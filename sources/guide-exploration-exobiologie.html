@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explorer la galaxie — Le guide complet de l'exploration et de l'exobiologie | Elite Dangerous 2026</title>
+<style>
+html{background:#06080a !important}
+body{background:#06080a !important;color:#dce6f0 !important;margin:0;padding:0;
+  font:16px/1.72 "Segoe UI",Roboto,system-ui,sans-serif}
+.page{background:#06080a;min-height:100vh;padding-bottom:60px;position:relative;overflow-x:hidden}
+.page:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background:repeating-linear-gradient(0deg,rgba(255,113,0,.02) 0 1px,transparent 1px 3px)}
+.page:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background:radial-gradient(ellipse at 50% 0%,rgba(255,113,0,.09),transparent 60%)}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+
+/* progress */
+.rp{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#ff7100,#ffb62e);
+  width:0;z-index:99;box-shadow:0 0 12px rgba(255,113,0,.8)}
+
+/* hero */
+.hero{border-bottom:1px solid #ff7100;background:linear-gradient(180deg,#1a0f02,#06080a);
+  padding:64px 0 42px;position:relative;z-index:2;text-align:center}
+.kicker{font-size:10px;letter-spacing:5px;color:#8a7050;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:40px;line-height:1.15;font-weight:700;letter-spacing:1px;color:#ff8c1a;
+  text-transform:uppercase;text-shadow:0 0 30px rgba(255,113,0,.45);margin:0 0 16px}
+.dek{font-size:17px;color:#9fb2c6;max-width:640px;margin:0 auto;line-height:1.65}
+.byline{margin-top:26px;font-size:11px;letter-spacing:2.5px;color:#6d7f92;text-transform:uppercase}
+
+/* toc */
+.toc{background:#0a0e13;border:1px solid #1e2833;padding:26px 30px;margin:42px 0 50px;
+  clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px))}
+.toc h4{margin:0 0 16px;font-size:11px;letter-spacing:3px;color:#ff8c1a;text-transform:uppercase}
+.toc ol{margin:0;padding-left:22px;color:#9fb2c6}
+.toc li{margin-bottom:8px;font-size:14.5px}
+.toc a{color:#c3d0dd;text-decoration:none;border-bottom:1px solid transparent;transition:.15s}
+.toc a:hover{color:#ff8c1a;border-bottom-color:#ff7100}
+
+/* typography */
+h2{font-size:15px;color:#ff8c1a;text-transform:uppercase;letter-spacing:3px;
+  padding:12px 0 12px 18px;margin:64px 0 22px;border-left:3px solid #ff7100;
+  background:linear-gradient(90deg,rgba(255,113,0,.11),transparent 60%);
+  text-shadow:0 0 14px rgba(255,113,0,.3)}
+h2 .num{color:#6d7f92;margin-right:10px;font-family:ui-monospace,monospace}
+h3{font-size:20px;color:#e8eef5;margin:40px 0 14px;font-weight:600;letter-spacing:.2px}
+h4{font-size:12px;color:#5ecbf5;margin:30px 0 12px;text-transform:uppercase;letter-spacing:2.2px}
+p{margin:0 0 17px;color:#c3d0dd}
+p b,li b{color:#e8eef5}
+a{color:#7ad6f8}
+.intro{font-size:18px;color:#b7c6d6;border-left:2px solid #ff7100;padding-left:22px;margin-bottom:30px}
+ul,ol{color:#c3d0dd;padding-left:24px}
+li{margin-bottom:9px}
+em{color:#9fb2c6;font-style:italic}
+
+/* pull quote */
+.pq{margin:36px 0;padding:24px 30px;background:linear-gradient(90deg,rgba(255,113,0,.09),transparent 75%);
+  border-left:3px solid #ff7100;font-size:19px;line-height:1.55;color:#e8eef5;font-weight:500}
+.pq cite{display:block;margin-top:12px;font-size:12px;color:#8a9cb0;font-style:normal;letter-spacing:1.5px;text-transform:uppercase}
+
+/* tables */
+.tbl{overflow-x:auto;margin:24px 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:#0a0e13;border:1px solid #1e2833}
+th{background:#111820;color:#5ecbf5;text-align:left;padding:11px 13px;font-size:10px;
+  text-transform:uppercase;letter-spacing:1.6px;border-bottom:1px solid #24303c;white-space:nowrap}
+td{padding:10px 13px;border-bottom:1px solid #161e26;vertical-align:top;color:#c3d0dd}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,113,0,.05)}
+td b{color:#e8eef5}
+td.n{font-family:ui-monospace,Consolas,monospace;color:#ffc451;white-space:nowrap}
+.win{color:#5ade82;font-weight:600}
+.lose{color:#ff5f64;font-weight:600}
+.mid{color:#ffc451;font-weight:600}
+
+/* callouts */
+.cw,.ci,.ct{padding:18px 22px;margin:26px 0;font-size:14px;border:1px solid;border-left-width:3px;
+  color:#c3d0dd;line-height:1.65;
+  clip-path:polygon(0 0,calc(100% - 13px) 0,100% 13px,100% 100%,13px 100%,0 calc(100% - 13px))}
+.cw{background:rgba(229,72,77,.07);border-color:#5c2427;border-left-color:#e5484d}
+.ci{background:rgba(94,203,245,.06);border-color:#1d3d4d;border-left-color:#5ecbf5}
+.ct{background:rgba(63,207,106,.07);border-color:#1f4d2f;border-left-color:#3fcf6a}
+.cw .t,.ci .t,.ct .t{font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:2.4px;
+  margin-bottom:9px;display:block}
+.cw .t{color:#ff5f64}.ci .t{color:#7ad6f8}.ct .t{color:#5ade82}
+.cw b,.ci b,.ct b{color:#e8eef5}
+.cw p:last-child,.ci p:last-child,.ct p:last-child{margin-bottom:0}
+
+/* verdict card */
+.verdict{background:#0c1116;border:1px solid #1e2833;border-top:3px solid #ff7100;
+  padding:22px 26px;margin:26px 0}
+.verdict h5{margin:0 0 10px;font-size:11px;letter-spacing:2.5px;color:#ff8c1a;text-transform:uppercase}
+.verdict p{margin:0;font-size:14.5px}
+
+/* tag */
+.tag{display:inline-block;font-size:9px;font-weight:700;padding:2px 6px;letter-spacing:1.2px;
+  vertical-align:middle;margin-left:5px}
+.t1{background:#123322;color:#5ade82}
+.t2{background:#0f2c3a;color:#7ad6f8}
+.t3{background:#3a2d0f;color:#ffc451}
+
+/* steps */
+.steps{counter-reset:s;list-style:none;padding:0;margin:24px 0}
+.steps li{counter-increment:s;padding:14px 0 14px 46px;position:relative;
+  border-bottom:1px solid #161e26;font-size:14.5px;color:#c3d0dd}
+.steps li:last-child{border-bottom:none}
+.steps li:before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:15px;
+  width:28px;height:22px;background:#ff7100;color:#06080a;display:flex;align-items:center;
+  justify-content:center;font-size:11px;font-weight:700;font-family:ui-monospace,monospace;
+  clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,5px 100%,0 calc(100% - 5px))}
+.steps li b{color:#e8eef5}
+
+hr{border:none;border-top:1px solid #1e2833;margin:52px 0}
+footer{border-top:1px solid #1e2833;margin-top:60px;padding:26px 0 0;font-size:12.5px;
+  color:#7d8fa3;line-height:1.9}
+footer b{color:#9fb2c6}
+</style>
+</head>
+<body>
+<div class="rp" id="rp"></div>
+<div class="page">
+
+<div class="hero"><div class="wrap">
+  <div class="kicker">Elite Dangerous · Édition août 2026</div>
+  <h1>Explorer la galaxie</h1>
+  <p class="dek">Le guide complet de l'exploration et de l'exobiologie : choisir son vaisseau, scanner un système, récolter la vie extraterrestre, et transformer tout cela en milliards de crédits.</p>
+  <div class="byline">PC · Live · Odyssey requis</div>
+</div></div>
+
+<div class="wrap">
+
+<div class="toc">
+<h4>Au sommaire</h4>
+<ol>
+<li><a href="#c1">Choisir son vaisseau : le grand comparatif</a></li>
+<li><a href="#c2">La découverte de systèmes, de zéro</a></li>
+<li><a href="#c3">L'exobiologie, de zéro</a></li>
+<li><a href="#c4">Optimiser ses revenus : les jalons</a></li>
+<li><a href="#c5">La boîte à outils</a></li>
+<li><a href="#c6">Ce qu'il faut retenir</a></li>
+</ol>
+</div>
+
+<p class="intro">Ce guide part du principe que vous avez un vaisseau d'exploration correct, votre rebuy en poche et une vingtaine de millions de crédits de trésorerie. Autrement dit : vous n'êtes plus débutant, mais l'exploration profonde et l'exobiologie restent pour vous des terres inconnues. À la fin, vous saurez exactement quoi faire, dans quel ordre, et combien ça rapporte.</p>
+
+<p>L'exploration est la seule activité d'Elite Dangerous qui ne vous mettra jamais en danger si vous êtes méthodique. Pas de pirates, pas de zones de combat, pas de rebuy à 80 millions. Juste vous, un vaisseau bien préparé, et 400 milliards de systèmes dont la grande majorité n'a jamais vu passer personne.</p>
+
+<p>C'est aussi, depuis l'arrivée d'Odyssey et de l'exobiologie, l'une des activités les plus rentables du jeu. Un seul spécimen bien choisi peut valoir <b>95 millions de crédits</b>. Une expédition de deux mois a rapporté à un joueur <b>4,7 milliards</b>. Le tout sans tirer un coup de feu.</p>
+
+<div class="ci"><span class="t">Comment lire les chiffres de ce guide</span>
+Les données sont étiquetées selon leur fiabilité. <span class="tag t1">OFF</span> provient de Frontier ou du wiki officiel. <span class="tag t2">COM</span> vient des bases communautaires (Inara, EDSM, Spansh, Canonn, wiki Fandom) ou de mesures de joueurs. <span class="tag t3">EST</span> signale une estimation ou une fourchette indicative. Les rendements horaires sont particulièrement variables : ils dépendent de votre technique, de la densité biologique et de votre chance.</div>
+
+<h2 id="c1"><span class="num">01</span>Choisir son vaisseau</h2>
+
+<p>La première erreur du candidat explorateur est de croire qu'un seul critère compte : la portée de saut. C'est faux, et c'est même trompeur pour l'exobiologie. Un vaisseau qui saute à 90 années-lumière mais qui met deux minutes à se poser sur un terrain vallonné vous fera perdre plus de temps qu'il ne vous en fait gagner.</p>
+
+<p>Il faut en réalité arbitrer entre trois qualités : la <b>portée</b>, qui détermine votre vitesse de déplacement ; l'<b>aptitude à l'atterrissage</b>, décisive en exobiologie où vous vous poserez des dizaines de fois par session ; et l'<b>autonomie</b>, c'est-à-dire le nombre d'emplacements disponibles pour les réparateurs, le SRV et le reste.</p>
+
+<h3>Le comparatif complet</h3>
+
+<div class="tbl">
+<table>
+<tr><th>Vaisseau</th><th>Pad</th><th>Prix coque</th><th>Portée ingénierée</th><th>Atterrissage</th><th>Verdict</th></tr>
+<tr><td><b>Hauler</b></td><td>S</td><td class="n">~52 000</td><td class="n">~35 LY</td><td class="win">Excellent</td><td>Dépannage, budget nul</td></tr>
+<tr><td><b>Adder</b></td><td>S</td><td class="n">~87 000</td><td class="n">~35 LY</td><td class="win">Excellent</td><td>Idem, plus de slots</td></tr>
+<tr><td><b>Cobra Mk III</b></td><td>S</td><td class="n">~380 000</td><td class="n">~43 LY</td><td class="mid">Bon</td><td>Multirôle débutant</td></tr>
+<tr><td><b>Cobra Mk V</b></td><td>S</td><td class="n">~350 000</td><td class="n">~43 LY</td><td class="mid">Bon</td><td>Version 2025, SCO véloce</td></tr>
+<tr><td><b>Dolphin</b></td><td>S</td><td class="n">~1,3 M</td><td class="n">~55 LY</td><td class="mid">Bon</td><td>Confort, belle canopée</td></tr>
+<tr><td><b>Diamondback Explorer</b></td><td>S</td><td class="n">~14 M</td><td class="n">~82 LY</td><td class="win">Excellent</td><td>Meilleur rapport qualité/prix</td></tr>
+<tr><td><b>Asp Explorer</b></td><td>M</td><td class="n">~6,6 M</td><td class="n">~65 LY</td><td class="mid">Correct</td><td>Le classique polyvalent</td></tr>
+<tr><td><b>Mandalay</b></td><td>M</td><td class="n">17 639 220</td><td class="n">~80–91 LY</td><td class="win">Excellent</td><td class="win">La référence exobio</td></tr>
+<tr><td><b>Krait Phantom</b></td><td>M</td><td class="n">37 472 250</td><td class="n">~65 LY</td><td class="mid">Correct</td><td>Explorateur polyvalent</td></tr>
+<tr><td><b>Python Mk II</b></td><td>M</td><td class="n">67 527 360</td><td class="n">~38 LY</td><td class="mid">Moyen</td><td>Rapide, mais pas un explorateur</td></tr>
+<tr><td><b>Anaconda</b></td><td>L</td><td class="n">~262 M</td><td class="n">~85–89 LY</td><td class="lose">Médiocre</td><td>Confort et autonomie</td></tr>
+<tr><td><b>Caspian Explorer</b></td><td>L</td><td class="n">~194,9 M</td><td class="n">~89–92 LY</td><td class="mid">Bon</td><td class="win">Roi du voyage longue distance</td></tr>
+</table>
+</div>
+
+<h3>Le meilleur vaisseau d'exobiologie : le Mandalay</h3>
+
+<p>Le consensus est net, et il s'appuie sur des choix de conception délibérés de Frontier. La <b>rampe d'embarquement du Mandalay se trouve sous le cockpit</b>, ce qui permet d'aligner visuellement son atterrissage sur le spécimen que l'on vise. Le plancher du cockpit est <b>transparent</b>, hérité du Mamba : vous voyez le terrain directement sous vous pendant la descente.</p>
+
+<p>Ajoutez à cela une signature thermique très basse — le vaisseau commence à charger son FSD pendant qu'il scoope encore — une maniabilité comparable à celle du Diamondback Explorer, un scoop de taille 6, et un prix de seulement 17,6 millions. Frontier affirme même qu'il dépasse l'Anaconda en portée de saut.</p>
+
+<div class="pq">« The Mandalay is simply outstanding. In my opinion, it is the best exploration ship available. »
+<cite>CMDR AndyRice, classement Just About</cite></div>
+
+<h3>Le meilleur pour aller loin, vite : le Caspian Explorer</h3>
+
+<p>Le Caspian est le <b>seul vaisseau du jeu capable de monter un FSD de classe 8</b>, et surtout le seul à recevoir le <b>FSD SCO Mk II</b>. Ce module change complètement le rapport au voyage : son boost sur les étoiles à neutrons monte à <b>500 %</b> au lieu des 400 % habituels, soit des sauts pouvant atteindre <b>556 années-lumière</b> — davantage qu'un Fleet Carrier.</p>
+
+<p>Détail qui compte sur une longue expédition : ce FSD <b>ne subit pas les 1 % de dégâts</b> infligés à chaque supercharge sur tous les autres vaisseaux. Vous pouvez enchaîner les neutrons sans regarder l'état de votre module.</p>
+
+<div class="verdict">
+<h5>Verdict</h5>
+<p>Si vous faites de l'exobiologie, prenez le <b>Mandalay</b> et n'y réfléchissez pas davantage : c'est le meilleur investissement du jeu dans cette activité. Si votre plaisir est de traverser la galaxie et de cartographier, et que le budget suit, le <b>Caspian</b> vous fera gagner des heures de trajet. L'<b>Anaconda</b> reste défendable pour son confort, mais elle se pose mal — un vrai handicap quand on atterrit trente fois par soirée.</p>
+</div>
+
+<h3>Le build type, module par module</h3>
+
+<p>Peu importe le vaisseau, la logique reste la même : tout ce qui n'est pas indispensable est du poids en moins de portée. On descend donc tous les modules non critiques en classe D, et on les allège chez un ingénieur.</p>
+
+<div class="tbl">
+<table>
+<tr><th>Module</th><th>Recommandation</th><th>Statut</th></tr>
+<tr><td>Frame Shift Drive</td><td>Le plus gros SCO A-raté, ingénieré <b>Increased Range G5 + Mass Manager</b></td><td class="win">Indispensable</td></tr>
+<tr><td>Guardian FSD Booster</td><td><b>5H</b> si le slot le permet (+10,5 LY pour 1,3 t)</td><td class="win">Quasi indispensable</td></tr>
+<tr><td>Fuel Scoop</td><td>Le plus gros A-raté possible</td><td class="win">Indispensable</td></tr>
+<tr><td>Detailed Surface Scanner</td><td>Un seul (+40 % de rayon de sonde)</td><td class="win">Indispensable</td></tr>
+<tr><td>Planetary Vehicle Hangar</td><td>Taille 2 suffit (SRV)</td><td class="win">Indispensable</td></tr>
+<tr><td>AFMU</td><td><b>Une seule</b> suffit, D-ratée, éteinte. Deux si usage intensif des neutrons</td><td class="win">Indispensable</td></tr>
+<tr><td>Heat Sink Launcher</td><td>Un ou deux</td><td class="win">Indispensable</td></tr>
+<tr><td>Bouclier</td><td>Léger, 3D ou 4D</td><td class="mid">Recommandé</td></tr>
+<tr><td>Life Support, Power Distributor, Sensors</td><td>D-ratés, <b>Lightweight G5</b></td><td class="win">Indispensable</td></tr>
+<tr><td>Supercruise Assist, Docking Computer</td><td>Au goût</td><td class="mid">Confort</td></tr>
+<tr><td>Armes</td><td><b>Aucune</b></td><td class="lose">À proscrire</td></tr>
+</table>
+</div>
+
+<div class="ci"><span class="t">Le raccourci que peu de joueurs connaissent</span>
+Le <b>FSD SCO V1 pré-ingénieré</b>, disponible au Human Tech Broker, offre souvent le plus gros gain de portée du jeu pour un effort minimal — bien plus que d'ingénierer soi-même un FSD standard. Vérifiez sa disponibilité pour la classe de votre vaisseau avant de vous lancer dans le grind Farseer.</div>
+
+<h3>Le Nomad : révolution ou fausse bonne idée ?</h3>
+
+<p>Ajouté par la mise à jour <b>Operations du 30 juin 2026</b>, le Nomad est la première <em>Ship-Launched Vessel</em> du jeu — un petit véhicule volant que l'on largue depuis son vaisseau, et le premier engin d'Elite doté d'un intérieur où l'on peut marcher.</p>
+
+<p>Son intérêt pour l'exobiologie est réel : il embarque un <b>scanner biologique</b> qui détecte les signaux <b>depuis le cockpit</b>. En glissant train sorti au-dessus du terrain, les zones exploitables apparaissent en vert sur le radar, visibles jusqu'à environ 200 mètres. Fini les allers-retours à l'aveugle.</p>
+
+<div class="cw"><span class="t">Trois limites à connaître avant de fantasmer</span>
+<p><b>Il ne se déploie que depuis un Vessel Hangar Mk II</b> — le module anciennement appelé Fighter Hangar, renommé avec Operations. Or seuls <b>trois vaisseaux</b> peuvent monter ce Mk II : le Caspian Explorer, le Panther Clipper Mk II et le Type-11 Prospector. Si vous volez en Mandalay, le Nomad ne vous concerne tout simplement pas.</p>
+<p><b>Il n'a pas de soute.</b> Il ne récupère aucun matériau, et ne peut pas moissonner les Brain Trees. Le SRV reste obligatoire.</p>
+<p><b>S'il est détruit, vous perdez toutes vos données d'exobiologie.</b> C'est un point de défaillance unique qui peut effacer plusieurs sessions de travail. Posez-vous lentement, sur du plat.</p>
+</div>
+
+<p>Notez aussi son <b>altitude minimale de lancement de 500 mètres</b> : on peut techniquement le larguer depuis l'orbite, mais la descente est interminable. Descendez d'abord avec le vaisseau-mère, larguez ensuite. Le vaisseau-mère vous suit alors automatiquement, ou peut être congédié et rappelé en une trentaine de secondes.</p>
+
+<h2 id="c2"><span class="num">02</span>La découverte de systèmes</h2>
+
+<p>Scanner un système, c'est trois gestes qui s'enchaînent toujours dans le même ordre. Une fois le réflexe acquis, un système se traite en une à deux minutes.</p>
+
+<h3>Le honk</h3>
+
+<p>À l'arrivée dans un système, basculez en <b>Analysis Mode</b> et maintenez le tir primaire. Une onde se propage — c'est le fameux « honk » — et révèle combien de corps compte le système et où ils se trouvent grossièrement. C'est gratuit, ça prend six secondes, et ça se fait à chaque saut sans exception.</p>
+
+<h3>Le FSS</h3>
+
+<p>Le <b>Full Spectrum System Scanner</b> transforme ces échos en objets réels. Vous entrez dans une vue dédiée où l'on balaie une barre de fréquences : chaque type de corps résonne dans une bande différente. On centre le réticule sur un point lumineux, on ajuste, on zoome jusqu'à ce que l'image se stabilise, et le corps est scanné.</p>
+
+<p>C'est aussi le FSS qui révèle les <b>signaux</b> présents sur chaque corps : biologiques, géologiques, humains, Guardian, Thargoïd ou anomalies. Les signaux biologiques sont votre gagne-pain — notez soigneusement leur nombre.</p>
+
+<p>Pour aller vite, apprenez à reconnaître les signatures sonores et visuelles des corps à haute valeur : mondes océaniques, mondes arctiques, terraformables. Les corps rocheux et glacés sans intérêt peuvent être ignorés sans remords si vous chassez le rendement.</p>
+
+<h3>Le DSS et les sondes</h3>
+
+<p>Le <b>Detailed Surface Scanner</b> est de loin le module le plus rentable de votre soute. Cartographier un corps multiplie sa valeur par trois environ, et c'est lui qui révèle précisément où se trouvent les zones biologiques.</p>
+
+<p>En orbite, throttle à zéro, vous tirez des sondes vers la surface. Le jeu vous indique une cible d'efficacité — six sondes par exemple. En utiliser moins rapporte un bonus. Couvrir environ 90 % de la surface déclenche l'auto-complétion à 100 %.</p>
+
+<div class="ci"><span class="t">La technique du limbe</span>
+Pour atteindre la face cachée d'un corps sans en faire le tour, visez volontairement au-delà du bord visible : la sonde affiche « Miss », puis s'incurve autour de la planète et frappe l'autre côté. Deux sondes bien placées suffisent souvent pour un petit corps.</div>
+
+<h3>Les bonus de première découverte</h3>
+
+<p>Un corps que personne n'a jamais scanné n'affiche aucun nom de découvreur. Le premier à le passer au FSS décroche le <b>First Discovered</b>, le premier à le cartographier décroche le <b>First Mapped</b>. Votre nom reste attaché au corps de façon permanente, visible par tous les joueurs.</p>
+
+<div class="cw"><span class="t">Le piège classique</span>
+Les tags ne sont validés que <b>lorsque vous vendez les données</b>. Tant que vous voguez avec vos scans dans la soute, rien n'est acquis — et si vous mourez, tout est perdu. Vendez régulièrement.</div>
+
+<h4>Ce que rapporte chaque type de corps <span class="tag t3">EST</span></h4>
+
+<div class="tbl">
+<table>
+<tr><th>Type de corps</th><th>FSS seul</th><th>FSS + DSS</th><th>Priorité</th></tr>
+<tr><td>Earth-Like World</td><td class="n">~1,2 M</td><td class="n">~3,6 M</td><td class="win">Toujours</td></tr>
+<tr><td>Water World</td><td class="n">~600 k</td><td class="n">~1,8 M</td><td class="win">Toujours</td></tr>
+<tr><td>HMC terraformable</td><td class="n">~300 k</td><td class="n">~900 k</td><td class="win">Oui</td></tr>
+<tr><td>Géante gazeuse</td><td class="n">faible</td><td class="n">modéré</td><td class="mid">Si sur le chemin</td></tr>
+<tr><td>Rocheux / glacé non terraformable</td><td class="n">~500–1 k</td><td class="n">~50–150 k</td><td class="lose">Ignorer, sauf signaux bio</td></tr>
+</table>
+</div>
+
+<h3>Survivre : carburant et étoiles</h3>
+
+<p>La cause numéro un de mort en exploration n'est pas un pirate, c'est une panne sèche ou une surchauffe. Deux règles suffisent à l'éviter.</p>
+
+<p><b>Les étoiles scoopables</b> répondent à l'acronyme KGBFOAM : classes K, G, B, F, O, A et M. Toutes les autres — naines L, T et Y, naines blanches, étoiles à neutrons, trous noirs — ne vous donneront pas une goutte de carburant. Ne sautez jamais vers l'une d'elles sans réserve.</p>
+
+<p>Ensuite, à chaque sortie de saut, vous arrivez face à l'étoile. <b>Manœuvrez immédiatement pour vous en écarter</b> avant de faire quoi que ce soit d'autre. Les surchauffes de sortie de saut détruisent plus de vaisseaux d'exploration que tout le reste réuni.</p>
+
+<h3>La route des neutrons</h3>
+
+<p>Les étoiles à neutrons projettent des cônes de matière dans lesquels on peut « supercharger » son FSD. Un saut supercharge porte quatre fois plus loin qu'un saut normal — six fois pour le FSD SCO Mk II du Caspian. En chaînant ces étoiles, on traverse la galaxie en une fraction du temps.</p>
+
+<p>Le prix à payer : chaque supercharge inflige <b>1 % de dégâts</b> à votre FSD, et le SCO chauffe considérablement en supercruise. C'est précisément pour cela que l'AFMU et les Heat Sinks figurent parmi les modules indispensables. Le FSD SCO Mk II, lui, échappe à ces dégâts — un privilège réservé au Caspian.</p>
+
+<h2 id="c3"><span class="num">03</span>L'exobiologie</h2>
+
+<p>L'exobiologie consiste à descendre à pied sur des planètes à atmosphère ténue, scanner des organismes extraterrestres, et vendre ces données génétiques. C'est aujourd'hui l'activité la plus lucrative accessible à un joueur solitaire, et de loin.</p>
+
+<h3>L'équipement</h3>
+
+<p>Une seule combinaison possède le <b>Genetic Sampler</b> : l'<b>Artemis Suit</b>, achetable à n'importe quel comptoir Pioneer Supplies. Sans elle, rien n'est possible.</p>
+
+<div class="cw"><span class="t">Deux règles à connaître avant de dépenser</span>
+<p>On <b>ne peut pas modifier une combinaison de grade 1</b>. Il faut d'abord la faire passer grade 2 à Pioneer Supplies avant d'espérer y poser le moindre mod.</p>
+<p>Un mod installé est <b>définitif</b> : impossible de le retirer ou de le remplacer. Pour changer d'avis, il faut racheter une combinaison entière. Réfléchissez avant de valider.</p>
+</div>
+
+<p>Le mod le plus utile est <b>Improved Battery Capacity</b>, qui compense la consommation élevée du Genetic Sampler. Viennent ensuite Extra Backpack Capacity, Improved Jump Assist et Increased Sprint Duration.</p>
+
+<p>Bonne nouvelle pour ceux qui n'aiment pas le combat au sol : plusieurs ingénieurs de combinaison se débloquent <b>sans tirer un coup de feu</b> — Domino Green, Wellington Beck, Kit Fowler et Yarden Bond. Seul Hero Ferrari exige de passer par des zones de conflit. Les ingénieurs de Colonia (Rosa Dayette, Baltanos, Eleanor Bresa, Yi Shen) proposent les mêmes mods et sont réputés plus faciles.</p>
+
+<div class="ci"><span class="t">Le raccourci</span>
+Pioneer Supplies vend parfois des <b>combinaisons premium pré-modifiées</b>, en stock limité et variable selon les stations. Elles évitent tout le parcours d'ingénierie. Prenez l'habitude de jeter un œil à la vitrine à chaque escale.</div>
+
+<h3>Trouver les bonnes planètes</h3>
+
+<p>Au FSS, cherchez les corps affichant des signaux biologiques. Les conditions favorables se recoupent souvent : atmosphère ténue, <b>gravité inférieure à 0,27 g</b>, et un type de planète adapté — rocheuse, à haute teneur métallique ou glacée.</p>
+
+<p>Un critère pratique est souvent négligé : privilégiez les corps situés à <b>moins de 1500 secondes-lumière</b> de leur étoile. Le supercruise vers un corps lointain peut engloutir plus de temps que la récolte elle-même.</p>
+
+<h3>La récolte</h3>
+
+<ol class="steps">
+<li>Posez-vous sur du terrain <b>plat</b>, à proximité d'une zone repérée au DSS.</li>
+<li>Sortez à pied et activez le <b>Scan Pulse</b>. Les organismes s'illuminent autour de vous.</li>
+<li>Lisez les couleurs : <b>vert</b> signifie à scanner ou en cours, <b>bleu</b> signifie déjà fait ou trop proche génétiquement, <b>violet</b> désigne une autre espèce.</li>
+<li>Prélevez <b>trois échantillons</b> de la même espèce, en respectant la distance minimale entre chacun.</li>
+<li>Éloignez-vous au-delà de la Colony Range entre chaque prélèvement, à pied, en jetpack ou en SRV selon la distance.</li>
+<li>Une fois les trois obtenus, l'échantillon est complet et rejoint votre inventaire.</li>
+</ol>
+
+<div class="cw"><span class="t">Les deux erreurs qui coûtent du temps</span>
+<p>Le message <b>« insufficient genetic diversity »</b> signifie que vous êtes trop près du prélèvement précédent. Éloignez-vous davantage.</p>
+<p>Scanner une <b>autre espèce</b> en cours de route <b>réinitialise</b> votre échantillon partiel. Terminez toujours une espèce avant d'en commencer une autre.</p>
+</div>
+
+<h4>La Colony Range par genre <span class="tag t2">COM</span></h4>
+
+<div class="tbl">
+<table>
+<tr><th>Distance minimale</th><th>Genres concernés</th></tr>
+<tr><td class="n">100 m</td><td>Amphora, Anemone, Bark Mound, Brain Tree, Crystalline Shard, Fumerola, Sinuous Tuber</td></tr>
+<tr><td class="n">150 m</td><td>Aleoida, Clypeus, Concha, Frutexa, Recepta</td></tr>
+<tr><td class="n">200 m</td><td>Tussock</td></tr>
+<tr><td class="n">300 m</td><td>Cactoida, Fungoida</td></tr>
+<tr><td class="n">500 m</td><td>Bacterium, Fonticulua, Stratum</td></tr>
+<tr><td class="n">800 m</td><td>Osseus, Tubus</td></tr>
+<tr><td class="n">1000 m</td><td>Electricae</td></tr>
+</table>
+</div>
+
+<h3>Ce que valent les espèces</h3>
+
+<p>Les valeurs sont fixes et n'ont pas bougé en 2025 ni en 2026. Le bonus de première découverte, lui, multiplie tout par cinq.</p>
+
+<div class="tbl">
+<table>
+<tr><th>Espèce</th><th>Valeur de base</th><th>Avec First Footfall</th><th>Conditions</th></tr>
+<tr><td><b>Stratum Tectonicas</b></td><td class="n">19 010 800</td><td class="n">95 054 000</td><td>HMC, &gt; 165 K</td></tr>
+<tr><td>Tussock Stigmasis</td><td class="n">19 010 800</td><td class="n">95 054 000</td><td>Rocky, SO₂</td></tr>
+<tr><td>Fonticulua Segmentatus</td><td class="n">19 010 800</td><td class="n">95 054 000</td><td>Néon</td></tr>
+<tr><td>Concha Biconcavis</td><td class="n">16 777 215</td><td class="n">83 886 075</td><td>Azote</td></tr>
+<tr><td>Fonticulua Fluctus</td><td class="n">16 777 215</td><td class="n">83 886 075</td><td>Oxygène</td></tr>
+<tr><td>Clypeus Speculumi</td><td class="n">16 202 800</td><td class="n">81 014 000</td><td>Rocky/HMC, &gt; 2500 sl</td></tr>
+<tr><td>Cactoida Vermis</td><td class="n">16 202 800</td><td class="n">81 014 000</td><td>Eau</td></tr>
+<tr><td>Recepta Deltahedronix</td><td class="n">16 202 800</td><td class="n">81 014 000</td><td>Rocky/HMC, SO₂</td></tr>
+<tr><td>Fumerola Extremus</td><td class="n">16 202 800</td><td class="n">81 014 000</td><td>Volcanisme</td></tr>
+<tr><td>Aleoida Gravis</td><td class="n">12 934 900</td><td class="n">64 674 500</td><td>CO₂, 190–195 K</td></tr>
+<tr><td>Osseus Discus</td><td class="n">12 934 900</td><td class="n">64 674 500</td><td>Rocky/HMC, eau</td></tr>
+</table>
+</div>
+
+<div class="ct"><span class="t">Le repère à retenir</span>
+Une planète à <b>haute teneur métallique</b>, portant <b>un seul signal biologique</b>, avec une température supérieure à 165 K, a de fortes chances d'abriter un <b>Stratum Tectonicas</b>. C'est l'espèce la plus rentable du jeu et la plus recherchée par les exobiologistes.</div>
+
+<h3>La règle qui change toute votre planification</h3>
+
+<div class="cw"><span class="t">Une espèce, une planète, une fois</span>
+Une fois les données <b>vendues</b>, vous ne pouvez <b>plus jamais</b> re-scanner cette espèce sur cette planète. Le jeu refuse purement et simplement le prélèvement. En revanche, la même espèce sur une <b>autre</b> planète reste parfaitement valide.
+<p>La conséquence est double. D'abord, <b>ne planifiez jamais de retour</b> : vos itinéraires doivent toujours aller de l'avant. Ensuite, <b>finissez proprement chaque planète</b> avant de repartir. Si vous repérez quatre espèces et n'en récoltez que trois par lassitude, les quinze millions restants sont perdus définitivement.</p>
+</div>
+
+<h3>First Logged et First Footfall</h3>
+
+<p>Deux bonus distincts existent, souvent confondus. Le <b>First Logged</b> récompense le premier commandant à enregistrer une espèce donnée : base plus 400 %, soit <b>cinq fois la valeur</b>. Le <b>First Footfall</b> désigne le premier humain à poser le pied sur la planète, et ne peut être réclamé qu'une seule fois dans toute l'histoire du jeu.</p>
+
+<p>Corollaire important : <b>les planètes de la Bulle n'offrent aucun First Footfall</b>. Les colons NPC les ont foulées il y a des siècles. Pour toucher le multiplicateur, il faut sortir des sentiers battus.</p>
+
+<h3>Vendre</h3>
+
+<p>Les données se revendent à <b>Vista Genomics</b>, dans les concourses des stations Odyssey. Effet de bord appréciable : une vente d'exobiologie fait grimper votre réputation avec la faction contrôlante quasi instantanément jusqu'au statut <b>Allied</b>. Choisissez donc où vous vendez.</p>
+
+<h4>Les rangs d'exobiologiste <span class="tag t2">COM</span></h4>
+
+<div class="tbl">
+<table>
+<tr><th>Rang</th><th>Profit cumulé requis</th></tr>
+<tr><td>Directionless</td><td class="n">0</td></tr>
+<tr><td>Mostly Directionless</td><td class="n">1,5 M</td></tr>
+<tr><td>Compiler</td><td class="n">5,3 M</td></tr>
+<tr><td>Collector</td><td class="n">12,8 M</td></tr>
+<tr><td>Cataloguer</td><td class="n">32 M</td></tr>
+<tr><td>Taxonomist</td><td class="n">65 M</td></tr>
+<tr><td>Ecologist</td><td class="n">130 M</td></tr>
+<tr><td>Geneticist</td><td class="n">260 M</td></tr>
+<tr><td><b>Elite</b></td><td class="n">520 M</td></tr>
+<tr><td>Elite I à V</td><td class="n">1,04 Md → 3,12 Md</td></tr>
+</table>
+</div>
+
+<h2 id="c4"><span class="num">04</span>Optimiser ses revenus</h2>
+
+<p>Voici la partie que la plupart des guides négligent : non pas comment faire, mais dans quel ordre, et à quel moment franchir chaque cap.</p>
+
+<h3>Ce que vous gagnez réellement</h3>
+
+<div class="tbl">
+<table>
+<tr><th>Profil</th><th>Exploration classique</th><th>Exobiologie</th></tr>
+<tr><td>Débutant</td><td class="n">5–15 M/h</td><td class="n">10–20 M/h</td></tr>
+<tr><td>Rodé, près de la Bulle</td><td class="n">20–40 M/h</td><td class="n">40–60 M/h</td></tr>
+<tr><td>Rodé, zone vierge</td><td class="n">40–60 M/h</td><td class="n">80–150 M/h</td></tr>
+</table>
+</div>
+
+<p>Un débutant réalise typiquement <b>30 à 50 %</b> de ces valeurs. Ce n'est pas un défaut de méthode, c'est le temps d'apprentissage normal : choix des cibles, vitesse de scan, durée des atterrissages. La courbe monte vite.</p>
+
+<h3>Les jalons, dans l'ordre</h3>
+
+<div class="tbl">
+<table>
+<tr><th>Palier</th><th>Ce que vous faites</th><th>Ce que vous acquérez</th><th>Passez au suivant quand…</th></tr>
+<tr><td class="n">20 M</td><td>Exobio près de la Bulle, sans First Footfall</td><td>Artemis Suit, DSS, SRV</td><td>Farseer est débloqué</td></tr>
+<tr><td class="n">100 M</td><td>Chasse au Stratum via Spansh</td><td>FSD G5 + Mass Manager</td><td>Le Guardian 5H est posé</td></tr>
+<tr><td class="n">500 M</td><td>Première expédition First Footfall</td><td>Vaisseau pleinement ingénieré</td><td>Vous dépassez 2 Md</td></tr>
+<tr><td class="n">2 Md</td><td>Longue expédition, éventuellement Pranav Antal</td><td>Éventuellement un Caspian</td><td>Vous atteignez 6–8 Md</td></tr>
+<tr><td class="n">6–8 Md</td><td>Achat du Fleet Carrier</td><td>FC + Vista Genomics à bord</td><td>—</td></tr>
+</table>
+</div>
+
+<h3>L'ingénierie prioritaire</h3>
+
+<p>Un seul ingénieur compte vraiment : <b>Felicity Farseer</b>, installée à Deciat. Il vous faut le rang Explorer <em>Scout</em> et un <b>Meta-Alloy</b> — achetable vers Maia, récupérable sur les barnacles Thargoïd, ou parfois offert par des Fleet Carriers stationnés à Deciat même.</p>
+
+<p>Sa réputation se monte en lui <b>vendant des données d'exploration</b>, ce qui tombe bien : vos tournées de scan servent donc double. Demandez-lui <b>FSD Increased Range G5</b> puis l'effet expérimental <b>Mass Manager</b>, et profitez-en pour alléger vos sensors.</p>
+
+<div class="ci"><span class="t">Monter les grades sans souffrir</span>
+Fabriquer des <b>Fast Boot FSD de grade 3</b> permet de faire grimper les grades rapidement, car le composant nécessaire s'achète au lieu de se farmer. Vous évitez ainsi la chasse aux Modular Terminals.</div>
+
+<h3>Le Guardian FSD Booster</h3>
+
+<p>Dix années-lumière et demie de portée supplémentaire pour <b>1,3 tonne</b>. C'est, en rapport gain/poids, le meilleur module du jeu. Le déblocage est <b>définitif</b> : une fois obtenu, vous en achetez autant que vous voulez, pour n'importe quel vaisseau, à vie.</p>
+
+<div class="tbl">
+<table>
+<tr><th>Taille</th><th>Bonus</th><th>Prix</th></tr>
+<tr><td>2H</td><td class="n">+6 LY</td><td class="n">790 257</td></tr>
+<tr><td>3H</td><td class="n">+7,75 LY</td><td class="n">1 579 920</td></tr>
+<tr><td>4H</td><td class="n">+9,25 LY</td><td class="n">3 163 887</td></tr>
+<tr><td><b>5H</b></td><td class="n">+10,5 LY</td><td class="n">~6 M</td></tr>
+</table>
+</div>
+
+<p>Le déblocage se fait au <b>Guardian Technology Broker</b> et demande un Guardian Module Blueprint Fragment, 21 Guardian Power Cells, 21 Guardian Technology Components, 24 Focus Crystals et 8 HN Shock Mounts. Les sites recommandés sont <b>Synuefe NL-N C23-4 B 3</b> et <b>HD 63154 B 3 A</b>.</p>
+
+<div class="ct"><span class="t">Bonne nouvelle pour les non-combattants</span>
+Le combat contre les Sentinels se déroule <b>en SRV</b>, pas au vaisseau. Votre rang de combat n'a aucune importance. Mieux : les lasers de vaisseau sont <b>inefficaces</b> contre eux à cause de leur résistance thermique — c'est le plasma du SRV qui fait le travail. Affrontez-les un par un, servez-vous du frein à main pour encaisser les explosions, et utilisez les ruines comme couverture.</div>
+
+<h3>Le multiplicateur Powerplay</h3>
+
+<p>S'engager auprès de <b>Pranav Antal</b> octroie jusqu'à <b>+30 % sur les ventes d'exobiologie</b> réalisées dans les systèmes qu'il contrôle. Sur un objectif à un milliard, cela représente environ 230 millions de crédits gratuits.</p>
+
+<p>Deux réserves. L'engagement Powerplay demande du temps consacré aux mérites, et une défection vous fait perdre les bonus. Par ailleurs, ne vendez pas dans le système capitale : il ne donne ni bonus ni mérites. Pour l'exploration cartographique classique, c'est plutôt <b>Li Yong-Rui</b> qui offre historiquement les meilleurs bonus de vente.</p>
+
+<h3>Le Fleet Carrier : quand et pourquoi</h3>
+
+<p>Cinq milliards de crédits, et une facture hebdomadaire qui court même quand vous ne jouez pas. C'est un outil formidable et un piège financier pour qui l'achète trop tôt.</p>
+
+<div class="tbl">
+<table>
+<tr><th>Poste</th><th>Montant</th></tr>
+<tr><td>Achat</td><td class="n">5 000 000 000 Cr</td></tr>
+<tr><td>Entretien hebdomadaire, carrier nu</td><td class="n">5 M Cr</td></tr>
+<tr><td>Entretien hebdomadaire, tous services</td><td class="n">~30 M Cr</td></tr>
+<tr><td>Coût par saut</td><td class="n">100 000 Cr + tritium</td></tr>
+<tr><td>Portée par saut</td><td class="n">500 LY</td></tr>
+<tr><td>Seuil de faillite</td><td class="n">250 M de dette</td></tr>
+</table>
+</div>
+
+<div class="cw"><span class="t">N'achetez pas à cinq milliards</span>
+Le seuil de faillite se déclenche à <b>250 millions de dette</b>, soit environ dix semaines d'impayés tous services activés. Vous disposez alors d'une semaine pour régulariser, faute de quoi le carrier est décommissionné automatiquement.
+<p>La règle communautaire est de viser <b>6 à 8 milliards</b> au total : cinq pour la coque, le reste pour les services et une réserve d'entretien couvrant environ un an.</p>
+</div>
+
+<p>Son intérêt réel pour l'explorateur n'est pas financier, il est logistique. Installez <b>Universal Cartographics</b> et <b>Vista Genomics</b> à bord, positionnez le carrier en espace profond, et vous vendez sur place sans jamais rentrer dans la Bulle. Sur une expédition de plusieurs semaines, le gain de temps est considérable — et vos données sont à l'abri.</p>
+
+<h2 id="c5"><span class="num">05</span>La boîte à outils</h2>
+
+<p>Elite Dangerous s'accompagne d'un écosystème d'outils communautaires sans lesquels l'exploration moderne serait beaucoup plus laborieuse. Tous sont gratuits.</p>
+
+<div class="tbl">
+<table>
+<tr><th>Outil</th><th>À quoi il sert</th></tr>
+<tr><td><b>Spansh</b></td><td>Road to Riches, routeur neutron, recherche de corps par filtres, routeur Fleet Carrier</td></tr>
+<tr><td><b>Inara</b></td><td>Prix des modules, ingénieurs, Tech Brokers, localisation des services</td></tr>
+<tr><td><b>EDSM</b></td><td>Base de données des systèmes et stations</td></tr>
+<tr><td><b>EDSY / Coriolis</b></td><td>Simulateurs de build, import et export au format SLEF</td></tr>
+<tr><td><b>Elite Observatory</b> + BioInsights</td><td>Signale les espèces probables dès le FSS, calcule les Colony Range</td></tr>
+<tr><td><b>EDMC</b> + BioScan</td><td>Surimpression des valeurs pendant la récolte</td></tr>
+<tr><td><b>EDDiscovery</b></td><td>Journal de bord, statistiques, historique des découvertes</td></tr>
+</table>
+</div>
+
+<h3>Où aller en 2026</h3>
+
+<p>L'arbitrage est simple. Rester <b>près de la Bulle</b> vous prive du multiplicateur First Footfall, mais offre un volume élevé de spécimens, des retours rapides et un risque quasi nul. C'est la stratégie dite du « Bubble Billionaire », et elle fonctionne très bien.</p>
+
+<p><b>Partir loin</b> multiplie tout par cinq, mais impose des expéditions de plusieurs jours et le risque permanent de perdre ses données. Visez les bras extérieurs et les régions à l'écart des grandes routes communautaires — les zones balisées par les expéditions Distant Worlds ont déjà été largement ratissées.</p>
+
+<h2 id="c6"><span class="num">06</span>Ce qu'il faut retenir</h2>
+
+<ol class="steps">
+<li><b>Achetez l'Artemis Suit</b> et passez-la grade 2 avant tout. Sans elle, pas d'exobiologie.</li>
+<li><b>Faites une première boucle près de la Bulle</b> en chassant le Stratum Tectonicas via Spansh. Objectif : atteindre 100 millions et apprendre les gestes sans risque.</li>
+<li><b>Débloquez Felicity Farseer</b> et posez FSD Increased Range G5 plus Mass Manager. C'est le plus gros gain de portée de votre carrière.</li>
+<li><b>Passez au Mandalay</b> si ce n'est pas déjà fait. Dix-sept millions pour le meilleur outil d'exobiologie du jeu, c'est le meilleur achat possible.</li>
+<li><b>Farmez le Guardian FSD Booster 5H</b> en SRV. Une à deux sessions, et dix années-lumière acquises définitivement.</li>
+<li><b>Partez en expédition First Footfall.</b> C'est là que se gagnent les milliards.</li>
+<li><b>N'achetez un Fleet Carrier qu'à 6 ou 8 milliards</b>, jamais à cinq.</li>
+</ol>
+
+<div class="ct"><span class="t">Le conseil le plus important de ce guide</span>
+Vendez régulièrement. Toutes les données non vendues — cartographiques comme génétiques — disparaissent avec votre vaisseau. La discipline de vente vaut mieux que n'importe quelle optimisation de build.</div>
+
+<footer>
+<b>Fiabilité des données.</b> Les valeurs d'exobiologie et les Colony Range proviennent du wiki Fandom et de Canonn Research. Les prix de vaisseaux et de modules viennent d'Inara et d'EDSM, relevés en août 2026. Les portées de saut ingénierées sont des mesures communautaires et non des spécifications officielles Frontier : vérifiez les vôtres sur EDSY avant tout achat. Les rendements horaires sont des fourchettes indicatives.<br><br>
+<b>Sources principales.</b> Patch notes et GalNet Frontier Developments, wiki Elite Dangerous (Fandom), Inara, EDSM, Spansh, Canonn Research, forums Frontier, retours de commandants sur Reddit et Steam.<br><br>
+<b>Contenu couvert.</b> À jour de la mise à jour Operations du 30 juin 2026, incluant le Nomad et le renommage des Vessel Hangars, ainsi que la sortie en crédits du Caspian Explorer du 23 mars 2026.
+</footer>
+
+</div>
+</div>
+
+<script>
+window.addEventListener('scroll',function(){
+  var h=document.documentElement,b=document.body;
+  var st=h.scrollTop||b.scrollTop;
+  var sh=(h.scrollHeight||b.scrollHeight)-h.clientHeight;
+  document.getElementById('rp').style.width=(sh>0?(st/sh*100):0)+'%';
+});
+document.querySelectorAll('.toc a').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var t=document.querySelector(a.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faire évoluer son Artemis Suit sans jamais combattre — Guide Odyssey | Elite Dangerous 2026</title>
+<style>
+html{background:#06080a !important}
+body{background:#06080a !important;color:#dce6f0 !important;margin:0;padding:0;
+  font:16px/1.72 "Segoe UI",Roboto,system-ui,sans-serif}
+.page{background:#06080a;min-height:100vh;padding-bottom:60px;position:relative;overflow-x:hidden}
+.page:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background:repeating-linear-gradient(0deg,rgba(255,113,0,.02) 0 1px,transparent 1px 3px)}
+.page:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background:radial-gradient(ellipse at 50% 0%,rgba(255,113,0,.09),transparent 60%)}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.rp{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#ff7100,#ffb62e);
+  width:0;z-index:99;box-shadow:0 0 12px rgba(255,113,0,.8)}
+
+.hero{border-bottom:1px solid #ff7100;background:linear-gradient(180deg,#1a0f02,#06080a);
+  padding:64px 0 42px;position:relative;z-index:2;text-align:center}
+.kicker{font-size:10px;letter-spacing:5px;color:#8a7050;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:37px;line-height:1.18;font-weight:700;letter-spacing:1px;color:#ff8c1a;
+  text-transform:uppercase;text-shadow:0 0 30px rgba(255,113,0,.45);margin:0 0 16px}
+.dek{font-size:17px;color:#9fb2c6;max-width:660px;margin:0 auto;line-height:1.65}
+.byline{margin-top:26px;font-size:11px;letter-spacing:2.5px;color:#6d7f92;text-transform:uppercase}
+
+.toc{background:#0a0e13;border:1px solid #1e2833;padding:26px 30px;margin:42px 0 50px;
+  clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px))}
+.toc h4{margin:0 0 16px;font-size:11px;letter-spacing:3px;color:#ff8c1a;text-transform:uppercase}
+.toc ol{margin:0;padding-left:22px}
+.toc li{margin-bottom:8px;font-size:14.5px}
+.toc a{color:#c3d0dd;text-decoration:none;border-bottom:1px solid transparent;transition:.15s}
+.toc a:hover{color:#ff8c1a;border-bottom-color:#ff7100}
+
+h2{font-size:15px;color:#ff8c1a;text-transform:uppercase;letter-spacing:3px;
+  padding:12px 0 12px 18px;margin:64px 0 22px;border-left:3px solid #ff7100;
+  background:linear-gradient(90deg,rgba(255,113,0,.11),transparent 60%);
+  text-shadow:0 0 14px rgba(255,113,0,.3)}
+h2 .num{color:#6d7f92;margin-right:10px;font-family:ui-monospace,monospace}
+h3{font-size:20px;color:#e8eef5;margin:40px 0 14px;font-weight:600}
+h4{font-size:12px;color:#5ecbf5;margin:30px 0 12px;text-transform:uppercase;letter-spacing:2.2px}
+p{margin:0 0 17px;color:#c3d0dd}
+p b,li b,td b{color:#e8eef5}
+a{color:#7ad6f8}
+.intro{font-size:18px;color:#b7c6d6;border-left:2px solid #ff7100;padding-left:22px;margin-bottom:30px}
+ul,ol{color:#c3d0dd;padding-left:24px}
+li{margin-bottom:9px}
+em{color:#9fb2c6;font-style:italic}
+
+.pq{margin:36px 0;padding:24px 30px;background:linear-gradient(90deg,rgba(255,113,0,.09),transparent 75%);
+  border-left:3px solid #ff7100;font-size:18px;line-height:1.55;color:#e8eef5;font-weight:500}
+.pq cite{display:block;margin-top:12px;font-size:12px;color:#8a9cb0;font-style:normal;
+  letter-spacing:1.5px;text-transform:uppercase}
+
+.tbl{overflow-x:auto;margin:24px 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:#0a0e13;border:1px solid #1e2833}
+th{background:#111820;color:#5ecbf5;text-align:left;padding:11px 13px;font-size:10px;
+  text-transform:uppercase;letter-spacing:1.6px;border-bottom:1px solid #24303c;white-space:nowrap}
+td{padding:10px 13px;border-bottom:1px solid #161e26;vertical-align:top;color:#c3d0dd}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,113,0,.05)}
+td.n{font-family:ui-monospace,Consolas,monospace;color:#ffc451;white-space:nowrap}
+tr.tot td{background:rgba(255,113,0,.09);font-weight:700;border-top:1px solid #5c3406}
+tr.tot td.n{color:#ff8c1a}
+.win{color:#5ade82;font-weight:600}
+.lose{color:#ff5f64;font-weight:600}
+.mid{color:#ffc451;font-weight:600}
+
+.cw,.ci,.ct{padding:18px 22px;margin:26px 0;font-size:14px;border:1px solid;border-left-width:3px;
+  color:#c3d0dd;line-height:1.65;
+  clip-path:polygon(0 0,calc(100% - 13px) 0,100% 13px,100% 100%,13px 100%,0 calc(100% - 13px))}
+.cw{background:rgba(229,72,77,.07);border-color:#5c2427;border-left-color:#e5484d}
+.ci{background:rgba(94,203,245,.06);border-color:#1d3d4d;border-left-color:#5ecbf5}
+.ct{background:rgba(63,207,106,.07);border-color:#1f4d2f;border-left-color:#3fcf6a}
+.cw .t,.ci .t,.ct .t{font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:2.4px;
+  margin-bottom:9px;display:block}
+.cw .t{color:#ff5f64}.ci .t{color:#7ad6f8}.ct .t{color:#5ade82}
+.cw b,.ci b,.ct b{color:#e8eef5}
+.cw p:last-child,.ci p:last-child,.ct p:last-child{margin-bottom:0}
+
+.tag{display:inline-block;font-size:9px;font-weight:700;padding:2px 6px;letter-spacing:1.2px;
+  vertical-align:middle;margin-left:5px}
+.t1{background:#123322;color:#5ade82}
+.t2{background:#0f2c3a;color:#7ad6f8}
+.t3{background:#3a2d0f;color:#ffc451}
+
+.steps{counter-reset:s;list-style:none;padding:0;margin:24px 0}
+.steps li{counter-increment:s;padding:14px 0 14px 46px;position:relative;
+  border-bottom:1px solid #161e26;font-size:14.5px;color:#c3d0dd}
+.steps li:last-child{border-bottom:none}
+.steps li:before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:15px;
+  width:28px;height:22px;background:#ff7100;color:#06080a;display:flex;align-items:center;
+  justify-content:center;font-size:11px;font-weight:700;font-family:ui-monospace,monospace;
+  clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,5px 100%,0 calc(100% - 5px))}
+
+footer{border-top:1px solid #1e2833;margin-top:60px;padding:26px 0 0;font-size:12.5px;
+  color:#7d8fa3;line-height:1.9}
+footer b{color:#9fb2c6}
+</style>
+</head>
+<body>
+<div class="rp" id="rp"></div>
+<div class="page">
+
+<div class="hero"><div class="wrap">
+  <div class="kicker">Elite Dangerous : Odyssey · Édition août 2026</div>
+  <h1>Faire évoluer son Artemis Suit sans jamais combattre</h1>
+  <p class="dek">Trouver les composants, monter les grades, débloquer les bons ingénieurs. Le guide complet pour l'exobiologiste qui n'a aucune envie de tirer sur quoi que ce soit.</p>
+  <div class="byline">PC · Live · Odyssey requis</div>
+</div></div>
+
+<div class="wrap">
+
+<div class="toc">
+<h4>Au sommaire</h4>
+<ol>
+<li><a href="#c1">Grades et mods : deux choses différentes</a></li>
+<li><a href="#c2">Ce qu'il vous faut exactement</a></li>
+<li><a href="#c3">Où trouver chaque composant</a></li>
+<li><a href="#c4">Les quatre méthodes sans combat</a></li>
+<li><a href="#c5">L'équipement du bon pillard</a></li>
+<li><a href="#c6">Les mods et leurs ingénieurs</a></li>
+<li><a href="#c7">Par où commencer</a></li>
+</ol>
+</div>
+
+<p class="intro">L'Artemis Suit est la seule combinaison du jeu à posséder un Genetic Sampler. Si vous faites de l'exobiologie, c'est votre outil de travail — et vous allez vouloir l'améliorer. La bonne nouvelle, c'est que l'intégralité du parcours peut se faire sans tirer une seule balle.</p>
+
+<p>C'est une chose que beaucoup de joueurs ignorent, et que les guides d'il y a deux ans racontaient de travers. Le farming de matériaux à pied traîne une réputation de calvaire réservé aux commandants lourdement armés. Cette réputation était méritée en 2021. Elle ne l'est plus.</p>
+
+<p>En août 2024, Frontier a divisé les coûts d'amélioration par quatre et supprimé la nécessité des Power Regulators. Depuis, monter une Artemis du grade 1 au grade 5 ne demande plus que <b>cinq types de matériaux</b>, dont deux s'échangent librement au comptoir d'un bar. Et les méthodes de récolte les plus rentables se pratiquent dans des colonies désertes, sans âme qui vive pour vous embêter.</p>
+
+<div class="ci"><span class="t">Comment lire ce guide</span>
+Les informations sont étiquetées selon leur fiabilité. <span class="tag t1">OFF</span> vient de Frontier ou du wiki officiel. <span class="tag t2">COM</span> provient des bases communautaires (INARA, EDSM, wiki Fandom) ou de retours de commandants. <span class="tag t3">EST</span> signale une estimation. Les quantités indiquées peuvent bouger après un patch : vérifiez-les en jeu au moment de dépenser.</div>
+
+<h2 id="c1"><span class="num">01</span>Grades et mods : deux choses différentes</h2>
+
+<p>Première source de confusion chez les nouveaux venus : une combinaison Odyssey évolue selon <b>deux axes totalement séparés</b>, qui ne se traitent ni au même endroit ni avec les mêmes ressources.</p>
+
+<p>Le <b>grade</b>, de 1 à 5, se monte à <b>Pioneer Supplies</b> — le magasin d'équipement à pied présent dans le concourse des stations. Il coûte uniquement des matériaux, jamais de crédits, et améliore les résistances et le bouclier de la combinaison.</p>
+
+<p>Les <b>modifications</b>, elles, s'installent chez les <b>suit engineers</b>, une catégorie d'ingénieurs entièrement distincte de ceux qui travaillent sur les vaisseaux. Chaque mod coûte des matériaux <em>et</em> des crédits.</p>
+
+<div class="cw"><span class="t">Trois règles à graver avant de dépenser quoi que ce soit</span>
+<p><b>Une combinaison grade 1 ne peut pas être modifiée.</b> Elle ne possède aucun emplacement de mod. Il faut impérativement la passer grade 2 d'abord.</p>
+<p><b>Un mod installé est définitif.</b> Impossible de le retirer. Si vous en posez un nouveau sur un emplacement occupé, il écrase l'ancien de façon permanente. Pour une autre combinaison de mods, il faut acheter une seconde combinaison.</p>
+<p><b>Chaque grade débloque un emplacement.</b> Grade 2 donne un mod, grade 3 en donne deux, et ainsi de suite jusqu'à quatre au grade 5.</p>
+</div>
+
+<h3>Faut-il vraiment viser le grade 5 ?</h3>
+
+<p>Pour un exobiologiste, la réponse honnête est <b>non, pas forcément</b>. Le grade améliore essentiellement les résistances et le bouclier — c'est-à-dire votre capacité à survivre à un combat que vous ne comptez pas livrer. Scanner des plantes n'expose à aucun danger.</p>
+
+<p>Une <b>Artemis grade 3</b>, avec deux bons mods, couvre confortablement les besoins d'un explorateur. Le grade 5 n'a d'intérêt que si vous voulez les quatre mods simultanément. Considérez-le comme un objectif de confort, pas comme un prérequis.</p>
+
+<div class="ct"><span class="t">Le raccourci que tout le monde devrait connaître</span>
+Pioneer Supplies vend parfois des <b>combinaisons pré-améliorées</b>, jusqu'au grade 3, et parfois déjà modifiées. C'est une économie de matériaux considérable.
+<p>Le stock est réattribué une fois par semaine, en général le <b>jeudi</b> après la maintenance, en premier arrivé premier servi — une fois achetée, la combinaison disparaît pour tout le monde. Cherchez de préférence dans les stations peu fréquentées, loin de l'étoile principale : elles sont mieux garnies et moins pillées.</p>
+</div>
+
+<h3>Ce qui a changé récemment</h3>
+
+<p>Trois mises à jour comptent pour qui veut éviter les guides périmés.</p>
+
+<p>La plus importante reste <b>Update 18, en août 2024</b>. Les besoins en matériaux ont été ramenés à environ un quart de ce qu'ils étaient, les Power Regulators ne sont plus nécessaires pour les combinaisons, et les signaux à haute intensité peuvent désormais générer jusqu'à cent matériaux au lieu de quatre ou six. <span class="tag t1">OFF</span></p>
+
+<p>La <b>mise à jour Caspian Explorer, en décembre 2025</b>, a en revanche durci le combat à pied : les PNJ sont plus agressifs, se mettent mieux à couvert, et scannent les crimes de plus loin. Notez que le rééquilibrage des résistances ne concerne que les PNJ, pas vous. C'est une raison de plus de rester sur les méthodes pacifiques. <span class="tag t1">OFF</span></p>
+
+<p>Enfin, l'<b>Operations Update du 30 juin 2026</b> a introduit des scénarios coopératifs et une monnaie dédiée, la Merc Coin. C'est du contenu orienté combat en escouade, tourné vers les modules de vaisseau. <b>Rien de tout cela ne modifie les combinaisons, Pioneer Supplies ou l'ingénierie à pied.</b> Tout ce que décrit ce guide reste valide. <span class="tag t1">OFF</span></p>
+
+<h2 id="c2"><span class="num">02</span>Ce qu'il vous faut exactement</h2>
+
+<p>Voici le tableau que la plupart des joueurs cherchent sans le trouver : la liste complète, palier par palier, pour une Artemis Suit.</p>
+
+<div class="tbl">
+<table>
+<tr><th>Palier</th><th>Suit Schematic</th><th>Health Monitor</th><th>Manufacturing Instructions</th><th>Aerogel</th><th>Graphene</th></tr>
+<tr><td>Grade 1 → 2</td><td class="n">1</td><td class="n">1</td><td class="n">1</td><td class="n">2</td><td class="n">2</td></tr>
+<tr><td>Grade 2 → 3</td><td class="n">2</td><td class="n">2</td><td class="n">2</td><td class="n">5</td><td class="n">5</td></tr>
+<tr><td>Grade 3 → 4</td><td class="n">4</td><td class="n">4</td><td class="n">4</td><td class="n">9</td><td class="n">9</td></tr>
+<tr><td>Grade 4 → 5</td><td class="n">5</td><td class="n">5</td><td class="n">5</td><td class="n">12</td><td class="n">12</td></tr>
+<tr class="tot"><td>Total G1 → G5</td><td class="n">12</td><td class="n">12</td><td class="n">12</td><td class="n">28</td><td class="n">28</td></tr>
+</table>
+</div>
+
+<p><b>Aucun crédit n'est demandé pour les grades.</b> Les crédits ne servent qu'aux mods, chez les ingénieurs.</p>
+
+<p>Notez que l'Artemis utilise de l'<b>Aerogel</b> là où la Dominator et la Maverick réclament du Titanium Plating ou du Carbon Fibre Plating. Ne recopiez pas une liste trouvée pour une autre combinaison.</p>
+
+<div class="ci"><span class="t">Où se situe la vraie difficulté</span>
+Contrairement à ce qu'on imagine, ce ne sont pas les cinquante matériaux exotiques qui posent problème — il n'y en a que cinq. L'Aerogel et le Graphene sont communs et s'échangent au bar. Le goulot d'étranglement, ce sont les <b>Manufacturing Instructions</b> (des données, réclamées aussi par les armes) et les <b>Suit Schematics</b> (des biens, plus rares).</div>
+
+<h2 id="c3"><span class="num">03</span>Où trouver chaque composant</h2>
+
+<div class="tbl">
+<table>
+<tr><th>Composant</th><th>Catégorie</th><th>Où le trouver</th></tr>
+<tr><td><b>Graphene</b></td><td>Asset · Chemical</td><td>En abondance dans les bâtiments <b>Research</b> des colonies. S'échange très bien au bar vers les autres Chemicals.</td></tr>
+<tr><td><b>Aerogel</b></td><td>Asset · Chemical</td><td>Loot de colonies et récompenses de mission. Troquable au bar.</td></tr>
+<tr><td><b>Manufacturing Instructions</b></td><td>Data</td><td>Récompenses de mission, data ports des sections Power et Command. Farmable en boucle sur certains points de données.</td></tr>
+<tr><td><b>Suit Schematic</b></td><td>Goods</td><td>Toujours dans les <b>mêmes casiers</b> des bâtiments <b>CMD</b> et <b>PWR</b>. Les colonies militaires en donnent davantage.</td></tr>
+<tr><td><b>Health Monitor</b></td><td>Goods</td><td>Bâtiments médicaux et habitations, récompenses de mission.</td></tr>
+</table>
+</div>
+
+<h3>Quelle colonie pour quel besoin</h3>
+
+<p>Le type d'une colonie détermine ce qu'on y trouve, et une session bien ciblée vaut trois sessions au hasard.</p>
+
+<div class="tbl">
+<table>
+<tr><th>Type de colonie</th><th>Ce qu'on y trouve</th></tr>
+<tr><td><b>Research</b> / High Tech</td><td>Beaucoup de données et de produits chimiques, dont le Graphene. Peu de schematics.</td></tr>
+<tr><td><b>Military</b></td><td>Le meilleur endroit pour les Suit Schematics (bâtiments CMD et PWR).</td></tr>
+<tr><td><b>Extraction</b></td><td>Assets techniques en quantité, mais peu de schematics.</td></tr>
+<tr><td><b>Industrial</b> / Agricultural</td><td>Profil équilibré, bon pour les Manufacturing Instructions.</td></tr>
+<tr><td><b>Tourist</b></td><td>Beaucoup de points de données, peu de biens.</td></tr>
+</table>
+</div>
+
+<h3>Le bar, votre chambre de compensation</h3>
+
+<p>Le <b>Bartender</b> de chaque concourse échange les <b>Assets uniquement</b> — pas les données, pas les biens, qu'il se contente d'acheter contre crédits. L'échange fonctionne par points : chaque asset cédé rapporte une valeur de troc, chaque asset désiré en coûte une.</p>
+
+<p>Concrètement, votre surplus de Graphene se convertit en Aerogel manquant, et réciproquement. C'est le moyen le plus rapide de boucler un palier bloqué par un seul matériau.</p>
+
+<div class="cw"><span class="t">Ne confondez pas les deux comptoirs</span>
+Le <b>Bartender</b> traite les matériaux de <b>combinaison</b>. Les <b>Material Traders</b> traitent les matériaux de <b>vaisseau</b> (Raw, Manufactured, Encoded). Ce sont deux systèmes sans aucun rapport, et beaucoup de joueurs perdent du temps à chercher au mauvais endroit.
+<p>À noter également : le Bartender refuse d'acheter les objets illégaux, <b>sauf en système Anarchy</b>.</p>
+</div>
+
+<p>Dernière option souvent oubliée : la recherche INARA permet de localiser des <b>Fleet Carriers de joueurs</b> qui vendent des composants. Pratique pour compléter un matériau manquant sans repartir en expédition.</p>
+
+<h2 id="c4"><span class="num">04</span>Les quatre méthodes sans combat</h2>
+
+<p>Voici le cœur du sujet. Ces quatre approches se pratiquent intégralement avec un rang de mercenaire nul et aucune expérience du combat à pied.</p>
+
+<h3>Les missions de réactivation, la méthode reine</h3>
+
+<p>C'est de loin la meilleure boucle, et elle mérite qu'on s'y attarde. On trouve ces missions dans les systèmes où une colonie Odyssey appartient à une faction en difficulté : <b>Reactivation</b> quand l'état est <em>infrastructure failure</em>, <b>Restore</b> quand il s'agit de <em>civil unrest</em>.</p>
+
+<p>Le principe est imbattable. La colonie est <b>hors tension et déserte</b>. On vous confie un régulateur de puissance et un niveau d'habilitation 3, ce qui signifie que vous pouvez <b>tout piller légalement</b>, y compris télécharger des données classées, sans le moindre garde pour vous en empêcher.</p>
+
+<div class="ct"><span class="t">La séquence qui élimine le seul risque</span>
+Des pillards peuvent débarquer en vaisseau pendant votre visite. Mais ils <b>ne peuvent plus apparaître une fois le courant rétabli</b>.
+<p>Repérez donc le bâtiment <b>PWR</b>, rallumez l'alimentation en priorité absolue, puis fouillez tranquillement le reste. Posez-vous à une centaine de mètres <b>en dehors</b> de la colonie plutôt que sur la plateforme, qui attire les pillards.</p>
+</div>
+
+<div class="cw"><span class="t">Ne vous déconnectez jamais en cours de mission</span>
+Un relog pendant une mission de réactivation fait <b>disparaître l'intégralité du butin</b> ramassé. Terminez, remontez au vaisseau, puis seulement là faites ce que vous voulez.</div>
+
+<h3>Les colonies abandonnées</h3>
+
+<p>Certaines colonies sont en état d'abandon permanent : aucune sécurité, aucun PNJ, uniquement des journaux, des points de données et quelques matériaux au sol.</p>
+
+<p>Leur particularité est qu'elles n'apparaissent souvent pas sur la carte du système tant qu'on n'a pas activé une balise de données locale. On les repère via les postes d'écoute ou les listes communautaires. Petite astuce : basculer entre les modes Ouvert, Privé et Solo fait réapparaître les matériaux et réinitialise les points de données.</p>
+
+<h3>Le pillage tranquille en système Anarchy</h3>
+
+<p>Les colonies contrôlées par une faction <b>Anarchy</b> sont un terrain de jeu idéal. Y voler, forcer des casiers, déclencher une alarme — rien de tout cela n'entraîne d'amende, de prime ni de notoriété. La faction oublie tout dès que vous repartez, ce qui autorise les visites en boucle.</p>
+
+<p>Pour opérer discrètement, restez hors du champ de vision des PNJ et des caméras, utilisez le <b>Profile Analyser</b> pour cloner un profil de sécurité, et ouvrez ce qui est verrouillé à l'Arc Cutter ou à l'E-Breach. Mais en Anarchy, même si l'alarme sonne, vous ne risquez rien de légal.</p>
+
+<h3>Les récompenses de mission</h3>
+
+<p>Depuis le rééquilibrage de 2024, les terminaux permettent de <b>filtrer les missions par matériau offert</b> en récompense. Les missions de transport, de collecte de données et de récupération n'exigent aucun combat. Les donneurs d'ordre présents dans le concourse acceptent parfois de <b>négocier</b>, ce qui peut doubler la récompense.</p>
+
+<div class="cw"><span class="t">Ce qu'il faut éviter avec un rang de combat nul</span>
+Les <b>raids de colonie</b> et les <b>zones de conflit à pied</b> impliquent un combat garanti. Le vol de données protégées dans une colonie active <b>hors Anarchy</b> déclenche une réponse armée. Tout le reste décrit ci-dessus est faisable en solo, sans risque, quel que soit votre rang.</div>
+
+<h2 id="c5"><span class="num">05</span>L'équipement du bon pillard</h2>
+
+<p>Voici une vérité contre-intuitive : <b>l'Artemis n'est pas la bonne combinaison pour récolter les matériaux de l'Artemis</b>.</p>
+
+<p>L'Artemis est un outil d'exobiologie, seule à posséder le Genetic Sampler. Mais pour fouiller efficacement une colonie, il faut l'<b>Arc Cutter</b> — l'outil de découpe qui ouvre les panneaux et une bonne partie des conteneurs. Et l'Arc Cutter est <b>exclusif à la Maverick Suit</b>.</p>
+
+<div class="tbl">
+<table>
+<tr><th>Outil</th><th>Fonction</th><th>Disponibilité</th></tr>
+<tr><td><b>Arc Cutter</b></td><td>Découpe panneaux et conteneurs</td><td class="lose">Maverick uniquement</td></tr>
+<tr><td><b>Genetic Sampler</b></td><td>Prélèvement exobiologique</td><td class="lose">Artemis uniquement</td></tr>
+<tr><td><b>E-Breach / Energylink</b></td><td>Ouvre portes verrouillées et conteneurs</td><td class="win">Toutes combinaisons</td></tr>
+<tr><td><b>Profile Analyser</b></td><td>Clone un profil de sécurité</td><td class="win">Toutes combinaisons</td></tr>
+</table>
+</div>
+
+<p>La conclusion est donc simple : <b>achetez une Maverick grade 3 en plus de votre Artemis</b>. Guettez une version pré-améliorée à Pioneer Supplies. Le grade 3 suffit largement pour du farming pacifique, et vous n'aurez jamais besoin d'y investir davantage.</p>
+
+<p>Pensez aussi aux consommables — cellules d'énergie pour recharger la combinaison, medkits — et à la capacité du sac à dos, que le mod Extra Backpack Capacity double. Une astuce de terrain consiste à garer le SRV au milieu de la colonie pour s'en servir de dépôt intermédiaire.</p>
+
+<h2 id="c6"><span class="num">06</span>Les mods et leurs ingénieurs</h2>
+
+<p>Pour un exobiologiste, quatre mods valent le détour, et il se trouve qu'aucun n'exige de passer par un ingénieur guerrier.</p>
+
+<div class="tbl">
+<table>
+<tr><th>Mod</th><th>Effet</th><th>Ingénieurs</th><th>Coût</th></tr>
+<tr><td><b>Extra Backpack Capacity</b></td><td>Double la capacité du sac</td><td>Domino Green, Wellington Beck</td><td class="n">750 000</td></tr>
+<tr><td><b>Improved Battery Capacity</b></td><td>+50 % d'énergie</td><td>Wellington Beck, Oden Geiger</td><td class="n">750 000</td></tr>
+<tr><td><b>Reduced Tool Battery Consumption</b></td><td>Outils moins gourmands</td><td>Domino Green, Wellington Beck</td><td class="n">500 000</td></tr>
+<tr><td><b>Increased Sprint Duration</b></td><td>Sprint prolongé</td><td>Terra Velasquez, Baltanos</td><td class="n">750 000</td></tr>
+<tr><td><b>Improved Jump Assist</b></td><td>Jetpack prolongé</td><td>Yarden Bond, Baltanos</td><td class="n">750 000</td></tr>
+<tr><td>Night Vision</td><td>Vision nocturne</td><td>Oden Geiger, Yi Shen</td><td class="n">1 000 000</td></tr>
+</table>
+</div>
+
+<div class="ci"><span class="t">La combinaison gagnante pour l'exobiologie</span>
+<b>Extra Backpack Capacity</b> et <b>Improved Battery Capacity</b> d'abord — le Genetic Sampler est gourmand en énergie, et vous voulez rester longtemps sur le terrain. Puis <b>Reduced Tool Battery Consumption</b> et enfin un mod de mobilité, sprint ou jetpack selon votre style.
+<p>La Night Vision est agréable mais coûteuse et profondément enfouie dans l'arbre de déblocage. Le Genetic Sampler émet déjà une impulsion qui révèle les spécimens : ne la priorisez pas.</p>
+</div>
+
+<h3>Les ingénieurs pacifiques</h3>
+
+<div class="tbl">
+<table>
+<tr><th>Ingénieur</th><th>Système</th><th>Condition de déblocage</th></tr>
+<tr><td><b>Domino Green</b></td><td>Orishis</td><td>Parcourir 100 al en navettes Apex, livrer 5 Push</td></tr>
+<tr><td><b>Wellington Beck</b></td><td>Jolapa</td><td>Vendre 25 médias aux barmen, livrer 5 Insight Entertainment Suites</td></tr>
+<tr><td><b>Yarden Bond</b></td><td>Bayan</td><td>Vendre 8 Smear Campaign Plans aux barmen</td></tr>
+<tr><td><b>Terra Velasquez</b></td><td>Shou Xing</td><td>6 missions Covert Theft ou Covert Heist (infiltration furtive)</td></tr>
+<tr><td><b>Oden Geiger</b></td><td>Candiaei</td><td>Vendre 20 échantillons biologiques ou données génétiques</td></tr>
+<tr><td><b>Kit Fowler</b></td><td>Capova</td><td>Vendre des Opinion Polls au bar</td></tr>
+</table>
+</div>
+
+<p><b>Domino Green est votre porte d'entrée.</b> Il ne demande que des trajets en navette et cinq unités de Push, et il vous réfère ensuite à Kit Fowler. Wellington Beck vient juste après : il fournit à lui seul trois des quatre mods essentiels.</p>
+
+<h3>Le cas Hero Ferrari</h3>
+
+<p>Un seul ingénieur à pied de la Bulle exige du combat : <b>Hero Ferrari</b>, qui demande de compléter dix zones de conflit au sol. C'est rédhibitoire pour un profil pacifique.</p>
+
+<div class="ct"><span class="t">Bonne nouvelle : vous pouvez l'ignorer complètement</span>
+Tous ses mods existent ailleurs. <b>Improved Jump Assist</b> se trouve chez Yarden Bond, qui ne demande que de vendre huit documents au bar. <b>Increased Sprint Duration</b> et <b>Increased Air Reserves</b> se trouvent chez Terra Velasquez, dont les missions d'infiltration se terminent sans tuer personne.
+<p><b>Un exobiologiste n'a jamais besoin de Hero Ferrari.</b></p>
+</div>
+
+<p>Mentionnons enfin les ingénieurs de <b>Colonia</b> — Baltanos, Eleanor Bresa, Rosa Dayette et Yi Shen. Ils proposent les mêmes mods et sont réputés plus faciles à débloquer. Le hic est qu'ils se trouvent à vingt-deux mille années-lumière. Si une expédition vous y mène un jour, profitez-en ; ne faites pas le voyage pour eux.</p>
+
+<h2 id="c7"><span class="num">07</span>Par où commencer</h2>
+
+<ol class="steps">
+<li><b>Achetez votre Artemis</b> à Pioneer Supplies, et guettez au passage une Maverick grade 3 pré-améliorée. Revenez chaque jeudi si le stock ne vaut rien.</li>
+<li><b>Débloquez Domino Green.</b> Cent années-lumière en navettes Apex et cinq unités de Push, aucun combat. Il ouvre la porte au reste de l'arbre.</li>
+<li><b>Enchaînez sur Wellington Beck</b> en vendant des médias aux barmen au fil de vos escales. Il fournit à lui seul l'essentiel de ce dont vous avez besoin.</li>
+<li><b>Cherchez des systèmes en <em>infrastructure failure</em></b> sur INARA ou EDSM, et enchaînez les missions de réactivation. Rallumez toujours le courant en premier.</li>
+<li><b>Visez vos quantités</b> : douze Suit Schematics, douze Health Monitors, douze Manufacturing Instructions, vingt-huit Aerogel, vingt-huit Graphene. Complétez les manques au bar.</li>
+<li><b>Montez les grades</b> à Pioneer Supplies, un palier à la fois, en installant un mod dès que le grade 2 est atteint.</li>
+<li><b>Ignorez Hero Ferrari</b> et gardez la Night Vision pour la fin, si vous y tenez.</li>
+</ol>
+
+<div class="ci"><span class="t">Un outil qui change tout</span>
+Installez <b>ED Odyssey Materials Helper</b>. Il suit vos matériaux en temps réel, gère une liste de courses en fonction de vos objectifs d'amélioration, et affiche une surimpression au comptoir de troc pour vous éviter les calculs mentaux. C'est l'outil que recommandent unanimement les farmeurs de matériaux à pied.</div>
+
+<h3>Le mot de la fin</h3>
+
+<p>Le farming de matériaux Odyssey souffre d'une réputation dissuasive qui date d'une époque révolue. Depuis 2024, la charge a été divisée par quatre, et l'essentiel du travail se fait dans des colonies vides où personne ne vous tirera dessus.</p>
+
+<p>Une Artemis grade 3 avec deux bons mods se monte en quelques sessions. C'est un objectif atteignable en une semaine de jeu tranquille, et cela transformera vos sorties d'exobiologie bien plus que n'importe quel module de vaisseau.</p>
+
+<footer>
+<b>Fiabilité des données.</b> Les quantités de matériaux proviennent d'INARA, base communautaire qui signale elle-même que ses valeurs peuvent comporter des imprécisions ; elles sont corroborées par le wiki Fandom. Certains prérequis d'ingénieurs varient selon les sources — vérifiez en jeu au moment du déblocage. L'état des systèmes (Anarchy, panne d'infrastructure) change en permanence : utilisez INARA ou EDSM en temps réel pour repérer des cibles proches de vous.<br><br>
+<b>Sources principales.</b> Notes de mise à jour Frontier Developments, wiki Elite Dangerous (Fandom), INARA, EDSM, E:D Black Box, forums Frontier, et retours de commandants sur Reddit et Steam.<br><br>
+<b>Contenu couvert.</b> À jour d'août 2026, incluant Update 18 (août 2024), la mise à jour Caspian Explorer (décembre 2025) et l'Operations Update (30 juin 2026).
+</footer>
+
+</div>
+</div>
+
+<script>
+window.addEventListener('scroll',function(){
+  var h=document.documentElement,b=document.body;
+  var st=h.scrollTop||b.scrollTop;
+  var sh=(h.scrollHeight||b.scrollHeight)-h.clientHeight;
+  document.getElementById('rp').style.width=(sh>0?(st/sh*100):0)+'%';
+});
+document.querySelectorAll('.toc a').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var t=document.querySelector(a.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>

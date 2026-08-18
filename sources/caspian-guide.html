@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CASPIAN TAI-CE // PROTOCOLE 1 MD CR</title>
+<style>
+html{background:#06080a !important;}
+body{background:#06080a !important;color:#dce6f0 !important;margin:0;padding:0;
+  font:15px/1.6 "Segoe UI",Roboto,system-ui,sans-serif;}
+.page{background:#06080a;min-height:100vh;padding-bottom:70px;position:relative;overflow-x:hidden}
+.page:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background:repeating-linear-gradient(0deg,rgba(255,113,0,.022) 0 1px,transparent 1px 3px);}
+.page:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background:radial-gradient(ellipse at 50% 0%,rgba(255,113,0,.08),transparent 62%);}
+.wrap{max-width:1200px;margin:0 auto;padding:0 22px;position:relative;z-index:2}
+
+/* ---------- HUD HEADER ---------- */
+.hdr{border-bottom:1px solid #ff7100;background:linear-gradient(180deg,#1a0f02,#06080a);
+  padding:26px 0 20px;position:relative;z-index:2}
+.hdr:after{content:"";position:absolute;bottom:-4px;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,#ff7100,transparent 45%)}
+.eyebrow{font-size:10px;letter-spacing:4px;color:#7d8fa3;text-transform:uppercase;margin-bottom:8px}
+h1{font-size:27px;font-weight:700;letter-spacing:3px;color:#ff8c1a;text-transform:uppercase;
+  text-shadow:0 0 22px rgba(255,113,0,.45);margin:0}
+.sub{font-size:13px;color:#8fa2b6;margin-top:7px;letter-spacing:.3px}
+.status{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{background:#0e1319;border:1px solid #24303c;padding:6px 12px;font-size:11px;
+  letter-spacing:1px;text-transform:uppercase;color:#8fa2b6;
+  clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,7px 100%,0 calc(100% - 7px))}
+.chip b{color:#5ecbf5;font-weight:600}
+.chip.w b{color:#ffb62e}
+
+/* ---------- NAV ---------- */
+nav{position:sticky;top:0;z-index:60;background:rgba(6,8,10,.97);
+  border-bottom:1px solid #1e2833;padding:10px 0;margin-bottom:30px;backdrop-filter:blur(8px)}
+nav .wrap{display:flex;flex-wrap:wrap;gap:5px}
+nav a{color:#7d8fa3;text-decoration:none;font-size:11px;letter-spacing:1.4px;
+  text-transform:uppercase;padding:6px 11px;border:1px solid transparent;transition:.15s}
+nav a:hover{color:#ff8c1a;border-color:#ff7100;background:rgba(255,113,0,.07)}
+
+/* ---------- SECTIONS ---------- */
+section{margin-bottom:38px;position:relative;z-index:2}
+h2{font-size:17px;color:#ff8c1a;text-transform:uppercase;letter-spacing:2.5px;
+  padding:9px 0 9px 16px;margin:0 0 8px;border-left:3px solid #ff7100;
+  background:linear-gradient(90deg,rgba(255,113,0,.11),transparent 62%);
+  text-shadow:0 0 14px rgba(255,113,0,.3)}
+h2 .meta{float:right;font-size:10px;color:#7d8fa3;letter-spacing:1px;padding-top:5px;font-weight:400}
+h3{font-size:13px;color:#5ecbf5;margin:24px 0 11px;padding-bottom:7px;
+  border-bottom:1px solid #1e2833;text-transform:uppercase;letter-spacing:2px}
+p{margin:0 0 12px;color:#c3d0dd}
+.lead{color:#8fa2b6;font-size:13px;margin:0 0 18px;padding-left:19px;border-left:1px solid #1e2833}
+
+/* ---------- LEGEND ---------- */
+.legend{display:flex;flex-wrap:wrap;gap:18px;margin:18px 0 16px;font-size:11px;
+  letter-spacing:1.4px;text-transform:uppercase}
+.legend span{display:flex;align-items:center;gap:8px;color:#c3d0dd}
+.dot{width:12px;height:12px;display:inline-block;flex:0 0 auto}
+.d1{background:#e5484d;box-shadow:0 0 9px rgba(229,72,77,.6)}
+.d2{background:#ffb62e;box-shadow:0 0 9px rgba(255,182,46,.6)}
+.d3{background:#5ecbf5;box-shadow:0 0 9px rgba(94,203,245,.6)}
+.d4{background:#3fcf6a;box-shadow:0 0 9px rgba(63,207,106,.6)}
+
+/* ---------- SLOT CARDS ---------- */
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(272px,1fr));gap:9px}
+.slot{background:#0c1116;border:1px solid #1e2833;border-left:4px solid;padding:11px 13px;
+  position:relative;transition:.15s;
+  clip-path:polygon(0 0,calc(100% - 11px) 0,100% 11px,100% 100%,11px 100%,0 calc(100% - 11px))}
+.slot:hover{background:#111820;border-color:#31404f;border-left-color:inherit}
+.s1{border-left-color:#e5484d}.s2{border-left-color:#ffb62e}
+.s3{border-left-color:#5ecbf5}.s4{border-left-color:#3fcf6a}
+.sid{font-size:10px;color:#6d7f92;font-family:ui-monospace,Consolas,monospace;letter-spacing:.5px}
+.mod{font-size:13.5px;font-weight:600;margin:3px 0 4px;color:#e8eef5}
+.act{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px}
+.s1 .act{color:#ff5f64}.s2 .act{color:#ffc451}.s3 .act{color:#7ad6f8}.s4 .act{color:#5ade82}
+.why{font-size:11.5px;color:#8fa2b6;margin-top:5px;line-height:1.5}
+.why b{color:#c3d0dd}
+.pin{position:absolute;top:9px;right:11px;font-size:9px;background:#3fcf6a;color:#04180a;
+  padding:2px 7px;font-weight:700;letter-spacing:1.2px}
+.s4.lock{background:linear-gradient(100deg,rgba(63,207,106,.08),#0c1116 55%)}
+
+/* ---------- TABLES ---------- */
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px;
+  background:#0a0e13;border:1px solid #1e2833}
+th{background:#111820;color:#5ecbf5;text-align:left;padding:10px 12px;font-size:10px;
+  text-transform:uppercase;letter-spacing:1.6px;border-bottom:1px solid #24303c}
+td{padding:9px 12px;border-bottom:1px solid #161e26;vertical-align:top;color:#c3d0dd}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,113,0,.05)}
+td b{color:#e8eef5}
+td.n{font-family:ui-monospace,Consolas,monospace;color:#ffc451;white-space:nowrap}
+.ok{color:#5ade82;font-weight:600}
+.no{color:#ff5f64;font-weight:600}
+td i{color:#7d8fa3;font-style:normal}
+
+/* ---------- CHECKLIST ---------- */
+.check{list-style:none;margin:12px 0;padding:0}
+.check li{background:#0c1116;border:1px solid #1e2833;margin-bottom:6px;padding:11px 13px;
+  display:flex;gap:12px;align-items:flex-start;cursor:pointer;transition:.15s;
+  clip-path:polygon(0 0,calc(100% - 9px) 0,100% 9px,100% 100%,9px 100%,0 calc(100% - 9px))}
+.check li:hover{border-color:#ff7100;background:#12191f}
+.check li.done{opacity:.4;background:#080c10}
+.check li.done .ctxt{text-decoration:line-through}
+.bx{width:16px;height:16px;flex:0 0 auto;border:2px solid #4d5f72;margin-top:2px;position:relative}
+.check li.done .bx{background:#3fcf6a;border-color:#3fcf6a}
+.check li.done .bx:after{content:"✓";position:absolute;inset:0;color:#04180a;font-size:12px;
+  font-weight:900;display:flex;align-items:center;justify-content:center}
+.ctxt{flex:1;font-size:13.5px;color:#c3d0dd}
+.ctxt b{color:#e8eef5}
+.ctxt em{color:#8fa2b6;font-style:normal;font-size:11.5px;display:block;margin-top:3px;line-height:1.5}
+
+/* ---------- CALLOUTS ---------- */
+.cw,.ci,.cf{padding:13px 16px;margin:16px 0;font-size:13px;border:1px solid;border-left-width:3px;color:#c3d0dd;
+  clip-path:polygon(0 0,calc(100% - 11px) 0,100% 11px,100% 100%,11px 100%,0 calc(100% - 11px))}
+.cw{background:rgba(229,72,77,.07);border-color:#5c2427;border-left-color:#e5484d}
+.ci{background:rgba(94,203,245,.06);border-color:#1d3d4d;border-left-color:#5ecbf5}
+.cf{background:rgba(160,107,212,.08);border-color:#3d2a52;border-left-color:#a06bd4}
+.cw .t,.ci .t,.cf .t{font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:2px;
+  margin-bottom:7px;display:block}
+.cw .t{color:#ff5f64}.ci .t{color:#7ad6f8}.cf .t{color:#bb8ce6}
+.cw b,.ci b,.cf b{color:#e8eef5}
+
+/* ---------- GATE ---------- */
+.gate{background:linear-gradient(90deg,rgba(63,207,106,.13),transparent 70%);
+  border:1px solid #1f4d2f;border-left:3px solid #3fcf6a;padding:12px 16px;margin-top:18px;
+  font-size:13px;color:#c3d0dd;
+  clip-path:polygon(0 0,calc(100% - 11px) 0,100% 11px,100% 100%,11px 100%,0 calc(100% - 11px))}
+.gate b{color:#5ade82;text-transform:uppercase;font-size:10px;letter-spacing:2px}
+
+/* ---------- MISC ---------- */
+.tag{display:inline-block;font-size:9px;font-weight:700;padding:2px 6px;letter-spacing:1.2px;
+  vertical-align:middle;margin-left:5px}
+.t1{background:#123322;color:#5ade82}
+.t2{background:#0f2c3a;color:#7ad6f8}
+.t3{background:#3a2d0f;color:#ffc451}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:860px){.grid2{grid-template-columns:1fr}}
+.seq{counter-reset:s;list-style:none;padding:0;margin:12px 0}
+.seq li{counter-increment:s;padding:9px 0 9px 40px;position:relative;
+  border-bottom:1px solid #161e26;font-size:13.5px;color:#c3d0dd}
+.seq li:before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:9px;
+  width:26px;height:22px;background:#ff7100;color:#06080a;display:flex;align-items:center;
+  justify-content:center;font-size:11px;font-weight:700;font-family:ui-monospace,monospace;
+  clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,5px 100%,0 calc(100% - 5px))}
+.seq li b{color:#e8eef5}
+.total{background:linear-gradient(90deg,rgba(255,113,0,.16),transparent 72%);
+  border:1px solid #5c3406;border-left:3px solid #ff7100;padding:16px 20px;margin-top:16px}
+.total b{color:#ff8c1a;font-size:16px;letter-spacing:1.5px;text-transform:uppercase}
+.total p{margin:9px 0 0;font-size:13px;color:#8fa2b6}
+.total p b{color:#e8eef5;font-size:13px;letter-spacing:0;text-transform:none}
+footer{border-top:1px solid #1e2833;margin-top:44px;padding-top:20px;font-size:11.5px;
+  color:#7d8fa3;line-height:1.9}
+
+/* ---------- PROGRESS ---------- */
+.prog{position:fixed;bottom:0;left:0;right:0;background:#0a0e13;border-top:1px solid #ff7100;
+  padding:10px 22px;font-size:11px;z-index:70;display:flex;justify-content:space-between;
+  align-items:center;letter-spacing:1.5px;text-transform:uppercase;color:#8fa2b6}
+.bar{flex:1;height:4px;background:#161e26;margin:0 18px;overflow:hidden}
+.fill{height:100%;background:linear-gradient(90deg,#ff7100,#ffb62e);width:0;transition:.3s;
+  box-shadow:0 0 12px rgba(255,113,0,.7)}
+#ppct{color:#ff8c1a;font-weight:700}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="hdr"><div class="wrap">
+  <div class="eyebrow">Pilots Federation // Dossier opérationnel</div>
+  <h1>Caspian &laquo;&nbsp;USS Enterprise&nbsp;&raquo; — TAI-CE</h1>
+  <div class="sub">Protocole ordonné : de 45 480 912 Cr à 1 000 000 000 Cr par l'exploration et l'exobiologie</div>
+  <div class="status">
+    <div class="chip">Position <b>Cubeo</b></div>
+    <div class="chip">Solde <b>45 480 912 Cr</b></div>
+    <div class="chip">Rebuy <b>92 967 Cr</b></div>
+    <div class="chip">Explorer <b>Pathfinder</b></div>
+    <div class="chip w">Combat <b>Harmless</b></div>
+    <div class="chip w">Exobiologist <b>Mostly Directionless</b></div>
+    <div class="chip w">Mercenary <b>Defenceless</b></div>
+    <div class="chip w">Ingénieurs <b>0 débloqué</b></div>
+  </div>
+</div></div>
+
+<nav><div class="wrap">
+  <a href="#map">Carte des slots</a>
+  <a href="#p1">01 Reconfiguration</a>
+  <a href="#p2">02 Farseer</a>
+  <a href="#p3">03 Guardian</a>
+  <a href="#p4">04 Artemis</a>
+  <a href="#p5">05 Apprentissage</a>
+  <a href="#p6">06 Expédition</a>
+  <a href="#p7">07 Jalons</a>
+  <a href="#ref">Fiches réflexes</a>
+  <a href="#chg">Corrections</a>
+</div></nav>
+
+<div class="wrap">
+
+<!-- ===== CARTE DES SLOTS ===== -->
+<section id="map">
+<h2>Carte des slots &mdash; à faire avant toute ingénierie</h2>
+<p class="lead">Ouvre l'Outfitting à Cubeo et traite les cases dans l'ordre des couleurs : rouge d'abord (tu récupères des crédits), puis jaune, puis bleu. Les cases vertes ne se touchent sous aucun prétexte.</p>
+
+<div class="legend">
+  <span><i class="dot d1"></i>Vendre</span>
+  <span><i class="dot d2"></i>Alléger / downsize</span>
+  <span><i class="dot d3"></i>Acheter</span>
+  <span><i class="dot d4"></i>Garder tel quel</span>
+</div>
+
+<h3>Hardpoints</h3>
+<div class="slots">
+  <div class="slot s1"><div class="sid">mediumhardpoint2</div><div class="mod">Burst Laser tourelle</div><div class="act">Vendre</div><div class="why">Inefficace contre les Sentinels (résistance thermique). Inutile ailleurs.</div></div>
+  <div class="slot s1"><div class="sid">mediumhardpoint3</div><div class="mod">Pulse Laser gimballed</div><div class="act">Vendre</div><div class="why">Idem &mdash; le combat Guardian se fait en SRV.</div></div>
+  <div class="slot s1"><div class="sid">mediumhardpoint4</div><div class="mod">Pulse Laser gimballed</div><div class="act">Vendre</div><div class="why">Idem.</div></div>
+  <div class="slot s1"><div class="sid">mediumhardpoint5</div><div class="mod">Multi-cannon tourelle</div><div class="act">Vendre</div><div class="why">Masse et énergie pour rien.</div></div>
+  <div class="slot s4"><div class="sid">tinyhardpoint1</div><div class="mod">Heat Sink Launcher</div><div class="act">Garder</div><div class="why">Indispensable au SCO et aux étoiles chaudes.</div></div>
+  <div class="slot s3"><div class="sid">tinyhardpoint2</div><div class="mod">&rarr; Point Defence</div><div class="act">Acheter</div><div class="why">Remplace le FS Wake Scanner. Abat les missiles des Sentinels. <b>Monter sur le dessus de la coque.</b></div></div>
+  <div class="slot s1"><div class="sid">tinyhardpoint3</div><div class="mod">Heat Sink Launcher (2ᵉ)</div><div class="act">Vendre</div><div class="why">Un seul suffit.</div></div>
+  <div class="slot s3"><div class="sid">tinyhardpoint4</div><div class="mod">&rarr; Point Defence</div><div class="act">Acheter</div><div class="why">Remplace le Chaff. Deuxième couverture anti-missiles.</div></div>
+  <div class="slot s1"><div class="sid">tinyhardpoint5</div><div class="mod">Pulse Wave Analyser cl.4</div><div class="act">Vendre</div><div class="why">Module de <b>minage</b>. Aucun usage ici.</div></div>
+  <div class="slot s1"><div class="sid">tinyhardpoint6</div><div class="mod">ECM</div><div class="act">Vendre</div><div class="why">Le Point Defence fait mieux le travail.</div></div>
+</div>
+
+<h3>Optional internals</h3>
+<div class="slots">
+  <div class="slot s4"><div class="sid">slot01_size7</div><div class="mod">Fuel Scoop 7A</div><div class="act">Garder</div><div class="why">Ta meilleure pièce après le FSD. Scoop rapide = autonomie.</div></div>
+  <div class="slot s4"><div class="sid">slot02_size6</div><div class="mod">AFMU 6A</div><div class="act">Garder</div><div class="why">Un seul, celui-ci. Répare après surchauffe neutron.</div></div>
+  <div class="slot s1"><div class="sid">slot03_size6</div><div class="mod">AFMU 6A (2ᵉ)</div><div class="act">Vendre</div><div class="why">Redondant.</div></div>
+  <div class="slot s1"><div class="sid">slot04_size5</div><div class="mod">AFMU 5A (3ᵉ)</div><div class="act">Vendre</div><div class="why">Redondant.</div></div>
+  <div class="slot s2"><div class="sid">slot05_size5</div><div class="mod">Shield Generator 5D</div><div class="act">Alléger</div><div class="why">Garde un bouclier (atterrissages ratés), mais descends en taille.</div></div>
+  <div class="slot s1"><div class="sid">slot06_size5</div><div class="mod">Repair Limpet Ctrl 5D</div><div class="act">Vendre</div><div class="why">AFMU + prudence suffisent.</div></div>
+  <div class="slot s4 lock"><span class="pin">NOMAD</span><div class="sid">slot07_size5</div><div class="mod">Vessel Hangar taille 5</div><div class="act">Garder &mdash; évaluer Mk II</div><div class="why">Ex-&laquo;&nbsp;Fighter Hangar&nbsp;&raquo;, renommée en juin 2026. Compare le <b>Mk II</b> (exclusif Caspian) : prends-le <b>seulement s'il est plus léger</b>.</div></div>
+  <div class="slot s4 lock"><span class="pin">SRV ×2</span><div class="sid">slot08_size4</div><div class="mod">Planetary Vehicle Hangar 4</div><div class="act">Garder</div><div class="why">Tes 2 SRV. <b>Ce sont eux qui feront le site Guardian</b>, et le Nomad n'a pas de soute.</div></div>
+  <div class="slot s4"><div class="sid">slot09_size4</div><div class="mod">Cargo Rack 4E</div><div class="act">Garder</div><div class="why">Nécessaire pour ramasser les matériaux Guardian.</div></div>
+  <div class="slot s1"><div class="sid">slot10_size3</div><div class="mod">Cargo Rack 3E</div><div class="act">Vendre</div><div class="why">Un rack suffit.</div></div>
+  <div class="slot s3"><div class="sid">slot11_size2</div><div class="mod">&rarr; Collector Limpet Ctrl</div><div class="act">Remplacer</div><div class="why">Vire le Research Limpet. Le collecteur sert au farm HGE (Phase 2).</div></div>
+  <div class="slot s4"><div class="sid">slot12_size1</div><div class="mod">Detailed Surface Scanner</div><div class="act">Garder</div><div class="why">Le cœur du métier. Sondes = bonus First Mapped.</div></div>
+  <div class="slot s4"><div class="sid">slot13_size1</div><div class="mod">Supercruise Assist</div><div class="act">Garder</div><div class="why">Confort pur.</div></div>
+  <div class="slot s4"><div class="sid">slot14_size1</div><div class="mod">Advanced Docking Computer</div><div class="act">Garder</div><div class="why">Confort pur.</div></div>
+</div>
+
+<div class="ci"><span class="t">Emplacement à libérer pour plus tard</span>
+Le <b>Guardian FSD Booster 5H</b> (+10,5 LY, 1,3 t seulement) ira dans un optional internal en Phase 3. Après les ventes ci-dessus tu auras la place. Ne rachète rien pour combler les trous avant de l'avoir.</div>
+
+<h3>Core internals</h3>
+<div class="slots">
+  <div class="slot s2"><div class="sid">powerplant</div><div class="mod">Power Plant 8A</div><div class="act">Downsize</div><div class="why">Le plus petit <b>A</b> qui alimente tout (le A dissipe mieux &mdash; utile en SCO).</div></div>
+  <div class="slot s4"><div class="sid">mainengines</div><div class="mod">Thrusters 7A Gravity Mk II</div><div class="act">Garder</div><div class="why">Exclusif Caspian, déjà optimisé. <b>N'y touche pas.</b></div></div>
+  <div class="slot s4"><div class="sid">frameshiftdrive</div><div class="mod">FSD SCO 8A Overcharge Mk II</div><div class="act">Garder &rarr; ingénierer</div><div class="why">Classe 8 exclusive Caspian. Boost neutron <b>500 %</b> et sans les 1 % de dégâts habituels. Farseer en Phase 2.</div></div>
+  <div class="slot s2"><div class="sid">lifesupport</div><div class="mod">Life Support 5D</div><div class="act">Downsize</div><div class="why">Le plus petit D fonctionnel.</div></div>
+  <div class="slot s2"><div class="sid">powerdistributor</div><div class="mod">Power Distributor 7A</div><div class="act">Downsize</div><div class="why">Petit D : tu n'as besoin que de booster.</div></div>
+  <div class="slot s2"><div class="sid">radar</div><div class="mod">Sensors 8D</div><div class="act">Downsize</div><div class="why">Puis Lightweight chez Farseer.</div></div>
+  <div class="slot s2"><div class="sid">fueltank</div><div class="mod">Fuel Tank 7C &mdash; 128 t</div><div class="act">Taille 5-6</div><div class="why"><b>Ne descends pas sous la taille 5</b> : le SCO en overcharge boit énormément.</div></div>
+  <div class="slot s4"><div class="sid">armour</div><div class="mod">Lightweight Alloy</div><div class="act">Garder</div><div class="why">Le plus léger = la meilleure portée.</div></div>
+</div>
+
+<h3>Portée de saut attendue <span class="tag t3">EST</span></h3>
+<table>
+<tr><th>Étape</th><th>Portée</th><th>Écart</th></tr>
+<tr><td>Build actuel, réservoir plein</td><td class="n">~40-48 LY</td><td>&mdash;</td></tr>
+<tr><td>Après la carte des slots ci-dessus</td><td class="n">~55-62 LY</td><td class="n">+14</td></tr>
+<tr><td>+ Farseer FSD G5 + Mass Manager</td><td class="n">~68-75 LY</td><td class="n">+13</td></tr>
+<tr><td>+ Guardian FSD Booster 5H</td><td class="n">~78-85 LY</td><td class="n">+10,5</td></tr>
+</table>
+<div class="ci"><span class="t">Le prix de ta contrainte Nomad</span>
+Vessel Hangar + Vehicle Hangar + 2 SRV te coûtent environ <b>15 à 20 LY</b>. C'est un choix défendable : le Nomad te fait gagner plus de temps en exobio qu'il ne t'en coûte en trajet. Mais sache que tu le paies.<br><br>
+<b>Vérifie tes chiffres réels sur edsy.org avant d'acheter quoi que ce soit.</b> Mes valeurs sont des estimations calculées sur une coque de 950 t.</div>
+</section>
+
+<!-- ===== PHASE 1 ===== -->
+<section id="p1">
+<h2>01 &middot; Reconfiguration <span class="meta">1 session &middot; Cubeo &middot; bilan positif</span></h2>
+<ul class="check">
+<li><i class="bx"></i><span class="ctxt"><b>Vendre les 8 modules rouges</b> de la carte ci-dessus<em>Outfitting &rarr; sélectionner &rarr; Sell. Tu récupères des crédits.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Acheter 2× Point Defence</b> et les monter sur les hardpoints du <b>dessus</b> de la coque<em>Critique pour le site Guardian : ils abattent les missiles des Sentinels pendant que tu es en SRV.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Acheter 1× Collector Limpet Controller</b> (slot11)<em>Sert au farm HGE en Phase 2. Emporte quelques limpets.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Comparer Vessel Hangar Mk I vs Mk II</b> dans l'Outfitting<em>Le Mk II est exclusif au Caspian / Panther Clipper Mk II / Type-11. Prends-le seulement s'il est plus léger. Le Nomad fonctionne avec les deux.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Downsizer les 6 modules jaunes</b><em>Power Plant, Life Support, Power Distributor, Sensors, Fuel Tank, Shield.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Vérifier la portée finale sur edsy.org</b><em>Charge ton loadout, teste les variantes avant de payer.</em></span></li>
+</ul>
+<div class="ci"><span class="t">Où trouver les pièces depuis Cubeo</span>
+Je n'ai pas l'inventaire temps réel des stations, et il varie. Procédure fiable :<br>
+<b>inara.cz</b> &rarr; <i>Galaxy</i> &rarr; <b>Nearest outfitting</b> &rarr; système de référence <b>Cubeo</b> &rarr; coche <b>Large pad</b> &rarr; cherche module par module &rarr; trie par distance.<br><br>
+Repère les 2-3 stations qui couvrent le plus de pièces et fais <b>une seule tournée</b>. Cubeo est un gros système impérial : tu devrais trouver l'essentiel sur place.</div>
+<div class="gate"><b>Feu vert Phase 2 &mdash;</b> armes vendues, 2 Point Defence montés sur le dessus, modules allégés, portée &ge; 55 LY, Nomad et 2 SRV toujours à bord.</div>
+</section>
+
+<!-- ===== PHASE 2 ===== -->
+<section id="p2">
+<h2>02 &middot; Felicity Farseer <span class="meta">3-5 sessions &middot; le plus gros gain du plan</span></h2>
+<p class="lead">Un seul ingénieur compte pour ton objectif. Ne disperse pas ton temps de jeu sur les autres.</p>
+<table>
+<tr><th>Élément</th><th>Détail</th></tr>
+<tr><td>Localisation</td><td><b>Deciat</b> &mdash; planète Deciat 6 A, base <i>Farseer Inc</i></td></tr>
+<tr><td>Rang requis</td><td>Explorer <b>Scout</b> &mdash; tu es <b>Pathfinder</b> <span class="ok">&check; acquis</span></td></tr>
+<tr><td>Invitation</td><td>Fournir <b>1 Meta-Alloy</b></td></tr>
+<tr><td>Montée au Grade 5</td><td>Lui vendre ~<b>24 M Cr</b> de données d'exploration <span class="tag t2">COM</span></td></tr>
+</table>
+<ul class="check">
+<li><i class="bx"></i><span class="ctxt"><b>Acheter 1 Meta-Alloy</b><em>Inara &rarr; cherche « Meta-Alloys » &rarr; bouton Find Trade Offer. Région de Maia historiquement, et de nombreux Fleet Carriers en vendent.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Aller à Deciat et débloquer Farseer</b></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Farmer les matériaux</b> (une session dédiée, pas des allers-retours)</span></li>
+<li><i class="bx"></i><span class="ctxt"><b>FSD &rarr; Increased Range</b> G1 &rarr; G5</span></li>
+<li><i class="bx"></i><span class="ctxt"><b>FSD &rarr; Mass Manager</b> (expérimental, débloqué au G5)<em>Plus économe en carburant que Deep Charge — ce qui compte à l'ère du SCO, plus gourmand.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Sensors &rarr; Lightweight</b><em>Gain de masse gratuit.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Ne pas toucher aux thrusters</b><em>Tes Gravity Optimised Mk II sont déjà supérieurs.</em></span></li>
+</ul>
+<h3>Où farmer les matériaux &mdash; sans aucun combat</h3>
+<table>
+<tr><th>Catégorie</th><th>Lieu</th><th>Méthode</th></tr>
+<tr><td><b>Raw</b></td><td>Surface de planètes, en SRV</td><td>Cratères et filons. Le DSS révèle les zones géologiques.</td></tr>
+<tr><td><b>Encoded</b></td><td><b>Jameson Crash Site</b><br>HIP 12099, planète 1 B</td><td>Boucle en SRV, aucune opposition. La référence.</td></tr>
+<tr><td><b>Manufactured</b></td><td><b>HGE</b> (High Grade Emissions)</td><td>Systèmes très peuplés Empire/Fédération en état <i>none</i>. Collector limpets. Ton SCO aide : les HGE sont souvent très loin.</td></tr>
+<tr><td><b>Tout</b></td><td><b>Material Traders</b></td><td>Échange tes surplus. Taux défavorable, gain de temps énorme.</td></tr>
+</table>
+<div class="cw"><span class="t">Astuce limpets</span>
+Ne cible pas le matériau que tu veux ramasser : le limpet qui le récupère meurt dès qu'il l'a livré. Laisse-le travailler seul.</div>
+<div class="gate"><b>Feu vert Phase 3 &mdash;</b> FSD en Increased Range G5 + Mass Manager posé, portée &ge; 68 LY.</div>
+</section>
+
+<!-- ===== PHASE 3 ===== -->
+<section id="p3">
+<h2>03 &middot; Guardian FSD Booster <span class="meta">1-2 sessions &middot; +10,5 LY définitifs</span></h2>
+<div class="cf"><span class="t">Correction assumée</span>
+Je t'avais d'abord dit de sauter cette étape, puis de garder des armes pour la faire. <b>Les deux étaient faux.</b><br><br>
+Le booster ne pèse que <b>1,3 t</b> pour +10,5 LY &mdash; le meilleur rapport du jeu. Le déblocage est <b>définitif</b> : une fois fait, tu en rachètes autant que tu veux, pour n'importe quel vaisseau, à vie. Il se cumule avec Farseer <b>et</b> avec les boosts neutron.<br><br>
+Et surtout : <b>le combat se fait en SRV, pas au vaisseau.</b> Ton rang Combat Harmless est hors sujet. Les lasers de vaisseau sont même <b>inefficaces</b> contre les Sentinels (résistance thermique) &mdash; c'est le plasma du SRV qui fait le travail.</div>
+
+<h3>Ce que ça coûte</h3>
+<table>
+<tr><th>Taille</th><th>Bonus</th><th>Prix</th><th>Masse</th></tr>
+<tr><td>3H</td><td class="n">+7,75 LY</td><td class="n">1 579 920 Cr</td><td class="n">1,3 t</td></tr>
+<tr><td>4H</td><td class="n">+9,25 LY</td><td class="n">3 163 887 Cr</td><td class="n">1,3 t</td></tr>
+<tr><td><b>5H</b> &larr; ta cible</td><td class="n">+10,5 LY</td><td class="n">6 321 023 Cr</td><td class="n">1,3 t</td></tr>
+</table>
+
+<h3>Matériaux à réunir pour le Tech Broker</h3>
+<table>
+<tr><th>Qté</th><th>Matériau</th><th>Où</th></tr>
+<tr><td class="n">1</td><td>Guardian Module Blueprint Fragment</td><td>Site Guardian</td></tr>
+<tr><td class="n">21</td><td>Guardian Power Cell</td><td>Site Guardian</td></tr>
+<tr><td class="n">21</td><td>Guardian Technology Component</td><td>Site Guardian</td></tr>
+<tr><td class="n">24</td><td>Focus Crystals <i>(manufactured)</i></td><td><b>Dav's Hope</b> ou Material Trader</td></tr>
+<tr><td class="n">8</td><td>HN Shock Mount <i>(commodité)</i></td><td>Achat en station (Inara)</td></tr>
+</table>
+
+<h3>Préparation</h3>
+<ul class="check">
+<li><i class="bx"></i><span class="ctxt"><b>Vérifier les 2 Point Defence sur le dessus de la coque</b><em>Ils abattront les missiles pendant que tu es en SRV.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Reconfigurer les commandes du SRV en mode FPS</b><em>Souris = tourelle, ZQSD = déplacement. C'est ce qui débloque le plus de joueurs. Désactive aussi le drive assist.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Emporter tes 2 SRV</b> (tu les as déjà)</span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Cap sur Synuefe NL-N C23-4, planète B 3</b><em>Alternative : HD 63154 B 3 A.</em></span></li>
+</ul>
+
+<h3>Procédure sur site</h3>
+<ol class="seq">
+<li>Scanne la planète pour faire apparaître la <b>Guardian Structure</b> dans le panneau de navigation, puis descends.</li>
+<li><b>Pose-toi en bordure du site, pas dedans.</b> Être <i>à l'intérieur</i> du périmètre désactive les tourelles de ton SRV. Assez près pour la couverture Point Defence, assez loin pour rester armé.</li>
+<li>Déploie le SRV. Pips <b>2/0/4</b> en combat, <b>4/0/2</b> si tu encaisses une salve de missiles.</li>
+<li>Active les <b>2 pylônes primaires</b> &rarr; ça active les 4 autres &rarr; les Sentinels apparaissent.</li>
+<li>Détruis les Sentinels <b>un par un, à mesure qu'ils apparaissent</b>. Ne laisse jamais le nombre monter.</li>
+<li>Tire sur les <b>panneaux destructibles</b> de certains pylônes &rarr; les matériaux tombent &rarr; ramasse-les.</li>
+<li>Charge les pylônes en tirant sur <b>l'orbe bleu central</b>.</li>
+<li>Un <b>grand orbe</b> apparaît. Scanne-le &rarr; tu obtiens le Blueprint Fragment. Ce scan déclenche <b>une dernière vague</b> &mdash; replie-toi sous la couverture des Point Defence.</li>
+<li>Ensuite tu peux réactiver les pylônes <b>sans déclencher de nouveaux Sentinels</b>.</li>
+<li>Retourne au vaisseau, <b>quitte vers le menu principal, reconnecte-toi</b> : les matériaux réapparaissent. Répète jusqu'à avoir tes quantités.</li>
+</ol>
+
+<h3>Les 6 règles qui rendent les Sentinels faciles</h3>
+<table>
+<tr><th>#</th><th>Règle</th><th>Pourquoi</th></tr>
+<tr><td class="n">1</td><td>Un seul Sentinel à la fois</td><td>À plusieurs, ils te retournent le SRV</td></tr>
+<tr><td class="n">2</td><td><b>Ne jamais leur présenter l'avant du SRV</b></td><td>De face tu es retourné facilement ; de côté, beaucoup plus stable</td></tr>
+<tr><td class="n">3</td><td>Frein à main serré pour tirer</td><td>Stabilise et empêche d'être renversé</td></tr>
+<tr><td class="n">4</td><td>Utiliser les couvertures</td><td>Sors, tire, replie-toi avant l'impact. Ils ne sont pas malins</td></tr>
+<tr><td class="n">5</td><td>Anticiper leur cycle</td><td>Tir direct &rarr; pause &rarr; charge &rarr; missiles &rarr; pause &rarr; boucle. Bascule en boucliers dès la charge</td></tr>
+<tr><td class="n">6</td><td>Passer sous le Sentinel si les missiles arrivent</td><td>La trajectoire haut-bas fait exploser le missile sur lui</td></tr>
+</table>
+
+<div class="cw"><span class="t">Deux pièges</span>
+<b>1.</b> Les missiles se <b>répartissent entre les cibles</b> : vaisseau posé + SRV = deux chacun. C'est justement pourquoi le Point Defence du vaisseau vaut le coup.<br>
+<b>2.</b> Tu peux <b>réparer la coque du SRV par synthèse</b> en cours de route. Et si ça tourne mal, tu remontes au vaisseau. Rebuy à 93 000 Cr : aucun enjeu.</div>
+
+<h3>Finir le déblocage</h3>
+<ul class="check">
+<li><i class="bx"></i><span class="ctxt"><b>Focus Crystals ×24 &rarr; Dav's Hope</b><em>Hyades Sector DR-V c2-23 A 5, coordonnées 44.818 / −31.389. Boucle en SRV : ramasse, relog, les matériaux réapparaissent. Fastidieux mais sans aucun risque. Alternative : Material Trader.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>HN Shock Mount ×8 &rarr; achat en station</b><em>Inara &rarr; Find Trade Offer.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Trouver un Guardian Technology Broker</b><em>Inara &rarr; Galaxy &rarr; Nearest &rarr; Technology Broker. Jameson Memorial (Shinrarta Dezhra) en a un si tu y as accès.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Débloquer, puis acheter le 5H</b> (6 321 023 Cr)</span></li>
+</ul>
+<div class="ci"><span class="t">Tant que tu y es</span>
+Ramasse de quoi faire <b>plusieurs</b> Blueprint Fragments pendant tes relogs. Ça ne coûte que du temps sur place et ça t'ouvre d'autres modules Guardian plus tard sans y retourner.</div>
+<div class="gate"><b>Feu vert Phase 4 &mdash;</b> Guardian FSD Booster 5H monté, portée &ge; 78 LY.</div>
+</section>
+
+<!-- ===== PHASE 4 ===== -->
+<section id="p4">
+<h2>04 &middot; Combinaison Artemis <span class="meta">1 session + fond de tâche</span></h2>
+<div class="cw"><span class="t">Trois règles avant de dépenser</span>
+&bull; On <b>monte en grade</b> à <b>Pioneer Supplies</b> &middot; on <b>installe les mods</b> chez les <b>ingénieurs à pied</b> (différents de ceux des vaisseaux).<br>
+&bull; <b>Impossible de modifier une combinaison Grade 1.</b> Il faut d'abord la passer Grade 2.<br>
+&bull; Un mod installé <b>ne peut jamais être retiré ni remplacé</b>. Il faut racheter une combinaison pour changer.</div>
+<ul class="check">
+<li><i class="bx"></i><span class="ctxt"><b>Acheter l'Artemis Suit</b> à Pioneer Supplies<em>La seule combinaison avec le Genetic Sampler. C'est aussi celle qui a la meilleure mobilité et la meilleure batterie.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Monter Grade 1 &rarr; Grade 2</b> minimum</span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Inspecter les combinaisons premium pré-moddées</b> à chaque escale<em>Le wiki est franc : c'est beaucoup plus rapide et facile que l'ingénierie. Stock exclusif et limité par boutique — regarde systématiquement.</em></span></li>
+</ul>
+<h3>Les mods qui comptent pour l'exobio</h3>
+<table>
+<tr><th>Mod</th><th>Effet</th><th>Ingénieur</th><th>Accessible ?</th></tr>
+<tr><td><b>Improved Battery Capacity</b></td><td>+50 % batterie &mdash; compense la <b>forte consommation du Genetic Sampler</b></td><td>Wellington Beck, Oden Geiger<br><i>Colonia : Rosa Dayette</i></td><td class="ok">&check; Priorité 1</td></tr>
+<tr><td>Extra Backpack Capacity</td><td>Plus d'inventaire</td><td>Domino Green, Wellington Beck</td><td class="ok">&check; Oui</td></tr>
+<tr><td>Improved Jump Assist</td><td>Sauts plus longs &mdash; utile sur les grandes Colony Range</td><td><b>Yarden Bond</b> ou Hero Ferrari</td><td class="ok">&check; via Yarden Bond</td></tr>
+<tr><td>Increased Sprint Duration</td><td>Sprint plus long</td><td>divers</td><td class="ok">&check; Confort</td></tr>
+</table>
+<h3>Ingénieurs à pied &mdash; tri pour un Mercenary rang 0</h3>
+<table>
+<tr><th>Ingénieur</th><th>Système</th><th>Condition</th><th>Combat ?</th></tr>
+<tr><td><b>Domino Green</b></td><td>Orishis</td><td>Voyager <b>100 LY en navettes Apex</b> + fournir <b>5 Push</b></td><td class="ok">Aucun</td></tr>
+<tr><td><b>Wellington Beck</b></td><td>Jolapa</td><td>Vendre <b>25 médias</b> (Multimedia / Classic Entertainment / Cat media) aux barmen + <b>5 Insight Entertainment Suites</b></td><td class="ok">Aucun</td></tr>
+<tr><td>Kit Fowler</td><td>Capova</td><td>Vendre <b>20 opinion polls</b> + <b>5 Surveillance Equipment</b></td><td class="ok">Aucun</td></tr>
+<tr><td>Yarden Bond</td><td>&mdash;</td><td>Vendre <b>8 smear campaigns</b> aux barmen</td><td class="ok">Aucun</td></tr>
+<tr><td>Hero Ferrari</td><td>Siris</td><td>10 surface conflict zones + 15 Settlement Defense Plans</td><td class="no">Bloqué</td></tr>
+</table>
+<ul class="check">
+<li><i class="bx"></i><span class="ctxt"><b>Débloquer Domino Green</b> (100 LY en navettes Apex + 5 Push)</span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Débloquer Wellington Beck</b> (25 médias + 5 Insight Entertainment Suites)</span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Installer Improved Battery Capacity</b> &mdash; priorité absolue</span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Installer Extra Backpack Capacity</b></span></li>
+<li><i class="bx"></i><span class="ctxt">Optionnel : <b>Yarden Bond &rarr; Improved Jump Assist</b><em>Contourne Hero Ferrari, donc contourne le combat.</em></span></li>
+</ul>
+<div class="ci"><span class="t">Trouver les matériaux de déblocage</span>
+Inara &rarr; <i>Engineers</i> &rarr; l'ingénieur &rarr; clique sur le matériau &rarr; bouton <b>Find Trade Offer</b>. Ça liste les stations et Fleet Carriers qui en vendent.<br><br>
+<b>Note :</b> les ingénieurs de <b>Colonia</b> (Rosa Dayette, Baltanos, Eleanor Bresa, Yi Shen) proposent les mêmes mods et sont plus faciles à débloquer. À garder en tête si ton expédition de Phase 6 passe par là.</div>
+<div class="gate"><b>Feu vert Phase 5 &mdash;</b> Artemis Grade 2 ou plus, avec Improved Battery Capacity.</div>
+</section>
+
+<!-- ===== PHASE 5 ===== -->
+<section id="p5">
+<h2>05 &middot; Apprentissage près de la Bulle <span class="meta">4-8 sessions &middot; apprendre, pas maximiser</span></h2>
+<h3>Keybinds à configurer d'abord</h3>
+<ul class="check">
+<li><i class="bx"></i><span class="ctxt">Ship Mode Switch (Combat &harr; Analysis)</span></li>
+<li><i class="bx"></i><span class="ctxt">Enter FSS Mode</span></li>
+<li><i class="bx"></i><span class="ctxt">Enter DSS Mode + tir de sonde</span></li>
+<li><i class="bx"></i><span class="ctxt">Pips SYS / ENG / WEP</span></li>
+<li><i class="bx"></i><span class="ctxt">Boost &middot; Heat Sink</span></li>
+<li><i class="bx"></i><span class="ctxt">Deploy / Recall Vessel (Nomad) &mdash; via Role Panel</span></li>
+</ul>
+<div class="grid2">
+<div>
+<h3>Séquence de scan système</h3>
+<ol class="seq">
+<li>Sortie de saut &rarr; <b>écarte-toi de l'étoile</b> immédiatement</li>
+<li>Bascule en <b>Analysis Mode</b></li>
+<li>Maintiens le tir primaire &rarr; <b>honk</b></li>
+<li><b>Scoope</b> si l'étoile est scoopable (KGBFOAM)</li>
+<li><b>FSS</b> : balaie les fréquences, résous chaque corps</li>
+<li>Repère les <b>Biological Signals</b> &rarr; tes cibles</li>
+<li><b>DSS uniquement</b> : Earth-Like, Water, Ammonia, terraformables, <b>et tout corps à signaux bio</b></li>
+<li>Sondes jusqu'à <b>100 %</b> (vise le limbe pour la face cachée)</li>
+<li>Ignore le reste. Saute.</li>
+</ol>
+</div>
+<div>
+<h3>Séquence exobio avec le Nomad</h3>
+<ol class="seq">
+<li>Cible la planète, entre en orbite</li>
+<li><b>Descends sous 500 m</b> avec le Caspian</li>
+<li>Role Panel &rarr; <b>déploie le Nomad</b></li>
+<li>Le Caspian suit tout seul, ou congédie-le via le menu</li>
+<li>Le <b>MK II Discovery Scanner</b> du Nomad détecte les signaux bio depuis le cockpit</li>
+<li><b>Pose-toi lentement, terrain plat</b></li>
+<li>Sors à pied &rarr; <b>Scan Pulse</b> (touche 5)</li>
+<li><b>3 échantillons</b> de la même espèce, en respectant la Colony Range</li>
+<li>Rappelle le Caspian, rembarque, système suivant</li>
+</ol>
+</div>
+</div>
+<div class="cw"><span class="t">Le risque n°1 de tout ce plan</span>
+<b>Si le Nomad est détruit, tu perds TOUTES tes données d'exobiologie.</b> C'est un point de défaillance unique sur plusieurs sessions de travail.<br><br>
+Les trois premières sessions : pose-toi sur des terrains ridiculement plats et vends après chaque sortie, même si le rendement est mauvais. Tu achètes de la fiabilité, pas des crédits.<br><br>
+Vérifie aussi ton <b>compteur de redéploiements</b> avant de partir loin (illimité si acheté en ARX, limité si acheté en crédits &mdash; à réapprovisionner au marché).</div>
+<h3>Rendement honnête à ton niveau</h3>
+<table>
+<tr><th>Étape</th><th>Par session de 1-2 h</th></tr>
+<tr><td>Sessions 1-3 &mdash; apprentissage</td><td class="n">10-25 M Cr</td></tr>
+<tr><td>Sessions 4-8 &mdash; rodé, près de la Bulle</td><td class="n">40-80 M Cr</td></tr>
+</table>
+<p style="font-size:13px;color:#8fa2b6">Tu feras <b style="color:#e8eef5">30 à 50 %</b> des chiffres des vidéos YouTube au début. C'est normal, et la courbe monte vite. Les vidéos omettent systématiquement le trajet et la vente.</p>
+<h3>Où aller depuis Cubeo</h3>
+<ul class="check">
+<li><i class="bx"></i><span class="ctxt"><b>spansh.co.uk</b> &rarr; recherche de corps &rarr; filtres <i>landable</i> + <i>thin atmosphere</i> + <i>gravity &lt; 0.27</i> + rayon 200-500 LY</span></li>
+<li><i class="bx"></i><span class="ctxt">Cible les <b>HMC à atmosphère ténue</b> à moins de 1500 sl de leur étoile<em>Moins de temps perdu en supercruise.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Rentre vendre toutes les 2 sessions maximum</b><em>Données cartographiques &rarr; Universal Cartographics (ou Farseer tant que tu montes sa réputation). Données bio &rarr; Vista Genomics.</em></span></li>
+</ul>
+<div class="gate"><b>Feu vert Phase 6 &mdash;</b> 3 sessions consécutives sans crash du Nomad, séquence fluide, &ge; 40 M Cr par session, Farseer au Grade 5.</div>
+</section>
+
+<!-- ===== PHASE 6 ===== -->
+<section id="p6">
+<h2>06 &middot; Expédition lointaine <span class="meta">first footfall ×5</span></h2>
+<p class="lead">Le point délicat : une expédition suppose normalement de longues sessions. Avec 1-2 h, il faut découper.</p>
+<table>
+<tr><th>Session</th><th>Contenu</th></tr>
+<tr><td><b>S1</b></td><td>Trajet aller via neutron highway. Rien d'autre.</td></tr>
+<tr><td><b>S2 &rarr; S6</b></td><td>1 à 2 systèmes bio complets par session</td></tr>
+<tr><td><b>S7</b></td><td>Trajet retour + vente</td></tr>
+</table>
+<ul class="check">
+<li><i class="bx"></i><span class="ctxt"><b>Tracer la route</b> : spansh.co.uk &rarr; Neutron Router<em>Ton FSD SCO Mk II boost à 500 % et ne subit pas les 1 % de dégâts habituels. C'est ton avantage unique — aucun autre vaisseau n'a ça.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Garder AFMU et Heat Sink actifs</b><em>La surchauffe reste possible même sans les dégâts de supercharge.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Viser 500 à 2000 LY hors des routes fréquentées</b><em>Évite l'axe Sol – Colonia – Sagittarius A*, déjà ratissé.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Ne jamais dépasser 6 sessions sans vendre</b><em>Le risque cumulé devient inacceptable.</em></span></li>
+<li><i class="bx"></i><span class="ctxt"><b>Se déconnecter uniquement en position sûre</b><em>Posé ou en orbite haute. Jamais en descente.</em></span></li>
+</ul>
+<p style="font-size:13px;color:#c3d0dd"><b style="color:#e8eef5">Rendement en zone vierge :</b> <span style="font-family:ui-monospace,monospace;color:#ffc451">80-150 M Cr</span> par session <span class="tag t3">EST</span></p>
+</section>
+
+<!-- ===== PHASE 7 ===== -->
+<section id="p7">
+<h2>07 &middot; Jalons jusqu'au milliard <span class="meta">1-2 h × ~3 par semaine</span></h2>
+<table>
+<tr><th>Jalon</th><th>Phase</th><th>Gain / session</th><th>Sessions</th><th>Calendrier</th></tr>
+<tr><td>45 M &rarr; 45 M</td><td>Reconfiguration</td><td class="n">0 (neutre)</td><td class="n">1</td><td>semaine 1</td></tr>
+<tr><td>45 M &rarr; 60 M</td><td>Farseer + matériaux</td><td class="n">+5-10 M</td><td class="n">4</td><td>semaines 1-2</td></tr>
+<tr><td>60 M &rarr; 55 M</td><td>Guardian Booster<br><i>&minus;6,3 M pour le module</i></td><td class="n">&minus;6 M</td><td class="n">2</td><td>semaine 2</td></tr>
+<tr><td>55 M &rarr; 65 M</td><td>Artemis</td><td class="n">+5 M</td><td class="n">1-2</td><td>semaine 3</td></tr>
+<tr><td>65 M &rarr; <b>250 M</b></td><td>Apprentissage Bulle</td><td class="n">+25-50 M</td><td class="n">5-6</td><td>semaines 3-4</td></tr>
+<tr><td>250 M &rarr; <b>500 M</b></td><td>Rodé</td><td class="n">+60-80 M</td><td class="n">4</td><td>semaine 5</td></tr>
+<tr><td>500 M &rarr; <b>1 Md</b></td><td>Expédition ×5</td><td class="n">+100-150 M</td><td class="n">5-6</td><td>semaines 6-9</td></tr>
+</table>
+<div class="total">
+<b>Total réaliste : 22 à 27 sessions &asymp; 8 à 10 semaines</b>
+<p>Sois sceptique face à ce tableau : il suppose que tu ne perds jamais de données. <b>Une seule mort mal placée coûte 2-3 sessions.</b> D'où la discipline de vente.</p>
+</div>
+</section>
+
+<!-- ===== FICHES RÉFLEXES ===== -->
+<section id="ref">
+<h2>Fiches réflexes</h2>
+<div class="grid2">
+<div>
+<h3>Colony Range &mdash; distance mini</h3>
+<table>
+<tr><th>Genre</th><th>Distance</th></tr>
+<tr><td>Fumerola</td><td class="n">100 m</td></tr>
+<tr><td>Clypeus &middot; Recepta &middot; Aleoida</td><td class="n">150 m</td></tr>
+<tr><td>Tussock</td><td class="n">200 m</td></tr>
+<tr><td>Cactoida</td><td class="n">300 m</td></tr>
+<tr><td>Bacterium &middot; Stratum &middot; Fonticulua</td><td class="n">500 m</td></tr>
+<tr><td>Osseus &middot; Tubus</td><td class="n">800 m</td></tr>
+<tr><td>Electricae</td><td class="n">1 000 m</td></tr>
+</table>
+<div class="cw"><span class="t">Codes couleur du Scan Pulse</span>
+<b style="color:#5ade82">Vert</b> = à scanner / en cours &middot; <b style="color:#7ad6f8">Bleu</b> = déjà fait ou trop proche &middot; <b style="color:#bb8ce6">Violet</b> = autre espèce<br><br>
+« Insufficient genetic diversity » = trop près du précédent.<br>
+Scanner une <b>autre espèce</b> réinitialise un échantillon partiel en cours.</div>
+</div>
+<div>
+<h3>Espèces les plus rentables <span class="tag t2">COM</span></h3>
+<table>
+<tr><th>Espèce</th><th>Base</th><th>Conditions</th></tr>
+<tr><td>Stratum Tectonicas</td><td class="n">19 010 800</td><td>HMC, &gt; 165 K</td></tr>
+<tr><td>Fonticulua Segmentatus</td><td class="n">19 010 800</td><td>Atmo Neon</td></tr>
+<tr><td>Tussock Stigmasis</td><td class="n">19 010 800</td><td>Atmo SO&#8322;</td></tr>
+<tr><td>Concha Biconcavis</td><td class="n">16 777 215</td><td>Atmo Nitrogen</td></tr>
+<tr><td>Clypeus Speculumi</td><td class="n">16 202 800</td><td>Rocky/HMC, &gt; 2500 sl</td></tr>
+<tr><td>Recepta Deltahedronix</td><td class="n">16 202 800</td><td>SO&#8322;, gravité &lt; 0,27</td></tr>
+<tr><td>Osseus Discus</td><td class="n">12 934 900</td><td>Rocky/HMC, atmo Water</td></tr>
+</table>
+<div class="ci"><span class="t">Le repère à retenir</span>
+<b>HMC + un seul signal bio + &gt; 165 K</b> = forte probabilité de <b>Stratum Tectonicas</b> (~19 M).<br><br>
+<b>First Logged = ×5</b> <span class="tag t1">OFF</span> &mdash; un Stratum Tectonicas en premier passage vaut <b>95 054 000 Cr</b>.</div>
+</div>
+</div>
+<h3>Le Nomad &mdash; tout ce qui est vérifié <span class="tag t1">OFF</span></h3>
+<table>
+<tr><th>Fait</th><th>Conséquence</th></tr>
+<tr><td>La Fighter Hangar est <b>renommée Vessel Hangar</b> (Operations, juin 2026)</td><td>Ton module est une Vessel Hangar taille 5 <b>Mk I</b></td></tr>
+<tr><td>Le <b>Mk II</b> est exclusif au Caspian, Panther Clipper Mk II et Type-11</td><td>Tu as accès à un module rare &mdash; compare la masse</td></tr>
+<tr><td>Le Nomad accepte <b>Mk I ou Mk II</b></td><td>Ton setup actuel fonctionne déjà</td></tr>
+<tr><td><b>MK II Discovery Scanner</b> intégré</td><td>Détecte les signaux bio depuis le cockpit</td></tr>
+<tr><td>Altitude mini de lancement : <b>500 m</b></td><td>Descends avant de larguer</td></tr>
+<tr><td>Lancement possible en orbite mais descente très longue</td><td>Ne le fais pas</td></tr>
+<tr><td>Le vaisseau-mère suit à distance ou peut être congédié</td><td>Ton usage est correct</td></tr>
+<tr><td><b>Pas de soute</b></td><td>Garde le SRV pour les matériaux</td></tr>
+<tr><td><b>Destruction = perte de toutes les données exobio</b></td><td>Le risque n°1 du plan</td></tr>
+<tr><td>ARX = redéploiements infinis &middot; crédits = stock limité</td><td>Vérifie ton compteur avant de partir</td></tr>
+</table>
+</section>
+
+<!-- ===== CORRECTIONS ===== -->
+<section id="chg">
+<h2>Corrections apportées</h2>
+<p class="lead">Ce que j'avais dit et qui était faux, pour que tu saches ce qui a changé depuis les versions précédentes.</p>
+<table>
+<tr><th>Version antérieure</th><th>Correction</th></tr>
+<tr><td>« Retire le Fighter Hangar, c'est ta pire pièce »</td><td class="ok">Faux &mdash; c'est ta Vessel Hangar pour le Nomad. Elle reste.</td></tr>
+<tr><td>« Le Guardian FSD Booster ne vaut pas l'effort »</td><td class="ok">Faux &mdash; 1,3 t pour +10,5 LY, déblocage définitif, cumulable. Il le vaut.</td></tr>
+<tr><td>« Garde deux armes pour le site Guardian »</td><td class="ok">Faux &mdash; le combat se fait en <b>SRV</b>. Les lasers de vaisseau sont même <b>inefficaces</b> contre les Sentinels. Ce sont des <b>Point Defence</b> qu'il te faut.</td></tr>
+<tr><td>« Tu es Archduke »</td><td class="ok">Faux &mdash; tu es <b>Duke</b>. Sans conséquence, l'objectif Cutter étant abandonné.</td></tr>
+<tr><td>« Pose-toi près du site Guardian »</td><td class="ok">Précision &mdash; <b>en bordure, jamais dedans</b> : être à l'intérieur du périmètre désactive les tourelles du SRV.</td></tr>
+</table>
+<h3>Ce qui reste à vérifier par toi</h3>
+<table>
+<tr><th>Point</th><th>Pourquoi je ne peux pas trancher</th><th>Où vérifier</th></tr>
+<tr><td>Masse du Mk II Vessel Hangar</td><td>Module de juin 2026, données communautaires encore instables</td><td>Outfitting en jeu</td></tr>
+<tr><td>Inventaire Outfitting de Cubeo</td><td>Variable dans le temps</td><td>Inara &rarr; Nearest outfitting</td></tr>
+<tr><td>Ta portée réelle post-ingénierie</td><td>Dépend de tes downsizes exacts</td><td>edsy.org</td></tr>
+</table>
+<h3>Outils</h3>
+<table>
+<tr><th>Outil</th><th>Usage</th></tr>
+<tr><td><b>spansh.co.uk</b></td><td>Neutron Router, recherche de corps, routes exobio</td></tr>
+<tr><td><b>inara.cz</b></td><td>Nearest outfitting, Find Trade Offer, ingénieurs, Tech Brokers</td></tr>
+<tr><td><b>edsy.org</b></td><td>Simulateur de build &mdash; vérifie ta portée avant d'acheter</td></tr>
+<tr><td><b>edsm.net</b></td><td>Stations, outfitting, prix des modules</td></tr>
+<tr><td><b>Elite Observatory</b> + plugin Botanist</td><td>Calcule les Colony Range, signale les corps intéressants</td></tr>
+<tr><td><b>EDMC</b> + plugin BioScan</td><td>Overlay des espèces et valeurs pendant le scan</td></tr>
+</table>
+</section>
+
+<footer>
+CMDR TAI-CE &middot; Caspian &laquo;&nbsp;USS Enterprise&nbsp;&raquo; &middot; à jour du contenu d'août 2026 (Operations, 30 juin 2026).<br>
+<span class="tag t1">OFF</span> officiel / wiki &nbsp; <span class="tag t2">COM</span> communauté &nbsp; <span class="tag t3">EST</span> estimation à vérifier.<br>
+Les cases cochées ne sont pas sauvegardées : elles se réinitialisent si tu recharges la page.
+</footer>
+</div>
+
+<div class="prog">
+  <span id="ptxt">0 / 0 étapes</span>
+  <div class="bar"><div class="fill" id="pfill"></div></div>
+  <span id="ppct">0 %</span>
+</div>
+</div>
+
+<script>
+const items=document.querySelectorAll('.check li');
+const ptxt=document.getElementById('ptxt'),pfill=document.getElementById('pfill'),ppct=document.getElementById('ppct');
+function upd(){
+  const d=document.querySelectorAll('.check li.done').length,t=items.length;
+  ptxt.textContent=d+' / '+t+' étapes';
+  const p=t?Math.round(d/t*100):0;
+  pfill.style.width=p+'%';ppct.textContent=p+' %';
+}
+items.forEach(li=>li.addEventListener('click',()=>{li.classList.toggle('done');upd();}));
+upd();
+document.querySelectorAll('nav a').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>

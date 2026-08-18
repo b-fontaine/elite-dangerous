@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ta boîte à outils — Elite Dangerous 2026 | Exobiologiste / Explorateur</title>
+<style>
+html{background:#06080a !important}
+body{background:#06080a !important;color:#dce6f0 !important;margin:0;padding:0;
+  font:15.5px/1.68 "Segoe UI",Roboto,system-ui,sans-serif}
+.page{background:#06080a;min-height:100vh;padding-bottom:60px;position:relative;overflow-x:hidden}
+.page:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background:repeating-linear-gradient(0deg,rgba(255,113,0,.02) 0 1px,transparent 1px 3px)}
+.page:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background:radial-gradient(ellipse at 50% 0%,rgba(255,113,0,.09),transparent 60%)}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.rp{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#ff7100,#ffb62e);
+  width:0;z-index:99;box-shadow:0 0 12px rgba(255,113,0,.8)}
+
+.hero{border-bottom:1px solid #ff7100;background:linear-gradient(180deg,#1a0f02,#06080a);
+  padding:56px 0 38px;position:relative;z-index:2;text-align:center}
+.kicker{font-size:10px;letter-spacing:5px;color:#8a7050;text-transform:uppercase;margin-bottom:16px}
+h1{font-size:34px;line-height:1.18;font-weight:700;letter-spacing:2px;color:#ff8c1a;
+  text-transform:uppercase;text-shadow:0 0 30px rgba(255,113,0,.45);margin:0 0 14px}
+.dek{font-size:16px;color:#9fb2c6;max-width:660px;margin:0 auto;line-height:1.6}
+.byline{margin-top:22px;font-size:11px;letter-spacing:2.5px;color:#6d7f92;text-transform:uppercase}
+
+.toc{background:#0a0e13;border:1px solid #1e2833;padding:24px 28px;margin:40px 0 46px;
+  clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px))}
+.toc h4{margin:0 0 14px;font-size:11px;letter-spacing:3px;color:#ff8c1a;text-transform:uppercase}
+.toc ol{margin:0;padding-left:22px}
+.toc li{margin-bottom:7px;font-size:14px}
+.toc a{color:#c3d0dd;text-decoration:none;border-bottom:1px solid transparent;transition:.15s}
+.toc a:hover{color:#ff8c1a;border-bottom-color:#ff7100}
+
+h2{font-size:15px;color:#ff8c1a;text-transform:uppercase;letter-spacing:3px;
+  padding:12px 0 12px 18px;margin:60px 0 20px;border-left:3px solid #ff7100;
+  background:linear-gradient(90deg,rgba(255,113,0,.11),transparent 60%);
+  text-shadow:0 0 14px rgba(255,113,0,.3)}
+h2 .num{color:#6d7f92;margin-right:10px;font-family:ui-monospace,monospace}
+h3{font-size:19px;color:#e8eef5;margin:36px 0 12px;font-weight:600}
+p{margin:0 0 15px;color:#c3d0dd}
+p b,li b,td b{color:#e8eef5}
+a{color:#7ad6f8}
+.intro{font-size:17px;color:#b7c6d6;border-left:2px solid #ff7100;padding-left:22px;margin-bottom:28px}
+ul,ol{color:#c3d0dd;padding-left:24px}
+li{margin-bottom:8px}
+em{color:#9fb2c6;font-style:italic}
+code{background:#111820;padding:2px 6px;font-size:12.5px;color:#ffc451;
+  font-family:ui-monospace,Consolas,monospace;border:1px solid #24303c}
+
+/* TOOL CARD */
+.tool{background:#0a0e13;border:1px solid #1e2833;border-top:3px solid #ff7100;
+  margin:26px 0;padding:0;overflow:hidden}
+.tool.n2{border-top-color:#5ecbf5}
+.tool.n3{border-top-color:#8a9cb0}
+.tool .head{padding:20px 26px 16px;border-bottom:1px solid #161e26;background:#0c1116}
+.tool .tname{font-size:20px;font-weight:700;color:#e8eef5;margin:0 0 10px}
+.tool .badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.badge{font-size:9.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;
+  padding:3px 9px;background:#111820;border:1px solid #24303c;color:#9fb2c6}
+.badge.free{border-color:#1f4d2f;color:#5ade82}
+.badge.web{border-color:#1d3d4d;color:#7ad6f8}
+.badge.app{border-color:#5c3406;color:#ffb62e}
+.badge.plug{border-color:#3d2a52;color:#bb8ce6}
+.badge.scr{border-color:#24303c;color:#9fb2c6}
+.tlink{display:inline-block;font-family:ui-monospace,Consolas,monospace;font-size:12.5px;
+  color:#7ad6f8;text-decoration:none;word-break:break-all;border-bottom:1px dotted #2d4d5e;
+  padding-bottom:1px}
+.tlink:hover{color:#ff8c1a;border-bottom-color:#ff7100}
+.tlink+.tlink{margin-top:5px}
+.tool .body{padding:20px 26px 22px}
+.tool .lbl{font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:#5ecbf5;
+  margin:0 0 8px;font-weight:700}
+.tool .body>.lbl:not(:first-child){margin-top:22px;padding-top:18px;border-top:1px solid #161e26}
+.tool p:last-child{margin-bottom:0}
+
+.tbl{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:13px;background:#0a0e13;border:1px solid #1e2833}
+th{background:#111820;color:#5ecbf5;text-align:left;padding:10px 12px;font-size:10px;
+  text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #24303c;white-space:nowrap}
+td{padding:9px 12px;border-bottom:1px solid #161e26;vertical-align:top;color:#c3d0dd}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,113,0,.05)}
+td.n{font-family:ui-monospace,Consolas,monospace;color:#ffc451;white-space:nowrap}
+.yes{color:#5ade82;font-weight:600}
+.no{color:#ff5f64;font-weight:600}
+.mid{color:#ffc451;font-weight:600}
+
+.cw,.ci,.ct{padding:16px 20px;margin:20px 0;font-size:13.5px;border:1px solid;border-left-width:3px;
+  color:#c3d0dd;line-height:1.62;
+  clip-path:polygon(0 0,calc(100% - 13px) 0,100% 13px,100% 100%,13px 100%,0 calc(100% - 13px))}
+.cw{background:rgba(229,72,77,.07);border-color:#5c2427;border-left-color:#e5484d}
+.ci{background:rgba(94,203,245,.06);border-color:#1d3d4d;border-left-color:#5ecbf5}
+.ct{background:rgba(63,207,106,.07);border-color:#1f4d2f;border-left-color:#3fcf6a}
+.cw .t,.ci .t,.ct .t{font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:2.3px;
+  margin-bottom:8px;display:block}
+.cw .t{color:#ff5f64}.ci .t{color:#7ad6f8}.ct .t{color:#5ade82}
+.cw b,.ci b,.ct b{color:#e8eef5}
+.cw p:last-child,.ci p:last-child,.ct p:last-child{margin-bottom:0}
+
+.tag{display:inline-block;font-size:9px;font-weight:700;padding:2px 6px;letter-spacing:1.2px;
+  vertical-align:middle;margin-left:5px}
+.t1{background:#123322;color:#5ade82}
+.t2{background:#0f2c3a;color:#7ad6f8}
+.t3{background:#3a2d0f;color:#ffc451}
+
+.steps{counter-reset:s;list-style:none;padding:0;margin:20px 0}
+.steps li{counter-increment:s;padding:13px 0 13px 46px;position:relative;
+  border-bottom:1px solid #161e26;font-size:14px;color:#c3d0dd}
+.steps li:last-child{border-bottom:none}
+.steps li:before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:14px;
+  width:28px;height:22px;background:#ff7100;color:#06080a;display:flex;align-items:center;
+  justify-content:center;font-size:11px;font-weight:700;font-family:ui-monospace,monospace;
+  clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,5px 100%,0 calc(100% - 5px))}
+.dur{float:right;font-size:11px;color:#6d7f92;font-family:ui-monospace,monospace}
+
+footer{border-top:1px solid #1e2833;margin-top:56px;padding:24px 0 0;font-size:12.5px;
+  color:#7d8fa3;line-height:1.85}
+footer b{color:#9fb2c6}
+</style>
+</head>
+<body>
+<div class="rp" id="rp"></div>
+<div class="page">
+
+<div class="hero"><div class="wrap">
+  <div class="kicker">Elite Dangerous · Édition août 2026</div>
+  <h1>Ta boîte à outils</h1>
+  <p class="dek">Les outils tiers réellement utiles à un exobiologiste-explorateur qui ne combat pas. Liens vérifiés, procédures d'installation, et ce qu'il faut ignorer.</p>
+  <div class="byline">Caspian Explorer · Cubeo · Objectif 1 Md Cr</div>
+</div></div>
+
+<div class="wrap">
+
+<div class="toc">
+<h4>Au sommaire</h4>
+<ol>
+<li><a href="#stack">Le stack minimal</a></li>
+<li><a href="#n1">Niveau 1 — Indispensables</a></li>
+<li><a href="#n2">Niveau 2 — Très utiles</a></li>
+<li><a href="#n3">Niveau 3 — Confort</a></li>
+<li><a href="#no">Inutile pour toi</a></li>
+<li><a href="#recap">Tableau récapitulatif</a></li>
+<li><a href="#ordre">Ordre d'installation</a></li>
+</ol>
+</div>
+
+<p class="intro">Il existe une soixantaine d'outils tiers pour Elite Dangerous. Pour ton profil — exobiologie, exploration, zéro combat, sessions de 1 à 2 heures — <b>quatre</b> couvrent 90 % du besoin. Le reste est du confort, et une poignée est carrément périmée.</p>
+
+<div class="ci"><span class="t">Conformité Frontier</span>
+Tous les outils listés ici lisent le <b>journal de bord</b> du jeu (<code>%USERPROFILE%\Saved Games\Frontier Developments\Elite Dangerous</code>) ou l'API Companion officielle. C'est <b>autorisé</b>. Aucun ne fait d'injection mémoire, ce qui serait interdit.
+<p>Les overlays exigent en revanche que le jeu tourne en <b>Fenêtré</b> ou <b>Fenêtré sans bordure</b> — jamais en plein écran exclusif.</p></div>
+
+<h2 id="stack"><span class="num">01</span>Le stack minimal</h2>
+
+<p>Si tu ne veux pas passer ta soirée à configurer des logiciels, installe uniquement ceci :</p>
+
+<div class="tbl">
+<table>
+<tr><th>Outil</th><th>Rôle</th><th>Temps d'install</th></tr>
+<tr><td><b>EDMC + BioScan + EDMCOverlay</b></td><td>Te dit quelles bios sont sur un corps et ce qu'elles valent, avant d'atterrir</td><td class="n">25 min</td></tr>
+<tr><td><b>ED Odyssey Materials Helper</b></td><td>Suit tes matériaux à pied pour monter l'Artemis Suit</td><td class="n">10 min</td></tr>
+<tr><td><b>Spansh</b></td><td>Trace tes routes exobio et neutron depuis Cubeo</td><td class="n">0 min</td></tr>
+<tr><td><b>INARA</b></td><td>Localise Vista Genomics, Pioneer Supplies, méta-alliages</td><td class="n">0 min</td></tr>
+</table>
+</div>
+
+<p>Les deux derniers sont des sites web : rien à installer, tu les gardes ouverts sur ton second écran. Les deux premiers demandent une quarantaine de minutes une seule fois.</p>
+
+<h2 id="n1"><span class="num">02</span>Niveau 1 — Indispensables</h2>
+
+<!-- SPANSH -->
+<div class="tool">
+<div class="head">
+  <div class="tname">Spansh</div>
+  <div class="badges"><span class="badge web">Site web</span><span class="badge free">Gratuit</span><span class="badge">Second écran ★★</span></div>
+  <a class="tlink" href="https://spansh.co.uk">https://spansh.co.uk</a><br>
+  <a class="tlink" href="https://spansh.co.uk/exobiology">https://spansh.co.uk/exobiology</a> — routeur exobio<br>
+  <a class="tlink" href="https://spansh.co.uk/bodies">https://spansh.co.uk/bodies</a> — recherche de corps<br>
+  <a class="tlink" href="https://spansh.co.uk/plotter">https://spansh.co.uk/plotter</a> — routeur neutron
+</div>
+<div class="body">
+<div class="lbl">À quoi ça te sert</div>
+<p>C'est le moteur de ta stratégie crédits. <b>Expressway to Exomastery</b> te génère une liste ordonnée de systèmes riches en bios à haute valeur, l'équivalent du Road to Riches pour l'exobiologie.</p>
+
+<div class="lbl">Configuration pour toi</div>
+<p><b>Expressway to Exomastery :</b> <em>Source System</em> = Cubeo · <em>Destination</em> = laisse vide · <em>Range</em> = la portée réelle de ton Caspian · <em>Radius</em> = 50 à 100 LY · <em>Minimum value</em> = <b>16 000 000 Cr</b> · coche <b>Avoid Thargoids</b>.</p>
+<p><b>Body Search</b>, pour chasser le Stratum Tectonicas hors de la bulle : <em>Subtype</em> = High metal content world · <em>Gravity</em> = 0 à 0,27 g · <em>Atmosphere</em> = Thin Carbon dioxide / Sulphur dioxide / Water / Ammonia / Oxygen · <em>Surface temperature</em> &gt; 165 K · et surtout <em>Last Updated At</em> = <b>avant le 19 mai 2021</b> pour cibler des corps jamais foulés.</p>
+<p><b>Neutron Plotter :</b> système source, destination, portée de saut, et une <em>efficacité</em> entre 40 et 60 % — plus elle est basse, plus la route dévie pour enchaîner les étoiles à neutrons et réduire le nombre total de sauts.</p>
+
+<div class="lbl">Piège</div>
+<p>Si Cubeo ne remonte pas dans un champ de recherche, choisis un système voisin déjà indexé. Et vérifie la date de mise à jour des résultats : une offre de plus de trois jours a souvent disparu.</p>
+</div>
+</div>
+
+<!-- INARA -->
+<div class="tool">
+<div class="head">
+  <div class="tname">INARA</div>
+  <div class="badges"><span class="badge web">Site web</span><span class="badge free">Gratuit</span><span class="badge">Second écran ★★</span></div>
+  <a class="tlink" href="https://inara.cz">https://inara.cz</a><br>
+  <a class="tlink" href="https://inara.cz/elite/nearest-stations/">https://inara.cz/elite/nearest-stations/</a> — services les plus proches<br>
+  <a class="tlink" href="https://inara.cz/galaxy-techbroker/">https://inara.cz/galaxy-techbroker/</a> — Technology Brokers
+</div>
+<div class="body">
+<div class="lbl">À quoi ça te sert</div>
+<p>Ton annuaire. Trouver la <b>Vista Genomics</b> la plus proche pour vendre tes échantillons, la <b>Pioneer Supplies</b> pour l'Artemis Suit, et le <b>méta-alliage</b> nécessaire à Felicity Farseer.</p>
+
+<div class="lbl">Comment s'en servir</div>
+<p><em>Nearest → Systems and Stations → Nearest stations</em>, entre <b>Cubeo</b> comme référence, coche le service voulu. Trie par distance à l'étoile plutôt que par nombre de sauts : c'est souvent ce qui coûte le plus de temps.</p>
+<p>Pour le méta-alliage de Farseer, passe par <em>Find Trade Offer</em> ou la recherche de matériaux.</p>
+
+<div class="lbl">Astuce</div>
+<p>Les Pioneer Supplies des stations à <b>économie militaire</b> vendent parfois des combinaisons pré-améliorées grade 2 ou 3. Le stock se réinitialise <b>chaque jeudi</b> après le tick serveur. Filtre par économie militaire et tu peux économiser des heures de farm.</p>
+</div>
+</div>
+
+<!-- EDMC -->
+<div class="tool">
+<div class="head">
+  <div class="tname">EDMC + BioScan + EDMCOverlay</div>
+  <div class="badges"><span class="badge app">Application</span><span class="badge plug">+ 2 plugins</span><span class="badge free">Open source</span><span class="badge">Overlay en jeu</span></div>
+  <a class="tlink" href="https://github.com/EDCD/EDMarketConnector">https://github.com/EDCD/EDMarketConnector</a><br>
+  <a class="tlink" href="https://github.com/Silarn/EDMC-BioScan">https://github.com/Silarn/EDMC-BioScan</a><br>
+  <a class="tlink" href="https://github.com/inorton/EDMCOverlay">https://github.com/inorton/EDMCOverlay</a>
+</div>
+<div class="body">
+<div class="lbl">À quoi ça te sert</div>
+<p><b>C'est le cœur de ta boucle exobio.</b> Dès le scan FSS, BioScan déduit les <b>espèces probables</b> présentes sur un corps et leur <b>valeur estimée</b>. Il t'affiche la <b>distance d'échantillonnage requise</b> entre deux prélèvements — fini les allers-retours ratés.</p>
+<p>Surtout, il <b>conserve ta progression en base de données</b> par commandant. Vu que perdre le Nomad efface tes données d'exobio non synchronisées, c'est une assurance.</p>
+
+<div class="lbl">Installation</div>
+<ol class="steps">
+<li>Installe <b>EDMC</b> (fichier .msi depuis la page Releases), lance-le une fois. Il doit détecter ton dossier journal automatiquement. Autorise le login Frontier quand il le demande.</li>
+<li>Ouvre <em>File → Settings → Plugins → Open</em>. Ça ouvre <code>%LOCALAPPDATA%\EDMarketConnector\plugins</code>.</li>
+<li>Dézippe <b>ExploData</b> puis <b>BioScan</b> dans ce dossier, en gardant les noms de dossiers intacts.</li>
+<li>Installe <b>EDMCOverlay</b> (.msi) sous le <b>même utilisateur Windows</b> que le jeu.</li>
+<li>Redémarre EDMC, puis active l'overlay dans les réglages de BioScan.</li>
+</ol>
+
+<div class="cw"><span class="t">Trois pièges</span>
+<p><b>1.</b> EDMCOverlay en est à la version 1.0.6 de janvier 2022 : stable mais dormante. Si tu as des soucis en multi-écran ou sans bordure, bascule sur le successeur activement maintenu, <a href="https://github.com/SweetJonnySauce/EDMCModernOverlay">EDMCModernOverlay</a>.</p>
+<p><b>2.</b> L'overlay ne s'affiche que si le jeu tourne en fenêtré ou sans bordure.</p>
+<p><b>3.</b> Sur EDMC 6.x sous Windows, prends la version d'ExploData compatible Python 3.13.</p></div>
+</div>
+</div>
+
+<!-- MATERIALS HELPER -->
+<div class="tool">
+<div class="head">
+  <div class="tname">ED Odyssey Materials Helper</div>
+  <div class="badges"><span class="badge app">Application</span><span class="badge free">Gratuit</span><span class="badge">Overlay + second écran</span></div>
+  <a class="tlink" href="https://github.com/jixxed/ed-odyssey-materials-helper">https://github.com/jixxed/ed-odyssey-materials-helper</a>
+</div>
+<div class="body">
+<div class="lbl">À quoi ça te sert</div>
+<p><b>L'outil clé pour monter ton Artemis Suit.</b> Il suit en temps réel tes matériaux à pied, te dit combien il t'en manque pour chaque grade et chaque modification, gère une liste de courses, et — sa fonction phare — affiche une <b>surimpression au comptoir du Bartender</b> qui te montre instantanément si ce que tu as sous les yeux vaut le coup.</p>
+
+<div class="lbl">Installation</div>
+<p>Télécharge le <b>.msi auto-updater</b> pour Windows, installe, lance. Il trouve seul ton dossier journal et se met à jour à chaque lancement. Dernière version relevée : <b>3.14.2</b>, août 2026 — le projet est très actif.</p>
+
+<div class="lbl">Astuce</div>
+<p>Crée ta liste de courses avec les mods Artemis prioritaires pour l'exobio : <b>Improved Battery Capacity</b> et <b>Reduced Tool Consumption</b> (autonomie du Genetic Sampler), puis <b>Increased Sprint Duration</b> ou <b>Improved Jump Assist</b> pour te déplacer entre spécimens.</p>
+
+<div class="ci"><span class="t">Faux positifs antivirus</span>
+Chaque release publie une analyse VirusTotal. Consulte-la si ton antivirus proteste — c'est un cas connu sur les applications Java packagées.</div>
+</div>
+</div>
+
+<h2 id="n2"><span class="num">03</span>Niveau 2 — Très utiles</h2>
+
+<!-- OBSERVATORY -->
+<div class="tool n2">
+<div class="head">
+  <div class="tname">Elite Observatory Core + plugins</div>
+  <div class="badges"><span class="badge app">Application</span><span class="badge plug">Plugins .eop</span><span class="badge free">Open source</span></div>
+  <a class="tlink" href="https://observatory.xjph.net">https://observatory.xjph.net</a><br>
+  <a class="tlink" href="https://github.com/fredjk-gh/ObservatoryPlugins">https://github.com/fredjk-gh/ObservatoryPlugins</a><br>
+  <a class="tlink" href="https://edjp.colacube.net/observatory">https://edjp.colacube.net/observatory</a> — plugins BioInsights / Evaluator
+</div>
+<div class="body">
+<div class="lbl">À quoi ça te sert</div>
+<p>Observatory surveille ton journal et te <b>notifie automatiquement</b> des corps intéressants. Trois plugins te concernent : <b>Botanist</b> (catalogue tes signaux bio et valide les échantillons plus vite que le jeu), <b>BioInsights</b> (prédit les bios dès le FSS), et <b>Evaluator</b> (décompose la valeur d'un système et masque les corps sous un seuil).</p>
+
+<div class="lbl">Installation des plugins</div>
+<p>Installe Observatory Core, <b>ferme-le</b>, puis <b>double-clique le fichier .eop</b> — il se déballe seul et gère ses dépendances. Relance ensuite. Le plugin AutoUpdater maintient tout à jour par la suite.</p>
+
+<div class="cw"><span class="t">Ne fais pas doublon</span>
+BioInsights et BioScan font le même travail. <b>Choisis-en un seul</b> comme moteur de prédiction. BioScan est plus compact et mieux intégré en overlay ; BioInsights est parfois plus précis sur les cas limites. Si tu as pris BioScan dans le stack minimal, Observatory devient optionnel.</div>
+</div>
+</div>
+
+<!-- EDDISCOVERY -->
+<div class="tool n2">
+<div class="head">
+  <div class="tname">EDDiscovery <span style="font-size:14px;color:#8a9cb0">/ EDDLite</span></div>
+  <div class="badges"><span class="badge app">Application</span><span class="badge free">Open source</span><span class="badge">Second écran</span></div>
+  <a class="tlink" href="https://github.com/EDDiscovery/EDDiscovery">https://github.com/EDDiscovery/EDDiscovery</a>
+</div>
+<div class="body">
+<div class="lbl">À quoi ça te sert</div>
+<p>Ton carnet de voyage : systèmes visités, découvertes, gains, cartographie 3D. L'onglet <b>Estimated Values</b> te dit si un corps vaut le scan, et le panneau <b>Discoveries</b> permet des alertes personnalisables (corps à haute valeur, planètes atterrissables, lunes près d'anneaux).</p>
+
+<div class="lbl">Piège</div>
+<p>Gourmand en mémoire sur de gros journaux. Si tu joues en sessions courtes et veux du léger, prends <b>EDDLite</b>. Et ne fais pas tourner EDDiscovery et EDMC en émetteurs vers les mêmes cibles — ce n'est pas bloquant, juste inutile.</p>
+</div>
+</div>
+
+<!-- EDSY -->
+<div class="tool n2">
+<div class="head">
+  <div class="tname">EDSY <span style="font-size:14px;color:#8a9cb0">/ Coriolis</span></div>
+  <div class="badges"><span class="badge web">Site web</span><span class="badge free">Open source</span></div>
+  <a class="tlink" href="https://edsy.org">https://edsy.org</a><br>
+  <a class="tlink" href="https://coriolis.io">https://coriolis.io</a>
+</div>
+<div class="body">
+<div class="lbl">À quoi ça te sert</div>
+<p>Simuler ton <b>Caspian Explorer</b> — portée de saut avec le FSD SCO Mk II classe 8, masse, thermique — avant de dépenser crédits et matériaux d'ingénierie.</p>
+
+<div class="lbl">Charger ton vaisseau</div>
+<p>EDSY importe ta flotte via l'API Frontier et gère le format <b>SLEF</b>. Pour alimenter le Galaxy Plotter de Spansh : dans EDSY, <em>OPS → Export → coche SLEF → Ctrl+C</em>, puis colle dans Spansh.</p>
+
+<div class="ci"><span class="t">Prends EDSY, pas Coriolis</span>
+Coriolis accuse un retard de maintenance — son auteur original ne joue plus et se contente de fusionner les contributions. <b>EDSY est la référence à jour en 2026</b>, notamment pour les modules récents et les FSD SCO.</div>
+</div>
+</div>
+
+<!-- EDSM -->
+<div class="tool n2">
+<div class="head">
+  <div class="tname">EDSM — Elite Dangerous Star Map</div>
+  <div class="badges"><span class="badge web">Site web</span><span class="badge free">Gratuit</span></div>
+  <a class="tlink" href="https://www.edsm.net">https://www.edsm.net</a><br>
+  <a class="tlink" href="https://www.edsm.net/en/engineers">https://www.edsm.net/en/engineers</a>
+</div>
+<div class="body">
+<div class="lbl">À quoi ça te sert</div>
+<p>Cartographie, fiches systèmes et stations, et surtout la <b>liste complète des ingénieurs</b> avec localisation et prérequis — pratique pour planifier Farseer à Deciat puis la suite.</p>
+
+<div class="lbl">Verdict</div>
+<p>Utile, mais <b>recouvre largement INARA</b>. Si tu ne veux qu'un seul annuaire web, garde INARA. EDSM en complément pour la carto 3D et la vérification croisée.</p>
+</div>
+</div>
+
+<h2 id="n3"><span class="num">04</span>Niveau 3 — Confort</h2>
+
+<!-- EDCOPILOT -->
+<div class="tool n3">
+<div class="head">
+  <div class="tname">EDCoPilot</div>
+  <div class="badges"><span class="badge app">Application</span><span class="badge mid">Donation</span><span class="badge">Second écran ★★</span></div>
+  <a class="tlink" href="https://www.razzafrag.com">https://www.razzafrag.com</a>
+</div>
+<div class="body">
+<div class="lbl">À quoi ça te sert</div>
+<p>Assistant vocal. Il appelle Spansh pour générer et suivre tes routes en bookmarks automatiques, te guide vocalement vers Vista Genomics ou Pioneer Supplies, et affiche un panneau « Bodies » avec gravité, température et composition de surface — utile pour trier tes cibles bio sans quitter le cockpit des yeux.</p>
+
+<div class="cw"><span class="t">Mise à jour obligatoire si tu utilises le Nomad</span>
+Le Nomad positionne le flag <b>SRV</b> dans <code>status.json</code>, et non le flag « fighter ». Ça a cassé le suivi de plusieurs outils au lancement de l'Operations Update. EDCoPilot a publié un correctif — <b>mets-le à jour</b>. Teste aussi tes autres outils avec le Nomad déployé.</div>
+
+<div class="lbl">Verdict</div>
+<p>Excellent si tu aimes l'immersion vocale. <b>Pur confort</b> : ça ne te rapproche pas du milliard.</p>
+</div>
+</div>
+
+<!-- CANONN -->
+<div class="tool n3">
+<div class="head">
+  <div class="tname">Canonn Research <span style="font-size:14px;color:#8a9cb0">+ ed-dsn</span></div>
+  <div class="badges"><span class="badge web">Site web</span><span class="badge free">Gratuit</span><span class="badge">Référence</span></div>
+  <a class="tlink" href="https://canonn.science">https://canonn.science</a><br>
+  <a class="tlink" href="https://canonn.science/codex/organic-scanning-guide/">https://canonn.science/codex/organic-scanning-guide/</a>
+</div>
+<div class="body">
+<div class="lbl">À quoi ça te sert</div>
+<p>La référence data de l'exobiologie : <b>où pousse chaque espèce</b>, les conditions planétaires exactes, et les valeurs Vista Genomics. Le <em>Guide de scan organique</em> est la meilleure ressource pour optimiser ta boucle.</p>
+<p>Complète-le avec <b>ed-dsn.net</b>, qui liste les conditions d'apparition par type d'atmosphère.</p>
+<p>Les sections Guardian et Thargoïd existent mais sont <b>hors de ton scope</b>.</p>
+</div>
+</div>
+
+<!-- STRATUMFINDER -->
+<div class="tool n3">
+<div class="head">
+  <div class="tname">StratumFinder</div>
+  <div class="badges"><span class="badge app">Application</span><span class="badge free">Open source</span><span class="badge mid">Maintenance incertaine</span></div>
+  <a class="tlink" href="https://github.com/lynnel1/StratumFinder">https://github.com/lynnel1/StratumFinder</a>
+</div>
+<div class="body">
+<div class="lbl">À quoi ça te sert</div>
+<p>Cherche les systèmes à exobio de valeur dont le bonus <b>First Footfall</b> est probablement encore libre — exactement ta cible quand tu sors de la bulle pour toucher le ×5.</p>
+
+<div class="cw"><span class="t">Réserve</span>
+Projet communautaire de niche. <b>Vérifie qu'il est encore maintenu</b> et compatible avec les journaux post-Operations avant d'en dépendre. Le Body Search de Spansh reste ta valeur sûre.
+<p>Et garde en tête qu'<b>aucun outil ne garantit un système jamais visité</b> : la grande majorité des joueurs n'uploadent pas leurs données, donc les bases sous-estiment ce qui est déjà exploré. Au-delà de mille années-lumière de Sol, les vrais first footfall deviennent fréquents de toute façon.</div>
+</div>
+</div>
+
+<h2 id="no"><span class="num">05</span>Inutile pour toi</h2>
+
+<p>Ces outils reviennent constamment dans les recommandations générales. Voici pourquoi tu peux les ignorer.</p>
+
+<div class="tbl">
+<table>
+<tr><th>Outil</th><th>Pourquoi tu passes</th></tr>
+<tr><td><b>EDEngineer</b></td><td>Suit les matériaux d'ingénierie de <b>vaisseau</b>, pas ceux à pied. Le dépôt d'origine est <b>archivé depuis juillet 2025</b>. ED Odyssey Materials Helper couvre déjà ton besoin.</td></tr>
+<tr><td><b>CMDRs Toolbox</b></td><td>Ses données de settlements datent de l'alpha Odyssey. <b>Périmé.</b> INARA fait mieux et à jour.</td></tr>
+<tr><td><b>Elite Observatory (ancien dépôt Xjph/EliteObservatory)</b></td><td><b>Archivé en janvier 2025</b>, lecture seule. Utilise Observatory <b>Core</b>, son successeur.</td></tr>
+<tr><td><b>EDR, ED Recon, EDMC-Triumvirate, StreamSource</b></td><td>Outils de combat, PvP et Thargoïdes. <b>Hors profil.</b></td></tr>
+<tr><td><b>EDDI</b></td><td>Fait doublon avec EDCoPilot.</td></tr>
+<tr><td><b>EDAutopilot et autopilotes par reconnaissance d'écran</b></td><td>Fragiles, et à la limite des conditions d'utilisation. <b>À éviter.</b></td></tr>
+<tr><td><b>Applications mobiles</b></td><td>INARA et EDSM fonctionnent très bien dans un navigateur mobile. Ton second écran couvre déjà ce besoin.</td></tr>
+</table>
+</div>
+
+<h2 id="recap"><span class="num">06</span>Tableau récapitulatif</h2>
+
+<div class="tbl">
+<table>
+<tr><th>Outil</th><th>Type</th><th>Coût</th><th>2ᵉ écran</th><th>Priorité</th><th>État 2026</th></tr>
+<tr><td><b>Spansh</b></td><td>Site web</td><td class="yes">Gratuit</td><td class="yes">★★</td><td class="yes">Indispensable</td><td class="yes">Actif</td></tr>
+<tr><td><b>INARA</b></td><td>Site web</td><td class="yes">Gratuit</td><td class="yes">★★</td><td class="yes">Indispensable</td><td class="yes">Actif</td></tr>
+<tr><td><b>EDMC + BioScan</b></td><td>App + plugins</td><td class="yes">Gratuit</td><td class="yes">Overlay</td><td class="yes">Indispensable</td><td class="mid">Actif, overlay dormant</td></tr>
+<tr><td><b>Materials Helper</b></td><td>App</td><td class="yes">Gratuit</td><td class="yes">Overlay</td><td class="yes">Indispensable</td><td class="yes">v3.14.2 (août 2026)</td></tr>
+<tr><td>Observatory Core</td><td>App + plugins</td><td class="yes">Gratuit</td><td class="yes">Oui</td><td class="mid">Très utile</td><td class="yes">Actif</td></tr>
+<tr><td>EDDiscovery</td><td>App</td><td class="yes">Gratuit</td><td class="yes">Oui</td><td class="mid">Très utile</td><td class="yes">Actif</td></tr>
+<tr><td>EDSY</td><td>Site web</td><td class="yes">Gratuit</td><td>—</td><td class="mid">Très utile</td><td class="yes">À jour</td></tr>
+<tr><td>Coriolis</td><td>Site web</td><td class="yes">Gratuit</td><td>—</td><td class="mid">Alternative</td><td class="mid">En retard</td></tr>
+<tr><td>EDSM</td><td>Site web</td><td class="yes">Gratuit</td><td class="yes">Oui</td><td class="mid">Doublon INARA</td><td class="yes">Actif</td></tr>
+<tr><td>EDCoPilot</td><td>App</td><td class="mid">Donation</td><td class="yes">★★</td><td>Confort</td><td class="yes">Patch Nomad</td></tr>
+<tr><td>Canonn</td><td>Site web</td><td class="yes">Gratuit</td><td class="yes">Oui</td><td>Référence</td><td class="yes">Actif</td></tr>
+<tr><td>StratumFinder</td><td>App</td><td class="yes">Gratuit</td><td>—</td><td>Optionnel</td><td class="mid">À vérifier</td></tr>
+</table>
+</div>
+
+<h2 id="ordre"><span class="num">07</span>Ordre d'installation</h2>
+
+<p>Une seule session de configuration, quarante minutes montre en main.</p>
+
+<ol class="steps">
+<li><span class="dur">10 min</span><b>Le socle.</b> Installe EDMC, lance-le, autorise le login Frontier, vérifie qu'il lit ton dossier journal.</li>
+<li><span class="dur">5 min</span><b>L'overlay.</b> Installe EDMCOverlay dans le dossier plugins d'EDMC. Si tu es en multi-écran ou sans bordure, prends plutôt EDMCModernOverlay.</li>
+<li><span class="dur">10 min</span><b>L'exobio.</b> Dépose ExploData puis BioScan dans le dossier plugins, relance EDMC, active l'overlay dans les réglages BioScan. Lance l'import de tes anciens journaux.</li>
+<li><span class="dur">10 min</span><b>L'Artemis.</b> Installe ED Odyssey Materials Helper et crée ta liste de courses : batterie, réduction de consommation d'outil, puis mobilité.</li>
+<li><span class="dur">5 min</span><b>Les onglets.</b> Ouvre Spansh (configure l'Expressway depuis Cubeo, valeur minimale 16 M, Avoid Thargoids coché) et INARA (repère ta Vista Genomics et ta Pioneer Supplies les plus proches).</li>
+<li><span class="dur">plus tard</span><b>Le reste.</b> EDDiscovery pour le carnet de bord, EDSY pour optimiser le Caspian, EDCoPilot si l'immersion vocale te tente.</li>
+</ol>
+
+<div class="ct"><span class="t">Ta première sortie une fois tout installé</span>
+Génère ta route Expressway depuis Cubeo, suis-la, et à chaque système : honk puis FSS. BioScan te dit alors quels corps valent l'atterrissage. Prélève trois échantillons par espèce en respectant la distance qu'il affiche, puis revends à Vista Genomics.
+<p>Profite du premier passage pour récupérer <b>un méta-alliage</b> et débloquer <b>Farseer</b> à Deciat — c'est ton gain de portée le plus rentable, et le seul ingénieur qui compte à court terme.</p></div>
+
+<footer>
+<b>Fiabilité.</b> Tous les liens ci-dessus pointent vers les sites ou dépôts officiels, vérifiés actifs en août 2026. N'installe jamais depuis un miroir tiers : risque de malware, et les faux positifs antivirus sont déjà assez pénibles comme ça. Contrôle les analyses VirusTotal fournies dans les releases GitHub.<br><br>
+<b>Points à surveiller.</b> Le flag SRV du Nomad dans <code>status.json</code> peut encore casser des outils non mis à jour depuis le 30 juin 2026 — teste les tiens avec le Nomad déployé. StratumFinder et les projets communautaires de niche peuvent cesser d'être maintenus sans préavis.<br><br>
+<b>Conformité.</b> Lecture du journal et API Companion : autorisé par Frontier. Injection mémoire : interdit — aucun outil listé ici n'en fait.
+</footer>
+
+</div>
+</div>
+
+<script>
+window.addEventListener('scroll',function(){
+  var h=document.documentElement,b=document.body;
+  var st=h.scrollTop||b.scrollTop;
+  var sh=(h.scrollHeight||b.scrollHeight)-h.clientHeight;
+  document.getElementById('rp').style.width=(sh>0?(st/sh*100):0)+'%';
+});
+document.querySelectorAll('.toc a').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var t=document.querySelector(a.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>
