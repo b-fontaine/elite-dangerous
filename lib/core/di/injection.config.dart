@@ -38,6 +38,21 @@ import '../../features/commander/domain/usecases/commander_usecases.dart'
     as _i694;
 import '../../features/commander/presentation/bloc/commander_bloc.dart'
     as _i820;
+import '../../features/diagnostics/data/datasources/diagnostics_api.dart'
+    as _i395;
+import '../../features/diagnostics/data/diagnostics_module.dart' as _i944;
+import '../../features/diagnostics/data/repositories/diagnostics_repository_impl.dart'
+    as _i901;
+import '../../features/diagnostics/data/services/payload_exporter.dart'
+    as _i721;
+import '../../features/diagnostics/domain/repositories/diagnostics_repository.dart'
+    as _i13;
+import '../../features/diagnostics/domain/services/payload_inspector.dart'
+    as _i653;
+import '../../features/diagnostics/domain/usecases/diagnostics_usecases.dart'
+    as _i1044;
+import '../../features/diagnostics/presentation/bloc/diagnostics_bloc.dart'
+    as _i516;
 import '../../features/exobiology/data/datasources/exobiology_catalog_asset_data_source.dart'
     as _i906;
 import '../../features/exobiology/data/datasources/exobiology_progress_local_data_source.dart'
@@ -99,6 +114,8 @@ import '../../features/journal/domain/services/exobiology_activity_aggregator.da
     as _i888;
 import '../../features/journal/domain/services/journal_event_parser.dart'
     as _i644;
+import '../../features/journal/domain/services/journal_session_aggregator.dart'
+    as _i1060;
 import '../../features/journal/domain/usecases/journal_usecases.dart' as _i832;
 import '../../features/journal/presentation/bloc/journal_bloc.dart' as _i366;
 import '../../features/settings/data/settings_repository_impl.dart' as _i659;
@@ -112,8 +129,10 @@ import '../network/access_token_provider.dart' as _i962;
 import '../network/network_module.dart' as _i200;
 import '../storage/flutter_secure_store.dart' as _i889;
 import '../storage/key_value_store.dart' as _i892;
+import '../storage/line_store.dart' as _i937;
 import '../storage/secure_store.dart' as _i271;
 import '../storage/shared_preferences_key_value_store.dart' as _i782;
+import '../storage/storage_module.dart' as _i699;
 import '../time/clock.dart' as _i807;
 import 'core_module.dart' as _i154;
 
@@ -125,9 +144,11 @@ extension GetItInjectableX on _i174.GetIt {
   }) async {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final coreModule = _$CoreModule();
+    final diagnosticsModule = _$DiagnosticsModule();
     final exobiologyModule = _$ExobiologyModule();
     final journalModule = _$JournalModule();
     final networkModule = _$NetworkModule();
+    final storageModule = _$StorageModule();
     await gh.factoryAsync<_i460.SharedPreferences>(
       () => coreModule.sharedPreferences,
       preResolve: true,
@@ -138,6 +159,12 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.lazySingleton<_i776.RedirectListenerFactory>(
       () => const _i776.RedirectListenerFactory(),
+    );
+    gh.lazySingleton<_i653.PayloadInspector>(
+      () => diagnosticsModule.payloadInspector,
+    );
+    gh.lazySingleton<_i721.PayloadExporter>(
+      () => const _i721.PayloadExporter(),
     );
     gh.lazySingleton<_i906.ExobiologyCatalogAssetDataSource>(
       () => const _i906.ExobiologyCatalogAssetDataSource(),
@@ -155,6 +182,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i644.JournalEventParser>(() => journalModule.parser);
     gh.lazySingleton<_i888.ExobiologyActivityAggregator>(
       () => journalModule.aggregator,
+    );
+    gh.lazySingleton<_i1060.JournalSessionAggregator>(
+      () => journalModule.sessionAggregator,
     );
     gh.lazySingleton<_i686.ExobiologyCatalogRepository>(
       () => _i412.ExobiologyCatalogRepositoryImpl(
@@ -200,6 +230,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i808.SpeciesCatalogBloc>(
       () => _i808.SpeciesCatalogBloc(gh<_i396.GetExobiologyCatalog>()),
     );
+    gh.lazySingleton<_i937.LineStore>(
+      () => storageModule.lineStore(gh<_i892.KeyValueStore>()),
+    );
     gh.lazySingleton<_i806.CommanderLocalDataSource>(
       () => _i806.CommanderLocalDataSource(gh<_i892.KeyValueStore>()),
     );
@@ -208,9 +241,6 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.lazySingleton<_i585.GuideReadStateLocalDataSource>(
       () => _i585.GuideReadStateLocalDataSource(gh<_i892.KeyValueStore>()),
-    );
-    gh.lazySingleton<_i896.JournalLocalStore>(
-      () => _i896.JournalLocalStore(gh<_i892.KeyValueStore>()),
     );
     gh.lazySingleton<_i787.AuthRepository>(
       () => _i153.AuthRepositoryImpl(
@@ -231,6 +261,12 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i279.ResetLocalData>(
       () => _i279.ResetLocalData(gh<_i674.SettingsRepository>()),
+    );
+    gh.lazySingleton<_i896.JournalLocalStore>(
+      () => _i896.JournalLocalStore(
+        gh<_i892.KeyValueStore>(),
+        gh<_i937.LineStore>(),
+      ),
     );
     gh.factory<_i586.SettingsBloc>(
       () => _i586.SettingsBloc(
@@ -345,6 +381,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i261.CommanderApi>(
       () => _i261.CommanderApi(gh<_i361.Dio>(instanceName: 'frontierApi')),
     );
+    gh.factory<_i395.DiagnosticsApi>(
+      () => _i395.DiagnosticsApi(gh<_i361.Dio>(instanceName: 'frontierApi')),
+    );
     gh.factory<_i80.JournalApi>(
       () => _i80.JournalApi(gh<_i361.Dio>(instanceName: 'frontierApi')),
     );
@@ -388,6 +427,18 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i137.GuidesBloc>(
       () => _i137.GuidesBloc(gh<_i7.ListGuides>(), gh<_i215.SearchGuides>()),
     );
+    gh.factory<_i832.GetJournalSessionState>(
+      () => _i832.GetJournalSessionState(
+        gh<_i636.JournalRepository>(),
+        gh<_i1060.JournalSessionAggregator>(),
+      ),
+    );
+    gh.factory<_i832.WatchJournalSessionState>(
+      () => _i832.WatchJournalSessionState(
+        gh<_i636.JournalRepository>(),
+        gh<_i1060.JournalSessionAggregator>(),
+      ),
+    );
     gh.lazySingleton<_i851.CommanderRepository>(
       () => _i538.CommanderRepositoryImpl(
         gh<_i261.CommanderApi>(),
@@ -404,6 +455,16 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i832.GetExobiologyActivity>(),
         gh<_i686.ExobiologyCatalogRepository>(),
         gh<_i832.WatchJournalEvents>(),
+        gh<_i832.GetJournalSessionState>(),
+      ),
+    );
+    gh.lazySingleton<_i13.DiagnosticsRepository>(
+      () => _i901.DiagnosticsRepositoryImpl(
+        gh<_i395.DiagnosticsApi>(),
+        gh<_i892.KeyValueStore>(),
+        gh<_i807.Clock>(),
+        gh<_i962.AccessTokenProvider>(),
+        gh<_i721.PayloadExporter>(),
       ),
     );
     gh.factory<_i366.JournalBloc>(
@@ -431,6 +492,33 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i694.SaveManualOverrides>(
       () => _i694.SaveManualOverrides(gh<_i851.CommanderRepository>()),
     );
+    gh.factory<_i1044.ReadCachedProfile>(
+      () => _i1044.ReadCachedProfile(
+        gh<_i13.DiagnosticsRepository>(),
+        gh<_i653.PayloadInspector>(),
+      ),
+    );
+    gh.factory<_i1044.RefreshProfileCapture>(
+      () => _i1044.RefreshProfileCapture(
+        gh<_i13.DiagnosticsRepository>(),
+        gh<_i653.PayloadInspector>(),
+      ),
+    );
+    gh.factory<_i1044.ReadStoredJournal>(
+      () => _i1044.ReadStoredJournal(
+        gh<_i13.DiagnosticsRepository>(),
+        gh<_i653.PayloadInspector>(),
+      ),
+    );
+    gh.factory<_i820.CommanderBloc>(
+      () => _i820.CommanderBloc(
+        gh<_i694.WatchCommander>(),
+        gh<_i694.RefreshCommanderProfile>(),
+        gh<_i694.GetManualOverrides>(),
+        gh<_i694.SaveManualOverrides>(),
+        gh<_i832.WatchJournalSessionState>(),
+      ),
+    );
     gh.factory<_i396.GetExobiologyRoadmap>(
       () => _i396.GetExobiologyRoadmap(
         gh<_i643.CommanderSnapshotSource>(),
@@ -443,12 +531,23 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i437.ExobiologyRoadmapEngine>(),
       ),
     );
-    gh.factory<_i820.CommanderBloc>(
-      () => _i820.CommanderBloc(
-        gh<_i694.WatchCommander>(),
-        gh<_i694.RefreshCommanderProfile>(),
-        gh<_i694.GetManualOverrides>(),
-        gh<_i694.SaveManualOverrides>(),
+    gh.factory<_i1044.ExportCapture>(
+      () => _i1044.ExportCapture(gh<_i13.DiagnosticsRepository>()),
+    );
+    gh.factory<_i1044.FetchJournalDayCapture>(
+      () => _i1044.FetchJournalDayCapture(
+        gh<_i13.DiagnosticsRepository>(),
+        gh<_i653.PayloadInspector>(),
+        gh<_i807.Clock>(),
+      ),
+    );
+    gh.factory<_i516.DiagnosticsBloc>(
+      () => _i516.DiagnosticsBloc(
+        gh<_i1044.ReadCachedProfile>(),
+        gh<_i1044.RefreshProfileCapture>(),
+        gh<_i1044.ReadStoredJournal>(),
+        gh<_i1044.FetchJournalDayCapture>(),
+        gh<_i1044.ExportCapture>(),
       ),
     );
     gh.factory<_i6.RoadmapBloc>(
@@ -463,8 +562,12 @@ extension GetItInjectableX on _i174.GetIt {
 
 class _$CoreModule extends _i154.CoreModule {}
 
+class _$DiagnosticsModule extends _i944.DiagnosticsModule {}
+
 class _$ExobiologyModule extends _i152.ExobiologyModule {}
 
 class _$JournalModule extends _i245.JournalModule {}
 
 class _$NetworkModule extends _i200.NetworkModule {}
+
+class _$StorageModule extends _i699.StorageModule {}
