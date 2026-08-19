@@ -10,6 +10,7 @@ import '../../../../core/time/clock.dart';
 import '../../../../core/usecase/usecase.dart';
 import '../../domain/entities/exobiology_activity.dart';
 import '../../domain/entities/journal_event.dart';
+import '../../domain/entities/journal_sync_policy.dart';
 import '../../domain/repositories/journal_repository.dart';
 import '../../domain/services/exobiology_activity_aggregator.dart';
 import '../../domain/usecases/journal_usecases.dart';

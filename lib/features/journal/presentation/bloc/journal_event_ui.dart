@@ -23,9 +23,16 @@ final class JournalEventsUpdated extends JournalUiEvent {
 
 /// Pulls the last [days] days from the Companion API.
 final class JournalSyncRequested extends JournalUiEvent {
-  const JournalSyncRequested({this.days = 7});
+  const JournalSyncRequested({this.days = JournalSyncPolicy.defaultSyncDays});
+
+  /// Reaches as far back as a single sync is allowed to walk. The walk stops
+  /// on its own once the days come back empty, and skips the ones a previous
+  /// sync already settled, so this is rarely as expensive as it looks.
+  const JournalSyncRequested.maximum() : days = JournalSyncPolicy.maxSyncDays;
 
   final int days;
+
+  bool get isMaximum => days >= JournalSyncPolicy.maxSyncDays;
 
   @override
   List<Object?> get props => <Object?>[days];

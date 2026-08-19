@@ -19,6 +19,7 @@ abstract final class StorageKeys {
 
   static const String journalEvents = 'journal.events';
   static const String journalLastSyncedDay = 'journal.last_synced_day';
+  static const String journalSettledDays = 'journal.settled_days';
   static const String journalLocalFolder = 'journal.local_folder';
 
   static const String exobiologyProgress = 'exobiology.progress';
@@ -36,6 +37,7 @@ abstract final class StorageKeys {
     commanderLastSync,
     journalEvents,
     journalLastSyncedDay,
+    journalSettledDays,
     journalLocalFolder,
     exobiologyProgress,
     exobiologyRoadmapOverrides,
