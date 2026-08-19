@@ -78,11 +78,27 @@ utilisent leur propre coffre.
 > l'erreur libsecret *avant* d'atteindre cette ligne, le cache garde `/usr/local`
 > pour toujours. Purger le cache est le seul remède.
 
+> **Ne vide jamais `build/` à la main : utilise `task clean`.**
+>
+> Supprimer `build/` en laissant `.dart_tool/` donne :
+>
+> ```
+> file INSTALL cannot find ".../build/native_assets/linux": No such file
+> or directory.
+> ```
+>
+> Le répertoire est produit par la cible `InstallCodeAssets` du système de build
+> Flutter, qui est incrémentale et consulte ses empreintes dans
+> `.dart_tool/flutter_build/`. Celles-ci survivent à la suppression de `build/`,
+> la cible est donc sautée, et `install(DIRECTORY)` de `linux/CMakeLists.txt`
+> échoue sur une source absente — le répertoire est vide en l'absence de native
+> assets, mais CMake exige qu'il existe. `flutter clean` efface les deux.
+
 Vérification complète :
 
 ```bash
-dart analyze            # doit être à zéro
-flutter test            # 284 tests
+task check              # dart analyze --fatal-infos puis flutter test
+flutter test            # 307 tests
 flutter build web       # compile la chaîne complète, y compris le code généré
 ```
 
