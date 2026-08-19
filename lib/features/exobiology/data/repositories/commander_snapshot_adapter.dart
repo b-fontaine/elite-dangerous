@@ -10,8 +10,10 @@ import '../../../commander/domain/entities/rank.dart';
 import '../../../commander/domain/entities/suit_info.dart';
 import '../../../commander/domain/repositories/commander_repository.dart';
 import '../../../journal/domain/entities/exobiology_activity.dart';
+import '../../../journal/domain/entities/journal_session_state.dart';
 import '../../../journal/domain/usecases/journal_usecases.dart';
 import '../../domain/entities/commander_snapshot.dart';
+import '../../domain/entities/engineer.dart';
 import '../../domain/entities/exobiology_catalog.dart';
 import '../../domain/entities/exobiology_progress.dart';
 import '../../domain/entities/organic_species.dart';
@@ -19,6 +21,7 @@ import '../../domain/entities/suit.dart';
 import '../../domain/repositories/commander_snapshot_source.dart';
 import '../../domain/repositories/exobiology_catalog_repository.dart';
 import '../../domain/repositories/exobiology_progress_repository.dart';
+import '../../domain/services/exobiology_reference_data.dart';
 
 /// Anti-corruption layer between the commander context and the exobiology one.
 ///
@@ -38,6 +41,7 @@ class CommanderSnapshotAdapter implements CommanderSnapshotSource {
     this._activity,
     this._catalog,
     this._journalEvents,
+    this._sessionState,
   );
 
   final CommanderRepository _commanders;
@@ -45,6 +49,7 @@ class CommanderSnapshotAdapter implements CommanderSnapshotSource {
   final GetExobiologyActivity _activity;
   final ExobiologyCatalogRepository _catalog;
   final WatchJournalEvents _journalEvents;
+  final GetJournalSessionState _sessionState;
 
   @override
   Future<Result<CommanderSnapshot>> current() async {
@@ -55,6 +60,8 @@ class CommanderSnapshotAdapter implements CommanderSnapshotSource {
     final Result<ExobiologyActivity> activity =
         await _activity(const NoParams());
     final Result<ExobiologyCatalog> catalog = await _catalog.loadCatalog();
+    final Result<JournalSessionState> session =
+        await _sessionState(const NoParams());
 
     return Success<CommanderSnapshot>(
       _build(
@@ -63,6 +70,7 @@ class CommanderSnapshotAdapter implements CommanderSnapshotSource {
         progress.valueOrNull ?? const ExobiologyProgress.empty(),
         activity.valueOrNull ?? const ExobiologyActivity(),
         catalog.valueOrNull ?? const ExobiologyCatalog.empty(),
+        session.valueOrNull ?? const JournalSessionState.empty(),
       ),
     );
   }
@@ -110,6 +118,7 @@ class CommanderSnapshotAdapter implements CommanderSnapshotSource {
     ExobiologyProgress progress,
     ExobiologyActivity activity,
     ExobiologyCatalog catalog,
+    JournalSessionState session,
   ) {
     final SuitInfo? artemis = commander.artemis;
     final int artemisGrade = overrides.artemisGrade ?? artemis?.grade ?? 0;
@@ -120,8 +129,12 @@ class CommanderSnapshotAdapter implements CommanderSnapshotSource {
       currentSystem: commander.currentSystem,
       // Records entered in the app and sales proven by the journal describe
       // the same career; taking the larger keeps an import from inflating it.
-      exobiologyProfitCr: (overrides.declaredExobiologyProfitCr ?? 0) +
-          _max(progress.cumulativeProfitCr, activity.totalSoldCr),
+      // Three witnesses to one career. `Statistics` is the game's own total
+      // and outranks the rest when present: the app can only ever have
+      // imported part of the history, so its figures are lower bounds.
+      exobiologyProfitCr: session.exobiologyProfitCr ??
+          (overrides.declaredExobiologyProfitCr ?? 0) +
+              _max(progress.cumulativeProfitCr, activity.totalSoldCr),
       suit: artemisGrade > 0
           ? SuitLoadout(
               type: SuitType.artemis,
@@ -137,19 +150,33 @@ class CommanderSnapshotAdapter implements CommanderSnapshotSource {
         if (commander.ownsMaverick || overrides.ownsMaverick)
           SuitType.maverick,
       },
-      suitMaterials: overrides.suitMaterials,
-      hasMetaAlloy: overrides.hasMetaAlloy,
-      pledgedPower: overrides.pledgedPower,
-      unlockedShipEngineerIds: overrides.unlockedShipEngineerIds,
-      unlockedSuitEngineerIds: overrides.unlockedSuitEngineerIds,
+      // Merged, not chosen: the journal knows the counts, and a commander
+      // correcting one must still win on that one entry.
+      suitMaterials: <String, int>{
+        ...session.onFootInventory,
+        ...overrides.suitMaterials,
+      },
+      hasMetaAlloy: overrides.hasMetaAlloy || session.hasMetaAlloy,
+      pledgedPower: overrides.pledgedPower ?? session.pledgedPower,
+      unlockedShipEngineerIds: <String>{
+        ...overrides.unlockedShipEngineerIds,
+        ..._unlockedEngineerIds(session, EngineerKind.ship),
+      },
+      unlockedSuitEngineerIds: <String>{
+        ...overrides.unlockedSuitEngineerIds,
+        ..._unlockedEngineerIds(session, EngineerKind.suit),
+      },
       explorerRank:
           overrides.explorerRankLevel ?? commander.rankLevel(RankType.explore),
       hasFsdIncreasedRangeG5: overrides.hasFsdIncreasedRangeG5,
       hasMassManager: overrides.hasMassManager,
-      hasGuardianFsdBooster: overrides.hasGuardianFsdBooster,
-      jumpRangeLy: overrides.jumpRangeLy ?? commander.jumpRangeLy,
+      hasGuardianFsdBooster:
+          overrides.hasGuardianFsdBooster || session.hasGuardianFsdBooster,
+      jumpRangeLy:
+          overrides.jumpRangeLy ?? session.jumpRangeLy ?? commander.jumpRangeLy,
       shipName: overrides.shipName ?? commander.shipType ?? commander.shipName,
-      hasDetailedSurfaceScanner: overrides.hasDetailedSurfaceScanner,
+      hasDetailedSurfaceScanner: overrides.hasDetailedSurfaceScanner ||
+          session.hasDetailedSurfaceScanner,
       unsoldOrganicDataCr: _max(
         progress.atRiskValueCr,
         _atRiskFromJournal(activity, catalog),
@@ -160,6 +187,28 @@ class CommanderSnapshotAdapter implements CommanderSnapshotSource {
           _max(progress.distinctSpeciesSold, activity.distinctSpeciesSold),
       lastSaleAt: activity.lastSaleAt ?? _lastSaleAt(progress),
     );
+  }
+
+  /// Engineer ids the journal proves unlocked, for one track.
+  ///
+  /// The journal names engineers; the roadmap keys them by id. Matching on the
+  /// name is the only bridge, and it is safe here because the reference table
+  /// carries the exact in-game spellings.
+  Set<String> _unlockedEngineerIds(
+    JournalSessionState session,
+    EngineerKind kind,
+  ) {
+    if (session.unlockedEngineerNames.isEmpty) {
+      return const <String>{};
+    }
+    final Set<String> unlocked = session.unlockedEngineerNames
+        .map((String name) => name.toLowerCase())
+        .toSet();
+    return <String>{
+      for (final Engineer engineer in ExobiologyReferenceData.engineers)
+        if (engineer.kind == kind && unlocked.contains(engineer.name.toLowerCase()))
+          engineer.id,
+    };
   }
 
   /// Value of the organisms the journal shows as complete but unsold.

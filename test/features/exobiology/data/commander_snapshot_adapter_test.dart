@@ -9,11 +9,14 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../fixtures/path_provider_stub.dart';
+
 /// Importing a flight log must change what the roadmap tells the commander to
 /// do. This is the whole point of the import: an app that reads the journal but
 /// keeps advising a beginner's first steps would be worthless.
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  usePathProviderStub();
 
   const ExobiologyRoadmapEngine engine = ExobiologyRoadmapEngine();
 
@@ -131,4 +134,89 @@ void main() {
     );
     await sub.cancel();
   });
+
+  group('ce que le journal remplit désormais à la place du commandant', () {
+    /// Une journée telle que le jeu l'écrit au démarrage d'une session.
+    const List<String> sessionLines = <String>[
+      '{"timestamp":"2026-08-19T20:00:00Z","event":"Statistics",'
+          '"Exobiology":{"Organic_Data_Profits":2483000000}}',
+      '{"timestamp":"2026-08-19T20:00:01Z","event":"EngineerProgress",'
+          '"Engineers":[{"Engineer":"Felicity Farseer","EngineerID":300100,'
+          '"Progress":"Unlocked","Rank":5}]}',
+      '{"timestamp":"2026-08-19T20:00:02Z","event":"ShipLocker",'
+          '"Data":[{"Name":"suitschematic","Name_Localised":"Suit Schematic",'
+          '"Count":9}]}',
+      '{"timestamp":"2026-08-19T20:00:03Z","event":"Loadout",'
+          '"Ship":"explorer_nx","Rebuy":2363875,"MaxJumpRange":78.42,'
+          '"Modules":[{"Slot":"Slot12_Size1",'
+          '"Item":"int_detailedsurfacescanner_tiny"}]}',
+      '{"timestamp":"2026-08-19T20:00:04Z","event":"Powerplay",'
+          '"Power":"Pranav Antal","Rank":3,"Merits":1520}',
+      '{"timestamp":"2026-08-19T20:00:05Z","event":"Cargo","Vessel":"Ship",'
+          '"Inventory":[{"Name":"metaalloys","Count":1}]}',
+    ];
+
+    Future<CommanderSnapshot> importSession() async {
+      await getIt<JournalRepository>().importFiles(<JournalFileSource>[
+        JournalFileSource(
+          name: 'Journal.session.log',
+          readLines: () => Stream<String>.fromIterable(sessionLines),
+        ),
+      ]);
+      return (await getIt<CommanderSnapshotSource>().current()).valueOrNull!;
+    }
+
+    test('la portée de saut cesse d\'être une saisie manuelle', () async {
+      final CommanderSnapshot snapshot = await importSession();
+
+      expect(snapshot.jumpRangeLy, 78.42);
+    });
+
+    test('les matériaux à pied sont comptés par le jeu', () async {
+      final CommanderSnapshot snapshot = await importSession();
+
+      expect(snapshot.suitMaterials['Suit Schematic'], 9);
+      expect(snapshot.missingMaterial('Suit Schematic', 12), 3);
+    });
+
+    test('un ingénieur débloqué est reconnu par son nom', () async {
+      final CommanderSnapshot snapshot = await importSession();
+
+      // Le journal nomme les ingénieurs, la feuille de route les indexe par
+      // identifiant : le rapprochement se fait sur le nom exact du jeu.
+      expect(snapshot.unlockedShipEngineerIds, contains('felicity_farseer'));
+      expect(snapshot.meetsFarseerRankRequirement, isFalse);
+    });
+
+    test('le Meta-Alloy en soute est vu sans case à cocher', () async {
+      final CommanderSnapshot snapshot = await importSession();
+
+      expect(snapshot.hasMetaAlloy, isTrue);
+    });
+
+    test('l\'allégeance Powerplay et sa majoration sont détectées', () async {
+      final CommanderSnapshot snapshot = await importSession();
+
+      expect(snapshot.pledgedPower, 'Pranav Antal');
+      expect(snapshot.hasExobiologySalesBonus, isTrue);
+    });
+
+    test('le détecteur de surface est lu dans l\'équipement', () async {
+      final CommanderSnapshot snapshot = await importSession();
+
+      expect(snapshot.hasDetailedSurfaceScanner, isTrue);
+    });
+
+    test('le total de carrière du jeu prime sur ce que l\'app a importé',
+        () async {
+      // L'app ne peut avoir importé qu'une partie de l'historique : ses
+      // chiffres sont des minorants, celui de `Statistics` est le vrai.
+      await importJournal();
+      final CommanderSnapshot snapshot = await importSession();
+
+      expect(snapshot.exobiologyProfitCr, 2483000000);
+      expect(snapshot.exobiologistRank.rank.name, isNotEmpty);
+    });
+  });
+
 }
