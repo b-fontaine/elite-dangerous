@@ -7,6 +7,8 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../fixtures/path_provider_stub.dart';
+
 class _FakeBuildConfig implements BuildConfig {
   const _FakeBuildConfig(this.frontierClientId);
 
@@ -45,6 +47,7 @@ TextField _clientIdField(WidgetTester tester) =>
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  usePathProviderStub();
 
   setUp(() async {
     SharedPreferences.setMockInitialValues(<String, Object>{});

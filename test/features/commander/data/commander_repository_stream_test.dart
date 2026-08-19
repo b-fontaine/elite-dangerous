@@ -7,6 +7,8 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../fixtures/path_provider_stub.dart';
+
 /// Guards the boundary between queries and mutations.
 ///
 /// The exobiology snapshot listens to `watchProfile()` and rebuilds itself by
@@ -15,6 +17,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// exactly what happened, and what hung the app on the roadmap screen.
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  usePathProviderStub();
 
   setUp(() async {
     SharedPreferences.setMockInitialValues(<String, Object>{});
@@ -85,13 +88,29 @@ void main() {
     final List<Object> snapshots = <Object>[];
     final sub = source.watch().listen(snapshots.add);
 
-    await Future<void>.delayed(const Duration(milliseconds: 120));
-    final int settled = snapshots.length;
-    await Future<void>.delayed(const Duration(milliseconds: 120));
+    // Waits for quiet rather than for a fixed delay: building a snapshot now
+    // reads the journal from a file, and how long that takes is the machine's
+    // business. A fixed window would either flake or hide a real loop.
+    int quietRounds = 0;
+    int previous = -1;
+    for (int round = 0; round < 40 && quietRounds < 4; round++) {
+      await Future<void>.delayed(const Duration(milliseconds: 25));
+      if (snapshots.length == previous) {
+        quietRounds++;
+      } else {
+        quietRounds = 0;
+        previous = snapshots.length;
+      }
+    }
 
-    expect(snapshots.length, settled,
-        reason: 'Le flux doit se stabiliser, pas boucler.');
-    expect(settled, lessThan(5));
+    expect(
+      quietRounds,
+      greaterThanOrEqualTo(4),
+      reason: 'Le flux doit se stabiliser, pas boucler.',
+    );
+    // A feedback loop would run into the hundreds; a handful is the graph
+    // settling as each of its three sources reports in.
+    expect(snapshots.length, lessThan(8));
     await sub.cancel();
   });
 

@@ -7,6 +7,8 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../fixtures/path_provider_stub.dart';
+
 /// Renders every shipped guide for real.
 ///
 /// The guides are 260 kB of authored content exercising every block type, at
@@ -14,6 +16,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// a callout would surface before a commander hits it.
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  usePathProviderStub();
 
   const List<String> guideIds = <String>[
     'exploration-exobiologie',

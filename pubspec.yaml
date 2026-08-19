@@ -60,6 +60,11 @@ dev_dependencies:
   bloc_test: ^10.0.0
   mocktail: ^1.0.5
 
+  # Le journal vit dans un fichier : les tests qui montent le vrai graphe de
+  # dépendances doivent pouvoir substituer `path_provider`.
+  path_provider_platform_interface: ^2.1.2
+  plugin_platform_interface: ^2.1.8
+
   flutter_lints: ^6.0.0
 
 flutter:
