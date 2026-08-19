@@ -2,7 +2,10 @@ import 'package:equatable/equatable.dart';
 
 import 'manual_commander_overrides.dart';
 import 'rank.dart';
+import 'ship.dart';
+import 'station_services.dart';
 import 'suit_info.dart';
+import 'suit_loadout.dart';
 
 /// Where the commander's data came from, so the UI can be honest about it.
 enum CommanderDataSource {
@@ -41,6 +44,9 @@ class Commander extends Equatable {
     this.currentSuit,
     this.jumpRangeLy,
     this.lastSyncedAt,
+    this.fleet = const <Ship>[],
+    this.suitLoadouts = const <SuitLoadout>[],
+    this.station = const StationServices.none(),
   });
 
   const Commander.unknown()
@@ -58,7 +64,10 @@ class Commander extends Equatable {
         suits = const <SuitInfo>[],
         currentSuit = null,
         jumpRangeLy = null,
-        lastSyncedAt = null;
+        lastSyncedAt = null,
+        fleet = const <Ship>[],
+        suitLoadouts = const <SuitLoadout>[],
+        station = const StationServices.none();
 
   final String name;
   final CommanderDataSource source;
@@ -75,6 +84,64 @@ class Commander extends Equatable {
   final SuitInfo? currentSuit;
   final double? jumpRangeLy;
   final DateTime? lastSyncedAt;
+
+  /// Every ship owned. Only [currentShip] carries its fitting: verified on a
+  /// real payload, where none of the seven stored ships had one.
+  final List<Ship> fleet;
+
+  /// Saved on-foot loadouts, weapons included — but never their grade, which
+  /// Frontier does not send.
+  final List<SuitLoadout> suitLoadouts;
+
+  /// The last station docked at, and what it offers. `vistagenomics` is the
+  /// entry that matters: it says whether organic data can be sold here.
+  final StationServices station;
+
+  Ship? get currentShip {
+    for (final Ship ship in fleet) {
+      if (ship.isCurrent) {
+        return ship;
+      }
+    }
+    return null;
+  }
+
+  /// Ships parked elsewhere, most valuable first.
+  List<Ship> get storedShips => <Ship>[
+        for (final Ship ship in fleet)
+          if (!ship.isCurrent) ship,
+      ]..sort((Ship a, Ship b) => b.value.totalCr.compareTo(a.value.totalCr));
+
+  int get fleetValueCr => fleet.fold<int>(
+        0,
+        (int sum, Ship ship) => sum + ship.value.totalCr,
+      );
+
+  /// Liquid credits plus what the fleet is worth.
+  int get netWorthCr => credits + fleetValueCr - debt;
+
+  SuitLoadout? get equippedLoadout {
+    for (final SuitLoadout loadout in suitLoadouts) {
+      if (loadout.isEquipped) {
+        return loadout;
+      }
+    }
+    return null;
+  }
+
+  /// Whether the account has Odyssey, deduced rather than read.
+  ///
+  /// `commander.capabilities` reports it, and lies: a real payload had
+  /// `Odyssey: false` on an account owning an Artemis, a Maverick and a
+  /// Dominator. Owning a suit that is not the Flight Suit is the fact.
+  bool get hasOdyssey =>
+      suits.any((SuitInfo suit) => suit.kind != SuitKind.flight) ||
+      currentSuit?.kind == SuitKind.artemis;
+
+  /// Likewise for Horizons: `capabilities` had it at `false` on a ship
+  /// carrying two SRVs. A planetary vehicle bay is the fact.
+  bool get hasHorizons =>
+      fleet.any((Ship ship) => ship.hasSrv) || hasOdyssey;
 
   RankProgress? rank(RankType type) => ranks[type];
 
@@ -180,6 +247,9 @@ class Commander extends Equatable {
     SuitInfo? currentSuit,
     double? jumpRangeLy,
     DateTime? lastSyncedAt,
+    List<Ship>? fleet,
+    List<SuitLoadout>? suitLoadouts,
+    StationServices? station,
   }) {
     return Commander(
       name: name ?? this.name,
@@ -197,6 +267,9 @@ class Commander extends Equatable {
       currentSuit: currentSuit ?? this.currentSuit,
       jumpRangeLy: jumpRangeLy ?? this.jumpRangeLy,
       lastSyncedAt: lastSyncedAt ?? this.lastSyncedAt,
+      fleet: fleet ?? this.fleet,
+      suitLoadouts: suitLoadouts ?? this.suitLoadouts,
+      station: station ?? this.station,
     );
   }
 
@@ -212,5 +285,8 @@ class Commander extends Equatable {
         suits,
         currentSuit,
         jumpRangeLy,
+        fleet,
+        suitLoadouts,
+        station,
       ];
 }

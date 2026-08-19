@@ -125,6 +125,35 @@ enum RankType {
     ],
     hasEliteTiers: false,
   ),
+  /// Powerplay rating, 0 to 5. Frontier exposes the number and no name for it.
+  power(
+    capiKey: 'power',
+    journalKey: 'Power',
+    label: 'Powerplay',
+    names: <String>[],
+    hasEliteTiers: false,
+  ),
+
+  /// Added by Trailblazers with system colonisation. Frontier publishes no
+  /// tier names for it, so the level is shown as a number rather than invented.
+  builder(
+    capiKey: 'builder',
+    journalKey: 'Builder',
+    label: 'Colonisation',
+    names: <String>[],
+    hasEliteTiers: false,
+  ),
+
+  /// Present in `/profile` since the same update, undocumented and always
+  /// observed at zero. Modelled so it stops showing up as an unknown key.
+  learner(
+    capiKey: 'learner',
+    journalKey: 'Learner',
+    label: 'Apprentissage',
+    names: <String>[],
+    hasEliteTiers: false,
+  ),
+
   empire(
     capiKey: 'empire',
     journalKey: 'Empire',
@@ -179,11 +208,22 @@ enum RankType {
     'Elite V',
   ];
 
-  int get maxLevel => names.length - 1 + (hasEliteTiers ? eliteTiers.length : 0);
+  /// Highest level the ladder can report. Zero when Frontier publishes no
+  /// tier names, which also makes [RankProgress.fraction] fall back to nothing
+  /// rather than to a bar computed from a length of `-1`.
+  int get maxLevel => names.isEmpty
+      ? 0
+      : names.length - 1 + (hasEliteTiers ? eliteTiers.length : 0);
+
+  /// Whether the app knows what to call each tier of this ladder.
+  bool get hasNamedTiers => names.isNotEmpty;
 
   /// Never throws: an unknown level degrades to `Rang N` rather than crashing
   /// the profile screen when Frontier adds a tier.
   String nameFor(int level) {
+    if (names.isEmpty) {
+      return level <= 0 ? 'Aucun' : 'Rang $level';
+    }
     if (level < 0) {
       return names.first;
     }
@@ -246,7 +286,8 @@ class RankProgress extends Equatable {
     return max == 0 ? 0 : (level / max).clamp(0.0, 1.0);
   }
 
-  bool get isElite => level >= type.names.length - 1;
+  bool get isElite =>
+      type.hasNamedTiers && level >= type.names.length - 1;
 
   @override
   List<Object?> get props => <Object?>[type, level, progressPercent];
