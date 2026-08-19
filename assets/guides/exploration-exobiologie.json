@@ -1,0 +1,317 @@
+{
+  "id": "exploration-exobiologie",
+  "title": "Explorer la galaxie",
+  "kicker": "Elite Dangerous · Édition août 2026",
+  "deck": "Le guide complet de l'exploration et de l'exobiologie : choisir son vaisseau, scanner un système, récolter la vie extraterrestre, et transformer tout cela en milliards de crédits.",
+  "byline": "PC · Live · Odyssey requis",
+  "edition": "2026-08",
+  "topics": ["exobiologie", "exploration", "vaisseaux", "fleet-carrier"],
+  "estimatedReadMinutes": 22,
+  "sections": [
+    {
+      "id": "introduction",
+      "number": 0,
+      "title": "Introduction",
+      "blocks": [
+        {"type": "heading", "text": "Au sommaire", "level": 4},
+        {"type": "list", "ordered": true, "items": [
+          "Choisir son vaisseau : le grand comparatif",
+          "La découverte de systèmes, de zéro",
+          "L'exobiologie, de zéro",
+          "Optimiser ses revenus : les jalons",
+          "La boîte à outils",
+          "Ce qu'il faut retenir"
+        ]},
+        {"type": "paragraph", "emphasis": "intro", "text": "Ce guide part du principe que vous avez un vaisseau d'exploration correct, votre rebuy en poche et une vingtaine de millions de crédits de trésorerie. Autrement dit : vous n'êtes plus débutant, mais l'exploration profonde et l'exobiologie restent pour vous des terres inconnues. À la fin, vous saurez exactement quoi faire, dans quel ordre, et combien ça rapporte."},
+        {"type": "paragraph", "emphasis": "normal", "text": "L'exploration est la seule activité d'Elite Dangerous qui ne vous mettra jamais en danger si vous êtes méthodique. Pas de pirates, pas de zones de combat, pas de rebuy à 80 millions. Juste vous, un vaisseau bien préparé, et 400 milliards de systèmes dont la grande majorité n'a jamais vu passer personne."},
+        {"type": "paragraph", "emphasis": "normal", "text": "C'est aussi, depuis l'arrivée d'Odyssey et de l'exobiologie, l'une des activités les plus rentables du jeu. Un seul spécimen bien choisi peut valoir **95 millions de crédits**. Une expédition de deux mois a rapporté à un joueur **4,7 milliards**. Le tout sans tirer un coup de feu."},
+        {"type": "callout", "tone": "info", "title": "Comment lire les chiffres de ce guide", "text": "Les données sont étiquetées selon leur fiabilité. **OFF** provient de Frontier ou du wiki officiel. **COM** vient des bases communautaires (Inara, EDSM, Spansh, Canonn, wiki Fandom) ou de mesures de joueurs. **EST** signale une estimation ou une fourchette indicative. Les rendements horaires sont particulièrement variables : ils dépendent de votre technique, de la densité biologique et de votre chance."}
+      ]
+    },
+    {
+      "id": "choisir-son-vaisseau",
+      "number": 1,
+      "title": "Choisir son vaisseau",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "normal", "text": "La première erreur du candidat explorateur est de croire qu'un seul critère compte : la portée de saut. C'est faux, et c'est même trompeur pour l'exobiologie. Un vaisseau qui saute à 90 années-lumière mais qui met deux minutes à se poser sur un terrain vallonné vous fera perdre plus de temps qu'il ne vous en fait gagner."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Il faut en réalité arbitrer entre trois qualités : la **portée**, qui détermine votre vitesse de déplacement ; l'**aptitude à l'atterrissage**, décisive en exobiologie où vous vous poserez des dizaines de fois par session ; et l'**autonomie**, c'est-à-dire le nombre d'emplacements disponibles pour les réparateurs, le SRV et le reste."},
+        {"type": "heading", "text": "Le comparatif complet", "level": 3},
+        {"type": "table",
+         "headers": ["Vaisseau", "Pad", "Prix coque", "Portée ingénierée", "Atterrissage", "Verdict"],
+         "rows": [
+           [{"text": "Hauler", "style": "strong"}, {"text": "S", "style": "normal"}, {"text": "~52 000", "style": "number"}, {"text": "~35 LY", "style": "number"}, {"text": "Excellent", "style": "win"}, {"text": "Dépannage, budget nul", "style": "normal"}],
+           [{"text": "Adder", "style": "strong"}, {"text": "S", "style": "normal"}, {"text": "~87 000", "style": "number"}, {"text": "~35 LY", "style": "number"}, {"text": "Excellent", "style": "win"}, {"text": "Idem, plus de slots", "style": "normal"}],
+           [{"text": "Cobra Mk III", "style": "strong"}, {"text": "S", "style": "normal"}, {"text": "~380 000", "style": "number"}, {"text": "~43 LY", "style": "number"}, {"text": "Bon", "style": "mid"}, {"text": "Multirôle débutant", "style": "normal"}],
+           [{"text": "Cobra Mk V", "style": "strong"}, {"text": "S", "style": "normal"}, {"text": "~350 000", "style": "number"}, {"text": "~43 LY", "style": "number"}, {"text": "Bon", "style": "mid"}, {"text": "Version 2025, SCO véloce", "style": "normal"}],
+           [{"text": "Dolphin", "style": "strong"}, {"text": "S", "style": "normal"}, {"text": "~1,3 M", "style": "number"}, {"text": "~55 LY", "style": "number"}, {"text": "Bon", "style": "mid"}, {"text": "Confort, belle canopée", "style": "normal"}],
+           [{"text": "Diamondback Explorer", "style": "strong"}, {"text": "S", "style": "normal"}, {"text": "~14 M", "style": "number"}, {"text": "~82 LY", "style": "number"}, {"text": "Excellent", "style": "win"}, {"text": "Meilleur rapport qualité/prix", "style": "normal"}],
+           [{"text": "Asp Explorer", "style": "strong"}, {"text": "M", "style": "normal"}, {"text": "~6,6 M", "style": "number"}, {"text": "~65 LY", "style": "number"}, {"text": "Correct", "style": "mid"}, {"text": "Le classique polyvalent", "style": "normal"}],
+           [{"text": "Mandalay", "style": "strong"}, {"text": "M", "style": "normal"}, {"text": "17 639 220", "style": "number"}, {"text": "~80–91 LY", "style": "number"}, {"text": "Excellent", "style": "win"}, {"text": "La référence exobio", "style": "win"}],
+           [{"text": "Krait Phantom", "style": "strong"}, {"text": "M", "style": "normal"}, {"text": "37 472 250", "style": "number"}, {"text": "~65 LY", "style": "number"}, {"text": "Correct", "style": "mid"}, {"text": "Explorateur polyvalent", "style": "normal"}],
+           [{"text": "Python Mk II", "style": "strong"}, {"text": "M", "style": "normal"}, {"text": "67 527 360", "style": "number"}, {"text": "~38 LY", "style": "number"}, {"text": "Moyen", "style": "mid"}, {"text": "Rapide, mais pas un explorateur", "style": "normal"}],
+           [{"text": "Anaconda", "style": "strong"}, {"text": "L", "style": "normal"}, {"text": "~262 M", "style": "number"}, {"text": "~85–89 LY", "style": "number"}, {"text": "Médiocre", "style": "lose"}, {"text": "Confort et autonomie", "style": "normal"}],
+           [{"text": "Caspian Explorer", "style": "strong"}, {"text": "L", "style": "normal"}, {"text": "~194,9 M", "style": "number"}, {"text": "~89–92 LY", "style": "number"}, {"text": "Bon", "style": "mid"}, {"text": "Roi du voyage longue distance", "style": "win"}]
+         ]},
+        {"type": "heading", "text": "Le meilleur vaisseau d'exobiologie : le Mandalay", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le consensus est net, et il s'appuie sur des choix de conception délibérés de Frontier. La **rampe d'embarquement du Mandalay se trouve sous le cockpit**, ce qui permet d'aligner visuellement son atterrissage sur le spécimen que l'on vise. Le plancher du cockpit est **transparent**, hérité du Mamba : vous voyez le terrain directement sous vous pendant la descente."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Ajoutez à cela une signature thermique très basse — le vaisseau commence à charger son FSD pendant qu'il scoope encore — une maniabilité comparable à celle du Diamondback Explorer, un scoop de taille 6, et un prix de seulement 17,6 millions. Frontier affirme même qu'il dépasse l'Anaconda en portée de saut."},
+        {"type": "quote", "text": "« The Mandalay is simply outstanding. In my opinion, it is the best exploration ship available. »", "attribution": "CMDR AndyRice, classement Just About"},
+        {"type": "heading", "text": "Le meilleur pour aller loin, vite : le Caspian Explorer", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le Caspian est le **seul vaisseau du jeu capable de monter un FSD de classe 8**, et surtout le seul à recevoir le **FSD SCO Mk II**. Ce module change complètement le rapport au voyage : son boost sur les étoiles à neutrons monte à **500 %** au lieu des 400 % habituels, soit des sauts pouvant atteindre **556 années-lumière** — davantage qu'un Fleet Carrier."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Détail qui compte sur une longue expédition : ce FSD **ne subit pas les 1 % de dégâts** infligés à chaque supercharge sur tous les autres vaisseaux. Vous pouvez enchaîner les neutrons sans regarder l'état de votre module."},
+        {"type": "verdict", "title": "Verdict", "text": "Si vous faites de l'exobiologie, prenez le **Mandalay** et n'y réfléchissez pas davantage : c'est le meilleur investissement du jeu dans cette activité. Si votre plaisir est de traverser la galaxie et de cartographier, et que le budget suit, le **Caspian** vous fera gagner des heures de trajet. L'**Anaconda** reste défendable pour son confort, mais elle se pose mal — un vrai handicap quand on atterrit trente fois par soirée."},
+        {"type": "heading", "text": "Le build type, module par module", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Peu importe le vaisseau, la logique reste la même : tout ce qui n'est pas indispensable est du poids en moins de portée. On descend donc tous les modules non critiques en classe D, et on les allège chez un ingénieur."},
+        {"type": "table",
+         "headers": ["Module", "Recommandation", "Statut"],
+         "rows": [
+           [{"text": "Frame Shift Drive", "style": "normal"}, {"text": "Le plus gros SCO A-raté, ingénieré **Increased Range G5 + Mass Manager**", "style": "normal"}, {"text": "Indispensable", "style": "win"}],
+           [{"text": "Guardian FSD Booster", "style": "normal"}, {"text": "**5H** si le slot le permet (+10,5 LY pour 1,3 t)", "style": "normal"}, {"text": "Quasi indispensable", "style": "win"}],
+           [{"text": "Fuel Scoop", "style": "normal"}, {"text": "Le plus gros A-raté possible", "style": "normal"}, {"text": "Indispensable", "style": "win"}],
+           [{"text": "Detailed Surface Scanner", "style": "normal"}, {"text": "Un seul (+40 % de rayon de sonde)", "style": "normal"}, {"text": "Indispensable", "style": "win"}],
+           [{"text": "Planetary Vehicle Hangar", "style": "normal"}, {"text": "Taille 2 suffit (SRV)", "style": "normal"}, {"text": "Indispensable", "style": "win"}],
+           [{"text": "AFMU", "style": "normal"}, {"text": "**Une seule** suffit, D-ratée, éteinte. Deux si usage intensif des neutrons", "style": "normal"}, {"text": "Indispensable", "style": "win"}],
+           [{"text": "Heat Sink Launcher", "style": "normal"}, {"text": "Un ou deux", "style": "normal"}, {"text": "Indispensable", "style": "win"}],
+           [{"text": "Bouclier", "style": "normal"}, {"text": "Léger, 3D ou 4D", "style": "normal"}, {"text": "Recommandé", "style": "mid"}],
+           [{"text": "Life Support, Power Distributor, Sensors", "style": "normal"}, {"text": "D-ratés, **Lightweight G5**", "style": "normal"}, {"text": "Indispensable", "style": "win"}],
+           [{"text": "Supercruise Assist, Docking Computer", "style": "normal"}, {"text": "Au goût", "style": "normal"}, {"text": "Confort", "style": "mid"}],
+           [{"text": "Armes", "style": "normal"}, {"text": "**Aucune**", "style": "normal"}, {"text": "À proscrire", "style": "lose"}]
+         ]},
+        {"type": "callout", "tone": "info", "title": "Le raccourci que peu de joueurs connaissent", "text": "Le **FSD SCO V1 pré-ingénieré**, disponible au Human Tech Broker, offre souvent le plus gros gain de portée du jeu pour un effort minimal — bien plus que d'ingénierer soi-même un FSD standard. Vérifiez sa disponibilité pour la classe de votre vaisseau avant de vous lancer dans le grind Farseer."},
+        {"type": "heading", "text": "Le Nomad : révolution ou fausse bonne idée ?", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Ajouté par la mise à jour **Operations du 30 juin 2026**, le Nomad est la première Ship-Launched Vessel du jeu — un petit véhicule volant que l'on largue depuis son vaisseau, et le premier engin d'Elite doté d'un intérieur où l'on peut marcher."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Son intérêt pour l'exobiologie est réel : il embarque un **scanner biologique** qui détecte les signaux **depuis le cockpit**. En glissant train sorti au-dessus du terrain, les zones exploitables apparaissent en vert sur le radar, visibles jusqu'à environ 200 mètres. Fini les allers-retours à l'aveugle."},
+        {"type": "callout", "tone": "warning", "title": "Trois limites à connaître avant de fantasmer", "text": "**Il ne se déploie que depuis un Vessel Hangar Mk II** — le module anciennement appelé Fighter Hangar, renommé avec Operations. Or seuls **trois vaisseaux** peuvent monter ce Mk II : le Caspian Explorer, le Panther Clipper Mk II et le Type-11 Prospector. Si vous volez en Mandalay, le Nomad ne vous concerne tout simplement pas.\n\n**Il n'a pas de soute.** Il ne récupère aucun matériau, et ne peut pas moissonner les Brain Trees. Le SRV reste obligatoire.\n\n**S'il est détruit, vous perdez toutes vos données d'exobiologie.** C'est un point de défaillance unique qui peut effacer plusieurs sessions de travail. Posez-vous lentement, sur du plat."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Notez aussi son **altitude minimale de lancement de 500 mètres** : on peut techniquement le larguer depuis l'orbite, mais la descente est interminable. Descendez d'abord avec le vaisseau-mère, larguez ensuite. Le vaisseau-mère vous suit alors automatiquement, ou peut être congédié et rappelé en une trentaine de secondes."}
+      ]
+    },
+    {
+      "id": "la-decouverte-de-systemes",
+      "number": 2,
+      "title": "La découverte de systèmes",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "normal", "text": "Scanner un système, c'est trois gestes qui s'enchaînent toujours dans le même ordre. Une fois le réflexe acquis, un système se traite en une à deux minutes."},
+        {"type": "heading", "text": "Le honk", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "À l'arrivée dans un système, basculez en **Analysis Mode** et maintenez le tir primaire. Une onde se propage — c'est le fameux « honk » — et révèle combien de corps compte le système et où ils se trouvent grossièrement. C'est gratuit, ça prend six secondes, et ça se fait à chaque saut sans exception."},
+        {"type": "heading", "text": "Le FSS", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le **Full Spectrum System Scanner** transforme ces échos en objets réels. Vous entrez dans une vue dédiée où l'on balaie une barre de fréquences : chaque type de corps résonne dans une bande différente. On centre le réticule sur un point lumineux, on ajuste, on zoome jusqu'à ce que l'image se stabilise, et le corps est scanné."},
+        {"type": "paragraph", "emphasis": "normal", "text": "C'est aussi le FSS qui révèle les **signaux** présents sur chaque corps : biologiques, géologiques, humains, Guardian, Thargoïd ou anomalies. Les signaux biologiques sont votre gagne-pain — notez soigneusement leur nombre."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Pour aller vite, apprenez à reconnaître les signatures sonores et visuelles des corps à haute valeur : mondes océaniques, mondes arctiques, terraformables. Les corps rocheux et glacés sans intérêt peuvent être ignorés sans remords si vous chassez le rendement."},
+        {"type": "heading", "text": "Le DSS et les sondes", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le **Detailed Surface Scanner** est de loin le module le plus rentable de votre soute. Cartographier un corps multiplie sa valeur par trois environ, et c'est lui qui révèle précisément où se trouvent les zones biologiques."},
+        {"type": "paragraph", "emphasis": "normal", "text": "En orbite, throttle à zéro, vous tirez des sondes vers la surface. Le jeu vous indique une cible d'efficacité — six sondes par exemple. En utiliser moins rapporte un bonus. Couvrir environ 90 % de la surface déclenche l'auto-complétion à 100 %."},
+        {"type": "callout", "tone": "info", "title": "La technique du limbe", "text": "Pour atteindre la face cachée d'un corps sans en faire le tour, visez volontairement au-delà du bord visible : la sonde affiche « Miss », puis s'incurve autour de la planète et frappe l'autre côté. Deux sondes bien placées suffisent souvent pour un petit corps."},
+        {"type": "heading", "text": "Les bonus de première découverte", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Un corps que personne n'a jamais scanné n'affiche aucun nom de découvreur. Le premier à le passer au FSS décroche le **First Discovered**, le premier à le cartographier décroche le **First Mapped**. Votre nom reste attaché au corps de façon permanente, visible par tous les joueurs."},
+        {"type": "callout", "tone": "warning", "title": "Le piège classique", "text": "Les tags ne sont validés que **lorsque vous vendez les données**. Tant que vous voguez avec vos scans dans la soute, rien n'est acquis — et si vous mourez, tout est perdu. Vendez régulièrement."},
+        {"type": "heading", "text": "Ce que rapporte chaque type de corps (EST)", "level": 4},
+        {"type": "table",
+         "headers": ["Type de corps", "FSS seul", "FSS + DSS", "Priorité"],
+         "rows": [
+           [{"text": "Earth-Like World", "style": "normal"}, {"text": "~1,2 M", "style": "number"}, {"text": "~3,6 M", "style": "number"}, {"text": "Toujours", "style": "win"}],
+           [{"text": "Water World", "style": "normal"}, {"text": "~600 k", "style": "number"}, {"text": "~1,8 M", "style": "number"}, {"text": "Toujours", "style": "win"}],
+           [{"text": "HMC terraformable", "style": "normal"}, {"text": "~300 k", "style": "number"}, {"text": "~900 k", "style": "number"}, {"text": "Oui", "style": "win"}],
+           [{"text": "Géante gazeuse", "style": "normal"}, {"text": "faible", "style": "number"}, {"text": "modéré", "style": "number"}, {"text": "Si sur le chemin", "style": "mid"}],
+           [{"text": "Rocheux / glacé non terraformable", "style": "normal"}, {"text": "~500–1 k", "style": "number"}, {"text": "~50–150 k", "style": "number"}, {"text": "Ignorer, sauf signaux bio", "style": "lose"}]
+         ]},
+        {"type": "heading", "text": "Survivre : carburant et étoiles", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "La cause numéro un de mort en exploration n'est pas un pirate, c'est une panne sèche ou une surchauffe. Deux règles suffisent à l'éviter."},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Les étoiles scoopables** répondent à l'acronyme KGBFOAM : classes K, G, B, F, O, A et M. Toutes les autres — naines L, T et Y, naines blanches, étoiles à neutrons, trous noirs — ne vous donneront pas une goutte de carburant. Ne sautez jamais vers l'une d'elles sans réserve."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Ensuite, à chaque sortie de saut, vous arrivez face à l'étoile. **Manœuvrez immédiatement pour vous en écarter** avant de faire quoi que ce soit d'autre. Les surchauffes de sortie de saut détruisent plus de vaisseaux d'exploration que tout le reste réuni."},
+        {"type": "heading", "text": "La route des neutrons", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Les étoiles à neutrons projettent des cônes de matière dans lesquels on peut « supercharger » son FSD. Un saut supercharge porte quatre fois plus loin qu'un saut normal — six fois pour le FSD SCO Mk II du Caspian. En chaînant ces étoiles, on traverse la galaxie en une fraction du temps."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le prix à payer : chaque supercharge inflige **1 % de dégâts** à votre FSD, et le SCO chauffe considérablement en supercruise. C'est précisément pour cela que l'AFMU et les Heat Sinks figurent parmi les modules indispensables. Le FSD SCO Mk II, lui, échappe à ces dégâts — un privilège réservé au Caspian."}
+      ]
+    },
+    {
+      "id": "l-exobiologie",
+      "number": 3,
+      "title": "L'exobiologie",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "normal", "text": "L'exobiologie consiste à descendre à pied sur des planètes à atmosphère ténue, scanner des organismes extraterrestres, et vendre ces données génétiques. C'est aujourd'hui l'activité la plus lucrative accessible à un joueur solitaire, et de loin."},
+        {"type": "heading", "text": "L'équipement", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Une seule combinaison possède le **Genetic Sampler** : l'**Artemis Suit**, achetable à n'importe quel comptoir Pioneer Supplies. Sans elle, rien n'est possible."},
+        {"type": "callout", "tone": "warning", "title": "Deux règles à connaître avant de dépenser", "text": "On **ne peut pas modifier une combinaison de grade 1**. Il faut d'abord la faire passer grade 2 à Pioneer Supplies avant d'espérer y poser le moindre mod.\n\nUn mod installé est **définitif** : impossible de le retirer ou de le remplacer. Pour changer d'avis, il faut racheter une combinaison entière. Réfléchissez avant de valider."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le mod le plus utile est **Improved Battery Capacity**, qui compense la consommation élevée du Genetic Sampler. Viennent ensuite Extra Backpack Capacity, Improved Jump Assist et Increased Sprint Duration."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Bonne nouvelle pour ceux qui n'aiment pas le combat au sol : plusieurs ingénieurs de combinaison se débloquent **sans tirer un coup de feu** — Domino Green, Wellington Beck, Kit Fowler et Yarden Bond. Seul Hero Ferrari exige de passer par des zones de conflit. Les ingénieurs de Colonia (Rosa Dayette, Baltanos, Eleanor Bresa, Yi Shen) proposent les mêmes mods et sont réputés plus faciles."},
+        {"type": "callout", "tone": "info", "title": "Le raccourci", "text": "Pioneer Supplies vend parfois des **combinaisons premium pré-modifiées**, en stock limité et variable selon les stations. Elles évitent tout le parcours d'ingénierie. Prenez l'habitude de jeter un œil à la vitrine à chaque escale."},
+        {"type": "heading", "text": "Trouver les bonnes planètes", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Au FSS, cherchez les corps affichant des signaux biologiques. Les conditions favorables se recoupent souvent : atmosphère ténue, **gravité inférieure à 0,27 g**, et un type de planète adapté — rocheuse, à haute teneur métallique ou glacée."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Un critère pratique est souvent négligé : privilégiez les corps situés à **moins de 1500 secondes-lumière** de leur étoile. Le supercruise vers un corps lointain peut engloutir plus de temps que la récolte elle-même."},
+        {"type": "heading", "text": "La récolte", "level": 3},
+        {"type": "steps", "items": [
+          {"text": "Posez-vous sur du terrain **plat**, à proximité d'une zone repérée au DSS."},
+          {"text": "Sortez à pied et activez le **Scan Pulse**. Les organismes s'illuminent autour de vous."},
+          {"text": "Lisez les couleurs : **vert** signifie à scanner ou en cours, **bleu** signifie déjà fait ou trop proche génétiquement, **violet** désigne une autre espèce."},
+          {"text": "Prélevez **trois échantillons** de la même espèce, en respectant la distance minimale entre chacun."},
+          {"text": "Éloignez-vous au-delà de la Colony Range entre chaque prélèvement, à pied, en jetpack ou en SRV selon la distance."},
+          {"text": "Une fois les trois obtenus, l'échantillon est complet et rejoint votre inventaire."}
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Les deux erreurs qui coûtent du temps", "text": "Le message **« insufficient genetic diversity »** signifie que vous êtes trop près du prélèvement précédent. Éloignez-vous davantage.\n\nScanner une **autre espèce** en cours de route **réinitialise** votre échantillon partiel. Terminez toujours une espèce avant d'en commencer une autre."},
+        {"type": "heading", "text": "La Colony Range par genre (COM)", "level": 4},
+        {"type": "table",
+         "headers": ["Distance minimale", "Genres concernés"],
+         "rows": [
+           [{"text": "100 m", "style": "number"}, {"text": "Amphora, Anemone, Bark Mound, Brain Tree, Crystalline Shard, Fumerola, Sinuous Tuber", "style": "normal"}],
+           [{"text": "150 m", "style": "number"}, {"text": "Aleoida, Clypeus, Concha, Frutexa, Recepta", "style": "normal"}],
+           [{"text": "200 m", "style": "number"}, {"text": "Tussock", "style": "normal"}],
+           [{"text": "300 m", "style": "number"}, {"text": "Cactoida, Fungoida", "style": "normal"}],
+           [{"text": "500 m", "style": "number"}, {"text": "Bacterium, Fonticulua, Stratum", "style": "normal"}],
+           [{"text": "800 m", "style": "number"}, {"text": "Osseus, Tubus", "style": "normal"}],
+           [{"text": "1000 m", "style": "number"}, {"text": "Electricae", "style": "normal"}]
+         ]},
+        {"type": "heading", "text": "Ce que valent les espèces", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Les valeurs sont fixes et n'ont pas bougé en 2025 ni en 2026. Le bonus de première découverte, lui, multiplie tout par cinq."},
+        {"type": "table",
+         "headers": ["Espèce", "Valeur de base", "Avec First Footfall", "Conditions"],
+         "rows": [
+           [{"text": "Stratum Tectonicas", "style": "strong"}, {"text": "19 010 800", "style": "number"}, {"text": "95 054 000", "style": "number"}, {"text": "HMC, > 165 K", "style": "normal"}],
+           [{"text": "Tussock Stigmasis", "style": "normal"}, {"text": "19 010 800", "style": "number"}, {"text": "95 054 000", "style": "number"}, {"text": "Rocky, SO₂", "style": "normal"}],
+           [{"text": "Fonticulua Segmentatus", "style": "normal"}, {"text": "19 010 800", "style": "number"}, {"text": "95 054 000", "style": "number"}, {"text": "Néon", "style": "normal"}],
+           [{"text": "Concha Biconcavis", "style": "normal"}, {"text": "16 777 215", "style": "number"}, {"text": "83 886 075", "style": "number"}, {"text": "Azote", "style": "normal"}],
+           [{"text": "Fonticulua Fluctus", "style": "normal"}, {"text": "16 777 215", "style": "number"}, {"text": "83 886 075", "style": "number"}, {"text": "Oxygène", "style": "normal"}],
+           [{"text": "Clypeus Speculumi", "style": "normal"}, {"text": "16 202 800", "style": "number"}, {"text": "81 014 000", "style": "number"}, {"text": "Rocky/HMC, > 2500 sl", "style": "normal"}],
+           [{"text": "Cactoida Vermis", "style": "normal"}, {"text": "16 202 800", "style": "number"}, {"text": "81 014 000", "style": "number"}, {"text": "Eau", "style": "normal"}],
+           [{"text": "Recepta Deltahedronix", "style": "normal"}, {"text": "16 202 800", "style": "number"}, {"text": "81 014 000", "style": "number"}, {"text": "Rocky/HMC, SO₂", "style": "normal"}],
+           [{"text": "Fumerola Extremus", "style": "normal"}, {"text": "16 202 800", "style": "number"}, {"text": "81 014 000", "style": "number"}, {"text": "Volcanisme", "style": "normal"}],
+           [{"text": "Aleoida Gravis", "style": "normal"}, {"text": "12 934 900", "style": "number"}, {"text": "64 674 500", "style": "number"}, {"text": "CO₂, 190–195 K", "style": "normal"}],
+           [{"text": "Osseus Discus", "style": "normal"}, {"text": "12 934 900", "style": "number"}, {"text": "64 674 500", "style": "number"}, {"text": "Rocky/HMC, eau", "style": "normal"}]
+         ]},
+        {"type": "callout", "tone": "tip", "title": "Le repère à retenir", "text": "Une planète à **haute teneur métallique**, portant **un seul signal biologique**, avec une température supérieure à 165 K, a de fortes chances d'abriter un **Stratum Tectonicas**. C'est l'espèce la plus rentable du jeu et la plus recherchée par les exobiologistes."},
+        {"type": "heading", "text": "La règle qui change toute votre planification", "level": 3},
+        {"type": "callout", "tone": "warning", "title": "Une espèce, une planète, une fois", "text": "Une fois les données **vendues**, vous ne pouvez **plus jamais** re-scanner cette espèce sur cette planète. Le jeu refuse purement et simplement le prélèvement. En revanche, la même espèce sur une **autre** planète reste parfaitement valide.\n\nLa conséquence est double. D'abord, **ne planifiez jamais de retour** : vos itinéraires doivent toujours aller de l'avant. Ensuite, **finissez proprement chaque planète** avant de repartir. Si vous repérez quatre espèces et n'en récoltez que trois par lassitude, les quinze millions restants sont perdus définitivement."},
+        {"type": "heading", "text": "First Logged et First Footfall", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Deux bonus distincts existent, souvent confondus. Le **First Logged** récompense le premier commandant à enregistrer une espèce donnée : base plus 400 %, soit **cinq fois la valeur**. Le **First Footfall** désigne le premier humain à poser le pied sur la planète, et ne peut être réclamé qu'une seule fois dans toute l'histoire du jeu."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Corollaire important : **les planètes de la Bulle n'offrent aucun First Footfall**. Les colons NPC les ont foulées il y a des siècles. Pour toucher le multiplicateur, il faut sortir des sentiers battus."},
+        {"type": "heading", "text": "Vendre", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Les données se revendent à **Vista Genomics**, dans les concourses des stations Odyssey. Effet de bord appréciable : une vente d'exobiologie fait grimper votre réputation avec la faction contrôlante quasi instantanément jusqu'au statut **Allied**. Choisissez donc où vous vendez."},
+        {"type": "heading", "text": "Les rangs d'exobiologiste (COM)", "level": 4},
+        {"type": "table",
+         "headers": ["Rang", "Profit cumulé requis"],
+         "rows": [
+           [{"text": "Directionless", "style": "normal"}, {"text": "0", "style": "number"}],
+           [{"text": "Mostly Directionless", "style": "normal"}, {"text": "1,5 M", "style": "number"}],
+           [{"text": "Compiler", "style": "normal"}, {"text": "5,3 M", "style": "number"}],
+           [{"text": "Collector", "style": "normal"}, {"text": "12,8 M", "style": "number"}],
+           [{"text": "Cataloguer", "style": "normal"}, {"text": "32 M", "style": "number"}],
+           [{"text": "Taxonomist", "style": "normal"}, {"text": "65 M", "style": "number"}],
+           [{"text": "Ecologist", "style": "normal"}, {"text": "130 M", "style": "number"}],
+           [{"text": "Geneticist", "style": "normal"}, {"text": "260 M", "style": "number"}],
+           [{"text": "Elite", "style": "strong"}, {"text": "520 M", "style": "number"}],
+           [{"text": "Elite I à V", "style": "normal"}, {"text": "1,04 Md → 3,12 Md", "style": "number"}]
+         ]}
+      ]
+    },
+    {
+      "id": "optimiser-ses-revenus",
+      "number": 4,
+      "title": "Optimiser ses revenus",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "normal", "text": "Voici la partie que la plupart des guides négligent : non pas comment faire, mais dans quel ordre, et à quel moment franchir chaque cap."},
+        {"type": "heading", "text": "Ce que vous gagnez réellement", "level": 3},
+        {"type": "table",
+         "headers": ["Profil", "Exploration classique", "Exobiologie"],
+         "rows": [
+           [{"text": "Débutant", "style": "normal"}, {"text": "5–15 M/h", "style": "number"}, {"text": "10–20 M/h", "style": "number"}],
+           [{"text": "Rodé, près de la Bulle", "style": "normal"}, {"text": "20–40 M/h", "style": "number"}, {"text": "40–60 M/h", "style": "number"}],
+           [{"text": "Rodé, zone vierge", "style": "normal"}, {"text": "40–60 M/h", "style": "number"}, {"text": "80–150 M/h", "style": "number"}]
+         ]},
+        {"type": "paragraph", "emphasis": "normal", "text": "Un débutant réalise typiquement **30 à 50 %** de ces valeurs. Ce n'est pas un défaut de méthode, c'est le temps d'apprentissage normal : choix des cibles, vitesse de scan, durée des atterrissages. La courbe monte vite."},
+        {"type": "heading", "text": "Les jalons, dans l'ordre", "level": 3},
+        {"type": "table",
+         "headers": ["Palier", "Ce que vous faites", "Ce que vous acquérez", "Passez au suivant quand…"],
+         "rows": [
+           [{"text": "20 M", "style": "number"}, {"text": "Exobio près de la Bulle, sans First Footfall", "style": "normal"}, {"text": "Artemis Suit, DSS, SRV", "style": "normal"}, {"text": "Farseer est débloqué", "style": "normal"}],
+           [{"text": "100 M", "style": "number"}, {"text": "Chasse au Stratum via Spansh", "style": "normal"}, {"text": "FSD G5 + Mass Manager", "style": "normal"}, {"text": "Le Guardian 5H est posé", "style": "normal"}],
+           [{"text": "500 M", "style": "number"}, {"text": "Première expédition First Footfall", "style": "normal"}, {"text": "Vaisseau pleinement ingénieré", "style": "normal"}, {"text": "Vous dépassez 2 Md", "style": "normal"}],
+           [{"text": "2 Md", "style": "number"}, {"text": "Longue expédition, éventuellement Pranav Antal", "style": "normal"}, {"text": "Éventuellement un Caspian", "style": "normal"}, {"text": "Vous atteignez 6–8 Md", "style": "normal"}],
+           [{"text": "6–8 Md", "style": "number"}, {"text": "Achat du Fleet Carrier", "style": "normal"}, {"text": "FC + Vista Genomics à bord", "style": "normal"}, {"text": "—", "style": "normal"}]
+         ]},
+        {"type": "heading", "text": "L'ingénierie prioritaire", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Un seul ingénieur compte vraiment : **Felicity Farseer**, installée à Deciat. Il vous faut le rang Explorer Scout et un **Meta-Alloy** — achetable vers Maia, récupérable sur les barnacles Thargoïd, ou parfois offert par des Fleet Carriers stationnés à Deciat même."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Sa réputation se monte en lui **vendant des données d'exploration**, ce qui tombe bien : vos tournées de scan servent donc double. Demandez-lui **FSD Increased Range G5** puis l'effet expérimental **Mass Manager**, et profitez-en pour alléger vos sensors."},
+        {"type": "callout", "tone": "info", "title": "Monter les grades sans souffrir", "text": "Fabriquer des **Fast Boot FSD de grade 3** permet de faire grimper les grades rapidement, car le composant nécessaire s'achète au lieu de se farmer. Vous évitez ainsi la chasse aux Modular Terminals."},
+        {"type": "heading", "text": "Le Guardian FSD Booster", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Dix années-lumière et demie de portée supplémentaire pour **1,3 tonne**. C'est, en rapport gain/poids, le meilleur module du jeu. Le déblocage est **définitif** : une fois obtenu, vous en achetez autant que vous voulez, pour n'importe quel vaisseau, à vie."},
+        {"type": "table",
+         "headers": ["Taille", "Bonus", "Prix"],
+         "rows": [
+           [{"text": "2H", "style": "normal"}, {"text": "+6 LY", "style": "number"}, {"text": "790 257", "style": "number"}],
+           [{"text": "3H", "style": "normal"}, {"text": "+7,75 LY", "style": "number"}, {"text": "1 579 920", "style": "number"}],
+           [{"text": "4H", "style": "normal"}, {"text": "+9,25 LY", "style": "number"}, {"text": "3 163 887", "style": "number"}],
+           [{"text": "5H", "style": "strong"}, {"text": "+10,5 LY", "style": "number"}, {"text": "~6 M", "style": "number"}]
+         ]},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le déblocage se fait au **Guardian Technology Broker** et demande un Guardian Module Blueprint Fragment, 21 Guardian Power Cells, 21 Guardian Technology Components, 24 Focus Crystals et 8 HN Shock Mounts. Les sites recommandés sont **Synuefe NL-N C23-4 B 3** et **HD 63154 B 3 A**."},
+        {"type": "callout", "tone": "tip", "title": "Bonne nouvelle pour les non-combattants", "text": "Le combat contre les Sentinels se déroule **en SRV**, pas au vaisseau. Votre rang de combat n'a aucune importance. Mieux : les lasers de vaisseau sont **inefficaces** contre eux à cause de leur résistance thermique — c'est le plasma du SRV qui fait le travail. Affrontez-les un par un, servez-vous du frein à main pour encaisser les explosions, et utilisez les ruines comme couverture."},
+        {"type": "heading", "text": "Le multiplicateur Powerplay", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "S'engager auprès de **Pranav Antal** octroie jusqu'à **+30 % sur les ventes d'exobiologie** réalisées dans les systèmes qu'il contrôle. Sur un objectif à un milliard, cela représente environ 230 millions de crédits gratuits."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Deux réserves. L'engagement Powerplay demande du temps consacré aux mérites, et une défection vous fait perdre les bonus. Par ailleurs, ne vendez pas dans le système capitale : il ne donne ni bonus ni mérites. Pour l'exploration cartographique classique, c'est plutôt **Li Yong-Rui** qui offre historiquement les meilleurs bonus de vente."},
+        {"type": "heading", "text": "Le Fleet Carrier : quand et pourquoi", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Cinq milliards de crédits, et une facture hebdomadaire qui court même quand vous ne jouez pas. C'est un outil formidable et un piège financier pour qui l'achète trop tôt."},
+        {"type": "table",
+         "headers": ["Poste", "Montant"],
+         "rows": [
+           [{"text": "Achat", "style": "normal"}, {"text": "5 000 000 000 Cr", "style": "number"}],
+           [{"text": "Entretien hebdomadaire, carrier nu", "style": "normal"}, {"text": "5 M Cr", "style": "number"}],
+           [{"text": "Entretien hebdomadaire, tous services", "style": "normal"}, {"text": "~30 M Cr", "style": "number"}],
+           [{"text": "Coût par saut", "style": "normal"}, {"text": "100 000 Cr + tritium", "style": "number"}],
+           [{"text": "Portée par saut", "style": "normal"}, {"text": "500 LY", "style": "number"}],
+           [{"text": "Seuil de faillite", "style": "normal"}, {"text": "250 M de dette", "style": "number"}]
+         ]},
+        {"type": "callout", "tone": "warning", "title": "N'achetez pas à cinq milliards", "text": "Le seuil de faillite se déclenche à **250 millions de dette**, soit environ dix semaines d'impayés tous services activés. Vous disposez alors d'une semaine pour régulariser, faute de quoi le carrier est décommissionné automatiquement.\n\nLa règle communautaire est de viser **6 à 8 milliards** au total : cinq pour la coque, le reste pour les services et une réserve d'entretien couvrant environ un an."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Son intérêt réel pour l'explorateur n'est pas financier, il est logistique. Installez **Universal Cartographics** et **Vista Genomics** à bord, positionnez le carrier en espace profond, et vous vendez sur place sans jamais rentrer dans la Bulle. Sur une expédition de plusieurs semaines, le gain de temps est considérable — et vos données sont à l'abri."}
+      ]
+    },
+    {
+      "id": "la-boite-a-outils",
+      "number": 5,
+      "title": "La boîte à outils",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "normal", "text": "Elite Dangerous s'accompagne d'un écosystème d'outils communautaires sans lesquels l'exploration moderne serait beaucoup plus laborieuse. Tous sont gratuits."},
+        {"type": "table",
+         "headers": ["Outil", "À quoi il sert"],
+         "rows": [
+           [{"text": "Spansh", "style": "strong"}, {"text": "Road to Riches, routeur neutron, recherche de corps par filtres, routeur Fleet Carrier", "style": "normal"}],
+           [{"text": "Inara", "style": "strong"}, {"text": "Prix des modules, ingénieurs, Tech Brokers, localisation des services", "style": "normal"}],
+           [{"text": "EDSM", "style": "strong"}, {"text": "Base de données des systèmes et stations", "style": "normal"}],
+           [{"text": "EDSY / Coriolis", "style": "strong"}, {"text": "Simulateurs de build, import et export au format SLEF", "style": "normal"}],
+           [{"text": "**Elite Observatory** + BioInsights", "style": "normal"}, {"text": "Signale les espèces probables dès le FSS, calcule les Colony Range", "style": "normal"}],
+           [{"text": "**EDMC** + BioScan", "style": "normal"}, {"text": "Surimpression des valeurs pendant la récolte", "style": "normal"}],
+           [{"text": "EDDiscovery", "style": "strong"}, {"text": "Journal de bord, statistiques, historique des découvertes", "style": "normal"}]
+         ]},
+        {"type": "heading", "text": "Où aller en 2026", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "L'arbitrage est simple. Rester **près de la Bulle** vous prive du multiplicateur First Footfall, mais offre un volume élevé de spécimens, des retours rapides et un risque quasi nul. C'est la stratégie dite du « Bubble Billionaire », et elle fonctionne très bien."},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Partir loin** multiplie tout par cinq, mais impose des expéditions de plusieurs jours et le risque permanent de perdre ses données. Visez les bras extérieurs et les régions à l'écart des grandes routes communautaires — les zones balisées par les expéditions Distant Worlds ont déjà été largement ratissées."}
+      ]
+    },
+    {
+      "id": "ce-qu-il-faut-retenir",
+      "number": 6,
+      "title": "Ce qu'il faut retenir",
+      "blocks": [
+        {"type": "steps", "items": [
+          {"text": "**Achetez l'Artemis Suit** et passez-la grade 2 avant tout.", "detail": "Sans elle, pas d'exobiologie."},
+          {"text": "**Faites une première boucle près de la Bulle** en chassant le Stratum Tectonicas via Spansh.", "detail": "Objectif : atteindre 100 millions et apprendre les gestes sans risque."},
+          {"text": "**Débloquez Felicity Farseer** et posez FSD Increased Range G5 plus Mass Manager.", "detail": "C'est le plus gros gain de portée de votre carrière."},
+          {"text": "**Passez au Mandalay** si ce n'est pas déjà fait.", "detail": "Dix-sept millions pour le meilleur outil d'exobiologie du jeu, c'est le meilleur achat possible."},
+          {"text": "**Farmez le Guardian FSD Booster 5H** en SRV.", "detail": "Une à deux sessions, et dix années-lumière acquises définitivement."},
+          {"text": "**Partez en expédition First Footfall.**", "detail": "C'est là que se gagnent les milliards."},
+          {"text": "**N'achetez un Fleet Carrier qu'à 6 ou 8 milliards**, jamais à cinq."}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le conseil le plus important de ce guide", "text": "Vendez régulièrement. Toutes les données non vendues — cartographiques comme génétiques — disparaissent avec votre vaisseau. La discipline de vente vaut mieux que n'importe quelle optimisation de build."}
+      ]
+    },
+    {
+      "id": "fiabilite-et-sources",
+      "number": 7,
+      "title": "Fiabilité et sources",
+      "blocks": [
+        {"type": "divider"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Fiabilité des données.** Les valeurs d'exobiologie et les Colony Range proviennent du wiki Fandom et de Canonn Research. Les prix de vaisseaux et de modules viennent d'Inara et d'EDSM, relevés en août 2026. Les portées de saut ingénierées sont des mesures communautaires et non des spécifications officielles Frontier : vérifiez les vôtres sur EDSY avant tout achat. Les rendements horaires sont des fourchettes indicatives."},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Sources principales.** Patch notes et GalNet Frontier Developments, wiki Elite Dangerous (Fandom), Inara, EDSM, Spansh, Canonn Research, forums Frontier, retours de commandants sur Reddit et Steam."},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Contenu couvert.** À jour de la mise à jour Operations du 30 juin 2026, incluant le Nomad et le renommage des Vessel Hangars, ainsi que la sortie en crédits du Caspian Explorer du 23 mars 2026."}
+      ]
+    }
+  ],
+  "sources": ["Frontier Developments", "GalNet", "wiki Elite Dangerous (Fandom)", "Inara", "EDSM", "Spansh", "Canonn Research", "forums Frontier", "Reddit", "Steam"]
+}

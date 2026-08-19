@@ -1,0 +1,1965 @@
+{
+  "id": "debuter-sans-combat",
+  "title": "Devenir riche sans combat — le guide du débutant",
+  "kicker": "Elite Dangerous · Édition août 2026",
+  "deck": "Devenir milliardaire dans Elite Dangerous sans jamais tirer un coup de feu : exobiologie, minage laser de Platinum, commerce et hauling de colonisation, avec l'exploration Road to Riches comme tremplin — le parcours complet du Sidewinder au Fleet Carrier, avec des chiffres honnêtes de débutant.",
+  "byline": "PC · Live · Odyssey requis pour l'exobiologie",
+  "edition": "2026-08",
+  "topics": [
+    "débutant",
+    "exploration",
+    "exobiologie",
+    "minage",
+    "commerce",
+    "sans combat"
+  ],
+  "estimatedReadMinutes": 32,
+  "sections": [
+    {
+      "id": "tldr",
+      "number": 1,
+      "title": "TL;DR",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Oui, on peut devenir milliardaire dans Elite Dangerous en 2026 sans jamais tirer un coup de feu** : le trio gagnant du joueur pacifique est l'**exobiologie** (activité solo la plus rentable du jeu), le **minage laser de Platinum/Tritium**, et le **commerce/hauling** (dopé depuis 2025 par la colonisation) — avec l'**exploration Road to Riches** comme tremplin de départ.",
+          "emphasis": "intro"
+        },
+        {
+          "type": "paragraph",
+          "text": "Comptez un parcours réaliste de **jalons** : premier million en 2-4 h, 10 M en un week-end via l'exploration, 100 M en une à deux semaines via exobio/minage, et le **premier milliard en 40 à 120 heures de jeu** selon votre régularité (un débutant réalise 30 à 50 % des chiffres « optimisés » que vous verrez sur YouTube — ce guide donne les chiffres honnêtes).",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Le combat s'évite entièrement** en jouant en mode **Solo**, en ne transportant jamais de cargo illégal, et en maîtrisant trois gestes : *soumettre* l'interdiction (throttle 0), *booster* et *high wake* (saut vers un autre système). La grosse actualité 2026 (mise à jour **Operations** du 30 juin + monnaie **Merc Coin**) est **du contenu 100 % combat** : un débutant pacifique peut l'ignorer sans aucun regret.",
+          "emphasis": "normal"
+        }
+      ]
+    },
+    {
+      "id": "avant-de-commencer",
+      "number": 2,
+      "title": "Partie 0 — Avant de commencer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bienvenue, Commander. Elite Dangerous est un simulateur spatial à l'échelle 1:1 de notre galaxie (400 milliards de systèmes). Vous y pilotez un vaisseau à la première personne. Ce guide part du principe que vous ne connaissez **rien** et vous mène jusqu'au milliard de crédits **sans combat**. Prenez le temps de lire cette partie 0 : elle vous évitera 90 % des frustrations de débutant.",
+          "emphasis": "intro"
+        },
+        {
+          "type": "heading",
+          "text": "0.1 — Les bases à comprendre (vocabulaire)",
+          "level": 3
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Crédits (Cr)** : la monnaie du jeu. Tout se chiffre en Cr : vaisseaux, modules, assurance.",
+            "**Rebuy (rachat / assurance)** : quand votre vaisseau est détruit, vous ne le perdez pas définitivement — vous payez une **franchise d'assurance** d'environ **5 % de la valeur totale** du vaisseau + modules pour le récupérer. **Si vous ne pouvez pas payer le rebuy, vous perdez le vaisseau.** D'où le principe d'or ci-dessous.",
+            "**La Bulle (« the Bubble »)** : la zone d'espace habité autour de la Terre (systèmes de départ), avec des milliers de stations. Tout ce qui est en dehors, c'est « le Noir » (« the Black »).",
+            "**Supercruise vs FSD** : le **FSD** (Frame Shift Drive, lecteur à décalage de trame) fait deux choses. En **saut hyperspatial**, il vous téléporte d'un système étoile à un autre (le fameux « jump »). En **supercruise**, il vous propulse plus vite que la lumière *à l'intérieur* d'un système, pour aller d'une planète/station à l'autre.",
+            "**Types de stations** : les **Coriolis/Orbis/Ocellus** (grandes stations orbitales, accueillent tous les vaisseaux), les **outposts** (avant-postes, petits pads seulement), les **planetary ports** (ports au sol) et les **settlements** (colonies au sol, Odyssey). Un « pad » est une plateforme d'atterrissage : **Small / Medium / Large**. Vérifiez toujours que la station a un pad assez grand pour votre vaisseau.",
+            "**S'amarrer (docking)** : demandez l'autorisation via le **panneau de contact** (Contacts), attendez le numéro de pad, entrez doucement, posez-vous. Un **Advanced Docking Computer** (voir keybinds) fait ça automatiquement — achetez-le, c'est le meilleur ami du débutant.",
+            "**Rangs & réputation** : vous avez des rangs de **Combat, Trade, Exploration** (Pilots Federation) et des rangs **Federation/Empire** (les deux superpuissances). La **réputation de faction** (chaque station est contrôlée par une « minor faction ») monte quand vous faites des missions ou vendez des données/marchandises chez elle : une meilleure réputation débloque de meilleures missions."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "0.2 — Le principe d'or du débutant",
+          "level": 3
+        },
+        {
+          "type": "quote",
+          "text": "« Ne vole JAMAIS sans pouvoir payer ton rebuy. »",
+          "attribution": "Le principe d'or du débutant"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gardez toujours en banque au moins 1,5× le montant du rebuy affiché de votre vaisseau. Le rebuy est indiqué en bas à droite dans l'écran d'assurance et sur le panneau de gauche. Tant que vous respectez cette règle, une mort n'est jamais une catastrophe — juste une contrariété.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "0.3 — Réglages essentiels (contrôles, HUD, keybinds)",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Elite se joue très bien au clavier+souris, à la manette, ou au HOTAS (joystick). Pour du non-combat, le clavier+souris suffit largement. Configurez (ou vérifiez) ces raccourcis **avant** de décoller — ils sont vitaux pour le joueur pacifique :",
+          "emphasis": "normal"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Fonction",
+            "À quoi ça sert",
+            "Priorité"
+          ],
+          "rows": [
+            [
+              {
+                "text": "**Pips SYS / ENG / WEP** (répartition d'énergie)",
+                "style": "strong"
+              },
+              {
+                "text": "Basculer l'énergie vers les moteurs (ENG) pour fuir, ou les boucliers (SYS) pour encaisser",
+                "style": "normal"
+              },
+              {
+                "text": "★★★ Vital",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Boost**",
+                "style": "strong"
+              },
+              {
+                "text": "Coup d'accélérateur (indispensable pour fuir)",
+                "style": "normal"
+              },
+              {
+                "text": "★★★ Vital",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**FSS (Full Spectrum System scanner)**",
+                "style": "strong"
+              },
+              {
+                "text": "Le mode « carte du ciel » pour scanner les corps d'un système à distance",
+                "style": "normal"
+              },
+              {
+                "text": "★★★ Exploration",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**DSS (Detailed Surface Scanner)** — tir des sondes",
+                "style": "strong"
+              },
+              {
+                "text": "Cartographier une planète pour toucher le bonus « first mapped »",
+                "style": "normal"
+              },
+              {
+                "text": "★★★ Exploration",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Honk (Discovery Scanner)**",
+                "style": "strong"
+              },
+              {
+                "text": "Le « klaxon » qui révèle tous les corps d'un système en 1 pression longue",
+                "style": "normal"
+              },
+              {
+                "text": "★★★ Exploration",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Supercruise Assist**",
+                "style": "strong"
+              },
+              {
+                "text": "Auto-approche d'une cible en supercruise (évite le sur-dépassement)",
+                "style": "normal"
+              },
+              {
+                "text": "★★ Confort",
+                "style": "mid"
+              }
+            ],
+            [
+              {
+                "text": "**Advanced Docking Computer**",
+                "style": "strong"
+              },
+              {
+                "text": "Amarrage/décollage automatiques",
+                "style": "normal"
+              },
+              {
+                "text": "★★ Confort",
+                "style": "mid"
+              }
+            ],
+            [
+              {
+                "text": "**Silent Running**",
+                "style": "strong"
+              },
+              {
+                "text": "Coupe la signature thermique (fuite discrète)",
+                "style": "normal"
+              },
+              {
+                "text": "★ Situationnel",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**Landing Gear / Lights / Cargo Scoop**",
+                "style": "strong"
+              },
+              {
+                "text": "Train d'atterrissage, phares, collecteur de cargo",
+                "style": "normal"
+              },
+              {
+                "text": "★★ Utile",
+                "style": "mid"
+              }
+            ],
+            [
+              {
+                "text": "**Target next system in route**",
+                "style": "strong"
+              },
+              {
+                "text": "Cible le prochain saut de votre itinéraire (exploration)",
+                "style": "normal"
+              },
+              {
+                "text": "★★★ Exploration",
+                "style": "win"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Astuce HUD** : dans les options graphiques, montez la luminosité du HUD et pensez à activer le mode « report contacts in nav panel ». Beaucoup de débutants ratent des signaux faute d'avoir regardé le **panneau de gauche** (Nav) et le **panneau de droite** (modules/cargo/fonctions).",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "0.4 — Solo vs Open vs Private Group (LE choix anti-combat n°1)",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Au lancement d'une partie, vous choisissez un **mode de jeu** :",
+          "emphasis": "normal"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Open** : vous croisez de vrais joueurs — dont d'éventuels « gankers » (joueurs qui détruisent les nouveaux pour le plaisir).",
+            "**Solo** : vous êtes seul avec les PNJ. **Le même univers, la même économie, les mêmes gains** — mais aucun joueur ne peut vous attaquer.",
+            "**Private Group** : sur invitation (ex. le célèbre groupe « Mobius » orienté PvE, sans PvP)."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Encadré — Erreur fréquente",
+          "text": "croire qu'il faut jouer en Open pour gagner plus. **FAUX.** Les gains sont identiques en Solo. Pour le joueur pacifique, **jouez en Solo** (ou Mobius) : vous supprimez d'un coup 100 % du risque PvP. Vous pourrez toujours basculer en Open plus tard si l'envie de social vous prend."
+        },
+        {
+          "type": "heading",
+          "text": "0.5 — Comment éviter et fuir le combat (le kit de survie du pacifiste)",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Même en Solo, des **PNJ pirates** peuvent vous « interdire » (vous tirer hors du supercruise) si vous transportez du cargo. Voici comment vous en sortir **sans arme** :",
+          "emphasis": "normal"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**L'interdiction (interdiction / interdictor)** : un pirate se cale derrière vous et lance une manœuvre qui remplit une jauge. Deux options :",
+              "detail": "• **Résister** : alignez votre nez sur le marqueur bleu de « vecteur d'évasion ». Difficile dans un gros vaisseau.\n• **SOUMETTRE (recommandé pour débuter)** : mettez les gaz à **0**. Vous tombez en espace normal, **mais votre FSD se recharge beaucoup plus vite** que si vous résistez et échouez. C'est contre-intuitif mais c'est LA technique."
+            },
+            {
+              "text": "**Une fois tombé** : mettez **4 pips en ENG**, **boostez**, orientez-vous vers le vide, et faites un **high wake** (saut vers un autre système) : la recharge du FSD pour un saut système **ne peut pas être bloquée** (mass-locked).",
+              "detail": "Vous partez sans une égratignure. Un **low wake** (retour en supercruise) est plus rapide mais le pirate peut vous re-suivre."
+            },
+            {
+              "text": "**Silent Running + heatsink** : en dernier recours, coupez la signature thermique pour casser le verrou de tir. Situationnel."
+            },
+            {
+              "text": "**Boucliers & blindage même sans armes** : un débutant pacifique **doit** monter un **bouclier** (shield generator) et, sur les vaisseaux de valeur, quelques **Hull/Module Reinforcement**.",
+              "detail": "Le but n'est pas de gagner un combat : c'est de **survivre 20 secondes** le temps de fuir."
+            },
+            {
+              "text": "**Les règles d'or anti-combat :**",
+              "detail": "• **Jouez en Solo.**\n• **Ne transportez jamais de cargo illégal** (marchandises volées, esclaves, narcotiques) : cela déclenche les scans de sécurité et les amendes. Aux **scans de sécurité** (un vaisseau des autorités vous scanne près des stations), si votre soute est propre, il ne se passe **rien**.\n• **En exploration/exobio, votre soute est vide** → les pirates PNJ n'ont aucune raison de vous interdire. C'est la façon la plus sûre de jouer."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "0.6 — Les 5 erreurs qui ruinent un débutant",
+          "level": 3
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "**Voler sans pouvoir payer son rebuy** (voir principe d'or). La n°1 absolue.",
+            "**Vendre ses données d'exploration trop tard / au mauvais endroit** — ou pire, se faire détruire avec des heures de données non vendues à bord (les données non vendues sont **perdues** à la mort).",
+            "**Acheter trop gros trop vite** : un vaisseau cher mal équipé est un piège à rebuy. Montez en gamme progressivement.",
+            "**Suivre des guides périmés** (voir la section « Ce qui a changé en 2025-2026 »). Le méta bouge : Robigo, le core mining et le Painite ne sont plus ce qu'ils étaient.",
+            "**Négliger l'ingénierie du FSD** : sans le blueprint **Increased Range** sur le FSD, vous doublez le nombre de sauts pour tout — c'est la première amélioration à faire."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "premier-million",
+      "number": 3,
+      "title": "Partie 1 — Du Sidewinder au premier million (0 → 1 M Cr)",
+      "blocks": [
+        {
+          "type": "keyValue",
+          "items": [
+            {
+              "label": "Objectif chiffré",
+              "value": "1 000 000 Cr et un vaisseau capable de faire de l'exploration (Adder, Hauler, Cobra Mk III, ou le nouveau Cobra Mk V).",
+              "reliability": "estimate"
+            },
+            {
+              "label": "Temps estimé",
+              "value": "2 à 4 heures.",
+              "reliability": "estimate"
+            },
+            {
+              "label": "Vaisseau de départ",
+              "value": "le **Sidewinder** (gratuit, re-livré gratuitement si détruit).",
+              "reliability": "official"
+            },
+            {
+              "label": "Prérequis",
+              "value": "avoir terminé le tutoriel de pilotage (fortement recommandé).",
+              "reliability": "official"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Vos 2 premières heures, pas à pas",
+          "level": 3
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Faites le tutoriel de vol et d'amarrage** depuis le menu principal (Training).",
+              "detail": "Apprenez : décoller, supercruise, sauter, s'amarrer. 30 minutes qui sauvent des heures."
+            },
+            {
+              "text": "**Achetez immédiatement un Advanced Docking Computer et un Supercruise Assist** (quelques milliers de Cr) et montez-les sur le Sidewinder via **Outfitting**.",
+              "detail": "Fini les crashs contre les portes de station."
+            },
+            {
+              "text": "**Prenez des missions faciles au tableau des missions** (Mission Board) : **livraison de données** (data delivery) et **livraison de fret** (courier/delivery) vers des systèmes proches.",
+              "detail": "Elles ne demandent aucun combat, presque aucune soute, et paient bien pour le rang débutant."
+            },
+            {
+              "text": "**Empilez (« stack ») les missions** allant dans la même direction : acceptez-en plusieurs vers le même système ou des systèmes voisins, livrez tout en une tournée."
+            },
+            {
+              "text": "**Vendez toute donnée d'exploration** que vous glanez (klaxonnez chaque système où vous passez) à l'**Universal Cartographics** de n'importe quelle grande station."
+            },
+            {
+              "text": "Avec vos premiers ~100-200 k Cr, achetez un petit vaisseau plus polyvalent. Options :",
+              "detail": "• **Adder** (~87 k Cr) : petit, bon rapport soute/portée, excellent premier explorateur.\n• **Hauler** (~52 k Cr) : le roi de la portée de saut pour trois francs six sous.\n• **Cobra Mk III** (~380 k Cr) : le multirôle légendaire, rapide, bonne soute — LE choix si vous pouvez vous le payer.\n• **Cobra Mk V** (~1,99 M Cr, sorti en 2025) : la version moderne, meilleur petit vaisseau polyvalent du jeu, compatible FSD SCO. Visez-le juste après le premier million."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Astuce",
+          "text": "dès que vous avez ~500 k Cr et un petit explorateur, vous êtes prêt pour la Partie 2. Ne vous éternisez pas sur les micro-missions."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Le « signal » pour passer à l'étape suivante** : vous avez ≥ 1 M Cr, un vaisseau avec ≥ 20 al de portée de saut, un **Detailed Surface Scanner (DSS)** et un **Discovery Scanner** montés.",
+          "emphasis": "normal"
+        }
+      ]
+    },
+    {
+      "id": "road-to-riches",
+      "number": 4,
+      "title": "Partie 2 — Du million aux 10 millions : le pivot Exploration / Road to Riches",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "C'est ici que l'argent commence à couler, **sans le moindre danger**. L'exploration = scanner des systèmes et vendre les données.",
+          "emphasis": "intro"
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {
+              "label": "Objectif chiffré",
+              "value": "10 M Cr.",
+              "reliability": "estimate"
+            },
+            {
+              "label": "Temps estimé",
+              "value": "un week-end de jeu (8-15 h) pour un débutant.",
+              "reliability": "estimate"
+            },
+            {
+              "label": "Vaisseau recommandé",
+              "value": "Diamondback Explorer (DBX, ~14 M — un peu plus tard), sinon Cobra Mk III/V ou Adder A-ratés sur le FSD.",
+              "reliability": "community"
+            },
+            {
+              "label": "Gain estimé",
+              "value": "**5 à 15 M Cr/h** en optimisant (un débutant fera plutôt **3 à 8 M/h** au début, le temps de prendre le coup de main du FSS/DSS). [COMMUNAUTÉ]",
+              "reliability": "community"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Comprendre les 3 gestes de l'explorateur",
+          "level": 3
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Le Honk** : à l'arrivée dans un système, maintenez le **Discovery Scanner** → une onde révèle tous les corps du système.",
+            "**Le FSS (Full Spectrum System scanner)** : entrez en mode FSS, balayez les fréquences pour « résoudre » chaque planète/étoile. Chaque corps scanné = crédits + éventuellement le bonus **First Discovered** (premier à le découvrir).",
+            "**Le DSS (Detailed Surface Scanner)** : en supercruise, approchez une planète intéressante et tirez des **sondes** pour la cartographier → gros bonus **First Mapped**, et **c'est le DSS qui rapporte le plus**."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Utiliser Spansh « Road to Riches » pas à pas",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "**Road to Riches** est un outil web (spansh.co.uk) qui calcule un itinéraire des systèmes les plus rentables à scanner autour de vous.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Allez sur **spansh.co.uk/riches**."
+            },
+            {
+              "text": "**Source system** : tapez le système où vous êtes."
+            },
+            {
+              "text": "**Range (jump range)** : mettez votre portée de saut réelle (ex. 30). Plus elle est haute, mieux c'est."
+            },
+            {
+              "text": "**Radius** : rayon de recherche (ex. 500). **Max results / systems** : nombre d'étapes (ex. 100 à 325)."
+            },
+            {
+              "text": "**Min value** : valeur minimale par corps pour qu'il soit inclus (ex. 500 000 Cr — filtre les cailloux sans intérêt)."
+            },
+            {
+              "text": "**Cochez « Use mapping value »** : l'outil classera les corps selon le gain **DSS** (cartographié), bien plus élevé que le simple FSS."
+            },
+            {
+              "text": "Lancez. Vous obtenez une **liste ordonnée** de systèmes avec, pour chacun, les corps à scanner (souvent des **Water Worlds** et **Earth-like Worlds** = les plus payants)."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Comment lire l'itinéraire** : pour chaque système, sautez-y, honk, ouvrez le FSS, résolvez les corps listés, puis allez en supercruise **DSS-cartographier** les planètes à haute valeur (Water/Earth-like). Passez au système suivant. Notez que Road to Riches **évite les systèmes habités** (donc fonctionne mal *dans* la Bulle) : élargissez le rayon si besoin.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Chiffre réaliste (retour de joueur)",
+          "text": "un débutant qui a klaxonné + FSS + DSS ~10 systèmes bien choisis rapporte de l'ordre de **13 M Cr** accumulés en quelques heures ; une tournée complète bien optimisée dépasse **300 M Cr**. [COMMUNAUTÉ]"
+        },
+        {
+          "type": "heading",
+          "text": "Où et quand vendre les données",
+          "level": 3
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Vendez à l'**Universal Cartographics** de n'importe quelle grande station.",
+            "**Ne vendez pas au fil de l'eau si vous visez l'ingénierie** : gardez vos premières données d'exploration pour les donner à **Felicity Farseer** (voir Partie 3) — elles servent à débloquer et monter son atelier.",
+            "**Vendez avant tout retour risqué** : ne rentrez jamais dans la Bulle avec des heures de données non vendues sans les sécuriser dès que possible. Les données non vendues sont **perdues à la mort**."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Le « signal » pour passer à la suite** : vous avez 10 M Cr, vous maîtrisez FSS/DSS, et vous avez de quoi vous payer un **Diamondback Explorer** ou un **Mandalay** et débloquer vos premiers ingénieurs.",
+          "emphasis": "normal"
+        }
+      ]
+    },
+    {
+      "id": "ingenierie-sans-combat",
+      "number": 5,
+      "title": "Partie 3 — Débloquer l'ingénierie SANS combat",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'**ingénierie** (Engineering) améliore vos modules via des **blueprints** (plans) appliqués par des **Engineers** (ingénieurs). Pour le pacifiste, **une seule amélioration compte vraiment au début** : le **FSD** (portée de saut).",
+          "emphasis": "intro"
+        },
+        {
+          "type": "heading",
+          "text": "La priorité absolue : FSD « Increased Range » + « Mass Manager »",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Rendez-vous chez **Felicity Farseer** (système **Deciat**, planète Deciat 6 A). Elle applique le blueprint **Increased Range** (portée accrue) sur votre FSD, avec l'effet expérimental **Mass Manager**. **C'est de loin l'amélioration la plus rentable du jeu** : +40 à 60 % de portée de saut → tout devient plus rapide.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Comment débloquer Felicity Farseer (100 % pacifique)",
+          "level": 4
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Atteignez le rang **Exploration : Scout** (très facile — quelques scans suffisent)."
+            },
+            {
+              "text": "Apportez-lui **1 unité de Meta-Alloys** (achetable/récupérable, ex. à Maia ou dans certaines stations) pour l'invitation initiale."
+            },
+            {
+              "text": "**Montez sa réputation en lui VENDANT des données d'exploration** : environ **24 M Cr de données** la font monter jusqu'au Grade 5.",
+              "detail": "Vos tournées Road to Riches servent donc double : argent **et** ingénierie. [COMMUNAUTÉ]"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Les ingénieurs accessibles pacifiquement",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Ingénieur",
+            "Système",
+            "Débloqué par (pacifique)",
+            "Spécialité utile non-combat"
+          ],
+          "rows": [
+            [
+              {
+                "text": "**Felicity Farseer**",
+                "style": "strong"
+              },
+              {
+                "text": "Deciat",
+                "style": "normal"
+              },
+              {
+                "text": "Rang Scout + Meta-Alloys ; rép. via données d'explo",
+                "style": "normal"
+              },
+              {
+                "text": "**FSD (portée)**, thrusters, power plant",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Elvira Martuuk**",
+                "style": "strong"
+              },
+              {
+                "text": "Khun",
+                "style": "normal"
+              },
+              {
+                "text": "Vendre des données / voyager ≥ 300 al d'un coup",
+                "style": "normal"
+              },
+              {
+                "text": "FSD, thrusters, boucliers",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**The Dweller**",
+                "style": "strong"
+              },
+              {
+                "text": "Wyrd",
+                "style": "normal"
+              },
+              {
+                "text": "Vendre des données à 5 marchés noirs*",
+                "style": "normal"
+              },
+              {
+                "text": "Power distributor, lasers",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**Lei Cheung**",
+                "style": "strong"
+              },
+              {
+                "text": "Laksak",
+                "style": "normal"
+              },
+              {
+                "text": "Vendre des données à 50 marchés différents",
+                "style": "normal"
+              },
+              {
+                "text": "**Boucliers**, sensors",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Bill Turner**",
+                "style": "strong"
+              },
+              {
+                "text": "Alioth (permis Alioth requis)",
+                "style": "normal"
+              },
+              {
+                "text": "Vendre du Bromellite / rép. faction",
+                "style": "normal"
+              },
+              {
+                "text": "Scanners, FSD interdictor",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**Juri Ishmaak**",
+                "style": "strong"
+              },
+              {
+                "text": "Giryak",
+                "style": "normal"
+              },
+              {
+                "text": "Via Farseer + bounties/combat bonds (moins pacifique)",
+                "style": "normal"
+              },
+              {
+                "text": "Sensors, détecteurs",
+                "style": "lose"
+              }
+            ],
+            [
+              {
+                "text": "**Selene Jean**",
+                "style": "strong"
+              },
+              {
+                "text": "Kuk (permis)",
+                "style": "normal"
+              },
+              {
+                "text": "Miner ≈ 500 t de minerai (100 % pacifique)",
+                "style": "normal"
+              },
+              {
+                "text": "**Blindage / Hull Reinforcement**",
+                "style": "win"
+              }
+            ]
+          ],
+          "caption": "* Le Dweller demande de vendre chez des « black markets » — activité tolérée, pas du combat, mais évitez d'y transporter du cargo volé."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Astuce",
+          "text": "pour débuter, **Farseer (FSD) + Lei Cheung (boucliers) + Selene Jean (blindage via minage)** couvrent tous les besoins d'un vaisseau pacifique costaud. Inutile de tout débloquer."
+        },
+        {
+          "type": "heading",
+          "text": "Obtenir les matériaux d'ingénierie SANS combat",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Les blueprints consomment des **matériaux** (Raw / Manufactured / Encoded). Sources 100 % pacifiques :",
+          "emphasis": "normal"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Raw (bruts)** : **prospection en SRV** (le petit véhicule tout-terrain) sur les planètes — roulez sur les cailloux et minerais de surface. Les **cratères de matériaux** et zones biologiques sont riches.",
+            "**Encoded (données)** : les **signal sources encodés** (Encoded Emissions), et surtout le **site du crash de Jameson** (Jameson Crash Site, système HIP 12099 / Founders World voisin) : source fiable de données encodées de haut niveau, en boucle (relog).",
+            "**Manufactured (fabriqués)** : les **HGE (High Grade Emissions)** — des signaux qui apparaissent selon l'état des systèmes (Boom, War…) et lâchent des matériaux rares sans combat (approchez, récupérez au collecteur).",
+            "**Sites de crash & épaves** : récupération au **cargo scoop** ou aux **limpets collecteurs**.",
+            "**Material Traders (marchands de matériaux)** : échangez vos surplus contre ce qui vous manque (taux de conversion défavorable mais très pratique)."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Le « signal » pour passer à la suite** : FSD Grade 5 Increased Range + Mass Manager posé, portée de saut nettement augmentée, un bouclier correct engineeré. Vous êtes prêt pour le mid-game.",
+          "emphasis": "normal"
+        }
+      ]
+    },
+    {
+      "id": "exobiologie-ou-minage",
+      "number": 6,
+      "title": "Partie 4 — De 10 à 100 millions : Exobiologie OU Minage",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Deux grandes voies pacifiques, au choix (ou en alternance selon votre humeur).",
+          "emphasis": "intro"
+        },
+        {
+          "type": "heading",
+          "text": "Comparatif rapide des activités pacifiques (Cr/h réalistes)",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Activité",
+            "Cr/h optimisé",
+            "Cr/h débutant (30-50 %)",
+            "Danger",
+            "Rythme",
+            "Prérequis"
+          ],
+          "rows": [
+            [
+              {
+                "text": "**Exobiologie**",
+                "style": "strong"
+              },
+              {
+                "text": "100-300 M/expédition (plusieurs h)",
+                "style": "number"
+              },
+              {
+                "text": "40-120 M/expédition",
+                "style": "number"
+              },
+              {
+                "text": "Très faible",
+                "style": "win"
+              },
+              {
+                "text": "Zen, immersif",
+                "style": "normal"
+              },
+              {
+                "text": "Odyssey, Artemis Suit",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**Minage laser Platinum**",
+                "style": "strong"
+              },
+              {
+                "text": "40-100 M/h",
+                "style": "number"
+              },
+              {
+                "text": "20-40 M/h",
+                "style": "number"
+              },
+              {
+                "text": "Faible",
+                "style": "win"
+              },
+              {
+                "text": "Répétitif, relaxant",
+                "style": "normal"
+              },
+              {
+                "text": "Vaisseau minier",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**Core mining (LTD/Void Opals)**",
+                "style": "strong"
+              },
+              {
+                "text": "Variable, à-coups",
+                "style": "number"
+              },
+              {
+                "text": "15-30 M/h",
+                "style": "number"
+              },
+              {
+                "text": "Faible",
+                "style": "win"
+              },
+              {
+                "text": "Ludique, technique",
+                "style": "normal"
+              },
+              {
+                "text": "Seismic charges",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**Commerce / hauling**",
+                "style": "strong"
+              },
+              {
+                "text": "20-40 M/h (solo)",
+                "style": "number"
+              },
+              {
+                "text": "10-20 M/h",
+                "style": "number"
+              },
+              {
+                "text": "Faible",
+                "style": "win"
+              },
+              {
+                "text": "Actif",
+                "style": "normal"
+              },
+              {
+                "text": "Gros cargo",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**Missions passagers**",
+                "style": "strong"
+              },
+              {
+                "text": "20-40 M/h",
+                "style": "number"
+              },
+              {
+                "text": "10-20 M/h",
+                "style": "number"
+              },
+              {
+                "text": "Faible-moyen",
+                "style": "mid"
+              },
+              {
+                "text": "Répétitif",
+                "style": "normal"
+              },
+              {
+                "text": "Cabines passagers",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**Road to Riches (explo)**",
+                "style": "strong"
+              },
+              {
+                "text": "5-15 M/h",
+                "style": "number"
+              },
+              {
+                "text": "3-8 M/h",
+                "style": "number"
+              },
+              {
+                "text": "Quasi nul",
+                "style": "win"
+              },
+              {
+                "text": "Contemplatif",
+                "style": "normal"
+              },
+              {
+                "text": "Scanners",
+                "style": "normal"
+              }
+            ]
+          ],
+          "caption": "Chiffres [COMMUNAUTÉ/ESTIMATION] — l'économie du jeu est dynamique, les prix des minerais fluctuent fortement."
+        },
+        {
+          "type": "heading",
+          "text": "Voie A — Exobiologie (la plus rentable en solo)",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "L'exobiologie = descendre à pied (Odyssey) scanner des formes de vie alien avec le **Genetic Sampler** de l'**Artemis Suit**, puis vendre les données à **Vista Genomics**.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Build recommandé — Mandalay (l'explorateur/exobiologiste de référence 2024-2026)",
+          "level": 4
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Vaisseau** : **Mandalay** (~17,6 M Cr). Excellente portée (jusqu'à ~91 al engineeré), sobre en supercruise SCO, petit train d'atterrissage (se pose partout), gère bien la chaleur.",
+            "**FSD** : le plus gros **FSD (SCO)** possible, A-raté, engineeré Increased Range + Mass Manager.",
+            "**Detailed Surface Scanner (DSS)** : obligatoire.",
+            "**Fuel scoop** (récupérateur de carburant) : le plus gros possible — vous serez loin de toute station.",
+            "**Vehicle Hangar (Planetary Vehicle)** : pour le SRV.",
+            "**AFMU (Auto Field-Maintenance Unit)** : répare vos modules loin de la Bulle.",
+            "**Petit bouclier + Heat Sink Launcher**.",
+            "**Modules D-ratés** partout ailleurs (légers) sauf FSD et power plant en A."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Méthode pas à pas",
+          "level": 4
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Achetez l'**Artemis Suit** au **Pioneer Supplies** d'une station Odyssey (elle seule a le Genetic Sampler)."
+            },
+            {
+              "text": "Sortez de la Bulle vers des systèmes **non visités** (sur la carte galactique, filtrez « unexplored »).",
+              "detail": "Visez les planètes à **atmosphère ténue** (Ammonia, CO2…) proches de leur étoile (< 1500 sl)."
+            },
+            {
+              "text": "Honk → FSS chaque système : les planètes avec **signaux biologiques** s'affichent."
+            },
+            {
+              "text": "DSS la planète pour localiser les zones bio. Descendez."
+            },
+            {
+              "text": "À pied ou en SRV, utilisez le **Scan Pulse** (portée 750 m) pour repérer les spécimens.",
+              "detail": "**Chaque espèce = 3 échantillons** pris à distance minimale les uns des autres (la « Clonal Colony Range », 100 m à 1 km selon l'espèce)."
+            },
+            {
+              "text": "Revendez tout à **Vista Genomics** de retour dans la Bulle (ou à Colonia)."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Chiffres honnêtes** : les espèces valent de ~1 M à ~19-20 M Cr pièce. Selon la base de données EDExobiology (HerzbubeWiki), *« The base price you get for selling a scanned Stratum Tectonicas is 19.01 MCr »* — soit **19 010 800 Cr** en base, et **95 054 000 Cr** avec le bonus First Footfall (elitedangerous.net). Ce bonus **« First Logged » multiplie par 5 (×5)** le prix de vente si vous êtes le premier humain à logger l'espèce sur la planète (Elite Dangerous Wiki, *Exobiology Sample Values* : *« samples that qualify as \"First Logged\" will reward five times the amount listed below »*). Une expédition d'un week-end peut rapporter **plusieurs centaines de millions** ; comme retour vérifiable, le CMDR **jojt45** rapporte sur Steam (31 mars 2023) une expédition hivernale de deux mois vers le secteur du **Perseus Arm** : *« I went from 3.4B to 8.1B »* — soit **+4,7 milliards** — en klaxonnant chaque système et en ne visitant que les planètes BIO à moins de 1500 sl de leur étoile. [COMMUNAUTÉ]",
+          "emphasis": "normal"
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Erreur fréquente",
+          "text": "scanner 3 échantillons trop près les uns des autres → message « insufficient genetic diversity ». Éloignez-vous de la Clonal Colony Range (l'outil Elite Observatory + plugin Botanist vous l'indique, voir Partie 7)."
+        },
+        {
+          "type": "heading",
+          "text": "Voie B — Minage (laser vs core vs subsurface)",
+          "level": 3
+        },
+        {
+          "type": "heading",
+          "text": "Comparatif pour débuter",
+          "level": 4
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type de minage",
+            "Principe",
+            "Difficulté",
+            "Rentabilité",
+            "Verdict débutant"
+          ],
+          "rows": [
+            [
+              {
+                "text": "**Laser mining**",
+                "style": "strong"
+              },
+              {
+                "text": "Tirer un laser minier sur les astéroïdes riches, ramasser les fragments aux limpets collecteurs",
+                "style": "normal"
+              },
+              {
+                "text": "★ Facile",
+                "style": "win"
+              },
+              {
+                "text": "Élevée & régulière (Platinum)",
+                "style": "normal"
+              },
+              {
+                "text": "✅ **Commencez par ça**",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Core mining (deep core)**",
+                "style": "strong"
+              },
+              {
+                "text": "Trouver un astéroïde fissuré, poser des **Seismic Charges**, l'exploser, ramasser le cœur (LTD, Void Opals)",
+                "style": "normal"
+              },
+              {
+                "text": "★★★ Technique",
+                "style": "lose"
+              },
+              {
+                "text": "À-coups, gros pics",
+                "style": "normal"
+              },
+              {
+                "text": "À essayer plus tard, pour le fun",
+                "style": "mid"
+              }
+            ],
+            [
+              {
+                "text": "**Subsurface displacement**",
+                "style": "strong"
+              },
+              {
+                "text": "Missiles **Sub-surface Displacement** pour extraire des dépôts sous la croûte",
+                "style": "normal"
+              },
+              {
+                "text": "★★ Moyen",
+                "style": "mid"
+              },
+              {
+                "text": "Complément",
+                "style": "normal"
+              },
+              {
+                "text": "Optionnel",
+                "style": "mid"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Le méta 2026, honnête** : le **laser mining de Platinum** dans un **hotspot** (point chaud) reste la valeur sûre — régulier, prévisible, ~40-100 M/h optimisé. Le **core mining** de **Void Opals / Low Temperature Diamonds (LTD)** n'est plus l'eldorado d'antan (prix nerfés au fil des ans) : à faire par plaisir, pas pour le rendement pur. Repérez les hotspots via **edtools** ou **edmining.com**.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Build minier recommandé — Type-11 Prospector (le vaisseau minier dédié, 2025-2026)",
+          "level": 4
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Vaisseau** : **Type-11 Prospector** (~67,9 M Cr) — premier vaisseau **conçu** pour le minage. Sort de l'usine quasi prêt.",
+            "**Hardpoint minier Mk II Large** : le **Mining Volley Repeater** (laser minier surpuissant fourni) — si puissant que mettre autre chose est un gâchis.",
+            "**Mk II Mining Limpet Controller (taille 5)** : jusqu'à **14 limpets** actifs (collecteurs + prospecteurs).",
+            "**Refinery** (raffinerie) + **Cargo Racks** (soutes).",
+            "**Prospector Limpet Controller** + **Collector Limpet Controller** (si vous ne prenez pas le Mk II combiné).",
+            "**Detailed Surface Scanner** (pour trouver les hotspots) + **Pulse Wave Analyser** (pour le core mining).",
+            "Alternative petit budget : **Cobra Mk V** ou **Type-8 Transporter** (~38,5 M Cr) font très bien le job en laser mining."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Méthode laser mining pas à pas",
+          "level": 4
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Trouvez un anneau (ring) avec un **hotspot Platinum** (outils tiers)."
+            },
+            {
+              "text": "Entrez dans l'anneau, lancez un **Prospector Limpet** sur un astéroïde → il affiche sa composition. Visez ≥ 20-30 % Platinum."
+            },
+            {
+              "text": "Tirez le laser minier, les fragments se détachent, les **Collector Limpets** les ramassent automatiquement."
+            },
+            {
+              "text": "Soute pleine → vendez au marché le plus offrant (Inara vous donne les meilleurs prix)."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Astuce",
+          "text": "vendez le Platinum là où la demande est haute (Inara → « Commodities » → meilleur prix d'achat). Ne bradez pas votre cargaison à la première station."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Le « signal » pour passer à la suite** : vous avez 100 M Cr, un vaisseau mid-game A-raté (Mandalay/Type-11/Type-8), et vos ingénieurs FSD + boucliers posés.",
+          "emphasis": "normal"
+        }
+      ]
+    },
+    {
+      "id": "vers-le-premier-milliard",
+      "number": 7,
+      "title": "Partie 5 — De 100 millions au premier milliard",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ici, on **industrialise** la méthode qui vous plaît. Le but : accumuler vers les 5-6 milliards nécessaires au Fleet Carrier (Partie 6).",
+          "emphasis": "intro"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Exobiologie longue distance** : de vraies expéditions de plusieurs jours vers des régions vierges (Perseus Arm, etc.) → **plusieurs centaines de M à quelques milliards** par voyage (cf. le retour de jojt45 ci-dessus). Utilisez la **neutron highway** (voir ci-dessous) et l'outil Spansh « Neutron Router » pour bondir loin, vite.",
+            "**Minage optimisé** : passez à un gros vaisseau (Type-11 pleinement engineeré, ou plus tard **Imperial Cutter** / **Type-9** pour la soute), parking près d'un hotspot, cycles serrés extraction → vente.",
+            "**Trading longue distance & colonisation** : voir Partie 6bis ci-dessous — les contrats de hauling vers les chantiers de colonisation paient bien à l'unité."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "La Neutron Highway & le SCO (accélérateurs 2024-2026)",
+          "level": 3
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Neutron Highway** : en vous « surchargeant » (supercharge) dans le **cône de jet d'une étoile à neutrons**, votre prochain saut est **×4** en portée. En chaînant les étoiles à neutrons (via le **Neutron Router** de Spansh), on traverse la galaxie en une fraction du temps. Gratuit, sans danger si on gère la chaleur.",
+            "**FSD (SCO) — Supercruise Overcharge** : depuis fin 2024, les nouveaux FSD permettent d'appuyer sur **Boost en supercruise** pour aller **beaucoup plus vite à l'intérieur d'un système** (fini les 7 minutes pour atteindre une planète à 200 000 sl). ⚠️ Ça consomme énormément de carburant et ça chauffe : montez un **heatsink**. Sur les vaisseaux non optimisés SCO (anciens), ça surchauffe vite — mais **remplacez quand même votre vieux FSD par un FSD (SCO)** : à ingénierie égale, il jump **1-2 al plus loin** que l'ancien. Les anciens FSD sont désormais obsolètes.",
+            "**Classe 8 FSD (SCO)** : introduite le **2 décembre 2025** avec le **Caspian Explorer**, seul vaisseau à pouvoir la monter."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Le « signal » pour la suite** : ~1 milliard en banque, une routine rentable maîtrisée, l'envie d'un « chez-soi mobile ».",
+          "emphasis": "normal"
+        }
+      ]
+    },
+    {
+      "id": "fleet-carrier",
+      "number": 8,
+      "title": "Partie 6 — Le Fleet Carrier et au-delà (milliards)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **Fleet Carrier (FC)** — de son vrai nom **Drake-Class Carrier** — est la plus grosse possession joueur : une base mobile de 16 pads, avec marché, outfitting, shipyard, réservoir de tritium, entrepôt. C'est un **outil économique**, pas un vaisseau de combat.",
+          "emphasis": "intro"
+        },
+        {
+          "type": "heading",
+          "text": "Chiffres 2026 [OFFICIEL, wiki]",
+          "level": 4
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {
+              "label": "Prix d'achat",
+              "value": "**5 000 000 000 Cr (5 milliards)**.",
+              "reliability": "official"
+            },
+            {
+              "label": "Upkeep (entretien) hebdomadaire",
+              "value": "le Wiki (Drake-Class Carrier) précise *« weekly upkeep costs starting at 5 million credits for a newly-purchased, unmodified vessel, and rising to around 30 million credits for a vessel with all optional services installed and active »* — donc **5 M/semaine** à nu, jusqu'à **~30 M/semaine** tout équipé.",
+              "reliability": "official"
+            },
+            {
+              "label": "Coût par saut",
+              "value": "**100 000 Cr** de maintenance fixe + le **tritium** consommé (~10-15 t/saut).",
+              "reliability": "official"
+            },
+            {
+              "label": "Faillite",
+              "value": "selon le Wiki, *« when the owner…fails to regularly pay upkeep costs and their debt exceeds 250 million credits, equivalent to 10 weeks of debt with all optional services installed, the owner will have one week to resolve their finances or their Fleet Carrier will be automatically shut down »* — soit **250 M Cr de dette (≈ 10 semaines impayées)** avant décommissionnement automatique.",
+              "reliability": "official"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Encadré — Erreur fréquente",
+          "text": "acheter un FC dès qu'on a 5 milliards, sans réserve. **Gardez au moins 5,5-6 milliards** : 5 pour l'achat + une réserve pour l'upkeep et le tritium. Beaucoup de joueurs conseillent d'avoir de quoi tenir **des mois d'upkeep** d'avance."
+        },
+        {
+          "type": "heading",
+          "text": "Quand l'acheter ?",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Quand vous avez **≥ 6 milliards** ET une activité qui le rentabilise. Le FC n'est **pas** rentable en soi : c'est un **multiplicateur de confort** :",
+          "emphasis": "normal"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Exobio/exploration** : le FC vous suit dans le Noir (sauts de 500 al), sert de point de vente Vista Genomics/Universal Cartographics mobile, de garage et d'atelier. Change la vie sur les longues expéditions.",
+            "**Minage** : parkez le FC sur le hotspot, minez, videz la soute dans le FC, il jump vendre là où c'est cher. Vous pouvez même **stocker et revendre du tritium/Platinum** à d'autres joueurs (arbitrage).",
+            "**Arbitrage / entrepôt** : achetez bas dans une région, faites sauter le FC, revendez haut ailleurs ; ou servez de dépôt de tritium premium (les autres commandants paient 200-900 % du prix moyen pour du tritium livré)."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Le tritium",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **tritium** est le carburant du FC. Deux options : le **miner** vous-même (hotspots de tritium, laser ou surface) — gratuit mais chronophage — ou l'**acheter** (~45-50 k Cr/t en moyenne). Gardez toujours une réserve à bord pour ne pas rester bloqué.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Le « signal » : vous n'avez plus de « signal ».** À ce stade, vous jouez pour vos objectifs perso (Elite dans les trois carrières, exploration de Colonia/Sagittarius A*, collection de vaisseaux…). Le milliard est derrière vous.",
+          "emphasis": "normal"
+        }
+      ]
+    },
+    {
+      "id": "colonisation",
+      "number": 9,
+      "title": "Partie 6bis — La colonisation comme revenu pacifique (2025-2026)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La mise à jour **Trailblazers** (février 2025) a introduit la **System Colonisation** : réclamer un système inhabité et y bâtir stations/avant-postes en y **haulant des marchandises**. En 2026, c'est un pan majeur du jeu. Selon le Developer Log de Frontier du 16 février 2026 (relayé par l'Elite Dangerous Wiki, *System Colonisation*) : *« By February 2026: 101,862 systems have been colonized, with 175,973 surface facilities, and 307,014 space facilities. »* [OFFICIEL]",
+          "emphasis": "intro"
+        },
+        {
+          "type": "heading",
+          "text": "Pour le joueur pacifique, deux angles",
+          "level": 4
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "**Hauler pour les chantiers de colonisation** : livrer les commodités demandées par les stations en construction paie **des prix premium à l'unité** — une excellente activité de trading actif, sans combat. C'est le vrai gain.",
+            "**Être soi-même architecte** : intéressant pour le plaisir de bâtir, **mais pas pour le rendement**. ⚠️ Le **revenu passif** de vos stations est dérisoire : un joueur ayant haulé ~800 000 t rapporte un versement hebdomadaire de l'ordre de **627 000 Cr** — « la pire activité en Cr/h du jeu » de son propre aveu. [COMMUNAUTÉ] Ne colonisez pas *pour* l'argent passif."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "⚠️ Taxe galactique",
+          "text": "à mesure que votre réseau de colonies grandit, une taxe s'applique sur les revenus au-delà de 5 000 000 Cr pour financer la maintenance des infrastructures. [OFFICIEL]"
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "le **hauling rémunéré vers les chantiers** est une bonne source de revenus active pacifique en 2026 ; le revenu passif d'architecte, non."
+        }
+      ]
+    },
+    {
+      "id": "actualite-2026",
+      "number": 10,
+      "title": "Partie 7 — L'actualité 2026 : Operations, Merc Coin & ce qui a changé",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Operations (30 juin 2026) & Merc Coin — inutiles pour le pacifiste",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "La grande mise à jour **Operations** (lancée le **30 juin 2026**, Odyssey requis) ajoute **6 scénarios multijoueurs** (jusqu'à 4 commandants, solo possible) et une monnaie, le **Merc Coin**. Le plafond est confirmé par l'Elite Dangerous Wiki (*Operations*) : *« You can have a maximum of 9999 Merc Coin with a weekly allowance limit of 1000 »* — soit **1000/semaine**, max **9999**. [OFFICIEL]",
+          "emphasis": "normal"
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict sans détour",
+          "text": "c'est du contenu 100 % COMBAT. Un débutant pacifique peut l'ignorer intégralement."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Les **6 opérations** (Biohazard Takedown, Firestorm Rescue, Rapid Response, Reclamation Point, Tactical Takedown, Terminal Prosecution) sont **toutes** basées sur le combat vaisseau et/ou à pied. Même « Firestorm Rescue » (sauvetage de station en feu) exige de repousser des ennemis. Le wiki recommande des vaisseaux à **≥ 1000 de bouclier** sous peine d'être détruit. Bonne nouvelle si vous êtes curieux : **les morts n'ont aucune conséquence** (respawns illimités, n'affectent pas le score/récompenses), et le mode « easy » se fait en solo en infiltration.",
+            "Le **Merc Coin** achète surtout des **mods d'armes et d'équipement à pied de combat** (via des Engineers dédiés). La **seule** utilité non-combat repérée : des **cargo racks pré-engineerés à capacité étendue** (utiles aux haulers, ~550 MC pièce). Aucun module Merc Coin de **FSD, bouclier, thruster, scanner d'exploration ou minage** n'existe pour le joueur pacifique."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Conclusion",
+          "text": "pour devenir riche sans combat, **Operations et Merc Coin ne servent à rien.** Ne perdez pas de temps à grinder des Merc Coins ; les ingénieurs classiques (matériaux, sans combat) couvrent tous vos besoins."
+        },
+        {
+          "type": "heading",
+          "text": "Ce qui a été nerfé / buffé / modifié (pour ne pas suivre de guide périmé)",
+          "level": 3
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Robigo (missions passagers)** : ⚠️ **fortement dilué**. La colonisation a multiplié les destinations possibles, cassant l'empilement de missions vers une seule cible. « Les jours dorés de Robigo sont finis. » [COMMUNAUTÉ] Ça reste faisable mais ce n'est plus le spot magique des vieux guides.",
+            "**Missions de sauvetage / stations en feu** : ✅ **de retour** depuis le patch du **28 avril 2026** (arrivée du Lynx Highliner). Les stations attaquées offrent des missions d'évacuation de passagers et de **salvage** (escape pods, black boxes) à rendre au **Search and Rescue Agent** ou aux **Rescue Vessels**. Activité pacifique honnête quand des stations brûlent (vérifiez le filtre « Damaged Starports » sur la carte). Le **Lynx Highliner** est désormais le meilleur transport de passagers en masse.",
+            "**Core mining Void Opals / LTD** : nerfé au fil des ans → à faire pour le plaisir, plus pour le rendement. Le **laser Platinum** domine.",
+            "**Painite** : plus le roi incontesté ; le **Platinum** est la valeur sûre du laser mining.",
+            "**Tritium & Type-11 Prospector** : le Type-11 (creditbuyable depuis le 22 janvier 2026) est excellent pour miner tritium et Platinum ; le tritium reste crucial pour les Fleet Carriers.",
+            "**SCO / FSD** : les anciens FSD sont **obsolètes** — passez aux **FSD (SCO)** (jump un peu plus loin + overcharge en supercruise). **Classe 8** ajoutée le 2 déc. 2025 (Caspian).",
+            "**Powerplay 2.0** : refondu ; système de **mérites**. Pour le pacifiste, non prioritaire — certaines activités pacifiques y contribuent, mais ne vous en préoccupez pas pour l'argent.",
+            "**Colonisation** : nouvelle grande source de hauling rémunéré (voir Partie 6bis)."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Les vaisseaux récents pertinents pour le non-combat (prix crédits 2026)",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Vaisseau",
+            "Prix (Cr)",
+            "Taille",
+            "Rôle non-combat",
+            "Dispo crédits"
+          ],
+          "rows": [
+            [
+              {
+                "text": "**Cobra Mk V**",
+                "style": "strong"
+              },
+              {
+                "text": "~1,99 M",
+                "style": "number"
+              },
+              {
+                "text": "Small",
+                "style": "normal"
+              },
+              {
+                "text": "Multirôle polyvalent (débutant idéal)",
+                "style": "normal"
+              },
+              {
+                "text": "✅ 24 avr. 2025",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Mandalay**",
+                "style": "strong"
+              },
+              {
+                "text": "~17,6 M",
+                "style": "number"
+              },
+              {
+                "text": "Medium",
+                "style": "normal"
+              },
+              {
+                "text": "**Exploration / exobiologie** (référence)",
+                "style": "win"
+              },
+              {
+                "text": "✅ 26 fév. 2025",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Type-8 Transporter**",
+                "style": "strong"
+              },
+              {
+                "text": "~38,5 M",
+                "style": "number"
+              },
+              {
+                "text": "Medium",
+                "style": "normal"
+              },
+              {
+                "text": "Hauling / minage / explo",
+                "style": "normal"
+              },
+              {
+                "text": "✅ 28 nov. 2024",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Type-11 Prospector**",
+                "style": "strong"
+              },
+              {
+                "text": "~67,9 M",
+                "style": "number"
+              },
+              {
+                "text": "Medium",
+                "style": "normal"
+              },
+              {
+                "text": "**Minage dédié**",
+                "style": "win"
+              },
+              {
+                "text": "✅ 22 janv. 2026",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Gutamaya Corsair**",
+                "style": "strong"
+              },
+              {
+                "text": "~79,3 M",
+                "style": "number"
+              },
+              {
+                "text": "Medium",
+                "style": "normal"
+              },
+              {
+                "text": "Multirôle rapide (combat-capable)",
+                "style": "normal"
+              },
+              {
+                "text": "✅ mi-2025",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Caspian (Explorer)**",
+                "style": "strong"
+              },
+              {
+                "text": "~194,9 M",
+                "style": "number"
+              },
+              {
+                "text": "Large",
+                "style": "normal"
+              },
+              {
+                "text": "**Exploration longue portée** (FSD classe 8)",
+                "style": "win"
+              },
+              {
+                "text": "✅ 23 mars 2026",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Panther Clipper Mk II**",
+                "style": "strong"
+              },
+              {
+                "text": "~301 M (coque)",
+                "style": "number"
+              },
+              {
+                "text": "Large",
+                "style": "normal"
+              },
+              {
+                "text": "**Cargo roi (1238 t)** / colonisation",
+                "style": "win"
+              },
+              {
+                "text": "✅ 30 oct. 2025",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Lynx Highliner**",
+                "style": "strong"
+              },
+              {
+                "text": "—",
+                "style": "number"
+              },
+              {
+                "text": "Large",
+                "style": "normal"
+              },
+              {
+                "text": "**Transport de passagers en masse**",
+                "style": "win"
+              },
+              {
+                "text": "✅ 28 avr. 2026",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Nomad**",
+                "style": "strong"
+              },
+              {
+                "text": "ARX (SLV)",
+                "style": "number"
+              },
+              {
+                "text": "SLV",
+                "style": "normal"
+              },
+              {
+                "text": "Petit véhicule lancé (Operations)",
+                "style": "normal"
+              },
+              {
+                "text": "ARX early access",
+                "style": "mid"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "⚠️ Panther Clipper Mk II",
+          "text": "plus gros cargo non-capital du jeu — l'Elite Dangerous Wiki confirme une *« maximum cargo capacity of 1238 tons, giving it the same capacity as a fully-laden Type-8 and Imperial Cutter combined »*. Coque nue ~301 M Cr, mais un build complet A-raté/blindé peut atteindre **~1,1 milliard**. [COMMUNAUTÉ]"
+        }
+      ]
+    },
+    {
+      "id": "outils-tiers",
+      "number": 11,
+      "title": "Partie 7bis — Outils tiers & hygiène de jeu",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Les outils indispensables (gratuits)",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Outil",
+            "À quoi ça sert",
+            "Installation"
+          ],
+          "rows": [
+            [
+              {
+                "text": "**Spansh** (spansh.co.uk)",
+                "style": "strong"
+              },
+              {
+                "text": "Road to Riches, Neutron Router, Fleet Carrier Router, Trade planner",
+                "style": "normal"
+              },
+              {
+                "text": "Site web, rien à installer",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**Inara** (inara.cz)",
+                "style": "strong"
+              },
+              {
+                "text": "Prix des marchandises, meilleurs marchés, ingénieurs, suivi de carrière",
+                "style": "normal"
+              },
+              {
+                "text": "Site web (+ appli)",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**EDSM** (edsm.net)",
+                "style": "strong"
+              },
+              {
+                "text": "Cartographie communautaire, suivi de vos systèmes visités",
+                "style": "normal"
+              },
+              {
+                "text": "Site web",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**EDDiscovery**",
+                "style": "strong"
+              },
+              {
+                "text": "Journal de bord, stats, cartes, suivi matériaux",
+                "style": "normal"
+              },
+              {
+                "text": "Appli Windows",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**EDMC (ED Market Connector)**",
+                "style": "strong"
+              },
+              {
+                "text": "Envoie vos données de jeu à Inara/EDSM/EDDB en temps réel",
+                "style": "normal"
+              },
+              {
+                "text": "Appli, à lancer avec le jeu",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**Elite Observatory + plugin Botanist**",
+                "style": "strong"
+              },
+              {
+                "text": "**Détecte les planètes à valeur exobio/explo** et calcule les Clonal Colony Range",
+                "style": "win"
+              },
+              {
+                "text": "Appli + plugin",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**EDCoPilot**",
+                "style": "strong"
+              },
+              {
+                "text": "Assistant vocal/immersion, aide au routing",
+                "style": "normal"
+              },
+              {
+                "text": "Appli",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**coriolis.io / edsy.org**",
+                "style": "strong"
+              },
+              {
+                "text": "**Éditeurs de build** : concevez/optimisez vos vaisseaux module par module avant d'acheter",
+                "style": "win"
+              },
+              {
+                "text": "Sites web",
+                "style": "normal"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Comment démarrer** : installez **EDMC** (il alimente automatiquement Inara/EDSM). Pour l'exobio, ajoutez **Elite Observatory + Botanist**. Pour planifier vos vaisseaux, utilisez **edsy.org** (moderne) ou **coriolis.io**. Pour les itinéraires, tout passe par **Spansh**.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Planifier une session & éviter le burnout",
+          "level": 3
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Fixez UN objectif par session** (« finir cette tournée R2R », « remplir la soute 2 fois »). Vous éviterez l'errance improductive.",
+            "**Alternez les activités** : exobio un soir, minage le lendemain, hauling colonisation le week-end. La répétitivité est l'ennemi n°1 d'Elite.",
+            "**Vendez régulièrement** (données, cargo) : sécurisez vos gains, ne cumulez pas des heures de données à bord.",
+            "**Podcast/musique** : les longues sessions d'explo/minage sont parfaites pour ça.",
+            "**N'ayez pas peur de vous arrêter** : le jeu ne « punit » pas les pauses (sauf l'upkeep du FC — mais gardez une réserve)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq-debutant",
+      "number": 12,
+      "title": "Partie 8 — FAQ débutant",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Solo ou Open ?",
+          "level": 4
+        },
+        {
+          "type": "paragraph",
+          "text": "→ **Solo** (ou Private Group Mobius) pour zéro risque PvP. Gains identiques.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Faut-il acheter Odyssey ?",
+          "level": 4
+        },
+        {
+          "type": "paragraph",
+          "text": "→ **OUI** si vous voulez l'**exobiologie** (l'activité solo la plus rentable) et les nouveaux vaisseaux. C'est aujourd'hui la version standard. Sans Odyssey, vous vous privez de la meilleure voie pacifique.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Quel vaisseau acheter en premier ?",
+          "level": 4
+        },
+        {
+          "type": "paragraph",
+          "text": "→ Un petit explorateur : **Cobra Mk III** (380 k) si budget serré, sinon visez le **Cobra Mk V** (~1,99 M) puis le **Mandalay** (~17,6 M) pour l'explo/exobio, ou le **Type-11 Prospector** (~67,9 M) pour le minage.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Comment ne pas mourir ?",
+          "level": 4
+        },
+        {
+          "type": "paragraph",
+          "text": "→ Jouez en Solo, soute vide en explo, montez un bouclier, et maîtrisez **soumettre → booster → high wake**. Respectez le principe d'or (réserve de rebuy).",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Que faire si je perds mon vaisseau ?",
+          "level": 4
+        },
+        {
+          "type": "paragraph",
+          "text": "→ Payez le **rebuy** (~5 % de sa valeur). Si vous avez suivi le principe d'or, ce n'est qu'un contretemps. Le Sidewinder, lui, est re-livré gratuitement.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Combien de temps pour le premier milliard ?",
+          "level": 4
+        },
+        {
+          "type": "paragraph",
+          "text": "→ Réaliste pour un débutant : **40 à 120 heures** de jeu selon la méthode et la régularité. L'exobiologie longue distance est la voie solo la plus rapide vers les gros montants ; le minage/hauling est plus régulier. [ESTIMATION]",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Le combat est-il jamais obligatoire ?",
+          "level": 4
+        },
+        {
+          "type": "paragraph",
+          "text": "→ **Non** pour devenir riche. Les seules activités combat (bounty hunting, Conflict Zones, Operations 2026) sont **facultatives** et hors-sujet ici.",
+          "emphasis": "normal"
+        }
+      ]
+    },
+    {
+      "id": "roadmap-visuelle",
+      "number": 13,
+      "title": "Roadmap visuelle — le parcours pacifique complet",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Jalon",
+            "Activité principale",
+            "Vaisseau",
+            "Durée estimée (débutant)"
+          ],
+          "rows": [
+            [
+              {
+                "text": "**0 → 1 M**",
+                "style": "number"
+              },
+              {
+                "text": "Missions livraison données/fret, empilage",
+                "style": "normal"
+              },
+              {
+                "text": "Sidewinder → Adder/Hauler/Cobra III",
+                "style": "normal"
+              },
+              {
+                "text": "2-4 h",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**1 → 10 M**",
+                "style": "number"
+              },
+              {
+                "text": "**Road to Riches** (FSS/DSS), vente Universal Cartographics",
+                "style": "strong"
+              },
+              {
+                "text": "Cobra III/V ou DBX",
+                "style": "normal"
+              },
+              {
+                "text": "1 week-end (8-15 h)",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Ingénierie**",
+                "style": "number"
+              },
+              {
+                "text": "Farseer (FSD Increased Range + Mass Manager) via données d'explo",
+                "style": "normal"
+              },
+              {
+                "text": "idem",
+                "style": "normal"
+              },
+              {
+                "text": "2-5 h",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**10 → 100 M**",
+                "style": "number"
+              },
+              {
+                "text": "**Exobiologie** (Vista Genomics) OU **laser mining Platinum**",
+                "style": "strong"
+              },
+              {
+                "text": "Mandalay / Type-11 Prospector",
+                "style": "normal"
+              },
+              {
+                "text": "1-2 semaines",
+                "style": "mid"
+              }
+            ],
+            [
+              {
+                "text": "**100 M → 1 Md**",
+                "style": "number"
+              },
+              {
+                "text": "Expéditions exobio longue distance (neutron highway) / minage optimisé / hauling colonisation",
+                "style": "normal"
+              },
+              {
+                "text": "Mandalay / Type-11 / Cutter / Panther",
+                "style": "normal"
+              },
+              {
+                "text": "40-120 h cumulées",
+                "style": "mid"
+              }
+            ],
+            [
+              {
+                "text": "**1 Md+**",
+                "style": "number"
+              },
+              {
+                "text": "**Fleet Carrier** comme base mobile, tritium, arbitrage, objectifs perso",
+                "style": "strong"
+              },
+              {
+                "text": "+ Drake-Class Carrier (5 Md)",
+                "style": "normal"
+              },
+              {
+                "text": "à votre rythme",
+                "style": "normal"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sources-et-outils",
+      "number": 14,
+      "title": "Sources & outils",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Outils** : Spansh (spansh.co.uk) · Inara (inara.cz) · EDSM (edsm.net) · EDDiscovery · ED Market Connector (EDMC) · Elite Observatory + plugin Botanist · EDCoPilot · Coriolis (coriolis.io) · EDSY (edsy.org) · edmining.com / edtools.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Sources d'information** : site officiel Elite Dangerous (patch notes, dev logs 2026) · Elite Dangerous Wiki (Fandom) · forums Frontier · bases de données communautaires (Inara, EDExobiology/HerzbubeWiki, elitedangerous.net) · retours de joueurs (Steam, dont CMDR jojt45) · Massively Overpowered. Distinction dans le texte : **[OFFICIEL]** = Frontier ; **[COMMUNAUTÉ]** = mesures/retours de joueurs ; **[ESTIMATION]** = ordre de grandeur.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "paragraph",
+          "text": "o7 Commander — et fly safe (sans combat).",
+          "emphasis": "normal"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "Frontier Developments (site officiel, patch notes, dev logs 2026)",
+    "Elite Dangerous Wiki (Fandom)",
+    "forums Frontier",
+    "Inara",
+    "EDSM",
+    "Spansh",
+    "EDExobiology / HerzbubeWiki",
+    "elitedangerous.net",
+    "retours de joueurs (Steam, dont CMDR jojt45)",
+    "Massively Overpowered"
+  ]
+}

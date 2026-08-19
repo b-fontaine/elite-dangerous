@@ -1,0 +1,686 @@
+{
+  "id": "outils",
+  "title": "Ta boîte à outils",
+  "kicker": "Elite Dangerous · Édition août 2026",
+  "deck": "Les outils tiers réellement utiles à un exobiologiste-explorateur qui ne combat pas. Liens vérifiés, procédures d'installation, et ce qu'il faut ignorer.",
+  "byline": "Caspian Explorer · Cubeo · Objectif 1 Md Cr",
+  "edition": "2026-08",
+  "topics": ["outils", "exobiologie", "exploration"],
+  "estimatedReadMinutes": 14,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Le stack minimal",
+            "Niveau 1 — Indispensables",
+            "Niveau 2 — Très utiles",
+            "Niveau 3 — Confort",
+            "Inutile pour toi",
+            "Tableau récapitulatif",
+            "Ordre d'installation"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "Il existe une soixantaine d'outils tiers pour Elite Dangerous. Pour ton profil — exobiologie, exploration, zéro combat, sessions de 1 à 2 heures — **quatre** couvrent 90 % du besoin. Le reste est du confort, et une poignée est carrément périmée."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Conformité Frontier",
+          "text": "Tous les outils listés ici lisent le **journal de bord** du jeu (%USERPROFILE%\\Saved Games\\Frontier Developments\\Elite Dangerous) ou l'API Companion officielle. C'est **autorisé**. Aucun ne fait d'injection mémoire, ce qui serait interdit.\n\nLes overlays exigent en revanche que le jeu tourne en **Fenêtré** ou **Fenêtré sans bordure** — jamais en plein écran exclusif."
+        }
+      ]
+    },
+    {
+      "id": "stack",
+      "number": 1,
+      "title": "Le stack minimal",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Si tu ne veux pas passer ta soirée à configurer des logiciels, installe uniquement ceci :"
+        },
+        {
+          "type": "table",
+          "caption": "Le stack minimal",
+          "headers": ["Outil", "Rôle", "Temps d'install"],
+          "rows": [
+            [
+              {"text": "EDMC + BioScan + EDMCOverlay", "style": "strong"},
+              {"text": "Te dit quelles bios sont sur un corps et ce qu'elles valent, avant d'atterrir", "style": "normal"},
+              {"text": "25 min", "style": "number"}
+            ],
+            [
+              {"text": "ED Odyssey Materials Helper", "style": "strong"},
+              {"text": "Suit tes matériaux à pied pour monter l'Artemis Suit", "style": "normal"},
+              {"text": "10 min", "style": "number"}
+            ],
+            [
+              {"text": "Spansh", "style": "strong"},
+              {"text": "Trace tes routes exobio et neutron depuis Cubeo", "style": "normal"},
+              {"text": "0 min", "style": "number"}
+            ],
+            [
+              {"text": "INARA", "style": "strong"},
+              {"text": "Localise Vista Genomics, Pioneer Supplies, méta-alliages", "style": "normal"},
+              {"text": "0 min", "style": "number"}
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Les deux derniers sont des sites web : rien à installer, tu les gardes ouverts sur ton second écran. Les deux premiers demandent une quarantaine de minutes une seule fois."
+        }
+      ]
+    },
+    {
+      "id": "n1",
+      "number": 2,
+      "title": "Niveau 1 — Indispensables",
+      "blocks": [
+        {"type": "heading", "level": 3, "text": "Spansh"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Site web** · **Gratuit** · **Second écran ★★**"},
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "https://spansh.co.uk",
+            "https://spansh.co.uk/exobiology — routeur exobio",
+            "https://spansh.co.uk/bodies — recherche de corps",
+            "https://spansh.co.uk/plotter — routeur neutron"
+          ]
+        },
+        {"type": "heading", "level": 4, "text": "À quoi ça te sert"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "C'est le moteur de ta stratégie crédits. **Expressway to Exomastery** te génère une liste ordonnée de systèmes riches en bios à haute valeur, l'équivalent du Road to Riches pour l'exobiologie."
+        },
+        {"type": "heading", "level": 4, "text": "Configuration pour toi"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "**Expressway to Exomastery :** Source System = Cubeo · Destination = laisse vide · Range = la portée réelle de ton Caspian · Radius = 50 à 100 LY · Minimum value = **16 000 000 Cr** · coche **Avoid Thargoids**."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "**Body Search**, pour chasser le Stratum Tectonicas hors de la bulle : Subtype = High metal content world · Gravity = 0 à 0,27 g · Atmosphere = Thin Carbon dioxide / Sulphur dioxide / Water / Ammonia / Oxygen · Surface temperature > 165 K · et surtout Last Updated At = **avant le 19 mai 2021** pour cibler des corps jamais foulés."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "**Neutron Plotter :** système source, destination, portée de saut, et une efficacité entre 40 et 60 % — plus elle est basse, plus la route dévie pour enchaîner les étoiles à neutrons et réduire le nombre total de sauts."
+        },
+        {"type": "heading", "level": 4, "text": "Piège"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Si Cubeo ne remonte pas dans un champ de recherche, choisis un système voisin déjà indexé. Et vérifie la date de mise à jour des résultats : une offre de plus de trois jours a souvent disparu."
+        },
+
+        {"type": "divider"},
+
+        {"type": "heading", "level": 3, "text": "INARA"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Site web** · **Gratuit** · **Second écran ★★**"},
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "https://inara.cz",
+            "https://inara.cz/elite/nearest-stations/ — services les plus proches",
+            "https://inara.cz/galaxy-techbroker/ — Technology Brokers"
+          ]
+        },
+        {"type": "heading", "level": 4, "text": "À quoi ça te sert"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Ton annuaire. Trouver la **Vista Genomics** la plus proche pour vendre tes échantillons, la **Pioneer Supplies** pour l'Artemis Suit, et le **méta-alliage** nécessaire à Felicity Farseer."
+        },
+        {"type": "heading", "level": 4, "text": "Comment s'en servir"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Nearest → Systems and Stations → Nearest stations, entre **Cubeo** comme référence, coche le service voulu. Trie par distance à l'étoile plutôt que par nombre de sauts : c'est souvent ce qui coûte le plus de temps."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Pour le méta-alliage de Farseer, passe par Find Trade Offer ou la recherche de matériaux."
+        },
+        {"type": "heading", "level": 4, "text": "Astuce"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Les Pioneer Supplies des stations à **économie militaire** vendent parfois des combinaisons pré-améliorées grade 2 ou 3. Le stock se réinitialise **chaque jeudi** après le tick serveur. Filtre par économie militaire et tu peux économiser des heures de farm."
+        },
+
+        {"type": "divider"},
+
+        {"type": "heading", "level": 3, "text": "EDMC + BioScan + EDMCOverlay"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Application** · **+ 2 plugins** · **Open source** · **Overlay en jeu**"},
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "https://github.com/EDCD/EDMarketConnector",
+            "https://github.com/Silarn/EDMC-BioScan",
+            "https://github.com/inorton/EDMCOverlay"
+          ]
+        },
+        {"type": "heading", "level": 4, "text": "À quoi ça te sert"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "**C'est le cœur de ta boucle exobio.** Dès le scan FSS, BioScan déduit les **espèces probables** présentes sur un corps et leur **valeur estimée**. Il t'affiche la **distance d'échantillonnage requise** entre deux prélèvements — fini les allers-retours ratés."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Surtout, il **conserve ta progression en base de données** par commandant. Vu que perdre le Nomad efface tes données d'exobio non synchronisées, c'est une assurance."
+        },
+        {"type": "heading", "level": 4, "text": "Installation"},
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Installe **EDMC** (fichier .msi depuis la page Releases), lance-le une fois.",
+              "detail": "Il doit détecter ton dossier journal automatiquement. Autorise le login Frontier quand il le demande."
+            },
+            {
+              "text": "Ouvre File → Settings → Plugins → Open.",
+              "detail": "Ça ouvre %LOCALAPPDATA%\\EDMarketConnector\\plugins."
+            },
+            {
+              "text": "Dézippe **ExploData** puis **BioScan** dans ce dossier, en gardant les noms de dossiers intacts.",
+              "detail": ""
+            },
+            {
+              "text": "Installe **EDMCOverlay** (.msi) sous le **même utilisateur Windows** que le jeu.",
+              "detail": ""
+            },
+            {
+              "text": "Redémarre EDMC, puis active l'overlay dans les réglages de BioScan.",
+              "detail": ""
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Trois pièges",
+          "text": "**1.** EDMCOverlay en est à la version 1.0.6 de janvier 2022 : stable mais dormante. Si tu as des soucis en multi-écran ou sans bordure, bascule sur le successeur activement maintenu, EDMCModernOverlay (https://github.com/SweetJonnySauce/EDMCModernOverlay).\n\n**2.** L'overlay ne s'affiche que si le jeu tourne en fenêtré ou sans bordure.\n\n**3.** Sur EDMC 6.x sous Windows, prends la version d'ExploData compatible Python 3.13."
+        },
+
+        {"type": "divider"},
+
+        {"type": "heading", "level": 3, "text": "ED Odyssey Materials Helper"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Application** · **Gratuit** · **Overlay + second écran**"},
+        {
+          "type": "list",
+          "ordered": false,
+          "items": ["https://github.com/jixxed/ed-odyssey-materials-helper"]
+        },
+        {"type": "heading", "level": 4, "text": "À quoi ça te sert"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "**L'outil clé pour monter ton Artemis Suit.** Il suit en temps réel tes matériaux à pied, te dit combien il t'en manque pour chaque grade et chaque modification, gère une liste de courses, et — sa fonction phare — affiche une **surimpression au comptoir du Bartender** qui te montre instantanément si ce que tu as sous les yeux vaut le coup."
+        },
+        {"type": "heading", "level": 4, "text": "Installation"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Télécharge le **.msi auto-updater** pour Windows, installe, lance. Il trouve seul ton dossier journal et se met à jour à chaque lancement. Dernière version relevée : **3.14.2**, août 2026 — le projet est très actif."
+        },
+        {"type": "heading", "level": 4, "text": "Astuce"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Crée ta liste de courses avec les mods Artemis prioritaires pour l'exobio : **Improved Battery Capacity** et **Reduced Tool Consumption** (autonomie du Genetic Sampler), puis **Increased Sprint Duration** ou **Improved Jump Assist** pour te déplacer entre spécimens."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Faux positifs antivirus",
+          "text": "Chaque release publie une analyse VirusTotal. Consulte-la si ton antivirus proteste — c'est un cas connu sur les applications Java packagées."
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "number": 3,
+      "title": "Niveau 2 — Très utiles",
+      "blocks": [
+        {"type": "heading", "level": 3, "text": "Elite Observatory Core + plugins"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Application** · **Plugins .eop** · **Open source**"},
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "https://observatory.xjph.net",
+            "https://github.com/fredjk-gh/ObservatoryPlugins",
+            "https://edjp.colacube.net/observatory — plugins BioInsights / Evaluator"
+          ]
+        },
+        {"type": "heading", "level": 4, "text": "À quoi ça te sert"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Observatory surveille ton journal et te **notifie automatiquement** des corps intéressants. Trois plugins te concernent : **Botanist** (catalogue tes signaux bio et valide les échantillons plus vite que le jeu), **BioInsights** (prédit les bios dès le FSS), et **Evaluator** (décompose la valeur d'un système et masque les corps sous un seuil)."
+        },
+        {"type": "heading", "level": 4, "text": "Installation des plugins"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Installe Observatory Core, **ferme-le**, puis **double-clique le fichier .eop** — il se déballe seul et gère ses dépendances. Relance ensuite. Le plugin AutoUpdater maintient tout à jour par la suite."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ne fais pas doublon",
+          "text": "BioInsights et BioScan font le même travail. **Choisis-en un seul** comme moteur de prédiction. BioScan est plus compact et mieux intégré en overlay ; BioInsights est parfois plus précis sur les cas limites. Si tu as pris BioScan dans le stack minimal, Observatory devient optionnel."
+        },
+
+        {"type": "divider"},
+
+        {"type": "heading", "level": 3, "text": "EDDiscovery / EDDLite"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Application** · **Open source** · **Second écran**"},
+        {
+          "type": "list",
+          "ordered": false,
+          "items": ["https://github.com/EDDiscovery/EDDiscovery"]
+        },
+        {"type": "heading", "level": 4, "text": "À quoi ça te sert"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Ton carnet de voyage : systèmes visités, découvertes, gains, cartographie 3D. L'onglet **Estimated Values** te dit si un corps vaut le scan, et le panneau **Discoveries** permet des alertes personnalisables (corps à haute valeur, planètes atterrissables, lunes près d'anneaux)."
+        },
+        {"type": "heading", "level": 4, "text": "Piège"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Gourmand en mémoire sur de gros journaux. Si tu joues en sessions courtes et veux du léger, prends **EDDLite**. Et ne fais pas tourner EDDiscovery et EDMC en émetteurs vers les mêmes cibles — ce n'est pas bloquant, juste inutile."
+        },
+
+        {"type": "divider"},
+
+        {"type": "heading", "level": 3, "text": "EDSY / Coriolis"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Site web** · **Open source**"},
+        {
+          "type": "list",
+          "ordered": false,
+          "items": ["https://edsy.org", "https://coriolis.io"]
+        },
+        {"type": "heading", "level": 4, "text": "À quoi ça te sert"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Simuler ton **Caspian Explorer** — portée de saut avec le FSD SCO Mk II classe 8, masse, thermique — avant de dépenser crédits et matériaux d'ingénierie."
+        },
+        {"type": "heading", "level": 4, "text": "Charger ton vaisseau"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "EDSY importe ta flotte via l'API Frontier et gère le format **SLEF**. Pour alimenter le Galaxy Plotter de Spansh : dans EDSY, OPS → Export → coche SLEF → Ctrl+C, puis colle dans Spansh."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Prends EDSY, pas Coriolis",
+          "text": "Coriolis accuse un retard de maintenance — son auteur original ne joue plus et se contente de fusionner les contributions. **EDSY est la référence à jour en 2026**, notamment pour les modules récents et les FSD SCO."
+        },
+
+        {"type": "divider"},
+
+        {"type": "heading", "level": 3, "text": "EDSM — Elite Dangerous Star Map"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Site web** · **Gratuit**"},
+        {
+          "type": "list",
+          "ordered": false,
+          "items": ["https://www.edsm.net", "https://www.edsm.net/en/engineers"]
+        },
+        {"type": "heading", "level": 4, "text": "À quoi ça te sert"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Cartographie, fiches systèmes et stations, et surtout la **liste complète des ingénieurs** avec localisation et prérequis — pratique pour planifier Farseer à Deciat puis la suite."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Utile, mais **recouvre largement INARA**. Si tu ne veux qu'un seul annuaire web, garde INARA. EDSM en complément pour la carto 3D et la vérification croisée."
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "number": 4,
+      "title": "Niveau 3 — Confort",
+      "blocks": [
+        {"type": "heading", "level": 3, "text": "EDCoPilot"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Application** · **Donation** · **Second écran ★★**"},
+        {
+          "type": "list",
+          "ordered": false,
+          "items": ["https://www.razzafrag.com"]
+        },
+        {"type": "heading", "level": 4, "text": "À quoi ça te sert"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Assistant vocal. Il appelle Spansh pour générer et suivre tes routes en bookmarks automatiques, te guide vocalement vers Vista Genomics ou Pioneer Supplies, et affiche un panneau « Bodies » avec gravité, température et composition de surface — utile pour trier tes cibles bio sans quitter le cockpit des yeux."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Mise à jour obligatoire si tu utilises le Nomad",
+          "text": "Le Nomad positionne le flag **SRV** dans status.json, et non le flag « fighter ». Ça a cassé le suivi de plusieurs outils au lancement de l'Operations Update. EDCoPilot a publié un correctif — **mets-le à jour**. Teste aussi tes autres outils avec le Nomad déployé."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Excellent si tu aimes l'immersion vocale. **Pur confort** : ça ne te rapproche pas du milliard."
+        },
+
+        {"type": "divider"},
+
+        {"type": "heading", "level": 3, "text": "Canonn Research + ed-dsn"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Site web** · **Gratuit** · **Référence**"},
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "https://canonn.science",
+            "https://canonn.science/codex/organic-scanning-guide/"
+          ]
+        },
+        {"type": "heading", "level": 4, "text": "À quoi ça te sert"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "La référence data de l'exobiologie : **où pousse chaque espèce**, les conditions planétaires exactes, et les valeurs Vista Genomics. Le Guide de scan organique est la meilleure ressource pour optimiser ta boucle."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Complète-le avec **ed-dsn.net**, qui liste les conditions d'apparition par type d'atmosphère."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Les sections Guardian et Thargoïd existent mais sont **hors de ton scope**."
+        },
+
+        {"type": "divider"},
+
+        {"type": "heading", "level": 3, "text": "StratumFinder"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Application** · **Open source** · **Maintenance incertaine**"},
+        {
+          "type": "list",
+          "ordered": false,
+          "items": ["https://github.com/lynnel1/StratumFinder"]
+        },
+        {"type": "heading", "level": 4, "text": "À quoi ça te sert"},
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Cherche les systèmes à exobio de valeur dont le bonus **First Footfall** est probablement encore libre — exactement ta cible quand tu sors de la bulle pour toucher le ×5."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Réserve",
+          "text": "Projet communautaire de niche. **Vérifie qu'il est encore maintenu** et compatible avec les journaux post-Operations avant d'en dépendre. Le Body Search de Spansh reste ta valeur sûre.\n\nEt garde en tête qu'**aucun outil ne garantit un système jamais visité** : la grande majorité des joueurs n'uploadent pas leurs données, donc les bases sous-estiment ce qui est déjà exploré. Au-delà de mille années-lumière de Sol, les vrais first footfall deviennent fréquents de toute façon."
+        }
+      ]
+    },
+    {
+      "id": "no",
+      "number": 5,
+      "title": "Inutile pour toi",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Ces outils reviennent constamment dans les recommandations générales. Voici pourquoi tu peux les ignorer."
+        },
+        {
+          "type": "table",
+          "caption": "Inutile pour toi",
+          "headers": ["Outil", "Pourquoi tu passes"],
+          "rows": [
+            [
+              {"text": "EDEngineer", "style": "strong"},
+              {"text": "Suit les matériaux d'ingénierie de **vaisseau**, pas ceux à pied. Le dépôt d'origine est **archivé depuis juillet 2025**. ED Odyssey Materials Helper couvre déjà ton besoin.", "style": "normal"}
+            ],
+            [
+              {"text": "CMDRs Toolbox", "style": "strong"},
+              {"text": "Ses données de settlements datent de l'alpha Odyssey. **Périmé.** INARA fait mieux et à jour.", "style": "normal"}
+            ],
+            [
+              {"text": "Elite Observatory (ancien dépôt Xjph/EliteObservatory)", "style": "strong"},
+              {"text": "**Archivé en janvier 2025**, lecture seule. Utilise Observatory **Core**, son successeur.", "style": "normal"}
+            ],
+            [
+              {"text": "EDR, ED Recon, EDMC-Triumvirate, StreamSource", "style": "strong"},
+              {"text": "Outils de combat, PvP et Thargoïdes. **Hors profil.**", "style": "normal"}
+            ],
+            [
+              {"text": "EDDI", "style": "strong"},
+              {"text": "Fait doublon avec EDCoPilot.", "style": "normal"}
+            ],
+            [
+              {"text": "EDAutopilot et autopilotes par reconnaissance d'écran", "style": "strong"},
+              {"text": "Fragiles, et à la limite des conditions d'utilisation. **À éviter.**", "style": "normal"}
+            ],
+            [
+              {"text": "Applications mobiles", "style": "strong"},
+              {"text": "INARA et EDSM fonctionnent très bien dans un navigateur mobile. Ton second écran couvre déjà ce besoin.", "style": "normal"}
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "recap",
+      "number": 6,
+      "title": "Tableau récapitulatif",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Tableau récapitulatif",
+          "headers": ["Outil", "Type", "Coût", "2ᵉ écran", "Priorité", "État 2026"],
+          "rows": [
+            [
+              {"text": "Spansh", "style": "strong"},
+              {"text": "Site web", "style": "normal"},
+              {"text": "Gratuit", "style": "win"},
+              {"text": "★★", "style": "win"},
+              {"text": "Indispensable", "style": "win"},
+              {"text": "Actif", "style": "win"}
+            ],
+            [
+              {"text": "INARA", "style": "strong"},
+              {"text": "Site web", "style": "normal"},
+              {"text": "Gratuit", "style": "win"},
+              {"text": "★★", "style": "win"},
+              {"text": "Indispensable", "style": "win"},
+              {"text": "Actif", "style": "win"}
+            ],
+            [
+              {"text": "EDMC + BioScan", "style": "strong"},
+              {"text": "App + plugins", "style": "normal"},
+              {"text": "Gratuit", "style": "win"},
+              {"text": "Overlay", "style": "win"},
+              {"text": "Indispensable", "style": "win"},
+              {"text": "Actif, overlay dormant", "style": "mid"}
+            ],
+            [
+              {"text": "Materials Helper", "style": "strong"},
+              {"text": "App", "style": "normal"},
+              {"text": "Gratuit", "style": "win"},
+              {"text": "Overlay", "style": "win"},
+              {"text": "Indispensable", "style": "win"},
+              {"text": "v3.14.2 (août 2026)", "style": "win"}
+            ],
+            [
+              {"text": "Observatory Core", "style": "normal"},
+              {"text": "App + plugins", "style": "normal"},
+              {"text": "Gratuit", "style": "win"},
+              {"text": "Oui", "style": "win"},
+              {"text": "Très utile", "style": "mid"},
+              {"text": "Actif", "style": "win"}
+            ],
+            [
+              {"text": "EDDiscovery", "style": "normal"},
+              {"text": "App", "style": "normal"},
+              {"text": "Gratuit", "style": "win"},
+              {"text": "Oui", "style": "win"},
+              {"text": "Très utile", "style": "mid"},
+              {"text": "Actif", "style": "win"}
+            ],
+            [
+              {"text": "EDSY", "style": "normal"},
+              {"text": "Site web", "style": "normal"},
+              {"text": "Gratuit", "style": "win"},
+              {"text": "—", "style": "normal"},
+              {"text": "Très utile", "style": "mid"},
+              {"text": "À jour", "style": "win"}
+            ],
+            [
+              {"text": "Coriolis", "style": "normal"},
+              {"text": "Site web", "style": "normal"},
+              {"text": "Gratuit", "style": "win"},
+              {"text": "—", "style": "normal"},
+              {"text": "Alternative", "style": "mid"},
+              {"text": "En retard", "style": "mid"}
+            ],
+            [
+              {"text": "EDSM", "style": "normal"},
+              {"text": "Site web", "style": "normal"},
+              {"text": "Gratuit", "style": "win"},
+              {"text": "Oui", "style": "win"},
+              {"text": "Doublon INARA", "style": "mid"},
+              {"text": "Actif", "style": "win"}
+            ],
+            [
+              {"text": "EDCoPilot", "style": "normal"},
+              {"text": "App", "style": "normal"},
+              {"text": "Donation", "style": "mid"},
+              {"text": "★★", "style": "win"},
+              {"text": "Confort", "style": "normal"},
+              {"text": "Patch Nomad", "style": "win"}
+            ],
+            [
+              {"text": "Canonn", "style": "normal"},
+              {"text": "Site web", "style": "normal"},
+              {"text": "Gratuit", "style": "win"},
+              {"text": "Oui", "style": "win"},
+              {"text": "Référence", "style": "normal"},
+              {"text": "Actif", "style": "win"}
+            ],
+            [
+              {"text": "StratumFinder", "style": "normal"},
+              {"text": "App", "style": "normal"},
+              {"text": "Gratuit", "style": "win"},
+              {"text": "—", "style": "normal"},
+              {"text": "Optionnel", "style": "normal"},
+              {"text": "À vérifier", "style": "mid"}
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ordre",
+      "number": 7,
+      "title": "Ordre d'installation",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Une seule session de configuration, quarante minutes montre en main."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Le socle** · 10 min",
+              "detail": "Installe EDMC, lance-le, autorise le login Frontier, vérifie qu'il lit ton dossier journal."
+            },
+            {
+              "text": "**L'overlay** · 5 min",
+              "detail": "Installe EDMCOverlay dans le dossier plugins d'EDMC. Si tu es en multi-écran ou sans bordure, prends plutôt EDMCModernOverlay."
+            },
+            {
+              "text": "**L'exobio** · 10 min",
+              "detail": "Dépose ExploData puis BioScan dans le dossier plugins, relance EDMC, active l'overlay dans les réglages BioScan. Lance l'import de tes anciens journaux."
+            },
+            {
+              "text": "**L'Artemis** · 10 min",
+              "detail": "Installe ED Odyssey Materials Helper et crée ta liste de courses : batterie, réduction de consommation d'outil, puis mobilité."
+            },
+            {
+              "text": "**Les onglets** · 5 min",
+              "detail": "Ouvre Spansh (configure l'Expressway depuis Cubeo, valeur minimale 16 M, Avoid Thargoids coché) et INARA (repère ta Vista Genomics et ta Pioneer Supplies les plus proches)."
+            },
+            {
+              "text": "**Le reste** · plus tard",
+              "detail": "EDDiscovery pour le carnet de bord, EDSY pour optimiser le Caspian, EDCoPilot si l'immersion vocale te tente."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Ta première sortie une fois tout installé",
+          "text": "Génère ta route Expressway depuis Cubeo, suis-la, et à chaque système : honk puis FSS. BioScan te dit alors quels corps valent l'atterrissage. Prélève trois échantillons par espèce en respectant la distance qu'il affiche, puis revends à Vista Genomics.\n\nProfite du premier passage pour récupérer **un méta-alliage** et débloquer **Farseer** à Deciat — c'est ton gain de portée le plus rentable, et le seul ingénieur qui compte à court terme."
+        }
+      ]
+    },
+    {
+      "id": "fiabilite",
+      "number": 8,
+      "title": "Fiabilité et conformité",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "**Fiabilité.** Tous les liens ci-dessus pointent vers les sites ou dépôts officiels, vérifiés actifs en août 2026. N'installe jamais depuis un miroir tiers : risque de malware, et les faux positifs antivirus sont déjà assez pénibles comme ça. Contrôle les analyses VirusTotal fournies dans les releases GitHub."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "**Points à surveiller.** Le flag SRV du Nomad dans status.json peut encore casser des outils non mis à jour depuis le 30 juin 2026 — teste les tiens avec le Nomad déployé. StratumFinder et les projets communautaires de niche peuvent cesser d'être maintenus sans préavis."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "**Conformité.** Lecture du journal et API Companion : autorisé par Frontier. Injection mémoire : interdit — aucun outil listé ici n'en fait."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "Frontier Developments",
+    "Spansh",
+    "INARA",
+    "EDSM",
+    "Canonn Research",
+    "EDCD / EDMarketConnector",
+    "GitHub"
+  ]
+}

@@ -1,0 +1,149 @@
+# Tâches de développement — https://taskfile.dev
+#
+#   sudo snap install task --classic     (ou: brew install go-task)
+#   task                                 liste tout
+#
+# Le drapeau `--dart-define-from-file=.env` est ajouté automatiquement à chaque
+# run et build quand un `.env` existe (voir `.env.template`). Sans lui, le
+# client_id Frontier se saisit à la main dans Réglages → Compte Frontier.
+version: '3'
+
+vars:
+  DEFINES:
+    # `printf '%s'` et non `printf --` : l'interpréteur shell intégré à
+    # go-task lit le `--` comme format et n'émettrait que lui.
+    sh: test -f .env && printf '%s' '--dart-define-from-file=.env' || true
+
+tasks:
+  default:
+    desc: Liste les tâches disponibles
+    cmds:
+      - task --list
+    silent: true
+
+  # --- Cycle de développement ---------------------------------------------
+  setup:
+    desc: Installe les dépendances
+    cmds:
+      - flutter pub get
+
+  gen:
+    desc: Génère le code (injectable, retrofit, json, bdd)
+    cmds:
+      - dart run build_runner build --delete-conflicting-outputs
+
+  gen:watch:
+    desc: Régénère le code en continu
+    cmds:
+      - dart run build_runner watch --delete-conflicting-outputs
+
+  analyze:
+    desc: Analyse statique
+    # --fatal-infos : sans lui `dart analyze` sort en 0 malgré des lints info,
+    # et `check` passerait au vert sur du code que l'analyseur désapprouve.
+    cmds:
+      - dart analyze --fatal-infos lib test
+
+  test:
+    desc: Suite de tests
+    # Volontairement sans {{.DEFINES}} : aucun test ne doit pouvoir dépendre
+    # d'un vrai client_id. BuildConfig est injecté précisément pour ça.
+    cmds:
+      - flutter test {{.CLI_ARGS}}
+
+  check:
+    desc: Analyse + tests, ce qui doit passer avant de committer
+    cmds:
+      - task: analyze
+      - task: test
+
+  clean:
+    desc: Supprime les artefacts de build
+    cmds:
+      - flutter clean
+
+  # --- Lancer -------------------------------------------------------------
+  run:linux:
+    desc: Lance sur le bureau Linux
+    platforms: [linux]
+    cmds:
+      - flutter run -d linux {{.DEFINES}} {{.CLI_ARGS}}
+
+  run:macos:
+    desc: Lance sur le bureau macOS
+    platforms: [darwin]
+    cmds:
+      - flutter run -d macos {{.DEFINES}} {{.CLI_ARGS}}
+
+  run:windows:
+    desc: Lance sur le bureau Windows
+    platforms: [windows]
+    cmds:
+      - flutter run -d windows {{.DEFINES}} {{.CLI_ARGS}}
+
+  run:android:
+    desc: Lance sur Android
+    cmds:
+      - flutter run -d android {{.DEFINES}} {{.CLI_ARGS}}
+
+  run:ios:
+    desc: Lance sur iOS
+    platforms: [darwin]
+    cmds:
+      - flutter run -d ios {{.DEFINES}} {{.CLI_ARGS}}
+
+  run:web:
+    desc: Lance sur le web (la connexion Frontier y est indisponible)
+    cmds:
+      - flutter run -d chrome {{.DEFINES}} {{.CLI_ARGS}}
+
+  # --- Compiler -----------------------------------------------------------
+  build:apk:
+    desc: APK Android
+    cmds:
+      - flutter build apk {{.DEFINES}} {{.CLI_ARGS}}
+
+  build:appbundle:
+    desc: Android App Bundle (Play Store)
+    cmds:
+      - flutter build appbundle {{.DEFINES}} {{.CLI_ARGS}}
+
+  build:ios:
+    desc: iOS (Mac requis)
+    platforms: [darwin]
+    cmds:
+      - flutter build ios {{.DEFINES}} {{.CLI_ARGS}}
+
+  build:linux:
+    desc: Bureau Linux
+    platforms: [linux]
+    cmds:
+      - flutter build linux {{.DEFINES}} {{.CLI_ARGS}}
+
+  build:macos:
+    desc: Bureau macOS (Mac requis)
+    platforms: [darwin]
+    cmds:
+      - flutter build macos {{.DEFINES}} {{.CLI_ARGS}}
+
+  build:windows:
+    desc: Bureau Windows (Windows requis)
+    platforms: [windows]
+    cmds:
+      - flutter build windows {{.DEFINES}} {{.CLI_ARGS}}
+
+  build:web:
+    desc: Web
+    cmds:
+      - flutter build web {{.DEFINES}} {{.CLI_ARGS}}
+
+  build:all:
+    desc: Toutes les cibles que cet hôte sait construire
+    # Les tâches dont `platforms` ne correspond pas sont ignorées, pas en échec.
+    cmds:
+      - task: build:apk
+      - task: build:web
+      - task: build:linux
+      - task: build:macos
+      - task: build:ios
+      - task: build:windows

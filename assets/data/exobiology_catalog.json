@@ -1,0 +1,8600 @@
+{
+ "edition": "2026-08",
+ "sources": [
+  "Canonn Research — Vista Genomics price list (canonn.science)",
+  "Elite Dangerous Wiki — Exobiologist, Vista Genomics (elite-dangerous.fandom.com)",
+  "SrvSurvey bio-criteria (github.com/njthomson/SrvSurvey)"
+ ],
+ "genera": [
+  {
+   "id": "aleoida",
+   "name": "Aleoida",
+   "colonyRangeMeters": 150
+  },
+  {
+   "id": "amphora_plant",
+   "name": "Amphora Plant",
+   "colonyRangeMeters": 100
+  },
+  {
+   "id": "anemone",
+   "name": "Anemone",
+   "colonyRangeMeters": 100
+  },
+  {
+   "id": "bacterium",
+   "name": "Bacterium",
+   "colonyRangeMeters": 500
+  },
+  {
+   "id": "bark_mound",
+   "name": "Bark Mound",
+   "colonyRangeMeters": 100
+  },
+  {
+   "id": "brain_tree",
+   "name": "Brain Tree",
+   "colonyRangeMeters": 100
+  },
+  {
+   "id": "cactoida",
+   "name": "Cactoida",
+   "colonyRangeMeters": 300
+  },
+  {
+   "id": "clypeus",
+   "name": "Clypeus",
+   "colonyRangeMeters": 150
+  },
+  {
+   "id": "concha",
+   "name": "Concha",
+   "colonyRangeMeters": 150
+  },
+  {
+   "id": "crystalline_shard",
+   "name": "Crystalline Shard",
+   "colonyRangeMeters": 100
+  },
+  {
+   "id": "electricae",
+   "name": "Electricae",
+   "colonyRangeMeters": 1000
+  },
+  {
+   "id": "fonticulua",
+   "name": "Fonticulua",
+   "colonyRangeMeters": 500
+  },
+  {
+   "id": "frutexa",
+   "name": "Frutexa",
+   "colonyRangeMeters": 150
+  },
+  {
+   "id": "fumerola",
+   "name": "Fumerola",
+   "colonyRangeMeters": 100
+  },
+  {
+   "id": "fungoida",
+   "name": "Fungoida",
+   "colonyRangeMeters": 300
+  },
+  {
+   "id": "osseus",
+   "name": "Osseus",
+   "colonyRangeMeters": 800
+  },
+  {
+   "id": "radicoida",
+   "name": "Radicoida",
+   "colonyRangeMeters": 100
+  },
+  {
+   "id": "recepta",
+   "name": "Recepta",
+   "colonyRangeMeters": 150
+  },
+  {
+   "id": "sinuous_tuber",
+   "name": "Sinuous Tuber",
+   "colonyRangeMeters": 100
+  },
+  {
+   "id": "stratum",
+   "name": "Stratum",
+   "colonyRangeMeters": 500
+  },
+  {
+   "id": "tubus",
+   "name": "Tubus",
+   "colonyRangeMeters": 800
+  },
+  {
+   "id": "tussock",
+   "name": "Tussock",
+   "colonyRangeMeters": 200
+  }
+ ],
+ "species": [
+  {
+   "id": "aleoida_arcus",
+   "genusId": "aleoida",
+   "name": "Aleoida Arcus",
+   "baseValueCr": 7252500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 175,
+    "maxTemperatureK": 180,
+    "maxGravityG": 0.276,
+    "notes": "Plaines plates de mondes Rocky (97 %) ou HMC à CO2, pression >= 0,0161 atm, avec un plafond de gravité plus bas (0,238 G) sur les corps Rocky."
+   },
+   "variants": [
+    {
+     "name": "Aleoida Arcus - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Aleoida Arcus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Aleoida Arcus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Aleoida Arcus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Aleoida Arcus - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Aleoida Arcus - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Aleoida Arcus - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Aleoida Arcus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Aleoida Arcus - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Aleoida Arcus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Aleoida Arcus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Aleoida Arcus - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aleoida_coronamus",
+   "genusId": "aleoida",
+   "name": "Aleoida Coronamus",
+   "baseValueCr": 6284600,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 180,
+    "maxTemperatureK": 190,
+    "maxGravityG": 0.276,
+    "notes": "Terrain vallonné, pression >= 0,0244 atm, plafond de gravité 0,238 G sur Rocky et 0,276 G sur HMC."
+   },
+   "variants": [
+    {
+     "name": "Aleoida Coronamus - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Aleoida Coronamus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Aleoida Coronamus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Aleoida Coronamus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Aleoida Coronamus - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Aleoida Coronamus - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Aleoida Coronamus - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Aleoida Coronamus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Aleoida Coronamus - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Aleoida Coronamus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Aleoida Coronamus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Aleoida Coronamus - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aleoida_gravis",
+   "genusId": "aleoida",
+   "name": "Aleoida Gravis",
+   "baseValueCr": 12934900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 190,
+    "maxTemperatureK": 197,
+    "maxGravityG": 0.276,
+    "notes": "Terrain plat, pression >= 0,0544 atm, forte proportion de HMC (35 %) ou le plafond de gravité monte à 0,276 G contre 0,238 G sur Rocky."
+   },
+   "variants": [
+    {
+     "name": "Aleoida Gravis - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Aleoida Gravis - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Aleoida Gravis - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Aleoida Gravis - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Aleoida Gravis - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Aleoida Gravis - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Aleoida Gravis - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Aleoida Gravis - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Aleoida Gravis - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Aleoida Gravis - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Aleoida Gravis - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Aleoida Gravis - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aleoida_laminiae",
+   "genusId": "aleoida",
+   "name": "Aleoida Laminiae",
+   "baseValueCr": 3385200,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "ammonia"
+    ],
+    "volcanism": [
+     "none",
+     "water"
+    ],
+    "maxGravityG": 0.276,
+    "notes": "Terrain vallonné, uniquement dans Sagittarius-Carina Arm, Orion-Cygnus Arm et Galactic Centre-Left, avec pression <= 0,008 atm sur HMC."
+   },
+   "variants": [
+    {
+     "name": "Aleoida Laminiae - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Aleoida Laminiae - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Aleoida Laminiae - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Aleoida Laminiae - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Aleoida Laminiae - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Aleoida Laminiae - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Aleoida Laminiae - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Aleoida Laminiae - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Aleoida Laminiae - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Aleoida Laminiae - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Aleoida Laminiae - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Aleoida Laminiae - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aleoida_spica",
+   "genusId": "aleoida",
+   "name": "Aleoida Spica",
+   "baseValueCr": 3385200,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "ammonia"
+    ],
+    "volcanism": [
+     "none",
+     "iron_magma",
+     "water",
+     "silicate"
+    ],
+    "minTemperatureK": 170,
+    "maxGravityG": 0.276,
+    "notes": "Terrain quasi-montagneux, absente de Sagittarius-Carina et d'Orion-Cygnus (contrairement à Laminiae, sa jumelle de prix)."
+   },
+   "variants": [
+    {
+     "name": "Aleoida Spica - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Aleoida Spica - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Aleoida Spica - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Aleoida Spica - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Aleoida Spica - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Aleoida Spica - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Aleoida Spica - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Aleoida Spica - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Aleoida Spica - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Aleoida Spica - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Aleoida Spica - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Aleoida Spica - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "amphora_plant",
+   "genusId": "amphora_plant",
+   "name": "Amphora Plant",
+   "baseValueCr": 1628800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "metal_rich"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "iron_magma",
+     "rocky",
+     "silicate"
+    ],
+    "minTemperatureK": 1000,
+    "maxTemperatureK": 1800,
+    "minGravityG": 0.04,
+    "notes": "Étoile primaire de classe A et système contenant au moins un ELW, Ammonia World, Gas Giant à vie ou Water Giant ; régions Scutum-Centaurus / Sagittarius-Carina."
+   }
+  },
+  {
+   "id": "blatteum_bioluminescent_anemone",
+   "genusId": "anemone",
+   "name": "Blatteum Bioluminescent Anemone",
+   "baseValueCr": 1499900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "hmc",
+     "metal_rich"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "rocky",
+     "silicate",
+     "iron_magma"
+    ],
+    "minTemperatureK": 220,
+    "maxTemperatureK": 6000,
+    "notes": "Étoile primaire O, B, K, étoile à neutrons ou trou noir ; 220–999 K sur HMC et 800–6000 K sur Metal-Rich."
+   }
+  },
+  {
+   "id": "croceum_anemone",
+   "genusId": "anemone",
+   "name": "Croceum Anemone",
+   "baseValueCr": 1499900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "silicate",
+     "iron_magma"
+    ],
+    "minTemperatureK": 200,
+    "maxTemperatureK": 440,
+    "maxGravityG": 0.42,
+    "notes": "Étoile primaire de classe B ou A (typiquement B VI / A III) sur corps rocheux."
+   }
+  },
+  {
+   "id": "luteolum_anemone",
+   "genusId": "anemone",
+   "name": "Luteolum Anemone",
+   "baseValueCr": 1499900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "silicate",
+     "iron_magma",
+     "rocky"
+    ],
+    "minTemperatureK": 200,
+    "maxTemperatureK": 440,
+    "maxGravityG": 1.6,
+    "notes": "Étoile primaire de classe B ou A (typiquement B IV–B V) sur corps rocheux."
+   }
+  },
+  {
+   "id": "prasinum_bioluminescent_anemone",
+   "genusId": "anemone",
+   "name": "Prasinum Bioluminescent Anemone",
+   "baseValueCr": 1499900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc",
+     "metal_rich"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "minTemperatureK": 110,
+    "maxTemperatureK": 4000,
+    "maxGravityG": 1.9,
+    "notes": "Étoile primaire O, B, A, Herbig Ae/Be ou Wolf-Rayet ; le plafond de 1,9 G n'est connu que sur Rocky (110–999 K), 250–2400 K sur HMC et 1000–4000 K sur Metal-Rich."
+   }
+  },
+  {
+   "id": "puniceum_anemone",
+   "genusId": "anemone",
+   "name": "Puniceum Anemone",
+   "baseValueCr": 1499900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 75,
+    "maxTemperatureK": 800,
+    "minGravityG": 0.1,
+    "maxGravityG": 2.6,
+    "notes": "Étoile primaire de classe O ou Wolf-Rayet, sur corps glacé sans volcanisme."
+   }
+  },
+  {
+   "id": "roseum_anemone",
+   "genusId": "anemone",
+   "name": "Roseum Anemone",
+   "baseValueCr": 1499900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "silicate",
+     "iron_magma"
+    ],
+    "minTemperatureK": 200,
+    "maxTemperatureK": 440,
+    "maxGravityG": 0.386,
+    "notes": "Étoile primaire de classe B (luminosité I à III) sur corps rocheux."
+   }
+  },
+  {
+   "id": "roseum_bioluminescent_anemone",
+   "genusId": "anemone",
+   "name": "Roseum Bioluminescent Anemone",
+   "baseValueCr": 1499900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "hmc",
+     "metal_rich"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "rocky",
+     "silicate",
+     "iron_magma"
+    ],
+    "minTemperatureK": 400,
+    "maxTemperatureK": 5000,
+    "minGravityG": 0.24,
+    "notes": "Étoile primaire B, A ou trou noir ; sur HMC 400–999 K avec g ≥ 0,24, sur Metal-Rich 1000–5000 K."
+   }
+  },
+  {
+   "id": "rubeum_bioluminescent_anemone",
+   "genusId": "anemone",
+   "name": "Rubeum Bioluminescent Anemone",
+   "baseValueCr": 1499900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "hmc",
+     "metal_rich"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "rocky",
+     "silicate",
+     "iron_magma"
+    ],
+    "minTemperatureK": 164,
+    "maxTemperatureK": 1800,
+    "notes": "Étoile primaire O, B, A, F, étoile à neutrons ou trou noir ; 164–999 K sur HMC et 1000–1800 K sur Metal-Rich."
+   }
+  },
+  {
+   "id": "bacterium_acies",
+   "genusId": "bacterium",
+   "name": "Bacterium Acies",
+   "baseValueCr": 1000000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "neon"
+    ],
+    "notes": "Mondes glacés à atmosphère néon, sur plaines près des cratères ; aucune contrainte de gravité (invisible en night vision, chercher les flaques sombres depuis 200 m)."
+   },
+   "variants": [
+    {
+     "name": "Bacterium Acies - Cyan",
+     "colour": "Cyan",
+     "material": "Antimony"
+    },
+    {
+     "name": "Bacterium Acies - Magenta",
+     "colour": "Magenta",
+     "material": "Polonium"
+    },
+    {
+     "name": "Bacterium Acies - Cobalt",
+     "colour": "Cobalt",
+     "material": "Ruthenium"
+    },
+    {
+     "name": "Bacterium Acies - Lime",
+     "colour": "Vert citron",
+     "material": "Technetium"
+    },
+    {
+     "name": "Bacterium Acies - White",
+     "colour": "Blanc",
+     "material": "Tellurium"
+    },
+    {
+     "name": "Bacterium Acies - Aquamarine",
+     "colour": "Aigue-marine",
+     "material": "Yttrium"
+    }
+   ]
+  },
+  {
+   "id": "bacterium_alcyoneum",
+   "genusId": "bacterium",
+   "name": "Bacterium Alcyoneum",
+   "baseValueCr": 1658500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "ammonia"
+    ],
+    "minTemperatureK": 160.7,
+    "notes": "Plaines de mondes Rocky ou HMC à ammoniac ; couleur donnée par la classe de l'étoile parente."
+   },
+   "variants": [
+    {
+     "name": "Bacterium Alcyoneum - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Bacterium Alcyoneum - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Bacterium Alcyoneum - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Bacterium Alcyoneum - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Bacterium Alcyoneum - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Bacterium Alcyoneum - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Bacterium Alcyoneum - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Bacterium Alcyoneum - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Bacterium Alcyoneum - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Bacterium Alcyoneum - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Bacterium Alcyoneum - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Bacterium Alcyoneum - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Bacterium Alcyoneum - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Bacterium Alcyoneum - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Bacterium Alcyoneum - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bacterium_aurasus",
+   "genusId": "bacterium",
+   "name": "Bacterium Aurasus",
+   "baseValueCr": 1000000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "minTemperatureK": 145,
+    "maxTemperatureK": 400,
+    "notes": "Plaines de mondes Rocky ou HMC à CO2, très large fenêtre thermique ; couleur donnée par la classe stellaire."
+   },
+   "variants": [
+    {
+     "name": "Bacterium Aurasus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Bacterium Aurasus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Bacterium Aurasus - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Bacterium Aurasus - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Bacterium Aurasus - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Bacterium Aurasus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Bacterium Aurasus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Bacterium Aurasus - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Bacterium Aurasus - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Bacterium Aurasus - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Bacterium Aurasus - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Bacterium Aurasus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Bacterium Aurasus - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Bacterium Aurasus - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Bacterium Aurasus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bacterium_bullaris",
+   "genusId": "bacterium",
+   "name": "Bacterium Bullaris",
+   "baseValueCr": 1152500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky",
+     "hmc",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "methane"
+    ],
+    "maxTemperatureK": 143,
+    "notes": "Surtout sur mondes glacés à méthane ; le plafond descend à 129 K en atmosphère Méthane-rich contre 143 K en Méthane."
+   },
+   "variants": [
+    {
+     "name": "Bacterium Bullaris - Cobalt",
+     "colour": "Cobalt",
+     "material": "Antimony"
+    },
+    {
+     "name": "Bacterium Bullaris - Yellow",
+     "colour": "Jaune",
+     "material": "Polonium"
+    },
+    {
+     "name": "Bacterium Bullaris - Aquamarine",
+     "colour": "Aigue-marine",
+     "material": "Ruthenium"
+    },
+    {
+     "name": "Bacterium Bullaris - Gold",
+     "colour": "Or",
+     "material": "Technetium"
+    },
+    {
+     "name": "Bacterium Bullaris - Lime",
+     "colour": "Vert citron",
+     "material": "Tellurium"
+    },
+    {
+     "name": "Bacterium Bullaris - Red",
+     "colour": "Rouge",
+     "material": "Yttrium"
+    }
+   ]
+  },
+  {
+   "id": "bacterium_cerbrus",
+   "genusId": "bacterium",
+   "name": "Bacterium Cerbrus",
+   "baseValueCr": 1689800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "hmc",
+     "rocky",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "sulphur_dioxide",
+     "water"
+    ],
+    "minTemperatureK": 132,
+    "notes": "Principalement HMC à SO2 (T >= 132 K), la branche eau/water-rich exigeant des mondes bien plus chauds (T >= 390 K)."
+   },
+   "variants": [
+    {
+     "name": "Bacterium Cerbrus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Bacterium Cerbrus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Bacterium Cerbrus - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Bacterium Cerbrus - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Bacterium Cerbrus - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Bacterium Cerbrus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Bacterium Cerbrus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Bacterium Cerbrus - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Bacterium Cerbrus - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Bacterium Cerbrus - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Bacterium Cerbrus - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Bacterium Cerbrus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Bacterium Cerbrus - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Bacterium Cerbrus - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Bacterium Cerbrus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bacterium_informem",
+   "genusId": "bacterium",
+   "name": "Bacterium Informem",
+   "baseValueCr": 8418000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "hmc",
+     "rocky",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "nitrogen"
+    ],
+    "maxTemperatureK": 151,
+    "notes": "Mondes à atmosphère d'azote, surtout glacés ; la limite thermique tombe à 83 K sur les corps Rocky."
+   },
+   "variants": [
+    {
+     "name": "Bacterium Informem - Red",
+     "colour": "Rouge",
+     "material": "Antimony"
+    },
+    {
+     "name": "Bacterium Informem - Lime",
+     "colour": "Vert citron",
+     "material": "Polonium"
+    },
+    {
+     "name": "Bacterium Informem - Gold",
+     "colour": "Or",
+     "material": "Ruthenium"
+    },
+    {
+     "name": "Bacterium Informem - Aquamarine",
+     "colour": "Aigue-marine",
+     "material": "Technetium"
+    },
+    {
+     "name": "Bacterium Informem - Yellow",
+     "colour": "Jaune",
+     "material": "Tellurium"
+    },
+    {
+     "name": "Bacterium Informem - Cobalt",
+     "colour": "Cobalt",
+     "material": "Yttrium"
+    }
+   ]
+  },
+  {
+   "id": "bacterium_nebulus",
+   "genusId": "bacterium",
+   "name": "Bacterium Nebulus",
+   "baseValueCr": 5289900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy"
+    ],
+    "atmospheres": [
+     "helium"
+    ],
+    "notes": "Exclusivement mondes glacés à atmosphère d'hélium, extrêmement froids (observé 20,0 - 20,8 K)."
+   },
+   "variants": [
+    {
+     "name": "Bacterium Nebulus - Magenta",
+     "colour": "Magenta",
+     "material": "Antimony"
+    },
+    {
+     "name": "Bacterium Nebulus - Gold",
+     "colour": "Or",
+     "material": "Polonium"
+    },
+    {
+     "name": "Bacterium Nebulus - Orange",
+     "colour": "Orange",
+     "material": "Ruthenium"
+    },
+    {
+     "name": "Bacterium Nebulus - Cyan",
+     "colour": "Cyan",
+     "material": "Technetium"
+    },
+    {
+     "name": "Bacterium Nebulus - Green",
+     "colour": "Vert",
+     "material": "Tellurium"
+    },
+    {
+     "name": "Bacterium Nebulus - Cobalt",
+     "colour": "Cobalt",
+     "material": "Yttrium"
+    }
+   ]
+  },
+  {
+   "id": "bacterium_omentum",
+   "genusId": "bacterium",
+   "name": "Bacterium Omentum",
+   "baseValueCr": 4638900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy"
+    ],
+    "atmospheres": [
+     "neon",
+     "argon",
+     "methane",
+     "helium"
+    ],
+    "volcanism": [
+     "nitrogen",
+     "ammonia"
+    ],
+    "maxTemperatureK": 197,
+    "notes": "Uniquement mondes glacés (surtout néon) avec magma mineur d'azote ou d'ammoniac obligatoire, branche froide 20 - 61 K."
+   },
+   "variants": [
+    {
+     "name": "Bacterium Omentum - Lime",
+     "colour": "Vert citron",
+     "material": "Cadmium"
+    },
+    {
+     "name": "Bacterium Omentum - White",
+     "colour": "Blanc",
+     "material": "Mercury"
+    },
+    {
+     "name": "Bacterium Omentum - Aquamarine",
+     "colour": "Aigue-marine",
+     "material": "Molybdenum"
+    },
+    {
+     "name": "Bacterium Omentum - Peach",
+     "colour": "Peche",
+     "material": "Niobium"
+    },
+    {
+     "name": "Bacterium Omentum - Red",
+     "colour": "Rouge",
+     "material": "Tin"
+    },
+    {
+     "name": "Bacterium Omentum - Blue",
+     "colour": "Bleu",
+     "material": "Tungsten"
+    }
+   ]
+  },
+  {
+   "id": "bacterium_scopulum",
+   "genusId": "bacterium",
+   "name": "Bacterium Scopulum",
+   "baseValueCr": 4934500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "neon",
+     "methane",
+     "argon",
+     "helium"
+    ],
+    "volcanism": [
+     "carbon_dioxide",
+     "methane"
+    ],
+    "minTemperatureK": 35,
+    "maxTemperatureK": 146,
+    "notes": "Mondes glacés exigeant des geysers de dioxyde de carbone ou un magma de méthane mineur ; fenêtres thermiques par branche (35-50, 56-146, 61-71 K)."
+   },
+   "variants": [
+    {
+     "name": "Bacterium Scopulum - White",
+     "colour": "Blanc",
+     "material": "Cadmium"
+    },
+    {
+     "name": "Bacterium Scopulum - Peach",
+     "colour": "Peche",
+     "material": "Mercury"
+    },
+    {
+     "name": "Bacterium Scopulum - Lime",
+     "colour": "Vert citron",
+     "material": "Molybdenum"
+    },
+    {
+     "name": "Bacterium Scopulum - Red",
+     "colour": "Rouge",
+     "material": "Niobium"
+    },
+    {
+     "name": "Bacterium Scopulum - Mulberry",
+     "colour": "Mure",
+     "material": "Tin"
+    },
+    {
+     "name": "Bacterium Scopulum - Aquamarine",
+     "colour": "Aigue-marine",
+     "material": "Tungsten"
+    }
+   ]
+  },
+  {
+   "id": "bacterium_tela",
+   "genusId": "bacterium",
+   "name": "Bacterium Tela",
+   "baseValueCr": 1949000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "hmc",
+     "icy",
+     "rocky"
+    ],
+    "notes": "Espèce passe-partout, toutes atmosphères et presque tous les corps, souvent près des sites géologiques mais aussi trouvée sans volcanisme."
+   },
+   "variants": [
+    {
+     "name": "Bacterium Tela - Gold",
+     "colour": "Or",
+     "material": "Cadmium"
+    },
+    {
+     "name": "Bacterium Tela - Orange",
+     "colour": "Orange",
+     "material": "Mercury"
+    },
+    {
+     "name": "Bacterium Tela - Yellow",
+     "colour": "Jaune",
+     "material": "Molybdenum"
+    },
+    {
+     "name": "Bacterium Tela - Magenta",
+     "colour": "Magenta",
+     "material": "Niobium"
+    },
+    {
+     "name": "Bacterium Tela - Cobalt",
+     "colour": "Cobalt",
+     "material": "Tin"
+    },
+    {
+     "name": "Bacterium Tela - Green",
+     "colour": "Vert",
+     "material": "Tungsten"
+    }
+   ]
+  },
+  {
+   "id": "bacterium_verrata",
+   "genusId": "bacterium",
+   "name": "Bacterium Verrata",
+   "baseValueCr": 3897000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky_ice",
+     "rocky"
+    ],
+    "atmospheres": [
+     "neon",
+     "argon",
+     "helium",
+     "ammonia"
+    ],
+    "volcanism": [
+     "water"
+    ],
+    "notes": "Mondes glacés avec volcanisme exclusivement aqueux (magma ou geysers d'eau, majeur ou mineur), atmosphère néon dans 74 % des cas."
+   },
+   "variants": [
+    {
+     "name": "Bacterium Verrata - Peach",
+     "colour": "Peche",
+     "material": "Cadmium"
+    },
+    {
+     "name": "Bacterium Verrata - Red",
+     "colour": "Rouge",
+     "material": "Mercury"
+    },
+    {
+     "name": "Bacterium Verrata - White",
+     "colour": "Blanc",
+     "material": "Molybdenum"
+    },
+    {
+     "name": "Bacterium Verrata - Mulberry",
+     "colour": "Mure",
+     "material": "Niobium"
+    },
+    {
+     "name": "Bacterium Verrata - Blue",
+     "colour": "Bleu",
+     "material": "Tin"
+    },
+    {
+     "name": "Bacterium Verrata - Lime",
+     "colour": "Vert citron",
+     "material": "Tungsten"
+    }
+   ]
+  },
+  {
+   "id": "bacterium_vesicula",
+   "genusId": "bacterium",
+   "name": "Bacterium Vesicula",
+   "baseValueCr": 1000000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky_ice",
+     "hmc",
+     "rocky"
+    ],
+    "atmospheres": [
+     "argon"
+    ],
+    "maxTemperatureK": 267,
+    "notes": "Surtout mondes glacés à argon ; le plafond thermique varie selon le type de corps (148, 149, 245 ou 267 K)."
+   },
+   "variants": [
+    {
+     "name": "Bacterium Vesicula - Cyan",
+     "colour": "Cyan",
+     "material": "Antimony"
+    },
+    {
+     "name": "Bacterium Vesicula - Orange",
+     "colour": "Orange",
+     "material": "Polonium"
+    },
+    {
+     "name": "Bacterium Vesicula - Mulberry",
+     "colour": "Mure",
+     "material": "Ruthenium"
+    },
+    {
+     "name": "Bacterium Vesicula - Gold",
+     "colour": "Or",
+     "material": "Technetium"
+    },
+    {
+     "name": "Bacterium Vesicula - Red",
+     "colour": "Rouge",
+     "material": "Tellurium"
+    },
+    {
+     "name": "Bacterium Vesicula - Lime",
+     "colour": "Vert citron",
+     "material": "Yttrium"
+    }
+   ]
+  },
+  {
+   "id": "bacterium_volu",
+   "genusId": "bacterium",
+   "name": "Bacterium Volu",
+   "baseValueCr": 7774700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky_ice",
+     "hmc",
+     "rocky"
+    ],
+    "atmospheres": [
+     "oxygen"
+    ],
+    "notes": "Rare atmosphère d'oxygène, majoritairement sur mondes glacés (observé entre 143,8 et 245,8 K)."
+   },
+   "variants": [
+    {
+     "name": "Bacterium Volu - Red",
+     "colour": "Rouge",
+     "material": "Antimony"
+    },
+    {
+     "name": "Bacterium Volu - Aquamarine",
+     "colour": "Aigue-marine",
+     "material": "Polonium"
+    },
+    {
+     "name": "Bacterium Volu - Cobalt",
+     "colour": "Cobalt",
+     "material": "Ruthenium"
+    },
+    {
+     "name": "Bacterium Volu - Lime",
+     "colour": "Vert citron",
+     "material": "Technetium"
+    },
+    {
+     "name": "Bacterium Volu - Cyan",
+     "colour": "Cyan",
+     "material": "Tellurium"
+    },
+    {
+     "name": "Bacterium Volu - Gold",
+     "colour": "Or",
+     "material": "Yttrium"
+    }
+   ]
+  },
+  {
+   "id": "bark_mounds",
+   "genusId": "bark_mound",
+   "name": "Bark Mounds",
+   "baseValueCr": 1471900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc",
+     "icy",
+     "rocky_ice",
+     "metal_rich"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "minTemperatureK": 200,
+    "maxTemperatureK": 440,
+    "maxGravityG": 3.5,
+    "requiresNebula": true,
+    "notes": "À moins de 160 ly du centre d'une nébuleuse ; le plafond de 3,5 G vaut pour HMC et Metal-Rich, mais tombe à 0,49 G sur Rocky, 2,5 G sur Icy et 1,9 G sur Rocky Ice."
+   }
+  },
+  {
+   "id": "aureum_brain_tree",
+   "genusId": "brain_tree",
+   "name": "Aureum Brain Tree",
+   "baseValueCr": 1593700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "metal_rich",
+     "hmc"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "minTemperatureK": 300,
+    "maxTemperatureK": 500,
+    "notes": "Zone Guardian et ELW ou Gas Giant with Water-Based Life requis ; cratères d'éjecta près des Ruines Guardian."
+   }
+  },
+  {
+   "id": "gypseeum_brain_tree",
+   "genusId": "brain_tree",
+   "name": "Gypseeum Brain Tree",
+   "baseValueCr": 1593700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "iron_magma",
+     "rocky",
+     "silicate"
+    ],
+    "minTemperatureK": 200,
+    "maxTemperatureK": 330,
+    "minGravityG": 0.042,
+    "maxGravityG": 0.37,
+    "notes": "Zone Guardian requise et système contenant un ELW ou un Gas Giant with Water-Based Life ; cratères d'éjecta près des Ruines."
+   }
+  },
+  {
+   "id": "lindigoticum_brain_tree",
+   "genusId": "brain_tree",
+   "name": "Lindigoticum Brain Tree",
+   "baseValueCr": 1593700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "hmc",
+     "rocky"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "minTemperatureK": 300,
+    "maxTemperatureK": 500,
+    "notes": "Zone Guardian et ELW ou Gas Giant with Water-Based Life requis ; cratères d'éjecta près des Ruines Guardian."
+   }
+  },
+  {
+   "id": "lividum_brain_tree",
+   "genusId": "brain_tree",
+   "name": "Lividum Brain Tree",
+   "baseValueCr": 1593700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "minTemperatureK": 300,
+    "maxTemperatureK": 500,
+    "notes": "Zone Guardian et ELW ou Gas Giant with Water-Based Life requis ; cratères d'éjecta près des Ruines Guardian."
+   }
+  },
+  {
+   "id": "ostrinum_brain_tree",
+   "genusId": "brain_tree",
+   "name": "Ostrinum Brain Tree",
+   "baseValueCr": 1593700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "hmc",
+     "metal_rich"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "iron_magma",
+     "rocky",
+     "silicate"
+    ],
+    "minTemperatureK": 20,
+    "maxTemperatureK": 1000,
+    "maxGravityG": 2.342,
+    "notes": "Zone Guardian et ELW ou Gas Giant with Water-Based Life requis ; plafond 2,342 G sur Metal-Rich contre 2,28 G sur HMC."
+   }
+  },
+  {
+   "id": "puniceum_brain_tree",
+   "genusId": "brain_tree",
+   "name": "Puniceum Brain Tree",
+   "baseValueCr": 1593700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "metal_rich",
+     "hmc"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "notes": "Zone Guardian et ELW ou Gas Giant with Water-Based Life requis ; température, gravité et volcanisme non documentés."
+   }
+  },
+  {
+   "id": "roseum_brain_tree",
+   "genusId": "brain_tree",
+   "name": "Roseum Brain Tree",
+   "baseValueCr": 1593700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc",
+     "icy",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "iron_magma",
+     "rocky",
+     "silicate",
+     "water"
+    ],
+    "minTemperatureK": 200,
+    "maxTemperatureK": 500,
+    "maxGravityG": 4.202,
+    "notes": "Zone d'influence Guardian requise, souvent dans les cratères d'éjecta près des Ruines ; seule Brain Tree sans exigence ELW/Gas Giant, plafond 4,202 G sur HMC contre 1,27 G sur Rocky."
+   }
+  },
+  {
+   "id": "viride_brain_tree",
+   "genusId": "brain_tree",
+   "name": "Viride Brain Tree",
+   "baseValueCr": 1593700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "minTemperatureK": 100,
+    "maxTemperatureK": 270,
+    "notes": "Zone Guardian et ELW ou Gas Giant with Water-Based Life requis ; seule Brain Tree sur corps Rocky Ice."
+   }
+  },
+  {
+   "id": "cactoida_cortexum",
+   "genusId": "cactoida",
+   "name": "Cactoida Cortexum",
+   "baseValueCr": 3667600,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 180,
+    "maxTemperatureK": 197,
+    "maxGravityG": 0.276,
+    "notes": "Bras Orion-Cygnus et Centre-Left ; terrain plat à légèrement ondulé ; gravité limitée à 0,238 G sur corps Rocky."
+   },
+   "variants": [
+    {
+     "name": "Cactoida Cortexum - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Cactoida Cortexum - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Cactoida Cortexum - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Cactoida Cortexum - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Cactoida Cortexum - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Cactoida Cortexum - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Cactoida Cortexum - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Cactoida Cortexum - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Cactoida Cortexum - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Cactoida Cortexum - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Cactoida Cortexum - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Cactoida Cortexum - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cactoida_lapis",
+   "genusId": "cactoida",
+   "name": "Cactoida Lapis",
+   "baseValueCr": 2483600,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "ammonia"
+    ],
+    "volcanism": [
+     "none",
+     "silicate",
+     "iron_magma",
+     "rocky",
+     "water"
+    ],
+    "minTemperatureK": 160,
+    "maxGravityG": 0.276,
+    "notes": "Bras Sagittarius-Carina et Centre-Left ; terrain plat à légèrement ondulé."
+   },
+   "variants": [
+    {
+     "name": "Cactoida Lapis - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Cactoida Lapis - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Cactoida Lapis - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Cactoida Lapis - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Cactoida Lapis - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Cactoida Lapis - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Cactoida Lapis - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Cactoida Lapis - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Cactoida Lapis - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Cactoida Lapis - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Cactoida Lapis - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Cactoida Lapis - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cactoida_peperatis",
+   "genusId": "cactoida",
+   "name": "Cactoida Peperatis",
+   "baseValueCr": 2483600,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "ammonia"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 160,
+    "maxGravityG": 0.276,
+    "notes": "Bras Scutum-Centaurus et Centre-Left ; pousse sur les collines et flancs de montagne (magmas mineurs tolérés sur Rocky)."
+   },
+   "variants": [
+    {
+     "name": "Cactoida Peperatis - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Cactoida Peperatis - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Cactoida Peperatis - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Cactoida Peperatis - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Cactoida Peperatis - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Cactoida Peperatis - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Cactoida Peperatis - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Cactoida Peperatis - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Cactoida Peperatis - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Cactoida Peperatis - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Cactoida Peperatis - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Cactoida Peperatis - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cactoida_pullulanta",
+   "genusId": "cactoida",
+   "name": "Cactoida Pullulanta",
+   "baseValueCr": 3667600,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 180,
+    "maxTemperatureK": 195.41,
+    "maxGravityG": 0.276,
+    "notes": "Bras de Persée et Centre-Top ; terrain plat à légèrement ondulé ; gravité limitée à 0,238 G sur corps Rocky."
+   },
+   "variants": [
+    {
+     "name": "Cactoida Pullulanta - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Cactoida Pullulanta - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Cactoida Pullulanta - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Cactoida Pullulanta - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Cactoida Pullulanta - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Cactoida Pullulanta - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Cactoida Pullulanta - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Cactoida Pullulanta - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Cactoida Pullulanta - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Cactoida Pullulanta - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Cactoida Pullulanta - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Cactoida Pullulanta - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cactoida_vermis",
+   "genusId": "cactoida",
+   "name": "Cactoida Vermis",
+   "baseValueCr": 16202800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "water",
+     "sulphur_dioxide"
+    ],
+    "volcanism": [
+     "none",
+     "water",
+     "silicate",
+     "iron_magma"
+    ],
+    "minTemperatureK": 160,
+    "maxGravityG": 0.276,
+    "notes": "Branche Water (T >= 390 K, gravité très basse <= 0,064 G) ou branche rare SO2 (160-207 K, g >= 0,26)."
+   },
+   "variants": [
+    {
+     "name": "Cactoida Vermis - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Cactoida Vermis - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Cactoida Vermis - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Cactoida Vermis - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Cactoida Vermis - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Cactoida Vermis - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Cactoida Vermis - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Cactoida Vermis - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Cactoida Vermis - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Cactoida Vermis - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Cactoida Vermis - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Cactoida Vermis - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "clypeus_lacrimam",
+   "genusId": "clypeus",
+   "name": "Clypeus Lacrimam",
+   "baseValueCr": 8418000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "carbon_dioxide",
+     "water"
+    ],
+    "volcanism": [
+     "none",
+     "water"
+    ],
+    "minTemperatureK": 190,
+    "maxGravityG": 0.276,
+    "notes": "Uniquement sur Rocky : branche CO2 190-199 K (g <= 0,238) ou branche Water T >= 390 K, sur plaines caillouteuses."
+   },
+   "variants": [
+    {
+     "name": "Clypeus Lacrimam - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Clypeus Lacrimam - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Clypeus Lacrimam - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Clypeus Lacrimam - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Clypeus Lacrimam - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Clypeus Lacrimam - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Clypeus Lacrimam - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Clypeus Lacrimam - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Clypeus Lacrimam - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Clypeus Lacrimam - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "clypeus_margaritus",
+   "genusId": "clypeus",
+   "name": "Clypeus Margaritus",
+   "baseValueCr": 11873200,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide",
+     "water"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 190,
+    "maxGravityG": 0.276,
+    "notes": "Uniquement sur HMC : branche CO2 190-195 K ou branche Water T >= 390 K, sur plaines caillouteuses et bas de collines."
+   },
+   "variants": [
+    {
+     "name": "Clypeus Margaritus - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Clypeus Margaritus - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Clypeus Margaritus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Clypeus Margaritus - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Clypeus Margaritus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Clypeus Margaritus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Clypeus Margaritus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Clypeus Margaritus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Clypeus Margaritus - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Clypeus Margaritus - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "clypeus_speculumi",
+   "genusId": "clypeus",
+   "name": "Clypeus Speculumi",
+   "baseValueCr": 16202800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "carbon_dioxide",
+     "water"
+    ],
+    "volcanism": [
+     "none",
+     "water"
+    ],
+    "minTemperatureK": 190,
+    "maxGravityG": 0.238,
+    "minDistanceFromArrivalLs": 2500,
+    "notes": "Uniquement sur Rocky à plus de 2 500 Ls de l'étoile parente (contrainte communautaire non confirmée par télémétrie) ; branche Water limitée à 0,056 G."
+   },
+   "variants": [
+    {
+     "name": "Clypeus Speculumi - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Clypeus Speculumi - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Clypeus Speculumi - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Clypeus Speculumi - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Clypeus Speculumi - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Clypeus Speculumi - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Clypeus Speculumi - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Clypeus Speculumi - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Clypeus Speculumi - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Clypeus Speculumi - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "concha_aureolas",
+   "genusId": "concha",
+   "name": "Concha Aureolas",
+   "baseValueCr": 7774700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "ammonia"
+    ],
+    "maxGravityG": 0.276,
+    "notes": "Vallées et zones ondulées au pied des collines ; température seulement observée 152-177 K, sans borne dure."
+   },
+   "variants": [
+    {
+     "name": "Concha Aureolas - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Concha Aureolas - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Concha Aureolas - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Concha Aureolas - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Concha Aureolas - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Concha Aureolas - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Concha Aureolas - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Concha Aureolas - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Concha Aureolas - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Concha Aureolas - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "concha_biconcavis",
+   "genusId": "concha",
+   "name": "Concha Biconcavis",
+   "baseValueCr": 19010800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "nitrogen"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "maxTemperatureK": 52,
+    "maxGravityG": 0.276,
+    "notes": "Plafond thermique de 50 K sur corps Rocky (52 K sur HMC) ; vallées et zones ondulées au pied des reliefs."
+   },
+   "variants": [
+    {
+     "name": "Concha Biconcavis - Peach",
+     "colour": "Peche",
+     "material": "Antimony"
+    },
+    {
+     "name": "Concha Biconcavis - Red",
+     "colour": "Rouge",
+     "material": "Polonium"
+    },
+    {
+     "name": "Concha Biconcavis - Orange",
+     "colour": "Orange",
+     "material": "Ruthenium"
+    },
+    {
+     "name": "Concha Biconcavis - White",
+     "colour": "Blanc",
+     "material": "Technetium"
+    },
+    {
+     "name": "Concha Biconcavis - Yellow",
+     "colour": "Jaune",
+     "material": "Tellurium"
+    },
+    {
+     "name": "Concha Biconcavis - Gold",
+     "colour": "Or",
+     "material": "Yttrium"
+    }
+   ]
+  },
+  {
+   "id": "concha_labiata",
+   "genusId": "concha",
+   "name": "Concha Labiata",
+   "baseValueCr": 2352400,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 150,
+    "maxTemperatureK": 195.41,
+    "maxGravityG": 0.276,
+    "notes": "Vallées et zones ondulées ; gravité limitée à 0,238 G sur corps Rocky."
+   },
+   "variants": [
+    {
+     "name": "Concha Labiata - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Concha Labiata - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Concha Labiata - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Concha Labiata - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Concha Labiata - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Concha Labiata - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Concha Labiata - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Concha Labiata - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Concha Labiata - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Concha Labiata - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "concha_renibus",
+   "genusId": "concha",
+   "name": "Concha Renibus",
+   "baseValueCr": 4572400,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide",
+     "water",
+     "ammonia",
+     "methane"
+    ],
+    "minTemperatureK": 79,
+    "maxGravityG": 0.276,
+    "notes": "Branches CO2 180-195 K, Water T >= 390 K, Méthane 79-104 K et Ammonia T >= 174 K, avec une gravité de 0,05 à 0,238 G selon la branche."
+   },
+   "variants": [
+    {
+     "name": "Concha Renibus - Red",
+     "colour": "Rouge",
+     "material": "Cadmium"
+    },
+    {
+     "name": "Concha Renibus - Mulberry",
+     "colour": "Mure",
+     "material": "Mercury"
+    },
+    {
+     "name": "Concha Renibus - Peach",
+     "colour": "Peche",
+     "material": "Molybdenum"
+    },
+    {
+     "name": "Concha Renibus - Blue",
+     "colour": "Bleu",
+     "material": "Niobium"
+    },
+    {
+     "name": "Concha Renibus - Aquamarine",
+     "colour": "Aigue-marine",
+     "material": "Tin"
+    },
+    {
+     "name": "Concha Renibus - White",
+     "colour": "Blanc",
+     "material": "Tungsten"
+    }
+   ]
+  },
+  {
+   "id": "crystalline_shards",
+   "genusId": "crystalline_shard",
+   "name": "Crystalline Shards",
+   "baseValueCr": 1628800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky",
+     "rocky_ice",
+     "hmc"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "ammonia",
+     "carbon_dioxide",
+     "methane",
+     "nitrogen",
+     "water",
+     "iron_magma",
+     "rocky",
+     "silicate"
+    ],
+    "minTemperatureK": 20,
+    "maxTemperatureK": 250,
+    "maxGravityG": 1.45,
+    "minDistanceFromArrivalLs": 10000,
+    "notes": "Étoile primaire A, F, G, K ou M et système contenant un ELW, Water World, Ammonia World ou Gas Giant à vie ; volcanisme mineur obligatoire et plafond 1,45 G réservé aux HMC (0,19–0,24 G sur Icy/Rocky/Rocky Ice)."
+   }
+  },
+  {
+   "id": "electricae_pluma",
+   "genusId": "electricae",
+   "name": "Electricae Pluma",
+   "baseValueCr": 6284600,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy"
+    ],
+    "atmospheres": [
+     "argon",
+     "neon"
+    ],
+    "maxTemperatureK": 150,
+    "maxGravityG": 0.276,
+    "notes": "Exige une étoile parente de classe O, B, A, Ae/Be, Wolf-Rayet, naine blanche, étoile à neutrons ou trou noir ; plaines glacées près des lacs gelés."
+   },
+   "variants": [
+    {
+     "name": "Electricae Pluma - Cobalt",
+     "colour": "Cobalt",
+     "material": "Antimony"
+    },
+    {
+     "name": "Electricae Pluma - Cyan",
+     "colour": "Cyan",
+     "material": "Polonium"
+    },
+    {
+     "name": "Electricae Pluma - Blue",
+     "colour": "Bleu",
+     "material": "Ruthenium"
+    },
+    {
+     "name": "Electricae Pluma - Magenta",
+     "colour": "Magenta",
+     "material": "Technetium"
+    },
+    {
+     "name": "Electricae Pluma - Red",
+     "colour": "Rouge",
+     "material": "Tellurium"
+    },
+    {
+     "name": "Electricae Pluma - Mulberry",
+     "colour": "Mure",
+     "material": "Yttrium"
+    }
+   ]
+  },
+  {
+   "id": "electricae_radialem",
+   "genusId": "electricae",
+   "name": "Electricae Radialem",
+   "baseValueCr": 6284600,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy"
+    ],
+    "atmospheres": [
+     "argon",
+     "neon",
+     "methane"
+    ],
+    "maxTemperatureK": 150,
+    "maxGravityG": 0.276,
+    "requiresNebula": true,
+    "notes": "À moins de 150 ly du centre d'une nébuleuse ; plaines glacées près des lacs gelés et des fissures."
+   },
+   "variants": [
+    {
+     "name": "Electricae Radialem - Cyan",
+     "colour": "Cyan",
+     "material": "Antimony"
+    },
+    {
+     "name": "Electricae Radialem - Cobalt",
+     "colour": "Cobalt",
+     "material": "Polonium"
+    },
+    {
+     "name": "Electricae Radialem - Blue",
+     "colour": "Bleu",
+     "material": "Ruthenium"
+    },
+    {
+     "name": "Electricae Radialem - Aquamarine",
+     "colour": "Aigue-marine",
+     "material": "Technetium"
+    },
+    {
+     "name": "Electricae Radialem - Magenta",
+     "colour": "Magenta",
+     "material": "Tellurium"
+    },
+    {
+     "name": "Electricae Radialem - Green",
+     "colour": "Vert",
+     "material": "Yttrium"
+    }
+   ]
+  },
+  {
+   "id": "fonticulua_campestris",
+   "genusId": "fonticulua",
+   "name": "Fonticulua Campestris",
+   "baseValueCr": 1000000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "argon"
+    ],
+    "maxTemperatureK": 151,
+    "maxGravityG": 0.276,
+    "notes": "Plaines glacées doucement ondulées ; plafond de température 132 K sur Icy et 151 K sur Rocky Ice, et 59 % de la population du genre."
+   },
+   "variants": [
+    {
+     "name": "Fonticulua Campestris - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Fonticulua Campestris - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Fonticulua Campestris - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Fonticulua Campestris - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Fonticulua Campestris - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Fonticulua Campestris - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Fonticulua Campestris - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Fonticulua Campestris - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Fonticulua Campestris - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Fonticulua Campestris - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Fonticulua Campestris - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Fonticulua Campestris - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Fonticulua Campestris - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Fonticulua Campestris - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Fonticulua Campestris - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fonticulua_digitos",
+   "genusId": "fonticulua",
+   "name": "Fonticulua Digitos",
+   "baseValueCr": 1804100,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "methane"
+    ],
+    "maxGravityG": 0.276,
+    "notes": "Seule Fonticulua qui tolère un terrain plus rugueux que les plaines ondulées, avec une gravité observée très basse (0,06 G)."
+   },
+   "variants": [
+    {
+     "name": "Fonticulua Digitos - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Fonticulua Digitos - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Fonticulua Digitos - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Fonticulua Digitos - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Fonticulua Digitos - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Fonticulua Digitos - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Fonticulua Digitos - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Fonticulua Digitos - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Fonticulua Digitos - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Fonticulua Digitos - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Fonticulua Digitos - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Fonticulua Digitos - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Fonticulua Digitos - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Fonticulua Digitos - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Fonticulua Digitos - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fonticulua_fluctus",
+   "genusId": "fonticulua",
+   "name": "Fonticulua Fluctus",
+   "baseValueCr": 20000000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy"
+    ],
+    "atmospheres": [
+     "oxygen",
+     "carbon_dioxide"
+    ],
+    "minTemperatureK": 143,
+    "maxTemperatureK": 200,
+    "maxGravityG": 0.276,
+    "notes": "Espèce la plus chère du jeu (0,42 % de la population), exclusivement sur corps Icy en oxygène, avec une branche secondaire CO₂-rich à 170–180 K."
+   },
+   "variants": [
+    {
+     "name": "Fonticulua Fluctus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Fonticulua Fluctus - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Fonticulua Fluctus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Fonticulua Fluctus - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Fonticulua Fluctus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Fonticulua Fluctus - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Fonticulua Fluctus - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Fonticulua Fluctus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Fonticulua Fluctus - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Fonticulua Fluctus - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Fonticulua Fluctus - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Fonticulua Fluctus - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Fonticulua Fluctus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Fonticulua Fluctus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Fonticulua Fluctus - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fonticulua_lapida",
+   "genusId": "fonticulua",
+   "name": "Fonticulua Lapida",
+   "baseValueCr": 3111000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "nitrogen"
+    ],
+    "maxTemperatureK": 81,
+    "maxGravityG": 0.276,
+    "notes": "Plaines glacées très froides, avec un plafond de température de 70 K sur Icy et 81 K sur Rocky Ice."
+   },
+   "variants": [
+    {
+     "name": "Fonticulua Lapida - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Fonticulua Lapida - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Fonticulua Lapida - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Fonticulua Lapida - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Fonticulua Lapida - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Fonticulua Lapida - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Fonticulua Lapida - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Fonticulua Lapida - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Fonticulua Lapida - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Fonticulua Lapida - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Fonticulua Lapida - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Fonticulua Lapida - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Fonticulua Lapida - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Fonticulua Lapida - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Fonticulua Lapida - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fonticulua_segmentatus",
+   "genusId": "fonticulua",
+   "name": "Fonticulua Segmentatus",
+   "baseValueCr": 19010800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy"
+    ],
+    "atmospheres": [
+     "neon"
+    ],
+    "minTemperatureK": 50,
+    "maxTemperatureK": 75,
+    "maxGravityG": 0.276,
+    "notes": "Uniquement sur corps Icy : Néon entre 50 et 56,1 K, Néon-rich entre 56,2 et 75 K, pour 1,17 % de la population du genre."
+   },
+   "variants": [
+    {
+     "name": "Fonticulua Segmentatus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Fonticulua Segmentatus - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Fonticulua Segmentatus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Fonticulua Segmentatus - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Fonticulua Segmentatus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Fonticulua Segmentatus - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Fonticulua Segmentatus - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Fonticulua Segmentatus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Fonticulua Segmentatus - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Fonticulua Segmentatus - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Fonticulua Segmentatus - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Fonticulua Segmentatus - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Fonticulua Segmentatus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Fonticulua Segmentatus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Fonticulua Segmentatus - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fonticulua_upupam",
+   "genusId": "fonticulua",
+   "name": "Fonticulua Upupam",
+   "baseValueCr": 5727600,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "argon"
+    ],
+    "maxTemperatureK": 124,
+    "maxGravityG": 0.276,
+    "notes": "Exige une atmosphère Argon-rich (et non Argon simple), avec un plafond de 80 K sur Icy et 124 K sur Rocky Ice."
+   },
+   "variants": [
+    {
+     "name": "Fonticulua Upupam - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Fonticulua Upupam - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Fonticulua Upupam - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Fonticulua Upupam - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Fonticulua Upupam - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Fonticulua Upupam - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Fonticulua Upupam - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Fonticulua Upupam - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Fonticulua Upupam - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Fonticulua Upupam - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Fonticulua Upupam - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Fonticulua Upupam - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Fonticulua Upupam - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Fonticulua Upupam - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Fonticulua Upupam - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "frutexa_acus",
+   "genusId": "frutexa",
+   "name": "Frutexa Acus",
+   "baseValueCr": 7774700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "minTemperatureK": 146,
+    "maxTemperatureK": 195.41,
+    "maxGravityG": 0.238,
+    "notes": "Plaines et flancs rocheux, uniquement dans le bras Orion-Cygnus et la région Galactic Centre-Left (jumelle de Frutexa Fera)."
+   },
+   "variants": [
+    {
+     "name": "Frutexa Acus - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Frutexa Acus - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Frutexa Acus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Frutexa Acus - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Frutexa Acus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Frutexa Acus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Frutexa Acus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Frutexa Acus - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Frutexa Acus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Frutexa Acus - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "frutexa_collum",
+   "genusId": "frutexa",
+   "name": "Frutexa Collum",
+   "baseValueCr": 1639800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "sulphur_dioxide"
+    ],
+    "maxTemperatureK": 211,
+    "maxGravityG": 0.276,
+    "notes": "Sans contrainte régionale, avec une plage de 132–211 K sur HMC contre un simple plafond de 151 K sur Rocky."
+   },
+   "variants": [
+    {
+     "name": "Frutexa Collum - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Frutexa Collum - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Frutexa Collum - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Frutexa Collum - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Frutexa Collum - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Frutexa Collum - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Frutexa Collum - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Frutexa Collum - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Frutexa Collum - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Frutexa Collum - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "frutexa_fera",
+   "genusId": "frutexa",
+   "name": "Frutexa Fera",
+   "baseValueCr": 1632500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "minTemperatureK": 146,
+    "maxTemperatureK": 195.41,
+    "maxGravityG": 0.238,
+    "notes": "Plaines et flancs rocheux, uniquement dans l'Outer Arm et la région Galactic Centre-Right (jumelle de Frutexa Acus)."
+   },
+   "variants": [
+    {
+     "name": "Frutexa Fera - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Frutexa Fera - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Frutexa Fera - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Frutexa Fera - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Frutexa Fera - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Frutexa Fera - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Frutexa Fera - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Frutexa Fera - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Frutexa Fera - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Frutexa Fera - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "frutexa_flabellum",
+   "genusId": "frutexa",
+   "name": "Frutexa Flabellum",
+   "baseValueCr": 1808900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "ammonia",
+     "carbon_dioxide"
+    ],
+    "minTemperatureK": 152,
+    "maxTemperatureK": 195.41,
+    "maxGravityG": 0.276,
+    "notes": "Absente du bras Scutum-Centaurus et de la région Galactic Centre-Left, principalement en ammoniac avec une branche secondaire CO₂."
+   },
+   "variants": [
+    {
+     "name": "Frutexa Flabellum - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Frutexa Flabellum - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Frutexa Flabellum - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Frutexa Flabellum - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Frutexa Flabellum - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Frutexa Flabellum - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Frutexa Flabellum - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Frutexa Flabellum - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Frutexa Flabellum - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Frutexa Flabellum - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "frutexa_flammasis",
+   "genusId": "frutexa",
+   "name": "Frutexa Flammasis",
+   "baseValueCr": 10326000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "ammonia"
+    ],
+    "maxGravityG": 0.276,
+    "notes": "Restreinte au bras Scutum-Centaurus et à la région Galactic Centre-Left, sur flancs rocheux."
+   },
+   "variants": [
+    {
+     "name": "Frutexa Flammasis - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Frutexa Flammasis - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Frutexa Flammasis - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Frutexa Flammasis - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Frutexa Flammasis - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Frutexa Flammasis - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Frutexa Flammasis - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Frutexa Flammasis - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Frutexa Flammasis - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Frutexa Flammasis - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "frutexa_metallicum",
+   "genusId": "frutexa",
+   "name": "Frutexa Metallicum",
+   "baseValueCr": 1632500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "hmc"
+    ],
+    "atmospheres": [
+     "ammonia",
+     "carbon_dioxide",
+     "methane",
+     "water"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "maxGravityG": 0.276,
+    "notes": "Uniquement sur HMC sans volcanisme, avec des branches CO₂ 146–195,41 K, Water T ≥ 390 K (g ≤ 0,052) et Méthane 100–102 K."
+   },
+   "variants": [
+    {
+     "name": "Frutexa Metallicum - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Frutexa Metallicum - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Frutexa Metallicum - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Frutexa Metallicum - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Frutexa Metallicum - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Frutexa Metallicum - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Frutexa Metallicum - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Frutexa Metallicum - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Frutexa Metallicum - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Frutexa Metallicum - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "frutexa_sponsae",
+   "genusId": "frutexa",
+   "name": "Frutexa Sponsae",
+   "baseValueCr": 5988000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "water"
+    ],
+    "minTemperatureK": 390,
+    "maxGravityG": 0.276,
+    "notes": "Corps rocheux très chauds (T ≥ 390 K) en atmosphère d'eau, à gravité observée très faible (0,04–0,06 G)."
+   },
+   "variants": [
+    {
+     "name": "Frutexa Sponsae - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Frutexa Sponsae - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Frutexa Sponsae - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Frutexa Sponsae - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Frutexa Sponsae - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Frutexa Sponsae - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Frutexa Sponsae - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Frutexa Sponsae - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Frutexa Sponsae - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Frutexa Sponsae - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fumerola_aquatis",
+   "genusId": "fumerola",
+   "name": "Fumerola Aquatis",
+   "baseValueCr": 6284600,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "argon",
+     "sulphur_dioxide",
+     "ammonia",
+     "nitrogen",
+     "water",
+     "oxygen"
+    ],
+    "volcanism": [
+     "water"
+    ],
+    "minGravityG": 0.03,
+    "maxGravityG": 0.276,
+    "notes": "Pousse exclusivement sur les fumerolles à geysers ou magma d'eau, sur les rochers des zones plates repérées au DSS géologique."
+   },
+   "variants": [
+    {
+     "name": "Fumerola Aquatis - Green",
+     "colour": "Vert",
+     "material": "Cadmium"
+    },
+    {
+     "name": "Fumerola Aquatis - Yellow",
+     "colour": "Jaune",
+     "material": "Mercury"
+    },
+    {
+     "name": "Fumerola Aquatis - Cyan",
+     "colour": "Cyan",
+     "material": "Molybdenum"
+    },
+    {
+     "name": "Fumerola Aquatis - Gold",
+     "colour": "Or",
+     "material": "Niobium"
+    },
+    {
+     "name": "Fumerola Aquatis - Orange",
+     "colour": "Orange",
+     "material": "Tin"
+    },
+    {
+     "name": "Fumerola Aquatis - Cobalt",
+     "colour": "Cobalt",
+     "material": "Tungsten"
+    }
+   ]
+  },
+  {
+   "id": "fumerola_carbosis",
+   "genusId": "fumerola",
+   "name": "Fumerola Carbosis",
+   "baseValueCr": 6284600,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "methane",
+     "argon",
+     "sulphur_dioxide",
+     "nitrogen"
+    ],
+    "volcanism": [
+     "carbon_dioxide",
+     "methane"
+    ],
+    "minGravityG": 0.03,
+    "maxGravityG": 0.276,
+    "notes": "Fumerolles à geysers de dioxyde de carbone ou magma de méthane mineur, surtout sur corps Icy."
+   },
+   "variants": [
+    {
+     "name": "Fumerola Carbosis - Orange",
+     "colour": "Orange",
+     "material": "Cadmium"
+    },
+    {
+     "name": "Fumerola Carbosis - Magenta",
+     "colour": "Magenta",
+     "material": "Mercury"
+    },
+    {
+     "name": "Fumerola Carbosis - Gold",
+     "colour": "Or",
+     "material": "Molybdenum"
+    },
+    {
+     "name": "Fumerola Carbosis - Cobalt",
+     "colour": "Cobalt",
+     "material": "Niobium"
+    },
+    {
+     "name": "Fumerola Carbosis - Cyan",
+     "colour": "Cyan",
+     "material": "Tin"
+    },
+    {
+     "name": "Fumerola Carbosis - Yellow",
+     "colour": "Jaune",
+     "material": "Tungsten"
+    }
+   ]
+  },
+  {
+   "id": "fumerola_extremus",
+   "genusId": "fumerola",
+   "name": "Fumerola Extremus",
+   "baseValueCr": 16202800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "rocky_ice",
+     "hmc"
+    ],
+    "atmospheres": [
+     "methane",
+     "ammonia",
+     "sulphur_dioxide",
+     "argon"
+    ],
+    "volcanism": [
+     "silicate",
+     "rocky",
+     "iron_magma"
+    ],
+    "minGravityG": 0.04,
+    "maxGravityG": 0.276,
+    "notes": "Fumerolles à geysers de vapeur de silicate ou magma rocheux/métallique, majoritairement sur corps Rocky."
+   },
+   "variants": [
+    {
+     "name": "Fumerola Extremus - Aquamarine",
+     "colour": "Aigue-marine",
+     "material": "Cadmium"
+    },
+    {
+     "name": "Fumerola Extremus - Lime",
+     "colour": "Vert citron",
+     "material": "Mercury"
+    },
+    {
+     "name": "Fumerola Extremus - Blue",
+     "colour": "Bleu",
+     "material": "Molybdenum"
+    },
+    {
+     "name": "Fumerola Extremus - White",
+     "colour": "Blanc",
+     "material": "Niobium"
+    },
+    {
+     "name": "Fumerola Extremus - Peach",
+     "colour": "Pêche",
+     "material": "Tin"
+    },
+    {
+     "name": "Fumerola Extremus - Mulberry",
+     "colour": "Mûre",
+     "material": "Tungsten"
+    }
+   ]
+  },
+  {
+   "id": "fumerola_nitris",
+   "genusId": "fumerola",
+   "name": "Fumerola Nitris",
+   "baseValueCr": 7500900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy"
+    ],
+    "atmospheres": [
+     "argon",
+     "methane"
+    ],
+    "volcanism": [
+     "ammonia",
+     "nitrogen"
+    ],
+    "minGravityG": 0.03,
+    "maxGravityG": 0.276,
+    "notes": "Fumerolles à magma mineur d'ammoniac ou d'azote sur corps Icy, avec 2 % des relevés sur d'autres atmosphères qu'Argon ou Methane."
+   },
+   "variants": [
+    {
+     "name": "Fumerola Nitris - White",
+     "colour": "Blanc",
+     "material": "Cadmium"
+    },
+    {
+     "name": "Fumerola Nitris - Peach",
+     "colour": "Pêche",
+     "material": "Mercury"
+    },
+    {
+     "name": "Fumerola Nitris - Lime",
+     "colour": "Vert citron",
+     "material": "Molybdenum"
+    },
+    {
+     "name": "Fumerola Nitris - Red",
+     "colour": "Rouge",
+     "material": "Niobium"
+    },
+    {
+     "name": "Fumerola Nitris - Mulberry",
+     "colour": "Mûre",
+     "material": "Tin"
+    },
+    {
+     "name": "Fumerola Nitris - Aquamarine",
+     "colour": "Aigue-marine",
+     "material": "Tungsten"
+    }
+   ]
+  },
+  {
+   "id": "fungoida_bullarum",
+   "genusId": "fungoida",
+   "name": "Fungoida Bullarum",
+   "baseValueCr": 3703200,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky_ice",
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "argon",
+     "nitrogen"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "maxTemperatureK": 133,
+    "maxGravityG": 0.276,
+    "notes": "Surtout sur Rocky Ice, sur flancs et sommets de montagnes, avec un plafond de température variable selon la branche (77, 90, 93 ou 133 K)."
+   },
+   "variants": [
+    {
+     "name": "Fungoida Bullarum - Red",
+     "colour": "Rouge",
+     "material": "Antimony"
+    },
+    {
+     "name": "Fungoida Bullarum - Mulberry",
+     "colour": "Mûre",
+     "material": "Polonium"
+    },
+    {
+     "name": "Fungoida Bullarum - Magenta",
+     "colour": "Magenta",
+     "material": "Ruthenium"
+    },
+    {
+     "name": "Fungoida Bullarum - Peach",
+     "colour": "Pêche",
+     "material": "Technetium"
+    },
+    {
+     "name": "Fungoida Bullarum - Gold",
+     "colour": "Or",
+     "material": "Tellurium"
+    },
+    {
+     "name": "Fungoida Bullarum - Orange",
+     "colour": "Orange",
+     "material": "Yttrium"
+    }
+   ]
+  },
+  {
+   "id": "fungoida_gelata",
+   "genusId": "fungoida",
+   "name": "Fungoida Gelata",
+   "baseValueCr": 3330300,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide",
+     "water",
+     "ammonia",
+     "argon",
+     "methane"
+    ],
+    "maxGravityG": 0.276,
+    "notes": "Absente du bras Orion-Cygnus ; branche CO₂ à 180–195,41 K plafonnée à 0,238 G et branche Water à T ≥ 390 K, sur flancs de montagnes."
+   },
+   "variants": [
+    {
+     "name": "Fungoida Gelata - Cyan",
+     "colour": "Cyan",
+     "material": "Cadmium"
+    },
+    {
+     "name": "Fungoida Gelata - Lime",
+     "colour": "Vert citron",
+     "material": "Mercury"
+    },
+    {
+     "name": "Fungoida Gelata - Mulberry",
+     "colour": "Mûre",
+     "material": "Molybdenum"
+    },
+    {
+     "name": "Fungoida Gelata - Green",
+     "colour": "Vert",
+     "material": "Niobium"
+    },
+    {
+     "name": "Fungoida Gelata - Red",
+     "colour": "Rouge",
+     "material": "Tin"
+    },
+    {
+     "name": "Fungoida Gelata - Orange",
+     "colour": "Orange",
+     "material": "Tungsten"
+    }
+   ]
+  },
+  {
+   "id": "fungoida_setisis",
+   "genusId": "fungoida",
+   "name": "Fungoida Setisis",
+   "baseValueCr": 1670100,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "ammonia",
+     "methane",
+     "carbon_dioxide"
+    ],
+    "maxGravityG": 0.276,
+    "notes": "Sans contrainte régionale, sur flancs et sommets de montagnes, avec une branche Ammonia 160–195,41 K, une branche Methane 67–108 K et une branche CO₂."
+   },
+   "variants": [
+    {
+     "name": "Fungoida Setisis - Peach",
+     "colour": "Pêche",
+     "material": "Antimony"
+    },
+    {
+     "name": "Fungoida Setisis - White",
+     "colour": "Blanc",
+     "material": "Polonium"
+    },
+    {
+     "name": "Fungoida Setisis - Gold",
+     "colour": "Or",
+     "material": "Ruthenium"
+    },
+    {
+     "name": "Fungoida Setisis - Lime",
+     "colour": "Vert citron",
+     "material": "Technetium"
+    },
+    {
+     "name": "Fungoida Setisis - Yellow",
+     "colour": "Jaune",
+     "material": "Tellurium"
+    },
+    {
+     "name": "Fungoida Setisis - Orange",
+     "colour": "Orange",
+     "material": "Yttrium"
+    }
+   ]
+  },
+  {
+   "id": "fungoida_stabitis",
+   "genusId": "fungoida",
+   "name": "Fungoida Stabitis",
+   "baseValueCr": 2680300,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide",
+     "water",
+     "ammonia",
+     "argon",
+     "methane"
+    ],
+    "maxGravityG": 0.276,
+    "notes": "Restreinte au bras Orion-Cygnus et à la région Galactic Centre-Left ; branche CO₂ 180–195,41 K plafonnée à 0,238 G et branche Water T ≥ 390 K."
+   },
+   "variants": [
+    {
+     "name": "Fungoida Stabitis - Blue",
+     "colour": "Bleu",
+     "material": "Cadmium"
+    },
+    {
+     "name": "Fungoida Stabitis - Green",
+     "colour": "Vert",
+     "material": "Mercury"
+    },
+    {
+     "name": "Fungoida Stabitis - Magenta",
+     "colour": "Magenta",
+     "material": "Molybdenum"
+    },
+    {
+     "name": "Fungoida Stabitis - Orange",
+     "colour": "Orange",
+     "material": "Niobium"
+    },
+    {
+     "name": "Fungoida Stabitis - Peach",
+     "colour": "Pêche",
+     "material": "Tin"
+    },
+    {
+     "name": "Fungoida Stabitis - White",
+     "colour": "Blanc",
+     "material": "Tungsten"
+    }
+   ]
+  },
+  {
+   "id": "osseus_cornibus",
+   "genusId": "osseus",
+   "name": "Osseus Cornibus",
+   "baseValueCr": 1483000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 180,
+    "maxTemperatureK": 195.41,
+    "maxGravityG": 0.276,
+    "notes": "Pousse uniquement sur les zones rocheuses; bras de Persée et région Centre-Top; plafond réel 0,238 G sur corps Rocky, 0,276 G sur HMC."
+   },
+   "variants": [
+    {
+     "name": "Osseus Cornibus - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Osseus Cornibus - Lime",
+     "colour": "Vert lime",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Osseus Cornibus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Osseus Cornibus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Osseus Cornibus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Osseus Cornibus - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Osseus Cornibus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Osseus Cornibus - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "Y"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "osseus_discus",
+   "genusId": "osseus",
+   "name": "Osseus Discus",
+   "baseValueCr": 12934900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "water",
+     "methane",
+     "ammonia",
+     "argon"
+    ],
+    "minGravityG": 0.05,
+    "maxGravityG": 0.276,
+    "notes": "Pousse uniquement sur les zones rocheuses; la branche Water exige T >= 390 K et la branche Méthane 78-109 K."
+   },
+   "variants": [
+    {
+     "name": "Osseus Discus - White",
+     "colour": "Blanc",
+     "material": "Cadmium"
+    },
+    {
+     "name": "Osseus Discus - Lime",
+     "colour": "Vert lime",
+     "material": "Mercury"
+    },
+    {
+     "name": "Osseus Discus - Peach",
+     "colour": "Pêche",
+     "material": "Molybdenum"
+    },
+    {
+     "name": "Osseus Discus - Aquamarine",
+     "colour": "Aigue-marine",
+     "material": "Niobium"
+    },
+    {
+     "name": "Osseus Discus - Blue",
+     "colour": "Bleu",
+     "material": "Tin"
+    },
+    {
+     "name": "Osseus Discus - Red",
+     "colour": "Rouge",
+     "material": "Tungsten"
+    }
+   ]
+  },
+  {
+   "id": "osseus_fractus",
+   "genusId": "osseus",
+   "name": "Osseus Fractus",
+   "baseValueCr": 4027800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 180,
+    "maxTemperatureK": 190,
+    "maxGravityG": 0.276,
+    "notes": "Pousse uniquement sur les zones rocheuses; partout SAUF le bras de Persée et la région Centre-Top."
+   },
+   "variants": [
+    {
+     "name": "Osseus Fractus - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Osseus Fractus - Lime",
+     "colour": "Vert lime",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Osseus Fractus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Osseus Fractus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Osseus Fractus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Osseus Fractus - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Osseus Fractus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Osseus Fractus - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "Y"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "osseus_pellebantus",
+   "genusId": "osseus",
+   "name": "Osseus Pellebantus",
+   "baseValueCr": 9739000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 191,
+    "maxTemperatureK": 195.41,
+    "maxGravityG": 0.276,
+    "notes": "Pousse uniquement sur les zones rocheuses; partout SAUF le bras de Persée et la région Centre-Top."
+   },
+   "variants": [
+    {
+     "name": "Osseus Pellebantus - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Osseus Pellebantus - Lime",
+     "colour": "Vert lime",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Osseus Pellebantus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Osseus Pellebantus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Osseus Pellebantus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Osseus Pellebantus - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Osseus Pellebantus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Osseus Pellebantus - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "Y"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "osseus_pumice",
+   "genusId": "osseus",
+   "name": "Osseus Pumice",
+   "baseValueCr": 3156300,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky_ice",
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "argon",
+     "methane",
+     "nitrogen"
+    ],
+    "maxTemperatureK": 134,
+    "maxGravityG": 0.276,
+    "notes": "Pousse uniquement sur les zones rocheuses, surtout sur Rocky Ice; le plafond de température varie de 51 K à 134 K selon l'atmosphère."
+   },
+   "variants": [
+    {
+     "name": "Osseus Pumice - White",
+     "colour": "Blanc",
+     "material": "Antimony"
+    },
+    {
+     "name": "Osseus Pumice - Peach",
+     "colour": "Pêche",
+     "material": "Polonium"
+    },
+    {
+     "name": "Osseus Pumice - Gold",
+     "colour": "Or",
+     "material": "Ruthenium"
+    },
+    {
+     "name": "Osseus Pumice - Lime",
+     "colour": "Vert lime",
+     "material": "Technetium"
+    },
+    {
+     "name": "Osseus Pumice - Green",
+     "colour": "Vert",
+     "material": "Tellurium"
+    },
+    {
+     "name": "Osseus Pumice - Yellow",
+     "colour": "Jaune",
+     "material": "Yttrium"
+    }
+   ]
+  },
+  {
+   "id": "osseus_spiralis",
+   "genusId": "osseus",
+   "name": "Osseus Spiralis",
+   "baseValueCr": 2404700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "ammonia"
+    ],
+    "minTemperatureK": 160,
+    "maxGravityG": 0.276,
+    "notes": "Pousse uniquement sur les zones rocheuses; aucune contrainte de région galactique."
+   },
+   "variants": [
+    {
+     "name": "Osseus Spiralis - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Osseus Spiralis - Lime",
+     "colour": "Vert lime",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Osseus Spiralis - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Osseus Spiralis - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Osseus Spiralis - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Osseus Spiralis - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Osseus Spiralis - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Osseus Spiralis - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "Y"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "recepta_conditivus",
+   "genusId": "recepta",
+   "name": "Recepta Conditivus",
+   "baseValueCr": 14313700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky",
+     "rocky_ice",
+     "hmc"
+    ],
+    "atmospheres": [
+     "sulphur_dioxide",
+     "carbon_dioxide",
+     "oxygen"
+    ],
+    "maxTemperatureK": 273,
+    "maxGravityG": 0.276,
+    "notes": "Terrain plat, légèrement ondulé; très majoritairement sur corps Icy en atmosphère SO2."
+   },
+   "variants": [
+    {
+     "name": "Recepta Conditivus - Lime",
+     "colour": "Vert lime",
+     "material": "Antimony"
+    },
+    {
+     "name": "Recepta Conditivus - White",
+     "colour": "Blanc",
+     "material": "Polonium"
+    },
+    {
+     "name": "Recepta Conditivus - Yellow",
+     "colour": "Jaune",
+     "material": "Ruthenium"
+    },
+    {
+     "name": "Recepta Conditivus - Aquamarine",
+     "colour": "Aigue-marine",
+     "material": "Technetium"
+    },
+    {
+     "name": "Recepta Conditivus - Cyan",
+     "colour": "Cyan",
+     "material": "Tellurium"
+    },
+    {
+     "name": "Recepta Conditivus - Green",
+     "colour": "Vert",
+     "material": "Yttrium"
+    }
+   ]
+  },
+  {
+   "id": "recepta_deltahedronix",
+   "genusId": "recepta",
+   "name": "Recepta Deltahedronix",
+   "baseValueCr": 16202800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "icy",
+     "hmc",
+     "rocky_ice"
+    ],
+    "atmospheres": [
+     "sulphur_dioxide",
+     "carbon_dioxide",
+     "oxygen"
+    ],
+    "maxTemperatureK": 272,
+    "maxGravityG": 0.276,
+    "notes": "Terrain plat, légèrement ondulé; majoritairement sur corps Rocky, certaines branches plafonnent à 0,238 G."
+   },
+   "variants": [
+    {
+     "name": "Recepta Deltahedronix - Lime",
+     "colour": "Vert lime",
+     "material": "Cadmium"
+    },
+    {
+     "name": "Recepta Deltahedronix - Cyan",
+     "colour": "Cyan",
+     "material": "Mercury"
+    },
+    {
+     "name": "Recepta Deltahedronix - Gold",
+     "colour": "Or",
+     "material": "Molybdenum"
+    },
+    {
+     "name": "Recepta Deltahedronix - Mulberry",
+     "colour": "Mûre",
+     "material": "Niobium"
+    },
+    {
+     "name": "Recepta Deltahedronix - Orange",
+     "colour": "Orange",
+     "material": "Tin"
+    },
+    {
+     "name": "Recepta Deltahedronix - Red",
+     "colour": "Rouge",
+     "material": "Tungsten"
+    }
+   ]
+  },
+  {
+   "id": "recepta_umbrux",
+   "genusId": "recepta",
+   "name": "Recepta Umbrux",
+   "baseValueCr": 12934900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "icy",
+     "rocky",
+     "rocky_ice",
+     "hmc"
+    ],
+    "atmospheres": [
+     "sulphur_dioxide",
+     "carbon_dioxide",
+     "ammonia"
+    ],
+    "maxTemperatureK": 273,
+    "maxGravityG": 0.276,
+    "notes": "Terrain plat, légèrement ondulé ou en pente douce; surtout sur corps Icy en atmosphère SO2."
+   },
+   "variants": [
+    {
+     "name": "Recepta Umbrux - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Recepta Umbrux - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Recepta Umbrux - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Recepta Umbrux - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Recepta Umbrux - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Recepta Umbrux - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Recepta Umbrux - Maroon",
+     "colour": "Bordeaux",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Recepta Umbrux - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Recepta Umbrux - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Recepta Umbrux - Sage",
+     "colour": "Sauge",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Recepta Umbrux - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Recepta Umbrux - Lime",
+     "colour": "Vert lime",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Recepta Umbrux - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Recepta Umbrux - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "albidum_sinuous_tubers",
+   "genusId": "sinuous_tuber",
+   "name": "Albidum Sinuous Tubers",
+   "baseValueCr": 1514500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "iron_magma",
+     "silicate",
+     "rocky"
+    ],
+    "minTemperatureK": 200,
+    "maxTemperatureK": 500,
+    "maxGravityG": 3,
+    "notes": "Régions Canonn 9, 10 et 11 près du cœur galactique ; plafond 3 G sur Rocky mais seulement 0,3 G sur HMC."
+   }
+  },
+  {
+   "id": "blatteum_sinuous_tubers",
+   "genusId": "sinuous_tuber",
+   "name": "Blatteum Sinuous Tubers",
+   "baseValueCr": 1514500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "iron_magma",
+     "silicate",
+     "rocky"
+    ],
+    "minTemperatureK": 200,
+    "maxTemperatureK": 500,
+    "maxGravityG": 3,
+    "notes": "Régions Canonn 6 à 10, 18 et 19 ; plafond 3 G sur Rocky mais seulement 0,5 G sur HMC."
+   }
+  },
+  {
+   "id": "caeruleum_sinuous_tubers",
+   "genusId": "sinuous_tuber",
+   "name": "Caeruleum Sinuous Tubers",
+   "baseValueCr": 1514500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "rocky",
+     "silicate"
+    ],
+    "minTemperatureK": 200,
+    "maxTemperatureK": 500,
+    "maxGravityG": 3,
+    "notes": "Régions Canonn 1 à 5 et 8 à 11, geysers majeurs Rocky/Silicate ; plafond 3 G sur Rocky mais 0,7 G sur HMC."
+   }
+  },
+  {
+   "id": "lindigoticum_sinuous_tubers",
+   "genusId": "sinuous_tuber",
+   "name": "Lindigoticum Sinuous Tubers",
+   "baseValueCr": 1514500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "iron_magma",
+     "silicate",
+     "rocky"
+    ],
+    "minTemperatureK": 200,
+    "maxTemperatureK": 500,
+    "maxGravityG": 2,
+    "notes": "Régions Canonn 4 à 10, 18 et 19 ; plafond 2 G sur Rocky mais seulement 0,5 G sur HMC."
+   }
+  },
+  {
+   "id": "prasinum_sinuous_tubers",
+   "genusId": "sinuous_tuber",
+   "name": "Prasinum Sinuous Tubers",
+   "baseValueCr": 1514500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "iron_magma",
+     "silicate",
+     "rocky"
+    ],
+    "minTemperatureK": 200,
+    "maxTemperatureK": 500,
+    "maxGravityG": 3,
+    "notes": "Régions Canonn 1 à 5 et 8 à 11 ; plafond 3 G sur Rocky mais seulement 0,3 G sur HMC."
+   }
+  },
+  {
+   "id": "roseum_sinuous_tubers",
+   "genusId": "sinuous_tuber",
+   "name": "Roseum Sinuous Tubers",
+   "baseValueCr": 1514500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "rocky",
+     "silicate",
+     "iron_magma"
+    ],
+    "minTemperatureK": 200,
+    "maxTemperatureK": 500,
+    "maxGravityG": 4,
+    "notes": "Présent dans tout le TubersBatch (régions 1 à 11, 18 et 19) ; plafond 4 G sur Rocky mais seulement 0,3 G sur HMC."
+   }
+  },
+  {
+   "id": "violaceum_sinuous_tubers",
+   "genusId": "sinuous_tuber",
+   "name": "Violaceum Sinuous Tubers",
+   "baseValueCr": 1514500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "iron_magma",
+     "silicate",
+     "rocky"
+    ],
+    "minTemperatureK": 200,
+    "maxTemperatureK": 500,
+    "maxGravityG": 3,
+    "notes": "Régions Canonn 2 à 10, 18 et 19 ; plafond 3 G sur Rocky mais seulement 0,5 G sur HMC."
+   }
+  },
+  {
+   "id": "viride_sinuous_tubers",
+   "genusId": "sinuous_tuber",
+   "name": "Viride Sinuous Tubers",
+   "baseValueCr": 1514500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "none"
+    ],
+    "volcanism": [
+     "rocky",
+     "iron_magma",
+     "silicate"
+    ],
+    "minTemperatureK": 200,
+    "maxTemperatureK": 500,
+    "maxGravityG": 2,
+    "notes": "Régions Canonn 3 à 10, 18 et 19 ; plafond 2 G sur Rocky mais seulement 0,3 G sur HMC."
+   }
+  },
+  {
+   "id": "stratum_araneamus",
+   "genusId": "stratum",
+   "name": "Stratum Araneamus",
+   "baseValueCr": 2448900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "sulphur_dioxide"
+    ],
+    "minTemperatureK": 165,
+    "maxTemperatureK": 373,
+    "minGravityG": 0.26,
+    "maxGravityG": 0.57,
+    "notes": "Terrain plat ouvert, aucune contrainte de région; espèce très rare (0,3 % de la population), seule la variante Emerald a été observée."
+   },
+   "variants": [
+    {
+     "name": "Stratum Araneamus - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Stratum Araneamus - Lime",
+     "colour": "Vert lime",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Stratum Araneamus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Stratum Araneamus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Stratum Araneamus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Stratum Araneamus - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Stratum Araneamus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Stratum Araneamus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Stratum Araneamus - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Stratum Araneamus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stratum_cucumisis",
+   "genusId": "stratum",
+   "name": "Stratum Cucumisis",
+   "baseValueCr": 16202800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "sulphur_dioxide",
+     "carbon_dioxide",
+     "oxygen"
+    ],
+    "minTemperatureK": 191,
+    "maxTemperatureK": 373,
+    "maxGravityG": 0.59,
+    "notes": "Terrain plat ouvert; uniquement dans le bras Sagittarius-Carina et la région Centre-Left."
+   },
+   "variants": [
+    {
+     "name": "Stratum Cucumisis - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Stratum Cucumisis - Lime",
+     "colour": "Vert lime",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Stratum Cucumisis - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Stratum Cucumisis - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Stratum Cucumisis - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Stratum Cucumisis - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Stratum Cucumisis - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Stratum Cucumisis - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Stratum Cucumisis - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Stratum Cucumisis - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stratum_excutitus",
+   "genusId": "stratum",
+   "name": "Stratum Excutitus",
+   "baseValueCr": 2448900,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "carbon_dioxide",
+     "sulphur_dioxide",
+     "oxygen"
+    ],
+    "minTemperatureK": 165,
+    "maxTemperatureK": 190,
+    "maxGravityG": 0.49,
+    "notes": "Terrain plat ouvert; uniquement dans le bras Orion-Cygnus et la région Centre-Left."
+   },
+   "variants": [
+    {
+     "name": "Stratum Excutitus - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Stratum Excutitus - Lime",
+     "colour": "Vert lime",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Stratum Excutitus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Stratum Excutitus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Stratum Excutitus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Stratum Excutitus - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Stratum Excutitus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Stratum Excutitus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Stratum Excutitus - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Stratum Excutitus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stratum_frigus",
+   "genusId": "stratum",
+   "name": "Stratum Frigus",
+   "baseValueCr": 2637500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "sulphur_dioxide",
+     "carbon_dioxide",
+     "oxygen"
+    ],
+    "minTemperatureK": 191,
+    "maxTemperatureK": 372,
+    "maxGravityG": 0.56,
+    "notes": "Terrain plat ouvert; bras de Persée et régions 3 et 7."
+   },
+   "variants": [
+    {
+     "name": "Stratum Frigus - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Stratum Frigus - Lime",
+     "colour": "Vert lime",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Stratum Frigus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Stratum Frigus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Stratum Frigus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Stratum Frigus - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Stratum Frigus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Stratum Frigus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Stratum Frigus - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Stratum Frigus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stratum_laminamus",
+   "genusId": "stratum",
+   "name": "Stratum Laminamus",
+   "baseValueCr": 2788300,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "ammonia"
+    ],
+    "minTemperatureK": 161,
+    "maxGravityG": 0.62,
+    "notes": "Terrain plat ouvert; probablement bras Sagittarius-Carina et région Izanami."
+   },
+   "variants": [
+    {
+     "name": "Stratum Laminamus - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Stratum Laminamus - Lime",
+     "colour": "Vert lime",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Stratum Laminamus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Stratum Laminamus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Stratum Laminamus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Stratum Laminamus - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Stratum Laminamus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Stratum Laminamus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Stratum Laminamus - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Stratum Laminamus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stratum_limaxus",
+   "genusId": "stratum",
+   "name": "Stratum Limaxus",
+   "baseValueCr": 1362000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "carbon_dioxide",
+     "sulphur_dioxide",
+     "oxygen"
+    ],
+    "minTemperatureK": 165,
+    "maxTemperatureK": 190,
+    "maxGravityG": 0.48,
+    "notes": "Terrain plat ouvert; bras Scutum-Centaurus, hors Odin's Hold et Galactic Centre."
+   },
+   "variants": [
+    {
+     "name": "Stratum Limaxus - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Stratum Limaxus - Lime",
+     "colour": "Vert lime",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Stratum Limaxus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Stratum Limaxus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Stratum Limaxus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Stratum Limaxus - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Stratum Limaxus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Stratum Limaxus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Stratum Limaxus - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Stratum Limaxus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stratum_paleas",
+   "genusId": "stratum",
+   "name": "Stratum Paleas",
+   "baseValueCr": 1362000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "ammonia",
+     "carbon_dioxide",
+     "water",
+     "oxygen"
+    ],
+    "minTemperatureK": 165,
+    "maxTemperatureK": 447,
+    "maxGravityG": 0.6,
+    "notes": "Terrain plat ouvert, aucune contrainte de région; la branche Water exige T >= 390 K."
+   },
+   "variants": [
+    {
+     "name": "Stratum Paleas - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Stratum Paleas - Lime",
+     "colour": "Vert lime",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Stratum Paleas - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Stratum Paleas - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Stratum Paleas - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Stratum Paleas - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Stratum Paleas - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Stratum Paleas - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Stratum Paleas - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Stratum Paleas - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stratum_tectonicas",
+   "genusId": "stratum",
+   "name": "Stratum Tectonicas",
+   "baseValueCr": 19010800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "hmc"
+    ],
+    "atmospheres": [
+     "sulphur_dioxide",
+     "carbon_dioxide",
+     "ammonia",
+     "water",
+     "oxygen"
+    ],
+    "minTemperatureK": 165,
+    "maxTemperatureK": 450,
+    "maxGravityG": 0.62,
+    "notes": "Terrain plat ouvert sur HMC uniquement, aucune contrainte de région; la branche Water exige T >= 390 K."
+   },
+   "variants": [
+    {
+     "name": "Stratum Tectonicas - Emerald",
+     "colour": "Émeraude",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Stratum Tectonicas - Lime",
+     "colour": "Vert lime",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Stratum Tectonicas - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Stratum Tectonicas - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Stratum Tectonicas - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Stratum Tectonicas - Amethyst",
+     "colour": "Améthyste",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Stratum Tectonicas - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "AEBE"
+     ]
+    },
+    {
+     "name": "Stratum Tectonicas - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Stratum Tectonicas - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Stratum Tectonicas - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tubus_cavas",
+   "genusId": "tubus",
+   "name": "Tubus Cavas",
+   "baseValueCr": 11873200,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 160,
+    "maxTemperatureK": 197,
+    "maxGravityG": 0.153,
+    "notes": "Plaines ouvertes du bras Scutum-Centaurus et du Centre-Gauche galactique, pression >= 0,003 atm."
+   },
+   "variants": [
+    {
+     "name": "Tubus Cavas - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Tubus Cavas - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Tubus Cavas - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Tubus Cavas - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Tubus Cavas - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tubus Cavas - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tubus Cavas - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tubus Cavas - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tubus Cavas - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tubus Cavas - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Tubus Cavas - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tubus Cavas - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Tubus Cavas - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tubus_compagibus",
+   "genusId": "tubus",
+   "name": "Tubus Compagibus",
+   "baseValueCr": 7774700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 160,
+    "maxTemperatureK": 197,
+    "maxGravityG": 0.16,
+    "notes": "Plaines ouvertes du bras Sagittarius-Carina et du Centre-Gauche galactique, pression >= 0,003 atm."
+   },
+   "variants": [
+    {
+     "name": "Tubus Compagibus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Tubus Compagibus - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Tubus Compagibus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Tubus Compagibus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Tubus Compagibus - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tubus Compagibus - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tubus Compagibus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tubus Compagibus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tubus Compagibus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tubus Compagibus - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Tubus Compagibus - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tubus Compagibus - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Tubus Compagibus - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tubus_conifer",
+   "genusId": "tubus",
+   "name": "Tubus Conifer",
+   "baseValueCr": 2415500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 160,
+    "maxTemperatureK": 195.41,
+    "maxGravityG": 0.152,
+    "notes": "Plaines ouvertes du bras Perseus et du Centre-Haut galactique, pression >= 0,003 atm."
+   },
+   "variants": [
+    {
+     "name": "Tubus Conifer - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Tubus Conifer - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Tubus Conifer - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Tubus Conifer - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Tubus Conifer - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tubus Conifer - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tubus Conifer - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tubus Conifer - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tubus Conifer - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tubus Conifer - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Tubus Conifer - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tubus Conifer - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Tubus Conifer - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tubus_rosarium",
+   "genusId": "tubus",
+   "name": "Tubus Rosarium",
+   "baseValueCr": 2637500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky"
+    ],
+    "atmospheres": [
+     "ammonia"
+    ],
+    "minTemperatureK": 160,
+    "maxGravityG": 0.164,
+    "notes": "Plaines ouvertes sans contrainte de région, toléré un volcanisme particulaire mineur."
+   },
+   "variants": [
+    {
+     "name": "Tubus Rosarium - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Tubus Rosarium - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Tubus Rosarium - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Tubus Rosarium - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Tubus Rosarium - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tubus Rosarium - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tubus Rosarium - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tubus Rosarium - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tubus Rosarium - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tubus Rosarium - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Tubus Rosarium - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tubus Rosarium - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Tubus Rosarium - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tubus_sororibus",
+   "genusId": "tubus",
+   "name": "Tubus Sororibus",
+   "baseValueCr": 5727600,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide",
+     "ammonia"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 160,
+    "maxTemperatureK": 195.41,
+    "maxGravityG": 0.153,
+    "notes": "HMC uniquement, branche CO2 dominante (97 %) bornée à 195,41 K alors que la branche Ammoniac (3 %) n'a pas de plafond, pression >= 0,002 atm."
+   },
+   "variants": [
+    {
+     "name": "Tubus Sororibus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "O"
+     ]
+    },
+    {
+     "name": "Tubus Sororibus - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "B"
+     ]
+    },
+    {
+     "name": "Tubus Sororibus - Indigo",
+     "colour": "Indigo",
+     "starClasses": [
+      "A"
+     ]
+    },
+    {
+     "name": "Tubus Sororibus - Grey",
+     "colour": "Gris",
+     "starClasses": [
+      "F"
+     ]
+    },
+    {
+     "name": "Tubus Sororibus - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tubus Sororibus - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tubus Sororibus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tubus Sororibus - Turquoise",
+     "colour": "Turquoise",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tubus Sororibus - Mauve",
+     "colour": "Mauve",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tubus Sororibus - Ocher",
+     "colour": "Ocre",
+     "starClasses": [
+      "TTS"
+     ]
+    },
+    {
+     "name": "Tubus Sororibus - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tubus Sororibus - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "D"
+     ]
+    },
+    {
+     "name": "Tubus Sororibus - Amethyst",
+     "colour": "Amethyste",
+     "starClasses": [
+      "N"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_albata",
+   "genusId": "tussock",
+   "name": "Tussock Albata",
+   "baseValueCr": 3252500,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 175,
+    "maxTemperatureK": 180,
+    "maxGravityG": 0.276,
+    "notes": "Plaines plates entre les montagnes, bras Sagittarius-Carina et Perseus, plafond ramené à 0,238 G sur corps Rocky."
+   },
+   "variants": [
+    {
+     "name": "Tussock Albata - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Albata - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Albata - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Albata - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Albata - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Albata - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Albata - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Albata - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Albata - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_capillum",
+   "genusId": "tussock",
+   "name": "Tussock Capillum",
+   "baseValueCr": 7025800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky_ice",
+     "rocky"
+    ],
+    "atmospheres": [
+     "argon",
+     "methane"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 80,
+    "maxTemperatureK": 129,
+    "minGravityG": 0.22,
+    "maxGravityG": 0.276,
+    "notes": "Quasi exclusivement sur Rocky Ice, seule Tussock à exiger une gravité minimale (0,22 G, voire 0,269 G selon la branche), aucune contrainte de région."
+   },
+   "variants": [
+    {
+     "name": "Tussock Capillum - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Capillum - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Capillum - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Capillum - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Capillum - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Capillum - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Capillum - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Capillum - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Capillum - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_caputus",
+   "genusId": "tussock",
+   "name": "Tussock Caputus",
+   "baseValueCr": 3472400,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 181,
+    "maxTemperatureK": 190,
+    "maxGravityG": 0.276,
+    "notes": "Plaines plates des bras Sagittarius-Carina et Perseus, plafond ramené à 0,238 G sur corps Rocky."
+   },
+   "variants": [
+    {
+     "name": "Tussock Caputus - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Caputus - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Caputus - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Caputus - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Caputus - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Caputus - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Caputus - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Caputus - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Caputus - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_catena",
+   "genusId": "tussock",
+   "name": "Tussock Catena",
+   "baseValueCr": 1766600,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "ammonia"
+    ],
+    "maxGravityG": 0.276,
+    "notes": "Bras Scutum-Centaurus hors région du Centre Galactique, magmas mineurs tolérés."
+   },
+   "variants": [
+    {
+     "name": "Tussock Catena - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Catena - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Catena - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Catena - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Catena - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Catena - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Catena - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Catena - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Catena - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_cultro",
+   "genusId": "tussock",
+   "name": "Tussock Cultro",
+   "baseValueCr": 1766600,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "ammonia"
+    ],
+    "maxGravityG": 0.276,
+    "notes": "Bras Orion-Cygnus et Centre-Gauche (Odin's Hold, Izanami, Inner Orion Spur), geysers de silicate majeurs et magma métallique mineur tolérés."
+   },
+   "variants": [
+    {
+     "name": "Tussock Cultro - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Cultro - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Cultro - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Cultro - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Cultro - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Cultro - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Cultro - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Cultro - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Cultro - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_divisa",
+   "genusId": "tussock",
+   "name": "Tussock Divisa",
+   "baseValueCr": 1766600,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "ammonia"
+    ],
+    "maxGravityG": 0.276,
+    "notes": "Bras Perseus (et région 3), géologie mineure tolérée."
+   },
+   "variants": [
+    {
+     "name": "Tussock Divisa - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Divisa - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Divisa - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Divisa - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Divisa - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Divisa - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Divisa - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Divisa - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Divisa - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_ignis",
+   "genusId": "tussock",
+   "name": "Tussock Ignis",
+   "baseValueCr": 1849000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 161,
+    "maxTemperatureK": 170,
+    "maxGravityG": 0.196,
+    "notes": "Bras Sagittarius-Carina et Perseus, gravité très limitée (0,171 G sur Rocky, 0,196 G sur HMC)."
+   },
+   "variants": [
+    {
+     "name": "Tussock Ignis - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Ignis - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Ignis - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Ignis - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Ignis - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Ignis - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Ignis - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Ignis - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Ignis - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_pennata",
+   "genusId": "tussock",
+   "name": "Tussock Pennata",
+   "baseValueCr": 5853800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 145,
+    "maxTemperatureK": 154,
+    "maxGravityG": 0.79,
+    "notes": "Bras Sagittarius-Carina et Perseus, plafond de 0,09 G sur Rocky contre 0,79 G sur la branche HMC."
+   },
+   "variants": [
+    {
+     "name": "Tussock Pennata - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Pennata - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Pennata - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Pennata - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Pennata - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Pennata - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Pennata - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Pennata - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Pennata - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_pennatis",
+   "genusId": "tussock",
+   "name": "Tussock Pennatis",
+   "baseValueCr": 1000000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 146,
+    "maxTemperatureK": 195.41,
+    "maxGravityG": 0.276,
+    "notes": "Outer Arm et Centre-Droit galactique, plafond ramené à 0,238 G sur corps Rocky."
+   },
+   "variants": [
+    {
+     "name": "Tussock Pennatis - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Pennatis - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Pennatis - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Pennatis - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Pennatis - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Pennatis - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Pennatis - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Pennatis - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Pennatis - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_propagito",
+   "genusId": "tussock",
+   "name": "Tussock Propagito",
+   "baseValueCr": 1000000,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 145,
+    "maxTemperatureK": 195.41,
+    "maxGravityG": 0.276,
+    "notes": "Bras Scutum-Centaurus et Centre-Gauche, plafond ramené à 0,238 G sur corps Rocky."
+   },
+   "variants": [
+    {
+     "name": "Tussock Propagito - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Propagito - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Propagito - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Propagito - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Propagito - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Propagito - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Propagito - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Propagito - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Propagito - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_serrati",
+   "genusId": "tussock",
+   "name": "Tussock Serrati",
+   "baseValueCr": 4447100,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 171,
+    "maxTemperatureK": 174,
+    "maxGravityG": 0.227,
+    "notes": "Bras Sagittarius-Carina et Perseus, fenêtre thermique très étroite, plafond 0,198 G sur Rocky et 0,227 G sur HMC."
+   },
+   "variants": [
+    {
+     "name": "Tussock Serrati - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Serrati - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Serrati - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Serrati - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Serrati - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Serrati - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Serrati - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Serrati - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Serrati - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_stigmasis",
+   "genusId": "tussock",
+   "name": "Tussock Stigmasis",
+   "baseValueCr": 19010800,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "sulphur_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 132,
+    "maxTemperatureK": 168,
+    "maxGravityG": 0.276,
+    "notes": "Aucune contrainte de région, fenêtre 132-168 K sur HMC mais seulement <= 152 K sur corps Rocky."
+   },
+   "variants": [
+    {
+     "name": "Tussock Stigmasis - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Stigmasis - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Stigmasis - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Stigmasis - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Stigmasis - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Stigmasis - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Stigmasis - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Stigmasis - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Stigmasis - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_triticum",
+   "genusId": "tussock",
+   "name": "Tussock Triticum",
+   "baseValueCr": 7774700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none"
+    ],
+    "minTemperatureK": 191,
+    "maxTemperatureK": 195.41,
+    "maxGravityG": 0.276,
+    "notes": "Bras Sagittarius-Carina et Perseus, corps CO2 très chauds, plafond ramené à 0,238 G sur Rocky."
+   },
+   "variants": [
+    {
+     "name": "Tussock Triticum - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Triticum - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Triticum - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Triticum - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Triticum - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Triticum - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Triticum - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Triticum - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Triticum - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_ventusa",
+   "genusId": "tussock",
+   "name": "Tussock Ventusa",
+   "baseValueCr": 3227700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "minTemperatureK": 155,
+    "maxTemperatureK": 160,
+    "maxGravityG": 0.16,
+    "notes": "Bras Sagittarius-Carina et Perseus, gravité très basse (0,13 G sur Rocky, 0,16 G sur HMC), geysers de CO2 mineurs tolérés."
+   },
+   "variants": [
+    {
+     "name": "Tussock Ventusa - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Ventusa - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Ventusa - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Ventusa - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Ventusa - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Ventusa - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Ventusa - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Ventusa - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Ventusa - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tussock_virgam",
+   "genusId": "tussock",
+   "name": "Tussock Virgam",
+   "baseValueCr": 14313700,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "rocky",
+     "hmc"
+    ],
+    "atmospheres": [
+     "water"
+    ],
+    "minTemperatureK": 390,
+    "maxGravityG": 0.276,
+    "notes": "Mondes brûlants à atmosphère d'eau sans contrainte de région, gravité réelle observée très basse (0,04-0,06 G), magma d'eau mineur toléré."
+   },
+   "variants": [
+    {
+     "name": "Tussock Virgam - Yellow",
+     "colour": "Jaune",
+     "starClasses": [
+      "F",
+      "N"
+     ]
+    },
+    {
+     "name": "Tussock Virgam - Lime",
+     "colour": "Vert citron",
+     "starClasses": [
+      "G"
+     ]
+    },
+    {
+     "name": "Tussock Virgam - Green",
+     "colour": "Vert",
+     "starClasses": [
+      "K"
+     ]
+    },
+    {
+     "name": "Tussock Virgam - Emerald",
+     "colour": "Emeraude",
+     "starClasses": [
+      "M"
+     ]
+    },
+    {
+     "name": "Tussock Virgam - Sage",
+     "colour": "Vert sauge",
+     "starClasses": [
+      "L"
+     ]
+    },
+    {
+     "name": "Tussock Virgam - Teal",
+     "colour": "Sarcelle",
+     "starClasses": [
+      "T"
+     ]
+    },
+    {
+     "name": "Tussock Virgam - Red",
+     "colour": "Rouge",
+     "starClasses": [
+      "Y"
+     ]
+    },
+    {
+     "name": "Tussock Virgam - Orange",
+     "colour": "Orange",
+     "starClasses": [
+      "W"
+     ]
+    },
+    {
+     "name": "Tussock Virgam - Maroon",
+     "colour": "Marron",
+     "starClasses": [
+      "D"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "radicoida_unica",
+   "genusId": "radicoida",
+   "name": "Radicoida Unica",
+   "baseValueCr": 119037,
+   "reliability": "COM",
+   "conditions": {
+    "planetClasses": [
+     "hmc",
+     "rocky"
+    ],
+    "atmospheres": [
+     "carbon_dioxide"
+    ],
+    "volcanism": [
+     "none",
+     "silicate"
+    ],
+    "minTemperatureK": 467,
+    "maxTemperatureK": 699,
+    "minGravityG": 0.05,
+    "maxGravityG": 0.38,
+    "notes": "Uniquement dans HIP 87621 (système permit-locked), signal classé « Other » sans overlay exobiologie au DSS, et seuls les arbres de taille moyenne (~30 m) sont scannables."
+   }
+  }
+ ]
+}

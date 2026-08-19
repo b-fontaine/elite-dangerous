@@ -1,0 +1,2174 @@
+{
+  "id": "protocole-milliard",
+  "title": "Protocole 1 milliard de crédits",
+  "kicker": "Caspian « USS Enterprise » (TAI-CE) · Procédure ordonnée",
+  "deck": "De 45 480 912 Cr à 1 000 000 000 Cr par l'exploration et l'exobiologie : reconfiguration du Caspian, ingénierie Farseer, combinaison Artemis, apprentissage près de la Bulle, puis expédition lointaine en first footfall ×5.",
+  "byline": "Départ : Cubeo · 0 ingénieur débloqué · sessions de 1-2h",
+  "edition": "2026-08",
+  "topics": [
+    "exobiologie",
+    "exploration",
+    "ingénierie",
+    "crédits",
+    "caspian",
+    "nomad"
+  ],
+  "estimatedReadMinutes": 17,
+  "sections": [
+    {
+      "id": "objectif",
+      "number": 1,
+      "title": "Objectif : 1 000 000 000 Cr par exploration + exobiologie",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Départ : Cubeo · 45 480 912 Cr · 0 ingénieur débloqué · sessions de 1-2h**",
+          "emphasis": "intro"
+        },
+        {
+          "type": "paragraph",
+          "text": "Niveaux de confiance utilisés dans tout le document :",
+          "emphasis": "normal"
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {
+              "label": "[OFF]",
+              "value": "officiel / wiki",
+              "reliability": "official"
+            },
+            {
+              "label": "[COM]",
+              "value": "communauté",
+              "reliability": "community"
+            },
+            {
+              "label": "[EST]",
+              "value": "estimation à vérifier sur EDSY",
+              "reliability": "estimate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decisions-tranchees",
+      "number": 2,
+      "title": "DÉCISIONS TRANCHÉES (à lire avant tout)",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Guardian FSD Booster → **NON**",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Critère",
+            "Chiffre"
+          ],
+          "caption": "Guardian FSD Booster : le calcul complet",
+          "rows": [
+            [
+              {
+                "text": "Gain",
+                "style": "strong"
+              },
+              {
+                "text": "+10,5 LY (booster 5H) [COM]",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Coût réel",
+                "style": "strong"
+              },
+              {
+                "text": "3-6 h de jeu = **2 à 4 de tes sessions**, dont du combat contre des Sentinels",
+                "style": "lose"
+              }
+            ],
+            [
+              {
+                "text": "Ton rang combat",
+                "style": "strong"
+              },
+              {
+                "text": "Harmless (rang 0)",
+                "style": "lose"
+              }
+            ],
+            [
+              {
+                "text": "Gain relatif",
+                "style": "strong"
+              },
+              {
+                "text": "~15 % sur une base de ~70 LY",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Alternative gratuite",
+                "style": "strong"
+              },
+              {
+                "text": "Ton **FSD SCO Mk II** boost neutron à **500 %** (vs 400 % standard) et **sans les 1 % de dégâts** [OFF]",
+                "style": "win"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict : on saute.",
+          "text": "Farseer G5 sur le FSD rapporte davantage, sans combat, en moins de temps. Le neutron highway fait le gros du travail sur les longues distances. Tu pourras y revenir plus tard, les modules se rachètent."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Conséquence directe : on retire TOUTES les armes.** Le build devient cohérent.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Ce que le Nomad change réellement [OFF — wiki, juin 2026]",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Fait vérifié",
+            "Impact sur toi"
+          ],
+          "caption": "Nomad : faits vérifiés et conséquences concrètes",
+          "rows": [
+            [
+              {
+                "text": "La **Fighter Hangar est renommée Vessel Hangar** (Operations, juin 2026)",
+                "style": "normal"
+              },
+              {
+                "text": "Ton `int_fighterbay_size5_class1` = Vessel Hangar taille 5 **Mk I**",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Le **Mk II Vessel Hangar est exclusif au Caspian, au Panther Clipper Mk II et au Type-11**",
+                "style": "normal"
+              },
+              {
+                "text": "Tu as accès à un module rare — **à évaluer en Phase 1**",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "Nomad = **MK II Discovery Scanner** intégré, détecte les **signaux biologiques depuis le cockpit**",
+                "style": "normal"
+              },
+              {
+                "text": "Ton vrai accélérateur exobio",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "Altitude minimale de lancement : **500 m**",
+                "style": "number"
+              },
+              {
+                "text": "Tu dois descendre sous 500 m avant de larguer",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Lancement possible en orbite, mais **descente très longue**",
+                "style": "normal"
+              },
+              {
+                "text": "**Descends d'abord**, largue ensuite",
+                "style": "mid"
+              }
+            ],
+            [
+              {
+                "text": "Le vaisseau-mère **suit automatiquement à distance, ou peut être congédié**",
+                "style": "normal"
+              },
+              {
+                "text": "Ton usage est confirmé et correct",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Pas de soute** : le Nomad ne récupère ni matériaux ni marchandises",
+                "style": "normal"
+              },
+              {
+                "text": "⚠️ Garde le SRV pour les matériaux d'ingénierie",
+                "style": "mid"
+              }
+            ],
+            [
+              {
+                "text": "**Si le Nomad est détruit, tu perds TOUTES tes données d'exobiologie**",
+                "style": "normal"
+              },
+              {
+                "text": "⚠️⚠️ **Le risque n°1 de tout ce plan**",
+                "style": "lose"
+              }
+            ],
+            [
+              {
+                "text": "Achat ARX = redéploiements infinis · achat crédits = **stock limité, à réapprovisionner au marché**",
+                "style": "normal"
+              },
+              {
+                "text": "Vérifie ton compteur avant de partir loin",
+                "style": "normal"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Règle absolue",
+          "text": "Le Nomad n'est pas un SRV. Un crash = des heures perdues. Pose-toi lentement, sur terrain plat, sans figures."
+        }
+      ]
+    },
+    {
+      "id": "phase-1-reconfigurer-le-caspian",
+      "number": 3,
+      "title": "PHASE 1 — RECONFIGURER LE CASPIAN",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Où : Cubeo · Durée : 1 session · Coût net : positif (tu récupères des crédits)**",
+          "emphasis": "intro"
+        },
+        {
+          "type": "heading",
+          "text": "1.1 À RETIRER / VENDRE (Outfitting → vendre)",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Slot",
+            "Module",
+            "Pourquoi"
+          ],
+          "caption": "Les 13 modules à vendre à Cubeo",
+          "rows": [
+            [
+              {
+                "text": "mediumhardpoint2",
+                "style": "normal"
+              },
+              {
+                "text": "Burst Laser tourelle",
+                "style": "strong"
+              },
+              {
+                "text": "Décision Guardian = non",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "mediumhardpoint3",
+                "style": "normal"
+              },
+              {
+                "text": "Pulse Laser gimballed",
+                "style": "strong"
+              },
+              {
+                "text": "idem",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "mediumhardpoint4",
+                "style": "normal"
+              },
+              {
+                "text": "Pulse Laser gimballed",
+                "style": "strong"
+              },
+              {
+                "text": "idem",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "mediumhardpoint5",
+                "style": "normal"
+              },
+              {
+                "text": "Multi-cannon tourelle",
+                "style": "strong"
+              },
+              {
+                "text": "idem",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "tinyhardpoint2",
+                "style": "normal"
+              },
+              {
+                "text": "Frame Shift Wake Scanner",
+                "style": "strong"
+              },
+              {
+                "text": "Zéro usage en exploration",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "tinyhardpoint4",
+                "style": "normal"
+              },
+              {
+                "text": "Chaff Launcher",
+                "style": "strong"
+              },
+              {
+                "text": "Anti-combat",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "tinyhardpoint5",
+                "style": "normal"
+              },
+              {
+                "text": "Pulse Wave Analyser cl.4",
+                "style": "strong"
+              },
+              {
+                "text": "**Module de minage**",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "tinyhardpoint6",
+                "style": "normal"
+              },
+              {
+                "text": "ECM",
+                "style": "strong"
+              },
+              {
+                "text": "Anti-missile",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "slot03_size6",
+                "style": "normal"
+              },
+              {
+                "text": "AFMU 6A (2ᵉ)",
+                "style": "strong"
+              },
+              {
+                "text": "Redondant",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "slot04_size5",
+                "style": "normal"
+              },
+              {
+                "text": "AFMU 5A (3ᵉ)",
+                "style": "strong"
+              },
+              {
+                "text": "Redondant",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "slot06_size5",
+                "style": "normal"
+              },
+              {
+                "text": "Repair Limpet Controller 5D",
+                "style": "strong"
+              },
+              {
+                "text": "AFMU + prudence suffisent",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "slot10_size3",
+                "style": "normal"
+              },
+              {
+                "text": "Cargo Rack 3E",
+                "style": "strong"
+              },
+              {
+                "text": "Un seul rack suffit",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "slot11_size2",
+                "style": "normal"
+              },
+              {
+                "text": "Research Limpet Controller",
+                "style": "strong"
+              },
+              {
+                "text": "Données Thargoïd, hors sujet",
+                "style": "normal"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Garde 1 seul Heat Sink Launcher** (tinyhardpoint1)",
+              "detail": "Indispensable pour le SCO"
+            },
+            {
+              "text": "**Garde impérativement**",
+              "detail": "Vessel Hangar taille 5 (Nomad), Planetary Vehicle Hangar taille 4 (2 SRV), Fuel Scoop 7A, 1× AFMU 6A, Shield Generator, DSS, Supercruise Assist, Advanced Docking Computer"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "1.2 À ÉVALUER SUR PLACE — le Mk II Vessel Hangar",
+          "level": 3
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Dans l'Outfitting, cherche **Vessel Hangar Mk II** (taille 5)"
+            },
+            {
+              "text": "Compare **masse** et **prix** avec ton Mk I actuel"
+            },
+            {
+              "text": "**Prends-le seulement s'il est plus léger ou de masse égale.**",
+              "detail": "S'il est plus lourd, garde ton Mk I : le Nomad fonctionne avec les deux [OFF]"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "1.3 À ALLÉGER (downsize, rester en D-rated)",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Module",
+            "Actuel",
+            "Cible"
+          ],
+          "caption": "Downsize module par module",
+          "rows": [
+            [
+              {
+                "text": "Sensors",
+                "style": "strong"
+              },
+              {
+                "text": "8D",
+                "style": "number"
+              },
+              {
+                "text": "Plus petit D possible",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "Life Support",
+                "style": "strong"
+              },
+              {
+                "text": "5D",
+                "style": "number"
+              },
+              {
+                "text": "Plus petit D fonctionnel",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "Power Distributor",
+                "style": "strong"
+              },
+              {
+                "text": "7A",
+                "style": "number"
+              },
+              {
+                "text": "Petit D (juste de quoi booster)",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "Power Plant",
+                "style": "strong"
+              },
+              {
+                "text": "8A",
+                "style": "number"
+              },
+              {
+                "text": "Le plus petit **A** qui alimente tout",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "Fuel Tank",
+                "style": "strong"
+              },
+              {
+                "text": "7C (128 t)",
+                "style": "number"
+              },
+              {
+                "text": "**Taille 5-6**",
+                "style": "mid"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Attention Fuel Tank",
+          "text": "Le SCO en overcharge consomme énormément. Ne descends pas sous la taille 5, ou tu resteras en panne sèche loin de tout."
+        },
+        {
+          "type": "heading",
+          "text": "1.4 PORTÉE DE SAUT — avant / après [EST]",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Configuration",
+            "Portée estimée"
+          ],
+          "caption": "Ce que le nettoyage et l'ingénierie rapportent en portée",
+          "rows": [
+            [
+              {
+                "text": "Ton build actuel, réservoir plein",
+                "style": "normal"
+              },
+              {
+                "text": "**~40-48 LY**",
+                "style": "lose"
+              }
+            ],
+            [
+              {
+                "text": "Après nettoyage, **sans** ingénierie",
+                "style": "normal"
+              },
+              {
+                "text": "~55-62 LY",
+                "style": "mid"
+              }
+            ],
+            [
+              {
+                "text": "Après nettoyage **+ Farseer FSD G5 + Mass Manager**",
+                "style": "normal"
+              },
+              {
+                "text": "**~68-75 LY**",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "Théorique sans Vessel Hangar ni Vehicle Hangar",
+                "style": "normal"
+              },
+              {
+                "text": "~89 LY [COM]",
+                "style": "number"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Coût de ta contrainte Nomad + 2 SRV : environ 15-20 LY.** C'est ton choix et il est défendable — le Nomad te fait gagner plus de temps en exobio qu'il ne t'en coûte en trajet.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Vérifie tes chiffres réels sur edsy.org**",
+              "detail": "Charge ton loadout, teste les variantes avant d'acheter"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "1.5 Où trouver les pièces manquantes depuis Cubeo",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Je ne connais pas l'inventaire temps réel des stations de Cubeo, et l'Outfitting varie d'une station à l'autre. Procédure exacte plutôt qu'une supposition :",
+          "emphasis": "normal"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Va sur **inara.cz** → **Galaxy** → **Nearest outfitting**"
+            },
+            {
+              "text": "Système de référence : **Cubeo** · coche **Large pad** (le Caspian est un grand vaisseau)"
+            },
+            {
+              "text": "Cherche module par module (ex. « Power Plant 6A », « Sensors 3D »)"
+            },
+            {
+              "text": "Trie par distance, note les 2-3 stations couvrant le plus de pièces d'un coup"
+            },
+            {
+              "text": "Alternative : **edsm.net**",
+              "detail": "Fiche système → onglet **Stations** → **Outfitting**"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Astuce",
+          "text": "Cubeo est un gros système impérial. Tu trouveras probablement 80 % des pièces sur place. Fais une seule tournée, pas cinq allers-retours."
+        },
+        {
+          "type": "verdict",
+          "title": "✅ Tu passes en Phase 2 quand :",
+          "text": "Armes retirées, modules allégés, portée ≥ 55 LY, Nomad et 2 SRV toujours à bord."
+        }
+      ]
+    },
+    {
+      "id": "phase-2-ingenierie-depuis-zero",
+      "number": 4,
+      "title": "PHASE 2 — INGÉNIERIE DEPUIS ZÉRO",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Durée : 3-5 sessions · Le seul ingénieur qui compte vraiment : Farseer**",
+          "emphasis": "intro"
+        },
+        {
+          "type": "heading",
+          "text": "2.1 Felicity Farseer — PRIORITÉ ABSOLUE",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "**Où : Deciat** (planète Deciat 6 A, base **Farseer Inc**)",
+          "emphasis": "normal"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Étape",
+            "Détail"
+          ],
+          "caption": "Débloquer et monter Felicity Farseer",
+          "rows": [
+            [
+              {
+                "text": "Rang requis",
+                "style": "strong"
+              },
+              {
+                "text": "Explorer **Scout** — tu es **Pathfinder** ✅ déjà acquis",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "Invitation",
+                "style": "strong"
+              },
+              {
+                "text": "Fournir **1 Meta-Alloy**",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Où trouver le Meta-Alloy",
+                "style": "strong"
+              },
+              {
+                "text": "Achetable sur certains marchés (Inara → « Meta-Alloys » → **Find trade offer**) — région de **Maia** historiquement. Beaucoup de Fleet Carriers en vendent",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Réputation → Grade 5",
+                "style": "strong"
+              },
+              {
+                "text": "Lui **vendre des données d'exploration** : ~**24 M Cr** de données au total [COM]",
+                "style": "number"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Session A**",
+              "detail": "Acheter 1 Meta-Alloy (via Inara **Find trade offer**)"
+            },
+            {
+              "text": "**Session B**",
+              "detail": "Aller à Deciat, débloquer Farseer"
+            },
+            {
+              "text": "**Sessions suivantes**",
+              "detail": "Lui vendre TOUTES tes données d'exploration jusqu'au Grade 5"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Synergie",
+          "text": "Tes tournées de scan de la Phase 4 servent double — argent **et** montée de Farseer. Ne vends pas ailleurs tant que tu n'es pas G5."
+        },
+        {
+          "type": "heading",
+          "text": "2.2 Ce qu'il faut lui demander, dans l'ordre",
+          "level": 3
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**FSD → Increased Range** G1 → G5"
+            },
+            {
+              "text": "**Effet expérimental → Mass Manager** (débloqué au G5)"
+            },
+            {
+              "text": "**Sensors → Lightweight** (gain de masse gratuit)"
+            },
+            {
+              "text": "Thrusters : **ne touche pas** — tes Gravity Optimised Mk II sont déjà excellents"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2.3 Les autres ingénieurs",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "**Aucun n'est nécessaire.** Elvira Martuuk (FSD, plus faible), The Dweller, Lei Cheung : hors sujet pour ton objectif. **Ne disperse pas ton temps de jeu.**",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "2.4 Matériaux pour FSD Increased Range — farm SANS combat",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Catégorie",
+            "Où farmer",
+            "Méthode"
+          ],
+          "caption": "Farm de matériaux sans une seule ligne de combat",
+          "rows": [
+            [
+              {
+                "text": "**Raw** (bruts)",
+                "style": "strong"
+              },
+              {
+                "text": "Surface de planètes en **SRV**",
+                "style": "normal"
+              },
+              {
+                "text": "Cratères de matériaux, filons de surface. Le DSS révèle les zones géologiques",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**Encoded** (données)",
+                "style": "strong"
+              },
+              {
+                "text": "**Jameson Crash Site** (HIP 12099, planète 1 B)",
+                "style": "normal"
+              },
+              {
+                "text": "Site de crash, boucle en SRV, aucune opposition. La référence historique",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**Manufactured**",
+                "style": "strong"
+              },
+              {
+                "text": "**HGE** (High Grade Emissions)",
+                "style": "normal"
+              },
+              {
+                "text": "Signaux en supercruise dans les systèmes en **Boom/War**. Récupère au cargo scoop",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Tout",
+                "style": "strong"
+              },
+              {
+                "text": "**Material Traders**",
+                "style": "normal"
+              },
+              {
+                "text": "Échange tes surplus. Taux défavorable mais gain de temps énorme",
+                "style": "normal"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Fais UNE session dédiée matériaux plutôt que des allers-retours"
+            }
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "✅ Tu passes en Phase 3 quand :",
+          "text": "FSD en Increased Range G5 + Mass Manager posé, portée ≥ 68 LY."
+        }
+      ]
+    },
+    {
+      "id": "phase-3-la-combinaison-artemis",
+      "number": 5,
+      "title": "PHASE 3 — LA COMBINAISON ARTEMIS",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Durée : 1 session pour l'essentiel, le reste en fond de tâche**",
+          "emphasis": "intro"
+        },
+        {
+          "type": "heading",
+          "text": "3.1 Règles de base [OFF]",
+          "level": 3
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "On **achète et on monte en grade** la combinaison à **Pioneer Supplies** (dans le concourse)",
+            "On **installe les mods** chez les **ingénieurs à pied** (différents des ingénieurs de vaisseau)",
+            "⚠️ **Impossible de modifier une combinaison Grade 1.** Il faut d'abord la passer **Grade 2**",
+            "⚠️ Un mod installé **ne peut jamais être retiré ni remplacé**. Réfléchis avant"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3.2 Étapes",
+          "level": 3
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Acheter l'**Artemis Suit** à Pioneer Supplies (Cubeo ou station voisine avec concourse)"
+            },
+            {
+              "text": "La monter **Grade 1 → Grade 2** minimum (matériaux + crédits, sur place)"
+            },
+            {
+              "text": "**Avant de grinder** : inspecte les **combinaisons premium pré-moddées** en vitrine à Pioneer Supplies",
+              "detail": "Le wiki le dit franchement — c'est **beaucoup plus rapide et facile que l'ingénierie**. Chaque boutique a un stock exclusif limité. **Regarde à chaque station où tu t'arrêtes**"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3.3 Les mods qui comptent pour l'exobio",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Mod",
+            "Effet",
+            "Ingénieur",
+            "Accessible pour toi ?"
+          ],
+          "caption": "Les quatre mods de combinaison utiles",
+          "rows": [
+            [
+              {
+                "text": "**Improved Battery Capacity**",
+                "style": "strong"
+              },
+              {
+                "text": "+50 % batterie — compense la **forte consommation du Genetic Sampler**",
+                "style": "normal"
+              },
+              {
+                "text": "Wellington Beck, Oden Geiger (Bulle) · Rosa Dayette (Colonia)",
+                "style": "normal"
+              },
+              {
+                "text": "✅ **Priorité n°1**",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Extra Backpack Capacity**",
+                "style": "strong"
+              },
+              {
+                "text": "Plus d'inventaire",
+                "style": "normal"
+              },
+              {
+                "text": "Domino Green, Wellington Beck · Rosa Dayette",
+                "style": "normal"
+              },
+              {
+                "text": "✅ Oui",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Improved Jump Assist**",
+                "style": "strong"
+              },
+              {
+                "text": "Meilleurs sauts — utile pour les grandes Colony Range",
+                "style": "normal"
+              },
+              {
+                "text": "Hero Ferrari, **Yarden Bond**",
+                "style": "normal"
+              },
+              {
+                "text": "⚠️ Voir ci-dessous",
+                "style": "mid"
+              }
+            ],
+            [
+              {
+                "text": "Increased Sprint Duration",
+                "style": "strong"
+              },
+              {
+                "text": "Sprint plus long",
+                "style": "normal"
+              },
+              {
+                "text": "divers",
+                "style": "normal"
+              },
+              {
+                "text": "✅ Confort",
+                "style": "win"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3.4 Déblocage des ingénieurs à pied — ce qui t'est ouvert",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Tu es **Mercenary Defenceless** (rang 0). Tri sans complaisance :",
+          "emphasis": "normal"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Ingénieur",
+            "Condition",
+            "Combat ?"
+          ],
+          "caption": "Quels ingénieurs à pied sont réellement atteignables",
+          "rows": [
+            [
+              {
+                "text": "**Domino Green** (Orishis)",
+                "style": "strong"
+              },
+              {
+                "text": "Voyager **100 LY en navettes Apex** + fournir **5 Push**",
+                "style": "normal"
+              },
+              {
+                "text": "✅ **Aucun combat**",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Wellington Beck** (Jolapa)",
+                "style": "strong"
+              },
+              {
+                "text": "Vendre **25 médias** (Multimedia / Classic Entertainment / Cat media) aux barmen + **5 Insight Entertainment Suites**",
+                "style": "normal"
+              },
+              {
+                "text": "✅ **Aucun combat**",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Kit Fowler** (Capova)",
+                "style": "strong"
+              },
+              {
+                "text": "Vendre **20 opinion polls** aux barmen + **5 Surveillance Equipment**",
+                "style": "normal"
+              },
+              {
+                "text": "✅ Aucun combat",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Yarden Bond**",
+                "style": "strong"
+              },
+              {
+                "text": "Vendre **8 smear campaigns** aux barmen",
+                "style": "normal"
+              },
+              {
+                "text": "✅ Aucun combat",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "**Hero Ferrari** (Siris)",
+                "style": "strong"
+              },
+              {
+                "text": "**10 surface conflict zones** + 15 Settlement Defense Plans",
+                "style": "normal"
+              },
+              {
+                "text": "❌ **Bloqué pour toi**",
+                "style": "lose"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Ton parcours** : Domino Green → Wellington Beck",
+              "detail": "Ça te donne Battery Capacity + Backpack. Suffisant"
+            },
+            {
+              "text": "**Yarden Bond** te donne Improved Jump Assist **sans combat**, en contournant Hero Ferrari",
+              "detail": "À faire si tu accroches"
+            },
+            {
+              "text": "**Note** : les ingénieurs de **Colonia** (Rosa Dayette, Baltanos, Eleanor Bresa, Yi Shen) proposent les mêmes mods et sont **plus faciles à débloquer** [COM]",
+              "detail": "À garder en tête si ton expédition de Phase 5 passe par là"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Comment trouver les matériaux de déblocage",
+          "text": "Inara → **Engineers** → l'ingénieur → clique sur le matériau → bouton **« Find Trade Offer »**. Ça liste les Fleet Carriers et stations qui en vendent."
+        },
+        {
+          "type": "verdict",
+          "title": "✅ Tu passes en Phase 4 quand :",
+          "text": "Artemis Grade 2+ avec Improved Battery Capacity."
+        }
+      ]
+    },
+    {
+      "id": "phase-4-apprentissage-pres-de-la-bulle",
+      "number": 6,
+      "title": "PHASE 4 — APPRENTISSAGE PRÈS DE LA BULLE",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Durée : 4-8 sessions · Objectif : apprendre les gestes, pas maximiser**",
+          "emphasis": "intro"
+        },
+        {
+          "type": "heading",
+          "text": "4.1 Keybinds à configurer AVANT (5 min)",
+          "level": 3
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Ship Mode Switch (Combat ↔ Analysis)"
+            },
+            {
+              "text": "Enter FSS Mode"
+            },
+            {
+              "text": "Enter DSS Mode + tir de sonde"
+            },
+            {
+              "text": "Répartition des pips SYS / ENG / WEP"
+            },
+            {
+              "text": "Boost"
+            },
+            {
+              "text": "Deploy / Recall Vessel (Nomad)",
+              "detail": "Via **Role Panel**"
+            },
+            {
+              "text": "Heat Sink"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "4.2 Séquence de scan d'un système — checklist de gestes",
+          "level": 3
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Sortie de saut → **écarte-toi de l'étoile immédiatement** (surchauffe)"
+            },
+            {
+              "text": "Bascule en **Analysis Mode**"
+            },
+            {
+              "text": "**Maintiens le tir primaire** → « honk » (Discovery Scanner)"
+            },
+            {
+              "text": "**Scoope du carburant** si l'étoile est scoopable (classes K, G, B, F, O, A, M)"
+            },
+            {
+              "text": "Entre en **FSS** → balaie les fréquences → résous chaque corps"
+            },
+            {
+              "text": "Repère les corps affichant **« Biological Signals »** → ce sont tes cibles"
+            },
+            {
+              "text": "Ne **DSS que** : Earth-Like, Water Worlds, Ammonia Worlds, tout terraformable, **et tout corps à signaux bio**"
+            },
+            {
+              "text": "En orbite, tire les sondes jusqu'à **100 %** (vise le limbe pour la face cachée)"
+            },
+            {
+              "text": "Ignore le reste. Saute"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Erreur fréquente",
+          "text": "Tout cartographier. Les corps rocheux/glacés sans bio ne valent pas les 90 secondes."
+        },
+        {
+          "type": "heading",
+          "text": "4.3 Séquence exobio avec le Nomad — checklist de gestes",
+          "level": 3
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Cible la planète à signaux bio, entre en orbite"
+            },
+            {
+              "text": "**Descends sous 500 m d'altitude** avec le Caspian",
+              "detail": "Ne largue PAS depuis l'orbite : la descente du Nomad est très longue [OFF]"
+            },
+            {
+              "text": "Role Panel → **déploie le Nomad**"
+            },
+            {
+              "text": "Le Caspian suit automatiquement, ou **congédie-le** via le menu"
+            },
+            {
+              "text": "Utilise le **MK II Discovery Scanner du Nomad** pour repérer les signaux bio depuis le cockpit"
+            },
+            {
+              "text": "Pose-toi **lentement, terrain plat**"
+            },
+            {
+              "text": "Sors à pied → **Scan Pulse** (touche 5 par défaut)",
+              "detail": "**Vert** = espèce à scanner / en cours · **Bleu** = déjà fait ou trop proche · **Violet** = autre espèce"
+            },
+            {
+              "text": "Récolte **3 échantillons** de la même espèce, en respectant la **Colony Range**"
+            },
+            {
+              "text": "Rappelle le Caspian, rembarque, système suivant"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "4.4 Colony Range (distance minimale entre échantillons)",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Genre",
+            "Distance"
+          ],
+          "caption": "Distance minimale à respecter entre deux échantillons",
+          "rows": [
+            [
+              {
+                "text": "Fumerola",
+                "style": "strong"
+              },
+              {
+                "text": "100 m",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Clypeus, Recepta, Aleoida",
+                "style": "strong"
+              },
+              {
+                "text": "150 m",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Tussock",
+                "style": "strong"
+              },
+              {
+                "text": "200 m",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Cactoida",
+                "style": "strong"
+              },
+              {
+                "text": "300 m",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Bacterium, Stratum, Fonticulua",
+                "style": "strong"
+              },
+              {
+                "text": "500 m",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Osseus, Tubus",
+                "style": "strong"
+              },
+              {
+                "text": "800 m",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Electricae",
+                "style": "strong"
+              },
+              {
+                "text": "1 000 m",
+                "style": "number"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "quote",
+          "text": "« Insufficient genetic diversity » = tu es trop près du précédent. Éloigne-toi.",
+          "attribution": "Message en jeu"
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Attention",
+          "text": "Scanner une **autre espèce** réinitialise un échantillon partiel en cours."
+        },
+        {
+          "type": "heading",
+          "text": "4.5 Les espèces qui paient [COM]",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Espèce",
+            "Base (Cr)",
+            "Conditions"
+          ],
+          "caption": "Les espèces les plus rentables et leurs conditions d'apparition",
+          "rows": [
+            [
+              {
+                "text": "Stratum Tectonicas",
+                "style": "strong"
+              },
+              {
+                "text": "19 010 800",
+                "style": "number"
+              },
+              {
+                "text": "HMC, > 165 K, terrain plat",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Fonticulua Segmentatus",
+                "style": "strong"
+              },
+              {
+                "text": "19 010 800",
+                "style": "number"
+              },
+              {
+                "text": "Atmo Neon",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Tussock Stigmasis",
+                "style": "strong"
+              },
+              {
+                "text": "19 010 800",
+                "style": "number"
+              },
+              {
+                "text": "Atmo SO2",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Concha Biconcavis",
+                "style": "strong"
+              },
+              {
+                "text": "16 777 215",
+                "style": "number"
+              },
+              {
+                "text": "Atmo Nitrogen",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Clypeus Speculumi",
+                "style": "strong"
+              },
+              {
+                "text": "16 202 800",
+                "style": "number"
+              },
+              {
+                "text": "Rocky/HMC, > 2500 Ls",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Recepta Deltahedronix",
+                "style": "strong"
+              },
+              {
+                "text": "16 202 800",
+                "style": "number"
+              },
+              {
+                "text": "SO2, gravité < 0,27",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Osseus Discus",
+                "style": "strong"
+              },
+              {
+                "text": "12 934 900",
+                "style": "number"
+              },
+              {
+                "text": "Rocky/HMC, atmo Water",
+                "style": "normal"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Le repère à retenir** : HMC + 1 seul signal bio + > 165 K = forte probabilité de **Stratum Tectonicas** (~19 M).",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "**First Logged = ×5** [OFF] — un Stratum Tectonicas en premier passage = **95 054 000 Cr**.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "4.6 Où aller depuis Cubeo — procédure",
+          "level": 3
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**spansh.co.uk** → outil de recherche de corps",
+              "detail": "Filtres **landable** + **atmosphere: thin** + **gravity < 0.27** + rayon 200-500 LY depuis Cubeo"
+            },
+            {
+              "text": "Ou carte galactique en jeu → filtre **planètes non découvertes**, vise les systèmes hors des routes principales"
+            },
+            {
+              "text": "Cible en priorité les **HMC à atmosphère ténue** proches de leur étoile (< 1500 Ls, moins de temps de supercruise)"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "4.7 Rendement réaliste à ton niveau",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Tu es **Exobiologist « Mostly Directionless »** et tu n'as jamais fait de scan. Sois honnête avec toi-même :",
+          "emphasis": "normal"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Étape",
+            "Par session de 1-2h"
+          ],
+          "caption": "Rendement attendu pendant l'apprentissage",
+          "rows": [
+            [
+              {
+                "text": "Sessions 1-3 (apprentissage)",
+                "style": "strong"
+              },
+              {
+                "text": "**10-25 M Cr**",
+                "style": "mid"
+              }
+            ],
+            [
+              {
+                "text": "Sessions 4-8 (rodé, près de la Bulle)",
+                "style": "strong"
+              },
+              {
+                "text": "**40-80 M Cr**",
+                "style": "win"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Tu feras 30-50 % des chiffres des vidéos YouTube au début.** C'est normal. La courbe monte vite.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "4.8 Point d'arrêt sûr",
+          "level": 3
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Rentre vendre toutes les 2 sessions maximum** tant que tu apprends"
+            },
+            {
+              "text": "Données cartographiques → **Universal Cartographics** (ou Farseer tant que tu montes sa réputation)"
+            },
+            {
+              "text": "Données bio → **Vista Genomics** (localise-en un via Inara)"
+            }
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "✅ Tu passes en Phase 5 quand :",
+          "text": "3 sessions consécutives sans crash du Nomad, séquence scan+exobio fluide, ≥ 40 M Cr par session, Farseer au Grade 5."
+        }
+      ]
+    },
+    {
+      "id": "phase-5-expedition-lointaine",
+      "number": 7,
+      "title": "PHASE 5 — EXPÉDITION LOINTAINE (first footfall ×5)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Adaptée à des sessions de 1-2h — c'est le point délicat**",
+          "emphasis": "intro"
+        },
+        {
+          "type": "heading",
+          "text": "5.1 Le problème et la parade",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Une expédition classique suppose des sessions longues. Avec 1-2h, tu dois **découper** :",
+          "emphasis": "normal"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Session",
+            "Contenu"
+          ],
+          "caption": "Découpage d'une expédition en sessions courtes",
+          "rows": [
+            [
+              {
+                "text": "S1",
+                "style": "number"
+              },
+              {
+                "text": "Trajet aller via **neutron highway** (Spansh Neutron Router). Rien d'autre",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "S2 à S6",
+                "style": "number"
+              },
+              {
+                "text": "1 à 2 systèmes bio complets par session",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "S7",
+                "style": "number"
+              },
+              {
+                "text": "Trajet retour + vente",
+                "style": "normal"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Ne dépasse jamais 5-6 sessions sans vendre.**",
+              "detail": "Le risque cumulé (crash Nomad, mort du vaisseau) devient inacceptable"
+            },
+            {
+              "text": "**Déconnecte toujours en sécurité**",
+              "detail": "Vaisseau posé ou en orbite haute, jamais en descente"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "5.2 Utiliser le neutron highway",
+          "level": 3
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**spansh.co.uk/plotter** (Neutron Router) → Cubeo → destination → ta portée réelle"
+            },
+            {
+              "text": "Ton **FSD SCO Mk II** boost à **500 %** et **ne subit PAS les 1 % de dégâts** habituels [OFF] — c'est ton avantage unique"
+            },
+            {
+              "text": "Garde quand même ton **AFMU** et ton **Heat Sink** : la surchauffe reste possible"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "5.3 Où aller",
+          "level": 3
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Vise **500 à 2000 LY** hors des routes fréquentées (évite l'axe Sol–Colonia–Sagittarius A*, déjà ratissé)"
+            },
+            {
+              "text": "Vérifie sur la carte galactique que les systèmes sont **non découverts**"
+            },
+            {
+              "text": "Le **first footfall** (premier à poser le pied sur la planète) est visible dans le System Map — c'est lui qui déclenche le ×5"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "5.4 Rendement",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Contexte",
+            "Par session de 1-2h"
+          ],
+          "caption": "Rendement en zone vierge",
+          "rows": [
+            [
+              {
+                "text": "Zone vierge, first footfall",
+                "style": "strong"
+              },
+              {
+                "text": "**80-150 M Cr** [EST]",
+                "style": "win"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phase-6-jalons-jusquau-milliard",
+      "number": 8,
+      "title": "PHASE 6 — LES JALONS JUSQU'AU MILLIARD",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Base de calcul : sessions de 1-2h, ~3 par semaine.**",
+          "emphasis": "intro"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Jalon",
+            "Phase",
+            "Gain / session",
+            "Sessions",
+            "Calendrier"
+          ],
+          "caption": "De 45 M à 1 milliard, jalon par jalon",
+          "rows": [
+            [
+              {
+                "text": "45 M → 45 M",
+                "style": "number"
+              },
+              {
+                "text": "Ph.1 reconfiguration",
+                "style": "normal"
+              },
+              {
+                "text": "0 (neutre)",
+                "style": "mid"
+              },
+              {
+                "text": "1",
+                "style": "number"
+              },
+              {
+                "text": "semaine 1",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "45 M → 60 M",
+                "style": "number"
+              },
+              {
+                "text": "Ph.2 ingénierie + matériaux",
+                "style": "normal"
+              },
+              {
+                "text": "+5-10 M",
+                "style": "mid"
+              },
+              {
+                "text": "4",
+                "style": "number"
+              },
+              {
+                "text": "semaines 1-2",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "60 M → 70 M",
+                "style": "number"
+              },
+              {
+                "text": "Ph.3 Artemis",
+                "style": "normal"
+              },
+              {
+                "text": "+5 M",
+                "style": "mid"
+              },
+              {
+                "text": "1-2",
+                "style": "number"
+              },
+              {
+                "text": "semaine 2",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "70 M → **250 M**",
+                "style": "number"
+              },
+              {
+                "text": "Ph.4 apprentissage Bulle",
+                "style": "normal"
+              },
+              {
+                "text": "+25-50 M",
+                "style": "win"
+              },
+              {
+                "text": "**5-6**",
+                "style": "number"
+              },
+              {
+                "text": "semaines 3-4",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "250 M → **500 M**",
+                "style": "number"
+              },
+              {
+                "text": "Ph.4 rodé",
+                "style": "normal"
+              },
+              {
+                "text": "+60-80 M",
+                "style": "win"
+              },
+              {
+                "text": "**4**",
+                "style": "number"
+              },
+              {
+                "text": "semaine 5",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "500 M → **1 Md**",
+                "style": "number"
+              },
+              {
+                "text": "Ph.5 expédition ×5",
+                "style": "normal"
+              },
+              {
+                "text": "+100-150 M",
+                "style": "win"
+              },
+              {
+                "text": "**5-6**",
+                "style": "number"
+              },
+              {
+                "text": "semaines 6-8",
+                "style": "normal"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "**Total réaliste : 20 à 25 sessions ≈ 7 à 9 semaines.**",
+          "level": 3
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Sois sceptique face à ce tableau : il suppose que tu ne perds jamais de données",
+              "detail": "**Une seule mort mal placée coûte 2-3 sessions.** D'où la discipline de vente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "checklist-recapitulative",
+      "number": 9,
+      "title": "✅ CHECKLIST RÉCAPITULATIVE UNIQUE",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Phase 1 — Cubeo",
+          "level": 4
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Vendre : 4 armes, FS Wake Scanner, Chaff, PWA, ECM, 2 AFMU, Repair Limpet, Cargo 3E, Research Limpet"
+            },
+            {
+              "text": "Garder : Vessel Hangar 5 (Nomad), Vehicle Hangar 4 (2 SRV), Fuel Scoop 7A, 1 AFMU, Shield, DSS, 1 Heat Sink, Supercruise Assist, Docking Computer"
+            },
+            {
+              "text": "Comparer Vessel Hangar Mk I vs Mk II (prendre le plus léger)"
+            },
+            {
+              "text": "Downsize : Sensors, Life Support, Power Distributor, Power Plant, Fuel Tank (≥ taille 5)"
+            },
+            {
+              "text": "Vérifier la portée finale sur edsy.org"
+            },
+            {
+              "text": "Localiser les pièces via Inara → Nearest outfitting (Large pad)"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Phase 2 — Ingénierie",
+          "level": 4
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Acheter 1 Meta-Alloy (Inara → Find Trade Offer)"
+            },
+            {
+              "text": "Débloquer Felicity Farseer à Deciat"
+            },
+            {
+              "text": "Farmer les matériaux : SRV (Raw), Jameson Crash Site (Encoded), HGE (Manufactured), Material Traders"
+            },
+            {
+              "text": "FSD → Increased Range G1→G5"
+            },
+            {
+              "text": "FSD → Mass Manager"
+            },
+            {
+              "text": "Sensors → Lightweight"
+            },
+            {
+              "text": "Vendre les données d'exploration à Farseer jusqu'au Grade 5 (~24 M Cr)"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Phase 3 — Artemis",
+          "level": 4
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Acheter l'Artemis Suit (Pioneer Supplies)"
+            },
+            {
+              "text": "Monter Grade 1 → Grade 2 minimum"
+            },
+            {
+              "text": "Inspecter les combinaisons premium pré-moddées à chaque escale"
+            },
+            {
+              "text": "Débloquer Domino Green (100 LY en navettes Apex + 5 Push)"
+            },
+            {
+              "text": "Débloquer Wellington Beck (25 médias + 5 Insight Entertainment Suites)"
+            },
+            {
+              "text": "Installer **Improved Battery Capacity** (priorité)"
+            },
+            {
+              "text": "Installer Extra Backpack Capacity"
+            },
+            {
+              "text": "Optionnel : Yarden Bond → Improved Jump Assist"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Phase 4 — Apprentissage",
+          "level": 4
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Configurer tous les keybinds"
+            },
+            {
+              "text": "Maîtriser la séquence : honk → scoop → FSS → DSS ciblé"
+            },
+            {
+              "text": "Maîtriser la séquence Nomad : descendre < 500 m → déployer → poser → Scan Pulse → 3 échantillons"
+            },
+            {
+              "text": "Mémoriser les Colony Range"
+            },
+            {
+              "text": "Tracer les cibles via Spansh (thin atmosphere, gravité < 0,27)"
+            },
+            {
+              "text": "Vendre toutes les 2 sessions maximum"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Phase 5 — Expédition",
+          "level": 4
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Tracer la route (Spansh Neutron Router)"
+            },
+            {
+              "text": "Découper en sessions : 1 trajet, 4-5 exploitation, 1 retour"
+            },
+            {
+              "text": "Ne jamais dépasser 6 sessions sans vendre"
+            },
+            {
+              "text": "Se déconnecter uniquement en position sûre"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outils",
+      "number": 10,
+      "title": "Outils",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Outil",
+            "Usage"
+          ],
+          "caption": "Les outils tiers indispensables",
+          "rows": [
+            [
+              {
+                "text": "**spansh.co.uk**",
+                "style": "strong"
+              },
+              {
+                "text": "Neutron Router, recherche de corps, routes exobio",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**inara.cz**",
+                "style": "strong"
+              },
+              {
+                "text": "Nearest outfitting, Find Trade Offer, ingénieurs, Vista Genomics",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**edsy.org**",
+                "style": "strong"
+              },
+              {
+                "text": "Simulateur de build (vérifie ta portée avant d'acheter)",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**edsm.net**",
+                "style": "strong"
+              },
+              {
+                "text": "Stations, outfitting, systèmes",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**Elite Observatory + plugin Botanist**",
+                "style": "strong"
+              },
+              {
+                "text": "Calcule les Colony Range, signale les corps intéressants",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**EDMC + plugin BioScan**",
+                "style": "strong"
+              },
+              {
+                "text": "Overlay des espèces et valeurs pendant le scan",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "**elite-dangerous.fandom.com**",
+                "style": "strong"
+              },
+              {
+                "text": "Fiches Nomad, Vessel Hangar, Caspian Explorer, Suits",
+                "style": "normal"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a-verifier-par-toi",
+      "number": 11,
+      "title": "Ce qui reste à vérifier par toi",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "La **masse exacte du Mk II Vessel Hangar** — module trop récent pour des données communautaires stables",
+            "L'**inventaire Outfitting de Cubeo** — variable, à consulter en direct",
+            "Ta **portée réelle post-ingénierie** — dépend de tes downsizes exacts"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Les trois se règlent en 10 minutes sur EDSY + Inara. Le reste du plan tient.",
+          "emphasis": "normal"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "Frontier Developments",
+    "elite-dangerous.fandom.com",
+    "INARA",
+    "Spansh",
+    "EDSY",
+    "EDSM",
+    "Elite Observatory (plugin Botanist)",
+    "EDMC (plugin BioScan)"
+  ]
+}

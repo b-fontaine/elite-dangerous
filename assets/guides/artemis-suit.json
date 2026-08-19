@@ -1,0 +1,1021 @@
+{
+  "id": "artemis-suit",
+  "title": "Faire évoluer son Artemis Suit sans jamais combattre",
+  "kicker": "Elite Dangerous : Odyssey · Édition août 2026",
+  "deck": "Trouver les composants, monter les grades, débloquer les bons ingénieurs. Le guide complet pour l'exobiologiste qui n'a aucune envie de tirer sur quoi que ce soit.",
+  "byline": "PC · Live · Odyssey requis",
+  "edition": "2026-08",
+  "topics": [
+    "artemis suit",
+    "odyssey",
+    "ingénierie à pied",
+    "matériaux",
+    "exobiologie"
+  ],
+  "estimatedReadMinutes": 14,
+  "sections": [
+    {
+      "id": "introduction",
+      "number": 0,
+      "title": "Introduction",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Au sommaire",
+          "level": 3
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Grades et mods : deux choses différentes",
+            "Ce qu'il vous faut exactement",
+            "Où trouver chaque composant",
+            "Les quatre méthodes sans combat",
+            "L'équipement du bon pillard",
+            "Les mods et leurs ingénieurs",
+            "Par où commencer"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "L'Artemis Suit est la seule combinaison du jeu à posséder un Genetic Sampler. Si vous faites de l'exobiologie, c'est votre outil de travail — et vous allez vouloir l'améliorer. La bonne nouvelle, c'est que l'intégralité du parcours peut se faire sans tirer une seule balle.",
+          "emphasis": "intro"
+        },
+        {
+          "type": "paragraph",
+          "text": "C'est une chose que beaucoup de joueurs ignorent, et que les guides d'il y a deux ans racontaient de travers. Le farming de matériaux à pied traîne une réputation de calvaire réservé aux commandants lourdement armés. Cette réputation était méritée en 2021. Elle ne l'est plus.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "En août 2024, Frontier a divisé les coûts d'amélioration par quatre et supprimé la nécessité des Power Regulators. Depuis, monter une Artemis du grade 1 au grade 5 ne demande plus que **cinq types de matériaux**, dont deux s'échangent librement au comptoir d'un bar. Et les méthodes de récolte les plus rentables se pratiquent dans des colonies désertes, sans âme qui vive pour vous embêter.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Comment lire ce guide",
+          "text": "Les informations sont étiquetées selon leur fiabilité. **OFF** vient de Frontier ou du wiki officiel. **COM** provient des bases communautaires (INARA, EDSM, wiki Fandom) ou de retours de commandants. **EST** signale une estimation. Les quantités indiquées peuvent bouger après un patch : vérifiez-les en jeu au moment de dépenser."
+        }
+      ]
+    },
+    {
+      "id": "grades-et-mods",
+      "number": 1,
+      "title": "Grades et mods : deux choses différentes",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Première source de confusion chez les nouveaux venus : une combinaison Odyssey évolue selon **deux axes totalement séparés**, qui ne se traitent ni au même endroit ni avec les mêmes ressources.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **grade**, de 1 à 5, se monte à **Pioneer Supplies** — le magasin d'équipement à pied présent dans le concourse des stations. Il coûte uniquement des matériaux, jamais de crédits, et améliore les résistances et le bouclier de la combinaison.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les **modifications**, elles, s'installent chez les **suit engineers**, une catégorie d'ingénieurs entièrement distincte de ceux qui travaillent sur les vaisseaux. Chaque mod coûte des matériaux et des crédits.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Trois règles à graver avant de dépenser quoi que ce soit",
+          "text": "**Une combinaison grade 1 ne peut pas être modifiée.** Elle ne possède aucun emplacement de mod. Il faut impérativement la passer grade 2 d'abord.\n\n**Un mod installé est définitif.** Impossible de le retirer. Si vous en posez un nouveau sur un emplacement occupé, il écrase l'ancien de façon permanente. Pour une autre combinaison de mods, il faut acheter une seconde combinaison.\n\n**Chaque grade débloque un emplacement.** Grade 2 donne un mod, grade 3 en donne deux, et ainsi de suite jusqu'à quatre au grade 5."
+        },
+        {
+          "type": "heading",
+          "text": "Faut-il vraiment viser le grade 5 ?",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour un exobiologiste, la réponse honnête est **non, pas forcément**. Le grade améliore essentiellement les résistances et le bouclier — c'est-à-dire votre capacité à survivre à un combat que vous ne comptez pas livrer. Scanner des plantes n'expose à aucun danger.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une **Artemis grade 3**, avec deux bons mods, couvre confortablement les besoins d'un explorateur. Le grade 5 n'a d'intérêt que si vous voulez les quatre mods simultanément. Considérez-le comme un objectif de confort, pas comme un prérequis.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Le raccourci que tout le monde devrait connaître",
+          "text": "Pioneer Supplies vend parfois des **combinaisons pré-améliorées**, jusqu'au grade 3, et parfois déjà modifiées. C'est une économie de matériaux considérable.\n\nLe stock est réattribué une fois par semaine, en général le **jeudi** après la maintenance, en premier arrivé premier servi — une fois achetée, la combinaison disparaît pour tout le monde. Cherchez de préférence dans les stations peu fréquentées, loin de l'étoile principale : elles sont mieux garnies et moins pillées."
+        },
+        {
+          "type": "heading",
+          "text": "Ce qui a changé récemment",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Trois mises à jour comptent pour qui veut éviter les guides périmés.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "La plus importante reste **Update 18, en août 2024**. Les besoins en matériaux ont été ramenés à environ un quart de ce qu'ils étaient, les Power Regulators ne sont plus nécessaires pour les combinaisons, et les signaux à haute intensité peuvent désormais générer jusqu'à cent matériaux au lieu de quatre ou six. **OFF**",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "La **mise à jour Caspian Explorer, en décembre 2025**, a en revanche durci le combat à pied : les PNJ sont plus agressifs, se mettent mieux à couvert, et scannent les crimes de plus loin. Notez que le rééquilibrage des résistances ne concerne que les PNJ, pas vous. C'est une raison de plus de rester sur les méthodes pacifiques. **OFF**",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Enfin, l'**Operations Update du 30 juin 2026** a introduit des scénarios coopératifs et une monnaie dédiée, la Merc Coin. C'est du contenu orienté combat en escouade, tourné vers les modules de vaisseau. **Rien de tout cela ne modifie les combinaisons, Pioneer Supplies ou l'ingénierie à pied.** Tout ce que décrit ce guide reste valide. **OFF**",
+          "emphasis": "normal"
+        }
+      ]
+    },
+    {
+      "id": "ce-quil-vous-faut-exactement",
+      "number": 2,
+      "title": "Ce qu'il vous faut exactement",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Voici le tableau que la plupart des joueurs cherchent sans le trouver : la liste complète, palier par palier, pour une Artemis Suit.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Palier",
+            "Suit Schematic",
+            "Health Monitor",
+            "Manufacturing Instructions",
+            "Aerogel",
+            "Graphene"
+          ],
+          "rows": [
+            [
+              {
+                "text": "Grade 1 → 2",
+                "style": "normal"
+              },
+              {
+                "text": "1",
+                "style": "number"
+              },
+              {
+                "text": "1",
+                "style": "number"
+              },
+              {
+                "text": "1",
+                "style": "number"
+              },
+              {
+                "text": "2",
+                "style": "number"
+              },
+              {
+                "text": "2",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Grade 2 → 3",
+                "style": "normal"
+              },
+              {
+                "text": "2",
+                "style": "number"
+              },
+              {
+                "text": "2",
+                "style": "number"
+              },
+              {
+                "text": "2",
+                "style": "number"
+              },
+              {
+                "text": "5",
+                "style": "number"
+              },
+              {
+                "text": "5",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Grade 3 → 4",
+                "style": "normal"
+              },
+              {
+                "text": "4",
+                "style": "number"
+              },
+              {
+                "text": "4",
+                "style": "number"
+              },
+              {
+                "text": "4",
+                "style": "number"
+              },
+              {
+                "text": "9",
+                "style": "number"
+              },
+              {
+                "text": "9",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Grade 4 → 5",
+                "style": "normal"
+              },
+              {
+                "text": "5",
+                "style": "number"
+              },
+              {
+                "text": "5",
+                "style": "number"
+              },
+              {
+                "text": "5",
+                "style": "number"
+              },
+              {
+                "text": "12",
+                "style": "number"
+              },
+              {
+                "text": "12",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Total G1 → G5",
+                "style": "strong"
+              },
+              {
+                "text": "12",
+                "style": "number"
+              },
+              {
+                "text": "12",
+                "style": "number"
+              },
+              {
+                "text": "12",
+                "style": "number"
+              },
+              {
+                "text": "28",
+                "style": "number"
+              },
+              {
+                "text": "28",
+                "style": "number"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Aucun crédit n'est demandé pour les grades.** Les crédits ne servent qu'aux mods, chez les ingénieurs.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Notez que l'Artemis utilise de l'**Aerogel** là où la Dominator et la Maverick réclament du Titanium Plating ou du Carbon Fibre Plating. Ne recopiez pas une liste trouvée pour une autre combinaison.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Où se situe la vraie difficulté",
+          "text": "Contrairement à ce qu'on imagine, ce ne sont pas les cinquante matériaux exotiques qui posent problème — il n'y en a que cinq. L'Aerogel et le Graphene sont communs et s'échangent au bar. Le goulot d'étranglement, ce sont les **Manufacturing Instructions** (des données, réclamées aussi par les armes) et les **Suit Schematics** (des biens, plus rares)."
+        }
+      ]
+    },
+    {
+      "id": "ou-trouver-chaque-composant",
+      "number": 3,
+      "title": "Où trouver chaque composant",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Composant",
+            "Catégorie",
+            "Où le trouver"
+          ],
+          "rows": [
+            [
+              {
+                "text": "Graphene",
+                "style": "strong"
+              },
+              {
+                "text": "Asset · Chemical",
+                "style": "normal"
+              },
+              {
+                "text": "En abondance dans les bâtiments **Research** des colonies. S'échange très bien au bar vers les autres Chemicals.",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Aerogel",
+                "style": "strong"
+              },
+              {
+                "text": "Asset · Chemical",
+                "style": "normal"
+              },
+              {
+                "text": "Loot de colonies et récompenses de mission. Troquable au bar.",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Manufacturing Instructions",
+                "style": "strong"
+              },
+              {
+                "text": "Data",
+                "style": "normal"
+              },
+              {
+                "text": "Récompenses de mission, data ports des sections Power et Command. Farmable en boucle sur certains points de données.",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Suit Schematic",
+                "style": "strong"
+              },
+              {
+                "text": "Goods",
+                "style": "normal"
+              },
+              {
+                "text": "Toujours dans les **mêmes casiers** des bâtiments **CMD** et **PWR**. Les colonies militaires en donnent davantage.",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Health Monitor",
+                "style": "strong"
+              },
+              {
+                "text": "Goods",
+                "style": "normal"
+              },
+              {
+                "text": "Bâtiments médicaux et habitations, récompenses de mission.",
+                "style": "normal"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Quelle colonie pour quel besoin",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Le type d'une colonie détermine ce qu'on y trouve, et une session bien ciblée vaut trois sessions au hasard.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type de colonie",
+            "Ce qu'on y trouve"
+          ],
+          "rows": [
+            [
+              {
+                "text": "Research / High Tech",
+                "style": "strong"
+              },
+              {
+                "text": "Beaucoup de données et de produits chimiques, dont le Graphene. Peu de schematics.",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Military",
+                "style": "strong"
+              },
+              {
+                "text": "Le meilleur endroit pour les Suit Schematics (bâtiments CMD et PWR).",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Extraction",
+                "style": "strong"
+              },
+              {
+                "text": "Assets techniques en quantité, mais peu de schematics.",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Industrial / Agricultural",
+                "style": "strong"
+              },
+              {
+                "text": "Profil équilibré, bon pour les Manufacturing Instructions.",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Tourist",
+                "style": "strong"
+              },
+              {
+                "text": "Beaucoup de points de données, peu de biens.",
+                "style": "normal"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Le bar, votre chambre de compensation",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **Bartender** de chaque concourse échange les **Assets uniquement** — pas les données, pas les biens, qu'il se contente d'acheter contre crédits. L'échange fonctionne par points : chaque asset cédé rapporte une valeur de troc, chaque asset désiré en coûte une.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Concrètement, votre surplus de Graphene se convertit en Aerogel manquant, et réciproquement. C'est le moyen le plus rapide de boucler un palier bloqué par un seul matériau.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ne confondez pas les deux comptoirs",
+          "text": "Le **Bartender** traite les matériaux de **combinaison**. Les **Material Traders** traitent les matériaux de **vaisseau** (Raw, Manufactured, Encoded). Ce sont deux systèmes sans aucun rapport, et beaucoup de joueurs perdent du temps à chercher au mauvais endroit.\n\nÀ noter également : le Bartender refuse d'acheter les objets illégaux, **sauf en système Anarchy**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dernière option souvent oubliée : la recherche INARA permet de localiser des **Fleet Carriers de joueurs** qui vendent des composants. Pratique pour compléter un matériau manquant sans repartir en expédition.",
+          "emphasis": "normal"
+        }
+      ]
+    },
+    {
+      "id": "les-quatre-methodes-sans-combat",
+      "number": 4,
+      "title": "Les quatre méthodes sans combat",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Voici le cœur du sujet. Ces quatre approches se pratiquent intégralement avec un rang de mercenaire nul et aucune expérience du combat à pied.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Les missions de réactivation, la méthode reine",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "C'est de loin la meilleure boucle, et elle mérite qu'on s'y attarde. On trouve ces missions dans les systèmes où une colonie Odyssey appartient à une faction en difficulté : **Reactivation** quand l'état est infrastructure failure, **Restore** quand il s'agit de civil unrest.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le principe est imbattable. La colonie est **hors tension et déserte**. On vous confie un régulateur de puissance et un niveau d'habilitation 3, ce qui signifie que vous pouvez **tout piller légalement**, y compris télécharger des données classées, sans le moindre garde pour vous en empêcher.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "La séquence qui élimine le seul risque",
+          "text": "Des pillards peuvent débarquer en vaisseau pendant votre visite. Mais ils **ne peuvent plus apparaître une fois le courant rétabli**.\n\nRepérez donc le bâtiment **PWR**, rallumez l'alimentation en priorité absolue, puis fouillez tranquillement le reste. Posez-vous à une centaine de mètres **en dehors** de la colonie plutôt que sur la plateforme, qui attire les pillards."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ne vous déconnectez jamais en cours de mission",
+          "text": "Un relog pendant une mission de réactivation fait **disparaître l'intégralité du butin** ramassé. Terminez, remontez au vaisseau, puis seulement là faites ce que vous voulez."
+        },
+        {
+          "type": "heading",
+          "text": "Les colonies abandonnées",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Certaines colonies sont en état d'abandon permanent : aucune sécurité, aucun PNJ, uniquement des journaux, des points de données et quelques matériaux au sol.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Leur particularité est qu'elles n'apparaissent souvent pas sur la carte du système tant qu'on n'a pas activé une balise de données locale. On les repère via les postes d'écoute ou les listes communautaires. Petite astuce : basculer entre les modes Ouvert, Privé et Solo fait réapparaître les matériaux et réinitialise les points de données.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Le pillage tranquille en système Anarchy",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Les colonies contrôlées par une faction **Anarchy** sont un terrain de jeu idéal. Y voler, forcer des casiers, déclencher une alarme — rien de tout cela n'entraîne d'amende, de prime ni de notoriété. La faction oublie tout dès que vous repartez, ce qui autorise les visites en boucle.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour opérer discrètement, restez hors du champ de vision des PNJ et des caméras, utilisez le **Profile Analyser** pour cloner un profil de sécurité, et ouvrez ce qui est verrouillé à l'Arc Cutter ou à l'E-Breach. Mais en Anarchy, même si l'alarme sonne, vous ne risquez rien de légal.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Les récompenses de mission",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Depuis le rééquilibrage de 2024, les terminaux permettent de **filtrer les missions par matériau offert** en récompense. Les missions de transport, de collecte de données et de récupération n'exigent aucun combat. Les donneurs d'ordre présents dans le concourse acceptent parfois de **négocier**, ce qui peut doubler la récompense.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ce qu'il faut éviter avec un rang de combat nul",
+          "text": "Les **raids de colonie** et les **zones de conflit à pied** impliquent un combat garanti. Le vol de données protégées dans une colonie active **hors Anarchy** déclenche une réponse armée. Tout le reste décrit ci-dessus est faisable en solo, sans risque, quel que soit votre rang."
+        }
+      ]
+    },
+    {
+      "id": "lequipement-du-bon-pillard",
+      "number": 5,
+      "title": "L'équipement du bon pillard",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Voici une vérité contre-intuitive : **l'Artemis n'est pas la bonne combinaison pour récolter les matériaux de l'Artemis**.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "L'Artemis est un outil d'exobiologie, seule à posséder le Genetic Sampler. Mais pour fouiller efficacement une colonie, il faut l'**Arc Cutter** — l'outil de découpe qui ouvre les panneaux et une bonne partie des conteneurs. Et l'Arc Cutter est **exclusif à la Maverick Suit**.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Outil",
+            "Fonction",
+            "Disponibilité"
+          ],
+          "rows": [
+            [
+              {
+                "text": "Arc Cutter",
+                "style": "strong"
+              },
+              {
+                "text": "Découpe panneaux et conteneurs",
+                "style": "normal"
+              },
+              {
+                "text": "Maverick uniquement",
+                "style": "lose"
+              }
+            ],
+            [
+              {
+                "text": "Genetic Sampler",
+                "style": "strong"
+              },
+              {
+                "text": "Prélèvement exobiologique",
+                "style": "normal"
+              },
+              {
+                "text": "Artemis uniquement",
+                "style": "lose"
+              }
+            ],
+            [
+              {
+                "text": "E-Breach / Energylink",
+                "style": "strong"
+              },
+              {
+                "text": "Ouvre portes verrouillées et conteneurs",
+                "style": "normal"
+              },
+              {
+                "text": "Toutes combinaisons",
+                "style": "win"
+              }
+            ],
+            [
+              {
+                "text": "Profile Analyser",
+                "style": "strong"
+              },
+              {
+                "text": "Clone un profil de sécurité",
+                "style": "normal"
+              },
+              {
+                "text": "Toutes combinaisons",
+                "style": "win"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La conclusion est donc simple : **achetez une Maverick grade 3 en plus de votre Artemis**. Guettez une version pré-améliorée à Pioneer Supplies. Le grade 3 suffit largement pour du farming pacifique, et vous n'aurez jamais besoin d'y investir davantage.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pensez aussi aux consommables — cellules d'énergie pour recharger la combinaison, medkits — et à la capacité du sac à dos, que le mod Extra Backpack Capacity double. Une astuce de terrain consiste à garer le SRV au milieu de la colonie pour s'en servir de dépôt intermédiaire.",
+          "emphasis": "normal"
+        }
+      ]
+    },
+    {
+      "id": "les-mods-et-leurs-ingenieurs",
+      "number": 6,
+      "title": "Les mods et leurs ingénieurs",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pour un exobiologiste, quatre mods valent le détour, et il se trouve qu'aucun n'exige de passer par un ingénieur guerrier.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Mod",
+            "Effet",
+            "Ingénieurs",
+            "Coût"
+          ],
+          "rows": [
+            [
+              {
+                "text": "Extra Backpack Capacity",
+                "style": "strong"
+              },
+              {
+                "text": "Double la capacité du sac",
+                "style": "normal"
+              },
+              {
+                "text": "Domino Green, Wellington Beck",
+                "style": "normal"
+              },
+              {
+                "text": "750 000",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Improved Battery Capacity",
+                "style": "strong"
+              },
+              {
+                "text": "+50 % d'énergie",
+                "style": "normal"
+              },
+              {
+                "text": "Wellington Beck, Oden Geiger",
+                "style": "normal"
+              },
+              {
+                "text": "750 000",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Reduced Tool Battery Consumption",
+                "style": "strong"
+              },
+              {
+                "text": "Outils moins gourmands",
+                "style": "normal"
+              },
+              {
+                "text": "Domino Green, Wellington Beck",
+                "style": "normal"
+              },
+              {
+                "text": "500 000",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Increased Sprint Duration",
+                "style": "strong"
+              },
+              {
+                "text": "Sprint prolongé",
+                "style": "normal"
+              },
+              {
+                "text": "Terra Velasquez, Baltanos",
+                "style": "normal"
+              },
+              {
+                "text": "750 000",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Improved Jump Assist",
+                "style": "strong"
+              },
+              {
+                "text": "Jetpack prolongé",
+                "style": "normal"
+              },
+              {
+                "text": "Yarden Bond, Baltanos",
+                "style": "normal"
+              },
+              {
+                "text": "750 000",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Night Vision",
+                "style": "normal"
+              },
+              {
+                "text": "Vision nocturne",
+                "style": "normal"
+              },
+              {
+                "text": "Oden Geiger, Yi Shen",
+                "style": "normal"
+              },
+              {
+                "text": "1 000 000",
+                "style": "number"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "La combinaison gagnante pour l'exobiologie",
+          "text": "**Extra Backpack Capacity** et **Improved Battery Capacity** d'abord — le Genetic Sampler est gourmand en énergie, et vous voulez rester longtemps sur le terrain. Puis **Reduced Tool Battery Consumption** et enfin un mod de mobilité, sprint ou jetpack selon votre style.\n\nLa Night Vision est agréable mais coûteuse et profondément enfouie dans l'arbre de déblocage. Le Genetic Sampler émet déjà une impulsion qui révèle les spécimens : ne la priorisez pas."
+        },
+        {
+          "type": "heading",
+          "text": "Les ingénieurs pacifiques",
+          "level": 3
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Ingénieur",
+            "Système",
+            "Condition de déblocage"
+          ],
+          "rows": [
+            [
+              {
+                "text": "Domino Green",
+                "style": "strong"
+              },
+              {
+                "text": "Orishis",
+                "style": "normal"
+              },
+              {
+                "text": "Parcourir 100 al en navettes Apex, livrer 5 Push",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Wellington Beck",
+                "style": "strong"
+              },
+              {
+                "text": "Jolapa",
+                "style": "normal"
+              },
+              {
+                "text": "Vendre 25 médias aux barmen, livrer 5 Insight Entertainment Suites",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Yarden Bond",
+                "style": "strong"
+              },
+              {
+                "text": "Bayan",
+                "style": "normal"
+              },
+              {
+                "text": "Vendre 8 Smear Campaign Plans aux barmen",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Terra Velasquez",
+                "style": "strong"
+              },
+              {
+                "text": "Shou Xing",
+                "style": "normal"
+              },
+              {
+                "text": "6 missions Covert Theft ou Covert Heist (infiltration furtive)",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Oden Geiger",
+                "style": "strong"
+              },
+              {
+                "text": "Candiaei",
+                "style": "normal"
+              },
+              {
+                "text": "Vendre 20 échantillons biologiques ou données génétiques",
+                "style": "normal"
+              }
+            ],
+            [
+              {
+                "text": "Kit Fowler",
+                "style": "strong"
+              },
+              {
+                "text": "Capova",
+                "style": "normal"
+              },
+              {
+                "text": "Vendre des Opinion Polls au bar",
+                "style": "normal"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Domino Green est votre porte d'entrée.** Il ne demande que des trajets en navette et cinq unités de Push, et il vous réfère ensuite à Kit Fowler. Wellington Beck vient juste après : il fournit à lui seul trois des quatre mods essentiels.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "heading",
+          "text": "Le cas Hero Ferrari",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Un seul ingénieur à pied de la Bulle exige du combat : **Hero Ferrari**, qui demande de compléter dix zones de conflit au sol. C'est rédhibitoire pour un profil pacifique.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Bonne nouvelle : vous pouvez l'ignorer complètement",
+          "text": "Tous ses mods existent ailleurs. **Improved Jump Assist** se trouve chez Yarden Bond, qui ne demande que de vendre huit documents au bar. **Increased Sprint Duration** et **Increased Air Reserves** se trouvent chez Terra Velasquez, dont les missions d'infiltration se terminent sans tuer personne.\n\n**Un exobiologiste n'a jamais besoin de Hero Ferrari.**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mentionnons enfin les ingénieurs de **Colonia** — Baltanos, Eleanor Bresa, Rosa Dayette et Yi Shen. Ils proposent les mêmes mods et sont réputés plus faciles à débloquer. Le hic est qu'ils se trouvent à vingt-deux mille années-lumière. Si une expédition vous y mène un jour, profitez-en ; ne faites pas le voyage pour eux.",
+          "emphasis": "normal"
+        }
+      ]
+    },
+    {
+      "id": "par-ou-commencer",
+      "number": 7,
+      "title": "Par où commencer",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Achetez votre Artemis** à Pioneer Supplies, et guettez au passage une Maverick grade 3 pré-améliorée.",
+              "detail": "Revenez chaque jeudi si le stock ne vaut rien."
+            },
+            {
+              "text": "**Débloquez Domino Green.**",
+              "detail": "Cent années-lumière en navettes Apex et cinq unités de Push, aucun combat. Il ouvre la porte au reste de l'arbre."
+            },
+            {
+              "text": "**Enchaînez sur Wellington Beck** en vendant des médias aux barmen au fil de vos escales.",
+              "detail": "Il fournit à lui seul l'essentiel de ce dont vous avez besoin."
+            },
+            {
+              "text": "**Cherchez des systèmes en infrastructure failure** sur INARA ou EDSM, et enchaînez les missions de réactivation.",
+              "detail": "Rallumez toujours le courant en premier."
+            },
+            {
+              "text": "**Visez vos quantités** : douze Suit Schematics, douze Health Monitors, douze Manufacturing Instructions, vingt-huit Aerogel, vingt-huit Graphene.",
+              "detail": "Complétez les manques au bar."
+            },
+            {
+              "text": "**Montez les grades** à Pioneer Supplies, un palier à la fois, en installant un mod dès que le grade 2 est atteint."
+            },
+            {
+              "text": "**Ignorez Hero Ferrari** et gardez la Night Vision pour la fin, si vous y tenez."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Un outil qui change tout",
+          "text": "Installez **ED Odyssey Materials Helper**. Il suit vos matériaux en temps réel, gère une liste de courses en fonction de vos objectifs d'amélioration, et affiche une surimpression au comptoir de troc pour vous éviter les calculs mentaux. C'est l'outil que recommandent unanimement les farmeurs de matériaux à pied."
+        },
+        {
+          "type": "heading",
+          "text": "Le mot de la fin",
+          "level": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Le farming de matériaux Odyssey souffre d'une réputation dissuasive qui date d'une époque révolue. Depuis 2024, la charge a été divisée par quatre, et l'essentiel du travail se fait dans des colonies vides où personne ne vous tirera dessus.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une Artemis grade 3 avec deux bons mods se monte en quelques sessions. C'est un objectif atteignable en une semaine de jeu tranquille, et cela transformera vos sorties d'exobiologie bien plus que n'importe quel module de vaisseau.",
+          "emphasis": "normal"
+        }
+      ]
+    },
+    {
+      "id": "fiabilite-et-sources",
+      "number": 8,
+      "title": "Fiabilité et sources",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Fiabilité des données.** Les quantités de matériaux proviennent d'INARA, base communautaire qui signale elle-même que ses valeurs peuvent comporter des imprécisions ; elles sont corroborées par le wiki Fandom. Certains prérequis d'ingénieurs varient selon les sources — vérifiez en jeu au moment du déblocage. L'état des systèmes (Anarchy, panne d'infrastructure) change en permanence : utilisez INARA ou EDSM en temps réel pour repérer des cibles proches de vous.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Sources principales.** Notes de mise à jour Frontier Developments, wiki Elite Dangerous (Fandom), INARA, EDSM, E:D Black Box, forums Frontier, et retours de commandants sur Reddit et Steam.",
+          "emphasis": "normal"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Contenu couvert.** À jour d'août 2026, incluant Update 18 (août 2024), la mise à jour Caspian Explorer (décembre 2025) et l'Operations Update (30 juin 2026).",
+          "emphasis": "normal"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "Frontier Developments",
+    "wiki Elite Dangerous (Fandom)",
+    "INARA",
+    "EDSM",
+    "E:D Black Box",
+    "forums Frontier",
+    "retours de commandants (Reddit, Steam)"
+  ]
+}

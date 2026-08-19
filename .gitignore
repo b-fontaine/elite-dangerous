@@ -33,6 +33,13 @@ migrate_working_dir/
 /build/
 /coverage/
 
+# Agent operational state (oh-my-claudecode): sessions, logs, plans, memory.
+.omc/
+
+# Build configuration: holds the Frontier client_id, never committed.
+# `.env.template` is the committed stand-in and is not matched by this pattern.
+.env
+
 # Symbolication related
 app.*.symbols
 
