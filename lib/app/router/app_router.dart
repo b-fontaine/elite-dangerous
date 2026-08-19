@@ -4,7 +4,14 @@ import 'package:go_router/go_router.dart';
 import '../../features/auth/presentation/pages/frontier_connection_page.dart';
 import '../../features/commander/presentation/pages/commander_page.dart';
 import '../../features/commander/presentation/pages/manual_profile_page.dart';
+import '../../features/dashboard/presentation/pages/career_page.dart';
 import '../../features/dashboard/presentation/pages/dashboard_page.dart';
+import '../../features/dashboard/presentation/pages/engineers_page.dart';
+import '../../features/dashboard/presentation/pages/fleet_page.dart';
+import '../../features/dashboard/presentation/pages/materials_page.dart';
+import '../../features/dashboard/presentation/pages/on_foot_page.dart';
+import '../../features/dashboard/presentation/pages/station_page.dart';
+import '../../features/diagnostics/presentation/pages/diagnostics_page.dart';
 import '../../features/exobiology/presentation/pages/exobiology_home_page.dart';
 import '../../features/guides/presentation/pages/guide_detail_page.dart';
 import '../../features/guides/presentation/pages/guides_page.dart';
@@ -85,8 +92,16 @@ GoRouter createAppRouter() {
                 path: AppRoutes.dashboard,
                 builder: (BuildContext context, GoRouterState state) =>
                     DashboardPage(
-                  onOpenRoadmap: () => context.go(AppRoutes.exobiology),
-                  onOpenProfile: () => context.go(AppRoutes.commander),
+                  destinations: CockpitDestinations(
+                    onOpenRoadmap: () => context.go(AppRoutes.exobiology),
+                    onOpenProfile: () => context.go(AppRoutes.commander),
+                    onOpenCareer: () => context.go(AppRoutes.career),
+                    onOpenFleet: () => context.go(AppRoutes.fleet),
+                    onOpenOnFoot: () => context.go(AppRoutes.onFoot),
+                    onOpenEngineers: () => context.go(AppRoutes.engineers),
+                    onOpenMaterials: () => context.go(AppRoutes.materials),
+                    onOpenStation: () => context.go(AppRoutes.station),
+                  ),
                 ),
                 routes: <RouteBase>[
                   GoRoute(
@@ -103,6 +118,36 @@ GoRouter createAppRouter() {
                             const ManualProfilePage(),
                       ),
                     ],
+                  ),
+                  GoRoute(
+                    path: 'carriere',
+                    builder: (BuildContext context, GoRouterState state) =>
+                        const CareerPage(),
+                  ),
+                  GoRoute(
+                    path: 'flotte',
+                    builder: (BuildContext context, GoRouterState state) =>
+                        const FleetPage(),
+                  ),
+                  GoRoute(
+                    path: 'a-pied',
+                    builder: (BuildContext context, GoRouterState state) =>
+                        const OnFootPage(),
+                  ),
+                  GoRoute(
+                    path: 'ingenieurs',
+                    builder: (BuildContext context, GoRouterState state) =>
+                        const EngineersPage(),
+                  ),
+                  GoRoute(
+                    path: 'materiaux',
+                    builder: (BuildContext context, GoRouterState state) =>
+                        const MaterialsPage(),
+                  ),
+                  GoRoute(
+                    path: 'station',
+                    builder: (BuildContext context, GoRouterState state) =>
+                        const StationPage(),
                   ),
                 ],
               ),
@@ -152,6 +197,7 @@ GoRouter createAppRouter() {
                     SettingsPage(
                   onConfigureAuthentication: () =>
                       context.go(AppRoutes.frontierConnection),
+                  onOpenDiagnostics: () => context.go(AppRoutes.diagnostics),
                 ),
                 routes: <RouteBase>[
                   GoRoute(
@@ -161,6 +207,11 @@ GoRouter createAppRouter() {
                       onContinueWithoutAccount: () =>
                           context.go(AppRoutes.dashboard),
                     ),
+                  ),
+                  GoRoute(
+                    path: 'diagnostic',
+                    builder: (BuildContext context, GoRouterState state) =>
+                        const DiagnosticsPage(),
                   ),
                 ],
               ),

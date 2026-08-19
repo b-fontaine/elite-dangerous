@@ -36,3 +36,13 @@ final class CommanderOverridesSubmitted extends CommanderEvent {
   @override
   List<Object?> get props => <Object?>[overrides];
 }
+
+/// Internal: the journal changed, so what it proves changed with it.
+final class CommanderSessionUpdated extends CommanderEvent {
+  const CommanderSessionUpdated(this.session);
+
+  final JournalSessionState session;
+
+  @override
+  List<Object?> get props => <Object?>[session];
+}
