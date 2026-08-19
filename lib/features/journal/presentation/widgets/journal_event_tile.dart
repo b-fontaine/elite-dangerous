@@ -107,6 +107,102 @@ class JournalEventTile extends StatelessWidget {
           e.suitName ?? e.suitSymbol,
           e.grade == null ? null : 'Grade ${e.grade}',
         ),
+      final StatisticsEvent e => (
+          Icons.query_stats,
+          EdColors.gold,
+          'Statistiques de carrière',
+          e.organicDataProfitCr == null
+              ? '${e.sections.length} section(s)'
+              : 'Exobiologie : '
+                  '${formatCredits(e.organicDataProfitCr!)} de profit',
+        ),
+      final ReputationEvent e => (
+          Icons.handshake_outlined,
+          EdColors.purpleBright,
+          'Réputations',
+          e.values.entries
+              .map(
+                (MapEntry<String, double> entry) =>
+                    '${entry.key} ${entry.value.toStringAsFixed(0)}',
+              )
+              .join(' · '),
+        ),
+      final EngineerProgressEvent e => (
+          Icons.build_outlined,
+          EdColors.orangeBright,
+          e.isFullRoster ? 'Ingénieurs' : 'Progression d\'ingénieur',
+          '${e.unlocked.length} débloqué(s) sur ${e.engineers.length}',
+        ),
+      final ShipLoadoutEvent e => (
+          Icons.rocket_launch_outlined,
+          EdColors.cyanBright,
+          e.shipName ?? e.shipSymbol,
+          <String>[
+            if (e.rebuyCr != null) 'rebuy ${formatCredits(e.rebuyCr!)}',
+            if (e.maxJumpRangeLy != null)
+              '${e.maxJumpRangeLy!.toStringAsFixed(1)} LY',
+            if (e.isHot) 'recherché',
+          ].join(' · '),
+        ),
+      final ShipLockerEvent e => (
+          Icons.inventory_2_outlined,
+          EdColors.textMuted,
+          'Inventaire à pied',
+          e.isEmpty
+              ? 'mise à jour signalée, contenu dans ShipLocker.json'
+              : '${e.everything.length} type(s) de ressource',
+        ),
+      final MaterialsEvent e => (
+          Icons.science_outlined,
+          EdColors.textMuted,
+          'Matériaux du vaisseau',
+          '${e.everything.length} type(s)',
+        ),
+      final PowerplayEvent e => (
+          Icons.flag_outlined,
+          e.boostsOrganicSales ? EdColors.greenBright : EdColors.textMuted,
+          'Powerplay — ${e.power}',
+          <String>[
+            if (e.rank != null) 'rang ${e.rank}',
+            if (e.merits != null) '${e.merits} mérites',
+            if (e.boostsOrganicSales) '+30 % sur les ventes organiques',
+          ].join(' · '),
+        ),
+      final StoredShipsEvent e => (
+          Icons.warehouse_outlined,
+          EdColors.textMuted,
+          'Flotte stockée',
+          '${e.all.length} vaisseau(x)'
+              '${e.stationName == null ? '' : ' · ${e.stationName}'}',
+        ),
+      final CargoEvent e => (
+          Icons.inventory_outlined,
+          e.hasMetaAlloy ? EdColors.greenBright : EdColors.textMuted,
+          'Soute',
+          e.hasMetaAlloy
+              ? 'Meta-Alloy à bord — Felicity Farseer déblocable'
+              : '${e.count} tonne(s)',
+        ),
+      final LocationEvent e => (
+          e.docked ? Icons.anchor : Icons.place_outlined,
+          EdColors.cyan,
+          e.bodyName ?? e.starSystem ?? e.name,
+          <String>[
+            if (e.starSystem != null && e.bodyName != null) e.starSystem!,
+            if (e.stationName case final String station) station,
+            if (e.bodyType case final String type) type,
+          ].join(' · '),
+        ),
+      final DockedEvent e => (
+          Icons.anchor,
+          e.sellsOrganicData ? EdColors.greenBright : EdColors.cyanBright,
+          'Amarrage — ${e.stationName}',
+          <String>[
+            if (e.stationType case final String type) type,
+            if (e.starSystem case final String system) system,
+            if (e.sellsOrganicData) 'Vista Genomics',
+          ].join(' · '),
+        ),
       final UnknownJournalEvent e => (
           Icons.circle_outlined,
           EdColors.textFainter,

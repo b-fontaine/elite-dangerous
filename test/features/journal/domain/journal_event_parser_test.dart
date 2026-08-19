@@ -252,6 +252,34 @@ void main() {
       expect(events.last, isA<RankEvent>());
     });
 
+    test('supportedEvents lists exactly what parseLine models', () {
+      // The set is declared by hand because a `switch` cannot be enumerated,
+      // and the diagnostics screen states publicly what the app reads. A
+      // drifting list would make it lie.
+      for (final String name in JournalEventParser.supportedEvents) {
+        final JournalEvent? event = parser.parseLine(
+          '{ "timestamp":"2026-08-17T17:00:00Z", "event":"$name" }',
+        );
+        expect(
+          event,
+          isNot(isA<UnknownJournalEvent>()),
+          reason: '$name est annoncé comme pris en charge',
+        );
+      }
+    });
+
+    test('an event outside supportedEvents falls through to Unknown', () {
+      // `Music` is written constantly and carries nothing worth modelling; it
+      // stands in for the fifteen-odd event names the app deliberately keeps
+      // without reading.
+      final JournalEvent? event = parser.parseLine(
+        '{ "timestamp":"2026-08-17T17:00:00Z", "event":"Music" }',
+      );
+
+      expect(JournalEventParser.supportedEvents, isNot(contains('Music')));
+      expect(event, isA<UnknownJournalEvent>());
+    });
+
     test('dedupe keys separate two organisms scanned in the same second', () {
       final List<JournalEvent> events = parser.parseLines(<String>[
         '{ "timestamp":"2026-08-17T17:00:00Z", "event":"ScanOrganic", '
