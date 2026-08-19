@@ -10,12 +10,18 @@ class AuthStatusBanner extends StatelessWidget {
     required this.status,
     this.onConnect,
     this.onDisconnect,
+    this.isConnecting = false,
     super.key,
   });
 
   final AuthStatus status;
   final VoidCallback? onConnect;
   final VoidCallback? onDisconnect;
+
+  /// True while the browser is open on Frontier's consent screen. The action
+  /// stays visible but inert: pressing it again would open a second browser
+  /// window and orphan the first redirect listener.
+  final bool isConnecting;
 
   @override
   Widget build(BuildContext context) {
@@ -82,8 +88,25 @@ class AuthStatusBanner extends StatelessWidget {
             )
           else if (onConnect != null)
             OutlinedButton(
-              onPressed: onConnect,
-              child: const Text('Connecter'),
+              onPressed: isConnecting ? null : onConnect,
+              child: isConnecting
+                  ? const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        SizedBox(
+                          width: 12,
+                          height: 12,
+                          child: CircularProgressIndicator(strokeWidth: 2),
+                        ),
+                        SizedBox(width: EdSpacing.xs),
+                        Text('En attente…'),
+                      ],
+                    )
+                  : Text(
+                      status is AuthReauthorisationRequired
+                          ? 'Reconnecter'
+                          : 'Connecter',
+                    ),
             ),
         ],
       ),

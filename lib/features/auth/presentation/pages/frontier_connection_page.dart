@@ -9,16 +9,27 @@ import '../../domain/entities/oauth_client_config.dart';
 import '../bloc/auth_bloc.dart';
 import '../widgets/auth_status_banner.dart';
 
-/// Tells the commander that the client id on screen was compiled into this
-/// build rather than typed here, and that they can take it over.
+/// Tells the commander that a client id compiled into this build is already in
+/// use, that it is deliberately hidden, and how to take it over.
 ///
 /// Returns null when there is nothing to explain: a value they entered
 /// themselves, or no value at all.
 String? clientIdHelperText(OAuthClientConfig config) =>
     config.clientIdIsBuildDefault
-        ? 'Valeur par défaut de ce build. Une saisie la remplace sur cet '
-            'appareil ; vider le champ y revient.'
+        ? 'Ce build embarque déjà un client_id, masqué ici. Une saisie le '
+            'remplace sur cet appareil ; laisser le champ vide le conserve.'
         : null;
+
+/// What the client id field starts with.
+///
+/// A value that comes from the build is deliberately left out: it was never
+/// typed on this device, and putting it on screen — in a field, in a
+/// screenshot, over a shoulder — hands it out for nothing. An empty submission
+/// already means « keep the build default », so nothing is lost. A value the
+/// commander saved themselves does come back, so a typo can be corrected
+/// instead of retyped.
+String initialClientIdFieldValue(OAuthClientConfig config) =>
+    config.clientIdIsBuildDefault ? '' : config.clientId;
 
 /// Connecting a Frontier account — and being honest about what that costs.
 class FrontierConnectionPage extends StatelessWidget {
@@ -54,10 +65,10 @@ class _ConnectionView extends StatelessWidget {
             const SliverToBoxAdapter(
               child: EdPageHeader(
                 kicker: 'Companion API',
-                title: 'Compte Frontier',
-                deck: 'Se connecter permet de récupérer ton profil de '
-                    'commandant et tes journaux de bord directement depuis '
-                    'Frontier.',
+                title: 'Authentification',
+                deck: 'Le client OAuth avec lequel l\'application se présente '
+                    'à Frontier. Une fois configuré, la connexion se lance '
+                    'depuis Réglages.',
               ),
             ),
             SliverToBoxAdapter(
@@ -179,12 +190,18 @@ class _ClientConfigForm extends StatefulWidget {
 
 class _ClientConfigFormState extends State<_ClientConfigForm> {
   late final TextEditingController _clientId =
-      TextEditingController(text: widget.config.clientId);
+      TextEditingController(text: initialClientIdFieldValue(widget.config));
+
   late final TextEditingController _redirectUri = TextEditingController(
     text: widget.config.redirectUri.isEmpty
         ? RedirectListenerFactory.mobileRedirectUri
         : widget.config.redirectUri,
   );
+
+  /// A client id is not an OAuth secret, but it is not the commander's to leak
+  /// either — and the one this build ships with is never in the controller at
+  /// all, so revealing shows only what was typed here.
+  bool _obscureClientId = true;
 
   @override
   void dispose() {
@@ -204,12 +221,29 @@ class _ClientConfigFormState extends State<_ClientConfigForm> {
         children: <Widget>[
           TextField(
             controller: _clientId,
+            obscureText: _obscureClientId,
+            autocorrect: false,
+            enableSuggestions: false,
             style: EdTypography.bodySmall,
             decoration: InputDecoration(
               labelText: 'CLIENT ID',
-              hintText: '00000000-0000-0000-0000-000000000000',
+              hintText: widget.config.clientIdIsBuildDefault
+                  ? 'Client id du build — masqué'
+                  : '00000000-0000-0000-0000-000000000000',
               helperText: clientIdHelperText(widget.config),
-              helperMaxLines: 2,
+              helperMaxLines: 3,
+              suffixIcon: IconButton(
+                onPressed: () => setState(
+                  () => _obscureClientId = !_obscureClientId,
+                ),
+                tooltip: _obscureClientId ? 'Afficher' : 'Masquer',
+                icon: Icon(
+                  _obscureClientId
+                      ? Icons.visibility_outlined
+                      : Icons.visibility_off_outlined,
+                  size: 18,
+                ),
+              ),
             ),
           ),
           const SizedBox(height: EdSpacing.sm),

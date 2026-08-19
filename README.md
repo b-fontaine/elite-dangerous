@@ -123,16 +123,25 @@ task run:linux                       # le drapeau est ajouté automatiquement
 flutter run --dart-define-from-file=.env      # sans task
 ```
 
-Une compilation faite **sans `.env` reste utilisable** : le champ CLIENT ID de
-*Réglages → Compte Frontier* accepte alors n'importe quel client_id, et c'est
-la voie normale pour qui compile depuis les sources avec sa propre inscription
-Frontier. Une valeur saisie là est toujours prioritaire sur celle du build ;
-vider le champ revient au défaut compilé.
+Dans l'application, *Réglages → Compte Frontier* fait les deux choses
+séparément : « Connecter » lance directement l'autorisation dans le navigateur
+avec le client déjà configuré, et « Configurer l'authentification » ouvre
+l'écran qui sert à en changer.
 
-La « Shared Key » n'est jamais nécessaire : l'échange utilise PKCE. Un
-`client_id` compilé reste **extractible du binaire** — ce n'est pas un secret au
-sens OAuth, mais quelqu'un peut le récupérer et publier un outil s'annonçant
-sous ce nom auprès de Frontier. C'est le modèle qu'EDMC applique déjà.
+Une compilation faite **sans `.env` reste utilisable** : le champ CLIENT ID de
+cet écran accepte alors n'importe quel client_id, et c'est la voie normale pour
+qui compile depuis les sources avec sa propre inscription Frontier. Une valeur
+saisie là est toujours prioritaire sur celle du build ; vider le champ revient
+au défaut compilé.
+
+Ce champ est **masqué**, et la valeur compilée n'y est jamais pré-remplie : elle
+n'est pas passée à l'interface du tout, laisser le champ vide suffit à la
+conserver. Un `client_id` compilé reste **extractible du binaire** — ce n'est pas
+un secret au sens OAuth, et c'est le modèle qu'EDMC applique déjà — mais
+quelqu'un peut le récupérer et publier un outil s'annonçant sous ce nom auprès
+de Frontier, alors autant ne pas l'offrir à une capture d'écran.
+
+La « Shared Key », elle, n'est jamais nécessaire : l'échange utilise PKCE.
 
 Contraintes héritées de Frontier, visibles dans l'interface :
 

@@ -150,7 +150,7 @@ GoRouter createAppRouter() {
                 path: AppRoutes.settings,
                 builder: (BuildContext context, GoRouterState state) =>
                     SettingsPage(
-                  onOpenFrontierConnection: () =>
+                  onConfigureAuthentication: () =>
                       context.go(AppRoutes.frontierConnection),
                 ),
                 routes: <RouteBase>[
