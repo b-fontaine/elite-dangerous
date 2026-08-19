@@ -3,6 +3,8 @@ import 'package:elite_dangerous/features/auth/domain/repositories/auth_repositor
 import 'package:elite_dangerous/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:elite_dangerous/features/commander/domain/repositories/commander_repository.dart';
 import 'package:elite_dangerous/features/commander/presentation/bloc/commander_bloc.dart';
+import 'package:elite_dangerous/features/diagnostics/domain/repositories/diagnostics_repository.dart';
+import 'package:elite_dangerous/features/diagnostics/presentation/bloc/diagnostics_bloc.dart';
 import 'package:elite_dangerous/features/exobiology/domain/repositories/exobiology_catalog_repository.dart';
 import 'package:elite_dangerous/features/exobiology/domain/repositories/exobiology_progress_repository.dart';
 import 'package:elite_dangerous/features/exobiology/presentation/bloc/roadmap_bloc.dart';
@@ -19,11 +21,14 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../fixtures/path_provider_stub.dart';
+
 /// The generated `injection.config.dart` is excluded from static analysis, so
 /// a broken registration only shows up at runtime. Resolving every graph root
 /// here is what turns that into a test failure instead of a crash on launch.
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  usePathProviderStub();
 
   setUp(() async {
     SharedPreferences.setMockInitialValues(<String, Object>{});
@@ -41,6 +46,7 @@ void main() {
     expect(getIt<SettingsRepository>(), isNotNull);
     expect(getIt<ExobiologyCatalogRepository>(), isNotNull);
     expect(getIt<ExobiologyProgressRepository>(), isNotNull);
+    expect(getIt<DiagnosticsRepository>(), isNotNull);
   });
 
   test('every bloc resolves with its full dependency graph', () {
@@ -54,6 +60,7 @@ void main() {
       getIt<RoadmapBloc>(),
       getIt<SpeciesFinderBloc>(),
       getIt<SpeciesCatalogBloc>(),
+      getIt<DiagnosticsBloc>(),
     ];
 
     expect(blocs, everyElement(isNotNull));

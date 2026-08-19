@@ -11,9 +11,14 @@ import '../../domain/entities/app_settings.dart';
 import '../bloc/settings_bloc.dart';
 
 class SettingsPage extends StatelessWidget {
-  const SettingsPage({this.onConfigureAuthentication, super.key});
+  const SettingsPage({
+    this.onConfigureAuthentication,
+    this.onOpenDiagnostics,
+    super.key,
+  });
 
   final VoidCallback? onConfigureAuthentication;
+  final VoidCallback? onOpenDiagnostics;
 
   @override
   Widget build(BuildContext context) {
@@ -29,15 +34,17 @@ class SettingsPage extends StatelessWidget {
       ],
       child: _SettingsView(
         onConfigureAuthentication: onConfigureAuthentication,
+        onOpenDiagnostics: onOpenDiagnostics,
       ),
     );
   }
 }
 
 class _SettingsView extends StatelessWidget {
-  const _SettingsView({this.onConfigureAuthentication});
+  const _SettingsView({this.onConfigureAuthentication, this.onOpenDiagnostics});
 
   final VoidCallback? onConfigureAuthentication;
+  final VoidCallback? onOpenDiagnostics;
 
   @override
   Widget build(BuildContext context) {
@@ -185,7 +192,31 @@ class _SettingsView extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: EdSpacing.xxl),
-                      const EdSectionHeader(title: 'À propos', number: 5),
+                      const EdSectionHeader(title: 'Diagnostic', number: 5),
+                      const SizedBox(height: EdSpacing.md),
+                      EdPanel(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
+                            const Text(
+                              'Affiche ce que la Companion API renvoie '
+                              'vraiment : les clés présentes dans le profil, '
+                              'les types d\'événements du journal, et ce que '
+                              'l\'application en lit aujourd\'hui. Utile pour '
+                              'décider ce qu\'un écran peut afficher.',
+                              style: EdTypography.bodySmall,
+                            ),
+                            const SizedBox(height: EdSpacing.md),
+                            OutlinedButton.icon(
+                              onPressed: onOpenDiagnostics,
+                              icon: const Icon(Icons.biotech_outlined, size: 16),
+                              label: const Text('Inspecter la synchronisation'),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: EdSpacing.xxl),
+                      const EdSectionHeader(title: 'À propos', number: 6),
                       const SizedBox(height: EdSpacing.md),
                       const _AboutPanel(),
                       const SizedBox(height: EdSpacing.xxxl),
