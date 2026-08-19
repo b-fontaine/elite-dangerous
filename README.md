@@ -12,12 +12,13 @@ tenant compte de ce que le commandant possède déjà.
 
 | | |
 |---|---|
+| **Poste de pilotage** | Qui est le commandant, **les trois prochaines étapes**, six chiffres clés, et cinq portes vers le détail : carrière, flotte, équipement à pied, ingénieurs, matériaux. Court par construction — il tient sur un écran de téléphone, le détail est à un geste. |
 | **Feuille de route priorisée** | 23 règles encodées depuis les guides fournis, évaluées sur l'état réel du commandant — profil Frontier, journaux importés et saisie manuelle confondus. Chaque étape dit *quoi faire*, *pourquoi maintenant*, *ce que ça rapporte* et *ce qui la bloque*. |
 | **Identification d'espèces** | Saisis ce que le FSS affiche : l'app déduit les espèces possibles, leur valeur, leur Colony Range, et montre **quel critère reste invérifié**. |
 | **Catalogue** | Les 118 organiques connus, leurs valeurs Vista Genomics, leurs conditions et leurs variantes de couleur. Hors ligne. |
-| **Journal de bord** | Synchronisation depuis la Companion API de Frontier **ou** import des fichiers `Journal.*.log` du jeu — cette seconde voie ne demande aucun compte. |
+| **Journal de bord** | Synchronisation depuis la Companion API de Frontier **ou** import des fichiers `Journal.*.log` du jeu — cette seconde voie ne demande aucun compte. La synchronisation remonte du plus récent au plus ancien, jusqu'à 90 jours. |
 | **Guides** | Les cinq guides sources convertis en contenu structuré et navigable (260 Ko), rendus avec le même design system que le reste. |
-| **Profil** | Profil Frontier + saisie manuelle de tout ce que l'API n'expose pas : grade de combinaison, ingénieurs débloqués, matériaux, Meta-Alloy. |
+| **Profil** | Profil Frontier lu en entier — flotte, équipement du vaisseau piloté et son ingénierie, combinaisons, armes, rangs, services de la station — complété par le journal, qui fournit seul le rebuy exact, la portée de saut, les ingénieurs débloqués, les matériaux à pied et l'allégeance Powerplay. La saisie manuelle ne sert plus qu'à corriger. |
 
 Aucune partie serveur. Tout est embarqué ou stocké sur l'appareil ; le seul
 appel réseau possible est vers la Companion API de Frontier, à la demande.
@@ -98,7 +99,7 @@ Vérification complète :
 
 ```bash
 task check              # dart analyze --fatal-infos puis flutter test
-flutter test            # 307 tests
+flutter test            # 479 tests
 flutter build web       # compile la chaîne complète, y compris le code généré
 ```
 
@@ -162,6 +163,110 @@ figure.
 Sans compte, l'application reste complète : import de journaux locaux et saisie
 manuelle.
 
+### Où vit le journal
+
+Dans un fichier, `journal.jsonl`, sous le répertoire de données de
+l'application — pas dans les préférences, où il tenait jusqu'ici.
+
+Un journal n'est pas un réglage : c'est un corpus de dizaines de milliers de
+lignes JSON qui ne fait que croître. Rangé derrière `KeyValueStore`, il formait
+un unique tableau JSON, réencodé et réécrit en entier à chaque synchronisation,
+et résident en mémoire pour toute la vie du processus — **26,9 Mio** au plafond
+de 60 000 lignes, mesuré. Porter la fenêtre de synchronisation à quatre-vingt-dix
+jours rendait ce plafond atteignable.
+
+Un `LineStore` écrit des lignes. Une synchronisation n'ajoute plus que les
+lignes réellement neuves, en fin de fichier : son coût suit la taille de
+l'import, plus celle de l'historique. La réécriture complète ne subsiste que
+pour franchir le plafond, seul cas où les lignes les plus anciennes doivent
+partir, et elle passe par un fichier temporaire renommé — un processus tué en
+cours d'écriture ne doit pas laisser un journal tronqué, puisqu'il n'en existe
+pas d'autre copie.
+
+Un journal écrit par une version antérieure est déplacé au premier accès, puis
+la clé de préférences est supprimée. Le web, qui n'a pas de système de fichiers
+et ne peut de toute façon pas se connecter à Frontier, garde l'ancien
+comportement.
+
+### Remonter le journal aussi loin que possible
+
+Frontier n'expose pas de plage : `/journal/{année}/{mois}/{jour}` rend une
+journée, et rien ne documente combien de temps il les garde. La synchronisation
+compose avec ça.
+
+Elle remonte **du plus récent au plus ancien**, et c'est ce qui la rend
+utilisable : `Statistics`, `EngineerProgress`, `ShipLocker`, `Loadout` et
+`Reputation` sont réécrits à chaque démarrage de session, donc la dernière
+journée jouée porte déjà l'état courant du commandant. Une requête suffit
+souvent, là où un parcours chronologique aurait traversé toute la période avant
+d'y arriver.
+
+Elle s'arrête d'elle-même. Frontier répond `204` aussi bien pour une journée
+sans partie que pour une journée qu'il ne conserve plus, sans permettre de les
+distinguer — après trois semaines de silence d'affilée, les deux appellent la
+même réponse : arrêter. Un `206` (« je n'ai pas tout rassemblé ») est resollicité
+plus tard, comme Frontier le demande. Un `401` ou un `429` interrompt le
+parcours au lieu de le répéter quatre-vingt-dix fois.
+
+Enfin, une journée **passée** qui a répondu `200` ou `204` ne peut plus changer :
+elle est mémorisée et jamais redemandée. Le jour courant, lui, ne l'est jamais —
+la session peut encore tourner. Une deuxième synchronisation large ne coûte donc
+que les journées neuves.
+
+Le compte rendu dit jusqu'où le parcours est allé et pourquoi il s'est arrêté,
+ce qui est la seule façon de savoir si relancer trouverait autre chose.
+
+> **Le budget de requêtes est par famille d'endpoint, pas par URL.** `/journal`
+> prend la date dans son chemin : compter par chemin complet donnerait à chaque
+> journée son propre quota, et une synchronisation de quatre-vingt-dix jours
+> partirait en une seule rafale — précisément ce que Frontier limite.
+> `CapiThrottleInterceptor` regroupe donc les journées sous `/journal`, avec un
+> espacement propre à cette famille : une minute par journée serait inexploitable,
+> une rafale serait refusée.
+
+### Inspecter ce que renvoie la synchronisation
+
+*Réglages → Diagnostic → Inspecter la synchronisation* montre les charges utiles
+brutes, avant que l'application n'en tire quoi que ce soit — et les compte.
+
+C'est nécessaire parce que la documentation ne suffit pas. La référence CAPI de
+la communauté affirme que `ships` porte « le même format que `ship` », modules
+compris, alors que tous les outils qui importent un build n'importent jamais que
+le vaisseau piloté ; et `suit`, `suits`, `loadout`, `loadouts` n'apparaissent
+dans aucun document de Frontier — ils n'existent que dans le code d'EDMC.
+L'écran tranche sur un vrai compte : combien de vaisseaux stockés portent un
+bloc `modules`, combien d'armes portent leur grade `class`.
+
+Côté journal, il dénombre chaque type d'événement rencontré et dit lequel
+l'application lit déjà — treize sur la quarantaine qu'une session écrit. Les
+événements dont dépend la suite (`Statistics`, `EngineerProgress`, `ShipLocker`,
+`Loadout`, `Reputation`, `Powerplay`…) sont listés même absents : une absence est
+un résultat, elle dit jusqu'où la synchronisation doit remonter.
+
+Lire ce qui est déjà sur l'appareil ne coûte rien ; « Récupérer » dépense une
+requête. « Copier » et « Exporter » emportent la capture entière — l'aperçu à
+l'écran est tronqué, un `/profile` pèse des centaines de kilo-octets et une
+journée de journal plusieurs méga-octets.
+
+#### Ce qu'une vraie capture a tranché
+
+`test/fixtures/capi_profile_capture.dart` est un `/profile` réel, anonymisé,
+d'un compte Odyssey à huit vaisseaux. Les tests qui le lisent verrouillent six
+constats qu'aucune documentation ne donne :
+
+| Constat | Conséquence |
+|---|---|
+| **Aucun vaisseau stocké ne porte ses `modules`** — 0 sur 7 ; seul celui piloté les a | Une flotte s'affiche par type, nom, position et valeur ; pas par équipement. La référence communautaire, qui annonce « le même format que `ship` », a tort. |
+| **`loadouts` existe, le grade des armes non** | Les armes à pied sont là, nommées et localisées, mais sans `class` ni `mods` ; Frontier écrit `"modifications": ["NYI"]`, son propre marqueur « pas encore implémenté ». |
+| **`capabilities` contredit la charge utile qui le contient** | `Horizons` et `Odyssey` à `false` sur un compte possédant trois combinaisons Odyssey et deux VRS. À déduire des combinaisons et de `launchBays`, jamais à lire. |
+| **`hull` vaut `0`** sur les coques récentes | Le rebuy dérivé de `hull + modules` est très en dessous du vrai. Le montant exact ne vient que de `Rebuy`, dans l'événement `Loadout` du journal. |
+| **13 échelles de rang**, dont `builder` et `learner` | Frontier en ajoute sans prévenir ; l'écran nomme celles que l'application ne modélise pas. |
+| **Un tiers des `modules` est de la décoration** | Peintures, décalcomanies, plaques, kits et COVAS occupent des emplacements comme n'importe quel module. Une fiche d'équipement qui ne les filtre pas est illisible. |
+
+À l'inverse, `lastStarport.services` s'est révélé plus utile que prévu : il
+indique `vistagenomics`, donc si la station où le commandant est amarré achète
+les données organiques.
+
 ---
 
 ## Architecture
@@ -217,7 +322,7 @@ trois formats.
 
 Pilotage par les tests, deux niveaux :
 
-- **TDD** — 284 tests unitaires et widget. Le domaine (moteur de roadmap,
+- **TDD** — 470 tests unitaires et widget. Le domaine (moteur de roadmap,
   matcher d'espèces, parser de journal, agrégateur) est couvert en premier
   parce qu'il porte toute la connaissance du jeu.
 - **BDD** — scénarios Gherkin en français dans `test/features_bdd/`, générés
@@ -236,6 +341,128 @@ Trois tests protègent des données qui n'ont pas d'autre filet :
 contenu embarqué, `dependency_injection_test.dart` résout tout le graphe DI.
 
 ---
+
+## Le poste de pilotage
+
+Il répond d'abord à « qu'est-ce que je fais maintenant ? », puis laisse
+consulter le dossier complet.
+
+- **Trois étapes**, pas une. La première est mise en avant : c'est elle la
+  réponse. Les deux suivantes sont du contexte — les crier toutes les trois ne
+  dirait rien.
+- **Neuf chiffres clés** : système, corps, station, solde, valeur nette, profit
+  exobiologique de carrière, rang Exobiologist, portée de saut, rebuy. Chacun
+  dit d'où il vient quand ça change son sens — « total de carrière, énoncé par
+  le jeu » n'est pas « estimé depuis ce qui a été importé ».
+- **Six cartes** ouvrant chacune une page de détail.
+
+### Où se trouve le commandant
+
+Le système et la station viennent de `/profile` ; **le corps ne vient que du
+journal**. La Companion API n'a aucune notion de corps céleste, et elle ne se
+rafraîchit qu'à l'amarrage — un commandant en orbite depuis deux heures y est
+toujours à sa dernière station.
+
+Le journal, lui, le dit à l'instant : `FSDJump` nomme le système et l'étoile,
+`ApproachBody` la planète, `Touchdown` et `Disembark` la surface, `Docked` la
+station. Ces événements sont **fusionnés** plutôt que pris en bloc :
+`ApproachBody` ne répète pas toujours le système, `FSDJump` efface le corps.
+Appliquer chacun tel quel viderait la moitié de la position à chaque ligne.
+
+Deux règles méritent d'être dites, parce qu'elles se lisent mal autrement :
+s'amarrer **abandonne le corps** — une station n'est pas une planète, même
+planétaire, et garder le corps se lirait comme « toujours à la surface » ; et
+`LeaveBody` comme `StartJump` l'effacent sans toucher au système.
+
+### La station
+
+`/profile` en donne le nom, la faction, la faction mineure et **vingt-six
+services**. Une liste plate de vingt-six clés ne répond à aucune question, donc
+ils sont groupés par ce qu'on va y faire — exobiologie, à pied, ingénierie et
+échange, vaisseau, autres — avec Vista Genomics en tête, puisque c'est la seule
+qui décide si les données organiques se vendent ici. Les services qu'une future
+mise à jour de Frontier ajouterait apparaissent sous « non classés » plutôt que
+d'être perdus.
+
+L'événement `Docked` du journal complète : type de station, distance à
+l'étoile, économies, gouvernement, allégeance et nombre de plateformes par
+taille — rien de tout cela n'étant dans la Companion API.
+
+### L'équipement d'un vaisseau
+
+Les emplacements sont groupés en quatre catégories — points d'emport, points
+utilitaires, modules internes principaux et optionnels — déduites du nom de
+l'emplacement. La **taille**, elle, se lit dans le symbole du module et non
+dans ce nom : une capture réelle porte `MediumHardpoint5` contenant une arme
+*Small*, et sept emplacements Large/Medium sur un vaisseau qui n'en a que six.
+La numérotation de Frontier est décorrélée du plan réel du vaisseau.
+
+Les emplacements **vides** n'existent pas dans la charge utile : Frontier
+n'envoie que ce qui est monté. Ils sont donc repérés par les trous de
+numérotation — `Slot05` et `Slot08` présents, `Slot06` et `Slot07` absents. Ce
+procédé a deux limites, dites à l'écran plutôt que tues : la taille d'un
+emplacement vide est **bornée** par celle du précédent, jamais connue
+exactement ; et rien ne trahit un emplacement vide situé après le dernier
+emplacement occupé. Le savoir demanderait une table des plans de chaque
+vaisseau, que l'application n'embarque pas.
+
+### Les noms que Frontier ne traduit pas
+
+La Companion API renvoie tantôt une vraie traduction (`Scarabée VRS`), tantôt
+la clé de localisation brute (`lander01_name`). La clé est pire qu'inutile à
+l'écran, mais la rejeter laisse le symbole — et `lander01` ne dit rien du
+**Nomad** garé dans le hangar.
+
+Une petite table comble ces trous, vérifiée plutôt que devinée : Frontier vend
+le Nomad sous la référence `FORC_FDEV_V_LANDER01_BUNDLE_001`, et il se lance
+depuis un hangar à vaisseaux (`Int_FighterBayMk2`) et non depuis une soute à
+véhicules planétaires — ce n'est donc pas un VRS. Les noms de configuration
+(`lander01_loadout_advanced_name` → « Avancé ») suivent la même règle.
+
+Chaque page de détail, quand elle n'a rien à montrer, **dit pourquoi et ce qui
+la remplirait** : la Companion API n'expose pas les ingénieurs, le grade des
+armes n'existe nulle part, un vaisseau stocké n'a pas de fiche d'équipement. Un
+panneau vide se lit comme un bug ; une phrase se lit comme une instruction.
+
+`/commandant` a perdu ses rangs, ses combinaisons et ses finances — les pages de
+détail les portent mieux, et deux écrans qui affichent les mêmes chiffres sont
+deux écrans qui divergent. Il ne répond plus qu'à la question dont il est le
+seul dépositaire : **cette valeur vient-elle de Frontier, du journal, ou de
+moi ?**
+
+## Ce que la synchronisation donne, et ce qu'elle ne donnera pas
+
+Les deux sources se complètent exactement là où l'autre est muette.
+
+| | `/profile` | Journal |
+|---|---|---|
+| Identité, solde, position, rangs | ✅ 13 échelles, dont `builder` et `learner` sans paliers publiés | ✅ avec le **pourcentage** vers le rang suivant (`Progress`) |
+| Flotte | ✅ 8 vaisseaux : type, nom, position, valeur | ✅ `StoredShips`, avec le prix de transfert, sans compte Frontier |
+| Équipement d'un vaisseau | ⚠️ **le vaisseau piloté uniquement** — 41 emplacements, dont l'ingénierie posée avec blueprint, grade et modificateurs | ✅ `Loadout`, le vaisseau piloté |
+| Rebuy | ❌ `hull` vaut `0` sur les coques récentes : le calcul est faux d'un ordre de grandeur | ✅ `Rebuy`, exact |
+| Portée de saut | ❌ | ✅ `MaxJumpRange`, à pleine charge |
+| Combinaisons | ✅ possédées et équipée, grade dans le suffixe `_classN` | ✅ `SuitLoadout` |
+| Armes à pied | ⚠️ présentes et nommées, **sans grade ni modifications** — Frontier renvoie `["NYI"]` | ⚠️ idem |
+| Profit exobiologie de carrière | ❌ | ✅ `Statistics`, le chiffre exact que compte l'échelle |
+| Ingénieurs | ❌ | ✅ `EngineerProgress` : statut et rang, pour tous |
+| Réputations | ❌ | ✅ `Reputation`, −100 à +100 |
+| Matériaux à pied | ❌ | ✅ `ShipLocker`, aux noms lisibles du barman |
+| Powerplay | ❌ | ✅ `Powerplay` — dont la majoration de 30 % de Pranav Antal |
+| Meta-Alloy en soute | ❌ | ✅ `Cargo` |
+| Services de la station | ✅ dont `vistagenomics` : la station achète-t-elle les données organiques | ❌ |
+| Horizons / Odyssey | ❌ `capabilities` **ment** : `false` sur un compte qui possède trois combinaisons Odyssey et deux VRS | déduit des combinaisons et du hangar planétaire |
+
+Conséquence directe : `ManualCommanderOverrides` ne sert plus qu'à **corriger**.
+Portée de saut, matériaux, ingénieurs débloqués, Meta-Alloy, allégeance
+Powerplay et détecteur de surface sont désormais dérivés. Une valeur saisie
+reste prioritaire — l'application ne voit jamais qu'une partie d'une
+sauvegarde — mais plus rien n'oblige à remplir le formulaire.
+
+Les événements que Frontier réécrit **à chaque démarrage de session**
+(`Statistics`, `EngineerProgress`, `ShipLocker`, `Loadout`, `Reputation`,
+`Materials`, `Powerplay`) sont des instantanés, pas des incréments : replier
+deux mois de journal doit rendre le plus récent, jamais une somme. C'est aussi
+ce qui fait qu'**une seule journée jouée suffit** à connaître l'état courant.
 
 ## Données : ce qui a été corrigé
 
@@ -281,7 +508,7 @@ ainsi qu'une feuille de route « minage » ou « commerce » se grefferait.
 ## État
 
 Fonctionnel de bout en bout : `dart analyze` propre sur `lib/` et `test/`,
-284 tests verts, `flutter build web` réussi.
+479 tests verts, `flutter build web` réussi.
 
 La boucle est fermée : importer un journal met immédiatement à jour le profit
 de carrière, le rang Exobiologist, les données à risque en soute et donc l'ordre
