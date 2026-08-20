@@ -1,0 +1,1938 @@
+{
+  "edition": "2026-08",
+  "sources": [
+    "EDCD/FDevIDs material.csv — table d'identifiants du jeu, pour les 108 matériaux, leur catégorie et leur grade",
+    "docs/faisabilite-spansh-temps-reel-materiaux.md § 3.2, 3.4 et 3.5 — pour les sources de terrain"
+  ],
+  "storageCapsByGrade": {
+    "1": 300,
+    "2": 250,
+    "3": 200,
+    "4": 150,
+    "5": 100
+  },
+  "categories": [
+    {
+      "id": "encoded_data_archives",
+      "type": "encoded",
+      "name": "Data Archives",
+      "sources": [
+        {
+          "kind": "ship_scan",
+          "detail": "Scan de vaisseaux, automatique dès qu'un vaisseau est ciblé, en supercruise comme en sub-light.",
+          "conditions": null
+        },
+        {
+          "kind": "datapoint",
+          "detail": "Data points : Private Data Beacons des Degraded et Encoded Emissions, satellites, Planetary Outposts scannés au Data Link Scanner du SRV — les Starports ne comptent pas — et missions de scan de surface, qui rendent souvent des données rares.",
+          "conditions": "Les data points vont par sets de quatre, avec un timer de reset rechargé à chaque scan réussi ; compléter le set rend un Data Point Intel Package en crédits. Plus la sécurité du site est haute, plus les données sont rares — et les défenses fortes."
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Encoded.",
+          "conditions": "Économies High Tech et Military. Gresley Dock (Nanomam) est un trader Encoded en économie Agriculture : la règle ne se déduit pas."
+        }
+      ]
+    },
+    {
+      "id": "encoded_emission_data",
+      "type": "encoded",
+      "name": "Emission Data",
+      "sources": [
+        {
+          "kind": "ship_scan",
+          "detail": "Scan de vaisseaux, automatique dès qu'un vaisseau est ciblé, en supercruise comme en sub-light.",
+          "conditions": null
+        },
+        {
+          "kind": "datapoint",
+          "detail": "Data points : Private Data Beacons des Degraded et Encoded Emissions, satellites, Planetary Outposts scannés au Data Link Scanner du SRV — les Starports ne comptent pas — et missions de scan de surface, qui rendent souvent des données rares.",
+          "conditions": "Les data points vont par sets de quatre, avec un timer de reset rechargé à chaque scan réussi ; compléter le set rend un Data Point Intel Package en crédits. Plus la sécurité du site est haute, plus les données sont rares — et les défenses fortes."
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Encoded.",
+          "conditions": "Économies High Tech et Military. Gresley Dock (Nanomam) est un trader Encoded en économie Agriculture : la règle ne se déduit pas."
+        }
+      ]
+    },
+    {
+      "id": "encoded_encoded_firmware",
+      "type": "encoded",
+      "name": "Encoded Firmware",
+      "sources": [
+        {
+          "kind": "ship_scan",
+          "detail": "Scan de vaisseaux, automatique dès qu'un vaisseau est ciblé, en supercruise comme en sub-light.",
+          "conditions": null
+        },
+        {
+          "kind": "datapoint",
+          "detail": "Data points : Private Data Beacons des Degraded et Encoded Emissions, satellites, Planetary Outposts scannés au Data Link Scanner du SRV — les Starports ne comptent pas — et missions de scan de surface, qui rendent souvent des données rares.",
+          "conditions": "Les data points vont par sets de quatre, avec un timer de reset rechargé à chaque scan réussi ; compléter le set rend un Data Point Intel Package en crédits. Plus la sécurité du site est haute, plus les données sont rares — et les défenses fortes."
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Encoded.",
+          "conditions": "Économies High Tech et Military. Gresley Dock (Nanomam) est un trader Encoded en économie Agriculture : la règle ne se déduit pas."
+        }
+      ]
+    },
+    {
+      "id": "encoded_encryption_files",
+      "type": "encoded",
+      "name": "Encryption Files",
+      "sources": [
+        {
+          "kind": "ship_scan",
+          "detail": "Scan de vaisseaux, automatique dès qu'un vaisseau est ciblé, en supercruise comme en sub-light.",
+          "conditions": null
+        },
+        {
+          "kind": "datapoint",
+          "detail": "Data points : Private Data Beacons des Degraded et Encoded Emissions, satellites, Planetary Outposts scannés au Data Link Scanner du SRV — les Starports ne comptent pas — et missions de scan de surface, qui rendent souvent des données rares.",
+          "conditions": "Les data points vont par sets de quatre, avec un timer de reset rechargé à chaque scan réussi ; compléter le set rend un Data Point Intel Package en crédits. Plus la sécurité du site est haute, plus les données sont rares — et les défenses fortes."
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Encoded.",
+          "conditions": "Économies High Tech et Military. Gresley Dock (Nanomam) est un trader Encoded en économie Agriculture : la règle ne se déduit pas."
+        }
+      ]
+    },
+    {
+      "id": "encoded_shield_data",
+      "type": "encoded",
+      "name": "Shield Data",
+      "sources": [
+        {
+          "kind": "ship_scan",
+          "detail": "Scan de vaisseaux, automatique dès qu'un vaisseau est ciblé, en supercruise comme en sub-light.",
+          "conditions": null
+        },
+        {
+          "kind": "datapoint",
+          "detail": "Data points : Private Data Beacons des Degraded et Encoded Emissions, satellites, Planetary Outposts scannés au Data Link Scanner du SRV — les Starports ne comptent pas — et missions de scan de surface, qui rendent souvent des données rares.",
+          "conditions": "Les data points vont par sets de quatre, avec un timer de reset rechargé à chaque scan réussi ; compléter le set rend un Data Point Intel Package en crédits. Plus la sécurité du site est haute, plus les données sont rares — et les défenses fortes."
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Encoded.",
+          "conditions": "Économies High Tech et Military. Gresley Dock (Nanomam) est un trader Encoded en économie Agriculture : la règle ne se déduit pas."
+        }
+      ]
+    },
+    {
+      "id": "encoded_wake_scans",
+      "type": "encoded",
+      "name": "Wake Scans",
+      "sources": [
+        {
+          "kind": "wake",
+          "detail": "Frame Shift Wake Scanner braqué sur un sillage d'hyperespace (high energy wake). C'est la seule source des cinq Wake Scans : sans ce module, aucun ne s'obtient, quel que soit le temps passé à prospecter.",
+          "conditions": "Utility mount classe 0, notes E à A, 13 544 à 1 097 095 Cr, portée 2 à 4 km, 10 s de scan. À assigner à un groupe de tir. Camper les sillages près d'une station fréquentée est la méthode."
+        },
+        {
+          "kind": "trader",
+          "detail": "Le trader Encoded descend d'un grade à 1 pour 3 : une unité de Datamined Wake Exceptions (G5) rend 81 Atypical Disrupted Wake Echoes (G1). Récolter n'importe quel Wake Scan puis convertir est bien plus rapide que d'espérer le bon grade.",
+          "conditions": null
+        },
+        {
+          "kind": "ship_scan",
+          "detail": "Scan de vaisseaux, automatique dès qu'un vaisseau est ciblé, en supercruise comme en sub-light.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "manufactured_alloys",
+      "type": "manufactured",
+      "name": "Alloys",
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emissions : la source des grades 4 et 5. Elles apparaissent en deep space — le plus vite en volant 200 Ls hors du plan orbital — et scanner le Nav Beacon du système peut en faire apparaître.",
+          "conditions": "C'est l'allégeance qui domine, pas l'état de faction seul : une faction fédérale ou impériale ne rend jamais autre chose que ses composites ou son shielding. L'économie du système n'est pas un critère."
+        },
+        {
+          "kind": "salvage",
+          "detail": "Épaves de vaisseau, signaux de détresse, conteneurs de cargo et destruction de vaisseaux, pour les grades 1 à 3.",
+          "conditions": null
+        },
+        {
+          "kind": "mission",
+          "detail": "Récompense de mission. Depuis l'Update 18.08 (août 2024) les récompenses vont jusqu'à 24 unités.",
+          "conditions": null
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Manufactured.",
+          "conditions": "Économies Extraction et Industrial."
+        }
+      ]
+    },
+    {
+      "id": "manufactured_capacitors",
+      "type": "manufactured",
+      "name": "Capacitors",
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emissions : la source des grades 4 et 5. Elles apparaissent en deep space — le plus vite en volant 200 Ls hors du plan orbital — et scanner le Nav Beacon du système peut en faire apparaître.",
+          "conditions": "C'est l'allégeance qui domine, pas l'état de faction seul : une faction fédérale ou impériale ne rend jamais autre chose que ses composites ou son shielding. L'économie du système n'est pas un critère."
+        },
+        {
+          "kind": "salvage",
+          "detail": "Épaves de vaisseau, signaux de détresse, conteneurs de cargo et destruction de vaisseaux, pour les grades 1 à 3.",
+          "conditions": null
+        },
+        {
+          "kind": "mission",
+          "detail": "Récompense de mission. Depuis l'Update 18.08 (août 2024) les récompenses vont jusqu'à 24 unités.",
+          "conditions": null
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Manufactured.",
+          "conditions": "Économies Extraction et Industrial."
+        }
+      ]
+    },
+    {
+      "id": "manufactured_chemical",
+      "type": "manufactured",
+      "name": "Chemical",
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emissions : la source des grades 4 et 5. Elles apparaissent en deep space — le plus vite en volant 200 Ls hors du plan orbital — et scanner le Nav Beacon du système peut en faire apparaître.",
+          "conditions": "C'est l'allégeance qui domine, pas l'état de faction seul : une faction fédérale ou impériale ne rend jamais autre chose que ses composites ou son shielding. L'économie du système n'est pas un critère."
+        },
+        {
+          "kind": "salvage",
+          "detail": "Épaves de vaisseau, signaux de détresse, conteneurs de cargo et destruction de vaisseaux, pour les grades 1 à 3.",
+          "conditions": null
+        },
+        {
+          "kind": "mission",
+          "detail": "Récompense de mission. Depuis l'Update 18.08 (août 2024) les récompenses vont jusqu'à 24 unités.",
+          "conditions": null
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Manufactured.",
+          "conditions": "Économies Extraction et Industrial."
+        }
+      ]
+    },
+    {
+      "id": "manufactured_composite",
+      "type": "manufactured",
+      "name": "Composite",
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emissions : la source des grades 4 et 5. Elles apparaissent en deep space — le plus vite en volant 200 Ls hors du plan orbital — et scanner le Nav Beacon du système peut en faire apparaître.",
+          "conditions": "C'est l'allégeance qui domine, pas l'état de faction seul : une faction fédérale ou impériale ne rend jamais autre chose que ses composites ou son shielding. L'économie du système n'est pas un critère."
+        },
+        {
+          "kind": "salvage",
+          "detail": "Épaves de vaisseau, signaux de détresse, conteneurs de cargo et destruction de vaisseaux, pour les grades 1 à 3.",
+          "conditions": null
+        },
+        {
+          "kind": "mission",
+          "detail": "Récompense de mission. Depuis l'Update 18.08 (août 2024) les récompenses vont jusqu'à 24 unités.",
+          "conditions": null
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Manufactured.",
+          "conditions": "Économies Extraction et Industrial."
+        }
+      ]
+    },
+    {
+      "id": "manufactured_conductive",
+      "type": "manufactured",
+      "name": "Conductive",
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emissions : la source des grades 4 et 5. Elles apparaissent en deep space — le plus vite en volant 200 Ls hors du plan orbital — et scanner le Nav Beacon du système peut en faire apparaître.",
+          "conditions": "C'est l'allégeance qui domine, pas l'état de faction seul : une faction fédérale ou impériale ne rend jamais autre chose que ses composites ou son shielding. L'économie du système n'est pas un critère."
+        },
+        {
+          "kind": "salvage",
+          "detail": "Épaves de vaisseau, signaux de détresse, conteneurs de cargo et destruction de vaisseaux, pour les grades 1 à 3.",
+          "conditions": null
+        },
+        {
+          "kind": "mission",
+          "detail": "Récompense de mission. Depuis l'Update 18.08 (août 2024) les récompenses vont jusqu'à 24 unités.",
+          "conditions": null
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Manufactured.",
+          "conditions": "Économies Extraction et Industrial."
+        }
+      ]
+    },
+    {
+      "id": "manufactured_crystals",
+      "type": "manufactured",
+      "name": "Crystals",
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emissions : la source des grades 4 et 5. Elles apparaissent en deep space — le plus vite en volant 200 Ls hors du plan orbital — et scanner le Nav Beacon du système peut en faire apparaître.",
+          "conditions": "C'est l'allégeance qui domine, pas l'état de faction seul : une faction fédérale ou impériale ne rend jamais autre chose que ses composites ou son shielding. L'économie du système n'est pas un critère."
+        },
+        {
+          "kind": "salvage",
+          "detail": "Épaves de vaisseau, signaux de détresse, conteneurs de cargo et destruction de vaisseaux, pour les grades 1 à 3.",
+          "conditions": null
+        },
+        {
+          "kind": "mission",
+          "detail": "Récompense de mission. Depuis l'Update 18.08 (août 2024) les récompenses vont jusqu'à 24 unités.",
+          "conditions": null
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Manufactured.",
+          "conditions": "Économies Extraction et Industrial."
+        }
+      ]
+    },
+    {
+      "id": "manufactured_heat",
+      "type": "manufactured",
+      "name": "Heat",
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emissions : la source des grades 4 et 5. Elles apparaissent en deep space — le plus vite en volant 200 Ls hors du plan orbital — et scanner le Nav Beacon du système peut en faire apparaître.",
+          "conditions": "C'est l'allégeance qui domine, pas l'état de faction seul : une faction fédérale ou impériale ne rend jamais autre chose que ses composites ou son shielding. L'économie du système n'est pas un critère."
+        },
+        {
+          "kind": "salvage",
+          "detail": "Épaves de vaisseau, signaux de détresse, conteneurs de cargo et destruction de vaisseaux, pour les grades 1 à 3.",
+          "conditions": null
+        },
+        {
+          "kind": "mission",
+          "detail": "Récompense de mission. Depuis l'Update 18.08 (août 2024) les récompenses vont jusqu'à 24 unités.",
+          "conditions": null
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Manufactured.",
+          "conditions": "Économies Extraction et Industrial."
+        }
+      ]
+    },
+    {
+      "id": "manufactured_mechanical_components",
+      "type": "manufactured",
+      "name": "Mechanical Components",
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emissions : la source des grades 4 et 5. Elles apparaissent en deep space — le plus vite en volant 200 Ls hors du plan orbital — et scanner le Nav Beacon du système peut en faire apparaître.",
+          "conditions": "C'est l'allégeance qui domine, pas l'état de faction seul : une faction fédérale ou impériale ne rend jamais autre chose que ses composites ou son shielding. L'économie du système n'est pas un critère."
+        },
+        {
+          "kind": "salvage",
+          "detail": "Épaves de vaisseau, signaux de détresse, conteneurs de cargo et destruction de vaisseaux, pour les grades 1 à 3.",
+          "conditions": null
+        },
+        {
+          "kind": "mission",
+          "detail": "Récompense de mission. Depuis l'Update 18.08 (août 2024) les récompenses vont jusqu'à 24 unités.",
+          "conditions": null
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Manufactured.",
+          "conditions": "Économies Extraction et Industrial."
+        }
+      ]
+    },
+    {
+      "id": "manufactured_shielding",
+      "type": "manufactured",
+      "name": "Shielding",
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emissions : la source des grades 4 et 5. Elles apparaissent en deep space — le plus vite en volant 200 Ls hors du plan orbital — et scanner le Nav Beacon du système peut en faire apparaître.",
+          "conditions": "C'est l'allégeance qui domine, pas l'état de faction seul : une faction fédérale ou impériale ne rend jamais autre chose que ses composites ou son shielding. L'économie du système n'est pas un critère."
+        },
+        {
+          "kind": "salvage",
+          "detail": "Épaves de vaisseau, signaux de détresse, conteneurs de cargo et destruction de vaisseaux, pour les grades 1 à 3.",
+          "conditions": null
+        },
+        {
+          "kind": "mission",
+          "detail": "Récompense de mission. Depuis l'Update 18.08 (août 2024) les récompenses vont jusqu'à 24 unités.",
+          "conditions": null
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Manufactured.",
+          "conditions": "Économies Extraction et Industrial."
+        }
+      ]
+    },
+    {
+      "id": "manufactured_thermic",
+      "type": "manufactured",
+      "name": "Thermic",
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emissions : la source des grades 4 et 5. Elles apparaissent en deep space — le plus vite en volant 200 Ls hors du plan orbital — et scanner le Nav Beacon du système peut en faire apparaître.",
+          "conditions": "C'est l'allégeance qui domine, pas l'état de faction seul : une faction fédérale ou impériale ne rend jamais autre chose que ses composites ou son shielding. L'économie du système n'est pas un critère."
+        },
+        {
+          "kind": "salvage",
+          "detail": "Épaves de vaisseau, signaux de détresse, conteneurs de cargo et destruction de vaisseaux, pour les grades 1 à 3.",
+          "conditions": null
+        },
+        {
+          "kind": "mission",
+          "detail": "Récompense de mission. Depuis l'Update 18.08 (août 2024) les récompenses vont jusqu'à 24 unités.",
+          "conditions": null
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Manufactured.",
+          "conditions": "Économies Extraction et Industrial."
+        }
+      ]
+    },
+    {
+      "id": "odyssey_component",
+      "type": "odyssey",
+      "name": "Composants de combinaison",
+      "sources": [
+        {
+          "kind": "settlement",
+          "detail": "Pillage de settlement. Les settlements contrôlés par une faction Anarchy n'infligent aucune amende : c'est le terrain de farm à privilégier.",
+          "conditions": "On peut s'octroyer une autorisation de sécurité de niveau 3 depuis un terminal du Command Centre — le niveau 2 suffit à éteindre les tourelles — et les gardes n'entrent pas dans un bâtiment dont ils n'ont pas le niveau d'accès. Rétablir le courant d'abord empêche les scavengers d'apparaître."
+        },
+        {
+          "kind": "mission",
+          "detail": "Depuis le Type-8 Update (août 2024), les récompenses de mission couvrent les cinq composants de combinaison, avec des quantités trois à quatre fois supérieures à l'avant. Sélectionner ses missions par récompense est devenu plus efficace que piller.",
+          "conditions": null
+        },
+        {
+          "kind": "bartender",
+          "detail": "Le bartender ne revend que les Assets. Il achète les Goods et les Data contre crédits mais n'en revend jamais : Suit Schematic, Health Monitor et Manufacturing Instructions s'obtiennent donc uniquement par pillage ou par mission.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "raw_1",
+      "type": "raw",
+      "name": "Groupe 1",
+      "sources": [
+        {
+          "kind": "surface_prospecting",
+          "detail": "Prospection en SRV sur un corps atterrissable. Un outcrop rend 3 unités par morceau ; les dépôts volcaniques suivent une échelle de grade — Piceous Cobble (G1), Crystalline Fragments (G2-G3), Crystalline Cluster (G3-G4), Needle Crystals (G4, uniquement sur les sites Lava Spout).",
+          "conditions": "Chaque corps atterrissable a une composition fixe de 11 matériaux — 5 G1, 3 G2, 2 G3, 1 G4 — révélée par le Detailed Surface Scanner. Aucun autre ne peut y apparaître, quel que soit le moment de la prospection. Un DSS à 90 % de couverture révèle les signaux géologiques de façon permanente, et ils deviennent des points d'atterrissage sélectionnables."
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Raw : 6 unités contre 1 du grade supérieur dans la même catégorie, 1 contre 3 vers le grade inférieur.",
+          "conditions": "Économies Refinery et Extraction, sécurité moyenne ou haute, gouvernement non-Anarchy. Ne déduisez pas le type du trader de l'économie : elle ne le détermine pas."
+        }
+      ]
+    },
+    {
+      "id": "raw_2",
+      "type": "raw",
+      "name": "Groupe 2",
+      "sources": [
+        {
+          "kind": "surface_prospecting",
+          "detail": "Prospection en SRV sur un corps atterrissable. Un outcrop rend 3 unités par morceau ; les dépôts volcaniques suivent une échelle de grade — Piceous Cobble (G1), Crystalline Fragments (G2-G3), Crystalline Cluster (G3-G4), Needle Crystals (G4, uniquement sur les sites Lava Spout).",
+          "conditions": "Chaque corps atterrissable a une composition fixe de 11 matériaux — 5 G1, 3 G2, 2 G3, 1 G4 — révélée par le Detailed Surface Scanner. Aucun autre ne peut y apparaître, quel que soit le moment de la prospection. Un DSS à 90 % de couverture révèle les signaux géologiques de façon permanente, et ils deviennent des points d'atterrissage sélectionnables."
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Raw : 6 unités contre 1 du grade supérieur dans la même catégorie, 1 contre 3 vers le grade inférieur.",
+          "conditions": "Économies Refinery et Extraction, sécurité moyenne ou haute, gouvernement non-Anarchy. Ne déduisez pas le type du trader de l'économie : elle ne le détermine pas."
+        }
+      ]
+    },
+    {
+      "id": "raw_3",
+      "type": "raw",
+      "name": "Groupe 3",
+      "sources": [
+        {
+          "kind": "surface_prospecting",
+          "detail": "Prospection en SRV sur un corps atterrissable. Un outcrop rend 3 unités par morceau ; les dépôts volcaniques suivent une échelle de grade — Piceous Cobble (G1), Crystalline Fragments (G2-G3), Crystalline Cluster (G3-G4), Needle Crystals (G4, uniquement sur les sites Lava Spout).",
+          "conditions": "Chaque corps atterrissable a une composition fixe de 11 matériaux — 5 G1, 3 G2, 2 G3, 1 G4 — révélée par le Detailed Surface Scanner. Aucun autre ne peut y apparaître, quel que soit le moment de la prospection. Un DSS à 90 % de couverture révèle les signaux géologiques de façon permanente, et ils deviennent des points d'atterrissage sélectionnables."
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Raw : 6 unités contre 1 du grade supérieur dans la même catégorie, 1 contre 3 vers le grade inférieur.",
+          "conditions": "Économies Refinery et Extraction, sécurité moyenne ou haute, gouvernement non-Anarchy. Ne déduisez pas le type du trader de l'économie : elle ne le détermine pas."
+        }
+      ]
+    },
+    {
+      "id": "raw_4",
+      "type": "raw",
+      "name": "Groupe 4",
+      "sources": [
+        {
+          "kind": "surface_prospecting",
+          "detail": "Prospection en SRV sur un corps atterrissable. Un outcrop rend 3 unités par morceau ; les dépôts volcaniques suivent une échelle de grade — Piceous Cobble (G1), Crystalline Fragments (G2-G3), Crystalline Cluster (G3-G4), Needle Crystals (G4, uniquement sur les sites Lava Spout).",
+          "conditions": "Chaque corps atterrissable a une composition fixe de 11 matériaux — 5 G1, 3 G2, 2 G3, 1 G4 — révélée par le Detailed Surface Scanner. Aucun autre ne peut y apparaître, quel que soit le moment de la prospection. Un DSS à 90 % de couverture révèle les signaux géologiques de façon permanente, et ils deviennent des points d'atterrissage sélectionnables."
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Raw : 6 unités contre 1 du grade supérieur dans la même catégorie, 1 contre 3 vers le grade inférieur.",
+          "conditions": "Économies Refinery et Extraction, sécurité moyenne ou haute, gouvernement non-Anarchy. Ne déduisez pas le type du trader de l'économie : elle ne le détermine pas."
+        }
+      ]
+    },
+    {
+      "id": "raw_5",
+      "type": "raw",
+      "name": "Groupe 5",
+      "sources": [
+        {
+          "kind": "surface_prospecting",
+          "detail": "Prospection en SRV sur un corps atterrissable. Un outcrop rend 3 unités par morceau ; les dépôts volcaniques suivent une échelle de grade — Piceous Cobble (G1), Crystalline Fragments (G2-G3), Crystalline Cluster (G3-G4), Needle Crystals (G4, uniquement sur les sites Lava Spout).",
+          "conditions": "Chaque corps atterrissable a une composition fixe de 11 matériaux — 5 G1, 3 G2, 2 G3, 1 G4 — révélée par le Detailed Surface Scanner. Aucun autre ne peut y apparaître, quel que soit le moment de la prospection. Un DSS à 90 % de couverture révèle les signaux géologiques de façon permanente, et ils deviennent des points d'atterrissage sélectionnables."
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Raw : 6 unités contre 1 du grade supérieur dans la même catégorie, 1 contre 3 vers le grade inférieur.",
+          "conditions": "Économies Refinery et Extraction, sécurité moyenne ou haute, gouvernement non-Anarchy. Ne déduisez pas le type du trader de l'économie : elle ne le détermine pas."
+        }
+      ]
+    },
+    {
+      "id": "raw_6",
+      "type": "raw",
+      "name": "Groupe 6",
+      "sources": [
+        {
+          "kind": "surface_prospecting",
+          "detail": "Prospection en SRV sur un corps atterrissable. Un outcrop rend 3 unités par morceau ; les dépôts volcaniques suivent une échelle de grade — Piceous Cobble (G1), Crystalline Fragments (G2-G3), Crystalline Cluster (G3-G4), Needle Crystals (G4, uniquement sur les sites Lava Spout).",
+          "conditions": "Chaque corps atterrissable a une composition fixe de 11 matériaux — 5 G1, 3 G2, 2 G3, 1 G4 — révélée par le Detailed Surface Scanner. Aucun autre ne peut y apparaître, quel que soit le moment de la prospection. Un DSS à 90 % de couverture révèle les signaux géologiques de façon permanente, et ils deviennent des points d'atterrissage sélectionnables."
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Raw : 6 unités contre 1 du grade supérieur dans la même catégorie, 1 contre 3 vers le grade inférieur.",
+          "conditions": "Économies Refinery et Extraction, sécurité moyenne ou haute, gouvernement non-Anarchy. Ne déduisez pas le type du trader de l'économie : elle ne le détermine pas."
+        }
+      ]
+    },
+    {
+      "id": "raw_7",
+      "type": "raw",
+      "name": "Groupe 7",
+      "sources": [
+        {
+          "kind": "surface_prospecting",
+          "detail": "Prospection en SRV sur un corps atterrissable. Un outcrop rend 3 unités par morceau ; les dépôts volcaniques suivent une échelle de grade — Piceous Cobble (G1), Crystalline Fragments (G2-G3), Crystalline Cluster (G3-G4), Needle Crystals (G4, uniquement sur les sites Lava Spout).",
+          "conditions": "Chaque corps atterrissable a une composition fixe de 11 matériaux — 5 G1, 3 G2, 2 G3, 1 G4 — révélée par le Detailed Surface Scanner. Aucun autre ne peut y apparaître, quel que soit le moment de la prospection. Un DSS à 90 % de couverture révèle les signaux géologiques de façon permanente, et ils deviennent des points d'atterrissage sélectionnables."
+        },
+        {
+          "kind": "trader",
+          "detail": "Material trader Raw : 6 unités contre 1 du grade supérieur dans la même catégorie, 1 contre 3 vers le grade inférieur.",
+          "conditions": "Économies Refinery et Extraction, sécurité moyenne ou haute, gouvernement non-Anarchy. Ne déduisez pas le type du trader de l'économie : elle ne le détermine pas."
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "bulkscandata",
+      "name": "Anomalous Bulk Scan Data",
+      "type": "encoded",
+      "categoryId": "encoded_data_archives",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "scanarchives",
+      "name": "Unidentified Scan Archives",
+      "type": "encoded",
+      "categoryId": "encoded_data_archives",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "scandatabanks",
+      "name": "Classified Scan Databanks",
+      "type": "encoded",
+      "categoryId": "encoded_data_archives",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "encodedscandata",
+      "name": "Divergent Scan Data",
+      "type": "encoded",
+      "categoryId": "encoded_data_archives",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": []
+    },
+    {
+      "id": "classifiedscandata",
+      "name": "Classified Scan Fragment",
+      "type": "encoded",
+      "categoryId": "encoded_data_archives",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": []
+    },
+    {
+      "id": "scrambledemissiondata",
+      "name": "Exceptional Scrambled Emission Data",
+      "type": "encoded",
+      "categoryId": "encoded_emission_data",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "archivedemissiondata",
+      "name": "Irregular Emission Data",
+      "type": "encoded",
+      "categoryId": "encoded_emission_data",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "emissiondata",
+      "name": "Unexpected Emission Data",
+      "type": "encoded",
+      "categoryId": "encoded_emission_data",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "decodedemissiondata",
+      "name": "Decoded Emission Data",
+      "type": "encoded",
+      "categoryId": "encoded_emission_data",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": []
+    },
+    {
+      "id": "compactemissionsdata",
+      "name": "Abnormal Compact Emissions Data",
+      "type": "encoded",
+      "categoryId": "encoded_emission_data",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": []
+    },
+    {
+      "id": "legacyfirmware",
+      "name": "Specialised Legacy Firmware",
+      "type": "encoded",
+      "categoryId": "encoded_encoded_firmware",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "consumerfirmware",
+      "name": "Modified Consumer Firmware",
+      "type": "encoded",
+      "categoryId": "encoded_encoded_firmware",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "industrialfirmware",
+      "name": "Cracked Industrial Firmware",
+      "type": "encoded",
+      "categoryId": "encoded_encoded_firmware",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "securityfirmware",
+      "name": "Security Firmware Patch",
+      "type": "encoded",
+      "categoryId": "encoded_encoded_firmware",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": []
+    },
+    {
+      "id": "embeddedfirmware",
+      "name": "Modified Embedded Firmware",
+      "type": "encoded",
+      "categoryId": "encoded_encoded_firmware",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": []
+    },
+    {
+      "id": "encryptedfiles",
+      "name": "Unusual Encrypted Files",
+      "type": "encoded",
+      "categoryId": "encoded_encryption_files",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "encryptioncodes",
+      "name": "Tagged Encryption Codes",
+      "type": "encoded",
+      "categoryId": "encoded_encryption_files",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "symmetrickeys",
+      "name": "Open Symmetric Keys",
+      "type": "encoded",
+      "categoryId": "encoded_encryption_files",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "encryptionarchives",
+      "name": "Atypical Encryption Archives",
+      "type": "encoded",
+      "categoryId": "encoded_encryption_files",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": []
+    },
+    {
+      "id": "adaptiveencryptors",
+      "name": "Adaptive Encryptors Capture",
+      "type": "encoded",
+      "categoryId": "encoded_encryption_files",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": []
+    },
+    {
+      "id": "shieldcyclerecordings",
+      "name": "Distorted Shield Cycle Recordings",
+      "type": "encoded",
+      "categoryId": "encoded_shield_data",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "shieldsoakanalysis",
+      "name": "Inconsistent Shield Soak Analysis",
+      "type": "encoded",
+      "categoryId": "encoded_shield_data",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "shielddensityreports",
+      "name": "Untypical Shield Scans",
+      "type": "encoded",
+      "categoryId": "encoded_shield_data",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "shieldpatternanalysis",
+      "name": "Aberrant Shield Pattern Analysis",
+      "type": "encoded",
+      "categoryId": "encoded_shield_data",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": []
+    },
+    {
+      "id": "shieldfrequencydata",
+      "name": "Peculiar Shield Frequency Data",
+      "type": "encoded",
+      "categoryId": "encoded_shield_data",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": []
+    },
+    {
+      "id": "disruptedwakeechoes",
+      "name": "Atypical Disrupted Wake Echoes",
+      "type": "encoded",
+      "categoryId": "encoded_wake_scans",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "fsdtelemetry",
+      "name": "Anomalous FSD Telemetry",
+      "type": "encoded",
+      "categoryId": "encoded_wake_scans",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "wakesolutions",
+      "name": "Strange Wake Solutions",
+      "type": "encoded",
+      "categoryId": "encoded_wake_scans",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "hyperspacetrajectories",
+      "name": "Eccentric Hyperspace Trajectories",
+      "type": "encoded",
+      "categoryId": "encoded_wake_scans",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": []
+    },
+    {
+      "id": "dataminedwake",
+      "name": "Datamined Wake Exceptions",
+      "type": "encoded",
+      "categoryId": "encoded_wake_scans",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": []
+    },
+    {
+      "id": "salvagedalloys",
+      "name": "Salvaged Alloys",
+      "type": "manufactured",
+      "categoryId": "manufactured_alloys",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "galvanisingalloys",
+      "name": "Galvanising Alloys",
+      "type": "manufactured",
+      "categoryId": "manufactured_alloys",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "phasealloys",
+      "name": "Phase Alloys",
+      "type": "manufactured",
+      "categoryId": "manufactured_alloys",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "protolightalloys",
+      "name": "Proto Light Alloys",
+      "type": "manufactured",
+      "categoryId": "manufactured_alloys",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emission.",
+          "conditions": "État Boom ou Expansion, faction ni fédérale ni impériale."
+        }
+      ]
+    },
+    {
+      "id": "protoradiolicalloys",
+      "name": "Proto Radiolic Alloys",
+      "type": "manufactured",
+      "categoryId": "manufactured_alloys",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emission.",
+          "conditions": "État Boom ou Expansion, faction ni fédérale ni impériale."
+        }
+      ]
+    },
+    {
+      "id": "gridresistors",
+      "name": "Grid Resistors",
+      "type": "manufactured",
+      "categoryId": "manufactured_capacitors",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "hybridcapacitors",
+      "name": "Hybrid Capacitors",
+      "type": "manufactured",
+      "categoryId": "manufactured_capacitors",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "electrochemicalarrays",
+      "name": "Electrochemical Arrays",
+      "type": "manufactured",
+      "categoryId": "manufactured_capacitors",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "polymercapacitors",
+      "name": "Polymer Capacitors",
+      "type": "manufactured",
+      "categoryId": "manufactured_capacitors",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": []
+    },
+    {
+      "id": "militarysupercapacitors",
+      "name": "Military Supercapacitors",
+      "type": "manufactured",
+      "categoryId": "manufactured_capacitors",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emission.",
+          "conditions": "État War ou Civil War."
+        }
+      ]
+    },
+    {
+      "id": "chemicalstorageunits",
+      "name": "Chemical Storage Units",
+      "type": "manufactured",
+      "categoryId": "manufactured_chemical",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "chemicalprocessors",
+      "name": "Chemical Processors",
+      "type": "manufactured",
+      "categoryId": "manufactured_chemical",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "chemicaldistillery",
+      "name": "Chemical Distillery",
+      "type": "manufactured",
+      "categoryId": "manufactured_chemical",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "chemicalmanipulators",
+      "name": "Chemical Manipulators",
+      "type": "manufactured",
+      "categoryId": "manufactured_chemical",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": []
+    },
+    {
+      "id": "pharmaceuticalisolators",
+      "name": "Pharmaceutical Isolators",
+      "type": "manufactured",
+      "categoryId": "manufactured_chemical",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emission.",
+          "conditions": "État Outbreak, population supérieure à un million."
+        }
+      ]
+    },
+    {
+      "id": "compactcomposites",
+      "name": "Compact Composites",
+      "type": "manufactured",
+      "categoryId": "manufactured_composite",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "filamentcomposites",
+      "name": "Filament Composites",
+      "type": "manufactured",
+      "categoryId": "manufactured_composite",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "highdensitycomposites",
+      "name": "High Density Composites",
+      "type": "manufactured",
+      "categoryId": "manufactured_composite",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "fedproprietarycomposites",
+      "name": "Proprietary Composites",
+      "type": "manufactured",
+      "categoryId": "manufactured_composite",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emission.",
+          "conditions": "Faction fédérale — et rien d'autre."
+        }
+      ]
+    },
+    {
+      "id": "fedcorecomposites",
+      "name": "Core Dynamics Composites",
+      "type": "manufactured",
+      "categoryId": "manufactured_composite",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emission.",
+          "conditions": "Faction fédérale — et rien d'autre."
+        }
+      ]
+    },
+    {
+      "id": "basicconductors",
+      "name": "Basic Conductors",
+      "type": "manufactured",
+      "categoryId": "manufactured_conductive",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "conductivecomponents",
+      "name": "Conductive Components",
+      "type": "manufactured",
+      "categoryId": "manufactured_conductive",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "conductiveceramics",
+      "name": "Conductive Ceramics",
+      "type": "manufactured",
+      "categoryId": "manufactured_conductive",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "conductivepolymers",
+      "name": "Conductive Polymers",
+      "type": "manufactured",
+      "categoryId": "manufactured_conductive",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": []
+    },
+    {
+      "id": "biotechconductors",
+      "name": "Biotech Conductors",
+      "type": "manufactured",
+      "categoryId": "manufactured_conductive",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": []
+    },
+    {
+      "id": "crystalshards",
+      "name": "Crystal Shards",
+      "type": "manufactured",
+      "categoryId": "manufactured_crystals",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": [
+        {
+          "kind": "site",
+          "detail": "Les Crystalline Shards sont la méthode haut de gamme pour les Raw, mais leurs conditions d'apparition sont strictes.",
+          "conditions": "Étoile mère A, F, G, K, M ou S ; corps entre 0 et 273 K, sans atmosphère, avec volcanisme ; à plus de 12 000 Ls de l'étoile ; et le système doit contenir au moins un monde Earth-Like, Ammonia, Water World, Water Giant ou une géante gazeuse à vie. Le plus proche de Sol est à 1 426 ly."
+        }
+      ]
+    },
+    {
+      "id": "uncutfocuscrystals",
+      "name": "Flawed Focus Crystals",
+      "type": "manufactured",
+      "categoryId": "manufactured_crystals",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "focuscrystals",
+      "name": "Focus Crystals",
+      "type": "manufactured",
+      "categoryId": "manufactured_crystals",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "refinedfocuscrystals",
+      "name": "Refined Focus Crystals",
+      "type": "manufactured",
+      "categoryId": "manufactured_crystals",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": []
+    },
+    {
+      "id": "exquisitefocuscrystals",
+      "name": "Exquisite Focus Crystals",
+      "type": "manufactured",
+      "categoryId": "manufactured_crystals",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": []
+    },
+    {
+      "id": "heatconductionwiring",
+      "name": "Heat Conduction Wiring",
+      "type": "manufactured",
+      "categoryId": "manufactured_heat",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "heatdispersionplate",
+      "name": "Heat Dispersion Plate",
+      "type": "manufactured",
+      "categoryId": "manufactured_heat",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "heatexchangers",
+      "name": "Heat Exchangers",
+      "type": "manufactured",
+      "categoryId": "manufactured_heat",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "heatvanes",
+      "name": "Heat Vanes",
+      "type": "manufactured",
+      "categoryId": "manufactured_heat",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": []
+    },
+    {
+      "id": "protoheatradiators",
+      "name": "Proto Heat Radiators",
+      "type": "manufactured",
+      "categoryId": "manufactured_heat",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emission.",
+          "conditions": "État Boom ou Expansion, faction ni fédérale ni impériale."
+        }
+      ]
+    },
+    {
+      "id": "mechanicalscrap",
+      "name": "Mechanical Scrap",
+      "type": "manufactured",
+      "categoryId": "manufactured_mechanical_components",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "mechanicalequipment",
+      "name": "Mechanical Equipment",
+      "type": "manufactured",
+      "categoryId": "manufactured_mechanical_components",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "mechanicalcomponents",
+      "name": "Mechanical Components",
+      "type": "manufactured",
+      "categoryId": "manufactured_mechanical_components",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "configurablecomponents",
+      "name": "Configurable Components",
+      "type": "manufactured",
+      "categoryId": "manufactured_mechanical_components",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": []
+    },
+    {
+      "id": "improvisedcomponents",
+      "name": "Improvised Components",
+      "type": "manufactured",
+      "categoryId": "manufactured_mechanical_components",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emission.",
+          "conditions": "État Civil Unrest."
+        }
+      ]
+    },
+    {
+      "id": "wornshieldemitters",
+      "name": "Worn Shield Emitters",
+      "type": "manufactured",
+      "categoryId": "manufactured_shielding",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "shieldemitters",
+      "name": "Shield Emitters",
+      "type": "manufactured",
+      "categoryId": "manufactured_shielding",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "shieldingsensors",
+      "name": "Shielding Sensors",
+      "type": "manufactured",
+      "categoryId": "manufactured_shielding",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "compoundshielding",
+      "name": "Compound Shielding",
+      "type": "manufactured",
+      "categoryId": "manufactured_shielding",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": []
+    },
+    {
+      "id": "imperialshielding",
+      "name": "Imperial Shielding",
+      "type": "manufactured",
+      "categoryId": "manufactured_shielding",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emission.",
+          "conditions": "Faction impériale — et rien d'autre."
+        }
+      ]
+    },
+    {
+      "id": "temperedalloys",
+      "name": "Tempered Alloys",
+      "type": "manufactured",
+      "categoryId": "manufactured_thermic",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": []
+    },
+    {
+      "id": "heatresistantceramics",
+      "name": "Heat Resistant Ceramics",
+      "type": "manufactured",
+      "categoryId": "manufactured_thermic",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": []
+    },
+    {
+      "id": "precipitatedalloys",
+      "name": "Precipitated Alloys",
+      "type": "manufactured",
+      "categoryId": "manufactured_thermic",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": []
+    },
+    {
+      "id": "thermicalloys",
+      "name": "Thermic Alloys",
+      "type": "manufactured",
+      "categoryId": "manufactured_thermic",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": []
+    },
+    {
+      "id": "militarygradealloys",
+      "name": "Military Grade Alloys",
+      "type": "manufactured",
+      "categoryId": "manufactured_thermic",
+      "grade": 5,
+      "storageCap": 100,
+      "sources": [
+        {
+          "kind": "hge",
+          "detail": "High Grade Emission.",
+          "conditions": "État War ou Civil War."
+        }
+      ]
+    },
+    {
+      "id": "carbon",
+      "name": "Carbon",
+      "type": "raw",
+      "categoryId": "raw_1",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Présent à la surface de tout corps atterrissable : les cinq G1 de surface sont toujours Carbon, Iron, Nickel, Phosphorus et Sulphur.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "vanadium",
+      "name": "Vanadium",
+      "type": "raw",
+      "categoryId": "raw_1",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body, parfois icy.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "niobium",
+      "name": "Niobium",
+      "type": "raw",
+      "categoryId": "raw_1",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "yttrium",
+      "name": "Yttrium",
+      "type": "raw",
+      "categoryId": "raw_1",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "phosphorus",
+      "name": "Phosphorus",
+      "type": "raw",
+      "categoryId": "raw_2",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Présent à la surface de tout corps atterrissable : les cinq G1 de surface sont toujours Carbon, Iron, Nickel, Phosphorus et Sulphur.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "chromium",
+      "name": "Chromium",
+      "type": "raw",
+      "categoryId": "raw_2",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "molybdenum",
+      "name": "Molybdenum",
+      "type": "raw",
+      "categoryId": "raw_2",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "technetium",
+      "name": "Technetium",
+      "type": "raw",
+      "categoryId": "raw_2",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "sulphur",
+      "name": "Sulphur",
+      "type": "raw",
+      "categoryId": "raw_3",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Présent à la surface de tout corps atterrissable : les cinq G1 de surface sont toujours Carbon, Iron, Nickel, Phosphorus et Sulphur.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "manganese",
+      "name": "Manganese",
+      "type": "raw",
+      "categoryId": "raw_3",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "cadmium",
+      "name": "Cadmium",
+      "type": "raw",
+      "categoryId": "raw_3",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "ruthenium",
+      "name": "Ruthenium",
+      "type": "raw",
+      "categoryId": "raw_3",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "iron",
+      "name": "Iron",
+      "type": "raw",
+      "categoryId": "raw_4",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Présent à la surface de tout corps atterrissable : les cinq G1 de surface sont toujours Carbon, Iron, Nickel, Phosphorus et Sulphur.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "zinc",
+      "name": "Zinc",
+      "type": "raw",
+      "categoryId": "raw_4",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "tin",
+      "name": "Tin",
+      "type": "raw",
+      "categoryId": "raw_4",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "selenium",
+      "name": "Selenium",
+      "type": "raw",
+      "categoryId": "raw_4",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Icy body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "nickel",
+      "name": "Nickel",
+      "type": "raw",
+      "categoryId": "raw_5",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Présent à la surface de tout corps atterrissable : les cinq G1 de surface sont toujours Carbon, Iron, Nickel, Phosphorus et Sulphur.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "germanium",
+      "name": "Germanium",
+      "type": "raw",
+      "categoryId": "raw_5",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Rocky body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "tungsten",
+      "name": "Tungsten",
+      "type": "raw",
+      "categoryId": "raw_5",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "tellurium",
+      "name": "Tellurium",
+      "type": "raw",
+      "categoryId": "raw_5",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Rocky body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "rhenium",
+      "name": "Rhenium",
+      "type": "raw",
+      "categoryId": "raw_6",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": [
+        {
+          "kind": "asteroid_mining",
+          "detail": "Ne s'obtient qu'en minage d'astéroïdes. Inutile de le chercher au sol : il n'y apparaît jamais.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "arsenic",
+      "name": "Arsenic",
+      "type": "raw",
+      "categoryId": "raw_6",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Rocky body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "type": "raw",
+      "categoryId": "raw_6",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "polonium",
+      "name": "Polonium",
+      "type": "raw",
+      "categoryId": "raw_6",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body, parfois icy.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "lead",
+      "name": "Lead",
+      "type": "raw",
+      "categoryId": "raw_7",
+      "grade": 1,
+      "storageCap": 300,
+      "sources": [
+        {
+          "kind": "asteroid_mining",
+          "detail": "Ne s'obtient qu'en minage d'astéroïdes. Inutile de le chercher au sol : il n'y apparaît jamais.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "zirconium",
+      "name": "Zirconium",
+      "type": "raw",
+      "categoryId": "raw_7",
+      "grade": 2,
+      "storageCap": 250,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "boron",
+      "name": "Boron",
+      "type": "raw",
+      "categoryId": "raw_7",
+      "grade": 3,
+      "storageCap": 200,
+      "sources": [
+        {
+          "kind": "asteroid_mining",
+          "detail": "Ne s'obtient qu'en minage d'astéroïdes. Inutile de le chercher au sol : il n'y apparaît jamais.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "antimony",
+      "name": "Antimony",
+      "type": "raw",
+      "categoryId": "raw_7",
+      "grade": 4,
+      "storageCap": 150,
+      "sources": [
+        {
+          "kind": "body_type",
+          "detail": "Se prospecte surtout sur un Metal-rich body.",
+          "conditions": "Mesuré sur les 50 meilleurs corps de la galaxie pour ce matériau."
+        }
+      ]
+    },
+    {
+      "id": "suitschematic",
+      "name": "Suit Schematic",
+      "type": "odyssey",
+      "categoryId": "odyssey_component",
+      "grade": null,
+      "storageCap": null,
+      "odysseyCategory": "Good",
+      "valueCr": 50000,
+      "sources": [
+        {
+          "kind": "settlement",
+          "detail": "Settlements High Tech et Industrial, bâtiments CMD, PWR et STO.",
+          "conditions": "Le plus cher des cinq composants de combinaison : ne jamais le vendre au bartender pendant une montée en grade."
+        },
+        {
+          "kind": "mission",
+          "detail": "Récompense de mission.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "healthmonitor",
+      "name": "Health Monitor",
+      "type": "odyssey",
+      "categoryId": "odyssey_component",
+      "grade": null,
+      "storageCap": null,
+      "odysseyCategory": "Good",
+      "valueCr": 10000,
+      "sources": [
+        {
+          "kind": "settlement",
+          "detail": "Settlements Industrial, bâtiments IND, MED, RES, HAB et CMD, dans des Lockers.",
+          "conditions": null
+        },
+        {
+          "kind": "salvage",
+          "detail": "Seul des cinq composants attesté aussi sur épave de surface.",
+          "conditions": null
+        },
+        {
+          "kind": "mission",
+          "detail": "Récompense de mission.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "manufacturinginstructions",
+      "name": "Manufacturing Instructions",
+      "type": "odyssey",
+      "categoryId": "odyssey_component",
+      "grade": null,
+      "storageCap": null,
+      "odysseyCategory": "Data",
+      "valueCr": 9000,
+      "sources": [
+        {
+          "kind": "datapoint",
+          "detail": "Data ports uniquement — settlements Industrial et Extraction (Industrial, Laboratory, Satellite, Extraction Data Port), plus Irregular Markers et Impact Sites. Jusqu'à 3 par data port, et seulement dans les bâtiments de production industrielle.",
+          "conditions": "Le vrai goulot d'étranglement : il entre dans 56 recettes, n'est ni achetable ni vendable, et Rosa Dayette en réclame 10 pour son referral vers Yi Shen. Les téléchargements interdits sont signalés en violet et déclenchent l'alarme."
+        },
+        {
+          "kind": "mission",
+          "detail": "Récompense de mission.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "aerogel",
+      "name": "Aerogel",
+      "type": "odyssey",
+      "categoryId": "odyssey_component",
+      "grade": null,
+      "storageCap": null,
+      "odysseyCategory": "Asset",
+      "valueCr": 500,
+      "sources": [
+        {
+          "kind": "settlement",
+          "detail": "Salles LAB et PROC — donc bâtiments RES, IND, EXT et AGRI — via Industrial Locker (S) et Research Locker (L).",
+          "conditions": null
+        },
+        {
+          "kind": "bartender",
+          "detail": "Achetable au bartender : coût 9, valeur de cession 5.",
+          "conditions": "Céder un Graphene rapporte 13 et un Aerogel coûte 9 : échanger du Graphene contre de l'Aerogel est rentable, l'inverse coûteux."
+        }
+      ]
+    },
+    {
+      "id": "graphene",
+      "name": "Graphene",
+      "type": "odyssey",
+      "categoryId": "odyssey_component",
+      "grade": null,
+      "storageCap": null,
+      "odysseyCategory": "Asset",
+      "valueCr": 1300,
+      "sources": [
+        {
+          "kind": "settlement",
+          "detail": "Abondant dans les bâtiments Research ; aussi AGRI, HAB et SEC.",
+          "conditions": null
+        },
+        {
+          "kind": "bartender",
+          "detail": "Achetable au bartender : coût 23, valeur de cession 13.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "carbonfibreplating",
+      "name": "Carbon Fibre Plating",
+      "type": "odyssey",
+      "categoryId": "odyssey_component",
+      "grade": null,
+      "storageCap": null,
+      "odysseyCategory": "Asset",
+      "valueCr": 500,
+      "sources": [
+        {
+          "kind": "settlement",
+          "detail": "Comme l'Aerogel, dont il tient la place dans la recette de la combinaison Maverick.",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "id": "titaniumplating",
+      "name": "Titanium Plating",
+      "type": "odyssey",
+      "categoryId": "odyssey_component",
+      "grade": null,
+      "storageCap": null,
+      "odysseyCategory": "Asset",
+      "valueCr": 500,
+      "sources": [
+        {
+          "kind": "settlement",
+          "detail": "Comme l'Aerogel, dont il tient la place dans la recette de la combinaison Dominator.",
+          "conditions": null
+        }
+      ]
+    }
+  ],
+  "sites": [
+    {
+      "id": "davs_hope",
+      "name": "Dav's Hope",
+      "system": "Hyades Sector DR-V c2-23",
+      "body": "A 5",
+      "latitude": 50.5426,
+      "longitude": 137.415,
+      "yields": "Raw et Manufactured, boucle en SRV",
+      "note": "Les coordonnées de tous les vieux guides sont celles de Legacy (44.8180, -31.3893) et vous feront atterrir au mauvais endroit. Celles-ci sont les coordonnées Live (4.x), confirmées par le landmark Abandoned Base."
+    },
+    {
+      "id": "jameson_crash",
+      "name": "Jameson Crash Site",
+      "system": "HIP 12099",
+      "body": "1 B",
+      "latitude": -54.375358,
+      "longitude": -50.353342,
+      "yields": "Encoded G3, G4 et G5 sur environ neuf data points",
+      "note": "Landmark Wrecked Ship. Un second épave, Crashed Ship, se trouve à -55.431073, -49.255156."
+    }
+  ]
+}

@@ -8,7 +8,6 @@ import '../../features/dashboard/presentation/pages/career_page.dart';
 import '../../features/dashboard/presentation/pages/dashboard_page.dart';
 import '../../features/dashboard/presentation/pages/engineers_page.dart';
 import '../../features/dashboard/presentation/pages/fleet_page.dart';
-import '../../features/dashboard/presentation/pages/materials_page.dart';
 import '../../features/dashboard/presentation/pages/on_foot_page.dart';
 import '../../features/dashboard/presentation/pages/station_page.dart';
 import '../../features/diagnostics/presentation/pages/diagnostics_page.dart';
@@ -16,6 +15,8 @@ import '../../features/exobiology/presentation/pages/exobiology_home_page.dart';
 import '../../features/guides/presentation/pages/guide_detail_page.dart';
 import '../../features/guides/presentation/pages/guides_page.dart';
 import '../../features/journal/presentation/pages/journal_page.dart';
+import '../../features/materials/presentation/pages/blueprint_plan_page.dart';
+import '../../features/materials/presentation/pages/materials_page.dart';
 import '../../features/settings/presentation/pages/settings_page.dart';
 import '../shell/adaptive_shell.dart';
 import 'app_routes.dart';
@@ -143,6 +144,16 @@ GoRouter createAppRouter() {
                     path: 'materiaux',
                     builder: (BuildContext context, GoRouterState state) =>
                         const MaterialsPage(),
+                    routes: <RouteBase>[
+                      GoRoute(
+                        path: ':blueprintId',
+                        builder: (BuildContext context, GoRouterState state) =>
+                            BlueprintPlanPage(
+                          blueprintId:
+                              state.pathParameters['blueprintId'] ?? '',
+                        ),
+                      ),
+                    ],
                   ),
                   GoRoute(
                     path: 'station',

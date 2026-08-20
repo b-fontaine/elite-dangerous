@@ -12,6 +12,7 @@ abstract final class AppRoutes {
   static const String onFoot = '/a-pied';
   static const String engineers = '/ingenieurs';
   static const String materials = '/materiaux';
+  static String materialBlueprint(String id) => '/materiaux/$id';
   static const String station = '/station';
 
   static const String exobiology = '/exobiologie';

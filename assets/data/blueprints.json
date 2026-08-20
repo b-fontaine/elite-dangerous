@@ -1,0 +1,553 @@
+{
+  "edition": "2026-08",
+  "sources": [
+    "EDCD/coriolis-data modifications/blueprints.json et specials.json — pour les quantités de chaque grade et de chaque effet expérimental",
+    "docs/faisabilite-spansh-temps-reel-materiaux.md § 3.2 et 3.3 — pour les ingénieurs, les mises en garde et les paliers de combinaison"
+  ],
+  "notes": {
+    "rolls": "Depuis l'Update 18.08 (7 août 2024) un roll d'ingénieur donne un résultat fixe : au grade de réputation 5, un blueprint de grade N demande N rolls, et en dessous il en faut davantage — mais ce n'est plus aléatoire.",
+    "suitCredits": "Les montants en crédits des paliers de combinaison viennent du wiki Fandom seul ; Inara n'en liste aucun. À confirmer en jeu avant de s'y fier."
+  },
+  "blueprints": [
+    {
+      "id": "fsd_increased_range",
+      "fdName": "FSD_LongRange",
+      "name": "Portée accrue",
+      "module": "Frame Shift Drive",
+      "purpose": "Le blueprint de portée. Il agit sur la masse optimale du FSD, et la distance de saut y est linéaire — un G5 complet donne donc +55 % de portée brute, moins l'effet du +30 % de masse que le blueprint ajoute au module lui-même.",
+      "warning": "Les quatre matériaux encodés de la recette appartiennent tous à la catégorie Wake Scans, dont la seule source est le Frame Shift Wake Scanner braqué sur des sillages d'hyperespace. Sans ce module, le blueprint est impossible à compléter, quel que soit le temps passé à prospecter en SRV.",
+      "engineers": [
+        {
+          "id": "felicity_farseer",
+          "name": "Felicity Farseer",
+          "maxGrade": 5
+        },
+        {
+          "id": "elvira_martuuk",
+          "name": "Elvira Martuuk",
+          "maxGrade": 5
+        },
+        {
+          "id": "mel_brandon",
+          "name": "Mel Brandon",
+          "maxGrade": 5
+        }
+      ],
+      "engineersNote": "Ce sont les trois seuls à monter aux grades 4 et 5.",
+      "grades": [
+        {
+          "grade": 1,
+          "rollsAtReputation5": 1,
+          "materials": {
+            "disruptedwakeechoes": 1
+          },
+          "effect": "+15 % de masse optimale"
+        },
+        {
+          "grade": 2,
+          "rollsAtReputation5": 2,
+          "materials": {
+            "disruptedwakeechoes": 1,
+            "chemicalprocessors": 1
+          },
+          "effect": "+25 % de masse optimale"
+        },
+        {
+          "grade": 3,
+          "rollsAtReputation5": 3,
+          "materials": {
+            "chemicalprocessors": 1,
+            "phosphorus": 1,
+            "wakesolutions": 1
+          },
+          "effect": "+35 % de masse optimale"
+        },
+        {
+          "grade": 4,
+          "rollsAtReputation5": 4,
+          "materials": {
+            "chemicaldistillery": 1,
+            "hyperspacetrajectories": 1,
+            "manganese": 1
+          },
+          "effect": "+45 % de masse optimale"
+        },
+        {
+          "grade": 5,
+          "rollsAtReputation5": 5,
+          "materials": {
+            "arsenic": 1,
+            "chemicalmanipulators": 1,
+            "dataminedwake": 1
+          },
+          "effect": "+55 % de masse optimale"
+        }
+      ],
+      "experimentals": [
+        {
+          "id": "special_fsd_heavy",
+          "name": "Mass Manager",
+          "description": "Complex software upgrade and internal sensor suite able to optimise frame shift operation by analysing and accounting for ship loadout. Increases optimised mass at the cost of module health.",
+          "materials": {
+            "disruptedwakeechoes": 5,
+            "hyperspacetrajectories": 1,
+            "galvanisingalloys": 3
+          }
+        },
+        {
+          "id": "special_fsd_fuelcapacity",
+          "name": "Deep Charge",
+          "description": "Toughened FSD power conduits and a reinforced charging field increase the amount of fuel injected when charging, allowing larger jumps at the cost of increased power draw.",
+          "materials": {
+            "disruptedwakeechoes": 5,
+            "hyperspacetrajectories": 1,
+            "galvanisingalloys": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "fsd_faster_boot",
+      "fdName": "FSD_FastBoot",
+      "name": "Amorçage accéléré",
+      "module": "Frame Shift Drive",
+      "purpose": "Le blueprint le moins cher du jeu : son grade 1 ne demande qu'un Grid Resistors, le matériau le plus commun. C'est le moyen de gagner de la réputation chez Farseer sans consommer un seul Wake Scan — ce qui, vu la rareté de ceux-ci, est un argument sérieux.",
+      "warning": "Depuis l'Update 18.08 (7 août 2024) les rolls sont déterministes : « brûler » des rolls bon marché pour tomber sur un bon résultat n'a plus de sens, seule la réputation gagnée compte.",
+      "engineers": [
+        {
+          "id": "felicity_farseer",
+          "name": "Felicity Farseer",
+          "maxGrade": 5
+        }
+      ],
+      "engineersNote": null,
+      "grades": [
+        {
+          "grade": 1,
+          "rollsAtReputation5": 1,
+          "materials": {
+            "gridresistors": 1
+          },
+          "effect": "-20 % de temps d'amorçage"
+        },
+        {
+          "grade": 2,
+          "rollsAtReputation5": 2,
+          "materials": {
+            "chromium": 1,
+            "gridresistors": 1
+          },
+          "effect": "-35 % de temps d'amorçage"
+        },
+        {
+          "grade": 3,
+          "rollsAtReputation5": 3,
+          "materials": {
+            "gridresistors": 1,
+            "heatdispersionplate": 1,
+            "selenium": 1
+          },
+          "effect": "-50 % de temps d'amorçage"
+        },
+        {
+          "grade": 4,
+          "rollsAtReputation5": 4,
+          "materials": {
+            "cadmium": 1,
+            "heatexchangers": 1,
+            "hybridcapacitors": 1
+          },
+          "effect": "-65 % de temps d'amorçage"
+        },
+        {
+          "grade": 5,
+          "rollsAtReputation5": 5,
+          "materials": {
+            "electrochemicalarrays": 1,
+            "heatvanes": 1,
+            "tellurium": 1
+          },
+          "effect": "-80 % de temps d'amorçage"
+        }
+      ],
+      "experimentals": []
+    },
+    {
+      "id": "dss_expanded_probe",
+      "fdName": "Sensor_Expanded",
+      "name": "Rayon de sondage étendu",
+      "module": "Detailed Surface Scanner",
+      "purpose": "Le blueprint qui compte le plus pour l'exobiologie : un rayon de sonde plus large veut dire moins de sondes par corps, donc beaucoup moins de temps entre deux cartographies.",
+      "warning": null,
+      "engineers": [
+        {
+          "id": "felicity_farseer",
+          "name": "Felicity Farseer",
+          "maxGrade": 3
+        }
+      ],
+      "engineersNote": "Farseer plafonne le Detailed Surface Scanner au grade 3 : pour un G5, il faut aller voir ailleurs.",
+      "grades": [
+        {
+          "grade": 1,
+          "rollsAtReputation5": 1,
+          "materials": {
+            "mechanicalscrap": 1
+          },
+          "effect": "+10 % de rayon de sonde"
+        },
+        {
+          "grade": 2,
+          "rollsAtReputation5": 2,
+          "materials": {
+            "germanium": 1,
+            "mechanicalscrap": 1
+          },
+          "effect": "+20 % de rayon de sonde"
+        },
+        {
+          "grade": 3,
+          "rollsAtReputation5": 3,
+          "materials": {
+            "germanium": 1,
+            "mechanicalscrap": 1,
+            "phasealloys": 1
+          },
+          "effect": "+30 % de rayon de sonde"
+        },
+        {
+          "grade": 4,
+          "rollsAtReputation5": 4,
+          "materials": {
+            "mechanicalequipment": 1,
+            "niobium": 1,
+            "protolightalloys": 1
+          },
+          "effect": "+40 % de rayon de sonde"
+        },
+        {
+          "grade": 5,
+          "rollsAtReputation5": 5,
+          "materials": {
+            "mechanicalcomponents": 1,
+            "protoradiolicalloys": 1,
+            "tin": 1
+          },
+          "effect": "+50 % de rayon de sonde"
+        }
+      ],
+      "experimentals": []
+    },
+    {
+      "id": "sensors_lightweight",
+      "fdName": "Sensor_LightWeight",
+      "name": "Allégés",
+      "module": "Sensors",
+      "purpose": "De la masse en moins sur un module qui ne sert à rien en exploration, donc de la portée de saut en plus, pour des matériaux communs.",
+      "warning": null,
+      "engineers": [
+        {
+          "id": "felicity_farseer",
+          "name": "Felicity Farseer",
+          "maxGrade": 3
+        }
+      ],
+      "engineersNote": "Farseer plafonne les Sensors au grade 3.",
+      "grades": [
+        {
+          "grade": 1,
+          "rollsAtReputation5": 1,
+          "materials": {
+            "phosphorus": 1
+          },
+          "effect": "-20 % de masse"
+        },
+        {
+          "grade": 2,
+          "rollsAtReputation5": 2,
+          "materials": {
+            "manganese": 1,
+            "salvagedalloys": 1
+          },
+          "effect": "-35 % de masse"
+        },
+        {
+          "grade": 3,
+          "rollsAtReputation5": 3,
+          "materials": {
+            "conductiveceramics": 1,
+            "manganese": 1,
+            "salvagedalloys": 1
+          },
+          "effect": "-50 % de masse"
+        },
+        {
+          "grade": 4,
+          "rollsAtReputation5": 4,
+          "materials": {
+            "conductivecomponents": 1,
+            "phasealloys": 1,
+            "protolightalloys": 1
+          },
+          "effect": "-65 % de masse"
+        },
+        {
+          "grade": 5,
+          "rollsAtReputation5": 5,
+          "materials": {
+            "conductiveceramics": 1,
+            "protolightalloys": 1,
+            "protoradiolicalloys": 1
+          },
+          "effect": "-80 % de masse"
+        }
+      ],
+      "experimentals": []
+    },
+    {
+      "id": "thrusters_dirty",
+      "fdName": "Engine_Dirty",
+      "name": "Réglage sauvage",
+      "module": "Thrusters",
+      "purpose": "Ce qui permet de décoller d'un monde à forte gravité et de rejoindre un site d'échantillonnage sans y passer la soirée.",
+      "warning": null,
+      "engineers": [
+        {
+          "id": "felicity_farseer",
+          "name": "Felicity Farseer",
+          "maxGrade": 3
+        }
+      ],
+      "engineersNote": "Farseer plafonne les Thrusters au grade 3.",
+      "grades": [
+        {
+          "grade": 1,
+          "rollsAtReputation5": 1,
+          "materials": {
+            "legacyfirmware": 1
+          },
+          "effect": "+12 % de puissance de propulseur"
+        },
+        {
+          "grade": 2,
+          "rollsAtReputation5": 2,
+          "materials": {
+            "mechanicalequipment": 1,
+            "legacyfirmware": 1
+          },
+          "effect": "+19 % de puissance de propulseur"
+        },
+        {
+          "grade": 3,
+          "rollsAtReputation5": 3,
+          "materials": {
+            "chromium": 1,
+            "mechanicalcomponents": 1,
+            "legacyfirmware": 1
+          },
+          "effect": "+26 % de puissance de propulseur"
+        },
+        {
+          "grade": 4,
+          "rollsAtReputation5": 4,
+          "materials": {
+            "configurablecomponents": 1,
+            "consumerfirmware": 1,
+            "selenium": 1
+          },
+          "effect": "+33 % de puissance de propulseur"
+        },
+        {
+          "grade": 5,
+          "rollsAtReputation5": 5,
+          "materials": {
+            "cadmium": 1,
+            "industrialfirmware": 1,
+            "pharmaceuticalisolators": 1
+          },
+          "effect": "+40 % de puissance de propulseur"
+        }
+      ],
+      "experimentals": []
+    }
+  ],
+  "suits": [
+    {
+      "id": "artemis",
+      "name": "Artemis Suit",
+      "platingMaterialId": "aerogel",
+      "steps": [
+        {
+          "fromGrade": 1,
+          "toGrade": 2,
+          "materials": {
+            "aerogel": 2,
+            "graphene": 2,
+            "healthmonitor": 1,
+            "manufacturinginstructions": 1,
+            "suitschematic": 1
+          },
+          "creditsCr": 600000,
+          "modificationSlots": 1
+        },
+        {
+          "fromGrade": 2,
+          "toGrade": 3,
+          "materials": {
+            "aerogel": 5,
+            "graphene": 5,
+            "healthmonitor": 2,
+            "manufacturinginstructions": 2,
+            "suitschematic": 2
+          },
+          "creditsCr": 2250000,
+          "modificationSlots": 2
+        },
+        {
+          "fromGrade": 3,
+          "toGrade": 4,
+          "materials": {
+            "aerogel": 9,
+            "graphene": 9,
+            "healthmonitor": 4,
+            "manufacturinginstructions": 4,
+            "suitschematic": 4
+          },
+          "creditsCr": 4500000,
+          "modificationSlots": 3
+        },
+        {
+          "fromGrade": 4,
+          "toGrade": 5,
+          "materials": {
+            "aerogel": 12,
+            "graphene": 12,
+            "healthmonitor": 5,
+            "manufacturinginstructions": 5,
+            "suitschematic": 5
+          },
+          "creditsCr": 7500000,
+          "modificationSlots": 4
+        }
+      ]
+    },
+    {
+      "id": "maverick",
+      "name": "Maverick Suit",
+      "platingMaterialId": "carbonfibreplating",
+      "steps": [
+        {
+          "fromGrade": 1,
+          "toGrade": 2,
+          "materials": {
+            "carbonfibreplating": 2,
+            "graphene": 2,
+            "healthmonitor": 1,
+            "manufacturinginstructions": 1,
+            "suitschematic": 1
+          },
+          "creditsCr": 600000,
+          "modificationSlots": 1
+        },
+        {
+          "fromGrade": 2,
+          "toGrade": 3,
+          "materials": {
+            "carbonfibreplating": 5,
+            "graphene": 5,
+            "healthmonitor": 2,
+            "manufacturinginstructions": 2,
+            "suitschematic": 2
+          },
+          "creditsCr": 2250000,
+          "modificationSlots": 2
+        },
+        {
+          "fromGrade": 3,
+          "toGrade": 4,
+          "materials": {
+            "carbonfibreplating": 9,
+            "graphene": 9,
+            "healthmonitor": 4,
+            "manufacturinginstructions": 4,
+            "suitschematic": 4
+          },
+          "creditsCr": 4500000,
+          "modificationSlots": 3
+        },
+        {
+          "fromGrade": 4,
+          "toGrade": 5,
+          "materials": {
+            "carbonfibreplating": 12,
+            "graphene": 12,
+            "healthmonitor": 5,
+            "manufacturinginstructions": 5,
+            "suitschematic": 5
+          },
+          "creditsCr": 7500000,
+          "modificationSlots": 4
+        }
+      ]
+    },
+    {
+      "id": "dominator",
+      "name": "Dominator Suit",
+      "platingMaterialId": "titaniumplating",
+      "steps": [
+        {
+          "fromGrade": 1,
+          "toGrade": 2,
+          "materials": {
+            "graphene": 2,
+            "healthmonitor": 1,
+            "manufacturinginstructions": 1,
+            "suitschematic": 1,
+            "titaniumplating": 2
+          },
+          "creditsCr": 600000,
+          "modificationSlots": 1
+        },
+        {
+          "fromGrade": 2,
+          "toGrade": 3,
+          "materials": {
+            "graphene": 5,
+            "healthmonitor": 2,
+            "manufacturinginstructions": 2,
+            "suitschematic": 2,
+            "titaniumplating": 5
+          },
+          "creditsCr": 2250000,
+          "modificationSlots": 2
+        },
+        {
+          "fromGrade": 3,
+          "toGrade": 4,
+          "materials": {
+            "graphene": 9,
+            "healthmonitor": 4,
+            "manufacturinginstructions": 4,
+            "suitschematic": 4,
+            "titaniumplating": 9
+          },
+          "creditsCr": 4500000,
+          "modificationSlots": 3
+        },
+        {
+          "fromGrade": 4,
+          "toGrade": 5,
+          "materials": {
+            "graphene": 12,
+            "healthmonitor": 5,
+            "manufacturinginstructions": 5,
+            "suitschematic": 5,
+            "titaniumplating": 12
+          },
+          "creditsCr": 7500000,
+          "modificationSlots": 4
+        }
+      ]
+    }
+  ]
+}

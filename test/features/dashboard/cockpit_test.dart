@@ -5,11 +5,11 @@ import 'package:elite_dangerous/features/dashboard/presentation/pages/career_pag
 import 'package:elite_dangerous/features/dashboard/presentation/pages/dashboard_page.dart';
 import 'package:elite_dangerous/features/dashboard/presentation/pages/engineers_page.dart';
 import 'package:elite_dangerous/features/dashboard/presentation/pages/fleet_page.dart';
-import 'package:elite_dangerous/features/dashboard/presentation/pages/materials_page.dart';
 import 'package:elite_dangerous/features/dashboard/presentation/pages/on_foot_page.dart';
 import 'package:elite_dangerous/features/dashboard/presentation/pages/station_page.dart';
 import 'package:elite_dangerous/features/exobiology/presentation/widgets/roadmap_step_card.dart';
 import 'package:elite_dangerous/features/journal/domain/repositories/journal_repository.dart';
+import 'package:elite_dangerous/features/materials/presentation/pages/materials_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -294,11 +294,22 @@ void main() {
         tester,
         const MaterialsPage(),
         tallDesktop,
-        until: () =>
-            find.text('Suit Schematic').evaluate().isNotEmpty,
+        // Le nom d'un matériau ne prouve plus rien : le plan de montée en
+        // grade le nomme même quand l'inventaire est encore vide. La
+        // disparition du « aucun inventaire » est le seul marqueur fiable.
+        until: () => findCallout('Aucun inventaire').evaluate().isEmpty,
       );
 
-      expect(findSection('Inventaire à pied (1)'), findsOneWidget);
+      // La page ne tient plus sur un écran : le plan de combinaison et les
+      // blueprints passent devant l'inventaire, qui reste plus bas.
+      final Finder inventaire = findSection('Inventaire à pied (1)');
+      await tester.scrollUntilVisible(
+        inventaire,
+        400,
+        scrollable: find.byType(Scrollable).first,
+      );
+
+      expect(inventaire, findsOneWidget);
       expect(find.text('Suit Schematic'), findsWidgets);
     });
 

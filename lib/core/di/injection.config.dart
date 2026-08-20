@@ -118,6 +118,19 @@ import '../../features/journal/domain/services/journal_session_aggregator.dart'
     as _i1060;
 import '../../features/journal/domain/usecases/journal_usecases.dart' as _i832;
 import '../../features/journal/presentation/bloc/journal_bloc.dart' as _i366;
+import '../../features/materials/data/datasources/material_catalog_asset_data_source.dart'
+    as _i331;
+import '../../features/materials/data/materials_module.dart' as _i47;
+import '../../features/materials/data/repositories/material_catalog_repository_impl.dart'
+    as _i442;
+import '../../features/materials/domain/repositories/material_catalog_repository.dart'
+    as _i1035;
+import '../../features/materials/domain/services/material_planner.dart'
+    as _i1008;
+import '../../features/materials/domain/usecases/material_usecases.dart'
+    as _i91;
+import '../../features/materials/presentation/bloc/materials_bloc.dart'
+    as _i1052;
 import '../../features/settings/data/settings_repository_impl.dart' as _i659;
 import '../../features/settings/domain/repositories/settings_repository.dart'
     as _i674;
@@ -147,6 +160,7 @@ extension GetItInjectableX on _i174.GetIt {
     final diagnosticsModule = _$DiagnosticsModule();
     final exobiologyModule = _$ExobiologyModule();
     final journalModule = _$JournalModule();
+    final materialsModule = _$MaterialsModule();
     final networkModule = _$NetworkModule();
     final storageModule = _$StorageModule();
     await gh.factoryAsync<_i460.SharedPreferences>(
@@ -186,6 +200,12 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i1060.JournalSessionAggregator>(
       () => journalModule.sessionAggregator,
     );
+    gh.lazySingleton<_i331.MaterialCatalogAssetDataSource>(
+      () => const _i331.MaterialCatalogAssetDataSource(),
+    );
+    gh.lazySingleton<_i1008.MaterialPlanner>(
+      () => materialsModule.materialPlanner,
+    );
     gh.lazySingleton<_i686.ExobiologyCatalogRepository>(
       () => _i412.ExobiologyCatalogRepositoryImpl(
         gh<_i906.ExobiologyCatalogAssetDataSource>(),
@@ -210,6 +230,11 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i144.RoadmapDeclarationResolver>(),
       ),
     );
+    gh.lazySingleton<_i1035.MaterialCatalogRepository>(
+      () => _i442.MaterialCatalogRepositoryImpl(
+        gh<_i331.MaterialCatalogAssetDataSource>(),
+      ),
+    );
     gh.lazySingleton<_i892.KeyValueStore>(
       () => _i782.SharedPreferencesKeyValueStore(gh<_i460.SharedPreferences>()),
     );
@@ -232,6 +257,15 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.lazySingleton<_i937.LineStore>(
       () => storageModule.lineStore(gh<_i892.KeyValueStore>()),
+    );
+    gh.factory<_i91.GetMaterialPlans>(
+      () => _i91.GetMaterialPlans(
+        gh<_i1035.MaterialCatalogRepository>(),
+        gh<_i1008.MaterialPlanner>(),
+      ),
+    );
+    gh.factory<_i1052.MaterialsBloc>(
+      () => _i1052.MaterialsBloc(gh<_i91.GetMaterialPlans>()),
     );
     gh.lazySingleton<_i806.CommanderLocalDataSource>(
       () => _i806.CommanderLocalDataSource(gh<_i892.KeyValueStore>()),
@@ -567,6 +601,8 @@ class _$DiagnosticsModule extends _i944.DiagnosticsModule {}
 class _$ExobiologyModule extends _i152.ExobiologyModule {}
 
 class _$JournalModule extends _i245.JournalModule {}
+
+class _$MaterialsModule extends _i47.MaterialsModule {}
 
 class _$NetworkModule extends _i200.NetworkModule {}
 
