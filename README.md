@@ -16,6 +16,7 @@ tenant compte de ce que le commandant possède déjà.
 | **Feuille de route priorisée** | 23 règles encodées depuis les guides fournis, évaluées sur l'état réel du commandant — profil Frontier, journaux importés et saisie manuelle confondus. Chaque étape dit *quoi faire*, *pourquoi maintenant*, *ce que ça rapporte* et *ce qui la bloque*. |
 | **Identification d'espèces** | Saisis ce que le FSS affiche : l'app déduit les espèces possibles, leur valeur, leur Colony Range, et montre **quel critère reste invérifié**. |
 | **Catalogue** | Les 118 organiques connus, leurs valeurs Vista Genomics, leurs conditions et leurs variantes de couleur. Hors ligne. |
+| **Matériaux et blueprints** | Les 108 matériaux d'ingénierie et les composants de combinaison, avec **où et comment on obtient chacun**. Pour un blueprint ou une montée en grade : ce qu'il reste à trouver, ce que le trader peut convertir depuis le surplus, et ce qui bloque quand quelque chose bloque. Hors ligne, aucun appel réseau. |
 | **Journal de bord** | Synchronisation depuis la Companion API de Frontier **ou** import des fichiers `Journal.*.log` du jeu — cette seconde voie ne demande aucun compte. La synchronisation remonte du plus récent au plus ancien, jusqu'à 90 jours. |
 | **Guides** | Les cinq guides sources convertis en contenu structuré et navigable (260 Ko), rendus avec le même design system que le reste. |
 | **Profil** | Profil Frontier lu en entier — flotte, équipement du vaisseau piloté et son ingénierie, combinaisons, armes, rangs, services de la station — complété par le journal, qui fournit seul le rebuy exact, la portée de saut, les ingénieurs débloqués, les matériaux à pied et l'allégeance Powerplay. La saisie manuelle ne sert plus qu'à corriger. |
@@ -322,7 +323,7 @@ trois formats.
 
 Pilotage par les tests, deux niveaux :
 
-- **TDD** — 470 tests unitaires et widget. Le domaine (moteur de roadmap,
+- **TDD** — 595 tests unitaires et widget. Le domaine (moteur de roadmap,
   matcher d'espèces, parser de journal, agrégateur) est couvert en premier
   parce qu'il porte toute la connaissance du jeu.
 - **BDD** — scénarios Gherkin en français dans `test/features_bdd/`, générés
@@ -336,9 +337,10 @@ Scenario: Les données non vendues passent avant tout le reste
   Then la première étape est {'discipline.sell_run'}
 ```
 
-Trois tests protègent des données qui n'ont pas d'autre filet :
-`exobiology_catalog_asset_test.dart` et `guide_assets_test.dart` valident le
-contenu embarqué, `dependency_injection_test.dart` résout tout le graphe DI.
+Quatre tests protègent des données qui n'ont pas d'autre filet :
+`exobiology_catalog_asset_test.dart`, `materials_catalog_test.dart` et
+`guide_assets_test.dart` valident le contenu embarqué,
+`dependency_injection_test.dart` résout tout le graphe DI.
 
 ---
 
@@ -446,7 +448,8 @@ Les deux sources se complètent exactement là où l'autre est muette.
 | Profit exobiologie de carrière | ❌ | ✅ `Statistics`, le chiffre exact que compte l'échelle |
 | Ingénieurs | ❌ | ✅ `EngineerProgress` : statut et rang, pour tous |
 | Réputations | ❌ | ✅ `Reputation`, −100 à +100 |
-| Matériaux à pied | ❌ | ✅ `ShipLocker`, aux noms lisibles du barman |
+| Matériaux à pied | ❌ | ✅ `ShipLocker`, ramenés au nom anglais du jeu |
+| Matériaux de vaisseau | ❌ | ✅ `Materials`, les 108, ramenés au nom anglais du jeu |
 | Powerplay | ❌ | ✅ `Powerplay` — dont la majoration de 30 % de Pranav Antal |
 | Meta-Alloy en soute | ❌ | ✅ `Cargo` |
 | Services de la station | ✅ dont `vistagenomics` : la station achète-t-elle les données organiques | ❌ |
@@ -475,6 +478,23 @@ code d'EDMC, doc `fd-api`) et l'application retient les valeurs vérifiées :
 | **Rangs Exobiologist** | 1,5 M / 5,3 M / 12,8 M / … / 520 M | 22,5 M / 83,5 M / 210,6 M / … / 8,425 Md | Table d'avant l'Update 14.01 (déc. 2022). L'ancienne table place le commandant quatre rangs trop haut. |
 | **Le bonus ×5** | « First Footfall ×5 » | **First Logged** ×5 ; First Footfall ne rapporte **rien** | Le ×5 récompense le premier à *vendre* une espèce depuis un corps. Le First Footfall n'inscrit qu'un nom sur la carte. Les deux sont liés en pratique — un corps jamais foulé donne le First Logged — mais ce n'est pas la même mécanique. |
 | **Concha Biconcavis / Fonticulua Fluctus** | 16 777 215 Cr | 19 010 800 / 20 000 000 Cr | 16 777 215 = 2²⁴−1, artefact de troncature répandu dans les tables communautaires. Un test l'interdit désormais dans le catalogue. |
+
+### Matériaux
+
+| Sujet | Avant | Retenu | Pourquoi |
+|---|---|---|---|
+| **Nom des matériaux** | `Name_Localised` | `Name`, ramené au nom anglais du jeu | Le manuel du journal (§2.4) écrit `_Localised` **dans la langue du client**. Sur un jeu en français l'inventaire arrivait en français et ne rejoignait plus aucune recette. 32 des 108 matériaux ont par ailleurs un symbole qui n'est pas leur nom sans espaces — `disruptedwakeechoes` est *Atypical Disrupted Wake Echoes* — donc la table est explicite, transcrite depuis `EDCD/FDevIDs`. |
+| **Ingénieurs par modification de combinaison** | 2 par mod | 3 pour cinq des six | Rosa Dayette manquait sur trois, Hero Ferrari sur deux. Seul *Night Vision* était juste. |
+| **Coût en crédits d'un grade de combinaison** | « aucun » | affiché avec sa réserve | Le wiki Fandom publie 14 850 000 Cr au total, Inara n'en liste aucun. Une source contre le silence d'une autre : le chiffre est montré avec la mention, la feuille de route continue de traiter un grade comme gratuit tant que personne ne l'a vérifié en jeu. |
+| **Coordonnées de Dav's Hope** | — | `50.5426, 137.4150` | Tous les guides antérieurs citent les coordonnées Legacy (`44.8180, -31.3893`), qui font atterrir au mauvais endroit dans le jeu Live. |
+
+Les quantités des blueprints viennent de `EDCD/coriolis-data`, et comptent les
+**rolls** : à réputation 5, un blueprint de grade N se pose en N rolls, donc un
+FSD *Increased Range* complet coûte 41 unités et non 15. Les taux du material
+trader sont calculés par deux règles plutôt que recopiés, et un test les
+confronte à la table publiée ligne par ligne — y compris les conversions qui
+n'existent que sur le papier, celles qui exigeraient plus d'unités que le
+plafond de stockage n'en autorise.
 
 Le catalogue embarqué contient **118 espèces** (117 + `Radicoida Unica`, ajoutée
 en novembre 2025), leurs valeurs, conditions et variantes, ainsi que les
