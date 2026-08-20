@@ -6,6 +6,7 @@ import 'package:elite_dangerous/core/result/result.dart';
 import 'package:elite_dangerous/features/journal/data/datasources/journal_api.dart';
 import 'package:elite_dangerous/features/journal/data/datasources/journal_file_data_source.dart';
 import 'package:elite_dangerous/features/journal/data/datasources/journal_local_store.dart';
+import 'package:elite_dangerous/features/journal/data/datasources/journal_tail_data_source.dart';
 import 'package:elite_dangerous/features/journal/data/repositories/journal_repository_impl.dart';
 import 'package:elite_dangerous/features/journal/domain/entities/journal_sync_policy.dart';
 import 'package:elite_dangerous/features/journal/domain/repositories/journal_repository.dart';
@@ -79,6 +80,7 @@ void main() {
         const JournalFileDataSource(),
         local,
         parser,
+        JournalTailDataSource(const JournalFileDataSource()),
       );
 
   setUp(() {

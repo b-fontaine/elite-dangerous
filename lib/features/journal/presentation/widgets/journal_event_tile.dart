@@ -76,7 +76,7 @@ class JournalEventTile extends StatelessWidget {
         ),
       final BodyScanEvent e => (
           Icons.public,
-          EdColors.textMuted,
+          e.wasDiscovered ? EdColors.textMuted : EdColors.gold,
           e.bodyName,
           <String>[
             if (e.planetClass != null) e.planetClass!,
@@ -84,6 +84,31 @@ class JournalEventTile extends StatelessWidget {
               '${e.surfaceGravityG!.toStringAsFixed(2)} g',
             if (e.surfaceTemperatureK != null)
               '${e.surfaceTemperatureK!.toStringAsFixed(0)} K',
+            // La prime que le commandant risque de laisser sur la table s'il
+            // vend sans avoir remarqué qu'il est le premier à passer.
+            if (!e.wasDiscovered) 'première découverte',
+            if (!e.wasMapped) 'jamais cartographié',
+          ].join(' · '),
+        ),
+      final DiscoveryScanEvent e => (
+          Icons.wifi_tethering,
+          EdColors.cyan,
+          'Balayage de découverte — ${e.bodyCount} corps',
+          e.systemName,
+        ),
+      final AllBodiesFoundEvent e => (
+          Icons.done_all,
+          EdColors.greenBright,
+          'Système entièrement exploré',
+          '${e.count} corps · ${e.systemName ?? ''}'.trim(),
+        ),
+      final SurfaceMappedEvent e => (
+          Icons.satellite_alt_outlined,
+          EdColors.orangeBright,
+          'Cartographié — ${e.bodyName}',
+          <String>[
+            '${e.probesUsed} sonde(s)',
+            if (e.wasEfficient) 'sous la cible d\'efficacité',
           ].join(' · '),
         ),
       final SurfaceContactEvent e => (

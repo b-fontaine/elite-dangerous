@@ -90,6 +90,9 @@ class JournalEventParser {
       'FSSBodySignals' || 'SAASignalsFound' =>
         _bodySignals(timestamp, name, decoded),
       'Scan' => _bodyScan(timestamp, decoded),
+      'FSSDiscoveryScan' => _discoveryScan(timestamp, decoded),
+      'FSSAllBodiesFound' => _allBodiesFound(timestamp, decoded),
+      'SAAScanComplete' => _surfaceMapped(timestamp, decoded),
       'Touchdown' || 'Liftoff' => _surfaceContact(timestamp, name, decoded),
       'Disembark' || 'Embark' => _embark(timestamp, name, decoded),
       'Rank' || 'Progress' => _rank(timestamp, name, decoded),
@@ -216,6 +219,7 @@ class JournalEventParser {
       timestamp: timestamp,
       bodyName: _string(json['BodyName']) ?? '',
       starSystem: _string(json['StarSystem']),
+      systemAddress: _int(json['SystemAddress']),
       bodyId: _int(json['BodyID']),
       planetClass: _string(json['PlanetClass']),
       atmosphere: _string(json['Atmosphere']) ?? _string(json['AtmosphereType']),
@@ -227,8 +231,41 @@ class JournalEventParser {
       distanceFromArrivalLs: _double(json['DistanceFromArrivalLS']),
       landable: json['Landable'] == true,
       parentStarClass: _string(json['StarType']),
+      scanType: _string(json['ScanType']),
+      // Absent means "not stated", and the safe reading of an unstated
+      // discovery is that someone got here first.
+      wasDiscovered: json['WasDiscovered'] != false,
+      wasMapped: json['WasMapped'] != false,
     );
   }
+
+  JournalEvent _discoveryScan(DateTime timestamp, Map<String, dynamic> json) =>
+      DiscoveryScanEvent(
+        timestamp: timestamp,
+        bodyCount: _int(json['BodyCount']) ?? 0,
+        systemName: _string(json['SystemName']),
+        systemAddress: _int(json['SystemAddress']),
+        nonBodyCount: _int(json['NonBodyCount']) ?? 0,
+        progress: _double(json['Progress']) ?? 0,
+      );
+
+  JournalEvent _allBodiesFound(DateTime timestamp, Map<String, dynamic> json) =>
+      AllBodiesFoundEvent(
+        timestamp: timestamp,
+        count: _int(json['Count']) ?? 0,
+        systemName: _string(json['SystemName']),
+        systemAddress: _int(json['SystemAddress']),
+      );
+
+  JournalEvent _surfaceMapped(DateTime timestamp, Map<String, dynamic> json) =>
+      SurfaceMappedEvent(
+        timestamp: timestamp,
+        bodyName: _string(json['BodyName']) ?? '',
+        bodyId: _int(json['BodyID']),
+        systemAddress: _int(json['SystemAddress']),
+        probesUsed: _int(json['ProbesUsed']) ?? 0,
+        efficiencyTarget: _int(json['EfficiencyTarget']) ?? 0,
+      );
 
   JournalEvent _surfaceContact(
     DateTime timestamp,

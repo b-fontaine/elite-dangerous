@@ -224,6 +224,7 @@ final class BodyScanEvent extends JournalEvent {
     required super.timestamp,
     required this.bodyName,
     this.starSystem,
+    this.systemAddress,
     this.bodyId,
     this.planetClass,
     this.atmosphere,
@@ -234,10 +235,18 @@ final class BodyScanEvent extends JournalEvent {
     this.distanceFromArrivalLs,
     this.landable = false,
     this.parentStarClass,
+    this.scanType,
+    this.wasDiscovered = true,
+    this.wasMapped = true,
   }) : super(name: 'Scan');
 
   final String bodyName;
   final String? starSystem;
+
+  /// The system's `id64`, so a scan can be attributed to the system the
+  /// commander is standing in rather than to one that merely shares its name.
+  final int? systemAddress;
+
   final int? bodyId;
   final String? planetClass;
   final String? atmosphere;
@@ -252,6 +261,27 @@ final class BodyScanEvent extends JournalEvent {
   final bool landable;
   final String? parentStarClass;
 
+  /// `AutoScan`, `Basic`, `Detailed` or `NavBeaconDetail`.
+  ///
+  /// The distinction decides whether there is anything left to do: the
+  /// honk-and-jump `AutoScan` of the arrival star yields almost nothing,
+  /// whereas `Detailed` is the FSS scan that names the planet class and pays.
+  final String? scanType;
+
+  /// Whether someone had already discovered this body.
+  ///
+  /// Defaults to `true` on purpose: the field is absent from the oldest
+  /// journals, and claiming an undiscovered body on missing evidence would
+  /// send a commander to sell a first-discovery bonus that is not theirs.
+  final bool wasDiscovered;
+
+  /// Whether someone had already mapped it with the DSS.
+  final bool wasMapped;
+
+  /// A full FSS scan, as opposed to the arrival honk.
+  bool get isDetailed =>
+      scanType == 'Detailed' || scanType == 'NavBeaconDetail';
+
   /// The Journal reports `SurfaceGravity` in m/s²; every exobiology table is
   /// written in g, and 0.27 g is the threshold that decides a landing.
   static const double standardGravity = 9.80665;
@@ -260,7 +290,93 @@ final class BodyScanEvent extends JournalEvent {
   String get discriminator => bodyName;
 
   @override
-  List<Object?> get props => <Object?>[timestamp, bodyName, planetClass];
+  List<Object?> get props =>
+      <Object?>[timestamp, bodyName, planetClass, scanType];
+}
+
+/// `FSSDiscoveryScan` — the arrival honk, which says how much is out there.
+///
+/// This is the only event that states how many bodies a system holds. Without
+/// it "3 bodies scanned" is a number with no denominator, and the app cannot
+/// tell a finished system from one barely started.
+final class DiscoveryScanEvent extends JournalEvent {
+  const DiscoveryScanEvent({
+    required super.timestamp,
+    required this.bodyCount,
+    this.systemName,
+    this.systemAddress,
+    this.nonBodyCount = 0,
+    this.progress = 0,
+  }) : super(name: 'FSSDiscoveryScan');
+
+  /// Stars, planets and moons — everything the FSS can resolve.
+  final int bodyCount;
+
+  final String? systemName;
+  final int? systemAddress;
+
+  /// Signals that are not bodies: belts, rings, and the like.
+  final int nonBodyCount;
+
+  /// 0.0 → 1.0, the share already discovered at the moment of the honk.
+  final double progress;
+
+  @override
+  String get discriminator => '${systemAddress ?? systemName}';
+
+  @override
+  List<Object?> get props =>
+      <Object?>[timestamp, systemAddress, systemName, bodyCount];
+}
+
+/// `FSSAllBodiesFound` — nothing left to find in this system.
+final class AllBodiesFoundEvent extends JournalEvent {
+  const AllBodiesFoundEvent({
+    required super.timestamp,
+    required this.count,
+    this.systemName,
+    this.systemAddress,
+  }) : super(name: 'FSSAllBodiesFound');
+
+  final int count;
+  final String? systemName;
+  final int? systemAddress;
+
+  @override
+  String get discriminator => '${systemAddress ?? systemName}';
+
+  @override
+  List<Object?> get props =>
+      <Object?>[timestamp, systemAddress, systemName, count];
+}
+
+/// `SAAScanComplete` — a body mapped with the Detailed Surface Scanner.
+///
+/// Mapping is what reveals where the organisms are, so this is the event that
+/// separates "there is life down there somewhere" from a plan.
+final class SurfaceMappedEvent extends JournalEvent {
+  const SurfaceMappedEvent({
+    required super.timestamp,
+    required this.bodyName,
+    this.bodyId,
+    this.systemAddress,
+    this.probesUsed = 0,
+    this.efficiencyTarget = 0,
+  }) : super(name: 'SAAScanComplete');
+
+  final String bodyName;
+  final int? bodyId;
+  final int? systemAddress;
+  final int probesUsed;
+  final int efficiencyTarget;
+
+  /// Mapped under the efficiency target, which pays a bonus.
+  bool get wasEfficient =>
+      efficiencyTarget > 0 && probesUsed <= efficiencyTarget;
+
+  @override
+  List<Object?> get props =>
+      <Object?>[timestamp, bodyName, bodyId, systemAddress, probesUsed];
 }
 
 /// `Touchdown` and `Liftoff` — the ship meeting the ground, and leaving it.

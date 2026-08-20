@@ -97,6 +97,28 @@ class JournalFileDataSource {
     ];
   }
 
+  /// The journal the game is writing to right now, or `null` if the folder
+  /// holds none.
+  ///
+  /// "Most recent" is decided by the parsed name, never by the file's mtime:
+  /// copying a save folder rewrites every mtime at once, and the name is the
+  /// only thing that still says which session came last.
+  String? mostRecentJournalPath(String directory) {
+    final Directory dir = Directory(directory);
+    if (!dir.existsSync()) {
+      return null;
+    }
+    final List<String> paths = dir
+        .listSync()
+        .whereType<File>()
+        .map((File file) => file.path)
+        .where((String path) => journalFilePattern.hasMatch(_basename(path)))
+        .toList()
+      ..sort(compareNewestFirst);
+
+    return paths.isEmpty ? null : paths.first;
+  }
+
   /// Orders two journal paths newest first.
   ///
   /// A plain string sort is what one reaches for, and it is wrong: the two

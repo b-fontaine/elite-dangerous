@@ -453,4 +453,82 @@ void main() {
       expect(event.killerShip, 'anaconda');
     });
   });
+
+  group('découverte et cartographie', () {
+    test('le balayage d\'arrivée donne le nombre de corps', () {
+      final DiscoveryScanEvent event = parser.parseLine(
+        '{"timestamp":"2026-08-20T12:00:00Z","event":"FSSDiscoveryScan",'
+        '"Progress":0.328,"BodyCount":12,"NonBodyCount":3,'
+        '"SystemName":"Hyades Sector DR-V c2-23",'
+        '"SystemAddress":2871051298721}',
+      )! as DiscoveryScanEvent;
+
+      expect(event.bodyCount, 12);
+      expect(event.nonBodyCount, 3);
+      expect(event.progress, closeTo(0.328, 0.001));
+      expect(event.systemAddress, 2871051298721);
+    });
+
+    test('FSSAllBodiesFound dit que le système est fini', () {
+      final AllBodiesFoundEvent event = parser.parseLine(
+        '{"timestamp":"2026-08-20T12:05:00Z","event":"FSSAllBodiesFound",'
+        '"SystemName":"Hyades Sector DR-V c2-23",'
+        '"SystemAddress":2871051298721,"Count":12}',
+      )! as AllBodiesFoundEvent;
+
+      expect(event.count, 12);
+      expect(event.systemName, 'Hyades Sector DR-V c2-23');
+    });
+
+    test('SAAScanComplete retient les sondes et la cible d\'efficacité', () {
+      final SurfaceMappedEvent event = parser.parseLine(
+        '{"timestamp":"2026-08-20T12:10:00Z","event":"SAAScanComplete",'
+        '"BodyName":"Hyades Sector DR-V c2-23 A 5",'
+        '"SystemAddress":2871051298721,'
+        '"BodyID":5,"ProbesUsed":4,"EfficiencyTarget":6}',
+      )! as SurfaceMappedEvent;
+
+      expect(event.bodyName, 'Hyades Sector DR-V c2-23 A 5');
+      expect(event.probesUsed, 4);
+      expect(event.wasEfficient, isTrue);
+    });
+
+    test('dépasser la cible d\'efficacité se voit', () {
+      final SurfaceMappedEvent event = parser.parseLine(
+        '{"timestamp":"2026-08-20T12:10:00Z","event":"SAAScanComplete",'
+        '"BodyName":"A 5","BodyID":5,"ProbesUsed":9,"EfficiencyTarget":6}',
+      )! as SurfaceMappedEvent;
+
+      expect(event.wasEfficient, isFalse);
+    });
+
+    test('un Scan retient son type et à qui revient la découverte', () {
+      final BodyScanEvent event = parser.parseLine(
+        '{"timestamp":"2026-08-20T12:02:00Z","event":"Scan",'
+        '"ScanType":"Detailed","BodyName":"A 5","BodyID":5,'
+        '"SystemAddress":2871051298721,'
+        '"StarSystem":"Hyades Sector DR-V c2-23",'
+        '"WasDiscovered":false,"WasMapped":false,"Landable":true,'
+        '"PlanetClass":"High metal content body"}',
+      )! as BodyScanEvent;
+
+      expect(event.isDetailed, isTrue);
+      expect(event.systemAddress, 2871051298721);
+      expect(event.wasDiscovered, isFalse);
+      expect(event.wasMapped, isFalse);
+    });
+
+    test('un vieux Scan sans ces champs est réputé déjà découvert', () {
+      // L'inverse serait pire : annoncer une prime de première découverte que
+      // le commandant ne touchera pas.
+      final BodyScanEvent event = parser.parseLine(
+        '{"timestamp":"2018-01-01T12:00:00Z","event":"Scan",'
+        '"BodyName":"A 5","StarSystem":"Sol"}',
+      )! as BodyScanEvent;
+
+      expect(event.wasDiscovered, isTrue);
+      expect(event.wasMapped, isTrue);
+      expect(event.isDetailed, isFalse);
+    });
+  });
 }

@@ -13,6 +13,7 @@ tenant compte de ce que le commandant possède déjà.
 | | |
 |---|---|
 | **Poste de pilotage** | Qui est le commandant, **les trois prochaines étapes**, six chiffres clés, et cinq portes vers le détail : carrière, flotte, équipement à pied, ingénieurs, matériaux. Court par construction — il tient sur un écran de téléphone, le détail est à un geste. |
+| **Terrain — le jeu en direct** | Pendant une partie, l'app relit toutes les dix secondes ce que le jeu écrit sur le disque : où est le commandant (jusqu'à sa latitude), ce qui reste à scanner et à échantillonner **dans le système en cours**, et ce que vaut ce qu'il transporte sans l'avoir vendu. Bureau uniquement — c'est là que tourne le jeu. |
 | **Feuille de route priorisée** | 23 règles encodées depuis les guides fournis, évaluées sur l'état réel du commandant — profil Frontier, journaux importés et saisie manuelle confondus. Chaque étape dit *quoi faire*, *pourquoi maintenant*, *ce que ça rapporte* et *ce qui la bloque*. |
 | **Identification d'espèces** | Saisis ce que le FSS affiche : l'app déduit les espèces possibles, leur valeur, leur Colony Range, et montre **quel critère reste invérifié**. |
 | **Catalogue** | Les 118 organiques connus, leurs valeurs Vista Genomics, leurs conditions et leurs variantes de couleur. Hors ligne. |
@@ -189,6 +190,46 @@ la clé de préférences est supprimée. Le web, qui n'a pas de système de fich
 et ne peut de toute façon pas se connecter à Frontier, garde l'ancien
 comportement.
 
+### Suivre une partie en cours
+
+Le jeu écrit deux choses sur le disque : un journal, auquel il ajoute des
+lignes une fois les événements passés, et une poignée de fichiers d'état qu'il
+**réécrit sur place** pendant que la situation évolue. `Status.json` est le
+seul endroit d'où l'on peut lire la latitude d'un commandant à pied.
+
+Le suivi relit les deux toutes les dix secondes, `Timer.periodic`, sans
+surveillance du système de fichiers. Ce choix est délibéré : le jeu garde le
+journal ouvert et le vide par à-coups, si bien que sous Windows la
+notification de dossier arrive avant que la taille ait changé, et que sous
+Proton les événements inotify traversent une couche de traduction qui les
+agrège. Tous les outils tiers qui ont tenté un observateur ont fini par
+interroger périodiquement en dessous.
+
+Trois pièges y sont traités, et chacun a son test :
+
+- **Une ligne incomplète n'est jamais consommée.** La lecture s'arrête au
+  dernier saut de ligne et laisse le reste pour le passage suivant. C'est
+  aussi ce qui interdit de couper un caractère UTF-8 en deux, puisque `0x0A`
+  ne peut pas apparaître dans un octet de continuation.
+- **Le changement de fichier vide l'ancien d'abord.** Entre deux passages, une
+  session peut se terminer et une autre commencer ; la fin du fichier quitté
+  est là où se trouvent la vente à Vista Genomics et l'arrêt du jeu.
+- **Une lecture qui tombe pendant une réécriture ne casse rien.** Un
+  `Status.json` vide, tronqué ou verrouillé rend `null`, et l'affichage garde
+  la dernière valeur lue plutôt que de clignoter.
+
+`ShipLocker.json`, `Backpack.json` et `Cargo.json` sont, mot pour mot, des
+événements de journal enregistrés dans un fichier — le journal écrit la version
+*vide* de ces événements dès que la charge utile devient trop grosse. Ils sont
+donc relus et versés dans le même pipeline d'import que tout le reste : une
+seule source de vérité, et l'inventaire à pied cesse de dater du démarrage de
+la session.
+
+Rien ne dit de façon fiable si le jeu tourne. Le jeu ne réécrit `Status.json`
+que quand quelque chose change, donc vingt minutes de silence à une station
+sont normales. L'écran affiche l'**âge** de la dernière écriture plutôt qu'un
+voyant « connecté » qui mentirait.
+
 ### Remonter le journal aussi loin que possible
 
 Frontier n'expose pas de plage : `/journal/{année}/{mois}/{jour}` rend une
@@ -323,7 +364,7 @@ trois formats.
 
 Pilotage par les tests, deux niveaux :
 
-- **TDD** — 595 tests unitaires et widget. Le domaine (moteur de roadmap,
+- **TDD** — 666 tests unitaires et widget. Le domaine (moteur de roadmap,
   matcher d'espèces, parser de journal, agrégateur) est couvert en premier
   parce qu'il porte toute la connaissance du jeu.
 - **BDD** — scénarios Gherkin en français dans `test/features_bdd/`, générés
@@ -527,8 +568,8 @@ ainsi qu'une feuille de route « minage » ou « commerce » se grefferait.
 
 ## État
 
-Fonctionnel de bout en bout : `dart analyze` propre sur `lib/` et `test/`,
-479 tests verts, `flutter build web` réussi.
+Fonctionnel de bout en bout : `dart analyze --fatal-infos` propre sur `lib/` et
+`test/`, 666 tests verts, `flutter build web` réussi.
 
 La boucle est fermée : importer un journal met immédiatement à jour le profit
 de carrière, le rang Exobiologist, les données à risque en soute et donc l'ordre
@@ -540,7 +581,9 @@ Non implémenté à ce stade :
 
 - sélecteur de dossier natif pour l'import (le chemin se saisit, les
   emplacements par défaut de chaque plateforme sont proposés) ;
-- surveillance en temps réel du dossier de journaux pendant une partie ;
+- suivi en direct hors bureau : lire les fichiers du jeu suppose d'être sur la
+  machine qui le fait tourner, donc l'onglet Terrain y montre le dernier
+  journal importé et le dit ;
 - connexion Frontier sur la cible web (schéma d'URL impossible dans un
   navigateur, en-têtes CORS des hôtes Frontier non documentés) — l'import de
   journaux et la saisie manuelle y fonctionnent.

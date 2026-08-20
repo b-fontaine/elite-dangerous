@@ -77,6 +77,8 @@ import '../../features/exobiology/domain/services/roadmap_declaration_resolver.d
 import '../../features/exobiology/domain/services/species_matcher.dart' as _i5;
 import '../../features/exobiology/domain/usecases/exobiology_usecases.dart'
     as _i396;
+import '../../features/exobiology/presentation/bloc/field_report_bloc.dart'
+    as _i47;
 import '../../features/exobiology/presentation/bloc/roadmap_bloc.dart' as _i6;
 import '../../features/exobiology/presentation/bloc/species_catalog_bloc.dart'
     as _i808;
@@ -100,27 +102,37 @@ import '../../features/guides/domain/usecases/search_guides.dart' as _i215;
 import '../../features/guides/presentation/bloc/guide_detail_bloc.dart'
     as _i709;
 import '../../features/guides/presentation/bloc/guides_bloc.dart' as _i137;
+import '../../features/journal/data/datasources/game_state_data_source.dart'
+    as _i351;
 import '../../features/journal/data/datasources/journal_api.dart' as _i80;
 import '../../features/journal/data/datasources/journal_file_data_source.dart'
     as _i62;
 import '../../features/journal/data/datasources/journal_local_store.dart'
     as _i896;
+import '../../features/journal/data/datasources/journal_tail_data_source.dart'
+    as _i38;
 import '../../features/journal/data/journal_module.dart' as _i245;
 import '../../features/journal/data/repositories/journal_repository_impl.dart'
     as _i547;
+import '../../features/journal/data/repositories/live_journal_repository_impl.dart'
+    as _i561;
 import '../../features/journal/domain/repositories/journal_repository.dart'
     as _i636;
+import '../../features/journal/domain/repositories/live_journal_repository.dart'
+    as _i611;
 import '../../features/journal/domain/services/exobiology_activity_aggregator.dart'
     as _i888;
 import '../../features/journal/domain/services/journal_event_parser.dart'
     as _i644;
 import '../../features/journal/domain/services/journal_session_aggregator.dart'
     as _i1060;
+import '../../features/journal/domain/services/system_survey_builder.dart'
+    as _i661;
 import '../../features/journal/domain/usecases/journal_usecases.dart' as _i832;
 import '../../features/journal/presentation/bloc/journal_bloc.dart' as _i366;
 import '../../features/materials/data/datasources/material_catalog_asset_data_source.dart'
     as _i331;
-import '../../features/materials/data/materials_module.dart' as _i47;
+import '../../features/materials/data/materials_module.dart' as _i48;
 import '../../features/materials/data/repositories/material_catalog_repository_impl.dart'
     as _i442;
 import '../../features/materials/domain/repositories/material_catalog_repository.dart'
@@ -190,6 +202,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i258.GuideAssetDataSource>(
       () => const _i258.GuideAssetDataSource(),
     );
+    gh.lazySingleton<_i351.GameStateDataSource>(
+      () => const _i351.GameStateDataSource(),
+    );
     gh.lazySingleton<_i62.JournalFileDataSource>(
       () => const _i62.JournalFileDataSource(),
     );
@@ -199,6 +214,9 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.lazySingleton<_i1060.JournalSessionAggregator>(
       () => journalModule.sessionAggregator,
+    );
+    gh.lazySingleton<_i661.SystemSurveyBuilder>(
+      () => journalModule.systemSurveyBuilder,
     );
     gh.lazySingleton<_i331.MaterialCatalogAssetDataSource>(
       () => const _i331.MaterialCatalogAssetDataSource(),
@@ -237,6 +255,9 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.lazySingleton<_i892.KeyValueStore>(
       () => _i782.SharedPreferencesKeyValueStore(gh<_i460.SharedPreferences>()),
+    );
+    gh.lazySingleton<_i38.JournalTailDataSource>(
+      () => _i38.JournalTailDataSource(gh<_i62.JournalFileDataSource>()),
     );
     gh.factory<_i269.FrontierAuthApi>(
       () => _i269.FrontierAuthApi(gh<_i361.Dio>(instanceName: 'frontierAuth')),
@@ -421,30 +442,6 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i80.JournalApi>(
       () => _i80.JournalApi(gh<_i361.Dio>(instanceName: 'frontierApi')),
     );
-    gh.lazySingleton<_i636.JournalRepository>(
-      () => _i547.JournalRepositoryImpl(
-        gh<_i80.JournalApi>(),
-        gh<_i62.JournalFileDataSource>(),
-        gh<_i896.JournalLocalStore>(),
-        gh<_i644.JournalEventParser>(),
-      ),
-      dispose: (i) => i.dispose(),
-    );
-    gh.factory<_i832.WatchJournalEvents>(
-      () => _i832.WatchJournalEvents(gh<_i636.JournalRepository>()),
-    );
-    gh.factory<_i832.SyncJournalFromCompanionApi>(
-      () => _i832.SyncJournalFromCompanionApi(gh<_i636.JournalRepository>()),
-    );
-    gh.factory<_i832.ImportJournalDirectory>(
-      () => _i832.ImportJournalDirectory(gh<_i636.JournalRepository>()),
-    );
-    gh.factory<_i832.GetSuggestedJournalDirectories>(
-      () => _i832.GetSuggestedJournalDirectories(gh<_i636.JournalRepository>()),
-    );
-    gh.factory<_i832.ClearJournal>(
-      () => _i832.ClearJournal(gh<_i636.JournalRepository>()),
-    );
     gh.factory<_i692.SpeciesFinderBloc>(
       () => _i692.SpeciesFinderBloc(
         gh<_i396.IdentifySpeciesForBody>(),
@@ -452,14 +449,18 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i5.SpeciesMatcher>(),
       ),
     );
-    gh.factory<_i832.GetExobiologyActivity>(
-      () => _i832.GetExobiologyActivity(
-        gh<_i636.JournalRepository>(),
-        gh<_i888.ExobiologyActivityAggregator>(),
-      ),
-    );
     gh.factory<_i137.GuidesBloc>(
       () => _i137.GuidesBloc(gh<_i7.ListGuides>(), gh<_i215.SearchGuides>()),
+    );
+    gh.lazySingleton<_i636.JournalRepository>(
+      () => _i547.JournalRepositoryImpl(
+        gh<_i80.JournalApi>(),
+        gh<_i62.JournalFileDataSource>(),
+        gh<_i896.JournalLocalStore>(),
+        gh<_i644.JournalEventParser>(),
+        gh<_i38.JournalTailDataSource>(),
+      ),
+      dispose: (i) => i.dispose(),
     );
     gh.factory<_i832.GetJournalSessionState>(
       () => _i832.GetJournalSessionState(
@@ -482,16 +483,6 @@ extension GetItInjectableX on _i174.GetIt {
       ),
       dispose: (i) => i.dispose(),
     );
-    gh.lazySingleton<_i643.CommanderSnapshotSource>(
-      () => _i128.CommanderSnapshotAdapter(
-        gh<_i851.CommanderRepository>(),
-        gh<_i554.ExobiologyProgressRepository>(),
-        gh<_i832.GetExobiologyActivity>(),
-        gh<_i686.ExobiologyCatalogRepository>(),
-        gh<_i832.WatchJournalEvents>(),
-        gh<_i832.GetJournalSessionState>(),
-      ),
-    );
     gh.lazySingleton<_i13.DiagnosticsRepository>(
       () => _i901.DiagnosticsRepositoryImpl(
         gh<_i395.DiagnosticsApi>(),
@@ -501,14 +492,12 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i721.PayloadExporter>(),
       ),
     );
-    gh.factory<_i366.JournalBloc>(
-      () => _i366.JournalBloc(
-        gh<_i832.WatchJournalEvents>(),
-        gh<_i832.SyncJournalFromCompanionApi>(),
-        gh<_i832.ImportJournalDirectory>(),
-        gh<_i832.GetSuggestedJournalDirectories>(),
+    gh.factory<_i832.WatchFieldReport>(
+      () => _i832.WatchFieldReport(
+        gh<_i636.JournalRepository>(),
+        gh<_i1060.JournalSessionAggregator>(),
         gh<_i888.ExobiologyActivityAggregator>(),
-        gh<_i807.Clock>(),
+        gh<_i661.SystemSurveyBuilder>(),
       ),
     );
     gh.factory<_i694.GetCommanderProfile>(
@@ -525,6 +514,38 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i694.SaveManualOverrides>(
       () => _i694.SaveManualOverrides(gh<_i851.CommanderRepository>()),
+    );
+    gh.factory<_i832.WatchJournalEvents>(
+      () => _i832.WatchJournalEvents(gh<_i636.JournalRepository>()),
+    );
+    gh.factory<_i832.SyncJournalFromCompanionApi>(
+      () => _i832.SyncJournalFromCompanionApi(gh<_i636.JournalRepository>()),
+    );
+    gh.factory<_i832.ImportJournalDirectory>(
+      () => _i832.ImportJournalDirectory(gh<_i636.JournalRepository>()),
+    );
+    gh.factory<_i832.GetSuggestedJournalDirectories>(
+      () => _i832.GetSuggestedJournalDirectories(gh<_i636.JournalRepository>()),
+    );
+    gh.factory<_i832.ClearJournal>(
+      () => _i832.ClearJournal(gh<_i636.JournalRepository>()),
+    );
+    gh.factory<_i832.GetExobiologyActivity>(
+      () => _i832.GetExobiologyActivity(
+        gh<_i636.JournalRepository>(),
+        gh<_i888.ExobiologyActivityAggregator>(),
+      ),
+    );
+    gh.lazySingleton<_i611.LiveJournalRepository>(
+      () => _i561.LiveJournalRepositoryImpl(
+        gh<_i38.JournalTailDataSource>(),
+        gh<_i351.GameStateDataSource>(),
+        gh<_i62.JournalFileDataSource>(),
+        gh<_i896.JournalLocalStore>(),
+        gh<_i636.JournalRepository>(),
+        gh<_i807.Clock>(),
+      ),
+      dispose: (i) => i.dispose(),
     );
     gh.factory<_i1044.ReadCachedProfile>(
       () => _i1044.ReadCachedProfile(
@@ -553,6 +574,51 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i832.WatchJournalSessionState>(),
       ),
     );
+    gh.factory<_i1044.ExportCapture>(
+      () => _i1044.ExportCapture(gh<_i13.DiagnosticsRepository>()),
+    );
+    gh.factory<_i1044.FetchJournalDayCapture>(
+      () => _i1044.FetchJournalDayCapture(
+        gh<_i13.DiagnosticsRepository>(),
+        gh<_i653.PayloadInspector>(),
+        gh<_i807.Clock>(),
+      ),
+    );
+    gh.lazySingleton<_i643.CommanderSnapshotSource>(
+      () => _i128.CommanderSnapshotAdapter(
+        gh<_i851.CommanderRepository>(),
+        gh<_i554.ExobiologyProgressRepository>(),
+        gh<_i832.GetExobiologyActivity>(),
+        gh<_i686.ExobiologyCatalogRepository>(),
+        gh<_i832.WatchJournalEvents>(),
+        gh<_i832.GetJournalSessionState>(),
+      ),
+    );
+    gh.factory<_i516.DiagnosticsBloc>(
+      () => _i516.DiagnosticsBloc(
+        gh<_i1044.ReadCachedProfile>(),
+        gh<_i1044.RefreshProfileCapture>(),
+        gh<_i1044.ReadStoredJournal>(),
+        gh<_i1044.FetchJournalDayCapture>(),
+        gh<_i1044.ExportCapture>(),
+      ),
+    );
+    gh.factory<_i366.JournalBloc>(
+      () => _i366.JournalBloc(
+        gh<_i832.WatchJournalEvents>(),
+        gh<_i832.SyncJournalFromCompanionApi>(),
+        gh<_i832.ImportJournalDirectory>(),
+        gh<_i832.GetSuggestedJournalDirectories>(),
+        gh<_i888.ExobiologyActivityAggregator>(),
+        gh<_i807.Clock>(),
+      ),
+    );
+    gh.factory<_i832.WatchLiveGameState>(
+      () => _i832.WatchLiveGameState(gh<_i611.LiveJournalRepository>()),
+    );
+    gh.factory<_i832.RefreshLiveGameState>(
+      () => _i832.RefreshLiveGameState(gh<_i611.LiveJournalRepository>()),
+    );
     gh.factory<_i396.GetExobiologyRoadmap>(
       () => _i396.GetExobiologyRoadmap(
         gh<_i643.CommanderSnapshotSource>(),
@@ -565,23 +631,13 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i437.ExobiologyRoadmapEngine>(),
       ),
     );
-    gh.factory<_i1044.ExportCapture>(
-      () => _i1044.ExportCapture(gh<_i13.DiagnosticsRepository>()),
-    );
-    gh.factory<_i1044.FetchJournalDayCapture>(
-      () => _i1044.FetchJournalDayCapture(
-        gh<_i13.DiagnosticsRepository>(),
-        gh<_i653.PayloadInspector>(),
+    gh.factory<_i47.FieldReportBloc>(
+      () => _i47.FieldReportBloc(
+        gh<_i832.WatchFieldReport>(),
+        gh<_i832.WatchLiveGameState>(),
+        gh<_i832.RefreshLiveGameState>(),
+        gh<_i396.GetExobiologyCatalog>(),
         gh<_i807.Clock>(),
-      ),
-    );
-    gh.factory<_i516.DiagnosticsBloc>(
-      () => _i516.DiagnosticsBloc(
-        gh<_i1044.ReadCachedProfile>(),
-        gh<_i1044.RefreshProfileCapture>(),
-        gh<_i1044.ReadStoredJournal>(),
-        gh<_i1044.FetchJournalDayCapture>(),
-        gh<_i1044.ExportCapture>(),
       ),
     );
     gh.factory<_i6.RoadmapBloc>(
@@ -602,7 +658,7 @@ class _$ExobiologyModule extends _i152.ExobiologyModule {}
 
 class _$JournalModule extends _i245.JournalModule {}
 
-class _$MaterialsModule extends _i47.MaterialsModule {}
+class _$MaterialsModule extends _i48.MaterialsModule {}
 
 class _$NetworkModule extends _i200.NetworkModule {}
 

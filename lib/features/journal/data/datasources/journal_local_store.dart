@@ -40,18 +40,24 @@ class JournalLocalStore {
   ///
   /// Falls back to a full rewrite only when the cap is reached, which is the
   /// one case where the oldest lines have to go.
-  Future<void> appendLines(List<String> lines) async {
+  ///
+  /// Returns whether that fallback happened, i.e. whether lines were dropped
+  /// from the front. Callers that keep their own picture of the journal in
+  /// memory need to know: an append leaves that picture valid, a trim does
+  /// not.
+  Future<bool> appendLines(List<String> lines) async {
     await _migrateFromKeyValueStore();
     if (lines.isEmpty) {
-      return;
+      return false;
     }
     if (await _lines.countLines() + lines.length <= maxStoredLines) {
       await _lines.appendLines(lines);
-      return;
+      return false;
     }
     await _lines.writeLines(
       _capped(<String>[...await _lines.readLines(), ...lines]),
     );
+    return true;
   }
 
   Future<DateTime?> readLastSyncedDay() async {

@@ -17,8 +17,8 @@ L'étude a été écrite avant tout code. Ce qui en a été tiré depuis :
 | 4 — tri des fichiers journal par nom analysé | ✅ fait |
 | 5 — `Died` et `Resurrect` | ✅ fait — `Died` est le déclencheur, `Resurrect` le filet |
 | 6 — `materials.json`, `blueprints.json`, `MaterialPlan` | ✅ fait, avec l'écran qui va avec |
-| 7 — veille du journal et onglet Dashboard | ⬜ à faire |
-| 8 — `FSSDiscoveryScan` et compagnie | ⬜ à faire |
+| 7 — veille du journal et onglet Dashboard | ✅ fait — onglet « Terrain », relecture toutes les 10 s, sans observateur de fichiers |
+| 8 — `FSSDiscoveryScan` et compagnie | ✅ fait — plus `FSSAllBodiesFound`, `SAAScanComplete`, et `ScanType`/`WasDiscovered`/`WasMapped` sur `Scan` |
 | 9 — client Spansh en lecture | ⬜ à faire |
 | 10 — localisateur de trader et d'achat de Meta-Alloys | ⬜ à faire |
 | 11 — routeur d'exobiologie | ⬜ facultatif |
@@ -26,6 +26,18 @@ L'étude a été écrite avant tout code. Ce qui en a été tiré depuis :
 Deux défauts de position sans rapport avec cette étude ont été corrigés au
 passage : `Disembark` en station était traité comme un atterrissage planétaire,
 et un vaisseau rappelé ou congédié à distance déplaçait le commandant avec lui.
+
+Le lot 7 a demandé une correction qui n'était pas prévue par l'étude : le
+journal était reparsé en entier à chaque fusion, deux fois. Acceptable pour une
+synchronisation manuelle, intenable toutes les dix secondes — soixante mille
+lignes de JSON pour en ajouter quatre. Le dépôt garde désormais le journal
+analysé en mémoire et ne le reconstruit que lorsque le magasin est réécrit par
+l'avant, c'est-à-dire au franchissement du plafond de lignes.
+
+Trois lectures de `Status.json` que l'étude n'avait pas anticipées se sont
+révélées nécessaires à l'usage : le fichier est tronqué et réécrit plusieurs
+fois par seconde, il vaut `{"Flags":0}` au menu principal, et il n'a pas de
+`Flags2` sur un client Horizons.
 
 Trois points de la section [« ce qui reste à vérifier »](#ce-qui-reste-à-vérifier-avant-de-coder)
 restent ouverts et sont signalés comme tels **dans l'application** plutôt que

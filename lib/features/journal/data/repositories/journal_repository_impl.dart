@@ -15,27 +15,69 @@ import '../../domain/services/journal_event_parser.dart';
 import '../datasources/journal_api.dart';
 import '../datasources/journal_file_data_source.dart';
 import '../datasources/journal_local_store.dart';
+import '../datasources/journal_tail_data_source.dart';
 
 @LazySingleton(as: JournalRepository)
 class JournalRepositoryImpl implements JournalRepository {
-  JournalRepositoryImpl(this._api, this._files, this._store, this._parser);
+  JournalRepositoryImpl(
+    this._api,
+    this._files,
+    this._store,
+    this._parser,
+    this._tail,
+  );
 
   final JournalApi _api;
   final JournalFileDataSource _files;
   final JournalLocalStore _store;
   final JournalEventParser _parser;
 
+  /// Held only to be reset when the journal is cleared.
+  ///
+  /// Erasing the journal has to erase the memory of having read it, or the
+  /// tail would still be pointing at the end of the file the game is writing
+  /// and the store would sit empty until the commander started a new session.
+  final JournalTailDataSource _tail;
+
   final StreamController<List<JournalEvent>> _controller =
       StreamController<List<JournalEvent>>.broadcast();
 
+  /// The parsed journal, kept between calls.
+  ///
+  /// Not an optimisation for its own sake: the live tail merges every ten
+  /// seconds, and without this each of those merges re-read and re-parsed the
+  /// whole store twice over — sixty thousand lines of JSON, to append four.
+  /// The cache turns a merge into work proportional to what arrived.
+  ///
+  /// It is dropped whenever the store is rewritten from the front rather than
+  /// appended to, which is the only way its contents can stop matching.
+  List<JournalEvent>? _cached;
+  Set<String>? _cachedKeys;
+
   @override
   Future<Result<List<JournalEvent>>> events() => guard(
-        () async => _parser.parseLines(await _store.readLines()),
+        // Handed out read-only: the cache is the same list on every call, and
+        // one caller sorting it in place would quietly reorder everybody's.
+        () async => List<JournalEvent>.unmodifiable(await _loadCache()),
         onError: (Object error, _) => CacheFailure(
           message: 'Journal local illisible.',
           cause: error,
         ),
       );
+
+  Future<List<JournalEvent>> _loadCache() async {
+    final List<JournalEvent>? cached = _cached;
+    if (cached != null) {
+      return cached;
+    }
+    final List<JournalEvent> parsed =
+        _parser.parseLines(await _store.readLines());
+    _cached = parsed;
+    _cachedKeys = <String>{
+      for (final JournalEvent event in parsed) event.dedupeKey,
+    };
+    return parsed;
+  }
 
   @override
   Stream<List<JournalEvent>> watchEvents() => initialThen<List<JournalEvent>>(
@@ -207,6 +249,9 @@ class JournalRepositoryImpl implements JournalRepository {
   @override
   Future<Result<void>> clear() => guard(() async {
         await _store.clear();
+        _tail.reset();
+        _cached = <JournalEvent>[];
+        _cachedKeys = <String>{};
         _controller.add(const <JournalEvent>[]);
       });
 
@@ -220,18 +265,12 @@ class JournalRepositoryImpl implements JournalRepository {
   /// the whole journal to add a day's worth of events is what made a sync cost
   /// grow with the history rather than with the import.
   Future<({int added, int skipped})> _merge(List<String> incoming) async {
-    final List<String> stored = await _store.readLines();
-    final Set<String> seen = <String>{};
+    final List<JournalEvent> known = await _loadCache();
+    final Set<String> seen = _cachedKeys!;
     int skipped = 0;
 
-    for (final String line in stored) {
-      final JournalEvent? event = _parser.parseLine(line);
-      if (event != null) {
-        seen.add(event.dedupeKey);
-      }
-    }
-
     final List<String> fresh = <String>[];
+    final List<JournalEvent> freshEvents = <JournalEvent>[];
     for (final String line in incoming) {
       final JournalEvent? event = _parser.parseLine(line);
       if (event == null) {
@@ -242,6 +281,7 @@ class JournalRepositoryImpl implements JournalRepository {
       }
       if (seen.add(event.dedupeKey)) {
         fresh.add(line);
+        freshEvents.add(event);
       }
     }
 
@@ -249,10 +289,19 @@ class JournalRepositoryImpl implements JournalRepository {
       return (added: 0, skipped: skipped);
     }
 
-    await _store.appendLines(fresh);
-    // Observers get the merged whole, not the delta: the aggregators downstream
-    // recompute totals from the entire journal.
-    _controller.add(_parser.parseLines(await _store.readLines()));
+    final bool trimmed = await _store.appendLines(fresh);
+    if (trimmed) {
+      // The store dropped its oldest lines to stay under the cap, so the
+      // cache no longer describes it. Rebuilding is rare enough to be cheap.
+      _cached = null;
+      _cachedKeys = null;
+    } else {
+      known.addAll(freshEvents);
+    }
+
+    // Observers get the merged whole, not the delta: the aggregators
+    // downstream recompute totals from the entire journal.
+    _controller.add(List<JournalEvent>.unmodifiable(await _loadCache()));
 
     return (added: fresh.length, skipped: skipped);
   }

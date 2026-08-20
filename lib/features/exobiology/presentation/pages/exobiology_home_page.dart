@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../../../../design_system/design_system.dart';
+import 'field_dashboard_page.dart';
 import 'roadmap_page.dart';
 import 'species_catalog_page.dart';
 import 'species_finder_page.dart';
 
-/// The three faces of the exobiology guide: the plan, the field tool, and the
-/// reference table.
+/// The four faces of the exobiology guide: what is happening right now, the
+/// plan, the field tool, and the reference table.
+///
+/// The dashboard leads because it is the only one that answers a question
+/// asked mid-flight. The other three are read before leaving, or afterwards.
 class ExobiologyHomePage extends StatefulWidget {
   const ExobiologyHomePage({this.initialTab = 0, super.key});
 
@@ -19,9 +23,9 @@ class ExobiologyHomePage extends StatefulWidget {
 class _ExobiologyHomePageState extends State<ExobiologyHomePage>
     with SingleTickerProviderStateMixin {
   late final TabController _controller = TabController(
-    length: 3,
+    length: 4,
     vsync: this,
-    initialIndex: widget.initialTab.clamp(0, 2),
+    initialIndex: widget.initialTab.clamp(0, 3),
   );
 
   @override
@@ -50,7 +54,13 @@ class _ExobiologyHomePageState extends State<ExobiologyHomePage>
               color: EdColors.orangeBright,
             ),
             unselectedLabelStyle: EdTypography.overline,
+            isScrollable: true,
+            tabAlignment: TabAlignment.center,
             tabs: const <Tab>[
+              Tab(
+                icon: Icon(Icons.radar, size: 18),
+                text: 'Terrain',
+              ),
               Tab(icon: Icon(Icons.route_outlined, size: 18), text: 'Plan'),
               Tab(
                 icon: Icon(Icons.travel_explore, size: 18),
@@ -64,6 +74,7 @@ class _ExobiologyHomePageState extends State<ExobiologyHomePage>
           child: TabBarView(
             controller: _controller,
             children: const <Widget>[
+              FieldDashboardPage(),
               RoadmapPage(),
               SpeciesFinderPage(),
               SpeciesCatalogPage(),

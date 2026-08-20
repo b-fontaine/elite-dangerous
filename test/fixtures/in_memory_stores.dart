@@ -100,8 +100,18 @@ class InMemoryLineStore implements LineStore {
   int fullRewrites = 0;
   int appends = 0;
 
+  /// How many times the whole store was read back.
+  ///
+  /// The journal repository caches what it parsed; without a counter, a test
+  /// cannot tell a cache hit from a second full read that happened to return
+  /// the same thing.
+  int reads = 0;
+
   @override
-  Future<List<String>> readLines() async => List<String>.unmodifiable(_lines);
+  Future<List<String>> readLines() async {
+    reads++;
+    return List<String>.unmodifiable(_lines);
+  }
 
   @override
   Future<int> countLines() async => _lines.length;
