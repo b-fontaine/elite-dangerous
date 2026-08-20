@@ -87,10 +87,23 @@ class JournalEventTile extends StatelessWidget {
           ].join(' · '),
         ),
       final SurfaceContactEvent e => (
-          e.isDisembark ? Icons.directions_walk : Icons.flight_land,
+          e.isTouchdown ? Icons.flight_land : Icons.flight_takeoff,
           EdColors.cyanBright,
-          e.isDisembark ? 'Sortie à pied' : 'Atterrissage',
-          e.bodyName,
+          e.isTouchdown ? 'Atterrissage' : 'Décollage',
+          <String>[
+            if (e.bodyName case final String body) body,
+            // Worth saying out loud: the line looks identical to a landing the
+            // commander flew, and means the opposite.
+            if (!e.carriesCommander) 'vaisseau seul',
+          ].join(' · '),
+        ),
+      final EmbarkEvent e => (
+          e.isDisembark
+              ? Icons.directions_walk
+              : Icons.airline_seat_recline_normal,
+          EdColors.cyanBright,
+          e.isDisembark ? 'Sortie à pied' : 'Embarquement',
+          e.stationName ?? e.bodyName,
         ),
       final RankEvent e => (
           Icons.military_tech_outlined,

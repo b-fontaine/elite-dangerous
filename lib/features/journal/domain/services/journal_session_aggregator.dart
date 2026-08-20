@@ -24,11 +24,11 @@ class JournalSessionAggregator {
     LocationEvent event,
   ) {
     final bool leaving = event.clearsBody;
-    final bool undocking =
-        event.name == 'Undocked' || event.name == 'Liftoff';
+    final bool undocking = event.name == 'Undocked';
 
     return CommanderPosition(
       starSystem: event.starSystem ?? previous.starSystem,
+      systemAddress: event.systemAddress ?? previous.systemAddress,
       bodyName: leaving ? null : (event.bodyName ?? previous.bodyName),
       bodyType: leaving ? null : (event.bodyType ?? previous.bodyType),
       stationName: undocking ? null : event.stationName ?? previous.stationName,
@@ -38,6 +38,71 @@ class JournalSessionAggregator {
       docked: undocking ? false : (event.docked || previous.docked && !leaving),
       landed: event.landed,
       onFoot: event.onFoot,
+      at: event.timestamp,
+    );
+  }
+
+  /// Applies a `Touchdown` or `Liftoff` on top of the last known position.
+  ///
+  /// Merged rather than replaced, for the reason [_movedTo] is: the pair says
+  /// where the ship is and nothing about the station it may still be sitting
+  /// at, so taking the event whole drops the station, its type and its
+  /// distance from the star on every landing.
+  static CommanderPosition _shipTouched(
+    CommanderPosition previous,
+    SurfaceContactEvent event,
+  ) {
+    // A ship the commander is not aboard went somewhere without them — the
+    // Remote Flight Assist bringing it down to a surface they are standing on,
+    // or taking it away from there. Their own position did not change, and
+    // saying `landed` here would sit them back in a cockpit they left.
+    final bool moved = event.carriesCommander;
+
+    return CommanderPosition(
+      starSystem: event.systemName ?? previous.starSystem,
+      systemAddress: event.systemAddress ?? previous.systemAddress,
+      bodyName:
+          event.onPlanet ? event.bodyName ?? previous.bodyName : previous.bodyName,
+      bodyType: event.onPlanet ? 'Planet' : previous.bodyType,
+      stationName: previous.stationName,
+      stationType: previous.stationType,
+      distanceFromStarLs: previous.distanceFromStarLs,
+      // Only `Docked` and `Undocked` decide this. A ship lifting off a
+      // planetary port has already been undocked by the time it does.
+      docked: previous.docked,
+      landed: moved ? event.isTouchdown : previous.landed,
+      onFoot: moved ? false : previous.onFoot,
+      at: event.timestamp,
+    );
+  }
+
+  /// Applies a `Disembark` or `Embark`.
+  ///
+  /// The event name says whether the commander is on foot; it says nothing
+  /// about where, and the journal's `OnPlanet` and `OnStation` are the only
+  /// answer to that.
+  static CommanderPosition _steppedOut(
+    CommanderPosition previous,
+    EmbarkEvent event,
+  ) {
+    return CommanderPosition(
+      starSystem: event.systemName ?? previous.starSystem,
+      systemAddress: event.systemAddress ?? previous.systemAddress,
+      // `Body` names the station itself when the commander is not on a world,
+      // so it is a body name only when the journal claims a planet.
+      bodyName:
+          event.onPlanet ? event.bodyName ?? previous.bodyName : previous.bodyName,
+      bodyType: event.onPlanet ? 'Planet' : previous.bodyType,
+      stationName: event.stationName ?? previous.stationName,
+      stationType: event.stationType ?? previous.stationType,
+      distanceFromStarLs: previous.distanceFromStarLs,
+      // Stepping into a concourse does not undock the ship waiting on the pad.
+      docked: previous.docked || event.onStation,
+      // Nothing is landed while on foot. Boarding puts the commander back into
+      // whatever the vehicle is doing: sitting on the ground, unless it is
+      // parked at a station.
+      landed: event.isDisembark ? false : event.onPlanet && !event.onStation,
+      onFoot: event.isDisembark,
       at: event.timestamp,
     );
   }
@@ -113,6 +178,7 @@ class JournalSessionAggregator {
           docked = e;
           position = CommanderPosition(
             starSystem: e.starSystem ?? position.starSystem,
+            systemAddress: e.systemAddress ?? position.systemAddress,
             // Docking leaves the body behind: a station is not a planet, even
             // a planetary one, and keeping the last body would read as still
             // being on the surface.
@@ -125,14 +191,9 @@ class JournalSessionAggregator {
             at: e.timestamp,
           );
         case final SurfaceContactEvent e:
-          position = CommanderPosition(
-            starSystem: e.systemName ?? position.starSystem,
-            bodyName: e.bodyName ?? position.bodyName,
-            bodyType: 'Planet',
-            landed: !e.isDisembark,
-            onFoot: e.isDisembark,
-            at: e.timestamp,
-          );
+          position = _shipTouched(position, e);
+        case final EmbarkEvent e:
+          position = _steppedOut(position, e);
         default:
           continue;
       }

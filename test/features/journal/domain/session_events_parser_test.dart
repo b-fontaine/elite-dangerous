@@ -164,7 +164,8 @@ void main() {
   });
 
   group('ShipLocker', () {
-    test('lit l\'inventaire à pied par son nom localisé', () {
+    test('indexe l\'inventaire à pied sur le symbole, pas sur la traduction',
+        () {
       final ShipLockerEvent event = parse<ShipLockerEvent>(
         '{"timestamp":"2026-08-19T20:00:00Z","event":"ShipLocker",'
         '"Items":[{"Name":"healthmonitor","Name_Localised":"Health Monitor",'
@@ -178,7 +179,9 @@ void main() {
       );
 
       expect(event.isEmpty, isFalse);
-      // Les noms lisibles sont ceux que le commandant voit chez un barman.
+      // Les clés sont le vocabulaire anglais du reste de l'application — les
+      // coûts de grade, la feuille de route, la saisie manuelle. `Name` est
+      // stable, `Name_Localised` suit la langue du client.
       expect(event.everything['Suit Schematic'], 7);
       expect(event.everything['Health Monitor'], 12);
       expect(event.everything['Graphene'], 30);

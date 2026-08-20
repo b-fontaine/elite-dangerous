@@ -6,6 +6,7 @@ import 'journal_event.dart';
 class CommanderPosition extends Equatable {
   const CommanderPosition({
     this.starSystem,
+    this.systemAddress,
     this.bodyName,
     this.bodyType,
     this.stationName,
@@ -20,6 +21,12 @@ class CommanderPosition extends Equatable {
   const CommanderPosition.unknown() : this();
 
   final String? starSystem;
+
+  /// The system's `SystemAddress`, which is also its `id64` everywhere else in
+  /// the ecosystem — Spansh, EDSM and EDDN all key on this exact number. It is
+  /// the only identifier that survives a system being renamed, and the only
+  /// one an external lookup accepts.
+  final int? systemAddress;
 
   /// The body in focus — a star on arrival, a planet once approached. Cleared
   /// on leaving its sphere of influence, because "still orbiting" would be a
@@ -58,6 +65,7 @@ class CommanderPosition extends Equatable {
   @override
   List<Object?> get props => <Object?>[
         starSystem,
+        systemAddress,
         bodyName,
         bodyType,
         stationName,

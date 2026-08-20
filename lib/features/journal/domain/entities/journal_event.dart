@@ -263,7 +263,12 @@ final class BodyScanEvent extends JournalEvent {
   List<Object?> get props => <Object?>[timestamp, bodyName, planetClass];
 }
 
-/// `Touchdown` and `Disembark` — landing and stepping out.
+/// `Touchdown` and `Liftoff` — the ship meeting the ground, and leaving it.
+///
+/// The pair describes *the ship*, and since Odyssey the ship moves without the
+/// commander: recalling it while on foot writes a `Touchdown`, dismissing it
+/// writes a `Liftoff`, and in both the commander is standing on the surface
+/// watching it happen. [carriesCommander] is the question worth asking.
 final class SurfaceContactEvent extends JournalEvent {
   const SurfaceContactEvent({
     required super.timestamp,
@@ -272,12 +277,83 @@ final class SurfaceContactEvent extends JournalEvent {
     this.systemName,
     this.systemAddress,
     this.onPlanet = true,
+    this.onStation = false,
+    this.playerControlled = true,
+    this.taxi = false,
+    this.multicrew = false,
   });
 
   final String? bodyName;
   final String? systemName;
   final int? systemAddress;
+
+  /// The commander's own hands on the stick.
+  ///
+  /// False when the Remote Flight Assist brings the ship down or takes it
+  /// away — and also false in an Apex shuttle or another commander's ship,
+  /// which is why it cannot be read on its own. See [carriesCommander].
+  final bool playerControlled;
+
+  /// An Apex shuttle: nobody the commander knows is flying, yet they are in it.
+  final bool taxi;
+
+  /// A seat in another commander's ship. Same shape as [taxi].
+  final bool multicrew;
+
+  /// On a planet's surface. Absent from pre-Odyssey journals, where the only
+  /// thing a ship could touch down on was a planet.
   final bool onPlanet;
+
+  /// At a station — a planetary port is both this and [onPlanet].
+  final bool onStation;
+
+  bool get isTouchdown => name == 'Touchdown';
+
+  /// Whether this movement moved the commander too.
+  ///
+  /// When false the ship went somewhere on its own and the commander stayed
+  /// exactly where they were.
+  bool get carriesCommander => playerControlled || taxi || multicrew;
+
+  @override
+  String get discriminator => bodyName ?? '';
+}
+
+/// `Disembark` and `Embark` — the commander stepping out of a vehicle, and
+/// back into one.
+///
+/// Both happen on a planet's surface *and* inside a station, and the journal
+/// says which with `OnPlanet` and `OnStation`. Reading the event name alone —
+/// the obvious shortcut, since "disembark" sounds like stepping onto a world —
+/// puts a commander walking an Orbis concourse on the surface of a planet that
+/// has no station.
+final class EmbarkEvent extends JournalEvent {
+  const EmbarkEvent({
+    required super.timestamp,
+    required super.name,
+    this.bodyName,
+    this.systemName,
+    this.systemAddress,
+    this.stationName,
+    this.stationType,
+    this.onPlanet = true,
+    this.onStation = false,
+  });
+
+  /// Only a world's name when [onPlanet]: at a station the journal puts the
+  /// station in this field, because a station is a body of the system too.
+  final String? bodyName;
+
+  final String? systemName;
+  final int? systemAddress;
+
+  /// Written only at a station, which is what lets the position keep naming
+  /// the station across an import that never saw the `Docked`.
+  final String? stationName;
+  final String? stationType;
+
+  final bool onPlanet;
+  final bool onStation;
 
   bool get isDisembark => name == 'Disembark';
 

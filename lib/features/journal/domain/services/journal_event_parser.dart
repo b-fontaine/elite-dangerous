@@ -90,7 +90,8 @@ class JournalEventParser {
       'FSSBodySignals' || 'SAASignalsFound' =>
         _bodySignals(timestamp, name, decoded),
       'Scan' => _bodyScan(timestamp, decoded),
-      'Touchdown' || 'Disembark' => _surfaceContact(timestamp, name, decoded),
+      'Touchdown' || 'Liftoff' => _surfaceContact(timestamp, name, decoded),
+      'Disembark' || 'Embark' => _embark(timestamp, name, decoded),
       'Rank' || 'Progress' => _rank(timestamp, name, decoded),
       'LoadGame' => _loadGame(timestamp, decoded),
       'SuitLoadout' || 'BuySuit' || 'UpgradeSuit' =>
@@ -113,9 +114,7 @@ class JournalEventParser {
       'LeaveBody' ||
       'SupercruiseExit' ||
       'StartJump' ||
-      'Undocked' ||
-      'Liftoff' ||
-      'Embark' =>
+      'Undocked' =>
         _location(timestamp, name, decoded),
       'Docked' => _docked(timestamp, decoded),
       _ => UnknownJournalEvent(timestamp: timestamp, name: name),
@@ -241,7 +240,32 @@ class JournalEventParser {
       name: name,
       bodyName: _string(json['Body']) ?? _string(json['NearestDestination']),
       systemName: _string(json['StarSystem']),
+      systemAddress: _int(json['SystemAddress']),
       onPlanet: json['OnPlanet'] != false,
+      onStation: json['OnStation'] == true,
+      // Absent from pre-Odyssey journals, where a ship only ever moved with
+      // the commander flying it — so absence means "yes".
+      playerControlled: json['PlayerControlled'] != false,
+      taxi: json['Taxi'] == true,
+      multicrew: json['Multicrew'] == true,
+    );
+  }
+
+  JournalEvent _embark(
+    DateTime timestamp,
+    String name,
+    Map<String, dynamic> json,
+  ) {
+    return EmbarkEvent(
+      timestamp: timestamp,
+      name: name,
+      bodyName: _string(json['Body']),
+      systemName: _string(json['StarSystem']),
+      systemAddress: _int(json['SystemAddress']),
+      stationName: _string(json['StationName']),
+      stationType: _string(json['StationType']),
+      onPlanet: json['OnPlanet'] != false,
+      onStation: json['OnStation'] == true,
     );
   }
 
@@ -568,10 +592,11 @@ class JournalEventParser {
       stationType: _string(json['StationType']),
       distanceFromStarLs: _double(json['DistFromStarLS']),
       docked: json['Docked'] == true,
-      // `Liftoff` and `Undocked` say the commander left; neither carries a
-      // `Landed` flag, and reading their absence as "landed" would strand the
-      // display on the ground.
-      landed: json['Latitude'] != null && name != 'Liftoff',
+      // No event here carries a `Landed` flag. `Location` gives coordinates
+      // when the commander is sitting on a surface and none otherwise, which
+      // is exactly the distinction wanted; `Undocked` gives none, and it
+      // should not.
+      landed: json['Latitude'] != null,
       onFoot: json['OnFoot'] == true,
     );
   }
@@ -585,6 +610,7 @@ class JournalEventParser {
       stationName: _string(json['StationName']) ?? 'Station inconnue',
       stationType: _string(json['StationType']),
       starSystem: _string(json['StarSystem']),
+      systemAddress: _int(json['SystemAddress']),
       marketId: _int(json['MarketID']),
       faction: _string(_map(json['StationFaction'])['Name']),
       government: _string(json['StationGovernment_Localised']) ??
