@@ -210,6 +210,20 @@ class JournalEventTile extends StatelessWidget {
             if (e.sellsOrganicData) 'Vista Genomics',
           ].join(' · '),
         ),
+      final DiedEvent e => (
+          Icons.heart_broken_outlined,
+          EdColors.red,
+          'Mort du commandant',
+          e.killerName ?? e.killerShip,
+        ),
+      final ResurrectEvent e => (
+          Icons.refresh,
+          e.losesUnsoldData ? EdColors.red : EdColors.textMuted,
+          e.losesUnsoldData
+              ? 'Vaisseau perdu — données bio non vendues effacées'
+              : 'Retour au jeu',
+          e.costCr > 0 ? formatCredits(e.costCr) : null,
+        ),
       final UnknownJournalEvent e => (
           Icons.circle_outlined,
           EdColors.textFainter,

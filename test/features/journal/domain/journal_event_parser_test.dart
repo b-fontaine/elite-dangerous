@@ -395,4 +395,62 @@ void main() {
       expect(event.genuses, isEmpty);
     });
   });
+
+  group('Died et Resurrect', () {
+    test('un rachat après destruction annonce la perte', () {
+      final ResurrectEvent event = parser.parseLine(
+        '{"timestamp":"2026-08-19T20:00:00Z","event":"Resurrect",'
+        '"Option":"recover","Cost":120000,"Bankrupt":false}',
+      )! as ResurrectEvent;
+
+      expect(event.option, 'recover');
+      expect(event.costCr, 120000);
+      expect(event.bankrupt, isFalse);
+      expect(event.losesUnsoldData, isTrue);
+    });
+
+    test('le rachat payé et le Sidewinder gratuit comptent comme une perte',
+        () {
+      // Les deux issues de l'écran de rachat, donc le chemin de mort le plus
+      // courant. Payer l'assurance reconstruit la coque, jamais la soute.
+      for (final String option in <String>['rebuy', 'free']) {
+        final ResurrectEvent event = parser.parseLine(
+          '{"timestamp":"2026-08-19T20:00:00Z","event":"Resurrect",'
+          '"Option":"$option","Cost":36479,"Bankrupt":false}',
+        )! as ResurrectEvent;
+
+        expect(event.losesUnsoldData, isTrue, reason: 'option « $option »');
+      }
+    });
+
+    test('une option inconnue ne déclenche pas le filet de secours', () {
+      for (final String option in <String>['handin', '', 'quelquechose']) {
+        final ResurrectEvent event = parser.parseLine(
+          '{"timestamp":"2026-08-19T20:00:00Z","event":"Resurrect",'
+          '"Option":"$option"}',
+        )! as ResurrectEvent;
+
+        expect(event.losesUnsoldData, isFalse, reason: 'option « $option »');
+      }
+    });
+
+    test('la casse de l\'option n\'a pas à être devinée', () {
+      final ResurrectEvent event = parser.parseLine(
+        '{"timestamp":"2026-08-19T20:00:00Z","event":"Resurrect",'
+        '"Option":"Escape"}',
+      )! as ResurrectEvent;
+
+      expect(event.losesUnsoldData, isTrue);
+    });
+
+    test('la mort retient qui l\'a causée', () {
+      final DiedEvent event = parser.parseLine(
+        '{"timestamp":"2026-08-19T20:00:00Z","event":"Died",'
+        '"KillerName":"Cmdr Nemesis","KillerShip":"anaconda"}',
+      )! as DiedEvent;
+
+      expect(event.killerName, 'Cmdr Nemesis');
+      expect(event.killerShip, 'anaconda');
+    });
+  });
 }

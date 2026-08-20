@@ -45,6 +45,8 @@ class JournalEventParser {
     'Powerplay',
     'StoredShips',
     'Cargo',
+    'Died',
+    'Resurrect',
     'Location',
     'FSDJump',
     'CarrierJump',
@@ -102,6 +104,8 @@ class JournalEventParser {
       'Powerplay' => _powerplay(timestamp, decoded),
       'StoredShips' => _storedShips(timestamp, decoded),
       'Cargo' => _cargo(timestamp, decoded),
+      'Died' => _died(timestamp, decoded),
+      'Resurrect' => _resurrect(timestamp, decoded),
       'Location' ||
       'FSDJump' ||
       'CarrierJump' ||
@@ -479,6 +483,21 @@ class JournalEventParser {
                 inTransit: entry['InTransit'] == true,
               ),
       ];
+
+  JournalEvent _died(DateTime timestamp, Map<String, dynamic> json) =>
+      DiedEvent(
+        timestamp: timestamp,
+        killerName: _string(json['KillerName']),
+        killerShip: _string(json['KillerShip']),
+      );
+
+  JournalEvent _resurrect(DateTime timestamp, Map<String, dynamic> json) =>
+      ResurrectEvent(
+        timestamp: timestamp,
+        option: _string(json['Option']) ?? '',
+        costCr: _int(json['Cost']) ?? 0,
+        bankrupt: json['Bankrupt'] == true,
+      );
 
   JournalEvent _cargo(DateTime timestamp, Map<String, dynamic> json) {
     final Object? inventory = json['Inventory'];

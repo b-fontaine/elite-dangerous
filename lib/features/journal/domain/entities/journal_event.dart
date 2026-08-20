@@ -856,3 +856,78 @@ final class DockedEvent extends JournalEvent {
   List<Object?> get props =>
       <Object?>[timestamp, stationName, stationType, services, marketId];
 }
+
+/// `Died` — the moment unsold exobiology data is at risk.
+///
+/// Recorded for both kinds of death: a destroyed ship and a body on a
+/// planet's surface. Which one it was cannot be read from this event, which is
+/// why [ResurrectEvent] is what actually decides whether anything was lost.
+final class DiedEvent extends JournalEvent {
+  const DiedEvent({
+    required super.timestamp,
+    this.killerName,
+    this.killerShip,
+  }) : super(name: 'Died');
+
+  final String? killerName;
+  final String? killerShip;
+
+  @override
+  List<Object?> get props => <Object?>[timestamp, killerName, killerShip];
+}
+
+/// `Resurrect` — how the commander came back, and therefore what they lost.
+///
+/// The `Option` field is the one that matters, and it is the only signal the
+/// journal offers: no event ever states that organic data was lost.
+///
+/// Frontier documents the field as "the option selected on the insurance
+/// rebuy screen" and stops there — the set of values it can take is written
+/// down nowhere. What follows is therefore taken from BioScan, the reference
+/// exobiology plugin, which is the closest thing to an authority that exists.
+final class ResurrectEvent extends JournalEvent {
+  const ResurrectEvent({
+    required super.timestamp,
+    required this.option,
+    this.costCr = 0,
+    this.bankrupt = false,
+  }) : super(name: 'Resurrect');
+
+  /// `rebuy`, `escape`, `recover`, `rejoin`, `handin`…
+  final String option;
+
+  final int costCr;
+  final bool bankrupt;
+
+  /// Options that follow the loss of the ship, and with it the unsold organic
+  /// data it carried.
+  ///
+  /// The full set of values is `free`, `rebuy`, `recover`, `handIn`, `rejoin`
+  /// and `escape` — EDDiscovery enumerates exactly those
+  /// (`JournalDiedResurrect.cs`, `enum ResurrectTypes`). Five of the six are
+  /// outcomes of the insurance rebuy screen, which only ever appears once the
+  /// ship is gone: `rebuy` pays for it, `free` declines and takes the
+  /// complimentary Sidewinder. Paying rebuy rebuilds the hull, never the hold.
+  ///
+  /// Taking BioScan's three-value filter at face value was a mistake worth
+  /// recording: those three are its *fallback*, for a loss whose `Died` line
+  /// is missing. Its primary cut is the `Died` event itself, with no filter at
+  /// all — which is why [DiedEvent] is what the aggregator keys on, and why
+  /// this set only has to catch what a missing `Died` would let through.
+  static const Set<String> shipLostOptions = <String>{
+    'free',
+    'rebuy',
+    'escape',
+    'recover',
+    'rejoin',
+  };
+
+  bool get losesUnsoldData =>
+      shipLostOptions.contains(option.toLowerCase());
+
+  @override
+  String get discriminator => option;
+
+  @override
+  List<Object?> get props => <Object?>[timestamp, option, costCr, bankrupt];
+}
