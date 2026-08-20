@@ -164,14 +164,15 @@ class DetectedGenus extends Equatable {
 
   String get displayName => localised ?? symbol;
 
-  /// The token stripped of its `$Codex_Ent_…_Genus_Name;` wrapper, lower-cased:
-  /// `stratum`. What a catalogue lookup keys on.
-  String get id {
-    final RegExpMatch? match =
-        RegExp(r'^\$Codex_Ent_(.+?)(?:_Genus)?_Name;$', caseSensitive: false)
-            .firstMatch(symbol);
-    return (match?.group(1) ?? symbol).toLowerCase();
-  }
+  /// The token as a stable lookup key: trimmed and lower-cased, nothing more.
+  ///
+  /// Deliberately *not* reduced to a genus name. The token stem and the genus
+  /// the commander reads are different words far more often than not —
+  /// `Shrubs` is *Frutexa*, `Cone` is *Bark Mound*, `Sphere` is *Anemone* —
+  /// so anything that looks like a derived identifier would be a trap. The
+  /// translation belongs to whoever owns the catalogue; see
+  /// `ExobiologyReferenceData.genusIdFromCodex`.
+  String get lookupKey => symbol.trim().toLowerCase();
 
   @override
   List<Object?> get props => <Object?>[symbol, localised];

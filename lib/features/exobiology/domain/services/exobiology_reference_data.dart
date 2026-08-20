@@ -283,6 +283,59 @@ abstract final class ExobiologyReferenceData {
       .where((Engineer e) => e.kind == EngineerKind.suit && !e.requiresCombat)
       .toList(growable: false);
 
+  /// Journal codex token → the genus id used by `exobiology_catalog.json`.
+  ///
+  /// A table, because it cannot be a rule. The journal names a genus by an
+  /// internal token whose stem is usually a *different word* from the genus
+  /// the commander reads: `Shrubs` is Frutexa, `Cone` is Bark Mound, `Sphere`
+  /// is Anemone, `Vents` is Amphora Plant, `Ground_Struct_Ice` is Crystalline
+  /// Shard, `Tube` is Sinuous Tuber, `Ingensradices` is Radicoida. Six of the
+  /// twenty-two match by accident, which is exactly enough to make a derived
+  /// identifier look like it works.
+  ///
+  /// `genus_codex_mapping_test.dart` asserts this stays in step with the
+  /// catalogue in both directions.
+  static const Map<String, String> _genusIdByCodexToken = <String, String>{
+    r'$codex_ent_aleoids_genus_name;': 'aleoida',
+    r'$codex_ent_bacterial_genus_name;': 'bacterium',
+    r'$codex_ent_brancae_name;': 'brain_tree',
+    r'$codex_ent_cactoid_genus_name;': 'cactoida',
+    r'$codex_ent_clypeus_genus_name;': 'clypeus',
+    r'$codex_ent_conchas_genus_name;': 'concha',
+    r'$codex_ent_cone_name;': 'bark_mound',
+    r'$codex_ent_electricae_genus_name;': 'electricae',
+    r'$codex_ent_fonticulus_genus_name;': 'fonticulua',
+    r'$codex_ent_fumerolas_genus_name;': 'fumerola',
+    r'$codex_ent_fungoids_genus_name;': 'fungoida',
+    r'$codex_ent_ground_struct_ice_name;': 'crystalline_shard',
+    r'$codex_ent_ingensradices_genus_name;': 'radicoida',
+    r'$codex_ent_osseus_genus_name;': 'osseus',
+    r'$codex_ent_recepta_genus_name;': 'recepta',
+    r'$codex_ent_shrubs_genus_name;': 'frutexa',
+    r'$codex_ent_sphere_name;': 'anemone',
+    r'$codex_ent_stratum_genus_name;': 'stratum',
+    r'$codex_ent_tube_name;': 'sinuous_tuber',
+    r'$codex_ent_tubus_genus_name;': 'tubus',
+    r'$codex_ent_tussocks_genus_name;': 'tussock',
+    r'$codex_ent_vents_name;': 'amphora_plant',
+  };
+
+  /// The catalogue's genus id for a journal codex token, or `null` when the
+  /// game has introduced a genus the catalogue has not caught up with.
+  ///
+  /// `null` is a real answer, not a defect: Frontier added *Radicoida* in 2026
+  /// and will add more. A caller should degrade to the localised name rather
+  /// than drop the genus.
+  static String? genusIdFromCodex(String codexToken) =>
+      _genusIdByCodexToken[codexToken.trim().toLowerCase()];
+
+  /// Every codex token the app can translate.
+  static Iterable<String> get knownGenusCodexTokens =>
+      _genusIdByCodexToken.keys;
+
+  /// Every catalogue genus id the app can reach from a journal.
+  static Iterable<String> get mappedGenusIds => _genusIdByCodexToken.values;
+
   /// Total materials needed to take an Artemis from [fromGrade] to [toGrade].
   static Map<String, int> materialsBetween(int fromGrade, int toGrade) {
     final Map<String, int> total = <String, int>{};

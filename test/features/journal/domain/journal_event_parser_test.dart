@@ -291,4 +291,108 @@ void main() {
       expect(events.first.dedupeKey, isNot(events.last.dedupeKey));
     });
   });
+
+  group('SAASignalsFound', () {
+    // Depuis Odyssey Update 13 (juillet 2022), le DSS ne dit plus seulement
+    // combien de signaux biologiques un corps porte : il nomme les genres.
+    const String line = '{"timestamp":"2026-08-19T20:00:00Z",'
+        '"event":"SAASignalsFound","BodyName":"Caeritis A 3 a",'
+        '"SystemAddress":2931088689515,"BodyID":14,'
+        '"Signals":[{"Type":"\$SAA_SignalType_Biological;",'
+        '"Type_Localised":"Biologique","Count":2},'
+        '{"Type":"\$SAA_SignalType_Geological;",'
+        '"Type_Localised":"Géologique","Count":3}],'
+        '"Genuses":[{"Genus":"\$Codex_Ent_Bacterial_Genus_Name;",'
+        '"Genus_Localised":"Bacterium"},'
+        '{"Genus":"\$Codex_Ent_Stratum_Genus_Name;",'
+        '"Genus_Localised":"Stratum"}]}';
+
+    test('le DSS nomme les genres présents', () {
+      final BodySignalsEvent event =
+          parser.parseLine(line)! as BodySignalsEvent;
+
+      expect(event.biologicalCount, 2);
+      expect(event.fromDetailedScan, isTrue);
+      expect(event.identifiesGenuses, isTrue);
+      expect(
+        event.genuses.map((DetectedGenus g) => g.displayName),
+        <String>['Bacterium', 'Stratum'],
+      );
+    });
+
+    test('le jeton brut est conservé pour la traduction', () {
+      // Le journal nomme un genre par un jeton interne ; le rapprocher du
+      // catalogue est le travail d'`ExobiologyReferenceData`, pas du parseur.
+      final BodySignalsEvent event =
+          parser.parseLine(line)! as BodySignalsEvent;
+
+      expect(
+        event.genuses.map((DetectedGenus g) => g.lookupKey),
+        <String>[
+          r'$codex_ent_bacterial_genus_name;',
+          r'$codex_ent_stratum_genus_name;',
+        ],
+      );
+    });
+
+    test('sans Genus_Localised, le jeton sert de nom affichable', () {
+      // Les noms de genre sont latins : Frontier omet la traduction quand elle
+      // répéterait le jeton, et c'est fréquent.
+      final BodySignalsEvent event = parser.parseLine(
+        '{"timestamp":"2026-08-19T20:00:00Z","event":"SAASignalsFound",'
+        '"BodyName":"Caeritis A 3 a","Signals":[],'
+        '"Genuses":[{"Genus":"\$Codex_Ent_Tussocks_Genus_Name;"}]}',
+      )! as BodySignalsEvent;
+
+      expect(event.genuses.single.lookupKey,
+          r'$codex_ent_tussocks_genus_name;');
+      expect(event.genuses.single.displayName,
+          r'$Codex_Ent_Tussocks_Genus_Name;');
+    });
+
+    test('les organiques sans genre passent aussi', () {
+      // Bark Mounds, Brain Trees, Anemones s'écrivent sans le segment
+      // `_Genus` : \$Codex_Ent_Cone_Name;.
+      final BodySignalsEvent event = parser.parseLine(
+        '{"timestamp":"2026-08-19T20:00:00Z","event":"SAASignalsFound",'
+        '"BodyName":"X","Signals":[],'
+        '"Genuses":[{"Genus":"\$Codex_Ent_Cone_Name;",'
+        '"Genus_Localised":"Bark Mounds"}]}',
+      )! as BodySignalsEvent;
+
+      expect(event.genuses.single.lookupKey, r'$codex_ent_cone_name;');
+      expect(event.genuses.single.displayName, 'Bark Mounds');
+    });
+
+    test('le FSS compte les signaux sans nommer les genres', () {
+      // C'est la distinction qui structure l'écran : le FSS donne un nombre,
+      // le DSS donne la liste. Entre les deux, il faut prédire.
+      final BodySignalsEvent event = parser.parseLine(
+        '{"timestamp":"2026-08-19T20:00:00Z","event":"FSSBodySignals",'
+        '"BodyName":"Caeritis A 3 a","BodyID":14,'
+        '"SystemAddress":2931088689515,'
+        '"Signals":[{"Type":"\$SAA_SignalType_Biological;","Count":1}]}',
+      )! as BodySignalsEvent;
+
+      expect(event.biologicalCount, 1);
+      expect(event.fromDetailedScan, isFalse);
+      expect(event.identifiesGenuses, isFalse);
+      expect(event.genuses, isEmpty);
+    });
+
+    test('les signaux d\'anneau ne sont pas des signaux de surface', () {
+      // Le même événement, sur un anneau, écrit des noms de minerais sans
+      // préfixe — et parfois sans Type_Localised du tout.
+      final BodySignalsEvent event = parser.parseLine(
+        '{"timestamp":"2026-08-19T20:00:00Z","event":"SAASignalsFound",'
+        '"BodyName":"Hermitage 4 A Ring","Signals":['
+        '{"Type":"LowTemperatureDiamond",'
+        '"Type_Localised":"Low Temperature Diamonds","Count":1},'
+        '{"Type":"Alexandrite","Count":1}]}',
+      )! as BodySignalsEvent;
+
+      expect(event.biologicalCount, isZero);
+      expect(event.genuses, isEmpty);
+    });
+  });
 }

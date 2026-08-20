@@ -64,8 +64,15 @@ class JournalEventTile extends StatelessWidget {
           Icons.sensors,
           e.biologicalCount > 0 ? EdColors.orangeBright : EdColors.textFainter,
           e.bodyName ?? 'Corps inconnu',
-          '${e.biologicalCount} signal(aux) biologique(s)'
-              '${e.fromDetailedScan ? ' · DSS' : ' · FSS'}',
+          <String>[
+            '${e.biologicalCount} signal(aux) biologique(s)',
+            e.fromDetailedScan ? 'DSS' : 'FSS',
+            // Le FSS donne un nombre, le DSS donne les genres : les montrer
+            // est toute la différence entre « il y a de la vie ici » et
+            // « il y a du Stratum ici ».
+            if (e.identifiesGenuses)
+              e.genuses.map((DetectedGenus g) => g.displayName).join(', '),
+          ].join(' · '),
         ),
       final BodyScanEvent e => (
           Icons.public,

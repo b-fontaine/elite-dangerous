@@ -184,6 +184,7 @@ class JournalEventParser {
         }
       }
     }
+    final Object? genuses = json['Genuses'];
     return BodySignalsEvent(
       timestamp: timestamp,
       name: name,
@@ -191,6 +192,18 @@ class JournalEventParser {
       bodyName: _string(json['BodyName']),
       bodyId: _int(json['BodyID']),
       systemAddress: _int(json['SystemAddress']),
+      // Only `SAASignalsFound` carries this, and only after the body has been
+      // mapped. Its absence is the normal case, not a defect.
+      genuses: <DetectedGenus>[
+        if (genuses is List<dynamic>)
+          for (final Object? entry in genuses)
+            if (entry is Map<String, dynamic>)
+              if (_string(entry['Genus']) case final String symbol)
+                DetectedGenus(
+                  symbol: symbol,
+                  localised: _string(entry['Genus_Localised']),
+                ),
+      ],
     );
   }
 
