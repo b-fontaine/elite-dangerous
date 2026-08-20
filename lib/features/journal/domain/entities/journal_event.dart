@@ -588,8 +588,10 @@ final class ShipLockerEvent extends JournalEvent {
     this.isEmpty = false,
   }) : super(name: 'ShipLocker');
 
-  /// Keyed by the localised in-game name where Frontier gives one, so the
-  /// counts line up with what the commander reads at a bartender.
+  /// Keyed by the canonical English name, resolved from the journal's internal
+  /// symbol — see `MicroResourceNames`. Not by `Name_Localised`, which follows
+  /// the language the client runs in and so cannot be matched against
+  /// anything.
   final Map<String, int> items;
   final Map<String, int> components;
   final Map<String, int> consumables;

@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import '../entities/journal_event.dart';
+import 'micro_resource_names.dart';
 
 /// Turns raw journal lines into [JournalEvent]s.
 ///
@@ -484,10 +485,12 @@ class JournalEventParser {
 
   /// Reads a `[{Name, Count}]` list, the shape every inventory event uses.
   ///
-  /// Prefers `Name_Localised` when Frontier sent one: the counts then read the
-  /// way they do at a bartender, which is where the commander checks them.
-  /// Duplicate names are summed rather than overwritten — `ShipLocker` splits
-  /// the same item across entries when some of it is mission-owned.
+  /// Counts by canonical English name — the vocabulary the rest of the app
+  /// reasons in — resolved from the journal's internal symbol rather than from
+  /// `Name_Localised`, which follows the client's language.
+  ///
+  /// Two entries of the same item are summed: Frontier splits a stack across
+  /// several lines when the pieces have different owners.
   Map<String, int> _namedCounts(Object? value) {
     final Map<String, int> counts = <String, int>{};
     if (value is! List<dynamic>) {
@@ -497,8 +500,10 @@ class JournalEventParser {
       if (entry is! Map<String, dynamic>) {
         continue;
       }
-      final String? name =
-          _string(entry['Name_Localised']) ?? _string(entry['Name']);
+      final String? name = MicroResourceNames.canonical(
+        _string(entry['Name']),
+        _string(entry['Name_Localised']),
+      );
       if (name == null) {
         continue;
       }
