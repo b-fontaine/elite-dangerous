@@ -160,4 +160,145 @@ void main() {
 
     expect(activity.completedNotSold, hasLength(1));
   });
+
+  group('perte du vaisseau', () {
+    test('le chemin de mort le plus courant efface bien la soute', () {
+      // Mourir dans son vaisseau puis payer le rachat : `Option` vaut alors
+      // `rebuy`. C'est le cas ordinaire, et c'est celui qu'un filtre bâti sur
+      // les seules options de repli laisse passer.
+      final ExobiologyActivity activity = aggregator.aggregate(<JournalEvent>[
+        _scan(0, OrganicScanType.log),
+        _scan(1, OrganicScanType.sample),
+        _scan(2, OrganicScanType.analyse),
+        DiedEvent(timestamp: _at(3), killerName: 'Cmdr Hostile'),
+        ResurrectEvent(timestamp: _at(4), option: 'rebuy', costCr: 36479),
+      ]);
+
+      expect(activity.completedNotSold, isEmpty);
+      expect(activity.samplesInProgress, isEmpty);
+      expect(activity.hasDataAtRisk, isFalse);
+      expect(activity.organismsLostToDeath, 1);
+      // La mort, pas le retour : c'est l'instant où la soute a disparu.
+      expect(activity.lastLossAt, _at(3));
+    });
+
+    test('la mort seule suffit, sans attendre le retour au jeu', () {
+      // Une session qui s'arrête sur l'écran de rachat n'écrit jamais de
+      // `Resurrect` ; la perte a pourtant bien eu lieu.
+      final ExobiologyActivity activity = aggregator.aggregate(<JournalEvent>[
+        _scan(0, OrganicScanType.analyse),
+        DiedEvent(timestamp: _at(1)),
+      ]);
+
+      expect(activity.completedNotSold, isEmpty);
+      expect(activity.organismsLostToDeath, 1);
+    });
+
+    test('un Resurrect orphelin rattrape une mort absente de l\'import', () {
+      // Un import qui commence au milieu d'une session n'a pas la ligne
+      // `Died` ; l'option du rachat reste alors le seul indice.
+      final ExobiologyActivity activity = aggregator.aggregate(<JournalEvent>[
+        _scan(0, OrganicScanType.analyse),
+        ResurrectEvent(timestamp: _at(1), option: 'recover'),
+      ]);
+
+      expect(activity.completedNotSold, isEmpty);
+      expect(activity.organismsLostToDeath, 1);
+    });
+
+    test('mort et retour ne comptent qu\'une seule perte', () {
+      final ExobiologyActivity activity = aggregator.aggregate(<JournalEvent>[
+        _scan(0, OrganicScanType.analyse),
+        DiedEvent(timestamp: _at(1)),
+        ResurrectEvent(timestamp: _at(2), option: 'rebuy'),
+      ]);
+
+      expect(activity.organismsLostToDeath, 1);
+    });
+
+    test('les échantillons partiels partent avec le reste', () {
+      final ExobiologyActivity activity = aggregator.aggregate(<JournalEvent>[
+        _scan(0, OrganicScanType.log),
+        _scan(1, OrganicScanType.sample),
+        DiedEvent(timestamp: _at(2)),
+      ]);
+
+      expect(activity.samplesInProgress, isEmpty);
+      expect(activity.organismsLostToDeath, 1);
+    });
+
+    test('un Resurrect inconnu, sans mort, ne détruit rien', () {
+      // Le filet de secours ne se déclenche pas sur une option dont le sens
+      // est inconnu : sans `Died`, rien ne prouve une destruction.
+      final ExobiologyActivity activity = aggregator.aggregate(<JournalEvent>[
+        _scan(0, OrganicScanType.log),
+        _scan(1, OrganicScanType.sample),
+        _scan(2, OrganicScanType.analyse),
+        ResurrectEvent(timestamp: _at(4), option: 'handin'),
+      ]);
+
+      expect(activity.completedNotSold, hasLength(1));
+      expect(activity.organismsLostToDeath, isZero);
+      expect(activity.hasLostData, isFalse);
+    });
+
+    test('ce qui a été vendu avant la mort reste acquis', () {
+      final ExobiologyActivity activity = aggregator.aggregate(<JournalEvent>[
+        _scan(0, OrganicScanType.log),
+        _scan(1, OrganicScanType.sample),
+        _scan(2, OrganicScanType.analyse),
+        SellOrganicDataEvent(
+          timestamp: _at(3),
+          entries: const <SoldBioData>[
+            SoldBioData(
+              genus: 'Stratum',
+              species: 'Stratum Tectonicas',
+              speciesLocalised: 'Stratum Tectonicas',
+              valueCr: 19010800,
+              bonusCr: 0,
+            ),
+          ],
+        ),
+        DiedEvent(timestamp: _at(4)),
+      ]);
+
+      expect(activity.totalSoldCr, 19010800);
+      expect(activity.organismsLostToDeath, isZero);
+    });
+
+    test('échantillonner de nouveau après la perte repart de zéro', () {
+      final ExobiologyActivity activity = aggregator.aggregate(<JournalEvent>[
+        _scan(0, OrganicScanType.analyse),
+        DiedEvent(timestamp: _at(1)),
+        _scan(2, OrganicScanType.analyse, species: 'Bacterium Aurasus'),
+      ]);
+
+      expect(activity.organismsLostToDeath, 1);
+      expect(activity.completedNotSold, hasLength(1));
+      expect(activity.completedNotSold.single.species, 'Bacterium Aurasus');
+    });
+
+    test('deux morts successives comptent deux pertes', () {
+      final ExobiologyActivity activity = aggregator.aggregate(<JournalEvent>[
+        _scan(0, OrganicScanType.analyse),
+        DiedEvent(timestamp: _at(1)),
+        _scan(2, OrganicScanType.analyse, species: 'Bacterium Aurasus'),
+        DiedEvent(timestamp: _at(3)),
+      ]);
+
+      expect(activity.organismsLostToDeath, 2);
+      expect(activity.completedNotSold, isEmpty);
+      expect(activity.lastLossAt, _at(3));
+    });
+
+    test('mourir les mains vides ne compte aucune perte', () {
+      final ExobiologyActivity activity = aggregator.aggregate(<JournalEvent>[
+        DiedEvent(timestamp: _at(1)),
+        ResurrectEvent(timestamp: _at(2), option: 'rebuy'),
+      ]);
+
+      expect(activity.organismsLostToDeath, isZero);
+      expect(activity.lastLossAt, isNull);
+    });
+  });
 }

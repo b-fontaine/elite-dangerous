@@ -9,37 +9,75 @@ import '../../../../core/network/dio_error_mapper.dart';
 import '../../../../core/result/result.dart';
 import '../../../../core/stream/initial_then.dart';
 import '../../domain/entities/journal_event.dart';
+import '../../domain/entities/journal_sync_policy.dart';
 import '../../domain/repositories/journal_repository.dart';
 import '../../domain/services/journal_event_parser.dart';
 import '../datasources/journal_api.dart';
 import '../datasources/journal_file_data_source.dart';
 import '../datasources/journal_local_store.dart';
+import '../datasources/journal_tail_data_source.dart';
 
 @LazySingleton(as: JournalRepository)
 class JournalRepositoryImpl implements JournalRepository {
-  JournalRepositoryImpl(this._api, this._files, this._store, this._parser);
+  JournalRepositoryImpl(
+    this._api,
+    this._files,
+    this._store,
+    this._parser,
+    this._tail,
+  );
 
   final JournalApi _api;
   final JournalFileDataSource _files;
   final JournalLocalStore _store;
   final JournalEventParser _parser;
 
+  /// Held only to be reset when the journal is cleared.
+  ///
+  /// Erasing the journal has to erase the memory of having read it, or the
+  /// tail would still be pointing at the end of the file the game is writing
+  /// and the store would sit empty until the commander started a new session.
+  final JournalTailDataSource _tail;
+
   final StreamController<List<JournalEvent>> _controller =
       StreamController<List<JournalEvent>>.broadcast();
 
-  /// Frontier fetches a whole day per request and asks for no more than about
-  /// one query a minute; a wider window would take longer than the commander
-  /// is willing to wait.
-  static const int maxSyncDays = 14;
+  /// The parsed journal, kept between calls.
+  ///
+  /// Not an optimisation for its own sake: the live tail merges every ten
+  /// seconds, and without this each of those merges re-read and re-parsed the
+  /// whole store twice over — sixty thousand lines of JSON, to append four.
+  /// The cache turns a merge into work proportional to what arrived.
+  ///
+  /// It is dropped whenever the store is rewritten from the front rather than
+  /// appended to, which is the only way its contents can stop matching.
+  List<JournalEvent>? _cached;
+  Set<String>? _cachedKeys;
 
   @override
   Future<Result<List<JournalEvent>>> events() => guard(
-        () async => _parser.parseLines(await _store.readLines()),
+        // Handed out read-only: the cache is the same list on every call, and
+        // one caller sorting it in place would quietly reorder everybody's.
+        () async => List<JournalEvent>.unmodifiable(await _loadCache()),
         onError: (Object error, _) => CacheFailure(
           message: 'Journal local illisible.',
           cause: error,
         ),
       );
+
+  Future<List<JournalEvent>> _loadCache() async {
+    final List<JournalEvent>? cached = _cached;
+    if (cached != null) {
+      return cached;
+    }
+    final List<JournalEvent> parsed =
+        _parser.parseLines(await _store.readLines());
+    _cached = parsed;
+    _cachedKeys = <String>{
+      for (final JournalEvent event in parsed) event.dedupeKey,
+    };
+    return parsed;
+  }
 
   @override
   Stream<List<JournalEvent>> watchEvents() => initialThen<List<JournalEvent>>(
@@ -63,52 +101,105 @@ class JournalRepositoryImpl implements JournalRepository {
       );
     }
 
+    final Set<String> settled = await _store.readSettledDays();
+    final Set<String> newlySettled = <String>{};
+
     final List<String> collected = <String>[];
     final List<String> partial = <String>[];
     int fetched = 0;
     int withoutPlay = 0;
+    int alreadyKnown = 0;
+    int quietRun = 0;
+    int spent = 0;
+    String? oldestReached;
     Failure? lastFailure;
+    JournalSyncStop stop = JournalSyncStop.rangeExhausted;
 
-    DateTime day = start;
-    int guardCounter = 0;
-    while (!day.isAfter(end) && guardCounter < maxSyncDays) {
-      guardCounter++;
+    // Newest first: one played day carries the session-start events that
+    // describe the commander's present state, so the answer usually arrives
+    // on the first or second request rather than after the whole range.
+    DateTime day = end;
+    while (!day.isBefore(start)) {
+      if (spent >= JournalSyncPolicy.maxSyncDays) {
+        stop = JournalSyncStop.budgetSpent;
+        break;
+      }
+
+      final String key = _formatDay(day);
+      if (settled.contains(key)) {
+        alreadyKnown++;
+        day = day.subtract(const Duration(days: 1));
+        continue;
+      }
+
+      spent++;
       try {
         final HttpResponse<String> response = await _api.journalForDay(
           day.year.toString().padLeft(4, '0'),
           day.month.toString().padLeft(2, '0'),
           day.day.toString().padLeft(2, '0'),
         );
-        final int status = response.response.statusCode ?? 200;
+        final int status = response.response.statusCode ?? HttpStatus.ok;
+        oldestReached = key;
+
         if (status == HttpStatus.noContent) {
           withoutPlay++;
+          quietRun++;
+          // A past day with no session will never gain one.
+          if (day.isBefore(end)) {
+            newlySettled.add(key);
+          }
+          if (quietRun >= JournalSyncPolicy.quietDaysBeforeStopping) {
+            stop = JournalSyncStop.quietRun;
+            break;
+          }
         } else {
           fetched++;
-          if (status == HttpStatus.partialContent) {
-            partial.add(_formatDay(day));
-          }
+          quietRun = 0;
           collected.addAll(const LineSplitterLite().split(response.data));
+          if (status == HttpStatus.partialContent) {
+            // Frontier says it could not gather everything; asking again later
+            // is the documented remedy, so this day stays unsettled.
+            partial.add(key);
+          } else if (day.isBefore(end)) {
+            newlySettled.add(key);
+          }
         }
       } catch (error, stackTrace) {
         lastFailure = mapDioError(error, stackTrace);
+        // An expired session or a rate limit will greet every remaining day
+        // the same way. Walking the rest of the range would turn one refusal
+        // into ninety.
+        if (lastFailure is UnauthorizedFailure ||
+            lastFailure is RateLimitFailure) {
+          stop = JournalSyncStop.refused;
+          break;
+        }
       }
-      day = day.add(const Duration(days: 1));
+      day = day.subtract(const Duration(days: 1));
     }
 
-    if (collected.isEmpty && fetched == 0 && lastFailure != null) {
+    if (collected.isEmpty && fetched == 0 && withoutPlay == 0 &&
+        lastFailure != null) {
       return ResultFailure<JournalSyncReport>(lastFailure);
     }
 
     final ({int added, int skipped}) merged = await _merge(collected);
     await _store.writeLastSyncedDay(end);
+    if (newlySettled.isNotEmpty) {
+      await _store.writeSettledDays(<String>{...settled, ...newlySettled});
+    }
 
     return Success<JournalSyncReport>(
       JournalSyncReport(
         daysFetched: fetched,
         daysWithoutPlay: withoutPlay,
         partialDays: partial,
+        daysAlreadyKnown: alreadyKnown,
         eventsAdded: merged.added,
         eventsSkipped: merged.skipped,
+        oldestDayReached: oldestReached,
+        stoppedBecause: stop,
       ),
     );
   }
@@ -158,6 +249,9 @@ class JournalRepositoryImpl implements JournalRepository {
   @override
   Future<Result<void>> clear() => guard(() async {
         await _store.clear();
+        _tail.reset();
+        _cached = <JournalEvent>[];
+        _cachedKeys = <String>{};
         _controller.add(const <JournalEvent>[]);
       });
 
@@ -166,19 +260,17 @@ class JournalRepositoryImpl implements JournalRepository {
   /// Deduplication is on the parsed event's identity rather than on the raw
   /// string: the same event fetched from the Companion API and from a local
   /// file differs by whitespace and key order.
+  ///
+  /// Only the genuinely new lines are written, and they are appended. Rewriting
+  /// the whole journal to add a day's worth of events is what made a sync cost
+  /// grow with the history rather than with the import.
   Future<({int added, int skipped})> _merge(List<String> incoming) async {
-    final List<String> stored = await _store.readLines();
-    final Map<String, String> byKey = <String, String>{};
+    final List<JournalEvent> known = await _loadCache();
+    final Set<String> seen = _cachedKeys!;
     int skipped = 0;
 
-    for (final String line in stored) {
-      final JournalEvent? event = _parser.parseLine(line);
-      if (event != null) {
-        byKey[event.dedupeKey] = line;
-      }
-    }
-    final int before = byKey.length;
-
+    final List<String> fresh = <String>[];
+    final List<JournalEvent> freshEvents = <JournalEvent>[];
     for (final String line in incoming) {
       final JournalEvent? event = _parser.parseLine(line);
       if (event == null) {
@@ -187,14 +279,31 @@ class JournalRepositoryImpl implements JournalRepository {
         }
         continue;
       }
-      byKey.putIfAbsent(event.dedupeKey, () => line);
+      if (seen.add(event.dedupeKey)) {
+        fresh.add(line);
+        freshEvents.add(event);
+      }
     }
 
-    final List<String> merged = byKey.values.toList();
-    await _store.writeLines(merged);
-    _controller.add(_parser.parseLines(merged));
+    if (fresh.isEmpty) {
+      return (added: 0, skipped: skipped);
+    }
 
-    return (added: byKey.length - before, skipped: skipped);
+    final bool trimmed = await _store.appendLines(fresh);
+    if (trimmed) {
+      // The store dropped its oldest lines to stay under the cap, so the
+      // cache no longer describes it. Rebuilding is rare enough to be cheap.
+      _cached = null;
+      _cachedKeys = null;
+    } else {
+      known.addAll(freshEvents);
+    }
+
+    // Observers get the merged whole, not the delta: the aggregators
+    // downstream recompute totals from the entire journal.
+    _controller.add(List<JournalEvent>.unmodifiable(await _loadCache()));
+
+    return (added: fresh.length, skipped: skipped);
   }
 
   static String _formatDay(DateTime day) =>

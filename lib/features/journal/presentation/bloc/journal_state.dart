@@ -17,7 +17,8 @@ enum JournalFilter {
             event is SuitEvent,
         JournalFilter.exploration => event is BodyScanEvent ||
             event is BodySignalsEvent ||
-            event is SurfaceContactEvent,
+            event is SurfaceContactEvent ||
+            event is EmbarkEvent,
         JournalFilter.all => true,
       };
 }

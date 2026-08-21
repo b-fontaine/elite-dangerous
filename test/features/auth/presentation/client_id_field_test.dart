@@ -28,4 +28,30 @@ void main() {
       expect(clientIdHelperText(const OAuthClientConfig.empty()), isNull);
     });
   });
+
+  group('initialClientIdFieldValue', () {
+    test('never puts the build default on screen', () {
+      const OAuthClientConfig config = OAuthClientConfig(
+        clientId: 'BUILD-0000',
+        redirectUri: '',
+        clientIdIsBuildDefault: true,
+      );
+
+      expect(initialClientIdFieldValue(config), isEmpty);
+    });
+
+    test('brings back a value the commander saved themselves', () {
+      const OAuthClientConfig config = OAuthClientConfig(
+        clientId: 'TYPED-1111',
+        redirectUri: '',
+      );
+
+      expect(initialClientIdFieldValue(config), 'TYPED-1111');
+    });
+
+    test('is empty when nothing is configured', () {
+      expect(initialClientIdFieldValue(const OAuthClientConfig.empty()),
+          isEmpty);
+    });
+  });
 }

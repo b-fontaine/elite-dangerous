@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:elite_dangerous/core/storage/key_value_store.dart';
+import 'package:elite_dangerous/core/storage/line_store.dart';
 import 'package:elite_dangerous/core/storage/secure_store.dart';
 
 /// In-memory doubles for the two persistence ports.
@@ -83,4 +84,52 @@ class InMemoryKeyValueStore implements KeyValueStore {
 
   @override
   Future<void> clear() async => _values.clear();
+}
+
+/// [LineStore] over a plain list.
+///
+/// Counts the writes it receives, so a test can assert that a sync appended a
+/// day rather than rewriting the whole journal — the distinction the file
+/// store exists for.
+class InMemoryLineStore implements LineStore {
+  InMemoryLineStore([List<String>? seed])
+      : _lines = <String>[...?seed];
+
+  final List<String> _lines;
+
+  int fullRewrites = 0;
+  int appends = 0;
+
+  /// How many times the whole store was read back.
+  ///
+  /// The journal repository caches what it parsed; without a counter, a test
+  /// cannot tell a cache hit from a second full read that happened to return
+  /// the same thing.
+  int reads = 0;
+
+  @override
+  Future<List<String>> readLines() async {
+    reads++;
+    return List<String>.unmodifiable(_lines);
+  }
+
+  @override
+  Future<int> countLines() async => _lines.length;
+
+  @override
+  Future<void> writeLines(List<String> lines) async {
+    fullRewrites++;
+    _lines
+      ..clear()
+      ..addAll(lines);
+  }
+
+  @override
+  Future<void> appendLines(List<String> lines) async {
+    appends++;
+    _lines.addAll(lines);
+  }
+
+  @override
+  Future<void> clear() async => _lines.clear();
 }

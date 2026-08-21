@@ -47,6 +47,8 @@ class ExobiologyActivity extends Equatable {
     this.distinctSpeciesSold = 0,
     this.saleCount = 0,
     this.lastSaleAt,
+    this.organismsLostToDeath = 0,
+    this.lastLossAt,
   });
 
   /// Everything Vista Genomics has paid, First Logged bonuses included — this
@@ -66,7 +68,18 @@ class ExobiologyActivity extends Equatable {
   final int saleCount;
   final DateTime? lastSaleAt;
 
+  /// Organisms sampled but never sold, wiped by the loss of the ship.
+  ///
+  /// Kept rather than discarded silently: a commander who lost a full hold
+  /// deserves to see it said once, and a total that simply shrinks with no
+  /// explanation reads as a bug.
+  final int organismsLostToDeath;
+
+  final DateTime? lastLossAt;
+
   bool get hasDataAtRisk => completedNotSold.isNotEmpty;
+
+  bool get hasLostData => organismsLostToDeath > 0;
 
   @override
   List<Object?> get props => <Object?>[
@@ -77,5 +90,7 @@ class ExobiologyActivity extends Equatable {
         distinctSpeciesSold,
         saleCount,
         lastSaleAt,
+        organismsLostToDeath,
+        lastLossAt,
       ];
 }

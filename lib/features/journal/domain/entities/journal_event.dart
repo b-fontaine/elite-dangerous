@@ -145,6 +145,39 @@ final class SellOrganicDataEvent extends JournalEvent {
   List<Object?> get props => <Object?>[timestamp, entries, marketId];
 }
 
+/// One genus the DSS reported on a body.
+///
+/// Carries the raw codex token alongside the localised name because the two
+/// serve different purposes: the token is stable across languages and is what
+/// the catalogue can be matched on, the localised name is what the commander
+/// reads. Frontier omits `Genus_Localised` when it would repeat the token, and
+/// genus names being Latin, that happens in more languages than one might
+/// expect.
+class DetectedGenus extends Equatable {
+  const DetectedGenus({required this.symbol, this.localised});
+
+  /// `$Codex_Ent_Stratum_Genus_Name;`
+  final String symbol;
+
+  /// `Stratum`
+  final String? localised;
+
+  String get displayName => localised ?? symbol;
+
+  /// The token as a stable lookup key: trimmed and lower-cased, nothing more.
+  ///
+  /// Deliberately *not* reduced to a genus name. The token stem and the genus
+  /// the commander reads are different words far more often than not —
+  /// `Shrubs` is *Frutexa*, `Cone` is *Bark Mound*, `Sphere` is *Anemone* —
+  /// so anything that looks like a derived identifier would be a trap. The
+  /// translation belongs to whoever owns the catalogue; see
+  /// `ExobiologyReferenceData.genusIdFromCodex`.
+  String get lookupKey => symbol.trim().toLowerCase();
+
+  @override
+  List<Object?> get props => <Object?>[symbol, localised];
+}
+
 /// `FSSBodySignals` and `SAASignalsFound` — how many organisms are down there.
 final class BodySignalsEvent extends JournalEvent {
   const BodySignalsEvent({
@@ -154,6 +187,7 @@ final class BodySignalsEvent extends JournalEvent {
     this.bodyName,
     this.bodyId,
     this.systemAddress,
+    this.genuses = const <DetectedGenus>[],
   });
 
   final int biologicalCount;
@@ -161,16 +195,27 @@ final class BodySignalsEvent extends JournalEvent {
   final int? bodyId;
   final int? systemAddress;
 
+  /// Which genera are actually down there.
+  ///
+  /// Only `SAASignalsFound` carries this, and only since Odyssey Update 13
+  /// (July 2022): the FSS tells you *how many* biological signals a body has,
+  /// the DSS tells you *which* genera. Before mapping, this is empty and the
+  /// species have to be predicted from the body's physical properties.
+  final List<DetectedGenus> genuses;
+
   /// `SAASignalsFound` comes from the DSS and is the reliable one; the FSS
   /// count can be revised once probes land.
   bool get fromDetailedScan => name == 'SAASignalsFound';
+
+  /// The genera are known, so the guesswork can stop.
+  bool get identifiesGenuses => genuses.isNotEmpty;
 
   @override
   String get discriminator => '${bodyName ?? bodyId}';
 
   @override
   List<Object?> get props =>
-      <Object?>[timestamp, name, biologicalCount, bodyName, bodyId];
+      <Object?>[timestamp, name, biologicalCount, bodyName, bodyId, genuses];
 }
 
 /// `Scan` — the body survey the species matcher consumes.
@@ -179,6 +224,7 @@ final class BodyScanEvent extends JournalEvent {
     required super.timestamp,
     required this.bodyName,
     this.starSystem,
+    this.systemAddress,
     this.bodyId,
     this.planetClass,
     this.atmosphere,
@@ -189,10 +235,18 @@ final class BodyScanEvent extends JournalEvent {
     this.distanceFromArrivalLs,
     this.landable = false,
     this.parentStarClass,
+    this.scanType,
+    this.wasDiscovered = true,
+    this.wasMapped = true,
   }) : super(name: 'Scan');
 
   final String bodyName;
   final String? starSystem;
+
+  /// The system's `id64`, so a scan can be attributed to the system the
+  /// commander is standing in rather than to one that merely shares its name.
+  final int? systemAddress;
+
   final int? bodyId;
   final String? planetClass;
   final String? atmosphere;
@@ -207,6 +261,27 @@ final class BodyScanEvent extends JournalEvent {
   final bool landable;
   final String? parentStarClass;
 
+  /// `AutoScan`, `Basic`, `Detailed` or `NavBeaconDetail`.
+  ///
+  /// The distinction decides whether there is anything left to do: the
+  /// honk-and-jump `AutoScan` of the arrival star yields almost nothing,
+  /// whereas `Detailed` is the FSS scan that names the planet class and pays.
+  final String? scanType;
+
+  /// Whether someone had already discovered this body.
+  ///
+  /// Defaults to `true` on purpose: the field is absent from the oldest
+  /// journals, and claiming an undiscovered body on missing evidence would
+  /// send a commander to sell a first-discovery bonus that is not theirs.
+  final bool wasDiscovered;
+
+  /// Whether someone had already mapped it with the DSS.
+  final bool wasMapped;
+
+  /// A full FSS scan, as opposed to the arrival honk.
+  bool get isDetailed =>
+      scanType == 'Detailed' || scanType == 'NavBeaconDetail';
+
   /// The Journal reports `SurfaceGravity` in m/s²; every exobiology table is
   /// written in g, and 0.27 g is the threshold that decides a landing.
   static const double standardGravity = 9.80665;
@@ -215,22 +290,186 @@ final class BodyScanEvent extends JournalEvent {
   String get discriminator => bodyName;
 
   @override
-  List<Object?> get props => <Object?>[timestamp, bodyName, planetClass];
+  List<Object?> get props =>
+      <Object?>[timestamp, bodyName, planetClass, scanType];
 }
 
-/// `Touchdown` and `Disembark` — landing and stepping out.
+/// `FSSDiscoveryScan` — the arrival honk, which says how much is out there.
+///
+/// This is the only event that states how many bodies a system holds. Without
+/// it "3 bodies scanned" is a number with no denominator, and the app cannot
+/// tell a finished system from one barely started.
+final class DiscoveryScanEvent extends JournalEvent {
+  const DiscoveryScanEvent({
+    required super.timestamp,
+    required this.bodyCount,
+    this.systemName,
+    this.systemAddress,
+    this.nonBodyCount = 0,
+    this.progress = 0,
+  }) : super(name: 'FSSDiscoveryScan');
+
+  /// Stars, planets and moons — everything the FSS can resolve.
+  final int bodyCount;
+
+  final String? systemName;
+  final int? systemAddress;
+
+  /// Signals that are not bodies: belts, rings, and the like.
+  final int nonBodyCount;
+
+  /// 0.0 → 1.0, the share already discovered at the moment of the honk.
+  final double progress;
+
+  @override
+  String get discriminator => '${systemAddress ?? systemName}';
+
+  @override
+  List<Object?> get props =>
+      <Object?>[timestamp, systemAddress, systemName, bodyCount];
+}
+
+/// `FSSAllBodiesFound` — nothing left to find in this system.
+final class AllBodiesFoundEvent extends JournalEvent {
+  const AllBodiesFoundEvent({
+    required super.timestamp,
+    required this.count,
+    this.systemName,
+    this.systemAddress,
+  }) : super(name: 'FSSAllBodiesFound');
+
+  final int count;
+  final String? systemName;
+  final int? systemAddress;
+
+  @override
+  String get discriminator => '${systemAddress ?? systemName}';
+
+  @override
+  List<Object?> get props =>
+      <Object?>[timestamp, systemAddress, systemName, count];
+}
+
+/// `SAAScanComplete` — a body mapped with the Detailed Surface Scanner.
+///
+/// Mapping is what reveals where the organisms are, so this is the event that
+/// separates "there is life down there somewhere" from a plan.
+final class SurfaceMappedEvent extends JournalEvent {
+  const SurfaceMappedEvent({
+    required super.timestamp,
+    required this.bodyName,
+    this.bodyId,
+    this.systemAddress,
+    this.probesUsed = 0,
+    this.efficiencyTarget = 0,
+  }) : super(name: 'SAAScanComplete');
+
+  final String bodyName;
+  final int? bodyId;
+  final int? systemAddress;
+  final int probesUsed;
+  final int efficiencyTarget;
+
+  /// Mapped under the efficiency target, which pays a bonus.
+  bool get wasEfficient =>
+      efficiencyTarget > 0 && probesUsed <= efficiencyTarget;
+
+  @override
+  List<Object?> get props =>
+      <Object?>[timestamp, bodyName, bodyId, systemAddress, probesUsed];
+}
+
+/// `Touchdown` and `Liftoff` — the ship meeting the ground, and leaving it.
+///
+/// The pair describes *the ship*, and since Odyssey the ship moves without the
+/// commander: recalling it while on foot writes a `Touchdown`, dismissing it
+/// writes a `Liftoff`, and in both the commander is standing on the surface
+/// watching it happen. [carriesCommander] is the question worth asking.
 final class SurfaceContactEvent extends JournalEvent {
   const SurfaceContactEvent({
     required super.timestamp,
     required super.name,
     this.bodyName,
     this.systemName,
+    this.systemAddress,
     this.onPlanet = true,
+    this.onStation = false,
+    this.playerControlled = true,
+    this.taxi = false,
+    this.multicrew = false,
   });
 
   final String? bodyName;
   final String? systemName;
+  final int? systemAddress;
+
+  /// The commander's own hands on the stick.
+  ///
+  /// False when the Remote Flight Assist brings the ship down or takes it
+  /// away — and also false in an Apex shuttle or another commander's ship,
+  /// which is why it cannot be read on its own. See [carriesCommander].
+  final bool playerControlled;
+
+  /// An Apex shuttle: nobody the commander knows is flying, yet they are in it.
+  final bool taxi;
+
+  /// A seat in another commander's ship. Same shape as [taxi].
+  final bool multicrew;
+
+  /// On a planet's surface. Absent from pre-Odyssey journals, where the only
+  /// thing a ship could touch down on was a planet.
   final bool onPlanet;
+
+  /// At a station — a planetary port is both this and [onPlanet].
+  final bool onStation;
+
+  bool get isTouchdown => name == 'Touchdown';
+
+  /// Whether this movement moved the commander too.
+  ///
+  /// When false the ship went somewhere on its own and the commander stayed
+  /// exactly where they were.
+  bool get carriesCommander => playerControlled || taxi || multicrew;
+
+  @override
+  String get discriminator => bodyName ?? '';
+}
+
+/// `Disembark` and `Embark` — the commander stepping out of a vehicle, and
+/// back into one.
+///
+/// Both happen on a planet's surface *and* inside a station, and the journal
+/// says which with `OnPlanet` and `OnStation`. Reading the event name alone —
+/// the obvious shortcut, since "disembark" sounds like stepping onto a world —
+/// puts a commander walking an Orbis concourse on the surface of a planet that
+/// has no station.
+final class EmbarkEvent extends JournalEvent {
+  const EmbarkEvent({
+    required super.timestamp,
+    required super.name,
+    this.bodyName,
+    this.systemName,
+    this.systemAddress,
+    this.stationName,
+    this.stationType,
+    this.onPlanet = true,
+    this.onStation = false,
+  });
+
+  /// Only a world's name when [onPlanet]: at a station the journal puts the
+  /// station in this field, because a station is a body of the system too.
+  final String? bodyName;
+
+  final String? systemName;
+  final int? systemAddress;
+
+  /// Written only at a station, which is what lets the position keep naming
+  /// the station across an import that never saw the `Docked`.
+  final String? stationName;
+  final String? stationType;
+
+  final bool onPlanet;
+  final bool onStation;
 
   bool get isDisembark => name == 'Disembark';
 
@@ -313,4 +552,574 @@ final class SuitEvent extends JournalEvent {
 /// Any event the app does not model. Kept so nothing is silently lost.
 final class UnknownJournalEvent extends JournalEvent {
   const UnknownJournalEvent({required super.timestamp, required super.name});
+}
+
+/// `Statistics` — the career totals, rewritten at every session start.
+///
+/// The most valuable event in the journal for this app: `Exobiology`'s
+/// `Organic_Data_Profits` is exactly the figure the Exobiologist ladder counts,
+/// stated by the game rather than inferred from the sales the app happens to
+/// have imported.
+final class StatisticsEvent extends JournalEvent {
+  const StatisticsEvent({
+    required super.timestamp,
+    required this.sections,
+  }) : super(name: 'Statistics');
+
+  /// Section name (`Exobiology`, `Exploration`, `Bank_Account`…) to its
+  /// integer entries. Kept raw: Frontier adds keys with every update, and
+  /// dropping the unknown ones would mean re-parsing to get them back.
+  final Map<String, Map<String, int>> sections;
+
+  int? value(String section, String key) => sections[section]?[key];
+
+  /// Cumulative profit from organic data, First Logged bonuses included.
+  int? get organicDataProfitCr => value('Exobiology', 'Organic_Data_Profits');
+
+  int? get firstLoggedProfitCr => value('Exobiology', 'First_Logged_Profits');
+  int? get firstLoggedCount => value('Exobiology', 'First_Logged');
+  int? get organicSpeciesEncountered =>
+      value('Exobiology', 'Organic_Species_Encountered');
+  int? get organicVariantsEncountered =>
+      value('Exobiology', 'Organic_Variant_Encountered');
+  int? get organicSystems => value('Exobiology', 'Organic_Systems');
+  int? get organicPlanets => value('Exobiology', 'Organic_Planets');
+
+  int? get systemsVisited => value('Exploration', 'Systems_Visited');
+  int? get explorationProfitCr => value('Exploration', 'Exploration_Profits');
+  int? get bodiesScannedDetailed =>
+      value('Exploration', 'Planets_Scanned_To_Level_3');
+  int? get firstFootfalls => value('Exploration', 'First_Footfalls');
+  int? get hyperspaceJumps => value('Exploration', 'Total_Hyperspace_Jumps');
+  int? get greatestDistanceLy =>
+      value('Exploration', 'Greatest_Distance_From_Start');
+
+  /// Seconds. Frontier reports play time here and nowhere else.
+  int? get timePlayedSeconds => value('Exploration', 'Time_Played');
+
+  int? get currentWealthCr => value('Bank_Account', 'Current_Wealth');
+  int? get ownedShipCount => value('Bank_Account', 'Owned_Ship_Count');
+  int? get suitsOwned => value('Bank_Account', 'Suits_Owned');
+  int? get weaponsOwned => value('Bank_Account', 'Weapons_Owned');
+  int? get engineersUsed => value('Crafting', 'Count_Of_Used_Engineers');
+  int? get suitModsApplied => value('Crafting', 'Suit_Mods_Applied');
+
+  @override
+  List<Object?> get props => <Object?>[timestamp, sections];
+}
+
+/// `Reputation` — standing with the four powers, -100 to +100.
+final class ReputationEvent extends JournalEvent {
+  const ReputationEvent({
+    required super.timestamp,
+    required this.values,
+  }) : super(name: 'Reputation');
+
+  /// `Empire`, `Federation`, `Alliance`, `Independent`.
+  final Map<String, double> values;
+
+  double? operator [](String power) => values[power];
+
+  @override
+  List<Object?> get props => <Object?>[timestamp, values];
+}
+
+/// How far the commander has got with one engineer.
+enum EngineerUnlockStage {
+  unknown('Unknown', 'Inconnu'),
+  known('Known', 'Connu'),
+  invited('Invited', 'Invité'),
+  unlocked('Unlocked', 'Débloqué');
+
+  const EngineerUnlockStage(this.journalValue, this.label);
+
+  final String journalValue;
+  final String label;
+
+  bool get isUnlocked => this == EngineerUnlockStage.unlocked;
+
+  static EngineerUnlockStage fromJournal(String? raw) {
+    for (final EngineerUnlockStage stage in values) {
+      if (stage.journalValue.toLowerCase() == raw?.toLowerCase()) {
+        return stage;
+      }
+    }
+    return EngineerUnlockStage.unknown;
+  }
+}
+
+/// One engineer's standing.
+class EngineerStanding extends Equatable {
+  const EngineerStanding({
+    required this.name,
+    required this.stage,
+    this.engineerId,
+    this.rank,
+    this.rankProgressPercent,
+  });
+
+  final String name;
+  final EngineerUnlockStage stage;
+  final int? engineerId;
+
+  /// 1 to 5, once unlocked.
+  final int? rank;
+
+  final int? rankProgressPercent;
+
+  @override
+  List<Object?> get props => <Object?>[name, engineerId, stage, rank];
+}
+
+/// `EngineerProgress` — who is unlocked, and to what rank.
+///
+/// Frontier writes it two ways: a full `Engineers` array at session start, and
+/// a single-engineer update mid-session. Both are kept.
+final class EngineerProgressEvent extends JournalEvent {
+  const EngineerProgressEvent({
+    required super.timestamp,
+    required this.engineers,
+    required this.isFullRoster,
+  }) : super(name: 'EngineerProgress');
+
+  final List<EngineerStanding> engineers;
+
+  /// `true` for the session-start roster, `false` for a single update.
+  final bool isFullRoster;
+
+  List<EngineerStanding> get unlocked => engineers
+      .where((EngineerStanding engineer) => engineer.stage.isUnlocked)
+      .toList(growable: false);
+
+  @override
+  String get discriminator =>
+      engineers.map((EngineerStanding e) => e.name).join(',');
+
+  @override
+  List<Object?> get props => <Object?>[timestamp, engineers, isFullRoster];
+}
+
+/// `Loadout` — the flown ship, with the two figures the CAPI cannot give.
+///
+/// `Rebuy` is the real insurance cost, which `/profile` cannot yield because it
+/// reports `hull: 0` on recent ships. `MaxJumpRange` is the laden jump range,
+/// which the app otherwise has to ask the commander for.
+final class ShipLoadoutEvent extends JournalEvent {
+  const ShipLoadoutEvent({
+    required super.timestamp,
+    required this.shipSymbol,
+    this.shipId,
+    this.shipName,
+    this.shipIdent,
+    this.hullValueCr,
+    this.modulesValueCr,
+    this.rebuyCr,
+    this.maxJumpRangeLy,
+    this.fuelCapacity,
+    this.cargoCapacity,
+    this.unladenMass,
+    this.hullHealth,
+    this.isHot = false,
+    this.moduleSymbols = const <String>{},
+  }) : super(name: 'Loadout');
+
+  final String shipSymbol;
+  final int? shipId;
+  final String? shipName;
+  final String? shipIdent;
+  final int? hullValueCr;
+  final int? modulesValueCr;
+
+  /// The exact rebuy, stated by the game.
+  final int? rebuyCr;
+
+  /// Laden jump range, in light-years.
+  final double? maxJumpRangeLy;
+
+  final double? fuelCapacity;
+  final int? cargoCapacity;
+  final double? unladenMass;
+  final double? hullHealth;
+
+  /// Wanted: the ship cannot dock at most stations.
+  final bool isHot;
+
+  /// Fitted module symbols, lowercased — enough to answer "does this ship
+  /// carry a Detailed Surface Scanner?" without modelling every module.
+  final Set<String> moduleSymbols;
+
+  bool get hasDetailedSurfaceScanner =>
+      moduleSymbols.any((String s) => s.contains('detailedsurfacescanner'));
+
+  bool get hasGuardianFsdBooster =>
+      moduleSymbols.any((String s) => s.contains('guardianfsdbooster'));
+
+  bool get hasFuelScoop =>
+      moduleSymbols.any((String s) => s.contains('fuelscoop'));
+
+  @override
+  String get discriminator => '$shipSymbol|$shipId';
+
+  @override
+  List<Object?> get props =>
+      <Object?>[timestamp, shipSymbol, shipId, rebuyCr, maxJumpRangeLy];
+}
+
+/// `ShipLocker` — the on-foot inventory.
+///
+/// Frontier writes the full lists at session start and on boarding, and an
+/// empty event otherwise, pointing at `ShipLocker.json`. An empty one is kept
+/// rather than dropped so the aggregator can tell "nothing carried" from
+/// "never reported".
+final class ShipLockerEvent extends JournalEvent {
+  const ShipLockerEvent({
+    required super.timestamp,
+    this.items = const <String, int>{},
+    this.components = const <String, int>{},
+    this.consumables = const <String, int>{},
+    this.data = const <String, int>{},
+    this.isEmpty = false,
+  }) : super(name: 'ShipLocker');
+
+  /// Keyed by the canonical English name, resolved from the journal's internal
+  /// symbol — see `MicroResourceNames`. Not by `Name_Localised`, which follows
+  /// the language the client runs in and so cannot be matched against
+  /// anything.
+  final Map<String, int> items;
+  final Map<String, int> components;
+  final Map<String, int> consumables;
+  final Map<String, int> data;
+
+  /// The pointer form, with no lists at all.
+  final bool isEmpty;
+
+  /// Everything in one map, which is how the roadmap asks for materials.
+  Map<String, int> get everything => <String, int>{
+        ...items,
+        ...components,
+        ...consumables,
+        ...data,
+      };
+
+  @override
+  List<Object?> get props =>
+      <Object?>[timestamp, items, components, consumables, data, isEmpty];
+}
+
+/// `Materials` — the ship-side raw, manufactured and encoded materials.
+final class MaterialsEvent extends JournalEvent {
+  const MaterialsEvent({
+    required super.timestamp,
+    this.raw = const <String, int>{},
+    this.manufactured = const <String, int>{},
+    this.encoded = const <String, int>{},
+  }) : super(name: 'Materials');
+
+  final Map<String, int> raw;
+  final Map<String, int> manufactured;
+  final Map<String, int> encoded;
+
+  Map<String, int> get everything => <String, int>{
+        ...raw,
+        ...manufactured,
+        ...encoded,
+      };
+
+  @override
+  List<Object?> get props => <Object?>[timestamp, raw, manufactured, encoded];
+}
+
+/// `Powerplay` — the pledge, which decides a 30 % bonus on organic sales.
+final class PowerplayEvent extends JournalEvent {
+  const PowerplayEvent({
+    required super.timestamp,
+    required this.power,
+    this.rank,
+    this.merits,
+    this.timePledgedSeconds,
+  }) : super(name: 'Powerplay');
+
+  final String power;
+  final int? rank;
+  final int? merits;
+  final int? timePledgedSeconds;
+
+  /// Pranav Antal grants up to +30 % on exobiology sales in his space.
+  bool get boostsOrganicSales => power == 'Pranav Antal';
+
+  @override
+  String get discriminator => power;
+
+  @override
+  List<Object?> get props => <Object?>[timestamp, power, rank, merits];
+}
+
+/// One ship in `StoredShips`.
+class StoredShipEntry extends Equatable {
+  const StoredShipEntry({
+    required this.shipId,
+    required this.shipSymbol,
+    this.name,
+    this.starSystem,
+    this.valueCr,
+    this.transferPriceCr,
+    this.isHot = false,
+    this.inTransit = false,
+  });
+
+  final int shipId;
+  final String shipSymbol;
+  final String? name;
+  final String? starSystem;
+  final int? valueCr;
+  final int? transferPriceCr;
+  final bool isHot;
+  final bool inTransit;
+
+  @override
+  List<Object?> get props => <Object?>[shipId, shipSymbol, starSystem, valueCr];
+}
+
+/// `StoredShips` — the fleet, including where each one sleeps.
+///
+/// Overlaps `/profile`'s `ships`, and is worth reading anyway: it works with
+/// no Frontier account at all, and it states the transfer price.
+final class StoredShipsEvent extends JournalEvent {
+  const StoredShipsEvent({
+    required super.timestamp,
+    required this.here,
+    required this.remote,
+    this.stationName,
+    this.starSystem,
+  }) : super(name: 'StoredShips');
+
+  final List<StoredShipEntry> here;
+  final List<StoredShipEntry> remote;
+
+  final String? stationName;
+  final String? starSystem;
+
+  List<StoredShipEntry> get all => <StoredShipEntry>[...here, ...remote];
+
+  @override
+  List<Object?> get props => <Object?>[timestamp, here, remote, stationName];
+}
+
+/// `Cargo` — the hold. Read for one commodity: the Meta-Alloy that unlocks
+/// Felicity Farseer, which the app otherwise asks the commander to confirm.
+final class CargoEvent extends JournalEvent {
+  const CargoEvent({
+    required super.timestamp,
+    required this.inventory,
+    this.vessel,
+    this.count = 0,
+  }) : super(name: 'Cargo');
+
+  /// Commodity name, lowercased, to the number carried.
+  final Map<String, int> inventory;
+
+  /// `Ship` or `SRV`.
+  final String? vessel;
+
+  final int count;
+
+  bool get hasMetaAlloy => (inventory['metaalloys'] ?? 0) > 0;
+
+  @override
+  String get discriminator => vessel ?? '';
+
+  @override
+  List<Object?> get props => <Object?>[timestamp, inventory, vessel];
+}
+
+/// Where the commander is, as the journal reports it.
+///
+/// `/profile` names the system and the last station and stops there — it has
+/// no notion of which body you are orbiting, and it only refreshes when you
+/// dock. The journal names the body, and does so the moment you arrive.
+final class LocationEvent extends JournalEvent {
+  const LocationEvent({
+    required super.timestamp,
+    required super.name,
+    this.starSystem,
+    this.systemAddress,
+    this.bodyName,
+    this.bodyId,
+    this.bodyType,
+    this.stationName,
+    this.stationType,
+    this.distanceFromStarLs,
+    this.docked = false,
+    this.landed = false,
+    this.onFoot = false,
+  });
+
+  final String? starSystem;
+  final int? systemAddress;
+
+  /// The body in focus: the star on arrival, a planet once approached.
+  final String? bodyName;
+
+  final int? bodyId;
+
+  /// `Star`, `Planet`, `Station`, `PlanetaryRing`…
+  final String? bodyType;
+
+  final String? stationName;
+  final String? stationType;
+  final double? distanceFromStarLs;
+
+  final bool docked;
+  final bool landed;
+  final bool onFoot;
+
+  /// Events that clear the body rather than set one: leaving a body's sphere
+  /// of influence, or jumping out of the system entirely.
+  bool get clearsBody => name == 'LeaveBody' || name == 'StartJump';
+
+  bool get isPlanet => bodyType == 'Planet';
+
+  @override
+  String get discriminator => '${starSystem ?? ''}|${bodyName ?? ''}';
+
+  @override
+  List<Object?> get props =>
+      <Object?>[timestamp, name, starSystem, bodyName, stationName, docked];
+}
+
+/// `Docked` — everything the station offers, at the moment of docking.
+///
+/// Richer than `/profile`'s `lastStarport`, and available without a Frontier
+/// account: it carries the station's type, its distance from the star, its
+/// economies and its landing pads alongside the service list.
+final class DockedEvent extends JournalEvent {
+  const DockedEvent({
+    required super.timestamp,
+    required this.stationName,
+    this.stationType,
+    this.starSystem,
+    this.systemAddress,
+    this.marketId,
+    this.faction,
+    this.government,
+    this.allegiance,
+    this.economy,
+    this.secondEconomy,
+    this.distanceFromStarLs,
+    this.services = const <String>{},
+    this.largePads = 0,
+    this.mediumPads = 0,
+    this.smallPads = 0,
+  }) : super(name: 'Docked');
+
+  final String stationName;
+
+  /// `Coriolis`, `Orbis`, `Outpost`, `FleetCarrier`, `PlanetaryPort`…
+  final String? stationType;
+
+  final String? starSystem;
+  final int? systemAddress;
+  final int? marketId;
+  final String? faction;
+  final String? government;
+  final String? allegiance;
+
+  /// Localised economy names.
+  final String? economy;
+  final String? secondEconomy;
+
+  final double? distanceFromStarLs;
+
+  /// Lower-cased service keys, the same vocabulary `/profile` uses.
+  final Set<String> services;
+
+  final int largePads;
+  final int mediumPads;
+  final int smallPads;
+
+  bool get sellsOrganicData => services.contains('vistagenomics');
+
+  bool get isFleetCarrier => stationType == 'FleetCarrier';
+
+  @override
+  String get discriminator => stationName;
+
+  @override
+  List<Object?> get props =>
+      <Object?>[timestamp, stationName, stationType, services, marketId];
+}
+
+/// `Died` — the moment unsold exobiology data is at risk.
+///
+/// Recorded for both kinds of death: a destroyed ship and a body on a
+/// planet's surface. Which one it was cannot be read from this event, which is
+/// why [ResurrectEvent] is what actually decides whether anything was lost.
+final class DiedEvent extends JournalEvent {
+  const DiedEvent({
+    required super.timestamp,
+    this.killerName,
+    this.killerShip,
+  }) : super(name: 'Died');
+
+  final String? killerName;
+  final String? killerShip;
+
+  @override
+  List<Object?> get props => <Object?>[timestamp, killerName, killerShip];
+}
+
+/// `Resurrect` — how the commander came back, and therefore what they lost.
+///
+/// The `Option` field is the one that matters, and it is the only signal the
+/// journal offers: no event ever states that organic data was lost.
+///
+/// Frontier documents the field as "the option selected on the insurance
+/// rebuy screen" and stops there — the set of values it can take is written
+/// down nowhere. What follows is therefore taken from BioScan, the reference
+/// exobiology plugin, which is the closest thing to an authority that exists.
+final class ResurrectEvent extends JournalEvent {
+  const ResurrectEvent({
+    required super.timestamp,
+    required this.option,
+    this.costCr = 0,
+    this.bankrupt = false,
+  }) : super(name: 'Resurrect');
+
+  /// `rebuy`, `escape`, `recover`, `rejoin`, `handin`…
+  final String option;
+
+  final int costCr;
+  final bool bankrupt;
+
+  /// Options that follow the loss of the ship, and with it the unsold organic
+  /// data it carried.
+  ///
+  /// The full set of values is `free`, `rebuy`, `recover`, `handIn`, `rejoin`
+  /// and `escape` — EDDiscovery enumerates exactly those
+  /// (`JournalDiedResurrect.cs`, `enum ResurrectTypes`). Five of the six are
+  /// outcomes of the insurance rebuy screen, which only ever appears once the
+  /// ship is gone: `rebuy` pays for it, `free` declines and takes the
+  /// complimentary Sidewinder. Paying rebuy rebuilds the hull, never the hold.
+  ///
+  /// Taking BioScan's three-value filter at face value was a mistake worth
+  /// recording: those three are its *fallback*, for a loss whose `Died` line
+  /// is missing. Its primary cut is the `Died` event itself, with no filter at
+  /// all — which is why [DiedEvent] is what the aggregator keys on, and why
+  /// this set only has to catch what a missing `Died` would let through.
+  static const Set<String> shipLostOptions = <String>{
+    'free',
+    'rebuy',
+    'escape',
+    'recover',
+    'rejoin',
+  };
+
+  bool get losesUnsoldData =>
+      shipLostOptions.contains(option.toLowerCase());
+
+  @override
+  String get discriminator => option;
+
+  @override
+  List<Object?> get props => <Object?>[timestamp, option, costCr, bankrupt];
 }

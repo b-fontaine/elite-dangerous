@@ -38,6 +38,27 @@ class ExobiologyCatalog extends Equatable {
       .where((OrganicSpecies organic) => organic.id == id)
       .firstOrNull;
 
+  /// Looks a species up by the name the game prints.
+  ///
+  /// The journal names an organism in `Species_Localised` — `Stratum
+  /// Tectonicas` — and carries no catalogue id of any kind, so the name is the
+  /// only join available between what the commander sampled and what it is
+  /// worth. Matched case- and space-insensitively, and no further: guessing
+  /// past a name the catalogue does not hold would put a made-up price on a
+  /// real organism.
+  OrganicSpecies? speciesByName(String name) {
+    final String needle = _normalise(name);
+    if (needle.isEmpty) {
+      return null;
+    }
+    return species
+        .where((OrganicSpecies organic) => _normalise(organic.name) == needle)
+        .firstOrNull;
+  }
+
+  static String _normalise(String value) =>
+      value.trim().toLowerCase().replaceAll(RegExp(r'\s+'), ' ');
+
   List<OrganicSpecies> speciesOfGenus(String genusId) => species
       .where((OrganicSpecies organic) => organic.genusId == genusId)
       .toList(growable: false);

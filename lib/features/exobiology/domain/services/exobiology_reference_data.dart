@@ -38,10 +38,15 @@ abstract final class ExobiologyReferenceData {
 
   /// Material cost of every Artemis grade step.
   ///
-  /// Since Update 18 (August 2024) the costs were cut to roughly a quarter and
-  /// Power Regulators are no longer required. Note that the Artemis uses
-  /// **Aerogel** where the Dominator and Maverick use plating — copying a list
-  /// written for another suit is the classic mistake.
+  /// The Type-8 Update (18.08, August 2024) cut these costs — the community
+  /// puts the drop at 60-70 % — and dropped Power Regulators entirely. Note
+  /// that the Artemis uses **Aerogel** where the Dominator and Maverick use
+  /// plating; copying a list written for another suit is the classic mistake.
+  ///
+  /// The same figures, plus the credit cost and the sources for each
+  /// component, now live in `assets/data/blueprints.json`, which is what the
+  /// materials screen reads. These stay because the roadmap rules are pure and
+  /// synchronous, and `materials_catalog_test.dart` holds the two in step.
   static const List<SuitGradeStep> artemisGradeSteps = <SuitGradeStep>[
     SuitGradeStep(
       fromGrade: 1,
@@ -89,7 +94,18 @@ abstract final class ExobiologyReferenceData {
     ),
   ];
 
-  /// Grades cost materials only — never credits. Credits are for modifications.
+  /// Whether a suit grade step also charges credits.
+  ///
+  /// Left `false`, and deliberately: Inara lists no credit cost for suit
+  /// grades at all, while the Fandom wiki publishes 600 000 / 2 250 000 /
+  /// 4 500 000 / 7 500 000 Cr — 14 850 000 in total. That is one source
+  /// against another's silence, not two sources agreeing, and nobody has
+  /// checked it in game.
+  ///
+  /// So the roadmap keeps treating a grade as free — it would otherwise tell a
+  /// new commander to bank fifteen million they may not need — while the
+  /// materials screen shows the wiki figure with the caveat attached. The day
+  /// someone confirms it at an engineer, this flips and the note goes.
   static const bool gradesCostCredits = false;
 
   /// Suit modifications worth installing for an exobiologist, in the order the
@@ -100,7 +116,7 @@ abstract final class ExobiologyReferenceData {
       name: 'Improved Battery Capacity',
       effect: '+50 % d\'énergie — compense la consommation du Genetic Sampler',
       creditCost: 750000,
-      engineerIds: <String>[wellingtonBeck, odenGeiger],
+      engineerIds: <String>[wellingtonBeck, odenGeiger, rosaDayette],
       exobiologyPriority: 1,
     ),
     SuitModification(
@@ -108,7 +124,7 @@ abstract final class ExobiologyReferenceData {
       name: 'Extra Backpack Capacity',
       effect: 'Double la capacité du sac à dos',
       creditCost: 750000,
-      engineerIds: <String>[dominoGreen, wellingtonBeck],
+      engineerIds: <String>[dominoGreen, wellingtonBeck, rosaDayette],
       exobiologyPriority: 2,
     ),
     SuitModification(
@@ -116,7 +132,7 @@ abstract final class ExobiologyReferenceData {
       name: 'Reduced Tool Battery Consumption',
       effect: 'Outils moins gourmands en énergie',
       creditCost: 500000,
-      engineerIds: <String>[dominoGreen, wellingtonBeck],
+      engineerIds: <String>[dominoGreen, wellingtonBeck, rosaDayette],
       exobiologyPriority: 3,
     ),
     SuitModification(
@@ -124,7 +140,7 @@ abstract final class ExobiologyReferenceData {
       name: 'Improved Jump Assist',
       effect: 'Jetpack prolongé — utile sur les grandes Colony Range',
       creditCost: 750000,
-      engineerIds: <String>[yardenBond, baltanos],
+      engineerIds: <String>[yardenBond, baltanos, heroFerrari],
       exobiologyPriority: 4,
     ),
     SuitModification(
@@ -132,7 +148,7 @@ abstract final class ExobiologyReferenceData {
       name: 'Increased Sprint Duration',
       effect: 'Sprint prolongé entre deux prélèvements',
       creditCost: 750000,
-      engineerIds: <String>[terraVelasquez, baltanos],
+      engineerIds: <String>[terraVelasquez, baltanos, heroFerrari],
       exobiologyPriority: 5,
     ),
     SuitModification(
@@ -140,6 +156,8 @@ abstract final class ExobiologyReferenceData {
       name: 'Night Vision',
       effect: 'Vision nocturne — échantillonnage côté nuit',
       creditCost: 1000000,
+      // The only two, verified — every other modification here is offered by
+      // one more engineer than the app used to list.
       engineerIds: <String>[odenGeiger, yiShen],
       exobiologyPriority: 6,
     ),
@@ -272,8 +290,29 @@ abstract final class ExobiologyReferenceData {
     ),
   ];
 
-  static Engineer engineerById(String id) =>
-      engineers.firstWhere((Engineer engineer) => engineer.id == id);
+  /// The engineer with this id, or null when the app carries no card for them.
+  ///
+  /// Nullable rather than throwing, because the two things it joins move at
+  /// different speeds: [suitModifications] names every engineer who offers a
+  /// modification, while [engineers] only holds the ones whose unlock the app
+  /// can describe accurately. **Rosa Dayette** is exactly that case — she
+  /// offers three of the six modifications below, which is verified, but her
+  /// system and her unlock conditions are not, and inventing them would be
+  /// worse than omitting her.
+  static Engineer? engineerById(String id) {
+    for (final Engineer engineer in engineers) {
+      if (engineer.id == id) {
+        return engineer;
+      }
+    }
+    return null;
+  }
+
+  /// The names of [ids] the app can actually name, in order.
+  static List<String> engineerNames(Iterable<String> ids) => <String>[
+        for (final String id in ids)
+          if (engineerById(id) case final Engineer engineer) engineer.name,
+      ];
 
   static SuitModification modificationById(String id) => suitModifications
       .firstWhere((SuitModification modification) => modification.id == id);
@@ -282,6 +321,59 @@ abstract final class ExobiologyReferenceData {
   static List<Engineer> get peacefulSuitEngineers => engineers
       .where((Engineer e) => e.kind == EngineerKind.suit && !e.requiresCombat)
       .toList(growable: false);
+
+  /// Journal codex token → the genus id used by `exobiology_catalog.json`.
+  ///
+  /// A table, because it cannot be a rule. The journal names a genus by an
+  /// internal token whose stem is usually a *different word* from the genus
+  /// the commander reads: `Shrubs` is Frutexa, `Cone` is Bark Mound, `Sphere`
+  /// is Anemone, `Vents` is Amphora Plant, `Ground_Struct_Ice` is Crystalline
+  /// Shard, `Tube` is Sinuous Tuber, `Ingensradices` is Radicoida. Six of the
+  /// twenty-two match by accident, which is exactly enough to make a derived
+  /// identifier look like it works.
+  ///
+  /// `genus_codex_mapping_test.dart` asserts this stays in step with the
+  /// catalogue in both directions.
+  static const Map<String, String> _genusIdByCodexToken = <String, String>{
+    r'$codex_ent_aleoids_genus_name;': 'aleoida',
+    r'$codex_ent_bacterial_genus_name;': 'bacterium',
+    r'$codex_ent_brancae_name;': 'brain_tree',
+    r'$codex_ent_cactoid_genus_name;': 'cactoida',
+    r'$codex_ent_clypeus_genus_name;': 'clypeus',
+    r'$codex_ent_conchas_genus_name;': 'concha',
+    r'$codex_ent_cone_name;': 'bark_mound',
+    r'$codex_ent_electricae_genus_name;': 'electricae',
+    r'$codex_ent_fonticulus_genus_name;': 'fonticulua',
+    r'$codex_ent_fumerolas_genus_name;': 'fumerola',
+    r'$codex_ent_fungoids_genus_name;': 'fungoida',
+    r'$codex_ent_ground_struct_ice_name;': 'crystalline_shard',
+    r'$codex_ent_ingensradices_genus_name;': 'radicoida',
+    r'$codex_ent_osseus_genus_name;': 'osseus',
+    r'$codex_ent_recepta_genus_name;': 'recepta',
+    r'$codex_ent_shrubs_genus_name;': 'frutexa',
+    r'$codex_ent_sphere_name;': 'anemone',
+    r'$codex_ent_stratum_genus_name;': 'stratum',
+    r'$codex_ent_tube_name;': 'sinuous_tuber',
+    r'$codex_ent_tubus_genus_name;': 'tubus',
+    r'$codex_ent_tussocks_genus_name;': 'tussock',
+    r'$codex_ent_vents_name;': 'amphora_plant',
+  };
+
+  /// The catalogue's genus id for a journal codex token, or `null` when the
+  /// game has introduced a genus the catalogue has not caught up with.
+  ///
+  /// `null` is a real answer, not a defect: Frontier added *Radicoida* in 2026
+  /// and will add more. A caller should degrade to the localised name rather
+  /// than drop the genus.
+  static String? genusIdFromCodex(String codexToken) =>
+      _genusIdByCodexToken[codexToken.trim().toLowerCase()];
+
+  /// Every codex token the app can translate.
+  static Iterable<String> get knownGenusCodexTokens =>
+      _genusIdByCodexToken.keys;
+
+  /// Every catalogue genus id the app can reach from a journal.
+  static Iterable<String> get mappedGenusIds => _genusIdByCodexToken.values;
 
   /// Total materials needed to take an Artemis from [fromGrade] to [toGrade].
   static Map<String, int> materialsBetween(int fromGrade, int toGrade) {

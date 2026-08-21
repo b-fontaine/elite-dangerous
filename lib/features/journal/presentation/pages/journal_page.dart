@@ -8,6 +8,7 @@ import '../../../../design_system/design_system.dart';
 import '../../../exobiology/presentation/widgets/credits_format.dart';
 import '../../domain/entities/exobiology_activity.dart';
 import '../../domain/entities/journal_event.dart';
+import '../../domain/entities/journal_sync_policy.dart';
 import '../../domain/repositories/journal_repository.dart';
 import '../bloc/journal_bloc.dart';
 import '../widgets/journal_event_tile.dart';
@@ -186,10 +187,31 @@ class _SyncPanelState extends State<_SyncPanel> {
                           child: CircularProgressIndicator(strokeWidth: 2),
                         )
                       : const Icon(Icons.cloud_download_outlined, size: 16),
-                  label: const Text('Depuis Frontier (7 j)'),
+                  label: const Text(
+                    'Depuis Frontier '
+                    '(${JournalSyncPolicy.defaultSyncDays} j)',
+                  ),
                 ),
               ),
             ],
+          ),
+          const SizedBox(height: EdSpacing.xs),
+          OutlinedButton.icon(
+            onPressed: state.isSyncing
+                ? null
+                : () => context
+                    .read<JournalBloc>()
+                    .add(const JournalSyncRequested.maximum()),
+            icon: const Icon(Icons.history, size: 16),
+            label: const Text('Remonter le plus loin possible'),
+          ),
+          const SizedBox(height: EdSpacing.xxs),
+          const Text(
+            'Jusqu\'à ${JournalSyncPolicy.maxSyncDays} jours, du plus récent '
+            'au plus ancien. S\'arrête après '
+            '${JournalSyncPolicy.quietDaysBeforeStopping} jours sans partie, '
+            'et ne redemande jamais un jour déjà obtenu.',
+            style: EdTypography.caption,
           ),
           const SizedBox(height: EdSpacing.md),
           TextField(
@@ -241,16 +263,31 @@ class _SyncPanelState extends State<_SyncPanel> {
       if (report.daysFetched > 0) '${report.daysFetched} jour(s) récupéré(s)',
       if (report.daysWithoutPlay > 0)
         '${report.daysWithoutPlay} jour(s) sans partie',
+      if (report.daysAlreadyKnown > 0)
+        '${report.daysAlreadyKnown} jour(s) déjà connu(s)',
       if (report.eventsSkipped > 0)
         '${report.eventsSkipped} ligne(s) illisible(s)',
     ];
-    final String summary = parts.join(' · ');
-    if (!report.hasPartialDays) {
-      return summary;
+    final StringBuffer buffer = StringBuffer(parts.join(' · '));
+
+    // Where the walk stopped, and why, is the part that tells the commander
+    // whether relaunching would find anything more.
+    if (report.oldestDayReached case final String oldest) {
+      buffer.write('. Remonté jusqu\'au $oldest');
+      if (report.stoppedBecause case final JournalSyncStop stop) {
+        buffer.write(' — ${stop.label.toLowerCase()}');
+      }
+      buffer.write('.');
     }
-    return '$summary. Frontier n\'a pas pu rassembler toutes les données pour '
+
+    if (report.hasPartialDays) {
+      buffer.write(
+        ' Frontier n\'a pas pu rassembler toutes les données pour '
         '${report.partialDays.join(", ")} : relance la synchronisation plus '
-        'tard.';
+        'tard.',
+      );
+    }
+    return buffer.toString();
   }
 }
 

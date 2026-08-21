@@ -6,6 +6,15 @@ abstract final class AppRoutes {
   static const String commander = '/commandant';
   static const String commanderManual = '/commandant/saisie';
 
+  /// The cockpit's five detail pages.
+  static const String career = '/carriere';
+  static const String fleet = '/flotte';
+  static const String onFoot = '/a-pied';
+  static const String engineers = '/ingenieurs';
+  static const String materials = '/materiaux';
+  static String materialBlueprint(String id) => '/materiaux/$id';
+  static const String station = '/station';
+
   static const String exobiology = '/exobiologie';
   static const String exobiologyRoadmap = '/exobiologie';
   static const String exobiologySpecies = '/exobiologie/especes';
@@ -18,6 +27,7 @@ abstract final class AppRoutes {
 
   static const String settings = '/reglages';
   static const String frontierConnection = '/reglages/frontier';
+  static const String diagnostics = '/reglages/diagnostic';
 }
 
 /// A top-level destination of the adaptive navigation.

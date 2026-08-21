@@ -6,14 +6,19 @@ import '../../../../core/network/app_identity.dart';
 import '../../../../core/responsive/adaptive.dart';
 import '../../../../design_system/design_system.dart';
 import '../../../auth/presentation/bloc/auth_bloc.dart';
-import '../../../auth/presentation/widgets/auth_status_banner.dart';
+import '../../../auth/presentation/widgets/frontier_account_section.dart';
 import '../../domain/entities/app_settings.dart';
 import '../bloc/settings_bloc.dart';
 
 class SettingsPage extends StatelessWidget {
-  const SettingsPage({this.onOpenFrontierConnection, super.key});
+  const SettingsPage({
+    this.onConfigureAuthentication,
+    this.onOpenDiagnostics,
+    super.key,
+  });
 
-  final VoidCallback? onOpenFrontierConnection;
+  final VoidCallback? onConfigureAuthentication;
+  final VoidCallback? onOpenDiagnostics;
 
   @override
   Widget build(BuildContext context) {
@@ -28,16 +33,18 @@ class SettingsPage extends StatelessWidget {
         ),
       ],
       child: _SettingsView(
-        onOpenFrontierConnection: onOpenFrontierConnection,
+        onConfigureAuthentication: onConfigureAuthentication,
+        onOpenDiagnostics: onOpenDiagnostics,
       ),
     );
   }
 }
 
 class _SettingsView extends StatelessWidget {
-  const _SettingsView({this.onOpenFrontierConnection});
+  const _SettingsView({this.onConfigureAuthentication, this.onOpenDiagnostics});
 
-  final VoidCallback? onOpenFrontierConnection;
+  final VoidCallback? onConfigureAuthentication;
+  final VoidCallback? onOpenDiagnostics;
 
   @override
   Widget build(BuildContext context) {
@@ -69,19 +76,8 @@ class _SettingsView extends StatelessWidget {
                     children: <Widget>[
                       const EdSectionHeader(title: 'Compte Frontier', number: 1),
                       const SizedBox(height: EdSpacing.md),
-                      BlocBuilder<AuthBloc, AuthState>(
-                        builder: (BuildContext context, AuthState authState) {
-                          if (authState is! AuthReady) {
-                            return const EdLoadingView();
-                          }
-                          return AuthStatusBanner(
-                            status: authState.status,
-                            onConnect: onOpenFrontierConnection,
-                            onDisconnect: () => context
-                                .read<AuthBloc>()
-                                .add(const AuthSignOutRequested()),
-                          );
-                        },
+                      FrontierAccountSection(
+                        onConfigure: onConfigureAuthentication,
                       ),
                       const SizedBox(height: EdSpacing.xxl),
                       const EdSectionHeader(
@@ -196,7 +192,31 @@ class _SettingsView extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: EdSpacing.xxl),
-                      const EdSectionHeader(title: 'À propos', number: 5),
+                      const EdSectionHeader(title: 'Diagnostic', number: 5),
+                      const SizedBox(height: EdSpacing.md),
+                      EdPanel(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
+                            const Text(
+                              'Affiche ce que la Companion API renvoie '
+                              'vraiment : les clés présentes dans le profil, '
+                              'les types d\'événements du journal, et ce que '
+                              'l\'application en lit aujourd\'hui. Utile pour '
+                              'décider ce qu\'un écran peut afficher.',
+                              style: EdTypography.bodySmall,
+                            ),
+                            const SizedBox(height: EdSpacing.md),
+                            OutlinedButton.icon(
+                              onPressed: onOpenDiagnostics,
+                              icon: const Icon(Icons.biotech_outlined, size: 16),
+                              label: const Text('Inspecter la synchronisation'),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: EdSpacing.xxl),
+                      const EdSectionHeader(title: 'À propos', number: 6),
                       const SizedBox(height: EdSpacing.md),
                       const _AboutPanel(),
                       const SizedBox(height: EdSpacing.xxxl),

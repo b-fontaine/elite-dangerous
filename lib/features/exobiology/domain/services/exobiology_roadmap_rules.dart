@@ -403,8 +403,13 @@ abstract class _SuitEngineerRule extends RoadmapRule {
     if (!snapshot.canSampleOrganics) {
       return null;
     }
-    final Engineer engineer =
+    final Engineer? engineer =
         ExobiologyReferenceData.engineerById(engineerId);
+    if (engineer == null) {
+      // A rule pointing at an engineer with no card is a data mistake, not a
+      // situation to render: better no step than a step called "Débloquer ".
+      return null;
+    }
     final bool unlocked =
         snapshot.unlockedSuitEngineerIds.contains(engineerId);
     return RoadmapStep(
@@ -521,9 +526,9 @@ abstract class _SuitModificationRule extends RoadmapRule {
     final bool hasEngineer = modification.engineerIds
         .any(snapshot.unlockedSuitEngineerIds.contains);
     if (!hasEngineer) {
-      final String names = modification.engineerIds
-          .map((String id) => ExobiologyReferenceData.engineerById(id).name)
-          .join(' ou ');
+      final String names =
+          ExobiologyReferenceData.engineerNames(modification.engineerIds)
+              .join(' ou ');
       reasons.add('Aucun ingénieur débloqué pour ce mod ($names)');
     }
     if (snapshot.creditBalance < modification.creditCost) {
@@ -545,9 +550,9 @@ abstract class _SuitModificationRule extends RoadmapRule {
     required RoadmapStatus status,
     required List<String> blockedReasons,
   }) {
-    final String engineers = modification.engineerIds
-        .map((String id) => ExobiologyReferenceData.engineerById(id).name)
-        .join(', ');
+    final String engineers =
+        ExobiologyReferenceData.engineerNames(modification.engineerIds)
+            .join(', ');
     return RoadmapStep(
       id: id,
       title: 'Installer ${modification.name}',
@@ -815,8 +820,13 @@ class UnlockFelicityFarseerRule extends RoadmapRule {
           'Acheter 1 Meta-Alloy — INARA → « Meta-Alloys » → Find Trade Offer '
               '(région de Maia historiquement, souvent des Fleet Carriers)',
         'Se rendre à Deciat, base Farseer Inc (Deciat 6 A)',
-        'Lui vendre toutes tes données d\'exploration jusqu\'au Grade 5 '
-            '(~24 M Cr de données au total)',
+        // Aucune source consultée ne chiffre la montée en réputation : ni les
+        // points par craft, ni par crédit de données vendues, ni les seuils
+        // des grades 1 à 5. L'ancien « ~24 M Cr au total » n'était rattaché à
+        // rien, et un montant inventé décide d'un trajet de 20 000 al.
+        'Lui vendre toutes tes données d\'exploration jusqu\'au Grade 5 — '
+            'à sa station, pas ailleurs. Fabriquer des modules chez elle fait '
+            'monter la réputation aussi, et sans consommer de Wake Scans',
         'Ne pas vendre ailleurs tant que le Grade 5 n\'est pas atteint',
       ],
       references: const <RoadmapReference>[_exobioGuide, _protocolGuide],

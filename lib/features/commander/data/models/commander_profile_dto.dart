@@ -1,6 +1,13 @@
 import '../../domain/entities/commander.dart';
 import '../../domain/entities/rank.dart';
+import '../../domain/entities/ship.dart';
+import '../../domain/entities/station_services.dart';
 import '../../domain/entities/suit_info.dart';
+import '../../domain/entities/suit_loadout.dart';
+import 'json_readers.dart';
+import 'ship_dto.dart';
+import 'station_services_dto.dart';
+import 'suit_loadout_dto.dart';
 
 /// Wire format of `GET /profile`.
 ///
@@ -24,6 +31,9 @@ class CommanderProfileDto {
     this.currentStation,
     this.shipName,
     this.shipType,
+    this.fleet = const <Ship>[],
+    this.suitLoadouts = const <SuitLoadout>[],
+    this.station = const StationServices.none(),
   });
 
   factory CommanderProfileDto.fromJson(Map<String, dynamic> json) {
@@ -51,6 +61,19 @@ class CommanderProfileDto {
       currentStation: _string(_map(json['lastStarport'])['name']),
       shipName: _string(ship['shipName']),
       shipType: _string(ship['name']),
+      fleet: ShipDto.fleetFromJson(
+        json['ships'],
+        currentShip: ship,
+        currentShipId: _int(commander['currentShipId']),
+      ),
+      suitLoadouts: SuitLoadoutDto.loadoutsFromJson(
+        json['loadouts'],
+        equipped: json['loadout'],
+      ),
+      station: StationServicesDto.fromJson(
+        json['lastStarport'],
+        lastSystem: json['lastSystem'],
+      ),
     );
   }
 
@@ -69,6 +92,13 @@ class CommanderProfileDto {
   final String? currentStation;
   final String? shipName;
   final String? shipType;
+
+  /// Every ship owned, the flown one detailed and the rest summarised — which
+  /// is all Frontier sends for them.
+  final List<Ship> fleet;
+
+  final List<SuitLoadout> suitLoadouts;
+  final StationServices station;
 
   Commander toEntity({
     required CommanderDataSource source,
@@ -95,6 +125,9 @@ class CommanderProfileDto {
       suits: suits.map((SuitInfoDto dto) => dto.toEntity()).toList(),
       currentSuit: currentSuit?.toEntity(),
       lastSyncedAt: syncedAt,
+      fleet: fleet,
+      suitLoadouts: suitLoadouts,
+      station: station,
     );
   }
 
@@ -103,30 +136,14 @@ class CommanderProfileDto {
   /// Not handling the object form is the single most common way third-party
   /// clients crash on a real account: the map appears as soon as the commander
   /// sells a ship or a suit and leaves a gap in the indices.
-  static List<Map<String, dynamic>> normaliseCollection(Object? value) {
-    if (value is List<dynamic>) {
-      return value.whereType<Map<String, dynamic>>().toList(growable: false);
-    }
-    if (value is Map<String, dynamic>) {
-      return value.values
-          .whereType<Map<String, dynamic>>()
-          .toList(growable: false);
-    }
-    return const <Map<String, dynamic>>[];
-  }
+  static List<Map<String, dynamic>> normaliseCollection(Object? value) =>
+      normaliseJsonCollection(value);
 
-  static Map<String, dynamic> _map(Object? value) =>
-      value is Map<String, dynamic> ? value : const <String, dynamic>{};
+  static Map<String, dynamic> _map(Object? value) => readMap(value);
 
-  static String? _string(Object? value) =>
-      value is String && value.isNotEmpty ? value : null;
+  static String? _string(Object? value) => readString(value);
 
-  static int? _int(Object? value) => switch (value) {
-        final int v => v,
-        final double v => v.round(),
-        final String v => int.tryParse(v),
-        _ => null,
-      };
+  static int? _int(Object? value) => readInt(value);
 }
 
 /// One entry of `suit` / `suits`.

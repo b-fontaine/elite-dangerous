@@ -19,11 +19,17 @@ abstract final class StorageKeys {
 
   static const String journalEvents = 'journal.events';
   static const String journalLastSyncedDay = 'journal.last_synced_day';
+  static const String journalSettledDays = 'journal.settled_days';
   static const String journalLocalFolder = 'journal.local_folder';
 
   static const String exobiologyProgress = 'exobiology.progress';
   static const String exobiologyRoadmapOverrides = 'exobiology.roadmap_overrides';
   static const String exobiologyFinderHistory = 'exobiology.finder_history';
+
+  /// Answers fetched from Spansh, keyed on `id64`. Not the commander's data:
+  /// a public record of the galaxy, kept locally so it is asked for once.
+  static const String systemLookupSystems = 'system_lookup.systems';
+  static const String systemLookupBodies = 'system_lookup.bodies';
 
   static const String guidesReadState = 'guides.read_state';
   static const String settingsThemeDensity = 'settings.theme_density';
@@ -36,10 +42,13 @@ abstract final class StorageKeys {
     commanderLastSync,
     journalEvents,
     journalLastSyncedDay,
+    journalSettledDays,
     journalLocalFolder,
     exobiologyProgress,
     exobiologyRoadmapOverrides,
     exobiologyFinderHistory,
+    systemLookupSystems,
+    systemLookupBodies,
     guidesReadState,
   ];
 }

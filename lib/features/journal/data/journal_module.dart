@@ -2,6 +2,8 @@ import 'package:injectable/injectable.dart';
 
 import '../domain/services/exobiology_activity_aggregator.dart';
 import '../domain/services/journal_event_parser.dart';
+import '../domain/services/journal_session_aggregator.dart';
+import '../domain/services/system_survey_builder.dart';
 
 /// Registers the journal domain services, which carry no framework annotations
 /// so the domain layer stays free of `injectable`.
@@ -13,4 +15,11 @@ abstract class JournalModule {
   @lazySingleton
   ExobiologyActivityAggregator get aggregator =>
       const ExobiologyActivityAggregator();
+
+  @lazySingleton
+  JournalSessionAggregator get sessionAggregator =>
+      const JournalSessionAggregator();
+
+  @lazySingleton
+  SystemSurveyBuilder get systemSurveyBuilder => const SystemSurveyBuilder();
 }

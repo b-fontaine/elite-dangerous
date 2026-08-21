@@ -12,15 +12,21 @@ tenant compte de ce que le commandant possède déjà.
 
 | | |
 |---|---|
+| **Poste de pilotage** | Qui est le commandant, **les trois prochaines étapes**, six chiffres clés, et cinq portes vers le détail : carrière, flotte, équipement à pied, ingénieurs, matériaux. Court par construction — il tient sur un écran de téléphone, le détail est à un geste. |
+| **Terrain — le jeu en direct** | Pendant une partie, l'app relit toutes les dix secondes ce que le jeu écrit sur le disque : où est le commandant (jusqu'à sa latitude), ce qui reste à scanner et à échantillonner **dans le système en cours**, et ce que vaut ce qu'il transporte sans l'avoir vendu. Bureau uniquement — c'est là que tourne le jeu. |
+| **Relevé de la communauté** | Sur demande explicite, l'app interroge Spansh sur le système en cours : les corps que ce commandant n'a jamais scannés, et surtout les **espèces exactes** avec leur valeur et leurs coordonnées de surface — ce qu'aucun scan ne révèle avant d'être posé dessus. Une requête, mise en cache, jamais automatique. |
 | **Feuille de route priorisée** | 23 règles encodées depuis les guides fournis, évaluées sur l'état réel du commandant — profil Frontier, journaux importés et saisie manuelle confondus. Chaque étape dit *quoi faire*, *pourquoi maintenant*, *ce que ça rapporte* et *ce qui la bloque*. |
 | **Identification d'espèces** | Saisis ce que le FSS affiche : l'app déduit les espèces possibles, leur valeur, leur Colony Range, et montre **quel critère reste invérifié**. |
 | **Catalogue** | Les 118 organiques connus, leurs valeurs Vista Genomics, leurs conditions et leurs variantes de couleur. Hors ligne. |
-| **Journal de bord** | Synchronisation depuis la Companion API de Frontier **ou** import des fichiers `Journal.*.log` du jeu — cette seconde voie ne demande aucun compte. |
+| **Matériaux et blueprints** | Les 108 matériaux d'ingénierie et les composants de combinaison, avec **où et comment on obtient chacun**. Pour un blueprint ou une montée en grade : ce qu'il reste à trouver, ce que le trader peut convertir depuis le surplus, et ce qui bloque quand quelque chose bloque. Hors ligne, aucun appel réseau. |
+| **Journal de bord** | Synchronisation depuis la Companion API de Frontier **ou** import des fichiers `Journal.*.log` du jeu — cette seconde voie ne demande aucun compte. La synchronisation remonte du plus récent au plus ancien, jusqu'à 90 jours. |
 | **Guides** | Les cinq guides sources convertis en contenu structuré et navigable (260 Ko), rendus avec le même design system que le reste. |
-| **Profil** | Profil Frontier + saisie manuelle de tout ce que l'API n'expose pas : grade de combinaison, ingénieurs débloqués, matériaux, Meta-Alloy. |
+| **Profil** | Profil Frontier lu en entier — flotte, équipement du vaisseau piloté et son ingénierie, combinaisons, armes, rangs, services de la station — complété par le journal, qui fournit seul le rebuy exact, la portée de saut, les ingénieurs débloqués, les matériaux à pied et l'allégeance Powerplay. La saisie manuelle ne sert plus qu'à corriger. |
 
-Aucune partie serveur. Tout est embarqué ou stocké sur l'appareil ; le seul
-appel réseau possible est vers la Companion API de Frontier, à la demande.
+Aucune partie serveur. Tout est embarqué ou stocké sur l'appareil, et les deux
+seuls appels réseau possibles partent à la demande : la Companion API de
+Frontier pour le profil du commandant, et Spansh pour le système où il se
+trouve. L'application est complète sans ni l'un ni l'autre.
 
 ---
 
@@ -98,7 +104,7 @@ Vérification complète :
 
 ```bash
 task check              # dart analyze --fatal-infos puis flutter test
-flutter test            # 307 tests
+flutter test            # 479 tests
 flutter build web       # compile la chaîne complète, y compris le code généré
 ```
 
@@ -123,16 +129,25 @@ task run:linux                       # le drapeau est ajouté automatiquement
 flutter run --dart-define-from-file=.env      # sans task
 ```
 
-Une compilation faite **sans `.env` reste utilisable** : le champ CLIENT ID de
-*Réglages → Compte Frontier* accepte alors n'importe quel client_id, et c'est
-la voie normale pour qui compile depuis les sources avec sa propre inscription
-Frontier. Une valeur saisie là est toujours prioritaire sur celle du build ;
-vider le champ revient au défaut compilé.
+Dans l'application, *Réglages → Compte Frontier* fait les deux choses
+séparément : « Connecter » lance directement l'autorisation dans le navigateur
+avec le client déjà configuré, et « Configurer l'authentification » ouvre
+l'écran qui sert à en changer.
 
-La « Shared Key » n'est jamais nécessaire : l'échange utilise PKCE. Un
-`client_id` compilé reste **extractible du binaire** — ce n'est pas un secret au
-sens OAuth, mais quelqu'un peut le récupérer et publier un outil s'annonçant
-sous ce nom auprès de Frontier. C'est le modèle qu'EDMC applique déjà.
+Une compilation faite **sans `.env` reste utilisable** : le champ CLIENT ID de
+cet écran accepte alors n'importe quel client_id, et c'est la voie normale pour
+qui compile depuis les sources avec sa propre inscription Frontier. Une valeur
+saisie là est toujours prioritaire sur celle du build ; vider le champ revient
+au défaut compilé.
+
+Ce champ est **masqué**, et la valeur compilée n'y est jamais pré-remplie : elle
+n'est pas passée à l'interface du tout, laisser le champ vide suffit à la
+conserver. Un `client_id` compilé reste **extractible du binaire** — ce n'est pas
+un secret au sens OAuth, et c'est le modèle qu'EDMC applique déjà — mais
+quelqu'un peut le récupérer et publier un outil s'annonçant sous ce nom auprès
+de Frontier, alors autant ne pas l'offrir à une capture d'écran.
+
+La « Shared Key », elle, n'est jamais nécessaire : l'échange utilise PKCE.
 
 Contraintes héritées de Frontier, visibles dans l'interface :
 
@@ -152,6 +167,200 @@ figure.
 
 Sans compte, l'application reste complète : import de journaux locaux et saisie
 manuelle.
+
+### Où vit le journal
+
+Dans un fichier, `journal.jsonl`, sous le répertoire de données de
+l'application — pas dans les préférences, où il tenait jusqu'ici.
+
+Un journal n'est pas un réglage : c'est un corpus de dizaines de milliers de
+lignes JSON qui ne fait que croître. Rangé derrière `KeyValueStore`, il formait
+un unique tableau JSON, réencodé et réécrit en entier à chaque synchronisation,
+et résident en mémoire pour toute la vie du processus — **26,9 Mio** au plafond
+de 60 000 lignes, mesuré. Porter la fenêtre de synchronisation à quatre-vingt-dix
+jours rendait ce plafond atteignable.
+
+Un `LineStore` écrit des lignes. Une synchronisation n'ajoute plus que les
+lignes réellement neuves, en fin de fichier : son coût suit la taille de
+l'import, plus celle de l'historique. La réécriture complète ne subsiste que
+pour franchir le plafond, seul cas où les lignes les plus anciennes doivent
+partir, et elle passe par un fichier temporaire renommé — un processus tué en
+cours d'écriture ne doit pas laisser un journal tronqué, puisqu'il n'en existe
+pas d'autre copie.
+
+Un journal écrit par une version antérieure est déplacé au premier accès, puis
+la clé de préférences est supprimée. Le web, qui n'a pas de système de fichiers
+et ne peut de toute façon pas se connecter à Frontier, garde l'ancien
+comportement.
+
+### Suivre une partie en cours
+
+Le jeu écrit deux choses sur le disque : un journal, auquel il ajoute des
+lignes une fois les événements passés, et une poignée de fichiers d'état qu'il
+**réécrit sur place** pendant que la situation évolue. `Status.json` est le
+seul endroit d'où l'on peut lire la latitude d'un commandant à pied.
+
+Le suivi relit les deux toutes les dix secondes, `Timer.periodic`, sans
+surveillance du système de fichiers. Ce choix est délibéré : le jeu garde le
+journal ouvert et le vide par à-coups, si bien que sous Windows la
+notification de dossier arrive avant que la taille ait changé, et que sous
+Proton les événements inotify traversent une couche de traduction qui les
+agrège. Tous les outils tiers qui ont tenté un observateur ont fini par
+interroger périodiquement en dessous.
+
+Trois pièges y sont traités, et chacun a son test :
+
+- **Une ligne incomplète n'est jamais consommée.** La lecture s'arrête au
+  dernier saut de ligne et laisse le reste pour le passage suivant. C'est
+  aussi ce qui interdit de couper un caractère UTF-8 en deux, puisque `0x0A`
+  ne peut pas apparaître dans un octet de continuation.
+- **Le changement de fichier vide l'ancien d'abord.** Entre deux passages, une
+  session peut se terminer et une autre commencer ; la fin du fichier quitté
+  est là où se trouvent la vente à Vista Genomics et l'arrêt du jeu.
+- **Une lecture qui tombe pendant une réécriture ne casse rien.** Un
+  `Status.json` vide, tronqué ou verrouillé rend `null`, et l'affichage garde
+  la dernière valeur lue plutôt que de clignoter.
+
+`ShipLocker.json`, `Backpack.json` et `Cargo.json` sont, mot pour mot, des
+événements de journal enregistrés dans un fichier — le journal écrit la version
+*vide* de ces événements dès que la charge utile devient trop grosse. Ils sont
+donc relus et versés dans le même pipeline d'import que tout le reste : une
+seule source de vérité, et l'inventaire à pied cesse de dater du démarrage de
+la session.
+
+Rien ne dit de façon fiable si le jeu tourne. Le jeu ne réécrit `Status.json`
+que quand quelque chose change, donc vingt minutes de silence à une station
+sont normales. L'écran affiche l'**âge** de la dernière écriture plutôt qu'un
+voyant « connecté » qui mentirait.
+
+### Demander à Spansh ce que les autres ont trouvé
+
+Le journal ne sait que ce que son propriétaire a pointé au FSS. Spansh sait ce
+que **tous** les commandants passés par là ont rapporté, indexé sur le même
+`id64` que le jeu écrit dans `Location` et `FSDJump`. Deux requêtes documentées
+suffisent : `/api/dump/{id64}` rend le système et ses corps, `/api/body/{id64}`
+rend les `landmarks` d'un corps — c'est-à-dire l'espèce, sa variante de
+couleur, sa valeur et sa **latitude/longitude**.
+
+C'est la seule source publique qui nomme l'espèce. Les dumps galactiques ne la
+portent pas : sur 272 Mo de `galaxy_1day.json`, « Stratum Tectonicas » apparaît
+zéro fois. Le dump s'arrête au genre.
+
+Quatre règles encadrent ces requêtes, et elles ne sont pas décoratives — Spansh
+ne publie **ni conditions d'utilisation, ni limite de débit** :
+
+- **Rien ne part sans un appui.** Arriver dans un système n'envoie rien ; le
+  cache local est relu, et c'est tout. Traverser vingt systèmes vers une
+  nébuleuse coûte zéro requête.
+- **Un client HTTP séparé.** Le throttle d'une requête par minute est une règle
+  Frontier, pas une règle Spansh. Celui-ci espace les appels d'une seconde par
+  courtoisie, avec un `User-Agent` qui identifie l'application.
+- **Le cache est la contrepartie.** Un système est gardé deux semaines : ses
+  corps ne changent pas. Les espèces d'un corps, elles, ne périment pas au
+  temps mais sur `signals_updated_at` — la date que le dump rapporte pour les
+  signaux, indépendante de celle du corps (neuf jours d'écart mesurés).
+- **L'échec est un état affiché.** Spansh injoignable ne vide pas l'écran : le
+  panneau le dit, garde ce qu'il montrait, et le reste de la page — qui ne
+  dépend que des fichiers du jeu — continue.
+
+Le panneau croise les deux sources : un corps signalé par la communauté et
+absent du journal est marqué comme tel, et un corps déjà travaillé rappelle
+combien d'organismes y ont été analysés. La distance à respecter entre deux
+échantillons vient, elle, du catalogue embarqué.
+
+Deux surprises valent d'être notées pour qui relit ce code. Les deux endpoints
+ne se ressemblent pas : le premier répond sous une racine `system` en
+`camelCase`, le second sous une racine `record` en `snake_case`. Et les
+`landmarks` mélangent la vie et le reste — geysers, épaves, sites Thargoïdes,
+Molluscs et Lagrange Clouds. Le tri se fait sur une **liste blanche** des 22
+genres échantillonnables, pas sur une liste noire :
+`/api/bodies/field_values/landmarks` en renvoie 65 types, et un Mollusc a
+toutes les apparences d'un organisme sans pouvoir être récolté.
+
+**La cible web en est exclue** : Spansh ne renvoie aucun en-tête CORS, donc le
+navigateur refuse la requête avant qu'elle parte. Le panneau y disparaît au
+lieu de promettre une réponse qui ne viendra jamais. Sur téléphone, en
+revanche, il fonctionne — le journal y vient de la Companion API, et l'`id64`
+suffit.
+
+### Remonter le journal aussi loin que possible
+
+Frontier n'expose pas de plage : `/journal/{année}/{mois}/{jour}` rend une
+journée, et rien ne documente combien de temps il les garde. La synchronisation
+compose avec ça.
+
+Elle remonte **du plus récent au plus ancien**, et c'est ce qui la rend
+utilisable : `Statistics`, `EngineerProgress`, `ShipLocker`, `Loadout` et
+`Reputation` sont réécrits à chaque démarrage de session, donc la dernière
+journée jouée porte déjà l'état courant du commandant. Une requête suffit
+souvent, là où un parcours chronologique aurait traversé toute la période avant
+d'y arriver.
+
+Elle s'arrête d'elle-même. Frontier répond `204` aussi bien pour une journée
+sans partie que pour une journée qu'il ne conserve plus, sans permettre de les
+distinguer — après trois semaines de silence d'affilée, les deux appellent la
+même réponse : arrêter. Un `206` (« je n'ai pas tout rassemblé ») est resollicité
+plus tard, comme Frontier le demande. Un `401` ou un `429` interrompt le
+parcours au lieu de le répéter quatre-vingt-dix fois.
+
+Enfin, une journée **passée** qui a répondu `200` ou `204` ne peut plus changer :
+elle est mémorisée et jamais redemandée. Le jour courant, lui, ne l'est jamais —
+la session peut encore tourner. Une deuxième synchronisation large ne coûte donc
+que les journées neuves.
+
+Le compte rendu dit jusqu'où le parcours est allé et pourquoi il s'est arrêté,
+ce qui est la seule façon de savoir si relancer trouverait autre chose.
+
+> **Le budget de requêtes est par famille d'endpoint, pas par URL.** `/journal`
+> prend la date dans son chemin : compter par chemin complet donnerait à chaque
+> journée son propre quota, et une synchronisation de quatre-vingt-dix jours
+> partirait en une seule rafale — précisément ce que Frontier limite.
+> `CapiThrottleInterceptor` regroupe donc les journées sous `/journal`, avec un
+> espacement propre à cette famille : une minute par journée serait inexploitable,
+> une rafale serait refusée.
+
+### Inspecter ce que renvoie la synchronisation
+
+*Réglages → Diagnostic → Inspecter la synchronisation* montre les charges utiles
+brutes, avant que l'application n'en tire quoi que ce soit — et les compte.
+
+C'est nécessaire parce que la documentation ne suffit pas. La référence CAPI de
+la communauté affirme que `ships` porte « le même format que `ship` », modules
+compris, alors que tous les outils qui importent un build n'importent jamais que
+le vaisseau piloté ; et `suit`, `suits`, `loadout`, `loadouts` n'apparaissent
+dans aucun document de Frontier — ils n'existent que dans le code d'EDMC.
+L'écran tranche sur un vrai compte : combien de vaisseaux stockés portent un
+bloc `modules`, combien d'armes portent leur grade `class`.
+
+Côté journal, il dénombre chaque type d'événement rencontré et dit lequel
+l'application lit déjà — treize sur la quarantaine qu'une session écrit. Les
+événements dont dépend la suite (`Statistics`, `EngineerProgress`, `ShipLocker`,
+`Loadout`, `Reputation`, `Powerplay`…) sont listés même absents : une absence est
+un résultat, elle dit jusqu'où la synchronisation doit remonter.
+
+Lire ce qui est déjà sur l'appareil ne coûte rien ; « Récupérer » dépense une
+requête. « Copier » et « Exporter » emportent la capture entière — l'aperçu à
+l'écran est tronqué, un `/profile` pèse des centaines de kilo-octets et une
+journée de journal plusieurs méga-octets.
+
+#### Ce qu'une vraie capture a tranché
+
+`test/fixtures/capi_profile_capture.dart` est un `/profile` réel, anonymisé,
+d'un compte Odyssey à huit vaisseaux. Les tests qui le lisent verrouillent six
+constats qu'aucune documentation ne donne :
+
+| Constat | Conséquence |
+|---|---|
+| **Aucun vaisseau stocké ne porte ses `modules`** — 0 sur 7 ; seul celui piloté les a | Une flotte s'affiche par type, nom, position et valeur ; pas par équipement. La référence communautaire, qui annonce « le même format que `ship` », a tort. |
+| **`loadouts` existe, le grade des armes non** | Les armes à pied sont là, nommées et localisées, mais sans `class` ni `mods` ; Frontier écrit `"modifications": ["NYI"]`, son propre marqueur « pas encore implémenté ». |
+| **`capabilities` contredit la charge utile qui le contient** | `Horizons` et `Odyssey` à `false` sur un compte possédant trois combinaisons Odyssey et deux VRS. À déduire des combinaisons et de `launchBays`, jamais à lire. |
+| **`hull` vaut `0`** sur les coques récentes | Le rebuy dérivé de `hull + modules` est très en dessous du vrai. Le montant exact ne vient que de `Rebuy`, dans l'événement `Loadout` du journal. |
+| **13 échelles de rang**, dont `builder` et `learner` | Frontier en ajoute sans prévenir ; l'écran nomme celles que l'application ne modélise pas. |
+| **Un tiers des `modules` est de la décoration** | Peintures, décalcomanies, plaques, kits et COVAS occupent des emplacements comme n'importe quel module. Une fiche d'équipement qui ne les filtre pas est illisible. |
+
+À l'inverse, `lastStarport.services` s'est révélé plus utile que prévu : il
+indique `vistagenomics`, donc si la station où le commandant est amarré achète
+les données organiques.
 
 ---
 
@@ -208,7 +417,7 @@ trois formats.
 
 Pilotage par les tests, deux niveaux :
 
-- **TDD** — 284 tests unitaires et widget. Le domaine (moteur de roadmap,
+- **TDD** — 728 tests unitaires et widget. Le domaine (moteur de roadmap,
   matcher d'espèces, parser de journal, agrégateur) est couvert en premier
   parce qu'il porte toute la connaissance du jeu.
 - **BDD** — scénarios Gherkin en français dans `test/features_bdd/`, générés
@@ -222,11 +431,135 @@ Scenario: Les données non vendues passent avant tout le reste
   Then la première étape est {'discipline.sell_run'}
 ```
 
-Trois tests protègent des données qui n'ont pas d'autre filet :
-`exobiology_catalog_asset_test.dart` et `guide_assets_test.dart` valident le
-contenu embarqué, `dependency_injection_test.dart` résout tout le graphe DI.
+Quatre tests protègent des données qui n'ont pas d'autre filet :
+`exobiology_catalog_asset_test.dart`, `materials_catalog_test.dart` et
+`guide_assets_test.dart` valident le contenu embarqué,
+`dependency_injection_test.dart` résout tout le graphe DI.
 
 ---
+
+## Le poste de pilotage
+
+Il répond d'abord à « qu'est-ce que je fais maintenant ? », puis laisse
+consulter le dossier complet.
+
+- **Trois étapes**, pas une. La première est mise en avant : c'est elle la
+  réponse. Les deux suivantes sont du contexte — les crier toutes les trois ne
+  dirait rien.
+- **Neuf chiffres clés** : système, corps, station, solde, valeur nette, profit
+  exobiologique de carrière, rang Exobiologist, portée de saut, rebuy. Chacun
+  dit d'où il vient quand ça change son sens — « total de carrière, énoncé par
+  le jeu » n'est pas « estimé depuis ce qui a été importé ».
+- **Six cartes** ouvrant chacune une page de détail.
+
+### Où se trouve le commandant
+
+Le système et la station viennent de `/profile` ; **le corps ne vient que du
+journal**. La Companion API n'a aucune notion de corps céleste, et elle ne se
+rafraîchit qu'à l'amarrage — un commandant en orbite depuis deux heures y est
+toujours à sa dernière station.
+
+Le journal, lui, le dit à l'instant : `FSDJump` nomme le système et l'étoile,
+`ApproachBody` la planète, `Touchdown` et `Disembark` la surface, `Docked` la
+station. Ces événements sont **fusionnés** plutôt que pris en bloc :
+`ApproachBody` ne répète pas toujours le système, `FSDJump` efface le corps.
+Appliquer chacun tel quel viderait la moitié de la position à chaque ligne.
+
+Deux règles méritent d'être dites, parce qu'elles se lisent mal autrement :
+s'amarrer **abandonne le corps** — une station n'est pas une planète, même
+planétaire, et garder le corps se lirait comme « toujours à la surface » ; et
+`LeaveBody` comme `StartJump` l'effacent sans toucher au système.
+
+### La station
+
+`/profile` en donne le nom, la faction, la faction mineure et **vingt-six
+services**. Une liste plate de vingt-six clés ne répond à aucune question, donc
+ils sont groupés par ce qu'on va y faire — exobiologie, à pied, ingénierie et
+échange, vaisseau, autres — avec Vista Genomics en tête, puisque c'est la seule
+qui décide si les données organiques se vendent ici. Les services qu'une future
+mise à jour de Frontier ajouterait apparaissent sous « non classés » plutôt que
+d'être perdus.
+
+L'événement `Docked` du journal complète : type de station, distance à
+l'étoile, économies, gouvernement, allégeance et nombre de plateformes par
+taille — rien de tout cela n'étant dans la Companion API.
+
+### L'équipement d'un vaisseau
+
+Les emplacements sont groupés en quatre catégories — points d'emport, points
+utilitaires, modules internes principaux et optionnels — déduites du nom de
+l'emplacement. La **taille**, elle, se lit dans le symbole du module et non
+dans ce nom : une capture réelle porte `MediumHardpoint5` contenant une arme
+*Small*, et sept emplacements Large/Medium sur un vaisseau qui n'en a que six.
+La numérotation de Frontier est décorrélée du plan réel du vaisseau.
+
+Les emplacements **vides** n'existent pas dans la charge utile : Frontier
+n'envoie que ce qui est monté. Ils sont donc repérés par les trous de
+numérotation — `Slot05` et `Slot08` présents, `Slot06` et `Slot07` absents. Ce
+procédé a deux limites, dites à l'écran plutôt que tues : la taille d'un
+emplacement vide est **bornée** par celle du précédent, jamais connue
+exactement ; et rien ne trahit un emplacement vide situé après le dernier
+emplacement occupé. Le savoir demanderait une table des plans de chaque
+vaisseau, que l'application n'embarque pas.
+
+### Les noms que Frontier ne traduit pas
+
+La Companion API renvoie tantôt une vraie traduction (`Scarabée VRS`), tantôt
+la clé de localisation brute (`lander01_name`). La clé est pire qu'inutile à
+l'écran, mais la rejeter laisse le symbole — et `lander01` ne dit rien du
+**Nomad** garé dans le hangar.
+
+Une petite table comble ces trous, vérifiée plutôt que devinée : Frontier vend
+le Nomad sous la référence `FORC_FDEV_V_LANDER01_BUNDLE_001`, et il se lance
+depuis un hangar à vaisseaux (`Int_FighterBayMk2`) et non depuis une soute à
+véhicules planétaires — ce n'est donc pas un VRS. Les noms de configuration
+(`lander01_loadout_advanced_name` → « Avancé ») suivent la même règle.
+
+Chaque page de détail, quand elle n'a rien à montrer, **dit pourquoi et ce qui
+la remplirait** : la Companion API n'expose pas les ingénieurs, le grade des
+armes n'existe nulle part, un vaisseau stocké n'a pas de fiche d'équipement. Un
+panneau vide se lit comme un bug ; une phrase se lit comme une instruction.
+
+`/commandant` a perdu ses rangs, ses combinaisons et ses finances — les pages de
+détail les portent mieux, et deux écrans qui affichent les mêmes chiffres sont
+deux écrans qui divergent. Il ne répond plus qu'à la question dont il est le
+seul dépositaire : **cette valeur vient-elle de Frontier, du journal, ou de
+moi ?**
+
+## Ce que la synchronisation donne, et ce qu'elle ne donnera pas
+
+Les deux sources se complètent exactement là où l'autre est muette.
+
+| | `/profile` | Journal |
+|---|---|---|
+| Identité, solde, position, rangs | ✅ 13 échelles, dont `builder` et `learner` sans paliers publiés | ✅ avec le **pourcentage** vers le rang suivant (`Progress`) |
+| Flotte | ✅ 8 vaisseaux : type, nom, position, valeur | ✅ `StoredShips`, avec le prix de transfert, sans compte Frontier |
+| Équipement d'un vaisseau | ⚠️ **le vaisseau piloté uniquement** — 41 emplacements, dont l'ingénierie posée avec blueprint, grade et modificateurs | ✅ `Loadout`, le vaisseau piloté |
+| Rebuy | ❌ `hull` vaut `0` sur les coques récentes : le calcul est faux d'un ordre de grandeur | ✅ `Rebuy`, exact |
+| Portée de saut | ❌ | ✅ `MaxJumpRange`, à pleine charge |
+| Combinaisons | ✅ possédées et équipée, grade dans le suffixe `_classN` | ✅ `SuitLoadout` |
+| Armes à pied | ⚠️ présentes et nommées, **sans grade ni modifications** — Frontier renvoie `["NYI"]` | ⚠️ idem |
+| Profit exobiologie de carrière | ❌ | ✅ `Statistics`, le chiffre exact que compte l'échelle |
+| Ingénieurs | ❌ | ✅ `EngineerProgress` : statut et rang, pour tous |
+| Réputations | ❌ | ✅ `Reputation`, −100 à +100 |
+| Matériaux à pied | ❌ | ✅ `ShipLocker`, ramenés au nom anglais du jeu |
+| Matériaux de vaisseau | ❌ | ✅ `Materials`, les 108, ramenés au nom anglais du jeu |
+| Powerplay | ❌ | ✅ `Powerplay` — dont la majoration de 30 % de Pranav Antal |
+| Meta-Alloy en soute | ❌ | ✅ `Cargo` |
+| Services de la station | ✅ dont `vistagenomics` : la station achète-t-elle les données organiques | ❌ |
+| Horizons / Odyssey | ❌ `capabilities` **ment** : `false` sur un compte qui possède trois combinaisons Odyssey et deux VRS | déduit des combinaisons et du hangar planétaire |
+
+Conséquence directe : `ManualCommanderOverrides` ne sert plus qu'à **corriger**.
+Portée de saut, matériaux, ingénieurs débloqués, Meta-Alloy, allégeance
+Powerplay et détecteur de surface sont désormais dérivés. Une valeur saisie
+reste prioritaire — l'application ne voit jamais qu'une partie d'une
+sauvegarde — mais plus rien n'oblige à remplir le formulaire.
+
+Les événements que Frontier réécrit **à chaque démarrage de session**
+(`Statistics`, `EngineerProgress`, `ShipLocker`, `Loadout`, `Reputation`,
+`Materials`, `Powerplay`) sont des instantanés, pas des incréments : replier
+deux mois de journal doit rendre le plus récent, jamais une somme. C'est aussi
+ce qui fait qu'**une seule journée jouée suffit** à connaître l'état courant.
 
 ## Données : ce qui a été corrigé
 
@@ -239,6 +572,23 @@ code d'EDMC, doc `fd-api`) et l'application retient les valeurs vérifiées :
 | **Rangs Exobiologist** | 1,5 M / 5,3 M / 12,8 M / … / 520 M | 22,5 M / 83,5 M / 210,6 M / … / 8,425 Md | Table d'avant l'Update 14.01 (déc. 2022). L'ancienne table place le commandant quatre rangs trop haut. |
 | **Le bonus ×5** | « First Footfall ×5 » | **First Logged** ×5 ; First Footfall ne rapporte **rien** | Le ×5 récompense le premier à *vendre* une espèce depuis un corps. Le First Footfall n'inscrit qu'un nom sur la carte. Les deux sont liés en pratique — un corps jamais foulé donne le First Logged — mais ce n'est pas la même mécanique. |
 | **Concha Biconcavis / Fonticulua Fluctus** | 16 777 215 Cr | 19 010 800 / 20 000 000 Cr | 16 777 215 = 2²⁴−1, artefact de troncature répandu dans les tables communautaires. Un test l'interdit désormais dans le catalogue. |
+
+### Matériaux
+
+| Sujet | Avant | Retenu | Pourquoi |
+|---|---|---|---|
+| **Nom des matériaux** | `Name_Localised` | `Name`, ramené au nom anglais du jeu | Le manuel du journal (§2.4) écrit `_Localised` **dans la langue du client**. Sur un jeu en français l'inventaire arrivait en français et ne rejoignait plus aucune recette. 32 des 108 matériaux ont par ailleurs un symbole qui n'est pas leur nom sans espaces — `disruptedwakeechoes` est *Atypical Disrupted Wake Echoes* — donc la table est explicite, transcrite depuis `EDCD/FDevIDs`. |
+| **Ingénieurs par modification de combinaison** | 2 par mod | 3 pour cinq des six | Rosa Dayette manquait sur trois, Hero Ferrari sur deux. Seul *Night Vision* était juste. |
+| **Coût en crédits d'un grade de combinaison** | « aucun » | affiché avec sa réserve | Le wiki Fandom publie 14 850 000 Cr au total, Inara n'en liste aucun. Une source contre le silence d'une autre : le chiffre est montré avec la mention, la feuille de route continue de traiter un grade comme gratuit tant que personne ne l'a vérifié en jeu. |
+| **Coordonnées de Dav's Hope** | — | `50.5426, 137.4150` | Tous les guides antérieurs citent les coordonnées Legacy (`44.8180, -31.3893`), qui font atterrir au mauvais endroit dans le jeu Live. |
+
+Les quantités des blueprints viennent de `EDCD/coriolis-data`, et comptent les
+**rolls** : à réputation 5, un blueprint de grade N se pose en N rolls, donc un
+FSD *Increased Range* complet coûte 41 unités et non 15. Les taux du material
+trader sont calculés par deux règles plutôt que recopiés, et un test les
+confronte à la table publiée ligne par ligne — y compris les conversions qui
+n'existent que sur le papier, celles qui exigeraient plus d'unités que le
+plafond de stockage n'en autorise.
 
 Le catalogue embarqué contient **118 espèces** (117 + `Radicoida Unica`, ajoutée
 en novembre 2025), leurs valeurs, conditions et variantes, ainsi que les
@@ -271,8 +621,8 @@ ainsi qu'une feuille de route « minage » ou « commerce » se grefferait.
 
 ## État
 
-Fonctionnel de bout en bout : `dart analyze` propre sur `lib/` et `test/`,
-284 tests verts, `flutter build web` réussi.
+Fonctionnel de bout en bout : `dart analyze --fatal-infos` propre sur `lib/` et
+`test/`, 728 tests verts, `flutter build web` et `flutter build linux` réussis.
 
 La boucle est fermée : importer un journal met immédiatement à jour le profit
 de carrière, le rang Exobiologist, les données à risque en soute et donc l'ordre
@@ -284,7 +634,15 @@ Non implémenté à ce stade :
 
 - sélecteur de dossier natif pour l'import (le chemin se saisit, les
   emplacements par défaut de chaque plateforme sont proposés) ;
-- surveillance en temps réel du dossier de journaux pendant une partie ;
+- suivi en direct hors bureau : lire les fichiers du jeu suppose d'être sur la
+  machine qui le fait tourner, donc l'onglet Terrain y montre le dernier
+  journal importé et le dit ;
 - connexion Frontier sur la cible web (schéma d'URL impossible dans un
   navigateur, en-têtes CORS des hôtes Frontier non documentés) — l'import de
-  journaux et la saisie manuelle y fonctionnent.
+  journaux et la saisie manuelle y fonctionnent ;
+- relevé Spansh sur la cible web : l'hôte ne renvoie aucun en-tête CORS, le
+  navigateur refuse la requête avant qu'elle parte. Le panneau s'y masque ;
+- itinéraires calculés : le routage d'exploration pure serait faisable
+  localement, celui d'exobiologie non — il demande les *corps*, que personne ne
+  publie autrement qu'au prix des 115,8 Go du dump galactique ou d'une requête
+  par système.
