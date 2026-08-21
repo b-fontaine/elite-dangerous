@@ -149,6 +149,18 @@ import '../../features/settings/domain/repositories/settings_repository.dart'
 import '../../features/settings/domain/usecases/settings_usecases.dart'
     as _i279;
 import '../../features/settings/presentation/bloc/settings_bloc.dart' as _i586;
+import '../../features/system_lookup/data/datasources/spansh_api.dart'
+    as _i1024;
+import '../../features/system_lookup/data/datasources/system_lookup_cache.dart'
+    as _i256;
+import '../../features/system_lookup/data/repositories/system_lookup_repository_impl.dart'
+    as _i168;
+import '../../features/system_lookup/domain/repositories/system_lookup_repository.dart'
+    as _i925;
+import '../../features/system_lookup/domain/usecases/system_lookup_usecases.dart'
+    as _i490;
+import '../../features/system_lookup/presentation/bloc/system_chart_bloc.dart'
+    as _i731;
 import '../config/build_config.dart' as _i237;
 import '../network/access_token_provider.dart' as _i962;
 import '../network/network_module.dart' as _i200;
@@ -259,6 +271,10 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i38.JournalTailDataSource>(
       () => _i38.JournalTailDataSource(gh<_i62.JournalFileDataSource>()),
     );
+    gh.lazySingleton<_i361.Dio>(
+      () => networkModule.spanshDio(gh<_i807.Clock>()),
+      instanceName: 'spansh',
+    );
     gh.factory<_i269.FrontierAuthApi>(
       () => _i269.FrontierAuthApi(gh<_i361.Dio>(instanceName: 'frontierAuth')),
     );
@@ -279,6 +295,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i937.LineStore>(
       () => storageModule.lineStore(gh<_i892.KeyValueStore>()),
     );
+    gh.factory<_i1024.SpanshApi>(
+      () => _i1024.SpanshApi(gh<_i361.Dio>(instanceName: 'spansh')),
+    );
     gh.factory<_i91.GetMaterialPlans>(
       () => _i91.GetMaterialPlans(
         gh<_i1035.MaterialCatalogRepository>(),
@@ -296,6 +315,9 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.lazySingleton<_i585.GuideReadStateLocalDataSource>(
       () => _i585.GuideReadStateLocalDataSource(gh<_i892.KeyValueStore>()),
+    );
+    gh.lazySingleton<_i256.SystemLookupCache>(
+      () => _i256.SystemLookupCache(gh<_i892.KeyValueStore>()),
     );
     gh.lazySingleton<_i787.AuthRepository>(
       () => _i153.AuthRepositoryImpl(
@@ -337,6 +359,13 @@ extension GetItInjectableX on _i174.GetIt {
       ),
       dispose: (i) => i.dispose(),
     );
+    gh.lazySingleton<_i925.SystemLookupRepository>(
+      () => _i168.SystemLookupRepositoryImpl(
+        gh<_i1024.SpanshApi>(),
+        gh<_i256.SystemLookupCache>(),
+        gh<_i807.Clock>(),
+      ),
+    );
     gh.lazySingleton<_i514.GuideRepository>(
       () => _i618.GuideRepositoryImpl(
         gh<_i258.GuideAssetDataSource>(),
@@ -349,6 +378,18 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i787.AuthRepository>(),
         gh<_i807.Clock>(),
       ),
+    );
+    gh.factory<_i490.LookupSystem>(
+      () => _i490.LookupSystem(gh<_i925.SystemLookupRepository>()),
+    );
+    gh.factory<_i490.LookupBodyLandmarks>(
+      () => _i490.LookupBodyLandmarks(gh<_i925.SystemLookupRepository>()),
+    );
+    gh.factory<_i490.ReadCachedSystem>(
+      () => _i490.ReadCachedSystem(gh<_i925.SystemLookupRepository>()),
+    );
+    gh.factory<_i490.CanLookUpSystems>(
+      () => _i490.CanLookUpSystems(gh<_i925.SystemLookupRepository>()),
     );
     gh.factory<_i46.WatchAuthStatus>(
       () => _i46.WatchAuthStatus(gh<_i787.AuthRepository>()),
@@ -431,6 +472,14 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i1013.GetGuide>(),
         gh<_i531.GetGuideReadSections>(),
         gh<_i468.MarkGuideSectionRead>(),
+      ),
+    );
+    gh.factory<_i731.SystemChartBloc>(
+      () => _i731.SystemChartBloc(
+        gh<_i490.LookupSystem>(),
+        gh<_i490.LookupBodyLandmarks>(),
+        gh<_i490.ReadCachedSystem>(),
+        gh<_i490.CanLookUpSystems>(),
       ),
     );
     gh.factory<_i261.CommanderApi>(

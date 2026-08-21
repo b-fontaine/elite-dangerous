@@ -26,6 +26,11 @@ abstract final class StorageKeys {
   static const String exobiologyRoadmapOverrides = 'exobiology.roadmap_overrides';
   static const String exobiologyFinderHistory = 'exobiology.finder_history';
 
+  /// Answers fetched from Spansh, keyed on `id64`. Not the commander's data:
+  /// a public record of the galaxy, kept locally so it is asked for once.
+  static const String systemLookupSystems = 'system_lookup.systems';
+  static const String systemLookupBodies = 'system_lookup.bodies';
+
   static const String guidesReadState = 'guides.read_state';
   static const String settingsThemeDensity = 'settings.theme_density';
   static const String settingsOnboardingDone = 'settings.onboarding_done';
@@ -42,6 +47,8 @@ abstract final class StorageKeys {
     exobiologyProgress,
     exobiologyRoadmapOverrides,
     exobiologyFinderHistory,
+    systemLookupSystems,
+    systemLookupBodies,
     guidesReadState,
   ];
 }

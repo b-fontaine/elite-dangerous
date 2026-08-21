@@ -11,15 +11,20 @@ import '../../../journal/domain/entities/live_game_state.dart';
 import '../../../journal/domain/entities/system_survey.dart';
 import '../bloc/field_report_bloc.dart';
 import '../widgets/credits_format.dart';
+import '../widgets/system_chart_panel.dart';
 
 /// The live view: where the commander is standing, and what is left to do
 /// within walking distance of it.
 ///
 /// Everything here is read from the two things the game writes to disk — the
-/// journal and `Status.json`. Nothing is fetched, and nothing is guessed: a
-/// figure the files do not support is shown as unknown rather than estimated,
-/// because this screen is read while flying and a wrong number costs a
-/// landing.
+/// journal and `Status.json`. Nothing is guessed: a figure the files do not
+/// support is shown as unknown rather than estimated, because this screen is
+/// read while flying and a wrong number costs a landing.
+///
+/// One section is the exception and says so plainly: `SystemChartPanel` asks
+/// Spansh what the rest of the galaxy has recorded here. It sends nothing
+/// until the commander presses its button, and the page is complete without
+/// it.
 class FieldDashboardPage extends StatelessWidget {
   const FieldDashboardPage({super.key});
 
@@ -85,6 +90,14 @@ class _Body extends StatelessWidget {
         if (state.currentBody case final SurveyBody body)
           _Section(child: _RightHere(body: body)),
         if (survey.isKnown) _Section(child: _InThisSystem(survey: survey)),
+        _Section(
+          child: SystemChartPanel(
+            id64: state.systemAddress,
+            systemName: state.systemName,
+            survey: survey,
+            catalog: state.catalog,
+          ),
+        ),
         _Section(child: _UnsoldPanel(state: state)),
         const SliverToBoxAdapter(child: SizedBox(height: EdSpacing.xxxl)),
       ],

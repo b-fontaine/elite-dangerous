@@ -19,7 +19,7 @@ L'étude a été écrite avant tout code. Ce qui en a été tiré depuis :
 | 6 — `materials.json`, `blueprints.json`, `MaterialPlan` | ✅ fait, avec l'écran qui va avec |
 | 7 — veille du journal et onglet Dashboard | ✅ fait — onglet « Terrain », relecture toutes les 10 s, sans observateur de fichiers |
 | 8 — `FSSDiscoveryScan` et compagnie | ✅ fait — plus `FSSAllBodiesFound`, `SAAScanComplete`, et `ScanType`/`WasDiscovered`/`WasMapped` sur `Scan` |
-| 9 — client Spansh en lecture | ⬜ à faire |
+| 9 — client Spansh en lecture | ✅ fait — `/api/dump` et `/api/body`, cache sur `id64`, à la demande seulement |
 | 10 — localisateur de trader et d'achat de Meta-Alloys | ⬜ à faire |
 | 11 — routeur d'exobiologie | ⬜ facultatif |
 
@@ -38,6 +38,32 @@ Trois lectures de `Status.json` que l'étude n'avait pas anticipées se sont
 révélées nécessaires à l'usage : le fichier est tronqué et réécrit plusieurs
 fois par seconde, il vaut `{"Flags":0}` au menu principal, et il n'a pas de
 `Flags2` sur un client Horizons.
+
+Le lot 9 a corrigé l'étude sur quatre points, tous relevés en interrogeant la
+vraie API plutôt qu'en lisant le schéma :
+
+1. **Les deux endpoints sont enveloppés**, ce que le schéma passe sous silence :
+   `/api/dump/{id64}` répond `{"system": {…}}` et `/api/body/{id64}` répond
+   `{"record": {…}}`. Un mappeur écrit d'après le schéma seul lit un objet vide
+   et n'échoue nulle part.
+2. **`/api/bodies/field_values/landmarks` existe et publie l'exhaustif** :
+   347 sous-types, **64 types** et 24 variantes de couleur. C'est la source qui
+   permet de trier la vie du reste par liste blanche — les 22 genres
+   échantillonnables — plutôt que par liste noire. Sans elle, `Mollusc`,
+   `Peduncle Pod` et `Gyre Tree` seraient passés pour des organismes récoltables
+   et auraient reçu un prix.
+3. **Le champ d'invalidation ne s'appelle pas pareil des deux côtés** :
+   `signals.updateTime` dans le dump, `signals_updated_at` dans la fiche de
+   corps. C'est la même date, et c'est bien elle qui périme une liste
+   d'espèces.
+4. **`signals.genuses` est parfois absent plutôt que vide** sur un corps qui
+   porte des signaux non biologiques — Vénus et la Terre en sont deux exemples
+   dans Sol.
+
+Un cinquième point, celui-là à l'avantage de l'étude : les noms d'espèces de
+Spansh (`Bacterium Tela`, `Roseum Brain Tree`, `Crystalline Shards`) sont
+**exactement** ceux du catalogue embarqué. Valeur, portée de colonie et
+conditions s'y accrochent sans traduction.
 
 Trois points de la section [« ce qui reste à vérifier »](#ce-qui-reste-à-vérifier-avant-de-coder)
 restent ouverts et sont signalés comme tels **dans l'application** plutôt que
@@ -1372,12 +1398,12 @@ ligne fausse dans l'application.
 
 | Endpoint | Méthode | Doc ? | CORS | Notes |
 |---|---|---|---|---|
-| `spansh.co.uk/api/dump/{id64}` | GET | ✅ | ❌ | Système complet, corps + `signals.genuses`. `camelCase`. |
-| `spansh.co.uk/api/body/{id64}` | GET | ✅ | ❌ | **`landmarks` : espèce, variante, valeur, lat/lon.** `snake_case`. |
+| `spansh.co.uk/api/dump/{id64}` | GET | ✅ | ❌ | Système complet, corps + `signals.genuses`. `camelCase`, **racine `system`**. 404 = `{"error": "…"}`. |
+| `spansh.co.uk/api/body/{id64}` | GET | ✅ | ❌ | **`landmarks` : espèce, variante, valeur, lat/lon.** `snake_case`, **racine `record`**. L'`id64` est celui **du corps**. |
 | `spansh.co.uk/api/system/{id64}` · `/station/{marketId}` | GET | ✅ | ❌ | |
 | `spansh.co.uk/api/bodies/search` | POST JSON | ❌ | ❌ | Filtres + `reference_system` + tri. `count` plafonné à 10 000. |
 | `spansh.co.uk/api/stations/search` | POST JSON | ❌ | ❌ | **Seule source du type de trader** (`material_trader`). 100-130 Ko/station. |
-| `spansh.co.uk/api/{…}/field_values/{champ}` | GET | ❌ | ❌ | `genuses`, `signals`, `landmarks`, `materials`, `state`, `services`, `material_trader`. |
+| `spansh.co.uk/api/{…}/field_values/{champ}` | GET | ❌ | ❌ | `genuses`, `signals`, `landmarks`, `materials`, `state`, `services`, `material_trader`. `landmarks` rend `{min_max, values:{subtype, type, variant}}` — 347 / 64 / 24 valeurs. |
 | `spansh.co.uk/api/nearest?x=&y=&z=` | GET | ❌ | ❌ | Synchrone. |
 | `spansh.co.uk/api/route` · `/exobiology/route` · `/riches/route` · `/tourist/route` | POST **form** | ❌ | ❌ | 202 + `job`, puis `GET /api/results/{job}`. **Refuse le JSON.** ~145 s mesurés. |
 | `downloads.spansh.co.uk/*.json.gz` | GET | — | `*` | `accept-ranges: bytes` — échantillonnage par plage possible. |

@@ -14,6 +14,7 @@ tenant compte de ce que le commandant possède déjà.
 |---|---|
 | **Poste de pilotage** | Qui est le commandant, **les trois prochaines étapes**, six chiffres clés, et cinq portes vers le détail : carrière, flotte, équipement à pied, ingénieurs, matériaux. Court par construction — il tient sur un écran de téléphone, le détail est à un geste. |
 | **Terrain — le jeu en direct** | Pendant une partie, l'app relit toutes les dix secondes ce que le jeu écrit sur le disque : où est le commandant (jusqu'à sa latitude), ce qui reste à scanner et à échantillonner **dans le système en cours**, et ce que vaut ce qu'il transporte sans l'avoir vendu. Bureau uniquement — c'est là que tourne le jeu. |
+| **Relevé de la communauté** | Sur demande explicite, l'app interroge Spansh sur le système en cours : les corps que ce commandant n'a jamais scannés, et surtout les **espèces exactes** avec leur valeur et leurs coordonnées de surface — ce qu'aucun scan ne révèle avant d'être posé dessus. Une requête, mise en cache, jamais automatique. |
 | **Feuille de route priorisée** | 23 règles encodées depuis les guides fournis, évaluées sur l'état réel du commandant — profil Frontier, journaux importés et saisie manuelle confondus. Chaque étape dit *quoi faire*, *pourquoi maintenant*, *ce que ça rapporte* et *ce qui la bloque*. |
 | **Identification d'espèces** | Saisis ce que le FSS affiche : l'app déduit les espèces possibles, leur valeur, leur Colony Range, et montre **quel critère reste invérifié**. |
 | **Catalogue** | Les 118 organiques connus, leurs valeurs Vista Genomics, leurs conditions et leurs variantes de couleur. Hors ligne. |
@@ -22,8 +23,10 @@ tenant compte de ce que le commandant possède déjà.
 | **Guides** | Les cinq guides sources convertis en contenu structuré et navigable (260 Ko), rendus avec le même design system que le reste. |
 | **Profil** | Profil Frontier lu en entier — flotte, équipement du vaisseau piloté et son ingénierie, combinaisons, armes, rangs, services de la station — complété par le journal, qui fournit seul le rebuy exact, la portée de saut, les ingénieurs débloqués, les matériaux à pied et l'allégeance Powerplay. La saisie manuelle ne sert plus qu'à corriger. |
 
-Aucune partie serveur. Tout est embarqué ou stocké sur l'appareil ; le seul
-appel réseau possible est vers la Companion API de Frontier, à la demande.
+Aucune partie serveur. Tout est embarqué ou stocké sur l'appareil, et les deux
+seuls appels réseau possibles partent à la demande : la Companion API de
+Frontier pour le profil du commandant, et Spansh pour le système où il se
+trouve. L'application est complète sans ni l'un ni l'autre.
 
 ---
 
@@ -230,6 +233,56 @@ que quand quelque chose change, donc vingt minutes de silence à une station
 sont normales. L'écran affiche l'**âge** de la dernière écriture plutôt qu'un
 voyant « connecté » qui mentirait.
 
+### Demander à Spansh ce que les autres ont trouvé
+
+Le journal ne sait que ce que son propriétaire a pointé au FSS. Spansh sait ce
+que **tous** les commandants passés par là ont rapporté, indexé sur le même
+`id64` que le jeu écrit dans `Location` et `FSDJump`. Deux requêtes documentées
+suffisent : `/api/dump/{id64}` rend le système et ses corps, `/api/body/{id64}`
+rend les `landmarks` d'un corps — c'est-à-dire l'espèce, sa variante de
+couleur, sa valeur et sa **latitude/longitude**.
+
+C'est la seule source publique qui nomme l'espèce. Les dumps galactiques ne la
+portent pas : sur 272 Mo de `galaxy_1day.json`, « Stratum Tectonicas » apparaît
+zéro fois. Le dump s'arrête au genre.
+
+Quatre règles encadrent ces requêtes, et elles ne sont pas décoratives — Spansh
+ne publie **ni conditions d'utilisation, ni limite de débit** :
+
+- **Rien ne part sans un appui.** Arriver dans un système n'envoie rien ; le
+  cache local est relu, et c'est tout. Traverser vingt systèmes vers une
+  nébuleuse coûte zéro requête.
+- **Un client HTTP séparé.** Le throttle d'une requête par minute est une règle
+  Frontier, pas une règle Spansh. Celui-ci espace les appels d'une seconde par
+  courtoisie, avec un `User-Agent` qui identifie l'application.
+- **Le cache est la contrepartie.** Un système est gardé deux semaines : ses
+  corps ne changent pas. Les espèces d'un corps, elles, ne périment pas au
+  temps mais sur `signals_updated_at` — la date que le dump rapporte pour les
+  signaux, indépendante de celle du corps (neuf jours d'écart mesurés).
+- **L'échec est un état affiché.** Spansh injoignable ne vide pas l'écran : le
+  panneau le dit, garde ce qu'il montrait, et le reste de la page — qui ne
+  dépend que des fichiers du jeu — continue.
+
+Le panneau croise les deux sources : un corps signalé par la communauté et
+absent du journal est marqué comme tel, et un corps déjà travaillé rappelle
+combien d'organismes y ont été analysés. La distance à respecter entre deux
+échantillons vient, elle, du catalogue embarqué.
+
+Deux surprises valent d'être notées pour qui relit ce code. Les deux endpoints
+ne se ressemblent pas : le premier répond sous une racine `system` en
+`camelCase`, le second sous une racine `record` en `snake_case`. Et les
+`landmarks` mélangent la vie et le reste — geysers, épaves, sites Thargoïdes,
+Molluscs et Lagrange Clouds. Le tri se fait sur une **liste blanche** des 22
+genres échantillonnables, pas sur une liste noire :
+`/api/bodies/field_values/landmarks` en renvoie 65 types, et un Mollusc a
+toutes les apparences d'un organisme sans pouvoir être récolté.
+
+**La cible web en est exclue** : Spansh ne renvoie aucun en-tête CORS, donc le
+navigateur refuse la requête avant qu'elle parte. Le panneau y disparaît au
+lieu de promettre une réponse qui ne viendra jamais. Sur téléphone, en
+revanche, il fonctionne — le journal y vient de la Companion API, et l'`id64`
+suffit.
+
 ### Remonter le journal aussi loin que possible
 
 Frontier n'expose pas de plage : `/journal/{année}/{mois}/{jour}` rend une
@@ -364,7 +417,7 @@ trois formats.
 
 Pilotage par les tests, deux niveaux :
 
-- **TDD** — 666 tests unitaires et widget. Le domaine (moteur de roadmap,
+- **TDD** — 728 tests unitaires et widget. Le domaine (moteur de roadmap,
   matcher d'espèces, parser de journal, agrégateur) est couvert en premier
   parce qu'il porte toute la connaissance du jeu.
 - **BDD** — scénarios Gherkin en français dans `test/features_bdd/`, générés
@@ -569,7 +622,7 @@ ainsi qu'une feuille de route « minage » ou « commerce » se grefferait.
 ## État
 
 Fonctionnel de bout en bout : `dart analyze --fatal-infos` propre sur `lib/` et
-`test/`, 666 tests verts, `flutter build web` réussi.
+`test/`, 728 tests verts, `flutter build web` et `flutter build linux` réussis.
 
 La boucle est fermée : importer un journal met immédiatement à jour le profit
 de carrière, le rang Exobiologist, les données à risque en soute et donc l'ordre
@@ -586,4 +639,10 @@ Non implémenté à ce stade :
   journal importé et le dit ;
 - connexion Frontier sur la cible web (schéma d'URL impossible dans un
   navigateur, en-têtes CORS des hôtes Frontier non documentés) — l'import de
-  journaux et la saisie manuelle y fonctionnent.
+  journaux et la saisie manuelle y fonctionnent ;
+- relevé Spansh sur la cible web : l'hôte ne renvoie aucun en-tête CORS, le
+  navigateur refuse la requête avant qu'elle parte. Le panneau s'y masque ;
+- itinéraires calculés : le routage d'exploration pure serait faisable
+  localement, celui d'exobiologie non — il demande les *corps*, que personne ne
+  publie autrement qu'au prix des 115,8 Go du dump galactique ou d'une requête
+  par système.

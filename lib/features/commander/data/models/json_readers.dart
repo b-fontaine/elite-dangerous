@@ -1,30 +1,10 @@
-/// Lenient readers shared by every `/profile` mapper.
+/// Readers specific to Frontier's `/profile` payload.
 ///
-/// The payload is not a stable schema: collections arrive as an array or as an
-/// object keyed by index depending on whether the indices are contiguous,
-/// numbers arrive as int, double or string, and some localised names are the
-/// raw localisation key. Everything here degrades rather than throws.
+/// The generic ones live in `core/json` and are re-exported here so the
+/// mappers keep a single import.
 library;
 
-Map<String, dynamic> readMap(Object? value) =>
-    value is Map<String, dynamic> ? value : const <String, dynamic>{};
-
-String? readString(Object? value) =>
-    value is String && value.isNotEmpty ? value : null;
-
-int? readInt(Object? value) => switch (value) {
-      final int v => v,
-      final double v => v.round(),
-      final String v => int.tryParse(v),
-      _ => null,
-    };
-
-double? readDouble(Object? value) => switch (value) {
-      final double v => v,
-      final int v => v.toDouble(),
-      final String v => double.tryParse(v),
-      _ => null,
-    };
+export '../../../../core/json/json_readers.dart';
 
 /// Flattens the two shapes Frontier alternates between for `ships`, `suits`
 /// and `loadouts`.

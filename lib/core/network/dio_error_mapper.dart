@@ -8,7 +8,15 @@ import '../error/failure.dart';
 ///
 /// Keeping this in one place means no repository ever has to know what a
 /// `DioException` is.
-Failure mapDioError(Object error, [StackTrace? stackTrace]) {
+///
+/// [service] names the host in the messages the commander reads. It matters:
+/// "Frontier ne répond pas" while the app is in fact waiting on Spansh sends
+/// someone off to check their game login for nothing.
+Failure mapDioError(
+  Object error, [
+  StackTrace? stackTrace,
+  String service = 'Frontier',
+]) {
   if (error is! DioException) {
     if (error is SocketException) {
       return NetworkFailure(cause: error);
@@ -25,7 +33,7 @@ Failure mapDioError(Object error, [StackTrace? stackTrace]) {
     case DioExceptionType.receiveTimeout:
     case DioExceptionType.transformTimeout:
       return NetworkFailure(
-        message: 'Frontier ne répond pas (délai dépassé).',
+        message: '$service ne répond pas (délai dépassé).',
         cause: error,
       );
     case DioExceptionType.connectionError:
@@ -39,11 +47,11 @@ Failure mapDioError(Object error, [StackTrace? stackTrace]) {
         cause: error,
       );
     case DioExceptionType.badResponse:
-      return _mapStatus(error);
+      return _mapStatus(error, service);
   }
 }
 
-Failure _mapStatus(DioException error) {
+Failure _mapStatus(DioException error, String service) {
   final int status = error.response?.statusCode ?? 0;
   if (status == HttpStatus.unauthorized || status == HttpStatus.forbidden) {
     return UnauthorizedFailure(cause: error);
@@ -53,6 +61,8 @@ Failure _mapStatus(DioException error) {
   }
   if (status == HttpStatus.tooManyRequests) {
     return RateLimitFailure(
+      message: 'Trop de requêtes vers $service. '
+          'Réessaie dans quelques minutes.',
       cause: error,
       retryAfter: _retryAfter(error.response?.headers),
     );
@@ -61,7 +71,7 @@ Failure _mapStatus(DioException error) {
     return ServerFailure(cause: error, statusCode: status);
   }
   return ServerFailure(
-    message: 'Réponse inattendue de Frontier (HTTP $status).',
+    message: 'Réponse inattendue de $service (HTTP $status).',
     cause: error,
     statusCode: status,
   );

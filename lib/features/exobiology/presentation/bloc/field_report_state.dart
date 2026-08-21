@@ -61,6 +61,11 @@ class FieldReportState extends Equatable {
   /// The system the survey describes, named for the UI.
   String? get systemName => survey.systemName ?? session.position.starSystem;
 
+  /// The `SystemAddress` of that system — the only key a third party can be
+  /// asked with, since two systems can share a name.
+  int? get systemAddress =>
+      survey.systemAddress ?? session.position.systemAddress;
+
   /// The body the commander is at, as the game reports it.
   ///
   /// `Status.json` is preferred over the journal here, and this is the one
