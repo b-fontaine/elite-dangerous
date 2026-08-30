@@ -241,9 +241,12 @@ class _SpeciesTile extends StatelessWidget {
               ),
               const SizedBox(width: EdSpacing.sm),
               if (genus != null)
-                Text(
-                  '${genus!.name} · ${genus!.colonyRangeMeters} m',
-                  style: EdTypography.caption,
+                Flexible(
+                  child: Text(
+                    '${genus!.name} · ${genus!.colonyRangeMeters} m',
+                    style: EdTypography.caption,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
             ],
           ),

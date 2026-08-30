@@ -49,21 +49,32 @@ class RoadmapStepCard extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              _StatusChip(status: step.status, accent: accent),
-              const SizedBox(width: EdSpacing.xs),
-              EdTag(
-                label: step.category.label,
-                background: EdColors.panelHeader,
-                foreground: EdColors.textMuted,
-                tooltip: step.category.description,
+              // Status and category wrap onto a second line rather than push
+              // the highlight off the card: on a phone the three labels are
+              // wider than the column they sit in.
+              Expanded(
+                child: Wrap(
+                  spacing: EdSpacing.xs,
+                  runSpacing: EdSpacing.xs,
+                  children: <Widget>[
+                    _StatusChip(status: step.status, accent: accent),
+                    EdTag(
+                      label: step.category.label,
+                      background: EdColors.panelHeader,
+                      foreground: EdColors.textMuted,
+                      tooltip: step.category.description,
+                    ),
+                  ],
+                ),
               ),
-              const Spacer(),
-              if (isHighlighted)
+              if (isHighlighted) ...<Widget>[
+                const SizedBox(width: EdSpacing.xs),
                 const EdTag(
                   label: 'Prochaine étape',
                   background: EdColors.tagOrangeFill,
                   foreground: EdColors.orangeBright,
                 ),
+              ],
             ],
           ),
           const SizedBox(height: EdSpacing.sm),
@@ -108,7 +119,11 @@ class RoadmapStepCard extends StatelessWidget {
           const SizedBox(height: EdSpacing.sm),
           _StepDetails(step: step),
           const SizedBox(height: EdSpacing.xs),
-          Row(
+          // `Marquer comme fait` and `Ignorer` sit at opposite ends when the
+          // card is wide enough, and stack when it is not.
+          OverflowBar(
+            alignment: MainAxisAlignment.spaceBetween,
+            overflowAlignment: OverflowBarAlignment.start,
             children: <Widget>[
               TextButton.icon(
                 onPressed: () => onToggleCompleted(!isDone),
@@ -121,7 +136,6 @@ class RoadmapStepCard extends StatelessWidget {
                 ),
                 label: Text(isDone ? 'Fait' : 'Marquer comme fait'),
               ),
-              const Spacer(),
               TextButton(
                 onPressed: () => onToggleDismissed(!isDismissed),
                 child: Text(
@@ -191,7 +205,9 @@ class _ImpactRow extends StatelessWidget {
         children: <Widget>[
           Icon(icon, size: 13, color: EdColors.textFainter),
           const SizedBox(width: 5),
-          Text(label, style: EdTypography.caption),
+          // `impact.label` is a sentence, not a figure: it has to be allowed
+          // to run onto a second line inside its chip.
+          Flexible(child: Text(label, style: EdTypography.caption)),
         ],
       );
 
