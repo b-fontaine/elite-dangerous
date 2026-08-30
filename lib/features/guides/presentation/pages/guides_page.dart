@@ -11,19 +11,23 @@ import '../bloc/guides_bloc.dart';
 class GuidesPage extends StatelessWidget {
   const GuidesPage({this.onOpenGuide, super.key});
 
+  /// Opening a guide is the router's business, not the library's: the page
+  /// stays usable in a test harness that has no router.
   final void Function(String guideId)? onOpenGuide;
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider<GuidesBloc>(
       create: (_) => getIt<GuidesBloc>()..add(const GuidesRequested()),
-      child: const _GuidesView(),
+      child: _GuidesView(onOpenGuide: onOpenGuide),
     );
   }
 }
 
 class _GuidesView extends StatelessWidget {
-  const _GuidesView();
+  const _GuidesView({required this.onOpenGuide});
+
+  final void Function(String guideId)? onOpenGuide;
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +89,7 @@ class _GuidesView extends StatelessWidget {
                       minTileWidth: 320,
                       children: <Widget>[
                         for (final GuideSummary guide in guides)
-                          _GuideCard(guide: guide),
+                          _GuideCard(guide: guide, onOpen: onOpenGuide),
                       ],
                     ),
                   ),
@@ -117,14 +121,15 @@ class _SearchField extends StatelessWidget {
 }
 
 class _GuideCard extends StatelessWidget {
-  const _GuideCard({required this.guide});
+  const _GuideCard({required this.guide, required this.onOpen});
 
   final GuideSummary guide;
+  final void Function(String guideId)? onOpen;
 
   @override
   Widget build(BuildContext context) {
     return EdPanel(
-      onTap: () => Navigator.of(context).pushNamed('/guides/${guide.id}'),
+      onTap: onOpen == null ? null : () => onOpen!(guide.id),
       semanticLabel: guide.title,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -6,7 +6,9 @@ import '_world.dart';
 
 /// Usage: When j'ouvre la bibliothèque de guides
 Future<void> jouvreLaBibliothequeDeGuides(WidgetTester tester) async {
-  await tester.pumpWidget(wrapPage(const GuidesPage()));
+  // The library only draws tappable cards when the router hands it a way
+  // to open a guide, and the search step counts those cards.
+  await tester.pumpWidget(wrapPage(GuidesPage(onOpenGuide: (String _) {})));
   await pumpUntil(
     tester,
     () =>

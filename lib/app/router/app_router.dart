@@ -187,7 +187,10 @@ GoRouter createAppRouter() {
               GoRoute(
                 path: AppRoutes.guides,
                 builder: (BuildContext context, GoRouterState state) =>
-                    const GuidesPage(),
+                    GuidesPage(
+                  onOpenGuide: (String id) =>
+                      context.go(AppRoutes.guideDetail(id)),
+                ),
                 routes: <RouteBase>[
                   GoRoute(
                     path: ':guideId',
