@@ -94,7 +94,8 @@ GoRouter createAppRouter() {
                 builder: (BuildContext context, GoRouterState state) =>
                     DashboardPage(
                   destinations: CockpitDestinations(
-                    onOpenRoadmap: () => context.go(AppRoutes.exobiology),
+                    onOpenRoadmap: () =>
+                        context.go(AppRoutes.exobiologyRoadmap),
                     onOpenProfile: () => context.go(AppRoutes.commander),
                     onOpenCareer: () => context.go(AppRoutes.career),
                     onOpenFleet: () => context.go(AppRoutes.fleet),
@@ -170,6 +171,31 @@ GoRouter createAppRouter() {
                 path: AppRoutes.exobiology,
                 builder: (BuildContext context, GoRouterState state) =>
                     const ExobiologyHomePage(),
+              ),
+              // One address per tab. They are siblings rather than children of
+              // `/exobiologie`: a tab is a different face of the same page, so
+              // opening it replaces the guide instead of stacking a second
+              // copy of it on top.
+              GoRoute(
+                path: AppRoutes.exobiologyRoadmap,
+                builder: (BuildContext context, GoRouterState state) =>
+                    const ExobiologyHomePage(
+                  initialTab: ExobiologyTab.roadmap,
+                ),
+              ),
+              GoRoute(
+                path: AppRoutes.exobiologyFinder,
+                builder: (BuildContext context, GoRouterState state) =>
+                    const ExobiologyHomePage(
+                  initialTab: ExobiologyTab.finder,
+                ),
+              ),
+              GoRoute(
+                path: AppRoutes.exobiologySpecies,
+                builder: (BuildContext context, GoRouterState state) =>
+                    const ExobiologyHomePage(
+                  initialTab: ExobiologyTab.species,
+                ),
               ),
             ],
           ),

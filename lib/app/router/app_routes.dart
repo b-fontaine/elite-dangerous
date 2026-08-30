@@ -15,10 +15,12 @@ abstract final class AppRoutes {
   static String materialBlueprint(String id) => '/materiaux/$id';
   static const String station = '/station';
 
+  /// The exobiology guide opens on its field tab; the three others are
+  /// addressable on their own, so a link can point at the plan or the tables.
   static const String exobiology = '/exobiologie';
-  static const String exobiologyRoadmap = '/exobiologie';
-  static const String exobiologySpecies = '/exobiologie/especes';
+  static const String exobiologyRoadmap = '/exobiologie/plan';
   static const String exobiologyFinder = '/exobiologie/identifier';
+  static const String exobiologySpecies = '/exobiologie/especes';
 
   static const String journal = '/journal';
 

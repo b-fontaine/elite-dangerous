@@ -6,14 +6,25 @@ import 'roadmap_page.dart';
 import 'species_catalog_page.dart';
 import 'species_finder_page.dart';
 
+/// The tabs, named so no caller has to spell out an index.
+abstract final class ExobiologyTab {
+  static const int field = 0;
+  static const int roadmap = 1;
+  static const int finder = 2;
+  static const int species = 3;
+
+  static const int count = 4;
+}
+
 /// The four faces of the exobiology guide: what is happening right now, the
 /// plan, the field tool, and the reference table.
 ///
 /// The dashboard leads because it is the only one that answers a question
 /// asked mid-flight. The other three are read before leaving, or afterwards.
 class ExobiologyHomePage extends StatefulWidget {
-  const ExobiologyHomePage({this.initialTab = 0, super.key});
+  const ExobiologyHomePage({this.initialTab = ExobiologyTab.field, super.key});
 
+  /// Which face the guide opens on — the router picks it from the URL.
   final int initialTab;
 
   @override
@@ -23,9 +34,9 @@ class ExobiologyHomePage extends StatefulWidget {
 class _ExobiologyHomePageState extends State<ExobiologyHomePage>
     with SingleTickerProviderStateMixin {
   late final TabController _controller = TabController(
-    length: 4,
+    length: ExobiologyTab.count,
     vsync: this,
-    initialIndex: widget.initialTab.clamp(0, 3),
+    initialIndex: widget.initialTab.clamp(0, ExobiologyTab.count - 1),
   );
 
   @override
