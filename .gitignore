@@ -36,6 +36,9 @@ migrate_working_dir/
 # Agent operational state (oh-my-claudecode): sessions, logs, plans, memory.
 .omc/
 
+# Playwright MCP scratch: traces and screenshots of browser-driven checks.
+.playwright-mcp/
+
 # Build configuration: holds the Frontier client_id, never committed.
 # `.env.template` is the committed stand-in and is not matched by this pattern.
 .env
