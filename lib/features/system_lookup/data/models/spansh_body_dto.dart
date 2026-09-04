@@ -1,4 +1,5 @@
 import '../../../../core/json/json_readers.dart';
+import '../../../../core/network/spansh_landmarks.dart';
 import '../../domain/entities/body_landmarks.dart';
 import 'spansh_system_dto.dart';
 
@@ -12,46 +13,6 @@ import 'spansh_system_dto.dart';
 /// It answers under a `record` root, in `snake_case`, and mixes organics with
 /// surface stations and geology in the same `landmarks` array.
 abstract final class SpanshBodyDto {
-  /// The genera a commander can put a Genetic Sampler to, keyed by the `type`
-  /// Spansh reports and valued by the name the bundled catalogue uses.
-  ///
-  /// A whitelist, not a blacklist, and the difference is not academic:
-  /// `/api/bodies/field_values/landmarks` returns **64** distinct types, of
-  /// which barely a third are sampleable life. The rest are geysers, gas
-  /// vents, lava spouts, crystal formations, Thargoid and Guardian sites,
-  /// crashed ships and Lagrange clouds — several of them organic-looking
-  /// enough (Molluscs, Peduncle Pods, Gyre Trees) that a blacklist would have
-  /// let them through and quoted the commander a payout for something they
-  /// cannot sample.
-  ///
-  /// Three names need translating and one genus answers to two spellings
-  /// (`Shards` and `Crystalline Shard`); the other twenty match as they are.
-  static const Map<String, String> _sampleableGenera = <String, String>{
-    'Aleoida': 'Aleoida',
-    'Amphora Plant': 'Amphora Plant',
-    'Anemone': 'Anemone',
-    'Bacterium': 'Bacterium',
-    'Bark Mounds': 'Bark Mound',
-    'Brain Tree': 'Brain Tree',
-    'Cactoida': 'Cactoida',
-    'Clypeus': 'Clypeus',
-    'Concha': 'Concha',
-    'Crystalline Shard': 'Crystalline Shard',
-    'Electricae': 'Electricae',
-    'Fonticulua': 'Fonticulua',
-    'Frutexa': 'Frutexa',
-    'Fumerola': 'Fumerola',
-    'Fungoida': 'Fungoida',
-    'Osseus': 'Osseus',
-    'Radicoida': 'Radicoida',
-    'Recepta': 'Recepta',
-    'Shards': 'Crystalline Shard',
-    'Stratum': 'Stratum',
-    'Tubers': 'Sinuous Tuber',
-    'Tubus': 'Tubus',
-    'Tussock': 'Tussock',
-  };
-
   static BodyLandmarks? fromJson(
     Map<String, dynamic> json, {
     required DateTime fetchedAt,
@@ -73,8 +34,7 @@ abstract final class SpanshBodyDto {
           in raw.whereType<Map<String, dynamic>>()) {
         final String? type = readString(entry['type']);
         final String? subtype = readString(entry['subtype']);
-        final String? genus =
-            type == null ? null : _sampleableGenera[type];
+        final String? genus = SpanshLandmarks.genusFor(type);
         if (genus == null || subtype == null) {
           others++;
           continue;
