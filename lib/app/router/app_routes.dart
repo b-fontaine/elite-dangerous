@@ -22,6 +22,14 @@ abstract final class AppRoutes {
   static const String exobiologyFinder = '/exobiologie/identifier';
   static const String exobiologySpecies = '/exobiologie/especes';
 
+  /// Composing a route, and following the one being flown. One path rather
+  /// than two: the commander has one of the two questions at a time, and which
+  /// one depends on whether a route is active.
+  static const String routes = '/routes';
+
+  /// Sharing the route with a second screen, and pairing to one.
+  static const String routeBridge = '/routes/partage';
+
   static const String journal = '/journal';
 
   static const String guides = '/guides';

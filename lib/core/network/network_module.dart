@@ -7,11 +7,12 @@ import 'app_identity.dart';
 import 'auth_interceptor.dart';
 import 'capi_throttle_interceptor.dart';
 import 'courtesy_throttle_interceptor.dart';
+import 'edsm_endpoints.dart';
 import 'frontier_endpoints.dart';
 import 'retry_interceptor.dart';
 import 'spansh_endpoints.dart';
 
-/// The three HTTP clients this app needs.
+/// The four HTTP clients this app needs.
 ///
 /// They are kept separate on purpose. The authorisation server must never see
 /// an `Authorization` header from the interceptor, otherwise a refresh
@@ -53,6 +54,34 @@ abstract class NetworkModule {
       )..interceptors.addAll(<Interceptor>[
           CapiThrottleInterceptor(clock),
           AuthInterceptor(tokenProvider),
+          RetryInterceptor(),
+        ]);
+
+  /// Talks to `www.edsm.net`. Carries the commander's own EDSM key as a query
+  /// parameter, which is what that API expects — there is no header scheme and
+  /// no OAuth.
+  ///
+  /// The throttle is not courtesy here but a published budget: 360 requests an
+  /// hour, which is one every ten seconds. A backfill walks years of history at
+  /// that pace, so the interceptor is what keeps it inside the quota without
+  /// every caller having to remember.
+  @Named('edsm')
+  @lazySingleton
+  Dio edsmDio(Clock clock) => Dio(
+        BaseOptions(
+          baseUrl: EdsmEndpoints.baseUrl,
+          connectTimeout: const Duration(seconds: 15),
+          receiveTimeout: const Duration(seconds: 30),
+          headers: <String, String>{
+            'User-Agent': AppIdentity.userAgent,
+            'Accept': 'application/json',
+          },
+        ),
+      )..interceptors.addAll(<Interceptor>[
+          CourtesyThrottleInterceptor(
+            clock,
+            minimumInterval: const Duration(seconds: 10),
+          ),
           RetryInterceptor(),
         ]);
 

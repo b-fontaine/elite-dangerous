@@ -12,6 +12,8 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../fixtures/path_provider_stub.dart';
+
 /// Shared context between the Gherkin steps of one scenario.
 ///
 /// `bdd_widget_test` hands each step only the `WidgetTester`, so the state a
@@ -31,6 +33,11 @@ BddWorld world = BddWorld();
 /// ones that ship.
 Future<void> bootApplication(WidgetTester tester) async {
   TestWidgetsFlutterBinding.ensureInitialized();
+  // The journal lives in a file under the app-support directory, so a scenario
+  // that imports one needs a real path. Without this the whole graph still
+  // builds and every journal read fails — which now degrades quietly rather
+  // than erroring, and would make a scenario pass while measuring nothing.
+  installPathProviderStub();
   SharedPreferences.setMockInitialValues(<String, Object>{});
   FlutterSecureStorage.setMockInitialValues(<String, String>{});
   world = BddWorld();

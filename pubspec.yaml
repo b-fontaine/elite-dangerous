@@ -39,6 +39,11 @@ dependencies:
   url_launcher: ^6.3.2
   app_links: ^7.2.1
 
+  # --- Archives ---
+  # Le cache d'étoiles visitées de Frontier arrive en ZIP ; écrire un lecteur
+  # ZIP maison serait du code délicat pour rien.
+  archive: ^4.0.7
+
   # --- Misc ---
   collection: ^1.19.1
   intl: ^0.20.3

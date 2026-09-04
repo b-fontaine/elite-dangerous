@@ -100,7 +100,7 @@ import '../../features/guides/domain/usecases/mark_guide_section_read.dart'
     as _i468;
 import '../../features/guides/domain/usecases/search_guides.dart' as _i215;
 import '../../features/guides/presentation/bloc/guide_detail_bloc.dart'
-    as _i709;
+    as _i710;
 import '../../features/guides/presentation/bloc/guides_bloc.dart' as _i137;
 import '../../features/journal/data/datasources/game_state_data_source.dart'
     as _i351;
@@ -143,6 +143,48 @@ import '../../features/materials/domain/usecases/material_usecases.dart'
     as _i91;
 import '../../features/materials/presentation/bloc/materials_bloc.dart'
     as _i1052;
+import '../../features/route_planning/data/datasources/edsm_api.dart' as _i3;
+import '../../features/route_planning/data/datasources/spansh_route_api.dart'
+    as _i296;
+import '../../features/route_planning/data/repositories/active_route_repository_impl.dart'
+    as _i839;
+import '../../features/route_planning/data/repositories/history_backfill_repository_impl.dart'
+    as _i771;
+import '../../features/route_planning/data/repositories/http_route_bridge_client.dart'
+    as _i454;
+import '../../features/route_planning/data/repositories/local_route_bridge_host.dart'
+    as _i940;
+import '../../features/route_planning/data/repositories/route_planner_repository_impl.dart'
+    as _i779;
+import '../../features/route_planning/data/route_planning_module.dart' as _i287;
+import '../../features/route_planning/domain/repositories/active_route_repository.dart'
+    as _i1003;
+import '../../features/route_planning/domain/repositories/history_backfill_repository.dart'
+    as _i642;
+import '../../features/route_planning/domain/repositories/route_bridge.dart'
+    as _i289;
+import '../../features/route_planning/domain/repositories/route_planner_repository.dart'
+    as _i303;
+import '../../features/route_planning/domain/services/done_index_builder.dart'
+    as _i744;
+import '../../features/route_planning/domain/services/route_duration_estimator.dart'
+    as _i438;
+import '../../features/route_planning/domain/services/route_filter.dart'
+    as _i136;
+import '../../features/route_planning/domain/services/route_progress_calculator.dart'
+    as _i470;
+import '../../features/route_planning/domain/services/session_pace_calibrator.dart'
+    as _i709;
+import '../../features/route_planning/domain/usecases/route_planning_usecases.dart'
+    as _i748;
+import '../../features/route_planning/domain/usecases/route_tracking_usecases.dart'
+    as _i668;
+import '../../features/route_planning/presentation/bloc/route_bridge_bloc.dart'
+    as _i286;
+import '../../features/route_planning/presentation/bloc/route_planner_bloc.dart'
+    as _i756;
+import '../../features/route_planning/presentation/bloc/route_tracking_bloc.dart'
+    as _i822;
 import '../../features/settings/data/settings_repository_impl.dart' as _i659;
 import '../../features/settings/domain/repositories/settings_repository.dart'
     as _i674;
@@ -185,6 +227,7 @@ extension GetItInjectableX on _i174.GetIt {
     final exobiologyModule = _$ExobiologyModule();
     final journalModule = _$JournalModule();
     final materialsModule = _$MaterialsModule();
+    final routePlanningModule = _$RoutePlanningModule();
     final networkModule = _$NetworkModule();
     final storageModule = _$StorageModule();
     await gh.factoryAsync<_i460.SharedPreferences>(
@@ -236,6 +279,19 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i1008.MaterialPlanner>(
       () => materialsModule.materialPlanner,
     );
+    gh.lazySingleton<_i470.RouteProgressCalculator>(
+      () => routePlanningModule.progressCalculator,
+    );
+    gh.lazySingleton<_i744.DoneIndexBuilder>(
+      () => routePlanningModule.doneIndexBuilder,
+    );
+    gh.lazySingleton<_i136.RouteFilter>(() => routePlanningModule.routeFilter);
+    gh.lazySingleton<_i709.SessionPaceCalibrator>(
+      () => routePlanningModule.paceCalibrator,
+    );
+    gh.lazySingleton<_i438.RouteDurationEstimator>(
+      () => routePlanningModule.durationEstimator,
+    );
     gh.lazySingleton<_i686.ExobiologyCatalogRepository>(
       () => _i412.ExobiologyCatalogRepositoryImpl(
         gh<_i906.ExobiologyCatalogAssetDataSource>(),
@@ -271,6 +327,13 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i38.JournalTailDataSource>(
       () => _i38.JournalTailDataSource(gh<_i62.JournalFileDataSource>()),
     );
+    gh.lazySingleton<_i289.RouteBridgeClient>(
+      () => _i454.HttpRouteBridgeClient(gh<_i892.KeyValueStore>()),
+    );
+    gh.lazySingleton<_i361.Dio>(
+      () => networkModule.edsmDio(gh<_i807.Clock>()),
+      instanceName: 'edsm',
+    );
     gh.lazySingleton<_i361.Dio>(
       () => networkModule.spanshDio(gh<_i807.Clock>()),
       instanceName: 'spansh',
@@ -295,8 +358,17 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i937.LineStore>(
       () => storageModule.lineStore(gh<_i892.KeyValueStore>()),
     );
+    gh.factory<_i296.SpanshRouteApi>(
+      () => _i296.SpanshRouteApi(gh<_i361.Dio>(instanceName: 'spansh')),
+    );
     gh.factory<_i1024.SpanshApi>(
       () => _i1024.SpanshApi(gh<_i361.Dio>(instanceName: 'spansh')),
+    );
+    gh.lazySingleton<_i303.RoutePlannerRepository>(
+      () => _i779.RoutePlannerRepositoryImpl.wire(
+        gh<_i296.SpanshRouteApi>(),
+        gh<_i807.Clock>(),
+      ),
     );
     gh.factory<_i91.GetMaterialPlans>(
       () => _i91.GetMaterialPlans(
@@ -306,6 +378,12 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i1052.MaterialsBloc>(
       () => _i1052.MaterialsBloc(gh<_i91.GetMaterialPlans>()),
+    );
+    gh.factory<_i3.EdsmApi>(
+      () => _i3.EdsmApi(gh<_i361.Dio>(instanceName: 'edsm')),
+    );
+    gh.lazySingleton<_i1003.ActiveRouteRepository>(
+      () => _i839.ActiveRouteRepositoryImpl(gh<_i892.KeyValueStore>()),
     );
     gh.lazySingleton<_i806.CommanderLocalDataSource>(
       () => _i806.CommanderLocalDataSource(gh<_i892.KeyValueStore>()),
@@ -319,6 +397,18 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i256.SystemLookupCache>(
       () => _i256.SystemLookupCache(gh<_i892.KeyValueStore>()),
     );
+    gh.factory<_i668.StartRoute>(
+      () => _i668.StartRoute(gh<_i1003.ActiveRouteRepository>()),
+    );
+    gh.factory<_i668.ReadActiveRoute>(
+      () => _i668.ReadActiveRoute(gh<_i1003.ActiveRouteRepository>()),
+    );
+    gh.factory<_i668.AbandonRoute>(
+      () => _i668.AbandonRoute(gh<_i1003.ActiveRouteRepository>()),
+    );
+    gh.factory<_i668.ReadArchivedRoutes>(
+      () => _i668.ReadArchivedRoutes(gh<_i1003.ActiveRouteRepository>()),
+    );
     gh.lazySingleton<_i787.AuthRepository>(
       () => _i153.AuthRepositoryImpl(
         gh<_i269.FrontierAuthApi>(),
@@ -329,6 +419,15 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i237.BuildConfig>(),
       ),
       dispose: (i) => i.dispose(),
+    );
+    gh.factory<_i748.PlanRoute>(
+      () => _i748.PlanRoute(gh<_i303.RoutePlannerRepository>()),
+    );
+    gh.factory<_i748.ReadPlannedRoute>(
+      () => _i748.ReadPlannedRoute(gh<_i303.RoutePlannerRepository>()),
+    );
+    gh.factory<_i748.CanPlanRoutes>(
+      () => _i748.CanPlanRoutes(gh<_i303.RoutePlannerRepository>()),
     );
     gh.factory<_i279.WatchSettings>(
       () => _i279.WatchSettings(gh<_i674.SettingsRepository>()),
@@ -467,8 +566,8 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i215.SearchGuides>(
       () => _i215.SearchGuides(gh<_i514.GuideRepository>()),
     );
-    gh.factory<_i709.GuideDetailBloc>(
-      () => _i709.GuideDetailBloc(
+    gh.factory<_i710.GuideDetailBloc>(
+      () => _i710.GuideDetailBloc(
         gh<_i1013.GetGuide>(),
         gh<_i531.GetGuideReadSections>(),
         gh<_i468.MarkGuideSectionRead>(),
@@ -490,6 +589,22 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i80.JournalApi>(
       () => _i80.JournalApi(gh<_i361.Dio>(instanceName: 'frontierApi')),
+    );
+    gh.lazySingleton<_i642.HistoryBackfillRepository>(
+      () => _i771.HistoryBackfillRepositoryImpl(
+        gh<_i261.CommanderApi>(),
+        gh<_i3.EdsmApi>(),
+        gh<_i892.KeyValueStore>(),
+        gh<_i271.SecureStore>(),
+        gh<_i807.Clock>(),
+      ),
+    );
+    gh.factory<_i668.ImportVisitedStars>(
+      () => _i668.ImportVisitedStars(gh<_i642.HistoryBackfillRepository>()),
+    );
+    gh.factory<_i668.BackfillHistoryFromEdsm>(
+      () =>
+          _i668.BackfillHistoryFromEdsm(gh<_i642.HistoryBackfillRepository>()),
     );
     gh.factory<_i692.SpeciesFinderBloc>(
       () => _i692.SpeciesFinderBloc(
@@ -532,6 +647,20 @@ extension GetItInjectableX on _i174.GetIt {
       ),
       dispose: (i) => i.dispose(),
     );
+    gh.factory<_i668.ReachInTime>(
+      () => _i668.ReachInTime(
+        gh<_i636.JournalRepository>(),
+        gh<_i709.SessionPaceCalibrator>(),
+        gh<_i438.RouteDurationEstimator>(),
+      ),
+    );
+    gh.factory<_i668.TrackActiveRoute>(
+      () => _i668.TrackActiveRoute(
+        gh<_i1003.ActiveRouteRepository>(),
+        gh<_i636.JournalRepository>(),
+        gh<_i470.RouteProgressCalculator>(),
+      ),
+    );
     gh.lazySingleton<_i13.DiagnosticsRepository>(
       () => _i901.DiagnosticsRepositoryImpl(
         gh<_i395.DiagnosticsApi>(),
@@ -539,6 +668,25 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i807.Clock>(),
         gh<_i962.AccessTokenProvider>(),
         gh<_i721.PayloadExporter>(),
+      ),
+    );
+    gh.factory<_i668.MeasureSessionPace>(
+      () => _i668.MeasureSessionPace(
+        gh<_i636.JournalRepository>(),
+        gh<_i709.SessionPaceCalibrator>(),
+      ),
+    );
+    gh.lazySingleton<_i289.RouteBridgeHost>(
+      () => _i940.LocalRouteBridgeHost(
+        gh<_i668.TrackActiveRoute>(),
+        gh<_i668.MeasureSessionPace>(),
+        gh<_i807.Clock>(),
+      ),
+    );
+    gh.factory<_i668.BuildDoneIndex>(
+      () => _i668.BuildDoneIndex(
+        gh<_i636.JournalRepository>(),
+        gh<_i744.DoneIndexBuilder>(),
       ),
     );
     gh.factory<_i832.WatchFieldReport>(
@@ -563,6 +711,14 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i694.SaveManualOverrides>(
       () => _i694.SaveManualOverrides(gh<_i851.CommanderRepository>()),
+    );
+    gh.factory<_i822.RouteTrackingBloc>(
+      () => _i822.RouteTrackingBloc(
+        gh<_i668.TrackActiveRoute>(),
+        gh<_i668.MeasureSessionPace>(),
+        gh<_i438.RouteDurationEstimator>(),
+        gh<_i668.AbandonRoute>(),
+      ),
     );
     gh.factory<_i832.WatchJournalEvents>(
       () => _i832.WatchJournalEvents(gh<_i636.JournalRepository>()),
@@ -623,8 +779,23 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i832.WatchJournalSessionState>(),
       ),
     );
+    gh.factory<_i668.FilterPlannedRoute>(
+      () => _i668.FilterPlannedRoute(
+        gh<_i636.JournalRepository>(),
+        gh<_i470.RouteProgressCalculator>(),
+        gh<_i744.DoneIndexBuilder>(),
+        gh<_i136.RouteFilter>(),
+        gh<_i642.HistoryBackfillRepository>(),
+      ),
+    );
     gh.factory<_i1044.ExportCapture>(
       () => _i1044.ExportCapture(gh<_i13.DiagnosticsRepository>()),
+    );
+    gh.factory<_i286.RouteBridgeBloc>(
+      () => _i286.RouteBridgeBloc(
+        gh<_i289.RouteBridgeHost>(),
+        gh<_i289.RouteBridgeClient>(),
+      ),
     );
     gh.factory<_i1044.FetchJournalDayCapture>(
       () => _i1044.FetchJournalDayCapture(
@@ -660,6 +831,16 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i832.GetSuggestedJournalDirectories>(),
         gh<_i888.ExobiologyActivityAggregator>(),
         gh<_i807.Clock>(),
+      ),
+    );
+    gh.factory<_i756.RoutePlannerBloc>(
+      () => _i756.RoutePlannerBloc(
+        gh<_i748.PlanRoute>(),
+        gh<_i668.FilterPlannedRoute>(),
+        gh<_i668.MeasureSessionPace>(),
+        gh<_i438.RouteDurationEstimator>(),
+        gh<_i668.StartRoute>(),
+        gh<_i748.CanPlanRoutes>(),
       ),
     );
     gh.factory<_i832.WatchLiveGameState>(
@@ -708,6 +889,8 @@ class _$ExobiologyModule extends _i152.ExobiologyModule {}
 class _$JournalModule extends _i245.JournalModule {}
 
 class _$MaterialsModule extends _i48.MaterialsModule {}
+
+class _$RoutePlanningModule extends _i287.RoutePlanningModule {}
 
 class _$NetworkModule extends _i200.NetworkModule {}
 
