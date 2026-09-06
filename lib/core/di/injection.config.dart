@@ -712,14 +712,6 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i694.SaveManualOverrides>(
       () => _i694.SaveManualOverrides(gh<_i851.CommanderRepository>()),
     );
-    gh.factory<_i822.RouteTrackingBloc>(
-      () => _i822.RouteTrackingBloc(
-        gh<_i668.TrackActiveRoute>(),
-        gh<_i668.MeasureSessionPace>(),
-        gh<_i438.RouteDurationEstimator>(),
-        gh<_i668.AbandonRoute>(),
-      ),
-    );
     gh.factory<_i832.WatchJournalEvents>(
       () => _i832.WatchJournalEvents(gh<_i636.JournalRepository>()),
     );
@@ -797,6 +789,13 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i289.RouteBridgeClient>(),
       ),
     );
+    gh.factory<_i668.FollowRoute>(
+      () => _i668.FollowRoute(
+        gh<_i289.RouteBridgeClient>(),
+        gh<_i668.TrackActiveRoute>(),
+        gh<_i668.MeasureSessionPace>(),
+      ),
+    );
     gh.factory<_i1044.FetchJournalDayCapture>(
       () => _i1044.FetchJournalDayCapture(
         gh<_i13.DiagnosticsRepository>(),
@@ -830,6 +829,14 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i832.ImportJournalDirectory>(),
         gh<_i832.GetSuggestedJournalDirectories>(),
         gh<_i888.ExobiologyActivityAggregator>(),
+        gh<_i807.Clock>(),
+      ),
+    );
+    gh.factory<_i822.RouteTrackingBloc>(
+      () => _i822.RouteTrackingBloc(
+        gh<_i668.FollowRoute>(),
+        gh<_i438.RouteDurationEstimator>(),
+        gh<_i668.AbandonRoute>(),
         gh<_i807.Clock>(),
       ),
     );

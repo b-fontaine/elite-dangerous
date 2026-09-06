@@ -1,5 +1,8 @@
+import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 
+import 'package:elite_dangerous/core/error/failure.dart';
 import 'package:elite_dangerous/core/result/result.dart';
 import 'package:elite_dangerous/core/time/clock.dart';
 import 'package:elite_dangerous/core/usecase/usecase.dart';
@@ -10,6 +13,7 @@ import 'package:elite_dangerous/features/route_planning/data/repositories/local_
 import 'package:elite_dangerous/features/route_planning/domain/entities/route_plan.dart';
 import 'package:elite_dangerous/features/route_planning/domain/entities/route_progress.dart';
 import 'package:elite_dangerous/features/route_planning/domain/entities/route_request.dart';
+import 'package:elite_dangerous/features/route_planning/domain/entities/route_state_envelope.dart';
 import 'package:elite_dangerous/features/route_planning/domain/entities/session_pace.dart';
 import 'package:elite_dangerous/features/route_planning/domain/repositories/route_bridge.dart';
 import 'package:elite_dangerous/features/route_planning/domain/services/route_progress_calculator.dart';
@@ -350,6 +354,110 @@ void main() {
 
       await client.unpair();
       expect(await client.pairing(), isNull);
+    });
+
+    test('decodes the route the follow screen will show', () async {
+      final BridgePairing pairing = (await host.start(port: 0)).valueOrNull!;
+      await client.pair(
+        BridgePairing(
+          host: '127.0.0.1',
+          port: pairing.port,
+          token: pairing.token,
+        ),
+      );
+
+      final Result<RouteStateEnvelope?> read = await client.readRoute();
+
+      expect(read.isSuccess, isTrue, reason: read.failureOrNull?.message);
+      expect(read.valueOrNull!.publishedAt, publishedAt);
+      expect(
+        read.valueOrNull!.progress.speciesAnalysed,
+        track.progress!.speciesAnalysed,
+      );
+    });
+
+    test('decodes "no route" as no route, not as a failure', () async {
+      // The screen tells these two apart, so the client must too: this one
+      // reads as "the PC is on and flying nothing".
+      track.progress = null;
+      final BridgePairing pairing = (await host.start(port: 0)).valueOrNull!;
+      await client.pair(
+        BridgePairing(
+          host: '127.0.0.1',
+          port: pairing.port,
+          token: pairing.token,
+        ),
+      );
+
+      final Result<RouteStateEnvelope?> read = await client.readRoute();
+
+      expect(read.isSuccess, isTrue);
+      expect(read.valueOrNull, isNull);
+    });
+
+    test('a stopped host is a network failure, not a decoding one', () async {
+      final BridgePairing pairing = (await host.start(port: 0)).valueOrNull!;
+      await client.pair(
+        BridgePairing(
+          host: '127.0.0.1',
+          port: pairing.port,
+          token: pairing.token,
+        ),
+      );
+      await host.stop();
+
+      final Result<RouteStateEnvelope?> unreachable = await client.readRoute();
+
+      expect(unreachable.isFailure, isTrue);
+      expect(unreachable.failureOrNull, isA<NetworkFailure>());
+    });
+
+    test('a stale token is named for what it is', () async {
+      // The second most likely failure after a firewall: the commander relaunched
+      // the share, and the phone still holds the old code.
+      final BridgePairing pairing = (await host.start(port: 0)).valueOrNull!;
+      await client.pair(
+        BridgePairing(host: '127.0.0.1', port: pairing.port, token: 'perime'),
+      );
+
+      final Result<RouteStateEnvelope?> read = await client.readRoute();
+
+      expect(read.isFailure, isTrue);
+      expect(read.failureOrNull, isA<UnauthorizedFailure>());
+      expect(read.failureOrNull!.message, contains('Jeton refusé'));
+    });
+
+    test('a host on another version is a decoding failure, not a dead socket',
+        () async {
+      // Blaming the network here would send the commander to their firewall
+      // for a problem that is on neither end of it. A hand-rolled server
+      // rather than the real host, because the real one cannot be made to
+      // publish a schema it does not have.
+      final HttpServer stranger =
+          await HttpServer.bind(InternetAddress.loopbackIPv4, 0);
+      addTearDown(() => stranger.close(force: true));
+      unawaited(
+        stranger.forEach((HttpRequest request) async {
+          request.response
+            ..statusCode = HttpStatus.ok
+            ..headers.contentType = ContentType.json
+            ..write(jsonEncode(<String, dynamic>{'version': 99}));
+          await request.response.close();
+        }).catchError((Object _) {}),
+      );
+      await client.pair(
+        BridgePairing(
+          host: '127.0.0.1',
+          port: stranger.port,
+          token: 'peu-importe',
+        ),
+      );
+
+      final Result<RouteStateEnvelope?> read = await client.readRoute();
+
+      expect(read.isFailure, isTrue);
+      expect(read.failureOrNull, isA<ParsingFailure>());
+      expect(read.failureOrNull!.message, contains('même version'));
     });
   });
 }

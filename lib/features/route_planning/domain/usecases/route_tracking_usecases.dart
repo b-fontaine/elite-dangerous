@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:injectable/injectable.dart';
 
+import '../../../../core/error/failure.dart';
 import '../../../../core/result/result.dart';
 import '../../../../core/usecase/usecase.dart';
 import '../../../journal/domain/entities/journal_event.dart';
@@ -9,9 +10,11 @@ import '../entities/done_index.dart';
 import '../entities/filtered_route.dart';
 import '../entities/route_plan.dart';
 import '../entities/route_progress.dart';
+import '../entities/route_state_envelope.dart';
 import '../entities/session_pace.dart';
 import '../repositories/active_route_repository.dart';
 import '../repositories/history_backfill_repository.dart';
+import '../repositories/route_bridge.dart';
 import '../services/done_index_builder.dart';
 import '../services/route_duration_estimator.dart';
 import '../services/route_filter.dart';
@@ -234,6 +237,113 @@ class ReachInTime extends UseCase<SessionReach, RouteBudget> {
         events.valueOrNull ?? const <JournalEvent>[];
     return Result<SessionReach>.ok(
       _estimator.reach(input.plan, _calibrator(all), input.available),
+    );
+  }
+}
+
+/// Where the route on screen was read from.
+enum RouteSource {
+  /// This machine's own journal, folded here.
+  local,
+
+  /// A game machine on the local network, over the bridge.
+  shared,
+}
+
+/// Everything the follow screen needs to caption itself honestly.
+///
+/// Carries its own [failure] instead of travelling in a `Result`, because the
+/// source is a fact even when the read fails: a phone paired to a sleeping PC
+/// must say *that*, and a `Result.err` would have lost which side it came from
+/// by the time the screen renders it.
+class FollowedRoute extends Equatable {
+  const FollowedRoute({
+    required this.source,
+    this.progress,
+    this.pace = const SessionPace(),
+    this.publishedAt,
+    this.host,
+    this.failure,
+  });
+
+  final RouteSource source;
+
+  /// Null when no route is being flown. On [RouteSource.shared] that is the
+  /// *other* machine flying none, which reads differently on screen.
+  final RouteProgress? progress;
+
+  final SessionPace pace;
+
+  /// When the game machine computed this, in UTC. Null when local, where the
+  /// journal on this disk is the freshest thing there is.
+  ///
+  /// Raw rather than aged here: the age has to keep growing while the machine
+  /// stays silent, and only the caller knows when it is asking.
+  final DateTime? publishedAt;
+
+  /// The machine this was read from, for the caption. Null when local.
+  final String? host;
+
+  /// Why there is nothing to show. Null when the read worked.
+  final Failure? failure;
+
+  bool get isShared => source == RouteSource.shared;
+
+  @override
+  List<Object?> get props =>
+      <Object?>[source, progress, pace, publishedAt, host, failure];
+}
+
+/// The route the follow screen should show, from wherever it is authoritative.
+///
+/// **The pairing decides, and nothing else.** A device paired to a game machine
+/// reads that machine, full stop: falling back to the local journal when the
+/// bridge is unreachable would answer a different question — "what did this
+/// phone last import" — while looking like an answer to the one that was asked.
+/// A sleeping PC must read as a sleeping PC.
+///
+/// The game machine itself is never paired to anything, so it takes the local
+/// branch without having to be told which side of the bridge it is on.
+@injectable
+class FollowRoute {
+  const FollowRoute(this._bridge, this._track, this._measurePace);
+
+  final RouteBridgeClient _bridge;
+  final TrackActiveRoute _track;
+  final MeasureSessionPace _measurePace;
+
+  Future<FollowedRoute> call() async {
+    final BridgePairing? pairing = await _bridge.pairing();
+    return pairing == null ? _fromJournal() : _fromBridge(pairing);
+  }
+
+  Future<FollowedRoute> _fromJournal() async {
+    final Result<RouteProgress?> tracked = await _track(const NoParams());
+    final RouteProgress? progress = tracked.valueOrNull;
+    if (progress == null) {
+      return FollowedRoute(
+        source: RouteSource.local,
+        failure: tracked.failureOrNull,
+      );
+    }
+    final Result<SessionPace> pace = await _measurePace(const NoParams());
+    return FollowedRoute(
+      source: RouteSource.local,
+      progress: progress,
+      pace: pace.valueOrNull ?? const SessionPace(),
+    );
+  }
+
+  Future<FollowedRoute> _fromBridge(BridgePairing pairing) async {
+    final Result<RouteStateEnvelope?> read = await _bridge.readRoute();
+    final RouteStateEnvelope? envelope = read.valueOrNull;
+    return FollowedRoute(
+      source: RouteSource.shared,
+      host: pairing.host,
+      progress: envelope?.progress,
+      pace: envelope?.pace ?? const SessionPace(),
+      publishedAt: envelope?.publishedAt,
+      failure: read.failureOrNull,
     );
   }
 }

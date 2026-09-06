@@ -1,48 +1,23 @@
 import '../../../../core/json/json_readers.dart';
 import '../../domain/entities/route_plan.dart';
 import '../../domain/entities/route_progress.dart';
+import '../../domain/entities/route_state_envelope.dart';
 import '../../domain/entities/session_pace.dart';
 import 'route_plan_codec.dart';
 
-/// What one device publishes about the route being flown, and another reads.
-///
-/// **The computed state travels, not the raw material.** The phone has no
-/// journal and no game files; sending it events to fold would mean shipping the
-/// whole domain and megabytes of journal across the network so both ends could
-/// arrive at the same answer. One end computes, the other displays.
-///
-/// The timestamp is not decoration. Nothing on the wire says whether the game
-/// is still running — the game only rewrites its files when something changes,
-/// so twenty quiet minutes at a station are normal. The client shows the *age*
-/// of what it holds rather than a "connected" light that would lie.
-class RouteStateEnvelope {
-  const RouteStateEnvelope({
-    required this.progress,
-    required this.pace,
-    required this.publishedAt,
-    this.commanderSystem,
-  });
-
-  final RouteProgress progress;
-  final SessionPace pace;
-
-  /// When the host computed this, in UTC. The client reports its age.
-  final DateTime publishedAt;
-
-  /// Where the journal last put the commander, when known.
-  final String? commanderSystem;
-
-  static const int version = 1;
-}
-
 /// Reads and writes [RouteStateEnvelope] as the app's own JSON.
 abstract final class RouteStateCodec {
+  /// The wire schema both ends must agree on.
+  ///
+  /// Lives here rather than on the entity: it says nothing about a route being
+  /// flown, only about how one travels, and the two readers below are its only
+  /// users.
+  static const int version = 1;
+
   static Map<String, dynamic> toJson(RouteStateEnvelope envelope) =>
       <String, dynamic>{
-        'version': RouteStateEnvelope.version,
+        'version': version,
         'publishedAt': envelope.publishedAt.toIso8601String(),
-        if (envelope.commanderSystem != null)
-          'commanderSystem': envelope.commanderSystem,
         'pace': _paceToJson(envelope.pace),
         // The plan travels in its stored shape, so one schema serves both disk
         // and wire — a route saved yesterday and a route pushed to a phone are
@@ -55,7 +30,7 @@ abstract final class RouteStateCodec {
       };
 
   static RouteStateEnvelope? fromJson(Map<String, dynamic> json) {
-    if (readInt(json['version']) != RouteStateEnvelope.version) {
+    if (readInt(json['version']) != version) {
       return null;
     }
     final RoutePlan? plan = RoutePlanCodec.fromJson(readMap(json['plan']));
@@ -87,7 +62,6 @@ abstract final class RouteStateCodec {
       ),
       pace: _paceFromJson(readMap(json['pace'])),
       publishedAt: publishedAt,
-      commanderSystem: readString(json['commanderSystem']),
     );
   }
 

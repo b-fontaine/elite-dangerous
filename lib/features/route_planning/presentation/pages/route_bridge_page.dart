@@ -213,9 +213,10 @@ class _ClientPanelState extends State<_ClientPanel> {
               // Never a "connected" light: the game only rewrites its files
               // when something changes, so silence is normal and a lit lamp
               // would be a lie. What travels is the age of the answer.
-              'Appairé à ${paired.host}. L\'écran de route affichera l\'âge de '
-              'la dernière donnée reçue, jamais un voyant « connecté » : le jeu '
-              'n\'écrit que lorsque quelque chose bouge.',
+              'Appairé à ${paired.host}. L\'écran de route lit désormais cette '
+              'machine et affiche l\'âge de la dernière donnée reçue, jamais un '
+              'voyant « connecté » : le jeu n\'écrit que lorsque quelque chose '
+              'bouge.',
               style: Theme.of(context)
                   .textTheme
                   .labelSmall

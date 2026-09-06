@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
-import '../../../../app/router/app_routes.dart';
 import '../../../../core/di/injection.dart';
 import '../../../../design_system/design_system.dart';
 import '../../domain/entities/route_progress.dart';
 import '../bloc/route_tracking_bloc.dart';
+import '../widgets/bridge_link.dart';
 import '../widgets/route_composer_form.dart';
 import '../widgets/route_progress_panel.dart';
+import '../widgets/shared_route_banner.dart';
 
 /// The route screen: what is being flown, or the form to compose one.
 ///
@@ -39,9 +39,19 @@ class _RoutesView extends StatelessWidget {
         if (state.isLoading) {
           return const EdLoadingView(message: 'Lecture de la route…');
         }
-        if (state.failure case final failure?) {
+        if (state.failure case final failure? when !state.isStale) {
           return EdErrorView(
-            title: 'Route illisible',
+            // Three different problems with three different fixes: a sleeping
+            // PC, one answering in a shape this version cannot read, and a
+            // journal this device cannot fold. Naming the wrong one sends the
+            // commander to a firewall that is working fine.
+            title: switch (state) {
+              RouteTrackingState(isUnreachable: true) =>
+                'Machine de jeu injoignable',
+              RouteTrackingState(isUnpaired: true) => 'Appairage à refaire',
+              RouteTrackingState(isIncompatible: true) => 'Réponse illisible',
+              _ => 'Route illisible',
+            },
             message: failure.message,
             onRetry: () => context
                 .read<RouteTrackingBloc>()
@@ -50,6 +60,11 @@ class _RoutesView extends StatelessWidget {
         }
         if (state.progress case final RouteProgress progress) {
           return _FollowView(state: state, progress: progress);
+        }
+        if (state.isShared) {
+          // Reachable, and flying nothing. Offering the composer here would let
+          // a phone start a route the game machine never hears about.
+          return _SharedIdleView(host: state.host ?? '');
         }
         // No route being flown: compose one. Not an empty state — this is the
         // screen's normal starting point.
@@ -82,18 +97,26 @@ class _FollowView extends StatelessWidget {
                 : 'Étape ${progress.currentIndex + 1} sur '
                     '${progress.plan.waypoints.length}',
             actions: <Widget>[
-              IconButton(
+              const BridgeLinkButton(
                 tooltip: 'Partager avec un autre écran',
-                onPressed: () => context.push(AppRoutes.routeBridge),
-                icon: const Icon(Icons.devices_outlined),
               ),
-              TextButton(
-                onPressed: () => _confirmAbandon(context, bloc),
-                child: const Text('Abandonner'),
-              ),
+              if (state.canEditRoute)
+                TextButton(
+                  onPressed: () => _confirmAbandon(context, bloc),
+                  child: const Text('Abandonner'),
+                ),
             ],
           ),
           const SizedBox(height: 12),
+          if (state.isShared && state.host != null) ...<Widget>[
+            SharedRouteBanner(
+              host: state.host!,
+              age: state.age,
+              isStale: state.isStale,
+              onRefresh: () => bloc.add(const RouteTrackingRefreshed()),
+            ),
+            const SizedBox(height: 12),
+          ],
           RouteHeadline(
             progress: progress,
             pace: state.pace,
@@ -161,5 +184,60 @@ class _FollowView extends StatelessWidget {
     if (confirmed ?? false) {
       bloc.add(const RouteTrackingAbandoned());
     }
+  }
+}
+
+/// A second screen whose game machine is reachable and flying nothing.
+///
+/// Deliberately not the composer: a route started here would live on this
+/// device's disk, and the machine that reads the journal would never know about
+/// it. The commander composes on the game machine, and this screen picks it up
+/// on its next read.
+class _SharedIdleView extends StatelessWidget {
+  const _SharedIdleView({required this.host});
+
+  final String host;
+
+  @override
+  Widget build(BuildContext context) {
+    final RouteTrackingBloc bloc = context.read<RouteTrackingBloc>();
+
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 32),
+      children: <Widget>[
+        const EdPageHeader(
+          kicker: 'Second écran',
+          title: 'Aucune route en cours',
+          deck: 'La machine de jeu répond, mais elle ne suit aucune route '
+              'pour le moment.',
+        ),
+        const SizedBox(height: 16),
+        if (host.isNotEmpty) ...<Widget>[
+          SharedRouteBanner(
+            host: host,
+            age: null,
+            onRefresh: () => bloc.add(const RouteTrackingRefreshed()),
+          ),
+          const SizedBox(height: 16),
+        ],
+        const EdCallout.info(
+          title: 'Composer une route',
+          child: Text(
+            'Une route se compose sur la machine qui fait tourner le jeu : '
+            'elle seule lit le journal. Cet écran la reprendra dès qu\'elle '
+            'sera lancée.',
+          ),
+        ),
+        const SizedBox(height: 12),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: TextButton.icon(
+            onPressed: () => openBridgePairing(context),
+            icon: const Icon(Icons.devices_outlined, size: 16),
+            label: const Text('Gérer l\'appairage'),
+          ),
+        ),
+      ],
+    );
   }
 }

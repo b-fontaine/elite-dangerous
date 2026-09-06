@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
-import '../../../../app/router/app_routes.dart';
 import '../../../../core/di/injection.dart';
 import '../../../../core/format/credits.dart';
 import '../../../../core/responsive/adaptive.dart';
@@ -12,6 +10,7 @@ import '../../domain/entities/route_request.dart';
 import '../../domain/services/route_duration_estimator.dart';
 import '../bloc/route_planner_bloc.dart';
 import '../bloc/route_tracking_bloc.dart';
+import 'bridge_link.dart';
 import 'route_progress_panel.dart';
 
 /// Composing a route: a form, then a proposal to accept or throw away.
@@ -59,16 +58,14 @@ class _ComposerView extends StatelessWidget {
         return ListView(
           padding: const EdgeInsets.fromLTRB(16, 8, 16, 32),
           children: <Widget>[
-            EdPageHeader(
+            const EdPageHeader(
               kicker: 'Composer',
               title: 'Une route pour ce soir',
               deck: 'Le temps disponible décide de la taille ; ce qui est déjà '
                   'analysé est retiré avant affichage.',
               actions: <Widget>[
-                IconButton(
+                BridgeLinkButton(
                   tooltip: 'Suivre la route d\'une autre machine',
-                  onPressed: () => context.push(AppRoutes.routeBridge),
-                  icon: const Icon(Icons.devices_outlined),
                 ),
               ],
             ),

@@ -6,7 +6,9 @@ import '../../../../core/network/dio_error_mapper.dart';
 import '../../../../core/result/result.dart';
 import '../../../../core/storage/key_value_store.dart';
 import '../../../../core/storage/storage_keys.dart';
+import '../../domain/entities/route_state_envelope.dart';
 import '../../domain/repositories/route_bridge.dart';
+import '../models/route_state_codec.dart';
 
 /// Reads the game machine from a second screen.
 ///
@@ -39,6 +41,32 @@ class HttpRouteBridgeClient implements RouteBridgeClient {
   Future<void> unpair() => _store.remove(StorageKeys.routeBridgePairing);
 
   @override
+  Future<Result<RouteStateEnvelope?>> readRoute() async {
+    final Result<Map<String, dynamic>> state = await fetchState();
+    return state.flatMap((Map<String, dynamic> json) {
+      // An empty body is the host saying "no route being flown", which
+      // [fetchState] turns into an empty map. Not a decoding failure.
+      if (json.isEmpty) {
+        return const Result<RouteStateEnvelope?>.ok(null);
+      }
+      final RouteStateEnvelope? envelope = RouteStateCodec.fromJson(json);
+      if (envelope == null) {
+        // The host answered, so it is running — it is just not running this
+        // version. Saying "injoignable" here would send the commander to their
+        // firewall for a problem that is on neither end of the network.
+        return const Result<RouteStateEnvelope?>.err(
+          ParsingFailure(
+            message: 'La machine de jeu publie une route dans un format que '
+                'cette version ne sait pas lire. Mettre les deux appareils à '
+                'la même version.',
+          ),
+        );
+      }
+      return Result<RouteStateEnvelope?>.ok(envelope);
+    });
+  }
+
+  @override
   Future<Result<Map<String, dynamic>>> fetchState() async {
     final BridgePairing? paired = await pairing();
     if (paired == null) {
@@ -64,10 +92,7 @@ class HttpRouteBridgeClient implements RouteBridgeClient {
             paired.stateUri,
           );
           if (response.statusCode == 403) {
-            throw const FormatException(
-              'Jeton refusé. Le partage a peut-être été relancé : '
-              'reprendre le code affiché sur la machine de jeu.',
-            );
+            throw const _StaleToken();
           }
           if (response.statusCode == 204 || response.data == null) {
             return const <String, dynamic>{};
@@ -80,6 +105,16 @@ class HttpRouteBridgeClient implements RouteBridgeClient {
           );
         },
         onError: (Object error, StackTrace stackTrace) {
+          // Three different problems, three different failures: a token the
+          // host no longer knows, an answer this version cannot read, and a
+          // machine that did not answer. The screen names each one, and only
+          // the last one is worth opening the firewall for.
+          if (error is _StaleToken) {
+            return const UnauthorizedFailure(
+              message: 'Jeton refusé. Le partage a peut-être été relancé : '
+                  'reprendre le code affiché sur la machine de jeu.',
+            );
+          }
           if (error is FormatException) {
             return ParsingFailure(message: error.message, cause: error);
           }
@@ -90,4 +125,9 @@ class HttpRouteBridgeClient implements RouteBridgeClient {
       dio.close(force: true);
     }
   }
+}
+
+/// A `403` from the host: the pairing code is no longer the one in force.
+class _StaleToken implements Exception {
+  const _StaleToken();
 }

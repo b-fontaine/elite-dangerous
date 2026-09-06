@@ -11,6 +11,7 @@ import '../../../../core/result/result.dart';
 import '../../../../core/time/clock.dart';
 import '../../../../core/usecase/usecase.dart';
 import '../../domain/entities/route_progress.dart';
+import '../../domain/entities/route_state_envelope.dart';
 import '../../domain/entities/session_pace.dart';
 import '../../domain/repositories/route_bridge.dart';
 import '../../domain/usecases/route_tracking_usecases.dart';

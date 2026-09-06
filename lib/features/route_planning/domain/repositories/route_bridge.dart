@@ -1,4 +1,5 @@
 import '../../../../core/result/result.dart';
+import '../entities/route_state_envelope.dart';
 
 /// How to reach a host that is publishing its route.
 class BridgePairing {
@@ -92,4 +93,12 @@ abstract interface class RouteBridgeClient {
   /// failure and the network failure stay distinguishable: one means the host
   /// is running a different version, the other that it is off.
   Future<Result<Map<String, dynamic>>> fetchState();
+
+  /// The route the paired machine is flying, decoded.
+  ///
+  /// Three answers, and the screen says something different for each: a route,
+  /// `null` when the host is reachable and flying none, and a failure when it
+  /// cannot be reached at all. Collapsing the last two would show an empty
+  /// route for a sleeping PC — the one lie this whole bridge is built to avoid.
+  Future<Result<RouteStateEnvelope?>> readRoute();
 }
