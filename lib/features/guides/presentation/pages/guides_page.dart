@@ -85,11 +85,34 @@ class _GuidesView extends StatelessWidget {
                 SliverPadding(
                   padding: const EdgeInsets.all(EdSpacing.lg),
                   sliver: SliverToBoxAdapter(
-                    child: AdaptiveGrid(
-                      minTileWidth: 320,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        for (final GuideSummary guide in guides)
-                          _GuideCard(guide: guide, onOpen: onOpenGuide),
+                        // Two shelves rather than one grid: "comment conduire
+                        // l'application" and "comment jouer" are different
+                        // questions, and a reader has only one of them at a
+                        // time. A shelf with nothing on it is not drawn, so a
+                        // search that only matches field manuals still reads as
+                        // one list.
+                        for (final GuideShelf shelf in GuideShelf.values)
+                          if (guides
+                              .where((GuideSummary g) => g.shelf == shelf)
+                              .isNotEmpty) ...<Widget>[
+                            EdSectionHeader(title: shelf.label),
+                            const SizedBox(height: EdSpacing.md),
+                            AdaptiveGrid(
+                              minTileWidth: 320,
+                              children: <Widget>[
+                                for (final GuideSummary guide in guides
+                                    .where((GuideSummary g) => g.shelf == shelf))
+                                  _GuideCard(
+                                    guide: guide,
+                                    onOpen: onOpenGuide,
+                                  ),
+                              ],
+                            ),
+                            const SizedBox(height: EdSpacing.xl),
+                          ],
                       ],
                     ),
                   ),

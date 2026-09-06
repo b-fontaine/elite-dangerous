@@ -20,13 +20,20 @@ tenant compte de ce que le commandant possède déjà.
 | **Catalogue** | Les 118 organiques connus, leurs valeurs Vista Genomics, leurs conditions et leurs variantes de couleur. Hors ligne. |
 | **Matériaux et blueprints** | Les 108 matériaux d'ingénierie et les composants de combinaison, avec **où et comment on obtient chacun**. Pour un blueprint ou une montée en grade : ce qu'il reste à trouver, ce que le trader peut convertir depuis le surplus, et ce qui bloque quand quelque chose bloque. Hors ligne, aucun appel réseau. |
 | **Journal de bord** | Synchronisation depuis la Companion API de Frontier **ou** import des fichiers `Journal.*.log` du jeu — cette seconde voie ne demande aucun compte. La synchronisation remonte du plus récent au plus ancien, jusqu'à 90 jours. |
-| **Guides** | Les cinq guides sources convertis en contenu structuré et navigable (260 Ko), rendus avec le même design system que le reste. |
+| **Guides** | Deux étagères. Les cinq guides sources convertis en contenu structuré et navigable (260 Ko), et sept modes d'emploi de l'application — un par grande fonctionnalité — écrits dans le même format et cherchables avec eux. |
 | **Profil** | Profil Frontier lu en entier — flotte, équipement du vaisseau piloté et son ingénierie, combinaisons, armes, rangs, services de la station — complété par le journal, qui fournit seul le rebuy exact, la portée de saut, les ingénieurs débloqués, les matériaux à pied et l'allégeance Powerplay. La saisie manuelle ne sert plus qu'à corriger. |
 
-Aucune partie serveur. Tout est embarqué ou stocké sur l'appareil, et les deux
-seuls appels réseau possibles partent à la demande : la Companion API de
-Frontier pour le profil du commandant, et Spansh pour le système où il se
-trouve. L'application est complète sans ni l'un ni l'autre.
+Rien n'est hébergé, aucun compte n'est requis, et tout est embarqué ou stocké
+sur l'appareil. Les appels réseau partent à la demande, jamais tout seuls : la
+Companion API de Frontier pour le profil et le cache d'étoiles visitées, Spansh
+pour le système courant et le calcul d'itinéraires, EDSM pour le rattrapage
+d'historique. L'application est complète sans aucun d'eux.
+
+Une exception, explicite et optionnelle : pour suivre une route depuis un
+téléphone, **la machine de jeu peut ouvrir un port sur le réseau local** et
+publier ce qu'elle lit. Rien ne quitte ce réseau, rien n'est hébergé, et le
+serveur ne tourne que tant qu'il est allumé — voir *Suivre depuis un autre
+écran*.
 
 ---
 
@@ -362,6 +369,61 @@ constats qu'aucune documentation ne donne :
 indique `vistagenomics`, donc si la station où le commandant est amarré achète
 les données organiques.
 
+### Suivre depuis un autre écran
+
+Le jeu écrit ses fichiers sur une seule machine ; la question « où en suis-je
+sur ma route » se pose partout. La machine de jeu peut donc publier son état sur
+le réseau local, et n'importe quel autre écran le lit — un téléphone, une
+tablette, un second PC, la même application dans un autre mode.
+
+Trois décisions méritent d'être dites, parce qu'elles se lisent mal autrement :
+
+- **C'est l'état calculé qui voyage, pas la matière première.** Le téléphone n'a
+  ni journal ni fichiers de jeu ; lui envoyer des événements à replier
+  supposerait d'expédier tout le domaine et des méga-octets de journal pour que
+  les deux bouts arrivent à la même réponse. Un bout calcule, l'autre affiche.
+- **On interroge, on ne pousse pas.** Un WebSocket suggérerait une vivacité que
+  cette donnée n'a pas : le jeu ne réécrit ses fichiers que quand quelque chose
+  change, et l'application les relit déjà toutes les dix secondes. Une socket
+  qui meurt en silence ressemble exactement à une partie où il ne se passe rien.
+- **Il n'y a pas de voyant « connecté ».** L'écran distant affiche l'**âge** de
+  la dernière donnée reçue. Vingt minutes de silence à une station sont
+  normales ; un voyant vert mentirait.
+
+L'appairage tient en un code — `192.168.1.24:8420/k7m2xq9p` — affiché sur la
+machine de jeu et saisi sur l'autre appareil. Le jeton est tiré à chaque
+démarrage : relancer le partage invalide l'ancien. C'est un cran au-dessus du
+précédent le plus proche, le serveur web d'EDDiscovery, dont la documentation ne
+décrit aucune authentification.
+
+Une fois le code saisi, il n'y a rien d'autre à faire : **c'est l'appairage seul
+qui décide** de la source de l'écran de route. Un appareil appairé lit la
+machine de jeu et la relit toutes les dix secondes tant que l'écran est ouvert ;
+un appareil qui ne l'est pas — la machine de jeu elle-même, notamment — lit son
+propre journal. Un appareil appairé ne retombe jamais en silence sur son journal
+local. Et comme composer ou abandonner une route écrit sur le disque de
+l'appareil qui le fait, ces deux actions restent sur la machine de jeu.
+
+Trois précautions, chacune pour une façon de mentir :
+
+- **Une lecture ratée ne vide pas l'écran.** Les chiffres affichés étaient vrais
+  quand ils sont arrivés ; ils restent, et la légende vieillit — « données il y
+  a 2 min » — au lieu de laisser croire à une route sans progression. Un
+  hoquet de wifi ne fait plus clignoter la soirée.
+- **Trois pannes, trois noms.** Une machine qui ne répond pas est *injoignable*,
+  une qui refuse le code demande un *appairage à refaire*, une qui répond dans
+  un format inconnu donne une *réponse illisible*. Une seule de ces trois se
+  règle au pare-feu, et se tromper de nom envoie le commandant au mauvais
+  endroit.
+- **Un hôte muet est interrogé de moins en moins souvent.** L'intervalle
+  s'étire jusqu'à une minute après des échecs répétés : un téléphone posé sur le
+  bureau, écran ouvert, PC éteint pour la nuit, n'ouvre pas une socket toutes
+  les dix secondes jusqu'au matin.
+
+Quand l'autre appareil ne voit rien, c'est presque toujours le pare-feu de la
+machine de jeu — la panne numéro un documentée chez EDDiscovery, nommée à
+l'écran plutôt que laissée à découvrir.
+
 ---
 
 ## Architecture
@@ -634,15 +696,19 @@ Non implémenté à ce stade :
 
 - sélecteur de dossier natif pour l'import (le chemin se saisit, les
   emplacements par défaut de chaque plateforme sont proposés) ;
-- suivi en direct hors bureau : lire les fichiers du jeu suppose d'être sur la
-  machine qui le fait tourner, donc l'onglet Terrain y montre le dernier
-  journal importé et le dit ;
+- sélection de fichiers du jeu hors bureau : lire les journaux suppose d'être
+  sur la machine qui fait tourner le jeu. L'onglet Terrain y montre le dernier
+  journal importé et le dit — mais la **route**, elle, se suit désormais depuis
+  n'importe quel écran via le partage local ;
 - connexion Frontier sur la cible web (schéma d'URL impossible dans un
   navigateur, en-têtes CORS des hôtes Frontier non documentés) — l'import de
   journaux et la saisie manuelle y fonctionnent ;
 - relevé Spansh sur la cible web : l'hôte ne renvoie aucun en-tête CORS, le
   navigateur refuse la requête avant qu'elle parte. Le panneau s'y masque ;
-- itinéraires calculés : le routage d'exploration pure serait faisable
-  localement, celui d'exobiologie non — il demande les *corps*, que personne ne
-  publie autrement qu'au prix des 115,8 Go du dump galactique ou d'une requête
-  par système.
+- itinéraires calculés **localement** : le routage d'exploration pure serait
+  faisable, celui d'exobiologie non — il demande les *corps*, que personne ne
+  publie autrement qu'au prix des 115,8 Go du dump galactique. Le calcul passe
+  donc par les planificateurs de Spansh, qui font ce travail côté serveur et
+  nomment l'espèce ;
+- code QR pour l'appairage : le code se saisit à la main, huit caractères après
+  l'adresse.

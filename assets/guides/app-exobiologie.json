@@ -1,0 +1,269 @@
+{
+ "id": "app-exobiologie",
+ "title": "L'exobiologie",
+ "kicker": "Codex Exobiologique · Mode d'emploi",
+ "deck": "Quatre onglets, quatre questions : ce qui se passe maintenant, ce qu'il faut faire ensuite, ce que je viens de scanner, et ce qui existe.",
+ "edition": "2026-09",
+ "shelf": "application",
+ "topics": [
+  "Application",
+  "Exobiologie",
+  "Feuille de route"
+ ],
+ "sections": [
+  {
+   "id": "sommaire",
+   "number": 0,
+   "title": "Au sommaire",
+   "blocks": [
+    {
+     "type": "list",
+     "ordered": true,
+     "items": [
+      "Quatre onglets, quatre questions",
+      "Le Plan : ce qu'il faut faire ensuite",
+      "Identifier : lire un relevé du FSS",
+      "Espèces : le catalogue hors ligne"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "quatre-onglets",
+   "number": 1,
+   "title": "Quatre onglets, quatre questions",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "L'onglet **Terrain** ouvre la section parce qu'il est le seul à répondre à une question posée en vol. Les trois autres se lisent avant de partir, ou au retour.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Onglet",
+      "La question",
+      "Quand"
+     ],
+     "rows": [
+      [
+       {
+        "text": "Terrain"
+       },
+       {
+        "text": "Que reste-t-il à faire ici ?"
+       },
+       {
+        "text": "Pendant la session"
+       }
+      ],
+      [
+       {
+        "text": "Plan"
+       },
+       {
+        "text": "Que faire ensuite, et pourquoi maintenant ?"
+       },
+       {
+        "text": "Avant de partir"
+       }
+      ],
+      [
+       {
+        "text": "Identifier"
+       },
+       {
+        "text": "Qu'est-ce que je viens de trouver ?"
+       },
+       {
+        "text": "Devant le FSS"
+       }
+      ],
+      [
+       {
+        "text": "Espèces"
+       },
+       {
+        "text": "Que vaut cette espèce, et où pousse-t-elle ?"
+       },
+       {
+        "text": "N'importe quand"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": "Terrain a son propre guide, parce qu'il obéit à des règles différentes : il lit le disque, il ne fonctionne que sur la machine de jeu, et il refuse d'estimer."
+    }
+   ]
+  },
+  {
+   "id": "plan",
+   "number": 2,
+   "title": "Le Plan : ce qu'il faut faire ensuite",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Vingt-trois règles encodées depuis les guides de terrain, évaluées sur ton état réel — profil Frontier, journaux importés et saisie manuelle confondus.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "heading",
+     "text": "Ce que chaque étape dit",
+     "level": 3
+    },
+    {
+     "type": "list",
+     "items": [
+      "**Quoi faire** — l'action, formulée comme un ordre exécutable.",
+      "**Pourquoi maintenant** — ce qui la rend prioritaire à ce moment de ta progression.",
+      "**Ce que ça rapporte** — le gain chiffré quand il est chiffrable.",
+      "**Ce qui la bloque** — la liste explicite des prérequis manquants, s'il y en a."
+     ]
+    },
+    {
+     "type": "heading",
+     "text": "Les quatre statuts",
+     "level": 3
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Statut",
+      "Ce qu'il signifie"
+     ],
+     "rows": [
+      [
+       {
+        "text": "À faire",
+        "style": "win"
+       },
+       {
+        "text": "Exécutable maintenant, rien ne manque"
+       }
+      ],
+      [
+       {
+        "text": "En cours",
+        "style": "mid"
+       },
+       {
+        "text": "Commencé mais incomplet — 6 schémas sur 12, par exemple"
+       }
+      ],
+      [
+       {
+        "text": "Bloqué",
+        "style": "lose"
+       },
+       {
+        "text": "Un prérequis manque, et la carte dit lequel"
+       }
+      ],
+      [
+       {
+        "text": "Fait",
+        "style": "strong"
+       },
+       {
+        "text": "Ton état actuel la satisfait déjà"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": "La barre de filtres au-dessus de la liste — **À faire**, **Bloqué**, **Fait**, **Tout** — porte le compte de chaque catégorie. Le kicker de l'écran rappelle la phase courante de ta progression."
+    },
+    {
+     "type": "callout",
+     "tone": "tip",
+     "title": "Les trois premières lignes sont sur l'accueil",
+     "text": "Le poste de pilotage affiche les trois premières étapes de ce plan. Ouvre cet onglet quand tu veux la suite, les raisons, ou ce qui bloque."
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "Le plan se recalcule, il ne se coche pas",
+     "text": "Rien n'est marqué à la main : une étape passe à « Fait » parce que le journal ou le profil montrent qu'elle l'est. Un import plus complet peut donc en clore plusieurs d'un coup."
+    },
+    {
+     "type": "paragraph",
+     "text": "Le nombre de règles n'a pas vocation à grandir sans fin : elles viennent des guides de terrain de cette même bibliothèque, et chacune est traçable jusqu'à un passage écrit."
+    }
+   ]
+  },
+  {
+   "id": "identifier",
+   "number": 3,
+   "title": "Identifier : lire un relevé du FSS",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Tu es en orbite, le scanner détaillé affiche les caractéristiques d'un corps, et tu veux savoir ce qui peut y pousser avant de descendre.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "steps",
+     "items": [
+      {
+       "text": "Saisir le type de corps",
+       "detail": "Tel que le FSS l'annonce."
+      },
+      {
+       "text": "Saisir l'atmosphère",
+       "detail": "C'est le critère le plus discriminant du lot."
+      },
+      {
+       "text": "Ajouter température et gravité",
+       "detail": "En kelvins et en g, comme le jeu les affiche."
+      },
+      {
+       "text": "Lire les espèces compatibles",
+       "detail": "Chacune avec sa valeur Vista Genomics et son Colony Range."
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "tone": "warning",
+     "title": "Ce qui reste invérifiable depuis l'orbite",
+     "text": "Certains critères ne se lisent pas au scanner — la proximité d'une géologie, ou la présence d'une étoile d'un type donné dans le système. L'application le dit au lieu de trancher : chaque espèce proposée indique **quel critère reste invérifié**.\n\nUne liste de trois espèces dont deux portent un critère invérifié n'est pas une erreur : c'est l'état réel de ce qui est connaissable d'en haut."
+    },
+    {
+     "type": "paragraph",
+     "text": "Le **Colony Range** affiché à côté de chaque espèce est la distance minimale à respecter entre deux échantillons du même organisme. C'est le chiffre qui décide de la longueur de tes trajets au sol."
+    }
+   ]
+  },
+  {
+   "id": "especes",
+   "number": 4,
+   "title": "Espèces : le catalogue hors ligne",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Les 118 organiques connus, leurs valeurs Vista Genomics, leurs conditions d'apparition et leurs variantes de couleur.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "paragraph",
+     "text": "Le catalogue est embarqué : il fonctionne dans le vide interstellaire, sans réseau ni compte. Une section récapitule le **Colony Range par genre**, qui est la donnée qu'on cherche le plus souvent une fois posé."
+    },
+    {
+     "type": "callout",
+     "tone": "tip",
+     "title": "Les variantes de couleur ne changent pas la valeur",
+     "text": "Le catalogue les liste parce qu'elles décident du **premier découvreur** d'une variante, pas du prix payé par Vista Genomics. Une Bacterium Aurasus verte et une bleue valent la même chose."
+    },
+    {
+     "type": "verdict",
+     "title": "Le plan avant le catalogue",
+     "text": "Le catalogue répond à « que vaut ceci ? ». Le plan répond à « qu'est-ce que je fais maintenant ? », et c'est presque toujours la bonne question au moment de décoller."
+    }
+   ]
+  }
+ ],
+ "estimatedReadMinutes": 5
+}

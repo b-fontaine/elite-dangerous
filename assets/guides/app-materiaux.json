@@ -1,0 +1,237 @@
+{
+ "id": "app-materiaux",
+ "title": "Matériaux et blueprints",
+ "kicker": "Codex Exobiologique · Mode d'emploi",
+ "deck": "Quatre inventaires qui ne communiquent pas, et un plan de blueprint qui dit ce qui manque, ce qui se convertit et ce qui bloque.",
+ "edition": "2026-09",
+ "shelf": "application",
+ "topics": [
+  "Application",
+  "Matériaux",
+  "Ingénierie"
+ ],
+ "sections": [
+  {
+   "id": "sommaire",
+   "number": 0,
+   "title": "Au sommaire",
+   "blocks": [
+    {
+     "type": "list",
+     "ordered": true,
+     "items": [
+      "D'où viennent les inventaires",
+      "Quatre réserves, trois traders",
+      "L'écran, en deux inventaires",
+      "Lire un plan de blueprint",
+      "Où trouver ce qui manque"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "inventaires",
+   "number": 1,
+   "title": "D'où viennent les inventaires",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Cet écran ne demande jamais rien au réseau : les 108 matériaux d'ingénierie et les composants de combinaison sont embarqués. Ce qui manque, en revanche, c'est **ce que tu possèdes**.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "callout",
+     "tone": "warning",
+     "title": "La Companion API ne connaît pas tes matériaux",
+     "text": "Ni les matériaux à pied, ni ceux du vaisseau. Ils viennent des événements `ShipLocker` et `Materials` du **journal**.\n\nUn écran Matériaux vide avec un compte Frontier connecté n'est donc pas une panne : il manque un import de journaux."
+    },
+    {
+     "type": "paragraph",
+     "text": "C'est l'un des rares endroits où la voie sans compte est strictement supérieure à la voie avec compte. Voir le guide « Alimenter l'application »."
+    }
+   ]
+  },
+  {
+   "id": "reserves",
+   "number": 2,
+   "title": "Quatre réserves, trois traders",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Les matériaux ne se mélangent pas, et aucun trader ne franchit la frontière entre deux réserves.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Réserve",
+      "Ce qu'elle contient",
+      "Material trader"
+     ],
+     "rows": [
+      [
+       {
+        "text": "Brut"
+       },
+       {
+        "text": "Les éléments ramassés au sol ou minés"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       }
+      ],
+      [
+       {
+        "text": "Manufacturé"
+       },
+       {
+        "text": "Les composants issus des épaves et des signaux"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       }
+      ],
+      [
+       {
+        "text": "Encodé"
+       },
+       {
+        "text": "Les données scannées"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       }
+      ],
+      [
+       {
+        "text": "À pied"
+       },
+       {
+        "text": "Les micro-ressources Odyssey, sac à dos et soute"
+       },
+       {
+        "text": "Aucun",
+        "style": "lose"
+       }
+      ]
+     ],
+     "caption": "Aucune quantité de données encodées n'achètera jamais un seul élément brut : les trois réserves de vaisseau sont étanches entre elles, et les ressources Odyssey n'ont pas de trader du tout."
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "Le trader convertit, il ne crée pas",
+     "text": "À l'intérieur d'une réserve, un trader échange vers le haut à un taux défavorable. L'application s'en sert pour te dire ce que ton **surplus** pourrait couvrir — pas pour prétendre que tout est atteignable."
+    }
+   ]
+  },
+  {
+   "id": "ecran",
+   "number": 3,
+   "title": "L'écran, en deux inventaires",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "La page Matériaux montre côte à côte ce que tu portes et ce que ton vaisseau transporte, chacun compté.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "list",
+     "items": [
+      "**Inventaire à pied** — les micro-ressources Odyssey, celles du sac à dos et de la soute.",
+      "**Matériaux du vaisseau** — les trois réserves brut, manufacturé et encodé.",
+      "**Blueprints d'ingénierie** — la liste des modifications, chacune ouvrant son plan."
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": "Chaque matériau affiche son nom, sa quantité et son grade. Le tout est mesuré contre ce qu'il te reste à fabriquer : un matériau que rien n'attend n'a pas la même valeur qu'un matériau qui bloque un grade 5."
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "Un écran vide a deux causes, et une seule est une panne",
+     "text": "« Aucun inventaire » veut dire qu'aucun journal n'a été importé — c'est le cas courant, et il se règle en une minute.\n\n« Base de données des matériaux indisponible » est la vraie panne : l'asset embarqué n'a pas pu être lu. Elle ne devrait jamais arriver, et l'écran affiche alors la raison exacte."
+    }
+   ]
+  },
+  {
+   "id": "plan-blueprint",
+   "number": 4,
+   "title": "Lire un plan de blueprint",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Depuis la section **Blueprints d'ingénierie** de l'écran Matériaux, chaque entrée ouvre son plan. Il se lit toujours dans le même ordre.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "steps",
+     "items": [
+      {
+       "text": "Ce qui bloque",
+       "detail": "En tête, et seulement s'il y a lieu : ingénieur non débloqué, matériaux manquants, grade insuffisant."
+      },
+      {
+       "text": "Grade déjà posé",
+       "detail": "Ce que ton module porte aujourd'hui, d'après le journal."
+      },
+      {
+       "text": "Effet par grade",
+       "detail": "Ce que chaque grade apporte, pour décider où s'arrêter."
+      },
+      {
+       "text": "Qui le pose",
+       "detail": "Les ingénieurs qui proposent ce blueprint, et à quel grade."
+      },
+      {
+       "text": "Effets expérimentaux",
+       "detail": "Les modifications finales, avec leur coût propre."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": "Quand tout est réuni, le plan le dit d'une phrase — **« Tout est là. Reste à faire le trajet. »** — plutôt que d'afficher une liste vide. Sinon, il chiffre ce qui manque, à l'unité près."
+    }
+   ]
+  },
+  {
+   "id": "ou-trouver",
+   "number": 5,
+   "title": "Où trouver ce qui manque",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Chaque matériau porte ses sources, et chaque source dit **comment** on obtient la chose, pas seulement où.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "list",
+     "items": [
+      "Prospection de surface, type de corps, minage d'astéroïdes — ce qui se ramasse.",
+      "High Grade Emission, épaves, missions — ce qui se cherche.",
+      "Data points, scans de vaisseau, scanner de sillage — ce qui se lit.",
+      "Settlements, bartenders, sites connus — pour les ressources à pied.",
+      "Material trader — la conversion, quand ton surplus le permet."
+     ]
+    },
+    {
+     "type": "callout",
+     "tone": "tip",
+     "title": "La source dit comment, pas seulement où",
+     "text": "« High Grade Emission » n'est pas un lieu mais un signal à traquer ; « Data point » est un terminal à scanner dans un settlement ; « Type de corps » veut dire que le matériau ne se trouve que sur certaines planètes.\n\nC'est cette nuance qui fait la différence entre une liste de courses et une carte au trésor."
+    },
+    {
+     "type": "verdict",
+     "title": "Importe d'abord, planifie ensuite",
+     "text": "Sans journal importé, cet écran est une encyclopédie ; avec, il devient une liste de courses. C'est la même différence que partout ailleurs dans l'application, et elle tient à un seul import."
+    }
+   ]
+  }
+ ],
+ "estimatedReadMinutes": 5
+}

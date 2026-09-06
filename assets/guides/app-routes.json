@@ -1,0 +1,210 @@
+{
+ "id": "app-routes",
+ "title": "Les routes",
+ "kicker": "Codex Exobiologique · Mode d'emploi",
+ "deck": "Composer une route à la taille de ta soirée, la suivre sans rien cocher, et la lire depuis un téléphone posé à côté du clavier.",
+ "edition": "2026-09",
+ "shelf": "application",
+ "topics": [
+  "Application",
+  "Routes",
+  "Second écran"
+ ],
+ "sections": [
+  {
+   "id": "sommaire",
+   "number": 0,
+   "title": "Au sommaire",
+   "blocks": [
+    {
+     "type": "list",
+     "ordered": true,
+     "items": [
+      "Composer : le temps décide de la taille",
+      "Ce qui est retiré avant affichage",
+      "Suivre : rien à cocher",
+      "Suivre depuis un autre écran"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "composer",
+   "number": 1,
+   "title": "Composer : le temps décide de la taille",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "L'écran Routes s'ouvre sur un formulaire tant qu'aucune route n'est en cours. La question qu'il pose en premier n'est pas « où », mais **« combien de temps as-tu ce soir ? »**",
+     "emphasis": "intro"
+    },
+    {
+     "type": "heading",
+     "text": "Ce que tu renseignes",
+     "level": 3
+    },
+    {
+     "type": "list",
+     "items": [
+      "**Le temps disponible** — un curseur. Il suggère un nombre de systèmes à demander.",
+      "**Le départ** — pré-rempli depuis ton journal.",
+      "**La portée de saut** — lue dans ton équipement, corrigeable.",
+      "**Le rayon** — de combien la route peut s'écarter du trajet direct pour trouver mieux.",
+      "**L'objectif** — exobiologie, ou Road to Riches.",
+      "Facultatif : une destination, une boucle de retour, une valeur minimale, l'évitement des Thargoïdes."
+     ]
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "Le rythme est mesuré sur toi",
+     "text": "La durée annoncée ne vient pas d'une moyenne de joueurs. Quatre constantes sont mesurées sur **ton** journal — le temps par saut, par atterrissage, par échantillon — et l'écran dit toujours si elles ont été mesurées ou si ce sont encore des valeurs par défaut.\n\nUn Krait chargé au pad et un Diamondback allégé ne partagent aucune de ces constantes."
+    },
+    {
+     "type": "callout",
+     "tone": "warning",
+     "title": "Le calcul part chez Spansh, sur ta demande",
+     "text": "Plotter une route est la chose la plus coûteuse que l'application demande à un service tiers, et le calcul prend des dizaines de secondes. Il ne part jamais tout seul.\n\nSur la cible web, la fonction est indisponible : Spansh n'envoie pas d'en-têtes CORS."
+    }
+   ]
+  },
+  {
+   "id": "retire",
+   "number": 2,
+   "title": "Ce qui est retiré avant affichage",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Spansh connaît la galaxie, il ne te connaît pas. La soustraction de ce que tu as déjà fait se passe donc chez toi, après le calcul.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Objectif",
+      "Un corps disparaît quand…"
+     ],
+     "rows": [
+      [
+       {
+        "text": "Exobiologie"
+       },
+       {
+        "text": "**toutes** ses espèces ont été analysées"
+       }
+      ],
+      [
+       {
+        "text": "Road to Riches"
+       },
+       {
+        "text": "sa surface a été cartographiée par toi"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "callout",
+     "tone": "tip",
+     "title": "Traverser un système ne l'élimine pas",
+     "text": "Être passé quelque part ne dit rien de ce qu'on y a fait : un ravitaillement d'il y a six mois ne doit pas effacer le meilleur corps de ta route. Ces systèmes sont **signalés**, jamais supprimés."
+    },
+    {
+     "type": "paragraph",
+     "text": "La route n'est pas tronquée à ton temps disponible : elle est calculée généreusement, et l'écran marque simplement l'endroit où ta soirée s'arrête. Couper casserait une boucle et jetterait du travail réutilisable demain."
+    }
+   ]
+  },
+  {
+   "id": "suivre",
+   "number": 3,
+   "title": "Suivre : rien à cocher",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Une fois la route acceptée, l'écran devient un écran de suivi. Tu n'as **rien à marquer** : jouer suffit.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "paragraph",
+     "text": "Seul le plan est enregistré. Ce qui est fait se recalcule à chaque lecture, à partir du journal. Fermer l'application au milieu, réimporter un journal, tirer pour rafraîchir dix fois : rien ne peut être compté deux fois, parce qu'il n'y a aucun compteur à corrompre."
+    },
+    {
+     "type": "list",
+     "items": [
+      "La barre de sauts, l'avancement par étape et les espèces analysées.",
+      "Le temps restant estimé, à ton rythme mesuré.",
+      "La valeur en soute non vendue — celle qu'une destruction efface.",
+      "Les échantillons non rattachés, quand le journal importé ne nomme pas le corps où ils ont été pris."
+     ]
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "Une espèce se ferme à trois échantillons",
+     "text": "Quand un corps porte deux espèces d'un même genre, le journal ne dit pas laquelle tu échantillonnes : la ligne ne se ferme donc qu'une fois le genre échantillonné pour toutes ses espèces. C'est volontairement prudent — l'inverse effacerait du travail jamais fait."
+    }
+   ]
+  },
+  {
+   "id": "second-ecran",
+   "number": 4,
+   "title": "Suivre depuis un autre écran",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Le jeu écrit ses fichiers sur une seule machine ; la question « où en suis-je » se pose partout. La machine de jeu peut donc publier son état sur le réseau local.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "steps",
+     "items": [
+      {
+       "text": "Sur la machine de jeu : Routes › Partager",
+       "detail": "Un interrupteur ouvre un port sur le réseau local et affiche un code du genre `192.168.1.24:8420/k7m2xq9p`."
+      },
+      {
+       "text": "Sur l'autre appareil : la même page",
+       "detail": "Colle le code dans le champ du bas, puis Appairer."
+      },
+      {
+       "text": "Rien d'autre",
+       "detail": "L'écran de route de cet appareil lit désormais la machine de jeu, et la relit toutes les dix secondes tant qu'il est ouvert."
+      }
+     ]
+    },
+    {
+     "type": "heading",
+     "text": "Ce que l'écran distant refuse de mentir",
+     "level": 3
+    },
+    {
+     "type": "list",
+     "items": [
+      "**Pas de voyant « connecté ».** Le jeu ne réécrit ses fichiers que quand quelque chose change : vingt minutes de silence à une station sont normales. C'est l'**âge** de la donnée qui s'affiche.",
+      "**Une lecture ratée ne vide pas l'écran.** Les chiffres restent, la bannière passe à l'orange et la légende vieillit.",
+      "**Trois pannes, trois noms** : injoignable, appairage à refaire, réponse illisible. Une seule des trois se règle au pare-feu."
+     ]
+    },
+    {
+     "type": "callout",
+     "tone": "warning",
+     "title": "Si l'autre appareil ne voit rien",
+     "text": "C'est presque toujours le pare-feu de la machine de jeu : il faut autoriser les connexions entrantes sur ce port. Les deux appareils doivent aussi être sur le même réseau — ou reliés par un VPN.\n\nLe jeton est retiré à chaque démarrage du partage : relancer le partage invalide l'ancien code."
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "Composer reste sur la machine de jeu",
+     "text": "Composer ou abandonner une route écrit sur le disque de l'appareil qui le fait. Ces deux actions sont donc masquées sur un second écran : une route lancée depuis le téléphone vivrait là, et la machine qui lit le journal n'en saurait jamais rien."
+    },
+    {
+     "type": "verdict",
+     "title": "Une route par soirée, suivie toute seule",
+     "text": "Le temps disponible fixe la taille, ce qui est fait se retire tout seul, et le suivi ne demande aucun geste. Le second écran n'ajoute rien à la route : il la déplace là où tu peux la lire."
+    }
+   ]
+  }
+ ],
+ "estimatedReadMinutes": 6
+}

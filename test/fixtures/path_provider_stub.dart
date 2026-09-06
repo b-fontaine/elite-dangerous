@@ -43,3 +43,15 @@ void usePathProviderStub() {
     }
   });
 }
+
+/// Installs the stub without a `setUp`/`tearDown` pair.
+///
+/// The BDD suite needs this: `bdd_widget_test` generates its own `main`, so a
+/// scenario cannot register lifecycle hooks — its `Given` has to do the work
+/// itself. Returns the directory so a caller can clean it up if it wants to;
+/// the system temp directory is fine to leave otherwise.
+Directory installPathProviderStub() {
+  final Directory root = Directory.systemTemp.createTempSync('ed_bdd_');
+  PathProviderPlatform.instance = _TempPathProvider(root);
+  return root;
+}

@@ -17,6 +17,8 @@ import '../../features/guides/presentation/pages/guides_page.dart';
 import '../../features/journal/presentation/pages/journal_page.dart';
 import '../../features/materials/presentation/pages/blueprint_plan_page.dart';
 import '../../features/materials/presentation/pages/materials_page.dart';
+import '../../features/route_planning/presentation/pages/route_bridge_page.dart';
+import '../../features/route_planning/presentation/pages/routes_page.dart';
 import '../../features/settings/presentation/pages/settings_page.dart';
 import '../shell/adaptive_shell.dart';
 import 'app_routes.dart';
@@ -36,6 +38,13 @@ const List<AppDestination> appDestinations = <AppDestination>[
     shortLabel: 'Exobio',
     icon: Icons.biotech_outlined,
     selectedIcon: Icons.biotech,
+  ),
+  AppDestination(
+    path: AppRoutes.routes,
+    label: 'Routes',
+    shortLabel: 'Routes',
+    icon: Icons.route_outlined,
+    selectedIcon: Icons.route,
   ),
   AppDestination(
     path: AppRoutes.journal,
@@ -196,6 +205,22 @@ GoRouter createAppRouter() {
                     const ExobiologyHomePage(
                   initialTab: ExobiologyTab.species,
                 ),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: <RouteBase>[
+              GoRoute(
+                path: AppRoutes.routes,
+                builder: (BuildContext context, GoRouterState state) =>
+                    const RoutesPage(),
+                routes: <RouteBase>[
+                  GoRoute(
+                    path: 'partage',
+                    builder: (BuildContext context, GoRouterState state) =>
+                        const RouteBridgePage(),
+                  ),
+                ],
               ),
             ],
           ),
