@@ -19,6 +19,24 @@ enum GuideCellStyle { normal, number, win, lose, mid, strong }
 /// Provenance of a [GuideKeyValue], shown as the OFF / COM / EST chips.
 enum GuideReliability { official, community, estimate }
 
+/// Which shelf of the library a guide sits on.
+///
+/// Two kinds of manual coexist here and answer different questions: how to play
+/// Elite Dangerous, and how to drive this application. Shelving them together
+/// would bury "Suivre une route" between two field guides about suit grades.
+enum GuideShelf {
+  /// How to use this application.
+  application('Utiliser l\'application'),
+
+  /// How to play: the authored field manuals.
+  field('Manuels de terrain');
+
+  const GuideShelf(this.label);
+
+  /// The heading the library shows above the shelf.
+  final String label;
+}
+
 /// One authored element of a guide section.
 ///
 /// Sealed so the presentation layer can switch exhaustively: adding a block
@@ -274,6 +292,7 @@ final class GuideSummary extends Equatable {
     this.deck,
     this.topics = const <String>[],
     this.estimatedReadMinutes = 0,
+    this.shelf = GuideShelf.field,
   });
 
   final String id;
@@ -281,10 +300,11 @@ final class GuideSummary extends Equatable {
   final String? deck;
   final List<String> topics;
   final int estimatedReadMinutes;
+  final GuideShelf shelf;
 
   @override
   List<Object?> get props =>
-      <Object?>[id, title, deck, topics, estimatedReadMinutes];
+      <Object?>[id, title, deck, topics, estimatedReadMinutes, shelf];
 }
 
 /// A long-form authored guide, bundled with the app as a JSON asset.
@@ -300,6 +320,7 @@ final class Guide extends Equatable {
     this.estimatedReadMinutes = 0,
     this.sections = const <GuideSection>[],
     this.sources = const <String>[],
+    this.shelf = GuideShelf.field,
   });
 
   final String id;
@@ -313,12 +334,17 @@ final class Guide extends Equatable {
   final List<GuideSection> sections;
   final List<String> sources;
 
+  /// Defaults to [GuideShelf.field]: the five authored manuals predate the
+  /// distinction and must not have to declare it.
+  final GuideShelf shelf;
+
   GuideSummary get summary => GuideSummary(
         id: id,
         title: title,
         deck: deck,
         topics: topics,
         estimatedReadMinutes: estimatedReadMinutes,
+        shelf: shelf,
       );
 
   /// Everything a full-text search should look at: heading matter, topics and
@@ -367,6 +393,7 @@ final class Guide extends Equatable {
         estimatedReadMinutes,
         sections,
         sources,
+        shelf,
       ];
 }
 

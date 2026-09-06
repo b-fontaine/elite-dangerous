@@ -1,5 +1,12 @@
 {
   "guides": [
+    "app-prise-en-main",
+    "app-alimenter",
+    "app-terrain",
+    "app-exobiologie",
+    "app-releve",
+    "app-routes",
+    "app-materiaux",
     "exploration-exobiologie",
     "artemis-suit",
     "outils",

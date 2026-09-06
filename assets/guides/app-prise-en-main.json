@@ -1,0 +1,318 @@
+{
+ "id": "app-prise-en-main",
+ "title": "Prise en main",
+ "kicker": "Codex Exobiologique · Mode d'emploi",
+ "deck": "Ce que l'application sait, d'où elle le tient, et comment lire le poste de pilotage le premier soir.",
+ "edition": "2026-09",
+ "shelf": "application",
+ "topics": [
+  "Application",
+  "Démarrage",
+  "Navigation"
+ ],
+ "sections": [
+  {
+   "id": "sommaire",
+   "number": 0,
+   "title": "Au sommaire",
+   "blocks": [
+    {
+     "type": "list",
+     "ordered": true,
+     "items": [
+      "Ce qu'elle fait, et ce qu'elle ne fait pas",
+      "Les six destinations",
+      "Lire le poste de pilotage",
+      "Les trois alertes",
+      "Le premier quart d'heure"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-quelle-fait",
+   "number": 1,
+   "title": "Ce qu'elle fait, et ce qu'elle ne fait pas",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "L'application répond à une seule question : **« qu'est-ce que je fais maintenant ? »**, en tenant compte de ce que tu possèdes déjà. Tout le reste en découle.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "paragraph",
+     "text": "Rien n'est hébergé, aucun compte n'est obligatoire, et tout est embarqué ou stocké sur l'appareil. Le catalogue des 118 organiques, les 108 matériaux d'ingénierie et les guides fonctionnent **hors ligne**, sans qu'aucun octet ne sorte."
+    },
+    {
+     "type": "heading",
+     "text": "Les appels réseau, tous à la demande",
+     "level": 3
+    },
+    {
+     "type": "paragraph",
+     "text": "Trois services peuvent être interrogés, et jamais tout seuls : la Companion API de Frontier pour ton profil, Spansh pour le système où tu te trouves et le calcul d'itinéraires, EDSM pour rattraper un historique ancien. Chacun part sur une action de ta part."
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "Elle est complète sans eux",
+     "text": "Un commandant qui n'ouvre aucun compte et importe seulement ses fichiers `Journal.*.log` a accès à tout : la feuille de route, le suivi en direct, les matériaux, les blueprints et le catalogue.\n\nCe qu'il perd est précis et limité : la flotte, l'équipement du vaisseau et sa valeur nette, que seule la Companion API expose."
+    },
+    {
+     "type": "heading",
+     "text": "Ce qu'elle ne fait pas",
+     "level": 3
+    },
+    {
+     "type": "list",
+     "items": [
+      "Elle ne joue pas à ta place et ne touche jamais au jeu : elle **lit** des fichiers, elle n'en écrit aucun côté Elite Dangerous.",
+      "Elle ne devine pas. Un chiffre que les fichiers ne portent pas s'affiche « — » plutôt qu'estimé, parce qu'un mauvais nombre lu en vol coûte un atterrissage.",
+      "Elle ne surveille rien en arrière-plan : fermée, elle ne consomme ni réseau ni disque."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "destinations",
+   "number": 2,
+   "title": "Les six destinations",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "La navigation tient en six entrées, sur un rail à gauche sur ordinateur et une barre en bas sur téléphone.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Destination",
+      "La question qu'elle traite",
+      "Hors ligne"
+     ],
+     "rows": [
+      [
+       {
+        "text": "Poste de pilotage"
+       },
+       {
+        "text": "Qui je suis, et quoi faire maintenant"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       }
+      ],
+      [
+       {
+        "text": "Exobiologie"
+       },
+       {
+        "text": "Terrain, plan, identification, catalogue"
+       },
+       {
+        "text": "Oui*",
+        "style": "mid"
+       }
+      ],
+      [
+       {
+        "text": "Routes"
+       },
+       {
+        "text": "Où aller ce soir, et où j'en suis"
+       },
+       {
+        "text": "Non",
+        "style": "lose"
+       }
+      ],
+      [
+       {
+        "text": "Journal de bord"
+       },
+       {
+        "text": "Alimenter l'application"
+       },
+       {
+        "text": "Oui*",
+        "style": "mid"
+       }
+      ],
+      [
+       {
+        "text": "Guides"
+       },
+       {
+        "text": "Apprendre — ce que tu lis en ce moment"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       }
+      ],
+      [
+       {
+        "text": "Réglages"
+       },
+       {
+        "text": "Compte Frontier, données locales, diagnostic"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       }
+      ]
+     ],
+     "caption": "* Un onglet demande le réseau — le relevé Spansh — et une action l'exige : la synchronisation depuis Frontier. Le reste fonctionne sans."
+    },
+    {
+     "type": "callout",
+     "tone": "tip",
+     "title": "Le dossier est à un geste",
+     "text": "Cinq écrans de détail — carrière, flotte, équipement à pied, ingénieurs, matériaux — n'ont pas d'entrée dans la navigation : on les ouvre depuis les cartes du poste de pilotage. C'est voulu : ils se consultent, ils ne se surveillent pas."
+    }
+   ]
+  },
+  {
+   "id": "poste-de-pilotage",
+   "number": 3,
+   "title": "Lire le poste de pilotage",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "L'écran d'accueil tient sur un téléphone et se lit de haut en bas, dans l'ordre de l'urgence.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "steps",
+     "items": [
+      {
+       "text": "Les alertes",
+       "detail": "En haut, et seulement quand il y a lieu. Rien à faire : rien ne s'affiche."
+      },
+      {
+       "text": "Huit chiffres clés",
+       "detail": "Système, corps, station, solde, valeur nette, profit exobiologie, rang Exobiologist, portée de saut. Chacun porte une précision sous la valeur — le vaisseau piloté sous la portée de saut, le rachat sous le solde quand tu es en dette."
+      },
+      {
+       "text": "Les prochaines étapes",
+       "detail": "Les trois premières lignes de la feuille de route, dans l'ordre. La suite se lit dans l'onglet Plan."
+      },
+      {
+       "text": "Le dossier",
+       "detail": "Cinq cartes de synthèse, chacune ouvrant son écran de détail."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": "Le titre de la page est ton nom de commandant dès qu'il est connu, et la ligne en dessous dit où tu es et ce que tu fais — elle vient du journal, pas d'une saisie."
+    }
+   ]
+  },
+  {
+   "id": "alertes",
+   "number": 4,
+   "title": "Les trois alertes",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Elles sont peu nombreuses et chacune demande une action différente.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Alerte",
+      "Ce qu'elle veut dire",
+      "Quoi faire"
+     ],
+     "rows": [
+      [
+       {
+        "text": "Rien à afficher pour l'instant",
+        "style": "strong"
+       },
+       {
+        "text": "Aucune source n'a encore été branchée"
+       },
+       {
+        "text": "Voir le guide « Alimenter l'application »"
+       }
+      ],
+      [
+       {
+        "text": "Synchronisation impossible",
+        "style": "strong"
+       },
+       {
+        "text": "La Companion API a refusé ou n'a pas répondu"
+       },
+       {
+        "text": "Réglages › Frontier ; le reste continue de fonctionner"
+       }
+      ],
+      [
+       {
+        "text": "Données non vendues",
+        "style": "strong"
+       },
+       {
+        "text": "De l'exobiologie scannée dort en soute"
+       },
+       {
+        "text": "Vendre avant tout le reste"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "callout",
+     "tone": "warning",
+     "title": "L'alerte qui coûte le plus cher",
+     "text": "« Données non vendues » chiffre ce qu'une seule destruction efface. Les données organiques scannées ne sont créditées qu'une fois **vendues à Vista Genomics** ; tant qu'elles sont en soute, elles ne valent rien et disparaissent avec le vaisseau.\n\nC'est la seule alerte qui parle d'argent déjà gagné mais pas encore acquis."
+    }
+   ]
+  },
+  {
+   "id": "premier-quart-dheure",
+   "number": 5,
+   "title": "Le premier quart d'heure",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Dans cet ordre, parce que chaque étape rend la suivante plus utile.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "steps",
+     "items": [
+      {
+       "text": "Importer un journal",
+       "detail": "Journal de bord › Importer ce dossier. C'est la seule étape indispensable, et elle ne demande aucun compte."
+      },
+      {
+       "text": "Regarder la feuille de route",
+       "detail": "Exobiologie › Plan. Elle est déjà personnalisée : elle a lu ce que le journal raconte."
+      },
+      {
+       "text": "Lancer le jeu, ouvrir Terrain",
+       "detail": "Sur l'ordinateur qui fait tourner Elite Dangerous, l'onglet Terrain passe « En direct » et se relit tout seul."
+      },
+      {
+       "text": "Le reste quand tu en auras besoin",
+       "detail": "Le compte Frontier, le relevé Spansh et les routes se branchent plus tard, sans rien perdre."
+      }
+     ]
+    },
+    {
+     "type": "verdict",
+     "title": "Commence par le journal",
+     "text": "Un dossier de journaux importé alimente à lui seul la feuille de route, le suivi en direct, les matériaux et le calcul de la valeur en soute. Le compte Frontier ajoute la flotte et l'équipement — utile, mais jamais bloquant."
+    }
+   ]
+  }
+ ],
+ "estimatedReadMinutes": 6
+}

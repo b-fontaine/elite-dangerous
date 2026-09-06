@@ -46,12 +46,51 @@ void main() {
   });
 
   test('every guide carries real content, not a summary', () {
+    // Two floors, because the two shelves fail differently. A field manual is
+    // converted from source HTML, so the failure to catch is a truncated
+    // conversion — hence the high bar. An application guide is written here and
+    // is short by design; its failure would be a stub that documents nothing,
+    // which a much lower bar still catches.
     for (final MapEntry<String, Guide> entry in guides.entries) {
       final int blocks = entry.value.sections
           .fold<int>(0, (int sum, GuideSection s) => sum + s.blocks.length);
+      final int floor =
+          entry.value.shelf == GuideShelf.application ? 15 : 40;
       expect(entry.value.sections.length, greaterThanOrEqualTo(4),
           reason: entry.key);
-      expect(blocks, greaterThanOrEqualTo(40), reason: entry.key);
+      expect(blocks, greaterThanOrEqualTo(floor), reason: entry.key);
+    }
+  });
+
+  test('the application guides are shelved as such', () {
+    // The shelf drives the library's two headings, and an id says out loud
+    // which one a guide belongs to: a mismatch would file a manual under the
+    // wrong question.
+    for (final MapEntry<String, Guide> entry in guides.entries) {
+      expect(
+        entry.value.shelf,
+        entry.key.startsWith('app-')
+            ? GuideShelf.application
+            : GuideShelf.field,
+        reason: entry.key,
+      );
+    }
+  });
+
+  test('every application guide opens on its own table of contents', () {
+    // The five field manuals all do it, and a reader landing on a how-to
+    // deserves to see its shape before reading it.
+    for (final MapEntry<String, Guide> entry in guides.entries) {
+      if (entry.value.shelf != GuideShelf.application) {
+        continue;
+      }
+      final GuideSection first = entry.value.sections.first;
+      expect(first.id, 'sommaire', reason: entry.key);
+      expect(
+        first.blocks.whereType<GuideList>().single.items.length,
+        entry.value.sections.length - 1,
+        reason: '${entry.key} : le sommaire doit lister toutes les sections',
+      );
     }
   });
 

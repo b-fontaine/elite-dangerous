@@ -28,6 +28,7 @@ GuideDto _$GuideDtoFromJson(Map<String, dynamic> json) => GuideDto(
   sources: (json['sources'] as List<dynamic>?)
       ?.map((e) => e as String)
       .toList(),
+  shelf: json['shelf'] as String?,
 );
 
 GuideSectionDto _$GuideSectionDtoFromJson(Map<String, dynamic> json) =>

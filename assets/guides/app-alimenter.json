@@ -1,0 +1,465 @@
+{
+ "id": "app-alimenter",
+ "title": "Alimenter l'application",
+ "kicker": "Codex Exobiologique · Mode d'emploi",
+ "deck": "Trois sources — la Companion API, les journaux du jeu, ta propre saisie — et ce que chacune apporte que les autres ignorent.",
+ "edition": "2026-09",
+ "shelf": "application",
+ "topics": [
+  "Application",
+  "Journal",
+  "Frontier"
+ ],
+ "sections": [
+  {
+   "id": "sommaire",
+   "number": 0,
+   "title": "Au sommaire",
+   "blocks": [
+    {
+     "type": "list",
+     "ordered": true,
+     "items": [
+      "Trois sources, trois portées",
+      "Importer les journaux du jeu",
+      "Synchroniser depuis Frontier",
+      "Connecter un compte Frontier",
+      "La saisie manuelle",
+      "Quand un chiffre est faux"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trois-sources",
+   "number": 1,
+   "title": "Trois sources, trois portées",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Les trois voies fonctionnent séparément et se complètent. Aucune n'est obligatoire, mais **sans aucune, l'application n'a rien à dire**.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Ce que tu veux voir",
+      "Companion API",
+      "Journaux",
+      "Saisie"
+     ],
+     "rows": [
+      [
+       {
+        "text": "Nom, solde, position"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       },
+       {
+        "text": "Oui",
+        "style": "mid"
+       }
+      ],
+      [
+       {
+        "text": "Flotte et valeur nette"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       },
+       {
+        "text": "Non",
+        "style": "lose"
+       },
+       {
+        "text": "Non",
+        "style": "lose"
+       }
+      ],
+      [
+       {
+        "text": "Équipement du vaisseau et son ingénierie"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       },
+       {
+        "text": "Partiel",
+        "style": "mid"
+       },
+       {
+        "text": "Non",
+        "style": "lose"
+       }
+      ],
+      [
+       {
+        "text": "Rachat exact, portée de saut"
+       },
+       {
+        "text": "Non",
+        "style": "lose"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       },
+       {
+        "text": "Oui",
+        "style": "mid"
+       }
+      ],
+      [
+       {
+        "text": "Ingénieurs débloqués"
+       },
+       {
+        "text": "Non",
+        "style": "lose"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       },
+       {
+        "text": "Oui",
+        "style": "mid"
+       }
+      ],
+      [
+       {
+        "text": "Matériaux à pied et de vaisseau"
+       },
+       {
+        "text": "Non",
+        "style": "lose"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       },
+       {
+        "text": "Partiel",
+        "style": "mid"
+       }
+      ],
+      [
+       {
+        "text": "Espèces scannées, vendues, en soute"
+       },
+       {
+        "text": "Non",
+        "style": "lose"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       },
+       {
+        "text": "Non",
+        "style": "lose"
+       }
+      ],
+      [
+       {
+        "text": "Suivi en direct"
+       },
+       {
+        "text": "Non",
+        "style": "lose"
+       },
+       {
+        "text": "Oui",
+        "style": "win"
+       },
+       {
+        "text": "Non",
+        "style": "lose"
+       }
+      ]
+     ],
+     "caption": "Les journaux couvrent le plus large ; la Companion API couvre ce que le jeu n'écrit jamais sur le disque."
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "Elles ne se contredisent pas",
+     "text": "Quand deux sources parlent du même fait, la plus récente et la plus précise gagne. La saisie manuelle ne sert qu'à corriger ce que les deux autres ignorent — elle n'écrase pas un profil synchronisé."
+    }
+   ]
+  },
+  {
+   "id": "importer",
+   "number": 2,
+   "title": "Importer les journaux du jeu",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "La voie qui ne demande **aucun compte**, et celle par laquelle commencer.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "steps",
+     "items": [
+      {
+       "text": "Ouvrir Journal de bord",
+       "detail": "Dernière section de l'écran : le champ de dossier."
+      },
+      {
+       "text": "Saisir le chemin du dossier de sauvegarde",
+       "detail": "Le champ propose l'emplacement par défaut de ta plateforme sous la forme `Saved Games/Frontier Developments/Elite Dangerous`."
+      },
+      {
+       "text": "Importer ce dossier",
+       "detail": "L'application lit les `Journal.*.log`, `Status.json`, `ShipLocker.json` et les autres fichiers d'état."
+      },
+      {
+       "text": "Lire le résultat",
+       "detail": "Un panneau dit combien d'événements ont été ingérés, ou pourquoi rien ne l'a été."
+      }
+     ]
+    },
+    {
+     "type": "heading",
+     "text": "Où sont ces fichiers",
+     "level": 3
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Système",
+      "Emplacement"
+     ],
+     "rows": [
+      [
+       {
+        "text": "Windows"
+       },
+       {
+        "text": "`%USERPROFILE%\\Saved Games\\Frontier Developments\\Elite Dangerous`"
+       }
+      ],
+      [
+       {
+        "text": "macOS"
+       },
+       {
+        "text": "`~/Library/Application Support/Frontier Developments/Elite Dangerous`"
+       }
+      ],
+      [
+       {
+        "text": "Linux (Steam Proton)"
+       },
+       {
+        "text": "Sous `compatdata/359320/pfx/drive_c/users/steamuser/`, puis la même arborescence `Saved Games`"
+       }
+      ]
+     ],
+     "caption": "Ce sont les emplacements que le champ propose lui-même : sur Linux il essaie les deux racines Steam usuelles avant de retomber sur `~/Saved Games`."
+    },
+    {
+     "type": "callout",
+     "tone": "tip",
+     "title": "Le chemin sert deux fois",
+     "text": "Le dossier saisi ici est aussi celui que le **suivi en direct** relira tout seul. Un import réussi suffit à faire passer l'onglet Terrain de « Dossier de journal inconnu » à « En direct » dès que le jeu écrit."
+    },
+    {
+     "type": "callout",
+     "tone": "warning",
+     "title": "Pas de sélecteur natif",
+     "text": "Le chemin se saisit au clavier : il n'y a pas de boîte de dialogue système. C'est une limite assumée, documentée dans le README du projet."
+    }
+   ]
+  },
+  {
+   "id": "synchroniser",
+   "number": 3,
+   "title": "Synchroniser depuis Frontier",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Une fois un compte connecté, deux boutons remontent ton historique côté serveur.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "keyValue",
+     "items": [
+      {
+       "label": "Fenêtre par défaut",
+       "value": "14 jours",
+       "reliability": "official"
+      },
+      {
+       "label": "Fenêtre maximale",
+       "value": "90 jours",
+       "reliability": "official"
+      },
+      {
+       "label": "Sens de lecture",
+       "value": "du plus récent au plus ancien",
+       "reliability": "official"
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": "**Depuis Frontier (14 j)** couvre les sessions récentes et coûte peu. **Remonter le plus loin possible** va chercher jusqu'à la limite des 90 jours — c'est plus long, et c'est ce qu'on lance une fois, au début."
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "Pourquoi 90 jours et pas plus",
+     "text": "C'est la profondeur que Frontier expose. Au-delà, seuls tes fichiers locaux gardent la mémoire : c'est pour cela que l'import de dossier reste utile même avec un compte connecté."
+    }
+   ]
+  },
+  {
+   "id": "compte-frontier",
+   "number": 4,
+   "title": "Connecter un compte Frontier",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "L'étape la plus déroutante, parce qu'elle demande un identifiant que tu dois créer toi-même.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "steps",
+     "items": [
+      {
+       "text": "Ouvrir Réglages › Frontier",
+       "detail": "L'écran d'authentification explique la démarche."
+      },
+      {
+       "text": "Obtenir un client_id",
+       "detail": "Sur le Developer Zone de Frontier : c'est gratuit, et c'est ce qui identifie l'application auprès d'eux."
+      },
+      {
+       "text": "Le coller dans le champ, puis Enregistrer",
+       "detail": "Il est stocké sur l'appareil, dans le stockage sécurisé."
+      },
+      {
+       "text": "Se connecter",
+       "detail": "Le navigateur s'ouvre sur la page de Frontier, puis rend la main à l'application."
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "Pourquoi c'est à toi de le faire",
+     "text": "Un `client_id` distribué avec l'application serait partagé par tous ses utilisateurs et révoqué au premier abus. Le tien n'engage que toi.\n\nLa liste des redirections du Developer Zone peut rester vide : le flux utilisé n'en réclame pas."
+    },
+    {
+     "type": "callout",
+     "tone": "tip",
+     "title": "Continuer sans compte",
+     "text": "L'écran propose explicitement de passer. Ce n'est pas un renoncement : relis le tableau de la première section pour voir ce que tu perds exactement."
+    }
+   ]
+  },
+  {
+   "id": "saisie",
+   "number": 5,
+   "title": "La saisie manuelle",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Cinq sections numérotées, dans Mon profil : identité, combinaison, matériaux à pied, ingénieurs, vaisseau et économie.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "paragraph",
+     "text": "Elle existe pour ce que la Companion API n'expose pas et que le journal n'a pas encore vu — le grade de ta combinaison Artemis, par exemple, si tu ne l'as pas améliorée depuis le dernier journal importé."
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "Ta parole fait foi",
+     "text": "Ce que tu saisis ici est traité comme vrai. L'application ne le confronte pas aux autres sources : elle s'en sert pour ce qu'aucune ne sait."
+    }
+   ]
+  },
+  {
+   "id": "chiffre-faux",
+   "number": 6,
+   "title": "Quand un chiffre est faux",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Presque toujours la même cause : la source qui porte ce chiffre n'a pas encore été lue.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Symptôme",
+      "Cause la plus probable",
+      "Remède"
+     ],
+     "rows": [
+      [
+       {
+        "text": "Flotte vide, valeur nette à zéro"
+       },
+       {
+        "text": "Aucun compte Frontier connecté"
+       },
+       {
+        "text": "Réglages › Frontier"
+       }
+      ],
+      [
+       {
+        "text": "Aucun inventaire de matériaux"
+       },
+       {
+        "text": "Les événements `ShipLocker` et `Materials` viennent du journal"
+       },
+       {
+        "text": "Importer un dossier de journaux"
+       }
+      ],
+      [
+       {
+        "text": "Espèces échantillonnées non rattachées"
+       },
+       {
+        "text": "Le journal importé ne nomme pas le corps concerné"
+       },
+       {
+        "text": "Importer les journaux plus anciens"
+       }
+      ],
+      [
+       {
+        "text": "Position figée sur une vieille session"
+       },
+       {
+        "text": "Le jeu n'écrit rien en ce moment"
+       },
+       {
+        "text": "Normal : Terrain affiche « Jeu non détecté »"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "verdict",
+     "title": "Un import, puis le reste",
+     "text": "Un seul dossier de journaux importé suffit à rendre l'application utile. Le compte Frontier et la saisie manuelle comblent des trous précis, chacun documenté dans le tableau d'ouverture."
+    }
+   ]
+  }
+ ],
+ "estimatedReadMinutes": 6
+}

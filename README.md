@@ -20,7 +20,7 @@ tenant compte de ce que le commandant possède déjà.
 | **Catalogue** | Les 118 organiques connus, leurs valeurs Vista Genomics, leurs conditions et leurs variantes de couleur. Hors ligne. |
 | **Matériaux et blueprints** | Les 108 matériaux d'ingénierie et les composants de combinaison, avec **où et comment on obtient chacun**. Pour un blueprint ou une montée en grade : ce qu'il reste à trouver, ce que le trader peut convertir depuis le surplus, et ce qui bloque quand quelque chose bloque. Hors ligne, aucun appel réseau. |
 | **Journal de bord** | Synchronisation depuis la Companion API de Frontier **ou** import des fichiers `Journal.*.log` du jeu — cette seconde voie ne demande aucun compte. La synchronisation remonte du plus récent au plus ancien, jusqu'à 90 jours. |
-| **Guides** | Les cinq guides sources convertis en contenu structuré et navigable (260 Ko), rendus avec le même design system que le reste. |
+| **Guides** | Deux étagères. Les cinq guides sources convertis en contenu structuré et navigable (260 Ko), et sept modes d'emploi de l'application — un par grande fonctionnalité — écrits dans le même format et cherchables avec eux. |
 | **Profil** | Profil Frontier lu en entier — flotte, équipement du vaisseau piloté et son ingénierie, combinaisons, armes, rangs, services de la station — complété par le journal, qui fournit seul le rebuy exact, la portée de saut, les ingénieurs débloqués, les matériaux à pied et l'allégeance Powerplay. La saisie manuelle ne sert plus qu'à corriger. |
 
 Rien n'est hébergé, aucun compte n'est requis, et tout est embarqué ou stocké

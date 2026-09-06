@@ -1,0 +1,291 @@
+{
+ "id": "app-terrain",
+ "title": "Le terrain, en direct",
+ "kicker": "Codex Exobiologique · Mode d'emploi",
+ "deck": "L'onglet qui relit le jeu pendant que tu joues : ce qu'il lit, les cinq états du suivi, et ce qu'il refuse de deviner.",
+ "edition": "2026-09",
+ "shelf": "application",
+ "topics": [
+  "Application",
+  "Terrain",
+  "Direct"
+ ],
+ "sections": [
+  {
+   "id": "sommaire",
+   "number": 0,
+   "title": "Au sommaire",
+   "blocks": [
+    {
+     "type": "list",
+     "ordered": true,
+     "items": [
+      "Ce qu'il lit, et où",
+      "Les cinq états du suivi",
+      "L'écran dans l'ordre",
+      "La soute, et ce qu'une mort efface",
+      "Ce que l'accueil en reprend"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-quil-lit",
+   "number": 1,
+   "title": "Ce qu'il lit, et où",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Pendant une partie, l'application relit **toutes les dix secondes** ce que le jeu écrit sur le disque. Aucune injection, aucune lecture mémoire : uniquement les fichiers que Frontier prévoit pour cela.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "list",
+     "items": [
+      "`Journal.*.log` — la suite des événements : sauts, scans, échantillons, ventes, morts.",
+      "`Status.json` — la position instantanée, jusqu'à la latitude et la longitude quand tu es posé.",
+      "Les fichiers d'inventaire — `ShipLocker.json` et compagnie, pour les matériaux."
+     ]
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "Pourquoi dix secondes, et pas moins",
+     "text": "Les fichiers sont sur le disque que le jeu est lui-même en train d'écrire, et ce qu'on observe — un vol vers une planète, une marche vers un organisme — se mesure en minutes. Interroger plus vite ne gagnerait rien et disputerait des entrées-sorties au jeu, sur la seule machine où cela compte."
+    },
+    {
+     "type": "callout",
+     "tone": "warning",
+     "title": "Bureau uniquement",
+     "text": "Lire les fichiers du jeu suppose d'être sur la machine qui le fait tourner. Sur téléphone et tablette, l'onglet Terrain montre le dernier journal importé et le dit clairement.\n\nPour suivre depuis un autre écran, c'est la **route** qui se partage — voir le guide « Les routes »."
+    }
+   ]
+  },
+  {
+   "id": "etats",
+   "number": 2,
+   "title": "Les cinq états du suivi",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Le kicker en haut de l'écran nomme toujours l'état courant. C'est la première chose à lire quand un chiffre surprend.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "table",
+     "headers": [
+      "État",
+      "Ce qui se passe",
+      "Ce que tu vois"
+     ],
+     "rows": [
+      [
+       {
+        "text": "En direct",
+        "style": "win"
+       },
+       {
+        "text": "Le jeu écrit, l'app relit"
+       },
+       {
+        "text": "L'état réel, à dix secondes près"
+       }
+      ],
+      [
+       {
+        "text": "Jeu non détecté",
+        "style": "mid"
+       },
+       {
+        "text": "Le dossier est lu, le jeu n'y écrit rien"
+       },
+       {
+        "text": "La dernière session, telle qu'elle s'est terminée"
+       }
+      ],
+      [
+       {
+        "text": "Dossier de journal inconnu",
+        "style": "lose"
+       },
+       {
+        "text": "Aucun dossier n'a encore été indiqué"
+       },
+       {
+        "text": "Rien — l'app ne sait pas où chercher"
+       }
+      ],
+      [
+       {
+        "text": "Dossier introuvable",
+        "style": "lose"
+       },
+       {
+        "text": "Le dossier configuré a disparu"
+       },
+       {
+        "text": "Rien — disque débranché, partie déplacée"
+       }
+      ],
+      [
+       {
+        "text": "Suivi indisponible",
+        "style": "lose"
+       },
+       {
+        "text": "Pas de système de fichiers à lire"
+       },
+       {
+        "text": "Le dernier journal importé"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "callout",
+     "tone": "tip",
+     "title": "« Jeu non détecté » n'est pas une panne",
+     "text": "C'est l'état normal entre deux sessions, et celui qu'on voit le plus souvent. Les chiffres affichés restent vrais : ils datent simplement de la dernière fois que le jeu a écrit."
+    }
+   ]
+  },
+  {
+   "id": "ecran",
+   "number": 3,
+   "title": "L'écran dans l'ordre",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Sept sections, de la plus immédiate à la plus large. Chacune disparaît quand elle n'a rien à dire.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "steps",
+     "items": [
+      {
+       "text": "L'état du suivi",
+       "detail": "Un encart, seulement lorsque le suivi n'est pas en direct. Il dit quoi faire pour qu'il le soit."
+      },
+      {
+       "text": "Le relevé",
+       "detail": "Ce qui reste à scanner et à échantillonner dans le système courant."
+      },
+      {
+       "text": "Où suis-je",
+       "detail": "La position lue dans `Status.json` : système, corps, et coordonnées de surface quand tu es posé."
+      },
+      {
+       "text": "Ici même",
+       "detail": "Le corps sous tes pieds : ses espèces connues, ce qui y a déjà été fait."
+      },
+      {
+       "text": "Dans ce système",
+       "detail": "L'inventaire du système entier, corps par corps."
+      },
+      {
+       "text": "Relevé de la communauté",
+       "detail": "Ce que Spansh sait et que ton scanner ne dit pas. Un bouton, jamais automatique — voir le guide dédié."
+      },
+      {
+       "text": "Non vendu",
+       "detail": "La valeur des données organiques en soute."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": "Le bouton **Relire** en haut force une relecture immédiate quand le suivi est actif — utile juste après un scan, sans attendre le prochain cycle."
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "Rien n'est estimé",
+     "text": "Un chiffre que les fichiers ne portent pas s'affiche comme inconnu, jamais approché. Cet écran se lit en vol : un nombre inventé coûterait un atterrissage pour rien."
+    }
+   ]
+  },
+  {
+   "id": "soute",
+   "number": 4,
+   "title": "La soute, et ce qu'une mort efface",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "La dernière section chiffre ce que tu transportes sans l'avoir vendu.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "paragraph",
+     "text": "Les données organiques suivent une règle simple et brutale : trois échantillons complètent une espèce, et rien n'est crédité tant que ce n'est pas vendu à **Vista Genomics**. Entre les deux, la valeur existe mais ne t'appartient pas."
+    },
+    {
+     "type": "callout",
+     "tone": "warning",
+     "title": "Une mort efface tout",
+     "text": "Une destruction fait disparaître l'intégralité des données non vendues. Ni l'assurance, ni le rachat du vaisseau ne les rendent.\n\nC'est pourquoi cette valeur remonte aussi en alerte sur le poste de pilotage : c'est le seul chiffre de l'application qui peut tomber à zéro d'un coup."
+    },
+    {
+     "type": "verdict",
+     "title": "Lis l'état avant les chiffres",
+     "text": "Le kicker dit s'il s'agit de maintenant ou de la dernière session. Tout le reste de l'écran se lit à travers cette phrase — et « Jeu non détecté » est un état parfaitement sain."
+    }
+   ]
+  },
+  {
+   "id": "accueil",
+   "number": 5,
+   "title": "Ce que l'accueil en reprend",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Trois chiffres du poste de pilotage viennent directement de ce que Terrain lit.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Sur l'accueil",
+      "Ce que ça vaut vraiment"
+     ],
+     "rows": [
+      [
+       {
+        "text": "Système, corps, station"
+       },
+       {
+        "text": "La position live, ou la dernière connue"
+       }
+      ],
+      [
+       {
+        "text": "Profit exobiologie"
+       },
+       {
+        "text": "Ce qui a été vendu, pas ce qui est en soute"
+       }
+      ],
+      [
+       {
+        "text": "Alerte « Données non vendues »"
+       },
+       {
+        "text": "Exactement la valeur du panneau Non vendu"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": "Autrement dit : l'accueil dit **combien**, Terrain dit **où** et **quoi faire pour le sécuriser**."
+    },
+    {
+     "type": "callout",
+     "tone": "tip",
+     "title": "Relire, plutôt qu'attendre",
+     "text": "Le cycle est de dix secondes, mais un scan qu'on vient de terminer se vérifie tout de suite avec le bouton **Relire** en haut de l'écran. Il n'apparaît que lorsque le suivi lit vraiment quelque chose."
+    }
+   ]
+  }
+ ],
+ "estimatedReadMinutes": 5
+}

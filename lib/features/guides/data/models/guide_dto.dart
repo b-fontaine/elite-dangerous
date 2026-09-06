@@ -33,6 +33,7 @@ class GuideDto {
     this.estimatedReadMinutes,
     this.sections,
     this.sources,
+    this.shelf,
   });
 
   factory GuideDto.fromJson(Map<String, dynamic> json) =>
@@ -49,6 +50,10 @@ class GuideDto {
   final List<GuideSectionDto>? sections;
   final List<String>? sources;
 
+  /// `"application"` for the manuals about this app. Anything else — including
+  /// nothing at all — is a field manual.
+  final String? shelf;
+
   Guide toEntity() => Guide(
         id: id,
         title: title,
@@ -62,6 +67,9 @@ class GuideDto {
             .map((GuideSectionDto dto) => dto.toEntity())
             .toList(growable: false),
         sources: sources ?? const <String>[],
+        shelf: shelf == 'application'
+            ? GuideShelf.application
+            : GuideShelf.field,
       );
 }
 

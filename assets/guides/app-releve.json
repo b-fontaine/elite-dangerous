@@ -1,0 +1,211 @@
+{
+ "id": "app-releve",
+ "title": "Le relevé de la communauté",
+ "kicker": "Codex Exobiologique · Mode d'emploi",
+ "deck": "Demander à Spansh ce que les autres commandants ont trouvé ici — les espèces exactes et leurs coordonnées, qu'aucun scan ne révèle avant d'être posé dessus.",
+ "edition": "2026-09",
+ "shelf": "application",
+ "topics": [
+  "Application",
+  "Spansh",
+  "Réseau"
+ ],
+ "sections": [
+  {
+   "id": "sommaire",
+   "number": 0,
+   "title": "Au sommaire",
+   "blocks": [
+    {
+     "type": "list",
+     "ordered": true,
+     "items": [
+      "Ce que Spansh sait et que ton scanner ignore",
+      "Pourquoi c'est un bouton",
+      "Ce qu'il faut pour interroger",
+      "Lire le résultat",
+      "Spansh sert deux fois"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-que-spansh-sait",
+   "number": 1,
+   "title": "Ce que Spansh sait et que ton scanner ignore",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Le panneau **Relevé de la communauté**, en bas de l'onglet Terrain, interroge Spansh sur le système où tu te trouves.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "paragraph",
+     "text": "Ce qu'il rapporte n'est pas ce que ton scanner peut produire : les corps que **tu** n'as jamais scannés, et surtout les **espèces exactes** avec leur valeur et leurs coordonnées de surface — une information qu'aucun relevé orbital ne donne, et qui suppose normalement d'aller se poser pour la découvrir."
+    },
+    {
+     "type": "keyValue",
+     "items": [
+      {
+       "label": "Ce que le FSS donne",
+       "value": "les espèces possibles",
+       "reliability": "community"
+      },
+      {
+       "label": "Ce que le relevé donne",
+       "value": "les espèces relevées, avec leurs coordonnées",
+       "reliability": "community"
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "C'est du travail d'autres commandants",
+     "text": "Spansh agrège ce que la communauté a remonté. Un système jamais visité n'y figure pas, et un système partiellement exploré n'y figure qu'en partie. L'absence de réponse n'est donc pas une panne : c'est une frontière."
+    }
+   ]
+  },
+  {
+   "id": "un-bouton",
+   "number": 2,
+   "title": "Pourquoi c'est un bouton",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "La requête ne part **que** sur ton geste. Rien n'est demandé sans ton accord, et le panneau le dit lui-même.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "list",
+     "items": [
+      "Aucune interrogation automatique, ni au démarrage, ni au changement de système.",
+      "Le résultat est mis en cache : rouvrir l'écran ne redemande rien. Un bouton **Redemander à Spansh** force une nouvelle requête quand tu la veux.",
+      "Le reste de la page ne dépend pas de Spansh : ce que ton journal sait reste affiché, avec ou sans réponse."
+     ]
+    },
+    {
+     "type": "callout",
+     "tone": "tip",
+     "title": "Le coût est réel",
+     "text": "Spansh est un service gratuit tenu par une personne. Une requête par système visité est raisonnable ; une requête toutes les dix secondes ne le serait pas. C'est la raison du bouton, pas une précaution de façade."
+    }
+   ]
+  },
+  {
+   "id": "prerequis",
+   "number": 3,
+   "title": "Ce qu'il faut pour interroger",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Une seule condition, et elle vient du journal.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "callout",
+     "tone": "warning",
+     "title": "Il faut un id64, pas un nom",
+     "text": "Spansh ne répond qu'à un identifiant numérique de système — jamais à un nom, parce que **deux systèmes peuvent porter le même**. Cet identifiant vient du journal.\n\nSi le panneau annonce qu'aucun identifiant n'est disponible, c'est que le journal courant ne porte pas encore de position : importe un journal, ou lance le jeu."
+    },
+    {
+     "type": "paragraph",
+     "text": "Sur la cible web, le panneau se masque entièrement : Spansh n'envoie pas d'en-têtes CORS, et le navigateur refuse la requête avant même qu'elle parte. Ce n'est pas contournable côté application."
+    }
+   ]
+  },
+  {
+   "id": "lire",
+   "number": 4,
+   "title": "Lire le résultat",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Avant la première requête, le panneau ne montre qu'une explication et son bouton **Interroger Spansh** : il n'y a rien à afficher, et il ne fait pas semblant.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "paragraph",
+     "text": "Le panneau annonce d'abord le volume : combien de corps sont connus, et combien portent de la biologie."
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Ce que le panneau annonce",
+      "Ce que tu en fais"
+     ],
+     "rows": [
+      [
+       {
+        "text": "Le nombre de corps connus"
+       },
+       {
+        "text": "Mesurer ce que Spansh sait de plus que toi"
+       }
+      ],
+      [
+       {
+        "text": "Combien portent de la biologie"
+       },
+       {
+        "text": "Décider si le système mérite qu'on s'y arrête"
+       }
+      ],
+      [
+       {
+        "text": "Les genres présents"
+       },
+       {
+        "text": "Savoir quel Colony Range prévoir avant de descendre"
+       }
+      ],
+      [
+       {
+        "text": "Les espèces par corps, avec leur valeur"
+       },
+       {
+        "text": "Choisir sur quel corps se poser en premier"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "list",
+     "items": [
+      "Les **genres présents** dans le système, pour savoir tout de suite si le détour vaut le carburant.",
+      "Corps par corps, les espèces relevées, avec leur valeur Vista Genomics.",
+      "L'horodatage du relevé : tu sais quand la réponse a été obtenue, et donc si elle mérite d'être rafraîchie."
+     ]
+    },
+    {
+     "type": "verdict",
+     "title": "Une requête par système, au bon moment",
+     "text": "Le meilleur moment pour interroger Spansh est à l'arrivée dans un système, avant de choisir sur quel corps descendre. C'est là que la réponse change une décision — après l'atterrissage, ton propre scanner en sait déjà autant."
+    }
+   ]
+  },
+  {
+   "id": "ailleurs",
+   "number": 5,
+   "title": "Spansh sert deux fois",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Le même service répond à une autre question dans l'application, avec les mêmes précautions.",
+     "emphasis": "intro"
+    },
+    {
+     "type": "paragraph",
+     "text": "Le calcul d'itinéraires de l'écran **Routes** passe aussi par Spansh : même règle du geste explicite, même indisponibilité sur la cible web, et un coût bien plus élevé — une route se calcule en dizaines de secondes là où un relevé de système est immédiat."
+    },
+    {
+     "type": "callout",
+     "tone": "info",
+     "title": "Deux usages, un seul service",
+     "text": "Si le relevé fonctionne, les routes fonctionneront aussi, et réciproquement. Un échec des deux au même moment désigne le réseau, pas l'application."
+    }
+   ]
+  }
+ ],
+ "estimatedReadMinutes": 5
+}

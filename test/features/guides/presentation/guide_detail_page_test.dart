@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:elite_dangerous/core/di/injection.dart';
 import 'package:elite_dangerous/design_system/design_system.dart';
+import 'package:elite_dangerous/features/guides/data/models/guide_mapper.dart';
 import 'package:elite_dangerous/features/guides/domain/repositories/guide_repository.dart';
 import 'package:elite_dangerous/features/guides/presentation/pages/guide_detail_page.dart';
 import 'package:flutter/material.dart';
@@ -18,13 +21,12 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   usePathProviderStub();
 
-  const List<String> guideIds = <String>[
-    'exploration-exobiologie',
-    'artemis-suit',
-    'outils',
-    'protocole-milliard',
-    'debuter-sans-combat',
-  ];
+  // Read from the shipped index rather than listed here: a guide added to the
+  // library must be rendered on a phone before anyone finds out otherwise, and
+  // a hand-kept list is exactly what stops happening.
+  final List<String> guideIds = GuideMapper.parseIndex(
+    File('assets/guides/index.json').readAsStringSync(),
+  ).valueOrNull!;
 
   const Map<String, Size> sizes = <String, Size>{
     'téléphone': Size(360, 800),
