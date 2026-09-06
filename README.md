@@ -396,6 +396,30 @@ démarrage : relancer le partage invalide l'ancien. C'est un cran au-dessus du
 précédent le plus proche, le serveur web d'EDDiscovery, dont la documentation ne
 décrit aucune authentification.
 
+Une fois le code saisi, il n'y a rien d'autre à faire : **c'est l'appairage seul
+qui décide** de la source de l'écran de route. Un appareil appairé lit la
+machine de jeu et la relit toutes les dix secondes tant que l'écran est ouvert ;
+un appareil qui ne l'est pas — la machine de jeu elle-même, notamment — lit son
+propre journal. Un appareil appairé ne retombe jamais en silence sur son journal
+local. Et comme composer ou abandonner une route écrit sur le disque de
+l'appareil qui le fait, ces deux actions restent sur la machine de jeu.
+
+Trois précautions, chacune pour une façon de mentir :
+
+- **Une lecture ratée ne vide pas l'écran.** Les chiffres affichés étaient vrais
+  quand ils sont arrivés ; ils restent, et la légende vieillit — « données il y
+  a 2 min » — au lieu de laisser croire à une route sans progression. Un
+  hoquet de wifi ne fait plus clignoter la soirée.
+- **Trois pannes, trois noms.** Une machine qui ne répond pas est *injoignable*,
+  une qui refuse le code demande un *appairage à refaire*, une qui répond dans
+  un format inconnu donne une *réponse illisible*. Une seule de ces trois se
+  règle au pare-feu, et se tromper de nom envoie le commandant au mauvais
+  endroit.
+- **Un hôte muet est interrogé de moins en moins souvent.** L'intervalle
+  s'étire jusqu'à une minute après des échecs répétés : un téléphone posé sur le
+  bureau, écran ouvert, PC éteint pour la nuit, n'ouvre pas une socket toutes
+  les dix secondes jusqu'au matin.
+
 Quand l'autre appareil ne voit rien, c'est presque toujours le pare-feu de la
 machine de jeu — la panne numéro un documentée chez EDDiscovery, nommée à
 l'écran plutôt que laissée à découvrir.
