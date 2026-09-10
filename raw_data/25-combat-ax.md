@@ -1,10 +1,36 @@
+---
+id: 25-combat-ax
+titre: "Combat anti-Thargoïde (AX) approfondi"
+domaine: combat
+entites: [Thargoïdes, Interceptor, Scout thargoïde, Titan, Maelstrom, Shutdown Field Neutraliser, Guardian Gauss Cannon, Caustic Sink Launcher, Nuage caustique, Aegis, AXI, Zone de Combat Anti-Xéno]
+mots_cles_en: [thargoid, interceptor, hydra, caustic cloud, shutdown field neutraliser, guardian gauss cannon, anti-xeno combat zone, non-human signal source, maelstrom, titan]
+version_jeu_couverte: "4.4.0.x — contenu thargoïde inchangé depuis fin 2024, recoupé sur le flux d'annonces 2025-2026"
+branche: live
+date_verification: 2026-09-09
+confiance_globale: moyenne
+volatilite: moyenne
+sources_primaires: [Flux Steam News officiel de Frontier Developments, Wikipédia EN Elite Dangerous, codex Maelstrom de Canonn, Inara, Massively OP]
+zones_incertaines: ["Le nombre exact de cœurs par classe d'Interceptor n'a pas pu être recoupé sur source accessible", "La durée de la fenêtre de tir après shutdown (15 à 20 secondes) est une valeur indicative non vérifiée", "L'absence de sous-classes nommées de Scouts n'a pas pu être recoupée sur wiki", "Les valeurs de dégâts et de DPS des builds AX ne sont pas vérifiées et évoluent avec l'équilibrage", "La chronologie d'Aegis (3303, 3308, 3309) est reprise du corpus sans source primaire indépendante", "L'absence de mise à jour thargoïde depuis fin 2024 repose sur les titres et résumés du flux Steam News, pas sur les changelogs complets", "Le statut du domaine axi.info n'a pas pu être testé"]
+guides_lies: [0, 1, 4, 5, 8, 16, 24]
+---
+
 # Combat anti-Thargoïde (AX) approfondi
 
-## Introduction
+## En bref
+
+Le combat anti-Thargoïde (AX, *anti-xeno*) oppose les Commandants aux vaisseaux organiques des Thargoïdes : les
+**Scouts**, capables d'hyperdiction, et quatre classes d'**Interceptors** — Cyclops (1 cœur), Basilisk (2), Medusa (3)
+et Hydra (4), du niveau de menace modéré à extrême. Abattre un Interceptor suppose de fragiliser son bouclier organique
+aux tirs AX, de le désactiver au **Shutdown Field Neutraliser (SFN)**, puis de détruire ses cœurs (*hearts*) pendant une
+fenêtre d'une quinzaine de secondes, au **Guardian Gauss Cannon**, en nettoyant l'essaim au *Remote Release Flak
+Launcher* et en purgeant les stacks caustiques au *Caustic Sink Launcher*. La Seconde Guerre Thargoïde est close : le
+dernier des huit **Titans** (*Maelstroms*), **Cocijo**, est tombé à Sol le 19 décembre 2024 à 15:00 UTC, après Raijin
+et Taranis (2 mars 2024). En 2026, le combat AX se pratique encore en **Non-Human Signal Sources (NHSS)** et en **Zones
+de Combat Anti-Xéno (AXCZ)**, pour la réputation **Aegis**, les matériaux du Technology Broker et l'entraînement.
+
+## Introduction au combat anti-Thargoïde (AX) dans Elite Dangerous
 
 Le **combat anti-Thargoïde (AX)** est la branche de gameplay la plus exigeante d'Elite Dangerous en matière de combat spatial : elle oppose les Commandants à une biotechnologie extraterrestre hostile, les **Thargoïdes**, dont les vaisseaux organiques ne se détruisent pas comme un châssis humain classique. Ce guide approfondit les bases posées dans [08-combat-spatial.md](./08-combat-spatial.md) (section 4.5) et le contexte narratif de [01-lore.md](./01-lore.md) (section 3) : taxonomie complète des vaisseaux thargoïdes, anatomie détaillée d'un Interceptor, mécanique des nuages caustiques, archétypes de builds AX, organisations Aegis/AXI, et état du combat AX en 2026, après la conclusion officielle de la Seconde Guerre Thargoïde fin 2024.
-
-> **Note méthodologique sur la fiabilité des données de cette révision.** Les sources communautaires habituelles pour la taxonomie Thargoïde — le wiki elite-dangerous.fandom.com, les forums officiels Frontier — se sont révélées inaccessibles lors de la rédaction (blocage anti-bot HTTP 402), comme déjà noté dans [08-combat-spatial.md](./08-combat-spatial.md). En revanche, cette révision a pu consulter directement le flux officiel **Steam News de Frontier Developments** (API `ISteamNews`, contenu identique aux billets GalNet/site officiel) ainsi que l'article anglais de Wikipédia sur *Elite Dangerous* et deux sites communautaires (Inara, Canonn) — voir la section [Sources](#sources) en fin de document. Cela permet de confirmer avec un niveau de confiance élevé la chronologie de fin de guerre (section 1.1), directement recoupée sur l'horodatage brut des billets Steam. En revanche, la taxonomie fine des vaisseaux (nombre exact de « cœurs » par classe d'Interceptor), l'anatomie précise des sous-systèmes et les valeurs chiffrées de dégâts/DPS des builds reposent sur des **connaissances de jeu établies et stables depuis les mises à jour « Thargoid War » de 2020-2022**, que les sources consultées cette session (Wikipédia, Inara, Canonn) ne détaillent pas au niveau requis pour les re-vérifier ; elles sont signalées ci-dessous comme telles. Avant de graver un build ou un chiffre dans un contexte critique, recoupez-le avec le fil GalNet en jeu, un wiki communautaire à jour, ou un configurateur externe (Coriolis, EDSY — voir [16-outils.md](./16-outils.md)).
 
 ---
 
@@ -21,7 +47,14 @@ Le flux Steam News officiel de Frontier Developments (API `ISteamNews`, identiqu
 
 Ces deux dates et la citation du second billet ont été **vérifiées directement cette session** sur l'horodatage brut du flux Steam News officiel : **Sol n'a été envahi qu'à partir du 5 décembre 2024, 12:01 UTC**, et **la victoire finale a été proclamée le 19 décembre 2024, 15:00 UTC**. Cette séquence est cohérente avec le récit déjà présent dans [01-lore.md](./01-lore.md) (section 3.5), qui identifie également Cocijo comme dernier Titan tombé à Sol en décembre 2024.
 
-> **Divergence de date, déjà présente dans le corpus.** [01-lore.md](./01-lore.md) (section 3.6) situe l'événement narratif « Thargoid War Epilogue » en **janvier 2025**, alors que le billet Frontier du même nom est daté du **19 décembre 2024, 15:00 UTC** sur le flux Steam officiel (confirmé cette session). L'écart (environ un mois) n'a pas pu être tranché ici — il peut s'agir d'un contenu GalNet complémentaire diffusé en janvier 2025 en plus de l'annonce de décembre, ou d'une imprécision à corriger dans le corpus. Il est recommandé de trancher ce point via [00-chronologie-canonique.md](./00-chronologie-canonique.md) lors d'une prochaine révision plutôt que de trancher unilatéralement ici. Par ailleurs, l'article anglais de Wikipédia sur *Elite Dangerous* (consulté cette session) situe la destruction de Cocijo au « 26 mai 3310 » dans le calendrier in-fiction (GalNet) — une date de lore in-univers, sans valeur chronologique réelle, à ne pas confondre avec les dates réelles ci-dessus. Ce guide retient donc exclusivement les dates réelles vérifiées via Steam News (5 et 19 décembre 2024) pour toute référence temporelle.
+> **Date tranchée par le corpus.** La date de référence de l'Epilogue est le **19 décembre 2024, 15:00 UTC**, celle
+> du billet Frontier « The last Titan, Cocijo, has fallen. The war is over. », relevée sur l'horodatage brut du flux
+> Steam News officiel. La mention « janvier 2025 » de [01-lore.md](./01-lore.md) (section 3.6) est traitée comme
+> imprécise, et le « 26 mai 3310 » de l'article anglais de Wikipédia est une date **in-fiction** (calendrier GalNet),
+> sans valeur chronologique réelle : voir le fait tranché en
+> [00-chronologie-canonique.md](./00-chronologie-canonique.md#11-thargoid-war-epilogue--fin-de-la-seconde-guerre-thargoïde).
+> Ce guide retient donc exclusivement les dates réelles vérifiées via Steam News (5 et 19 décembre 2024) pour toute
+> référence temporelle.
 
 ### 1.2 Aucune évolution majeure du contenu Thargoïde documentée depuis fin 2024
 
@@ -46,7 +79,7 @@ Ce combat AX pérenne sert avant tout à l'entraînement, à la collecte de mat�
 
 ## 2. Taxonomie des vaisseaux thargoïdes
 
-### 2.1 Scouts
+### 2.1 Scouts — les plus petits vaisseaux thargoïdes, capables d'hyperdiction
 
 Les **Scouts** sont les plus petits vaisseaux thargoïdes, rencontrés principalement dans les NHSS et les systèmes en état d'alerte ou d'invasion. Points clés :
 
@@ -57,7 +90,7 @@ Les **Scouts** sont les plus petits vaisseaux thargoïdes, rencontrés principal
 
 Contrairement aux Interceptors, il n'existe pas de sous-classification formelle et largement consensuelle des Scouts au-delà du terme générique « Scout » — seule leur **échelle de niveau de menace** (généralement notée de façon croissante) distingue les rencontres les plus anodines des plus dangereuses. *Point à traiter avec prudence : cette absence de sous-classes nommées n'a pas pu être recoupée sur wiki cette session (accès bloqué) ; à confirmer si une taxonomie plus fine existe côté communauté.*
 
-### 2.2 Interceptors : les quatre classes nommées
+### 2.2 Interceptors : les quatre classes nommées (Cyclops, Basilisk, Medusa, Hydra)
 
 Les **Interceptors** sont la classe de vaisseaux de combat lourds thargoïdes rencontrés dans les AXCZ et les NHSS de haute menace. Quatre variantes nommées sont documentées, de la moins à la plus dangereuse — cette progression et les niveaux de menace sont cohérents avec le tableau déjà présent en [01-lore.md](./01-lore.md) (section 3.4) :
 
@@ -70,12 +103,13 @@ Les **Interceptors** sont la classe de vaisseaux de combat lourds thargoïdes re
 
 > Cette table complète le tableau déjà présent en [01-lore.md](./01-lore.md) (section 3.4, qui ne détaille pas le nombre de cœurs) en y ajoutant le nombre de cœurs par classe. **Le nombre exact de cœurs par classe n'a pas pu être vérifié via les sources accessibles cette session** (Wikipédia, Inara et Canonn ont été consultés mais ne détaillent pas ce point ; le wiki communautaire dédié était inaccessible) — il s'agit d'une donnée de connaissance de jeu largement citée par la communauté depuis les mises à jour « Thargoid War » 2020-2022, à confirmer en jeu ou via un wiki à jour avant toute utilisation dans un contexte critique (guide de raid, calcul de DPS requis, etc.).
 
-### 2.3 Titans : les méga-vaisseaux de l'invasion
+### 2.3 Titans (Maelstroms) : les huit méga-vaisseaux de l'invasion thargoïde
 
-Les **Titans** (également désignés « Maelstroms ») sont des super-vaisseaux stationnaires ayant servi de base d'opérations et de point de contrôle territorial pendant la Seconde Guerre Thargoïde. **Huit Titans ont été construits** (confirmé par l'article Wikipédia sur *Elite Dangerous*, consulté cette session) ; sept sont explicitement nommés dans le corpus existant ([01-lore.md](./01-lore.md), section 3.5) :
+Les **Titans** (également désignés « Maelstroms ») sont des super-vaisseaux stationnaires ayant servi de base d'opérations et de point de contrôle territorial pendant la Seconde Guerre Thargoïde. **Huit Titans ont été construits** (confirmé par l'article Wikipédia sur *Elite Dangerous*), et les huit sont désormais nommés — voir [01-lore.md](./01-lore.md), section 3.5, qui fait autorité sur cette liste :
 
 | Titan | Statut connu |
 |---|---|
+| **Taranis** | Premier des huit Titans détruit par les commandants, le 2 mars 2024 (2 mars 3310 en temps de jeu) |
 | Indra | Un des Titans ayant atteint les Systèmes du Cœur |
 | Leigong | idem |
 | Oya | idem |
@@ -84,7 +118,13 @@ Les **Titans** (également désignés « Maelstroms ») sont des super-vaisseaux
 | **Raijin** | Avant-dernier Titan détruit (avant le 5 décembre 2024, d'après le billet Frontier *Titan Presence In Sol*, confirmé cette session) |
 | **Cocijo** | Dernier Titan, envahisseur de Sol (5 déc. 2024), détruit le 19 décembre 2024 — fin de la guerre |
 
-*Le nom du huitième Titan n'a pas pu être confirmé sur source accessible cette session (il n'apparaît pas non plus dans [01-lore.md](./01-lore.md)) ; ne pas l'inventer, le vérifier via un wiki à jour avant citation.*
+*Le huitième Titan, longtemps non nommé dans ce corpus, est **Taranis** : la liste complète des huit Maelstroms est
+confirmée par le codex du groupe communautaire [Canonn](https://canonn.science/codex/maelstrom/) (consulté le
+9 septembre 2026), qui retient également la graphie **Raijin** relevée ci-dessus. La date de sa destruction provient
+de la couverture presse de l'événement
+([Massively OP](https://massivelyop.com/2024/03/04/elite-dangerous-players-successfully-destroy-the-first-thargoid-titan/),
+4 mars 2024), les pages officielles Frontier étant inaccessibles lors de cette révision (HTTP 403). Les huit Titans
+portent tous le nom d'une divinité de l'orage.*
 
 Chaque Titan était dissimulé dans un **Maelstrom** (nébuleuse rouge/violet visible à grande distance) et sa neutralisation suivait une progression en plusieurs phases — connaissance de jeu établie, cohérente avec [08-combat-spatial.md](./08-combat-spatial.md) (section 4.5), mais non re-détaillée sur wiki cette session :
 
@@ -108,19 +148,19 @@ Un Interceptor thargoïde ne se traite pas comme un vaisseau humain classique : 
 - Il est ensuite **désactivé** via le module utilitaire dédié **Shutdown Field Neutraliser (SFN)**, lui-même préalablement chargé en le ciblant avec une arme « chargeuse » de SFN dédiée sur un hardpoint séparé.
 - Une fois le bouclier neutralisé, une **fenêtre de tir limitée** (de l'ordre de 15 à 20 secondes, valeur indicative non vérifiée cette session) s'ouvre pour exposer les cœurs.
 
-### 3.2 Les cœurs (« hearts »)
+### 3.2 Les cœurs (« hearts ») d'un Interceptor thargoïde : la cible prioritaire
 
 - Les **cœurs** sont des organes internes vulnérables, visibles sous forme de points lumineux une fois le bouclier abaissé (mécanique confirmée en [08-combat-spatial.md](./08-combat-spatial.md), section 4.5).
 - Ils constituent la **cible prioritaire** : leur destruction inflige des dégâts catastrophiques au vaisseau et est nécessaire pour le vaincre.
 - Le nombre de cœurs varie selon la classe d'Interceptor (voir tableau section 2.2) : de 1 (Cyclops) à 4 (Hydra), selon les connaissances de jeu établies non vérifiées via les sources accessibles cette session.
 - Le tir sur les cœurs bénéficie particulièrement des armes à haut dégât d'alpha-strike et haute précision, comme le **Guardian Gauss Cannon** (voir section 5).
 
-### 3.3 L'essaim et les batteries caustiques
+### 3.3 L'essaim de Thargons et les batteries caustiques des Interceptors
 
 - Beaucoup d'Interceptors déploient un **essaim de petites unités autonomes** (parfois désignées « Thargons » dans la communauté) qui interceptent une partie des tirs destinés au vaisseau principal — un Flak Cannon ou un Remote Release Flak Launcher est généralement recommandé pour nettoyer cet essaim avant de se concentrer sur les cœurs.
 - Les classes **Medusa** et **Hydra** disposent en outre de **batteries/lance-missiles caustiques**, projetant des mines ou missiles qui libèrent des nuages corrosifs à l'impact (voir section 4).
 
-### 3.4 L'éruption terminale (« death cloud »)
+### 3.4 L'éruption terminale (« death cloud ») à la destruction d'un Interceptor
 
 À sa destruction finale, un Interceptor libère une **explosion de résine/gaz caustique** à grand rayon. La règle de sécurité standard en combat AX consiste à **s'éloigner immédiatement** après le coup de grâce, pour éviter d'être pris dans ce nuage terminal.
 
@@ -144,7 +184,7 @@ Cette mécanique est cohérente avec le résumé déjà présent en [08-combat-s
 
 ## 5. Armement et builds AX chiffrés
 
-### 5.1 Armement et modules dédiés
+### 5.1 Armement et modules dédiés au combat AX (AX Multi-Cannon, Guardian Gauss Cannon, SFN)
 
 Cet armement se débloque via la réputation auprès d'**Aegis** et la fourniture de matériaux/commodités Thargoïdes ou Guardian (voir [04-equipements.md](./04-equipements.md), section 2.6 pour le détail des montages et tailles) :
 
@@ -207,6 +247,12 @@ Avec la guerre officiellement terminée depuis fin 2024, le combat AX reste acce
 - les **carcasses de Titans** (dont celle de Sol), à but essentiellement d'exploration et de tourisme post-guerre, sans mécanique de combat actif documentée à ce jour.
 
 Comme le rappelle déjà [08-combat-spatial.md](./08-combat-spatial.md), la progression exacte du front (systèmes en alerte, en reconquête, etc.) évoluait au fil des campagnes tant que la guerre était active ; en 2026, ce point est devenu sans objet pour l'essentiel du territoire, la guerre étant conclue — consultez malgré tout le fil GalNet en jeu pour tout événement résiduel non couvert par cette révision.
+
+---
+
+## Note méthodologique sur la fiabilité des données de ce guide
+
+> **Note méthodologique sur la fiabilité des données de cette révision.** Les sources communautaires habituelles pour la taxonomie Thargoïde — le wiki elite-dangerous.fandom.com, les forums officiels Frontier — se sont révélées inaccessibles lors de la rédaction (blocage anti-bot HTTP 402), comme déjà noté dans [08-combat-spatial.md](./08-combat-spatial.md). En revanche, cette révision a pu consulter directement le flux officiel **Steam News de Frontier Developments** (API `ISteamNews`, contenu identique aux billets GalNet/site officiel) ainsi que l'article anglais de Wikipédia sur *Elite Dangerous* et deux sites communautaires (Inara, Canonn) — voir la section [Sources](#sources) en fin de document. Cela permet de confirmer avec un niveau de confiance élevé la chronologie de fin de guerre (section 1.1), directement recoupée sur l'horodatage brut des billets Steam. En revanche, la taxonomie fine des vaisseaux (nombre exact de « cœurs » par classe d'Interceptor), l'anatomie précise des sous-systèmes et les valeurs chiffrées de dégâts/DPS des builds reposent sur des **connaissances de jeu établies et stables depuis les mises à jour « Thargoid War » de 2020-2022**, que les sources consultées cette session (Wikipédia, Inara, Canonn) ne détaillent pas au niveau requis pour les re-vérifier ; elles sont signalées comme telles au fil du guide. Avant de graver un build ou un chiffre dans un contexte critique, recoupez-le avec le fil GalNet en jeu, un wiki communautaire à jour, ou un configurateur externe (Coriolis, EDSY — voir [16-outils.md](./16-outils.md)).
 
 ---
 

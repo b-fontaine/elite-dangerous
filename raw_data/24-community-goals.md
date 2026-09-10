@@ -1,6 +1,34 @@
+---
+id: 24-community-goals
+titre: "Community Goals (mécanique générique)"
+domaine: social
+entites: [Community Goal, CG, paliers (tiers), tranches de contribution, Inara.cz, GalNet, tableau des missions, modules pré-engineered, merits Powerplay, Battle for Sol, Wreaken Calls for Mining Support, Third Aegis Initiative]
+mots_cles_en: [community goal, CG, tier, contribution ranking, top percentile, top 25 CMDRs, GalNet, mission board, pre-engineered module, paint job, decal, merits, mission stacking]
+version_jeu_couverte: "4.4.0.x"
+branche: live
+date_verification: 2026-09-09
+confiance_globale: moyenne
+volatilite: haute
+sources_primaires: [Inara.cz (pages Community Goals et historique paginé), Wikipédia (Elite Dangerous), corpus interne 00-chronologie-canonique.md, 01-lore.md et guides d'activité]
+zones_incertaines: ["aucun barème standardisé de paliers, ni de seuils de tranches de centile, n'a pu être confirmé sur l'ensemble de l'historique du jeu", "barème exact des merits Powerplay distribués par les CG rattachées à une Power", "détail des modules engineered offerts par la CG « Battle for Sol » de décembre 2024", "on ignore si une CG crédite la livraison au commandant qui l'effectue ou à celui qui a produit la marchandise déposée sur un Fleet Carrier", "chiffres de rendement de la section 4 repris des guides d'activité internes, faute d'accès web lors de la rédaction"]
+guides_lies: [1, 10, 11, 20, 21]
+---
 # Community Goals (mécanique générique)
 
-## Vue d'ensemble
+## En bref
+
+Une **Community Goal** (CG) est un objectif temporaire publié par Frontier sur GalNet et au tableau des missions,
+rattaché à une station ou un système, auquel tous les commandants contribuent quels que soient leur plateforme et leur
+mode de jeu : livrer une commodité, miner un minerai, rendre des primes (*bounty vouchers*) ou des combat bonds,
+soumettre des données d'exploration ou d'exobiologie. Sa fenêtre dure généralement une à trois semaines. La récompense
+combine deux mesures : le **palier** (*tier*) atteint collectivement, qui plafonne le gain de tout le monde, et la
+**tranche de contribution individuelle** (top 75 %, 50 %, 25 %, parfois « top 10 » ou « top 25 CMDRs »). Les barèmes
+observés vont de quelques paliers à neuf, pour environ 30 à 180 M Cr. S'y ajoutent des modules pré-engineered, des
+peintures, des décalques, des packs Odyssey, l'ouverture d'un ingénieur ou d'un permis (Alioth), rarement un vaisseau
+complet (Alliance Chieftain, 2022), et depuis Powerplay 2.0 des merits. Pendant la CG, la marchandise ciblée bénéficie
+d'un multiplicateur de prix de x2 à x10. Inara.cz suit chaque CG active depuis 2015.
+
+## Vue d'ensemble des Community Goals (CG) dans Elite Dangerous
 
 Un **Community Goal** (CG) est un objectif de jeu temporaire, publié par Frontier Developments (annoncé sur GalNet et proposé au tableau des missions en jeu), rattaché à une station ou un système précis, que l'ensemble des commandants de la galaxie — toutes plateformes et tous modes de jeu confondus — peuvent contribuer à remplir en effectuant une action de jeu donnée : livrer une marchandise, miner un minerai, rendre des primes ou des combat bonds, soumettre des données d'exploration ou d'exobiologie, etc. C'est le principal mécanisme par lequel Frontier transforme une action individuelle de millions de commandants isolés en un événement collectif mesurable, doté de récompenses et, souvent, d'une portée narrative.
 
@@ -22,7 +50,7 @@ Un CG combine trois éléments constants :
 
 Les CG sont initiées par des factions mineures, des superpuissances (Fédération, Empire, Alliance) ou, depuis Powerplay 2.0, par des Powers, et servent souvent de vecteur à un enjeu de fond : renforcer une faction en conflit local ([BGS](./21-bgs.md)), soutenir l'effort de guerre anti-thargoïde, financer la recherche scientifique, ou accompagner la sortie d'un nouveau contenu (vaisseau, véhicule, fonctionnalité).
 
-### 1.2 Une structure à paliers (tiers) cumulatifs
+### 1.2 Une structure à paliers (tiers) cumulatifs de récompense
 
 Chaque CG définit un barème de paliers cumulatifs : la progression totale de la communauté (tonnage livré, primes rendues, données soumises...) fait franchir ces paliers un par un ; plus le palier final atteint est élevé, meilleure est la récompense pour l'ensemble des participants. Le nombre de paliers varie sensiblement d'une CG à l'autre — les exemples observés dans ce guide vont d'une poignée de paliers à environ neuf — sans qu'un barème unique et standardisé sur l'ensemble de l'historique du jeu ait pu être confirmé pour ce guide.
 
@@ -36,7 +64,7 @@ Exemple illustratif (CG « Wreaken Calls for Mining Support », minage, 9 palier
 
 Un palier non atteint par la communauté plafonne la récompense de **tous** les participants à ce niveau, quel qu'ait été leur effort individuel — un très gros contributeur dans une CG qui échoue à monter de palier reste plafonné à la récompense du dernier palier collectivement franchi.
 
-### 1.3 Deux niveaux de suivi de contribution
+### 1.3 Deux niveaux de suivi de contribution : progression collective et rang individuel
 
 La récompense effectivement perçue par un commandant dépend de la combinaison de deux mesures distinctes :
 
@@ -49,11 +77,11 @@ Conséquence pratique : un commandant n'ayant rien livré ne touche rien, même 
 
 Les CG ne suivent pas un cycle hebdomadaire unique et figé. La majorité durent entre une et trois semaines, avec des échéances typiquement calées sur les fenêtres de maintenance ou de mise à jour du jeu (souvent le jeudi). En revanche, plusieurs CG tournent généralement en parallèle à un instant donné — souvent des paires antagonistes rattachées au même conflit (campagne « Pour » contre « Contre » une faction, ou Fédération contre Alliance pour un même système). Ce chevauchement crée, à l'échelle de la galaxie, un flux quasi continu de renouvellement plutôt qu'un rythme hebdomadaire strict et unique.
 
-### 1.5 Le bonus économique pendant la CG
+### 1.5 Le bonus économique : le multiplicateur de prix appliqué pendant une CG
 
 Indépendamment de la récompense de fin de palier, la marchandise ou l'activité ciblée par une CG bénéficie très souvent d'un multiplicateur de prix de vente pendant toute sa durée — des multiplicateurs de x2 à x10 selon les CG ont été observés. Ce bonus incite à participer à l'activité même sans viser le haut du classement individuel, et explique pourquoi les CG figurent parmi les activités commerciales et minières ponctuellement les plus rentables du jeu.
 
-### 1.6 Panorama des récompenses typiques
+### 1.6 Panorama des récompenses typiques d'une CG (2015-2026)
 
 | Type de récompense | Exemples observés (2015-2026) |
 |---|---|
@@ -71,17 +99,17 @@ Indépendamment de la récompense de fin de palier, la marchandise ou l'activit�
 
 ## 2. Comment repérer les Community Goals actives
 
-### 2.1 En jeu
+### 2.1 Repérer une CG en jeu : tableau des missions et flux GalNet
 
 Le tableau des missions, disponible à quai dans les stations concernées, liste les CG actives rattachées à cette station. Le lancement et le suivi de chaque CG sont également relayés sur le flux **GalNet**, consultable en jeu et sur le site officiel.
 
-### 2.2 Inara.cz, la référence communautaire
+### 2.2 Inara.cz, la référence communautaire pour le suivi chiffré des CG
 
 La page dédiée [inara.cz/elite/communitygoals/](https://inara.cz/elite/communitygoals/) est la ressource tierce la plus complète pour suivre les CG. Elle liste les CG actives et achevées — l'historique remonte aux toutes premières semaines suivant le lancement du jeu (16 décembre 2014), avec des entrées dès février 2015 — et affiche pour chacune : nom, station et système, objectif exact, palier courant et pourcentage de progression, nombre de contributeurs, temps restant, et barème de récompenses par palier et par tranche de classement.
 
 Inara précise elle-même sa méthode : elle suit la progression globale, estime les seuils de palier et calcule la contribution personnelle du joueur à partir de données de journal de jeu (*journal data*) — soumises soit via des outils tiers (EDMC, EDDiscovery), soit par import direct du journal sur Inara. Le suivi individuel dépend donc d'une soumission volontaire du joueur : Inara n'a pas d'accès direct aux serveurs de Frontier, à la différence du tableau des missions en jeu qui reflète l'état réel côté serveur.
 
-### 2.3 Autres relais
+### 2.3 Autres relais de publication des CG : wiki communautaire et réseaux Frontier
 
 Le wiki communautaire Elite Dangerous ainsi que les réseaux sociaux officiels de Frontier relaient également le lancement de chaque CG, mais n'offrent généralement pas le même niveau de suivi chiffré en temps réel qu'Inara.cz. Pour un panorama plus large des outils tiers de suivi de données (EDDN, EDSM, Spansh, Canonn...), voir [Le guide des outils communautaires](./16-outils.md) et [Sources de données disponibles](./17-sources-donnees.md).
 
@@ -97,7 +125,7 @@ Le tableau ci-dessous est un échantillon repéré à intervalles réguliers dan
 | Mai 2015 | Preparing For The President | 78 Ursae Majoris | Bounty vouchers Alliance | Palier 10 atteint, 6 941 contributeurs |
 | Décembre 2015 | Xihe Companions for Weber Gateway | Noti | Livraison de compagnons androïdes Xihe | Palier 8/8 complet |
 | Juillet-août 2016 | Protect Traders in Carthage / A Majestic Development | Carthage | Chasse de primes / construction d'infrastructure | Jusqu'à ≈ 43,7 M Cr pour les meilleurs contributeurs |
-| Octobre 2017 | Third Aegis Initiative | Wyrd | Livraison de matériaux et explosifs thargoïdes pour la recherche | Jalon de la storyline anti-thargoïde Aegis (11,1 M tonnes collectées ; voir [Lore, section 3.7](./01-lore.md)) |
+| Octobre 2017 | Third Aegis Initiative | Wyrd | Livraison de matériaux et explosifs thargoïdes pour la recherche | Jalon de la storyline anti-thargoïde Aegis (11,1 M tonnes collectées ; voir [Lore, « AEGIS et l'arc Salvation / Azimuth Biotech »](./01-lore.md)) |
 | Juin 2018 | The 'Shut Down Lave Radio' Campaign | Lave Station | Composants pour un brouilleur de signal | Épisode de la storyline « Lave Radio » |
 | Février-mars 2019 | Macrosphere Mining Petition | DS Leonis | Minerais rares (Benitoite, Grandidierite, Alexandrite) | Alimente un scanner de détection de reprogrammation robotique illégale |
 | Décembre 2020-janvier 2021 | Deliver Xenological Samples Required by Colonia Scientists | Jaques Station, Colonia | Échantillons biologiques | Décalques exclusifs, lien direct avec la storyline Colonia |
@@ -105,21 +133,21 @@ Le tableau ci-dessous est un échantillon repéré à intervalles réguliers dan
 | Juin 2022 | Palin's Thargoid Research Project Phase 2 | Arque | Capteurs, sondes et résine thargoïdes | Packs de renforcement de coque engineered grade 5 |
 | Juin 2022 | Oppose the Sirius-Alliance Defense Pact | Di Jian | Composants divers | Vaisseau complet (Alliance Chieftain) offert au top 25 CMDRs |
 | Mars 2023 | Fight for Tavgi Blue Life Inc / Fight for Torval Mining | Tavgi | Combat bonds | Peintures Federal Corvette / Imperial Cutter pour le top 50 % — conflit [BGS](./21-bgs.md) entre factions locales |
-| 26 septembre 2024 | Defend Shinrarta Dezhra Against Thargoid Invasion | V886 Centauri | Combat bonds anti-thargoïdes | Modules d'armes AX pré-engineered (voir [Lore, section 3.5](./01-lore.md)) |
-| 12-19 décembre 2024 | Battle for Sol: Destroy Titan Cocijo | Luyten's Star (Sol) | Combat et livraisons pendant le siège final du Titan Cocijo | Récompenses en crédits et modules engineered (barème détaillé non confirmé pour ce guide) ; CG climactique marquant la destruction du dernier Titan thargoïde et la fin officielle de la Seconde Guerre Thargoïde (voir [Chronologie canonique](./00-chronologie-canonique.md) et [Lore, section 3.5](./01-lore.md) pour le détail du siège et la date du 19 décembre 2024) |
+| 26 septembre 2024 | Defend Shinrarta Dezhra Against Thargoid Invasion | V886 Centauri | Combat bonds anti-thargoïdes | Modules d'armes AX pré-engineered (voir [Lore, « La Seconde Guerre Thargoïde moderne »](./01-lore.md)) |
+| 12-19 décembre 2024 | Battle for Sol: Destroy Titan Cocijo | Luyten's Star (Sol) | Combat et livraisons pendant le siège final du Titan Cocijo | Récompenses en crédits et modules engineered (barème détaillé non confirmé pour ce guide) ; CG climactique marquant la destruction du dernier Titan thargoïde et la fin officielle de la Seconde Guerre Thargoïde. La [Chronologie canonique](./00-chronologie-canonique.md) arbitre les deux bornes réelles — début de l'invasion de Sol par Cocijo le 5 décembre 2024 et chute du Titan le 19 décembre 2024 à 15:00 UTC — sans raconter le siège lui-même ; c'est [Lore, « La Seconde Guerre Thargoïde »](./01-lore.md) qui en donne le déroulé : siège entamé le 12 décembre, blocage des conduits de refroidissement, annonce de victoire par la présidente Felicia Winters |
 | Novembre-décembre 2025 | Opening Federal Campaign / Opening Alliance Campaign for HIP 87621 | Col 359 Sector (The Ironbridge / Horizon's Glow) | Renforcer ou saper les systèmes autour de HIP 87621 | Merits Powerplay 2.0 (barème exact non confirmé), multicanon pré-engineered et crédits |
-| Juillet-août 2026 | Colonia Council Anniversary Celebrations Support | Peters Base, Facece | Livraison de marchandises rares | Cosmétiques Type-8 Convoy et Panther Clipper — lié au 10ᵉ anniversaire de la fondation de Colonia (9 septembre 2016, voir [Lore, section 7.5](./01-lore.md)) |
+| Juillet-août 2026 | Colonia Council Anniversary Celebrations Support | Peters Base, Facece | Livraison de marchandises rares | Cosmétiques Type-8 Convoy et Panther Clipper — lié au 10ᵉ anniversaire de la fondation de Colonia (9 septembre 2016, voir [Lore, « 10ᵉ anniversaire de Colonia »](./01-lore.md)) |
 | Septembre 2026 (en cours à la rédaction) | Wreaken Calls for Mining Support / Surface Mining Support | Metz Enterprise, Ega | Minage laser et minage de surface | 30 à 180 M Cr et skins Type-11 Prospector et Rhino (le SRV Rhino est sorti le 2 septembre 2026, voir [Roadmap](./15-roadmap.md)) |
 
 ---
 
-## 4. Optimiser sa contribution individuelle : stratégies actionnables
+## 4. Optimiser sa contribution individuelle à une CG : stratégies actionnables
 
 Les sections précédentes décrivent la mécanique (paliers, double suivi, cycles) mais pas la question que se pose concrètement un commandant en lançant une CG : *comment maximiser mon classement individuel pour le moins d'heures possible ?* Cette section synthétise, en s'appuyant sur les guides d'activité déjà vérifiés du corpus (minage, commerce, combat, exploration, logistique de groupe), les leviers pratiques disponibles.
 
 *Note méthodologique : les recherches web tentées pour cette section se sont heurtées à un budget épuisé et à des sites de référence inaccessibles (voir le détail dans la note méthodologique de la section Sources, en bas de page) ; les chiffres cités ci-dessous proviennent donc des guides d'activité déjà vérifiés de ce corpus plutôt que d'une nouvelle collecte, et le raisonnement de timing (4.1) découle directement de la mécanique décrite en section 1.3. Pour un rendement chiffré à jour au moment de la lecture, croiser le tableau des missions en jeu (valeur de la CG en cours) avec les outils listés en section 2 et dans [16-outils.md](./16-outils.md).*
 
-### 4.1 Stratégie de timing : s'engager tôt ou attendre
+### 4.1 Stratégie de timing d'une CG : s'engager tôt ou attendre la fin de la fenêtre
 
 Le mécanisme à deux niveaux décrit en 1.3 crée un arbitrage réel entre deux approches :
 
@@ -132,11 +160,15 @@ Le mécanisme à deux niveaux décrit en 1.3 crée un arbitrage réel entre deux
 
 Le rendement par heure dépend avant tout de l'activité ciblée par la CG. Les guides dédiés du corpus détaillent les builds ; cette sous-section indique lequel privilégier et pourquoi, dans un contexte de CG spécifiquement.
 
+#### 4.2.1 CG de minage : laser, core mining, hotspot et wing mining
+
 **Minage.** Voir [Le Minage](./20-minage.md) pour le détail complet des trois techniques, de l'équipement et des vaisseaux. Pour une CG :
-- Le **minage laser bien optimisé** (Python ou Type-9 Heavy équipés de refinery, prospector/collector limpets en nombre et cargo racks) atteint, selon la presse spécialisée citée par [20-minage.md, section V](./20-minage.md), largement plus de 100 millions de Cr/heure en valeur de revente — un ordre de grandeur transposable au tonnage brut recherché par une CG de minage.
-- Le **minage de noyau (core mining)** produit des volumes plus concentrés par roche pour les minerais rares (Painite, diamants basse température, Void Opals) mais demande davantage de pilotage actif (voir [20-minage.md, section I.C](./20-minage.md)) : à réserver aux CG portant sur ces minerais spécifiques plutôt qu'au tonnage générique.
-- Choisir un **hotspot** du type de ressource exactement demandé par la CG et situé le plus près possible de la station cible (voir [20-minage.md, section IV](./20-minage.md) pour les outils de repérage) : le temps de trajet aller-retour est souvent le principal facteur limitant le tonnage/heure, davantage que la vitesse d'extraction elle-même.
-- Le **wing mining organisé** (plusieurs commandants dédiant chacun un rôle — extraction, navette, vente) est cité par la presse spécialisée comme pouvant démultiplier le rendement collectif d'une escouade ; voir la mise en garde sur la fiabilité de ce chiffre précis dans [20-minage.md, section V](./20-minage.md).
+- Le **minage laser bien optimisé** (Python ou Type-9 Heavy équipés de refinery, prospector/collector limpets en nombre et cargo racks) atteint, selon la presse spécialisée citée par [20-minage.md, section 5](./20-minage.md), largement plus de 100 millions de Cr/heure en valeur de revente — un ordre de grandeur transposable au tonnage brut recherché par une CG de minage.
+- Le **minage de noyau (core mining)** produit des volumes plus concentrés par roche pour les minerais rares (Painite, diamants basse température, Void Opals) mais demande davantage de pilotage actif (voir [20-minage.md, section 1.3](./20-minage.md)) : à réserver aux CG portant sur ces minerais spécifiques plutôt qu'au tonnage générique.
+- Choisir un **hotspot** du type de ressource exactement demandé par la CG et situé le plus près possible de la station cible (voir [20-minage.md, section 4](./20-minage.md) pour les outils de repérage) : le temps de trajet aller-retour est souvent le principal facteur limitant le tonnage/heure, davantage que la vitesse d'extraction elle-même.
+- Le **wing mining organisé** (plusieurs commandants dédiant chacun un rôle — extraction, navette, vente) est cité par la presse spécialisée comme pouvant démultiplier le rendement collectif d'une escouade ; voir la mise en garde sur la fiabilité de ce chiffre précis dans [20-minage.md, section 5](./20-minage.md).
+
+#### 4.2.2 CG de primes et de combat bonds : RES, Compromised Nav Beacons, builds AX
 
 **Prime/combat.** Voir [Combat spatial](./08-combat-spatial.md) (sections 4, 7 et 8) et, pour les CG anti-thargoïdes spécifiquement, [Combat AX](./25-combat-ax.md). Pour une CG :
 - Vérifier d'abord **quelle monnaie exacte** la CG compte (bounty vouchers, combat bonds, ou nombre de destructions) : cela oriente le choix de la zone de farm et du type de cible, une prime individuelle plus élevée (cibles « Deadly »/« Elite ») rapportant davantage par kill qu'un grand nombre de cibles faiblement primées.
@@ -144,20 +176,24 @@ Le rendement par heure dépend avant tout de l'activité ciblée par la CG. Les 
 - Pour une CG de type combat anti-thargoïde, un build classique de chasse aux primes ne suffit pas : il faut un armement AX dédié et des contre-mesures aux nuages caustiques ([25-combat-ax.md, sections 4-5](./25-combat-ax.md)), et l'organisation communautaire **AXI (Anti Xeno Initiative)** coordonne justement ce type de campagne à grande échelle ([25-combat-ax.md, section 6.2](./25-combat-ax.md)).
 - Confirmer où les vouchers doivent être encaissés (comptoir de la faction/superpuissance liée à la CG) **avant** de lancer une session de farm loin de ce point de vente : un voucher encaissé au mauvais guichet ne compte pas pour la CG.
 
-**Commerce.** Voir [Le Commerce](./11-commerce.md), notamment la section IX déjà consacrée aux CG et la section V sur les vaisseaux de fret. Pour une CG :
-- Le tonnage/heure dépend directement de la capacité de soute du vaisseau utilisé : privilégier un **Type-9 Heavy, un Type-10 Defender ou un Imperial Cutter** ([11-commerce.md, section V](./11-commerce.md)) plutôt qu'un vaisseau polyvalent moins spécialisé en fret.
+#### 4.2.3 CG de commerce : gros porteurs et point d'approvisionnement le plus proche
+
+**Commerce.** Voir [Le Commerce](./11-commerce.md), notamment la section 9 déjà consacrée aux CG et la section 5 sur les vaisseaux de fret. Pour une CG :
+- Le tonnage/heure dépend directement de la capacité de soute du vaisseau utilisé : privilégier un **Type-9 Heavy, un Type-10 Defender ou un Imperial Cutter** ([11-commerce.md, section 5](./11-commerce.md)) plutôt qu'un vaisseau polyvalent moins spécialisé en fret.
 - Acheter la commodité au **point d'approvisionnement le plus proche possible** de la station cible de la CG réduit le temps de trajet par rotation, ce qui compte souvent davantage que la taille de la soute au-delà d'un certain seuil.
 - Si un point d'achat unique s'épuise (stock insuffisant, prix qui grimpe au fur et à mesure des achats), répartir les achats sur plusieurs stations sources proches, éventuellement en coordination avec d'autres membres d'escadron achetant chacun à un point différent avant de converger vers la station cible.
+
+#### 4.2.4 CG d'exploration et d'exobiologie : corps à forte valeur et échantillons complets
 
 **Exploration et exobiologie.** Voir [Exploration et exobiologie](./10-exploration.md) pour le détail complet. Pour une CG :
 - Une CG de données d'exploration valorise surtout les corps à forte valeur de cartographie (mondes semblables à la Terre, mondes d'eau terraformables, mondes riches en ammoniac ou en métaux terraformables — voir [10-exploration.md, section 1.5](./10-exploration.md)) : prioriser leur scan plutôt que celui de chaque corps d'un système.
 - Une CG d'exobiologie impose de vendre des échantillons complets (trois scans de la même espèce, chacun espacé de la précédente) ; privilégier les corps hébergeant plusieurs espèces à forte valeur repérées ensemble, dont le classement complet figure dans [10-exploration.md, section 2.5](./10-exploration.md), pour limiter les trajets en SRV/à pied entre relevés.
 - Les données doivent être physiquement rapportées et vendues à la station cible de la CG : intégrer la distance de retour dans le calcul de rentabilité dès le départ plutôt que de s'enfoncer loin dans une région inexplorée pendant la fenêtre de la CG.
 
-### 4.3 Logistique collective : escadron, Fleet Carrier, stacking de missions
+### 4.3 Logistique collective d'une CG : Wing, escadron, Fleet Carrier, stacking de missions
 
 - **Répartition en Wing/escadron.** Un [Wing](./23-jeu-en-groupe.md) (jusqu'à 4 joueurs) ne mutualise pas le score individuel de CG — chaque commandant reste comptabilisé séparément — mais partage en revanche l'intégralité des bounty vouchers et combat bonds entre tous les membres présents dans la même instance ayant participé à une destruction, **sans division du montant** ([23-jeu-en-groupe.md, section 2.3](./23-jeu-en-groupe.md)) : une CG de type combat/primes est donc mécaniquement plus rentable en Wing qu'en solo, à ressources égales. Un [Squadron](./22-squadrons.md), structure persistante plus large qu'un Wing, sert surtout à coordonner qui mine, qui transporte et qui vend, et à répartir les hotspots ou routes commerciales pour éviter que plusieurs membres ne se marchent dessus sur le même point de collecte.
-- **Le Fleet Carrier comme relais.** Un [Porte-Vaisseau](./19-fleet-carriers.md) peut être positionné à portée de saut du site de collecte (jusqu'à 500 années-lumière par saut, avec un cycle complet le plus rapide d'environ 20 minutes entre deux sauts — [19-fleet-carriers.md, section III](./19-fleet-carriers.md)) et servir de point de dépôt intermédiaire pour les vaisseaux miniers ou commerciaux, qui livrent alors au carrier au lieu de faire l'aller-retour complet jusqu'à la station de la CG à chaque rotation ; un ou quelques gros porteurs se chargent ensuite de rapatrier le stock accumulé du carrier vers la station cible en un nombre réduit de trajets. Un **Squadron Carrier**, financé collectivement via la Squadron Bank, fonctionne selon toute vraisemblance comme un Fleet Carrier au sens mécanique et peut jouer ce même rôle de relais pour un escadron entier ([22-squadrons.md, section 6.1](./22-squadrons.md)). Point à vérifier avant de s'appuyer dessus : la CG crédite la contribution au commandant qui effectue la livraison finale à la station, ce qui peut ne pas correspondre à celui qui a miné ou acheté la marchandise déposée sur le carrier — à tester sur un petit lot avant d'y engager toute une cargaison, ou à confirmer auprès de la coordination communautaire de la CG en cours.
+- **Le Fleet Carrier comme relais.** Un [Porte-Vaisseau](./19-fleet-carriers.md) peut être positionné à portée de saut du site de collecte (jusqu'à 500 années-lumière par saut, avec un cycle complet le plus rapide d'environ 20 minutes entre deux sauts — [19-fleet-carriers.md, section 3](./19-fleet-carriers.md)) et servir de point de dépôt intermédiaire pour les vaisseaux miniers ou commerciaux, qui livrent alors au carrier au lieu de faire l'aller-retour complet jusqu'à la station de la CG à chaque rotation ; un ou quelques gros porteurs se chargent ensuite de rapatrier le stock accumulé du carrier vers la station cible en un nombre réduit de trajets. Un **Squadron Carrier**, financé collectivement via la Squadron Bank, fonctionne selon toute vraisemblance comme un Fleet Carrier au sens mécanique et peut jouer ce même rôle de relais pour un escadron entier ([22-squadrons.md, section 6.1](./22-squadrons.md)). Point à vérifier avant de s'appuyer dessus : la CG crédite la contribution au commandant qui effectue la livraison finale à la station, ce qui peut ne pas correspondre à celui qui a miné ou acheté la marchandise déposée sur le carrier — à tester sur un petit lot avant d'y engager toute une cargaison, ou à confirmer auprès de la coordination communautaire de la CG en cours.
 - **Stacking de missions.** Le tableau des missions d'une station propose fréquemment, en parallèle d'une CG, des contrats individuels portant sur la même commodité, le même type de cible ou la même activité (livraison, primes). Accepter ces missions compatibles avant de démarrer une session permet de cumuler, pour un même trajet ou une même session de combat, la progression de la CG, la récompense de la mission, et le bonus de prix ou de primes propre à la CG (voir 1.5) — à condition de vérifier que la commodité ou le type de cible de la mission correspond **exactement** à celui compté par la CG, une mission portant sur un produit ou une cible voisine mais différente ne faisant pas progresser la barre de la CG même si elle reste rentable en elle-même.
 
 ---
@@ -187,7 +223,7 @@ Les Community Goals ne sont pas un système isolé : elles recoupent plusieurs a
 - [La roadmap des développeurs](./15-roadmap.md) — calendrier des sorties de contenu que les CG accompagnent régulièrement.
 - [Le Background Simulation (BGS)](./21-bgs.md) — mécanique des états de faction, dont les CG de type « Fight for X » sont un des leviers directs.
 - [Powerplay](./02-powerplay.md) — intégration des merits aux CG depuis Powerplay 2.0 (31 octobre 2024).
-- [Chronologie canonique du corpus](./00-chronologie-canonique.md) — dates de référence pour les événements croisés avec des CG (Bataille de Sol, anniversaire de Colonia, sortie du Rhino).
+- [Chronologie canonique du corpus](./00-chronologie-canonique.md) — dates réelles arbitrées pour trois événements croisés avec des CG : invasion de Sol par le Titan Cocijo (5 décembre 2024) puis fin de la Seconde Guerre Thargoïde (19 décembre 2024, 15:00 UTC), fondation de Colonia le 9 septembre 2016 dont découle le 10ᵉ anniversaire de 2026, et sortie du SRV Rhino le 2 septembre 2026. Ce document arbitre des dates, il ne raconte pas les événements.
 - [Le guide des outils communautaires](./16-outils.md) — panorama des outils tiers (EDMC, EDDiscovery...) utilisés pour soumettre les données de journal exploitées par Inara.
 
 ## Sources
@@ -211,16 +247,16 @@ Les Community Goals ne sont pas un système isolé : elles recoupent plusieurs a
 - https://inara.cz/elite/communitygoals/?page=150
 - https://inara.cz/elite/communitygoals/?page=154
 - https://en.wikipedia.org/wiki/Elite_Dangerous
-- /Users/bfontaine/git/github/rag-example/raw_data/00-chronologie-canonique.md (corpus interne, réconciliation de dates, notamment la date du 31 octobre 2024 pour Powerplay 2.0/Ascendancy)
-- /Users/bfontaine/git/github/rag-example/raw_data/01-lore.md (corpus interne, sections 1.7, 3.5 et 7.4 — chronologie de la Bataille de Sol et de la destruction du Titan Cocijo, 12-19 décembre 2024)
-- /Users/bfontaine/git/github/rag-example/raw_data/20-minage.md (corpus interne, section V — rendements chiffrés de minage laser et wing mining, déjà sourcés sur GameRant/TheGamer et Pilots Trade Network)
-- /Users/bfontaine/git/github/rag-example/raw_data/11-commerce.md (corpus interne, sections V, VIII et IX — vaisseaux de fret et Fleet Carrier appliqués au commerce et aux CG)
-- /Users/bfontaine/git/github/rag-example/raw_data/08-combat-spatial.md (corpus interne, sections 4.1-4.2 et 7 — RES/HazRES, Compromised Nav Beacons, bounty vouchers)
-- /Users/bfontaine/git/github/rag-example/raw_data/25-combat-ax.md (corpus interne, sections 5-6 — builds AX et organisation communautaire AXI)
-- /Users/bfontaine/git/github/rag-example/raw_data/10-exploration.md (corpus interne, sections 1.5 et 2.5 — corps célestes et espèces exobiologiques à forte valeur)
-- /Users/bfontaine/git/github/rag-example/raw_data/23-jeu-en-groupe.md (corpus interne, section 2.3 — partage non divisé des bounty vouchers et combat bonds en Wing, déjà sourcé sur la fiche Steam officielle)
-- /Users/bfontaine/git/github/rag-example/raw_data/19-fleet-carriers.md (corpus interne, section III — portée de saut de 500 al et cycle de cooldown d'un Fleet Carrier, déjà sourcés sur roguey.co.uk, PTN et elite-journal.readthedocs.io)
-- /Users/bfontaine/git/github/rag-example/raw_data/22-squadrons.md (corpus interne, section 6.1 — Squadron Carrier comme Fleet Carrier collectif)
+- [00-chronologie-canonique.md](./00-chronologie-canonique.md) (corpus interne, réconciliation de dates, notamment la date du 31 octobre 2024 pour Powerplay 2.0/Ascendancy)
+- [01-lore.md](./01-lore.md) (corpus interne, sections « La Seconde Guerre Thargoïde », « La Seconde Guerre Thargoïde moderne » et « Community Goals de la guerre thargoïde » — déroulé du siège de Sol du 12 au 19 décembre 2024 et destruction du Titan Cocijo)
+- [20-minage.md](./20-minage.md) (corpus interne, section 5 — rendements chiffrés de minage laser et wing mining, déjà sourcés sur GameRant/TheGamer et Pilots Trade Network)
+- [11-commerce.md](./11-commerce.md) (corpus interne, sections 5, 8 et 9 — vaisseaux de fret et Fleet Carrier appliqués au commerce et aux CG)
+- [08-combat-spatial.md](./08-combat-spatial.md) (corpus interne, sections 4.1-4.2 et 7 — RES/HazRES, Compromised Nav Beacons, bounty vouchers)
+- [25-combat-ax.md](./25-combat-ax.md) (corpus interne, sections 5-6 — builds AX et organisation communautaire AXI)
+- [10-exploration.md](./10-exploration.md) (corpus interne, sections 1.5 et 2.5 — corps célestes et espèces exobiologiques à forte valeur)
+- [23-jeu-en-groupe.md](./23-jeu-en-groupe.md) (corpus interne, section 2.3 — partage non divisé des bounty vouchers et combat bonds en Wing, déjà sourcé sur la fiche Steam officielle)
+- [19-fleet-carriers.md](./19-fleet-carriers.md) (corpus interne, section 3 — portée de saut de 500 al et cycle de cooldown d'un Fleet Carrier, déjà sourcés sur roguey.co.uk, PTN et elite-journal.readthedocs.io)
+- [22-squadrons.md](./22-squadrons.md) (corpus interne, section 6.1 — Squadron Carrier comme Fleet Carrier collectif)
 
 *Note méthodologique : lors de cette relecture, le budget de recherche web de la session était épuisé ; les corrections apportées aux affirmations signalées comme douteuses s'appuient donc sur un recoupement avec les fichiers de réconciliation déjà présents dans le corpus interne (voir ci-dessus) plutôt que sur une nouvelle recherche en ligne. Les points qui restaient non confirmables après ce recoupement (barème exact des merits Powerplay distribués par certaines CG, détail précis des modules offerts pour la CG « Battle for Sol ») ont été reformulés avec prudence plutôt que présentés comme des faits établis.*
 

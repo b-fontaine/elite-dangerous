@@ -1,6 +1,34 @@
+---
+id: 02-powerplay
+titre: "Politique et Powerplay dans Elite Dangerous"
+domaine: politique
+entites: [Powerplay, Powerplay 2.0, Mérites, Éthos, Undermining, Bastion (Stronghold), Jerome Archer, Nakato Kaine, Ascendancy, Concord Cannon, Fédération, Empire d'Achenar]
+mots_cles_en: [powerplay, merits, pledge, undermining, reinforcement, acquisition, stronghold, fortified, exploited, ethos, control points]
+version_jeu_couverte: "4.4.0.x"
+branche: live
+date_verification: 2026-09-09
+confiance_globale: haute
+volatilite: haute
+sources_primaires: [Steam News Frontier, inara.cz, forums.frontier.co.uk, elite-dangerous.fandom.com, edpowerplay.com]
+zones_incertaines: ["taux exacts de conversion des mérites en points de contrôle, révisés à chaque rééquilibrage", "barème de rang exhaustif jamais publié par Frontier : le tableau des rangs 6 à 99 est une extrapolation", "éthos de Zemina Torval issu d'une source secondaire, fiche inara.cz en erreur HTTP 503 le 9 septembre 2026", "existence d'un seuil de développement avant qu'un système colonisé devienne éligible à l'Acquisition Powerplay", "l'allégeance choisie à la fondation d'un système colonisé restreint-elle les Powers pouvant le revendiquer", "durée exacte du délai de latence (cooldown) avant réengagement après avoir quitté un Power", "un module Powerplay déjà débloqué reste-t-il utilisable après avoir quitté le Power concerné"]
+guides_lies: [0, 1, 16, 18, 19, 21, 22, 24]
+---
 # Politique et Powerplay dans Elite Dangerous
 
-## Introduction
+## En bref
+
+Powerplay est la couche de méta-jeu territorial d'*Elite Dangerous* : douze Powers — deux fédéraux, quatre impériaux,
+deux de l'Alliance, quatre indépendants — se disputent le contrôle territorial des systèmes. Lancé en juin 2015 avec la
+mise à jour 1.3, il a été entièrement refondu le 31 octobre 2024 par la mise à jour *Ascendancy*
+(« Powerplay 2.0 ») : les mérites (merits) gagnés en s'engageant (pledge) auprès d'un Power sont désormais permanents
+et non décroissants, et presque toute activité du jeu en rapporte. Trois axes structurent le jeu territorial :
+Acquisition, Renforcement (reinforcement) et Undermining. Le score de contrôle d'un système détermine son état —
+Exploité (exploited, 0 à 350 000 points), Fortifié (fortified, 350 000 à 1 000 000, bulle de 20 années-lumière) ou
+Bastion (stronghold, au-delà d'un million, bulle de 30 années-lumière) — et les bascules sont appliquées au tick
+hebdomadaire du jeudi à 07:00 UTC. Les rangs vont de 1 à 100 (environ 775 000 mérites cumulés) et débloquent douze
+modules exclusifs communs à tous les Powers, dont les Prismatic Shields et le Concord Cannon.
+
+## Introduction — le méta-jeu politique d'Elite Dangerous
 
 Depuis son lancement en 2014, *Elite Dangerous* propose non seulement une simulation spatiale de vol, de combat et de
 commerce, mais aussi une toile de fond politique dense : trois superpuissances humaines rivales, des milliers de
@@ -11,12 +39,12 @@ son lancement en 2015 jusqu'à la refonte majeure « Powerplay 2.0 » d'octobre 
 (2025-2026) —, dresse le portrait des douze Powers actuels, et propose une méthode pratique pour y jouer efficacement
 aujourd'hui.
 
-## 1. Le paysage politique galactique
+## 1. Le paysage politique galactique d'Elite Dangerous
 
 L'univers d'*Elite Dangerous* se situe au-delà de l'an 3300. Il est structuré autour de trois superpuissances humaines
 et d'une multitude de systèmes n'ayant prêté allégeance à aucune d'entre elles.
 
-### 1.1 La Fédération (Federation)
+### 1.1 La Fédération (Federation) — superpuissance démocratique, 3730 systèmes
 
 La Fédération est une démocratie représentative, la plus ancienne et la plus peuplée des trois superpuissances. Elle a
 été fondée dans la foulée de la Troisième Guerre mondiale (2044-2055) et a établi sa capitale à Olympus Village, sur
@@ -35,7 +63,7 @@ Figures politiques actuelles liées à Powerplay :
   Fédération et de nombreux systèmes indépendants) ; il s'est retiré du jeu politique et de Powerplay le 31 octobre
   3310, jour du lancement de Powerplay 2.0.
 
-### 1.2 L'Empire d'Achenar
+### 1.2 L'Empire d'Achenar — monarchie héréditaire, 4239 systèmes
 
 L'Empire est une monarchie héréditaire fondée par Marlin Duval, organisée selon un système de clientélisme directement
 inspiré de la Rome antique. La société impériale est strictement stratifiée par l'argent, le patronage et l'influence ;
@@ -53,7 +81,7 @@ reflètent cette hiérarchie sénatoriale :
 - **Aisling Duval** — prétendante malheureuse au trône, restée une figure politique influente.
 - **Arissa Lavigny-Duval** — l'Empereur elle-même.
 
-### 1.3 L'Alliance des systèmes indépendants (Alliance of Independent Systems)
+### 1.3 L'Alliance des systèmes indépendants (Alliance of Independent Systems) — 1199 systèmes
 
 L'Alliance est une démocratie parlementaire décentralisée, association volontaire de systèmes qui rejette à la fois la
 hiérarchie rigide de l'Empire et le capitalisme fédéral extrême, au profit de la prospérité mutuelle de ses membres. Son
@@ -67,7 +95,7 @@ trois superpuissances et aussi la plus fragile, ses nombreux systèmes membres p
   devenir elle-même un Power actif lors du lancement de Powerplay 2.0 en octobre 3310, où elle a rallié de nombreux
   partisans.
 
-### 1.4 Les systèmes indépendants
+### 1.4 Les systèmes indépendants et leurs quatre Powers
 
 En dehors des trois superpuissances existent d'innombrables systèmes indépendants, y compris des enclaves situées
 géographiquement à l'intérieur des frontières fédérales ou impériales mais qui conservent leur souveraineté et leurs
@@ -80,7 +108,7 @@ actuels incarnent chacun une facette différente de ce pan du jeu :
 - **Yuri Grom** — ancien chef de la milice EG Pilots, vainqueur des « Dangerous Games » de 3302, territoire centré sur
   la région de Clan Grom / Achilles' Altar.
 
-### 1.5 Comparatif des superpuissances
+### 1.5 Comparatif des trois superpuissances d'Elite Dangerous
 
 | Superpuissance   | Type de gouvernement                   | Capitale               | Population (in-universe, 3308) | Nombre de systèmes | Powers actuels                                                     |
 |------------------|----------------------------------------|------------------------|--------------------------------|--------------------|--------------------------------------------------------------------|
@@ -110,7 +138,7 @@ communautaires. On distingue donc deux grandes ères :
 
 ## 3. Historique de Powerplay : de 2015 à la refonte 2.0
 
-### 3.1 Le lancement et les débuts (2015-2018)
+### 3.1 Le lancement de Powerplay et ses débuts (2015-2018)
 
 Powerplay a été introduit en juin 2015 avec la mise à jour 1.3, avec un premier groupe de Powers répartis entre
 Fédération, Empire, Alliance et Indépendants. Le système ajoutait une strate de stratégie territoriale à grande échelle,
@@ -128,7 +156,7 @@ de Powers à onze, chiffre resté stable jusqu'à la refonte 2.0. Particularité
 d'origine, qui disposent chacun d'un « Powerplay Group » officiel, Grom s'appuie sur un groupe de joueurs communautaire
 baptisé « The Eyes of Leshak ».
 
-### 3.2 Une décennie de critiques (2016-2024)
+### 3.2 Powerplay 1.0 : une décennie de critiques (2016-2024)
 
 Pendant près de dix ans, la communauté a très largement jugé Powerplay 1.0 mal conçu, et ce jugement a peu varié dans le
 temps. Les griefs les plus récurrents étaient :
@@ -145,7 +173,7 @@ temps. Les griefs les plus récurrents étaient :
 Résultat : Powerplay est resté une activité de niche, pratiquée surtout pour ses bonus économiques passifs, boudée par
 la majorité des joueurs.
 
-### 3.3 Le contexte de mai 2024 : la controverse « pay-to-win »
+### 3.3 Le contexte de mai 2024 : la controverse « pay-to-win » du Python Mk II
 
 Juste avant la refonte, en mai 2024, Frontier a déclenché un important « review bombing » sur Steam (la note globale du
 jeu est tombée dans la catégorie « Mixed », autour de 66 %) en annonçant la vente du vaisseau Python Mk II contre de
@@ -218,7 +246,7 @@ reste du jeu, et la décroissance des mérites.
 
 ## 5. Mécaniques détaillées de Powerplay 2.0
 
-### 5.1 Les trois types d'activités territoriales
+### 5.1 Les trois axes d'activité territoriale : Acquisition, Renforcement, Undermining
 
 - **Renforcement (Reinforcement)** — agir dans des systèmes déjà contrôlés par son propre Power afin de les consolider
   et de les faire progresser en état.
@@ -239,7 +267,7 @@ vérifier les valeurs courantes via les outils communautaires cités en section 
 figé). Ce qui est stable, en revanche, ce sont les seuils de points de contrôle définissant les états d'un système,
 détaillés ci-dessous.
 
-### 5.3 États des systèmes (paliers de contrôle)
+### 5.3 États des systèmes Powerplay : Exploité, Fortifié, Bastion (paliers de contrôle)
 
 | État                     | Seuil de points de contrôle | Effet                                                                                                                                                                                                                   |
 |--------------------------|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -256,7 +284,7 @@ Chaque semaine, deux scores opposés s'accumulent en parallèle sur un système 
 rivaux). Si l'undermining l'emporte largement, le système peut perdre des points de contrôle, régresser d'état, voire
 basculer entièrement sous le contrôle d'un Power adverse lors du tick hebdomadaire.
 
-### 5.5 Rangs et récompenses
+### 5.5 Rangs Powerplay (1 à 100) et récompenses
 
 - **Rangs de 1 à 100** — le rang 1 est atteint après 5 missions initiales (0 mérite requis) ; les paliers 2 à 5
   nécessitent une progression croissante jusqu'à 15 000 mérites ; du rang 6 à 99, chaque rang requiert environ 8 000
@@ -266,7 +294,7 @@ basculer entièrement sous le contrôle d'un Power adverse lors du tick hebdomad
   d'armement, etc. — voir section 6) ; déblocage progressif des modules exclusifs, généralement complet à partir du
   rang ~97.
 
-#### Tableau de progression de rang (mérites cumulés, estimation par palier)
+#### Tableau de progression des rangs Powerplay (mérites cumulés, estimation par palier)
 
 Frontier n'a jamais publié de barème officiel exhaustif rang par rang. Le tableau ci-dessous combine les rares points de
 mesure documentés (rang 2, rang 100) avec une extrapolation linéaire au taux moyen de ~8 000 mérites/rang décrit
@@ -301,7 +329,7 @@ Instantané au 9 septembre 2026, à revérifier sur les rendements courants (voi
 taux de conversion mérites ont été révisés à plusieurs reprises depuis le lancement de la 2.0 (voir 5.7), ce qui change
 directement ces estimations d'heures.
 
-### 5.6 Le système d'éthos
+### 5.6 Le système d'éthos Powerplay (bonus de mérites d'environ +50 %)
 
 Chaque Power associe l'une des quatre catégories d'activités suivantes à chacun de ses trois axes d'action
 (Acquisition, Renforcement, Undermining — voir 5.1) :
@@ -347,7 +375,7 @@ secondaire (lavewiki.com) qui, sur les Powers où elle a pu être recoupée avec
 certains mais en désaccord pour d'autres (notamment l'axe Undermining d'Edmund Mahon et d'Archon Delaine). À vérifier en
 priorité dans le panneau Powerplay en jeu avant de bâtir une stratégie dessus.
 
-### 5.7 Rééquilibrages continus (2025-2026)
+### 5.7 Rééquilibrages continus de Powerplay 2.0 (2025-2026)
 
 Le système a fait l'objet d'ajustements fréquents après son lancement, preuve d'un suivi actif de Frontier, mais aussi
 de problèmes d'équilibrage persistants :
@@ -472,10 +500,11 @@ par la progression de rang :
 
 ## 7. Guide pratique pour bien jouer Powerplay en 2025-2026
 
-### 7.1 Choisir son Power
+### 7.1 Choisir son Power (s'engager, « pledge »)
 
-Le choix se fait via le panneau droit du cockpit (onglet Powerplay), qui affiche pour chaque Power son système
-d'origine, sa philosophie/affiliation et ses avantages propres.
+Le choix d'un Power — l'engagement, ou « pledge » — se fait via le panneau droit du cockpit (onglet Powerplay), qui
+affiche pour chaque Power son système d'origine, sa philosophie/affiliation et ses avantages
+propres.
 
 Comme tous les modules finissent par être accessibles quel que soit le Power choisi, le critère de sélection le plus
 souvent recommandé par la communauté repose sur trois axes :
@@ -515,7 +544,7 @@ Depuis l'Update 3.4 (Trailblazers, été 2025), il est conseillé de privilégie
 systèmes **activement contestés**, plutôt que le renforcement passif de bastions déjà tranquilles, pénalisé par la
 nouvelle formule (voir 5.7).
 
-### 7.3 Stratégie territoriale
+### 7.3 Stratégie territoriale Powerplay (acquisition, decay hebdomadaire, coordination)
 
 - Privilégier l'acquisition de systèmes inoccupés proches (20 à 30 années-lumière) des bastions déjà alliés, pour
   bénéficier de la bulle logistique et faciliter le ravitaillement et la défense.
@@ -532,7 +561,7 @@ nouvelle formule (voir 5.7).
   largement absente de l'interface officielle — voir aussi [Escadrons de joueurs](./22-squadrons.md) pour la
   coordination structurée en groupe.
 
-### 7.4 Points de vigilance et limites actuelles du système
+### 7.4 Points de vigilance et limites actuelles de Powerplay 2.0
 
 Malgré le succès relatif de la refonte 2.0 par rapport à la version 1.0, plusieurs critiques persistent au sein de la
 communauté (2025) :

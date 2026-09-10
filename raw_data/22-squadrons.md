@@ -1,6 +1,42 @@
+---
+id: 22-squadrons
+titre: "Escadrons de joueurs (Squadrons)"
+domaine: social
+entites: [Squadron, Vanguards, Squadron Carrier, Squadron Bank, Squadron Browser, Squadron Leaderboards, Squadron Leader, Senior Officer, System Architect, Squadron Bar]
+mots_cles_en: [squadron, vanguards, squadron carrier, squadron bank, squadron browser, squadron leaderboards, squadron leader, senior officer, permission groups, claim sniping]
+version_jeu_couverte: "non déterminée — contenu arrêté au Caspian Explorer Update (2 décembre 2025), non revu depuis pour la 4.4.0.x"
+branche: live
+date_verification: 2026-09-10
+confiance_globale: haute
+volatilite: moyenne
+sources_primaires: [Steam News Frontier (API ISteamNews v0002), Inara.cz annuaire des escadrons, fiche Inara de l'escadron New Pilots Initiative]
+zones_incertaines:
+  - "Liste complète et officielle des rangs d'escadron au-delà de Squadron Leader, Senior Officer et Recruit."
+  - "Détail exact de l'interface des groupes de permissions personnalisables."
+  - "Existence d'une condition de rang, d'ancienneté ou de coût pour fonder un escadron."
+  - "Mécanisme précis d'affiliation formelle d'un escadron à un Power, au-delà du filtre du Squadron Browser."
+  - "Catégories exactes des Squadron Leaderboards."
+  - "Assimilation du Squadron Carrier à un Fleet Carrier au sens mécanique : déduction du guide, jamais énoncée telle quelle par Frontier."
+guides_lies: [0, 2, 16, 21, 23]
+---
+
 # Escadrons de joueurs (Squadrons)
 
-## Introduction
+## En bref
+
+Un **Squadron** (escadron) d'*Elite Dangerous* est une structure sociale persistante, comparable à une guilde, qui
+regroupe jusqu'à **600 membres** depuis le Patch 1 du 22 août 2025 et accepte au maximum **25 candidatures** en
+attente. Le système existe depuis 2018 et a été entièrement refondu par la saison **« Vanguards »**, lancée le
+**19 août 2025** puis corrigée par trois patches (22 août, 1er et 11 septembre 2025). La refonte apporte logo,
+bannière et devise (*motto*) personnalisés, un **Squadron Browser** filtrable par Power, des **Squadron
+Leaderboards**, une trésorerie commune (**Squadron Bank**), des bonus sélectionnables (*perks*) et un **Squadron
+Carrier** collectif que seul le **Squadron Leader** peut acheter. Un escadron peut être rattaché à une faction
+mineure du Background Simulation, dont il devient le bras opérationnel. Si le Leader ne s'est pas connecté depuis
+**90 jours**, un nouveau leader est tiré au sort parmi les membres actifs du rang immédiatement inférieur. En
+colonisation, les membres de l'escadron du **System Architect** bénéficient d'une fenêtre de revendication élargie,
+de **30 minutes à 24 heures** après l'achèvement du port primaire.
+
+## Introduction — ce qu'est un Squadron (escadron) dans Elite Dangerous
 
 Un **Squadron** (escadron) est, dans *Elite Dangerous*, une structure sociale persistante regroupant des commandants
 autour d'une identité, d'un objectif ou d'une communauté commune — de quelques amis à plusieurs centaines de pilotes.
@@ -17,18 +53,6 @@ d'options et de personnalisation dans la gestion de vos groupes). Ce guide couvr
 après cette refonte et ses trois patches correctifs (fin août - mi-septembre 2025) : création, rôles et permissions,
 rattachement à une faction mineure du Background Simulation, Squadron Carrier, Squadron Bank, classements, et
 visibilité.
-
-> **Note sur les sources.** L'essentiel du contenu factuel de ce guide provient du flux officiel de mise à jour de
-> Frontier Developments sur Steam News, récupéré directement au format JSON brut (horodatages Unix exacts, contenus
-> intégraux des billets « Vanguards », « Vanguards Patch 1 », « Patch 2 », « Patch 3 », « Type-11 Prospector Update »
-> et « Type-11 Prospector Update 2 »), ainsi que de la base communautaire [Inara.cz](https://inara.cz/elite/squadrons/).
-> Cette récupération directe a permis de confirmer verbatim l'ensemble des dates, plafonds numériques et mécaniques
-> détaillés ci-dessous. Les pages officielles elitedangerous.com, le forum Frontier et le wiki Fandom restent en
-> revanche inaccessibles depuis l'environnement de recherche (erreurs 403/402 systématiques, y compris via des
-> méthodes de contournement). Certains points de détail — liste exhaustive des rangs, mécanique fine des groupes de
-> permissions, catégories précises des classements, mécanisme formel d'affiliation à un Power — n'ont donc pas pu
-> être vérifiés via une source primaire directement consultable ; ils sont signalés comme tels dans le texte et
-> rassemblés en fin de guide.
 
 ## 1. Chronologie de la refonte « Vanguards »
 
@@ -48,7 +72,7 @@ août 2025 est effectivement un mardi). Cette date s'insère par ailleurs entre 
 | 1er septembre      | lundi      | Vanguards Patch 2 (annoncé pour un déploiement le 2 septembre)            |
 | 11 septembre       | jeudi      | Vanguards Patch 3                                                         |
 
-### 1.1 Nouveautés annoncées au lancement
+### 1.1 Nouveautés des Squadrons annoncées au lancement de Vanguards
 
 Frontier a présenté les apports suivants comme le cœur de la refonte :
 
@@ -69,7 +93,7 @@ des plafonds numériques ; ils sont détaillés dans les sections correspondante
 
 ## 2. Créer un escadron
 
-### 2.1 Champs obligatoires
+### 2.1 Champs obligatoires à la création d'un escadron
 
 Les notes du Patch 3 confirment explicitement, via la description d'un correctif (« Fixed squadron not being created
 if motto, mission statement, and application requirements are blank »), les champs requis pour fonder un escadron :
@@ -87,14 +111,14 @@ Patch 3 a corrigé pour éviter une confirmation silencieuse en échec.
 > ouverte à tout commandant, mais ce point n'a pas pu être vérifié via une note de patch ou une page officielle dans
 > cet environnement — à confirmer en jeu ou sur une source officielle avant de l'affirmer comme un fait établi.
 
-### 2.2 Filtrage anti-injures et texte libre
+### 2.2 Filtrage anti-injures des textes libres d'escadron
 
 Le motto, la description de l'escadron et les messages de recrutement sont soumis à un filtre anti-injures
 (« profanity filtering »). Les notes du Patch 1 confirment que ce filtre, jugé trop restrictif au lancement, a été
 assoupli pour autoriser explicitement « commas and accented characters » (les virgules et les caractères accentués) —
 un ajustement bienvenu pour un jeu à forte communauté francophone et plus largement non anglophone.
 
-### 2.3 Limites numériques à la création et au recrutement
+### 2.3 Limites numériques d'un escadron : 600 membres, 25 candidatures en attente
 
 Les notes officielles du Patch 1 confirment verbatim les deux relèvements de plafond suivants :
 
@@ -106,9 +130,9 @@ Les notes officielles du Patch 1 confirment verbatim les deux relèvements de pl
 Ces deux plafonds réapparaissent identiques dans les notes du « Caspian Explorer Update » (2 décembre 2025), ce qui
 confirme qu'ils sont restés stables plusieurs mois après la refonte.
 
-## 3. Rôles, permissions et gouvernance
+## 3. Rôles, permissions et gouvernance d'un escadron
 
-### 3.1 Rangs
+### 3.1 Rangs d'escadron : Squadron Leader, Senior Officer, Recruit
 
 Les notes de patch confirment explicitement l'existence des rangs suivants, du plus élevé au plus bas :
 
@@ -128,7 +152,7 @@ Le **rang le plus bas d'un escadron est explicitement exclu de la succession de 
 within a squadron will not be eligible for leadership transfer ») — voir la mécanique de succession automatique en
 3.3.
 
-### 3.2 Groupes de permissions personnalisables
+### 3.2 Groupes de permissions personnalisables d'un escadron
 
 Au-delà de la hiérarchie de rangs, un système de **« permission groups »** personnalisables permet d'attribuer des
 droits de gestion plus fins que le simple rang. Ce système a été retravaillé pendant la saison Vanguards : un bug de
@@ -144,7 +168,7 @@ unable to edit rank permissions »).
 > source primaire consultable dans cet environnement. À vérifier directement en jeu ou via une capture d'écran
 > officielle avant de documenter plus précisément cette interface.
 
-### 3.3 Succession automatique du leader
+### 3.3 Succession automatique du Squadron Leader après 90 jours d'inactivité
 
 La refonte Vanguards a introduit, au Patch 3 (11 septembre 2025), une mécanique de **succession automatique** destinée
 à éviter qu'un escadron reste bloqué avec un Squadron Leader inactif indéfiniment. Son fonctionnement, confirmé
@@ -174,7 +198,7 @@ un effet concret sur le jeu.
 
 ## 4. Escadron et Background Simulation (BGS)
 
-### 4.1 Rattachement à une faction mineure
+### 4.1 Rattachement d'un escadron à une faction mineure du BGS
 
 Un escadron peut être associé à une **faction mineure** du Background Simulation, généralement portant le même nom.
 C'est le cas, par exemple, de l'escadron « New Pilots Initiative » sur Inara.cz, dont la fiche affiche un champ
@@ -214,7 +238,7 @@ escadron à un Power — au-delà de ce filtre de recherche et d'affichage — n
 des sources consultées. Pour le fonctionnement complet de Powerplay (Powers, mérites, systèmes Stronghold), voir
 [Politique et Powerplay](./02-powerplay.md).
 
-## 5. Squadron Bank
+## 5. La Squadron Bank, trésorerie commune de l'escadron
 
 La **Squadron Bank** est la trésorerie commune de l'escadron : elle permet aux membres de mutualiser des ressources
 (crédits) pour financer des projets collectifs. Depuis le Patch 2 (1er septembre 2025), le solde du Squadron Carrier
@@ -224,7 +248,7 @@ section 6.
 
 ## 6. Squadron Carrier
 
-### 6.1 Un porte-vaisseaux collectif
+### 6.1 Le Squadron Carrier, porte-vaisseaux collectif de l'escadron
 
 Le **Squadron Carrier** est un porte-vaisseaux dédié à l'escadron, financé et géré via la Squadron Bank. Il offre un
 stockage étendu pour les marchandises, les objets et les vaisseaux des membres. D'après les fonctionnalités décrites
@@ -234,18 +258,18 @@ restrictions d'accostage spécifiques ajoutées au « Type-11 Prospector Update 
 restrictions on Squadron Fleet Carriers ») — le Squadron Carrier apparaît, avec une forte probabilité mais sans
 qu'une phrase officielle unique ne l'énonce explicitement, comme un **Fleet Carrier au sens mécanique**, simplement
 possédé et financé collectivement par l'escadron plutôt qu'individuellement par un seul commandant. Pour le
-fonctionnement général des Fleet Carriers, voir le guide dédié du corpus.
+fonctionnement général des Fleet Carriers, voir le guide dédié [19-fleet-carriers.md](./19-fleet-carriers.md).
 
-### 6.2 Achat et gouvernance
+### 6.2 Achat d'un Squadron Carrier : une prérogative du Squadron Leader
 
 Seul le **Squadron Leader** peut acheter un Squadron Carrier (voir section 3.1). Un bug corrigé au Patch 2 avait
 permis par erreur aux Senior Officers d'effectuer cet achat, provoquant une erreur et une déconnexion ; ce
 comportement a été confirmé non intentionnel et corrigé, ce qui fixe cette prérogative comme réservée au rang le plus
 élevé de l'escadron.
 
-### 6.3 Services embarqués
+### 6.3 Services embarqués d'un Squadron Carrier (Vista Genomics, Pioneer Supplies, Bar)
 
-Les services disponibles à bord d'un Squadron Carrier ont été déployés progressivement pendant la saison Vanguards :
+Les services disponibles à bord d'un **Squadron Carrier** ont été déployés progressivement pendant la saison Vanguards :
 
 - **Vista Genomics** et **Pioneer Supplies**, activables dès le Patch 1 (22 août 2025) ;
 - un **Bar** avec service de « Bartender », ajouté au Patch 2 (1er septembre 2025) — la gestion des commandes d'achat
@@ -253,14 +277,14 @@ Les services disponibles à bord d'un Squadron Carrier ont été déployés prog
 
 ## 7. Squadron Browser, recrutement et visibilité
 
-### 7.1 Découverte et filtres
+### 7.1 Découverte des escadrons et filtres du Squadron Browser
 
 Le **Squadron Browser**, entièrement repensé par Vanguards, permet de rechercher des escadrons et leurs membres selon
 plusieurs critères, dont le **Power** soutenu (Powerplay). C'est l'outil principal pour trouver un escadron à
 rejoindre ou évaluer sa propre visibilité auprès des autres commandants. Le Patch 1 a par ailleurs corrigé des erreurs
 de filtrage du Squadron Browser lorsque le nom d'un Power soutenu contenait certains caractères spéciaux.
 
-### 7.2 Visibilité et confidentialité
+### 7.2 Visibilité et confidentialité d'un escadron (Private, Squadron only)
 
 Depuis le Patch 2, un escadron peut définir sa **visibilité** parmi plusieurs niveaux, dont « Private » et « Squadron
 only », qui masquent la localisation et d'autres détails aux commandants non-membres. Cette option est particulièrement
@@ -270,12 +294,13 @@ d'escadron et les autres outils de jeu privé entre amis (Private Groups, invita
 
 ## 8. Classements (Squadron Leaderboards)
 
-Vanguards a introduit des **Squadron Leaderboards** étendus, avec de nouvelles récompenses associées au classement.
+La refonte Vanguards a introduit des **Squadron Leaderboards** (classements d'escadron) étendus, avec de nouvelles
+récompenses associées au classement.
 Les catégories précises de ces classements (par exemple par combat, exploration, commerce ou contribution au BGS,
 comme c'était le cas avant la refonte) n'ont pas pu être confirmées verbatim à partir des sources consultées ; ce
 point est à vérifier directement en jeu, dans l'onglet dédié aux classements de l'interface Squadron.
 
-## 9. Plafonds et limites — récapitulatif
+## 9. Plafonds et limites d'un escadron — récapitulatif
 
 | Paramètre                                      | Valeur (depuis le Patch 1, 22 août 2025) |
 |-------------------------------------------------|--------------------------------------------|
@@ -287,7 +312,7 @@ point est à vérifier directement en jeu, dans l'onglet dédié aux classements
 | Fenêtre de revendication exclusive (colonisation) | 30 minutes (System Architect seul)        |
 | Fenêtre de revendication élargie à l'escadron   | 23,5 heures supplémentaires (30 min à 24h)  |
 
-## 10. Outils communautaires
+## 10. Outils communautaires pour les escadrons (annuaire Inara.cz)
 
 **[Inara.cz](https://inara.cz/elite/squadrons/)** maintient un annuaire complet des escadrons du jeu, avec recherche
 et tri par nombre de membres actifs, filtrage par allégeance, Power, langue ou fuseau horaire. Chaque fiche d'escadron
@@ -297,7 +322,7 @@ externe la plus pratique pour trouver un escadron actif correspondant à ses pr�
 santé d'un escadron avant de le rejoindre. Voir aussi [Outils](./16-outils.md) pour le panorama complet des outils
 communautaires disponibles sur *Elite Dangerous*.
 
-## Points d'incertitude à vérifier
+## Points d'incertitude à vérifier sur les Squadrons
 
 Les points suivants n'ont pas pu être confirmés par une source primaire accessible depuis l'environnement de
 recherche (elitedangerous.com, forums.frontier.co.uk et le wiki Fandom ont de nouveau systématiquement renvoyé des
@@ -335,6 +360,18 @@ officielle avant d'être présentés comme des faits établis :
 - https://inara.cz/elite/squadrons/ (annuaire communautaire des escadrons, colonnes et filtres consultés directement)
 - https://inara.cz/elite/squadron/5068/ (fiche de l'escadron « New Pilots Initiative », champ « Related minor
   faction » et champ « Power » confirmés)
+
+> **Note sur les sources.** L'essentiel du contenu factuel de ce guide provient du flux officiel de mise à jour de
+> Frontier Developments sur Steam News, récupéré directement au format JSON brut (horodatages Unix exacts, contenus
+> intégraux des billets « Vanguards », « Vanguards Patch 1 », « Patch 2 », « Patch 3 », « Type-11 Prospector Update »
+> et « Type-11 Prospector Update 2 »), ainsi que de la base communautaire [Inara.cz](https://inara.cz/elite/squadrons/).
+> Cette récupération directe a permis de confirmer verbatim l'ensemble des dates, plafonds numériques et mécaniques
+> détaillés dans ce guide. Les pages officielles elitedangerous.com, le forum Frontier et le wiki Fandom restent en
+> revanche inaccessibles depuis l'environnement de recherche (erreurs 403/402 systématiques, y compris via des
+> méthodes de contournement). Certains points de détail — liste exhaustive des rangs, mécanique fine des groupes de
+> permissions, catégories précises des classements, mécanisme formel d'affiliation à un Power — n'ont donc pas pu
+> être vérifiés via une source primaire directement consultable ; ils sont signalés comme tels dans le texte et
+> rassemblés en fin de guide.
 
 > **Note méthodologique.** elitedangerous.com (page /news), forums.frontier.co.uk et elite-dangerous.fandom.com ont
 > de nouveau renvoyé des erreurs HTTP 403/402 lors des tentatives d'accès directes effectuées pendant cette session de

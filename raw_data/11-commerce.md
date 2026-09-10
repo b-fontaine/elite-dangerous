@@ -1,6 +1,34 @@
+---
+id: 11-commerce
+titre: "Guide complet du commerce dans Elite Dangerous"
+domaine: economie
+entites: [Trade Rank, Rare Goods, Trade Dangerous, Spansh, Type-9 Heavy, Imperial Cutter, Type-10 Defender, Panther Clipper Mk II, Type-8 Transporter, Keelback, Cargo Rack, Robigo Run]
+mots_cles_en: [trading, supply and demand, trade rank, rare goods, black market, smuggling, Robigo run, cargo rack, trade route, Trade Dangerous, mining to trade]
+version_jeu_couverte: "4.4.0.x"
+branche: live
+date_verification: 2026-09-09
+confiance_globale: haute
+volatilite: haute
+sources_primaires: [EDCD/coriolis-data, EDCD/FDevIDs, Trade Dangerous (dépôt GitHub), EDSM, TheGamer, GameRant, TwistedVoxel, chronologie canonique interne]
+zones_incertaines: ["seuils de profit cumulé de chaque palier de Trade Rank : aucune source primaire retrouvée, à lire dans le panneau Réputation en jeu", "portée de saut laden/unladen du Keelback, du Type-8 Transporter et du Panther Clipper Mk II : non publiée par coriolis-data, dépend du FSD et de la charge", "chiffres de rentabilité GameRant (100 M Cr/h en minage laser, 90 M Cr/h en Robigo, 3,5 Md Cr par cycle PTN) : instantanés non redatés par la source"]
+guides_lies: [3, 12, 16, 18, 20, 24]
+---
 # Guide complet du commerce dans Elite Dangerous
 
-## Introduction
+## En bref
+
+Le commerce (*trading*) consiste à acheter une commodité là où une économie de station la produit (offre abondante,
+prix bas) pour la revendre là où une autre la consomme (forte demande), en tenant compte de l'état de simulation de
+fond (*Background Simulation*, BGS) de la faction locale : **Boom** favorise la vente, **Famine** fait exploser la
+demande alimentaire, **Outbreak** celle des produits médicaux. Quatre familles coexistent : le vrac, les données, la
+contrebande (*smuggling*, dont la boucle **Robigo Run**, environ 90 M Cr/h en Python) et le **mining-to-trade** (plus
+de 100 M Cr/h en laser). Le **Trade Rank** compte neuf paliers, de Penniless à Elite, ce dernier subdivisé en Elite I
+à V. Une route type en Type-6 Transporter (114 t, marge 2 150 Cr/t) rapporte environ 1,2 M Cr/heure. Côté vaisseaux,
+le **Type-9 Heavy** (~72,1 M Cr, ~790 t théoriques), l'**Imperial Cutter** (rang de Duc requis), le **Type-10
+Defender** et le **Panther Clipper Mk II** (~301,35 M Cr, le plus gros transporteur non-capital du jeu) couvrent le
+haut de gamme ; **Spansh** et **Trade Dangerous** calculent les routes.
+
+## Introduction au commerce dans Elite Dangerous
 
 Le commerce (*trading*) est l'une des activités économiques centrales d'Elite Dangerous : il permet de générer des
 crédits en exploitant les écarts de prix entre stations, tout en offrant plusieurs variantes de gameplay (commerce légal
@@ -16,7 +44,7 @@ pratiques de gestion du risque et les évolutions récentes de la méta (2025-20
 > [Le BGS](./21-bgs.md), [La Colonisation](./18-colonisation.md), [Porte-Vaisseaux](./19-fleet-carriers.md),
 > [Community Goals](./24-community-goals.md), [Escadrons](./22-squadrons.md) et [Outils](./16-outils.md).
 
-## I. Mécanique générale du commerce
+## 1. Mécanique générale du commerce
 
 Le principe de base du trading repose sur l'écart entre le prix d'achat d'une commodité dans une station où l'offre
 (*supply*) est élevée et son prix de vente dans une station où la demande (*demand*) est élevée. Les prix fluctuent en
@@ -31,7 +59,7 @@ continu selon deux facteurs :
 de perte du vaisseau (piraterie, interdiction, erreur de pilotage) n'est jamais nul, et l'assurance (*rebuy*) ne couvre
 que le remplacement de la coque — jamais la cargaison perdue.
 
-### Mécanique des prix : offre, demande et économies de station
+### Mécanique des prix du commerce : offre, demande et économies de station
 
 Chaque station possède un ou plusieurs types d'**économie** (fichier de référence officiel `economy.csv` du dépôt
 communautaire EDCD/FDevIDs, qui reprend les identifiants internes du jeu) qui déterminent quelles commodités elle
@@ -103,7 +131,9 @@ seuil exact du prochain palier, ou un wiki communautaire à jour.
 commerce les mieux rémunérées (visibilité et fréquence accrues dans le tableau des missions), et sert de filtre
 d'affichage dans certains outils communautaires de recherche de missions. Il n'ouvre en revanche pas de déblocage de
 vaisseau ou de module spécifique, contrairement au rang impérial/fédéral qui conditionne l'achat de certains vaisseaux
-(voir Imperial Cutter plus bas).
+(voir Imperial Cutter plus bas). Pour situer cette échelle par rapport aux sept autres et savoir quelles méthodes de
+profit décrites ci-dessous font effectivement monter le rang de commerce, voir
+[27 — Débuter et progresser](./27-debuter-et-progresser.md).
 
 ### Les denrées rares (Rare Goods)
 
@@ -113,9 +143,9 @@ augmente avec la distance parcourue jusqu'à un plafond. Cela permet de réalise
 avoir besoin d'organiser un fret retour — une méthode qualifiée par la presse spécialisée de « toujours la plus
 lucrative » pour démarrer une carrière de commerçant.
 
-## II. Les quatre types de commerce
+## 2. Les quatre types de commerce
 
-### A. Commerce simple (commodités en vrac)
+### 2.1 Commerce simple : commodités légales en vrac
 
 C'est l'activité de base du trading : acheter des marchandises légales (métaux, denrées alimentaires, produits
 chimiques, machines, technologie) dans une station et les revendre ailleurs avec une marge bénéficiaire.
@@ -130,14 +160,14 @@ Progression classique de vaisseaux recommandée par les guides communautaires :
 | Confirmé          | Type-6 Transporter               | ~1 M Cr          | 114 t             |
 | Confirmé avancé   | Type-8 Transporter *(nouveau)*   | ~38,5 M Cr       | jusqu'à ~400 t selon configuration |
 | Avancé            | Asp Explorer                     | ~6,6 M Cr        | 130 t             |
-| Expert            | Type-9 Heavy / Imperial Cutter / Panther Clipper Mk II | voir section VI | voir section VI |
+| Expert            | Type-9 Heavy / Imperial Cutter / Panther Clipper Mk II | voir section 5 | voir section 5 |
 
 Le **Keelback** (Lakon Spaceways) occupe une niche particulière : c'est un cargo de gabarit moyen doté d'une **baie de
 chasseur** (*fighter bay*), ce qui en fait une bonne transition pour qui veut commencer à transporter du fret dans des
 systèmes un peu moins sûrs sans encore investir dans un vaisseau de fret pur. Le **Type-8 Transporter**, introduit le
 7 août 2024, se positionne juste au-dessus du Type-6/Keelback : bonne capacité de chargement, gestion supérieure du
 FSD en régime **[SCO](./00-glossaire.md)** (Supercruise Overcharge), au prix d'un armement minimal. Voir la fiche
-détaillée de chacun en section VI, et [Vaisseaux](./03-vaisseaux.md) pour la liste complète et les fabricants.
+détaillée de chacun en section 5, et [Vaisseaux](./03-vaisseaux.md) pour la liste complète et les fabricants.
 
 > **Encart outils — EDMC et BGS-Tally.** Pour suivre concrètement sa progression de rang de commerce et les opportunités
 > de marché, deux outils communautaires reviennent systématiquement : **EDMC** (Elite Dangerous Market Connector),
@@ -150,7 +180,7 @@ détaillée de chacun en section VI, et [Vaisseaux](./03-vaisseaux.md) pour la l
 > le dépôt GitHub). Présentation complète des deux outils (installation, écosystème de plugins) dans
 > [Outils](./16-outils.md).
 
-### B. Commerce de données (Data Trading)
+### 2.2 Commerce de données (Data Trading)
 
 Moins connu que le commerce de marchandises, il consiste à transporter des données (missions de courrier de données,
 données d'exploration, données tactiques) qui n'occupent aucune ou très peu de soute. C'est un point d'entrée idéal pour
@@ -161,7 +191,7 @@ une grosse soute. Cette activité recoupe également :
 - certaines missions de renseignement pour les factions locales, liées au [BGS](./00-glossaire.md) ou au Powerplay
   (voir [Powerplay](./02-powerplay.md)).
 
-### C. Commerce noir / marché illégal (Smuggling)
+### 2.3 Commerce noir et marché illégal (Smuggling)
 
 Les marchandises illégales (stupéfiants, esclaves, armes interdites, biotechnologie de contrebande) s'achètent et se
 vendent exclusivement sur les **marchés noirs** (*Black Markets*), disponibles principalement dans les systèmes en état
@@ -187,7 +217,7 @@ allers-retours réussis (chiffre instantané, capturé début 2025 selon l'artic
 communauté avant de bâtir un plan de jeu dessus, ce type d'estimation évoluant avec les rééquilibrages du jeu). Pour
 les mécaniques détaillées de transport de passagers légal/illégal, voir [Transport](./12-transport.md).
 
-### D. Mining-to-trade (minage puis revente)
+### 2.4 Mining-to-trade (minage puis revente)
 
 Le minage alimente le commerce en fournissant des matières premières à forte valeur ajoutée (Platine, Painite, Diamants
 basse température, Void Opals) revendues sur des marchés spécialisés (économies de raffinage/extraction). Ce guide ne
@@ -216,7 +246,7 @@ milliards de crédits par cycle** pour l'équipage au complet (chiffres instanta
 l'article GameRant source — à revérifier, ces estimations dépendant fortement des prix de marché du moment). Ce mode de
 jeu en groupe recoupe l'organisation d'escadron ; voir [Escadrons](./22-squadrons.md).
 
-## III. Exemple chiffré complet d'une route de commerce légal en vrac
+## 3. Exemple chiffré complet d'une route de commerce légal en vrac
 
 L'exemple ci-dessous illustre la méthode de calcul de rentabilité d'une route de commerce en vrac. **Il s'agit d'un
 exemple pédagogique construit à partir d'ordres de grandeur typiques du commerce de composants industriels/high-tech**
@@ -248,11 +278,11 @@ chaque station (voir la sous-section « Mécanique des prix » ci-dessus). Insta
 
 Ce chiffre de profit horaire suppose un marché qui ne s'épuise pas d'un aller à l'autre (l'achat/la vente répétés font
 en réalité baisser l'offre et la demande locales, donc la marge réelle se dégrade progressivement — d'où l'intérêt des
-outils de routage multi-étapes comme Trade Dangerous ou Spansh, voir section IV, qui recalculent la meilleure boucle
+outils de routage multi-étapes comme Trade Dangerous ou Spansh, voir section 4, qui recalculent la meilleure boucle
 disponible plutôt que de répéter un aller simple jusqu'à épuisement du marché). Trouver un **fret retour** rentable sur
 le trajet inverse permettrait, en théorie, de doubler le profit horaire pour un temps de trajet quasiment identique.
 
-## IV. Trouver des routes commerciales rentables : les outils
+## 4. Trouver des routes commerciales rentables : les outils
 
 Les outils communautaires de recherche de marché et de routage commercial (Trade Dangerous, EDSM, Spansh, Inara, et
 l'obsolète EDDB) sont documentés en détail, avec leur statut de maintenance à jour, dans le guide dédié
@@ -274,7 +304,7 @@ crédit », plutôt que de simplement suggérer le chargement maximal :
 trade.py run --credits 5000 --capacity 8 --ly-per 8.56 --jumps 2 --hops 2
 ```
 
-## V. Vaisseaux de commerce optimaux : spécifications vérifiées
+## 5. Vaisseaux de commerce optimaux : spécifications vérifiées
 
 *(Données extraites des fichiers officiels du dépôt communautaire EDCD/coriolis-data, base de référence utilisée par les
 calculateurs de configuration comme Coriolis et EDSY)*
@@ -366,9 +396,9 @@ vaisseaux non-capitaux du jeu, ce qui en fait le nouveau roi du volume de fret p
 d'une maniabilité très limitée et d'un mass-lock élevé qui le rend particulièrement vulnérable pendant les manœuvres
 d'interdiction. Fiche complète dans [Vaisseaux](./03-vaisseaux.md).
 
-## VI. Configurations recommandées
+## 6. Configurations recommandées d'un vaisseau de commerce
 
-### Soutes (cargo)
+### Soutes (Cargo Racks) : capacité doublée à chaque classe d'emplacement
 
 On maximise le cargo en installant des **Cargo Racks** dans les plus gros emplacements internes disponibles. La capacité
 double à chaque classe :
@@ -384,14 +414,14 @@ Le choix central est l'arbitrage entre :
 - **Configuration équilibrée** : soute légèrement réduite mais conservant boucliers et modules utilitaires. Recommandée
   par la communauté pour toute route qui n'est pas garantie 100% sûre.
 
-### Boucliers
+### Boucliers d'un vaisseau de fret : générateur, boosters et Shield Cell Bank
 
 - **Shield Generator** de la classe la plus élevée compatible avec le vaisseau.
 - **Shield Boosters** dans les points d'ancrage utilitaires (classe 0) pour renforcer la capacité d'encaisser une
   interdiction avant de pouvoir fuir.
 - **Shield Cell Bank** : permet de régénérer rapidement le bouclier après un engagement bref.
 
-### Modules de fuite
+### Modules de fuite d'un cargo : FSD, Heat Sink, Chaff, Point Defence
 
 - **FSD (Frame Shift Drive)** à la portée de saut la plus élevée possible, éventuellement complété par un **Guardian FSD
   Booster** — réduit le nombre de sauts, donc le nombre d'occasions d'être intercepté, sur une route donnée. Voir
@@ -416,7 +446,7 @@ l'interdiction repose sur trois leviers combinés :
 Enfin, soumettre volontairement à l'interdiction (« *submit* ») permet de contrôler le moment et la position de sortie
 de la vitesse supraluminique, plutôt que de subir une sortie forcée à un endroit défavorable.
 
-## VII. Équipement optimal complémentaire
+## 7. Équipement complémentaire : Collector Limpet Controller, AFMU, Fuel Scoop, Refinery
 
 - **Collector Limpet Controller** : module essentiel dans la boucle mining-to-trade — il pilote des drones qui aspirent
   efficacement le minerai/cargo éjecté dans l'espace, évitant la collecte manuelle. Utile aussi pour récupérer du fret
@@ -428,7 +458,7 @@ de la vitesse supraluminique, plutôt que de subir une sortie forcée à un endr
 - **Refinery** : indispensable pour convertir le minerai brut en cargo vendable dans le cadre du mining-to-trade. Voir
   [Équipements](./04-equipements.md) pour la fiche complète de chaque module cité ici.
 
-## VIII. Fleet Carrier et commerce
+## 8. Fleet Carrier et commerce
 
 Les **Porte-Vaisseaux de joueur** (*Fleet Carriers*) ajoutent une dimension logistique importante au commerce :
 
@@ -442,7 +472,7 @@ Les **Porte-Vaisseaux de joueur** (*Fleet Carriers*) ajoutent une dimension logi
 - leur fonctionnement (coût d'achat, entretien en Tritium, services installables, restrictions) est détaillé dans le
   guide dédié [Porte-Vaisseaux (Fleet Carriers)](./19-fleet-carriers.md), que nous ne dupliquons pas ici.
 
-## IX. Community Goals
+## 9. Community Goals (CG) : le commerce en pic de demande temporaire
 
 Les **Community Goals** ([CG](./00-glossaire.md)) sont des objectifs galactiques temporaires proposés par des factions
 ou des superpuissances, très souvent construits autour du commerce : livrer un volume cumulé donné d'une commodité
@@ -454,7 +484,7 @@ et de contribution globale de la communauté (crédits, matériaux, parfois modu
 générique des Community Goals (mécanique de contribution, paliers de récompense, historique) est détaillé dans le
 guide dédié [Community Goals](./24-community-goals.md).
 
-## X. Sécurité et gestion du risque
+## 10. Sécurité et gestion du risque du commerçant
 
 - Ne jamais transporter une cargaison dont la perte mettrait en péril la trésorerie du commandant.
 - L'assurance (*rebuy*) ne couvre que le remplacement du vaisseau, jamais la marchandise perdue — un argument
@@ -464,7 +494,7 @@ guide dédié [Community Goals](./24-community-goals.md).
 - Éviter les marchés noirs et routes de contrebande dans les systèmes fortement surveillés ; privilégier les systèmes
   d'Anarchie pour l'illégal.
 
-## XI. Actualités et méta récente (2025-2026)
+## 11. Actualités et méta récente du commerce (2025-2026)
 
 - **Colonisation des systèmes** : nouvelle fonctionnalité majeure permettant aux joueurs de revendiquer des systèmes
   inhabités et de construire des colonies (facilités, économies façonnées par le joueur en tant qu'« architecte
@@ -479,7 +509,7 @@ guide dédié [Community Goals](./24-community-goals.md).
   dernière date correspond en réalité à la mise à jour « Trailblazers » (colonisation), sortie près de quatre mois
   plus tard. Détails et sources dans [Powerplay](./02-powerplay.md).
 - **Panther Clipper Mk II** : disponible en jeu depuis le **22 juillet 2025** en accès anticipé ARX — voir tableau de
-  la section V pour ses spécifications.
+  la section 5 pour ses spécifications.
 - **Type-8 Transporter** : lancé le **7 août 2024**, 406 tonnes de capacité annoncées, efficace en carburant — voir
   [Transport](./12-transport.md) pour la chronologie complète des mises à jour touchant le fret.
 - **Patch « Vanguards » (Patch 1, août 2025)** : ce patch a notamment augmenté le plafond de membres d'escadron (500 →
@@ -499,7 +529,7 @@ guide dédié [Community Goals](./24-community-goals.md).
   jeu en groupe organisé (*wings*/ *squadrons*) pour maximiser les profits — un axe que les mises à jour Vanguards ont
   explicitement renforcé côté infrastructure (porte-vaisseaux, plafond de membres).
 
-## En résumé : quel vaisseau pour quel usage ?
+## En résumé : quel vaisseau de commerce pour quel usage ?
 
 | Objectif                                  | Vaisseau recommandé                               | Raison                                                              |
 |---------------------------------------------|------------------------------------------------------|------------------------------------------------------------------------|
@@ -530,6 +560,8 @@ guide dédié [Community Goals](./24-community-goals.md).
 - [Wings, Multicrew et CQC](./23-jeu-en-groupe.md) — mécanique de wing pour voyager à plusieurs.
 - [Powerplay](./02-powerplay.md) — dates canoniques d'Ascendancy/Powerplay 2.0.
 - [Outils](./16-outils.md) — Trade Dangerous, EDSM, Spansh, Inara, EDMC, BGS-Tally en détail.
+- [Débuter et progresser](./27-debuter-et-progresser.md) — parcours du nouveau Commandant et comparatif des huit
+  échelles de rang, dont la façon de relier au rang de commerce les méthodes de profit décrites ici.
 
 ## Sources
 

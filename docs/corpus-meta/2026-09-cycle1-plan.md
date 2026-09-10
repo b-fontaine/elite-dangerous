@@ -1,5 +1,14 @@
 # Plan d'enrichissement du corpus Elite Dangerous (17 guides)
 
+> **Document de travail, hors corpus — archive du cycle 1.** Ce fichier vit dans `docs/corpus-meta/` et doit être
+> **exclu de l'ingestion RAG** : il décrit un plan de travail, il ne documente pas le jeu. Les actions qu'il liste
+> ont été **entièrement appliquées** ; il ne décrit donc pas l'état actuel du corpus. Les pistes qu'il formule à
+> l'affirmatif (dont le vaisseau « Nomad », son constructeur, sa classification, et le mode multijoueur
+> « Operations » 2026) ont été **retirées du corpus faute de source fiable** — voir
+> [14-rhino-nomad.md](../../raw_data/14-rhino-nomad.md) et [00-chronologie-canonique.md](../../raw_data/00-chronologie-canonique.md), qui
+> font foi. Voir aussi le [plan de cycle 3](./2026-09-plan-cycle3.md) et
+> [l'annexe des constats](./2026-09-constats.md).
+
 Document de travail issu de l'audit critique des 17 guides existants et de l'audit des systèmes de jeu majeurs absents du corpus. Objectif : combler les lacunes de contenu, corriger les incohérences factuelles inter-guides, et renforcer la cohérence RAG (liens croisés, fraîcheur des données, format des tableaux).
 
 ---

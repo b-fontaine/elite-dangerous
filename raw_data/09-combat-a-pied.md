@@ -1,53 +1,63 @@
+---
+id: 09-combat-a-pied
+titre: "Guide complet du combat à pied dans Elite Dangerous"
+domaine: combat
+entites: [Dominator, Maverick, Artemis, Flight Suit, Manticore Executioner, Karma AR-50, Added Melee Damage, Quieter Footsteps, Audio Masking, Ground CZ, Merc Coin, MercGear]
+mots_cles_en: [on-foot combat, dominator suit, maverick suit, artemis suit, ground conflict zone, added melee damage, quieter footsteps, audio masking, noise suppressor, merc coin, mercgear, operations]
+version_jeu_couverte: "4.4.0.x"
+branche: live
+date_verification: 2026-09-09
+confiance_globale: haute
+volatilite: moyenne
+sources_primaires: [Steam News Frontier (API ISteamNews), Wikipedia Elite Dangerous, Canonn Research, Inara, PCGamesN, Spansh, Steam Community Guides]
+zones_incertaines:
+  - "Plafond d'ingénierie à 75 % de résistance attribué au Caspian Explorer : non retrouvé dans une source primaire, à vérifier en jeu."
+  - "Lien causal entre la mise à jour Caspian Explorer et une IA de PNJ au sol plus prudente : à confirmer en jeu."
+  - "Grade exact de chaque matériau d'ingénierie à pied nommé, non détaillé de façon exhaustive."
+  - "Coûts d'ingénierie en crédits : instantané du 9 septembre 2026, susceptible d'être rééquilibré."
+  - "Aucune modification de combat recensée à ce jour chez les quatre Engineers de Colonia."
+  - "Correspondance entre les six scénarios annoncés le 22 avril 2026 et les six opérations du lancement : Frontier n'a publié aucune table de correspondance."
+guides_lies: [0, 2, 6, 7, 8, 13, 14, 18, 26]
+---
+
 # Guide complet du combat à pied dans Elite Dangerous
+
+## En bref
+
+Le combat à pied (*on-foot combat*) d'*Elite Dangerous* est arrivé avec l'extension **Odyssey** le **19 mai 2021**. Un
+commandant emporte une arme longue, une arme de poing, un outil utilitaire non létal, **trois grenades d'un même
+type** et un sac à dos, dans l'une des quatre combinaisons (*suits*) : **Flight Suit**, **Dominator** (tank),
+**Maverick** (polyvalente) et **Artemis** (précision et discrétion). Chacune existe en **5 grades**, puis s'améliore
+chez neuf Engineers de la bulle Core pour **500 000 à 1 000 000 Cr** par modification, avec des matériaux Chemicals,
+Circuits, Technology et Data. Les armes viennent de trois fabricants — **Manticore**, **Kinematic Armaments** et
+**Takada** ; aucune arme de mêlée dédiée n'existe, le corps-à-corps passant par l'attaque à mains nues renforcée par
+**Added Melee Damage**. Deux mises à jour de 2026 comptent : la refonte de l'audio de combat du **24 février 2026** et
+le passage de la portée des armes silencieuses de **40 à 128 mètres** le **28 avril 2026**. Le terrain de jeu reste les
+zones de conflit au sol (**Ground CZ**), les raids de settlement et, depuis le **1ᵉʳ juillet 2026**, le mode
+**Operations**.
+
+## Introduction — ce que couvre ce guide du combat à pied
 
 Le combat à pied (« on-foot combat ») a été introduit avec l'extension **Odyssey** en mai 2021 et reste, en 2025-2026,
 le principal moyen d'agir directement sur les conflits de surface : raids de settlements, zones de conflit au sol
-(Ground CZ — voir [glossaire](./00-glossaire.md)), missions de mercenariat et, potentiellement, un mode coopératif
-« Operations » dont l'existence même reste à confirmer par une source primaire fiable (voir la section Historique
-ci-dessous). Ce guide couvre l'équipement (armes, combinaisons, grenades, gadgets), la manière de l'obtenir et de
+(Ground CZ — voir [glossaire](./00-glossaire.md)), missions de mercenariat et, depuis le **1ᵉʳ juillet 2026**, le mode
+coopératif **Operations** — des scénarios d'escouade jusqu'à quatre commandants, dont plusieurs se jouent en grande
+partie à pied (abordage de mégavaisseau, évacuation de station en feu, secours de port planétaire). Le détail complet
+du système vit dans [13-operations.md](./13-operations.md) ; ce guide-ci ne traite que ce qui relève du combat au sol.
+Ce guide couvre l'équipement (armes, combinaisons, grenades, gadgets), la manière de l'obtenir et de
 l'améliorer, les meilleures combinaisons selon le style de jeu, les tactiques contre PNJ et joueurs — y compris la
 détection/infiltration et le combat à mains nues —, ainsi que les stratégies pour les settlements et les zones de
 conflit au sol.
 
-## Voir aussi
-
-Ce guide se concentre sur les **tactiques et choix de style de jeu** en combat à pied. Pour éviter les redites (et les
-contradictions qu'elles ont pu créer par le passé entre guides), le détail exhaustif de certains sujets vit ailleurs
-dans le corpus :
-
-- **[07 — Équipement à pied](./07-equipement-a-pied.md)** : catalogue complet des armes par fabricant, tables
-  d'ingénierie (Engineers, blueprints, coûts), builds nommés, outils et consommables. Ce guide-ci ne reprend que des
-  tableaux condensés qui renvoient vers 07 pour le détail.
-- **[13 — Opérations (gameplay à pied)](./13-operations.md)** : typologie des settlements, mécanique fine de
-  détection/suspicion/confinement, catégories de missions au sol. Ce guide-ci résume la mécanique et renvoie vers 13
-  pour l'exhaustif.
-- **[14 — Rhino et Nomad](./14-rhino-nomad.md)** : chronologie sourcée du SRV Rhino, du vaisseau Nomad et de la
-  fonctionnalité multijoueur « Operations » (2026).
-- **[02 — Powerplay](./02-powerplay.md)** : détail de Powerplay 2.0 / l'extension Ascendancy (31 octobre 2024), dont
-  les cycles hebdomadaires influencent l'apparition des Ground CZ liées aux Powers.
-- **[00 — Chronologie canonique](./00-chronologie-canonique.md)** : arbitrage daté de toutes les confusions
-  chronologiques listées ci-dessous (Powerplay 2.0 vs Trailblazers, Colonisation, Rhino, Caspian Explorer, Kestrel
-  Mk II, mode « Operations »).
-- **[06 — Ingénieurs](./06-ingenieurs.md)** : système général d'ingénierie (vaisseaux et à pied), grades de matériaux.
-
-## Note sur la fiabilité des données chiffrées
-
-Les noms de familles d'équipement, les mécaniques de jeu et l'historique des mises à jour présentés ici ont été
-recoupés avec les guides 07, 13, 14 et la chronologie canonique (00). En revanche, les **valeurs numériques précises**
-(dégâts exacts, points de vie, prix en crédits, quantités de matériaux d'ingénierie) évoluent au fil des correctifs et
-doivent être confirmées directement dans l'écran d'outfitting en jeu ou sur le wiki communautaire
-(elite-dangerous.fandom.com) avant toute prise de décision engageant beaucoup de crédits ou de temps de collecte. Les
-coûts en crédits cités dans ce guide sont un **instantané capturé le 9 septembre 2026** (repris de 07) — à revérifier
-auprès de l'Engineer concerné, ces montants pouvant être rééquilibrés par Frontier. Ce guide privilégie donc les
-catégories, rôles et rapports de force relatifs (« élevé / moyen / faible ») plutôt que des chiffres qui seraient
-rapidement obsolètes ou invérifiables.
-
 ## Historique des évolutions récentes du combat à pied (2021-2026)
 
-Cette table a été **entièrement recoupée** avec 07-equipement-a-pied.md, 14-rhino-nomad.md et l'audit chronologique
-consolidé dans 00-chronologie-canonique.md. Plusieurs dates de la version précédente de ce guide étaient erronées
-(confusions d'un an ou entre deux mises à jour distinctes) ; elles sont corrigées ici, avec le niveau de confiance de
-la correction.
+Les deux tables ci-dessous ont été **entièrement recoupées** avec 07-equipement-a-pied.md, 14-rhino-nomad.md et
+l'audit chronologique consolidé dans 00-chronologie-canonique.md. Plusieurs dates de la version précédente de ce
+guide étaient erronées
+(confusions d'un an ou entre deux mises à jour distinctes) ; elles sont corrigées ici, avec le niveau de confiance
+de la correction.
+
+### Évolutions 2021-2025 du combat à pied : Odyssey, Powerplay 2.0, Colonisation, Caspian Explorer
 
 | Date                                       | Mise à jour                                    | Changement pour le combat à pied                                                                                                                                                                                              | Confiance / source                                                                                                       |
 |---------------------------------------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -55,22 +65,40 @@ la correction.
 | **31 octobre 2024** (et non « 2023-2024 »)  | Powerplay 2.0 (extension « Ascendancy »)        | Cycles hebdomadaires d'acquisition/renforcement/sape ; les Ground CZ et missions de combat au sol deviennent un levier d'action direct dans les systèmes disputés par les Powers.                                            | Haute — voir 02-powerplay.md et 00-chronologie-canonique.md §1. Ne pas confondre avec Trailblazers (26 février 2025).      |
 | **26 février 2025** (bêta), et non « 2 mars 2025 » | Colonisation de systèmes (« Trailblazers »)      | Les commandants peuvent construire systèmes et établissements ; les conflits liés aux colonies génèrent de nouvelles zones de conflit au sol, en complément des Ground CZ traditionnelles et de celles liées à Powerplay 2.0. | Haute — le 28 février 2025 est la date d'un article explicatif, pas du lancement. Sortie complète : **11 novembre 2025** (« Dodec Update »). Voir 00-chronologie-canonique.md §2. |
 | **2 décembre 2025** (et non « janvier 2025 »)      | Caspian Explorer (révélé le 25 novembre 2025)   | Vaisseau d'exploration (Zorgon Peterson) associé, selon 14-rhino-nomad.md, à une « IA ennemie à pied améliorée » (comportement des PNJ au sol : couverture, esquive, repli). Le chiffre précis d'un plafond d'ingénierie à 75 % de résistance, avancé par une version antérieure de ce guide, n'a pas pu être retrouvé dans une source primaire et doit être traité comme **non confirmé** jusqu'à vérification en jeu. | Haute pour la date ; non confirmé pour le détail du plafond de résistance. Voir 00-chronologie-canonique.md §5.            |
-| **24 février 2026** (et non « février 2025 »)      | Kestrel Mk II                                   | Sortie accompagnée, selon 14-rhino-nomad.md, d'« une refonte du système audio ». Une version antérieure de ce guide présentait cette refonte comme spécifiquement dédiée au combat à pied (repérage sonore des tirs et explosions) ; ce point n'est pas explicitement confirmé par la source disponible et est donc à considérer comme plausible mais non garanti. | Moyenne — date corroborée indirectement (commit EDCD/FDevIDs du 25/02/2026). Voir 00-chronologie-canonique.md §6.          |
-| Non confirmée                               | Mode coopératif « Operations »                  | L'existence même de ce mode n'a pas pu être confirmée par une source primaire fiable. Voir la sous-section dédiée plus bas.                                                                    | **Non confirmé** — aucune source primaire officielle (elitedangerous.com, forums Frontier, GalNet) n'a pu être vérifiée. Voir 00-chronologie-canonique.md §3.                                     |
-| 2 septembre 2026 (et non « août 2025 »)     | Rhino (SRV de minage, fabricant Vodel)          | Véhicule de surface à 3 places dédié au minage planétaire ; peut servir de couverture mobile improvisée en surface, mais son rôle premier est l'extraction (scanner de gisements, raffinerie embarquée), pas le combat. | Haute — confirmé par Steam News Frontier et GalNet in-univers. Voir 14-rhino-nomad.md et 00-chronologie-canonique.md §4.   |
 
-**Constat pour la méta 2025-2026** : la seule refonte structurelle avérée touchant directement le combat à pied
-« classique » depuis fin 2024 est indirecte — l'ouverture de nouvelles Ground CZ via Powerplay 2.0 (31 octobre 2024)
-et la Colonisation (bêta le 26 février 2025, sortie complète le 11 novembre 2025). Les PNJ au sol seraient devenus
-plus prudents (couverture, esquive, repli) autour de la période Caspian Explorer (2 décembre 2025), mais ce lien
-causal précis reste à confirmer en jeu. Le mode **Operations**, souvent cité comme la grande nouveauté de combat
-coopératif au sol de la période récente, n'a pas de date de sortie confirmée par une source primaire fiable — voir
-ci-dessous et [13-operations.md](./13-operations.md) / [14-rhino-nomad.md](./14-rhino-nomad.md) pour l'état des
-lieux détaillé de cette incertitude.
+### Évolutions 2026 du combat à pied : Kestrel Mk II, Lynx Highliner, Operations, Rhino SRV
+
+| Date                                       | Mise à jour                                    | Changement pour le combat à pied                                                                                                                                                                                              | Confiance / source                                                                                                       |
+|---------------------------------------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| **24 février 2026** (et non « février 2025 »)      | Kestrel Mk II                                   | La mise à jour embarque une **refonte étendue de l'audio de combat à pied**, explicitement dédiée à la conscience situationnelle : portée de propagation des tirs augmentée, directivité de la ligne de feu ennemie améliorée et réverbération parasite réduite, explosions et grenades aux transitoires plus nettes et différenciées intérieur/extérieur, atténuation temporaire des tirs alentour quand le joueur est touché, hit markers / ruptures de bouclier / confirmations de kill plus lisibles dans le mix. Refonte par arme (Manticore Executioner et Intimidator, Karma AR-50 et P-15), par grenade (Shield Disruptor et fragmentation), et sur les sons de déplacement (pas, surfaces, respiration, glissades) et d'environnement (réverbération intérieure, ambiance de settlement, vaisseaux distants atténués pour laisser entendre tirs et pas). | **Haute** — billet officiel Frontier « Elite Dangerous \| Kestrel Mk. II Update », 24 février 2026 12:21 UTC, section « On-Foot Combat Audio Rebalance ». La réserve d'une version antérieure de ce guide est levée. |
+| **28 avril 2026**                           | Lynx Highliner Update                           | Correctif d'équilibrage direct pour l'infiltration : la **portée des armes silencieuses passe de 40 à 128 mètres**, pour les aligner sur les autres armes — elle reste toutefois inférieure à celle des armes non silencieuses. Corrections associées sur les sons de tir silencieux du Karma AR-50 et sur les modes suppressed / audio-masked du Manticore Executioner, désormais comparables à ceux du Karma AR-50 et du P-15. | **Haute** — billet officiel Frontier « Elite Dangerous \| Lynx Highliner Update Notes », 28 avril 2026 13:11 UTC.          |
+| **30 juin 2026** (jeu en 4.4.0.0), notes le **1ᵉʳ juillet 2026** | Mode coopératif **Operations**   | Nouveau mode d'escouade jusqu'à 4 commandants, avec six scénarios au lancement dont plusieurs se jouent essentiellement à pied. La même mise à jour corrige trois défauts de longue date des **zones de conflit au sol** (voir le détail sous le tableau). Nouvelle monnaie **Merc Coin** et catalogue **MercGear**. | **Haute** — billet officiel Frontier « Elite Dangerous \| Operations Update », 1ᵉʳ juillet 2026 14:01 UTC ; report annoncé le 22 avril 2026 14:02 UTC. Voir [13-operations.md](./13-operations.md). |
+| 2 septembre 2026 (et non « août 2025 »)     | Rhino (SRV de minage, fabricant Vodel) + opération « Under Siege » | Véhicule de surface à 3 places dédié au minage planétaire ; peut servir de couverture mobile improvisée en surface, mais son rôle premier est l'extraction (scanner de gisements, raffinerie embarquée), pas le combat. La même mise à jour ajoute une **septième opération, « Under Siege »** : répondre à l'appel de détresse d'un settlement planétaire, lever un blocus et neutraliser les forces ennemies qui tentent de s'en emparer — un scénario de combat de surface. | Haute — billet officiel Frontier « Elite Dangerous \| Rhino SRV Update », 2 septembre 2026 11:20 UTC. Voir 14-rhino-nomad.md et 00-chronologie-canonique.md §4.   |
+
+### Correctifs de zones de conflit au sol livrés avec la mise à jour Operations
+
+Les mêmes notes du 1ᵉʳ juillet 2026 14:01 UTC corrigent trois défauts qui pénalisaient directement les **Ground CZ**,
+résolus à cette occasion :
+
+- les CZ à pied qui échouaient malgré une victoire du joueur, sans navette de retour vers la station (Issue ID 80753) ;
+- les CZ à pied qui ne se plaçaient pas dans le bon état lorsque le joueur arrivait par Dropship (Issue ID 78904) ;
+- les CZ qui ne se résolvaient pas correctement, s'accumulant en grand nombre dans certains systèmes (Issue ID 78480) ;
+- s'y ajoute la correction de Frontline Solutions, qui ne réservait pas de dropship à l'engagement dans un conflit.
+
+### Constat pour la méta 2025-2026 du combat à pied
+
+Deux évolutions structurelles touchent aujourd'hui le combat à pied. La première est indirecte et ancienne —
+l'ouverture de nouvelles Ground CZ via Powerplay 2.0 (31 octobre 2024) et la Colonisation
+(bêta le 26 février 2025, sortie complète le 11 novembre 2025). La seconde est directe et récente : le mode
+**Operations** (1ᵉʳ juillet 2026) ajoute un format d'escouade scénarisé, avec une progression et une monnaie propres,
+là où le combat au sol reposait jusque-là sur les CZ et les missions de settlement. Les PNJ au sol seraient par
+ailleurs devenus plus prudents (couverture, esquive, repli) autour de la période Caspian Explorer (2 décembre 2025),
+mais ce lien causal précis reste à confirmer en jeu. Voir [13-operations.md](./13-operations.md) pour le détail du
+mode Operations et [14-rhino-nomad.md](./14-rhino-nomad.md) pour les véhicules livrés dans la même fenêtre.
 
 ## L'équipement du commandant au sol
 
-### Emplacements d'équipement
+### Les cinq emplacements d'équipement d'un commandant à pied
 
 Un commandant à pied dispose d'un nombre limité d'emplacements, qu'il faut choisir avant chaque sortie (le changement
 d'équipement se fait à une station, un settlement habité ou dans certains abris) :
@@ -83,7 +111,7 @@ d'équipement se fait à une station, un settlement habité ou dans certains abr
   Goods — ce sont les catégories de **tri de l'inventaire du sac à dos**, à ne pas confondre avec les catégories de
   **matériaux d'ingénierie** détaillées plus bas).
 
-### Les combinaisons (suits)
+### Les combinaisons à pied (suits) : Dominator, Maverick, Artemis et Flight Suit
 
 Il existe trois familles de combinaisons de combat, en plus de la combinaison de vol par défaut (sans bonus de combat,
 portée hors mission dédiée) :
@@ -102,9 +130,9 @@ Chaque suit existe en **5 grades** (du grade 1 de base au grade 5 le plus perfor
 s'obtiennent par achat progressif ou déblocage de rang, et chaque grade peut ensuite être **engineered** (amélioré par
 un ingénieur au sol) indépendamment de son grade de base.
 
-### Les armes
+### Les armes à pied
 
-#### Armes longues (primaires)
+#### Armes longues à pied (primaires) : assaut, précision, pompe, plasma, laser
 
 Les armes longues couvrent plusieurs archétypes, portés par différents fabricants en jeu :
 
@@ -119,16 +147,17 @@ Les armes longues couvrent plusieurs archétypes, portés par différents fabric
   de couverture, munitions limitées.
 - **Arme à faisceau laser longue portée** : tir continu, efficace à distance moyenne à longue, sensible à la surchauffe.
 
-#### Armes de poing (secondaires)
+#### Armes de poing à pied (secondaires)
 
-Déclinaisons compactes des mêmes familles de fabricants (kinétique, laser, plasma), utilisées en complément de l'arme
-longue à courte portée, en dégainage rapide, ou comme arme principale silencieuse lors des missions d'infiltration.
+Les armes de poing à pied sont des déclinaisons compactes des mêmes familles de fabricants (kinétique, laser, plasma),
+utilisées en complément de l'arme longue à courte portée, en dégainage rapide, ou comme arme principale silencieuse
+lors des missions d'infiltration.
 
-#### Armes nommées par fabricant
+#### Armes à pied nommées par fabricant (Manticore, Kinematic Armaments, Takada)
 
 Trois fabricants se partagent le catalogue des armes à pied, chacun avec ses propres recettes d'ingénierie. Le tableau
 ci-dessous est un **résumé condensé** ; pour la liste exhaustive des modèles et l'ensemble des builds nommés par la
-communauté, voir [07-equipement-a-pied.md](./07-equipement-a-pied.md#les-armes-à-pied), qui reste la source de
+communauté, voir [07-equipement-a-pied.md](./07-equipement-a-pied.md#les-armes-à-pied-dodyssey--catégories-fabricants-et-builds), qui reste la source de
 référence pour ce sujet.
 
 | Fabricant               | Catégories couvertes                                        | Exemples de builds nommés (détail dans 07)                                                  | Style de jeu associé                          |
@@ -139,15 +168,16 @@ référence pour ce sujet.
 
 Il n'existe pas d'arme de mêlée dédiée : voir la sous-section **Combat à mains nues** ci-dessous.
 
-#### Outils utilitaires non létaux
+#### Outils utilitaires non létaux du Suit Tool (piratage, découpe, profileur, scanner)
 
-Un seul emplacement, mais déterminant selon la mission : outil de piratage de portes/terminaux, outil de découpe
-(breach) pour ouvrir des accès non prévus, profileur de cibles (identification à distance), scanner de signaux, ou outil
-de récupération d'énergie à distance pour un vaisseau posé à proximité. Le détail de chaque outil (Compact Multi-Tool,
+Le commandant ne dispose que d'un seul emplacement d'outil utilitaire, mais son choix est déterminant selon la
+mission : outil de piratage de portes/terminaux, outil de découpe (breach) pour ouvrir des accès non prévus, profileur
+de cibles (identification à distance), scanner de signaux, ou outil de récupération d'énergie à distance pour un
+vaisseau posé à proximité. Le détail de chaque outil (Compact Multi-Tool,
 Profile Analyser, Wave Scanner, Arc Cutter, E-Break) est couvert dans
-[07-equipement-a-pied.md](./07-equipement-a-pied.md#les-outils-à-pied).
+[07-equipement-a-pied.md](./07-equipement-a-pied.md#les-outils-à-pied--genetic-sampler-arc-cutter-wave-scanner-profile-analyser-compact-multi-tool-e-break).
 
-### Les grenades et gadgets
+### Les grenades à pied et gadgets (fragmentation, shield disruptor, incendiaire, non létale)
 
 Les grenades se déclinent en plusieurs catégories, sélectionnées par lot de 3 avant la sortie (un seul type à la fois) :
 
@@ -171,7 +201,7 @@ capturé le 9 septembre 2026, source 07) — « augmente fortement les dégâts 
 corps-à-corps à l'arme ». Cette formulation confirme que le mêlée à pied couvre à la fois le coup de poing pur et le
 coup porté avec l'arme tenue en main (crosse), et non une arme séparée. Pour la planification du build (matériaux
 requis, chaîne de déblocage des deux Engineers), voir
-[07-equipement-a-pied.md](./07-equipement-a-pied.md#modifications-de-combinaison-blueprints).
+[07-equipement-a-pied.md](./07-equipement-a-pied.md#modifications-de-combinaison-blueprints--les-quatorze-effets-et-leurs-engineers).
 
 Usages tactiques recommandés :
 
@@ -182,13 +212,13 @@ Usages tactiques recommandés :
 - **PvP à pied** : un profil offensif rare mais dévastateur une fois Added Melee Damage posé, notamment en combinaison
   avec une approche furtive qui place le joueur au corps-à-corps sans avoir été détecté.
 
-### Grades et progression (1 à 5)
+### Grades et progression des armes et combinaisons à pied (1 à 5)
 
 Chaque arme et chaque suit progresse sur 5 grades. Les grades les plus élevés offrent de meilleures statistiques de base
 et davantage d'emplacements de modification pour l'ingénierie. La progression de grade se fait via l'achat (une fois
 débloqué) ou via la montée en rang du commandant dans les activités de mercenariat/combat.
 
-### Achat et déblocage de l'équipement
+### Achat et déblocage de l'équipement à pied (Pioneer Supplies, rang, Engineers)
 
 - **Achat initial en crédits** : les comptoirs « Pioneer Supplies » (outfitting à pied) dans les stations et settlements
   habités vendent l'équipement de base et ses premiers grades.
@@ -198,7 +228,7 @@ débloqué) ou via la montée en rang du commandant dans les activités de merce
 - **Effets expérimentaux et modifications** : nécessitent la collecte de matériaux au sol puis leur dépôt chez
   l'ingénieur correspondant.
 
-### Ingénierie (engineering) du matériel de combat
+### Ingénierie du matériel de combat à pied et ses quatre catégories de matériaux
 
 L'ingénierie du matériel de combat à pied fonctionne sur le même principe que l'ingénierie des vaisseaux (voir
 [06-ingenieurs.md](./06-ingenieurs.md)) : on apporte des matériaux à un Engineer physique spécialisé pour débloquer
@@ -217,7 +247,7 @@ matériaux d'ingénierie proprement dits) :
 | **Data**        | Non (aucun échange possible)      | 1 à 5*     | Piratage de terminaux/ordinateurs, récompenses de mission uniquement  | Effets expérimentaux                |
 
 \* Le grade exact varie par matériau nommé et n'est pas détaillé exhaustivement ici — voir
-[07-equipement-a-pied.md](./07-equipement-a-pied.md#lingénierie-à-pied-engineering) pour la méthode de collecte
+[07-equipement-a-pied.md](./07-equipement-a-pied.md#lingénierie-à-pied-engineering-dodyssey--engineers-blueprints-et-modifications-irréversibles) pour la méthode de collecte
 recommandée (missions aux terminaux à pied des stations) et [06-ingenieurs.md](./06-ingenieurs.md) pour le
 référentiel général des grades de matériaux.
 
@@ -231,7 +261,7 @@ Neuf Engineers sont présents dans la bulle « Core », organisés en trois cha�
 dans la région de Colonia. Le tableau ci-dessous liste uniquement les **spécialités directement utiles au combat**
 (bouclier, dégâts, discrétion, munitions) ; pour la table complète (position exacte dans la chaîne, coûts détaillés de
 chaque blueprint, liste intégrale des modifications d'armes et de combinaison), voir
-[07-equipement-a-pied.md](./07-equipement-a-pied.md#les-engineers-à-pied).
+[07-equipement-a-pied.md](./07-equipement-a-pied.md#les-treize-engineers-à-pied--neuf-dans-la-bulle-core-quatre-à-colonia).
 
 | Engineer            | Système   | Spécialités combat (suit)                              | Spécialités combat (arme)                       | Coût typique observé*      |
 |----------------------|-----------|-----------------------------------------------------------|----------------------------------------------------|--------------------------------|
@@ -270,7 +300,7 @@ déblocage convergente.
 - **Contexte d'usage** : vol de données, sabotage, missions à timer serré où le déclenchement d'alarme est pénalisant.
   Voir la sous-section **Détection et infiltration** ci-dessous pour la mécanique complète de suspicion.
 
-### Sniping et harcèlement à distance
+### Sniping et harcèlement à distance au sol
 
 - **Suit** : famille précision/discrétion, pour le zoom et la stabilité de visée.
 - **Arme longue** : fusil de précision à forte puissance et longue portée.
@@ -279,16 +309,16 @@ déblocage convergente.
 - **Priorité d'ingénierie** : portée, stabilité de visée, réduction du temps de réaction (recul, temps de rechargement
   du zoom).
 
-### Composition d'escouade hybride (multijoueur)
+### Composition d'escouade hybride à pied (multijoueur)
 
 Un profil courant en groupe consiste à faire porter à un membre une **suit tank** pour absorber l'attention et les
 dégâts, pendant qu'un autre membre en **suit précision** élimine à distance les cibles prioritaires (tourelles,
 opérateurs, renforts), le tout complété par un membre en **suit polyvalente** chargé du piratage/soutien logistique
 (portes, terminaux, ravitaillement).
 
-## Tactiques de combat
+## Tactiques de combat à pied
 
-### Face aux PNJ
+### Face aux PNJ au sol : cibles isolées, points faibles, repérage sonore
 
 Le comportement des PNJ au sol serait devenu plus prudent (usage de couvertures, esquive accrue) depuis la période de
 la mise à jour Caspian Explorer (2 décembre 2025) — voir la réserve exprimée dans le tableau d'historique ci-dessus.
@@ -299,8 +329,10 @@ Recommandations générales, indépendantes de cette évolution précise :
   le bouclier neutralisé).
 - Utiliser une grenade EMP/perturbatrice pour désactiver le bouclier avant un assaut à l'arme automatique ou au
   corps-à-corps.
-- Exploiter le repérage sonore pour anticiper les angles de tir ennemis avant d'être vu (voir la réserve sur la
-  refonte audio associée à Kestrel Mk II dans le tableau d'historique).
+- Exploiter le repérage sonore pour anticiper les angles de tir ennemis avant d'être vu — la refonte audio du
+  24 février 2026 (mise à jour Kestrel Mk II) a précisément été conçue pour cela : la ligne de feu ennemie est plus
+  facile à localiser, la réverbération parasite est réduite, et les tirs alentour s'atténuent brièvement lorsque le
+  joueur est touché ou frôlé, afin de faciliter l'identification de la menace.
 
 ### Face aux tourelles et défenses automatisées de settlement
 
@@ -309,7 +341,7 @@ Les tourelles représentent souvent la principale source de dégâts imprévus l
 - le piratage/la désactivation à distance avant d'entrer dans leur champ de tir ;
 - ou une élimination à l'arme longue de précision depuis l'extérieur de leur portée effective.
 
-### Détection et infiltration
+### Détection et infiltration au sol : suspicion, confinement et armes silencieuses
 
 Cette sous-section résume la mécanique de suspicion et de confinement décrite en détail dans
 [13-operations.md](./13-operations.md#infiltration-détection-et-système-dalarme) ; s'y référer pour la table complète
@@ -342,6 +374,16 @@ risque de scan au moment du décollage si le vaisseau reste dans la zone de séc
   éviter toute alerte, quel que soit le niveau d'ingénierie de la combinaison ;
 - le **Profile Analyser**, pour repérer gardes et points d'intérêt à distance avant de s'engager.
 
+**Portée des armes silencieuses — un rééquilibrage majeur pour l'infiltration.** Jusqu'au printemps 2026, une arme
+silencieuse plafonnait à **40 mètres** de portée, ce qui condamnait le joueur furtif à s'approcher très près de sa
+cible. La mise à jour du **28 avril 2026** (billet « Elite Dangerous | Lynx Highliner Update Notes », 13:11 UTC) a
+porté cette portée à **128 mètres**, explicitement « pour les aligner sur les autres armes » ; Frontier précise
+qu'elle reste inférieure à celle des armes non silencieuses. Un build d'infiltration conçu avant cette date part donc
+d'une hypothèse de portée périmée : l'élimination silencieuse à distance moyenne est désormais viable. La même mise à
+jour a corrigé les sons de tir silencieux du Karma AR-50 et aligné les modes *suppressed* et *audio-masked* du
+Manticore Executioner sur ceux du Karma AR-50 et du P-15 — ce qui rend le comportement des modifications **Noise
+Suppressor** et **Audio Masking** plus homogène d'une arme à l'autre.
+
 Le niveau de sécurité du settlement (civile / faible / moyenne / élevée) dimensionne directement la difficulté de
 cette phase — voir la table complète dans 13-operations.md.
 
@@ -356,7 +398,7 @@ settlement disputés. Principes clés :
 - gérer la régénération du bouclier (se replier hors de vue pour laisser le bouclier se régénérer avant de rengager) est
   une tactique clé, en CZ comme en duel.
 
-### Gestion des ressources vitales
+### Gestion des ressources vitales à pied : bouclier, santé, oxygène
 
 - **Bouclier** : se régénère automatiquement après un délai sans être touché.
 - **Santé** : ne se régénère pas seule ; nécessite des consommables de soin (kit de soin/auto-injecteur).
@@ -394,19 +436,78 @@ Dans les deux cas, une **reconnaissance préalable** est recommandée : scanner 
 tourelles depuis l'extérieur, puis désactiver en priorité les systèmes d'alarme et les tourelles pour éviter d'être
 submergé par les renforts.
 
-### Le mode « Operations » : état des lieux et incertitude
+### Le mode Operations, vu du combat à pied
 
-Aucune source fiable ne confirme l'existence d'un mode multijoueur coopératif appelé « Operations » dans Elite
-Dangerous. Ce point est à traiter comme une entrée sans fondement vérifiable dans le corpus (probable confusion,
-rumeur ou contenu non officiel), et non comme un fait établi — voir le texte de référence dans
-00-chronologie-canonique.md §3, et [14-rhino-nomad.md](./14-rhino-nomad.md) pour le détail de l'enquête menée sur ce
-sujet.
+Le mode **Operations** est sorti le **30 juin 2026** (version du jeu 4.4.0.0), ses notes de version étant publiées le
+**1ᵉʳ juillet 2026 14:01 UTC** sous le titre « Elite Dangerous | Operations Update » — *« The Operations Update is
+here »*. Il avait été reporté d'avril à juin par le billet « An Update on Operations » du **22 avril 2026 14:02 UTC**.
+Frontier le déploie en **« Networking & Balancing Beta »**, c'est-à-dire avec des ajustements de charge serveur et
+d'équilibrage possibles en continu. Le système complet — lobby, appariement, récompenses, difficulté — est traité dans
+**[13-operations.md](./13-operations.md)** ; cette sous-section ne retient que ce qui change pour un commandant au sol.
 
-**Recommandation pratique** : pour toute décision de jeu (achat, planification de session), vérifier directement en
-jeu ou sur les canaux officiels Frontier l'existence et l'état actuel d'un tel mode plutôt que de se fier à une
-mention de ce guide ou d'un autre document du corpus.
+#### Format d'escouade d'une opération : quatre commandants, modes Mercenary et Powerplay
 
-### Colonisation, Powerplay 2.0 et nouvelles zones de conflit
+Une opération se lance seul ou en escouade constituée, avec appariement facultatif pour combler les places restantes,
+et se joue **jusqu'à quatre commandants** (billet du 22 avril 2026). Elle s'ouvre depuis les tableaux de mission une
+fois amarré — starport, Fleet Carrier ou Squadron Carrier. Deux modes coexistent : le mode
+**Mercenary**, par défaut, sans conséquence ni effet Powerplay, et le mode **Powerplay**, dans lequel l'escouade sape
+une Power adverse ; les systèmes éligibles dépendent de l'allégeance du chef d'escouade, et un commandant non aligné
+peut participer sans gagner de mérites.
+
+#### L'Operation Runner, point d'entrée, de réapparition et d'extraction de l'escouade
+
+Une fois l'opération lancée, tous les commandants sont transférés à bord de l'**Operation Runner**, vaisseau de
+déploiement spécialisé qui sert de point d'entrée, de point de réapparition et de point d'extraction finale. Un commandant mis hors de combat y revient automatiquement, son vaisseau réparé, ravitaillé et
+réarmé, avant d'être redéployé.
+
+#### Les six opérations du lancement et leur part de combat à pied
+
+Les six opérations du lancement, dont plusieurs sont majoritairement à pied :
+
+| Opération | Déroulé | Part de combat à pied |
+|---|---|---|
+| **Tactical Takedown** | Aborder un mégavaisseau compromis, se frayer un chemin jusqu'au pont de commandement pour récupérer des renseignements, puis frapper le général responsable dans sa base | Forte — abordage et progression en intérieur |
+| **Firestorm Rescue** | Briser le siège d'une station en feu et évacuer les otages, en gérant la montée en température de la station | Forte — évacuation sous contrainte de temps |
+| **Reclamation Point** | Éliminer toutes les forces hostiles dans et autour d'un mégavaisseau détourné pour permettre au client de le récupérer | Mixte — vaisseau et intérieur |
+| **Biohazard Takedown** | Assaillir un vaisseau de recherche, obtenir la position et l'identité des chercheurs développant une arme dangereuse, puis les neutraliser | Forte — assaut et élimination ciblée |
+| **Rapid Response** | Évacuer le personnel piégé dans un port planétaire attaqué avant l'arrivée d'une flotte hostile | Forte — port planétaire, timer serré |
+| **Terminal Prosecution** | Nettoyer un système d'un élément criminel qui y opère des raids depuis des semaines | Mixte |
+
+Ces six intitulés sont ceux des notes de version du 1ᵉʳ juillet 2026 et font foi. **Piège de comptage** : le billet de
+présentation du 22 avril 2026 annonçait six scénarios sous d'autres noms — *Counter Attack*, *Burning Rescue*,
+*Megaship Massacre Reclaim*, *Megaship Massacre Strike*, *Surface Rescue* et *Pirate Hunt*. Leurs descriptifs
+recouvrent ceux des six opérations du lancement, ce qui suggère de simples noms de travail renommés en cours de
+développement — Frontier n'a toutefois publié aucune table de correspondance. Dans tous les cas, il y avait bien
+**six** opérations au lancement, et non douze.
+
+Une **septième opération, « Under Siege »**, a été ajoutée le **2 septembre 2026** (billet « Rhino SRV Update »,
+11:20 UTC) : répondre à l'appel de détresse d'un settlement planétaire, lever un blocus et neutraliser les forces
+ennemies qui tentent de s'en emparer.
+
+#### Merc Coin et MercGear : aucune pièce d'équipement à pied dans le catalogue de lancement
+
+Terminer une opération rapporte des crédits, des matériaux, des mérites (mode Powerplay
+uniquement) et du **Merc Coin**, une monnaie gagnée en jeu qui **ne s'achète pas en ARX**, assortie d'un bonus
+hebdomadaire à la première réalisation de certaines activités. Le Merc Coin sert à acheter le catalogue **MercGear**.
+**Attention à un contresens fréquent** : le catalogue MercGear publié au lancement est composé de **modules de
+vaisseau** — plans d'ingénierie (*Thermal Plasma Conversion*, *Scoop Rate Enhanced*), armes pré-modifiées
+(*pre-engineered* : rail gun, abrasion blaster, canon à fragmentation, laser minier, multi-canon, lance-missiles à tête
+chercheuse) et modules internes ou de cœur pré-modifiés (distributeurs de puissance, soute étendue, DSS longue portée,
+renfort de module).
+**Aucune pièce d'équipement à pied — arme, combinaison, outil, grenade — ne figure dans la liste du lancement.** Le
+correctif du 2 septembre 2026 sur l'ingénierie du MercGear (« Seeker Missile Rack MercGear » chez Petra Olmanova, une
+ingénieure de vaisseaux) confirme cette lecture. L'équipement de combat à pied reste donc acheté et amélioré par les
+circuits décrits plus haut dans ce guide et dans [07-equipement-a-pied.md](./07-equipement-a-pied.md).
+
+#### Réserve : incidents de récompenses et interface d'escouade à pied manquante
+
+Le mode a connu des incidents de récompenses et d'inventaire lors de ses premiers jours : le correctif
+« Operations Update | Update 3 » du **9 juillet 2026 10:24 UTC** annonce la restitution rétroactive des récompenses
+d'opération non attribuées et des inventaires à pied effacés après une opération. Au 2 septembre 2026, Frontier
+signale encore comme problème connu une **interface d'escouade à pied manquante** (« On-foot wing UI is currently
+missing ») — un point à garder en tête pour la coordination d'une escouade au sol.
+
+### Colonisation, Powerplay 2.0 et nouvelles zones de conflit au sol
 
 Le système de **Colonisation** (« Trailblazers ») est passé en **bêta le 26 février 2025**, puis en **lancement
 complet le 11 novembre 2025** via la mise à jour officiellement nommée « Dodec Update » — et non le 2 mars 2025
@@ -434,17 +535,29 @@ colonisation elle-même, voir le guide dédié [18-colonisation.md](./18-colonis
 
 ## Voir aussi
 
-- **[07 — Équipement à pied](./07-equipement-a-pied.md)** — catalogue complet des armes, combinaisons, outils,
-  consommables, et tables d'ingénierie exhaustives (Engineers, blueprints, coûts).
-- **[13 — Opérations (gameplay à pied)](./13-operations.md)** — typologie des settlements, mécanique complète de
-  détection/infiltration, catégories de missions au sol, zones de conflit à pied.
-- **[14 — Rhino et Nomad](./14-rhino-nomad.md)** — chronologie sourcée du Rhino, du Nomad et de la fonctionnalité
-  « Operations » (2026).
-- **[02 — Powerplay](./02-powerplay.md)** — Powerplay 2.0 / extension Ascendancy, cycles hebdomadaires affectant les
-  Ground CZ.
+Ce guide se concentre sur les **tactiques et choix de style de jeu** en combat à pied. Pour éviter les redites (et les
+contradictions qu'elles ont pu créer par le passé entre guides), le détail exhaustif de certains sujets vit ailleurs
+dans le corpus :
+
+- **[07 — Équipement à pied](./07-equipement-a-pied.md)** — catalogue complet des armes par fabricant, des
+  combinaisons, outils et consommables, tables d'ingénierie exhaustives (Engineers, blueprints, coûts) et builds
+  nommés. Ce guide-ci ne reprend que des tableaux condensés qui renvoient vers 07 pour le détail.
+- **[26 — Ingénierie à pied avancée](./26-ingenierie-a-pied-avancee.md)** — où et comment farmer les matériaux
+  nécessaires aux modifications citées ici (Quieter Footsteps, Audio Masking, Damage Resistance…), règles d'échange
+  chez le barman et ordre de déblocage recommandé des Engineers à pied.
+- **[13 — Opérations](./13-operations.md)** — typologie des settlements, mécanique complète de
+  détection/suspicion/confinement, catégories de missions au sol, zones de conflit à pied, et système **Operations**
+  complet (lobby, appariement, difficulté, récompenses, Merc Coin). Ce guide-ci résume la mécanique et renvoie vers 13
+  pour l'exhaustif.
+- **[14 — Le Rhino et le Nomad](./14-rhino-nomad.md)** — chronologie sourcée du SRV Rhino de Vodel (2 septembre 2026)
+  et du **Nomad**, premier vaisseau embarqué (SLV) du jeu, livré avec Operations le 30 juin 2026.
+- **[02 — Powerplay](./02-powerplay.md)** — détail de Powerplay 2.0 / l'extension Ascendancy (31 octobre 2024), dont
+  les cycles hebdomadaires influencent l'apparition des Ground CZ liées aux Powers.
 - **[00 — Chronologie canonique](./00-chronologie-canonique.md)** — arbitrage daté de toutes les corrections
-  chronologiques appliquées dans ce guide.
-- **[06 — Ingénieurs](./06-ingenieurs.md)** — système général d'ingénierie et référentiel des grades de matériaux.
+  chronologiques appliquées dans ce guide (Powerplay 2.0 vs Trailblazers, Colonisation, Rhino, Caspian Explorer,
+  Kestrel Mk II, mode « Operations »).
+- **[06 — Ingénieurs](./06-ingenieurs.md)** — système général d'ingénierie (vaisseaux et à pied) et référentiel des
+  grades de matériaux.
 - **[08 — Combat spatial](./08-combat-spatial.md)** — pendant vaisseau des CZ et tactiques de combat au sol.
 - **[18 — Colonisation](./18-colonisation.md)** — mécanique de construction de systèmes/établissements, source des
   nouvelles zones de conflit au sol évoquées plus haut.
@@ -454,6 +567,19 @@ colonisation elle-même, voir le guide dédié [18-colonisation.md](./18-colonis
 
 Corpus interne recoupé pour cette révision : 00-chronologie-canonique.md, 02-powerplay.md, 06-ingenieurs.md,
 07-equipement-a-pied.md, 13-operations.md, 14-rhino-nomad.md.
+
+**Source primaire de cette révision** — flux Steam News officiel d'Elite Dangerous (appid 359320), qui republie
+verbatim les annonces de Frontier, relevé le 9 septembre 2026 via
+https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320. Billets cités inline dans ce guide :
+
+| Billet | Horodatage UTC | Ce qu'il établit pour ce guide |
+|---|---|---|
+| « Elite Dangerous \| Kestrel Mk. II Update » | 24 février 2026 12:21 | Refonte de l'audio de combat à pied (section « On-Foot Combat Audio Rebalance ») |
+| « Elite Dangerous \| An Update on Operations » | 22 avril 2026 14:02 | Report d'Operations en juin ; format d'escouade à 4, modes Mercenary/Powerplay, Operation Runner, Merc Coin |
+| « Elite Dangerous \| Lynx Highliner Update Notes » | 28 avril 2026 13:11 | Portée des armes silencieuses portée de 40 à 128 m ; correctifs audio d'armes silencieuses |
+| « Elite Dangerous \| Operations Update » | 1ᵉʳ juillet 2026 14:01 | Sortie d'Operations ; six opérations ; MercGear ; correctifs de zones de conflit au sol |
+| « Elite Dangerous \| Operations Update \| Update 3 » | 9 juillet 2026 10:24 | Restitution des récompenses d'opération et des inventaires à pied |
+| « Elite Dangerous \| Rhino SRV Update » | 2 septembre 2026 11:20 | SRV Rhino ; septième opération « Under Siege » ; interface d'escouade à pied manquante |
 
 Sources externes (historique, contexte général, non ré-explorées intégralement pour cette révision) :
 
@@ -465,3 +591,17 @@ Sources externes (historique, contexte général, non ré-explorées intégralem
 - https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320
 - https://www.spansh.co.uk/
 - https://steamcommunity.com/app/359320/guides/
+
+## Note sur la fiabilité des données chiffrées de ce guide
+
+Les noms de familles d'équipement, les mécaniques de jeu et l'historique des mises à jour présentés ici ont été
+recoupés avec les guides 07, 13, 14 et la chronologie canonique (00), puis **revérifiés sur les notes de version
+officielles de Frontier** (voir Sources) : chaque fait daté des tables d'historique de ce guide cite désormais le
+billet qui l'établit, avec son horodatage UTC. En revanche, les **valeurs numériques précises**
+(dégâts exacts, points de vie, prix en crédits, quantités de matériaux d'ingénierie) évoluent au fil des correctifs et
+doivent être confirmées directement dans l'écran d'outfitting en jeu ou sur le wiki communautaire
+(elite-dangerous.fandom.com) avant toute prise de décision engageant beaucoup de crédits ou de temps de collecte. Les
+coûts en crédits cités dans ce guide sont un **instantané capturé le 9 septembre 2026** (repris de 07) — à revérifier
+auprès de l'Engineer concerné, ces montants pouvant être rééquilibrés par Frontier. Ce guide privilégie donc les
+catégories, rôles et rapports de force relatifs (« élevé / moyen / faible ») plutôt que des chiffres qui seraient
+rapidement obsolètes ou invérifiables.

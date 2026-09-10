@@ -1,6 +1,45 @@
+---
+id: 21-bgs
+titre: "Le Background Simulation (BGS)"
+domaine: politique
+entites: [Background Simulation, faction mineure, tick quotidien, influence, faction contrôlante, Boom, Famine, Outbreak,
+  Lockdown, Investment, Expansion, Retreat, War, Civil War, Election, Player Minor Faction, BGS-Tally]
+mots_cles_en: [background simulation, bgs, minor faction, controlling faction, influence, tick, boom, bust, famine, outbreak,
+  lockdown, civil unrest, investment, expansion, retreat, war, civil war, election, conflict zone, player minor faction, bgs-tally]
+version_jeu_couverte: "4.4.0.x (mécanique stable depuis 2015, non rattachée à une version précise)"
+branche: live
+date_verification: 2026-09-10
+confiance_globale: moyenne
+volatilite: basse
+sources_primaires: [Wikipédia EN/FR, 00-chronologie-canonique du corpus, wiki GitHub aussig/BGS-Tally,
+  connaissances communautaires corroborées]
+zones_incertaines: ["horaire exact du tick quotidien, jamais publié par Frontier et dérivant au fil des années",
+  "seuil d'influence déclenchant une Expansion (~35 %), estimation communautaire non officielle",
+  "seuil d'influence déclenchant un Retreat (2,5 à 5 %), estimation communautaire non officielle",
+  "algorithme de sélection du système cible d'une Expansion, non documenté officiellement",
+  "valeur numérique du plafond d'influence par tick (« tick cap »), non confirmée",
+  "rapport de poids exact entre les cinq paliers de récompense de mission ventilés par BGS-Tally",
+  "classement chiffré d'INF par heure de jeu entre les leviers, non établi faute de source vérifiable",
+  "formule complète de calcul de l'influence, jamais publiée par Frontier Developments"]
+guides_lies: [2, 8, 11, 16, 18, 22, 24]
+---
+
 # Le Background Simulation (BGS)
 
-## Introduction
+## En bref
+
+Le **Background Simulation** (**BGS**) est le moteur qui simule en permanence, dans chaque système peuplé
+d'*Elite Dangerous*, l'**influence** (*influence*) des **factions mineures** (*minor factions*) — de 3 à 10 par système,
+pour une somme toujours égale à **100 %**. Il se met à jour une fois par cycle de 24 heures lors d'un **tick**, dont
+l'horaire n'a jamais été publié : une session de jeu ne produit donc jamais d'effet visible avant le lendemain. La
+faction la plus influente est la **faction contrôlante** (*controlling faction*) et fixe allégeance, taxes et accès au
+marché noir. Les factions traversent des **états** (*states*) économiques — **Boom**, **Bust**, **Famine**, **Outbreak**,
+**Lockdown**, **Investment** — ou de conflit — **War**, **Civil War**, **Election**, **Expansion** (autour de 35 %
+d'influence selon le consensus communautaire), **Retreat** (2,5 à 5 %). Un commandant pèse sur le BGS par ses missions,
+ses ventes, ses primes, ses **Conflict Zones**, ses dons et ses données d'exploration ; les groupes organisés pilotent
+leurs campagnes au tick et instrumentent leur effort avec le plugin **BGS-Tally**.
+
+## Introduction — ce que simule le BGS et ce que couvre ce guide
 
 Sous la surface visible d'*Elite Dangerous* — les combats, le commerce, l'exploration — tourne en permanence un moteur
 discret qui décide, système par système, qui gouverne, quelles denrées manquent, où éclate une guerre civile et où une
@@ -18,7 +57,7 @@ systèmes de jeu majeurs : Powerplay, la Colonisation et les Community Goals.
 
 ## 1. Qu'est-ce que le Background Simulation ?
 
-### 1.1 Un moteur de simulation continue
+### 1.1 Le BGS, un moteur de simulation continue des factions mineures
 
 Le BGS est le système qui simule, pour chaque système peuplé de la galaxie, l'état de ses factions mineures : leur
 influence relative, leur allégeance, leur type de gouvernement, et un ensemble d'« états » (*states*) économiques ou
@@ -31,7 +70,7 @@ Le BGS n'est pas un système « à part » que l'on choisirait d'activer : il to
 les systèmes habités du jeu, qu'un joueur s'y intéresse ou non. Un commandant qui ne s'en préoccupe jamais y participe
 quand même dès qu'il vend une cargaison, complète une mission ou abat un vaisseau ennemi dans un système peuplé.
 
-### 1.2 Le tick quotidien
+### 1.2 Le tick quotidien du BGS : une agrégation des actions sur 24 heures
 
 Le BGS se met à jour une fois par cycle de 24 heures, lors d'un événement communément appelé le **tick**. Durant ce
 tick — dont l'horaire exact n'a jamais été fixé ni publié officiellement par Frontier Developments et a dérivé à
@@ -46,13 +85,13 @@ Points importants sur le tick :
 - Le tick est propre à chaque système : il n'y a pas de mise à jour simultanée strictement identique partout, même si
   l'essentiel des systèmes bascule dans une fenêtre commune.
 - L'horaire précis de cette fenêtre commune varie selon les périodes et les rapports communautaires (des groupes
-  spécialisés en BGS republient régulièrement l'horaire observé, par exemple via le plugin BGS-Tally ou les outils
-  cités en 5.6) ; aucun horaire fixe ne doit être considéré comme garanti sans le recouper avec une source
-  communautaire à jour au moment de jouer.
+  spécialisés en BGS republient régulièrement l'horaire observé, par exemple via le plugin BGS-Tally — documenté dans
+  [Outils](./16-outils.md) — ou les outils cités en 5.6) ; aucun horaire fixe ne doit être considéré comme garanti
+  sans le recouper avec une source communautaire à jour au moment de jouer.
 - Les groupes de joueurs qui pratiquent le BGS de façon intensive organisent généralement leurs campagnes en cycles
   correspondant à ces ticks quotidiens (« faire du BGS » se compte en général en jours de tick, pas en heures de jeu).
 
-### 1.3 Une mécanique stable depuis 2015
+### 1.3 Une mécanique de BGS stable depuis 2015
 
 Le BGS a été introduit avec le jeu de base et son fonctionnement général — factions mineures, influence en
 pourcentage, états économiques et de conflit, expansion/rétraction — n'a pas connu de refonte structurelle majeure
@@ -63,7 +102,7 @@ officielle.
 
 ## 2. Factions mineures et influence
 
-### 2.1 Anatomie d'un système habité
+### 2.1 Anatomie d'un système habité : factions mineures, allégeance, gouvernement
 
 Chaque système peuplé d'*Elite Dangerous* héberge un certain nombre de **factions mineures** (*minor factions*), en
 général entre 3 et 10 selon la taille et l'ancienneté du système. Chaque faction mineure possède :
@@ -90,7 +129,7 @@ Les principaux types de gouvernement rencontrés dans le BGS sont résumés ci-d
 | Féodal (*Feudal*) | Hiérarchie de vassalité, courant côté Empire. |
 | Colonie pénitentiaire (*Prison Colony*) | Système dédié à l'incarcération, avec ses propres particularités de sécurité. |
 
-### 2.2 L'influence, une jauge à somme constante
+### 2.2 L'influence BGS, une jauge à somme constante (100 % par système)
 
 L'influence de chaque faction présente dans un système est exprimée en pourcentage, et **la somme des influences de
 toutes les factions du système est toujours égale à 100 %**. Concrètement, cela signifie que l'influence est un jeu à
@@ -102,7 +141,7 @@ toujours à la faire progresser si l'activité globale du système reste trop fa
 faction rivale (via des missions de sabotage, d'assassinat ou simplement en cessant toute activité en son nom) est
 souvent aussi efficace que de soutenir directement sa cible.
 
-### 2.3 La faction contrôlante
+### 2.3 La faction contrôlante d'un système et ce qu'elle détermine
 
 La faction ayant l'influence la plus élevée dans un système est dite **faction contrôlante** (*controlling faction*).
 Elle détermine, entre autres :
@@ -119,16 +158,16 @@ Un changement de faction contrôlante — à la suite d'une expansion, d'une gue
 donc immédiatement l'expérience de jeu dans le système concerné, ce qui explique pourquoi les groupes de joueurs
 orientés BGS considèrent la prise de contrôle d'un système comme un objectif à part entière.
 
-## 3. Les états de faction
+## 3. Les états (states) d'une faction mineure
 
 Une faction mineure peut se trouver, à un instant donné, dans un ou plusieurs **états** (*states*) qui modifient
 temporairement les conditions de jeu dans les systèmes où elle est présente. On distingue traditionnellement deux
 familles d'états : les états économiques/situationnels, et les états de conflit entre factions.
 
-### 3.1 États économiques et situationnels
+### 3.1 États BGS économiques et situationnels (Boom, Famine, Outbreak, Lockdown…)
 
-Ces états reflètent la conjoncture locale (activité commerciale, incidents, aléas) plutôt qu'une confrontation directe
-entre factions. Plusieurs peuvent survenir de façon largement indépendante des autres factions du système.
+Les états économiques et situationnels d'une faction mineure reflètent la conjoncture locale (activité commerciale,
+incidents, aléas) plutôt qu'une confrontation directe entre factions. Plusieurs peuvent survenir de façon largement indépendante des autres factions du système.
 
 | État | Déclencheur général | Effets principaux pour les joueurs |
 |---|---|---|
@@ -148,10 +187,10 @@ entre factions. Plusieurs peuvent survenir de façon largement indépendante des
 Une faction peut cumuler un état économique/situationnel avec, en parallèle, un état de conflit (par exemple être en
 Boom dans un système tout en étant en Guerre dans un autre où elle est également présente).
 
-### 3.2 États de conflit entre factions
+### 3.2 États de conflit BGS (Expansion, Retreat, War, Civil War, Election)
 
-Ces états naissent de la proximité des niveaux d'influence entre deux (ou plusieurs) factions d'un même système, ou du
-franchissement d'un seuil haut ou bas par une faction isolée.
+Les états de conflit du BGS naissent de la proximité des niveaux d'influence entre deux (ou plusieurs) factions d'un
+même système, ou du franchissement d'un seuil haut ou bas par une faction isolée.
 
 | État | Déclencheur | Résolution |
 |---|---|---|
@@ -168,9 +207,9 @@ ordres de grandeur indicatifs plutôt que comme des règles absolues, d'autant q
 des mises à jour sans annonce officielle. Un commandant qui planifie une campagne BGS précise a intérêt à recouper ces
 valeurs avec un outil communautaire à jour (voir 5.6) avant de s'y fier au tick près.
 
-## 4. Expansion et rétraction : la mécanique de territoire
+## 4. Expansion et rétraction d'une faction mineure : la mécanique de territoire
 
-### 4.1 Comment une faction s'étend
+### 4.1 Comment une faction mineure s'étend (Investment puis Expansion)
 
 Lorsqu'une faction approche du seuil d'expansion, elle entre d'abord dans l'état préparatoire **Investment**, puis
 bascule en **Expansion** si son influence reste suffisamment élevée au tick suivant. Le système cible de l'expansion
@@ -182,7 +221,7 @@ Une expansion réussie installe la faction comme nouvelle présence dans le syst
 généralement modeste, qui devra ensuite être développée comme celle de toute autre faction du système par les
 activités décrites en section 5.
 
-### 4.2 Comment une faction se retire
+### 4.2 Comment une faction mineure se retire d'un système (Retreat)
 
 À l'inverse, une faction dont l'influence chute et se maintient durablement sous le seuil bas entre en état de
 **Retreat**. Si la situation ne se redresse pas, la faction perd toute présence dans le système : elle en disparaît
@@ -209,7 +248,7 @@ une trajectoire plus organique.
 Toute action ayant un effet économique, sécuritaire ou politique enregistrable dans un système peuplé nourrit le BGS.
 Les leviers les plus efficaces et les plus utilisés par les groupes spécialisés sont les suivants.
 
-### 5.1 Missions
+### 5.1 Missions : le levier BGS le plus direct et le plus contrôlable
 
 Compléter une mission proposée par une faction augmente l'influence de cette faction dans le système où elle est
 donnée. C'est le levier le plus direct et le plus contrôlable : un joueur choisit explicitement quelle faction il
@@ -217,7 +256,7 @@ soutient à chaque mission acceptée. À l'inverse, certaines missions (massacre
 faction adverse et réduisent son influence lorsqu'elles sont complétées — un même passage en station permet donc
 souvent de soutenir une faction et d'en affaiblir une autre simultanément.
 
-### 5.2 Commerce et ventes en marché
+### 5.2 Commerce et ventes en marché comme levier BGS
 
 Vendre des marchandises dans une station appartenant à une faction contribue à son influence, l'effet étant amplifié
 dans certains contextes :
@@ -226,7 +265,7 @@ dans certains contextes :
 - livrer des denrées alimentaires pendant une **Famine**, ou des médicaments pendant un **Outbreak** ;
 - vendre des données d'exploration ou d'exobiologie à un comptoir universel rattaché à une faction (voir 5.4).
 
-### 5.3 Combat, primes et zones de conflit
+### 5.3 Combat, primes et Conflict Zones comme levier BGS
 
 Le combat influe sur le BGS de plusieurs façons :
 
@@ -238,14 +277,14 @@ Le combat influe sur le BGS de plusieurs façons :
 - les missions d'assassinat ciblées affaiblissent directement l'influence de la faction visée, indépendamment de tout
   état de conflit actif.
 
-### 5.4 Exploration et exobiologie
+### 5.4 Exploration et exobiologie comme levier BGS
 
 Les données collectées en exploration (cartographie, scans FSS/DSS) et en exobiologie (échantillonnage d'espèces)
 peuvent être vendues à un comptoir universel rattaché à une faction donnée plutôt qu'à un comptoir neutre, ce qui
 contribue à son influence — un levier apprécié des explorateurs qui souhaitent tout de même peser sur le BGS sans
 s'engager dans le commerce ou le combat.
 
-### 5.5 Autres leviers
+### 5.5 Autres leviers BGS : contrebande, dons et sauvetage
 
 - **Piraterie et contrebande** : le trafic de marchandises illicites via le marché noir contribue à l'influence de la
   faction propriétaire du marché noir concerné, généralement une faction en Anarchie.
@@ -279,7 +318,7 @@ combler ce manque avec ce qui peut être établi de façon fiable, et indique ex
 donnée chiffrée précise et à jour n'a pas pu être vérifiée lors de la préparation de ce guide — auquel cas une méthode
 de mesure directe est proposée à la place plutôt qu'un chiffre inventé.
 
-#### 5.7.1 Ce qui est structurellement vérifiable
+#### 5.7.1 Ce qui est structurellement vérifiable sur l'effort BGS
 
 Trois faits, contrairement aux seuils numériques exacts d'expansion/retrait déjà signalés en 3.2, reposent sur une
 observation directe du comportement du jeu et de ses outils communautaires plutôt que sur une seule source volatile :
@@ -319,7 +358,7 @@ concentrer en une seule journée** est presque toujours plus efficace, précisé
 tick — quelle qu'en soit la valeur exacte pour le système visé — rend improbable qu'un pic isolé d'activité se
 convertisse linéairement en gain d'influence.
 
-#### 5.7.3 Efficacité comparée des leviers (INF par heure de jeu)
+#### 5.7.3 Efficacité comparée des leviers BGS (INF par heure de jeu)
 
 Un classement chiffré et universel de l'INF/heure par levier (missions courtes vs longues, trade en Boom/Famine vs
 normal, Conflict Zones) n'a pas pu être établi à partir de sources vérifiables et à jour lors de la préparation de ce
@@ -375,7 +414,7 @@ supérieur à ce qu'un éventuel plafond de tick (5.7.2) peut convertir en influ
 au-delà de ce plafond est, pour l'objectif BGS visé, du temps de jeu gaspillé, même s'il reste par ailleurs rentable
 en crédits ou en équipement.
 
-#### 5.7.5 Exemple méthodologique chiffré (illustratif, à recalibrer localement)
+#### 5.7.5 Exemple méthodologique chiffré d'une campagne BGS (illustratif)
 
 L'exemple suivant illustre la **méthode de calcul** à appliquer une fois le ratio local mesuré (étape 5 du protocole
 ci-dessus). Les chiffres d'activité et de ratio utilisés ici sont des **valeurs d'illustration choisies pour la
@@ -400,12 +439,12 @@ pour le système et la faction concernés avant toute planification réelle.
 > par la valeur réellement observée via BGS-Tally sur le système visé, sur plusieurs ticks consécutifs, comme décrit
 > en 5.7.4.
 
-## 6. Articulation avec les autres systèmes de jeu
+## 6. Articulation du BGS avec les autres systèmes de jeu
 
 Le BGS n'est pas un système isolé : trois autres mécaniques majeures d'*Elite Dangerous* interagissent avec lui sans
 pour autant être calculées par le même moteur.
 
-### 6.1 Powerplay
+### 6.1 BGS et Powerplay : deux couches distinctes sur un même système
 
 **Powerplay** est un système parallèle géré au niveau des **Powers** — des figures politiques qui se situent
 au-dessus des factions mineures — et non au niveau du BGS lui-même. Depuis la refonte **Powerplay 2.0**, sortie le
@@ -421,7 +460,7 @@ Ces deux couches coexistent et s'influencent parfois indirectement (l'activité 
 calcul. Le fonctionnement complet de Powerplay, le détail des Powers actuelles et leur méthode de jeu sont couverts
 dans le guide dédié (voir [Politique et Powerplay](./02-powerplay.md)).
 
-### 6.2 Colonisation
+### 6.2 BGS et Colonisation de systèmes
 
 La **Colonisation** de systèmes — passée en bêta le **26 février 2025** avec la mise à jour gratuite **Trailblazers**,
 puis sortie complète le **11 novembre 2025** avec la mise à jour **Dodec Update** (version 4.2.2.0) — permet à un
@@ -433,7 +472,7 @@ constitue ainsi un point d'entrée complémentaire et piloté par le joueur dans
 l'expansion organique d'une faction déjà existante. Le détail de la mécanique de revendication, de construction et de
 progression économique est couvert dans le guide dédié (voir [Colonisation](./18-colonisation.md)).
 
-### 6.3 Community Goals
+### 6.3 BGS et Community Goals (CG)
 
 Les **Community Goals** (CG) sont des objectifs galactiques ponctuels, généralement sponsorisés par une faction ou une
 entité précise, auxquels l'ensemble de la communauté peut contribuer sur une période limitée. Leur réussite ou leur
@@ -452,6 +491,12 @@ dédié (voir [Community Goals](./24-community-goals.md)).
   piloté par le joueur qui finit par générer de nouvelles factions mineures soumises au BGS (voir la section 6.2).
 - [Community Goals](./24-community-goals.md) — objectifs galactiques ponctuels dont l'issue peut injecter un gain ou
   une perte d'influence massif pour une faction, en plus du calcul BGS organique quotidien (voir la section 6.3).
+- [Commerce](./11-commerce.md) — marchandises, marchés et routes rentables, matière première du levier « ventes en
+  marché » décrit en 5.2.
+- [Combat spatial](./08-combat-spatial.md) — primes, Conflict Zones et builds de combat, matière première du levier
+  « combat » décrit en 5.3.
+- [Escadrons de joueurs](./22-squadrons.md) — outil de jeu pour structurer le groupe organisé qui mène une campagne
+  BGS (voir la section 5.6).
 
 ## Sources
 

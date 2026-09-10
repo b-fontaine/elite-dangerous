@@ -1,4 +1,32 @@
+---
+id: 16-outils
+titre: "Elite Dangerous : le guide des outils communautaires"
+domaine: meta-outils
+entites: [EDDN, Frontier Companion API (CAPI), EDMC, EDSM, Inara, Spansh, EDDiscovery, EDDI, Coriolis, EDSY, BGS-Tally, Fuel Rats]
+mots_cles_en: [eddn, edmc, journal files, companion api, edsm, inara, spansh, coriolis, edsy, bgs-tally, trade dangerous, fuel rats, ratsignal]
+version_jeu_couverte: "4.4.0.x"
+branche: live
+date_verification: 2026-09-08
+confiance_globale: haute
+volatilite: haute
+sources_primaires: ["dépôts GitHub EDCD (EDDN, EDMarketConnector, coriolis, EDDI)", "edsm.net", "inara.cz", "spansh.co.uk", "canonn.science", "fuelrats.com"]
+zones_incertaines: ["le détail exact des fonctionnalités de colonisation annoncées par Spansh, son site étant une SPA non récupérable par un simple fetch", "le niveau d'activité réel des forks communautaires d'EDEngineer", "le contenu du guide de secours officiel wiki.fuelrats.com, page indisponible au moment du contrôle", "l'erreur HTTP 410 de la page inara.cz/elite/powerplay-stats est probablement une URL obsolète, sans confirmation"]
+guides_lies: [0, 6, 17, 18, 19, 21, 22, 25]
+---
 # Elite Dangerous : le guide des outils communautaires
+
+## En bref
+
+L'écosystème d'outils communautaires d'*Elite Dangerous* repose sur l'**Elite Dangerous Data Network (EDDN)**, un bus de
+messages qui redistribue en temps réel les événements des fichiers de journal (*Journal files*) que le jeu écrit sur le
+disque du commandant, complété par la **Frontier Companion API (CAPI)** pour le profil, la cargaison, le marché et le
+chantier naval. Sur le poste du joueur, **E:D Market Connector (EDMC)** est la brique de base à installer en premier :
+c'est le socle de plugins de l'écosystème (BGS-Tally, EDMC-Canonn, trackers Powerplay), aux côtés d'EDDiscovery (carte
+3D, EDDLite) et d'EDDI (synthèse vocale, Monitors et Responders). Côté web, **EDSM** couvre la cartographie et le journal
+de vol, **Inara** le volet social, le Powerplay et l'engineering — EDDB, longtemps la référence, est morte — et
+**Spansh** la planification de route (plotter neutron, Road to Riches, Fleet Carrier). **Coriolis** et **EDSY** dominent
+la construction de vaisseaux, Trade Dangerous le calcul d'itinéraires commerciaux, ED Odyssey Materials Helper la gestion
+des matériaux, et les **Fuel Rats** le secours d'urgence par *ratsignal*.
 
 ## Vue d'ensemble : un écosystème bâti sur EDDN
 
@@ -38,7 +66,7 @@ matériaux, de Powerplay et de colonisation, d'engineering, et d'entraide entre 
 
 ---
 
-## 1. Bases de données et plateformes web communautaires
+## 1. Bases de données et plateformes web communautaires (EDSM, Inara, Spansh)
 
 ### EDSM — Elite Dangerous Star Map
 
@@ -62,7 +90,7 @@ Elle sert de source de référence à de nombreux logiciels tiers, dont EDDiscov
 
 **Statut de maintenance.** Actif, alimenté en continu par le flux EDDN.
 
-### Inara
+### Inara (inara.cz) — base de données communautaire et volet social
 
 **Description et utilité principale.** Inara (`inara.cz`, hébergé en République tchèque — à ne pas confondre avec un
 domaine `.cn`) est une base de données et wiki non officiel, explicitement non affilié à Frontier. Son périmètre est
@@ -91,7 +119,7 @@ essais de minage de surface de Wreaken Corporation). Le site est actif.
 > systèmes. Comme pour tout classement de Powers ou statistique en temps réel : instantané du 8 septembre 2026, à
 > revérifier directement sur Inara.
 
-### Spansh
+### Spansh (spansh.co.uk) — planification de route et Road to Riches
 
 **Description et utilité principale.** Spansh (`spansh.co.uk`) est devenu la référence pour la planification de route en
 exploration longue distance. Sa suite d'outils comprend notamment :
@@ -172,7 +200,7 @@ récente a pu sortir depuis).
 *Numéros de version et compteurs indiqués à titre d'instantané du 8 septembre 2026 — vérifiez toujours la dernière
 release sur le dépôt de chaque plugin avant de vous y fier.*
 
-### EDDiscovery
+### EDDiscovery — carnet de bord, carte stellaire 3D et EDDLite
 
 **Description et utilité principale.** Officiellement décrit comme « *Captain's log and 3D star map for Elite
 Dangerous* », EDDiscovery (`github.com/EDDiscovery/EDDiscovery`) est une alternative complète à EDMC intégrant une carte
@@ -189,7 +217,7 @@ preuve d'une synchronisation rapide avec le contenu de Frontier. EDDLite, plus j
 **Roadmap.** Contrairement à EDMC, les jalons GitHub existants (« Long term », « Possible future work », « 9.0 ») sont
 tous actuellement clos, sans issue ouverte — aucune roadmap publique active n'a été identifiée au moment du contrôle.
 
-### EDDI
+### EDDI — application compagnon vocale (TTS, Monitors et Responders)
 
 **Description et utilité principale.** EDDI (`github.com/EDCD/EDDI`) est l'application compagnon la plus ancienne
 dédiée à l'intégration vocale/TTS de la communauté, historiquement couplée à VoiceAttack pour la synthèse vocale et les
@@ -224,7 +252,7 @@ malgré tout interopérable avec l'écosystème EDMC via les données qu'elle re
 
 ## 3. Commandes vocales et retour audio : EDCoPilot et VoiceAttack
 
-### EDCoPilot
+### EDCoPilot — tableau de bord externe et assistant vocal piloté par IA
 
 > **Correction de domaine importante.** L'ancien domaine `edcopilot.com` redirige désormais (301) vers un site sans
 > rapport (`educopilot.com`, une plateforme éducative). Le site officiel actuel, retrouvé via le dépôt GitHub de
@@ -366,7 +394,7 @@ avec la mise à jour *Trailblazers*, puis en version complète le 11 novembre 20
 [Colonisation](./18-colonisation.md) pour le détail de cette mécanique) sont deux fonctionnalités indépendantes, mais
 souvent suivies par les mêmes outils communautaires, à des niveaux de maturité très différents.
 
-### Outils Powerplay
+### Outils Powerplay (BGS-Tally, Inara, powerplayplanner, powerplay-parser)
 
 | Outil                            | Portée                                                                                                                      | Statut / dernière mise à jour                                                                                    |
 |-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
@@ -410,7 +438,7 @@ n'a pas pu être confirmé directement (site en SPA non récupérable par un sim
 
 Deux « ship-builders » web dominent cette catégorie, à un niveau de maturité comparable.
 
-### Coriolis
+### Coriolis (coriolis.edcd.io) — le ship-builder de référence de la communauté
 
 **Description et utilité principale.** Coriolis (`github.com/EDCD/coriolis`, `coriolis.edcd.io`) est LE ship-builder
 historique de référence de la communauté, désormais maintenu directement sous l'organisation officielle **EDCD**
@@ -422,7 +450,7 @@ détail de cette mécanique) et de leur impact sur les statistiques du vaisseau.
 revérifier sur le dépôt). Il sert de standard de facto pour le partage de builds ; de nombreux dépôts communautaires de
 « builds » Coriolis existent en parallèle.
 
-### EDSY
+### EDSY (edsy.org) — simulateur d'outillage de vaisseau, alternative à Coriolis
 
 **Description et utilité principale.** EDSY (`edsy.org`, dépôt `github.com/taleden/EDSY`) est un simulateur
 d'outillage de vaisseau web, alternative indépendante à Coriolis. Il permet de gérer des configurations de chantier
@@ -439,7 +467,7 @@ forums et Reddit — une gouvernance plus proche d'EDCoPilot que de Coriolis, ma
 **Statut de maintenance.** Actif — dépôt ouvert sur GitHub, environ 37 étoiles, dernier commit observé début septembre
 2026 (instantané du 8 septembre 2026, à revérifier sur le dépôt `taleden/EDSY`).
 
-### Autres outils Engineering
+### Autres outils Engineering (EDEngineer, Inara, ED Odyssey Materials Helper)
 
 | Outil                                                         | Description                                                                                                                                                                                                                                                                                                                                   | Statut                                                                                                                                                                                                                                                                                                                                                                              |
 |-----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -484,7 +512,7 @@ le détail exact de la procédure de secours — à confirmer sur le site offici
 
 ---
 
-## 10. Tableau récapitulatif de l'écosystème
+## 10. Tableau récapitulatif de l'écosystème d'outils Elite Dangerous
 
 | Outil                        | Catégorie                          | Plateforme                       | Utilité principale                                        | Statut au 8 septembre 2026             |
 |-------------------------------|--------------------------------------|-------------------------------------|--------------------------------------------------------------|--------------------------------------------|

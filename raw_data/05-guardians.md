@@ -1,6 +1,34 @@
+---
+id: 05-guardians
+titre: "Guide complet des Guardians dans Elite Dangerous"
+domaine: lore
+entites: [Guardians, Guardian Ruins, Guardian Structures, Guardian Sentinels, Ram Tah, Canonn Research, Guardian Tech Broker, Gauss Cannon, Shard Cannon, Guardian FSD Booster, Ancient Data Terminal, Guardian Beacon]
+mots_cles_en: [guardian ruins, guardian structure, guardian sentinel, guardian tech broker, gauss cannon, plasma charger, shard cannon, guardian fsd booster, obelisk data, ancient data terminal, guardian beacon, brain tree]
+version_jeu_couverte: "4.4.0.x"
+branche: live
+date_verification: 2026-09-10
+confiance_globale: haute
+volatilite: moyenne
+sources_primaires: ["canonn.science", "EDSM (API publique)", "EDCD/coriolis-data", "EDCD/FDevIDs", "Elite Dangerous Wiki (Fandom, API MediaWiki)", "inara.cz"]
+zones_incertaines: ["le type exact de bâtiment présent sur chaque site Guardian n'a pas pu être vérifié site par site", "la cartographie exhaustive des types d'obélisques n'a pas pu être revérifiée auprès d'une source primaire", "les plages de bonus par grade (1 à 5) des blueprints d'ingénierie applicables aux armes Guardian", "les quantités du Tech Broker pour les autres classes que celles listées (FSD Booster classes 2 à 5, armes small/large)", "le minutage de charge des 6 pylônes d'un site au sol, seulement extrapolé des 3 minutes documentées pour une balise", "la durée totale d'un passage complet sur un Guardian Structure, non chiffrée par une source primaire", "le rattachement aux Guardians du teaser Canonn du 30 août 2025 relève d'une hypothèse communautaire"]
+guides_lies: [0, 3, 6, 7, 8, 9, 10, 18, 25]
+---
 # Guide complet des Guardians dans Elite Dangerous
 
-## Vue d'ensemble
+## En bref
+
+Les Guardians sont une civilisation extraterrestre humanoïde d'*Elite Dangerous*, éteinte depuis un à deux millions
+d'années et découverte par les commandants en 3302-3303, dans une trentaine de systèmes situés à plusieurs centaines
+d'années-lumière de la Bulle humaine — HIP 12099 à environ 217 al de Sol, amas Synuefe entre 368 et 793 al. Leurs sites
+de surface se répartissent en **Guardian Ruins** non défendues, où un puzzle de pylônes active une Relic Tower livrant
+des objets de catégorie Salvage (Guardian Relic, Casket, Orb, Tablet, Urn), et en **Guardian Structures** défendues par
+des Guardian Sentinels, où la charge de six pylônes puis le scan d'un Ancient Data Terminal délivrent un seul Blueprint
+Segment par instance et par commandant solo. Ces fragments s'échangent au **Guardian Tech Broker** contre trois armes —
+Gauss Cannon, Plasma Charger, Shard Cannon — et des modules hybrides, dont le Guardian FSD Booster (de +4 al en classe 1
+à +10,5 al en classe 5, un seul exemplaire par vaisseau). Ram Tah, à Meene, décrypte 28 Guardian Logs issus des
+obélisques ; Canonn Research en documente le lore.
+
+## Vue d'ensemble — la civilisation Guardian et son héritage technologique
 
 La civilisation **Guardian** est l'une des deux grandes civilisations extraterrestres d'Elite Dangerous, aux côtés des
 Thargoids — mais à la différence de ces derniers, les Guardians ont disparu depuis longtemps. Ce guide rassemble
@@ -9,9 +37,9 @@ l'essentiel du lore, de la géographie, des mécaniques de jeu (ruines, structur
 loin. Un encart « Voir aussi » en fin de guide renvoie vers les autres guides du corpus utiles pour compléter une
 expédition Guardian (ingénierie, équipement à pied, combat, exploration, colonisation).
 
-## 1. Lore et contexte historique
+## 1. Lore et contexte historique des Guardians
 
-### Une civilisation humanoïde disparue
+### Une civilisation humanoïde disparue depuis un à deux millions d'années
 
 Les Guardians sont une civilisation extraterrestre humanoïde découverte par les Commanders en 3302-3303, dans une région
 aujourd'hui surnommée informellement « la Nébuleuse Guardian » : un amas de systèmes situé à plusieurs centaines
@@ -22,7 +50,7 @@ exacte de l'ennemi affronté par les Guardians reste débattue dans le lore du j
 ultérieurs — dont l'épisode du Proteus Wave et la découverte des Unclassified Relics (voir plus bas) — tendent à relier
 cette guerre ancienne aux Thargoids qui menacent aujourd'hui la Bulle humaine.
 
-### Ram Tah et le décryptage des logs
+### Ram Tah et le décryptage des Guardian Logs (28 logs du Codex)
 
 **Ram Tah**, ingénieur basé à **Meene** (station Phoenix Base, à environ 164 années-lumière de Sol), est la figure
 centrale du décryptage de cette histoire. Dans le cadre de sa mission « Decrypting the Guardian Logs », les Commanders
@@ -32,7 +60,7 @@ Selon le Codex documenté par Canonn Research, l'ensemble constitue un corpus de
 seconde mission Ram Tah. Ce sont précisément les obélisques disséminés sur les sites Guardian qui fournissent la matière
 première de ces logs — voir la sous-section dédiée dans la section 4.
 
-### Canonn Research, le principal organe d'investigation
+### Canonn Research, le principal organe d'investigation sur les Guardians
 
 **Canonn Research** (canonn.science) est un groupe scientifique communautaire — fondé en avril 3301 dans la fiction du
 jeu par le Dr Arcanonn, opérant depuis Thompson Dock, dans le système Varati — qui constitue la référence pour ce lore.
@@ -40,7 +68,7 @@ Canonn a cartographié les sites Guardian, documenté les logs traduits par Ram 
 sujet. Le site organise son travail en quatre départements : Archéologie & Histoire, Cartographie & Exploration,
 Géologie & Organismes de Surface, et Technologie Xéno.
 
-### Un lore toujours vivant
+### Un lore Guardian toujours vivant (Proteus Wave, Unclassified Relics)
 
 Le lore Guardian n'est pas une intrigue close :
 
@@ -77,7 +105,7 @@ Deux types de sites de surface coexistent dans cette zone :
 | **Ancient Ruins**                        | Aucune / très limitée                    | Vestiges peu interactifs, moins de mécanique active               |
 | **Guardian Structures** (sites défendus) | Sentinelles actives (drones + tourelles) | Fragments de plans de vaisseaux/armes/modules, composants d'épave |
 
-### Sites Guardian de référence
+### Sites Guardian de référence et distances depuis Sol
 
 Le tableau suivant liste quelques systèmes Guardian couramment cités par la communauté, avec leur distance réelle
 depuis Sol (calculée à partir des coordonnées galactiques publiques d'EDSM, Sol = (0, 0, 0)) :
@@ -103,13 +131,13 @@ depuis Sol (calculée à partir des coordonnées galactiques publiques d'EDSM, S
 
 ## 3. Sites de ruines (Guardian Ruins)
 
-### Présentation
+### Présentation des Guardian Ruins : pylônes lumineux et Relic Tower
 
 Les ruines Guardian se présentent comme des sites de surface **non défendus** — pas de sentinelles hostiles sur les
 sites de ruines « simples » — organisés autour de **pylônes de pierre** émettant des faisceaux de lumière colorés
 (bleu/vert) qui convergent vers une **Relic Tower** (tour-relique) centrale.
 
-### Mécanique du puzzle des pylônes
+### Mécanique du puzzle des pylônes (Guardian Ruins)
 
 1. Descendre en SRV (Scarab) à proximité du site.
 2. Observer la séquence lumineuse projetée par les pylônes/plaques au sol.
@@ -120,7 +148,7 @@ Ce puzzle des pylônes est distinct du **puzzle des obélisques**, décrit dans 
 collectivement la Relic Tower d'un site donné, alors que chaque obélisque se capture individuellement, sans séquence à
 reproduire.
 
-### Butin obtenu
+### Butin obtenu sur les ruines Guardian (objets « Ancient », catégorie Salvage)
 
 Les objets libérés appartiennent à la famille des marchandises de catégorie **Salvage** (et non au système de grades
 Raw/Manufactured/Encoded utilisé pour l'ingénierie — voir [Ingénieurs](./06-ingenieurs.md)), qui servent à débloquer
@@ -132,7 +160,7 @@ des plans au Guardian Tech Broker. Noms affichés en jeu, avec leur symbole inte
 - Guardian Tablet (`AncientTablet`)
 - Guardian Urn (`AncientUrn`)
 
-### Lien avec l'exobiologie
+### Lien entre ruines Guardian et exobiologie (Brain Trees)
 
 Selon le Codex Canonn, les **Brain Trees** (organismes de surface exploitables en exobiologie — voir
 [Exploration](./10-exploration.md) pour la méthodologie de scan) apparaissent systématiquement dans les cratères situés
@@ -141,7 +169,7 @@ et scan xénobiologique dans le même déplacement.
 
 ## 4. Guardian Structures : les sites défendus
 
-### Composition d'un site
+### Composition d'un site Guardian Structure (Foundry, Robotics, Blueprint Facilities)
 
 Un nombre plus restreint de systèmes contient des **Guardian Structures** : des installations plus grandes, organisées
 autour d'un hub central avec plusieurs bâtiments spécialisés :
@@ -155,7 +183,7 @@ autour d'un hub central avec plusieurs bâtiments spécialisés :
 Contrairement aux simples ruines, ces sites sont **activement défendus** par des Guardian Sentinels (drones volants et
 tourelles immobiles au sol — voir section 9).
 
-### Déroulé typique d'une expédition
+### Déroulé typique d'une expédition sur Guardian Structure
 
 1. **Neutraliser les sentinelles** qui protègent le site (drones volants + tourelles immobiles).
 2. **Descendre en SRV** pour résoudre le puzzle des pylônes/obélisques (voir les deux sous-sections dédiées ci-dessous),
@@ -165,9 +193,9 @@ tourelles immobiles au sol — voir section 9).
 4. **Livrer** ces fragments et données à un **Guardian Tech Broker** pour débloquer définitivement les plans (voir
    section 5).
 5. **Depuis Odyssey (2021)** : un volet complémentaire à pied est disponible sur certains sites — voir la sous-section
-   « Volet à pied (Odyssey) » ci-dessous.
+   « Volet à pied des sites Guardian (Odyssey) » ci-dessous.
 
-### Le puzzle des obélisques
+### Le puzzle des obélisques Guardian (Pattern Obelisk Data)
 
 À ne pas confondre avec le puzzle des pylônes (section 3), qui active collectivement la Relic Tower d'un site de
 ruines : les **obélisques** sont des colonnes de pierre isolées, disséminées individuellement autour des Guardian
@@ -190,7 +218,7 @@ données.
 > ingrédient obligatoire de plusieurs modules Guardian de la section 8 (Shield/Hull Reinforcement, Power Distributor,
 > Power Plant) — voir le tableau chiffré de la section 10 pour le détail exact par module.
 
-### Volet à pied (Odyssey)
+### Volet à pied des sites Guardian (Odyssey)
 
 Depuis l'extension **Odyssey** (2021), les Commanders peuvent sortir de leur SRV ou de leur vaisseau en combinaison
 spatiale pour explorer à pied une partie des Guardian Structures.
@@ -237,7 +265,7 @@ Le **Guardian Fighter** est une unité de combat autonome (design en forme de so
 PNJ**, défendant les sites Guardian aux côtés des sentinelles. Ce n'est pas un chasseur embarqué pilotable par le joueur
 dans le cadre standard des mécaniques Guardian.
 
-### Les « vaisseaux hybrides »
+### Les « vaisseaux hybrides » Guardian : coques humaines et modules alien
 
 Ce qu'on appelle communément « vaisseaux hybrides Guardian » désigne en réalité des **vaisseaux humains standards
 équipés de modules Guardian** (armes, FSD booster, distributeur/centrale électrique, renforts de coque/bouclier). Le
@@ -256,7 +284,7 @@ Thargoids autant que de l'arsenal Guardian « classique » :
 | **Plasma Charger** | Fixe ou gimbal   | À charge                                 | Dégâts thermiques importants, forte consommation d'énergie et de chaleur           | Polyvalent contre boucliers et coque                        |
 | **Shard Cannon**   | Fixe ou tourelle | Gerbe de projectiles façon fusil à pompe | Dégâts sur la durée dévastateurs à courte portée sur la coque et les sous-systèmes | Très prisée en combat anti-Thargoid rapproché               |
 
-### Statistiques de combat (configuration stock)
+### Statistiques de combat des trois armes Guardian (configuration stock)
 
 Chiffres calculés à partir des valeurs brutes de la base communautaire technique EDCD/coriolis-data (données extraites
 des fichiers du jeu), pour la variante **montage fixe, taille 2 (moyenne), configuration stock** de chaque arme — la
@@ -293,7 +321,7 @@ passées et documentées dans la base communautaire EDCD/coriolis-data. Les plag
 n'ont pas pu être revérifiées auprès d'une source primaire accessible durant cette mise à jour — consulter Coriolis,
 EDSY ou [Ingénieurs](./06-ingenieurs.md) avant de planifier un build précis.
 
-### Module utilitaire complémentaire
+### Module utilitaire complémentaire : le Guardian Shutdown Field Neutraliser
 
 Le **Guardian Shutdown Field Neutraliser** contre le pulse de mise hors service (« shutdown field ») des Interceptors
 Thargoids — un module devenu indispensable sur les configurations de combat anti-xéno modernes, même s'il n'est pas une
@@ -335,7 +363,7 @@ quantités exactes par classe).
 
 ## 9. Guardian Sentinels et combat sur les sites
 
-### Types de sentinelles
+### Types de Guardian Sentinels (drones volants et tourelles au sol)
 
 Les **Guardian Sentinels** sont les gardiens automatisés des Guardian Structures :
 
@@ -345,7 +373,7 @@ Les **Guardian Sentinels** sont les gardiens automatisés des Guardian Structure
 Leurs faisceaux de tir peuvent endommager rapidement la coque et perturber ou désactiver des modules du vaisseau — le
 FSD est une cible fréquente — ce qui impose une approche rapide et mobile plutôt qu'un combat statique.
 
-### Bonnes pratiques de combat
+### Bonnes pratiques de combat contre les Guardian Sentinels
 
 - Privilégier des **armes fixes à tir rapide** pour abattre les drones avant qu'ils ne verrouillent leur faisceau.
 - Emporter **heatsinks/chaff** pour limiter les dégâts de composants pendant l'engagement.
@@ -358,7 +386,7 @@ FSD est une cible fréquente — ce qui impose une approche rapide et mobile plu
 Pour les fondamentaux du pilotage et du combat spatial hors contexte Guardian (gestion des pips, ciblage des
 sous-systèmes, etc.), voir [Combat spatial](./08-combat-spatial.md).
 
-### Vaisseaux recommandés pour le nettoyage des sites
+### Vaisseaux recommandés pour le nettoyage des sites Guardian
 
 | Vaisseau             | Points forts sur ce type de mission                              |
 |----------------------|--------------------------------------------------------------------|
@@ -373,9 +401,9 @@ Pour les caractéristiques détaillées de ces vaisseaux (prix, portée de saut,
 
 ## 10. Farming des matériaux Guardian
 
-### Deux grandes catégories de ressources
+### Deux grandes catégories de ressources Guardian
 
-#### Composants d'épave (matériaux manufacturés)
+#### Composants d'épave Guardian (matériaux manufacturés, grades 1 à 3)
 
 | Matériau                                     | Grade | Source d'obtention                                                                 |
 |-----------------------------------------------|-------|--------------------------------------------------------------------------------------|
@@ -385,7 +413,7 @@ Pour les caractéristiques détaillées de ces vaisseaux (prix, portée de saut,
 | Guardian Technology Component                 | 3     | Guardian Structures — composants d'épave au sol, souvent après combat               |
 | Guardian Sentinel Weapon Parts                | 3     | Guardian Structures — butin des sentinelles détruites                               |
 
-#### Données de sites et fragments de plans
+#### Données de sites et fragments de plans Guardian (Blueprint Segments)
 
 | Objet                                  | Catégorie / Grade                                                    | Source d'obtention                                          |
 |------------------------------------------|-------------------------------------------------------------------------|----------------------------------------------------------------|
@@ -396,7 +424,7 @@ Pour les caractéristiques détaillées de ces vaisseaux (prix, portée de saut,
 
 *(Grades et symboles internes vérifiés sur la base communautaire technique EDCD/FDevIDs.)*
 
-### Stratégie de farming communautaire
+### Stratégie de farming communautaire des sites Guardian
 
 - Cibler des **systèmes contenant plusieurs sites de ruines rapprochés** pour enchaîner les puzzles sans combat.
 - Alterner avec des passages sur les **Guardian Structures** pour les fragments de plans (voir le déroulé précis et le
@@ -412,11 +440,11 @@ de cette sous-section : l'Elite Dangerous Wiki (Fandom, pages *Ancient Data Term
 Beacon*, *Technology Broker*, interrogées via l'API MediaWiki publique) et Inara.cz (page *Technology Brokers*,
 comptoir Guardian) — voir la liste complète en fin de guide.
 
-#### Combien de fragments et de matériaux par plan
+#### Combien de fragments et de matériaux par plan Guardian au Tech Broker
 
 Chaque plan du Guardian Tech Broker (section 5) consomme, par exemplaire acheté : **1 fragment de blueprint** de la
 famille correspondante (Weapon/Module/Vessel Blueprint Segment — voir le tableau « Données de sites et fragments de
-plans » plus haut dans cette section), une combinaison de
+plans Guardian » plus haut dans cette section), une combinaison de
 **matériaux Guardian** farmés sur site (composants d'épave ou données d'obélisques, voir sections 3-4 et le tableau
 ci-dessus), et le plus souvent un ou deux **éléments/matériaux non spécifiques aux Guardians** (minerai brut, salvage
 de vaisseau) ainsi qu'une **commodity Guardian achetée en station** (pas farmée sur site). Chiffres vérifiés sur
@@ -463,7 +491,7 @@ D'après l'Elite Dangerous Wiki (pages *Ancient Data Terminal* et *Guardian Stru
    été retrouvé chiffré dans une source primaire lors de cette mise à jour — par extrapolation prudente (deux fois
    plus de pylônes), compter un ordre de grandeur de quelques minutes pour la phase de charge, à valider en jeu.
 
-#### Le vrai « délai de repop » : une reconnexion, pas un simple minuteur
+#### Le vrai « délai de repop » d'un Guardian Structure : une reconnexion, pas un minuteur
 
 Contrairement à une idée répandue, ce n'est pas un minuteur qui limite le farming répété d'un même Data Terminal par
 un seul Commander : selon la page *Guardian Structure* du wiki communautaire, **« si le même joueur réactive et
@@ -477,7 +505,7 @@ solo :
 - Jouer en Wing avec un ou deux autres Commanders multiplie mécaniquement le nombre de fragments obtenus par site
   visité, sans multiplier le temps de nettoyage des sentinelles.
 
-#### Enchaîner plusieurs sites rapprochés plutôt qu'attendre
+#### Enchaîner plusieurs sites Guardian rapprochés plutôt qu'attendre un repop
 
 Puisqu'un site donné ne rapporte qu'un seul fragment par instance et par joueur solo, la boucle la plus efficace
 observée par la communauté consiste à **enchaîner plusieurs sites Guardian déjà vérifiés et proches entre eux**,
@@ -494,7 +522,7 @@ plutôt que d'attendre une hypothétique régénération sur place :
 4. Une fois le groupe de sites épuisé, soit continuer vers un autre cluster (Spansh, voir encart ci-dessous), soit
    revenir sur le premier site après une reconnexion complète pour reprendre la boucle.
 
-#### Estimation de temps par passage
+#### Estimation de temps par passage sur un site Guardian
 
 Aucune source primaire consultée ne chiffre précisément la durée totale d'un passage complet (atterrissage → segment
 scanné) sur un Guardian Structure — cette durée dépend fortement de l'armement embarqué, du skill de pilotage et du
@@ -508,7 +536,7 @@ décomposé, à valider en chronométrant son propre premier passage :
 | Charge des pylônes (6 au sol, contre 3 en 3 minutes sur une balise) | Ordre de grandeur extrapolé de quelques minutes (voir point 4 ci-dessus)          |
 | Dépôt de la relique/clé + scan du Terminal     | Quelques secondes une fois les pylônes chargés                                               |
 
-#### Où vérifier des sites et des coûts à jour
+#### Où vérifier des sites Guardian et des coûts à jour (Bifrost, Inara, Spansh)
 
 Pas seulement à mentionner en passant : ces trois outils couvrent, ensemble, tout le cycle de préparation d'une
 session de farming Guardian et se complètent — utiliser les trois avant de partir en expédition ciblée :
@@ -522,7 +550,7 @@ session de farming Guardian et se complètent — utiliser les trois avant de pa
 3. **Spansh.co.uk — planificateur de routes** (voir section 11) : une fois le cluster de sites choisi via Bifrost,
    construire l'itinéraire optimisé entre ces systèmes plutôt que de les visiter dans un ordre arbitraire.
 
-### Contexte récent : la colonisation de systèmes
+### Contexte récent : la colonisation de systèmes et la demande en matériaux Guardian
 
 La fonctionnalité de **colonisation de systèmes** a été lancée en bêta le **26 février 2025** (mise à jour *Trailblazers*,
 v4.1.0.0), puis est sortie de bêta le **11 novembre 2025** via le *Dodec Update* (v4.2.2.0) — voir
@@ -533,7 +561,7 @@ complète de colonisation (coûts, étapes de construction, logistique), voir [L
 plutôt qu'un résumé partiel ici ; il est recommandé de vérifier les quantités et types exacts requis auprès des patch
 notes officiels ou d'Inara avant de planifier une session de farming dédiée à un projet de colonisation.
 
-## 11. Ressources et outils pour approfondir
+## 11. Ressources et outils communautaires pour approfondir les Guardians
 
 | Ressource                                             | Usage                                                                                                                                                                |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -552,7 +580,7 @@ Géologie & Organismes de Surface, Technologie Xéno — et maintient un Codex a
 Guardians. Le site documente également des « Unclassified/Green Relics » encore non pleinement expliquées dans le lore,
 preuve que l'enquête communautaire se poursuit activement.
 
-## Conclusion
+## Conclusion — pourquoi les Guardians restent centraux dans Elite Dangerous
 
 La civilisation Guardian reste, plus de dix ans après la sortie du jeu, l'un des fils narratifs et mécaniques les plus
 riches d'Elite Dangerous : un lore encore actif porté par Canonn Research et Ram Tah, une boucle de gameplay complète

@@ -1,19 +1,265 @@
-# Elite Dangerous : Guide complet des Opérations (Odyssey)
+---
+id: 13-operations
+titre: "Elite Dangerous : Guide complet des Opérations — mode multijoueur (2026) et gameplay à pied (Odyssey)"
+domaine: combat
+entites: [Operations, Operation Runner, Merc Coin, MercGear, Under Siege, Tactical Takedown, Firestorm Rescue, settlement, zone de conflit au sol, Odyssey, Nomad, Profile Analyser]
+mots_cles_en: [operations, operation runner, merc coin, mercgear, under siege, tactical takedown, on-foot combat zone, settlement, odyssey, matchmaking, powerplay mode]
+version_jeu_couverte: "4.4.0.x"
+branche: live
+date_verification: 2026-09-09
+confiance_globale: haute
+volatilite: haute
+sources_primaires: [Steam News Frontier (API ISteamNews), ticket EDCD/EDDI n° 2849, Wikipedia Elite Dangerous, EDSM, Canonn Research, Steam Community Guides]
+zones_incertaines:
+  - "Plafond de 9 999 Merc Coins et gain limité à 1 000 par semaine : donnée communautaire jamais publiée par Frontier, à confirmer en jeu."
+  - "Correspondance entre les six scénarios annoncés le 22 avril 2026 et les six opérations du lancement : rapprochement éditorial, sans table officielle."
+  - "Table des récompenses des opérations au sol par niveau de menace : ordres de grandeur communautaires non vérifiés en session."
+  - "Numéros de version client 4.4.0.0 et 4.4.0.3 : relevés communautaires de journaux de jeu, non officiels."
+  - "Spécialités des quatre Engineers à pied de Colonia, non détaillées dans les sources consultées."
+  - "Aucun build nommé recoupé pour le fabricant d'armes Takada."
+guides_lies: [0, 2, 6, 7, 9, 14, 18, 23, 26]
+---
 
-## Vue d'ensemble
+# Elite Dangerous : Guide complet des Opérations — mode multijoueur (2026) et gameplay à pied (Odyssey)
 
-Le mode **Opérations** désigne ici l'ensemble du gameplay à pied (*on-foot*) introduit avec l'extension **Odyssey**,
-lancée le 19 mai 2021 sur PC. Il permet aux commandants de quitter leur vaisseau pour explorer des installations
-planétaires (« settlements »), interagir avec elles via des tableaux de mission locaux, mener des combats en vue
-première personne, s'infiltrer discrètement, pirater des systèmes informatiques et remplir des contrats allant du
-simple sabotage à l'assassinat ciblé. Ce guide couvre l'intégralité de ce périmètre : typologie des settlements,
-catégories de missions au sol, mécaniques d'infiltration et de piratage, zones de conflit à pied, équipement
-(combinaisons et armes), progression par l'ingénierie, récompenses, et conseils pratiques.
+## En bref
 
-**Attention au titre** : une rumeur communautaire non confirmée associe aussi le mot « Operations » à un prétendu
-mode multijoueur distinct. Voir la mise au point dans la section
-[À propos du nom Operations et de la rumeur associée](#à-propos-du-nom-operations-et-de-la-rumeur-associée) juste en
-dessous avant de continuer.
+Deux contenus d'*Elite Dangerous* portent le nom « Operations ». Le **mode Operations** (multijoueur) est une couche
+de gameplay en escouade sortie le **30 juin 2026**, ses notes de version étant publiées le **1ᵉʳ juillet 2026** :
+jusqu'à **4 commandants** enchaînent les étapes d'un scénario instancié, lancé depuis un tableau de missions et
+desservi par l'**Operation Runner**, qui sert de hub, de point de réapparition et d'extraction. **Sept opérations**
+existent — *Tactical Takedown*, *Firestorm Rescue*, *Reclamation Point*, *Biohazard Takedown*, *Rapid Response*,
+*Terminal Prosecution*, puis *Under Siege* ajoutée le 2 septembre 2026 —, jouables en mode **Mercenary** ou
+**Powerplay** (déstabilisation, *undermining*, uniquement). Elles rapportent crédits, matériaux, mérites et **Merc
+Coin**, monnaie gagnée en jeu et non achetable en Arx, qui donne accès au catalogue **MercGear** de quinze modules de
+vaisseau et blueprints pré-ingénierés. Les **opérations au sol** désignent, elles, le gameplay à pied d'**Odyssey**
+(19 mai 2021) : settlements classés par activité économique et par niveau de sécurité, huit familles de missions,
+infiltration et piratage au *Suit Tool*, zones de conflit à pied et combinaisons Dominator, Maverick et Artemis.
+
+## Vue d'ensemble — deux contenus nommés « Operations » à ne pas confondre
+
+Deux contenus distincts d'*Elite Dangerous* portent le nom « Operations ». Ils n'ont ni la même date, ni le même
+périmètre, ni les mêmes mécaniques, et les confondre est la principale source d'erreur sur ce sujet. Ce guide les
+documente tous les deux, en les séparant explicitement :
+
+| Sens du mot « Operations »            | De quoi il s'agit                                                                          | Date de mise en service | Où le lire ici                                                         |
+|---------------------------------------|--------------------------------------------------------------------------------------------|-------------------------|------------------------------------------------------------------------|
+| **Le mode Operations** (multijoueur)  | Couche de gameplay en escouade : scénarios instanciés, Operation Runner, Merc Coin         | 30 juin 2026            | [Partie A](#partie-a--le-mode-operations-multijoueur-en-escouade-2026) |
+| **Les opérations au sol** (*on-foot*) | Gameplay à pied d'*Odyssey* : settlements, missions, infiltration, zones de conflit à pied | 19 mai 2021             | [Partie B](#partie-b--les-opérations-au-sol-dodyssey)                  |
+
+Le mode Operations est un contenu **multijoueur en escouade** livré par la mise à jour du même nom, dont les notes de
+version officielles ont été publiées le **1er juillet 2026** (« Operations Update », 1er juillet 2026 14:01 UTC). Les
+opérations au sol, elles, désignent l'ensemble du gameplay à pied introduit avec l'extension **Odyssey**, lancée le
+**19 mai 2021** sur PC : quitter son vaisseau pour explorer des installations planétaires (« settlements »),
+interagir avec elles via des tableaux de mission locaux, combattre en vue première personne, s'infiltrer, pirater des
+systèmes informatiques et remplir des contrats allant du simple sabotage à l'assassinat ciblé.
+
+Les deux se recoupent sur un point pratique : les Operations se lancent depuis les **tableaux de missions**, les
+mêmes que ceux qui distribuent les contrats au sol, et plusieurs scénarios d'Operations se déroulent en tout ou
+partie à pied. Les mécaniques de détection, d'équipement et d'ingénierie décrites en partie B restent donc
+directement utiles à qui joue le mode de la partie A.
+
+## Partie A — Le mode Operations (multijoueur en escouade, 2026)
+
+### Chronologie officielle du mode Operations (avril 2026 – septembre 2026)
+
+Toutes les dates ci-dessous proviennent des billets d'annonce publiés par Frontier Developments sur le flux
+d'actualités officiel du jeu.
+
+| Date et heure (UTC)     | Billet officiel Frontier          | Ce que le billet établit                                                                                             |
+|-------------------------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| 22 avril 2026, 14:02    | « An Update on Operations »       | Report de la sortie d'Operations, « which will now be arriving in June » ; présentation détaillée du système à venir |
+| 2 juin 2026, 13:03      | « Discover the Nomad »            | Confirme la fenêtre de sortie : le Nomad arrivera « in ARX Early Access alongside Operations on 30th June »          |
+| 1er juillet 2026, 14:01 | « Operations Update »             | Notes de version complètes : « The Operations Update is here » — six opérations, Operation Runner, Merc Coin, Nomad  |
+| 9 juillet 2026, 10:24   | « Operations Update \| Update 3 » | Correctifs, restitution des récompenses d'Operations et des inventaires à pied manquants                             |
+| 2 septembre 2026, 11:20 | « Rhino SRV Update »              | Ajoute une septième opération, « Under Siege », et corrige plusieurs points touchant les Operations et le MercGear   |
+
+Deux précisions de lecture :
+
+- Le billet du 9 juillet 2026 s'intitule « Operations Update | Update 3 » mais son texte annonce « The Operations
+  Update 2 is now live ». Cette incohérence est présente telle quelle dans le billet officiel ; elle n'affecte pas le
+  contenu du correctif, décrit plus bas.
+- Les **numéros de version du client** correspondants (4.4.0.0 au 30 juin 2026, 4.4.0.3 au 9 juillet 2026) ne
+  proviennent pas des billets Frontier mais des journaux de jeu relevés par la communauté technique (ticket EDCD/EDDI
+  n° 2849 du 5 août 2026) — donnée **communautaire**, utile pour dater un journal, à ne pas présenter comme
+  officielle.
+
+### Principe du mode Operations : une couche de gameplay en escouade jusqu'à 4 commandants
+
+Le mode Operations ajoute, selon les notes de version du 1er juillet 2026, « une nouvelle couche de gameplay à haute
+intensité, centrée sur l'escouade, articulée autour du travail d'équipe, de la coordination et de l'exécution
+tactique ». Le billet du 22 avril 2026 précise la structure : un **système d'opérations en plusieurs étapes**, conçu
+pour le jeu en escouade, permettant à **jusqu'à 4 commandants** d'enchaîner des défis de difficulté croissante et
+d'en tirer des récompenses.
+
+Chaque opération se déroule dans son **environnement isolé dédié** et comporte **plusieurs étapes** de difficultés
+variables — ce n'est donc pas une activité de la galaxie persistante mais un scénario instancié, ce qui explique le
+transport préalable de l'escouade décrit ci-dessous.
+
+### Lancer une opération Operations : escouade, appariement et accès depuis les tableaux de missions
+
+- **Point d'accès** : les Operations sont accessibles depuis les **tableaux de missions**, à quai dans un starport,
+  sur un Fleet Carrier ou sur un Squadron Carrier (« An Update on Operations », 22 avril 2026).
+- **Composition de l'équipe** : une opération peut être lancée « soit par un commandant seul, soit par une escouade
+  déjà constituée, avec un appariement (*matchmaking*) optionnel pour compléter les places restantes » (« Operations
+  Update », 1er juillet 2026). La mise à jour introduit à cet effet « un tout nouveau système de lobby et
+  d'appariement ».
+- **Invitations** : le chef d'escouade peut inviter d'autres commandants, mais doit être **à quai** pour sélectionner
+  une opération et envoyer une invitation. Les membres n'ont pas besoin d'être au même endroit : une escouade peut se
+  former à l'échelle de la galaxie, tous ses membres étant ensuite transférés vers l'Operation Runner avant le début
+  du scénario.
+- **Rejoindre via l'appariement** : il faut également être à quai pour accéder aux annonces d'escouades ouvertes dans
+  le menu Operations. Un commandant qui sélectionne une annonce sans être à quai voit sa place **réservée** jusqu'à
+  ce qu'il accoste.
+
+### L'Operation Runner — vaisseau de déploiement, de réapparition et d'extraction
+
+Une fois l'opération lancée, « tous les commandants sont transportés à bord du nouvel **Operation Runner**, un
+vaisseau de déploiement spécialisé qui emmène l'équipe directement vers le système du scénario » (« Operations
+Update », 1er juillet 2026). Le billet du 22 avril 2026 en détaille le rôle, qui va au-delà du simple transport :
+
+- il sert de **hub central** et de point d'entrée de l'escouade dans l'opération ;
+- il fait office de **point de réapparition** : un commandant mis hors de combat pendant n'importe quelle étape y
+  revient automatiquement, son vaisseau étant alors **entièrement réparé, ravitaillé en carburant et réarmé** avant
+  redéploiement ;
+- il constitue le **point d'extraction final** de l'opération ;
+- sa position dans chaque scénario est choisie pour raccourcir le trajet de retour vers l'objectif.
+
+### Les sept opérations disponibles, de Tactical Takedown à Under Siege
+
+Six opérations étaient disponibles au lancement, « et nous en avons d'autres de prévues pour de futures mises à
+jour » (« Operations Update », 1er juillet 2026) ; une septième a été ajoutée le 2 septembre 2026.
+
+| Opération                | Scénario (d'après les notes officielles)                                                                                                                                                                                                                       | Ajoutée le       |
+|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
+| **Tactical Takedown**    | Le megaship du client a été compromis par une faction rivale : aborder le vaisseau, se frayer un chemin jusqu'au pont de commandement pour récupérer des renseignements et remonter à l'origine de l'attaque, puis frapper le général responsable dans sa base | 1er juillet 2026 |
+| **Firestorm Rescue**     | Des otages sont piégés dans une station en feu : briser le siège et évacuer les survivants, en gérant la chaleur de la station pour gagner du temps tout en repoussant les forces hostiles                                                                     | 1er juillet 2026 |
+| **Reclamation Point**    | Un megaship a été détourné : éliminer toutes les forces hostiles à l'intérieur et autour du vaisseau pour que le client puisse le récupérer — opération annoncée comme exigeant le meilleur équipement et le meilleur vaisseau                                 | 1er juillet 2026 |
+| **Biohazard Takedown**   | Un groupe de chercheurs met au point une arme dangereuse : donner l'assaut au vaisseau, obtenir la localisation et l'identité des chercheurs, puis les neutraliser                                                                                             | 1er juillet 2026 |
+| **Rapid Response**       | Un port planétaire est attaqué et du personnel y est encore piégé : l'évacuation est contre-la-montre, une importante flotte hostile étant en route                                                                                                            | 1er juillet 2026 |
+| **Terminal Prosecution** | Un élément criminel écume le système depuis des semaines : le nettoyer                                                                                                                                                                                         | 1er juillet 2026 |
+| **Under Siege**          | Répondre à l'appel de détresse d'un settlement planétaire où une aide urgente est requise : lever le blocus et neutraliser les forces ennemies qui tentent de s'emparer du site                                                                                | 2 septembre 2026 |
+
+**Sur la liste annoncée en avril 2026.** Le billet du 22 avril 2026 annonçait six scénarios sous d'autres intitulés —
+*Counter Attack*, *Burning Rescue*, *Megaship Massacre Reclaim*, *Megaship Massacre Strike*, *Surface Rescue*,
+*Pirate Hunt* — dont les descriptions recoupent très largement celles publiées au lancement. Le
+rapprochement entre les deux listes est un **rapprochement éditorial de ce guide**, à partir des descriptions des
+deux billets : Frontier n'a pas publié de table de correspondance, et rien n'établit officiellement qu'il s'agit des
+mêmes scénarios renommés. Les noms qui font foi en jeu sont ceux de la colonne de gauche du tableau ci-dessus.
+
+### Les deux modes de jeu du mode Operations : Mercenary et Powerplay
+
+Le billet du 22 avril 2026 décrit deux modes de jeu pour une même opération :
+
+| Mode               | Conditions d'accès                                                                             | Conséquences                                                                                                                                                                      |
+|--------------------|------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Mercenary Mode** | Mode par défaut, ouvert à tout commandant remplissant les prérequis du scénario                | Aucune conséquence ni effet Powerplay                                                                                                                                             |
+| **Powerplay Mode** | Les systèmes éligibles dépendent de l'alignement du chef d'escouade et de sa position courante | L'escouade **déstabilise** (*undermine*) un Power choisi ; impossible de viser son propre Power ; les commandants non alignés peuvent participer mais ne gagnent **aucun mérite** |
+
+Le mode Powerplay branche donc les Operations sur le cycle décrit dans [02-powerplay.md](./02-powerplay.md), du côté
+de l'axe **Undermining** uniquement. Les **Powerplay Squads** d'Operations sont une entité de jeu distincte : le
+billet du 2 septembre 2026 corrige d'ailleurs « un crash lors de la tentative de création d'une Powerplay Squad pour
+les Operations pendant un saut en hyperespace ».
+
+### Récompenses du mode Operations : la monnaie Merc Coin et le catalogue MercGear
+
+Terminer une opération rapporte à chaque commandant un assortiment de récompenses : **crédits**, **matériaux**,
+**mérites** (mode Powerplay uniquement) et **Merc Coin** (« An Update on Operations », 22 avril 2026).
+
+#### Le Merc Coin, monnaie gagnée en jeu et non achetable en Arx
+
+Le **Merc Coin** est une monnaie inédite, introduite avec les Operations :
+
+- elle s'obtient en réussissant un scénario d'Operations, et un **bonus hebdomadaire** est versé la première fois que
+  certaines activités sont accomplies ;
+- elle **n'est pas achetable en Arx** — c'est une monnaie gagnée en jeu, explicitement non monétisée ;
+- elle sert à acheter des récompenses : **modules de vaisseau** (armes, core internals, optional internals) et
+  **blueprints d'ingénierie**.
+- Un plafond de **9 999 Merc Coins**, avec un gain limité à **1 000 par semaine**, circule dans la documentation
+  communautaire. Frontier n'a publié aucun de ces deux chiffres dans ses billets officiels : à traiter comme une
+  **donnée communautaire non vérifiée**, à confirmer en jeu. La question connexe — le Merc Coin permet-il d'acheter de
+  l'équipement à pied ? — est traitée par [07-equipement-a-pied.md](./07-equipement-a-pied.md), qui relève que les
+  annonces officielles ne mentionnent que des modules de vaisseau et des blueprints d'ingénierie.
+
+#### Le catalogue MercGear : quinze modules de vaisseau et blueprints achetés en Merc Coin
+
+L'équipement achetable avec le Merc Coin est désigné sous le nom de **MercGear**. Les notes de version du 1er
+juillet 2026 en donnent le catalogue de lancement, composé de quinze entrées :
+
+| Catégorie                       | Élément                                 | Effet annoncé                                                                                                                           |
+|---------------------------------|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| Blueprint                       | Thermal Plasma Conversion               | Consommation électrique accrue pour convertir une part des dégâts en plasma (lasers *beam*, *pulse*, *burst*)                           |
+| Blueprint                       | Scoop Rate Enhanced                     | Consommation électrique accrue pour améliorer le débit du fuel scoop                                                                    |
+| Hardpoint pré-ingénieré         | Enduring Feedback Rail Gun              | Masse, consommation et dégâts revus pour améliorer rechargement, chaleur, portée et munitions ; effet Feedback Cascade                  |
+| Hardpoint pré-ingénieré         | Far-Reaching Abrasion Blaster           | Consommation, distributeur et charge thermique réduits, vitesse de tir et portée maximale accrues, au prix de l'intégrité               |
+| Hardpoint pré-ingénieré         | Double Screaming Fragment Cannon        | Munitions, chargeur et rafale accrus, rechargement réduit, au prix de la portée, de la cadence, de la masse et de la consommation       |
+| Hardpoint pré-ingénieré         | Long Range Mining Laser                 | Portée accrue, consommation, distributeur et charge thermique réduits, au prix de l'intégrité et des dégâts                             |
+| Hardpoint pré-ingénieré         | Rapid Phase Multi-Cannon                | Plus de projectiles par tir, munitions, chargeur et cadence accrus, au prix de la portée et d'une dispersion accrue                     |
+| Hardpoint pré-ingénieré         | Drag Seeker Missile Rack                | Munitions, chargeur et cadence accrus, au prix de la masse, de la consommation et du distributeur                                       |
+| Hardpoint pré-ingénieré         | Lightweight Thermal Seeker Missile Rack | Munitions, chargeur et cadence accrus, masse et consommation réduites, au prix de l'intégrité                                           |
+| Hardpoint pré-ingénieré         | Lockdown Seeker Missile Rack            | Munitions, chargeur et intégrité accrus, charge thermique réduite, au prix de la consommation, de la masse, de la cadence et des dégâts |
+| Core interne pré-ingénieré      | Support Focused Power Distributor       | Capacité et charge moteurs/systèmes accrues, au prix de la charge du circuit armes                                                      |
+| Core interne pré-ingénieré      | Balanced Power Distributor              | Débit et charge du distributeur modérément accrus, consommation réduite, au prix de la masse et de l'intégrité                          |
+| Interne optionnel pré-ingénieré | Extended Cargo Rack                     | Capacité de soute accrue                                                                                                                |
+| Interne optionnel pré-ingénieré | Long Range Detailed Surface Scanner     | Masse et consommation accrues contre un meilleur rayon de sondes                                                                        |
+| Interne optionnel pré-ingénieré | Heavy Duty Module Reinforcement Package | Protection des modules accrue au prix d'une masse accrue                                                                                |
+
+**Le MercGear passe par les ingénieurs.** Deux correctifs officiels l'établissent sans ambiguïté : le billet du
+2 septembre 2026 corrige « un problème où le MercGear n'était pas ingénierable immédiatement après achat », puis « un
+problème où le Seeker Missile Rack MercGear ne pouvait pas être ingénieré chez Petra Olmanova ». Le MercGear
+pré-ingénieré n'est donc pas un équipement figé : il entre dans la boucle d'ingénierie décrite dans
+[06-ingenieurs.md](./06-ingenieurs.md). L'Update 3 du 9 juillet 2026 a par ailleurs amélioré la lisibilité de ces
+modules (« Merc Engineering / Merc Modules telegraphing ») dans l'outfitting et dans le panneau interne du vaisseau.
+
+### Le Nomad, ship-launched vessel livré par la mise à jour Operations
+
+La mise à jour Operations a également introduit le **Nomad** : « Cette mise à jour amène également avec elle le
+puissant Nomad ! » (« Operations Update », 1er juillet 2026). Il s'agit d'un **ship-launched vessel** (SLV) compact
+dédié à l'exploration des surfaces planétaires, doté d'un **Mk II Biological Scanner** permettant de détecter les
+signaux biologiques depuis le cockpit, et déployable « depuis une soute à vaisseau compatible, y compris les modules
+MK I et MK II ». Le Nomad n'est pas un vaisseau de chantier naval et ne modifie donc pas le décompte des vaisseaux
+pilotables du corpus.
+
+Pour la chronologie complète, les caractéristiques et les modules de soute concernés, voir le guide dédié
+[14-rhino-nomad.md](./14-rhino-nomad.md).
+
+### État du service du mode Operations : « Networking & Balancing Beta » et problèmes connus
+
+Frontier a livré les Operations sous le statut explicite de **« Networking & Balancing Beta »** : « comme pour tout
+changement majeur apporté à *Elite Dangerous*, nous devons équilibrer diverses considérations de connectivité et de
+serveur […] cela nous permet d'apporter des ajustements plus régulièrement en coulisses pour garantir des
+performances optimales » (« Operations Update », 1er juillet 2026). Le mode est donc, de l'aveu de l'éditeur, sujet à
+des ajustements réguliers côté serveur.
+
+L'Update 3 du 9 juillet 2026 a traité les principaux incidents du lancement : récompenses d'Operations (Merc Coins,
+crédits, matériaux et inventaire) non attribuées, à restituer rétroactivement ; inventaires à pied effacés après une
+opération terminée avant le 2 juillet 2026 à 23:30 UTC, à restaurer ; données d'exploration non vendues d'avant la
+maintenance du 2 juillet, restaurées ; ajout d'un bouton « Resync Local Data » dans le sous-menu Help and Info du
+menu principal pour reconstruire le cache local des étoiles visitées.
+
+Au 2 septembre 2026, Frontier signale encore deux problèmes connus touchant directement ce mode : l'opération **Under
+Siege peut parfois se terminer prématurément**, et l'**interface de wing à pied est actuellement absente**.
+
+### Note de méthode : pourquoi ce guide niait auparavant l'existence du mode Operations
+
+Une révision antérieure concluait qu'aucune source fiable ne confirmait l'existence d'un mode multijoueur
+« Operations » ni d'un vaisseau « Nomad », et traitait les deux comme une rumeur. **Cette conclusion était erronée**,
+et sa cause est identifiée : la vérification s'appuyait sur les catalogues de vaisseaux d'Inara.cz et d'EDCD, qui ne
+recensent que les **vaisseaux pilotables achetables au chantier naval**. Ces catalogues ne contiennent ni les SRV
+(Scarab, Scorpion, Rhino), ni les chasseurs embarqués (SLF), ni les *ship-launched vessels* (SLV) : y chercher le
+Nomad revenait à chercher un chasseur embarqué dans une liste de chantier naval, et son absence n'y avait aucune
+valeur probante. Combinée aux erreurs d'accès HTTP rencontrées sur les sites d'actualité et les wikis communautaires,
+cette erreur de catégorie a produit un faux négatif.
+
+Toute la partie A ci-dessus est rétablie à partir des billets d'annonce officiels de Frontier Developments, chacun
+cité avec son titre et son horodatage UTC.
+
+## Partie B — Les opérations au sol d'Odyssey
+
+Cette partie couvre l'intégralité du gameplay à pied : typologie des settlements, catégories de missions au sol,
+mécaniques d'infiltration et de piratage, zones de conflit à pied, équipement (combinaisons et armes), progression
+par l'ingénierie, récompenses, et conseils pratiques. Sauf mention explicite du contraire, tout ce qui suit concerne
+ce périmètre-là, et non le mode multijoueur de la partie A.
 
 Odyssey a connu un lancement difficile : d'importants problèmes de stabilité client/serveur, des bugs de gameplay et
 des performances PC inadéquates ont entraîné des retours largement négatifs sur Steam. Frontier Developments a réagi
@@ -25,41 +271,7 @@ concentrer ses efforts sur une base de code unique post-Odyssey, développée po
 n'affectent plus l'expérience de jeu actuelle, mais expliquent pourquoi certaines mécaniques ont été révisées par la
 suite (notamment l'ajout des « missions partagées » facilitant le jeu à plusieurs sur les opérations au sol).
 
-## Voir aussi
-
-Ce guide se concentre sur les **mécaniques d'opération au sol** (settlements, missions, infiltration, CZ). Pour
-éviter les redites entre guides du corpus, le détail exhaustif de certains sujets connexes vit ailleurs :
-
-- **[07 — Équipement à pied](./07-equipement-a-pied.md)** : catalogue complet des armes par fabricant, tables
-  d'ingénierie (Engineers, blueprints, coûts, grades de matériaux), builds nommés. Ce guide-ci ne reprend que des
-  tableaux condensés qui renvoient vers 07 pour l'exhaustif.
-- **[09 — Combat à pied](./09-combat-a-pied.md)** : tactiques et choix de style de jeu en combat à pied.
-- **[06 — Ingénieurs](./06-ingenieurs.md)** : mécanique générale de l'ingénierie (vaisseaux et à pied).
-- **[02 — Powerplay](./02-powerplay.md)** : cycles hebdomadaires Acquisition/Renforcement/Undermining et leur effet
-  sur les missions et zones de conflit au sol.
-- **[18 — Colonisation](./18-colonisation.md)** : mécanique complète de colonisation de systèmes et des nouvelles
-  installations qu'elle crée.
-- **[00 — Chronologie canonique](./00-chronologie-canonique.md)** : arbitrage daté de toutes les confusions
-  chronologiques mentionnées dans ce guide.
-
-## À propos du nom Operations et de la rumeur associée
-
-Le titre de ce guide partage son nom avec une rumeur communautaire non confirmée évoquant un mode multijoueur
-distinct appelé « Operations », qui serait accompagné d'un vaisseau « Nomad ». Aucune source fiable ne confirme
-l'existence de ce mode ni d'aucune date qui lui serait associée : ni l'article Wikipédia sur *Elite Dangerous* (dont
-la seule fonctionnalité majeure documentée pour 2024-2026 est la **System Colonisation**), ni l'article Wikipédia
-sur *Elite Dangerous: Odyssey* (qui liste les missions à pied réellement existantes — Mercenary, Covert Heist,
-Salvage, Rescue, Assassination, Exobiology, Ground Combat Zones — sans qu'aucune ne soit nommée « Operations »), ni
-le fil GalNet agrégé par Inara.cz. De même, aucune source fiable ne confirme l'existence d'un vaisseau « Nomad » : la
-liste quasi exhaustive des vaisseaux d'Inara.cz (47 vaisseaux au 9 septembre 2026, vérification refaite en direct ce
-jour-là) n'en mentionne aucun, pas plus que l'article Wikipédia sur *Elite Dangerous*.
-
-Cette entrée du corpus est donc à traiter comme non fondée (probable rumeur, fan-fiction ou confusion), et aucune
-date, nom d'opération, monnaie ou caractéristique de vaisseau qui lui serait associée ne doit être considérée comme
-un fait. Ce guide-ci ne traite que du gameplay à pied introduit avec **Odyssey le 19 mai 2021**, un contenu bien réel
-et sans rapport avec cette rumeur.
-
-## Accéder aux opérations : embarquement et déplacement
+## Accéder aux opérations au sol d'Odyssey : atterrissage, approche et déplacement à pied
 
 Il existe plusieurs façons de rejoindre une opération au sol :
 
@@ -78,9 +290,9 @@ combinaison, rechargeable via des bonbonnes ou en retournant au vaisseau/à une 
 (debout, accroupi, ramper) qui influence la vitesse de détection, et un scanner de profil (« Profile Analyser »)
 permettant d'identifier les gardes, employés civils et objets d'intérêt à distance.
 
-## Les settlements : typologie et sécurité
+## Les settlements d'Odyssey : typologie et sécurité
 
-### Types de settlements par activité économique
+### Types de settlements Odyssey par activité économique (agricole, minier, industriel, militaire…)
 
 Les settlements se répartissent selon l'activité économique dominante du site, qui détermine le type de ressources et
 de missions disponibles :
@@ -95,7 +307,7 @@ de missions disponibles :
 | Tourisme / civil          | Habitation, commerce, loisirs               | Sécurité faible à nulle, bon point d'entrée pour débutants |
 | Installations criminelles | Factions pirates ou hors-la-loi             | Butin illégal, marché noir, risques accrus                 |
 
-### Niveaux de sécurité
+### Niveaux de sécurité d'un settlement (civile, faible, moyenne, élevée)
 
 Chaque settlement affiche un niveau de sécurité qui conditionne la difficulté de l'opération :
 
@@ -109,14 +321,14 @@ Chaque settlement affiche un niveau de sécurité qui conditionne la difficulté
 Le niveau de sécurité influence aussi le comportement des patrouilles (rotations, cycles jour/nuit) et la probabilité
 de croiser des gardes en dehors des zones normalement surveillées.
 
-### Autorisations d'accès
+### Autorisations d'accostage sur un settlement et options en leur absence
 
 Un settlement peut être librement accessible (autorisation civile automatique) ou nécessiter une **autorisation
 d'accostage** demandée en approche. Sans autorisation, trois options existent : accomplir une mission ou une action de
 type « bypass » pour l'obtenir légitimement, s'infiltrer discrètement par une entrée non surveillée, ou engager le
 combat frontalement en acceptant le statut recherché qui en découle localement.
 
-## Le tableau de missions et les types d'opérations au sol
+## Le tableau de missions et les huit familles d'opérations au sol (assassinat, sabotage, hacking…)
 
 Le tableau de mission d'un settlement (ou le comptoir de contacts en station, pour les missions à distance) propose
 plusieurs grandes familles d'opérations :
@@ -135,10 +347,14 @@ plusieurs grandes familles d'opérations :
 Chaque mission indique généralement un **niveau de menace** (faible / moyen / élevé) qui dimensionne le nombre et
 l'équipement des gardes rencontrés, ainsi qu'éventuellement une contrainte « non-lethal » ou « sans alarme » qui
 impose une approche entièrement différente (armes non létales, discrétion stricte, pas d'affrontement toléré). Voir
-la section [Récompenses des opérations](#récompenses-des-opérations) pour la table des gains associés à chaque
-niveau de menace.
+la section [Récompenses des opérations au sol](#récompenses-des-opérations-au-sol-par-niveau-de-menace)
+pour la table des gains associés à chaque niveau de menace.
 
-### Powerplay et missions d'Opérations
+### Powerplay et missions de mercenariat au sol
+
+Cette section traite du recoupement entre Powerplay et les **missions au sol** (partie B). Pour le **mode Powerplay
+des Operations multijoueur**, mécanique distincte et postérieure, voir
+[Les deux modes : Mercenary et Powerplay](#les-deux-modes-de-jeu-du-mode-operations--mercenary-et-powerplay) en partie A.
 
 Les missions **Mercenariat / défense de faction** ci-dessus recoupent, dans les systèmes disputés par les
 superpuissances, le cycle hebdomadaire de **Powerplay 2.0** (extension « Ascendancy », sortie le **31 octobre 2024** —
@@ -161,32 +377,33 @@ serait rapidement obsolète.
 
 ## Infiltration, détection et système d'alarme
 
-### Détection visuelle et sonore
+### Détection visuelle et sonore par les gardes et les caméras d'un settlement
 
 La discrétion repose sur le champ de vision des gardes et des caméras/tourelles automatiques, sur le bruit produit
 par le joueur (courir est bien plus détectable que marcher accroupi) et sur l'état apparent du joueur : dégainer une
 arme dans une zone civile ou surveillée déclenche immédiatement la suspicion, même sans tir.
 
-### Escalade de la suspicion
+### Escalade de la suspicion jusqu'à l'alerte complète du settlement
 
 Être repéré en zone interdite, forcer une porte verrouillée ou pirater un terminal sous observation fait monter un
 niveau de suspicion progressif. Ce niveau peut redescendre si le joueur se met hors de vue suffisamment longtemps, ou
 déclencher une **alerte complète** s'il continue de s'exposer.
 
-### Confinement et statut recherché
+### Confinement du settlement et statut recherché après une alerte complète
 
 Une alerte complète entraîne le verrouillage des portes en mode confinement, l'appel de renforts armés, l'activation
 des tourelles, et l'attribution d'un statut recherché localement au joueur. Ce statut complique l'extraction :
 ressortir du site implique alors soit un affrontement direct, soit un risque de scan au moment du décollage si le
 vaisseau reste dans la zone de sécurité du settlement.
 
-### Contre-mesures
+### Contre-mesures de discrétion : combinaisons, modules et lecture des rondes
 
-Certaines combinaisons et modules réduisent la vitesse de détection ou le bruit produit par le joueur, ce qui
-facilite nettement une approche furtive prolongée. Une bonne connaissance du cycle des rondes et des angles morts
+Face au système de détection d'un settlement, certaines combinaisons et modules réduisent la vitesse de détection ou
+le bruit produit par le joueur, ce qui facilite nettement une approche furtive prolongée. Une bonne connaissance du
+cycle des rondes et des angles morts
 des caméras reste toutefois l'outil le plus fiable pour éviter toute alerte.
 
-## Piratage de terminaux et de portes (hacking)
+## Piratage de terminaux et de portes au sol (hacking, emplacement Suit Tool)
 
 Le piratage s'effectue avec un outil dédié, porté dans l'emplacement « Suit Tool », que l'on pointe sur un terminal
 ou un point d'accès verrouillé. L'opération prend un temps variable pendant lequel le joueur reste immobile et
@@ -223,7 +440,7 @@ pendant l'engagement, avec une prime supplémentaire à la victoire finale. Un c
 ajout qui facilite nettement le nettoyage des zones de conflit High en répartissant la pression de détection et de
 combat.
 
-## S'équiper : les combinaisons (suits)
+## S'équiper à pied : les quatre combinaisons (suits) Flight, Dominator, Maverick, Artemis
 
 Quatre familles de combinaisons structurent la progression du joueur à pied :
 
@@ -241,12 +458,12 @@ offrent davantage d'emplacements de modules et de meilleures statistiques de bas
 améliorés via l'ingénierie une fois les Engineers concernés débloqués (voir
 [Les Engineers à pied par archétype de mission](#les-engineers-à-pied-par-archétype-de-mission) plus bas).
 
-## S'équiper : les armes
+## S'équiper à pied : les armes et leurs trois fabricants
 
 Les armes à pied se répartissent en plusieurs catégories, chacune déclinée en variantes cinétique, laser ou plasma,
 avec pour certaines une version non létale.
 
-### Fabricants
+### Les trois fabricants d'armes à pied et les catégories d'armes
 
 Trois fabricants se partagent le catalogue, chacun avec ses propres recettes d'ingénierie (détail complet dans
 [07-equipement-a-pied.md](./07-equipement-a-pied.md)) :
@@ -267,7 +484,7 @@ cibles. Comme les combinaisons, chaque arme existe en plusieurs grades et peut �
 dégâts, la cadence, la portée, ou au contraire réduire le bruit et la signature — un critère déterminant pour
 l'infiltration.
 
-### Armes nommées par archétype de mission
+### Armes à pied nommées par archétype de mission (Karma P15, Manticore Terminator…)
 
 Pour faire le lien avec le tableau de missions plus haut, voici les modèles nommés qui reviennent le plus souvent
 dans la documentation communautaire pour chaque archétype (source : builds nommés recensés dans
@@ -289,7 +506,7 @@ fabricant dans les sources communautaires consultées pour ce guide — pour l'e
 numériques précises de dégâts, consultez [07-equipement-a-pied.md](./07-equipement-a-pied.md) ou une base de données
 à jour (Inara, wiki communautaire Elite Dangerous) plutôt qu'une valeur figée ici.
 
-## Outils, utilitaires et consommables
+## Outils, utilitaires et consommables des emplacements Suit Tool et Utility
 
 En complément des armes, le joueur dispose d'emplacements « Suit Tool » et « Utility » pouvant accueillir :
 
@@ -342,7 +559,7 @@ plus cohérent avec ce que chaque Engineer permet d'améliorer :
 | Baltanos, Eleanor Bresa, Rosa Dayette | Deriso, Desy, Kojeara (Colonia) | Spécialités non détaillées dans les sources consultées | Débloquent conjointement Yi Shen ; pas d'archétype dédié identifié | 07 |
 | Yi Shen          | Einheriar (Colonia) | Spécialités non détaillées dans les sources consultées                | Débloqué par les trois Engineers Colonia précédents | 07 |
 
-## Récompenses des opérations
+## Récompenses des opérations au sol par niveau de menace
 
 Les missions et zones de conflit au sol rapportent des crédits, de la réputation, des matériaux/données et parfois
 des marchandises. Le tableau suivant tente de chiffrer ces gains par niveau de menace ; **avertissement de
@@ -365,12 +582,13 @@ Les zones de conflit versent en plus des paiements réguliers en crédits **pend
 victoire finale — ce complément n'est pas inclus dans la colonne « Crédits par mission » ci-dessus, qui ne couvre que
 les missions au tableau.
 
-## Colonisation et sécurité des installations
+## Colonisation de systèmes et sécurité des installations planétaires
 
 Depuis le lancement de la **Colonisation de systèmes**, les commandants peuvent construire eux-mêmes des systèmes et
 des établissements, ce qui crée directement de nouvelles installations planétaires relevant du même périmètre de
 sécurité que celui décrit dans ce guide (typologie de settlement, niveaux de sécurité, gardes et défenses
-automatiques — voir [Les settlements : typologie et sécurité](#les-settlements--typologie-et-sécurité) plus haut).
+automatiques — voir [Les settlements d'Odyssey : typologie et sécurité](#les-settlements-dodyssey--typologie-et-sécurité)
+plus haut).
 
 **Chronologie corrigée** (voir [00-chronologie-canonique.md](./00-chronologie-canonique.md) pour le détail complet) :
 
@@ -382,14 +600,14 @@ automatiques — voir [Les settlements : typologie et sécurité](#les-settlemen
 - **11 novembre 2025** : sortie de bêta et **lancement complet**, via la mise à jour officiellement nommée « Dodec
   Update » (version 4.2.2.0).
 
-Comme le résume [09-combat-a-pied.md](./09-combat-a-pied.md#colonisation-powerplay-20-et-nouvelles-zones-de-conflit),
+Comme le résume [09-combat-a-pied.md](./09-combat-a-pied.md#colonisation-powerplay-20-et-nouvelles-zones-de-conflit-au-sol),
 les conflits et l'état de sécurité des systèmes colonisés génèrent de nouvelles zones de conflit au sol, en
 complément des Ground CZ traditionnelles et de celles liées à Powerplay 2.0. Pour toute la mécanique de
 colonisation elle-même (revendication de système, construction, coût, gouvernance) — hors du périmètre de ce
 guide — voir le guide dédié [18-colonisation.md](./18-colonisation.md), qui fait référence sur ce sujet plutôt que
 de dupliquer ce contenu ici.
 
-## Contexte et évolutions récentes
+## Contexte et évolutions récentes, d'Odyssey (2021) au mode Operations (2026)
 
 - **19 mai 2021** : lancement de l'extension Odyssey sur PC, marqué par d'importants problèmes de stabilité
   client/serveur, des bugs de gameplay et des performances PC inadéquates, entraînant des retours largement négatifs
@@ -402,12 +620,22 @@ de dupliquer ce contenu ici.
   opérations au sol — un changement significatif pour l'accessibilité des CZ High.
 - **10 mars 2022** : la version console d'Odyssey est officiellement annulée, Frontier ayant choisi de concentrer
   ses efforts sur une base de code unique post-Odyssey, développée pour PC.
+- **22 avril 2026** : Frontier annonce le report du mode multijoueur **Operations**, « which will now be arriving in
+  June » (« An Update on Operations », 22 avril 2026 14:02 UTC).
+- **30 juin 2026** : sortie du mode **Operations** et du **Nomad**, en accès anticipé Arx pour ce dernier (date
+  annoncée dans « Discover the Nomad », 2 juin 2026 13:03 UTC) ; notes de version publiées le **1er juillet 2026**.
+- **2 septembre 2026** : la mise à jour **Rhino SRV Update** ajoute une septième opération, **Under Siege**, dont le
+  scénario se joue autour d'un **settlement planétaire** assiégé — un point de contact direct entre le mode
+  multijoueur et le décor des opérations au sol décrites dans cette partie.
 
 Pour les évolutions liées à la Colonisation et à Powerplay 2.0, voir respectivement
-[Colonisation et sécurité des installations](#colonisation-et-sécurité-des-installations) ci-dessus et
-[Powerplay et missions d'Opérations](#powerplay-et-missions-dopérations) plus haut.
+[Colonisation de systèmes et sécurité des installations planétaires](#colonisation-de-systèmes-et-sécurité-des-installations-planétaires)
+ci-dessus et
+[Powerplay et missions de mercenariat au sol](#powerplay-et-missions-de-mercenariat-au-sol) plus haut. Pour les
+évolutions de 2026 (mode Operations, Nomad, Rhino), voir la
+[partie A](#partie-a--le-mode-operations-multijoueur-en-escouade-2026).
 
-## Stratégies et conseils pour progresser efficacement
+## Stratégies et conseils pour progresser efficacement dans les opérations au sol
 
 - **Commencer petit** : réaliser des missions à faible menace en Flight Suit pour apprendre les mécaniques de
   détection et d'alarme avant d'investir dans une combinaison spécialisée.
@@ -426,7 +654,7 @@ Pour les évolutions liées à la Colonisation et à Powerplay 2.0, voir respect
   du bonus de mérites lié à l'axe (Acquisition, Renforcement, Undermining) actuellement assigné par le Power local
   (voir [02-powerplay.md](./02-powerplay.md)).
 
-## Notes sur les guides communautaires
+## Notes sur les guides communautaires Steam consacrés aux opérations au sol
 
 Deux guides publiés sur la page Steam Community du jeu traitent spécifiquement de ce périmètre et peuvent compléter
 ce document pour les commandants souhaitant approfondir certains détails d'équipement ou de mission :
@@ -437,17 +665,55 @@ ce document pour les commandants souhaitant approfondir certains détails d'équ
 
 ## Voir aussi
 
+Ce guide couvre le **mode multijoueur Operations** (partie A) et les **mécaniques d'opération au sol** (partie B :
+settlements, missions, infiltration, CZ). Pour éviter les redites entre guides du corpus, le détail exhaustif de
+certains sujets connexes vit ailleurs :
+
+- **[14 — Rhino et Nomad](./14-rhino-nomad.md)** — chronologie, caractéristiques et modules du **Nomad**, le
+  ship-launched vessel livré par la mise à jour Operations, et du **Rhino**, ajouté le 2 septembre 2026 en même temps
+  que l'opération Under Siege.
+- **[23 — Jeu en groupe](./23-jeu-en-groupe.md)** — wings, modes de jeu et coordination multijoueur, cadre général
+  dans lequel s'inscrivent les escouades d'Operations.
 - **[07 — Équipement à pied](./07-equipement-a-pied.md)** — catalogue complet des armes par fabricant, tables
-  d'ingénierie exhaustives (Engineers, blueprints, coûts, grades de matériaux), outils et consommables.
-- **[09 — Combat à pied](./09-combat-a-pied.md)** — tactiques et style de jeu en combat à pied.
-- **[06 — Ingénieurs](./06-ingenieurs.md)** — système général d'ingénierie (vaisseaux et à pied).
+  d'ingénierie exhaustives (Engineers, blueprints, coûts, grades de matériaux), builds nommés, outils et
+  consommables. Ce guide-ci ne reprend que des tableaux condensés qui renvoient vers 07 pour l'exhaustif.
+- **[09 — Combat à pied](./09-combat-a-pied.md)** — tactiques et choix de style de jeu en combat à pied.
+- **[26 — Ingénierie à pied avancée](./26-ingenierie-a-pied-avancee.md)** — quelles opérations au sol rapportent quels
+  matériaux : missions de réactivation/restauration, corrélation entre économie du settlement et loot, farming ciblé
+  des schémas d'armes et des Data, et règles d'échange chez le barman.
+- **[06 — Ingénieurs](./06-ingenieurs.md)** — mécanique générale de l'ingénierie (vaisseaux et à pied).
 - **[02 — Powerplay](./02-powerplay.md)** — Powerplay 2.0 / extension Ascendancy (31 octobre 2024), cycles
-  hebdomadaires Acquisition/Renforcement/Undermining.
-- **[18 — Colonisation](./18-colonisation.md)** — mécanique complète de colonisation de systèmes.
-- **[00 — Chronologie canonique](./00-chronologie-canonique.md)** — arbitrage daté de toutes les corrections
-  chronologiques appliquées dans ce guide.
+  hebdomadaires Acquisition/Renforcement/Undermining et leur effet sur les missions et zones de conflit au sol.
+- **[18 — Colonisation](./18-colonisation.md)** — mécanique complète de colonisation de systèmes et des nouvelles
+  installations qu'elle crée.
+- **[00 — Chronologie canonique](./00-chronologie-canonique.md)** — arbitrage daté de toutes les confusions
+  chronologiques mentionnées dans ce guide et des corrections qui y ont été appliquées.
 
 ## Sources
+
+### Sources primaires du mode Operations (partie A)
+
+Billets d'annonce officiels de Frontier Developments, relevés le 9 septembre 2026 sur le flux d'actualités officiel
+d'*Elite Dangerous* (appid Steam 359320), via l'API publique
+`api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320`, qui republie les annonces de Frontier sans
+intermédiaire :
+
+- « Elite Dangerous | An Update on Operations », **22 avril 2026 14:02 UTC** — report d'Operations en juin.
+- « Discover the Nomad », **2 juin 2026 13:03 UTC** — premier dévoilement du Nomad, sortie annoncée le 30 juin 2026
+  en accès anticipé Arx, aux côtés d'Operations.
+- « Elite Dangerous | Operations Update », **1er juillet 2026 14:01 UTC** — notes de version complètes : principe du
+  mode, Operation Runner, les six opérations de lancement, Merc Coin et catalogue MercGear, Nomad, statut
+  « Networking & Balancing Beta ».
+- « Elite Dangerous | Operations Update | Update 3 », **9 juillet 2026 10:24 UTC** — correctifs, restitution des
+  récompenses et des inventaires à pied, lisibilité du Merc Engineering.
+- « Elite Dangerous | Rhino SRV Update », **2 septembre 2026 11:20 UTC** — opération **Under Siege**, correctifs
+  Powerplay Squad et MercGear, problèmes connus.
+
+Corroboration technique communautaire, citée comme telle et non comme source officielle : ticket **EDCD/EDDI n° 2849**
+du 5 août 2026, dont le journal de jeu joint donne les versions client 4.4.0.0 (30 juin 2026) et 4.4.0.3
+(9 juillet 2026).
+
+### Sources des opérations au sol (partie B)
 
 - https://en.wikipedia.org/wiki/Elite_Dangerous
 - https://www.edsm.net/en/
@@ -459,9 +725,11 @@ ce document pour les commandants souhaitant approfondir certains détails d'équ
 **Note de vérification (9 septembre 2026)** : la table de récompenses par niveau de menace n'a pas pu être recoupée
 avec une source primaire ou une base communautaire dans cette session (budget de recherche web épuisé ;
 elite-dangerous.fandom.com a renvoyé une erreur HTTP 402, inara.cz une erreur HTTP 410 lors des tentatives d'accès
-direct). Les autres données de ce guide (settlements, missions, Engineers, armes) proviennent du recoupement avec
-07-equipement-a-pied.md, 06-ingenieurs.md, 09-combat-a-pied.md, 02-powerplay.md et 00-chronologie-canonique.md. La
-section sur le nom « Operations » et le vaisseau « Nomad » a été vérifiée et corrigée le 9 septembre 2026 : aucune
-source fiable ne confirme leur existence (voir la section
-[À propos du nom Operations et de la rumeur associée](#à-propos-du-nom-operations-et-de-la-rumeur-associée)
-ci-dessus pour le détail des vérifications effectuées).
+direct). Les autres données de la partie B (settlements, missions, Engineers, armes) proviennent du recoupement avec
+07-equipement-a-pied.md, 06-ingenieurs.md, 09-combat-a-pied.md, 02-powerplay.md et 00-chronologie-canonique.md.
+
+**Correction du 9 septembre 2026 (mode Operations et Nomad)** : une révision antérieure de ce guide déclarait le mode
+Operations et le vaisseau Nomad non confirmés et en avait retiré tout le contenu. Cette conclusion reposait sur une
+erreur de catégorie — chercher un *ship-launched vessel* dans un catalogue de chantier naval — détaillée dans
+[Note de méthode](#note-de-méthode--pourquoi-ce-guide-niait-auparavant-lexistence-du-mode-operations) en fin de partie A. Le
+contenu correspondant a été rétabli en partie A à partir des billets officiels listés ci-dessus.

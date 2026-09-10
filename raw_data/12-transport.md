@@ -1,6 +1,35 @@
+---
+id: 12-transport
+titre: "Guide complet du transport dans Elite Dangerous"
+domaine: economie
+entites: [Lynx Highliner, Beluga Liner, Orca, Dolphin, Panther Clipper Mk II, Type-8 Transporter, Search & Rescue, Occupied Escape Pods, Stronghold Carrier, cabines passagers, marchandises rares, stations en feu]
+mots_cles_en: [passenger cabins, economy cabin, business class cabin, first class cabin, luxury cabin, Lynx Highliner, Beluga Liner, search and rescue, occupied escape pods, burning stations, rare goods, stronghold carrier, colonisation hauling, interdiction escape]
+version_jeu_couverte: "4.4.0.x"
+branche: live
+date_verification: 2026-09-09
+confiance_globale: moyenne
+volatilite: moyenne
+sources_primaires: [MassivelyOP, PCGamesN, EDSM, EDSY, Canonn Research, Inara.cz, notes de version officielles 4.2.2.0]
+zones_incertaines: ["capacités de cabines passagers par taille de module non reconfirmées en direct (valeurs communautaires EDSY/Inara/Coriolis)", "aucun bonus Powerplay propre au Search & Rescue n'a pu être ni confirmé ni infirmé", "tonnages de colonisation donnés en ordres de grandeur composites, non revérifiés", "date du passage du Panther Clipper Mk II à l'achat en crédits (~octobre 2025) non sourcée précisément"]
+guides_lies: [2, 3, 18, 19, 22]
+---
 # Guide complet du transport dans Elite Dangerous
 
-## Vue d'ensemble et actualités majeures (2024-2026)
+## En bref
+
+Le transport recouvre quatre métiers distincts dans *Elite Dangerous*. Le **transport de passagers** repose sur des
+cabines de quatre conforts — Économique, Affaires, Première classe, Luxe (*economy, business, first class, luxury*) —,
+un module de taille 6 embarquant 128 passagers en Économique contre 12 en Luxe ; les vaisseaux dédiés sont le Dolphin,
+l'Orca et le Beluga Liner, rejoints en avril 2026 par le **Lynx Highliner** de **Zorgon Peterson** (jusqu'à 225
+passagers), qui ramène les missions « stations en feu » (*burning stations*). Le **Search & Rescue** consiste à
+ramasser Occupied Escape Pods, Black Boxes et Wreckage Components sur épaves et USS, puis à les livrer au contact
+dédié en station. Le **fret** sert Powerplay et surtout la **colonisation**, achevée le 11 novembre 2025 (« Dodec
+Update », 4.2.2.0), qui exige des milliers à des dizaines de milliers de tonnes par chantier et impose les gros
+porteurs : Type-9 Heavy, Imperial Cutter et **Panther Clipper Mk II** (1200 à 1400 t, sorti le 22 juillet 2025),
+relayés par un Fleet Carrier en base avancée. Les **marchandises rares** (*rare goods*) se bonifient jusqu'à 150-200
+al.
+
+## Vue d'ensemble du transport dans Elite Dangerous et actualités majeures (2024-2026)
 
 Le transport — de passagers, de fret, de marchandises rares ou de matériaux stratégiques — est l'une des activités les
 plus polyvalentes d'Elite Dangerous. Entre 2024 et 2026, plusieurs mises à jour majeures ont profondément renouvelé ce
@@ -9,22 +38,21 @@ joueur, retour de missions de sauvetage emblématiques, et développement des Fl
 part entière. Ce guide couvre l'ensemble de ces mécaniques telles qu'elles existent aujourd'hui, avec des renvois vers
 les guides dédiés du corpus pour le détail de chaque système connexe (Powerplay, colonisation, Fleet Carriers).
 
-### Chronologie des mises à jour clés
+### Chronologie des mises à jour ayant touché le transport (2024-2026)
 
-| Date              | Mise à jour                                                                        | Impact sur le transport                                                                                                                                  |
-|-------------------|--------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7 août 2024       | Lancement du **Type-8 Transporter**                                                  | Nouveau vaisseau de fret moyen, 406 tonnes de capacité, efficace en carburant                                                                              |
-| 31 octobre 2024   | **Ascendancy** — Powerplay 2.0 + **Mandalay**                                        | Refonte complète de la logistique Powerplay ; nouveau vaisseau d'exploration longue portée ; teasing de la colonisation                                    |
-| 22 novembre 2024  | Ajustements des gains Powerplay                                                      | Réduction du temps nécessaire pour monter en rang et débloquer les premiers modules                                                                        |
-| 26 février 2025   | **Bêta** de la **colonisation** (mise à jour *Trailblazers*, patch 4.1.x)            | Les joueurs peuvent revendiquer des systèmes et y construire des installations, créant une toute nouvelle logistique de fret                               |
-| 5 mars 2025       | Pause temporaire de la colonisation                                                  | Correction d'un problème après plus de 8 000 systèmes déjà colonisés (et 13 000 installations construites) durant la première semaine de la bêta ouverte  |
-| 30 avril 2025     | Rééquilibrage économique de la colonisation                                          | Introduction des liens économiques automatiques entre systèmes colonisés (forts/faibles)                                                                  |
-| 22 juillet 2025   | Accès anticipé du **Panther Clipper Mk2**                                            | Nouveau vaisseau-cargo super-massif, 1200 à 1400 tonnes selon l'outillage, plus gros transporteur du jeu                                                   |
-| ~octobre 2025     | Panther Clipper Mk2 disponible contre crédits                                        | Fin de la fenêtre d'accès anticipé payant                                                                                                                  |
-| **11 novembre 2025** | **Sortie complète de la colonisation** (« **Dodec Update** », version 4.2.2.0)     | Fin officielle de la bêta ouverte de colonisation ; introduction de la station Dodec en accès anticipé ARX (correctif « Patch 1 » le 13 novembre 2025)    |
-| avril 2026        | **Lynx Highliner** (Zorgon Peterson) distribué gratuitement, puis achetable en crédits (28 avril) | Nouveau vaisseau de transport de passagers de taille moyenne (jusqu'à 225 passagers) ; retour des missions « stations en feu »                             |
-| 2 septembre 2026  | Mise à jour minage de surface (SRV **Rhino**)                                        | Impact indirect sur la logistique de fret vers les zones minières                                                                                          |
-
+| Date                 | Mise à jour                                                                                       | Impact sur le transport                                                                                                                                  |
+|----------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7 août 2024          | Lancement du **Type-8 Transporter**                                                               | Nouveau vaisseau de fret moyen, 406 tonnes de capacité, efficace en carburant                                                                            |
+| 31 octobre 2024      | **Ascendancy** — Powerplay 2.0 + **Mandalay**                                                     | Refonte complète de la logistique Powerplay ; nouveau vaisseau d'exploration longue portée ; teasing de la colonisation                                  |
+| 22 novembre 2024     | Ajustements des gains Powerplay                                                                   | Réduction du temps nécessaire pour monter en rang et débloquer les premiers modules                                                                      |
+| 26 février 2025      | **Bêta** de la **colonisation** (mise à jour *Trailblazers*, patch 4.1.x)                         | Les joueurs peuvent revendiquer des systèmes et y construire des installations, créant une toute nouvelle logistique de fret                             |
+| 5 mars 2025          | Pause temporaire de la colonisation                                                               | Correction d'un problème après plus de 8 000 systèmes déjà colonisés (et 13 000 installations construites) durant la première semaine de la bêta ouverte |
+| 30 avril 2025        | Rééquilibrage économique de la colonisation                                                       | Introduction des liens économiques automatiques entre systèmes colonisés (forts/faibles)                                                                 |
+| 22 juillet 2025      | Accès anticipé du **Panther Clipper Mk II**                                                       | Nouveau vaisseau-cargo super-massif, 1200 à 1400 tonnes selon l'outillage, le plus gros transporteur non-capital du jeu                                  |
+| ~octobre 2025        | Panther Clipper Mk II disponible contre crédits                                                   | Fin de la fenêtre d'accès anticipé payant                                                                                                                |
+| **11 novembre 2025** | **Sortie complète de la colonisation** (« **Dodec Update** », version 4.2.2.0)                    | Fin officielle de la bêta ouverte de colonisation ; introduction de la station Dodec en accès anticipé ARX (correctif « Patch 1 » le 13 novembre 2025)   |
+| avril 2026           | **Lynx Highliner** (Zorgon Peterson) distribué gratuitement, puis achetable en crédits (28 avril) | Nouveau vaisseau de transport de passagers de taille moyenne (jusqu'à 225 passagers) ; retour des missions « stations en feu »                           |
+| 2 septembre 2026     | Mise à jour minage de surface (SRV **Rhino**)                                                     | Impact indirect sur la logistique de fret vers les zones minières                                                                                        |
 Cette chronologie constitue la toile de fond de toutes les mécaniques détaillées ci-dessous : missions de passagers,
 sauvetage de survivants, fret pour Powerplay, matériaux rares, logistique de colonisation et Fleet Carriers, et
 configurations optimales de vaisseaux.
@@ -58,7 +86,7 @@ et des passagers VIP à forte valeur. À l'inverse, l'échec d'une mission — d
 arrivée au mauvais quai — entraîne la perte du passager, une pénalité de réputation, voire une prime (bounty) si le
 passager bénéficiait d'une protection particulière.
 
-### Classes de cabines : l'arbitrage densité / rémunération
+### Classes de cabines passagers : l'arbitrage densité / rémunération
 
 | Classe de cabine | Densité de passagers | Rémunération par tête | Usage typique                                             |
 |------------------|----------------------|-----------------------|-------------------------------------------------------------|
@@ -67,7 +95,7 @@ passager bénéficiait d'une protection particulière.
 | Première classe  | Modérée              | Élevée                | Contrats VIP, tourisme haut de gamme                         |
 | Luxe             | Faible               | Très élevée           | Circuits de luxe longue distance sur gros porteurs dédiés    |
 
-#### Capacité de passagers par taille de module (valeurs stock)
+#### Capacité en passagers par taille de module de cabine (valeurs stock, tailles 2 à 6)
 
 | Taille du module | Économique | Affaires | Première classe | Luxe |
 |-------------------|------------|----------|-------------------|------|
@@ -127,7 +155,7 @@ Le sauvetage de survivants (**Search & Rescue**, souvent abrégé SAR par la com
 transport à part entière, distincte des missions de passagers classiques : elle consiste à récupérer des personnes en
 détresse ou des données/effets liés à un naufrage, puis à les livrer à un contact dédié en station.
 
-### Sources de marchandises de sauvetage
+### Où trouver les marchandises de sauvetage : épaves, USS de détresse, zones de conflit
 
 Les marchandises de type sauvetage se trouvent typiquement :
 
@@ -148,7 +176,7 @@ Elles se transportent comme du fret classique (soute standard, pas besoin de cab
 manipulées avec prudence : scanner ou détruire un vaisseau contenant des occupants vivants avant de les récupérer
 entraîne leur perte définitive.
 
-### Livraison et récompenses
+### Livraison au contact Search and Rescue et récompenses associées
 
 La livraison au contact **Search and Rescue** d'une station rapporte :
 
@@ -158,7 +186,7 @@ La livraison au contact **Search and Rescue** d'une station rapporte :
   [24-community-goals.md](./24-community-goals.md)) à thème « évacuation » ou « secours », lorsqu'un tel objectif est
   actif dans le secteur.
 
-### Lien avec Powerplay : bonus non confirmé à ce jour
+### Search & Rescue et Powerplay : bonus de mérites non confirmé à ce jour
 
 L'audit de ce guide demandait de documenter un éventuel bonus Powerplay lié au Search & Rescue. **Cette information n'a
 pas pu être vérifiée** lors de la rédaction de cette mise à jour : les recherches web nécessaires ont échoué (budget de
@@ -214,7 +242,7 @@ approvisionne ou en dépend.
 > À ne pas confondre avec les **Fleet Carriers** (porte-vaisseaux appartenant à des joueurs), présentés en détail dans
 > la section [Fleet Carriers](#fleet-carriers--base-logistique-mobile) ci-dessous.
 
-### Classement des Puissances : voir 02-powerplay.md
+### Classement des Puissances Powerplay : donnée centralisée dans 02-powerplay.md
 
 Le nombre de systèmes contrôlés par chaque Puissance change en continu au gré de l'activité des joueurs et des cycles
 hebdomadaires de Powerplay ; publier ici un classement figé reviendrait à diffuser une donnée obsolète dès sa lecture,
@@ -247,7 +275,7 @@ jeu, non plus une fonctionnalité expérimentale.
 
 Ce chantier constitue le plus gros défi logistique actuel du jeu : construire une installation nécessite de livrer
 physiquement de très grandes quantités de marchandises de construction (matériaux, équipements) au site. Cela a fait des
-plus gros porteurs de fret — Type-9 Heavy, Imperial Cutter, et depuis juillet 2025 le Panther Clipper Mk2 — les outils
+plus gros porteurs de fret — Type-9 Heavy, Imperial Cutter, et depuis juillet 2025 le Panther Clipper Mk II — les outils
 de choix pour ce type d'opération, souvent organisée en convois coordonnés par escadron ou appuyée sur un Fleet Carrier
 servant de base avancée pour raccourcir le dernier saut de livraison. Pour l'ensemble des mécaniques de colonisation
 (revendication, économies, gouvernance des systèmes), voir le guide dédié **[18-colonisation.md](./18-colonisation.md)**.
@@ -268,7 +296,7 @@ servant de base avancée pour raccourcir le dernier saut de livraison. Pour l'en
 > **[18-colonisation.md](./18-colonisation.md)**, qui sert de **source unique de vérité** sur ce sujet ; ces besoins ont
 > déjà été ajustés une fois par le passé (rééquilibrage du 30 avril 2025 décrit ci-dessous) et peuvent l'être de nouveau.
 
-### Liens économiques automatiques (depuis avril 2025)
+### Liens économiques automatiques entre systèmes colonisés (depuis avril 2025)
 
 Le rééquilibrage du 30 avril 2025 a introduit des **liens économiques automatiques** entre systèmes colonisés :
 
@@ -283,9 +311,9 @@ Ces liens modifient dynamiquement l'offre, la demande et la disponibilité des m
 ### Vaisseaux et méthodes recommandés pour la logistique de colonisation
 
 - **Type-9 Heavy** et **Imperial Cutter** : gros porteurs éprouvés, bon compromis capacité/disponibilité.
-- **Panther Clipper Mk2** : le plus gros transporteur du jeu, avec une capacité estimée entre 1200 et 1400 tonnes selon
-  l'outillage — bien au-delà du Type-9 Heavy ou de l'Imperial Cutter — idéal pour les livraisons massives en une seule
-  rotation.
+- **Panther Clipper Mk II** : le plus gros transporteur non-capital du jeu, avec une capacité estimée entre 1200 et
+  1400 tonnes selon l'outillage — bien au-delà du Type-9 Heavy ou de l'Imperial Cutter — idéal pour les livraisons
+  massives en une seule rotation.
 - **Fleet Carrier** : base avancée permettant de rapprocher le stock de matériaux de construction du site final,
   réduisant le nombre de sauts nécessaires par rotation (voir sous-section dédiée ci-dessous).
 - **Convois d'escadron coordonnés** : répartir la charge entre plusieurs joueurs accélère considérablement la
@@ -323,9 +351,10 @@ Caractéristiques pratiques à connaître :
 - c'est une activité peu risquée et à faible mise de départ, souvent combinée avec des **cabines passagers** (Beluga,
   Orca, Dolphin) puisque les rares occupent peu de place en soute.
 
-### Transport de données
+### Transport de données : courrier Odyssey à pied et cargo de données classifiées
 
-Deux mécaniques distinctes coexistent :
+Le transport de données est la variante la moins encombrante du métier de transporteur : la marchandise n'occupe
+aucune place, ou presque, en soute. Deux mécaniques distinctes coexistent :
 
 1. **Missions « à pied » (Odyssey)** : courrier de données via un terminal, transport physique sur soi sans passer par
    la soute du vaisseau, avec nécessité d'éviter la détection.
@@ -342,7 +371,7 @@ organisée par thèmes et un Codex détaillé des espèces et sites découverts.
 
 ## Configurations de vaisseaux optimales pour le transport
 
-### Cabines : l'arbitrage central
+### Choisir sa classe de cabine : l'arbitrage central du transporteur de passagers
 
 Pour tout transporteur de passagers, le choix de classe de cabine détermine le profil de mission visé :
 
@@ -352,7 +381,7 @@ Pour tout transporteur de passagers, le choix de classe de cabine détermine le 
 - **Luxe** est la classe la plus exigeante en espace mais la mieux rémunérée, réservée aux gros vaisseaux dédiés (Orca,
   Beluga Liner).
 
-### Optimiser l'autonomie du FSD (jump range)
+### Optimiser l'autonomie de saut du FSD (jump range) d'un transporteur
 
 L'autonomie de saut est le nerf de la guerre pour tout transporteur longue distance. Les leviers principaux :
 
@@ -396,7 +425,7 @@ Stratégie générale recommandée pour un vaisseau peu ou pas armé : privilég
 pointe/boost élevée**, et une **marge de portée de saut suffisante** pour enchaîner rapidement un low-wake ou un
 high-wake plutôt que d'engager le combat.
 
-### Tableau récapitulatif : quel vaisseau pour quel usage ?
+### Tableau récapitulatif : quel vaisseau de transport pour quel usage ?
 
 | Objectif                                  | Vaisseau recommandé                                            | Raison principale                                |
 |-------------------------------------------|------------------------------------------------------------------|-----------------------------------------------------|
@@ -405,7 +434,7 @@ high-wake plutôt que d'engager le combat.
 | Maximiser les passagers par rotation      | Beluga Liner ou Lynx Highliner                                    | Plus grande capacité dédiée                          |
 | Évacuation de masse / « stations en feu » / Search & Rescue | Type-9 Heavy ou Beluga en config Économique      | Volume maximal à faible coût par tête                |
 | Escorte de VIP à haut risque              | Anaconda                                                          | Cargo + cabines + armement                           |
-| Fret massif pour colonisation/Powerplay   | Panther Clipper Mk2, Type-9 Heavy, Imperial Cutter                | Tonnage maximal par rotation                         |
+| Fret massif pour colonisation/Powerplay   | Panther Clipper Mk II, Type-9 Heavy, Imperial Cutter                | Tonnage maximal par rotation                         |
 | Boucles de marchandises rares             | Beluga, Orca, Dolphin (cabines + rares)                           | Rares peu volumineux, combinables avec passagers     |
 | Exploration et matériaux Gardiens         | Anaconda ou vaisseau d'exploration équipé Guardian FSD Booster    | Portée de saut étendue                               |
 | Base logistique avancée multi-rotation    | Fleet Carrier                                                     | Rapproche le stock du site de livraison final        |
@@ -434,6 +463,9 @@ fil des patchs d'équilibrage.
   sauvetage/évacuation
 - [25-combat-ax.md](./25-combat-ax.md) — combat anti-Thargoïde, contexte fréquent des opérations de sauvetage et
   d'évacuation
+- [27-debuter-et-progresser.md](./27-debuter-et-progresser.md) — parcours du nouveau Commandant : où situer le
+  transport de passagers parmi les premières activités rentables, et pourquoi les Cr/h publiés supposent des
+  configurations de fin de partie
 
 ## Sources
 
@@ -478,4 +510,3 @@ fil des patchs d'équilibrage.
   officielles à l'adresse elitedangerous.com/update-notes/4-2-2-0 (métadonnées CMS confirmées lors de l'audit du
   corpus). Accès direct à cette page bloqué depuis cet environnement (anti-bot), donnée reconstituée via des sources
   miroirs convergentes.
-</content>
