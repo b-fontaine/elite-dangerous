@@ -60,7 +60,7 @@ restreints ; les hardpoints existent en Small, Medium, Large et Huge, sur montag
 (*gimballed*) ou tourelle (*turreted*). Ce guide porte le référentiel chiffré du corpus : **vingt et une tables de
 modules** donnant masse, intégrité, consommation en **MW**, statistique propre à la famille et prix en **crédits**, de
 la centrale aux limpets, et **huit tables d'armes** donnant dégâts par tir, cadence, DPS dérivé, charge thermique,
-portée, pénétration et prix — plus de mille lignes tirées d'EDCD/coriolis-data. Le blindage de coque (*bulkheads*)
+portée, pénétration et prix — près de mille lignes tirées d'EDCD/coriolis-data. Le blindage de coque (*bulkheads*)
 compte cinq grades, les trois plus lourds apportant tous **+250 %** d'intégrité ; résistances, masse et prix sont
 chiffrés pour les **47 châssis** du jeu. Un bouclier applique nativement **+40 %** de résistance cinétique, **+50 %**
 explosive et **−20 %** thermique.
@@ -457,6 +457,14 @@ Blaster, rendement horaire), voir [20-minage.md](./20-minage.md) ; pour l'usage 
 | **Planetary Approach Suite / Advanced Planetary Approach Suite** | 1       | I                                   | Requis pour l'atterrissage planétaire (Horizons)                                                                                                                                          |
 | **Fuel Scoop**                                                   | 1–8     | A–E                                 | Récupération de carburant depuis une étoile en vol                                                                                                                                        |
 | **Auto Field-Maintenance Unit (AFMU)**                           | 1–8     | A–E                                 | Réparation autonome des modules endommagés en vol                                                                                                                                         |
+
+**Partage des rôles avec le guide d'exploration.** Ce guide-ci est la référence sur les **caractéristiques** de ces
+modules : tailles, notations, masse, consommation, prix et effet principal, chiffrés dans le « Référentiel chiffré des
+modules » plus bas — et, pour le FSD, aux §11.1 et §11.2. Leur **usage sur le terrain** relève de
+[10-exploration.md](./10-exploration.md), qui traite ce que révèle une cartographie au **Detailed Surface Scanner**
+(ressources de surface révélées, statut « mapped », bonus de première cartographie) et recense les classes
+stellaires qui se laissent écoper au **Fuel Scoop**. Les deux fiches détaillées de ces modules, plus bas, y renvoient
+sur ces points.
 
 ### 11.1 Portée de saut du FSD : masse optimale par classe et notation
 
@@ -1413,7 +1421,7 @@ La soute est le module le plus simple du jeu : une capacité qui double à chaqu
 
 ### Collecteur de carburant (Fuel Scoop) — débit en kg/s et prix
 
-Le collecteur remplit les réservoirs en frôlant une étoile de classe KGBFOAM. Sa seule statistique utile est le **débit**, en kilogrammes de carburant par seconde : il commande directement la durée d'un ravitaillement, donc le rythme d'une expédition. Le module n'a pas de masse propre dans le jeu de données.
+Le collecteur remplit les réservoirs en frôlant une étoile de classe KGBFOAM (K, G, B, F, O, A, M). Sa statistique déterminante est le **débit**, en kilogrammes de carburant par seconde, tel que le déclare le jeu de données ; le module n'y a pas de masse propre. **Ce débit caractérise le module, pas l'étoile.** Savoir quelles classes stellaires se laissent écoper relève de l'usage, traité dans [10-exploration.md](./10-exploration.md), qui reprend le mnémonique KGBFOAM classe par classe sur l'énumération du jeu — et qui signale que cette donnée-là est **binaire** : aucune source accessible ne publie de débit ni de coefficient de collecte par classe d'étoile, et ce guide-ci n'en avance donc aucun. La table ci-dessous reste la référence sur la caractéristique du module.
 
 | Classe | Notation | Masse (t) | Consommation (MW) | Débit (kg/s) | Prix (Cr)   |
 |--------|----------|-----------|-------------------|--------------|-------------|
@@ -1799,7 +1807,7 @@ Les *Multi Limpet Controllers* réunissent plusieurs fonctions de limpet dans un
 
 ### Modules internes divers — appontage, baies, sondes et booster de saut
 
-Huit familles marginales sont regroupées ici, chacune ne comptant qu'une à six entrées : ordinateur d'appontage, assistance au supercruise, suite d'approche planétaire, scanner de surface détaillé, baie de chasseur, baie de véhicule planétaire, Guardian FSD Booster et stabilisateur d'armes expérimentales. La colonne Effet principal donne, pour chacune, la statistique qui la définit.
+Huit familles marginales sont regroupées ici, chacune ne comptant qu'une à six entrées : ordinateur d'appontage, assistance au supercruise, suite d'approche planétaire, scanner de surface détaillé, baie de chasseur, baie de véhicule planétaire, Guardian FSD Booster et stabilisateur d'armes expérimentales. La colonne Effet principal donne, pour chacune, la statistique qui la définit. Pour le **Detailed Surface Scanner**, cette statistique est le coefficient de rayon des sondes : c'est une caractéristique du module, et non l'inventaire de ce qu'une cartographie révèle au sol : ce volet-là, comme le statut « mapped » et le bonus de première cartographie, est traité dans [10-exploration.md](./10-exploration.md).
 
 | Module                                              | Classe | Notation | Masse (t) | Intégrité | Consommation (MW) | Effet principal                       | Prix (Cr) |
 |-----------------------------------------------------|--------|----------|-----------|-----------|-------------------|---------------------------------------|-----------|

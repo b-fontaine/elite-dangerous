@@ -561,7 +561,7 @@ complète de colonisation (coûts, étapes de construction, logistique), voir [L
 plutôt qu'un résumé partiel ici ; il est recommandé de vérifier les quantités et types exacts requis auprès des patch
 notes officiels ou d'Inara avant de planifier une session de farming dédiée à un projet de colonisation.
 
-## 11. Ressources et outils communautaires pour approfondir les Guardians
+## Ressources et outils communautaires pour approfondir les Guardians
 
 | Ressource                                             | Usage                                                                                                                                                                |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|

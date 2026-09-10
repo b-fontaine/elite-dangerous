@@ -2,29 +2,50 @@
 id: 10-exploration
 titre: "Guide complet de l'exploration et de l'exobiologie dans Elite Dangerous"
 domaine: exploration
-entites: [Exobiologie, Vista Genomics, Universal Cartographics, Canonn Research, FSS, DSS,
-  Combinaison Artemis, Nomad, Stratum Tectonicas, Fonticulua Fluctus, Neutron Highway, First Logged]
-mots_cles_en: [exobiology, Vista Genomics, Universal Cartographics, Full Spectrum System Scanner,
-  Detailed Surface Scanner, Artemis suit, first logged, first footfall, neutron highway, Road to Riches]
+entites: ["Exobiologie", "Vista Genomics", "Universal Cartographics", "Canonn Research", "FSS", "DSS", "Combinaison
+  Artemis", "Nomad", "Stratum Tectonicas", "Fonticulua Fluctus", "Neutron Highway", "First Logged", "EDDiscovery",
+  "BioScan", "Earth-like World", "Crystalline Shards", "Notable Stellar Phenomena", "Distant Worlds", "Beagle Point",
+  "Pallaeni"]
+mots_cles_en: ["exobiology", "Vista Genomics", "Universal Cartographics", "Full Spectrum System Scanner", "Detailed
+  Surface Scanner", "Artemis suit", "first logged", "first footfall", "neutron highway", "Road to Riches", "scan
+  value", "Earth-like World", "star class", "FSD supercharge", "jet cone boost", "surface signal", "SAASignalsFound",
+  "geological signal", "Crystalline Shards", "Notable Stellar Phenomena", "Lagrange Cloud", "surface gravity",
+  "landable body", "Distant Worlds", "Beagle Point"]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-09
+date_verification: 2026-09-10
 confiance_globale: haute
 volatilite: haute
-sources_primaires: [Canonn Research, wiki Elite Dangerous,
-  "catalogue d'exobiologie compilé du corpus (édition 2026-08)", EDCD/coriolis-data, EDCD/FDevIDs,
-  Steam News Frontier, Spansh, EDSM]
-zones_incertaines: ["valeur de 952 296 Cr de Radicoida Unica : observation unique en jeu, à reconfirmer",
-  "distance minimale de 15 m pour Radicoida, relevée en jeu contre 100 m au catalogue compilé",
-  "contrainte des 2 500 Ls de Clypeus Speculumi, non confirmée par télémétrie",
-  "intitulés et ordre exacts des paliers des rangs Explorateur et Exobiologiste : reconstitution communautaire",
-  "barèmes de vente Universal Cartographics et formule de valeur des ELW/WW, non reproduits dans ce guide",
-  "43 des 109 espèces du catalogue 2.4 sont sans fréquence d'observation publiée",
-  "fiches d'habitat de Bark Mound et Brain Tree absentes du catalogue 2.4",
-  "taux de rencontre supérieurs prêtés aux secteurs Sinuefai, Sinuefe et Wredguia, non recoupés",
-  "portées et temps de scan du Discovery Scanner, du FSS et du DSS, à confirmer sur une source à jour",
-  "les 100 000 000 Cr d'une Fonticulua Fluctus en First Logged sont un calcul, non un montant relevé"]
-guides_lies: [0, 6, 7, 13, 14, 17, 18, 19, 20, 21, 23, 24, 25, 27]
+sources_primaires: ["Canonn Research", "wiki Elite Dangerous", "EDDiscovery/EliteDangerousCore (commit
+  f21533ba1609d309fd6a96b9b3bb488df178a36e)", "EDDiscovery/EDDiscovery (commit 7b4726f3, 43 journaux de scan réels)",
+  "catalogue d'exobiologie compilé du corpus (édition 2026-08)", "EDCD/coriolis-data", "EDCD/FDevIDs",
+  "Silarn/EDMC-BioScan (commit 5f0d2e44)", "Steam News Frontier", "Spansh", "EDSM", "distantworlds3.space"]
+zones_incertaines: ["valeur de 952 296 Cr de Radicoida Unica : observation unique en jeu, à reconfirmer", "distance
+  minimale de 15 m pour Radicoida, relevée en jeu contre 100 m au catalogue compilé", "contrainte des 2 500 Ls de
+  Clypeus Speculumi, non confirmée par télémétrie", "intitulés et ordre exacts des paliers des rangs Explorateur et
+  Exobiologiste : reconstitution communautaire", "valeurs de scan de la partie 1 : calculées par l'implémentation de
+  référence d'EDDiscovery, jamais confrontées à un montant observé en jeu", "k du corps riche en métaux et du trou
+  noir supermassif : déclarés « not confirmed in game » dans le code", "multiplicateur ×6 de supercharge du Mk II
+  Supercharge Optimised FSD : relevé chez EDDiscovery, non chiffré par Frontier", "scoopabilité par classe stellaire :
+  dérivée du mnémonique KGBFOAM, non confirmée par une source de données", "43 des 109 espèces du catalogue 2.4 sont
+  sans fréquence d'observation publiée", "fiches d'habitat de Bark Mound et Brain Tree absentes du catalogue 2.4",
+  "taux de rencontre supérieurs prêtés aux secteurs Sinuefai, Sinuefe et Wredguia, non recoupés", "portées et temps de
+  scan du Discovery Scanner, du FSS et du DSS, à confirmer sur une source à jour", "les 100 000 000 Cr d'une
+  Fonticulua Fluctus en First Logged sont un calcul, non un montant relevé", "ce que désigne la catégorie de signal
+  $SAA_SignalType_Other; : inconnu, deux occurrences relevées et aucune source", "aucun signal Guardian, Thargoid ni
+  Anomalous dans les 43 journaux de test : ces catégories ne sont attestées que par le code", "aucun champ Genuses
+  rempli et aucun événement JetConeBoost dans les journaux de test : structure attestée, contenu jamais observé",
+  "correspondance entre les 15 volcanismes de l'énumération EDVolcanism et les 23 entrées de codex géologiques : non
+  tabulée", "conditions d'apparition des Crystalline Shards : divergence non arbitrée avec 06-ingenieurs.md sur la
+  classe S, le seuil de distance et le Water Giant", "conditions d'apparition des nuages de Lagrange et valeur de
+  vente des organismes des Notable Stellar Phenomena : non établies", "seuil de gravité endommageant le train
+  d'atterrissage : non établi, le journal n'expose qu'un booléen LandingGear", "seuil de gravité modifiant le
+  comportement du SRV ou du Nomad : non établi sur source accessible", "pénalité de mobilité à pied au-delà de 1 G :
+  non chiffrée, seul le marquage « haute gravité » de BioScan est établi", "organisateur de Distant Worlds II : non
+  établi, les fiches EDSM ne portent pas ce champ", "date de départ, effectifs et itinéraire de Distant Worlds 3 : non
+  établis, compteurs du site officiel remplis côté client", "bornes de la première expédition Distant Worlds : la
+  fiche EDSM donne 14 janvier - 5 juin 2016, plus large que le « fin 2015 - début 2016 » de 01-lore.md"]
+guides_lies: [0, 1, 4, 5, 6, 7, 13, 14, 17, 18, 19, 20, 21, 23, 24, 25, 27]
 ---
 
 # Guide complet de l'exploration et de l'exobiologie dans Elite Dangerous
@@ -33,14 +54,14 @@ guides_lies: [0, 6, 7, 13, 14, 17, 18, 19, 20, 21, 23, 24, 25, 27]
 
 L'exploration dans *Elite Dangerous* consiste à quitter la Bulle pour scanner des systèmes inconnus au Discovery
 Scanner, au FSS (*Full Spectrum System Scanner*) puis au DSS (*Detailed Surface Scanner*), et à vendre ces données aux
-comptoirs Universal Cartographics, avec un bonus de première découverte (*first discovered*) et de première
-cartographie (*first mapped*). Les routes se tracent sur EDSM et Spansh (Galaxy Plotter, Exact Plotter, Neutron Router,
-Road to Riches), la surcharge du FSD sur étoile à neutrons (*neutron highway*) démultipliant la portée de saut. Depuis
-Odyssey s'y ajoute l'exobiologie : prélever à pied, en combinaison **Artemis** (*Organic Scanner*, *Composition
-Scanner*), trois échantillons d'une même espèce en respectant la distance minimale du genre (15 m à 1 000 m), pour les
-vendre à **Vista Genomics**. Le catalogue compte **118 espèces**, de *Radicoida Unica* (952 296 Cr) à *Fonticulua
-Fluctus* (20 000 000 Cr), avec un multiplicateur **First Logged ×5** par couple espèce/corps. Depuis la mise à jour
-Operations (30 juin 2026), le **Nomad** et son *Mk II Biological Scanner* complètent le SRV au sol.
+comptoirs Universal Cartographics. Ce guide chiffre la valeur de scan corps par corps — 283 628 Cr pour un monde de
+type terrestre au simple scan, 3 546 696 Cr en première découverte et première cartographie, 500 Cr au plancher —
+détaille les 53 classes stellaires du journal de bord et la supercharge du FSD (×4 sur étoile à neutrons, ×1,5 sur
+naine blanche, ×6 avec un seul module du jeu). Il recense aussi ce qu'un scan de surface révèle : huit catégories de
+signaux, 23 sites géologiques au codex Canonn, les champs de Crystalline Shards et les Notable Stellar Phenomena.
+Depuis Odyssey s'y ajoute l'exobiologie : prélever à pied, en combinaison **Artemis**, trois échantillons d'une même
+espèce pour les vendre à **Vista Genomics**. Le catalogue compte **118 espèces**, de 952 296 Cr à 20 000 000 Cr, avec
+un multiplicateur **First Logged ×5**.
 
 ## Introduction à l'exploration spatiale et à l'exobiologie
 
@@ -145,6 +166,377 @@ les zones favorables à la vie apparaissent en teinte **sarcelle / vert clair**.
 > Les valeurs précises de portée et de temps de scan de ces trois instruments sont globalement stables depuis plusieurs
 > versions du jeu. Il est recommandé de les confirmer sur le wiki Fandom ou Inara.cn en cas de doute.
 
+#### Les 8 catégories de signaux de surface d'un corps scanné
+
+Un corps scanné peut porter des **signaux de surface**. Le journal du jeu les inscrit sous deux événements distincts :
+`FSSBodySignals`, produit par le balayage au FSS, et `SAASignalsFound`, produit par une cartographie au DSS. Le
+référentiel d'EDDiscovery classe ces signaux en **8 catégories**, chacune reconnue à un jeton de chaîne et rattachée à
+un prédicat de code. Le tableau ci-dessous les recense toutes — 8 lignes, recomptées sur son contenu — et donne pour
+chacune le nombre d'occurrences relevées dans les 43 journaux de test dépouillés pour ce guide.
+
+| Catégorie        | Jeton de journal                 | Prédicat EDDiscovery | Ce qu'elle désigne                                                         | Ce qu'elle débloque                                          | Occurrences relevées (DSS / FSS) |
+|------------------|----------------------------------|----------------------|----------------------------------------------------------------------------|--------------------------------------------------------------|----------------------------------|
+| Biological       | `$SAA_SignalType_Biological;`    | IsBio                | Formes de vie exobiologiques à la surface                                  | Prélèvement Artemis (3 échantillons) et vente Vista Genomics | 0 / 8                            |
+| Geological       | `$SAA_SignalType_Geological;`    | IsGeo                | Sites volcaniques de surface (fumerolles, geysers, gas vents, lava spouts) | Matériaux bruts au SRV et entrées de codex                   | 13 / 4                           |
+| Human            | `$SAA_SignalType_Human;`         | IsHuman              | Implantations et épaves humaines                                           | Data points, récupération, missions                          | 90 / 0                           |
+| Guardian         | `$SAA_SignalType_Guardian;`      | IsGuardian           | Sites Guardians de surface                                                 | Ruines et structures Guardians                               | 0 / 0                            |
+| Thargoid         | `$SAA_SignalType_Thargoid;`      | IsThargoid           | Sites Thargoids de surface                                                 | Barnacles, spires, Thargoid Links                            | 0 / 0                            |
+| Anomalous        | `$SAA_SignalType_PlanetAnomaly;` | IsThargoid           | Anomalies planétaires                                                      | Codex ; classé avec Thargoid par EDDiscovery                 | 0 / 0                            |
+| Other            | `$SAA_SignalType_Other;`         | IsOther              | Non précisé par les sources lues                                           | Non établi                                                   | 2 / 0                            |
+| Planetary mining | `$PlanetaryMiningLocation_Name;` | IsPlanetaryMining    | Emplacements de minage planétaire                                          | Minage au sol (Rhino SRV, 2 sept. 2026)                      | 0 / 0                            |
+
+Trois précisions, sans lesquelles ce tableau se lit de travers :
+
+- **« Anomalous » n'est pas une catégorie indépendante** dans le référentiel lu : son jeton est rattaché au même
+  prédicat que Thargoid, le code expliquant que l'anomalie planétaire est associée aux interactions thargoïdes. Le
+  compte exact est donc celui-ci : 8 jetons distincts, mais 7 prédicats seulement. La communauté cite couramment six
+  catégories de surface ; ce logiciel-là en reconnaît 8 et n'isole pas l'anomalie.
+- **La catégorie « Other » n'est documentée nulle part.** Elle existe, elle est relevée deux fois dans les journaux de
+  test — sur la Lune et sur Europa, une unité chacune — et aucune source consultée ne dit ce qu'elle désigne. Le trou
+  est signalé plutôt que comblé.
+- **Les emplacements de minage planétaire passent par le même événement**, sous un jeton qui ne commence pas par
+  `$SAA_SignalType`. Ils sont arrivés avec la mise à jour Rhino SRV du 2 septembre 2026, qui étend le DSS à leur
+  détection (voir [Équipements](./04-equipements.md) et [Le Rhino et le Nomad](./14-rhino-nomad.md)).
+
+Un même événement `SAASignalsFound` sert par ailleurs à deux usages que rien ne distingue à la lecture : cartographier
+un **anneau** ne rend pas une catégorie mais des **noms de matériaux**, que le code range en « non catégorisés »
+précisément parce que leur jeton ne commence pas par `$SAA_SignalType`. Les journaux de test en portent 13, avec leurs
+effectifs :
+
+| Jeton de signal d'anneau relevé | Occurrences | Somme des `Count` |
+|---------------------------------|-------------|-------------------|
+| Alexandrite                     | 10          | 14                |
+| Benitoite                       | 7           | 16                |
+| Bromellite                      | 4           | 4                 |
+| Grandidierite                   | 3           | 5                 |
+| LowTemperatureDiamond           | 2           | 4                 |
+| Monazite                        | 5           | 8                 |
+| Musgravite                      | 1           | 9                 |
+| Opal                            | 1           | 1                 |
+| Painite                         | 1           | 2                 |
+| Rhodplumsite                    | 2           | 2                 |
+| Serendibite                     | 8           | 16                |
+| Tritium                         | 1           | 1                 |
+| tritium                         | 1           | 1                 |
+
+La ligne `tritium` en minuscules n'est pas une coquille de ce guide : les deux graphies figurent telles quelles dans
+les journaux. Ces signaux d'anneau relèvent du [Minage](./20-minage.md), et non de l'exobiologie.
+
+#### Ce que le FSS annonce et ce que seul le DSS ajoute : le genre biologique
+
+La différence entre les deux instruments est structurelle, et elle se lit dans la définition même des classes du
+référentiel : celle qui porte l'événement du FSS n'a **aucun** champ `Genuses`, alors que celle du DSS en porte un,
+annoté « 4.0v13+ ».
+
+| Événement de journal | Classe EDDiscovery       | Champ `Signals` | Champ `Genuses`               | Occurrences relevées |
+|----------------------|--------------------------|-----------------|-------------------------------|----------------------|
+| `FSSBodySignals`     | `JournalFSSBodySignals`  | oui             | **non** (absent de la classe) | 12                   |
+| `SAASignalsFound`    | `JournalSAASignalsFound` | oui             | oui (4.0v13+)                 | 117                  |
+
+Autrement dit, et c'est la réponse exacte à « qu'apporte le DSS ? » : le FSS annonce **combien** de signaux
+biologiques porte un corps ; seul le DSS annonce **quels genres** s'y trouvent. La formule courante selon laquelle le
+DSS « révèle les ressources géologiques et biologiques exploitables » est vraie mais imprécise — le comptage, le FSS
+le donne déjà.
+
+Réserve de méthode, à connaître avant de citer ce tableau : sur les 117 événements `SAASignalsFound` des journaux de
+test, 15 portent la clé `Genuses` et **aucun** ne la remplit. L'échantillon vient très majoritairement de la Bulle
+habitée — 90 signaux Human contre 0 signal biologique côté DSS — et il ne contient aucun signal Guardian, Thargoid ni
+Anomalous. Ces journaux attestent la structure du champ, pas son contenu : le lien « DSS → liste des genres » est
+établi sur le code, jamais sur une observation.
+
+#### Géologie de surface : volcanisme du corps, signal de géologie, point d'intérêt
+
+Trois notions distinctes se cachent derrière le mot « géologie », et le corpus les emploie déjà toutes les trois. Les
+séparer évite l'essentiel des contresens :
+
+- **Le volcanisme du corps** est une propriété planétaire, énumérée dans le code du jeu. C'est elle que citent les
+  fiches d'habitat d'exobiologie de la partie 2, sous les intitulés « magma ferreux », « geysers de CO2 » et leurs
+  voisins.
+- **Le signal géologique** est un comptage de sites, rendu aussi bien par le FSS que par le DSS.
+- **Le point d'intérêt de surface** est le site lui-même, avec son entrée de codex et ses dépôts de matériaux.
+
+L'énumération du volcanisme porte **15 valeurs de volcanisme actif**, réparties en 8 magmas et 7 geysers :
+
+| Famille                | Nombre de valeurs | Valeurs de l'énumération `EDVolcanism`                                                                                             |
+|------------------------|-------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| Magma                  | 8                 | Water Magma, Sulphur Dioxide Magma, Ammonia Magma, Methane Magma, Nitrogen Magma, Silicate Magma, Metallic Magma, Rocky Magma      |
+| Geysers                | 7                 | Water Geysers, Carbon Dioxide Geysers, Ammonia Geysers, Methane Geysers, Nitrogen Geysers, Helium Geysers, Silicate Vapour Geysers |
+| Total volcanisme actif | 15                | —                                                                                                                                  |
+
+Le troisième niveau, celui des points d'intérêt, se compte sur le référentiel de codex de Canonn : **23 entrées** de
+géologie de surface, pour 222 898 relevés cumulés au 10 septembre 2026. Les distances ci-dessous sont DÉRIVÉES PAR
+CALCUL — ce sont des normes euclidiennes sur les coordonnées galactiques publiées par Canonn, Sol étant à l'origine ;
+les effectifs sont des comptages sur le dump.
+
+| Entrée de codex (nom anglais) | Famille      | Relevés Canonn | Systèmes distincts | Distance du plus proche à Sol (al) | Système le plus proche |
+|-------------------------------|--------------|----------------|--------------------|------------------------------------|------------------------|
+| Sulphur Dioxide Fumarole      | Fumarole     | 30 694         | 30 667             | 4,4                                | Alpha Centauri         |
+| Silicate Magma Lava Spout     | Lava Spout   | 25 848         | 25 827             | 6,6                                | Luhman 16              |
+| Silicate Vapour Gas Vent      | Gas Vent     | 25 381         | 25 360             | 4,4                                | Alpha Centauri         |
+| Sulphur Dioxide Gas Vent      | Gas Vent     | 25 180         | 25 163             | 4,4                                | Alpha Centauri         |
+| Silicate Vapour Fumarole      | Fumarole     | 22 860         | 22 837             | 6,6                                | Luhman 16              |
+| Water Ice Geyser              | Ice Geyser   | 19 241         | 19 230             | 0,0                                | Sol                    |
+| Water Ice Fumarole            | Ice Fumarole | 15 578         | 15 567             | 0,0                                | Sol                    |
+| Iron Magma Lava Spout         | Lava Spout   | 15 180         | 15 170             | 10,7                               | Lacaille 9352          |
+| Nitrogen Ice Geyser           | Ice Geyser   | 7 195          | 7 191              | 7,2                                | WISE 0855-0714         |
+| Carbon Dioxide Ice Geyser     | Ice Geyser   | 7 042          | 7 041              | 12,1                               | YZ Ceti                |
+| Carbon Dioxide Ice Fumarole   | Ice Fumarole | 6 343          | 6 340              | 12,1                               | YZ Ceti                |
+| Nitrogen Ice Fumarole         | Ice Fumarole | 5 399          | 5 397              | 7,2                                | WISE 0855-0714         |
+| Methane Ice Geyser            | Ice Geyser   | 4 616          | 4 614              | 16,2                               | DEN 0255-4700          |
+| Methane Ice Fumarole          | Ice Fumarole | 3 602          | 3 602              | 16,2                               | DEN 0255-4700          |
+| Ammonia Ice Geyser            | Ice Geyser   | 2 612          | 2 610              | 19,7                               | Wolf 1481              |
+| Ammonia Ice Fumarole          | Ice Fumarole | 2 322          | 2 321              | 19,7                               | Wolf 1481              |
+| Water Gas Vent                | Gas Vent     | 1 323          | 1 322              | 0,0                                | Sol                    |
+| Water Fumarole                | Fumarole     | 723            | 722                | 59,3                               | Matet                  |
+| Water Geyser                  | Geyser       | 701            | 700                | 59,3                               | Matet                  |
+| Silicate Vapour Ice Fumarole  | Ice Fumarole | 435            | 435                | 50,8                               | Ross 584               |
+| Carbon Dioxide Gas Vent       | Gas Vent     | 346            | 346                | 42,5                               | LHS 1650               |
+| Sulphur Dioxide Ice Fumarole  | Ice Fumarole | 267            | 266                | 17,4                               | Flousop                |
+| Carbon Dioxide Fumarole       | Fumarole     | 10             | 10                 | 6 446,9                            | Hypiae Aihm NQ-Y d30   |
+
+Ces 23 entrées se répartissent en **6 familles de site** :
+
+| Famille de site géologique | Nombre d'entrées de codex |
+|----------------------------|---------------------------|
+| Ice Fumarole               | 7                         |
+| Ice Geyser                 | 5                         |
+| Fumarole                   | 4                         |
+| Gas Vent                   | 4                         |
+| Lava Spout                 | 2                         |
+| Geyser                     | 1                         |
+| **Total**                  | 23                        |
+
+Quatre enseignements, tous DÉRIVÉS de ces comptages :
+
+- **Le nom de la famille ne se déduit pas du volcanisme.** « Sulphur Dioxide Fumarole » repose sur un magma et « Water
+  Geyser » sur des geysers, mais le jeu forme aussi « Ammonia Ice Fumarole » à partir de geysers d'ammoniac. La
+  correspondance entre les 15 volcanismes et les 23 entrées de codex se tabule, elle ne se calcule pas — et aucune
+  source lue ne la donne en entier.
+- **La rareté est très inégale.** Sulphur Dioxide Fumarole totalise 30 694 relevés, Carbon Dioxide Fumarole en
+  totalise 10 : un facteur supérieur à 3 000 entre la première et la dernière des 23 entrées.
+- **Une seule des 23 entrées a son relevé le plus proche hors de la Bulle** : Carbon Dioxide Fumarole, à 6 446,9 al de
+  Sol, contre moins de 60 al pour les 22 autres. Pour un chasseur de codex, c'est le fait le plus actionnable du
+  tableau.
+- **Trois entrées ont un relevé dans Sol même** — Water Ice Geyser, Water Ice Fumarole, Water Gas Vent —, ce que
+  recoupe le journal de test, où Europa porte deux signaux géologiques.
+
+Ce que rapportent ces sites relève de l'ingénierie plus que de l'exploration, et le corpus le documente déjà : un
+*outcrop* rend 3 unités par morceau ; les dépôts volcaniques suivent une échelle de grade — Piceous Cobble en G1,
+Crystalline Fragments en G2-G3, Crystalline Cluster en G3-G4, Needle Crystals en G4 et uniquement sur les sites *Lava
+Spout* ; chaque corps atterrissable porte une composition **fixe** de 11 matériaux — 5 G1, 3 G2, 2 G3 et 1 G4 — qu'un
+DSS à 90 % de couverture révèle définitivement, les signaux devenant alors des points d'atterrissage sélectionnables.
+Le détail figure dans [Ingénieurs](./06-ingenieurs.md) et n'est pas repris ici.
+
+Une conséquence DÉRIVÉE de ces deux relevés, et vérifiable sur place : puisqu'un corps n'a qu'un seul matériau de
+grade 4, tous les dépôts G4 d'un même corps rendent le même matériau. La boucle de récolte au SRV — approcher le
+dépôt, le fragmenter au répéteur à plasma, ramasser au collecteur de cargaison, attendre la phase dormante d'un geyser
+actif plutôt que de se faire projeter — est en revanche **communautaire** : aucune source primaire consultée ne la
+décrit.
+
+#### Crystalline Shards : un site de récolte classé « Biological » au codex
+
+Le même nom recouvre trois choses, et le corpus en a déjà tranché deux. *Crystal Shards* est un matériau manufacturé
+de grade 1 ; les *Crystalline Shards* sont un site de récolte de matériaux bruts. La mise au point complète est dans
+[Ingénieurs](./06-ingenieurs.md) et n'est pas répétée ici. Le troisième statut n'était relié nulle part : dans le
+référentiel de codex de Canonn, **Crystalline Shards** est classé en catégorie *Biology*, sous-catégorie *Organic
+Structures* — ce qui est cohérent avec la partie 2 de ce guide, qui en fait un genre d'exobiologie hors famille
+Odyssey à 1 628 800 Cr. Le même objet est donc à la fois une espèce à scanner pour Vista Genomics et un site à
+récolter au SRV. Conséquence pratique, convergente entre les sources communautaires : sur la carte du DSS, c'est le
+filtre **Biological** qui fait apparaître les champs d'aiguilles, et non le filtre Geological.
+
+Reste la distance, et elle est décourageante. Le dump de codex de Canonn du 10 septembre 2026 porte 4 482 relevés
+répartis sur **3 826 systèmes distincts**. Le plus proche de Sol est à 1 426,2 al — le chiffre que le corpus annonçait
+déjà — et il porte un nom que le corpus ne donnait pas :
+
+| Rang | Système                 | Distance à Sol (al) |
+|------|-------------------------|---------------------|
+| 1    | Oochorrs SB-J d10-5     | 1 426,2             |
+| 2    | Oochorrs AC-T c20-2     | 1 429,9             |
+| 3    | Outotz TA-M c21-2       | 1 469,0             |
+| 4    | Col 69 Sector GR-V d2-7 | 1 477,2             |
+| 5    | Outotz GZ-M c21-0       | 1 478,8             |
+
+Les quatre suivants tiennent dans un mouchoir de poche, entre 1 429,9 et 1 478,8 al. La distribution complète dit le
+reste :
+
+| Distance à Sol     | Systèmes à Crystalline Shards | Part    |
+|--------------------|-------------------------------|---------|
+| 0 à 2 000 al       | 97                            | 2,5 %   |
+| 2 000 à 5 000 al   | 374                           | 9,8 %   |
+| 5 000 à 10 000 al  | 480                           | 12,5 %  |
+| 10 000 à 20 000 al | 628                           | 16,4 %  |
+| 20 000 à 40 000 al | 761                           | 19,9 %  |
+| plus de 40 000 al  | 1 486                         | 38,8 %  |
+| **Total**          | 3 826                         | 100,0 % |
+
+Soit 2,5 % des systèmes à Crystalline Shards à moins de 2 000 al de Sol, et 38,8 % au-delà de 40 000 al : ce n'est pas
+une sortie du week-end, et le corpus a raison de le dire.
+
+**Les conditions d'apparition ne sont pas les mêmes des deux côtés du corpus, et ce guide ne tranche pas.** La fiche
+d'habitat de la partie 2 demande une étoile primaire de classe A, F, G, K ou M, une température de 20 à 250 K et une
+distance supérieure à 10 000 ls de l'étoile d'arrivée. [Ingénieurs](./06-ingenieurs.md) admet en plus la classe S,
+retient 0 à 273 K, place le seuil à 12 000 Ls et accepte le *Water Giant* parmi les mondes déclencheurs du système.
+Trois écarts, donc : la classe stellaire S, le seuil de distance et le *Water Giant*. Aucune source primaire consultée
+ne permet de départager les deux relevés ; en attendant un arbitrage, la lecture prudente consiste à chercher sur les
+conditions les plus larges et à n'affirmer que sur les plus étroites.
+
+Le rendement, lui, est **communautaire** : une aiguille brisée rendrait environ 3 unités du matériau de grade 4 du
+corps, et un champ dense remplirait un casier — plafond de 150 unités — en quelques minutes, en visant la jonction
+entre l'aiguille et son socle, le socle lui-même ne rendant rien. Pour trouver un site précis, deux sources se
+croisent sans se remplacer : l'API de repères de surface (*landmarks*) de Spansh expose les sites **avec leur latitude
+et leur longitude**, ce qui mène droit au terrain ; le dump de codex de Canonn donne les systèmes et leurs coordonnées
+galactiques, mais aucune coordonnée de surface. Les deux outils sont présentés en 1.2 et 1.6.
+
+#### Notable Stellar Phenomena : des signaux de système, et non de surface
+
+Les **Notable Stellar Phenomena** sont souvent rangés avec les signaux de surface ; ils n'en sont pas. Le référentiel
+d'EDDiscovery en fait une **classe de signal système**, reconnue à un nom de signal commençant par
+`$Fixed_Event_Life`, dotée de sa propre entrée d'énumération et d'une durée de validité d'un an — contre quatorze
+jours pour un porte-vaisseaux ou une zone de conflit. Ils ne relèvent donc pas du DSS : ils apparaissent au FSS, se
+pointent en survitesse et se parcourent en vol normal. Ce sont les nuages de Lagrange et ce qu'ils abritent.
+
+Le référentiel de codex de Canonn compte **133 entrées** classées « Cloud » : 12 pour les nuages eux-mêmes —
+les six couleurs Caeruleum, Croceum, Luteolum, Roseum, Rubicundum et Viride, des variantes « Storm » et le
+Proto-Lagrange Cloud — et
+121 pour les organismes qui y vivent.
+
+| Contenu d'un Notable Stellar Phenomenon                               | Entrées de codex |
+|-----------------------------------------------------------------------|------------------|
+| Nuages de Lagrange eux-mêmes (sous-catégorie *Geology and Anomalies*) | 12               |
+| Organismes de type *Mollusc* (sous-catégorie *Organic Structures*)    | 49               |
+| Organismes de type *Pod* (sous-catégorie *Organic Structures*)        | 36               |
+| Organismes de type *Crystals* (sous-catégorie *Organic Structures*)   | 18               |
+| Organismes de type *Tree* (sous-catégorie *Organic Structures*)       | 11               |
+| Organismes de type *Plates* (sous-catégorie *Organic Structures*)     | 4                |
+| Organismes de type *Spheres* (sous-catégorie *Organic Structures*)    | 2                |
+| Organismes de type *Heart* (sous-catégorie *Organic Structures*)      | 1                |
+| **Total des entrées classées « Cloud »**                              | 133              |
+
+Pour l'exobiologiste, la conclusion tient en une phrase : les Notable Stellar Phenomena sont la troisième source de
+scans d'organismes, à côté des surfaces planétaires d'Odyssey et des structures organiques posées hors atmosphère. Ce
+guide n'en dit pas davantage, et c'est délibéré : ni les conditions d'apparition des nuages, ni la valeur de vente de
+leurs organismes, ni l'utilité d'un DSS sur place ne sont établies sur une source consultable.
+
+#### Les 53 classes stellaires du journal de bord : identité, couleur, collecte de carburant, fréquence
+
+Le journal du jeu désigne chaque étoile par la valeur du champ `StarType` d'un événement `Scan` : ce sont ces chaînes
+exactes qu'un commandant retrouve dans ses propres fichiers et dans les API tierces. Le tableau ci-dessous les recense
+toutes — 53 classes — avec le libellé affiché en jeu, le sous-type employé par Spansh et EDSM (c'est lui qui porte la
+couleur), l'aptitude à la collecte de carburant et le poids de la classe dans la base EDSM au 10 septembre 2026.
+
+| `StarType` au journal   | Libellé en jeu                                    | Sous-type Spansh/EDSM (couleur)       | Collecte de carburant | Corps EDSM | Part EDSM |
+|-------------------------|---------------------------------------------------|---------------------------------------|-----------------------|-----------:|----------:|
+| `K`                     | Orange K class star                               | K (Yellow-Orange) Star                | Oui                   | 21 272 414 |  18,679 % |
+| `G`                     | Yellow G class star                               | G (White-Yellow) Star                 | Oui                   |  7 383 997 |   6,484 % |
+| `B`                     | Luminous Blue B class star                        | B (Blue-White) Star                   | Oui                   |  1 426 927 |   1,253 % |
+| `F`                     | White F class star                                | F (White) Star                        | Oui                   |  9 424 348 |   8,275 % |
+| `O`                     | Luminous Hot O class star                         | O (Blue-White) Star                   | Oui                   |    170 262 |   0,150 % |
+| `A`                     | Bluish-White A class star                         | A (Blue-White) Star                   | Oui                   |  4 671 937 |   4,102 % |
+| `M`                     | Red M class star                                  | M (Red dwarf) Star                    | Oui                   | 40 980 718 |  35,985 % |
+| `L`                     | Dark Red L class star                             | L (Brown dwarf) Star                  | Non                   | 11 892 112 |  10,442 % |
+| `T`                     | Methane Dwarf T class star                        | T (Brown dwarf) Star                  | Non                   |  5 583 893 |   4,903 % |
+| `Y`                     | Brown Dwarf Y class star                          | Y (Brown dwarf) Star                  | Non                   |  3 088 927 |   2,712 % |
+| `D`                     | White Dwarf D class star                          | White Dwarf (D) Star                  | Non                   |         14 |   0,000 % |
+| `DA`                    | White Dwarf DA class star                         | White Dwarf (DA) Star                 | Non                   |    123 884 |   0,109 % |
+| `DAB`                   | White Dwarf DAB class star                        | White Dwarf (DAB) Star                | Non                   |     55 152 |   0,048 % |
+| `DAO`                   | White Dwarf DAO class star                        | —                                     | Non                   |     absent |    absent |
+| `DAZ`                   | White Dwarf DAZ class star                        | White Dwarf (DAZ) Star                | Non                   |      2 670 |   0,002 % |
+| `DAV`                   | White Dwarf DAV class star                        | White Dwarf (DAV) Star                | Non                   |     14 138 |   0,012 % |
+| `DB`                    | White Dwarf DB class star                         | White Dwarf (DB) Star                 | Non                   |     22 338 |   0,020 % |
+| `DBZ`                   | White Dwarf DBZ class star                        | White Dwarf (DBZ) Star                | Non                   |        722 |   0,001 % |
+| `DBV`                   | White Dwarf DBV class star                        | White Dwarf (DBV) Star                | Non                   |      4 202 |   0,004 % |
+| `DO`                    | White Dwarf DO class star                         | —                                     | Non                   |     absent |    absent |
+| `DOV`                   | White Dwarf DOV class star                        | —                                     | Non                   |     absent |    absent |
+| `DQ`                    | White Dwarf DQ class star                         | White Dwarf (DQ) Star                 | Non                   |         22 |   0,000 % |
+| `DC`                    | White Dwarf DC class star                         | White Dwarf (DC) Star                 | Non                   |    188 323 |   0,165 % |
+| `DCV`                   | White Dwarf DCV class star                        | White Dwarf (DCV) Star                | Non                   |     16 077 |   0,014 % |
+| `DX`                    | White Dwarf DX class star                         | —                                     | Non                   |     absent |    absent |
+| `N`                     | Neutron Star                                      | Neutron Star                          | Non                   |  3 586 557 |   3,149 % |
+| `H`                     | Black Hole                                        | Black Hole                            | Non                   |    455 817 |   0,400 % |
+| `SuperMassiveBlackHole` | Super Massive Black Hole                          | Supermassive Black Hole               | Non                   |          1 |   0,000 % |
+| `W`                     | Wolf-Rayet W class star                           | Wolf-Rayet Star                       | Non                   |         84 |   0,000 % |
+| `WN`                    | Wolf-Rayet WN class star                          | Wolf-Rayet N Star                     | Non                   |      9 782 |   0,009 % |
+| `WNC`                   | Wolf-Rayet WNC class star                         | Wolf-Rayet NC Star                    | Non                   |      9 920 |   0,009 % |
+| `WC`                    | Wolf-Rayet WC class star                          | Wolf-Rayet C Star                     | Non                   |     14 196 |   0,012 % |
+| `WO`                    | Wolf-Rayet WO class star                          | Wolf-Rayet O Star                     | Non                   |     31 494 |   0,028 % |
+| `TTS`                   | T Tauri star                                      | T Tauri Star                          | Non                   |  2 911 142 |   2,556 % |
+| `AeBe`                  | Herbig Ae/Be class star                           | Herbig Ae Be Star / Herbig Ae/Be Star | Non                   |    156 931 |   0,138 % |
+| `CS`                    | Carbon CS class star                              | —                                     | Non                   |     absent |    absent |
+| `C`                     | Carbon C class star                               | C Star                                | Non                   |        203 |   0,000 % |
+| `CN`                    | Carbon CN class star                              | CN Star                               | Non                   |     18 750 |   0,016 % |
+| `CJ`                    | Carbon CJ class star                              | CJ Star                               | Non                   |      2 855 |   0,003 % |
+| `CHd`                   | Carbon CHd class star                             | —                                     | Non                   |     absent |    absent |
+| `MS`                    | Intermediate low Zirconium Monoxide MS class star | MS-type Star                          | Non                   |     25 758 |   0,023 % |
+| `S`                     | Cool Giant Zirconium Monoxide rich S class star   | S-type Star                           | Non                   |     26 897 |   0,024 % |
+| `A_BlueWhiteSuperGiant` | A Blue White Super Giant                          | A (Blue-White super giant) Star       | Oui                   |     18 148 |   0,016 % |
+| `B_BlueWhiteSuperGiant` | B Blue White Super Giant                          | B (Blue-White super giant) Star       | Oui                   |     15 373 |   0,013 % |
+| `F_WhiteSuperGiant`     | F White Super Giant                               | F (White super giant) Star            | Oui                   |      8 738 |   0,008 % |
+| `G_WhiteSuperGiant`     | G White Super Giant                               | G (White-Yellow super giant) Star     | Oui                   |      7 031 |   0,006 % |
+| `K_OrangeGiant`         | K Orange Giant                                    | K (Yellow-Orange giant) Star          | Oui                   |     53 769 |   0,047 % |
+| `M_RedGiant`            | M Red Giant                                       | M (Red giant) Star                    | Oui                   |    204 311 |   0,179 % |
+| `M_RedSuperGiant`       | M Red Super Giant                                 | M (Red super giant) Star              | Oui                   |      3 035 |   0,003 % |
+| `X`                     | Exotic                                            | —                                     | inconnu               |     absent |    absent |
+| `Nebula`                | Nebula                                            | —                                     | sans objet            |     absent |    absent |
+| `RoguePlanet`           | Rogue Planet                                      | —                                     | sans objet            |     absent |    absent |
+| `StellarRemnantNebula`  | Stellar Remnant Nebula                            | —                                     | sans objet            |     absent |    absent |
+
+Recomptes sur le tableau ci-dessus : 53 lignes, dont 14 classes marquées scoopables, 35 non scoopables, 1 inconnue et
+3 sans objet (les trois valeurs de l'énumération qui ne désignent pas une étoile). Les 14 classes scoopables cumulent
+75,200 % des corps stellaires du relevé EDSM.
+
+Trois avertissements de lecture, tous les trois importants :
+
+- **La colonne « collecte de carburant » est DÉRIVÉE, pas relevée.** Aucune des sources consultées n'expose
+  d'indicateur de scoopabilité par classe. La colonne applique à la lettre le mnémonique **KGBFOAM** que documente
+  déjà [Équipements](./04-equipements.md) à propos du collecteur de carburant (*Fuel Scoop*) : est marquée scoopable
+  toute classe dont la lettre spectrale appartient à K, G, B, F, O, A ou M, géantes et supergéantes de ces mêmes
+  lettres comprises, et rien d'autre. Deux pièges en découlent : `MS` et `S` sont des valeurs d'énumération
+  **distinctes** de `M` — une étoile `MS` n'est pas une étoile M — et `W` (Wolf-Rayet) n'appartient pas au mnémonique.
+  La classe `X` (« Exotic ») n'ayant jamais été confirmée dans un journal réel, son cas est noté « inconnu » et non
+  « non ». [Équipements](./04-equipements.md) renvoie explicitement à ce guide pour le rendement « classe stellaire
+  par classe stellaire » : la réponse honnête est que la seule donnée établie est **binaire**. Aucune source
+  accessible — dépôts EDDiscovery, coriolis-data, FDevIDs — ne publie de débit ni de coefficient de collecte par
+  classe d'étoile ; le débit en kg/s que documente ce corpus caractérise le **module**, pas l'étoile.
+- **La colonne « part EDSM » n'est PAS une fréquence galactique.** C'est le poids de chaque sous-type dans les
+  113 883 869 étoiles enregistrées par EDSM, réparties en 43 sous-types dont les effectifs se somment exactement au
+  total affiché. Ce relevé mesure ce que les commandants ont rapporté, avec au moins deux biais connus et non
+  quantifiables : sur-représentation de la Bulle et des routes fréquentées, et sur-représentation des étoiles à
+  neutrons, que les *neutron highways* font journaliser en masse. Les 3,149 % d'étoiles à neutrons se lisent « 3,149 %
+  des étoiles enregistrées par les joueurs », en aucun cas « 3,149 % des étoiles de la galaxie ».
+- **10 classes n'ont aucun sous-type Spansh/EDSM correspondant**, et donc aucun effectif : `DAO`, `DO`, `DOV`, `DX`,
+  `CS`, `CHd`, `X`, `Nebula`, `RoguePlanet`, `StellarRemnantNebula`. Le code source de correspondance signale lui-même
+  ces manques.
+
+#### Températures et masses relevées sur 62 étoiles de journaux réels (échantillon, et non bornes de classe)
+
+Le tableau suivant est un RELEVÉ brut, dépouillé par script sur les 43 fichiers de journal de scan du jeu de test
+d'EDDiscovery. Il donne un ordre de grandeur crédible, mais il ne définit **aucune** frontière de classe : il ne
+couvre que 11 des 53 classes de l'énumération, 42 classes n'y apparaissant pas une seule fois, et les effectifs par
+classe vont de 1 à 18. Rien n'y interdit qu'une K existe en jeu à 3 500 K ou à 5 200 K.
+
+| `StarType` | Corps relevés | T min (K) | T médiane (K) | T max (K) | Masse (masses solaires) |
+|------------|--------------:|----------:|--------------:|----------:|------------------------:|
+| `K`        |            14 |     3 803 |         4 370 |     5 063 |           0,516 – 0,902 |
+| `G`        |             5 |     5 395 |         5 590 |     5 942 |           0,891 – 1,051 |
+| `F`        |             2 |     6 253 |         6 274 |     6 295 |           1,051 – 1,102 |
+| `A`        |             3 |     7 904 |         8 299 |     8 884 |           1,574 – 2,039 |
+| `M`        |            18 |     2 008 |         3 024 |     3 657 |           0,191 – 0,465 |
+| `L`        |             6 |     1 445 |         1 659 |     1 862 |           0,121 – 0,168 |
+| `T`        |             6 |       929 |           986 |     1 140 |           0,047 – 0,082 |
+| `Y`        |             3 |       460 |           526 |       614 |           0,020 – 0,027 |
+| `DA`       |             2 |    19 194 |        21 540 |    23 887 |           0,293 – 0,406 |
+| `N`        |             1 | 2 456 499 |     2 456 499 | 2 456 499 |           0,746 – 0,746 |
+| `H`        |             2 |         0 |             0 |         0 |          3,195 – 31,539 |
+
+Deux singularités du journal méritent d'être signalées, parce qu'elles ressemblent à des erreurs sans en être : les
+trous noirs y déclarent une température de surface de 0 K, et l'unique étoile à neutrons du relevé en déclare
+2 456 499. Les bornes de température par classe, elles, ne sont établies par aucune source accessible : les seuils que
+l'on trouve dans le code d'EDDiscovery (5 500 / 8 000 / 14 000 K pour les naines blanches, par exemple) sont des
+seuils de **choix d'icône** dans un outil tiers, pas des bornes de classe de Frontier.
+
+La valeur marchande de ces étoiles est traitée plus bas, en 1.5 : depuis la version 3.3, elle ne dépend plus que de
+quatre constantes et de la masse.
+
 ### 1.4 Exploration profonde : Neutron Highways, Road to Riches, Distant Worlds
 
 #### Neutron Highways — surcharge du FSD sur étoile à neutrons
@@ -162,6 +554,63 @@ l'équateur d'un pulsar rapide.
 accélère considérablement les déplacements en survitesse et l'approche des corps planétaires ; il complète utilement
 les neutron highways pour la phase de trajet intra-système d'une expédition longue distance.
 
+#### Ce que multiplie exactement une supercharge de FSD — et l'exception à la règle du ×4
+
+Le multiplicateur de portée appliqué au saut suivant est RELEVÉ dans le référentiel d'EDDiscovery et confirmé par le
+format du journal de jeu. Il n'a pas la même valeur selon la source de la surcharge :
+
+| Source de la surcharge                             | Multiplicateur de portée | Portée du chiffre                             | Où il est relevé                                                                                 |
+|----------------------------------------------------|-------------------------:|-----------------------------------------------|--------------------------------------------------------------------------------------------------|
+| Étoile à neutrons (`N`)                            |                       ×4 | Tous les FSD du référentiel sauf un           | `FSDSpec.cs` (« neutron (4) ») ; `BoostUsed = 4` au journal                                      |
+| Étoile à neutrons, FSD Mk II Supercharge Optimised |                       ×6 | Ce seul module                                | `ModuleList.cs` (`FSDNeutronMultiplier = 6`), champ saisi à la main par les outils d'EDDiscovery |
+| Naine blanche (classes `D*`)                       |                     ×1,5 | Non différencié par module dans la source lue | `FSDSpec.cs` (« jet cone (1.5) »)                                                                |
+| Injection de synthèse, qualité basique             |                    ×1,25 | Sans étoile                                   | `JournalFSDJumpCarrierJump.cs` (`BoostUsed = 1`)                                                 |
+| Injection de synthèse, qualité standard            |                     ×1,5 | Sans étoile                                   | `JournalFSDJumpCarrierJump.cs` (`BoostUsed = 2`)                                                 |
+| Injection de synthèse, qualité premium             |                       ×2 | Sans étoile                                   | `JournalFSDJumpCarrierJump.cs` (`BoostUsed = 3`)                                                 |
+
+**La règle « une supercharge sur étoile à neutrons multiplie la portée par 4 » comporte une exception, et elle est
+nommée.** Le référentiel de modules d'EDDiscovery porte 72 Frame Shift Drives ; sur les 67 qui renseignent le
+multiplicateur de supercharge, 66 valent 4 et **un seul** vaut 6 : le module d'identifiant 129038968, dont le
+catalogue EDCD/FDevIDs donne le nom de chantier naval **Mk II Supercharge Optimised Frame Shift Drive (SCO)**, de
+taille 8 et de note A. Les notes de mise à jour 4.3.0.0 de Frontier (*Caspian Explorer Update*, 2 décembre 2025)
+confirment l'existence de ce module et sa fonction — il amplifie l'effet de la supercharge — mais **ne chiffrent aucun
+gain** : le ×6 vient d'EDDiscovery, et le champ qui le porte y est annoté comme saisi à la main par les outils du
+projet. Formuler la règle sans son exception, ou attribuer le ×6 à Frontier, serait faux dans les deux cas. Deuxième
+nuance sur le même référentiel : 5 FSD ne portent aucun multiplicateur, et ce sont exactement les cinq FSD classiques
+de taille 8 (notes E à A) — c'est un trou du référentiel, pas une propriété du jeu, et rien ne permet d'en conclure
+qu'ils ne se superchargent pas.
+
+Un piège de vocabulaire, à connaître pour lire les sources : le code appelle « jet cone » le cas de la **naine
+blanche** et « neutron » celui de l'étoile à neutrons, alors que le cône de jet est le dispositif physique commun aux
+deux. L'événement de journal `JetConeBoost` est émis dans les deux cas.
+
+Trois points solides, parce qu'ils tiennent à la structure même du journal ou du code :
+
+- **Pas de cumul avec une injection de carburant.** Le champ `BoostUsed` d'un saut est un entier unique, valant 1, 2
+  ou 3 pour les injections de synthèse et 4 pour la surcharge sur étoile à neutrons : un saut ne peut donc porter
+  qu'un seul boost. Que ce soit « le plus fort qui l'emporte » est en revanche une affirmation de forum, non établie.
+- **La supercharge use un module, pas la coque.** Le jeu émet un événement `JetConeDamage` dont le seul champ utile
+  nomme le **module** endommagé. L'usure d'environ 1 % d'intégrité de FSD par supercharge, et la réparation à l'AFMU
+  toutes les vingtaines de supercharges, sont des chiffres communautaires que ce guide ne peut pas étayer sur une
+  source primaire. Les dégâts de coque et l'échauffement massif relèvent, eux, de l'avarie : tomber en vol normal à
+  l'intérieur du jet, ou entrer dans la zone d'exclusion de l'étoile.
+- **Le multiplicateur est un paramètre du vaisseau, pas une constante du routeur.** Le Neutron Router de Spansh (voir
+  1.2) reçoit un paramètre de multiplicateur de supercharge alimenté par les caractéristiques du FSD embarqué, et le
+  Galaxy Plotter reçoit en plus deux drapeaux de supercharge. Deux commandants ne routent donc pas sur la même grille
+  s'ils n'ont pas le même FSD.
+
+Ce qui reste **communautaire** : la géométrie du cône (viser son extrémité large, loin de l'étoile, entrer
+tangentiellement à vitesse réduite, couper les moteurs, attendre une dizaine de secondes), le fait que la charge se
+conserve jusqu'au saut suivant sans minuteur, et le danger particulier de la naine blanche — zone d'exclusion large
+rapportée à la taille du cône, donc risque réel de sortie de survitesse tout près de l'étoile.
+
+Deux réserves de méthode, enfin. Les 43 journaux de test dépouillés pour ce guide ne contiennent **aucun** événement
+`JetConeBoost` : le ×4 et le ×1,5 sont établis par le code d'EDDiscovery et par le wiki communautaire, jamais par une
+observation de journal. Et dans le modèle de portée d'EDDiscovery, le bonus plat du [Guardian FSD
+Booster](./05-guardians.md) est ajouté **avant** la multiplication par le boost, donc lui aussi multiplié — c'est une
+conséquence de l'écriture du code, qu'aucune source primaire ne confirme, et le code lui-même signale que sa formule
+est probablement incorrecte pour le boost.
+
 #### Road to Riches — cibler les systèmes à espèces exobiologiques de valeur
 
 Méthode consistant à cibler les systèmes contenant des espèces exobiologiques à haute valeur avant de s'y rendre, plutôt
@@ -176,21 +625,83 @@ que de se poser au hasard :
 
 #### Distant Worlds — expéditions communautaires vers les confins de la galaxie
 
-Les expéditions **Distant Worlds** — voyages communautaires massifs et organisés vers les confins de la galaxie —
-sont documentées dans les archives Canonn (« Distant Worlds 2 » citée comme community goal, « Distant Worlds 3302 » dans les
-actualités Canonn). Ces expéditions relèvent de la mécanique générique des **Community Goals** (voir
-[Community Goals](./24-community-goals.md)) et se déroulent le plus souvent en **Wing** organisé (voir
-[Wings, Multicrew et CQC](./23-jeu-en-groupe.md)). Le détail logistique des éditions les plus récentes (dates,
-itinéraire) évolue d'une édition à l'autre ; il est conseillé de consulter les canaux officiels de la communauté avant
-de s'engager sur une expédition en cours.
+Les expéditions **Distant Worlds** sont des voyages communautaires massifs et organisés depuis la Bulle jusqu'aux
+confins de la galaxie, et plus précisément jusqu'à **Beagle Point**. Elles sont documentées dans les archives Canonn
+(« Distant Worlds 2 » citée comme community goal, « Distant Worlds 3302 » dans les actualités Canonn), relèvent de la
+mécanique générique des **Community Goals** (voir [Community Goals](./24-community-goals.md)) et se déroulent le plus
+souvent en **Wing** organisé (voir [Wings, Multicrew et CQC](./23-jeu-en-groupe.md)). Leur récit et leur place dans la
+chronologie figurent dans [Lore](./01-lore.md) ; ce qui suit en donne la logistique vérifiable, telle que
+l'enregistrent les fiches d'expédition d'EDSM et le site officiel de la dernière édition.
+
+Trois éditions ont eu lieu. Le tableau les recense — 3 lignes, recomptées sur son contenu —, et distingue
+systématiquement les grandeurs qui circulent sous le même mot :
+
+| Édition                     | Dates réelles                              | Dates in-game                   | Organisateur                     | Participants                                                                                              | Itinéraire                                                                                      | Waypoints                                                         |
+|-----------------------------|--------------------------------------------|---------------------------------|----------------------------------|-----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
+| **Distant Worlds** (DW1)    | 14 janv. 2016 → 5 juin 2016                | 14 janv. 3302 → 5 juin 3302     | CMDR Erimus Kamzel               | 911 sur le suivi EDSM (dont 446 comptes EDSM) ; « plus de 1 000 commandants » selon [Lore](./01-lore.md)  | Pallaeni (camp de base *Brooks Point*, sur Pallaeni A 1) → Beagle Point ; 81 129,92 al estimées | 24 étapes listées ; le champ « Waypoints » de la fiche affiche 22 |
+| **Distant Worlds II** (DW2) | 13 janv. 2019 → 14 juin 2019               | 13 janv. 3305 → 14 juin 3305    | Non établi sur source accessible | 4 380 sur le suivi EDSM (1 727 abandons, 2 647 réussites) ; « environ 10 000 » selon [Lore](./01-lore.md) | Pallaeni → Beagle Point ; 73 107,27 al estimées                                                 | 12 étapes listées ; le champ « Waypoints » de la fiche affiche 10 |
+| **Distant Worlds 3** (DW3)  | Départ non établi → achevée le 18 mai 2026 | Départ non établi → 18 mai 3312 | CMDR Erimus Kamzel               | Non établi                                                                                                | Non établi                                                                                      | Non établi                                                        |
+
+Cinq mises en garde accompagnent ce tableau, et aucune n'est cosmétique :
+
+- **Les effectifs ne sont pas comparables entre eux.** Trois grandeurs distinctes circulent : les inscrits au suivi
+  EDSM (911 pour DW1, 4 380 pour DW2), les comptes EDSM parmi eux (446 pour DW1), et les estimations globales de
+  participation reprises par [Lore](./01-lore.md) (« plus de 1 000 » et « environ 10 000 »). Substituer l'une à
+  l'autre fausse tout.
+- **Les colonnes d'EDSM ne partitionnent pas le total.** Pour DW2, 1 727 abandons et 2 647 réussites font 4 374, soit
+  6 inscrits sans statut enregistré sur 4 380 ; pour DW1, 132 et 329 font 461 sur 911, soit 450 sans statut. Écrire
+  « x commandants ont abandonné, les autres ont réussi » serait donc faux.
+- **Le champ « Waypoints » d'EDSM ne compte pas ce que compte sa propre table.** DW1 annonce 22 waypoints pour
+  24 lignes, DW2 en annonce 10 pour 12 : un écart de +2 dans les deux cas, qui suggère que le système de départ et le
+  système d'arrivée ne sont pas comptés. La lecture est cohérente sur les deux fiches examinées, mais elle reste une
+  inférence sur deux cas : le tableau reporte les deux valeurs sans trancher.
+- **Les durées annoncées et les durées enregistrées ne mesurent pas la même chose.** DW2 est décrite comme un voyage
+  de 18 semaines — la durée annoncée du programme —, alors que l'écart entre les deux bornes du tracker vaut
+  151 jours, soit 21,6 semaines. Les deux chiffres sont justes ; ils ne répondent pas à la même question. DW1, sur les
+  mêmes bornes EDSM, a duré 142 jours (20,3 semaines).
+- **DW3 n'a pas de logistique publiable.** Le site officiel affiche bien le statut « Complete », l'organisateur et
+  l'actualité de clôture, mais ses compteurs de participants et son libellé de prochain waypoint sont des conteneurs
+  remplis côté client : ils sont vides à la capture. L'expédition n'a par ailleurs aucune fiche EDSM. Et son
+  « Expedition Timer » ne permet pas de reconstituer une date : rapporté à la date de coupure affichée sur la même
+  page, il remonte au 14 mai 2026 en comptant des mois de 30 jours et au 11 mai 2026 en comptant des mois de 31 jours,
+  alors que l'écart réel entre le 18 mai 2026 et le 10 septembre 2026 est de 115 jours. Il ne recale sur aucune
+  hypothèse.
+
+Le détail des étapes de DW2, tel que l'enregistre sa fiche EDSM, donne une idée de l'échelle d'une telle expédition —
+**12 étapes** recomptées sur la table, du départ de Pallaeni à l'arrivée à Beagle Point :
+
+| #  | Système (points d'intérêt)                                                      | Distance depuis le départ |
+|----|---------------------------------------------------------------------------------|---------------------------|
+| 1  | Pallaeni                                                                        | — (système de départ)     |
+| 2  | Omega Sector VE-Q b5-15 (Omega Mining Operation)                                | 5 421,59 al               |
+| 3  | Pru Aescs NC-M d7-192                                                           | 9 133,81 al               |
+| 4  | Clooku EW-Y c3-197                                                              | 13 182,44 al              |
+| 5  | Boewnst KS-S c20-959 (Polo Harbour / The Grand Formation / The Venetian Nebula) | 17 772,05 al              |
+| 6  | Dryau Ausms KG-Y e3390 (DSSA Buurian Anchorage / The Dryau Awesomes)            | 24 435,33 al              |
+| 7  | Stuemeae KM-W c1-342 (Armstrong Landing)                                        | 29 772,77 al              |
+| 8  | Hypiae Phyloi LR-C d22 ('Lower' Goliath's Rest)                                 | 36 988,92 al              |
+| 9  | Phroi Bluae QI-T e3-3454 (DSSA HSRC Limpet's Call / Cerulean Tranquility)       | 41 905,80 al              |
+| 10 | Bleethuae NI-B d674 (Morphenniel Nebula)                                        | 45 133,02 al              |
+| 11 | Smootoae QY-S d3-202 (Luna's Shadow)                                            | 59 589,34 al              |
+| 12 | Beagle Point (DSSA Distant Worlds 'Endeavour')                                  | 73 107,27 al              |
+
+Deux réserves sur ce tableau. D'une part, rien ne garantit que la table d'EDSM reproduise la route officielle validée
+par les organisateurs : ces listes sont à lire comme un relevé de tracker, pas comme un itinéraire officiel. D'autre
+part, ce guide et [Lore](./01-lore.md) ne datent pas la première expédition de la même façon : le guide de lore
+retient « fin 2015 - début 2016 », là où la fiche EDSM enregistre un départ le 14 janvier 2016 et une arrivée le
+5 juin 2016. Le départ concorde ; la borne de fin, non. La divergence est signalée ici et laissée à l'arbitrage du
+guide concerné.
+
+Le détail logistique évolue d'une édition à l'autre : il reste conseillé de consulter les canaux officiels de la
+communauté avant de s'engager sur une expédition en cours.
 
 ### 1.5 Vendre ses données d'exploration aux comptoirs Universal Cartographics
 
 Les données de scan — relevés FSS et cartographies DSS — se vendent aux comptoirs **Universal Cartographics** dans les
 stations. Un bonus de **« première découverte »** (*first discovered*) et de **« première cartographie »** (*first
 mapped*) — c'est-à-dire un corps jamais rapporté par un autre commandant — majore significativement la valeur de la
-vente. Les barèmes exacts et la formule de calcul détaillée sont traditionnellement documentés sur Inara.cn et le wiki
-Fandom ; il est recommandé de les y consulter avant une session de vente de données à fort volume.
+vente. Les sous-sections qui suivent chiffrent ce barème corps par corps, donnent les deux formules de calcul et
+disent d'où viennent ces nombres — ainsi que ce qu'ils ne prouvent pas.
 
 #### Cas particulier : mondes remarquables (Earth-like Worlds et Water Worlds), les corps les mieux valorisés
 
@@ -207,13 +718,239 @@ Les deux types partagent des propriétés utiles à connaître :
 - Ils sont détectables **avant même le scan DSS complet**, dès le passage au FSS : leur signature de fréquence présente
   une forme caractéristique différente des autres corps telluriques, ce qui permet à un explorateur entraîné de les
   repérer à l'oreille/à l'œil sur l'interface FSS sans attendre l'analyse complète.
-- Leur valeur de vente aux comptoirs Universal Cartographics dépend d'une formule intégrant la masse, le rayon et la
-  distance parcourue depuis la dernière station — cette formule a été ajustée par Frontier à plusieurs reprises au fil
-  des années ; **ne pas se fier à un chiffre en Cr figé** dans un guide communautaire, mais vérifier la valeur courante
-  sur EDSM ou Inara.cn (calculateurs de valeur d'exploration) avant une session de vente.
+- Leur valeur de vente aux comptoirs Universal Cartographics ne dépend, dans l'implémentation de référence de la
+  communauté, que de **deux entrées** : une constante attachée au type de corps et la masse de celui-ci. Ni le rayon,
+  ni la distance parcourue depuis la dernière station n'y interviennent, contrairement à ce que répètent beaucoup de
+  guides — voir le barème chiffré et ses réserves ci-dessous. Un monde de type terrestre d'une masse terrestre vaut
+  283 628 Cr au scan seul, et 3 546 696 Cr en première découverte suivie d'une première cartographie sous Odyssey ;
+  un monde océanique de même masse, 101 520 Cr au scan seul, et 283 628 Cr s'il est terraformable — soit exactement
+  la valeur d'un monde de type terrestre.
 - Ils sont également des cibles privilégiées pour la **colonisation** (voir 1.7 ci-dessous) : un ELW ou un WW dans un
   système autrement éligible en fait une cible de choix pour un projet d'implantation à vocation agricole ou
   touristique.
+
+#### Combien vaut le scan d'un corps : les deux formules de valeur (version 3.3 et suivantes)
+
+Ce guide reproduit ci-dessous le barème complet, avec une réserve qu'il faut lire avant les chiffres : **ces valeurs
+sont celles que calcule l'implémentation de référence de la communauté** — le fichier `EstimatedValues.cs` du projet
+ouvert EDDiscovery — et non un barème publié par Frontier. L'événement `Scan` du journal ne porte aucun montant en
+crédits, et aucun test du dépôt n'assortit un scan d'une valeur attendue : dans les sources accessibles, il n'existe
+donc **aucune valeur observée en jeu** à laquelle confronter ce barème. Ce qui suit est vérifié comme calcul, pas
+comme relevé de caisse.
+
+Le calcul retenu dépend de l'horodatage du scan, et non de la version du jeu installée. Tout scan postérieur au
+11 décembre 2018 à 9 h 00 UTC relève de la branche « 3.3 et suivantes », la seule qui s'applique aujourd'hui. Les deux
+branches antérieures servent uniquement à revaloriser de vieilles entrées de journal et ne doivent jamais être citées
+comme « les valeurs du jeu ». La distinction n'est pas cosmétique : la plus ancienne des trois n'est pas une formule
+mais une table de **relevés** de terrain, dont le code conserve en commentaire les fourchettes observées en jeu ; les
+deux autres sont des formules. Confondre les deux, c'est présenter un relevé comme un calcul.
+
+**Formule stellaire** — `valeur = k + (m × k / 66,25)`, où `m` est la masse stellaire en masses solaires (champ
+`StellarMass` du journal ; 1,0 si le champ manque). Ni plancher, ni plafond.
+
+**Formule planétaire** — `valeur = max( k + k × m^0,2 × 0,56591828 , 500 )`, où `m` est la masse en masses terrestres
+(champ `MassEM` ; 1,0 par défaut). Le plancher de 500 Cr est réel, et il mord.
+
+Dans les deux cas, `k` est une constante attachée au type de corps, et la valeur publiée est **tronquée** vers zéro,
+pas arrondie. Ni le rayon du corps, ni la distance parcourue depuis la dernière station n'interviennent dans ces
+formules.
+
+#### Barème de la valeur de scan d'une planète, type par type
+
+Les 19 types planétaires de l'énumération du jeu se répartissent en **7 valeurs de k seulement** : les types qui
+partagent la même valeur sont regroupés sur une même ligne. La colonne « k retenu » est RELEVÉE dans le code ; les
+quatre colonnes de valeur sont DÉRIVÉES PAR CALCUL, à la masse de référence de **1 masse terrestre**, pour un corps
+**non terraformable**, bonus Odyssey **actif** (c'est le cas courant : l'indicateur est levé dès que la version du jeu
+commence par 4).
+
+| Type de corps (types de valeur k identique regroupés)                                                                                                                       | k retenu | Scan seul | Première découverte | Cartographié au DSS | 1re découverte + 1re cartographie |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------:|----------:|--------------------:|--------------------:|----------------------------------:|
+| Monde de type terrestre (Earth-like world)                                                                                                                                  |  181 126 |   283 628 |             737 434 |           1 229 056 |                         3 546 696 |
+| Monde d'ammoniac (Ammonia world)                                                                                                                                            |   96 932 |   151 787 |             394 647 |             657 746 |                         1 898 061 |
+| Monde océanique (Water world)                                                                                                                                               |   64 831 |   101 520 |             263 952 |             439 920 |                         1 269 480 |
+| Corps riche en métaux (Metal-rich body)                                                                                                                                     |   21 790 |    34 121 |              88 715 |             147 859 |                           426 678 |
+| Corps à haute teneur en métaux (High metal content body) et géante gazeuse de classe II (Sudarsky class II gas giant)                                                       |    9 654 |    15 117 |              39 305 |              65 508 |                           189 038 |
+| Géante gazeuse de classe I (Sudarsky class I gas giant)                                                                                                                     |    1 656 |     2 593 |               6 742 |              11 237 |                            32 426 |
+| Branche par défaut : les 12 autres types (corps rocheux, glacé, rocheux et glacé, géantes gazeuses de classes III, IV et V, géantes d'eau, géantes à vie, géantes d'hélium) |      300 |       500 |               1 300 |               2 221 |                             6 252 |
+
+Sans le bonus Odyssey — c'est-à-dire pour un scan journalisé par un client antérieur à la 4.0 — seules les deux
+colonnes de cartographie changent :
+
+| Type de corps (types de valeur k identique regroupés)                                                                                                                       | k retenu | Scan seul | Première découverte | Cartographié au DSS | 1re découverte + 1re cartographie |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------:|----------:|--------------------:|--------------------:|----------------------------------:|
+| Monde de type terrestre (Earth-like world)                                                                                                                                  |  181 126 |   283 628 |             737 434 |             945 428 |                         2 728 227 |
+| Monde d'ammoniac (Ammonia world)                                                                                                                                            |   96 932 |   151 787 |             394 647 |             505 958 |                         1 460 047 |
+| Monde océanique (Water world)                                                                                                                                               |   64 831 |   101 520 |             263 952 |             338 400 |                           976 523 |
+| Corps riche en métaux (Metal-rich body)                                                                                                                                     |   21 790 |    34 121 |              88 715 |             113 737 |                           328 213 |
+| Corps à haute teneur en métaux (High metal content body) et géante gazeuse de classe II (Sudarsky class II gas giant)                                                       |    9 654 |    15 117 |              39 305 |              50 391 |                           145 414 |
+| Géante gazeuse de classe I (Sudarsky class I gas giant)                                                                                                                     |    1 656 |     2 593 |               6 742 |               8 643 |                            24 943 |
+| Branche par défaut : les 12 autres types (corps rocheux, glacé, rocheux et glacé, géantes gazeuses de classes III, IV et V, géantes d'eau, géantes à vie, géantes d'hélium) |      300 |       500 |               1 300 |               1 666 |                             4 809 |
+
+**Terraformabilité.** Trois types sur 19 ne réagissent pas à l'indicateur terraformable : le monde de type terrestre,
+dont le bonus est déjà compris dans son k ; le monde d'ammoniac et la géante gazeuse de classe I, où l'indicateur
+n'est tout simplement pas lu. Pour les 16 autres types, le bonus s'ajoute à k **avant** tout calcul — d'où les 4
+lignes suivantes, bonus Odyssey actif :
+
+| Type de corps (types de valeur k identique regroupés)                                                                                                                       | k retenu | Scan seul | Première découverte | Cartographié au DSS | 1re découverte + 1re cartographie |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------:|----------:|--------------------:|--------------------:|----------------------------------:|
+| Monde océanique (Water world)                                                                                                                                               |  181 126 |   283 628 |             737 434 |           1 229 056 |                         3 546 696 |
+| Corps riche en métaux (Metal-rich body)                                                                                                                                     |   87 421 |   136 894 |             355 924 |             593 207 |                         1 711 823 |
+| Corps à haute teneur en métaux (High metal content body) et géante gazeuse de classe II (Sudarsky class II gas giant)                                                       |  110 331 |   172 769 |             449 200 |             748 667 |                         2 160 432 |
+| Branche par défaut : les 12 autres types (corps rocheux, glacé, rocheux et glacé, géantes gazeuses de classes III, IV et V, géantes d'eau, géantes à vie, géantes d'hélium) |   93 628 |   146 613 |             381 195 |             635 326 |                         1 833 365 |
+
+Une conséquence directe de la construction du code : un monde océanique terraformable vaut **exactement** autant qu'un
+monde de type terrestre, puisque le k du second est posé comme la somme du k du premier et de son bonus de
+terraformabilité. Les deux lignes portent les mêmes chiffres, et ce n'est pas une coïncidence.
+
+**Effet de la masse.** Il est réel mais lent, la masse intervenant à la puissance 0,2. Les deux colonnes ci-dessous
+sont DÉRIVÉES, pour un corps non terraformable, hors bonus Odyssey :
+
+| Masse (masses terrestres) | Monde de type terrestre — scan seul | Corps glacé — scan seul |
+|--------------------------:|------------------------------------:|------------------------:|
+|                      0,01 |                             221 932 |                     500 |
+|                      0,10 |                             245 800 |                     500 |
+|                      1,00 |                             283 628 |                     500 |
+|                     10,00 |                             343 581 |                     569 |
+|                    100,00 |                             438 600 |                     726 |
+|                  1 000,00 |                             589 195 |                     975 |
+
+Ce petit tableau montre au passage que le plancher de 500 Cr n'est pas décoratif : un corps glacé y est encore collé à
+1 masse terrestre et ne s'en détache qu'entre 1 et 10 masses terrestres. Toute la branche par défaut — 12 types sur 19
+— plafonne au plancher tant que le corps est léger.
+
+#### Les 8 valeurs possibles d'un même corps : multiplicateurs, bonus Odyssey et ordre des opérations
+
+Six multiplicateurs seulement interviennent, tous RELEVÉS dans le code :
+
+| Multiplicateur                                                       | Valeur                  | S'applique à                   | Variable ou motif dans le code      | Ligne |
+|----------------------------------------------------------------------|-------------------------|--------------------------------|-------------------------------------|------:|
+| Première découverte (*first discovered*)                             | ×2,6                    | Étoiles et planètes            | `firstdiscovery`                    |    81 |
+| Première découverte **et** première cartographie                     | ×3,699622554, puis ×2,6 | Planètes seules                | `mapmultforfirstdiscoveredmapped`   |   130 |
+| Première cartographie seule                                          | ×8,0956                 | Planètes seules                | `mapmultforfirstmappedonly`         |   131 |
+| Corps déjà découvert et cartographié, que l'on cartographie soi-même | ×3,3333333              | Planètes seules                | `mapmultforalreadymappeddiscovered` |   132 |
+| Cartographie efficace (objectif de sondes tenu)                      | ×1,25                   | Planètes seules                | `effmapped`                         |   128 |
+| Bonus Odyssey                                                        | +30 %, plancher 555 Cr  | Cartographie de planètes seule | `Math.Max(v * 0.3, 555)`            |   154 |
+
+Leur combinaison produit 8 valeurs distinctes pour un même corps, selon ce que le commandant a fait et selon ce que
+d'autres avaient déjà fait avant lui. Le tableau ci-dessous les donne toutes, DÉRIVÉES PAR CALCUL, pour deux corps de
+référence à 1 masse terrestre : un monde de type terrestre et un corps glacé.
+
+| Situation du commandant                                         | Propriété du code                                     | Terrestre, sans Odyssey | Terrestre, avec Odyssey | Corps glacé, sans Odyssey | Corps glacé, avec Odyssey |
+|-----------------------------------------------------------------|-------------------------------------------------------|------------------------:|------------------------:|--------------------------:|--------------------------:|
+| Scan seul, corps déjà découvert et déjà cartographié            | `EstimatedValueBase`                                  |                 283 628 |                 283 628 |                       500 |                       500 |
+| Scan seul, première découverte                                  | `EstimatedValueFirstDiscovered`                       |                 737 434 |                 737 434 |                     1 300 |                     1 300 |
+| Cartographié au DSS, corps déjà découvert et cartographié       | `EstimatedValueMapped`                                |                 945 428 |               1 229 056 |                     1 666 |                     2 221 |
+| Idem, cartographie efficace                                     | `EstimatedValueMappedEfficiently`                     |               1 181 785 |               1 536 321 |                     2 083 |                     2 777 |
+| Première cartographie seule (corps déjà découvert par un autre) | `EstimatedValueFirstMapped`                           |               2 296 143 |               2 984 985 |                     4 047 |                     5 262 |
+| Première cartographie seule, efficace                           | `EstimatedValueFirstMappedEfficiently`                |               2 870 178 |               3 731 232 |                     5 059 |                     6 577 |
+| Première découverte + première cartographie                     | `EstimatedValueFirstDiscoveredFirstMapped`            |               2 728 227 |               3 546 696 |                     4 809 |                     6 252 |
+| Idem, cartographie efficace                                     | `EstimatedValueFirstDiscoveredFirstMappedEfficiently` |               3 410 284 |               4 433 370 |                     6 011 |                     7 815 |
+
+Trois conséquences de l'ordre des opérations, qui sont des dérivations et non des relevés :
+
+1. **Le bonus Odyssey ne s'applique qu'aux valeurs de cartographie.** Ni la valeur de base, ni la valeur de première
+   découverte ne passent par la fonction qui l'applique. Scanner un corps sans le cartographier ne rapporte pas un
+   crédit de plus sous Odyssey — les deux premières lignes du tableau le montrent, identiques d'une colonne à l'autre.
+2. **Sur la colonne « première découverte + première cartographie », le plancher Odyssey vaut 1 443 Cr et non 555.**
+   Le bonus y est appliqué **avant** le ×2,6, qui le multiplie à son tour.
+3. **Le ×1,25 de cartographie efficace est appliqué après le bonus Odyssey**, dont il majore donc aussi les 30 %. Il
+   ne multiplie jamais la valeur de base seule.
+
+Le bonus Odyssey ne vaut d'ailleurs pas toujours +30 % : c'est le plus grand des deux termes qui l'emporte. Sur un
+corps glacé d'une masse terrestre, la cartographie d'un corps déjà connu passe de 1 666 à 2 221 Cr, soit exactement
++555 Cr — le plancher — et non les +499 Cr qu'aurait donnés une hausse de 30 %.
+
+Enfin, la « cartographie efficace » désigne le fait de boucler la cartographie au sondeur de surface détaillé sans
+dépasser l'objectif de sondes que le jeu associe au corps. Le fichier de référence porte **uniquement** le
+multiplicateur : ni l'objectif de sondes par corps, ni la règle qui décide si le bonus est acquis ne s'y trouvent.
+Écrire « il faut n sondes » sur la foi de cette source serait une invention.
+
+#### Valeur de scan d'une étoile : quatre constantes seulement, et aucune cartographie
+
+Depuis la version 3.3, le jeu ne différencie plus la valeur de scan des classes stellaires principales. Une O, une B,
+une A, une F, une G, une K, une M, une naine brune, une Wolf-Rayet, une carbonée, une T Tauri, une géante ou une
+supergéante partagent toutes le même k. Il n'existe que **4 valeurs de k** en tout : 18 classes sur 53 en reçoivent
+une spécifique, les 35 autres retombent sur le k par défaut. Il n'existe donc **pas** de table de valeur par classe
+stellaire : la liste détaillée classe par classe que l'on trouve encore dans d'anciens guides appartient à la branche
+antérieure à 2017, qui ne concerne plus aucun scan actuel.
+
+| Groupe de classes (version 3.3 et suivantes)                                                                                   |       k | Scan seul à 1 masse solaire | Première découverte (×2,6) |
+|--------------------------------------------------------------------------------------------------------------------------------|--------:|----------------------------:|---------------------------:|
+| Naines blanches : les 15 classes `D*`                                                                                          |  14 057 |                      14 269 |                     37 099 |
+| Étoile à neutrons `N` et trou noir `H`                                                                                         |  22 628 |                      22 969 |                     59 720 |
+| Trou noir supermassif `SuperMassiveBlackHole` (chiffre non fiable, voir les trous ci-dessous)                                  | 33,5678 |                          34 |                         88 |
+| Branche par défaut : les 35 autres classes (`O`, `B`, `A`, `F`, `G`, `K`, `M`, naines brunes, Wolf-Rayet, carbonées, géantes…) |   1 200 |                       1 218 |                      3 167 |
+
+Conséquence, contre-intuitive mais directe : à masse égale, une O massive ne rapporte pas plus qu'une naine rouge M.
+L'écart observé en jeu entre les deux vient uniquement du terme de masse, comme le montre ce tableau DÉRIVÉ :
+
+| Masse (masses solaires) | Classe ordinaire (k = 1 200) | Naine blanche | Étoile à neutrons ou trou noir |
+|------------------------:|-----------------------------:|--------------:|-------------------------------:|
+|                     0,1 |                        1 201 |        14 078 |                         22 662 |
+|                     0,5 |                        1 209 |        14 163 |                         22 798 |
+|                     1,0 |                        1 218 |        14 269 |                         22 969 |
+|                     2,0 |                        1 236 |        14 481 |                         23 311 |
+|                    10,0 |                        1 381 |        16 178 |                         26 043 |
+|                    60,0 |                        2 286 |        26 787 |                         43 121 |
+
+Trois précisions propres aux étoiles, qu'il ne faut pas transposer depuis les planètes : **une étoile ne se
+cartographie pas** — la branche stellaire du code ne renseigne aucune des propriétés de cartographie —, le **bonus
+Odyssey ne s'y applique pas**, et les multiplicateurs ×3,699622554, ×8,0956, ×3,3333333 et ×1,25 sont exclusivement
+planétaires. Seul le ×2,6 de première découverte vaut aussi pour les étoiles.
+
+#### Ce que ce barème ne dit pas : les trous à connaître
+
+- **Aucune valeur de référence relevée en jeu.** C'est le trou principal. Les chiffres ci-dessus sont « ce que calcule
+  l'implémentation de référence d'EDDiscovery », pas « ce que Frontier paie ». Aucun test unitaire du dépôt, aucun
+  événement `SellExplorationData` ou `MultiSellExplorationData` des journaux disponibles ne permet le recoupement par
+  le total encaissé.
+- **Deux constantes sont déclarées non confirmées par les auteurs du code eux-mêmes** : le k du corps riche en métaux
+  (21 790) et celui du trou noir supermassif (33,5678) portent tous deux en commentaire la mention *not confirmed in
+  game*. Les lignes correspondantes des tableaux en héritent.
+- **La valeur d'un trou noir supermassif n'est pas exploitable.** Son k produit 34 Cr à une masse solaire, moins
+  qu'une étoile banale ; or toute la valeur d'un tel objet vient de sa masse, et aucune source accessible ici ne donne
+  la masse typique d'un trou noir supermassif du jeu. Le chiffre est exact au regard de la formule et dénué de sens en
+  jeu : il ne doit pas être cité comme la valeur d'un trou noir supermassif réel.
+- **La condition d'obtention du bonus de cartographie efficace n'est pas dans la source**, seul le multiplicateur
+  l'est.
+- **Ni la prime de découverte du système au « honk » et au FSS, ni les primes de première empreinte (*first
+  footfall*), ni les bonus liés à la cartographie complète d'un système ne relèvent de ce barème** : ils ne figurent
+  pas dans le fichier de référence et ne sont donc pas chiffrés ici.
+- **Un cas de journal reste inexpliqué** : celui d'un corps marqué non découvert mais déjà cartographié. Le code lui
+  attribue alors la valeur de base ou la valeur « déjà cartographié », jamais celle de première découverte, sans que
+  la raison pour laquelle le jeu produit cet état soit documentée dans les sources lues.
+
+#### Provenance des constantes du barème, ligne à ligne
+
+Le tableau ci-dessous donne, pour chaque constante et chaque règle citée plus haut, le motif exact recherché dans le
+fichier source et le numéro de ligne où il se trouve. Fichier :
+`EliteDangerousCore/EliteDangerous/FrontierData/Enumerations/EstimatedValues.cs`, dépôt
+EDDiscovery/EliteDangerousCore, commit `f21533ba1609d309fd6a96b9b3bb488df178a36e` (7 septembre 2026), 825 lignes. Les
+21 motifs ont été retrouvés par recherche littérale, aucun n'est ressorti introuvable.
+
+| Constante ou règle                                       | Motif exact dans le code              | Ligne |
+|----------------------------------------------------------|---------------------------------------|------:|
+| Naines blanches, les 15 classes `D*`                     | `kValue = 14057;`                     |    63 |
+| Étoile à neutrons `N` et trou noir `H`                   | `kValue = 22628;`                     |    68 |
+| Trou noir supermassif                                    | `kValue = 33.5678;`                   |    73 |
+| Toute autre classe stellaire (branche par défaut)        | `kValue = 1200;`                      |    77 |
+| Corps riche en métaux                                    | `kValue = 21790;`                     |    99 |
+| Corps riche en métaux, bonus terraformable               | `kValue += 65631;`                    |   100 |
+| Monde d'ammoniac                                         | `kValue = 96932;`                     |   103 |
+| Géante gazeuse de classe I                               | `kValue = 1656;`                      |   106 |
+| Haute teneur en métaux et géante de classe II            | `kValue = 9654;`                      |   110 |
+| Haute teneur en métaux et classe II, bonus terraformable | `kValue += 100677;`                   |   111 |
+| Monde océanique                                          | `kValue = 64831;`                     |   114 |
+| Monde océanique, bonus terraformable                     | `kValue += 116295;`                   |   115 |
+| Monde de type terrestre (océanique + son bonus)          | `kValue = 64831 + 116295;`            |   119 |
+| Tout autre type planétaire (branche par défaut)          | `kValue = 300;`                       |   122 |
+| Branche par défaut, bonus terraformable                  | `kValue += 93328;`                    |   123 |
+| Formule stellaire                                        | `return k + (m * k / 66.25);`         |   159 |
+| Constante q de la formule planétaire                     | `const double q = 0.56591828;`        |   164 |
+| Plancher planétaire de 500 Cr                            | `Math.Pow(m, 0.2) * q)), 500);`       |   165 |
+| Bonus Odyssey : +30 %, plancher 555 Cr                   | `Math.Max(v * 0.3, 555)`              |   154 |
+| Bascule vers la branche « ED 2.2 »                       | `utc < EliteReleaseDates.Release_2_2` |    25 |
+| Bascule vers la branche « ED 3.2 »                       | `utc < EliteReleaseDates.Release_3_3` |    31 |
 
 ### 1.6 Boîte à outils du commandant explorateur : les sites Canonn Research
 
@@ -479,9 +1216,57 @@ Pour pratiquer l'exobiologie de terrain, le commandant doit s'équiper de :
   l'obscurité.
 - Le plugin communautaire **BioScan** (github.com/Silarn/EDMC-BioScan, extension d'EDMC), largement recommandé : il
   prédit les genres/espèces possibles à partir du type de corps, de la position galactique et des étoiles proches
-  (biologie « Horizons » et « Odyssey »), affiche en temps réel la distance minimale requise et la distance actuelle au
-  dernier échantillon, place des repères de navigation (cap, distance) pour les échantillons restants, et alerte sur les
-  planètes à gravité **≥ 1 G** (marche pénible) ou **≥ 2,7 G** (exploration à pied impossible).
+  (biologie « Horizons » et « Odyssey »), affiche en temps réel la distance minimale requise et la distance actuelle
+  au dernier échantillon, place des repères de navigation (cap, distance) pour les échantillons restants, et marque
+  les corps « haute gravité » (**≥ 1 G**) ou « gravité extrême » (**au-delà de 2,69 G**, seuil où la sortie à pied
+  devient impossible) — voir la mise au point ci-dessous.
+
+#### Gravité, atterrissage et sortie à pied : les seuils réellement étayés
+
+Le seuil de gravité que rencontre l'exobiologiste n'est pas une règle publiée par Frontier : c'est une constante lue
+dans un plugin communautaire, qui rapporte une règle du jeu sans l'implémenter. La source primaire disponible — le
+schéma du journal et du fichier d'état, qui expose bien la gravité courante du commandant à pied — n'énonce, elle,
+**aucun** seuil. Trois précautions s'imposent donc avant de citer un chiffre.
+
+**La borne codée n'est pas celle qu'annonce la documentation.** Le fichier de lecture de BioScan écrit « Extreme
+gravity is 2.7G or greater », mais son code teste une gravité **strictement supérieure à 2,69 G**. Ce n'est pas la
+même condition : en rejouant la fonction isolément, 2,6901 G et 2,695 G lèvent le drapeau de gravité extrême sans être
+« supérieurs ou égaux à 2,7 G », tandis que 2,69 G exactement ne le lève pas. La formulation exacte est donc « au-delà
+de 2,69 G ». Le cas dépasse ce guide : une règle arrondie dans un fichier de documentation n'est pas la règle
+qu'applique le code, et présenter l'une pour l'autre est exactement le défaut que ce corpus s'interdit.
+
+**Le seuil de 1 G ne dit rien de la mobilité.** Il est bien codé, et la documentation du plugin le confirme, mais
+l'outil se contente de marquer le corps « haute gravité » : aucune source accessible ne chiffre une pénalité de
+déplacement, de saut ou d'autonomie de jetpack au-delà. Les révisions antérieures de ce guide glosaient ce seuil en
+« marche pénible » ; la glose n'était étayée nulle part et a été retirée.
+
+**Aucun plafond de gravité n'empêche de poser le vaisseau.** La contrainte des 2,69 G porte sur le débarquement du
+commandant à pied, pas sur l'atterrissage du vaisseau ni sur le déploiement d'un véhicule de surface. Le corps
+`KOI 1701 1`, un corps riche en métaux, est déclaré atterrissable par EDSM avec une gravité de 45,32 G, soit
+16,85 fois le seuil de sortie à pied. Pour la taxonomie des types de corps célestes eux-mêmes, ce guide renvoie à
+[Colonisation](./18-colonisation.md#héritage-de-léconomie-de-base-par-type-de-corps-céleste) plutôt que de la
+dupliquer.
+
+Le tableau ci-dessous rassemble les 7 lignes de seuil qu'il a été possible d'établir : 5 portent un chiffre,
+2 déclarent un trou. Les valeurs en G sont RELEVÉES ; leurs conversions en m/s² sont DÉRIVÉES PAR CALCUL, au taux de
+9,80665 m/s² par G lu dans le référentiel d'EDDiscovery.
+
+| Seuil                                 | Conséquence documentée                                                                                                                                                                     | Statut                              | Source                                                                                                                                                       |
+|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **> 2,69 G** (soit > 26,38 m/s²)      | Sortie du vaisseau à pied (*Disembark*) indisponible : le corps est marqué « gravité extrême »                                                                                             | Relevé (constante lue dans le code) | BioScan `body_data/util.py` l. 61 — `if g_gravity > 2.69` ; README l. 56-57 : « Extreme gravity is 2.7G or greater which makes it impossible to go on foot » |
+| **≥ 1,00 G** (soit ≥ 9,80665 m/s²)    | Corps marqué « haute gravité » par l'outil. Aucune source accessible ne chiffre la dégradation de mobilité correspondante                                                                  | Relevé (constante lue dans le code) | BioScan `body_data/util.py` l. 63 — `if g_gravity >= 1.0` ; README l. 56 : « High gravity is currently considered 1G or greater »                            |
+| **≥ 3,00 G**                          | Seuil de la requête intégrée « Landable with High G » d'EDDiscovery — critère de tri d'un outil tiers, sans effet de jeu                                                                   | Relevé (constante lue dans le code) | EDDiscovery `History/Queries/Queries.cs` l. 96                                                                                                               |
+| **> 4 G** (repère de prudence)        | « you should not try to land on planets while exploring that have more than 4g gravity as it is extremely dangerous » — conseil de pilotage, non un seuil mécanique                        | Relevé (guide communautaire)        | elitedangerous.net, *Planetary Landings Guide*, consulté le 10/09/2026                                                                                       |
+| **45,32 G**                           | Gravité du corps atterrissable la plus élevée relevée pendant cette vérification (KOI 1701 1, *Metal-rich body*) : poser le vaisseau reste possible très au-delà du seuil de sortie à pied | Relevé (donnée de scan)             | EDSM, `api-system-v1/bodies?systemName=KOI 1701`, consulté le 10/09/2026                                                                                     |
+| Train d'atterrissage (*landing gear*) | Aucun seuil de gravité déclenchant des dégâts n'a pu être établi : le journal du jeu n'expose qu'un booléen `LandingGear`, sans valeur associée                                            | Non établi                          | EDDiscovery, *Event List September 2025*, l. 9331 (`UIEvent: UILandingGear`) — champ booléen                                                                 |
+| SRV et Nomad                          | Aucun seuil de gravité modifiant le comportement du véhicule ou interdisant son déploiement n'a pu être établi sur source accessible                                                       | Non établi                          | —                                                                                                                                                            |
+
+Les deux dernières lignes méritent d'être lues comme des trous et non comme des absences d'effet. Aucune source
+accessible ne donne de gravité à partir de laquelle le train d'atterrissage est endommagé — le journal n'expose qu'un
+booléen, sans valeur associée, et les guides communautaires rattachent ces dégâts à la vitesse verticale d'impact
+plutôt qu'à un seuil de gravité. Aucune ne donne davantage de seuil modifiant le comportement du SRV ou du Nomad, ni
+interdisant leur déploiement : l'existence d'un corps atterrissable à 45,32 G rend plausible l'absence de limite, mais
+la plausibilité n'est pas une source.
 
 #### Le Nomad, véhicule de surface dédié à l'exobiologie (Operations, 30 juin 2026)
 
@@ -875,6 +1660,11 @@ World, un Ammonia World ou une géante gazeuse à vie. Séparation minimale 100 
 
 *Le plafond de 1,45 G ne vaut que sur les corps HMC ; sur les corps glacés, rocheux ou rocheux-glacés, la fourchette
 observée est de 0,19 à 0,24 G. Fréquences d'observation Canonn non disponibles pour ce genre.*
+
+> **Divergence signalée.** Ces conditions d'apparition ne coïncident pas exactement avec celles que retient
+> [Ingénieurs](./06-ingenieurs.md) pour le même site de récolte : ce guide-là admet en plus la classe stellaire S,
+> retient 0 à 273 K, place le seuil à 12 000 Ls et accepte le *Water Giant* parmi les mondes déclencheurs. Aucune
+> source primaire consultée ne départage les deux relevés ; voir la mise au point de la partie 1.
 
 #### Electricae — genre d'exobiologie Odyssey (2 espèces, 6,28 M Cr chacune)
 
@@ -1321,12 +2111,12 @@ les deux :
 ##### Cumul du ×5 avec la vente chez Vista Genomics et effet sur la réputation de faction
 
 Le ×5 s'applique ligne par ligne, au couple (espèce, corps) : une même vente groupée peut donc mêler des lignes à
-valeur de base et des lignes à ×5, et la vente en gros n'ouvre droit à **aucun bonus de volume supplémentaire** : aucune des sources internes consultées n'en documente. Ce que la vente
-groupée apporte est d'un autre ordre : elle fait grimper la réputation auprès de la faction contrôlant la station,
-presque instantanément jusqu'au statut *Allied*, ce qui rend le **choix du lieu de vente** significatif. Sur une longue
-expédition, installer un module **Vista Genomics** à bord d'un Fleet Carrier (voir
-[Fleet Carriers](./19-fleet-carriers.md)) permet d'encaisser sur place et de mettre les données à l'abri sans rentrer
-dans la Bulle.
+valeur de base et des lignes à ×5, et la vente en gros n'ouvre droit à **aucun bonus de volume supplémentaire** :
+aucune des sources internes consultées n'en documente. Ce que la vente groupée apporte est d'un autre ordre : elle
+fait grimper la réputation auprès de la faction contrôlant la station, presque instantanément jusqu'au statut
+*Allied*, ce qui rend le **choix du lieu de vente** significatif. Sur une longue expédition, installer un module
+**Vista Genomics** à bord d'un Fleet Carrier (voir [Fleet Carriers](./19-fleet-carriers.md)) permet d'encaisser sur
+place et de mettre les données à l'abri sans rentrer dans la Bulle.
 
 > **Sources de cette sous-section** : quatre guides applicatifs internes à ce corpus (*exploration-exobiologie*,
 > *protocole-milliard*, *outils* et *débuter sans combat*, édition 2026-08), consultés le 09/09/2026, qui citent
@@ -1337,9 +2127,10 @@ dans la Bulle.
 ### 2.6 Rangs Explorateur et Exobiologiste : les paliers jusqu'à Elite V
 
 Comme les autres activités du jeu (combat, commerce, CQC…), l'exploration et l'exobiologie disposent chacune d'une
-échelle de progression propre, visible dans le panneau des rangs du commandant. Chaque échelle comporte huit paliers
-avant le rang **Elite**, lui-même subdivisé depuis la mise à jour Odyssey en cinq niveaux supplémentaires (**Elite I**
-à **Elite V**) au fur et à mesure de l'accumulation de mérites au-delà du seuil Elite.
+échelle de progression propre, visible dans le panneau des rangs du commandant. L'échelle Explorateur comporte huit paliers avant le rang **Elite** ;
+celle d'Exobiologiste n'en porte que sept dans les relevés dont dispose ce corpus, sans qu'aucune source consultée
+n'ait permis de nommer un huitième. Le rang **Elite** est lui-même subdivisé, depuis la mise à jour Odyssey, en cinq
+niveaux supplémentaires (**Elite I** à **Elite V**) au fur et à mesure de l'accumulation de mérites au-delà du seuil.
 
 **Rang Explorateur** (progression basée sur la valeur cumulée des données d'exploration vendues) :
 
@@ -1470,6 +2261,8 @@ information.
 Guides du corpus en lien direct avec l'exploration et l'exobiologie :
 
 - [Colonisation](./18-colonisation.md) — utiliser les données d'exploration pour repérer un système éligible (voir 1.7)
+- [Lore](./01-lore.md) — récit et chronologie des trois expéditions Distant Worlds dont la partie 1 donne la
+  logistique
 - [Fleet Carriers](./19-fleet-carriers.md) — base mobile pour les expéditions longue distance et l'acheminement de
   matériaux vers un système en cours de colonisation
 - [Minage](./20-minage.md) — anneaux et hotspots repérés lors des scans FSS/DSS
@@ -1533,7 +2326,43 @@ Guides du corpus en lien direct avec l'exploration et l'exobiologie :
 - Annonces officielles Frontier republiées sur le flux Steam News d'*Elite Dangerous* (appid 359320), relevées via
   `api.steampowered.com/ISteamNews/GetNewsForApp/v2/` le 09/09/2026 — billets *Discover the Nomad* (02/06/2026
   13:03 UTC) et *Operations Update* (01/07/2026 14:01 UTC), cités en 2.2
-- https://github.com/EDCD/FDevIDs (libellés des modules *Vessel Hangar* et *Mk II Vessel Hangar*)
+- https://github.com/EDCD/FDevIDs (libellés des modules *Vessel Hangar* et *Mk II Vessel Hangar* ; `outfitting.csv`
+  pour le nom de chantier naval du *Mk II Supercharge Optimised Frame Shift Drive (SCO)*, commit `c3561295`)
+- https://github.com/EDDiscovery/EliteDangerousCore — implémentation de référence de la communauté, commit
+  `f21533ba1609d309fd6a96b9b3bb488df178a36e` (07/09/2026), lue intégralement pour la partie 1 :
+  `FrontierData/Enumerations/EstimatedValues.cs` (valeurs de scan, formules, multiplicateurs),
+  `Enumerations/Stars.cs` et `Enumerations/Planets.cs` (énumérations `EDStar` et `EDPlanet`),
+  `Enumerations/FSDSpec.cs` et `Items/ModuleList.cs` (multiplicateurs de supercharge),
+  `3rdPartyInterfaces/Spansh/SpanshClassConvertEnums.cs` (sous-types Spansh/EDSM)
+- https://github.com/EDDiscovery/EDDiscovery — `UnitTest/StarScans/` (43 journaux de scan réels, commit `7b4726f3`),
+  utilisés pour les relevés de température et de masse stellaire
+- https://www.edsm.net/en/statistics/bodies — effectifs et parts par sous-type stellaire, page capturée et dépouillée
+  par script le 10/09/2026
+- https://www.elitedangerous.com/update-notes/4-3-0-0 — notes de la mise à jour 4.3.0.0 (*Caspian Explorer Update*,
+  02/12/2025), seule source primaire trouvée sur le Mk II Supercharge Optimised Frame Shift Drive (SCO)
+- https://github.com/EDDiscovery/EliteDangerousCore — même commit `f21533ba1609d309fd6a96b9b3bb488df178a36e`, fichiers
+  lus pour les signaux de surface et la gravité : `FrontierData/Enumerations/Signals.cs` (les huit prédicats de signal
+  et la classification des Notable Stellar Phenomena), `JournalStatus/Events/JournalDiscoveryScans.cs`
+  (`JournalSAASignalsFound` et `JournalFSSBodySignals`), `FrontierData/Enumerations/Planets.cs` (énumération
+  `EDVolcanism`), `FrontierData/Enumerations/PhysicalConstants.cs` (1 G = 9,80665 m/s²), `History/Queries/Queries.cs`
+  (seuil de la requête « Landable with High G »), `JournalStatus/UIScan/StatusReader.cs` (champ `Gravity` du fichier
+  d'état)
+- https://github.com/Silarn/EDMC-BioScan — plugin BioScan, commit `5f0d2e445a95681bf2e85223f883d5c552a7726b`
+  (11/07/2026) : `src/bio_scan/body_data/util.py` (fonction `get_gravity_warning`, bornes de gravité) et `README.md`,
+  cités en 2.2
+- API de codex de Canonn Research (`query/codex/ref`, 1 072 entrées, et les dumps CSV par entrée), interrogée par
+  script le 10/09/2026 : les 23 entrées de géologie de surface (222 898 relevés), les 4 482 relevés de Crystalline
+  Shards et les 133 entrées classées « Cloud »
+- https://www.edsm.net/en/expeditions/ — fiches « Distant Worlds Expedition (2016) » (identifiant 1) et « Distant
+  Worlds 2 - A Voyage of Discovery » (identifiant 58), consultées le 10/09/2026 : dates, systèmes de départ et
+  d'arrivée, participants, distances estimées et tables d'étapes
+- https://www.edsm.net/api-system-v1/bodies — corps du système KOI 1701, consulté le 10/09/2026 : `KOI 1701 1`, corps
+  riche en métaux déclaré atterrissable à 45,32 G
+- https://distantworlds3.space/ — site officiel de Distant Worlds 3, capturé le 10/09/2026 : statut, organisateur et
+  actualité de clôture ; compteurs de participants et libellé du prochain waypoint remplis côté client, donc vides à
+  la capture
+- https://www.elitedangerous.net/planetary-landings-guide.php — guide communautaire d'atterrissage planétaire (repère
+  de prudence des 4 G), consulté le 10/09/2026
 
 > **Note sur l'accès aux sources pendant la rédaction** : elitedangerous.com, forums.frontier.co.uk et le wiki Fandom
 > (elite-dangerous.fandom.com) ont renvoyé des erreurs HTTP 402/403 (blocage anti-bot) lors des tentatives d'accès

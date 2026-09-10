@@ -42,7 +42,11 @@ zones_incertaines:
   - "Répartition précise « quel ingénieur Odyssey modifie quelle combinaison ou arme », à vérifier en jeu ou sur Inara."
   - "Disponibilité actuelle des Rescue Megaships comme point de déblocage, liée à un contexte narratif ponctuel."
   - "Prix et stocks de Meta-Alloys : instantané de marché communautaire du 19 août 2026, volatil par nature."
-guides_lies: [2, 5, 7, 13, 20, 25, 26]
+  - "Conditions d'apparition des Crystalline Shards : le catalogue de matériaux et le catalogue
+    d'exobiologie divergent sur quatre critères (classe de l'étoile primaire, température, distance à
+    l'étoile, présence d'un Water Giant) ; aucune source consultable depuis ce chantier ne permet
+    d'arbitrer."
+guides_lies: [2, 5, 7, 10, 13, 20, 25, 26]
 ---
 
 # Guide complet des Ingénieurs (Engineers) dans Elite Dangerous
@@ -56,7 +60,7 @@ invitation puis cinq rangs de réputation ; depuis l'**Update 18.08** (7 août 2
 à réputation 5, un grade N coûte N applications. Ce guide chiffre les **81 blueprints** de modules sur **387 couples
 blueprint × grade** — matériaux, quantités, effet obtenu, puis coût total des **15 rolls** d'une montée G1 → G5 — et
 publie la **matrice Blueprint × Ingénieur × grade maximum** (186 lignes, 25 Ingénieurs), qui dit qui monte quel plan
-et jusqu'où. Les **91 effets expérimentaux** reçoivent matrice de compatibilité et coût en matériaux. Les
+et jusqu'où. Les **66 effets expérimentaux** (91 recettes, variantes comprises) reçoivent matrice de compatibilité et coût en matériaux. Les
 **115 matériaux** restent plafonnés de **300 unités (grade 1) à 100 (grade 5)** ; les
 grades 4-5 manufacturés viennent des **High Grade Emissions**, dont le contenu suit l'**allégeance** de la faction.
 
@@ -415,20 +419,27 @@ plusieurs blueprints de haut grade d'affilée.
 Les 28 **matériaux bruts** (*Raw*) sont récoltés, **à trois exceptions près signalées dans la table**, par prospection
 sur les surfaces planétaires sans atmosphère (Detailed Surface Scanner puis prospection au sol ou en véhicule).
 
-| Grade | Matériaux                                                               | Source d'obtention                                                          |
-|-------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| 1     | Iron, Nickel, Carbon, Sulphur, Phosphorus                               | Prospection de surface (planètes sans atmosphère), très commun              |
-| 1     | **Rhenium, Lead**                                                       | **Minage d'astéroïdes uniquement** — n'apparaissent jamais au sol           |
-| 2     | Zinc, Manganese, Chromium, Vanadium, Germanium, Arsenic, Zirconium      | Prospection de surface, notamment corps à forte métallicité                 |
-| 3     | Tin, Cadmium, Tungsten, Molybdenum, Niobium, Mercury                    | Prospection de surface, corps géologiquement actifs (volcanisme)            |
-| 3     | **Boron**                                                               | **Minage d'astéroïdes uniquement** — n'apparaît jamais au sol               |
-| 4     | Selenium, Yttrium, Tellurium, Polonium, Technetium, Ruthenium, Antimony | Prospection de surface, hotspots à cartographier via un outil communautaire |
+| Grade | Matériaux                                                               | Source d'obtention                                                                             |
+|-------|-------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| 1     | Iron, Nickel, Carbon, Sulphur, Phosphorus                               | Prospection de surface (planètes sans atmosphère), très commun                                 |
+| 1     | **Rhenium, Lead**                                                       | **Minage d'astéroïdes uniquement** — n'apparaissent jamais au sol                              |
+| 2     | Zinc, Manganese, Chromium, Vanadium, Germanium, Arsenic, Zirconium      | Prospection de surface, notamment corps à forte métallicité                                    |
+| 3     | Tin, Cadmium, Tungsten, Molybdenum, Niobium, Mercury                    | Prospection de surface, corps géologiquement actifs (volcanisme)                               |
+| 3     | **Boron**                                                               | **Minage d'astéroïdes uniquement** — n'apparaît jamais au sol                                  |
+| 4     | Selenium, Yttrium, Tellurium, Polonium, Technetium, Ruthenium, Antimony | Prospection de surface ; sites à repérer au DSS — voir [10 — Exploration](./10-exploration.md) |
 
 **Les trois exceptions comptent.** *Rhenium* (G1), *Lead* (G1) et *Boron* (G3) **ne s'obtiennent qu'en minage
 d'astéroïdes** : inutile de les chercher au sol, ils n'y apparaissent jamais, quelle que soit la composition affichée
 par le Detailed Surface Scanner. C'est la seule intersection entre les matériaux d'Engineering et le minage en anneau
 décrit dans [20 — Minage](./20-minage.md) ; le point est repris plus bas dans « Où farmer efficacement les
 matériaux d'Engineering, type par type ».
+
+**Où chercher ces sites, et dans quel guide.** Le repérage d'un site de récolte se joue en deux temps, et aucun des
+deux ne relève de ce guide-ci : d'abord choisir le système et le corps, ensuite, une fois sur place, lire les signaux
+de surface. Les deux sont traités dans [10 — Exploration](./10-exploration.md), qui documente la planification de
+route (EDSM, Spansh) puis le **Detailed Surface Scanner** et ce qu'une cartographie révèle en surface, sites de
+*Crystalline Shards* compris. Ce guide-ci reste la référence sur **quel** matériau chercher, dans quelle
+catégorie et pour quel blueprint.
 
 ### Matériaux manufacturés (Manufactured) — 50 matériaux « standards » + 14 matériaux spéciaux
 
@@ -683,6 +694,11 @@ gazeuse à vie. Le site le plus proche de Sol est à **1 426 ly** — ce n'est p
 confondre avec le matériau manufacturé *Crystal Shards*** (grade 1, catégorie Crystals), qui n'a aucun rapport avec
 ces sites : voir la mise en garde de la section Manufactured ci-dessous.
 
+Le repérage de ces sites relève du guide d'exploration : [10 — Exploration](./10-exploration.md) couvre le DSS et ce
+qu'une cartographie révèle en surface, et documente par ailleurs *Crystalline Shards* comme **espèce
+d'exobiologie** scannable et revendable à Vista Genomics. **Les conditions d'apparition relevées de part et d'autre ne
+coïncident pas exactement** : l'écart est détaillé dans la mise au point ci-dessous.
+
 Composition des groupes — c'est à l'intérieur d'un groupe que l'échange est le moins coûteux :
 
 | Catégorie | Grade 1    | Grade 2   | Grade 3    | Grade 4    |
@@ -776,6 +792,40 @@ cette table qui décide où chercher un grade 4 ou 5 précis, et elle vaut corre
 >
 > Autrement dit, ces conditions-là gouvernent l'apparition d'un **site à Raw**, jamais l'obtention du matériau
 > manufacturé de grade 1. Aller à 1 426 ly pour ramener des *Crystal Shards* serait un très long voyage pour rien.
+
+##### Les deux relevés de conditions des Crystalline Shards ne coïncident pas exactement
+
+Le corpus porte **deux relevés indépendants** des conditions d'apparition des *Crystalline Shards* : celui du
+**catalogue de matériaux** (`assets/data/materials.json`, édition 2026-08), repris dans la section Raw ci-dessus, et
+celui du **catalogue d'exobiologie** compilé par ce corpus (édition 2026-08, sources amont déclarées : Canonn Research,
+wiki *Elite Dangerous*, critères biologiques du projet SrvSurvey), repris par
+[10 — Exploration](./10-exploration.md), où *Crystalline Shards* figure comme **espèce scannable et revendable à Vista
+Genomics**. Les deux décrivent des conditions assez proches pour qu'il s'agisse très probablement du même objet en jeu,
+**mais aucune des sources consultées ne l'affirme explicitement**. Confrontation des 8 critères comparables (relevé du
+10 septembre 2026) : **4 divergences, 3 précisions apportées par le seul catalogue d'exobiologie, 1 accord**.
+
+| Critère                      | Catalogue de matériaux (section Raw ci-dessus)                            | Catalogue d'exobiologie (repris par le guide 10)               | Nature de l'écart |
+|------------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------|-------------------|
+| Classe de l'étoile primaire  | A, F, G, K, M **ou S**                                                    | A, F, G, K ou M                                                | divergence        |
+| Température du corps         | 0 à 273 K                                                                 | 20 à 250 K                                                     | divergence        |
+| Distance à l'étoile          | plus de 12 000 Ls de l'étoile                                             | plus de 10 000 ls de l'étoile d'arrivée                        | divergence        |
+| Monde requis dans le système | Earth-Like, Ammonia, Water World, **Water Giant** ou géante gazeuse à vie | Earth-like, Water World, Ammonia World ou géante gazeuse à vie | divergence        |
+| Volcanisme                   | exigé, sans autre précision                                               | volcanisme mineur obligatoire, 8 types listés                  | précision         |
+| Type de corps                | non précisé                                                               | Icy, Rocky, Rocky Ice ou HMC                                   | précision         |
+| Gravité                      | non précisée                                                              | ≤ 1,45 G sur HMC, 0,19 à 0,24 G sinon                          | précision         |
+| Atmosphère                   | sans atmosphère                                                           | aucune                                                         | accord            |
+
+**Ce guide n'arbitre pas ces 4 divergences** : les deux relevés viennent de sources distinctes, aucune n'est
+vérifiable en jeu depuis ce chantier, et fabriquer une valeur de compromis serait pire que signaler le trou. Deux
+conséquences pratiques, dont la seconde est **dérivée par recoupement des deux relevés, et non relevée en jeu** :
+
+- si vous cherchez le **site de récolte Raw**, retenez le relevé de la section Raw ci-dessus, qui est celui du
+  catalogue de matériaux ;
+- un corps qui satisfait, ligne à ligne, **le plus strict des deux relevés** — corps Icy, Rocky, Rocky Ice ou HMC,
+  gravité dans la fourchette du relevé d'exobiologie, étoile primaire A, F, G, K ou M, 20 à 250 K, sans atmosphère,
+  avec volcanisme mineur, à plus de 12 000 Ls, dans un système comportant un Earth-like, un Water World, un Ammonia
+  World ou une géante gazeuse à vie — satisfait **les deux** à la fois. C'est une intersection logique des deux
+  tables, pas une condition observée en jeu.
 
 #### Encoded — scan de vaisseaux, data points, comptoir, et le cas des Wake Scans
 
@@ -922,7 +972,9 @@ bruts, plus haut, les isole désormais sur leurs propres lignes.
 
 C'est, de tout l'Engineering, le farming le plus rapide et le plus prévisible : les gisements sont des points fixes
 sur un corps donné (contrairement aux signaux dynamiques ci-dessous), et les hotspots à forte concentration d'un
-élément précis sont cartographiés par la communauté (outils cités plus bas).
+élément précis sont cartographiés par la communauté (outils cités plus bas). Une fois sur place, les signaux de
+surface qui portent ces gisements se lisent au **Detailed Surface Scanner** : [10 — Exploration](./10-exploration.md)
+documente ce qu'une cartographie DSS révèle sur un corps.
 
 ##### La composition fixe de 11 matériaux par corps atterrissable (5 G1, 3 G2, 2 G3, 1 G4)
 
@@ -2400,7 +2452,7 @@ n'ont **aucune liste de matériaux** dans la source, et *Choke canister* n'a mê
 *Choke canister* et *Deep Cut Payload* ne sont référencés par **aucun module**, ce qui suggère des entrées héritées
 ou non implémentées.
 
-### Matrice de compatibilité des 91 effets expérimentaux — modules acceptés, effet obtenu et coût
+### Matrice de compatibilité des 66 effets expérimentaux et de leurs 91 recettes — modules acceptés, effet et coût
 
 La colonne « Modules et armes compatibles » est le cœur de cette section : elle répond à la question que le reste du
 corpus laissait ouverte, à savoir **quels modules acceptent quel effet**. Elle est construite en inversant les listes
@@ -2894,3 +2946,16 @@ conclurait à tort que 21 attributions ne sont pas étayées. Recomptage fait : 
 0 divergence sur les 89 lignes de la matrice qui portent au moins un module et 0 sur les 24 lignes de la lecture
 inverse. Enfin, les intitulés qui annonçaient une matrice « complète » nomment désormais leur périmètre réel, les
 25 Ingénieurs classiques, les 13 Ingénieurs Odyssey restant hors de portée des deux jeux de données.*
+
+*Révision du 10 septembre 2026 — articulation avec le guide d'exploration. Le renvoi vague « hotspots à cartographier
+via un outil communautaire » de la table des matériaux bruts est remplacé par un renvoi vers
+[10 — Exploration](./10-exploration.md), qui traite la planification de route et ce qu'une cartographie DSS révèle en
+surface. Trois autres renvois vers ce même guide sont posés dans les sections consacrées aux matériaux bruts, un
+quatrième dans la mise au point Crystal Shards / Crystalline Shards — tous sans ancre, pour rester justes si
+l'intitulé de la section visée évolue. Cette mise au point est complétée par la confrontation des deux relevés de
+conditions que porte le corpus, celui du catalogue de matériaux et celui du catalogue d'exobiologie repris par le
+guide 10 : sur 8 critères comparables, 4 divergent, 3 sont des précisions apportées par le seul catalogue
+d'exobiologie et 1 fait accord. Cet écart n'est pas arbitré ici, faute de source vérifiable depuis ce chantier, et il
+est reporté en* zones_incertaines. *Aucun chiffre nouveau n'est introduit : les valeurs confrontées sont recopiées
+telles quelles des deux guides, et la table d'écart comme le réalignement de la table des matériaux bruts sont générés
+par script.*

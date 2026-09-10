@@ -7,7 +7,7 @@ mots_cles_en: [power distributor, pips, flight assist off, shield cell bank, hul
 version_jeu_couverte: "mécaniques stables non rattachées à une version précise ; caractéristiques de vaisseaux, d'armes et de blindages relevées le 10 septembre 2026 dans EDCD/coriolis-data et EDCD/FDevIDs"
 branche: live
 date_verification: 2026-09-10
-confiance_globale: élevée
+confiance_globale: haute
 volatilite: moyenne
 sources_primaires: [Wikipedia Elite Dangerous, Canonn Research, EDSM, Spansh, Inara, EDCD/coriolis-data, EDCD/FDevIDs]
 zones_incertaines:

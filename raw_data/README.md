@@ -430,7 +430,9 @@ recouvre lexicalement l'ensemble du corpus. Indexées, elles remontent en tête 
 évincent les passages qui contiennent réellement la réponse. Les renvois croisés utiles restent accessibles au lecteur
 humain dans le fichier ; ils n'ont simplement pas leur place dans l'index vectoriel.
 
-**Relevé du 10 septembre 2026, après enrichissement chiffré du corpus : 56 sections, 15 563 mots.** Vingt-cinq guides
+**Relevé du 10 septembre 2026, après enrichissement chiffré du corpus : 57 sections, 16 597 mots.**
+Comptage : titres capturés par le motif ci-dessus dans les fichiers `NN-*.md`, contenu compté jusqu'au titre de
+même niveau ou de niveau supérieur suivant, `split()` sur les espaces. Vingt-cinq guides
 portent deux sections concernées (`## Voir aussi` et `## Sources`), deux en portent trois —
 [07-equipement-a-pied.md](./07-equipement-a-pied.md) et [10-exploration.md](./10-exploration.md), qui ajoutent chacun
 une section de ressources externes —, et deux n'en portent aucune :
