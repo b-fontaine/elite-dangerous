@@ -1,7 +1,7 @@
 # Index de routage du corpus Elite Dangerous
 #
 # FICHIER GÉNÉRÉ — ne pas éditer à la main.
-# Il agrège le front-matter YAML des 29 guides `raw_data/NN-*.md` et sert de routeur de requête :
+# Il agrège le front-matter YAML des 30 guides `raw_data/NN-*.md` et sert de routeur de requête :
 # on le lit d'abord pour sélectionner les deux ou trois guides candidats, puis on ne lance la
 # recherche vectorielle que dans ceux-là. Il n'est pas lui-même un guide et ne doit pas être indexé.
 #
@@ -11,9 +11,10 @@
 # impose de régénérer ce fichier.
 
 date_generation: 2026-09-10
-nombre_de_guides: 29
+nombre_de_guides: 30
 genere_depuis: "front-matter YAML des fichiers raw_data/NN-*.md"
 indexer_ce_fichier: false
+
 
 
 
@@ -202,16 +203,16 @@ guides:
     fichier: 11-commerce.md
     titre: "Guide complet du commerce dans Elite Dangerous"
     domaine: "economie"
-    entites: ["Trade Rank", "Rare Goods", "Trade Dangerous", "Spansh", "Type-9 Heavy", "Imperial Cutter", "Type-10 Defender", "Panther Clipper Mk II", "Type-8 Transporter", "Keelback", "Cargo Rack", "Robigo Run"]
-    mots_cles_en: ["trading", "supply and demand", "trade rank", "rare goods", "black market", "smuggling", "Robigo run", "cargo rack", "trade route", "Trade Dangerous", "mining to trade"]
+    entites: ["Trade Rank", "Rare Goods", "Trade Dangerous", "Spansh", "Type-9 Heavy", "Imperial Cutter", "Type-10 Defender", "Panther Clipper Mk II", "Type-8 Transporter", "Keelback", "Cargo Rack", "Robigo Run", "piraterie", "Hatch Breaker Limpet Controller", "Frame Shift Drive Interdictor", "Cargo Scanner", "notoriety"]
+    mots_cles_en: ["trading", "supply and demand", "trade rank", "rare goods", "black market", "smuggling", "Robigo run", "cargo rack", "trade route", "Trade Dangerous", "mining to trade", "piracy", "hatch breaker limpet", "FSD interdictor", "cargo scanner", "stolen cargo", "notoriety"]
     version_jeu_couverte: "4.4.0.x"
     branche: "live"
     date_verification: "2026-09-09"
     confiance_globale: "haute"
     volatilite: "haute"
     sources_primaires: ["EDCD/coriolis-data", "EDCD/FDevIDs", "Trade Dangerous (dépôt GitHub)", "EDSM", "TheGamer", "GameRant", "TwistedVoxel", "chronologie canonique interne"]
-    zones_incertaines: ["seuils de profit cumulé de chaque palier de Trade Rank : aucune source primaire retrouvée, à lire dans le panneau Réputation en jeu", "portée de saut laden/unladen du Keelback, du Type-8 Transporter et du Panther Clipper Mk II : non publiée par coriolis-data, dépend du FSD et de la charge", "chiffres de rentabilité GameRant (100 M Cr/h en minage laser, 90 M Cr/h en Robigo, 3,5 Md Cr par cycle PTN) : instantanés non redatés par la source"]
-    guides_lies: [3, 12, 16, 18, 20, 24]
+    zones_incertaines: ["seuils de profit cumulé de chaque palier de Trade Rank : aucune source primaire retrouvée, à lire dans le panneau Réputation en jeu", "portée de saut laden/unladen du Keelback, du Type-8 Transporter et du Panther Clipper Mk II : non publiée par coriolis-data, dépend du FSD et de la charge", "chiffres de rentabilité GameRant (100 M Cr/h en minage laser, 90 M Cr/h en Robigo, 3,5 Md Cr par cycle PTN) : instantanés non redatés par la source", "rentabilité horaire de la piraterie : aucun ordre de grandeur vérifié n'a été retrouvé, la section 2.5 le déclare explicitement plutôt que d'avancer un chiffre", "traitement exact du cargo marqué « volé » (stolen) sur un marché légal par rapport au marché noir : non recoupé avec une source primaire", "prise en compte ou non des ventes de cargo volé dans la progression du Trade Rank : non documentée par les sources consultées"]
+    guides_lies: [3, 8, 12, 16, 18, 20, 21, 24, 28]
 
   - id: 12-transport
     fichier: 12-transport.md
@@ -292,7 +293,7 @@ guides:
     fichier: 17-sources-donnees.md
     titre: "Sources de données disponibles pour Elite Dangerous"
     domaine: "meta-outils"
-    entites: ["Player Journal", "Status.json", "EDDN", "Companion API (CAPI)", "EDSM", "Inara", "Spansh", "EDCD/FDevIDs", "EDCD/coriolis-data", "Canonn Research", "Ardent Insight", "Elite BGS", "blueprints.json", "specials.json", "outfitting.csv", "shipyard.csv", "commit épinglé"]
+    entites: ["Player Journal", "Status.json", "EDDN", "Companion API (CAPI)", "EDSM", "Inara", "Spansh", "EDCD/FDevIDs", "EDCD/coriolis-data", "Canonn Research", "Ardent Insight", "Elite BGS", "blueprints.json", "specials.json", "outfitting.csv", "shipyard.csv", "commodity.csv", "rare_commodity.csv", "commit épinglé"]
     mots_cles_en: ["player journal", "Status.json", "EDDN", "Companion API", "EDSM", "Inara", "Spansh", "galaxy dump", "nightly dumps", "FDevIDs", "coriolis-data", "ScanOrganic", "blueprints.json", "specials.json", "outfitting.csv", "shipyard.csv", "bulkheads", "pinned commit", "commit SHA", "shallow clone"]
     version_jeu_couverte: "4.4.0.x"
     branche: "live"
@@ -301,7 +302,7 @@ guides:
     volatilite: "haute"
     sources_primaires: ["étude interne de faisabilité du 19 août 2026", "EDCD/EDDN", "elite-journal.readthedocs.io", "Journal Manual v38 de Frontier", "edsm.net (api-v1 à api-logs-v1)", "docs.spansh.co.uk", "EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579)", "EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27)", "Steam News Frontier (appid 359320)"]
     zones_incertaines: ["aucune source Frontier consultable ne confirme la date d'arrêt définitif des serveurs Legacy", "le contrat exact des routes d'API de Spansh est reconstitué par sondage, sans garantie de stabilité publiée", "divergence de domaine pour l'API Inara entre la documentation (inara.cn) et l'endpoint sondé (inara.cz)", "aucune limite de débit chiffrée n'est publiée pour Inara, Spansh et la CAPI", "la signification du booléen ScanOrganic.WasLogged, absent du manuel v38, reste une hypothèse", "la cadence réelle de mise à jour de EDCD/coriolis-data et de EDCD/FDevIDs n'est pas mesurable : les clones utilisés sont superficiels et ne portent que leur commit de tête", "EDCD/FDevIDs ne publie aucun fichier de licence, ce qui laisse indéterminé le statut de réutilisation de ses tables d'identifiants"]
-    guides_lies: [3, 4, 6, 10, 16, 18, 19, 20, 21]
+    guides_lies: [3, 4, 6, 10, 16, 18, 19, 20, 21, 28]
 
   - id: 18-colonisation
     fichier: 18-colonisation.md
@@ -337,16 +338,16 @@ guides:
     fichier: 20-minage.md
     titre: "Le Minage (Mining) dans Elite Dangerous"
     domaine: "economie"
-    entites: ["Mining Laser", "Abrasion Blaster", "Pulse Wave Analyser", "Seismic Charge Launcher", "Sub-Surface Displacement Missile", "Prospector Limpet Controller", "Refinery", "Type-11 Prospector", "Rhino", "Planetary Mining Deposit Scanner", "Void Opals", "EDTools.cc"]
-    mots_cles_en: ["mining", "laser mining", "core mining", "deep core mining", "subsurface deposit", "abrasion blaster", "pulse wave analyser", "seismic charge launcher", "prospector limpet", "hotspot", "surface mining", "Rhino SRV", "void opals", "painite", "low temperature diamonds"]
+    entites: ["Mining Laser", "Abrasion Blaster", "Pulse Wave Analyser", "Seismic Charge Launcher", "Sub-Surface Displacement Missile", "Prospector Limpet Controller", "Refinery", "Type-11 Prospector", "Rhino", "Planetary Mining Deposit Scanner", "Void Opals", "EDTools.cc", "Bertrandite", "Painite", "Platinum", "Monazite", "Alexandrite", "Musgravite", "Rhodplumsite", "anneau glacé", "anneau rocheux", "anneau métallique", "anneau riche en métaux"]
+    mots_cles_en: ["mining", "laser mining", "core mining", "deep core mining", "subsurface deposit", "abrasion blaster", "pulse wave analyser", "seismic charge launcher", "prospector limpet", "hotspot", "surface mining", "Rhino SRV", "void opals", "painite", "low temperature diamonds", "ring type", "icy ring", "rocky ring", "metallic ring", "metal rich ring", "pristine reserve", "bertrandite", "platinum", "palladium", "gold", "silver", "osmium", "samarium", "praseodymium", "coltan", "indite", "gallite", "uraninite", "lepidolite", "rutile", "bauxite", "cobalt", "bromellite", "monazite", "musgravite", "serendibite", "rhodplumsite", "benitoite", "grandidierite", "alexandrite", "tritium"]
     version_jeu_couverte: "4.4.0.x"
     branche: "live"
-    date_verification: "2026-09-09"
+    date_verification: "2026-09-10"
     confiance_globale: "haute"
     volatilite: "haute"
-    sources_primaires: ["Steam News Frontier (API ISteamNews, billets Frontier intégraux)", "EDCD/FDevIDs (outfitting.csv)", "EDSM (API bodies)", "Inara.cz", "EDTools.cc", "pilotstradenetwork.com"]
-    zones_incertaines: ["Frontier a publié les douze axes d'équilibrage du minage de surface sans aucune valeur chiffrée", "rôle fonctionnel exact du Sub-Surface Extraction Missile non confirmé par des notes de patch", "correctif « 9 → 12 fragments » du Rhino : ni numéro de version ni date publiés au 9 septembre 2026", "vaisseaux et classes de module permettant d'embarquer un Rhino, et existence d'un achat en crédits", "prix de vente, économies acheteuses et usages en ingénierie des treize marchandises de surface", "pourcentages de bonus Powerplay au minage (Torval, Kaine) et rendement PTN de 3,5 Md Cr par cycle, tous deux d'origine communautaire", "aucun système hotspot n'a pu être confirmé pour le Platine ni pour les Low Temperature Diamonds seuls"]
-    guides_lies: [2, 4, 11, 14, 16]
+    sources_primaires: ["Steam News Frontier (API ISteamNews, billets Frontier intégraux)", "EDCD/FDevIDs (outfitting.csv, commodity.csv, rings.csv, commit c356129)", "EDDiscovery/EliteDangerousCore (énumération RingClassEnum)", "EDSM (API bodies, FAQ Commodities)", "Inara.cz", "EDTools.cc", "pilotstradenetwork.com", "Guides et discussions Steam Community sur le minage (types d'anneau)"]
+    zones_incertaines: ["Frontier a publié les douze axes d'équilibrage du minage de surface sans aucune valeur chiffrée", "rôle fonctionnel exact du Sub-Surface Extraction Missile non confirmé par des notes de patch", "correctif « 9 → 12 fragments » du Rhino : ni numéro de version ni date publiés au 9 septembre 2026", "vaisseaux et classes de module permettant d'embarquer un Rhino, et existence d'un achat en crédits", "prix de vente, économies acheteuses et usages en ingénierie des treize marchandises de surface", "pourcentages de bonus Powerplay au minage (Torval, Kaine) et rendement PTN de 3,5 Md Cr par cycle, tous deux d'origine communautaire", "aucun système hotspot n'a pu être confirmé pour le Platine ni pour les Low Temperature Diamonds seuls", "section 4.5 : aucune source primaire Frontier ne publie la distribution des minéraux par type d'anneau ; les colonnes « technique » et « type d'anneau » sont une synthèse de guides de joueurs datés, non vérifiée en jeu", "section 4.5 : le type d'anneau reste non établi pour 16 des 63 marchandises Minerals et Metals, et aucune source ne publie de réserve minimale ni de rendement en tonnes par minéral"]
+    guides_lies: [2, 4, 11, 14, 16, 28]
 
   - id: 21-bgs
     fichier: 21-bgs.md
@@ -452,3 +453,18 @@ guides:
     sources_primaires: ["edfieldmanual.com", "inara.cz", "wikiwand/Wikipédia", "corpus interne (03-vaisseaux, 06-ingenieurs, 08-combat-spatial, 10-exploration, 11-commerce)"]
     zones_incertaines: ["seuils numériques de progression de rang, jamais publiés officiellement quelle que soit la filière", "conditions de déblocage de The Dweller, divergentes entre les deux sources consultées", "conditions chiffrées de Tod McQuinn et de Lei Cheung, non recoupées avec une source primaire", "échelle de paliers ordonnée du rang Mercenaire, absente de toutes les sources consultées", "échelle de paliers ordonnée du rang CQC, seuls les paliers hauts étant visibles sur Inara", "liste des quatre vaisseaux jouables en CQC, non sourcée dans le corpus", "noms et nombre des modes de jeu du CQC, non confirmés", "mécanisme exact de calcul du rang de commerce (achat-revente, minerai, missions comptent-ils à parts égales)", "aucun Cr/h fiable pour un vaisseau starter non ingénierié", "portée de saut stock du Hauler, non recoupée par une recherche indépendante cette édition"]
     guides_lies: [1, 3, 6, 8, 10, 11, 12, 20, 23]
+
+  - id: 28-marchandises
+    fichier: 28-marchandises.md
+    titre: "Les marchandises d'Elite Dangerous : catalogue des 270 commodités et des 142 denrées rares"
+    domaine: "economie"
+    entites: ["Commodity Market", "Gold", "Silver", "Palladium", "Platinum", "Osmium", "Bertrandite", "Indite", "Gallite", "Coltan", "Uraninite", "Lepidolite", "Rutile", "Painite", "Void Opal", "Low Temperature Diamonds", "Tritium", "Imperial Slaves", "Onionhead", "Soontill Relics", "Hutton Orbital", "Limpets"]
+    mots_cles_en: ["commodity", "commodities", "commodity market", "rare goods", "rare commodities", "minerals", "metals", "salvage", "machinery", "technology", "chemicals", "industrial materials", "foods", "legal drugs", "consumer items", "medicines", "textiles", "weapons", "waste", "slavery", "produced by", "consumed by", "illegal goods", "prohibited", "ring type", "metallic ring", "metal rich ring", "icy ring", "rocky ring", "market id"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "moyenne"
+    volatilite: "moyenne"
+    sources_primaires: ["EDCD/FDevIDs commit c35612952dd6a547d1a7ac4cffab9c7051e86579 (commodity.csv, rare_commodity.csv, economy.csv, rings.csv)", "EDSM FAQ Commodities (15 pages de catégories)", "API Spansh /api/station/<market_id>", "API EDSM /api-system-v1/stations/market", "guides communautaires Steam sur le minage (Devilish Dave, Yousseff., Edwyndham)"]
+    zones_incertaines: ["aucun prix d'achat ni de vente du commerce courant n'est établi : commodity.csv n'en porte aucun et aucune source stable n'a pu être retenue", "les économies productrices et consommatrices ne sont documentées que pour 133 marchandises sur 270, dont zéro des 96 marchandises de la catégorie Salvage", "la légalité n'est documentée que pour 12 marchandises sur 270 et aucune matrice marchandise par superpuissance ou par type de gouvernement n'a pu être consultée", "le type d'anneau reste inconnu pour 16 des 63 marchandises des catégories Minéraux et Métaux et repose partout ailleurs sur des guides de joueurs, jamais sur une source Frontier", "la réserve minimale conseillée par minéral n'est établie par aucune source : seule existe la règle générale de viser une réserve Pristine", "l'allocation par cycle des denrées rares et la distance optimale de revente ne sont établies par aucune source ; les prix et stocks relevés sont un instantané du 10 septembre 2026", "la colonne Nom français est une glose de lecture produite pour ce corpus, et non la localisation officielle du client français du jeu", "la position de la station Heart of Taurus (méga-vaisseau) repose sur un relevé de marché du 9 août 2022"]
+    guides_lies: [6, 11, 12, 16, 17, 19, 20, 27]

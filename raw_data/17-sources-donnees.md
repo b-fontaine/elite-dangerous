@@ -2,7 +2,7 @@
 id: 17-sources-donnees
 titre: "Sources de données disponibles pour Elite Dangerous"
 domaine: meta-outils
-entites: [Player Journal, Status.json, EDDN, Companion API (CAPI), EDSM, Inara, Spansh, EDCD/FDevIDs, EDCD/coriolis-data, Canonn Research, Ardent Insight, Elite BGS, blueprints.json, specials.json, outfitting.csv, shipyard.csv, commit épinglé]
+entites: [Player Journal, Status.json, EDDN, Companion API (CAPI), EDSM, Inara, Spansh, EDCD/FDevIDs, EDCD/coriolis-data, Canonn Research, Ardent Insight, Elite BGS, blueprints.json, specials.json, outfitting.csv, shipyard.csv, commodity.csv, rare_commodity.csv, commit épinglé]
 mots_cles_en: [player journal, Status.json, EDDN, Companion API, EDSM, Inara, Spansh, galaxy dump, nightly dumps, FDevIDs, coriolis-data, ScanOrganic, blueprints.json, specials.json, outfitting.csv, shipyard.csv, bulkheads, pinned commit, commit SHA, shallow clone]
 version_jeu_couverte: "4.4.0.x"
 branche: live
@@ -11,7 +11,7 @@ confiance_globale: haute
 volatilite: haute
 sources_primaires: [étude interne de faisabilité du 19 août 2026, EDCD/EDDN, elite-journal.readthedocs.io, Journal Manual v38 de Frontier, edsm.net (api-v1 à api-logs-v1), docs.spansh.co.uk, EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579), EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27), Steam News Frontier (appid 359320)]
 zones_incertaines: ["aucune source Frontier consultable ne confirme la date d'arrêt définitif des serveurs Legacy", "le contrat exact des routes d'API de Spansh est reconstitué par sondage, sans garantie de stabilité publiée", "divergence de domaine pour l'API Inara entre la documentation (inara.cn) et l'endpoint sondé (inara.cz)", "aucune limite de débit chiffrée n'est publiée pour Inara, Spansh et la CAPI", "la signification du booléen ScanOrganic.WasLogged, absent du manuel v38, reste une hypothèse", "la cadence réelle de mise à jour de EDCD/coriolis-data et de EDCD/FDevIDs n'est pas mesurable : les clones utilisés sont superficiels et ne portent que leur commit de tête", "EDCD/FDevIDs ne publie aucun fichier de licence, ce qui laisse indéterminé le statut de réutilisation de ses tables d'identifiants"]
-guides_lies: [3, 4, 6, 10, 16, 18, 19, 20, 21]
+guides_lies: [3, 4, 6, 10, 16, 18, 19, 20, 21, 28]
 ---
 
 # Sources de données disponibles pour Elite Dangerous
@@ -1400,6 +1400,28 @@ factions (`factionstate`, `factionids`, `happiness`), l'allégeance des système
 (`terraformingstate`), les motifs de refus d'amarrage (`dockingdeniedreasons`) et les références de boutique
 (`bundles`, `sku`).
 
+#### Les quatre tables du marché des marchandises, et ce qu'elles ne portent pas
+
+Le catalogue des marchandises de [28-marchandises.md](./28-marchandises.md) est bâti sur quatre de ces fichiers, relevés
+au même commit `c35612952dd6a547d1a7ac4cffab9c7051e86579` :
+
+| Fichier              | Colonnes                                | Lignes de données | Ce qu'on en tire                                                      |
+|----------------------|-----------------------------------------|------------------:|-----------------------------------------------------------------------|
+| `commodity.csv`      | `id, symbol, category, name`            |               270 | Les 270 marchandises et leurs **16 catégories** officielles           |
+| `rare_commodity.csv` | `id, symbol, market_id, category, name` |               142 | Les 142 denrées rares et le **`market_id`** de leur station d'origine |
+| `economy.csv`        | `id, name`                              |                17 | Les 17 types d'économie de système et de station                      |
+| `rings.csv`          | `id, name`                              |                 4 | Les quatre classes d'anneau : Icy, Metallic, Metal Rich, Rocky        |
+
+Ces quatre tables sont des **référentiels de nommage**, et rien de plus. Il faut le dire explicitement, car c'est ce qui
+détermine ce qu'un consommateur peut en attendre : elles ne portent **aucun prix** d'achat ni de vente, **aucune
+économie productrice ou consommatrice** par marchandise, **aucune légalité** par superpuissance ni par gouvernement, et
+**aucun rattachement d'un minerai à une classe d'anneau** — `commodity.csv` et `rings.csv` ne se croisent nulle part.
+Le `market_id` de `rare_commodity.csv` est un entier nu : il n'y a ni nom de station, ni système, ni allocation par
+cycle, ni distance optimale de revente. Résoudre ce `market_id` suppose d'interroger un agrégateur, Spansh
+(`/api/station/<market_id>`, section 6) ou EDSM (section 4), avec les réserves de disponibilité qui y sont posées. Le
+corpus tient ces colonnes pour non couvertes plutôt que de les inventer, et
+[28-marchandises.md](./28-marchandises.md) en dresse la liste en propre.
+
 ### Licence et cadence de mise à jour des deux dépôts
 
 **`EDCD/coriolis-data` sépare explicitement le code des données.** Son `LICENSE.md` place le code de Coriolis.io
@@ -1504,6 +1526,8 @@ d'annonces Steam du jeu (appid 359320), joignable sans authentification via
 - [Commerce](./11-commerce.md) — pour l'usage des routes de marché d'Ardent Insight.
 - [Minage](./20-minage.md) — pour l'exploitation des données de marché (Ardent Insight, EDDN) côté ressources minées,
   et pour les minerais qui apparaissent sans préfixe dans `SAASignalsFound` sur un anneau.
+- [Marchandises](./28-marchandises.md) — pour le catalogue bâti sur `commodity.csv`, `rare_commodity.csv`,
+  `economy.csv` et `rings.csv`, et pour la liste des colonnes que ces fichiers ne permettent pas de remplir.
 - [BGS](./21-bgs.md) — pour la mécanique suivie par Elite BGS et par les événements de faction du journal.
 - [Escadrons](./22-squadrons.md) et [Jeu en groupe](./23-jeu-en-groupe.md) — pour les données sociales exposées par
   Inara.

@@ -2,32 +2,32 @@
 id: 20-minage
 titre: "Le Minage (Mining) dans Elite Dangerous"
 domaine: economie
-entites: [Mining Laser, Abrasion Blaster, Pulse Wave Analyser, Seismic Charge Launcher, Sub-Surface Displacement Missile, Prospector Limpet Controller, Refinery, Type-11 Prospector, Rhino, Planetary Mining Deposit Scanner, Void Opals, EDTools.cc]
-mots_cles_en: [mining, laser mining, core mining, deep core mining, subsurface deposit, abrasion blaster, pulse wave analyser, seismic charge launcher, prospector limpet, hotspot, surface mining, Rhino SRV, void opals, painite, low temperature diamonds]
+entites: [Mining Laser, Abrasion Blaster, Pulse Wave Analyser, Seismic Charge Launcher, Sub-Surface Displacement Missile, Prospector Limpet Controller, Refinery, Type-11 Prospector, Rhino, Planetary Mining Deposit Scanner, Void Opals, EDTools.cc, Bertrandite, Painite, Platinum, Monazite, Alexandrite, Musgravite, Rhodplumsite, anneau glacé, anneau rocheux, anneau métallique, anneau riche en métaux]
+mots_cles_en: [mining, laser mining, core mining, deep core mining, subsurface deposit, abrasion blaster, pulse wave analyser, seismic charge launcher, prospector limpet, hotspot, surface mining, Rhino SRV, void opals, painite, low temperature diamonds, ring type, icy ring, rocky ring, metallic ring, metal rich ring, pristine reserve, bertrandite, platinum, palladium, gold, silver, osmium, samarium, praseodymium, coltan, indite, gallite, uraninite, lepidolite, rutile, bauxite, cobalt, bromellite, monazite, musgravite, serendibite, rhodplumsite, benitoite, grandidierite, alexandrite, tritium]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-09
+date_verification: 2026-09-10
 confiance_globale: haute
 volatilite: haute
-sources_primaires: ["Steam News Frontier (API ISteamNews, billets Frontier intégraux)", "EDCD/FDevIDs (outfitting.csv)", "EDSM (API bodies)", "Inara.cz", "EDTools.cc", "pilotstradenetwork.com"]
-zones_incertaines: ["Frontier a publié les douze axes d'équilibrage du minage de surface sans aucune valeur chiffrée", "rôle fonctionnel exact du Sub-Surface Extraction Missile non confirmé par des notes de patch", "correctif « 9 → 12 fragments » du Rhino : ni numéro de version ni date publiés au 9 septembre 2026", "vaisseaux et classes de module permettant d'embarquer un Rhino, et existence d'un achat en crédits", "prix de vente, économies acheteuses et usages en ingénierie des treize marchandises de surface", "pourcentages de bonus Powerplay au minage (Torval, Kaine) et rendement PTN de 3,5 Md Cr par cycle, tous deux d'origine communautaire", "aucun système hotspot n'a pu être confirmé pour le Platine ni pour les Low Temperature Diamonds seuls"]
-guides_lies: [2, 4, 11, 14, 16]
+sources_primaires: ["Steam News Frontier (API ISteamNews, billets Frontier intégraux)", "EDCD/FDevIDs (outfitting.csv, commodity.csv, rings.csv, commit c356129)", "EDDiscovery/EliteDangerousCore (énumération RingClassEnum)", "EDSM (API bodies, FAQ Commodities)", "Inara.cz", "EDTools.cc", "pilotstradenetwork.com", "Guides et discussions Steam Community sur le minage (types d'anneau)"]
+zones_incertaines: ["Frontier a publié les douze axes d'équilibrage du minage de surface sans aucune valeur chiffrée", "rôle fonctionnel exact du Sub-Surface Extraction Missile non confirmé par des notes de patch", "correctif « 9 → 12 fragments » du Rhino : ni numéro de version ni date publiés au 9 septembre 2026", "vaisseaux et classes de module permettant d'embarquer un Rhino, et existence d'un achat en crédits", "prix de vente, économies acheteuses et usages en ingénierie des treize marchandises de surface", "pourcentages de bonus Powerplay au minage (Torval, Kaine) et rendement PTN de 3,5 Md Cr par cycle, tous deux d'origine communautaire", "aucun système hotspot n'a pu être confirmé pour le Platine ni pour les Low Temperature Diamonds seuls", "section 4.5 : aucune source primaire Frontier ne publie la distribution des minéraux par type d'anneau ; les colonnes « technique » et « type d'anneau » sont une synthèse de guides de joueurs datés, non vérifiée en jeu", "section 4.5 : le type d'anneau reste non établi pour 16 des 63 marchandises Minerals et Metals, et aucune source ne publie de réserve minimale ni de rendement en tonnes par minéral"]
+guides_lies: [2, 4, 11, 14, 16, 28]
 ---
 # Le Minage (Mining) dans Elite Dangerous
 
 ## En bref
 
 Le minage (*mining*) extrait des minéraux d'astéroïdes en anneau planétaire ou, depuis le 2 septembre 2026, à la
-surface des planètes. Trois techniques d'anneau coexistent : le **laser mining** (Mining Laser, rendement modéré mais
-immédiat, employé pour le Painite, le Platine et l'Osmium), le **minage de gisements de subsurface** (Abrasion
-Blaster, une salve par « cloque ») et le **core mining** ou minage profond, le plus rentable — Pulse Wave Analyser
-pour révéler les fissures, Sub-Surface Displacement Missile pour monter la pression, Seismic Charge Launcher pour
-faire éclater le noyau, qui libère des dizaines de tonnes de Void Opals, Low Temperature Diamonds, Alexandrite ou
-Musgravite. Prospector et Collector Limpets, Refinery (deux à trois emplacements) et Detailed Surface Scanner
-complètent l'équipement. Le **Type-11 Prospector** (Lakon, 29 septembre 2025) est le premier vaisseau entièrement
-dédié au minage ; le SRV **Rhino** (Vodel, 2 septembre 2026) ouvre le minage de surface planétaire et ses treize
-marchandises nouvelles. Un minage laser bien optimisé dépasse 100 M Cr/heure, et rapporte 25 000 à 75 000 mérites
-Powerplay par heure en système d'acquisition ou de renforcement.
+surface des planètes. Trois techniques d'anneau coexistent : le **laser mining** (Mining Laser), le **minage de
+gisements de subsurface** (Abrasion Blaster) et le **core mining**, le plus rentable — Pulse Wave Analyser,
+Sub-Surface Displacement Missile puis Seismic Charge Launcher pour faire éclater un noyau qui libère des
+dizaines de tonnes de Void Opals, Low Temperature Diamonds ou Alexandrite. Le jeu ne reconnaît que **quatre
+types d'anneau** : glacé, rocheux, métallique, riche en métaux. La section 4.5 donne la correspondance minerai ×
+technique × type d'anneau pour les 63 marchandises `Minerals` et `Metals` — la Bertrandite se mine au laser en
+anneau métallique ou riche en métaux. Trente de ces lignes portent un type d'anneau ; les autres sont déclarées
+non établies plutôt que comblées. Le **Type-11 Prospector** (29 septembre 2025) est le premier vaisseau dédié au
+minage, le SRV **Rhino** (2 septembre 2026) ouvre le minage de surface. Un minage laser bien optimisé dépasse
+100 M Cr/heure.
 
 ## Introduction au minage dans Elite Dangerous
 
@@ -94,7 +94,8 @@ Technique à plus haut rendement, réservée aux astéroïdes « à noyau ». La
    ou à l'Abrasion Blaster, avant de tout collecter avec des Collector Limpets.
 
 Un seul noyau peut livrer des dizaines de tonnes du minéral cible : Void Opals, Low Temperature Diamonds, Musgravite,
-Serendibite, Alexandrite, Grandidierite, Benitoite, Rhodplumsite, Monazite.
+Serendibite, Alexandrite, Grandidierite, Benitoite, Rhodplumsite, Monazite. Le type d'anneau où chercher chacun
+d'eux, et la technique applicable à chacune des 63 marchandises minières du jeu, sont donnés en **section 4.5**.
 
 > **Point à vérifier avant usage stratégique.** [Équipements §2.5](./04-equipements.md) liste également un
 > **Sub-Surface Extraction Missile** (fixe, taille 2, notation B, type de projectile « Seeker »). Son existence et
@@ -462,12 +463,272 @@ pour un guide pas à pas définitif. En pratique, pour un premier repérage rapi
 guide peut garantir la description exacte de l'interface** (voir ci-dessus) ; Spansh vaut surtout pour recouper la
 distance de trajet une fois un système candidat identifié, via son Neutron Router (voir [Outils](./16-outils.md)).
 
+### 4.5 Quel minerai dans quel type d'anneau : table de correspondance
+
+Les sous-sections précédentes expliquent comment interroger les outils de repérage ; celle-ci répond à la
+question qui vient juste avant. Le menu **Mineral** d'`edtools.cc/hotspot` et son filtre par type d'anneau
+(voir 4.4) supposent en effet que le lecteur sache déjà **dans quel type d'anneau chercher le minerai qu'il
+vise** — une correspondance que ce guide ne portait pas jusqu'ici. La voici, marchandise par marchandise.
+
+> **Ce que vaut cette table, et ce qu'elle ne vaut pas.** Frontier ne publie aucune table de distribution des
+> minéraux par type d'anneau. Les colonnes « Technique » et « Type d'anneau » ci-dessous sont donc une
+> **synthèse de sources communautaires datées**, consultées le 10 septembre 2026, et non une donnée de jeu
+> officielle : elles doivent être traitées comme les exemples de la section 4.3, c'est-à-dire vérifiées au
+> Prospector Limpet avant d'engager une session. Elles sont recoupées entre deux relevés indépendants séparés
+> de sept ans chaque fois que la marchandise figure dans les deux, et les désaccords sont listés en 4.5.5
+> plutôt que masqués. **Une case vide signifie « non établi », jamais « aucun ».**
+>
+> Le **nommage et la classification complète des 270 marchandises** du jeu — les seize catégories, les denrées
+> rares, les marchandises non minières — relèvent du guide dédié
+> **[Les marchandises](./28-marchandises.md)**. Ce guide-ci n'en retient que les 63 entrées des catégories
+> `Minerals` et `Metals`, et sous le seul angle du minage.
+
+#### 4.5.1 Les quatre types d'anneau reconnus par le jeu
+
+| Identifiant interne    | Nom en jeu (anglais) | Nom français retenu ici | Remarque                                                                                                     |
+|------------------------|----------------------|-------------------------|--------------------------------------------------------------------------------------------------------------|
+| `eRingClass_Icy`       | Icy                  | Glacé                   | —                                                                                                            |
+| `eRingClass_Rocky`     | Rocky                | Rocheux                 | —                                                                                                            |
+| `eRingClass_Metalic`   | Metallic             | Métallique              | Le journal de jeu écrit « Metalic », avec une seule L ; les lecteurs de journaux normalisent en « Metallic » |
+| `eRingClass_MetalRich` | Metal Rich           | Riche en métaux         | Type **distinct** du métallique ; `edtools.cc/hotspot` ne le propose pas dans ses filtres                    |
+
+**Il n'existe que ces quatre types d'anneau** : c'est un relevé intégral du registre d'identifiants EDCD/FDevIDs
+(fichier `rings.csv`, quatre lignes), corroboré par l'énumération `RingClassEnum` du lecteur de journaux
+EliteDangerousCore, qui normalise lui-même « Metalic » en « Metallic » (voir Sources). Toute réponse qui en cite
+un cinquième est fausse. Conséquence pratique pour la section 4.4 : le Hotspot finder d'EDTools.cc, qui se
+limite aux anneaux glacés, rocheux et métalliques, **laisse de côté le quatrième type**, alors que dix-huit des
+marchandises du tableau ci-dessous y sont documentées — la recherche d'un anneau riche en métaux passe donc par
+un autre outil ou par le FSS en jeu.
+
+#### 4.5.2 Les 63 marchandises `Minerals` et `Metals` : technique et type d'anneau
+
+Les colonnes « Marchandise » et « Catégorie FDev » sont un relevé intégral de `commodity.csv` filtré sur les
+deux catégories minières (39 + 24 = 63 lignes). Les colonnes « Technique » et « Type d'anneau » viennent des
+sources communautaires ci-dessous, **ou restent vides quand aucune source n'a pu être établie**.
+
+| Marchandise (nom en jeu)      | Nom français                        | Catégorie FDev | Technique          | Type d'anneau                              | Source      |
+|-------------------------------|-------------------------------------|----------------|--------------------|--------------------------------------------|-------------|
+| Alexandrite                   |                                     | Minerals       | Noyau              | Glacé, Rocheux, Riche en métaux            | S1+S3       |
+| Aluminium                     | Aluminium                           | Metals         |                    |                                            |             |
+| Bastnasite                    | Bastnäsite                          | Minerals       | Surface planétaire | *hors anneau (minage de surface)*          | L1          |
+| Bauxite                       | Bauxite                             | Minerals       | Laser              | Rocheux                                    | S1+S2       |
+| Benitoite                     |                                     | Minerals       | Noyau              | Rocheux, Riche en métaux                   | S1          |
+| Bertrandite                   |                                     | Minerals       | Laser              | Métallique, Riche en métaux                | S1+S2       |
+| Beryllium                     | Béryllium                           | Metals         |                    |                                            |             |
+| Bismuth                       | Bismuth                             | Metals         |                    |                                            |             |
+| Bromellite                    |                                     | Minerals       | Laser + noyau      | Glacé                                      | S1+S2       |
+| Cobalt                        | Cobalt                              | Metals         | Laser              | Rocheux                                    | S1+S2       |
+| Coltan                        |                                     | Minerals       | Laser              | Rocheux, Riche en métaux                   | S1+S2       |
+| Copper                        | Cuivre                              | Metals         |                    |                                            |             |
+| Cryolite                      |                                     | Minerals       | Surface planétaire | *hors anneau (Extraction (Surface))*       | S4          |
+| Deuterium                     | Deutérium                           | Minerals       | Surface planétaire | *hors anneau (minage de surface)*          | L1          |
+| Diamond                       | Diamant                             | Minerals       | Surface planétaire | *hors anneau (minage de surface)*          | L1          |
+| Gallite                       |                                     | Minerals       | Laser              | Rocheux, Métallique, Riche en métaux       | S1+S2       |
+| Gallium                       | Gallium                             | Metals         |                    |                                            |             |
+| Gold                          | Or                                  | Metals         | Laser              | Métallique, Riche en métaux *(?)*          | S1/S2       |
+| Goslarite                     |                                     | Minerals       | Surface planétaire | *hors anneau (Extraction (Surface))*       | S4          |
+| Grandidierite                 |                                     | Minerals       | Noyau              | Glacé                                      | S1+S3       |
+| Haematite                     | Hématite                            | Minerals       |                    |                                            |             |
+| Hafnium 178                   | Hafnium 178                         | Metals         |                    |                                            |             |
+| Indite                        |                                     | Minerals       | Laser              | Rocheux, Métallique, Riche en métaux       | S1+S2       |
+| Indium                        | Indium                              | Metals         |                    |                                            |             |
+| Iridium                       | Iridium                             | Metals         | Surface planétaire | *hors anneau (minage de surface)*          | L1          |
+| Jadeite                       |                                     | Minerals       | Surface planétaire | *hors anneau (Planetary Mining)*           | S4          |
+| Lanthanum                     | Lanthane                            | Metals         |                    |                                            |             |
+| Lepidolite                    |                                     | Minerals       | Laser              | Rocheux, Riche en métaux                   | S1+S2       |
+| Lithium                       | Lithium                             | Metals         |                    |                                            |             |
+| Lithium Hydroxide             | Hydroxyde de lithium                | Minerals       | Laser              | Glacé                                      | S1+S2       |
+| Low Temperature Diamonds      | Diamants basse température          | Minerals       | Noyau + subsurface | Glacé                                      | S1+S3+S5    |
+| Magnesite                     | Magnésite                           | Minerals       | Surface planétaire | *hors anneau (minage de surface)*          | L1          |
+| Methane Clathrate             | Clathrate de méthane                | Minerals       | Laser              | Glacé                                      | S1+S2       |
+| Methanol Monohydrate Crystals | Cristaux de monohydrate de méthanol | Minerals       | Laser              | Glacé                                      | S1+S2       |
+| Moissanite                    |                                     | Minerals       | Surface planétaire | *hors anneau (Planetary Mining)*           | S4          |
+| Monazite                      |                                     | Minerals       | Noyau              | Rocheux, Métallique, Riche en métaux       | S1          |
+| Musgravite                    |                                     | Minerals       | Noyau              | Rocheux                                    | S1+S3       |
+| Olivine                       | Olivine                             | Minerals       | Surface planétaire | *hors anneau (minage de surface)*          | L1          |
+| Osmium                        | Osmium                              | Metals         | Laser              | Métallique, Riche en métaux                | S1+S2       |
+| Painite                       |                                     | Minerals       | Laser + noyau      | Métallique, Riche en métaux *(noyau)*      | S1+S2+S3+S5 |
+| Palladium                     | Palladium                           | Metals         | Laser              | Métallique                                 | S1+S2       |
+| Periclase Dunite              | Périclase dunite                    | Minerals       | Surface planétaire | *hors anneau (minage de surface)*          | L1          |
+| Platinum                      | Platine                             | Metals         | Laser + noyau      | Métallique, Riche en métaux *(noyau)*      | S1+S2+S3    |
+| Praseodymium                  | Praséodyme                          | Metals         | Laser              | Métallique, Riche en métaux                | S1+S2       |
+| Pyrophyllite                  |                                     | Minerals       | Surface planétaire | *hors anneau (Extraction (Surface))*       | S4          |
+| Quartz Pyroxenite             | Quartz pyroxénite                   | Minerals       | Surface planétaire | *hors anneau (minage de surface)*          | L1          |
+| Rhodplumsite                  |                                     | Minerals       | Noyau              | Métallique, Riche en métaux                | S1+S3       |
+| Ruby                          | Rubis                               | Minerals       | Surface planétaire | *hors anneau (minage de surface)*          | L1          |
+| Rutile                        |                                     | Minerals       | Laser              | Rocheux                                    | S1+S2       |
+| Samarium                      | Samarium                            | Metals         | Laser              | Métallique, Riche en métaux, Rocheux *(?)* | S1/S2       |
+| Sapphire                      | Saphir                              | Minerals       | Surface planétaire | *hors anneau (minage de surface)*          | L1          |
+| Serendibite                   |                                     | Minerals       | Noyau              | Rocheux, Métallique, Riche en métaux       | S1          |
+| Silver                        | Argent                              | Metals         | Laser              | Métallique, Riche en métaux                | S1+S2       |
+| Steel                         | Acier                               | Metals         |                    |                                            |             |
+| Taaffeite                     |                                     | Minerals       | Surface planétaire | *hors anneau (Planetary Mining)*           | S4          |
+| Tantalum                      | Tantale                             | Metals         |                    |                                            |             |
+| Thallium                      | Thallium                            | Metals         |                    |                                            |             |
+| Thorium                       | Thorium                             | Metals         |                    |                                            |             |
+| Thortveitite                  | Thortveitite                        | Minerals       | Surface planétaire | *hors anneau (minage de surface)*          | L1          |
+| Titanium                      | Titane                              | Metals         |                    |                                            |             |
+| Uraninite                     |                                     | Minerals       | Laser              | Rocheux, Riche en métaux                   | S1+S2       |
+| Uranium                       | Uranium                             | Metals         |                    |                                            |             |
+| Void Opal                     | Opale du vide                       | Minerals       | Noyau              | Glacé                                      | S1+S3       |
+
+**Clés de source.** S1 = guide Steam *Best Commodities to Mine (Laser & Core)* (3 octobre 2025, mis à jour le
+6 octobre 2025), tableaux « Laser Mining » et « Core Mining », qui donnent un type d'anneau par minéral ·
+S2 = guide Steam *Mining 3.3 Update in progress for 4.0* (décembre 2018), section « Ring types », qui donne la
+liste inverse, minéraux par anneau · S3 = discussion Steam *Mining Filter*, réponse retenue d'Edwyndham
+(1er octobre 2025), témoignage de core miner · S4 = EDSM, FAQ Commodities, colonne « Produced by » ·
+L1 = ce guide lui-même, section 3.3.3. Références complètes en Sources.
+
+**Lecture des marqueurs.** *(?)* signale un type d'anneau sur lequel les deux relevés fermés se contredisent —
+l'un l'affirme, l'autre donne pour la même marchandise une liste qui l'omet. *(noyau)* signale un type d'anneau
+que la source ne cite que pour les astéroïdes à noyau, et non pour le minage laser. Les deux cas sont détaillés
+en 4.5.5. La mention *hors anneau* n'est pas une case vide : elle signifie qu'une source atteste que la
+marchandise s'obtient ailleurs qu'en anneau — soit parce qu'EDSM la donne produite par une économie
+d'extraction de surface, soit parce qu'elle fait partie des treize marchandises du minage de surface planétaire
+du 2 septembre 2026 déjà listées en 3.3.3.
+
+**Décompte recalculé sur le tableau ci-dessus, et non de mémoire :**
+
+| Colonne                | Renseignée | « Hors anneau » | Vide (non établi) |
+|------------------------|------------|-----------------|-------------------|
+| Type d'anneau          | 30 / 63    | 17              | 16                |
+| Technique d'extraction | 47 / 63    | —               | 16                |
+
+Les 30 lignes à type d'anneau renseigné se répartissent en **22 marchandises `Minerals` et 8 `Metals`**, et 30 +
+17 + 16 = 63. Les **16 lignes entièrement vides** sont, nommément : Aluminium, Beryllium, Bismuth, Copper,
+Gallium, Haematite, Hafnium 178, Indium, Lanthanum, Lithium, Steel, Tantalum, Thallium, Thorium, Titanium,
+Uranium. Pour treize d'entre elles, EDSM indique une production par une économie `Refinery` ou `Refinery
+(Surface)`, ce qui rendrait plausible qu'elles ne soient pas extraites d'astéroïde du tout mais achetées en
+station — aucune source consultée ne l'affirme, la case reste donc vide plutôt que devinée. Les trois dernières
+— Hafnium 178, Steel, Haematite — n'ont strictement aucune donnée, pas même une économie productrice.
+
+#### 4.5.3 Le tableau inverse : ce que l'on trouve dans chaque type d'anneau
+
+Même contenu, lu dans l'autre sens. Une marchandise documentée dans plusieurs types d'anneau compte dans
+chacun : la somme des quatre nombres (54) n'est donc pas un effectif de marchandises distinctes.
+
+| Type d'anneau   | Nb (Minerals + Metals) | Marchandises documentées                                                                                                                                                                                            |
+|-----------------|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Glacé           | 8                      | Alexandrite, Bromellite, Grandidierite, Lithium Hydroxide, Low Temperature Diamonds, Methane Clathrate, Methanol Monohydrate Crystals, Void Opal                                                                    |
+| Rocheux         | 14                     | Alexandrite, Bauxite, Benitoite, Cobalt, Coltan, Gallite, Indite, Lepidolite, Monazite, Musgravite, Rutile, Samarium *(?)*, Serendibite, Uraninite                                                                  |
+| Métallique      | 14                     | Bertrandite, Gallite, Gold, Indite, Monazite, Osmium, Painite, Palladium, Platinum, Praseodymium, Rhodplumsite, Samarium, Serendibite, Silver                                                                       |
+| Riche en métaux | 18                     | Alexandrite, Benitoite, Bertrandite, Coltan, Gallite, Gold *(?)*, Indite, Lepidolite, Monazite, Osmium, Painite *(noyau)*, Platinum *(noyau)*, Praseodymium, Rhodplumsite, Samarium, Serendibite, Silver, Uraninite |
+
+**Réponse directe à la question qui manquait à ce guide** : la **Bertrandite** se mine **au laser**, dans les
+anneaux **métalliques** et **riches en métaux**. Les deux relevés, séparés de sept ans, l'y placent tous les
+deux et ne la placent nulle part ailleurs — ni en anneau glacé, ni en anneau rocheux.
+
+> **Piège de découpage à connaître : les anneaux glacés ne contiennent pas que des `Minerals`.** Le tableau
+> ci-dessus ne couvre que les catégories `Minerals` et `Metals`. Or le **Tritium** — carburant des Fleet
+> Carriers, et l'un des treize minéraux du Hotspot finder cité en 4.2 —, le **Hydrogen Peroxide**, le
+> **Liquid Oxygen** et l'**Eau** sont extraits en anneau glacé mais classés `Chemicals` par le jeu. Le nombre
+> « 8 » de la ligne Glacé ne dit donc pas combien de choses se minent dans un anneau glacé ; il dit combien de
+> `Minerals` et `Metals` y sont documentés. Voir [Les marchandises](./28-marchandises.md) pour la répartition
+> complète par catégorie.
+
+#### 4.5.4 Réserves d'anneau : la seule règle générale établie
+
+Un anneau porte, en plus de son type, un **niveau de réserve** qui conditionne le rendement. Les cinq niveaux,
+relevés tels que la source les énumère :
+
+| Niveau de réserve (nom en jeu) | Nom français | Ce que la source en dit                                                  |
+|--------------------------------|--------------|--------------------------------------------------------------------------|
+| Pristine                       | Vierge       | Le meilleur endroit où miner                                             |
+| Major                          | Majeure      | Correct, mais chercher plutôt une réserve Pristine                       |
+| Common                         | Commune      | On y trouve des ressources, mais le rendement ne vaut pas le temps passé |
+| Low                            | Faible       | Il ne reste que les restes                                               |
+| Depleted                       | Épuisée      | À éviter                                                                 |
+
+**Aucune source consultée ne publie de seuil de réserve minimale par minéral.** Il serait tentant d'ajouter au
+tableau 4.5.2 une colonne « réserve minimale conseillée » ; elle serait vide sur les 63 lignes, et la remplir
+« Pristine » partout reviendrait à transformer un conseil global en donnée par minéral. Ce qui est établi est
+la règle générale, corroborée par trois voies indépendantes : le relevé ci-dessus, la restriction que
+`edtools.cc/hotspot` s'impose à lui-même (« Pristine systems only », voir 4.4), et la vérification EDSM des
+anneaux cités en 4.3, tous en réserve Pristine. À type d'anneau égal, viser une réserve Pristine.
+
+#### 4.5.5 Divergences entre sources, et ce que cette table ne couvre pas
+
+| Marchandise       | Ce que dit le relevé de 2025 (S1)                                | Ce que dit l'autre relevé                                                           | Traitement retenu dans le tableau 4.5.2                        |
+|-------------------|------------------------------------------------------------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|
+| Gold              | Métallique seul (tableau laser)                                  | S2 (2018) range l'Or dans les anneaux métalliques **et** riches en métaux           | « Riche en métaux » marqué *(?)*                               |
+| Samarium          | Métallique, Riche en métaux **et Rocheux**                       | S2 (2018) ne range le Samarium que dans les anneaux métalliques et riches en métaux | « Rocheux » marqué *(?)*                                       |
+| Platinum, Painite | Métallique au laser ; Métallique **et** Riche en métaux au noyau | S2 (2018) ne les range que dans les anneaux métalliques                             | « Riche en métaux » marqué *(noyau)*                           |
+| Benitoite         | Rocheux et Riche en métaux                                       | S3 (2025) ne cite que le rocheux, sans se prononcer sur le reste                    | Les deux types conservés : silence n'est pas démenti           |
+| Monazite          | Rocheux, Métallique, Riche en métaux                             | S3 (2025) signale **aussi** du Monazite en anneau glacé                             | « Glacé » **non** ajouté : mention isolée d'un seul témoignage |
+
+**Poids respectif des sources, à peser avant de s'y fier.** S1 est le seul document structuré qui donne un type
+d'anneau minéral par minéral, mais c'est un guide de joueur à faible audience, et son tableau de prix porte une
+coquille de date. S3 est signé d'un autre joueur, mais publié dans une discussion ouverte par l'auteur de S1 :
+les deux ne sont pas totalement indépendants. S2 date de décembre 2018 et son propre auteur le reconnaissait
+périmé dès 2019 ; sa valeur ici est de servir de **contrôle indépendant à sept ans de distance**, jamais de
+source unique. Le wiki Fandom, source la plus citée sur ce sujet par les moteurs de recherche, est resté
+inaccessible (erreurs 402 et 403) comme lors des révisions précédentes, et n'a donc rien pu confirmer.
+
+**Ce que cette table ne donne pas, et où le chercher.**
+
+- **Les prix par tonne.** Volontairement absents, conformément à la règle que ce guide s'est donnée (voir la
+  note sur la fiabilité des données chiffrées) : les seuls prix disponibles pour ces minéraux forment un relevé
+  Inara unique du 3 octobre 2025, dont l'auteur signale lui-même deux valeurs possiblement gonflées par un
+  Community Goal alors en cours. Consulter `edtools.cc/miner` ou Inara avant de partir (voir 4.4).
+- **Le rendement par minéral en tonnes.** Aucune source ne le publie. Les seuls chiffres par minéral que S1
+  fournit sont des estimations de crédits par heure pour cinq métaux au laser ; ils ne sont pas repris ici,
+  la section 5 s'en tenant à un ordre de grandeur global pour la technique.
+- **La réserve minimale par minéral.** Voir 4.5.4 : la donnée n'existe pas publiquement.
+- **Le type d'anneau de 16 marchandises sur 63.** Voir la liste nominative en 4.5.2. La piste serait le wiki
+  Fandom, page par marchandise, aujourd'hui inaccessible — à défaut, un relevé au Prospector Limpet en jeu.
+- **Les économies acheteuses et productrices**, traitées pour les seules marchandises de valeur en section 5 et
+  dans leur ensemble par [Les marchandises](./28-marchandises.md).
+
 ---
 
 ## 5. Rendements chiffrés du minage et revente
 
 Le minage alimente le commerce en fournissant des matières premières à forte valeur ajoutée — **Platine, Painite,
-Diamants basse température, Void Opals** — revendues sur des marchés spécialisés (économies de raffinage/extraction).
+Diamants basse température, Void Opals**. Une révision antérieure de ce guide ajoutait qu'elles se revendent « sur
+des marchés spécialisés (économies de raffinage/extraction) » : **le relevé d'EDSM établit l'inverse**, et la phrase
+est corrigée ci-dessous avant d'aborder les rendements.
+
+### Où se revendent réellement les minerais de valeur : correction d'une affirmation de ce guide
+
+Colonnes relevées telles quelles chez EDSM, en anglais pour ne pas les déformer par traduction — « Produced by »
+désigne les économies qui produisent la marchandise, « Consumed by » celles qui l'achètent :
+
+| Marchandise              | Nom français               | « Produced by » (EDSM)  | « Consumed by » (EDSM)                                  |
+|--------------------------|----------------------------|-------------------------|---------------------------------------------------------|
+| Platinum                 | Platine                    | Mining only             | All except Agri, Refinery, Extraction and Military      |
+| Painite                  |                            | Mining only             | Everywhere except Terraforming, Extraction and Military |
+| Low Temperature Diamonds | Diamants basse température | Mining only             | All                                                     |
+| Void Opal                | Opale du vide              |                         |                                                         |
+| Gold                     | Or                         | Extraction and Refinery | All except Agri, Refinery, Extraction and Military      |
+| Palladium                | Palladium                  | Extraction              | All except Agri, Refinery, Extraction and Military      |
+| Silver                   | Argent                     | Extraction and Refinery | All except Agri, Refinery, Extraction and Military      |
+| Osmium                   | Osmium                     | Mining only             | High Tech, Industrial, Military and Terraforming        |
+
+**Décompte fait sur ces huit lignes.** Sept portent une valeur, une est vide. **Quatre** — Platine, Or, Palladium,
+Argent — excluent explicitement le raffinage *et* l'extraction de leurs acheteuses (« All except Agri, **Refinery**,
+**Extraction** and Military »). **Une**, l'Osmium, ne cite ni l'un ni l'autre. **Une**, la Painite, exclut
+l'extraction mais pas le raffinage. **Une seule**, les Diamants basse température, est achetée partout (« All »),
+raffinage et extraction compris. Et **une**, les Void Opals, n'a aucune donnée chez EDSM : la ligne reste vide
+plutôt que remplie par analogie.
+
+Étendu aux 63 marchandises `Minerals` et `Metals`, le même relevé donne 41 lignes renseignées, dont **une seule**
+— les Diamants basse température — a une économie d'extraction pour acheteuse, et **treize** nomment littéralement
+`Refinery` : Bauxite, Bertrandite, Coltan, Cryolite, Gallite, Goslarite, Indite, Lepidolite, Lithium Hydroxide,
+Methane Clathrate, Pyrophyllite, Rutile, Uraninite. Ce sont toutes des **minerais bruts ou des glaces à faible
+valeur unitaire**, jamais des gemmes. La logique du jeu est cohérente une fois la phrase corrigée : une économie de
+raffinage achète le minerai brut qu'elle va traiter, pas le métal déjà pur ni la gemme taillée ; et une économie
+d'extraction rachète rarement ce qu'elle produit elle-même — les Diamants basse température, achetés partout, sont
+la seule exception du relevé. En pratique, **le Platine, l'Or, le Palladium et l'Argent se vendent partout sauf
+dans les économies agricoles, de raffinage, d'extraction et militaires** : les deux économies que ce guide
+désignait comme leurs débouchés naturels sont précisément celles qui ne les achètent pas.
+
+> **Point à corriger hors de ce guide.** La même formulation figure dans
+> [Commerce § 2.4 « Mining-to-trade »](./11-commerce.md), fichier hors du périmètre de cette révision : la
+> correction y reste à faire. Le relevé complet des économies productrices et acheteuses, marchandise par
+> marchandise, relève de **[Les marchandises](./28-marchandises.md)**.
+
+### Rendements horaires observés
+
 Les chiffres de rendement ci-dessous sont repris de [Commerce § 2.4 « Mining-to-trade »](./11-commerce.md) plutôt que
 réinventés, pour rester cohérent avec le reste du corpus :
 
@@ -548,6 +809,9 @@ normalement pas, mais son intérêt économique (prix de vente, concurrence, sé
 
 - **[Le Commerce dans Elite Dangerous](./11-commerce.md)** — lien minage → revente, exemple chiffré de route
   commerciale, outils de routage (Trade Dangerous, Spansh).
+- **[Les marchandises](./28-marchandises.md)** — nommage et classification complète des 270 marchandises et des
+  142 denrées rares du jeu, catégorie par catégorie : ce guide-ci n'en traite que les 63 entrées `Minerals` et
+  `Metals`, et sous le seul angle du minage (section 4.5).
 - **[Liste complète des équipements](./04-equipements.md)** — fiches techniques complètes de toutes les armes
   minières, des contrôleurs de limpets et des scanners cités dans ce guide.
 - **[Guide complet du Rhino et du Nomad](./14-rhino-nomad.md)** — chronologie, spécifications et prix détaillés du
@@ -596,6 +860,7 @@ résumé, pour les deux premières) :
   section 2.1, dont le Sub-Surface Extraction Missile et la Mining Lance (avec son tag Powerplay).
 - https://edtools.cc/ , https://edtools.cc/hotspot et https://edtools.cc/miner — outils communautaires de repérage
   de hotspots et de prix de minage ; contenu et fonctionnalités revérifiés lors de cette révision.
+
 - https://pilotstradenetwork.com/ — site officiel du réseau communautaire Pilots Trade Network (PTN) ; confirme son
   existence et son activité de wing mining, sans toutefois publier de statistique de rendement chiffrée.
 - https://inara.cz/elite/ (accès partiel — page d'accueil et vue d'ensemble Powerplay uniquement ; les fiches
@@ -607,6 +872,47 @@ résumé, pour les deux premières) :
   minières et de contrôleurs de limpets, sourcé EDCD/FDevIDs et EDCD/coriolis-data), [02-powerplay.md](./02-powerplay.md)
   (bonus de minage Torval/Kaine et mérites, sourcé inara.cz et lavewiki.com — taux non revérifiés indépendamment
   ici, voir section 6).
+
+
+### Sources ajoutées lors de la révision du 10 septembre 2026 (section 4.5 — minerai × technique × type d'anneau)
+
+- https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv — registre EDCD/FDevIDs, commit
+  `c35612952dd6a547d1a7ac4cffab9c7051e86579` (5 septembre 2026), lu en local. **Assiette du tableau 4.5.2** :
+  270 marchandises réparties en seize catégories, dont `Minerals` 39 et `Metals` 24, soit les 63 lignes du tableau.
+  Ce fichier ne contient **ni prix, ni économie, ni type d'anneau** : il ne donne que l'identifiant, le symbole, la
+  catégorie et le nom.
+- https://raw.githubusercontent.com/EDCD/FDevIDs/master/rings.csv — même commit : les quatre types d'anneau du
+  tableau 4.5.1 (`eRingClass_Icy`, `eRingClass_Metalic`, `eRingClass_MetalRich`, `eRingClass_Rocky`), relevé
+  intégral.
+- Dépôt EDDiscovery/EliteDangerousCore, fichier
+  `EliteDangerous/FrontierData/Enumerations/Rings.cs` — énumération `RingClassEnum { Unknown, Rocky, Metallic, Icy,
+  MetalRich }` et normalisation documentant la coquille « Metalic » du journal de jeu : corrobore `rings.csv` par
+  une voie indépendante. Vérifié : ce dépôt ne contient **aucune** table de prix ni de distribution de minerais.
+- **S1** — https://steamcommunity.com/sharedfiles/filedetails/?id=3579503571 — guide Steam *Best Commodities to
+  Mine (Laser & Core)*, par Devilish Dave, publié le 3 octobre 2025 et mis à jour le 6 octobre 2025 ; consulté le
+  10 septembre 2026. Tableaux « Laser Mining » (24 lignes minéral / type d'anneau / prix) et « Core Mining »
+  (12 lignes). Guide de joueur, « Not enough ratings » : utilisable parce que daté et vérifiable, pas parce qu'il
+  fait autorité.
+- **S2** — https://steamcommunity.com/sharedfiles/filedetails/?id=1594281413 — guide Steam *Mining 3.3 Update in
+  progress for 4.0*, par Yousseff., décembre 2018 ; consulté le 10 septembre 2026. Sections « Where to mine »
+  (les cinq niveaux de réserve du tableau 4.5.4) et « Ring types » (listes de minéraux par type d'anneau, avec
+  l'avertissement de l'auteur « This list is subject to change »). Périmé de l'aveu de son auteur dès 2019 :
+  employé ici uniquement comme contrôle indépendant du relevé de 2025.
+- **S3** — https://steamcommunity.com/app/359320/discussions/0/596287304340200947/ — discussion Steam *Mining
+  Filter*, réponse retenue d'Edwyndham (1er octobre 2025), consultée le 10 septembre 2026 : types d'anneau
+  pratiqués en core mining, et jugement selon lequel core-miner du Platine ou de la Painite est possible mais
+  contre-productif, ces deux-là étant bien plus efficaces au laser — ce que la section 1.1 de ce guide disait déjà.
+- **S4** — https://www.edsm.net/en/faq/commodities/index/id/9/name/Minerals et
+  https://www.edsm.net/en/faq/commodities/index/id/8/name/Metals — colonnes « Produced by » et « Consumed by »
+  d'EDSM, consultées le 10 septembre 2026 : source des mentions *hors anneau* du tableau 4.5.2 et du tableau des
+  économies de la section 5. Attention en cas de recoupement : la page « Minerals » d'EDSM compte 41 entrées
+  contre 39 dans FDevIDs, l'écart venant de deux denrées rares qu'EDSM range dans les minerais ; un croisement
+  naïf des deux référentiels fabriquerait donc de faux minerais minables.
+- **S5** — https://www.elitedangerous.net/mining.php (Pilots Trade Network, dernière mise à jour du
+  15 juillet 2020) : confirme Painite en anneau métallique, Low Temperature Diamonds et Tritium en anneau glacé.
+- Restées inaccessibles, et à ne pas retenter à l'identique : `elite-dangerous.fandom.com` (HTTP 402 puis 403, y
+  compris via son API), les forums Frontier (HTTP 403 puis réponse vide), `spansh.co.uk/riches` (coquille
+  applicative sans données), `newp.io/mining` (HTTP 521). Aucune donnée n'en a été tirée.
 
 ### Limites de la recherche et points du minage restés à vérifier en jeu
 

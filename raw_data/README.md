@@ -30,12 +30,18 @@ pas, un encart « En bref » qui répond à lui seul à la question générale d
 compréhensibles une fois extraits de leur fichier. [`index.yaml`](./index.yaml) agrège ces métadonnées en un routeur
 de requête, et les *Notes d'ingestion RAG* en fin de document spécifient comment s'en servir.
 
+Un cinquième cycle, mené le même jour, a comblé le manque de vocabulaire le plus visible du corpus : le catalogue des
+marchandises. Le nouveau guide [28-marchandises.md](./28-marchandises.md) nomme et classe les 270 commodités et les
+142 denrées rares du jeu, que les guides d'économie ne faisaient jusqu'ici qu'effleurer, et porte le corpus à
+**28 guides thématiques**. Il déclare en propre les colonnes qu'aucune source consultée n'établit — prix, légalité,
+allocation par cycle —, plutôt que de les combler.
+
 ## Deux corpus dans le même dépôt : règle de préséance
 
 Le dépôt héberge deux ensembles de contenu francophone qui se recouvrent partiellement et n'avaient jamais été
 réconciliés. Cette section pose la règle qui les départage.
 
-- **`raw_data/`** — 29 fichiers markdown (27 guides thématiques et 2 documents transversaux) : la base de
+- **`raw_data/`** — 30 fichiers markdown (28 guides thématiques et 2 documents transversaux) : la base de
   connaissances de référence sur **le jeu**, écrite pour alimenter le RAG. C'est le présent répertoire. Chaque guide
   porte un front-matter YAML et un encart « En bref » ; [`index.yaml`](./index.yaml) en agrège les métadonnées et sert
   de routeur de requête. Le gabarit du front-matter et l'usage de l'index sont spécifiés dans les *Notes d'ingestion
@@ -147,7 +153,7 @@ celui défini par les *Notes d'ingestion RAG* en fin de document, qui n'indexe q
   Powerplay), formats de jeu (CG, CZ, RES, USS, PvE, PvP, NPC, CMDR) et matériel de bord (FSD et sa variante SCO, DSS,
   FSS, HRP, MRP, SRV, FC). Les entrées de modules précisent leur catégorie d'emplacement.
 
-Les 27 guides thématiques sont regroupés ci-dessous par domaine.
+Les 28 guides thématiques sont regroupés ci-dessous par domaine.
 
 ## Débuter et progresser
 
@@ -294,12 +300,21 @@ Les 27 guides thématiques sont regroupés ci-dessous par domaine.
   952 296 Cr à 20 000 000 Cr et multiplicateur *First Logged* ×5. Le **Nomad** et son *Mk II Biological Scanner* y
   complètent le SRV depuis le 30 juin 2026.
 
-## Économie (Commerce, Transport, Minage, Fleet Carriers)
+## Économie (Commerce, Transport, Minage, Fleet Carriers, Marchandises)
 
+- [Les marchandises d'Elite Dangerous : catalogue des 270 commodités et des 142 denrées rares](./28-marchandises.md) —
+  Référentiel de nommage du marché : les **270 commodités** du jeu réparties en **16 catégories** officielles —
+  Récupération (96 entrées), Minéraux (39), Machines (24), Métaux (24) —, chacune avec son nom affiché en jeu, une glose
+  française et le **symbole interne** qu'émet le journal de jeu. Donne les économies productrices et consommatrices pour
+  133 d'entre elles, et pour les 63 marchandises des catégories Minéraux et Métaux la technique d'extraction et le type
+  d'anneau lorsqu'une source les documente — la **Bertrandite** se mine au laser en anneau métallique et riche en
+  métaux —, puis localise les **142 denrées rares** par système, station et type de station, sur **139 stations** dont
+  trois en produisent deux. Les prix du commerce courant, la légalité par superpuissance et l'allocation par cycle n'y
+  figurent pas : aucune source consultée ne les établit, et le guide dit où il faudrait aller les chercher.
 - [Guide complet du commerce dans Elite Dangerous](./11-commerce.md) — Explique le principe du *trading* — acheter là
   où une économie de station produit, revendre là où une autre consomme — et l'effet des états du BGS sur les prix,
-  Boom, Famine et Outbreak en tête. Couvre les quatre familles de commerce (vrac, données, contrebande dont la
-  **Robigo Run**, *mining-to-trade*), les neuf paliers du **Trade Rank**, un exemple de route chiffré en Type-6, le
+  Boom, Famine et Outbreak en tête. Couvre les cinq familles de commerce (vrac, données, contrebande dont la
+  **Robigo Run**, *mining-to-trade*, piraterie), les neuf paliers du **Trade Rank**, un exemple de route chiffré en Type-6, le
   haut de gamme du fret (Type-9 Heavy, Imperial Cutter, Type-10 Defender, Panther Clipper Mk II) et les calculateurs
   de route Spansh et Trade Dangerous.
 - [Guide complet du transport dans Elite Dangerous](./12-transport.md) — Traite les quatre métiers du transport. Le
@@ -385,7 +400,7 @@ quels par un humain.
 ### Règle 1 — N'indexer que les guides
 
 Indexer `raw_data/*.md` **à l'exclusion de `README.md`**, et ne pas indexer `raw_data/index.yaml`, qui n'est pas un
-guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 29 fichiers dont le
+guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 30 fichiers dont le
 nom correspond à `^\d{2}-.*\.md$` à la racine de `raw_data/`.
 
 Ce glob doit rester **non récursif** et ignorer les répertoires cachés : `raw_data/` peut contenir un `.omc/`
@@ -430,21 +445,34 @@ recouvre lexicalement l'ensemble du corpus. Indexées, elles remontent en tête 
 évincent les passages qui contiennent réellement la réponse. Les renvois croisés utiles restent accessibles au lecteur
 humain dans le fichier ; ils n'ont simplement pas leur place dans l'index vectoriel.
 
-**Relevé du 10 septembre 2026, après enrichissement chiffré du corpus : 57 sections, 16 597 mots.**
+**Relevé du 10 septembre 2026, après l'ajout du guide des marchandises : 59 sections, 18 429 mots.**
 Comptage : titres capturés par le motif ci-dessus dans les fichiers `NN-*.md`, contenu compté jusqu'au titre de
 même niveau ou de niveau supérieur suivant, `split()` sur les espaces. Vingt-cinq guides
-portent deux sections concernées (`## Voir aussi` et `## Sources`), deux en portent trois —
-[07-equipement-a-pied.md](./07-equipement-a-pied.md) et [10-exploration.md](./10-exploration.md), qui ajoutent chacun
-une section de ressources externes —, et deux n'en portent aucune :
-[00-chronologie-canonique.md](./00-chronologie-canonique.md) et [00-glossaire.md](./00-glossaire.md). Les blocs les
-plus lourds sont les `## Sources` de [06-ingenieurs.md](./06-ingenieurs.md) (1 336 mots) et de
-[20-minage.md](./20-minage.md) (1 255 mots), suivis de celui de
-[17-sources-donnees.md](./17-sources-donnees.md) (717 mots).
+portent deux sections concernées (`## Voir aussi` et `## Sources`), trois en portent trois —
+[05-guardians.md](./05-guardians.md), [07-equipement-a-pied.md](./07-equipement-a-pied.md) et
+[10-exploration.md](./10-exploration.md), qui ajoutent chacun une section de ressources externes —, et deux n'en
+portent aucune : [00-chronologie-canonique.md](./00-chronologie-canonique.md) et
+[00-glossaire.md](./00-glossaire.md). Soit 25 × 2 + 3 × 3 + 2 × 0 = 59 sections pour 30 fichiers. Les blocs les plus
+lourds sont les `## Sources` de [06-ingenieurs.md](./06-ingenieurs.md) (1 783 mots) et de
+[20-minage.md](./20-minage.md) (1 776 mots), suivis de celui de
+[10-exploration.md](./10-exploration.md) (788 mots) et de celui de
+[28-marchandises.md](./28-marchandises.md) (749 mots).
+
+Deux écarts avec le relevé précédent, publié le même jour et corrigés ici, méritent d'être signalés parce qu'ils
+illustrent exactement le défaut que ce relevé est censé prévenir. Le décompte de **57 sections** était juste, mais la
+phrase qui l'introduisait ne retombait pas dessus : elle annonçait vingt-cinq guides à deux sections et deux à trois,
+soit 25 × 2 + 2 × 3 = 56 pour 29 fichiers. La répartition réelle sur ces 29 fichiers était vingt-quatre guides à deux
+sections et **trois** à trois — [05-guardians.md](./05-guardians.md) porte lui aussi une section de ressources
+externes, et avait été omis —, soit 24 × 2 + 3 × 3 = 57. Second écart : le bloc `## Sources` de
+[06-ingenieurs.md](./06-ingenieurs.md) était annoncé à 1 336 mots alors que la méthode ci-dessous, appliquée à cette
+même révision du fichier, en rend 1 783 ; d'où un total antérieur de 16 597 mots là où le recomptage de cette révision
+en donne 16 778. Le chiffre publié doit être celui que le script rend, et la prose qui l'introduit doit se recompter
+sur lui.
 
 **Méthode de comptage, à reproduire à l'identique après toute révision.** Ces deux chiffres ne sont comparables dans
 le temps que si la mesure l'est aussi. La convention retenue est la suivante :
 
-1. **Périmètre** : les 29 fichiers du périmètre indexé défini à la règle 1 ; `README.md`, `index.yaml` et les
+1. **Périmètre** : les 30 fichiers du périmètre indexé défini à la règle 1 ; `README.md`, `index.yaml` et les
    sous-répertoires en sont exclus.
 2. **Détection** : une section est retenue si sa ligne de titre correspond au motif ci-dessus et ne figure pas dans la
    liste des exceptions, vide à ce jour.
@@ -491,7 +519,7 @@ Il permet aussi de restituer une réponse en citant sa source exacte.
 
 ### Règle 4 — Router la requête sur `index.yaml` avant la recherche vectorielle
 
-[`index.yaml`](./index.yaml) agrège le front-matter des 29 guides. Il est **généré** depuis ces front-matter et doit
+[`index.yaml`](./index.yaml) agrège le front-matter des 30 guides. Il est **généré** depuis ces front-matter et doit
 être régénéré après toute modification de l'un d'eux ; il n'est **pas** indexé comme un guide.
 
 Il s'emploie en amont de la recherche vectorielle, comme routeur de requête :
