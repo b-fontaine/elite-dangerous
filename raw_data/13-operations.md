@@ -6,7 +6,7 @@ entites: [Operations, Operation Runner, Merc Coin, MercGear, Under Siege, Tactic
 mots_cles_en: [operations, operation runner, merc coin, mercgear, under siege, tactical takedown, on-foot combat zone, settlement, odyssey, matchmaking, powerplay mode]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-09
+date_verification: 2026-09-12
 confiance_globale: haute
 volatilite: haute
 sources_primaires: [Steam News Frontier (API ISteamNews), ticket EDCD/EDDI n° 2849, Wikipedia Elite Dangerous, EDSM, Canonn Research, Steam Community Guides]
@@ -17,7 +17,7 @@ zones_incertaines:
   - "Numéros de version client 4.4.0.0 et 4.4.0.3 : relevés communautaires de journaux de jeu, non officiels."
   - "Spécialités des quatre Engineers à pied de Colonia, non détaillées dans les sources consultées."
   - "Aucun build nommé recoupé pour le fabricant d'armes Takada."
-guides_lies: [0, 2, 6, 7, 9, 14, 18, 23, 26]
+guides_lies: [0, 2, 6, 7, 9, 14, 18, 23, 26, 29]
 ---
 
 # Elite Dangerous : Guide complet des Opérations — mode multijoueur (2026) et gameplay à pied (Odyssey)
@@ -328,7 +328,26 @@ d'accostage** demandée en approche. Sans autorisation, trois options existent :
 type « bypass » pour l'obtenir légitimement, s'infiltrer discrètement par une entrée non surveillée, ou engager le
 combat frontalement en acceptant le statut recherché qui en découle localement.
 
+### Apex Interstellar et Frontline Solutions : rallier une opération sans y poser son propre vaisseau
+
+Deux services Odyssey permettent de rejoindre un point d'engagement sans y amener son propre vaisseau. **Apex
+Interstellar** est une navette rapide, réservable à un comptoir en station ou à distance depuis un settlement,
+tarifée à la distance (frais de base + frais hyperespace variable), qui dépose son passager n'importe où — y compris
+à proximité d'un settlement distant. **Frontline Solutions** est spécifique à l'engagement en **zone de conflit au
+sol** : un comptoir dédié, actif uniquement dans un système en état Guerre ou Guerre Civile, permet de choisir un
+settlement en conflit et un camp, puis d'embarquer à bord d'un dropship dédié (jusqu'à cinq autres commandants ou
+PNJ) sans que le trajet compte pour la réputation du joueur envers les factions belligérantes. Le détail complet des
+deux services — tarification, limites, niveaux de « Conflict Intensity », paie observée — est traité dans
+[29-missions-reputation-et-rangs.md §7](./29-missions-reputation-et-rangs.md#7-apex-interstellar-et-frontline-solutions--les-deux-portes-dentrée-dodyssey),
+qui couvre aussi la correction du 30 juin 2026 mentionnée plus haut au sujet de la réservation systématique d'un
+dropship.
+
 ## Le tableau de missions et les huit familles d'opérations au sol (assassinat, sabotage, hacking…)
+
+Ce tableau documente les missions **au sol**. Pour la typologie équivalente côté missions de **vaisseau** (sept
+familles officieuses : Courier, Supply, Assassination, Massacre, Theft/Liberation, Recovery, Surface Operations) et
+la mécanique de cumul et de cycle de vie du tableau de missions en général, voir
+[29-missions-reputation-et-rangs.md §1](./29-missions-reputation-et-rangs.md#1-le-tableau-de-missions-de-vaisseau--typologie-et-fonctionnement).
 
 Le tableau de mission d'un settlement (ou le comptoir de contacts en station, pour les missions à distance) propose
 plusieurs grandes familles d'opérations :

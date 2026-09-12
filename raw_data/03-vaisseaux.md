@@ -11,7 +11,7 @@ mots_cles_en: [shipyard, hardpoints, optional internals, jump range, supercruise
   hull cost, retail cost]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-12
 confiance_globale: haute
 volatilite: haute
 sources_primaires: ["Inara.cz", "EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27)",
@@ -27,7 +27,7 @@ zones_incertaines: ["dureté de coque, mass lock, capacité thermique et coût d
   "fabricant, prix en crédits et gabarit de plateforme du Nomad non documentés par Frontier",
   "taux de rebuy d'environ 5 % de la valeur assurée donné comme ordre de grandeur, non comme valeur fixe",
   "prix Inara sujets à fluctuation, à revérifier avant tout achat important"]
-guides_lies: [4, 6, 10, 13, 14, 18, 20, 27]
+guides_lies: [4, 6, 10, 13, 14, 18, 20, 27, 29]
 ---
 
 # Liste complète des vaisseaux d'Elite Dangerous
@@ -507,7 +507,10 @@ L'ordre des rangs Fédération croît bien avec la puissance du vaisseau (Midshi
 < Rear Admiral dans l'échelle de la Federal Navy), de même côté Empire (Master < Baron < Duke). Aucun autre vaisseau du
 jeu — **Imperial Eagle et gamme Alliance incluse** — ne demande de rang : seuls les crédits comptent. Aucun des huit
 vaisseaux les plus récents (Python Mk II, Type-8, Mandalay, Caspian Explorer, Cobra Mk V, Corsair, Panther Clipper
-Mk II, Type-11 Prospector, Kestrel Mk II, Lynx Highliner) n'introduit de nouvelle condition de rang à ce jour.
+Mk II, Type-11 Prospector, Kestrel Mk II, Lynx Highliner) n'introduit de nouvelle condition de rang à ce jour. Pour
+l'échelle complète des deux marines (quinze paliers chacune, dont les paliers intermédiaires qui ne conditionnent
+aucun vaisseau) et leur mécanisme de promotion, voir
+[29-missions-reputation-et-rangs.md §3](./29-missions-reputation-et-rangs.md#3-les-deux-échelles-de-marine-de-superpuissance).
 
 ## Chasseurs embarqués (Ship-Launched Fighters)
 

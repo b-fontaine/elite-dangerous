@@ -9,11 +9,11 @@ mots_cles_en: [new commander, starter ship, sidewinder mk i, hauler, adder, cobr
   imperial navy rank]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-09
+date_verification: 2026-09-12
 confiance_globale: moyenne
 volatilite: moyenne
 sources_primaires: [edfieldmanual.com, inara.cz, wikiwand/Wikipédia,
-  "corpus interne (03-vaisseaux, 06-ingenieurs, 08-combat-spatial, 10-exploration, 11-commerce)"]
+  "corpus interne (03-vaisseaux, 06-ingenieurs, 08-combat-spatial, 10-exploration, 11-commerce, 29-missions-reputation-et-rangs)"]
 zones_incertaines: ["seuils numériques de progression de rang, jamais publiés officiellement quelle que soit la filière",
   "conditions de déblocage de The Dweller, divergentes entre les deux sources consultées",
   "conditions chiffrées de Tod McQuinn et de Lei Cheung, non recoupées avec une source primaire",
@@ -24,7 +24,7 @@ zones_incertaines: ["seuils numériques de progression de rang, jamais publiés 
   "mécanisme exact de calcul du rang de commerce (achat-revente, minerai, missions comptent-ils à parts égales)",
   "aucun Cr/h fiable pour un vaisseau starter non ingénierié",
   "portée de saut stock du Hauler, non recoupée par une recherche indépendante cette édition"]
-guides_lies: [1, 3, 6, 8, 10, 11, 12, 20, 23]
+guides_lies: [1, 3, 6, 8, 10, 11, 12, 20, 23, 29]
 ---
 
 # Débuter et progresser dans Elite Dangerous : premiers pas et rangs
@@ -120,14 +120,17 @@ Elite Dangerous suit **huit progressions de rang indépendantes** : les **six fi
 | 9 | Elite | Elite | Elite | — | *non confirmé* | *non confirmé* |
 | 9+ | Elite I → V | Elite I → V | Elite I → V | Elite I → V | *non confirmé* | Elite (I/III/V observés), Legend, Hero |
 
-Les deux échelles de marine ne suivent pas le même gabarit que les six filières Pilots Federation et sont donc données à part. Le corpus n'en documente que les paliers qui conditionnent l'achat d'un vaisseau, relevés sur les fiches Inara au 9 septembre 2026 ; les paliers intermédiaires ne sont pas couverts :
+Les deux échelles de marine ne suivent pas le même gabarit que les six filières Pilots Federation et sont donc données à part. Depuis cette édition, elles sont documentées **en entier** — quinze paliers chacun, dont « None » — dans
+[29-missions-reputation-et-rangs.md §3](./29-missions-reputation-et-rangs.md#3-les-deux-échelles-de-marine-de-superpuissance) ;
+ce guide-ci n'en reprend que les paliers qui conditionnent l'achat d'un vaisseau :
 
 | Échelle | Paliers documentés par le corpus (ordre croissant) | Ce qu'ils débloquent |
 |---|---|---|
 | Marine fédérale (Federal Navy) | Midshipman < Chief Petty Officer < Ensign < … < Rear Admiral | Federal Dropship, Federal Assault Ship, Federal Gunship, Federal Corvette |
 | Marine impériale (Imperial Navy) | Master < Baron < Duke | Imperial Courier, Imperial Clipper, Imperial Cutter |
 
-Sources internes : Combat — [08-combat-spatial.md §6.1](./08-combat-spatial.md) ; Commerce — [11-commerce.md, « Rang de commerce »](./11-commerce.md) ; Exploration/Exobiologie — [10-exploration.md §2.6](./10-exploration.md) ; existence des six filières Pilots Federation — [01-lore.md §2.7](./01-lore.md) ; échelles de marine — [03-vaisseaux.md, « Rangs de réputation requis »](./03-vaisseaux.md#rangs-de-réputation-requis--les-sept-vaisseaux-fédération-et-empire-sous-condition-de-rang). La colonne CQC reste volontairement lacunaire : Inara ne montre que les paliers atteints par les meilleurs joueurs de son classement (Legend, Hero, Elite I/III/V), pas une échelle complète et ordonnée du bas vers le haut — voir 2.4 pour le détail de ce qui n'a pas pu être confirmé. La colonne Mercenaire l'est pour une autre raison : le corpus atteste l'**existence** de cette filière ([01-lore.md §2.7](./01-lore.md)) et le fait que la réputation mercenaire conditionne les grades de combinaison à pied ([13-operations.md, « S'équiper à pied : les quatre combinaisons »](./13-operations.md)), mais aucune source consultée n'en donne l'échelle de paliers ordonnée — vérifiez-la dans le panneau des rangs en jeu.
+Sources internes : Combat — [08-combat-spatial.md §6.1](./08-combat-spatial.md) ; Commerce — [11-commerce.md, « Rang de commerce »](./11-commerce.md) ; Exploration/Exobiologie — [10-exploration.md §2.6](./10-exploration.md) ; existence des six filières Pilots Federation — [01-lore.md §2.7](./01-lore.md) ; échelles de marine — [03-vaisseaux.md, « Rangs de réputation requis »](./03-vaisseaux.md#rangs-de-réputation-requis--les-sept-vaisseaux-fédération-et-empire-sous-condition-de-rang) et, pour l'échelle complète et le mécanisme de promotion, [29-missions-reputation-et-rangs.md §3](./29-missions-reputation-et-rangs.md). La colonne CQC reste volontairement lacunaire : Inara ne montre que les paliers atteints par les meilleurs joueurs de son classement (Legend, Hero, Elite I/III/V), pas une échelle complète et ordonnée du bas vers le haut — voir 2.4 pour le détail de ce qui n'a pas pu être confirmé. La colonne Mercenaire l'est pour une autre raison : le corpus atteste l'**existence** de cette filière ([01-lore.md §2.7](./01-lore.md)) et le fait que la réputation mercenaire conditionne les grades de combinaison à pied ([13-operations.md, « S'équiper à pied : les quatre combinaisons »](./13-operations.md)), mais aucune source consultée n'en donne l'échelle de paliers ordonnée — une recherche indépendante menée pour
+[29-missions-reputation-et-rangs.md §4](./29-missions-reputation-et-rangs.md#4-le-rang-mercenaire-combat-à-pied) confirme cette même absence plutôt que de la combler ; vérifiez votre progression dans le panneau des rangs en jeu.
 
 ### 2.1 Rang Combat : CZ haute intensité contre assassinats de cibles élevées
 

@@ -10,8 +10,8 @@
 # « Notes d'ingestion RAG » de raw_data/README.md. Toute modification d'un front-matter de guide
 # impose de régénérer ce fichier.
 
-date_generation: 2026-09-10
-nombre_de_guides: 30
+date_generation: 2026-09-12
+nombre_de_guides: 31
 genere_depuis: "front-matter YAML des fichiers raw_data/NN-*.md"
 indexer_ce_fichier: false
 
@@ -468,3 +468,18 @@ guides:
     sources_primaires: ["EDCD/FDevIDs commit c35612952dd6a547d1a7ac4cffab9c7051e86579 (commodity.csv, rare_commodity.csv, economy.csv, rings.csv)", "EDSM FAQ Commodities (15 pages de catégories)", "API Spansh /api/station/<market_id>", "API EDSM /api-system-v1/stations/market", "guides communautaires Steam sur le minage (Devilish Dave, Yousseff., Edwyndham)"]
     zones_incertaines: ["aucun prix d'achat ni de vente du commerce courant n'est établi : commodity.csv n'en porte aucun et aucune source stable n'a pu être retenue", "les économies productrices et consommatrices ne sont documentées que pour 133 marchandises sur 270, dont zéro des 96 marchandises de la catégorie Salvage", "la légalité n'est documentée que pour 12 marchandises sur 270 et aucune matrice marchandise par superpuissance ou par type de gouvernement n'a pu être consultée", "le type d'anneau reste inconnu pour 16 des 63 marchandises des catégories Minéraux et Métaux et repose partout ailleurs sur des guides de joueurs, jamais sur une source Frontier", "la réserve minimale conseillée par minéral n'est établie par aucune source : seule existe la règle générale de viser une réserve Pristine", "l'allocation par cycle des denrées rares et la distance optimale de revente ne sont établies par aucune source ; les prix et stocks relevés sont un instantané du 10 septembre 2026", "la colonne Nom français est une glose de lecture produite pour ce corpus, et non la localisation officielle du client français du jeu", "la position de la station Heart of Taurus (méga-vaisseau) repose sur un relevé de marché du 9 août 2022"]
     guides_lies: [6, 11, 12, 16, 17, 19, 20, 27]
+
+  - id: 29-missions-reputation-et-rangs
+    fichier: 29-missions-reputation-et-rangs.md
+    titre: "Missions, réputation et rangs de superpuissance dans Elite Dangerous"
+    domaine: "transversal"
+    entites: ["Federal Navy", "Imperial Navy", "Federal Corvette", "Imperial Cutter", "Imperial Courier", "Federal Dropship", "Shinrarta Dezhra", "Alioth", "Achenar", "Apex Interstellar", "Frontline Solutions", "Mission Board", "Domino Green", "Gatekeeper", "Pilots Federation"]
+    mots_cles_en: ["mission board", "federal navy rank", "imperial navy rank", "reputation", "permit", "apex interstellar", "frontline solutions", "board flipping", "mission stacking", "team missions", "wing missions", "courier", "massacre", "assassination", "surface operations", "conflict intensity", "faction representative"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-12"
+    confiance_globale: "moyenne"
+    volatilite: "moyenne"
+    sources_primaires: ["elite-dangerous.fandom.com (Federation/Ranks, Empire/Ranks, Permits, Mission Board, Reputation, Team Missions, Apex Interstellar Transport, Conflict Zone (On Foot), Frontline Solutions, Domino Green)", "elitedangerous.com/news/updates (4.4.0.0, 4.4.0.2, 4.4.0.3)", "GitHub EDCD/EDMarketConnector (stats.py)", "forums.frontier.co.uk", "corpus interne (03-vaisseaux, 06-ingenieurs, 09-combat-a-pied, 13-operations, 24-community-goals, 27-debuter-et-progresser)"]
+    zones_incertaines: ["seuils numériques exacts (%) des paliers Unfriendly et Hostile de l'échelle de réputation, non chiffrés par les sources consultées", "condition d'accès au marché noir d'une station : contradiction non résolue entre gouvernance/état BGS et un seuil de réputation Cordial rapporté par la communauté", "plafond de missions actives simultanées (mission stacking), chiffré à 20 par une seule source datée de 2018", "mécanisme actuel du board flipping, non revérifié pour la version 4.4.0.x", "localisation exacte de la mission d'invitation du permis Sirius, divergente entre deux sources", "date du Community Goal ayant conditionné le permis Alioth, divergente entre le corpus interne (mai-juin 2021) et cette recherche (CG de février 2022, mégaship établi en novembre 2021)", "accessibilité actuelle du permis du Pilots' Federation District depuis la probable suppression de l'option de départ à Dromi en 2023", "échelle de paliers ordonnée du rang Mercenaire, absente de toutes les sources consultées", "durée exacte d'un trajet Apex et taux du Hyperspace Fee, non publiés officiellement", "prêt d'équipement par Frontline Solutions, mentionné par une source antérieure du corpus mais non confirmé par cette recherche"]
+    guides_lies: [2, 3, 6, 8, 9, 10, 11, 13, 21, 23, 24, 27]

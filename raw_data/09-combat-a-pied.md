@@ -6,7 +6,7 @@ entites: [Dominator, Maverick, Artemis, Flight Suit, Manticore Executioner, Karm
 mots_cles_en: [on-foot combat, dominator suit, maverick suit, artemis suit, ground conflict zone, added melee damage, quieter footsteps, audio masking, noise suppressor, merc coin, mercgear, operations]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-09
+date_verification: 2026-09-12
 confiance_globale: haute
 volatilite: moyenne
 sources_primaires: [Steam News Frontier (API ISteamNews), Wikipedia Elite Dangerous, Canonn Research, Inara, PCGamesN, Spansh, Steam Community Guides]
@@ -17,7 +17,7 @@ zones_incertaines:
   - "Coûts d'ingénierie en crédits : instantané du 9 septembre 2026, susceptible d'être rééquilibré."
   - "Aucune modification de combat recensée à ce jour chez les quatre Engineers de Colonia."
   - "Correspondance entre les six scénarios annoncés le 22 avril 2026 et les six opérations du lancement : Frontier n'a publié aucune table de correspondance."
-guides_lies: [0, 2, 6, 7, 8, 13, 14, 18, 26]
+guides_lies: [0, 2, 6, 7, 8, 13, 14, 18, 26, 29]
 ---
 
 # Guide complet du combat à pied dans Elite Dangerous
@@ -224,7 +224,9 @@ débloqué) ou via la montée en rang du commandant dans les activités de merce
   habités vendent l'équipement de base et ses premiers grades.
 - **Déblocage de grades/armes/suits supplémentaires** : nécessite généralement une progression de rang (rang de
   combat/mercenaire) et/ou l'accès à des ingénieurs spécifiques présents dans certains settlements, chacun spécialisé
-  dans un type d'arme ou de suit.
+  dans un type d'arme ou de suit. Le rang Mercenaire n'a, à ce jour, aucune échelle de paliers publiée par une source
+  consultée — voir [29-missions-reputation-et-rangs.md §4](./29-missions-reputation-et-rangs.md#4-le-rang-mercenaire-combat-à-pied),
+  qui confirme cette absence après une recherche dédiée plutôt que de la combler.
 - **Effets expérimentaux et modifications** : nécessitent la collecte de matériaux au sol puis leur dépôt chez
   l'ingénieur correspondant.
 

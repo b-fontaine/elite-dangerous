@@ -36,12 +36,22 @@ marchandises. Le nouveau guide [28-marchandises.md](./28-marchandises.md) nomme 
 **28 guides thématiques**. Il déclare en propre les colonnes qu'aucune source consultée n'établit — prix, légalité,
 allocation par cycle —, plutôt que de les combler.
 
+Un sixième cycle, mené le 12 septembre 2026, a assemblé la colonne vertébrale de la progression du joueur, jusque-là
+traitée activité par activité sans jamais l'être en tant que sujet. Le nouveau guide
+[29-missions-reputation-et-rangs.md](./29-missions-reputation-et-rangs.md) documente pour la première fois en entier
+les deux échelles de marine de superpuissance (Federal Navy et Imperial Navy, quinze paliers chacune), la typologie du
+tableau de missions de vaisseau, l'échelle de réputation de faction en six paliers, un tableau des systèmes à permis
+et les deux services Odyssey — Apex Interstellar et Frontline Solutions — qui donnent accès au combat organisé sans y
+poser son propre vaisseau, et porte le corpus à **29 guides thématiques**. Comme les cycles précédents, il signale
+plutôt qu'il ne tranche les divergences rencontrées entre sources — notamment sur la date du Community Goal associé
+au permis Alioth et sur un mécanisme de prêt d'équipement Frontline Solutions qui n'a pas pu être confirmé.
+
 ## Deux corpus dans le même dépôt : règle de préséance
 
 Le dépôt héberge deux ensembles de contenu francophone qui se recouvrent partiellement et n'avaient jamais été
 réconciliés. Cette section pose la règle qui les départage.
 
-- **`raw_data/`** — 30 fichiers markdown (28 guides thématiques et 2 documents transversaux) : la base de
+- **`raw_data/`** — 31 fichiers markdown (29 guides thématiques et 2 documents transversaux) : la base de
   connaissances de référence sur **le jeu**, écrite pour alimenter le RAG. C'est le présent répertoire. Chaque guide
   porte un front-matter YAML et un encart « En bref » ; [`index.yaml`](./index.yaml) en agrège les métadonnées et sert
   de routeur de requête. Le gabarit du front-matter et l'usage de l'index sont spécifiés dans les *Notes d'ingestion
@@ -153,7 +163,7 @@ celui défini par les *Notes d'ingestion RAG* en fin de document, qui n'indexe q
   Powerplay), formats de jeu (CG, CZ, RES, USS, PvE, PvP, NPC, CMDR) et matériel de bord (FSD et sa variante SCO, DSS,
   FSS, HRP, MRP, SRV, FC). Les entrées de modules précisent leur catégorie d'emplacement.
 
-Les 28 guides thématiques sont regroupés ci-dessous par domaine.
+Les 29 guides thématiques sont regroupés ci-dessous par domaine.
 
 ## Débuter et progresser
 
@@ -163,6 +173,12 @@ Les 28 guides thématiques sont regroupés ci-dessous par domaine.
   (349 720 Cr), le réflexe du coût de *rebuy*, et l'ordre de priorité des Ingénieurs, **Felicity Farseer** en tête pour
   le FSD. Côté progression, les **huit échelles de rang indépendantes** — six filières Pilots Federation plus les
   marines fédérale et impériale, qui conditionnent l'achat de sept vaisseaux.
+- [Missions, réputation et rangs de superpuissance](./29-missions-reputation-et-rangs.md) — Détaille pour la première
+  fois les deux échelles de marine en entier — **Federal Navy** et **Imperial Navy**, quinze paliers chacune —, la
+  typologie du tableau de missions de vaisseau (sept familles officieuses), l'échelle de réputation de faction en six
+  paliers (Hostile à Allied, seuils à 15/35/75 %), un tableau des systèmes à permis, et les deux services Odyssey qui
+  donnent accès au combat organisé sans y poser son propre vaisseau : **Apex Interstellar** et **Frontline
+  Solutions**.
 
 ## Lore & Politique
 
@@ -400,7 +416,7 @@ quels par un humain.
 ### Règle 1 — N'indexer que les guides
 
 Indexer `raw_data/*.md` **à l'exclusion de `README.md`**, et ne pas indexer `raw_data/index.yaml`, qui n'est pas un
-guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 30 fichiers dont le
+guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 31 fichiers dont le
 nom correspond à `^\d{2}-.*\.md$` à la racine de `raw_data/`.
 
 Ce glob doit rester **non récursif** et ignorer les répertoires cachés : `raw_data/` peut contenir un `.omc/`
@@ -445,18 +461,20 @@ recouvre lexicalement l'ensemble du corpus. Indexées, elles remontent en tête 
 évincent les passages qui contiennent réellement la réponse. Les renvois croisés utiles restent accessibles au lecteur
 humain dans le fichier ; ils n'ont simplement pas leur place dans l'index vectoriel.
 
-**Relevé du 10 septembre 2026, après l'ajout du guide des marchandises : 59 sections, 18 429 mots.**
+**Relevé du 12 septembre 2026, après l'ajout du guide missions/réputation/rangs : 61 sections, 19 198 mots.**
 Comptage : titres capturés par le motif ci-dessus dans les fichiers `NN-*.md`, contenu compté jusqu'au titre de
-même niveau ou de niveau supérieur suivant, `split()` sur les espaces. Vingt-cinq guides
+même niveau ou de niveau supérieur suivant, `split()` sur les espaces. Vingt-six guides
 portent deux sections concernées (`## Voir aussi` et `## Sources`), trois en portent trois —
 [05-guardians.md](./05-guardians.md), [07-equipement-a-pied.md](./07-equipement-a-pied.md) et
 [10-exploration.md](./10-exploration.md), qui ajoutent chacun une section de ressources externes —, et deux n'en
 portent aucune : [00-chronologie-canonique.md](./00-chronologie-canonique.md) et
-[00-glossaire.md](./00-glossaire.md). Soit 25 × 2 + 3 × 3 + 2 × 0 = 59 sections pour 30 fichiers. Les blocs les plus
+[00-glossaire.md](./00-glossaire.md). Soit 26 × 2 + 3 × 3 + 2 × 0 = 61 sections pour 31 fichiers. Les blocs les plus
 lourds sont les `## Sources` de [06-ingenieurs.md](./06-ingenieurs.md) (1 783 mots) et de
 [20-minage.md](./20-minage.md) (1 776 mots), suivis de celui de
 [10-exploration.md](./10-exploration.md) (788 mots) et de celui de
-[28-marchandises.md](./28-marchandises.md) (749 mots).
+[28-marchandises.md](./28-marchandises.md) (749 mots) — le nouveau guide
+[29-missions-reputation-et-rangs.md](./29-missions-reputation-et-rangs.md) n'y figure pas : ses sections `## Voir
+aussi` (221 mots) et `## Sources` (548 mots) restent sous ce seuil.
 
 Deux écarts avec le relevé précédent, publié le même jour et corrigés ici, méritent d'être signalés parce qu'ils
 illustrent exactement le défaut que ce relevé est censé prévenir. Le décompte de **57 sections** était juste, mais la
@@ -472,7 +490,7 @@ sur lui.
 **Méthode de comptage, à reproduire à l'identique après toute révision.** Ces deux chiffres ne sont comparables dans
 le temps que si la mesure l'est aussi. La convention retenue est la suivante :
 
-1. **Périmètre** : les 30 fichiers du périmètre indexé défini à la règle 1 ; `README.md`, `index.yaml` et les
+1. **Périmètre** : les 31 fichiers du périmètre indexé défini à la règle 1 ; `README.md`, `index.yaml` et les
    sous-répertoires en sont exclus.
 2. **Détection** : une section est retenue si sa ligne de titre correspond au motif ci-dessus et ne figure pas dans la
    liste des exceptions, vide à ce jour.

@@ -8,7 +8,7 @@ mots_cles_en: [background simulation, bgs, minor faction, controlling faction, i
   lockdown, civil unrest, investment, expansion, retreat, war, civil war, election, conflict zone, player minor faction, bgs-tally]
 version_jeu_couverte: "4.4.0.x (mécanique stable depuis 2015, non rattachée à une version précise)"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-12
 confiance_globale: moyenne
 volatilite: basse
 sources_primaires: [Wikipédia EN/FR, 00-chronologie-canonique du corpus, wiki GitHub aussig/BGS-Tally,
@@ -21,7 +21,7 @@ zones_incertaines: ["horaire exact du tick quotidien, jamais publié par Frontie
   "rapport de poids exact entre les cinq paliers de récompense de mission ventilés par BGS-Tally",
   "classement chiffré d'INF par heure de jeu entre les leviers, non établi faute de source vérifiable",
   "formule complète de calcul de l'influence, jamais publiée par Frontier Developments"]
-guides_lies: [2, 8, 11, 16, 18, 22, 24]
+guides_lies: [2, 8, 11, 16, 18, 22, 24, 29]
 ---
 
 # Le Background Simulation (BGS)
@@ -254,7 +254,9 @@ Compléter une mission proposée par une faction augmente l'influence de cette f
 donnée. C'est le levier le plus direct et le plus contrôlable : un joueur choisit explicitement quelle faction il
 soutient à chaque mission acceptée. À l'inverse, certaines missions (massacre, assassinat) visent explicitement une
 faction adverse et réduisent son influence lorsqu'elles sont complétées — un même passage en station permet donc
-souvent de soutenir une faction et d'en affaiblir une autre simultanément.
+souvent de soutenir une faction et d'en affaiblir une autre simultanément. Pour la typologie complète du tableau de
+missions, sa mécanique de génération et l'effet des états BGS (Boom, Famine, Guerre) sur son contenu, voir
+[29-missions-reputation-et-rangs.md, §1](./29-missions-reputation-et-rangs.md#1-le-tableau-de-missions-de-vaisseau--typologie-et-fonctionnement).
 
 ### 5.2 Commerce et ventes en marché comme levier BGS
 
