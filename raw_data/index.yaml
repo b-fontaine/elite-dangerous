@@ -1,0 +1,470 @@
+# Index de routage du corpus Elite Dangerous
+#
+# FICHIER GÉNÉRÉ — ne pas éditer à la main.
+# Il agrège le front-matter YAML des 30 guides `raw_data/NN-*.md` et sert de routeur de requête :
+# on le lit d'abord pour sélectionner les deux ou trois guides candidats, puis on ne lance la
+# recherche vectorielle que dans ceux-là. Il n'est pas lui-même un guide et ne doit pas être indexé.
+#
+# Régénération : relire le front-matter de chaque `raw_data/NN-*.md` et réécrire ce fichier ; la
+# procédure, le gabarit du front-matter et les valeurs admises sont décrits dans la section
+# « Notes d'ingestion RAG » de raw_data/README.md. Toute modification d'un front-matter de guide
+# impose de régénérer ce fichier.
+
+date_generation: 2026-09-10
+nombre_de_guides: 30
+genere_depuis: "front-matter YAML des fichiers raw_data/NN-*.md"
+indexer_ce_fichier: false
+
+
+
+
+guides:
+  - id: 00-chronologie-canonique
+    fichier: 00-chronologie-canonique.md
+    titre: "Chronologie canonique — Elite Dangerous"
+    domaine: "transversal"
+    entites: ["Operations Update", "Nomad", "SRV Rhino", "Kestrel Mk II", "Lynx Highliner", "Caspian Explorer", "Panther Clipper Mk II", "Powerplay 2.0", "Thargoid War Epilogue", "Vessel Hangar", "Dodec Update", "Colonia"]
+    mots_cles_en: ["operations update", "nomad", "rhino srv", "vessel hangar", "kestrel mk ii", "lynx highliner", "caspian explorer", "thargoid war epilogue", "powerplay 2.0", "dodec update", "patch notes", "shipyard"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "haute"
+    volatilite: "moyenne"
+    sources_primaires: ["Steam News Frontier (App ID 359320)", "elitedangerous.com", "EDCD/FDevIDs", "EDCD/coriolis-data", "Inara.cz", "GalNet", "Wayback Machine", "Wikipédia"]
+    zones_incertaines: ["rattachement du numéro 4.4.0.3 au billet du 9 juillet 2026, plausible mais non prouvé — le billet se contredit sur son propre numéro", "date de fin d'accès anticipé ARX du Panther Clipper Mk II, non confirmée", "date exacte de destruction du Titan Raijin, antérieure au 5 décembre 2024 sans plus de précision", "baie Mk I ou Mk II exigée par le SRV Rhino, non tranchée par une source primaire", "plafond de 9 999 Merc Coins et allocation de 1 000 par semaine, de source communautaire seulement", "numéros de version 4.4.1.0 et 4.4.1.1 de septembre 2026, issus de pages officielles restées inaccessibles"]
+    guides_lies: [1, 3, 13, 14, 25]
+
+  - id: 00-glossaire
+    fichier: 00-glossaire.md
+    titre: "Glossaire Elite Dangerous"
+    domaine: "transversal"
+    entites: ["AEGIS", "ARX", "BGS", "Powerplay", "Fleet Carrier", "Frame Shift Drive", "Supercruise Overcharge", "Detailed Surface Scanner", "Full Spectrum Scanner", "Hull Reinforcement Package", "Module Reinforcement Package", "SRV"]
+    mots_cles_en: ["glossary", "acronym", "Background Simulation", "Community Goal", "Conflict Zone", "Fleet Carrier", "Frame Shift Drive", "Supercruise Overcharge", "Detailed Surface Scanner", "Full Spectrum Scanner", "Resource Extraction Site", "Unidentified Signal Source"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "moyenne"
+    volatilite: "basse"
+    sources_primaires: ["guides du corpus (04-equipements.md pour la catégorie des modules)", "Codex in-jeu / Almanach"]
+    zones_incertaines: ["développement exact du sigle NMLA, à vérifier au Codex in-jeu", "sigle INRA attesté au Codex mais non recoupé sur une source in-jeu stricte"]
+    guides_lies: [4]
+
+  - id: 01-lore
+    fichier: 01-lore.md
+    titre: "Elite Dangerous : lore et histoire de l'univers"
+    domaine: "lore"
+    entites: ["Thargoïdes", "Guardians", "Fédération", "Empire d'Achenar", "Alliance des Systèmes Indépendants", "Pilots Federation", "AEGIS", "Salvation", "Raxxla", "Titans (Maelstroms)", "Colonia", "Distant Worlds"]
+    mots_cles_en: ["Thargoid", "Guardian", "Federation", "Empire", "Alliance", "Pilots Federation", "AEGIS", "Salvation", "Raxxla", "Maelstrom", "Titan", "Distant Worlds"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "moyenne"
+    volatilite: "basse"
+    sources_primaires: ["Canonn", "GalNet mirroré sur Inara.cz", "Steam News Frontier", "elitedangerous.com", "Wikipédia", "wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge)", "distantworlds3.space"]
+    zones_incertaines: ["date réelle de généralisation des propulseurs SCO à toutes les FSD, non confirmée en source primaire", "rôle d'Arek Vandevar auprès du Guardian Tech Broker, documenté seulement en source communautaire", "date de départ, effectifs et parcours de l'expédition Distant Worlds 3", "filiation narrative entre la recherche AEGIS/Salvation et les propulseurs SCO, lecture communautaire et non fait canonique", "étendue du territoire thargoïde au plus fort du conflit, estimations communautaires divergentes", "taux exact de rebuy de la Pilots Federation, à revérifier en jeu"]
+    guides_lies: [0, 2, 5, 18, 24, 25]
+
+  - id: 02-powerplay
+    fichier: 02-powerplay.md
+    titre: "Politique et Powerplay dans Elite Dangerous"
+    domaine: "politique"
+    entites: ["Powerplay", "Powerplay 2.0", "Mérites", "Éthos", "Undermining", "Bastion (Stronghold)", "Jerome Archer", "Nakato Kaine", "Ascendancy", "Concord Cannon", "Fédération", "Empire d'Achenar"]
+    mots_cles_en: ["powerplay", "merits", "pledge", "undermining", "reinforcement", "acquisition", "stronghold", "fortified", "exploited", "ethos", "control points"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-09"
+    confiance_globale: "haute"
+    volatilite: "haute"
+    sources_primaires: ["Steam News Frontier", "inara.cz", "forums.frontier.co.uk", "elite-dangerous.fandom.com", "edpowerplay.com"]
+    zones_incertaines: ["taux exacts de conversion des mérites en points de contrôle, révisés à chaque rééquilibrage", "barème de rang exhaustif jamais publié par Frontier : le tableau des rangs 6 à 99 est une extrapolation", "éthos de Zemina Torval issu d'une source secondaire, fiche inara.cz en erreur HTTP 503 le 9 septembre 2026", "existence d'un seuil de développement avant qu'un système colonisé devienne éligible à l'Acquisition Powerplay", "l'allégeance choisie à la fondation d'un système colonisé restreint-elle les Powers pouvant le revendiquer", "durée exacte du délai de latence (cooldown) avant réengagement après avoir quitté un Power", "un module Powerplay déjà débloqué reste-t-il utilisable après avoir quitté le Power concerné"]
+    guides_lies: [0, 1, 16, 18, 19, 21, 22, 24]
+
+  - id: 03-vaisseaux
+    fichier: 03-vaisseaux.md
+    titre: "Liste complète des vaisseaux d'Elite Dangerous"
+    domaine: "vaisseaux-equipement"
+    entites: ["Panther Clipper Mk II", "Lynx Highliner", "Caspian Explorer", "Kestrel Mk II", "Mandalay", "Nomad", "Vessel Hangar", "Frame Shift Drive (SCO)", "Federal Corvette", "Imperial Cutter", "Anaconda", "Type-11 Prospector", "Type-10 Defender", "Sidewinder Mk I", "Hauler", "Viper Mk III", "Cobra Mk V"]
+    mots_cles_en: ["shipyard", "hardpoints", "optional internals", "jump range", "supercruise overcharge", "vessel hangar", "ship-launched fighter", "ship-launched vessel", "rebuy", "Panther Clipper Mk II", "Lynx Highliner", "hull hardness", "base armour", "base shield strength", "hull mass", "mass lock", "boost speed", "heat capacity", "reserve fuel capacity", "hull cost", "retail cost"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "haute"
+    volatilite: "haute"
+    sources_primaires: ["Inara.cz", "EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27)", "EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579)", "Steam News Frontier (appid 359320)", "EDCD/EDDI ticket 2849", "Wikipedia EN"]
+    zones_incertaines: ["dureté de coque, mass lock, capacité thermique et coût de coque nue du Lynx Highliner absents des deux jeux de données EDCD, donc non documentés", "écart entre les valeurs de blindage et de bouclier des fiches individuelles (relevés Inara, équipement d'origine installé) et les valeurs de base d'EDCD/coriolis-data (châssis nu) : les deux séries ne mesurent pas la même chose", "portée de saut stock du Lynx Highliner non calculable, faute de masse de coque exploitable", "nombre d'emplacements utilitaires du Lynx Highliner non précisé par la source officielle", "capacité du Lynx Highliner à emporter deux baies de vaisseau déduite de ses emplacements, non confirmée", "fabricant, prix en crédits et gabarit de plateforme du Nomad non documentés par Frontier", "taux de rebuy d'environ 5 % de la valeur assurée donné comme ordre de grandeur, non comme valeur fixe", "prix Inara sujets à fluctuation, à revérifier avant tout achat important"]
+    guides_lies: [4, 6, 10, 13, 14, 18, 20, 27]
+
+  - id: 04-equipements
+    fichier: 04-equipements.md
+    titre: "Liste complète des équipements dans Elite Dangerous"
+    domaine: "vaisseaux-equipement"
+    entites: ["Bulkheads", "Hull Reinforcement Package", "Module Reinforcement Package", "Shield Booster", "Frame Shift Drive (SCO)", "Guardian FSD Booster", "Frame Shift Wake Scanner", "Vessel Hangar", "Mk II Biological Scanner", "MercGear", "Guardian Technology Broker", "Prismatic Shield Generator", "Power Plant", "Thrusters", "Power Distributor", "Life Support", "Sensors", "Fuel Tank", "Fuel Scoop", "Shield Cell Bank", "Bi-Weave Shield Generator", "Auto Field-Maintenance Unit", "Refinery", "Frame Shift Drive Interdictor", "Cargo Rack", "Meta Alloy Hull Reinforcement", "Pulse Laser", "Burst Laser", "Beam Laser", "Multi-Cannon", "Fragment Cannon", "Rail Gun", "Plasma Accelerator", "Plasma Shock Cannon", "Guardian Gauss Cannon", "Guardian Plasma Charger", "Guardian Shard Cannon", "Mirrored Surface Composite", "Reactive Surface Composite", "Military Grade Composite"]
+    mots_cles_en: ["outfitting", "hardpoint", "hull reinforcement package", "module reinforcement package", "shield booster", "frame shift drive SCO", "guardian fsd booster", "frame shift wake scanner", "vessel bay", "limpet controller", "increased range", "merc coin", "power plant", "thrusters", "power distributor", "life support", "sensors", "fuel tank", "fuel scoop", "shield cell bank", "bi-weave", "prismatic", "auto field maintenance unit", "refinery", "fsd interdictor", "cargo rack", "meta alloy", "pulse laser", "burst laser", "beam laser", "multi-cannon", "fragment cannon", "rail gun", "plasma accelerator", "shock cannon", "gauss cannon", "shard cannon", "damage per second", "distributor draw", "armour hardness", "bulkhead cost", "module price", "power draw"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "haute"
+    volatilite: "moyenne"
+    sources_primaires: ["EDCD/coriolis-data — ships/*.json, modules/standard/*.json, modules/internal/*.json et modules/hardpoints/*.json, commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27", "EDCD/FDevIDs — outfitting.csv, shipyard.csv et material.csv, commit c35612952dd6a547d1a7ac4cffab9c7051e86579", "EDCD/coriolis — Calculations.js", "Steam News Frontier (appid 359320) — annonces officielles 2026", "Catalogues d'ingénierie et de matériaux hors ligne, édition 2026-08", "Étude interne du 19 août 2026", "Wikipedia EN", "Inara.cz"]
+    zones_incertaines: ["table des masses optimales de FSD au grade 5 dérivée par calcul (×1,55), non relevée en jeu", "non-modifiabilité par l'ingénierie des attributs propres au SCO, établie via un mappage EDSY portant un TODO verify", "fabricants du Taipan Fighter et du Gu-97, association communautaire non revérifiée sur source primaire", "statistiques précises (PV, vitesse, DPS) des quatre chasseurs embarqués, non sourçables", "compromis chiffrés des modules MercGear, non publiés dans les notes de version", "colonnes Cadence et DPS brut du référentiel des armes, dérivées par calcul depuis fireint et damage, aucun champ rof ni dps n'existant dans la source", "masse du Mirrored Surface Composite du Diamondback Explorer (26 t contre 47 t pour ses autres grades lourds), anomalie présente telle quelle dans EDCD/coriolis-data", "emplacements des stations hébergeant les Brokers Guardian et Human, évolutifs", "appariement des deux variantes pré-ingénierées de Hpt_BasicMissileRack_Fixed_Medium avec les trois noms MercGear que outfitting.csv porte pour cet identifiant (Drag, Lightweight Thermal et Lockdown Seeker Missile Rack) : indécidable sur source reproductible"]
+    guides_lies: [3, 5, 6, 8, 10, 13, 14, 17, 20, 25]
+
+  - id: 05-guardians
+    fichier: 05-guardians.md
+    titre: "Guide complet des Guardians dans Elite Dangerous"
+    domaine: "lore"
+    entites: ["Guardians", "Guardian Ruins", "Guardian Structures", "Guardian Sentinels", "Ram Tah", "Canonn Research", "Guardian Tech Broker", "Gauss Cannon", "Shard Cannon", "Guardian FSD Booster", "Ancient Data Terminal", "Guardian Beacon"]
+    mots_cles_en: ["guardian ruins", "guardian structure", "guardian sentinel", "guardian tech broker", "gauss cannon", "plasma charger", "shard cannon", "guardian fsd booster", "obelisk data", "ancient data terminal", "guardian beacon", "brain tree"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "haute"
+    volatilite: "moyenne"
+    sources_primaires: ["canonn.science", "EDSM (API publique)", "EDCD/coriolis-data", "EDCD/FDevIDs", "Elite Dangerous Wiki (Fandom, API MediaWiki)", "inara.cz"]
+    zones_incertaines: ["le type exact de bâtiment présent sur chaque site Guardian n'a pas pu être vérifié site par site", "la cartographie exhaustive des types d'obélisques n'a pas pu être revérifiée auprès d'une source primaire", "les plages de bonus par grade (1 à 5) des blueprints d'ingénierie applicables aux armes Guardian", "les quantités du Tech Broker pour les autres classes que celles listées (FSD Booster classes 2 à 5, armes small/large)", "le minutage de charge des 6 pylônes d'un site au sol, seulement extrapolé des 3 minutes documentées pour une balise", "la durée totale d'un passage complet sur un Guardian Structure, non chiffrée par une source primaire", "le rattachement aux Guardians du teaser Canonn du 30 août 2025 relève d'une hypothèse communautaire"]
+    guides_lies: [0, 3, 6, 7, 8, 9, 10, 18, 25]
+
+  - id: 06-ingenieurs
+    fichier: 06-ingenieurs.md
+    titre: "Guide complet des Ingénieurs (Engineers) dans Elite Dangerous"
+    domaine: "vaisseaux-equipement"
+    entites: ["Ingénieur", "Felicity Farseer", "Elvira Martuuk", "Mel Brandon", "Petra Olmanova", "Selene Jean", "Marsha Hicks", "Tod « The Blaster » McQuinn", "Blueprint", "Technology Broker", "Merc Coin", "MercGear", "Material Trader", "High Grade Emission", "Frame Shift Wake Scanner", "Effet expérimental", "Mass Manager", "Deep Charge", "Dav's Hope", "Meta-Alloys", "Bulkheads", "Hull Reinforcement Package", "Shield Booster", "Power Distributor"]
+    mots_cles_en: ["engineers", "blueprints", "engineering materials", "raw materials", "manufactured materials", "encoded data", "high grade emission", "material trader", "technology broker", "increased range", "mass manager", "experimental effects", "merc coin", "wake scanner", "blueprint grades", "engineer max grade", "dirty drives", "clean drives", "drive strengthening", "faster boot sequence", "shielded fsd", "overcharged power plant", "armoured power plant", "low emissions power plant", "charge enhanced", "engine focused", "system focused", "weapon focused", "high charge capacity", "reinforced shield generator", "enhanced low power", "kinetic resistant", "thermal resistant", "heavy duty shield booster", "resistance augmented", "heavy duty hull reinforcement", "lightweight sensors", "long range sensors", "overcharged weapon", "efficient weapon", "long range weapon", "rapid fire", "sturdy", "corrosive shell", "thermal vent", "double braced", "stripped down", "experimental effect compatibility"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "haute"
+    volatilite: "moyenne"
+    sources_primaires: ["EDCD/coriolis-data — modifications/blueprints.json, modifications/modules.json, modifications/specials.json et modifications/modifications.json, commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27", "EDCD/FDevIDs — material.csv et engineers.csv, commit c35612952dd6a547d1a7ac4cffab9c7051e86579", "EDCD/EDDI — Blueprint.cs, BlueprintTemplate.cs, Engineer.cs", "Steam News Frontier (appid 359320) — annonces officielles 2026", "Wiki communautaire Elite Dangerous — fiches modules et Ingénieurs, consultées le 9 septembre 2026", "EDEngineer (msarilar) — plafonds de stockage par grade", "Catalogues internes consolidés, édition 2026-08, et étude interne du 19 août 2026"]
+    zones_incertaines: ["Aucune source ne chiffre la montée en réputation chez un Ingénieur : ni les points par module fabriqué, ni les seuils des rangs 1 à 5.", "La nature exacte des matériaux rendus par une Operation (catégorie, grade, quantité par scénario) n'est pas chiffrée par les notes officielles.", "Taux de rendement comparé des types d'USS de données et probabilité d'obtenir un grade donné sur un data point précis.", "Les 13 Ingénieurs Odyssey n'apparaissent dans aucun des deux jeux de données de blueprints : la matrice Blueprint × Ingénieur × grade ne couvre que les 25 Ingénieurs classiques.", "specials.json ne porte aucune valeur numérique pour les effets expérimentaux, et n'associe aucun effet à un Ingénieur : ces deux informations restent non couvertes par les sources reproductibles.", "Attributs du FSD SCO : le mappage module→blueprints d'EDSY porte un commentaire « TODO verify » et Coriolis n'a aucune donnée SCO.", "Paliers de montée en grade des trois combinaisons Odyssey : montants issus du wiki Fandom seul, à confirmer en jeu.", "Répartition précise « quel ingénieur Odyssey modifie quelle combinaison ou arme », à vérifier en jeu ou sur Inara.", "Disponibilité actuelle des Rescue Megaships comme point de déblocage, liée à un contexte narratif ponctuel.", "Prix et stocks de Meta-Alloys : instantané de marché communautaire du 19 août 2026, volatil par nature.", "Conditions d'apparition des Crystalline Shards : le catalogue de matériaux et le catalogue d'exobiologie divergent sur quatre critères (classe de l'étoile primaire, température, distance à l'étoile, présence d'un Water Giant) ; aucune source consultable depuis ce chantier ne permet d'arbitrer."]
+    guides_lies: [2, 5, 7, 10, 13, 20, 25, 26]
+
+  - id: 07-equipement-a-pied
+    fichier: 07-equipement-a-pied.md
+    titre: "Guide complet de l'équipement à pied dans Elite Dangerous (Odyssey)"
+    domaine: "vaisseaux-equipement"
+    entites: ["Flight Suit", "Artemis", "Maverick", "Dominator", "Genetic Sampler", "Arc Cutter", "Pioneer Supplies", "Vista Genomics", "Suit Schematic", "Manufacturing Instructions", "Engineers à pied", "Merc Coin", "Kinematic Armaments", "Manticore", "Takada", "Karma P-15", "Karma AR-50", "Manticore Executioner", "Manticore Intimidator", "Manticore Terminator", "Medkit", "Energy Cell", "Frag Grenade", "Shield Disruptor", "Shield Projector", "E-Breach", "Aerogel", "Carbon Fibre Plating", "Titanium Plating", "Graphene", "Health Monitor", "Headshot Damage", "Greater Range"]
+    mots_cles_en: ["on-foot suit", "Artemis bio suit", "Maverick suit", "Dominator suit", "genetic sampler", "Pioneer Supplies", "suit grade upgrade", "on-foot engineering", "bartender", "Merc Coin", "Kinematic Armaments", "Manticore", "Takada", "Karma P-15", "Karma AR-50", "Manticore Executioner", "Manticore Intimidator", "Manticore Terminator", "Shield Disruptor", "Shield Projector", "E-Breach", "on-foot consumable", "microresource", "weapon blueprint materials", "suit modification slots"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "haute"
+    volatilite: "haute"
+    sources_primaires: ["Flux d'annonces officielles Frontier", "EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27) — consulté comme contrôle négatif et pour le renvoi vers le volet vaisseau : ce dépôt ne porte aucune donnée d'équipement à pied", "EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579) — microresources.csv, seule source locale couvrant les micro-ressources et consommables Odyssey", "Inara", "edfieldmanual.com", "starzen.space"]
+    zones_incertaines: ["Les montants en crédits des paliers de montée en grade viennent du wiki Fandom seul et restent à confirmer en jeu", "Le tarif au comptoir du Carbon Fibre Plating et du Titanium Plating est déduit de leur type et non relevé", "Aucun jeu de données local ne porte les statistiques de combat des armes à pied : dégâts par tir, cadence, DPS, chargeur, portée nominale, efficacité contre bouclier et blindage, prix par grade restent non chiffrés", "Aucun jeu de données local ne porte les caractéristiques chiffrées des combinaisons : bouclier, points de vie, capacité du sac à dos, réserve d'oxygène, nombre d'emplacements d'armes", "Le catalogue complet des armes à pied n'est pas dénombrable localement : cinq modèles seulement sont nommés par une source, contre les onze que suppose le calcul des 56 recettes", "Vingt-sept des trente-trois cellules de la matrice modification d'arme × fabricant restent sans recette relevée", "L'existence de blueprints d'Engineer et de paliers de grade pour les quatre outils n'est pas confirmée", "Aucune preuve d'un effet expérimental distinct n'a pu être établie pour les suits et armes d'Odyssey", "Le montant exact du rebuy à pied n'a pas pu être confirmé", "Le plafond de 9 999 Merc Coin et l'allocation hebdomadaire de 1 000 ne sont corroborés par aucune annonce officielle", "La date du Kestrel Mk II (24 février 2026) n'est établie qu'avec une confiance moyenne", "L'association du Caspian Explorer à un plafonnement de l'ingénierie de combat à pied n'a pas pu être vérifiée dans les notes officielles"]
+    guides_lies: [0, 6, 9, 10, 13, 14, 18, 26]
+
+  - id: 08-combat-spatial
+    fichier: 08-combat-spatial.md
+    titre: "Guide complet du combat spatial dans Elite Dangerous"
+    domaine: "combat"
+    entites: ["Power Distributor", "pips SYS/ENG/WEP", "Flight Assist Off", "Shield Cell Bank", "Hull Reinforcement Package", "Module Reinforcement Package", "interdiction", "mass lock", "Resource Extraction Site", "Combat Zone", "notoriety", "CQC", "pénétration de blindage", "dureté de coque", "Corrosive shell", "Phasing sequence", "Thermal vent", "Feedback Cascade", "blueprint Focused", "blueprint Sturdy", "Cytoscrambler Burst Laser", "Guardian Gauss Cannon", "Plasma Accelerator", "Rail Gun", "Torpedo Pylon", "bulkheads"]
+    mots_cles_en: ["power distributor", "pips", "flight assist off", "shield cell bank", "hull reinforcement package", "module reinforcement package", "interdiction", "mass lock", "hazres", "combat zone", "bounty voucher", "notoriety", "armour piercing", "hull hardness", "damage distribution", "thermal damage", "kinetic damage", "explosive damage", "absolute damage", "corrosive shell", "phasing sequence", "thermal vent", "feedback cascade", "weapon focused", "weapon sturdy", "bulkheads", "hull boost", "combat rank"]
+    version_jeu_couverte: "mécaniques stables non rattachées à une version précise ; caractéristiques de vaisseaux, d'armes et de blindages relevées le 10 septembre 2026 dans EDCD/coriolis-data et EDCD/FDevIDs"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "haute"
+    volatilite: "moyenne"
+    sources_primaires: ["Wikipedia Elite Dangerous", "Canonn Research", "EDSM", "Spansh", "Inara", "EDCD/coriolis-data", "EDCD/FDevIDs"]
+    zones_incertaines: ["Coefficient exact de réduction des dégâts lorsque la pénétration de blindage d'une arme est inférieure à la dureté de coque de la cible : les deux champs sont publiés par EDCD/coriolis-data, la formule qui les combine ne l'est pas.", "Règle de calcul appliquée aux dégâts de type absolu et aux dégâts anti-xéno : le jeu de données porte l'étiquette de type, pas la règle.", "Dégâts par seconde comparés entre familles d'armes : dégâts par tir et cadences sont publiés, l'agrégat DPS et l'équilibrage courant ne le sont pas.", "Seuils de score nécessaires pour passer d'un rang de combat au suivant, jamais publiés par Frontier ; seule l'échelle nominale est confirmée par EDCD/FDevIDs.", "Montant moyen des bounty vouchers, non vérifié en direct.", "État courant du front thargoïde (systèmes en alerte, invasion, reconquête), non vérifiable dans un guide statique.", "Effet chiffré des Hull Reinforcement Packages et des Module Reinforcement Packages, non couvert par ce guide.", "Choix de modules des trois builds de la section 8.5, issus de la méta communautaire ; seules les caractéristiques de châssis sont recalées sur EDCD/coriolis-data."]
+    guides_lies: [0, 3, 4, 6, 16, 21, 23, 25]
+
+  - id: 09-combat-a-pied
+    fichier: 09-combat-a-pied.md
+    titre: "Guide complet du combat à pied dans Elite Dangerous"
+    domaine: "combat"
+    entites: ["Dominator", "Maverick", "Artemis", "Flight Suit", "Manticore Executioner", "Karma AR-50", "Added Melee Damage", "Quieter Footsteps", "Audio Masking", "Ground CZ", "Merc Coin", "MercGear"]
+    mots_cles_en: ["on-foot combat", "dominator suit", "maverick suit", "artemis suit", "ground conflict zone", "added melee damage", "quieter footsteps", "audio masking", "noise suppressor", "merc coin", "mercgear", "operations"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-09"
+    confiance_globale: "haute"
+    volatilite: "moyenne"
+    sources_primaires: ["Steam News Frontier (API ISteamNews)", "Wikipedia Elite Dangerous", "Canonn Research", "Inara", "PCGamesN", "Spansh", "Steam Community Guides"]
+    zones_incertaines: ["Plafond d'ingénierie à 75 % de résistance attribué au Caspian Explorer : non retrouvé dans une source primaire, à vérifier en jeu.", "Lien causal entre la mise à jour Caspian Explorer et une IA de PNJ au sol plus prudente : à confirmer en jeu.", "Grade exact de chaque matériau d'ingénierie à pied nommé, non détaillé de façon exhaustive.", "Coûts d'ingénierie en crédits : instantané du 9 septembre 2026, susceptible d'être rééquilibré.", "Aucune modification de combat recensée à ce jour chez les quatre Engineers de Colonia.", "Correspondance entre les six scénarios annoncés le 22 avril 2026 et les six opérations du lancement : Frontier n'a publié aucune table de correspondance."]
+    guides_lies: [0, 2, 6, 7, 8, 13, 14, 18, 26]
+
+  - id: 10-exploration
+    fichier: 10-exploration.md
+    titre: "Guide complet de l'exploration et de l'exobiologie dans Elite Dangerous"
+    domaine: "exploration"
+    entites: ["Exobiologie", "Vista Genomics", "Universal Cartographics", "Canonn Research", "FSS", "DSS", "Combinaison Artemis", "Nomad", "Stratum Tectonicas", "Fonticulua Fluctus", "Neutron Highway", "First Logged", "EDDiscovery", "BioScan", "Earth-like World", "Crystalline Shards", "Notable Stellar Phenomena", "Distant Worlds", "Beagle Point", "Pallaeni"]
+    mots_cles_en: ["exobiology", "Vista Genomics", "Universal Cartographics", "Full Spectrum System Scanner", "Detailed Surface Scanner", "Artemis suit", "first logged", "first footfall", "neutron highway", "Road to Riches", "scan value", "Earth-like World", "star class", "FSD supercharge", "jet cone boost", "surface signal", "SAASignalsFound", "geological signal", "Crystalline Shards", "Notable Stellar Phenomena", "Lagrange Cloud", "surface gravity", "landable body", "Distant Worlds", "Beagle Point"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "haute"
+    volatilite: "haute"
+    sources_primaires: ["Canonn Research", "wiki Elite Dangerous", "EDDiscovery/EliteDangerousCore (commit f21533ba1609d309fd6a96b9b3bb488df178a36e)", "EDDiscovery/EDDiscovery (commit 7b4726f3, 43 journaux de scan réels)", "catalogue d'exobiologie compilé du corpus (édition 2026-08)", "EDCD/coriolis-data", "EDCD/FDevIDs", "Silarn/EDMC-BioScan (commit 5f0d2e44)", "Steam News Frontier", "Spansh", "EDSM", "distantworlds3.space"]
+    zones_incertaines: ["valeur de 952 296 Cr de Radicoida Unica : observation unique en jeu, à reconfirmer", "distance minimale de 15 m pour Radicoida, relevée en jeu contre 100 m au catalogue compilé", "contrainte des 2 500 Ls de Clypeus Speculumi, non confirmée par télémétrie", "intitulés et ordre exacts des paliers des rangs Explorateur et Exobiologiste : reconstitution communautaire", "valeurs de scan de la partie 1 : calculées par l'implémentation de référence d'EDDiscovery, jamais confrontées à un montant observé en jeu", "k du corps riche en métaux et du trou noir supermassif : déclarés « not confirmed in game » dans le code", "multiplicateur ×6 de supercharge du Mk II Supercharge Optimised FSD : relevé chez EDDiscovery, non chiffré par Frontier", "scoopabilité par classe stellaire : dérivée du mnémonique KGBFOAM, non confirmée par une source de données", "43 des 109 espèces du catalogue 2.4 sont sans fréquence d'observation publiée", "fiches d'habitat de Bark Mound et Brain Tree absentes du catalogue 2.4", "taux de rencontre supérieurs prêtés aux secteurs Sinuefai, Sinuefe et Wredguia, non recoupés", "portées et temps de scan du Discovery Scanner, du FSS et du DSS, à confirmer sur une source à jour", "les 100 000 000 Cr d'une Fonticulua Fluctus en First Logged sont un calcul, non un montant relevé", "ce que désigne la catégorie de signal $SAA_SignalType_Other; : inconnu, deux occurrences relevées et aucune source", "aucun signal Guardian, Thargoid ni Anomalous dans les 43 journaux de test : ces catégories ne sont attestées que par le code", "aucun champ Genuses rempli et aucun événement JetConeBoost dans les journaux de test : structure attestée, contenu jamais observé", "correspondance entre les 15 volcanismes de l'énumération EDVolcanism et les 23 entrées de codex géologiques : non tabulée", "conditions d'apparition des Crystalline Shards : divergence non arbitrée avec 06-ingenieurs.md sur la classe S, le seuil de distance et le Water Giant", "conditions d'apparition des nuages de Lagrange et valeur de vente des organismes des Notable Stellar Phenomena : non établies", "seuil de gravité endommageant le train d'atterrissage : non établi, le journal n'expose qu'un booléen LandingGear", "seuil de gravité modifiant le comportement du SRV ou du Nomad : non établi sur source accessible", "pénalité de mobilité à pied au-delà de 1 G : non chiffrée, seul le marquage « haute gravité » de BioScan est établi", "organisateur de Distant Worlds II : non établi, les fiches EDSM ne portent pas ce champ", "date de départ, effectifs et itinéraire de Distant Worlds 3 : non établis, compteurs du site officiel remplis côté client", "bornes de la première expédition Distant Worlds : la fiche EDSM donne 14 janvier - 5 juin 2016, plus large que le « fin 2015 - début 2016 » de 01-lore.md"]
+    guides_lies: [0, 1, 4, 5, 6, 7, 13, 14, 17, 18, 19, 20, 21, 23, 24, 25, 27]
+
+  - id: 11-commerce
+    fichier: 11-commerce.md
+    titre: "Guide complet du commerce dans Elite Dangerous"
+    domaine: "economie"
+    entites: ["Trade Rank", "Rare Goods", "Trade Dangerous", "Spansh", "Type-9 Heavy", "Imperial Cutter", "Type-10 Defender", "Panther Clipper Mk II", "Type-8 Transporter", "Keelback", "Cargo Rack", "Robigo Run", "piraterie", "Hatch Breaker Limpet Controller", "Frame Shift Drive Interdictor", "Cargo Scanner", "notoriety"]
+    mots_cles_en: ["trading", "supply and demand", "trade rank", "rare goods", "black market", "smuggling", "Robigo run", "cargo rack", "trade route", "Trade Dangerous", "mining to trade", "piracy", "hatch breaker limpet", "FSD interdictor", "cargo scanner", "stolen cargo", "notoriety"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-09"
+    confiance_globale: "haute"
+    volatilite: "haute"
+    sources_primaires: ["EDCD/coriolis-data", "EDCD/FDevIDs", "Trade Dangerous (dépôt GitHub)", "EDSM", "TheGamer", "GameRant", "TwistedVoxel", "chronologie canonique interne"]
+    zones_incertaines: ["seuils de profit cumulé de chaque palier de Trade Rank : aucune source primaire retrouvée, à lire dans le panneau Réputation en jeu", "portée de saut laden/unladen du Keelback, du Type-8 Transporter et du Panther Clipper Mk II : non publiée par coriolis-data, dépend du FSD et de la charge", "chiffres de rentabilité GameRant (100 M Cr/h en minage laser, 90 M Cr/h en Robigo, 3,5 Md Cr par cycle PTN) : instantanés non redatés par la source", "rentabilité horaire de la piraterie : aucun ordre de grandeur vérifié n'a été retrouvé, la section 2.5 le déclare explicitement plutôt que d'avancer un chiffre", "traitement exact du cargo marqué « volé » (stolen) sur un marché légal par rapport au marché noir : non recoupé avec une source primaire", "prise en compte ou non des ventes de cargo volé dans la progression du Trade Rank : non documentée par les sources consultées"]
+    guides_lies: [3, 8, 12, 16, 18, 20, 21, 24, 28]
+
+  - id: 12-transport
+    fichier: 12-transport.md
+    titre: "Guide complet du transport dans Elite Dangerous"
+    domaine: "economie"
+    entites: ["Lynx Highliner", "Beluga Liner", "Orca", "Dolphin", "Panther Clipper Mk II", "Type-8 Transporter", "Search & Rescue", "Occupied Escape Pods", "Stronghold Carrier", "cabines passagers", "marchandises rares", "stations en feu"]
+    mots_cles_en: ["passenger cabins", "economy cabin", "business class cabin", "first class cabin", "luxury cabin", "Lynx Highliner", "Beluga Liner", "search and rescue", "occupied escape pods", "burning stations", "rare goods", "stronghold carrier", "colonisation hauling", "interdiction escape"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-09"
+    confiance_globale: "moyenne"
+    volatilite: "moyenne"
+    sources_primaires: ["MassivelyOP", "PCGamesN", "EDSM", "EDSY", "Canonn Research", "Inara.cz", "notes de version officielles 4.2.2.0"]
+    zones_incertaines: ["capacités de cabines passagers par taille de module non reconfirmées en direct (valeurs communautaires EDSY/Inara/Coriolis)", "aucun bonus Powerplay propre au Search & Rescue n'a pu être ni confirmé ni infirmé", "tonnages de colonisation donnés en ordres de grandeur composites, non revérifiés", "date du passage du Panther Clipper Mk II à l'achat en crédits (~octobre 2025) non sourcée précisément"]
+    guides_lies: [2, 3, 18, 19, 22]
+
+  - id: 13-operations
+    fichier: 13-operations.md
+    titre: "Elite Dangerous : Guide complet des Opérations — mode multijoueur (2026) et gameplay à pied (Odyssey)"
+    domaine: "combat"
+    entites: ["Operations", "Operation Runner", "Merc Coin", "MercGear", "Under Siege", "Tactical Takedown", "Firestorm Rescue", "settlement", "zone de conflit au sol", "Odyssey", "Nomad", "Profile Analyser"]
+    mots_cles_en: ["operations", "operation runner", "merc coin", "mercgear", "under siege", "tactical takedown", "on-foot combat zone", "settlement", "odyssey", "matchmaking", "powerplay mode"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-09"
+    confiance_globale: "haute"
+    volatilite: "haute"
+    sources_primaires: ["Steam News Frontier (API ISteamNews)", "ticket EDCD/EDDI n° 2849", "Wikipedia Elite Dangerous", "EDSM", "Canonn Research", "Steam Community Guides"]
+    zones_incertaines: ["Plafond de 9 999 Merc Coins et gain limité à 1 000 par semaine : donnée communautaire jamais publiée par Frontier, à confirmer en jeu.", "Correspondance entre les six scénarios annoncés le 22 avril 2026 et les six opérations du lancement : rapprochement éditorial, sans table officielle.", "Table des récompenses des opérations au sol par niveau de menace : ordres de grandeur communautaires non vérifiés en session.", "Numéros de version client 4.4.0.0 et 4.4.0.3 : relevés communautaires de journaux de jeu, non officiels.", "Spécialités des quatre Engineers à pied de Colonia, non détaillées dans les sources consultées.", "Aucun build nommé recoupé pour le fabricant d'armes Takada."]
+    guides_lies: [0, 2, 6, 7, 9, 14, 18, 23, 26]
+
+  - id: 14-rhino-nomad
+    fichier: 14-rhino-nomad.md
+    titre: "Le Rhino et le Nomad : le SRV de minage de surface et le premier vaisseau lancé depuis un vaisseau"
+    domaine: "vaisseaux-equipement"
+    entites: ["Rhino", "Nomad", "Vodel", "baie de véhicule", "Vessel Hangar", "Mk II Biological Scanner", "Planetary Mining Deposit Scanner", "minage de surface planétaire", "Operations Update", "Under Siege", "Lander01", "Caspian Explorer"]
+    mots_cles_en: ["rhino srv", "nomad", "ship-launched vessel", "vessel bay", "vessel hangar", "surface mining", "planetary mining location", "planetary mining deposit scanner", "mk ii biological scanner", "mining rig", "operations update", "lander01", "arx early access"]
+    version_jeu_couverte: "4.4.0.x (contenu du Rhino SRV Update du 2 septembre 2026 inclus ; numérotation 4.4.1.x non corroborée)"
+    branche: "live"
+    date_verification: "2026-09-09"
+    confiance_globale: "haute"
+    volatilite: "haute"
+    sources_primaires: ["Steam News Frontier (appid 359320)", "EDCoPilot v1.11.726", "EDCD/EDDI ticket 2849", "EDCD/FDevIDs outfitting.csv", "massivelyop.com"]
+    zones_incertaines: ["numéros de version 4.4.1.0 et 4.4.1.1 attribués au Rhino, absents des billets officiels relevés", "hotfix portant la collecte du Rhino de 9 à 12 fragments, annoncé mais non confirmé livré", "caractéristiques chiffrées du Rhino (vitesse, tonnage de soute, résistance du blindage) jamais communiquées", "répartition des trois sièges du Rhino, déduction du guide et non donnée officielle", "absence de coût de rebuy propre au Rhino, jamais confirmée explicitement par Frontier", "rattachement du constructeur Vodel à Core Dynamics, affirmation communautaire non vérifiée", "prix de revente et grade d'ingénierie des treize nouvelles matières de surface, non relevés", "portée réelle des rééquilibrages du 2 septembre 2026 au-delà de la boucle de minage de surface", "disponibilité ultérieure du Rhino à l'achat en crédits, non documentée par un billet officiel"]
+    guides_lies: [3, 4, 13, 15, 16, 17, 20]
+
+  - id: 15-roadmap
+    fichier: 15-roadmap.md
+    titre: "Elite Dangerous : la roadmap des développeurs (fin 2024 – septembre 2026)"
+    domaine: "transversal"
+    entites: ["Ascendancy", "Trailblazers", "Vanguards", "Operations Update", "Rhino SRV Update", "Nomad", "Kestrel Mk II", "Lynx Highliner", "Dodec Update", "ARX", "Dev Log", "GalNet"]
+    mots_cles_en: ["roadmap", "update notes", "ascendancy", "trailblazers", "vanguards", "operations update", "rhino srv", "nomad", "kestrel mk ii", "lynx highliner", "arx early access", "dev log", "known issues"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-09"
+    confiance_globale: "haute"
+    volatilite: "haute"
+    sources_primaires: ["Steam News Frontier (appid 359320)", "elitedangerous.com/news", "store.steampowered.com", "inara.cz"]
+    zones_incertaines: ["le numéro de version 4.4.1.0 attribué au Rhino SRV Update n'est pas attesté, les pages officielles de notes de version renvoyant une erreur HTTP 403", "le hotfix 4.4.1.1 du 3 septembre 2026 n'est confirmé par aucun billet officiel relevé", "le passage de 9 à 12 fragments pour le minage de surface du Rhino est annoncé mais non livré au 9 septembre 2026", "Frontier ne publie pas les valeurs des paramètres rééquilibrés du Surface Mining, ni le temps de reconstitution d'un gisement", "le contenu du « feature reboot » promis pour l'automne 2026 n'est pas détaillé", "les deux véhicules d'automne et d'hiver 2026 de la feuille de route annuelle ne sont pas identifiés"]
+    guides_lies: [0, 2, 12, 13, 14, 18, 20, 22, 24]
+
+  - id: 16-outils
+    fichier: 16-outils.md
+    titre: "Elite Dangerous : le guide des outils communautaires"
+    domaine: "meta-outils"
+    entites: ["EDDN", "Frontier Companion API (CAPI)", "EDMC", "EDSM", "Inara", "Spansh", "EDDiscovery", "EDDI", "Coriolis", "EDSY", "BGS-Tally", "Fuel Rats"]
+    mots_cles_en: ["eddn", "edmc", "journal files", "companion api", "edsm", "inara", "spansh", "coriolis", "edsy", "bgs-tally", "trade dangerous", "fuel rats", "ratsignal"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-08"
+    confiance_globale: "haute"
+    volatilite: "haute"
+    sources_primaires: ["dépôts GitHub EDCD (EDDN, EDMarketConnector, coriolis, EDDI)", "edsm.net", "inara.cz", "spansh.co.uk", "canonn.science", "fuelrats.com"]
+    zones_incertaines: ["le détail exact des fonctionnalités de colonisation annoncées par Spansh, son site étant une SPA non récupérable par un simple fetch", "le niveau d'activité réel des forks communautaires d'EDEngineer", "le contenu du guide de secours officiel wiki.fuelrats.com, page indisponible au moment du contrôle", "l'erreur HTTP 410 de la page inara.cz/elite/powerplay-stats est probablement une URL obsolète, sans confirmation"]
+    guides_lies: [0, 6, 17, 18, 19, 21, 22, 25]
+
+  - id: 17-sources-donnees
+    fichier: 17-sources-donnees.md
+    titre: "Sources de données disponibles pour Elite Dangerous"
+    domaine: "meta-outils"
+    entites: ["Player Journal", "Status.json", "EDDN", "Companion API (CAPI)", "EDSM", "Inara", "Spansh", "EDCD/FDevIDs", "EDCD/coriolis-data", "Canonn Research", "Ardent Insight", "Elite BGS", "blueprints.json", "specials.json", "outfitting.csv", "shipyard.csv", "commodity.csv", "rare_commodity.csv", "commit épinglé"]
+    mots_cles_en: ["player journal", "Status.json", "EDDN", "Companion API", "EDSM", "Inara", "Spansh", "galaxy dump", "nightly dumps", "FDevIDs", "coriolis-data", "ScanOrganic", "blueprints.json", "specials.json", "outfitting.csv", "shipyard.csv", "bulkheads", "pinned commit", "commit SHA", "shallow clone"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "haute"
+    volatilite: "haute"
+    sources_primaires: ["étude interne de faisabilité du 19 août 2026", "EDCD/EDDN", "elite-journal.readthedocs.io", "Journal Manual v38 de Frontier", "edsm.net (api-v1 à api-logs-v1)", "docs.spansh.co.uk", "EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579)", "EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27)", "Steam News Frontier (appid 359320)"]
+    zones_incertaines: ["aucune source Frontier consultable ne confirme la date d'arrêt définitif des serveurs Legacy", "le contrat exact des routes d'API de Spansh est reconstitué par sondage, sans garantie de stabilité publiée", "divergence de domaine pour l'API Inara entre la documentation (inara.cn) et l'endpoint sondé (inara.cz)", "aucune limite de débit chiffrée n'est publiée pour Inara, Spansh et la CAPI", "la signification du booléen ScanOrganic.WasLogged, absent du manuel v38, reste une hypothèse", "la cadence réelle de mise à jour de EDCD/coriolis-data et de EDCD/FDevIDs n'est pas mesurable : les clones utilisés sont superficiels et ne portent que leur commit de tête", "EDCD/FDevIDs ne publie aucun fichier de licence, ce qui laisse indéterminé le statut de réutilisation de ses tables d'identifiants"]
+    guides_lies: [3, 4, 6, 10, 16, 18, 19, 20, 21, 28]
+
+  - id: 18-colonisation
+    fichier: 18-colonisation.md
+    titre: "La Colonisation de systèmes"
+    domaine: "economie"
+    entites: ["Colonisation de systèmes", "Architecte système", "Balise de colonisation système", "Mégavaisseau de colonisation", "Points de Construction", "Trailblazers", "Dodec Update", "liens forts et liens faibles", "Coriolis", "Orbis", "Ocellus", "Brewer Corporation", "metahauling"]
+    mots_cles_en: ["system colonisation", "system architect", "system colonisation beacon", "colonisation ship", "construction points", "primary port", "trailblazers", "dodec update", "strong link", "weak link", "construction effort", "metahauling", "uncontrolled populated"]
+    version_jeu_couverte: "4.2.2.x (Dodec Update du 11 novembre 2025, dernière mise à jour couverte)"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "moyenne"
+    volatilite: "moyenne"
+    sources_primaires: ["elitedangerous.com update-notes 4.1.0.0 / 4.1.2.0 / 4.1.2.102 / 4.2.2.0", "mega-guide communautaire CMDR Mechan (MikeCZ23/CCCL)", "EDCD/coriolis-data", "Wikipédia", "aussig/BGS-Tally"]
+    zones_incertaines: ["formule exacte du revenu hebdomadaire de l'Architecte et fonctionnement du facteur « Chance »", "effets précis de la Richesse et du Niveau de vie sur un système colonisé", "statut du « sniping » des revendications après le Dodec Update, non vérifié", "pondération chiffrée du port primaire sur les statistiques système, recherchée et non confirmée, donc retirée", "portée de saut après ingénierie d'un porteur de fret, non chiffrée faute de source accessible", "capacité de fret du Panther Clipper Mk II, non vérifiée", "noms anglais complets des organisations logistiques SCCN et CTN, non confirmés", "usage documenté du contrôleur de limpets collecteurs en contexte de colonisation, déduit de la mécanique générale"]
+    guides_lies: [2, 3, 11, 12, 13, 16, 19, 21]
+
+  - id: 19-fleet-carriers
+    fichier: 19-fleet-carriers.md
+    titre: "Porte-vaisseaux de joueur (Fleet Carriers)"
+    domaine: "economie"
+    entites: ["Fleet Carrier", "Porte-Vaisseau", "Tritium", "Tritium Depot", "Drydock", "Shipyard", "Outfitting", "Redemption Office", "Stronghold Carrier", "Pilots Trade Network"]
+    mots_cles_en: ["fleet carrier", "tritium", "tritium depot", "carrier jump", "decommissioning", "drydock", "shipyard", "outfitting", "landing pads", "stronghold carrier"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-09"
+    confiance_globale: "haute"
+    volatilite: "haute"
+    sources_primaires: ["roguey.co.uk", "guide PTN Fleet Carrier Owner's Guide", "elite-journal.readthedocs.io", "FC-Fuel-Estimator (GitHub)", "Wikipedia Elite Dangerous", "forums.frontier.co.uk"]
+    zones_incertaines: ["coûts hebdomadaires exacts des trois services Odyssey (Concourse, Vista Genomics, Pioneer Supplies), non retrouvés dans les sources accessibles", "date précise et caractère « stealth change » du déblocage du commerce de denrées rares sur un Porte-Vaisseau, appuyé sur une seule citation de forum", "répartition des seize baies d'appontage, documentée par roguey.co.uk seul, sans deuxième source indépendante", "application ou non du bonus de prix par distance des denrées rares sur le marché d'un Porte-Vaisseau"]
+    guides_lies: [2, 4, 6, 11, 12, 18, 20, 22]
+
+  - id: 20-minage
+    fichier: 20-minage.md
+    titre: "Le Minage (Mining) dans Elite Dangerous"
+    domaine: "economie"
+    entites: ["Mining Laser", "Abrasion Blaster", "Pulse Wave Analyser", "Seismic Charge Launcher", "Sub-Surface Displacement Missile", "Prospector Limpet Controller", "Refinery", "Type-11 Prospector", "Rhino", "Planetary Mining Deposit Scanner", "Void Opals", "EDTools.cc", "Bertrandite", "Painite", "Platinum", "Monazite", "Alexandrite", "Musgravite", "Rhodplumsite", "anneau glacé", "anneau rocheux", "anneau métallique", "anneau riche en métaux"]
+    mots_cles_en: ["mining", "laser mining", "core mining", "deep core mining", "subsurface deposit", "abrasion blaster", "pulse wave analyser", "seismic charge launcher", "prospector limpet", "hotspot", "surface mining", "Rhino SRV", "void opals", "painite", "low temperature diamonds", "ring type", "icy ring", "rocky ring", "metallic ring", "metal rich ring", "pristine reserve", "bertrandite", "platinum", "palladium", "gold", "silver", "osmium", "samarium", "praseodymium", "coltan", "indite", "gallite", "uraninite", "lepidolite", "rutile", "bauxite", "cobalt", "bromellite", "monazite", "musgravite", "serendibite", "rhodplumsite", "benitoite", "grandidierite", "alexandrite", "tritium"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "haute"
+    volatilite: "haute"
+    sources_primaires: ["Steam News Frontier (API ISteamNews, billets Frontier intégraux)", "EDCD/FDevIDs (outfitting.csv, commodity.csv, rings.csv, commit c356129)", "EDDiscovery/EliteDangerousCore (énumération RingClassEnum)", "EDSM (API bodies, FAQ Commodities)", "Inara.cz", "EDTools.cc", "pilotstradenetwork.com", "Guides et discussions Steam Community sur le minage (types d'anneau)"]
+    zones_incertaines: ["Frontier a publié les douze axes d'équilibrage du minage de surface sans aucune valeur chiffrée", "rôle fonctionnel exact du Sub-Surface Extraction Missile non confirmé par des notes de patch", "correctif « 9 → 12 fragments » du Rhino : ni numéro de version ni date publiés au 9 septembre 2026", "vaisseaux et classes de module permettant d'embarquer un Rhino, et existence d'un achat en crédits", "prix de vente, économies acheteuses et usages en ingénierie des treize marchandises de surface", "pourcentages de bonus Powerplay au minage (Torval, Kaine) et rendement PTN de 3,5 Md Cr par cycle, tous deux d'origine communautaire", "aucun système hotspot n'a pu être confirmé pour le Platine ni pour les Low Temperature Diamonds seuls", "section 4.5 : aucune source primaire Frontier ne publie la distribution des minéraux par type d'anneau ; les colonnes « technique » et « type d'anneau » sont une synthèse de guides de joueurs datés, non vérifiée en jeu", "section 4.5 : le type d'anneau reste non établi pour 16 des 63 marchandises Minerals et Metals, et aucune source ne publie de réserve minimale ni de rendement en tonnes par minéral"]
+    guides_lies: [2, 4, 11, 14, 16, 28]
+
+  - id: 21-bgs
+    fichier: 21-bgs.md
+    titre: "Le Background Simulation (BGS)"
+    domaine: "politique"
+    entites: ["Background Simulation", "faction mineure", "tick quotidien", "influence", "faction contrôlante", "Boom", "Famine", "Outbreak", "Lockdown", "Investment", "Expansion", "Retreat", "War", "Civil War", "Election", "Player Minor Faction", "BGS-Tally"]
+    mots_cles_en: ["background simulation", "bgs", "minor faction", "controlling faction", "influence", "tick", "boom", "bust", "famine", "outbreak", "lockdown", "civil unrest", "investment", "expansion", "retreat", "war", "civil war", "election", "conflict zone", "player minor faction", "bgs-tally"]
+    version_jeu_couverte: "4.4.0.x (mécanique stable depuis 2015, non rattachée à une version précise)"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "moyenne"
+    volatilite: "basse"
+    sources_primaires: ["Wikipédia EN/FR", "00-chronologie-canonique du corpus", "wiki GitHub aussig/BGS-Tally", "connaissances communautaires corroborées"]
+    zones_incertaines: ["horaire exact du tick quotidien, jamais publié par Frontier et dérivant au fil des années", "seuil d'influence déclenchant une Expansion (~35 %), estimation communautaire non officielle", "seuil d'influence déclenchant un Retreat (2,5 à 5 %), estimation communautaire non officielle", "algorithme de sélection du système cible d'une Expansion, non documenté officiellement", "valeur numérique du plafond d'influence par tick (« tick cap »), non confirmée", "rapport de poids exact entre les cinq paliers de récompense de mission ventilés par BGS-Tally", "classement chiffré d'INF par heure de jeu entre les leviers, non établi faute de source vérifiable", "formule complète de calcul de l'influence, jamais publiée par Frontier Developments"]
+    guides_lies: [2, 8, 11, 16, 18, 22, 24]
+
+  - id: 22-squadrons
+    fichier: 22-squadrons.md
+    titre: "Escadrons de joueurs (Squadrons)"
+    domaine: "social"
+    entites: ["Squadron", "Vanguards", "Squadron Carrier", "Squadron Bank", "Squadron Browser", "Squadron Leaderboards", "Squadron Leader", "Senior Officer", "System Architect", "Squadron Bar"]
+    mots_cles_en: ["squadron", "vanguards", "squadron carrier", "squadron bank", "squadron browser", "squadron leaderboards", "squadron leader", "senior officer", "permission groups", "claim sniping"]
+    version_jeu_couverte: "non déterminée — contenu arrêté au Caspian Explorer Update (2 décembre 2025), non revu depuis pour la 4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "haute"
+    volatilite: "moyenne"
+    sources_primaires: ["Steam News Frontier (API ISteamNews v0002)", "Inara.cz annuaire des escadrons", "fiche Inara de l'escadron New Pilots Initiative"]
+    zones_incertaines: ["Liste complète et officielle des rangs d'escadron au-delà de Squadron Leader, Senior Officer et Recruit.", "Détail exact de l'interface des groupes de permissions personnalisables.", "Existence d'une condition de rang, d'ancienneté ou de coût pour fonder un escadron.", "Mécanisme précis d'affiliation formelle d'un escadron à un Power, au-delà du filtre du Squadron Browser.", "Catégories exactes des Squadron Leaderboards.", "Assimilation du Squadron Carrier à un Fleet Carrier au sens mécanique : déduction du guide, jamais énoncée telle quelle par Frontier."]
+    guides_lies: [0, 2, 16, 21, 23]
+
+  - id: 23-jeu-en-groupe
+    fichier: 23-jeu-en-groupe.md
+    titre: "Wings, Multicrew et CQC : jouer à plusieurs dans Elite Dangerous"
+    domaine: "social"
+    entites: ["Wing", "Multicrew", "CQC", "Elite Dangerous: Arena", "nav-lock", "chasseur embarqué", "F63 Condor", "Taipan", "Gu-97", "Trident", "Crew Lounge", "équipage PNJ", "Squadron", "Utopixx Entertainment"]
+    mots_cles_en: ["wing", "multicrew", "cqc", "close quarters combat", "arena", "nav-lock", "ship-launched fighter", "slf", "fighter hangar", "crew lounge", "npc crew", "bounty voucher", "combat bond", "telepresence", "wing mission"]
+    version_jeu_couverte: "4.4.0.x (mécaniques introduites entre 2015 et 2018, sans refonte majeure depuis)"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "moyenne"
+    volatilite: "basse"
+    sources_primaires: ["Wikipédia EN/FR/DE", "fiche Steam officielle Elite Dangerous (appid 359320)", "guides Steam Community"]
+    zones_incertaines: ["date précise et numéro de version d'introduction des Wings en 2015", "date précise d'introduction du CQC dans le jeu de base, avant le renommage en Arena", "portée exacte de l'enrichissement des missions de wing par Beyond Chapter One en 2018", "valeurs précises du partage des revenus Multicrew entre capitaine et invités", "nombre maximal d'invités humains simultanés en Multicrew (deux, non confirmé)", "paliers intermédiaires de frais et de commission de l'équipage PNJ du Crew Lounge", "noms exacts et nombre des modes de jeu du CQC (Deathmatch / Team Deathmatch / Domination supposés)", "promotion gratuite d'Elite Dangerous: Arena en juillet 2016, non recoupée", "statistiques de fréquentation du CQC en 2025-2026"]
+    guides_lies: [3, 4, 8, 22, 27]
+
+  - id: 24-community-goals
+    fichier: 24-community-goals.md
+    titre: "Community Goals (mécanique générique)"
+    domaine: "social"
+    entites: ["Community Goal", "CG", "paliers (tiers)", "tranches de contribution", "Inara.cz", "GalNet", "tableau des missions", "modules pré-engineered", "merits Powerplay", "Battle for Sol", "Wreaken Calls for Mining Support", "Third Aegis Initiative"]
+    mots_cles_en: ["community goal", "CG", "tier", "contribution ranking", "top percentile", "top 25 CMDRs", "GalNet", "mission board", "pre-engineered module", "paint job", "decal", "merits", "mission stacking"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-09"
+    confiance_globale: "moyenne"
+    volatilite: "haute"
+    sources_primaires: ["Inara.cz (pages Community Goals et historique paginé)", "Wikipédia (Elite Dangerous)", "corpus interne 00-chronologie-canonique.md", "01-lore.md et guides d'activité"]
+    zones_incertaines: ["aucun barème standardisé de paliers, ni de seuils de tranches de centile, n'a pu être confirmé sur l'ensemble de l'historique du jeu", "barème exact des merits Powerplay distribués par les CG rattachées à une Power", "détail des modules engineered offerts par la CG « Battle for Sol » de décembre 2024", "on ignore si une CG crédite la livraison au commandant qui l'effectue ou à celui qui a produit la marchandise déposée sur un Fleet Carrier", "chiffres de rendement de la section 4 repris des guides d'activité internes, faute d'accès web lors de la rédaction"]
+    guides_lies: [1, 10, 11, 20, 21]
+
+  - id: 25-combat-ax
+    fichier: 25-combat-ax.md
+    titre: "Combat anti-Thargoïde (AX) approfondi"
+    domaine: "combat"
+    entites: ["Thargoïdes", "Interceptor", "Scout thargoïde", "Titan", "Maelstrom", "Shutdown Field Neutraliser", "Guardian Gauss Cannon", "Caustic Sink Launcher", "Nuage caustique", "Aegis", "AXI", "Zone de Combat Anti-Xéno"]
+    mots_cles_en: ["thargoid", "interceptor", "hydra", "caustic cloud", "shutdown field neutraliser", "guardian gauss cannon", "anti-xeno combat zone", "non-human signal source", "maelstrom", "titan"]
+    version_jeu_couverte: "4.4.0.x — contenu thargoïde inchangé depuis fin 2024, recoupé sur le flux d'annonces 2025-2026"
+    branche: "live"
+    date_verification: "2026-09-09"
+    confiance_globale: "moyenne"
+    volatilite: "moyenne"
+    sources_primaires: ["Flux Steam News officiel de Frontier Developments", "Wikipédia EN Elite Dangerous", "codex Maelstrom de Canonn", "Inara", "Massively OP"]
+    zones_incertaines: ["Le nombre exact de cœurs par classe d'Interceptor n'a pas pu être recoupé sur source accessible", "La durée de la fenêtre de tir après shutdown (15 à 20 secondes) est une valeur indicative non vérifiée", "L'absence de sous-classes nommées de Scouts n'a pas pu être recoupée sur wiki", "Les valeurs de dégâts et de DPS des builds AX ne sont pas vérifiées et évoluent avec l'équilibrage", "La chronologie d'Aegis (3303, 3308, 3309) est reprise du corpus sans source primaire indépendante", "L'absence de mise à jour thargoïde depuis fin 2024 repose sur les titres et résumés du flux Steam News, pas sur les changelogs complets", "Le statut du domaine axi.info n'a pas pu être testé"]
+    guides_lies: [0, 1, 4, 5, 8, 16, 24]
+
+  - id: 26-ingenierie-a-pied-avancee
+    fichier: 26-ingenierie-a-pied-avancee.md
+    titre: "Ingénierie avancée de l'équipement à pied : farming, échange et optimisation"
+    domaine: "vaisseaux-equipement"
+    entites: ["Bartender", "Ship Locker", "Manufacturing Instructions", "Suit Schematic", "Power Regulator", "Data point", "Dav's Hope", "Jameson Crash Site", "EDOMH", "Domino Green", "Jude Navarro", "Rosa Dayette"]
+    mots_cles_en: ["bartender", "ship locker", "manufacturing instructions", "suit schematic", "on-foot materials", "settlement raid", "data point", "power regulator", "odyssey engineers", "EDOMH"]
+    version_jeu_couverte: "mécaniques Odyssey inchangées depuis le Type-8 Update d'août 2024 ; données de référence édition 2026-08, non revues pour la 4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-09"
+    confiance_globale: "haute"
+    volatilite: "haute"
+    sources_primaires: ["Manuel officiel du Journal Frontier v32", "Inara.cz pages Engineer et Logbook", "schemas.edomh.nl", "forums Frontier", "EDCD/FDevIDs", "EDCD/coriolis-data"]
+    zones_incertaines: ["Les valeurs de score de troc au bartender ne sont connues que pour le Graphene et l'Aerogel", "Le plafond du casier de bord de 1000 unités par catégorie n'a pas pu être reconfirmé sur une source primaire", "Le comportement du plafond de stockage sur Fleet Carrier n'est pas tranché", "La limite de stock du bartender lui-même n'est documentée nulle part", "Le tableau complet des quantités par blueprint n'existe plus en ligne", "L'URL et le statut actuel de l'Odyssey Mapping Guide sont inconnus, le site répondant en erreur 521", "Les montants en crédits des paliers de combinaison viennent du wiki Fandom seul", "Le tarif au comptoir du Carbon Fibre Plating et du Titanium Plating n'est relevé par aucune source", "Les coordonnées de Selenium Farm ne sont couvertes par aucune donnée de référence", "Le contenu de Falcon's Guide n'a pas pu être vérifié, Reddit étant bloqué"]
+    guides_lies: [0, 6, 7, 9, 10, 13, 18]
+
+  - id: 27-debuter-et-progresser
+    fichier: 27-debuter-et-progresser.md
+    titre: "Débuter et progresser dans Elite Dangerous : premiers pas et rangs"
+    domaine: "transversal"
+    entites: ["Sidewinder Mk I", "Hauler", "Adder", "Cobra Mk III", "Felicity Farseer", "The Dweller", "Tod « The Blaster » McQuinn", "Lei Cheung", "Elvira Martuuk", "Pilots Federation", "Road to Riches", "marine fédérale", "marine impériale", "rebuy"]
+    mots_cles_en: ["new commander", "starter ship", "sidewinder mk i", "hauler", "adder", "cobra mk iii", "engineers", "felicity farseer", "rebuy", "combat rank", "trade rank", "exploration rank", "exobiologist rank", "cqc rank", "road to riches", "federal navy rank", "imperial navy rank"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-09"
+    confiance_globale: "moyenne"
+    volatilite: "moyenne"
+    sources_primaires: ["edfieldmanual.com", "inara.cz", "wikiwand/Wikipédia", "corpus interne (03-vaisseaux, 06-ingenieurs, 08-combat-spatial, 10-exploration, 11-commerce)"]
+    zones_incertaines: ["seuils numériques de progression de rang, jamais publiés officiellement quelle que soit la filière", "conditions de déblocage de The Dweller, divergentes entre les deux sources consultées", "conditions chiffrées de Tod McQuinn et de Lei Cheung, non recoupées avec une source primaire", "échelle de paliers ordonnée du rang Mercenaire, absente de toutes les sources consultées", "échelle de paliers ordonnée du rang CQC, seuls les paliers hauts étant visibles sur Inara", "liste des quatre vaisseaux jouables en CQC, non sourcée dans le corpus", "noms et nombre des modes de jeu du CQC, non confirmés", "mécanisme exact de calcul du rang de commerce (achat-revente, minerai, missions comptent-ils à parts égales)", "aucun Cr/h fiable pour un vaisseau starter non ingénierié", "portée de saut stock du Hauler, non recoupée par une recherche indépendante cette édition"]
+    guides_lies: [1, 3, 6, 8, 10, 11, 12, 20, 23]
+
+  - id: 28-marchandises
+    fichier: 28-marchandises.md
+    titre: "Les marchandises d'Elite Dangerous : catalogue des 270 commodités et des 142 denrées rares"
+    domaine: "economie"
+    entites: ["Commodity Market", "Gold", "Silver", "Palladium", "Platinum", "Osmium", "Bertrandite", "Indite", "Gallite", "Coltan", "Uraninite", "Lepidolite", "Rutile", "Painite", "Void Opal", "Low Temperature Diamonds", "Tritium", "Imperial Slaves", "Onionhead", "Soontill Relics", "Hutton Orbital", "Limpets"]
+    mots_cles_en: ["commodity", "commodities", "commodity market", "rare goods", "rare commodities", "minerals", "metals", "salvage", "machinery", "technology", "chemicals", "industrial materials", "foods", "legal drugs", "consumer items", "medicines", "textiles", "weapons", "waste", "slavery", "produced by", "consumed by", "illegal goods", "prohibited", "ring type", "metallic ring", "metal rich ring", "icy ring", "rocky ring", "market id"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-10"
+    confiance_globale: "moyenne"
+    volatilite: "moyenne"
+    sources_primaires: ["EDCD/FDevIDs commit c35612952dd6a547d1a7ac4cffab9c7051e86579 (commodity.csv, rare_commodity.csv, economy.csv, rings.csv)", "EDSM FAQ Commodities (15 pages de catégories)", "API Spansh /api/station/<market_id>", "API EDSM /api-system-v1/stations/market", "guides communautaires Steam sur le minage (Devilish Dave, Yousseff., Edwyndham)"]
+    zones_incertaines: ["aucun prix d'achat ni de vente du commerce courant n'est établi : commodity.csv n'en porte aucun et aucune source stable n'a pu être retenue", "les économies productrices et consommatrices ne sont documentées que pour 133 marchandises sur 270, dont zéro des 96 marchandises de la catégorie Salvage", "la légalité n'est documentée que pour 12 marchandises sur 270 et aucune matrice marchandise par superpuissance ou par type de gouvernement n'a pu être consultée", "le type d'anneau reste inconnu pour 16 des 63 marchandises des catégories Minéraux et Métaux et repose partout ailleurs sur des guides de joueurs, jamais sur une source Frontier", "la réserve minimale conseillée par minéral n'est établie par aucune source : seule existe la règle générale de viser une réserve Pristine", "l'allocation par cycle des denrées rares et la distance optimale de revente ne sont établies par aucune source ; les prix et stocks relevés sont un instantané du 10 septembre 2026", "la colonne Nom français est une glose de lecture produite pour ce corpus, et non la localisation officielle du client français du jeu", "la position de la station Heart of Taurus (méga-vaisseau) repose sur un relevé de marché du 9 août 2022"]
+    guides_lies: [6, 11, 12, 16, 17, 19, 20, 27]
