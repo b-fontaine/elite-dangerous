@@ -11,7 +11,7 @@
 # impose de régénérer ce fichier.
 
 date_generation: 2026-09-12
-nombre_de_guides: 31
+nombre_de_guides: 32
 genere_depuis: "front-matter YAML des fichiers raw_data/NN-*.md"
 indexer_ce_fichier: false
 
@@ -483,3 +483,18 @@ guides:
     sources_primaires: ["elite-dangerous.fandom.com (Federation/Ranks, Empire/Ranks, Permits, Mission Board, Reputation, Team Missions, Apex Interstellar Transport, Conflict Zone (On Foot), Frontline Solutions, Domino Green)", "elitedangerous.com/news/updates (4.4.0.0, 4.4.0.2, 4.4.0.3)", "GitHub EDCD/EDMarketConnector (stats.py)", "forums.frontier.co.uk", "corpus interne (03-vaisseaux, 06-ingenieurs, 09-combat-a-pied, 13-operations, 24-community-goals, 27-debuter-et-progresser)"]
     zones_incertaines: ["seuils numériques exacts (%) des paliers Unfriendly et Hostile de l'échelle de réputation, non chiffrés par les sources consultées", "condition d'accès au marché noir d'une station : contradiction non résolue entre gouvernance/état BGS et un seuil de réputation Cordial rapporté par la communauté", "plafond de missions actives simultanées (mission stacking), chiffré à 20 par une seule source datée de 2018", "mécanisme actuel du board flipping, non revérifié pour la version 4.4.0.x", "localisation exacte de la mission d'invitation du permis Sirius, divergente entre deux sources", "date du Community Goal ayant conditionné le permis Alioth, divergente entre le corpus interne (mai-juin 2021) et cette recherche (CG de février 2022, mégaship établi en novembre 2021)", "accessibilité actuelle du permis du Pilots' Federation District depuis la probable suppression de l'option de départ à Dromi en 2023", "échelle de paliers ordonnée du rang Mercenaire, absente de toutes les sources consultées", "durée exacte d'un trajet Apex et taux du Hyperspace Fee, non publiés officiellement", "prêt d'équipement par Frontline Solutions, mentionné par une source antérieure du corpus mais non confirmé par cette recherche"]
     guides_lies: [2, 3, 6, 8, 9, 10, 11, 13, 21, 23, 24, 27]
+
+  - id: 30-piraterie-et-pvp
+    fichier: 30-piraterie-et-pvp.md
+    titre: "Piraterie, prédation et PvP subi dans Elite Dangerous"
+    domaine: "combat"
+    entites: ["Manifest Scanner", "Kill Warrant Scanner", "Frame Shift Wake Scanner", "Frame Shift Drive Interdictor", "Hatch Breaker Limpet Controller", "Collector Limpet Controller", "Convoy Dispersal Pattern", "Mobius PvE", "combat logging", "Interstellar Factors", "Archon Delaine", "Deciat", "Shinrarta Dezhra"]
+    mots_cles_en: ["piracy", "ganking", "griefing", "combat logging", "private group", "open play", "solo play", "mobius", "block player", "report player", "manifest scanner", "kill warrant scanner", "frame shift wake scanner", "convoy dispersal pattern", "hatch breaker", "collector limpet", "instancing", "matchmaking", "seal clubbing"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-12"
+    confiance_globale: "moyenne"
+    volatilite: "moyenne"
+    sources_primaires: ["elite-dangerous.fandom.com (Manifest Scanner, Kill Warrant Scanner, Frame Shift Wake Scanner, Pirate, Convoy Dispersal Pattern, Resource Extraction Site, Influence, Game Mode, Instance, Background Simulation, Griefers, Acronyms & Slang, Combat Logging, Shinrarta Dezhra, Colonia Bridge)", "forums.frontier.co.uk (fils datés sur le ganking, le blocage, l'instanciation, le combat logging et le BGS multi-mode)", "elitepve.com (Mobius, politique et procédure d'adhésion)", "frontier.co.uk/legal (EULA, Code of Conduct)", "corpus interne (02-powerplay, 04-equipements, 06-ingenieurs, 08-combat-spatial, 11-commerce, 21-bgs, 23-jeu-en-groupe)"]
+    zones_incertaines: ["plafond technique actuel de joueurs par instance : le chiffre de 32 date du Kickstarter et n'est confirmé par aucune source datée de 4.4.x", "fiabilité actuelle du blocage d'un joueur sur l'instanciation : un test de 2017 montrait qu'être ami avec un joueur bloqué annulait l'effet du blocage", "texte exact et actuellement en vigueur de l'EULA/Code of Conduct sur le combat logging, non retracé jusqu'à un texte légal primaire consulté directement", "taille de la communauté Mobius PvE : 40 000 membres selon la page de politique du groupe, 19 309 selon le compteur du forum consulté le même jour", "Colonia Bridge comme point de rassemblement de ganking : hypothèse du plan de cycle non confirmée par une source communautaire directe", "légalité de l'acte de scanner un vaisseau innocent : confirmée non sanctionnée, mais la seule déclaration explicite date de 2015, avant les refontes de 2018 et d'Odyssey", "effet du Squadron sur le matchmaking d'instance, non documenté par une source officielle", "compatibilité d'instanciation entre lanceurs PC (Steam/Epic/Frontier), sources communautaires contradictoires", "date exacte du renommage de Cargo Scanner en Manifest Scanner, associée à Odyssey sans note de patch primaire retrouvée", "montants exacts de bounty vouchers par type de PNJ, aucune moyenne fiable, à lire en jeu"]
+    guides_lies: [2, 4, 6, 8, 11, 21, 23, 27]

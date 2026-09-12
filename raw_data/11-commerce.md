@@ -6,12 +6,12 @@ entites: [ Trade Rank, Rare Goods, Trade Dangerous, Spansh, Type-9 Heavy, Imperi
 mots_cles_en: [ trading, supply and demand, trade rank, rare goods, black market, smuggling, Robigo run, cargo rack, trade route, Trade Dangerous, mining to trade, piracy, hatch breaker limpet, FSD interdictor, cargo scanner, stolen cargo, notoriety ]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-09
+date_verification: 2026-09-12
 confiance_globale: haute
 volatilite: haute
 sources_primaires: [ EDCD/coriolis-data, EDCD/FDevIDs, Trade Dangerous (dépôt GitHub), EDSM, TheGamer, GameRant, TwistedVoxel, chronologie canonique interne ]
 zones_incertaines: [ "seuils de profit cumulé de chaque palier de Trade Rank : aucune source primaire retrouvée, à lire dans le panneau Réputation en jeu", "portée de saut laden/unladen du Keelback, du Type-8 Transporter et du Panther Clipper Mk II : non publiée par coriolis-data, dépend du FSD et de la charge", "chiffres de rentabilité GameRant (100 M Cr/h en minage laser, 90 M Cr/h en Robigo, 3,5 Md Cr par cycle PTN) : instantanés non redatés par la source", "rentabilité horaire de la piraterie : aucun ordre de grandeur vérifié n'a été retrouvé, la section 2.5 le déclare explicitement plutôt que d'avancer un chiffre", "traitement exact du cargo marqué « volé » (stolen) sur un marché légal par rapport au marché noir : non recoupé avec une source primaire", "prise en compte ou non des ventes de cargo volé dans la progression du Trade Rank : non documentée par les sources consultées" ]
-guides_lies: [ 3, 8, 12, 16, 18, 20, 21, 24, 28 ]
+guides_lies: [ 3, 8, 12, 16, 18, 20, 21, 24, 28, 30 ]
 ---
 
 # Guide complet du commerce dans Elite Dangerous
@@ -343,8 +343,10 @@ noir contribue à l'influence de la faction propriétaire de ce marché noir, g�
 levier, ses limites et la façon dont il se combine aux autres sont traités dans [Le BGS](./21-bgs.md).
 
 > **Note de couverture.** Ce guide décrit la piraterie sous l'angle commercial — acquisition et écoulement de
-> marchandise. Le corpus ne dispose pas encore d'un guide dédié à cette activité ; en attendant, les mécaniques de
-> combat associées (interdiction, mass lock, traque au *Frame Shift Wake Scanner*, crime et notoriety) sont dans
+> marchandise. La chaîne opératoire complète (choix de cible, scan de cargaison, interdiction, Hatch Breaker,
+> récupération), l'équipement type, deux builds pirates chiffrés et le volet PvP subi (lieux à risque, groupes PvE,
+> combat logging) sont dans [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) ; les mécaniques de combat associées
+> (interdiction, mass lock, traque au *Frame Shift Wake Scanner*, crime et notoriety) restent dans
 > [Combat spatial](./08-combat-spatial.md), et l'effet sur les factions dans [Le BGS](./21-bgs.md).
 
 ## 3. Exemple chiffré complet d'une route de commerce légal en vrac

@@ -17,7 +17,7 @@ mots_cles_en: [engineers, blueprints, engineering materials, raw materials, manu
   experimental effect compatibility]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-12
 confiance_globale: haute
 volatilite: moyenne
 sources_primaires:
@@ -46,7 +46,7 @@ zones_incertaines:
     d'exobiologie divergent sur quatre critères (classe de l'étoile primaire, température, distance à
     l'étoile, présence d'un Water Giant) ; aucune source consultable depuis ce chantier ne permet
     d'arbitrer."
-guides_lies: [2, 5, 7, 10, 13, 20, 25, 26]
+guides_lies: [2, 5, 7, 10, 13, 20, 25, 26, 30]
 ---
 
 # Guide complet des Ingénieurs (Engineers) dans Elite Dangerous
@@ -1283,7 +1283,7 @@ Shot** (tir double, sur certaines armes).
 | Module                                                             | Modifications disponibles                                                  |
 |--------------------------------------------------------------------|----------------------------------------------------------------------------|
 | Capteurs (Sensors, module cœur)                                    | **Lightweight, Long Range, Wide Angle uniquement** *(corrigé — voir note)* |
-| Scanners utilitaires (Kill Warrant, Wake, Cargo, Manifest Scanner) | Fast Scan, Lightweight, Long Range, Reinforced, Shielded, Wide Angle       |
+| Scanners utilitaires (Kill Warrant, Frame Shift Wake, Manifest Scanner *(ex-Cargo Scanner)*) | Fast Scan, Lightweight, Long Range, Reinforced, Shielded, Wide Angle       |
 | Detailed Surface Scanner                                           | Expanded Probe Scanning Radius                                             |
 | Contrôleurs de limpets                                             | Lightweight, Reinforced, Shielded                                          |
 | Support de vie                                                     | Lightweight, Reinforced, Shielded                                          |
@@ -1292,7 +1292,9 @@ Shot** (tir double, sur certaines armes).
 > pour le module **Sensors** (module cœur, non retirable). En réalité, le module Sensors lui-même ne propose que
 > **Lightweight, Long Range et Wide Angle** (confirmé sur la fiche « Sensors » du wiki communautaire). « Fast Scan » et
 > « Reinforced »/« Shielded » appartiennent aux modules **scanners utilitaires** (Kill Warrant Scanner, Frame Shift Wake
-> Scanner, Cargo Scanner, Manifest Scanner), et « Expanded » (nom complet : *Expanded Probe Scanning Radius*)
+> Scanner, Manifest Scanner — anciennement Cargo Scanner, même module renommé, voir
+> [30-piraterie-et-pvp.md §2](./30-piraterie-et-pvp.md#2-les-scanners-de-piraterie--un-seul-module-renommé-pas-quatre)),
+> et « Expanded » (nom complet : *Expanded Probe Scanning Radius*)
 > appartient exclusivement au **Detailed Surface Scanner** — trois familles de modules distinctes que la version
 > précédente avait fusionnées à tort. Recoupé avec les champs `modulename` de `blueprints.json`, qui rattachent chaque
 > blueprint à son (ou ses) module(s) réel(s).

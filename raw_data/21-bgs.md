@@ -21,7 +21,7 @@ zones_incertaines: ["horaire exact du tick quotidien, jamais publié par Frontie
   "rapport de poids exact entre les cinq paliers de récompense de mission ventilés par BGS-Tally",
   "classement chiffré d'INF par heure de jeu entre les leviers, non établi faute de source vérifiable",
   "formule complète de calcul de l'influence, jamais publiée par Frontier Developments"]
-guides_lies: [2, 8, 11, 16, 18, 22, 24, 29]
+guides_lies: [2, 8, 11, 16, 18, 22, 24, 29, 30]
 ---
 
 # Le Background Simulation (BGS)
@@ -289,7 +289,8 @@ s'engager dans le commerce ou le combat.
 ### 5.5 Autres leviers BGS : contrebande, dons et sauvetage
 
 - **Piraterie et contrebande** : le trafic de marchandises illicites via le marché noir contribue à l'influence de la
-  faction propriétaire du marché noir concerné, généralement une faction en Anarchie.
+  faction propriétaire du marché noir concerné, généralement une faction en Anarchie. Chaîne opératoire complète,
+  terrains de chasse et statut légal du butin dans [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md).
 - **Dons** (*donations*) : remettre des crédits à une faction via certaines interfaces de station contribue directement
   à son influence.
 - **Sauvetage** (*search and rescue*) : la récupération d'objets de sauvetage (capsules, cargaisons perdues) livrée à

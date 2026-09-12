@@ -46,12 +46,21 @@ poser son propre vaisseau, et porte le corpus à **29 guides thématiques**. Com
 plutôt qu'il ne tranche les divergences rencontrées entre sources — notamment sur la date du Community Goal associé
 au permis Alioth et sur un mécanisme de prêt d'équipement Frontline Solutions qui n'a pas pu être confirmé.
 
+Un septième cycle, mené le même jour, a assemblé une boucle de gameplay dont toutes les pièces existaient déjà
+séparément dans le corpus : la piraterie. Le nouveau guide [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) relie en
+procédure jouable le scan de cargaison, l'interdiction, le mass lock, le Hatch Breaker et l'écoulement au marché noir,
+avec deux builds pirates chiffrés, et traite pour la première fois le PvP subi (lieux à risque, groupes privés PvE,
+blocage, combat logging) et l'architecture réseau du jeu (ajoutée à
+[23-jeu-en-groupe.md](./23-jeu-en-groupe.md)), portant le corpus à **30 guides thématiques**. Il corrige au passage une
+confusion du corpus lui-même : le « Manifest Scanner » n'est pas un quatrième scanner distinct du Cargo Scanner, mais
+son nom actuel.
+
 ## Deux corpus dans le même dépôt : règle de préséance
 
 Le dépôt héberge deux ensembles de contenu francophone qui se recouvrent partiellement et n'avaient jamais été
 réconciliés. Cette section pose la règle qui les départage.
 
-- **`raw_data/`** — 31 fichiers markdown (29 guides thématiques et 2 documents transversaux) : la base de
+- **`raw_data/`** — 32 fichiers markdown (30 guides thématiques et 2 documents transversaux) : la base de
   connaissances de référence sur **le jeu**, écrite pour alimenter le RAG. C'est le présent répertoire. Chaque guide
   porte un front-matter YAML et un encart « En bref » ; [`index.yaml`](./index.yaml) en agrège les métadonnées et sert
   de routeur de requête. Le gabarit du front-matter et l'usage de l'index sont spécifiés dans les *Notes d'ingestion
@@ -163,7 +172,7 @@ celui défini par les *Notes d'ingestion RAG* en fin de document, qui n'indexe q
   Powerplay), formats de jeu (CG, CZ, RES, USS, PvE, PvP, NPC, CMDR) et matériel de bord (FSD et sa variante SCO, DSS,
   FSS, HRP, MRP, SRV, FC). Les entrées de modules précisent leur catégorie d'emplacement.
 
-Les 29 guides thématiques sont regroupés ci-dessous par domaine.
+Les 30 guides thématiques sont regroupés ci-dessous par domaine.
 
 ## Débuter et progresser
 
@@ -274,6 +283,12 @@ Les 29 guides thématiques sont regroupés ci-dessous par domaine.
   Neutraliser**, détruire les cœurs au **Guardian Gauss Cannon**, nettoyer l'essaim au Flak et purger les stacks
   caustiques —, rappelle la fin de la Seconde Guerre Thargoïde le 19 décembre 2024, et décrit ce qui se pratique
   encore en 2026 : NHSS, zones AXCZ, réputation Aegis et matériaux du Technology Broker.
+- [Piraterie, prédation et PvP subi](./30-piraterie-et-pvp.md) — Assemble en procédure jouable la chaîne opératoire de
+  la piraterie (Manifest Scanner — le nom actuel du Cargo Scanner, pas un module distinct — interdiction, mass lock,
+  Hatch Breaker, revente au marché noir), deux builds pirates chiffrés (Python, Krait Mk II) et les terrains de chasse
+  (signaux Convoy Dispersal Pattern, RES, lanes en Boom). Traite symétriquement le PvP subi : lieux à risque
+  documentés par la communauté (Deciat, Shinrarta Dezhra, stations de CG — mais pas le Colonia Bridge, hypothèse
+  infirmée), groupes privés PvE (Mobius), blocage, signalement et combat logging.
 
 ## Combat et équipement à pied
 
@@ -416,7 +431,7 @@ quels par un humain.
 ### Règle 1 — N'indexer que les guides
 
 Indexer `raw_data/*.md` **à l'exclusion de `README.md`**, et ne pas indexer `raw_data/index.yaml`, qui n'est pas un
-guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 31 fichiers dont le
+guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 32 fichiers dont le
 nom correspond à `^\d{2}-.*\.md$` à la racine de `raw_data/`.
 
 Ce glob doit rester **non récursif** et ignorer les répertoires cachés : `raw_data/` peut contenir un `.omc/`
@@ -461,20 +476,21 @@ recouvre lexicalement l'ensemble du corpus. Indexées, elles remontent en tête 
 évincent les passages qui contiennent réellement la réponse. Les renvois croisés utiles restent accessibles au lecteur
 humain dans le fichier ; ils n'ont simplement pas leur place dans l'index vectoriel.
 
-**Relevé du 12 septembre 2026, après l'ajout du guide missions/réputation/rangs : 61 sections, 19 198 mots.**
+**Relevé du 12 septembre 2026, après l'ajout du guide piraterie/PvP : 63 sections, 19 705 mots.**
 Comptage : titres capturés par le motif ci-dessus dans les fichiers `NN-*.md`, contenu compté jusqu'au titre de
-même niveau ou de niveau supérieur suivant, `split()` sur les espaces. Vingt-six guides
+même niveau ou de niveau supérieur suivant, `split()` sur les espaces. Vingt-sept guides
 portent deux sections concernées (`## Voir aussi` et `## Sources`), trois en portent trois —
 [05-guardians.md](./05-guardians.md), [07-equipement-a-pied.md](./07-equipement-a-pied.md) et
 [10-exploration.md](./10-exploration.md), qui ajoutent chacun une section de ressources externes —, et deux n'en
 portent aucune : [00-chronologie-canonique.md](./00-chronologie-canonique.md) et
-[00-glossaire.md](./00-glossaire.md). Soit 26 × 2 + 3 × 3 + 2 × 0 = 61 sections pour 31 fichiers. Les blocs les plus
+[00-glossaire.md](./00-glossaire.md). Soit 27 × 2 + 3 × 3 + 2 × 0 = 63 sections pour 32 fichiers. Les blocs les plus
 lourds sont les `## Sources` de [06-ingenieurs.md](./06-ingenieurs.md) (1 783 mots) et de
 [20-minage.md](./20-minage.md) (1 776 mots), suivis de celui de
 [10-exploration.md](./10-exploration.md) (788 mots) et de celui de
-[28-marchandises.md](./28-marchandises.md) (749 mots) — le nouveau guide
-[29-missions-reputation-et-rangs.md](./29-missions-reputation-et-rangs.md) n'y figure pas : ses sections `## Voir
-aussi` (221 mots) et `## Sources` (548 mots) restent sous ce seuil.
+[28-marchandises.md](./28-marchandises.md) (749 mots) — ni
+[29-missions-reputation-et-rangs.md](./29-missions-reputation-et-rangs.md) (`## Voir aussi` 221 mots, `## Sources`
+548 mots) ni [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) (`## Voir aussi` 143 mots, `## Sources` 364 mots) n'y
+figurent : les deux restent sous ce seuil.
 
 Deux écarts avec le relevé précédent, publié le même jour et corrigés ici, méritent d'être signalés parce qu'ils
 illustrent exactement le défaut que ce relevé est censé prévenir. Le décompte de **57 sections** était juste, mais la
@@ -490,7 +506,7 @@ sur lui.
 **Méthode de comptage, à reproduire à l'identique après toute révision.** Ces deux chiffres ne sont comparables dans
 le temps que si la mesure l'est aussi. La convention retenue est la suivante :
 
-1. **Périmètre** : les 31 fichiers du périmètre indexé défini à la règle 1 ; `README.md`, `index.yaml` et les
+1. **Périmètre** : les 32 fichiers du périmètre indexé défini à la règle 1 ; `README.md`, `index.yaml` et les
    sous-répertoires en sont exclus.
 2. **Détection** : une section est retenue si sa ligne de titre correspond au motif ci-dessus et ne figure pas dans la
    liste des exceptions, vide à ce jour.

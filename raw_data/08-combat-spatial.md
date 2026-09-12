@@ -6,7 +6,7 @@ entites: [Power Distributor, pips SYS/ENG/WEP, Flight Assist Off, Shield Cell Ba
 mots_cles_en: [power distributor, pips, flight assist off, shield cell bank, hull reinforcement package, module reinforcement package, interdiction, mass lock, hazres, combat zone, bounty voucher, notoriety, armour piercing, hull hardness, damage distribution, thermal damage, kinetic damage, explosive damage, absolute damage, corrosive shell, phasing sequence, thermal vent, feedback cascade, weapon focused, weapon sturdy, bulkheads, hull boost, combat rank]
 version_jeu_couverte: "mécaniques stables non rattachées à une version précise ; caractéristiques de vaisseaux, d'armes et de blindages relevées le 10 septembre 2026 dans EDCD/coriolis-data et EDCD/FDevIDs"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-12
 confiance_globale: haute
 volatilite: moyenne
 sources_primaires: [Wikipedia Elite Dangerous, Canonn Research, EDSM, Spansh, Inara, EDCD/coriolis-data, EDCD/FDevIDs]
@@ -19,7 +19,7 @@ zones_incertaines:
   - "État courant du front thargoïde (systèmes en alerte, invasion, reconquête), non vérifiable dans un guide statique."
   - "Effet chiffré des Hull Reinforcement Packages et des Module Reinforcement Packages, non couvert par ce guide."
   - "Choix de modules des trois builds de la section 8.5, issus de la méta communautaire ; seules les caractéristiques de châssis sont recalées sur EDCD/coriolis-data."
-guides_lies: [0, 3, 4, 6, 16, 21, 23, 25]
+guides_lies: [0, 3, 4, 6, 16, 21, 23, 25, 30]
 ---
 
 # Guide complet du combat spatial dans Elite Dangerous
@@ -739,6 +739,11 @@ radicalement l'exposition au risque en combat :
 Le choix dépend donc essentiellement du niveau de risque PvP recherché : Solo ou Groupe privé pour du farming PvE
 tranquille (RES, CZ, missions), Open pour la chasse aux primes en PvP, les embuscades organisées ou la participation aux
 [Community Goals](./24-community-goals.md) et [Fleet Carriers](./19-fleet-carriers.md) en contexte communautaire vivant.
+Pour la piraterie en tant que boucle de jeu complète, les lieux à risque documentés par la communauté (Deciat,
+Shinrarta Dezhra, stations de CG), les groupes privés PvE comme Mobius, le blocage, le signalement et le combat
+logging, voir [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md). Pour l'architecture réseau qui explique pourquoi
+deux joueurs du même système ne se voient pas toujours, voir
+[23-jeu-en-groupe.md](./23-jeu-en-groupe.md#6-comment-fonctionne-le-réseau--instanciation-p2p-et-simulation-persistante).
 
 ### 6.3 CQC (Close Quarters Combat)
 

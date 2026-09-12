@@ -3,7 +3,7 @@ id: 04-equipements
 titre: "Liste complète des équipements dans Elite Dangerous"
 domaine: vaisseaux-equipement
 entites: [Bulkheads, Hull Reinforcement Package, Module Reinforcement Package, Shield Booster,
-  Frame Shift Drive (SCO), Guardian FSD Booster, Frame Shift Wake Scanner, Vessel Hangar,
+  Frame Shift Drive (SCO), Guardian FSD Booster, Frame Shift Wake Scanner, Manifest Scanner, Vessel Hangar,
   Mk II Biological Scanner, MercGear, Guardian Technology Broker, Prismatic Shield Generator,
   Power Plant, Thrusters, Power Distributor, Life Support, Sensors, Fuel Tank, Fuel Scoop,
   Shield Cell Bank, Bi-Weave Shield Generator, Auto Field-Maintenance Unit, Refinery,
@@ -20,7 +20,7 @@ mots_cles_en: [outfitting, hardpoint, hull reinforcement package, module reinfor
   damage per second, distributor draw, armour hardness, bulkhead cost, module price, power draw]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-12
 confiance_globale: haute
 volatilite: moyenne
 sources_primaires:
@@ -46,7 +46,7 @@ zones_incertaines: ["table des masses optimales de FSD au grade 5 dérivée par 
   "appariement des deux variantes pré-ingénierées de Hpt_BasicMissileRack_Fixed_Medium avec les trois noms
     MercGear que outfitting.csv porte pour cet identifiant (Drag, Lightweight Thermal et Lockdown Seeker
     Missile Rack) : indécidable sur source reproductible"]
-guides_lies: [3, 5, 6, 8, 10, 13, 14, 17, 20, 25]
+guides_lies: [3, 5, 6, 8, 10, 13, 14, 17, 20, 25, 30]
 ---
 
 # Liste complète des équipements dans Elite Dangerous
@@ -399,7 +399,9 @@ Capacités et taux de recharge SYS, ENG et WEP, classe par classe, avec prix : v
 - **Sensors** (module interne standard, tailles 1–8, notations A–E) — détermine la portée de détection des autres
   vaisseaux et l'affichage radar/HUD.
 - **Kill Warrant Scanner** (utilitaire) — révèle les primes actives sur une cible dans d'autres juridictions.
-- **Cargo Scanner** (utilitaire) — analyse le contenu de soute d'un vaisseau cible.
+- **Manifest Scanner**, anciennement **Cargo Scanner** (utilitaire) — analyse le contenu de soute (et, depuis Odyssey,
+  des cabines passagers) d'un vaisseau cible ; ce n'est pas un module distinct du Cargo Scanner mais son nom actuel en
+  jeu — voir [30-piraterie-et-pvp.md §2](./30-piraterie-et-pvp.md#2-les-scanners-de-piraterie--un-seul-module-renommé-pas-quatre).
 - **Frame Shift Wake Scanner** (utilitaire) — détecte la destination d'un vaisseau ayant sauté récemment.
 - **Pulse Wave Analyser** (utilitaire) — détection de sites de minage sur les astéroïdes.
 - **Xeno Scanner**, **Enhanced Xeno Scanner**, **Pulse Wave Xeno Scanner** (utilitaires) — analyse et diagnostic des
@@ -2102,11 +2104,11 @@ Les emplacements utilitaires, de classe 0, n'accueillent pas d'armes mais des sc
 
 | Module                             | Montage | Classe | Notation | Masse (t) | Intégrité | Consommation (MW) | Ponction distributeur | Portée (m) | Durée de scan (s) | Durée d'effet (s) | Angle (°) | Chargeur / réserve | Prix (Cr) |
 |------------------------------------|---------|--------|----------|-----------|-----------|-------------------|-----------------------|------------|-------------------|-------------------|-----------|--------------------|-----------|
-| Cargo Scanner                      | —       | 0      | A        | 1,3       | 48        | 3,2               | —                     | 4 000      | 10                | —                 | 15        | —                  | 1 097 095 |
-| Cargo Scanner                      | —       | 0      | B        | 1,3       | 56        | 1,6               | —                     | 3 500      | 10                | —                 | 15        | —                  | 365 698   |
-| Cargo Scanner                      | —       | 0      | C        | 1,3       | 40        | 0,8               | —                     | 3 000      | 10                | —                 | 15        | —                  | 121 899   |
-| Cargo Scanner                      | —       | 0      | D        | 1,3       | 24        | 0,4               | —                     | 2 500      | 10                | —                 | 15        | —                  | 40 633    |
-| Cargo Scanner                      | —       | 0      | E        | 1,3       | 32        | 0,2               | —                     | 2 000      | 10                | —                 | 15        | —                  | 13 544    |
+| Manifest Scanner *(ex-Cargo Scanner)* | —    | 0      | A        | 1,3       | 48        | 3,2               | —                     | 4 000      | 10                | —                 | 15        | —                  | 1 097 095 |
+| Manifest Scanner *(ex-Cargo Scanner)* | —    | 0      | B        | 1,3       | 56        | 1,6               | —                     | 3 500      | 10                | —                 | 15        | —                  | 365 698   |
+| Manifest Scanner *(ex-Cargo Scanner)* | —    | 0      | C        | 1,3       | 40        | 0,8               | —                     | 3 000      | 10                | —                 | 15        | —                  | 121 899   |
+| Manifest Scanner *(ex-Cargo Scanner)* | —    | 0      | D        | 1,3       | 24        | 0,4               | —                     | 2 500      | 10                | —                 | 15        | —                  | 40 633    |
+| Manifest Scanner *(ex-Cargo Scanner)* | —    | 0      | E        | 1,3       | 32        | 0,2               | —                     | 2 000      | 10                | —                 | 15        | —                  | 13 544    |
 | Chaff Launcher                     | —       | 0      | I        | 1,3       | 20        | 0,2               | 4                     | —          | —                 | 20                | —         | 1 / 10             | 8 500     |
 | Caustic Sink Launcher              | —       | 0      | I        | 1,7       | 45        | 0,6               | 2                     | —          | —                 | —                 | —         | 1 / 5              | 50 000    |
 | Electronic Countermeasure          | —       | 0      | F        | 1,3       | 20        | 0,2               | —                     | 3 000      | —                 | —                 | —         | —                  | 12 500    |
@@ -2134,7 +2136,7 @@ Les emplacements utilitaires, de classe 0, n'accueillent pas d'armes mais des sc
 | Pulse Wave Xeno Scanner            | —       | 0      | C        | 3         | 100       | 1                 | —                     | 1 000      | 10                | —                 | 23        | —                  | 850 000   |
 | Xeno Scanner                       | —       | 0      | E        | 1,3       | 56        | 0,2               | —                     | 500        | 10                | —                 | 23        | —                  | 365 698   |
 
-*(Source : EDCD/coriolis-data, modules/hardpoints/cargo_scanner.json, modules/hardpoints/chaff_launcher.json, modules/hardpoints/caustic_sink_launcher.json, modules/hardpoints/electronic_countermeasure.json, modules/hardpoints/heat_sink_launcher.json, modules/hardpoints/kill_warrant_scanner.json, modules/hardpoints/point_defence.json, modules/hardpoints/pulse_wave_analyser.json, modules/hardpoints/shutdown_field_neutraliser.json, modules/hardpoints/frame_shift_wake_scanner.json, modules/hardpoints/xeno_scanner.json, commit 0db9234b5b9c ; noms officiels des modules issus de EDCD/FDevIDs, outfitting.csv, commit c35612952dd6.)*
+*(Source : EDCD/coriolis-data, modules/hardpoints/cargo_scanner.json, modules/hardpoints/chaff_launcher.json, modules/hardpoints/caustic_sink_launcher.json, modules/hardpoints/electronic_countermeasure.json, modules/hardpoints/heat_sink_launcher.json, modules/hardpoints/kill_warrant_scanner.json, modules/hardpoints/point_defence.json, modules/hardpoints/pulse_wave_analyser.json, modules/hardpoints/shutdown_field_neutraliser.json, modules/hardpoints/frame_shift_wake_scanner.json, modules/hardpoints/xeno_scanner.json, commit 0db9234b5b9c ; noms officiels des modules issus de EDCD/FDevIDs, outfitting.csv, commit c35612952dd6. Le fichier source conserve le nom de fichier hérité `cargo_scanner.json` ; le nom affiché en jeu est désormais **Manifest Scanner**, sans changement de statistiques — voir [30-piraterie-et-pvp.md §2](./30-piraterie-et-pvp.md#2-les-scanners-de-piraterie--un-seul-module-renommé-pas-quatre).)*
 
 ### Shield Booster — gain de capacité et résistances par notation
 

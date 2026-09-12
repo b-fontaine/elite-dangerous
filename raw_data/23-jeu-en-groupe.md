@@ -3,15 +3,17 @@ id: 23-jeu-en-groupe
 titre: "Wings, Multicrew et CQC : jouer à plusieurs dans Elite Dangerous"
 domaine: social
 entites: [Wing, Multicrew, CQC, "Elite Dangerous: Arena", nav-lock, chasseur embarqué, F63 Condor, Taipan, Gu-97, Trident,
-  Crew Lounge, équipage PNJ, Squadron, Utopixx Entertainment]
+  Crew Lounge, équipage PNJ, Squadron, Utopixx Entertainment, instance, CGNAT, matchmaking]
 mots_cles_en: [wing, multicrew, cqc, close quarters combat, arena, nav-lock, ship-launched fighter, slf, fighter hangar,
-  crew lounge, npc crew, bounty voucher, combat bond, telepresence, wing mission]
+  crew lounge, npc crew, bounty voucher, combat bond, telepresence, wing mission, instancing, peer-to-peer,
+  matchmaking, nat type, cgnat, port forwarding]
 version_jeu_couverte: "4.4.0.x (mécaniques introduites entre 2015 et 2018, sans refonte majeure depuis)"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-12
 confiance_globale: moyenne
 volatilite: basse
-sources_primaires: [Wikipédia EN/FR/DE, fiche Steam officielle Elite Dangerous (appid 359320), guides Steam Community]
+sources_primaires: [Wikipédia EN/FR/DE, fiche Steam officielle Elite Dangerous (appid 359320), guides Steam Community,
+  "elite-dangerous.fandom.com (Instance, Game Mode, Background Simulation)", "forums.frontier.co.uk (architecture réseau, NAT/CGNAT, matchmaking, parité BGS entre modes)"]
 zones_incertaines: ["date précise et numéro de version d'introduction des Wings en 2015",
   "date précise d'introduction du CQC dans le jeu de base, avant le renommage en Arena",
   "portée exacte de l'enrichissement des missions de wing par Beyond Chapter One en 2018",
@@ -20,8 +22,12 @@ zones_incertaines: ["date précise et numéro de version d'introduction des Wing
   "paliers intermédiaires de frais et de commission de l'équipage PNJ du Crew Lounge",
   "noms exacts et nombre des modes de jeu du CQC (Deathmatch / Team Deathmatch / Domination supposés)",
   "promotion gratuite d'Elite Dangerous: Arena en juillet 2016, non recoupée",
-  "statistiques de fréquentation du CQC en 2025-2026"]
-guides_lies: [3, 4, 8, 22, 27]
+  "statistiques de fréquentation du CQC en 2025-2026",
+  "plafond technique actuel de joueurs par instance : le chiffre de 32 date du Kickstarter (2012-2013) et n'est confirmé par aucune source datée de la version 4.4.x",
+  "effet du Squadron sur le matchmaking d'instance : non documenté par une source officielle",
+  "compatibilité d'instanciation entre lanceurs PC (Steam/Epic/Frontier) : sources communautaires contradictoires",
+  "statut de résolution d'un signalement communautaire d'écart de mérites Powerplay entre Solo et jeu groupé (ticket officiel non lu directement)"]
+guides_lies: [2, 3, 4, 8, 21, 22, 27, 30]
 ---
 
 # Wings, Multicrew et CQC : jouer à plusieurs dans Elite Dangerous
@@ -38,7 +44,9 @@ embarqué** (*Ship-Launched Fighter*, rayon d'environ 30 km) en télé-présence
 d'une baie de chasseurs. Le **CQC** (*Close Quarters Combat*), décliné en produit autonome **Elite Dangerous: Arena** le
 **16 février 2016** puis retiré de la vente le **10 février 2017**, est un mode d'arène PvP arcade hors du monde
 persistant, doté d'un rang propre suivi par la **Pilots Federation**. À ne pas confondre avec le **Squadron**, ni avec
-l'**équipage PNJ** du Crew Lounge.
+l'**équipage PNJ** du Crew Lounge. Une nouvelle section explique enfin **pourquoi deux joueurs ne se voient pas
+toujours** : l'instanciation pair-à-pair, distincte du BGS et de Powerplay qui restent partagés entre tous les modes
+de jeu, et les causes réseau (NAT, CGNAT) d'un échec d'instanciation.
 
 ## Introduction — Wing, Multicrew et CQC, trois échelles de jeu à plusieurs
 
@@ -219,6 +227,80 @@ Point essentiel à retenir : **les rangs CQC sont officiellement suivis par la P
 
 ---
 
+## 6. Comment fonctionne le réseau : instanciation P2P et simulation persistante
+
+Cette section explique un phénomène que tout joueur en groupe rencontre tôt ou tard — « je suis dans le même système
+que mon ami, en Open, et je ne le vois pas » — jamais documenté ailleurs dans le corpus.
+
+### 6.1 Deux systèmes distincts : instances pair-à-pair et état persistant
+
+Le trafic de jeu en temps réel entre commandants présents dans la **même instance** (mouvement des vaisseaux, tirs,
+chat de proximité) circule en **pair-à-pair (P2P)**, via une connexion directe entre les machines des joueurs. En
+parallèle, un ensemble de serveurs cloud Frontier assure le **matchmaking** (qui regrouper avec qui), la traversée
+NAT, et surtout l'**état persistant partagé** de la galaxie — systèmes, factions, [BGS](./21-bgs.md), Powerplay — qui
+n'a rien à voir avec le P2P local : un joueur affecte cet état qu'il soit ou non instancié avec qui que ce soit.
+
+### 6.2 Combien de joueurs dans une même instance ?
+
+Le chiffre de « 32 joueurs par instance », souvent cité, remonte à l'époque du financement participatif du jeu
+(2012-2013) et a été qualifié d'approximatif par Frontier à l'époque plutôt que présenté comme un plafond technique
+ferme ; aucune documentation officielle datée de la version actuelle ne republie de plafond chiffré. En pratique, la
+taille réelle d'une instance dépend surtout de la bande passante et de la latence des participants plutôt que d'une
+limite logicielle fixe — le système de matchmaking cherche la meilleure qualité de connexion, ce qui produit souvent
+des instances à faible effectif. Dans des conditions optimales et avec coordination communautaire, des instances bien
+plus grandes ont été atteintes : un record de 127 commandants simultanés a été établi lors de l'expédition « Small
+Worlds 2 ». Les grandes expéditions type Distant Worlds (voir [10-exploration.md](./10-exploration.md)) rassemblent
+plusieurs milliers de participants au total, mais répartis sur un très grand nombre d'instances distinctes, jamais
+dans une seule instance géante.
+
+### 6.3 Ce qui regroupe deux joueurs dans la même instance
+
+Trois critères se combinent :
+
+1. **Le mode de jeu**, filtre strict et exclusif — Solo n'instancie jamais avec un autre humain (uniquement des PNJ) ;
+   Groupe privé n'instancie qu'avec les membres explicitement invités par le propriétaire du groupe ; Open peut
+   instancier avec n'importe quel autre joueur en Open, sans aucune garantie de rencontre (la galaxie est assez vaste
+   pour y jouer sans jamais croiser personne).
+2. **La localisation fine** — être dans le même système ne suffit pas : il faut partager le même point local (même
+   sortie de supercroisière, même signal, même station, même site de surface). Chaque déplacement peut faire
+   réévaluer l'instance du joueur.
+3. **La qualité de connexion** — le matchmaking privilégie des paires à latence comparable et proches
+   géographiquement, ce qui peut empêcher deux amis très éloignés (même système, même mode) de s'instancier ensemble.
+
+Le **Wing** (section 2) force activement l'instanciation commune de ses membres via son mécanisme de nav-lock : une
+fois deux joueurs mutuellement visibles en survitesse, former un Wing place le coéquipier qui en sort dans l'instance
+de son coéquipier — c'est le remède le plus fiable pour se retrouver entre amis. Le **Squadron** (structure
+persistante, voir [22-squadrons.md](./22-squadrons.md)), à la différence du Wing, n'a aucun effet connu et confirmé
+sur le matchmaking d'instance : il structure la vie sociale et le soutien BGS d'un groupe, pas sa visibilité mutuelle
+en jeu.
+
+### 6.4 Échecs d'instanciation : causes et remèdes
+
+La cause la plus documentée est un **type de NAT restrictif** (« strict », ou symétrique) chez un participant, qui
+empêche l'établissement direct de la connexion P2P — le menu réseau du jeu affiche un indicateur de type de NAT.
+Le **CGNAT** (adresse IP mutualisée par le fournisseur d'accès, fréquent en fibre/mobile) est une cause reconnue et
+particulièrement tenace : en P2P, au moins un participant doit être joignable en connexion entrante, ce que le CGNAT
+empêche structurellement, sans que la redirection de port habituelle n'y remédie. Remèdes communautaires alignés sur
+le support Frontier : activer manuellement la redirection du **port UDP** dédié au jeu si l'UPnP du routeur échoue,
+assigner une IP locale statique à sa machine pour que cette redirection reste valable, ouvrir les exceptions
+pare-feu nécessaires, et, en dernier recours derrière du CGNAT, recourir à IPv6 ou à un service de redirection de port.
+
+### 6.5 Modes de jeu, BGS et Powerplay : un état partagé, une exposition différente
+
+Le [BGS](./21-bgs.md#11-quest-ce-que-le-background-simulation) et Powerplay (voir
+[02-powerplay.md](./02-powerplay.md)) sont gérés par le système persistant, **indépendamment** de l'instanciation
+P2P : une mission accomplie, une vente en marché ou un combat pèse de façon identique sur l'influence d'une faction,
+que le joueur soit en Solo, Groupe privé ou Open. C'est une parité de principe, pas nécessairement perçue comme
+équitable par la communauté : un groupe qui choisit d'agir sur le BGS **uniquement en Solo** obtient de fait une
+immunité totale au risque de rétorsion PvP (invisible et inattaquable par des rivaux en Open), mais y perd toute
+coordination en jeu — il est techniquement impossible de former ou de rejoindre un Wing en restant en Solo, toute
+coordination doit alors passer par des moyens hors-jeu (chat vocal, tableurs). Cette asymétrie — peser sur un monde
+partagé sans risque de riposte visible — est un point de friction récurrent de la communauté, documenté jusque dans
+une pétition publique demandant à Frontier de rééquilibrer le poids du BGS entre les trois modes. Pour le volet PvP
+subi par un joueur qui choisit malgré tout l'Open, voir [30-piraterie-et-pvp.md §7](./30-piraterie-et-pvp.md#7-survivre-au-pvp-non-consenti).
+
+---
+
 ## Voir aussi
 
 - [08-combat-spatial.md](./08-combat-spatial.md) — échelle de rang de combat (Harmless → Elite), primes et notoriety hors Wing, coordination d'escadre en PvP.
@@ -226,6 +308,8 @@ Point essentiel à retenir : **les rangs CQC sont officiellement suivis par la P
 - [03-vaisseaux.md](./03-vaisseaux.md) — fiches techniques des vaisseaux compatibles Multicrew et dotés d'une baie de chasseurs.
 - [04-equipements.md](./04-equipements.md) — équipement des postes de tourelleur et modules liés aux chasseurs embarqués.
 - [27-debuter-et-progresser.md](./27-debuter-et-progresser.md) — comparatif des huit échelles de rang du jeu, dont le rang CQC séparé décrit en 4.5, et ce qui reste confirmé ou non sur sa progression.
+- [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) — piraterie, PvP subi, groupes privés PvE (Mobius), blocage et combat logging ; s'appuie sur l'architecture réseau décrite en section 6.
+- [21-bgs.md](./21-bgs.md), [02-powerplay.md](./02-powerplay.md) — les deux systèmes persistants partagés entre modes de jeu (section 6.5).
 
 ## Sources
 
