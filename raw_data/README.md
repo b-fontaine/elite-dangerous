@@ -587,7 +587,7 @@ Il permet aussi de restituer une réponse en citant sa source exacte.
 
 ### Règle 4 — Router la requête sur `index.yaml` avant la recherche vectorielle
 
-[`index.yaml`](./index.yaml) agrège le front-matter des 30 guides. Il est **généré** depuis ces front-matter et doit
+[`index.yaml`](./index.yaml) agrège le front-matter des 34 guides. Il est **généré** depuis ces front-matter et doit
 être régénéré après toute modification de l'un d'eux ; il n'est **pas** indexé comme un guide.
 
 Il s'emploie en amont de la recherche vectorielle, comme routeur de requête :

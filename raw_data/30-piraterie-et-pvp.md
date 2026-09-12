@@ -172,7 +172,7 @@ refusent. Deux canaux d'écoulement, déjà détaillés en
 (*Black Market*), présent surtout en systèmes Anarchy, et un **Interstellar Factors Contact**, qui permet de payer une
 prime émise dans un autre système sans s'y déplacer (moyennant commission) mais ne réduit **pas** la notoriety, dont
 la décroissance suit son propre délai — voir
-[08-combat-spatial.md §7.2](./08-combat-spatial.md#72-devenir-wanted-et-interstellar-factors). Un vaisseau qui accumule
+[08-combat-spatial.md §7.2](./08-combat-spatial.md#72-devenir--wanted--et-interstellar-factors). Un vaisseau qui accumule
 les infractions graves voit sa notoriety monter et se voit refuser l'accostage dans les stations légitimes du système
 concerné, indépendamment du paiement de ses primes. Le Power **Archon Delaine** (Kumo Crew), déjà documenté en
 [02-powerplay.md](./02-powerplay.md), offre à ses partisans un bonus de **+30 % sur les profits du marché noir** et une
