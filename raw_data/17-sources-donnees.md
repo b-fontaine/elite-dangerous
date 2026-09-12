@@ -665,7 +665,7 @@ des simples identifiants/libellés), voir la section 8 ci-dessous (`EDCD/corioli
 (Scarab, Scorpion, Rhino), **ni les chasseurs embarqués** (SLF), **ni les vaisseaux lancés depuis un vaisseau** (SLV)
 comme le **Nomad**. La liste des vaisseaux d'Inara a le même périmètre, pour la même raison : elle décrit ce qu'un
 commandant peut acheter au chantier naval. Sur ces véhicules eux-mêmes, voir
-[14-rhino-nomad.md](./14-rhino-nomad.md) et [04-equipements.md](./04-equipements.md) §13.
+[14-rhino.md](./14-rhino.md) et [04-equipements.md](./04-equipements.md) §13.
 
 Il en découle une règle de lecture qu'il vaut mieux poser explicitement : **l'absence d'un véhicule de `shipyard.csv`
 ou de la liste Inara ne prouve rien sur son existence en jeu**. Y chercher un SLF ou un SLV revient à chercher un

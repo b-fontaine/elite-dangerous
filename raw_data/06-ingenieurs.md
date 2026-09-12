@@ -1004,7 +1004,7 @@ alimenter un stock Raw de vaisseau. Deux effets de bord intéressent directement
 Scanner** — dont le blueprint *Expanded Probe Scanning Radius* est chiffré plus bas — détecte désormais les
 *Planetary Mining Locations*, et le Rhino se déploie depuis un **hangar de vaisseau**, pas par la trappe à cargaison
 des SRV classiques. Voir [20 — Minage](./20-minage.md#note-sur-la-fiabilité-des-données-chiffrées) pour la boucle de
-gameplay et [14 — Rhino et Nomad](./14-rhino-nomad.md) pour les deux véhicules.
+gameplay et [14 — Rhino et Nomad](./14-rhino.md) pour les deux véhicules.
 
 *(Sources : annonces officielles Frontier relayées par le flux Steam News d'Elite Dangerous — « Rhino SRV Update »,
 2 septembre 2026 11:20 UTC, pour la liste des marchandises, la détection des Planetary Mining Locations par le
@@ -2779,7 +2779,7 @@ Vessel Bay* ajouté. Le **Rhino**, plus grand SRV déployable depuis un vaisseau
 une boucle de minage au sol et une septième Operation. **Aucun de ces ajouts ne crée de nouvel Ingénieur**, et aucun
 n'entre dans le décompte des vaisseaux pilotables de [03 — Vaisseaux](./03-vaisseaux.md) : le Nomad est un vaisseau
 lancé depuis un vaisseau-mère, le Rhino un SRV. Le détail de ces deux véhicules est traité dans
-[14 — Rhino et Nomad](./14-rhino-nomad.md), et celui du mode multijoueur dans [13 — Operations](./13-operations.md).
+[14 — Rhino et Nomad](./14-rhino.md), et celui du mode multijoueur dans [13 — Operations](./13-operations.md).
 
 *(Sources : annonces officielles Frontier relayées par le flux Steam News d'Elite Dangerous — « An Update on
 Operations », 22 avril 2026 14:02 UTC ; « Discover the Nomad », 2 juin 2026 13:03 UTC ; « Operations Update »,
@@ -2798,7 +2798,7 @@ Operations », 22 avril 2026 14:02 UTC ; « Discover the Nomad », 2 juin 2026 1
 - [10 — Exploration](./10-exploration.md) — usage pratique des builds FSD longue portée en expédition.
 - [13 — Operations](./13-operations.md) — le mode d'escouade dont proviennent le Merc Coin, le MercGear et les
   matériaux distribués en récompense de scénario.
-- [14 — Rhino et Nomad](./14-rhino-nomad.md) — les deux véhicules ajoutés en 2026, leur mode de déploiement et le
+- [14 — Rhino et Nomad](./14-rhino.md) — les deux véhicules ajoutés en 2026, leur mode de déploiement et le
   Mk II Biological Scanner du Nomad.
 - [16 — Outils](./16-outils.md) — présentation complète de l'écosystème d'outils tiers (Coriolis, EDSY, Inara, EDMC...).
 - [18 — Colonisation](./18-colonisation.md) — économie de construction distincte de l'Engineering classique.

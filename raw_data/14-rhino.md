@@ -1,28 +1,33 @@
 ---
-id: 14-rhino-nomad
+id: 14-rhino
 titre: "Le Rhino et le Nomad : le SRV de minage de surface et le premier vaisseau lancé depuis un vaisseau"
 domaine: vaisseaux-equipement
-entites: [Rhino, Nomad, Vodel, baie de véhicule, Vessel Hangar, Mk II Biological Scanner, Planetary Mining Deposit Scanner,
-  minage de surface planétaire, Operations Update, Under Siege, Lander01, Caspian Explorer]
-mots_cles_en: [rhino srv, nomad, ship-launched vessel, vessel bay, vessel hangar, surface mining, planetary mining location,
-  planetary mining deposit scanner, mk ii biological scanner, mining rig, operations update, lander01, arx early access]
+entites: [Rhino, Nomad, Scarab, Scorpion, Vodel, baie de véhicule, Vessel Hangar, Mk II Biological Scanner,
+  Planetary Mining Deposit Scanner, minage de surface planétaire, Operations Update, Under Siege, Lander01,
+  Caspian Explorer, Wave Scanner]
+mots_cles_en: [rhino srv, nomad, scarab srv, scorpion srv, ship-launched vessel, vessel bay, vessel hangar,
+  surface mining, planetary mining location, planetary mining deposit scanner, mk ii biological scanner,
+  mining rig, operations update, lander01, arx early access, wave scanner, drive assist]
 version_jeu_couverte: "4.4.0.x (contenu du Rhino SRV Update du 2 septembre 2026 inclus ; numérotation 4.4.1.x non corroborée)"
 branche: live
-date_verification: 2026-09-09
+date_verification: 2026-09-12
 confiance_globale: haute
 volatilite: haute
 sources_primaires: [Steam News Frontier (appid 359320), EDCoPilot v1.11.726, EDCD/EDDI ticket 2849, EDCD/FDevIDs outfitting.csv,
-  massivelyop.com]
+  massivelyop.com, "elite-dangerous.fandom.com (Scarab, Scorpion, Wave Scanner, Drive Assist, Skimmers, Defence Turrets, Synthesis, Redeployment, Planetary Vehicle Hangar)"]
 zones_incertaines: ["numéros de version 4.4.1.0 et 4.4.1.1 attribués au Rhino, absents des billets officiels relevés",
   "hotfix portant la collecte du Rhino de 9 à 12 fragments, annoncé mais non confirmé livré",
   "caractéristiques chiffrées du Rhino (vitesse, tonnage de soute, résistance du blindage) jamais communiquées",
   "répartition des trois sièges du Rhino, déduction du guide et non donnée officielle",
-  "absence de coût de rebuy propre au Rhino, jamais confirmée explicitement par Frontier",
+  "absence de coût de rebuy propre au Rhino, jamais confirmée explicitement par Frontier — mais confirmée pour le Scarab et le Scorpion, voir §4",
   "rattachement du constructeur Vodel à Core Dynamics, affirmation communautaire non vérifiée",
   "prix de revente et grade d'ingénierie des treize nouvelles matières de surface, non relevés",
   "portée réelle des rééquilibrages du 2 septembre 2026 au-delà de la boucle de minage de surface",
-  "disponibilité ultérieure du Rhino à l'achat en crédits, non documentée par un billet officiel"]
-guides_lies: [3, 4, 13, 15, 16, 17, 20]
+  "disponibilité ultérieure du Rhino à l'achat en crédits, non documentée par un billet officiel",
+  "capacité de soute du Scorpion : 2 t selon les notes de patch de 2021, 30 t selon le site boutique actuel (valeur identique à la masse, suspicion d'erreur d'affichage)",
+  "prix d'achat du Scarab et du Scorpion, sourcés au seul wiki communautaire, inara.cz étant resté inaccessible",
+  "mécanisme exact pour rejoindre le siège de tireur du Scorpion en multijoueur (télé-présence à distance ou « multicrew physique »), non tranché par les sources consultées"]
+guides_lies: [3, 4, 13, 15, 16, 17, 20, 30, 31]
 ---
 
 # Le Rhino et le Nomad : le SRV de minage de surface et le premier vaisseau lancé depuis un vaisseau
@@ -537,6 +542,78 @@ pour l'arbitrage consolidé.
 
 ---
 
+## 5. Véhicules de surface : Scarab, Scorpion et Rhino comparés
+
+Le corpus documentait le Rhino en détail (sections 2-2.8) mais jamais le Scarab ni le Scorpion, cités par ricochet
+dans cinq guides sans fiche technique ni caractéristiques comparées. Cette section comble le vide.
+
+### 5.1 Tableau comparatif
+
+| | **Scarab** | **Scorpion** | **Rhino** |
+|---|---|---|---|
+| Places | 1 | 2 (conducteur + tireur) | 3 |
+| Armement | Tourelle double répéteur à plasma (~8,3 coups/s, 800 m de portée max) | Surge Repeater (jusqu'à 10 tirs/s) + Aculeus Launcher (missile direct/verrouillage) | Aucun (utilitaire) |
+| Soute | 4 t | 2 t selon les notes de patch 2021, **30 t** selon le site officiel actuel — contradiction non résolue, voir zones incertaines | Non chiffrée officiellement |
+| Vitesse de pointe | 38 m/s, jets propulseurs (saut/glisse) | 32 m/s, pas de jets propulseurs | Non chiffrée officiellement |
+| Blindage / Bouclier | 108 / 40 (site officiel ; 25 selon le wiki, écart non résolu) | 162 / 130 | « Heavily armoured », non chiffré |
+| Wave Scanner | Oui (exclusif) | Non | Scanner de gisements dédié (§2.3), pas de Wave Scanner généraliste |
+| Modifiable (ingénierie) | Non | Non | Non documenté, présumé non |
+| Hangar requis | Planetary Vehicle Hangar (véhicule par défaut) | Planetary Vehicle Hangar + extension Odyssey, vente réservée aux économies Militaires | Baie de véhicule dédiée (§2.3), pas la trappe à cargo du Scarab/Scorpion |
+| Coût d'achat | 5 270 Cr | 24 863 Cr | Vendu en Arx au lancement (§2.7), pas en crédits |
+| Rôle | Exploration/reconnaissance légère | Combat et soutien au sol anti-personnel/anti-petit vaisseau | Minage de surface planétaire |
+
+*(Sources : elite-dangerous.fandom.com — Scarab, Scorpion, Vehicles, Planetary Vehicle Hangar ; site officiel
+elitedangerous.com/store/vehicles ; forums.frontier.co.uk — Elite Dangerous: Odyssey Update 9 Notes ; consultées le
+12 septembre 2026. Rhino : §2.1-2.4 de ce guide.)*
+
+### 5.2 Mécaniques de conduite communes
+
+Les SRV utilisent le même système de **6 pips** (SYS/ENG/WEP) que les vaisseaux : SYS renforce le bouclier, ENG
+accélère les déplacements et la recharge des jets/boost, WEP prolonge le tir avant surchauffe. Le **Drive Assist**
+propose deux modes : activé, la SRV maintient la vitesse choisie (mais tourner fait déraper, le système compensant
+en accélérant à fond) ; désactivé, le pilotage se fait « à l'ancienne » (accélérateur et frein progressifs). Le
+**saut** (boost du Scarab uniquement, barre espace) active des jets propulseurs verticaux consommant l'énergie ENG,
+pour sauter, planer brièvement en faible gravité ou se redresser — le Scorpion n'en dispose pas. Sur une planète à
+moins de 1 g, les jets ajoutent une portance négative artificielle qui plafonne la gravité effective ressentie à un
+minimum d'environ 0,5 g ; au-dessus de 1 g, aucune compensation. Le bouclier d'un SRV ne protège **pas** contre les
+impacts de terrain (chutes, collisions), seulement contre les tirs ; aucun seuil chiffré officiel de dégâts de chute
+n'est publié par Frontier.
+
+### 5.3 Lecture du Wave Scanner
+
+Le Wave Scanner (exclusif au Scarab) distingue **trois** catégories de signaux, pas quatre — il n'existe **aucune**
+catégorie « biologique » : **natural** (fragments minables/minéraux, fréquence basse, son grave — inclut les cibles
+de type geysers/fumerolles), **vessel** (vaisseaux et épaves, fréquence moyenne), **artificial** (points de données
+et settlements, fréquence haute). La faune et la flore (exobiologie) n'y sont **pas** détectées : leur repérage
+passe par le Detailed Surface Scanner du vaisseau puis des outils dédiés au sol, voir
+[10-exploration.md](./10-exploration.md). Le scanner permet aussi de verrouiller des menaces (Skimmers) et des objets
+au sol (cargo canisters).
+
+### 5.4 Combat en SRV
+
+Menaces documentées : les **Skimmers**, véhicules pilotés à distance non jouables (Stinger-2 sans arme à charge
+suicide, S4 Sentry standard, S5LM Guardian et S9 Goliath en haute sécurité — neutralisables en détruisant leur base
+ou leurs relais s'ils sont hors de portée) ; les **tourelles de settlement** (Anti-Ground portée ~300 m, Anti-Air qui
+ciblent aussi les SRV, Defence Platform lourde dont la portée de détection dépend du niveau de sécurité du site,
+~728 m à ~1,6 km) — toutes destructibles mais auto-réparables. **Le mode tourelle télécommandé** du Scorpion
+n'existe pas « depuis le vaisseau » : un second joueur doit physiquement occuper le siège arrière du véhicule (par
+télé-présence classique, un mécanisme distinct du rôle Gunner réservé aux tourelles de vaisseau) — le point précis
+de savoir s'il peut rejoindre une SRV déjà déployée à distance reste débattu par la communauté, sans confirmation
+officielle.
+
+### 5.5 Maintenance : carburant, munitions, réparation, et l'absence de rebuy
+
+La coque d'un SRV se répare **automatiquement et gratuitement** en réintégrant la baie du vaisseau porteur — mais
+cela ne recharge ni le carburant ni les munitions, reconstituables sur le terrain par **Synthesis** : « SRV Refuel »
+(1 Sulphur + 1 Phosphorus), « SRV Ammo Restock » (2 Sulphur + 1 Phosphorus), « SRV Repair » (2 Iron + 1 Nickel),
+chacune en versions Standard/Premium plus efficaces. **Confirmé : un SRV détruit n'a aucun coût de rebuy** — le
+commandant reprend simplement le contrôle de son vaisseau sans passer par l'écran de Redeployment ; il doit
+seulement racheter un nouveau véhicule au prix plein pour en redéployer un, sans pénalité en pourcentage ni perte de
+progression. Cette règle, déjà pressentie pour le Rhino sans confirmation officielle (§2.4), est ici confirmée pour
+le Scarab et le Scorpion par la documentation générale des véhicules.
+
+---
+
 ## Voir aussi
 
 - **[00 — Chronologie canonique](./00-chronologie-canonique.md)** — arbitrage sourcé des dates et des contradictions
@@ -558,6 +635,10 @@ pour l'arbitrage consolidé.
   leur périmètre exact, au cœur de la correction décrite en tête de guide.
 - **[20 — Minage](./20-minage.md)** — boucle de gameplay complète du minage (spatial et, désormais, de surface) ; ce
   guide ne couvre que la spécificité Rhino.
+- **[30 — Piraterie et PvP](./30-piraterie-et-pvp.md)** — le Scorpion et son mode tourelle, utile en défense de
+  settlement.
+- **[31 — Pilotage, navigation et stations](./31-pilotage-navigation-et-stations.md)** — déploiement d'un SRV depuis
+  le vaisseau, atterrissage planétaire et Planetary Vehicle Hangar.
 
 ---
 
@@ -617,3 +698,14 @@ Relevées le 9 septembre 2026 sur le flux Steam News d'*Elite Dangerous* (appid 
   depuis cette session : les numéros de version 4.4.1.0 et 4.4.1.1 attribués au Rhino n'ont pas pu y être vérifiés
   (voir §2.2).
 - Aucun prix de revente n'a pu être relevé pour les treize nouvelles matières de surface (voir §2.6).
+
+### Sources ajoutées le 12 septembre 2026 (section 5 — comparatif Scarab/Scorpion/Rhino)
+
+- `elite-dangerous.fandom.com` — Scarab, Scorpion, Vehicles, Wave Scanner, Drive Assist, Skimmers, Defence Turrets,
+  Synthesis, Redeployment, Planetary Vehicle Hangar, Multicrew.
+- `www.elitedangerous.com/store/vehicles/scarab`, `/scorpion` — statistiques officielles actuelles, en écart mineur
+  avec le wiki sur le bouclier et le carburant du Scarab (voir zones incertaines).
+- `forums.frontier.co.uk` — Elite Dangerous: Odyssey Update 9 Notes (9 décembre 2021, soute et places du Scorpion),
+  fils sur les pips en SRV et le « base jumping ».
+- inara.cz est resté inaccessible (contrôle anti-robot) : les prix d'achat du Scarab et du Scorpion ne reposent que
+  sur le wiki communautaire.

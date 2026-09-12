@@ -55,12 +55,24 @@ blocage, combat logging) et l'architecture réseau du jeu (ajoutée à
 confusion du corpus lui-même : le « Manifest Scanner » n'est pas un quatrième scanner distinct du Cargo Scanner, mais
 son nom actuel.
 
+Un huitième cycle, mené le même jour, a documenté la première heure de jeu — vol de base et accostage — jamais
+couverte malgré 31 guides existants. Le nouveau guide
+[31-pilotage-navigation-et-stations.md](./31-pilotage-navigation-et-stations.md) détaille la supercroisière,
+l'accostage en sept étapes (avec ses variantes avant-poste et Surface Port — et non « Coriolis au sol », qui n'existe
+pas), l'atterrissage planétaire, une matrice de neuf types de station × quinze services avec les seuils officiels de
+Trailblazers, le HUD hors combat anti-Thargoïde et le carburant. La logistique de flotte (transfert et stockage de
+vaisseaux et de modules) a été ajoutée directement dans [03-vaisseaux.md](./03-vaisseaux.md) et
+[04-equipements.md](./04-equipements.md) plutôt que dans un guide séparé, et le comparatif Scarab/Scorpion/Rhino dans
+[14-rhino.md](./14-rhino.md), désormais renommé (son ancien nom, `14-rhino-nomad.md`, faisait du terme « Nomad » —
+longtemps traité comme un vaisseau non confirmé avant la réparation du troisième cycle — un mauvais point d'entrée
+RAG). Le corpus compte désormais **31 guides thématiques**.
+
 ## Deux corpus dans le même dépôt : règle de préséance
 
 Le dépôt héberge deux ensembles de contenu francophone qui se recouvrent partiellement et n'avaient jamais été
 réconciliés. Cette section pose la règle qui les départage.
 
-- **`raw_data/`** — 32 fichiers markdown (30 guides thématiques et 2 documents transversaux) : la base de
+- **`raw_data/`** — 33 fichiers markdown (31 guides thématiques et 2 documents transversaux) : la base de
   connaissances de référence sur **le jeu**, écrite pour alimenter le RAG. C'est le présent répertoire. Chaque guide
   porte un front-matter YAML et un encart « En bref » ; [`index.yaml`](./index.yaml) en agrège les métadonnées et sert
   de routeur de requête. Le gabarit du front-matter et l'usage de l'index sont spécifiés dans les *Notes d'ingestion
@@ -129,11 +141,11 @@ Relevé du 9 septembre 2026, établi par lecture des douze fichiers de `assets/g
 
 | Guide `assets/guides/`    | Nature        | Recouvrement principal dans `raw_data/`                      | Recouvrements secondaires                                                                 |
 |---------------------------|---------------|--------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| `exploration-exobiologie` | Guide de jeu  | [10-exploration.md](./10-exploration.md)                     | 03-vaisseaux, 19-fleet-carriers, 14-rhino-nomad                                           |
+| `exploration-exobiologie` | Guide de jeu  | [10-exploration.md](./10-exploration.md)                     | 03-vaisseaux, 19-fleet-carriers, 14-rhino                                           |
 | `artemis-suit`            | Guide de jeu  | [07-equipement-a-pied.md](./07-equipement-a-pied.md)         | 26-ingenierie-a-pied-avancee, 10-exploration                                              |
 | `outils`                  | Guide de jeu  | [16-outils.md](./16-outils.md)                               | 17-sources-donnees                                                                        |
 | `debuter-sans-combat`     | Guide de jeu  | [27-debuter-et-progresser.md](./27-debuter-et-progresser.md) | 20-minage, 11-commerce, 18-colonisation, 19-fleet-carriers, 10-exploration, 13-operations |
-| `protocole-milliard`      | Guide de jeu  | *aucun équivalent direct*                                    | 10-exploration, 06-ingenieurs, 07-equipement-a-pied, 03-vaisseaux, 14-rhino-nomad         |
+| `protocole-milliard`      | Guide de jeu  | *aucun équivalent direct*                                    | 10-exploration, 06-ingenieurs, 07-equipement-a-pied, 03-vaisseaux, 14-rhino         |
 | `app-prise-en-main`       | Mode d'emploi | *sans objet*                                                 | 17-sources-donnees (marginal)                                                             |
 | `app-alimenter`           | Mode d'emploi | *sans objet*                                                 | 17-sources-donnees (journal, Companion API)                                               |
 | `app-terrain`             | Mode d'emploi | *sans objet*                                                 | 17-sources-donnees (lecture du journal en direct)                                         |
@@ -172,7 +184,7 @@ celui défini par les *Notes d'ingestion RAG* en fin de document, qui n'indexe q
   Powerplay), formats de jeu (CG, CZ, RES, USS, PvE, PvP, NPC, CMDR) et matériel de bord (FSD et sa variante SCO, DSS,
   FSS, HRP, MRP, SRV, FC). Les entrées de modules précisent leur catégorie d'emplacement.
 
-Les 30 guides thématiques sont regroupés ci-dessous par domaine.
+Les 31 guides thématiques sont regroupés ci-dessous par domaine.
 
 ## Débuter et progresser
 
@@ -245,6 +257,12 @@ Les 30 guides thématiques sont regroupés ci-dessous par domaine.
   blindage de coque (*bulkheads*) pour les 47 châssis, les résistances natives d'un bouclier (+40 % cinétique, +50 %
   explosive, −20 % thermique), le Frame Shift Drive standard ou **SCO**, puis les quatre circuits d'acquisition —
   chantier naval, ingénieurs, Technology Brokers Guardian et Human, catalogue **MercGear** payé en **Merc Coin**.
+- [Pilotage, navigation, stations et carburant](./31-pilotage-navigation-et-stations.md) — Documente la première
+  heure de jeu : supercroisière (29,9 km/s à 2001c), accostage en sept étapes (demande à 7,5 km, mailslot de
+  222 × 52 m, délai de flânerie de 5 minutes), atterrissage planétaire (Orbital Cruise puis Glide à 2 500 m/s), une
+  matrice de **neuf types de station** × quinze services avec les seuils officiels de Trailblazers (niveau
+  technologique 35 pour Chantier Naval et Équipement), le HUD hors combat anti-Thargoïde et la procédure d'appel aux
+  Fuel Rats. Corrige au passage l'idée d'un « Coriolis au sol » : la station planétaire s'appelle Surface Port.
 
 ## Guardians & Ingénieurs
 
@@ -384,7 +402,7 @@ Les 30 guides thématiques sont regroupés ci-dessous par domaine.
 
 ## Nouveautés récentes
 
-- [Guide complet du SRV Rhino et du Nomad](./14-rhino-nomad.md) — Traite les deux véhicules livrés à l'été 2026. Le
+- [Guide complet du SRV Rhino et du Nomad](./14-rhino.md) — Traite les deux véhicules livrés à l'été 2026. Le
   **Nomad**, sorti le 30 juin 2026 avec l'*Operations Update*, inaugure la catégorie du **vaisseau lancé depuis un
   vaisseau** (*ship-launched vessel*) : compact, doté de patins et de moteurs pivotants, il embarque un **Mk II
   Biological Scanner** qui détecte les signaux biologiques depuis le cockpit. Le **Rhino**, SRV minier à six roues de
@@ -431,7 +449,7 @@ quels par un humain.
 ### Règle 1 — N'indexer que les guides
 
 Indexer `raw_data/*.md` **à l'exclusion de `README.md`**, et ne pas indexer `raw_data/index.yaml`, qui n'est pas un
-guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 32 fichiers dont le
+guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 33 fichiers dont le
 nom correspond à `^\d{2}-.*\.md$` à la racine de `raw_data/`.
 
 Ce glob doit rester **non récursif** et ignorer les répertoires cachés : `raw_data/` peut contenir un `.omc/`
@@ -476,21 +494,23 @@ recouvre lexicalement l'ensemble du corpus. Indexées, elles remontent en tête 
 évincent les passages qui contiennent réellement la réponse. Les renvois croisés utiles restent accessibles au lecteur
 humain dans le fichier ; ils n'ont simplement pas leur place dans l'index vectoriel.
 
-**Relevé du 12 septembre 2026, après l'ajout du guide piraterie/PvP : 63 sections, 19 705 mots.**
+**Relevé du 12 septembre 2026, après l'ajout du guide pilotage/stations : 65 sections, 20 287 mots.**
 Comptage : titres capturés par le motif ci-dessus dans les fichiers `NN-*.md`, contenu compté jusqu'au titre de
-même niveau ou de niveau supérieur suivant, `split()` sur les espaces. Vingt-sept guides
+même niveau ou de niveau supérieur suivant, `split()` sur les espaces. Vingt-huit guides
 portent deux sections concernées (`## Voir aussi` et `## Sources`), trois en portent trois —
 [05-guardians.md](./05-guardians.md), [07-equipement-a-pied.md](./07-equipement-a-pied.md) et
 [10-exploration.md](./10-exploration.md), qui ajoutent chacun une section de ressources externes —, et deux n'en
 portent aucune : [00-chronologie-canonique.md](./00-chronologie-canonique.md) et
-[00-glossaire.md](./00-glossaire.md). Soit 27 × 2 + 3 × 3 + 2 × 0 = 63 sections pour 32 fichiers. Les blocs les plus
+[00-glossaire.md](./00-glossaire.md). Soit 28 × 2 + 3 × 3 + 2 × 0 = 65 sections pour 33 fichiers. Les blocs les plus
 lourds sont les `## Sources` de [06-ingenieurs.md](./06-ingenieurs.md) (1 783 mots) et de
 [20-minage.md](./20-minage.md) (1 776 mots), suivis de celui de
 [10-exploration.md](./10-exploration.md) (788 mots) et de celui de
 [28-marchandises.md](./28-marchandises.md) (749 mots) — ni
 [29-missions-reputation-et-rangs.md](./29-missions-reputation-et-rangs.md) (`## Voir aussi` 221 mots, `## Sources`
-548 mots) ni [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) (`## Voir aussi` 143 mots, `## Sources` 364 mots) n'y
-figurent : les deux restent sous ce seuil.
+548 mots), ni [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) (`## Voir aussi` 143 mots, `## Sources` 364 mots),
+ni [14-rhino.md](./14-rhino.md) (`## Voir aussi` 290 mots, `## Sources` 532 mots), ni
+[31-pilotage-navigation-et-stations.md](./31-pilotage-navigation-et-stations.md) (`## Voir aussi` 162 mots,
+`## Sources` 275 mots) n'y figurent : tous restent sous ce seuil.
 
 Deux écarts avec le relevé précédent, publié le même jour et corrigés ici, méritent d'être signalés parce qu'ils
 illustrent exactement le défaut que ce relevé est censé prévenir. Le décompte de **57 sections** était juste, mais la
@@ -506,7 +526,7 @@ sur lui.
 **Méthode de comptage, à reproduire à l'identique après toute révision.** Ces deux chiffres ne sont comparables dans
 le temps que si la mesure l'est aussi. La convention retenue est la suivante :
 
-1. **Périmètre** : les 32 fichiers du périmètre indexé défini à la règle 1 ; `README.md`, `index.yaml` et les
+1. **Périmètre** : les 33 fichiers du périmètre indexé défini à la règle 1 ; `README.md`, `index.yaml` et les
    sous-répertoires en sont exclus.
 2. **Détection** : une section est retenue si sa ligne de titre correspond au motif ci-dessus et ne figure pas dans la
    liste des exceptions, vide à ce jour.

@@ -6,12 +6,12 @@ entites: [Mining Laser, Abrasion Blaster, Pulse Wave Analyser, Seismic Charge La
 mots_cles_en: [mining, laser mining, core mining, deep core mining, subsurface deposit, abrasion blaster, pulse wave analyser, seismic charge launcher, prospector limpet, hotspot, surface mining, Rhino SRV, void opals, painite, low temperature diamonds, ring type, icy ring, rocky ring, metallic ring, metal rich ring, pristine reserve, bertrandite, platinum, palladium, gold, silver, osmium, samarium, praseodymium, coltan, indite, gallite, uraninite, lepidolite, rutile, bauxite, cobalt, bromellite, monazite, musgravite, serendibite, rhodplumsite, benitoite, grandidierite, alexandrite, tritium]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-12
 confiance_globale: haute
 volatilite: haute
 sources_primaires: ["Steam News Frontier (API ISteamNews, billets Frontier intégraux)", "EDCD/FDevIDs (outfitting.csv, commodity.csv, rings.csv, commit c356129)", "EDDiscovery/EliteDangerousCore (énumération RingClassEnum)", "EDSM (API bodies, FAQ Commodities)", "Inara.cz", "EDTools.cc", "pilotstradenetwork.com", "Guides et discussions Steam Community sur le minage (types d'anneau)"]
 zones_incertaines: ["Frontier a publié les douze axes d'équilibrage du minage de surface sans aucune valeur chiffrée", "rôle fonctionnel exact du Sub-Surface Extraction Missile non confirmé par des notes de patch", "correctif « 9 → 12 fragments » du Rhino : ni numéro de version ni date publiés au 9 septembre 2026", "vaisseaux et classes de module permettant d'embarquer un Rhino, et existence d'un achat en crédits", "prix de vente, économies acheteuses et usages en ingénierie des treize marchandises de surface", "pourcentages de bonus Powerplay au minage (Torval, Kaine) et rendement PTN de 3,5 Md Cr par cycle, tous deux d'origine communautaire", "aucun système hotspot n'a pu être confirmé pour le Platine ni pour les Low Temperature Diamonds seuls", "section 4.5 : aucune source primaire Frontier ne publie la distribution des minéraux par type d'anneau ; les colonnes « technique » et « type d'anneau » sont une synthèse de guides de joueurs datés, non vérifiée en jeu", "section 4.5 : le type d'anneau reste non établi pour 16 des 63 marchandises Minerals et Metals, et aucune source ne publie de réserve minimale ni de rendement en tonnes par minéral"]
-guides_lies: [2, 4, 11, 14, 16, 28]
+guides_lies: [2, 4, 11, 14, 16, 28, 31]
 ---
 # Le Minage (Mining) dans Elite Dangerous
 
@@ -43,7 +43,7 @@ en Rhino (sections 3.2 à 3.4), les rendements chiffrés et la revente, ainsi qu
 > **Voir aussi.** Ce guide se concentre sur la boucle de minage proprement dite. Pour les mécaniques annexes qui
 > l'alimentent ou la recoupent, voir : [Commerce](./11-commerce.md) (lien minage → revente, outils de routage),
 > [Équipements](./04-equipements.md) (fiches techniques complètes de chaque arme et module cité ici),
-> [Rhino et Nomad](./14-rhino-nomad.md) (chronologie et caractéristiques du Rhino, véhicule de minage de surface, et
+> [Rhino et Nomad](./14-rhino.md) (chronologie et caractéristiques du Rhino, véhicule de minage de surface, et
 > du Nomad, le ship-launched vessel d'exploration livré avec la mise à jour Operations),
 > [Powerplay](./02-powerplay.md) (bonus de profits et mérites liés au minage) et [Outils](./16-outils.md)
 > (écosystème EDSM/Inara/Spansh pour le suivi de marché).
@@ -159,7 +159,8 @@ de devoir jeter du minerai brut faute de place pendant une session de minage int
   l'intérieur d'un site repéré au DSS (voir section 3.3).
 - **SRV embarqué (Scarab)** : sur le SRV de base, un « wave scanner » intégré permet déjà de repérer ressources et
   épaves en **surface planétaire** — une mécanique distincte et plus rudimentaire que le scanner dédié du Rhino (voir
-  section 3.3).
+  section 3.3). Détail des trois catégories de signaux qu'il distingue (natural/vessel/artificial, aucune catégorie
+  biologique) dans [14-rhino.md §5.3](./14-rhino.md#53-lecture-du-wave-scanner).
 
 ---
 
@@ -190,14 +191,14 @@ Trois formules de vaisseau pré-équipé ont été proposées dès le lancement 
 que ceux repris un an plus tard pour le Rhino : **Standard** (16 520 Arx), **Stellar** (33 000 Arx) et **Galactic**
 (60 000 Arx) — confirmé par les notes de patch officielles. Un bundle distinct et plus cher, publié un an plus tard
 avec le Rhino, associe les deux véhicules : **Type-11 Prospector Galactic Mining Pack, 100 000 Arx** (voir
-[Rhino et Nomad](./14-rhino-nomad.md)), ce qui souligne la filiation thématique entre les deux ajouts. Une
+[Rhino et Nomad](./14-rhino.md)), ce qui souligne la filiation thématique entre les deux ajouts. Une
 **Update 2** du **16 octobre 2025** a ajouté une protection anti « claim sniping » pour les claims de **colonisation**
 de systèmes (verrou d'exclusivité temporaire pour l'architecte système et sa Squadron) — confirmé par les notes de
 patch officielles ; voir aussi [15-roadmap.md](./15-roadmap.md).
 
 ### 3.2 Le Rhino (Vodel), SRV du minage de surface planétaire
 
-Le corpus dispose d'un guide dédié à ce véhicule : **[Rhino et Nomad](./14-rhino-nomad.md)**. Pour éviter la
+Le corpus dispose d'un guide dédié à ce véhicule : **[Rhino et Nomad](./14-rhino.md)**. Pour éviter la
 duplication, ce guide n'en donne que le résumé utile au mineur, établi directement sur les billets officiels Frontier
 (« Beneath the Surface: Your First Look at the Rhino », 6 août 2026 14:19 UTC, et « Elite Dangerous | Rhino SRV
 Update », 2 septembre 2026 11:20 UTC — voir Sources) :
@@ -791,7 +792,7 @@ Sauf mention contraire, les rendements horaires, prix Arx et statistiques d'équ
 **instantanés capturés le 9 septembre 2026**, à revérifier en jeu ou via des outils vivants (Inara, EDTools, Spansh)
 avant toute décision de session — ces valeurs fluctuent avec les prix de marché, l'état du [BGS](./00-glossaire.md)
 local et les correctifs de Frontier. **Point d'attention particulier** : la mise à jour *Rhino SRV Update*
-(« Elite Dangerous | Rhino SRV Update », 2 septembre 2026 11:20 UTC — voir [Rhino et Nomad](./14-rhino-nomad.md)) a
+(« Elite Dangerous | Rhino SRV Update », 2 septembre 2026 11:20 UTC — voir [Rhino et Nomad](./14-rhino.md)) a
 introduit le **minage de surface planétaire**, une boucle entièrement nouvelle traitée en section 3.3, et
 accompagné cet ajout d'une passe d'équilibrage dont Frontier a publié les **axes** mais **aucune valeur chiffrée**
 (voir le tableau de la section 3.3 et la mise au point de portée en section 3.4). Les rendements de minage
@@ -814,7 +815,7 @@ normalement pas, mais son intérêt économique (prix de vente, concurrence, sé
   `Metals`, et sous le seul angle du minage (section 4.5).
 - **[Liste complète des équipements](./04-equipements.md)** — fiches techniques complètes de toutes les armes
   minières, des contrôleurs de limpets et des scanners cités dans ce guide.
-- **[Guide complet du Rhino et du Nomad](./14-rhino-nomad.md)** — chronologie, spécifications et prix détaillés du
+- **[Guide complet du Rhino et du Nomad](./14-rhino.md)** — chronologie, spécifications et prix détaillés du
   Rhino (minage de surface planétaire), du Nomad (ship-launched vessel d'exploration livré le 30 juin 2026 avec la
   mise à jour Operations) et du Type-11 Prospector.
 - **[13 — Opérations](./13-operations.md)** — le mode multijoueur **Operations** livré le 30 juin 2026, dont la mise
@@ -853,7 +854,7 @@ résumé, pour les deux premières) :
   Le même flux contient les billets qui documentent la mise à jour **Operations** du 30 juin 2026 et le **Nomad**
   (« An Update on Operations », 22 avril 2026 14:02 UTC ; « Discover the Nomad », 2 juin 2026 13:03 UTC ;
   « Elite Dangerous | Operations Update », 1er juillet 2026 14:01 UTC) — traités dans
-  [13-operations.md](./13-operations.md) et [14-rhino-nomad.md](./14-rhino-nomad.md).
+  [13-operations.md](./13-operations.md) et [14-rhino.md](./14-rhino.md).
 - https://raw.githubusercontent.com/EDCD/FDevIDs/master/outfitting.csv — registre communautaire de référence des
   identifiants internes du jeu (EDCD/FDevIDs), récupéré en brut (`curl`) et filtré sur les entrées liées au minage :
   confirme indépendamment l'existence, les tailles, montages et notations de toutes les armes minières listées en
@@ -866,7 +867,7 @@ résumé, pour les deux premières) :
 - https://inara.cz/elite/ (accès partiel — page d'accueil et vue d'ensemble Powerplay uniquement ; les fiches
   détaillées par Power n'ont pas pu être chargées lors de cette révision).
 - https://en.wikipedia.org/wiki/Elite_Dangerous (contenu partiel sur les mécaniques de base du minage).
-- Corpus interne réutilisé pour cette révision : [14-rhino-nomad.md](./14-rhino-nomad.md) (chronologie et specs du
+- Corpus interne réutilisé pour cette révision : [14-rhino.md](./14-rhino.md) (chronologie et specs du
   Rhino, sourcé massivelyop.com et twistedvoxel.com), [11-commerce.md](./11-commerce.md) § 2.4 « Mining-to-trade »
   (rendements horaires, sourcé TheGamer et GameRant), [04-equipements.md](./04-equipements.md) (tableaux d'armes
   minières et de contrôleurs de limpets, sourcé EDCD/FDevIDs et EDCD/coriolis-data), [02-powerplay.md](./02-powerplay.md)

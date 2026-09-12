@@ -83,7 +83,7 @@ vaisseau/équipement dédiés.
 [Équipement à pied](./07-equipement-a-pied.md) (détail des combinaisons Odyssey),
 [Combat anti-Thargoïde (AX)](./25-combat-ax.md) (sites de ruines et structures inconnues croisés en exploration),
 [BGS](./21-bgs.md) (influence des factions dans les systèmes ciblés pour la colonisation),
-[Le Rhino et le Nomad](./14-rhino-nomad.md) (le véhicule de surface introduit en 2026 pour approcher les organiques,
+[Le Rhino et le Nomad](./14-rhino.md) (le véhicule de surface introduit en 2026 pour approcher les organiques,
 présenté en 2.2), et le [Glossaire](./00-glossaire.md) pour tous les sigles.
 
 ---
@@ -196,7 +196,7 @@ Trois précisions, sans lesquelles ce tableau se lit de travers :
   est signalé plutôt que comblé.
 - **Les emplacements de minage planétaire passent par le même événement**, sous un jeton qui ne commence pas par
   `$SAA_SignalType`. Ils sont arrivés avec la mise à jour Rhino SRV du 2 septembre 2026, qui étend le DSS à leur
-  détection (voir [Équipements](./04-equipements.md) et [Le Rhino et le Nomad](./14-rhino-nomad.md)).
+  détection (voir [Équipements](./04-equipements.md) et [Le Rhino et le Nomad](./14-rhino.md)).
 
 Un même événement `SAASignalsFound` sert par ailleurs à deux usages que rien ne distingue à la lecture : cartographier
 un **anneau** ne rend pas une catégorie mais des **noms de matériaux**, que le code range en « non catégorisés »
@@ -1291,14 +1291,14 @@ Trois points concernent directement la procédure décrite en 2.3 :
   **Mk II Vessel Bay** ; le référentiel ouvert EDCD/FDevIDs les publie sous les libellés *Vessel Hangar* et *Mk II
   Vessel Hangar*. Le Mk I est disponible sur treize châssis, parmi lesquels l'**Anaconda** (classes 5 à 7), seul
   vaisseau du comparatif de 2.7 à pouvoir emporter un Nomad ; le Mk II est réservé à trois châssis seulement. Le
-  détail des disponibilités figure dans [Le Rhino et le Nomad](./14-rhino-nomad.md).
+  détail des disponibilités figure dans [Le Rhino et le Nomad](./14-rhino.md).
 - **Ce n'est pas un vaisseau de chantier naval.** Le Nomad est un *ship-launched vessel*, au même titre qu'un SRV ou
   qu'un chasseur SLF : il ne s'achète pas au shipyard et n'entre pas dans le décompte des vaisseaux pilotables du
   corpus. Il est sorti en accès anticipé ARX le 30 juin 2026, « in ARX Early Access alongside Operations »
   (*Discover the Nomad*, 02/06/2026).
 
 Voir [Operations](./13-operations.md) pour la mise à jour qui l'introduit et
-[Le Rhino et le Nomad](./14-rhino-nomad.md) pour la fiche complète du véhicule.
+[Le Rhino et le Nomad](./14-rhino.md) pour la fiche complète du véhicule.
 
 ### 2.3 Procédure de scan et d'échantillonnage exobiologique (3 prélèvements par espèce)
 
@@ -2270,7 +2270,7 @@ Guides du corpus en lien direct avec l'exploration et l'exobiologie :
 - [Wings, Multicrew et CQC](./23-jeu-en-groupe.md) — organisation en Wing pour les expéditions type Distant Worlds
 - [Community Goals](./24-community-goals.md) — mécanique générique des expéditions/événements communautaires
 - [Combat anti-Thargoïde (AX)](./25-combat-ax.md) — sites de ruines et structures inconnues croisés en exploration
-- [Le Rhino et le Nomad](./14-rhino-nomad.md) — fiche complète du Nomad, du Mk II Biological Scanner et des modules
+- [Le Rhino et le Nomad](./14-rhino.md) — fiche complète du Nomad, du Mk II Biological Scanner et des modules
   Vessel Bay évoqués en 2.2
 - [Operations](./13-operations.md) — la mise à jour du 30 juin 2026 qui introduit le Nomad
 - [Ingénieurs](./06-ingenieurs.md) — matériaux, grades et blueprints cités dans les builds de ce guide

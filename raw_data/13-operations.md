@@ -221,7 +221,7 @@ MK I et MK II ». Le Nomad n'est pas un vaisseau de chantier naval et ne modifie
 pilotables du corpus.
 
 Pour la chronologie complète, les caractéristiques et les modules de soute concernés, voir le guide dédié
-[14-rhino-nomad.md](./14-rhino-nomad.md).
+[14-rhino.md](./14-rhino.md).
 
 ### État du service du mode Operations : « Networking & Balancing Beta » et problèmes connus
 
@@ -688,7 +688,7 @@ Ce guide couvre le **mode multijoueur Operations** (partie A) et les **mécaniqu
 settlements, missions, infiltration, CZ). Pour éviter les redites entre guides du corpus, le détail exhaustif de
 certains sujets connexes vit ailleurs :
 
-- **[14 — Rhino et Nomad](./14-rhino-nomad.md)** — chronologie, caractéristiques et modules du **Nomad**, le
+- **[14 — Rhino et Nomad](./14-rhino.md)** — chronologie, caractéristiques et modules du **Nomad**, le
   ship-launched vessel livré par la mise à jour Operations, et du **Rhino**, ajouté le 2 septembre 2026 en même temps
   que l'opération Under Siege.
 - **[23 — Jeu en groupe](./23-jeu-en-groupe.md)** — wings, modes de jeu et coordination multijoueur, cadre général

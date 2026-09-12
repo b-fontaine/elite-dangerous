@@ -9,7 +9,7 @@ mots_cles_en: [system colonisation, system architect, system colonisation beacon
   primary port, trailblazers, dodec update, strong link, weak link, construction effort, metahauling, uncontrolled populated]
 version_jeu_couverte: "4.2.2.x (Dodec Update du 11 novembre 2025, dernière mise à jour couverte)"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-12
 confiance_globale: moyenne
 volatilite: moyenne
 sources_primaires: [elitedangerous.com update-notes 4.1.0.0 / 4.1.2.0 / 4.1.2.102 / 4.2.2.0, mega-guide communautaire
@@ -22,7 +22,7 @@ zones_incertaines: ["formule exacte du revenu hebdomadaire de l'Architecte et fo
   "capacité de fret du Panther Clipper Mk II, non vérifiée",
   "noms anglais complets des organisations logistiques SCCN et CTN, non confirmés",
   "usage documenté du contrôleur de limpets collecteurs en contexte de colonisation, déduit de la mécanique générale"]
-guides_lies: [2, 3, 11, 12, 13, 16, 19, 21]
+guides_lies: [2, 3, 11, 12, 13, 16, 19, 21, 31]
 ---
 
 # La Colonisation de systèmes
@@ -200,7 +200,7 @@ Chaque installation influence, de façon non linéaire, les statistiques suivant
 
 > **Point retiré après vérification.** Une pondération chiffrée précise (port primaire à +40 %/+40 %/+40 %/+20 %/+40 % contre −10 %/−10 %/−20 %/−25 %/−25 % pour chaque installation suivante, attribuée à un rééquilibrage rétroactif du Dodec Update) figurait dans une version antérieure de ce guide. Recherche faite, aucune source consultée ne la confirme : le mega-guide communautaire documente l'état du jeu jusqu'à juin 2025, donc avant le Dodec Update, et les notes de mise à jour officielles n'ont pas pu être vérifiées sur ce point précis. Ce chiffrage est donc **considéré comme non confirmé et retiré** de ce guide (voir [Points d'incertitude](#points-dincertitude-à-garder-en-tête-sur-la-colonisation)). Le principe général — le Dodec Update a bien inclus un « rééquilibrage des statistiques système », cf. [Chronologie officielle](#chronologie-officielle-de-la-colonisation-de-systèmes-2024-2025) — n'est en revanche pas remis en cause.
 
-Un **niveau technologique minimal de 35** est requis pour qu'un chantier naval soit en ligne dans le système *(seuil confirmé verbatim dans le mega-guide communautaire : « Existuje minimální technologická úroveň (35), aby byly loděnice v přístavech online », explicitement daté des « services... depuis l'aktualizace 3.3 »)*, condition introduite par *Trailblazers – Update 3.3* (v4.1.2.102), qui a globalement réécrit les conditions d'activation des services de station — marché, chantier naval, équipement, cartographie universelle, Vista Genomics, marché noir, salon d'équipage, contact Pioneer Supplies — en fonction des liens forts/faibles et du niveau technologique.
+Un **niveau technologique minimal de 35** est requis pour qu'un chantier naval soit en ligne dans le système *(seuil confirmé verbatim dans le mega-guide communautaire : « Existuje minimální technologická úroveň (35), aby byly loděnice v přístavech online », explicitement daté des « services... depuis l'aktualizace 3.3 »)*, condition introduite par *Trailblazers – Update 3.3* (v4.1.2.102), qui a globalement réécrit les conditions d'activation des services de station — marché, chantier naval, équipement, cartographie universelle, Vista Genomics, marché noir, salon d'équipage, contact Pioneer Supplies — en fonction des liens forts/faibles et du niveau technologique. Table complète des neuf types de station, de leurs tailles de pad et de la disponibilité de ces quinze services (confirmée cette fois directement sur le texte officiel des notes de mise à jour) dans [31-pilotage-navigation-et-stations.md §4](./31-pilotage-navigation-et-stations.md#4-types-de-stations-tailles-de-pad-et-services).
 
 > Les effets précis de la « Richesse » et du « Niveau de vie » sur le système restent **non confirmés officiellement** dans le détail.
 

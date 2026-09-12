@@ -27,7 +27,7 @@ zones_incertaines: ["dureté de coque, mass lock, capacité thermique et coût d
   "fabricant, prix en crédits et gabarit de plateforme du Nomad non documentés par Frontier",
   "taux de rebuy d'environ 5 % de la valeur assurée donné comme ordre de grandeur, non comme valeur fixe",
   "prix Inara sujets à fluctuation, à revérifier avant tout achat important"]
-guides_lies: [4, 6, 10, 13, 14, 18, 20, 27, 29]
+guides_lies: [4, 6, 10, 13, 14, 18, 20, 27, 29, 31]
 ---
 
 # Liste complète des vaisseaux d'Elite Dangerous
@@ -66,7 +66,7 @@ les **SRV** (Scarab, Scorpion, Rhino), les **chasseurs embarqués (SLF)** et, de
 premier **vaisseau embarqué (*ship-launched vessel*, SLV)** du jeu. Aucun de ces véhicules n'apparaît dans la liste des
 vaisseaux d'Inara ni dans le `shipyard.csv` d'EDCD, et cette absence ne dit rien de leur existence : elle traduit
 seulement le périmètre de ces catalogues. Voir plus bas la section « Le cas du Nomad » ainsi que
-[Le Rhino et le Nomad](./14-rhino-nomad.md).
+[Le Rhino et le Nomad](./14-rhino.md).
 
 Parmi ces 48, sept sont soumis à une **condition de rang de réputation** en plus de leur prix en crédits : **Imperial
 Courier, Imperial Clipper, Imperial Cutter** (rang Empire), et **Federal Dropship, Federal Assault Ship, Federal
@@ -576,7 +576,7 @@ vessel bay, including MK I and MK II modules. »*
 
 Le **Nomad** inaugure une catégorie distincte du chasseur embarqué : le **vaisseau embarqué** (*ship-launched vessel*,
 SLV). Il se loge dans un Vessel Hangar comme un SLF dans son ancienne baie, mais son rôle n'est pas le combat : c'est
-un appareil d'exploration de surface planétaire, décrit et détaillé dans **[Le Rhino et le Nomad](./14-rhino-nomad.md)**.
+un appareil d'exploration de surface planétaire, décrit et détaillé dans **[Le Rhino et le Nomad](./14-rhino.md)**.
 Il n'a pas de prix en crédits ni de place au chantier naval : il s'acquiert en **ARX**. Voir la section
 « [Le cas du Nomad](#le-cas-du-nomad--vaisseau-embarqué-slv-absent-des-catalogues-de-chantier-naval) » plus bas pour
 la taxonomie complète.
@@ -883,7 +883,7 @@ chiffre, et le Nomad ne s'y ajoute pas — pas plus que le Scarab, le Scorpion, 
 ni prix en crédits, ni fiche de chantier naval : il s'acquiert en **ARX**, par formules pré-équipées, aux paliers
 habituels du jeu — **Nomad Standard** (16 520 ARX), **Nomad Stellar** (33 000 ARX) et **Nomad Galactic** (60 000 ARX),
 toutes trois livrées avec le Mk II Biological Scanner. Le contenu détaillé de ces trois formules, la conception du
-véhicule et ses conditions de déploiement sont documentés par [14-rhino-nomad.md](./14-rhino-nomad.md), qui fait
+véhicule et ses conditions de déploiement sont documentés par [14-rhino.md](./14-rhino.md), qui fait
 référence sur ce sujet.
 
 ### Nomad : ce que le corpus ne peut pas affirmer (fabricant, prix en crédits, gabarit)
@@ -911,7 +911,7 @@ la **documentation communautaire** et non de la source primaire, et sont signal�
   [Du Fighter Hangar au Vessel Hangar](#du-fighter-hangar-au-vessel-hangar--le-renommage-de-juillet-2026) ci-dessus.
 
 Pour la fiche complète du Nomad — équipement, usage en exploration, place aux côtés du SRV Rhino —, voir
-**[Le Rhino et le Nomad](./14-rhino-nomad.md)**. Pour le mode de jeu qui l'accompagne, voir
+**[Le Rhino et le Nomad](./14-rhino.md)**. Pour le mode de jeu qui l'accompagne, voir
 **[Opérations](./13-operations.md)**.
 
 ## Le coût réel d'un vaisseau équipé (rebuy inclus)
@@ -952,6 +952,37 @@ dépasse le prix d'achat de nombreux vaisseaux Medium du tableau ci-dessus. Un A
 pleinement équipé (boucliers, armes, module de piratage/scan, etc.) coûte en pratique significativement plus que ce
 sous-total. Voir [Les ingénieurs](./06-ingenieurs.md) pour la suite logique : une fois ces modules achetés,
 l'ingénierie les améliore encore sans changer leur coût d'achat initial.
+
+## Gestion de flotte : transférer et stocker un vaisseau
+
+Sujet à zéro occurrence avant ce cycle : posséder plusieurs vaisseaux répartis dans la galaxie soulève des questions
+de logistique que le corpus ne documentait pas.
+
+**Transfert entre deux stations.** Formule communautaire (non officielle, datée de 2019 et non revérifiée depuis,
+mais dont la partie « délai » reste corroborée par des témoignages récents de transferts vers Colonia) :
+
+- **Coût** ≈ (0,00006 × Valeur totale × Distance en al) + (0,0002 × Valeur totale) + 1 000 Cr, où la valeur totale
+  inclut la coque et les modules installés. Exemple indicatif : un vaisseau à 20 M Cr transféré sur 500 al coûterait
+  environ 605 000 Cr — un calcul, pas un tarif garanti.
+- **Délai** ≈ 300 secondes + 10 secondes par année-lumière (soit 5 minutes de base). Un transfert bulle → Colonia/
+  Jaques Station (≈ 22 000 al) prend ainsi environ 61 heures, cohérent avec les retours de joueurs.
+- Le transfert ne peut se déclencher qu'à quai, dans une station dotée du service Chantier Naval — impossible en vol
+  ou en supercroisière.
+- Vers un **Porte-Vaisseau**, le tarif standard s'applique toujours (aucune gratuité), et la disponibilité dépend du
+  réglage d'accès du propriétaire ; celui-ci peut en revanche stocker et transférer ses propres vaisseaux sans avoir
+  à acheter le service Chantier Naval, réservé à l'accueil des visiteurs — voir
+  [19-fleet-carriers.md](./19-fleet-carriers.md).
+
+**Stockage.** Un Chantier Naval standard plafonne à **40 vaisseaux stockés par station**, gratuitement et sans limite
+de durée — un commandant peut répartir un surplus sur plusieurs stations, chacune plafonnée à 40 également. C'est le
+même chiffre que les 40 emplacements gratuits d'un Porte-Vaisseau (déjà documentés en
+[19-fleet-carriers.md](./19-fleet-carriers.md)), simple coïncidence de plafond et non une règle unifiée énoncée comme
+telle. Un plafond global de 250 vaisseaux par commandant, toutes stations confondues, a été signalé en 2015 comme
+source de bugs au-delà : aucune source datée de 2024-2026 ne confirme s'il existe toujours.
+
+Pour le transfert et le stockage des **modules**, ainsi que les outils de recherche de station et la pratique des
+hubs de flotte, voir [04-equipements.md, « Gestion de flotte — modules »](./04-equipements.md). Pour la procédure
+d'accostage elle-même, voir [31-pilotage-navigation-et-stations.md](./31-pilotage-navigation-et-stations.md).
 
 ## Notes sur la fiabilité des données chiffrées de ce guide
 
@@ -996,8 +1027,8 @@ sur le flux Steam News du jeu (voir Sources), chacun cité inline avec son titre
 - [Combat spatial](./08-combat-spatial.md) — mise en œuvre des hardpoints et des chasseurs embarqués en combat.
 - [Exploration](./10-exploration.md) — choix de vaisseau et configuration pour l'exploration longue distance.
 - [Commerce](./11-commerce.md) et [Transport](./12-transport.md) — vaisseaux cargo et de passagers en usage.
-- [Le Rhino et le Nomad](./14-rhino-nomad.md) — fiche complète du Nomad (premier SLV du jeu, 30 juin 2026) et du SRV
-  Rhino de Vodel (2 septembre 2026).
+- [Le Rhino et le Nomad](./14-rhino.md) — fiche complète du Nomad (premier SLV du jeu, 30 juin 2026), du SRV Rhino de
+  Vodel (2 septembre 2026), et comparatif Scarab/Scorpion/Rhino.
 - [Opérations](./13-operations.md) — le mode d'escouade sorti le 1ᵉʳ juillet 2026, avec lequel le Nomad a été livré.
 - [La Colonisation](./18-colonisation.md) — rôle du Type-8, Type-9 et Type-11 Prospector dans l'économie de
   colonisation.
@@ -1006,6 +1037,8 @@ sur le flux Steam News du jeu (voir Sources), chacun cité inline avec son titre
 - [Débuter et progresser](./27-debuter-et-progresser.md) — dans quel ordre franchir les paliers de vaisseau quand on
   démarre (Sidewinder Mk I, puis un spécialisé bon marché, puis un premier multirôle) et quels rangs viser pour
   débloquer les châssis Fédération/Empire listés ci-dessus.
+- [Pilotage, navigation et stations](./31-pilotage-navigation-et-stations.md) — accostage, tailles de pad par
+  vaisseau, et logistique de flotte vue côté modules.
 
 ## Sources
 

@@ -46,7 +46,7 @@ zones_incertaines: ["table des masses optimales de FSD au grade 5 dérivée par 
   "appariement des deux variantes pré-ingénierées de Hpt_BasicMissileRack_Fixed_Medium avec les trois noms
     MercGear que outfitting.csv porte pour cet identifiant (Drag, Lightweight Thermal et Lockdown Seeker
     Missile Rack) : indécidable sur source reproductible"]
-guides_lies: [3, 5, 6, 8, 10, 13, 14, 17, 20, 25, 30]
+guides_lies: [3, 5, 6, 8, 10, 13, 14, 17, 20, 25, 30, 31]
 ---
 
 # Liste complète des équipements dans Elite Dangerous
@@ -706,7 +706,7 @@ ARX aux côtés d'Operations, le Nomad est décrit par Frontier comme « un vais
 compact, conçu pour explorer les surfaces planétaires ». Ce n'est donc **ni un SRV ni un chasseur**, mais une
 troisième catégorie de véhicule embarqué (*ship-launched vessel*, SLV) : il ne s'achète pas au chantier naval et
 n'entre pas dans le décompte des vaisseaux pilotables du [guide des vaisseaux](./03-vaisseaux.md). Le véhicule
-lui-même est traité en détail dans [14-rhino-nomad.md](./14-rhino-nomad.md) ; ne figurent ici que ses interactions
+lui-même est traité en détail dans [14-rhino.md](./14-rhino.md) ; ne figurent ici que ses interactions
 avec l'équipement. Ses caractéristiques annoncées par Frontier :
 
 - **Déploiement** — « le Nomad peut être déployé depuis une baie de vaisseau compatible, y compris les modules MK I et
@@ -898,6 +898,44 @@ mécanique des Opérations elles-mêmes et l'acquisition du Merc Coin, voir [13-
   environ 97,7 millions explorés directement), soit environ 0,0489 % de la galaxie — signe d'une activité d'exploration
   toujours soutenue (pertinent pour l'usage des FSD, DSS et Discovery Scanner). *Capture au 17 juin 2026 ; à
   revérifier sur les outils de suivi communautaires (EDAstro, Canonn, Inara) pour un chiffre à jour.*
+
+## 20. Gestion de flotte — modules
+
+Complément à la section « Gestion de flotte » de [03-vaisseaux.md](./03-vaisseaux.md#gestion-de-flotte--transférer-et-stocker-un-vaisseau)
+(transfert et stockage de vaisseaux) : ce qui concerne les modules.
+
+**Stockage.** Tout module retiré d'un vaisseau peut être stocké indéfiniment et gratuitement, jusqu'à un plafond
+**global de 600 modules par commandant**, toutes stations confondues (historique du plafond : 60 au lancement → 120
+avec *Beyond Chapter One* → 200 avec Odyssey Update 7 → 600 avec Odyssey Update 12) — à la différence du plafond de
+vaisseaux, qui est par station (voir 03-vaisseaux.md).
+
+**Transfert entre stations.** Payant et proportionnel à la distance, sur la même base que le transfert de vaisseau
+(section « Gestion de flotte » de 03-vaisseaux.md) mais avec un frais fixe de +100 Cr au lieu de +1 000 Cr — formule
+communautaire de 2019, non revérifiée depuis.
+
+**Outils de recherche d'une station.** Pour trouver où acheter un module ou un vaisseau précis :
+
+- **Spansh** (`spansh.co.uk/stations`) — formulaire vérifié directement : recherche par module ou vaisseau, filtres
+  Outfitting/Shipyard/taille de pad, triable par distance à un système de référence.
+- **Inara** — outil « Nearest Outfitting » et fiches de stock par station ; description confirmée par plusieurs
+  mentions communautaires convergentes, mais non vérifiée par un accès direct pendant cette recherche.
+- **EDSM** — avant tout une base de données de systèmes/stations (marché, Shipyard, Outfitting par station), moins
+  structurée qu'une recherche par nom de module ou de vaisseau.
+
+**Dépendance à l'économie et à la taille de station.** Un système à économie High Tech tend à offrir le plus grand
+choix de vaisseaux/modules, un système Industriel plutôt des vaisseaux miniers/cargo — tendance communautaire, pas
+une règle chiffrée. Depuis **Trailblazers (Update 3.3, v4.1.2.102)**, Chantier Naval et Équipement exigent tous deux
+un **niveau technologique système ≥ 35** dans un système colonisé (détail complet, avec les voies alternatives pour
+un port Tier 1, dans [31-pilotage-navigation-et-stations.md §4.2](./31-pilotage-navigation-et-stations.md)) ; en
+pratique, un avant-poste (pads Medium au maximum) a donc structurellement peu de chances d'un Chantier Naval complet.
+
+**Hubs de flotte.** Pratique communautaire de centralisation du stockage dans quelques stations de référence :
+**Jameson Memorial** (Shinrarta Dezhra) propose la quasi-totalité des vaisseaux et modules du jeu à 10 % de remise ;
+**Deciat** concentre un trafic exceptionnel de commandants (et de Porte-Vaisseaux) du fait de la présence de
+l'ingénieure Felicity Farseer, l'une des toutes premières débloquées ; **Jaques Station** (Colonia) sert de hub de
+facto pour la région, Frontier la désignant elle-même comme lieu de repli sûr pour les migrations de compte —
+combiné à un aller-retour d'environ 61 heures vers la Bulle, cela encourage à y centraliser sa flotte plutôt qu'à
+payer des transferts longue distance répétés.
 
 ## Référentiel chiffré des modules — classe, notation, masse, consommation et prix
 
@@ -2271,11 +2309,13 @@ Deux particularités du jeu de données méritent d'être signalées plutôt que
 - [Le Minage (Mining)](./20-minage.md) — usage détaillé des lasers de minage et des contrôleurs de limpets
   Collector/Prospector.
 - [Combat anti-Thargoïde (AX) approfondi](./25-combat-ax.md) — armes AX, anatomie des Interceptors, nuages caustiques.
+- [Pilotage, navigation et stations](./31-pilotage-navigation-et-stations.md) — seuils de service par station,
+  procédure d'accostage, et logistique de flotte vue côté vaisseau.
 - [Porte-vaisseaux de joueur (Fleet Carriers)](./19-fleet-carriers.md) — logistique de carburant et de limpets à
   l'échelle d'un escadron.
 - [Guide complet de l'équipement à pied (Odyssey)](./07-equipement-a-pied.md) — équipement des personnages, distinct
   des modules de vaisseau couverts ici.
-- [Le Rhino et le Nomad](./14-rhino-nomad.md) — les deux véhicules embarqués qui se déploient depuis la baie de
+- [Le Rhino et le Nomad](./14-rhino.md) — les deux véhicules embarqués qui se déploient depuis la baie de
   vaisseau du §13.
 - [Les Opérations](./13-operations.md) — la mécanique dont provient le Merc Coin et le catalogue MercGear de la
   section 18.

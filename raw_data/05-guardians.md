@@ -6,12 +6,12 @@ entites: [Guardians, Guardian Ruins, Guardian Structures, Guardian Sentinels, Ra
 mots_cles_en: [guardian ruins, guardian structure, guardian sentinel, guardian tech broker, gauss cannon, plasma charger, shard cannon, guardian fsd booster, obelisk data, ancient data terminal, guardian beacon, brain tree]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-12
 confiance_globale: haute
 volatilite: moyenne
 sources_primaires: ["canonn.science", "EDSM (API publique)", "EDCD/coriolis-data", "EDCD/FDevIDs", "Elite Dangerous Wiki (Fandom, API MediaWiki)", "inara.cz"]
 zones_incertaines: ["le type exact de bâtiment présent sur chaque site Guardian n'a pas pu être vérifié site par site", "la cartographie exhaustive des types d'obélisques n'a pas pu être revérifiée auprès d'une source primaire", "les plages de bonus par grade (1 à 5) des blueprints d'ingénierie applicables aux armes Guardian", "les quantités du Tech Broker pour les autres classes que celles listées (FSD Booster classes 2 à 5, armes small/large)", "le minutage de charge des 6 pylônes d'un site au sol, seulement extrapolé des 3 minutes documentées pour une balise", "la durée totale d'un passage complet sur un Guardian Structure, non chiffrée par une source primaire", "le rattachement aux Guardians du teaser Canonn du 30 août 2025 relève d'une hypothèse communautaire"]
-guides_lies: [0, 3, 6, 7, 8, 9, 10, 18, 25]
+guides_lies: [0, 3, 6, 7, 8, 9, 10, 18, 25, 31]
 ---
 # Guide complet des Guardians dans Elite Dangerous
 
@@ -383,8 +383,10 @@ FSD est une cible fréquente — ce qui impose une approche rapide et mobile plu
   nouveau passage complet redevient possible pour un même Commander en solo ; la section 10 explique pourquoi
   enchaîner plusieurs sites rapprochés est en pratique plus efficace que d'attendre sur place.
 
-Pour les fondamentaux du pilotage et du combat spatial hors contexte Guardian (gestion des pips, ciblage des
-sous-systèmes, etc.), voir [Combat spatial](./08-combat-spatial.md).
+Pour les fondamentaux du pilotage et du combat spatial hors contexte Guardian (gestion des pips, etc.), voir
+[Combat spatial](./08-combat-spatial.md) ; pour le HUD et le ciblage de sous-système en tant que mécanique générale
+(panneaux, effets concrets sur Sensors et Power Plant), voir
+[31-pilotage-navigation-et-stations.md §6.4](./31-pilotage-navigation-et-stations.md#64-ciblage-de-sous-système--effets-concrets).
 
 ### Vaisseaux recommandés pour le nettoyage des sites Guardian
 

@@ -24,7 +24,7 @@ zones_incertaines: ["seuils numériques de progression de rang, jamais publiés 
   "mécanisme exact de calcul du rang de commerce (achat-revente, minerai, missions comptent-ils à parts égales)",
   "aucun Cr/h fiable pour un vaisseau starter non ingénierié",
   "portée de saut stock du Hauler, non recoupée par une recherche indépendante cette édition"]
-guides_lies: [1, 3, 6, 8, 10, 11, 12, 20, 23, 29]
+guides_lies: [1, 3, 6, 8, 10, 11, 12, 20, 23, 29, 31]
 ---
 
 # Débuter et progresser dans Elite Dangerous : premiers pas et rangs
@@ -82,6 +82,11 @@ Aucune source consultée pour cette édition n'a permis de confirmer des chiffre
 | Trading court (aller-retour local) | Vaisseau de fret (Hauler, Type-6, Cobra Mk III) | Soutes de fret supplémentaires | Faible en soi, mais capital immobilisé en marchandise | Rapide — routes visibles sur le panneau de commerce ou via Inara/Spansh | [11-commerce.md §2.1](./11-commerce.md) |
 
 Faute de chiffres vérifiés, la meilleure approche pour un nouveau Commandant reste d'essayer chaque activité brièvement avec l'équipement déjà en sa possession avant d'investir dans une spécialisation — c'est aussi l'esprit de la *New Commander Roadmap* citée en 1.1, qui structure la progression autour de la découverte des styles de jeu plutôt que d'un chiffre de rentabilité imposé.
+
+Avant même de choisir une activité, la toute première compétence du jeu — décoller, voyager en supercroisière et
+accoster — n'était documentée nulle part dans le corpus jusqu'à ce cycle : voir
+[31-pilotage-navigation-et-stations.md](./31-pilotage-navigation-et-stations.md) pour la procédure complète
+d'accostage, l'atterrissage planétaire et les tailles de pad par type de station.
 
 ### 1.3 Choisir ses 2 ou 3 premiers Ingénieurs selon l'objectif
 

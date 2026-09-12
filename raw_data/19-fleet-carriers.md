@@ -6,12 +6,12 @@ entites: [Fleet Carrier, Porte-Vaisseau, Tritium, Tritium Depot, Drydock, Shipya
 mots_cles_en: [fleet carrier, tritium, tritium depot, carrier jump, decommissioning, drydock, shipyard, outfitting, landing pads, stronghold carrier]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-09
+date_verification: 2026-09-12
 confiance_globale: haute
 volatilite: haute
 sources_primaires: [roguey.co.uk, guide PTN Fleet Carrier Owner's Guide, elite-journal.readthedocs.io, FC-Fuel-Estimator (GitHub), Wikipedia Elite Dangerous, forums.frontier.co.uk]
 zones_incertaines: ["coûts hebdomadaires exacts des trois services Odyssey (Concourse, Vista Genomics, Pioneer Supplies), non retrouvés dans les sources accessibles", "date précise et caractère « stealth change » du déblocage du commerce de denrées rares sur un Porte-Vaisseau, appuyé sur une seule citation de forum", "répartition des seize baies d'appontage, documentée par roguey.co.uk seul, sans deuxième source indépendante", "application ou non du bonus de prix par distance des denrées rares sur le marché d'un Porte-Vaisseau"]
-guides_lies: [2, 4, 6, 11, 12, 18, 20, 22]
+guides_lies: [2, 4, 6, 11, 12, 18, 20, 22, 31]
 ---
 
 # Porte-vaisseaux de joueur (Fleet Carriers)
@@ -141,6 +141,10 @@ capacité de 25 000 t : c'est un stockage séparé, hors quota.
 *(Source : roguey.co.uk, confirmé par accès direct sur plusieurs pages du site (page principale et FAQ) ; confiance
 moyenne à haute faute d'une deuxième source totalement indépendante retrouvée dans le temps imparti — roguey.co.uk
 reste la seule source ayant documenté ce détail lors des recherches menées pour ce guide.)*
+
+Ce total (16 pads, 8 Large) fait du Porte-Vaisseau la seule infrastructure du jeu où les pads Large sont majoritaires
+— voir le comparatif des neuf types de station dans
+[31-pilotage-navigation-et-stations.md §4.1](./31-pilotage-navigation-et-stations.md#41-neuf-types-dinfrastructures-accostables).
 
 ### Dépôt de Tritium d'un Porte-Vaisseau (Tritium Depot) — réservoir séparé de 1 000 tonnes
 

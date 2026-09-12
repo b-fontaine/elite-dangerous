@@ -98,7 +98,7 @@ compatible vessel bay, including MK I and MK II modules » et qu'il embarque « 
 for the detection of biological signals directly from the cockpit ». Conséquence pratique pour ce guide : la
 **détection** des signaux biologiques peut désormais se faire depuis le cockpit, mais le **prélèvement** reste une
 opération à pied, au Genetic Sampler de l'Artemis (voir plus loin). Pour la fiche complète du Nomad, de son module de
-soute et du Rhino, voir [14-rhino-nomad.md](./14-rhino-nomad.md).
+soute et du Rhino, voir [14-rhino.md](./14-rhino.md).
 
 **Ne confondez pas cette mise à jour avec le mot « Opérations »** employé dans
 [13-operations.md](./13-operations.md), qui désigne plus largement l'ensemble générique du gameplay au sol
@@ -919,7 +919,7 @@ contenu à enjeu élevé (raid de settlement de haute valeur, transport de gros 
   daté du 25 février 2026, **remplace la mention erronée « février 2025 »** (probable erreur de transcription d'une
   année) trouvée dans une version antérieure de ce corpus — voir le détail et le niveau de confiance dans
   [00-chronologie-canonique.md](./00-chronologie-canonique.md#6-kestrel-mk-ii--date-de-sortie). Voir aussi
-  [14-rhino-nomad.md](./14-rhino-nomad.md) pour le contexte complet de cette période.
+  [14-rhino.md](./14-rhino.md) pour le contexte complet de cette période.
 - **Mise à jour « Operations » (4.4.0.0, 30 juin 2026 en accès anticipé ARX, notes de version le 1ᵉʳ juillet 2026)** —
   cadre de jeu en escadre dont plusieurs scénarios se jouent en partie à pied, et qui introduit le Merc Coin. La même
   mise à jour corrige plusieurs défauts du jeu au sol : zones de conflit à pied échouant malgré la victoire du joueur
@@ -929,11 +929,11 @@ contenu à enjeu élevé (raid de settlement de haute valeur, transport de gros 
 - **Nomad (dévoilement le 2 juin 2026, sortie le 30 juin 2026)** — *ship-launched vessel* d'exploration de surface
   équipé d'un **Mk II Biological Scanner** qui détecte les signaux biologiques depuis le cockpit. Il déplace la phase
   de **repérage** de l'exobiologie vers le vaisseau sans rien changer au **prélèvement**, qui reste à pied ; voir
-  [14-rhino-nomad.md](./14-rhino-nomad.md).
+  [14-rhino.md](./14-rhino.md).
 - **Véhicule terrestre « Rhino »** (SRV de minage de surface, sorti le 2 septembre 2026) — ajout lié au minage de
   surface plutôt qu'à l'équipement individuel à pied stricto sensu, mais pertinent pour le contexte du gameplay au sol.
   La même mise à jour ajoute l'Operation « Under Siege », qui demande de lever le blocus d'un settlement planétaire ;
-  voir [14-rhino-nomad.md](./14-rhino-nomad.md) et [20-minage.md](./20-minage.md).
+  voir [14-rhino.md](./14-rhino.md) et [20-minage.md](./20-minage.md).
 - Mises à jour mineures (numérotation 4.0.x à 4.4.1.1) — ajustements d'interface à pied, option d'aide à la visée pour
   les contrôles à pied, corrections de bugs de caméra à pied ; pour le détail précis de chaque patch, consultez les
   notes de mise à jour officielles.
@@ -954,7 +954,7 @@ contenu à enjeu élevé (raid de settlement de haute valeur, transport de gros 
   mains nues), qui s'appuie directement sur l'équipement décrit ici.
 - [13-operations.md](./13-operations.md) — le gameplay au sol générique (settlements, missions, piratage) au sens large
   du terme « Opérations », à ne pas confondre avec la mise à jour multijoueur du même nom de juin 2026.
-- [14-rhino-nomad.md](./14-rhino-nomad.md) — fiches détaillées du Rhino et du Nomad, et chronologie de la mise à jour
+- [14-rhino.md](./14-rhino.md) — fiches détaillées du Rhino et du Nomad, et chronologie de la mise à jour
   « Operations » évoquée plus haut.
 - [10-exploration.md](./10-exploration.md) — exobiologie approfondie (espèces, rangs, primes de première découverte).
 - [06-ingenieurs.md](./06-ingenieurs.md) — mécanique générale de l'ingénierie (vaisseaux), grades, effets expérimentaux.

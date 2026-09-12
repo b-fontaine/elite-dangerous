@@ -39,7 +39,7 @@ suivies de patchs correctifs et de hotfixs. Cette synthèse dresse l'état de ce
 Ce guide reste volontairement synthétique sur les sujets qui ont leur propre guide dédié dans le corpus : les
 sections « Operations », « Nomad » et « Rhino » ci-dessous ne résument que ce qui concerne la feuille de route
 (dates, versions, cadence), et renvoient vers [13-operations.md](./13-operations.md) et
-[14-rhino-nomad.md](./14-rhino-nomad.md) pour l'analyse détaillée — y compris pour les points où ces guides,
+[14-rhino.md](./14-rhino.md) pour l'analyse détaillée — y compris pour les points où ces guides,
 plus fouillés, nuancent ou corrigent ce qui est dit ici.
 
 Les dates et les intitulés retenus ci-dessous s'appuient en priorité sur les annonces officielles de Frontier
@@ -51,7 +51,7 @@ notable cite le billet qui l'étaye (titre et horodatage UTC).
 > méthode (recherche d'un vaisseau lancé depuis un vaisseau dans des catalogues de chantier naval, qui ne recensent
 > que les vaisseaux achetables) ; elle est corrigée ici. Les deux contenus sont sortis le **30 juin 2026** et sont
 > documentés par les billets officiels cités dans ce guide — voir
-> [14-rhino-nomad.md](./14-rhino-nomad.md) pour le détail de cette correction.
+> [14-rhino.md](./14-rhino.md) pour le détail de cette correction.
 
 ## Chronologie des mises à jour d'Elite Dangerous (fin 2024 – septembre 2026)
 
@@ -96,7 +96,7 @@ n'a été annoncée à ce jour.
 | 4.3.1.0           | 24 fév. 2026                | Kestrel Mk II Update      | Vaisseau de combat léger de Core Dynamics, propulseurs Mk II Agile Boost et Mk II Plasma Shock Accelerator, accompagné d'une refonte massive de l'audio du combat à pied (voir détail plus bas) |
 | 4.3.3.0           | 28 avril 2026               | Lynx Highliner Update     | Nouveau vaisseau de ligne pour passagers (Zorgon Peterson — et non Saud Kruger, malgré une confusion fréquente puisqu'il s'agit du premier paquebot de ce fabricant), pouvant accueillir jusqu'à 225 passagers |
 | **4.4.0.0**       | **30 juin 2026**            | **Operations Update**     | Contenu multijoueur en escouade et sortie du **Nomad** en accès anticipé Arx ; notes de version publiées le 1er juillet 2026 (billet « Operations Update », 14:01 UTC) |
-| 4.4.0.3           | 9 juillet 2026              | Operations Update 3       | Correctifs Operations (récompenses manquantes, données d'exploration perdues, inventaires à pied) — billet « Operations Update — Update 3 » (10:24 UTC) ; version attestée par les journaux de jeu (voir [14-rhino-nomad.md, §3.8](./14-rhino-nomad.md#38-nom-interne--lander01--du-nomad-et-effets-de-bord-sur-les-outils-tiers)) |
+| 4.4.0.3           | 9 juillet 2026              | Operations Update 3       | Correctifs Operations (récompenses manquantes, données d'exploration perdues, inventaires à pied) — billet « Operations Update — Update 3 » (10:24 UTC) ; version attestée par les journaux de jeu (voir [14-rhino.md, §3.8](./14-rhino.md#38-nom-interne--lander01--du-nomad-et-effets-de-bord-sur-les-outils-tiers)) |
 | 4.4.1.0 *(numéro non attesté)* | 2 sept. 2026   | Rhino SRV Update          | Nouveau SRV minier **Vodel's Rhino**, mécanique de Surface Mining, treize nouvelles commodités et opération « Under Siege » |
 
 Entre chaque saison majeure s'intercale ainsi une mise à jour « vaisseau » tous les 1 à 3 mois, elle-même suivie d'un ou
@@ -187,7 +187,7 @@ d'un **Mk II Biological Scanner** détectant les signaux biologiques depuis le c
 compatible vessel bay, including MK I and MK II modules ». Sa conception (patins d'atterrissage de type hélicoptère,
 moteurs pivotant à l'atterrissage), ses formules Arx, la liste des treize vaisseaux porteurs et son nom interne dans
 le journal du jeu sont détaillés dans
-[14-rhino-nomad.md, §3](./14-rhino-nomad.md#3-le-nomad-premier-vaisseau-lancé-depuis-un-vaisseau-30-juin-2026) plutôt que
+[14-rhino.md, §3](./14-rhino.md#3-le-nomad-premier-vaisseau-lancé-depuis-un-vaisseau-30-juin-2026) plutôt que
 dupliqués ici.
 
 ### L'Operations Update 3 du 9 juillet 2026 (version 4.4.0.3)
@@ -196,7 +196,7 @@ Le 9 juillet 2026 (billet « Operations Update — Update 3 », 10:24 UTC), un p
 lancement : restitution des données d'exploration invendues antérieures à la maintenance du 2 juillet, bouton
 « Resync Local Data » pour restaurer le cache des systèmes visités, réattribution différée des récompenses
 d'Operations manquantes, restauration des inventaires à pied effacés. Cette version est **4.4.0.3**, numéro attesté
-par les journaux de jeu (voir [14-rhino-nomad.md, §3.8](./14-rhino-nomad.md#38-nom-interne--lander01--du-nomad-et-effets-de-bord-sur-les-outils-tiers)).
+par les journaux de jeu (voir [14-rhino.md, §3.8](./14-rhino.md#38-nom-interne--lander01--du-nomad-et-effets-de-bord-sur-les-outils-tiers)).
 
 Curiosité de communication à ne pas prendre pour deux mises à jour distinctes : le billet s'intitule « Operations
 Update | Update 3 » mais son corps annonce que « The Operations Update 2 is now live » — une incohérence de la
@@ -219,7 +219,7 @@ Le **Rhino**, désigné « Vodel's Rhino SRV » par les notes officielles (bille
 11:20 UTC), est le premier nouveau SRV (véhicule de surface) depuis le Scorpion, sorti en 2021. Son rattachement au
 constructeur Vodel est officiel ; la filiation de Vodel avec Core Dynamics, avancée ailleurs dans le corpus, n'est
 étayée par aucun billet officiel. La fiche technique complète (déploiement, mécanique de minage détaillée, retours
-communautaires) est disponible dans [14-rhino-nomad.md, §2](./14-rhino-nomad.md#2-le-rhino-srv-de-minage-de-surface-planétaire-vodel-2-septembre-2026) ;
+communautaires) est disponible dans [14-rhino.md, §2](./14-rhino.md#2-le-rhino-srv-de-minage-de-surface-planétaire-vodel-2-septembre-2026) ;
 cette section n'en reprend que le fil roadmap.
 
 Le véhicule a été dévoilé le **6 août 2026** (billet « Beneath the Surface: Your First Look at the Rhino », 14:19 UTC)
@@ -230,7 +230,7 @@ pour une sortie alors annoncée « later this month » — elle est finalement i
 - Le plus gros SRV du jeu à ce jour, avec **3 places** (multi-crew jusqu'à trois occupants) ;
 - Déployé non pas via la trappe à cargo classique, mais via la **baie de véhicule** (*vessel bay*) introduite par
   l'Operations Update — le même module que celui du Nomad, dont la liste de vaisseaux porteurs figure dans
-  [14-rhino-nomad.md, §3.6](./14-rhino-nomad.md#36-déploiement-du-nomad--baie-de-véhicule-mk-i-13-vaisseaux-et-mk-ii-3-vaisseaux).
+  [14-rhino.md, §3.6](./14-rhino.md#36-déploiement-du-nomad--baie-de-véhicule-mk-i-13-vaisseaux-et-mk-ii-3-vaisseaux).
 
 ### La mécanique de Surface Mining introduite par le Rhino
 
@@ -243,14 +243,14 @@ d'astéroïdes existant (voir [Le Minage](./20-minage.md) pour les mécaniques d
 
 La mise à jour énumère par ailleurs une série de paramètres rééquilibrés (temps de minage de base, quantité extraite,
 taux de recharge d'efficacité, densité des gisements). Frontier n'en publie pas les valeurs, et le billet ne dit pas si
-ce rééquilibrage porte au-delà de la nouvelle boucle de surface — détail dans [14-rhino-nomad.md, §2.5](./14-rhino-nomad.md#25-le-minage-de-surface-planétaire-du-rhino--une-nouvelle-boucle-de-gameplay).
+ce rééquilibrage porte au-delà de la nouvelle boucle de surface — détail dans [14-rhino.md, §2.5](./14-rhino.md#25-le-minage-de-surface-planétaire-du-rhino--une-nouvelle-boucle-de-gameplay).
 
 ### Les treize nouvelles matières premières minables en surface
 
 Le Rhino SRV Update introduit treize nouvelles matières premières exclusivement minables en surface (Bastnäsite, Deutérium,
 Diamant, Hélium, Hélium-3, Iridium, Magnésite, Olivine, Periclase dunite, Quartz pyroxenite, Rubis, Saphir,
 Thortveitite). La liste complète, classée par catégorie, est maintenue dans
-[14-rhino-nomad.md, §2.6](./14-rhino-nomad.md#26-les-treize-nouvelles-matières-premières-minables-en-surface-avec-le-rhino) plutôt que dupliquée
+[14-rhino.md, §2.6](./14-rhino.md#26-les-treize-nouvelles-matières-premières-minables-en-surface-avec-le-rhino) plutôt que dupliquée
 ici.
 
 Le billet cite le « temps de reconstitution d'un gisement » parmi les paramètres d'équilibrage, sans en publier la
@@ -295,8 +295,8 @@ la boutique officielle ou Steam avant tout achat :
 
 En appliquant à titre indicatif le taux du plus gros palier (~0,55 €/1000 ARX, le plus avantageux), les formules ARX
 Early Access mentionnées plus haut représentent environ ce qui suit. La grille est identique pour le Kestrel Mk II
-(février 2026), le Nomad (voir [14-rhino-nomad.md, §3.7](./14-rhino-nomad.md#37-coût-et-disponibilité-du-nomad--bundles-arx-de-16-520-à-60-000-arx)) et le Rhino
-(voir [14-rhino-nomad.md, §2.7](./14-rhino-nomad.md#27-coût-et-disponibilité-du-rhino--bundles-arx-de-16-520-à-100-000-arx)) :
+(février 2026), le Nomad (voir [14-rhino.md, §3.7](./14-rhino.md#37-coût-et-disponibilité-du-nomad--bundles-arx-de-16-520-à-60-000-arx)) et le Rhino
+(voir [14-rhino.md, §2.7](./14-rhino.md#27-coût-et-disponibilité-du-rhino--bundles-arx-de-16-520-à-100-000-arx)) :
 
 | Article                                  | Prix ARX    | Équivalent approximatif |
 |-------------------------------------------|-------------|--------------------------|
@@ -345,7 +345,7 @@ habillage narratif du 10ᵉ anniversaire de Colonia (voir plus bas).
 | Correctifs « Under Siege » (complétion prématurée) et interface d'escadrille à pied | Billet « Rhino SRV Update », 2 septembre 2026, 11:20 UTC | Annoncés, non livrés                                                                                            | Notes de version en jeu                                                   |
 | Récompenses d'Operations manquantes (Merc Coins, crédits, matériaux, inventaires) | Billet « Operations Update — Update 3 », 9 juillet 2026, 10:24 UTC | Attribution rétroactive promise « at a later time », sans date                                                  | Notes de version en jeu                                                   |
 | Nouvelles opérations au-delà des sept existantes    | Billet « Operations Update », 1er juillet 2026, 14:01 UTC (« we have more planned for future updates ») | Annoncé sans calendrier                                                                                          | Dev Logs mensuels                                                          |
-| « Feature reboot » d'un système ancien, promis pour l'automne 2026 | Annoncé le 17 février 2026 (feuille de route annuelle, voir [14-rhino-nomad.md, §1.1](./14-rhino-nomad.md#11-la-feuille-de-route-2026-annoncée-le-17-février-2026-six-véhicules)) | Non détaillé à ce jour                                                                                          | Dev Log de l'automne 2026                                                 |
+| « Feature reboot » d'un système ancien, promis pour l'automne 2026 | Annoncé le 17 février 2026 (feuille de route annuelle, voir [14-rhino.md, §1.1](./14-rhino.md#11-la-feuille-de-route-2026-annoncée-le-17-février-2026-six-véhicules)) | Non détaillé à ce jour                                                                                          | Dev Log de l'automne 2026                                                 |
 | Deux véhicules d'automne et d'hiver 2026            | Feuille de route du 17 février 2026 (six véhicules dans l'année) | Non identifiés à ce jour ; trois sorties sur six sont livrées (Kestrel Mk II, Lynx Highliner, Nomad) et le Rhino en constitue la quatrième | Dev Logs mensuels                                                          |
 | Prochaine grande saison après Operations            | Non annoncée                  | Non annoncée — extrapolation de cadence uniquement (voir ci-dessous)                                            | Annonce officielle ; aucune date engagée                                   |
 
@@ -456,7 +456,7 @@ Plusieurs tendances de fond se dégagent de cette période :
 - [Guide complet des Opérations (Odyssey)](./13-operations.md) — le mode de jeu à pied hérité d'Odyssey, homonyme
   mais distinct du contenu multijoueur Operations sorti le 30 juin 2026, et point d'entrée pour le détail des
   opérations en escouade.
-- [Guide complet du Rhino et du Nomad](./14-rhino-nomad.md) — détail technique et chronologie fine des deux véhicules
+- [Guide complet du Rhino et du Nomad](./14-rhino.md) — détail technique et chronologie fine des deux véhicules
   de l'été 2026 : conception et déploiement du Nomad, baies de véhicule Mk I et Mk II, minage de surface du Rhino.
 - [Le Transport de passagers](./12-transport.md) — gameplay passager, enrichi par le Lynx Highliner et ses cabines
   Mk II (avril 2026).

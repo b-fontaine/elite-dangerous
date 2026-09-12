@@ -51,7 +51,7 @@ conflit au sol.
 
 ## Historique des évolutions récentes du combat à pied (2021-2026)
 
-Les deux tables ci-dessous ont été **entièrement recoupées** avec 07-equipement-a-pied.md, 14-rhino-nomad.md et
+Les deux tables ci-dessous ont été **entièrement recoupées** avec 07-equipement-a-pied.md, 14-rhino.md et
 l'audit chronologique consolidé dans 00-chronologie-canonique.md. Plusieurs dates de la version précédente de ce
 guide étaient erronées
 (confusions d'un an ou entre deux mises à jour distinctes) ; elles sont corrigées ici, avec le niveau de confiance
@@ -64,7 +64,7 @@ de la correction.
 | 19 mai 2021                                 | Odyssey                                         | Introduction du gameplay à pied dans son ensemble (combinaisons, armes, settlements, CZ au sol).                                                                                                                             | Haute — date de référence, voir 07 et 13.                                                                                  |
 | **31 octobre 2024** (et non « 2023-2024 »)  | Powerplay 2.0 (extension « Ascendancy »)        | Cycles hebdomadaires d'acquisition/renforcement/sape ; les Ground CZ et missions de combat au sol deviennent un levier d'action direct dans les systèmes disputés par les Powers.                                            | Haute — voir 02-powerplay.md et 00-chronologie-canonique.md §1. Ne pas confondre avec Trailblazers (26 février 2025).      |
 | **26 février 2025** (bêta), et non « 2 mars 2025 » | Colonisation de systèmes (« Trailblazers »)      | Les commandants peuvent construire systèmes et établissements ; les conflits liés aux colonies génèrent de nouvelles zones de conflit au sol, en complément des Ground CZ traditionnelles et de celles liées à Powerplay 2.0. | Haute — le 28 février 2025 est la date d'un article explicatif, pas du lancement. Sortie complète : **11 novembre 2025** (« Dodec Update »). Voir 00-chronologie-canonique.md §2. |
-| **2 décembre 2025** (et non « janvier 2025 »)      | Caspian Explorer (révélé le 25 novembre 2025)   | Vaisseau d'exploration (Zorgon Peterson) associé, selon 14-rhino-nomad.md, à une « IA ennemie à pied améliorée » (comportement des PNJ au sol : couverture, esquive, repli). Le chiffre précis d'un plafond d'ingénierie à 75 % de résistance, avancé par une version antérieure de ce guide, n'a pas pu être retrouvé dans une source primaire et doit être traité comme **non confirmé** jusqu'à vérification en jeu. | Haute pour la date ; non confirmé pour le détail du plafond de résistance. Voir 00-chronologie-canonique.md §5.            |
+| **2 décembre 2025** (et non « janvier 2025 »)      | Caspian Explorer (révélé le 25 novembre 2025)   | Vaisseau d'exploration (Zorgon Peterson) associé, selon 14-rhino.md, à une « IA ennemie à pied améliorée » (comportement des PNJ au sol : couverture, esquive, repli). Le chiffre précis d'un plafond d'ingénierie à 75 % de résistance, avancé par une version antérieure de ce guide, n'a pas pu être retrouvé dans une source primaire et doit être traité comme **non confirmé** jusqu'à vérification en jeu. | Haute pour la date ; non confirmé pour le détail du plafond de résistance. Voir 00-chronologie-canonique.md §5.            |
 
 ### Évolutions 2026 du combat à pied : Kestrel Mk II, Lynx Highliner, Operations, Rhino SRV
 
@@ -73,7 +73,7 @@ de la correction.
 | **24 février 2026** (et non « février 2025 »)      | Kestrel Mk II                                   | La mise à jour embarque une **refonte étendue de l'audio de combat à pied**, explicitement dédiée à la conscience situationnelle : portée de propagation des tirs augmentée, directivité de la ligne de feu ennemie améliorée et réverbération parasite réduite, explosions et grenades aux transitoires plus nettes et différenciées intérieur/extérieur, atténuation temporaire des tirs alentour quand le joueur est touché, hit markers / ruptures de bouclier / confirmations de kill plus lisibles dans le mix. Refonte par arme (Manticore Executioner et Intimidator, Karma AR-50 et P-15), par grenade (Shield Disruptor et fragmentation), et sur les sons de déplacement (pas, surfaces, respiration, glissades) et d'environnement (réverbération intérieure, ambiance de settlement, vaisseaux distants atténués pour laisser entendre tirs et pas). | **Haute** — billet officiel Frontier « Elite Dangerous \| Kestrel Mk. II Update », 24 février 2026 12:21 UTC, section « On-Foot Combat Audio Rebalance ». La réserve d'une version antérieure de ce guide est levée. |
 | **28 avril 2026**                           | Lynx Highliner Update                           | Correctif d'équilibrage direct pour l'infiltration : la **portée des armes silencieuses passe de 40 à 128 mètres**, pour les aligner sur les autres armes — elle reste toutefois inférieure à celle des armes non silencieuses. Corrections associées sur les sons de tir silencieux du Karma AR-50 et sur les modes suppressed / audio-masked du Manticore Executioner, désormais comparables à ceux du Karma AR-50 et du P-15. | **Haute** — billet officiel Frontier « Elite Dangerous \| Lynx Highliner Update Notes », 28 avril 2026 13:11 UTC.          |
 | **30 juin 2026** (jeu en 4.4.0.0), notes le **1ᵉʳ juillet 2026** | Mode coopératif **Operations**   | Nouveau mode d'escouade jusqu'à 4 commandants, avec six scénarios au lancement dont plusieurs se jouent essentiellement à pied. La même mise à jour corrige trois défauts de longue date des **zones de conflit au sol** (voir le détail sous le tableau). Nouvelle monnaie **Merc Coin** et catalogue **MercGear**. | **Haute** — billet officiel Frontier « Elite Dangerous \| Operations Update », 1ᵉʳ juillet 2026 14:01 UTC ; report annoncé le 22 avril 2026 14:02 UTC. Voir [13-operations.md](./13-operations.md). |
-| 2 septembre 2026 (et non « août 2025 »)     | Rhino (SRV de minage, fabricant Vodel) + opération « Under Siege » | Véhicule de surface à 3 places dédié au minage planétaire ; peut servir de couverture mobile improvisée en surface, mais son rôle premier est l'extraction (scanner de gisements, raffinerie embarquée), pas le combat. La même mise à jour ajoute une **septième opération, « Under Siege »** : répondre à l'appel de détresse d'un settlement planétaire, lever un blocus et neutraliser les forces ennemies qui tentent de s'en emparer — un scénario de combat de surface. | Haute — billet officiel Frontier « Elite Dangerous \| Rhino SRV Update », 2 septembre 2026 11:20 UTC. Voir 14-rhino-nomad.md et 00-chronologie-canonique.md §4.   |
+| 2 septembre 2026 (et non « août 2025 »)     | Rhino (SRV de minage, fabricant Vodel) + opération « Under Siege » | Véhicule de surface à 3 places dédié au minage planétaire ; peut servir de couverture mobile improvisée en surface, mais son rôle premier est l'extraction (scanner de gisements, raffinerie embarquée), pas le combat. La même mise à jour ajoute une **septième opération, « Under Siege »** : répondre à l'appel de détresse d'un settlement planétaire, lever un blocus et neutraliser les forces ennemies qui tentent de s'en emparer — un scénario de combat de surface. | Haute — billet officiel Frontier « Elite Dangerous \| Rhino SRV Update », 2 septembre 2026 11:20 UTC. Voir 14-rhino.md et 00-chronologie-canonique.md §4.   |
 
 ### Correctifs de zones de conflit au sol livrés avec la mise à jour Operations
 
@@ -94,7 +94,7 @@ l'ouverture de nouvelles Ground CZ via Powerplay 2.0 (31 octobre 2024) et la Col
 là où le combat au sol reposait jusque-là sur les CZ et les missions de settlement. Les PNJ au sol seraient par
 ailleurs devenus plus prudents (couverture, esquive, repli) autour de la période Caspian Explorer (2 décembre 2025),
 mais ce lien causal précis reste à confirmer en jeu. Voir [13-operations.md](./13-operations.md) pour le détail du
-mode Operations et [14-rhino-nomad.md](./14-rhino-nomad.md) pour les véhicules livrés dans la même fenêtre.
+mode Operations et [14-rhino.md](./14-rhino.md) pour les véhicules livrés dans la même fenêtre.
 
 ## L'équipement du commandant au sol
 
@@ -551,7 +551,7 @@ dans le corpus :
   détection/suspicion/confinement, catégories de missions au sol, zones de conflit à pied, et système **Operations**
   complet (lobby, appariement, difficulté, récompenses, Merc Coin). Ce guide-ci résume la mécanique et renvoie vers 13
   pour l'exhaustif.
-- **[14 — Le Rhino et le Nomad](./14-rhino-nomad.md)** — chronologie sourcée du SRV Rhino de Vodel (2 septembre 2026)
+- **[14 — Le Rhino et le Nomad](./14-rhino.md)** — chronologie sourcée du SRV Rhino de Vodel (2 septembre 2026)
   et du **Nomad**, premier vaisseau embarqué (SLV) du jeu, livré avec Operations le 30 juin 2026.
 - **[02 — Powerplay](./02-powerplay.md)** — détail de Powerplay 2.0 / l'extension Ascendancy (31 octobre 2024), dont
   les cycles hebdomadaires influencent l'apparition des Ground CZ liées aux Powers.
@@ -568,7 +568,7 @@ dans le corpus :
 ## Sources
 
 Corpus interne recoupé pour cette révision : 00-chronologie-canonique.md, 02-powerplay.md, 06-ingenieurs.md,
-07-equipement-a-pied.md, 13-operations.md, 14-rhino-nomad.md.
+07-equipement-a-pied.md, 13-operations.md, 14-rhino.md.
 
 **Source primaire de cette révision** — flux Steam News officiel d'Elite Dangerous (appid 359320), qui republie
 verbatim les annonces de Frontier, relevé le 9 septembre 2026 via
