@@ -6,12 +6,12 @@ entites: [Thargoïdes, Guardians, Fédération, Empire d'Achenar, Alliance des S
 mots_cles_en: [Thargoid, Guardian, Federation, Empire, Alliance, Pilots Federation, AEGIS, Salvation, Raxxla, Maelstrom, Titan, Distant Worlds]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-12
 confiance_globale: moyenne
 volatilite: basse
 sources_primaires: [Canonn, GalNet mirroré sur Inara.cz, Steam News Frontier, elitedangerous.com, Wikipédia, wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge), distantworlds3.space]
 zones_incertaines: ["date réelle de généralisation des propulseurs SCO à toutes les FSD, non confirmée en source primaire", "rôle d'Arek Vandevar auprès du Guardian Tech Broker, documenté seulement en source communautaire", "date de départ, effectifs et parcours de l'expédition Distant Worlds 3", "filiation narrative entre la recherche AEGIS/Salvation et les propulseurs SCO, lecture communautaire et non fait canonique", "étendue du territoire thargoïde au plus fort du conflit, estimations communautaires divergentes", "taux exact de rebuy de la Pilots Federation, à revérifier en jeu"]
-guides_lies: [0, 2, 5, 18, 24, 25]
+guides_lies: [0, 2, 5, 18, 24, 25, 32]
 ---
 # Elite Dangerous : lore et histoire de l'univers
 
@@ -229,7 +229,7 @@ Contrairement à la Fédération, l'Empire et l'Alliance, la **Pilots Federation
 - **Rebuy et assurance** : lorsqu'un vaisseau de Commandant est détruit, la Pilots Federation permet de le « racheter » (**rebuy**) moyennant une fraction de sa valeur totale (coque et modules), plutôt que de le perdre définitivement — le filet de sécurité qui explique que la destruction d'un vaisseau ne mette jamais fin à une carrière de Commandant. Le taux exact de ce rachat et ses cas de majoration sont documentés dans le guide [Combat spatial](./08-combat-spatial.md) *(chiffre à revérifier en jeu : susceptible d'ajustement par Frontier)*.
 - **Rescue Rangers** : branche bénévole affiliée qui organise gratuitement la récupération des pilotes en détresse critique (à distinguer des **Fuel Rats**, initiative communautaire indépendante, voir section 7.7).
 
-Voir aussi [Combat spatial](./08-combat-spatial.md) pour les mécaniques détaillées de rebuy, de rang de combat et d'assurance de vaisseau.
+Voir aussi [Combat spatial](./08-combat-spatial.md) pour les mécaniques détaillées de rebuy, de rang de combat et d'assurance de vaisseau. Pour situer ces capitales et Shinrarta Dezhra dans un référentiel spatial complet — rayon de la Bulle, distances, gazetteer d'une trentaine de systèmes fondateurs — voir [32-geographie-galactique.md](./32-geographie-galactique.md).
 
 ---
 

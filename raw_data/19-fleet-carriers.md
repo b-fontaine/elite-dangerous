@@ -11,7 +11,7 @@ confiance_globale: haute
 volatilite: haute
 sources_primaires: [roguey.co.uk, guide PTN Fleet Carrier Owner's Guide, elite-journal.readthedocs.io, FC-Fuel-Estimator (GitHub), Wikipedia Elite Dangerous, forums.frontier.co.uk]
 zones_incertaines: ["coûts hebdomadaires exacts des trois services Odyssey (Concourse, Vista Genomics, Pioneer Supplies), non retrouvés dans les sources accessibles", "date précise et caractère « stealth change » du déblocage du commerce de denrées rares sur un Porte-Vaisseau, appuyé sur une seule citation de forum", "répartition des seize baies d'appontage, documentée par roguey.co.uk seul, sans deuxième source indépendante", "application ou non du bonus de prix par distance des denrées rares sur le marché d'un Porte-Vaisseau"]
-guides_lies: [2, 4, 6, 11, 12, 18, 20, 22, 31]
+guides_lies: [2, 4, 6, 11, 12, 18, 20, 22, 31, 32]
 ---
 
 # Porte-vaisseaux de joueur (Fleet Carriers)
@@ -375,6 +375,8 @@ synergie) qu'une mécanique pleinement développée par Frontier — à formuler
 - [Équipements](./04-equipements.md) — Fuel Transfer Limpet et Repair Limpet utilisables en soutien de flotte.
 - [Escadrons](./22-squadrons.md) — Porte-Vaisseau d'escadron, mutualisation des coûts.
 - [00 — Chronologie canonique](./00-chronologie-canonique.md) — date de référence de la mise à jour Trailblazers (26 février 2025).
+- [32 — Géographie galactique](./32-geographie-galactique.md) — Colonia Bridge (≈56 mégavaisseaux relais entre Alcor
+  et Colonia) et réseau communautaire DSSA, deux logistiques de Porte-Vaisseau à grande distance.
 
 ## Sources
 

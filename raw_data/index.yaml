@@ -11,7 +11,7 @@
 # impose de régénérer ce fichier.
 
 date_generation: 2026-09-12
-nombre_de_guides: 33
+nombre_de_guides: 34
 genere_depuis: "front-matter YAML des fichiers raw_data/NN-*.md"
 indexer_ce_fichier: false
 
@@ -513,3 +513,18 @@ guides:
     sources_primaires: ["elite-dangerous.fandom.com (Supercruise, Supercruise Assist, Docking, Station, Access Corridor, Outpost, Surface Port, Orbis, Coriolis, Ocellus, Asteroid Base, Megaship, Fleet Carrier, Landing Pad, Concourse, Black Market, Interstellar Factor, Material Trader, Technology Broker, Universal Cartographics, HUD/Left, HUD/Right, HUD/Center, Sensors, Power Plant, Shield Generator, Orbital Cruise, Planetary Landing, Glide, Landing Gear, Gravity, Fuel, Fuel Scoop, Frame Shift Drive, Scarab, Scorpion, Wave Scanner, Drive Assist, Skimmers, Defence Turrets, Synthesis, Redeployment, Planetary Vehicle Hangar, Shipyard, Outfitting)", "elitedangerous.com (Update Notes Trailblazers 3.3 v4.1.2.102 ; boutique officielle Scarab/Scorpion)", "community.elitedangerous.com (Horizons Quick Start Guide)", "forums.frontier.co.uk (accostage, supercroisière, transfert de vaisseau/module, pips SRV)", "confluence.fuelrats.com (Rescue Standard Operating Procedures)", "corpus interne (03-vaisseaux, 04-equipements, 08-combat-spatial, 14-rhino, 19-fleet-carriers)"]
     zones_incertaines: ["contradiction non résolue entre deux pages du même wiki communautaire sur le délai avant destruction en cas d'accostage sans autorisation : 90 secondes (page Docking) contre 60 secondes (page Station)", "rayon exact de la no-fire zone d'une station, jamais chiffré par une source officielle", "délai précis de tolérance de flânerie sur un pad non assigné avant tir, non confirmé par une source primaire", "prime active comme motif de refus de la demande d'accostage, non confirmé par les sources consultées", "formule exacte de décélération gravitationnelle en supercroisière, jamais publiée par Frontier", "seuil chiffré de dégâts au train d'atterrissage, non documenté officiellement", "formule de consommation de carburant par saut FSD, qualifiée de spéculative par sa propre source", "capacité de soute du Scorpion : 2 t (2021) contre 30 t (site actuel), suspicion d'erreur d'affichage", "formule de coût et de délai de transfert de vaisseau/module, datée de 2019 et non revérifiée", "géométrie d'amarrage et gravité artificielle d'un megaship accostable, non documentées", "statut de l'Interstellar Factor, du Material Trader et du Technology Broker dans les seuils officiels de la Colonisation, absents de la liste des huit services couverts"]
     guides_lies: [3, 4, 5, 8, 14, 16, 18, 19, 20, 27]
+
+  - id: 32-geographie-galactique
+    fichier: 32-geographie-galactique.md
+    titre: "Géographie galactique, systèmes de référence et grands voyages dans Elite Dangerous"
+    domaine: "exploration"
+    entites: ["la Bulle", "Core Systems", "Colonia", "Jaques Station", "Sagittarius A*", "Beagle Point", "Hutton Orbital", "Colonia Bridge", "DSSA", "Stellar Forge", "Inner Orion Spur", "Shinrarta Dezhra"]
+    mots_cles_en: ["the bubble", "core systems", "colonia", "jaques station", "sagittarius a*", "beagle point", "hutton orbital", "colonia bridge", "dssa", "deep space support array", "stellar forge", "galactic regions", "spiral arm", "boxel"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-12"
+    confiance_globale: "moyenne"
+    volatilite: "basse"
+    sources_primaires: ["elite-dangerous.fandom.com (Core Systems, Galactic regions, Inner Orion Spur et bras nommés, Galaxy, Stellar Forge, Colonia, Jaques Station, Colonia Bridge, Sagittarius A*, Explorer's Anchorage, Beagle Point, Hutton Orbital, Pleiades/Witch Head/California Nebula, fiches des systèmes du gazetteer)", "hosting.zaonce.net (Player Journal Manual v32, champ StarPos)", "edsm.net (API publique, coordonnées vérifiées)", "wiki.herzbube.ch (nomenclature Stellar Forge)", "forums.frontier.co.uk (fil officiel DSSA)", "corpus interne (01-lore, 02-powerplay, 05-guardians, 10-exploration, 19-fleet-carriers)"]
+    zones_incertaines: ["rayon exact de la Bulle : ~200 al mesuré sur trois axes, une valeur de 150 al circule sans source primaire retrouvée", "nombre total actuel de systèmes peuplés dans/autour de la Bulle après plusieurs années de colonisation joueur", "aucune carte officielle de frontières fixes Fédération/Empire/Alliance", "allégeance actuelle de Riedquat : contradiction entre deux pages du même wiki communautaire", "nombre exact et espacement en années-lumière des porte-vaisseaux du réseau DSSA, non publié officiellement", "distance de route réelle jusqu'à Beagle Point, par opposition à la distance en ligne droite de 65 279 al", "classement officiel distance-par-distance des bras spiraux du Codex, non publié par Frontier", "format de nommage Stellar Forge (lettres de masse, tailles de boxel), reconstruction communautaire jamais démentie mais non documentée par une source primaire", "fiche système dédiée à Varati introuvable sur le wiki communautaire"]
+    guides_lies: [1, 2, 5, 10, 19]

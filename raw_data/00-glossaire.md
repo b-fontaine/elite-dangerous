@@ -2,25 +2,27 @@
 id: 00-glossaire
 titre: "Glossaire Elite Dangerous"
 domaine: transversal
-entites: [AEGIS, ARX, BGS, Powerplay, Fleet Carrier, Frame Shift Drive, Supercruise Overcharge, Detailed Surface Scanner, Full Spectrum Scanner, Hull Reinforcement Package, Module Reinforcement Package, SRV]
-mots_cles_en: [glossary, acronym, Background Simulation, Community Goal, Conflict Zone, Fleet Carrier, Frame Shift Drive, Supercruise Overcharge, Detailed Surface Scanner, Full Spectrum Scanner, Resource Extraction Site, Unidentified Signal Source]
+entites: [AEGIS, ARX, BGS, Bulle, Powerplay, Fleet Carrier, Frame Shift Drive, Supercruise Overcharge, Detailed Surface Scanner, Full Spectrum Scanner, Hull Reinforcement Package, Module Reinforcement Package, SRV]
+mots_cles_en: [glossary, acronym, Background Simulation, Community Goal, Conflict Zone, Fleet Carrier, Frame Shift Drive, Supercruise Overcharge, Detailed Surface Scanner, Full Spectrum Scanner, Resource Extraction Site, Unidentified Signal Source, the bubble, core systems]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-12
 confiance_globale: moyenne
 volatilite: basse
 sources_primaires: [guides du corpus (04-equipements.md pour la catégorie des modules), Codex in-jeu / Almanach]
 zones_incertaines: ["développement exact du sigle NMLA, à vérifier au Codex in-jeu", "sigle INRA attesté au Codex mais non recoupé sur une source in-jeu stricte"]
-guides_lies: [4]
+guides_lies: [4, 32]
 ---
 
 # Glossaire Elite Dangerous
 
 ## En bref
 
-Ce glossaire réunit 27 sigles et termes techniques d'*Elite Dangerous*, classés par ordre alphabétique ; chaque entrée
+Ce glossaire réunit 28 sigles et termes techniques d'*Elite Dangerous*, classés par ordre alphabétique ; chaque entrée
 donne le développement complet du sigle, puis sa définition. Il couvre les institutions et le lore (AEGIS, GalCop,
-INRA, NMLA), la monnaie cosmétique ARX, les mécaniques de fond (BGS pour *Background Simulation*, INF pour
+INRA, NMLA), la monnaie cosmétique ARX, la région centrale peuplée de la galaxie (**Bulle**, ≈200 années-lumière de
+rayon autour de Sol — voir [32-geographie-galactique.md](./32-geographie-galactique.md)), les mécaniques de fond (BGS
+pour *Background Simulation*, INF pour
 *Influence*, PMF pour *Player Minor Faction*, Powerplay), les formats de jeu (CG pour *Community Goal*, CZ pour
 *Conflict Zone*, RES pour *Resource Extraction Site*, USS pour *Unidentified Signal Source*, PvE, PvP, NPC, CMDR),
 l'outillage communautaire (EDSM pour *Elite Dangerous Star Map*) et surtout le matériel de bord : FSD (*Frame Shift
@@ -47,6 +49,14 @@ Glossaire commun des sigles et termes techniques utilisés dans les guides du co
 ### BGS — simulation de fond des factions mineures
 **Développement complet :** Background Simulation.
 **Définition :** simulation de fond qui gère l'influence des factions mineures, leurs états (guerre, essor, élection, famine, etc.) et l'économie de chaque système. Les actions des joueurs (missions, commerce, combats) modifient cet équilibre.
+
+### Bulle (The Bubble) — région centrale peuplée de la galaxie, autour de Sol
+**Développement complet :** aucun (nom courant, alias officieux « Core Systems »).
+**Définition :** région ellipsoïdale d'environ 200 années-lumière de rayon autour de Sol, dans la région galactique
+Inner Orion Spur, qui concentre plus de 20 000 systèmes peuplés et la quasi-totalité du territoire des trois
+superpuissances (Fédération, Empire, Alliance). Utilisée dans 13 fichiers du corpus sans jamais y être définie
+avant [32-geographie-galactique.md §1](./32-geographie-galactique.md#1-la-bulle--définition-chiffrée), qui en donne
+le rayon, la démographie et l'absence de frontière territoriale fixe.
 
 ### CG — objectif communautaire à durée limitée
 **Développement complet :** Community Goal.

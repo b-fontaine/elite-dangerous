@@ -11,7 +11,7 @@ confiance_globale: haute
 volatilite: moyenne
 sources_primaires: ["canonn.science", "EDSM (API publique)", "EDCD/coriolis-data", "EDCD/FDevIDs", "Elite Dangerous Wiki (Fandom, API MediaWiki)", "inara.cz"]
 zones_incertaines: ["le type exact de bâtiment présent sur chaque site Guardian n'a pas pu être vérifié site par site", "la cartographie exhaustive des types d'obélisques n'a pas pu être revérifiée auprès d'une source primaire", "les plages de bonus par grade (1 à 5) des blueprints d'ingénierie applicables aux armes Guardian", "les quantités du Tech Broker pour les autres classes que celles listées (FSD Booster classes 2 à 5, armes small/large)", "le minutage de charge des 6 pylônes d'un site au sol, seulement extrapolé des 3 minutes documentées pour une balise", "la durée totale d'un passage complet sur un Guardian Structure, non chiffrée par une source primaire", "le rattachement aux Guardians du teaser Canonn du 30 août 2025 relève d'une hypothèse communautaire"]
-guides_lies: [0, 3, 6, 7, 8, 9, 10, 18, 25, 31]
+guides_lies: [0, 3, 6, 7, 8, 9, 10, 18, 25, 31, 32]
 ---
 # Guide complet des Guardians dans Elite Dangerous
 
@@ -43,7 +43,8 @@ expédition Guardian (ingénierie, équipement à pied, combat, exploration, col
 
 Les Guardians sont une civilisation extraterrestre humanoïde découverte par les Commanders en 3302-3303, dans une région
 aujourd'hui surnommée informellement « la Nébuleuse Guardian » : un amas de systèmes situé à plusieurs centaines
-d'années-lumière de la Bulle humaine, dans le secteur regroupant des systèmes comme Synuefe ou les désignations HIP. Les
+d'années-lumière de la Bulle humaine (rayon de la Bulle et distances de référence dans
+[32-geographie-galactique.md](./32-geographie-galactique.md)), dans le secteur regroupant des systèmes comme Synuefe ou les désignations HIP. Les
 vestiges retrouvés sur place — ruines, structures militaires, technologies avancées — indiquent que cette civilisation a
 mené une lutte défensive de grande ampleur avant de s'éteindre, il y a environ un à deux millions d'années. L'identité
 exacte de l'ennemi affronté par les Guardians reste débattue dans le lore du jeu, mais plusieurs éléments narratifs

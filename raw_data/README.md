@@ -67,12 +67,20 @@ vaisseaux et de modules) a été ajoutée directement dans [03-vaisseaux.md](./0
 longtemps traité comme un vaisseau non confirmé avant la réparation du troisième cycle — un mauvais point d'entrée
 RAG). Le corpus compte désormais **31 guides thématiques**.
 
+Un neuvième cycle, mené le même jour, a donné au corpus le référentiel spatial qui lui manquait entièrement. Le
+nouveau guide [32-geographie-galactique.md](./32-geographie-galactique.md) définit enfin la **Bulle** (≈200 al de
+rayon, plus de 20 000 systèmes peuplés, aucune frontière territoriale fixe), employée sans définition dans 13
+fichiers depuis le premier cycle, avec un gazetteer de 31 systèmes fondateurs, les distances de référence des
+grandes destinations (Colonia, Sagittarius A\*, Beagle Point, Hutton Orbital), la structure en bras spiraux et
+régions du Codex, et la nomenclature Stellar Forge des secteurs procéduraux. Une entrée « Bulle » a été ajoutée au
+[glossaire](./00-glossaire.md). Le corpus compte désormais **32 guides thématiques**.
+
 ## Deux corpus dans le même dépôt : règle de préséance
 
 Le dépôt héberge deux ensembles de contenu francophone qui se recouvrent partiellement et n'avaient jamais été
 réconciliés. Cette section pose la règle qui les départage.
 
-- **`raw_data/`** — 33 fichiers markdown (31 guides thématiques et 2 documents transversaux) : la base de
+- **`raw_data/`** — 34 fichiers markdown (32 guides thématiques et 2 documents transversaux) : la base de
   connaissances de référence sur **le jeu**, écrite pour alimenter le RAG. C'est le présent répertoire. Chaque guide
   porte un front-matter YAML et un encart « En bref » ; [`index.yaml`](./index.yaml) en agrège les métadonnées et sert
   de routeur de requête. Le gabarit du front-matter et l'usage de l'index sont spécifiés dans les *Notes d'ingestion
@@ -184,7 +192,7 @@ celui défini par les *Notes d'ingestion RAG* en fin de document, qui n'indexe q
   Powerplay), formats de jeu (CG, CZ, RES, USS, PvE, PvP, NPC, CMDR) et matériel de bord (FSD et sa variante SCO, DSS,
   FSS, HRP, MRP, SRV, FC). Les entrées de modules précisent leur catégorie d'emplacement.
 
-Les 31 guides thématiques sont regroupés ci-dessous par domaine.
+Les 32 guides thématiques sont regroupés ci-dessous par domaine.
 
 ## Débuter et progresser
 
@@ -348,6 +356,11 @@ Les 31 guides thématiques sont regroupés ci-dessous par domaine.
   respectant la distance minimale du genre, vente à **Vista Genomics**, catalogue de **118 espèces** allant de
   952 296 Cr à 20 000 000 Cr et multiplicateur *First Logged* ×5. Le **Nomad** et son *Mk II Biological Scanner* y
   complètent le SRV depuis le 30 juin 2026.
+- [Géographie galactique, systèmes de référence et grands voyages](./32-geographie-galactique.md) — Donne au corpus
+  le référentiel spatial qui lui manquait : la **Bulle** (≈200 al de rayon autour de Sol, plus de 20 000 systèmes
+  peuplés, aucune frontière territoriale fixe), un gazetteer de **31 systèmes** fondateurs, les distances de
+  référence (Colonia à 22 000 al, Sagittarius A\* à 25 900 al, Beagle Point à 65 279 al **en ligne droite**, Hutton
+  Orbital à 0,22 al), les 42 régions du Codex et la nomenclature Stellar Forge des secteurs procéduraux.
 
 ## Économie (Commerce, Transport, Minage, Fleet Carriers, Marchandises)
 
@@ -449,7 +462,7 @@ quels par un humain.
 ### Règle 1 — N'indexer que les guides
 
 Indexer `raw_data/*.md` **à l'exclusion de `README.md`**, et ne pas indexer `raw_data/index.yaml`, qui n'est pas un
-guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 33 fichiers dont le
+guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 34 fichiers dont le
 nom correspond à `^\d{2}-.*\.md$` à la racine de `raw_data/`.
 
 Ce glob doit rester **non récursif** et ignorer les répertoires cachés : `raw_data/` peut contenir un `.omc/`
@@ -494,23 +507,24 @@ recouvre lexicalement l'ensemble du corpus. Indexées, elles remontent en tête 
 évincent les passages qui contiennent réellement la réponse. Les renvois croisés utiles restent accessibles au lecteur
 humain dans le fichier ; ils n'ont simplement pas leur place dans l'index vectoriel.
 
-**Relevé du 12 septembre 2026, après l'ajout du guide pilotage/stations : 65 sections, 20 287 mots.**
+**Relevé du 12 septembre 2026, après l'ajout du guide de géographie galactique : 67 sections, 20 676 mots.**
 Comptage : titres capturés par le motif ci-dessus dans les fichiers `NN-*.md`, contenu compté jusqu'au titre de
-même niveau ou de niveau supérieur suivant, `split()` sur les espaces. Vingt-huit guides
+même niveau ou de niveau supérieur suivant, `split()` sur les espaces. Vingt-neuf guides
 portent deux sections concernées (`## Voir aussi` et `## Sources`), trois en portent trois —
 [05-guardians.md](./05-guardians.md), [07-equipement-a-pied.md](./07-equipement-a-pied.md) et
 [10-exploration.md](./10-exploration.md), qui ajoutent chacun une section de ressources externes —, et deux n'en
 portent aucune : [00-chronologie-canonique.md](./00-chronologie-canonique.md) et
-[00-glossaire.md](./00-glossaire.md). Soit 28 × 2 + 3 × 3 + 2 × 0 = 65 sections pour 33 fichiers. Les blocs les plus
+[00-glossaire.md](./00-glossaire.md). Soit 29 × 2 + 3 × 3 + 2 × 0 = 67 sections pour 34 fichiers. Les blocs les plus
 lourds sont les `## Sources` de [06-ingenieurs.md](./06-ingenieurs.md) (1 783 mots) et de
 [20-minage.md](./20-minage.md) (1 776 mots), suivis de celui de
 [10-exploration.md](./10-exploration.md) (788 mots) et de celui de
-[28-marchandises.md](./28-marchandises.md) (749 mots) — ni
-[29-missions-reputation-et-rangs.md](./29-missions-reputation-et-rangs.md) (`## Voir aussi` 221 mots, `## Sources`
-548 mots), ni [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) (`## Voir aussi` 143 mots, `## Sources` 364 mots),
-ni [14-rhino.md](./14-rhino.md) (`## Voir aussi` 290 mots, `## Sources` 532 mots), ni
+[28-marchandises.md](./28-marchandises.md) (749 mots) — aucun des guides suivants n'y figure, tous restant sous ce
+seuil : [29-missions-reputation-et-rangs.md](./29-missions-reputation-et-rangs.md) (`## Voir aussi` 221 mots,
+`## Sources` 548 mots), [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) (`## Voir aussi` 143 mots, `## Sources`
+364 mots), [14-rhino.md](./14-rhino.md) (`## Voir aussi` 290 mots, `## Sources` 532 mots),
 [31-pilotage-navigation-et-stations.md](./31-pilotage-navigation-et-stations.md) (`## Voir aussi` 162 mots,
-`## Sources` 275 mots) n'y figurent : tous restent sous ce seuil.
+`## Sources` 275 mots), et [32-geographie-galactique.md](./32-geographie-galactique.md) (`## Voir aussi` 120 mots,
+`## Sources` 269 mots).
 
 Deux écarts avec le relevé précédent, publié le même jour et corrigés ici, méritent d'être signalés parce qu'ils
 illustrent exactement le défaut que ce relevé est censé prévenir. Le décompte de **57 sections** était juste, mais la
@@ -526,7 +540,7 @@ sur lui.
 **Méthode de comptage, à reproduire à l'identique après toute révision.** Ces deux chiffres ne sont comparables dans
 le temps que si la mesure l'est aussi. La convention retenue est la suivante :
 
-1. **Périmètre** : les 33 fichiers du périmètre indexé défini à la règle 1 ; `README.md`, `index.yaml` et les
+1. **Périmètre** : les 34 fichiers du périmètre indexé défini à la règle 1 ; `README.md`, `index.yaml` et les
    sous-répertoires en sont exclus.
 2. **Détection** : une section est retenue si sa ligne de titre correspond au motif ci-dessus et ne figure pas dans la
    liste des exceptions, vide à ce jour.

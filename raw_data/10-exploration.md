@@ -13,7 +13,7 @@ mots_cles_en: ["exobiology", "Vista Genomics", "Universal Cartographics", "Full 
   "landable body", "Distant Worlds", "Beagle Point"]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-12
 confiance_globale: haute
 volatilite: haute
 sources_primaires: ["Canonn Research", "wiki Elite Dangerous", "EDDiscovery/EliteDangerousCore (commit
@@ -45,7 +45,7 @@ zones_incertaines: ["valeur de 952 296 Cr de Radicoida Unica : observation uniqu
   établi, les fiches EDSM ne portent pas ce champ", "date de départ, effectifs et itinéraire de Distant Worlds 3 : non
   établis, compteurs du site officiel remplis côté client", "bornes de la première expédition Distant Worlds : la
   fiche EDSM donne 14 janvier - 5 juin 2016, plus large que le « fin 2015 - début 2016 » de 01-lore.md"]
-guides_lies: [0, 1, 4, 5, 6, 7, 13, 14, 17, 18, 19, 20, 21, 23, 24, 25, 27]
+guides_lies: [0, 1, 4, 5, 6, 7, 13, 14, 17, 18, 19, 20, 21, 23, 24, 25, 27, 32]
 ---
 
 # Guide complet de l'exploration et de l'exobiologie dans Elite Dangerous
@@ -631,7 +631,11 @@ confins de la galaxie, et plus précisément jusqu'à **Beagle Point**. Elles so
 mécanique générique des **Community Goals** (voir [Community Goals](./24-community-goals.md)) et se déroulent le plus
 souvent en **Wing** organisé (voir [Wings, Multicrew et CQC](./23-jeu-en-groupe.md)). Leur récit et leur place dans la
 chronologie figurent dans [Lore](./01-lore.md) ; ce qui suit en donne la logistique vérifiable, telle que
-l'enregistrent les fiches d'expédition d'EDSM et le site officiel de la dernière édition.
+l'enregistrent les fiches d'expédition d'EDSM et le site officiel de la dernière édition. Les distances de route
+listées ci-dessous (parcours réel, en sauts successifs) ne doivent pas être confondues avec la distance **en ligne
+droite** entre Sol et Beagle Point (≈ 65 279 al, toujours inférieure à une distance de route) — voir
+[32-geographie-galactique.md §3 et §5.3](./32-geographie-galactique.md), qui donne aussi le référentiel spatial
+complet (rayon de la Bulle, Sagittarius A*, Colonia) absent jusqu'ici de ce guide.
 
 Trois éditions ont eu lieu. Le tableau les recense — 3 lignes, recomptées sur son contenu —, et distingue
 systématiquement les grandeurs qui circulent sous le même mot :
