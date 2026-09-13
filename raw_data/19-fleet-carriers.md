@@ -6,10 +6,10 @@ entites: [Fleet Carrier, Porte-Vaisseau, Tritium, Tritium Depot, Drydock, Shipya
 mots_cles_en: [fleet carrier, tritium, tritium depot, carrier jump, decommissioning, drydock, shipyard, outfitting, landing pads, stronghold carrier]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-12
+date_verification: 2026-09-13
 confiance_globale: haute
 volatilite: haute
-sources_primaires: [roguey.co.uk, guide PTN Fleet Carrier Owner's Guide, elite-journal.readthedocs.io, FC-Fuel-Estimator (GitHub), Wikipedia Elite Dangerous, forums.frontier.co.uk]
+sources_primaires: [roguey.co.uk, guide PTN Fleet Carrier Owner's Guide, elite-journal.readthedocs.io, FC-Fuel-Estimator (GitHub), Wikipedia Elite Dangerous, forums.frontier.co.uk, PC Gamer (mai 2020), wiki Fandom « Fleet Carriers Update » (miroir)]
 zones_incertaines: ["coûts hebdomadaires exacts des trois services Odyssey (Concourse, Vista Genomics, Pioneer Supplies), non retrouvés dans les sources accessibles", "date précise et caractère « stealth change » du déblocage du commerce de denrées rares sur un Porte-Vaisseau, appuyé sur une seule citation de forum", "répartition des seize baies d'appontage, documentée par roguey.co.uk seul, sans deuxième source indépendante", "application ou non du bonus de prix par distance des denrées rares sur le marché d'un Porte-Vaisseau"]
 guides_lies: [2, 4, 6, 11, 12, 18, 20, 22, 31, 32]
 ---
@@ -18,7 +18,7 @@ guides_lies: [2, 4, 6, 11, 12, 18, 20, 22, 31, 32]
 
 ## En bref
 
-Le **Porte-Vaisseau de joueur** (*Fleet Carrier*, **FC**, [glossaire](./00-glossaire.md)), introduit le 9 avril 2020, est une méga-structure mobile
+Le **Porte-Vaisseau de joueur** (*Fleet Carrier*, **FC**, [glossaire](./00-glossaire.md)), introduit le 9 juin 2020, est une méga-structure mobile
 privée achetée **5 000 000 000 Cr** auprès du vendeur installé dans un système doté d'un chantier naval (*Drydock*).
 Il facture **5 000 000 Cr d'entretien hebdomadaire** à vide, plus **100 000 Cr par saut** et le coût de chaque service
 optionnel installé — de 1,5 M Cr pour Refuel, Repair ou Rearm jusqu'à **6,5 M Cr pour le Shipyard**. Il offre
@@ -34,9 +34,15 @@ cargo ni le Tritium restants.
 Le **Porte-Vaisseau de joueur** (*Fleet Carrier*, souvent abrégé **FC**) est une méga-structure mobile privée, achetée
 par un Commandant (ou financée collectivement par un [escadron](./22-squadrons.md)), capable de sauter de système en
 système avec sa propre soute, son propre marché et une partie des services habituellement réservés aux stations. Il a
-été introduit le **9 avril 2020** (confirmé directement sur l'article Wikipédia dédié au jeu : « On 9 April 2020,
-Fleet Carriers were added to the game, allowing players to own what are essentially mobile space stations for private
-use »), puis considérablement enrichi depuis (commerce de denrées rares, services Odyssey). Ce guide couvre l'achat,
+été introduit le **9 juin 2020** avec la mise à jour **v3.7 « Fleet Carriers Update »** (le Drake-Class Carrier).
+*(Correction du 13 septembre 2026 : une révision antérieure de ce guide datait l'introduction du 9 avril 2020, en
+s'appuyant sur une phrase de l'article Wikipédia anglais — « On 9 April 2020, Fleet Carriers were added to the game »
+— qui se révèle imprécise. Le 9 avril 2020 est la date d'ouverture de la **première bêta fermée**, PC uniquement
+(7-20 avril 2020) ; une seconde bêta a suivi du 11 au 26 mai 2020 (PC/Xbox/PS4) ; la fonctionnalité n'est réellement
+livrée à tous les joueurs que le 9 juin 2020. Voir [00-chronologie-canonique.md](./00-chronologie-canonique.md) pour
+la chronologie complète du jeu et cette correction.)* Il a ensuite été considérablement enrichi (commerce de denrées
+rares, services Odyssey — dont les intérieurs du Concourse, ajoutés seulement avec Odyssey Update 11, 15 mars 2022).
+Ce guide couvre l'achat,
 l'entretien hebdomadaire, la capacité de soute, le carburant Tritium, les services embarqués, le décommissionnement,
 et les usages spécialisés (commerce, minage, colonisation, ingénierie, Powerplay) — avec, pour chaque chiffre, un
 niveau de confiance explicite lorsque les sources divergent ou n'ont pas pu être recoupées.

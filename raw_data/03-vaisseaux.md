@@ -11,12 +11,12 @@ mots_cles_en: [shipyard, hardpoints, optional internals, jump range, supercruise
   hull cost, retail cost]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-12
+date_verification: 2026-09-13
 confiance_globale: haute
 volatilite: haute
 sources_primaires: ["Inara.cz", "EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27)",
   "EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579)", "Steam News Frontier (appid 359320)",
-  "EDCD/EDDI ticket 2849", "Wikipedia EN"]
+  "EDCD/EDDI ticket 2849", "Wikipedia EN", "presse spécialisée d'époque sur les Updates 17 et 18 (Massively Overpowered)"]
 zones_incertaines: ["dureté de coque, mass lock, capacité thermique et coût de coque nue du Lynx Highliner absents des
     deux jeux de données EDCD, donc non documentés",
   "écart entre les valeurs de blindage et de bouclier des fiches individuelles (relevés Inara, équipement d'origine
@@ -77,8 +77,11 @@ aucun rang** : ils s'achètent avec des crédits, comme n'importe quel autre vai
 ### Le Supercruise Overcharge (SCO) : disponible sur tout FSD, pas réservé à huit vaisseaux
 
 Le **Supercruise Overcharge** (SCO — voir [glossaire](./00-glossaire.md)) est un **mode d'utilisation du FSD**, pas un
-module à part : depuis la mise à jour **Update 17** (2024), n'importe quel vaisseau équipé d'un FSD standard peut
-l'activer en supercroisière pour une accélération temporaire, au prix d'une accumulation de chaleur plus rapide.
+module à part : depuis sa généralisation par les **Updates 18.02 et 18.04** (avril-mai 2024 — *correction du
+13 septembre 2026, une version antérieure de ce guide citait à tort l'Update 17, qui porte en réalité sur le minage
+des matériaux de Titan ; voir [00-chronologie-canonique.md](./00-chronologie-canonique.md)*), n'importe quel vaisseau
+équipé d'un FSD standard peut l'activer en supercroisière pour une accélération temporaire, au prix d'une
+accumulation de chaleur plus rapide.
 
 Ce qui est réellement propre à huit vaisseaux — **Python Mk II, Type-8 Transporter, Mandalay, Caspian Explorer, Cobra
 Mk V, Corsair, Panther Clipper Mk II et Type-11 Prospector** — c'est qu'ils sont livrés **d'origine** avec une variante

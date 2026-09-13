@@ -2,16 +2,16 @@
 id: 01-lore
 titre: "Elite Dangerous : lore et histoire de l'univers"
 domaine: lore
-entites: [Thargoïdes, Guardians, Fédération, Empire d'Achenar, Alliance des Systèmes Indépendants, Pilots Federation, AEGIS, Salvation, Raxxla, Titans (Maelstroms), Colonia, Distant Worlds, Pléiades, Maia, Merope, Barnacle, Constructs, Monolith Network]
-mots_cles_en: [Thargoid, Guardian, Federation, Empire, Alliance, Pilots Federation, AEGIS, Salvation, Raxxla, Maelstrom, Titan, Distant Worlds, pleiades, maia, merope, barnacle, construct, guardian civil war, monolith network]
+entites: [Thargoïdes, Guardians, Fédération, Empire d'Achenar, Alliance des Systèmes Indépendants, Pilots Federation, AEGIS, Salvation, Raxxla, Titans (Maelstroms), Colonia, Distant Worlds, Pléiades, Maia, Merope, Barnacle, Constructs, Monolith Network, Jerome Archer, NMLA, Marlinist Colonies, Lords of Restoration, Formidine Rift, Projet Dynasty, Zurara, Far God, The Club, Guardian Beacons, GalNet, Fuel Rats, Hull Seals, Fleetcomm]
+mots_cles_en: [Thargoid, Guardian, Federation, Empire, Alliance, Pilots Federation, AEGIS, Salvation, Raxxla, Maelstrom, Titan, Distant Worlds, pleiades, maia, merope, barnacle, construct, guardian civil war, monolith network, jerome archer, nmla, marlinist colonies, lords of restoration, formidine rift, project dynasty, zurara, far god cult, the club, guardian beacon, galnet, canon, transmedia, fuel rats, hull seals]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-12
+date_verification: 2026-09-13
 confiance_globale: moyenne
 volatilite: basse
-sources_primaires: [Canonn, GalNet mirroré sur Inara.cz, Steam News Frontier, elitedangerous.com, Wikipédia, wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge), distantworlds3.space]
-zones_incertaines: ["date réelle de généralisation des propulseurs SCO à toutes les FSD, non confirmée en source primaire", "rôle d'Arek Vandevar auprès du Guardian Tech Broker, documenté seulement en source communautaire", "date de départ, effectifs et parcours de l'expédition Distant Worlds 3", "filiation narrative entre la recherche AEGIS/Salvation et les propulseurs SCO, lecture communautaire et non fait canonique", "étendue du territoire thargoïde au plus fort du conflit, estimations communautaires divergentes", "taux exact de rebuy de la Pilots Federation, à revérifier en jeu", "divergence d'un jour entre deux pages du même wiki communautaire sur la date de découverte du premier Barnacle vs. du premier Meta-Alloy à Merope 5 C (15 vs 14 janvier 3302)", "absence de système de castes documenté chez les Guardians : structure sociale attestée en clans puis cités-États, sans hiérarchie de castes confirmée par une source consultée", "devenir des Constructs après l'extinction guardian : hypothèse de survie non tranchée, attribuée à Ram Tah"]
-guides_lies: [0, 2, 5, 18, 24, 25, 32]
+sources_primaires: [Canonn, GalNet mirroré sur Inara.cz, Steam News Frontier, elitedangerous.com, Wikipédia, wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge), distantworlds3.space, forums.frontier.co.uk, drewwagar.com]
+zones_incertaines: ["rôle d'Arek Vandevar auprès du Guardian Tech Broker, documenté seulement en source communautaire", "date de départ, effectifs et parcours de l'expédition Distant Worlds 3", "filiation narrative entre la recherche AEGIS/Salvation et les propulseurs SCO, lecture communautaire et non fait canonique", "étendue du territoire thargoïde au plus fort du conflit, estimations communautaires divergentes", "taux exact de rebuy de la Pilots Federation, à revérifier en jeu", "divergence d'un jour entre deux pages du même wiki communautaire sur la date de découverte du premier Barnacle vs. du premier Meta-Alloy à Merope 5 C (15 vs 14 janvier 3302)", "absence de système de castes documenté chez les Guardians : structure sociale attestée en clans puis cités-États, sans hiérarchie de castes confirmée par une source consultée", "devenir des Constructs après l'extinction guardian : hypothèse de survie non tranchée, attribuée à Ram Tah", "date et lieu exacts de l'assassinat du Prince Harold Duval (10-14 septembre 3306) reposent sur une source tertiaire unique (miroir de wiki communautaire), sans seconde source directe recoupée cette session (inara.cz rate-limité)", "événement daté précis du Kumo Crew/Archon Delaine entre 3304 et 3306 : seule une résurgence générale liée à la distraction thargoïde est confirmée, sans incident nommé", "statut de recherche communautaire actuel (2026) sur le Formidine Rift et « The Club », estimé mais non vérifié page par page", "canonicité et datation des « gravures » d'Ascendancy (2025) parfois reliées à Raxxla par la communauté : spéculation non confirmée par Frontier", "composition et mode de nomination de la Federal High Court, non documentés par une source consultée", "ce que confère concrètement un titre de noblesse impérial (droits, possessions) et son lien avec un système de quartier général Powerplay : non établi par une source consultée", "justification narrative du lien entre rang naval et déblocage de vaisseau, qualifiée de purement mécanique par les sources disponibles"]
+guides_lies: [0, 2, 5, 17, 18, 19, 23, 24, 25, 29, 32]
 ---
 # Elite Dangerous : lore et histoire de l'univers
 
@@ -28,7 +28,13 @@ moderne s'amorce dans les **Pléiades** (premier Barnacle découvert à Merope l
 Guerre (≈3308-3310, 2022-2024 réel) s'achève le **19 décembre 2024** avec la destruction à Sol de **Cocijo**, dernier
 des huit **Titans** (*Maelstroms*), et les **Guardians** (*Homo Custos*), disparus depuis 1 à 2 millions d'années
 après la rébellion des **Constructs** qu'ils avaient créés. Douze **Powers** s'affrontent au **Powerplay** depuis
-Ascendancy (31 octobre 2024). Raxxla, les Barnacles et le « Nemesis Protocol » de Salvation demeurent non résolus.
+Ascendancy (31 octobre 2024), dont **Jerome Archer**, désormais doté d'un portrait complet. L'« entre-deux-guerres »
+3304-3308 — terrorisme de la NMLA, assassinat du Prince Harold Duval, exode marliniste, captivité de l'Empereur
+Arissa Lavigny-Duval — comble un trou de quatre ans du récit vivant (§1.6bis). Le catalogue des mystères passe de
+trois à huit entrées (Raxxla, phénomènes thargoïdes, Nemesis Protocol de Salvation, Formidine Rift/Projet Dynasty/
+Zurara, culte du Far God, generation ships, « The Club », Guardian Beacons — §5), et une nouvelle section recense les
+œuvres transmedia officielles et leur statut canonique, en constatant qu'aucune hiérarchie d'autorité n'a jamais été
+publiée par Frontier (§9).
 
 ## Introduction — portée, période couverte et méthode de ce guide de lore
 
@@ -79,11 +85,18 @@ Le calendrier interne d'*Elite Dangerous* est décalé d'exactement **+1286 ans*
 | 10 janv. 3303 | janv. 2017 | Ram Tah lance le décryptage des logs Guardian | Découverte |
 | 3302-3303 | 2016-2017 | Retour officiel des Thargoïdes (USS/UA/UP) | Guerre |
 | 4 août 3303 | août 2017 | Fondation du consortium AEGIS | Guerre/Politique |
+| 11 janv. 3304 | janv. 2018 | Initiative fédérale-impériale anti-thargoïde depuis HIP 17692 ; plusieurs starports des Pléiades attaqués | Guerre |
+| 28 août 3304 | août 2018 | Ram Tah détecte trois signaux énergétiques inconnus (premiers Guardian Beacons) | Découverte |
 | 13 janv. 3305 | 13 janv. 2019 | Lancement de l'expédition Distant Worlds II | Communautaire |
+| 18 juil. 3305 | 18 juil. 2019 | Résurgence thargoïde massive dans les Pléiades ; évacuation de Maia | Guerre |
+| 10-14 sept. 3306 | sept. 2020 | Attentats de la NMLA contre quatre starports impériaux ; assassinat du Prince Harold Duval | Guerre |
+| déc. 3306 - 14 janv. 3307 | déc. 2020 - janv. 2021 | Exode marliniste ; fondation des huit Marlinist Colonies (secteur Hyades) | Politique |
 | 1er janv. 3307 | 2021 | Pranav Antal propose le Galactic Summit | Politique |
+| janv. 3307 - 9 févr. 3308 | 2021-2022 | Captivité de l'Empereur Arissa Lavigny-Duval par les « Lords of Restoration » | Politique |
 | 3307-3308 | 2021-2022 | Arc Salvation / Azimuth Biotech (Alexandria, Proteus) | Guerre |
+| Oct. 3309 | Oct. 2023 | Élection présidentielle fédérale : Felicia Winters bat Jerome Archer (candidat désigné par Zachary Hudson, en fin de mandat) | Politique |
 | ≈3308-3310 | 2022-2024 | Seconde Guerre Thargoïde | Guerre |
-| 31 oct. 3310 | **31 oct. 2024** | Ascendancy : Powerplay 2.0, drives SCO, Jerome Archer, Nakato Kaine | Politique/Technologie |
+| 31 oct. 3310 | **31 oct. 2024** | Ascendancy : Powerplay 2.0, vaisseau Mandalay natif SCO, Jerome Archer, Nakato Kaine | Politique/Technologie |
 | 19 déc. 3310 | **19 déc. 2024** | Bataille de Sol : destruction du Titan Cocijo ; billet « Thargoid War Epilogue » (15:00 UTC) ; suites GalNet en janv. 2025 | Guerre |
 | ≈26 févr. 3311 | 26 févr. 2025 | Trailblazers : bêta ouverte de la Colonisation | Technologie |
 | ≈11 nov. 3311 | 11 nov. 2025 | Dodec Update : sortie complète de la Colonisation | Technologie |
@@ -146,6 +159,57 @@ Entre la paix froide de 2382 et la fondation de l'Alliance en 3230 s'étend une 
 - À partir de 3302-3303 : réapparition officielle des **Thargoïdes** dans le jeu — signaux inconnus (USS), artefacts inconnus (UA) diffusant des coordonnées stellaires en morse, sondes corrosives (UP). Plusieurs types d'intercepteurs sont identifiés : Scout, Cyclops, Basilisk, Medusa et Hydra (le plus dangereux), tous dotés d'un mécanisme d'auto-réparation.
 - **4 août 3303** : fondation du consortium anti-xéno **AEGIS** (voir la nouvelle sous-section 3.7 pour sa structure, ses crises et sa réforme).
 
+### 1.6bis L'entre-deux-guerres (3304-3308) : escalade thargoïde, terrorisme marliniste et crise de succession impériale
+
+Entre la fondation d'AEGIS (août 3303) et le déclenchement de la Seconde Guerre Thargoïde (≈3308), quatre années
+restaient à zéro occurrence dans ce guide malgré une actualité dense. Cette sous-section comble ce vide.
+
+- **Escalade thargoïde continue dans les Pléiades et la nébuleuse Witch Head** — le retour massif de 3302-3303 (1.6)
+  ne s'arrête pas : le 11 janvier 3304, Fédération et Empire lancent une initiative conjointe anti-thargoïde depuis
+  HIP 17692, alors que des starports entiers des Pléiades ont déjà été frappés ; nouvelles attaques les 18 et
+  25 janvier puis 1ᵉʳ février 3304, avant un repli relatif jusqu'au 22 mars puis au 21 juin 3304 (bataille de
+  Henneql Prospect, système Assinda). Le **18 juillet 3305**, un retour massif et non détecté par le réseau
+  d'alerte Eagle Eye d'AEGIS force l'évacuation de **Maia** (déjà documentée en 3.4bis) ; une cinquième variante
+  d'intercepteur, « **Orthrus** », y est repérée le 25 août 3305. Les incursions reprennent le 9 janvier 3306 sur six
+  systèmes simultanés (Pléiades et Witch Head), puis s'intensifient jusqu'à neuf systèmes envahis d'un coup le
+  31 décembre 3306 — un an et demi avant l'invasion à grande échelle de 1.7.
+- **28 août 3304** : Ram Tah détecte trois signatures énergétiques inconnues dans les secteurs NGC 2451A, IC 2391 et
+  la région Synuefe — les premiers **Guardian Beacons**, structures orbitales guardian dormantes depuis des millions
+  d'années (voir catalogue des mystères, section 5).
+- **Résurgence opportuniste du Kumo Crew** — pendant que les forces fédérales et impériales sont accaparées par la
+  menace thargoïde, le cartel d'**Archon Delaine** (voir 6.2) profite du répit pour raider « des dizaines de
+  systèmes » du secteur Pegasi à partir de 3304 ; aucun incident isolé n'a pu être daté précisément dans cette
+  fenêtre, seule la tendance générale est confirmée.
+- **10-14 septembre 3306 : campagne terroriste de la NMLA.** Le 10 septembre, des attentats simultanés détruisent
+  quatre starports impériaux (Cemiess, Gabjaujis, LHS 4031, Rabh), faisant plus de 60 000 morts. Le 14 septembre, un
+  agent unique de la NMLA assassine le **Prince Harold Duval**, héritier écarté de la succession et père d'Aisling
+  Duval (voir 6.2), après s'être procuré son itinéraire — une fuite de sécurité interne qui n'a jamais été
+  entièrement élucidée. L'Impératrice Arissa Lavigny-Duval décrète le deuil officiel ; le Sénat adopte dans la foulée
+  des mesures antiterroristes portées par le sénateur Denton Patreus, et la loi martiale est décrétée fin septembre
+  dans quatre systèmes à forte sympathie marliniste. L'escalade se poursuit tout le reste de l'année 3306 : nouvelle
+  vague de plus de cinquante attentats revendiqués le 6 novembre (dont l'assassinat du Baron Cesare Lavigny), puis un
+  attentat à Kepler Orbital (système Atropos) le 19 novembre qui détruit la cellule où étaient détenus neuf membres
+  capturés de la NMLA. *(Point de vigilance : une mention isolée d'une tentative d'assassinat visant un « Imperator
+  Hadrian Augustus Duval » le 27 octobre 3306 a été écartée de ce guide — ce titre et ce personnage ne recoupent aucun
+  autre fait établi sur la lignée impériale de cette période, et n'ont pas pu être vérifiés par une seconde source.)*
+- **Exode marliniste et fondation des Marlinist Colonies (déc. 3306 - janv. 3307).** La répression qui suit frappe
+  aussi les marlinistes non-violents, scission pacifique du même mouvement (voir [glossaire](./00-glossaire.md),
+  entrée NMLA) : loi martiale, blocus d'Ackwada le 14 octobre, exode de plusieurs millions de réfugiés vers des
+  systèmes fédéraux à partir du 16 octobre, asile temporaire accordé par le Congrès fédéral le 26 octobre. Le
+  10 décembre 3306, **Li Yong-Rui** (voir 6.2) propose la construction de colonies indépendantes comme solution
+  permanente ; les huit **Marlinist Colonies** (secteur Hyades) sont achevées le **14 janvier 3307**, accueillant plus
+  de 800 millions de réfugiés, avec un premier Parlement marliniste élu le 21 janvier 3307.
+- **Crise de succession impériale (janvier 3307 - février 3308)** : dans la foulée de cette instabilité, l'Empereur
+  **Arissa Lavigny-Duval** est enlevée par les « Lords of Restoration » — voir son portrait complet en 6.2, qui
+  regroupe toute cette séquence (accession au trône en 3301, captivité et libération) plutôt que de la disperser ici.
+
+*(Sources : miroir communautaire du wiki Fandom (DarkSession/Elite-Dangerous-RAG-Knowledge), pages dédiées à la
+Neo-Marlinist Liberation Army, à la crise des réfugiés marlinistes, à la Seconde Guerre Thargoïde et aux Guardian
+Beacons — consultées le 13 septembre 2026. Confiance haute sur les bornes chronologiques, qui recoupent exactement
+les dates déjà validées par ce corpus par ailleurs (11 janvier et 3 mars 3304, 18 juillet 3305) ; confiance moyenne
+sur le détail fin de l'assassinat d'Harold Duval, faute d'une seconde source primaire directement consultée cette
+session — voir zones d'incertitude en tête de guide.)*
+
 ### 1.7 La Seconde Guerre Thargoïde (≈3308 - 3310, soit 2022-2024 en temps réel)
 
 - Escalade majeure : les Thargoïdes déploient huit **Titans**, méga-vaisseaux-mères servant de points d'ancrage à leur invasion.
@@ -169,12 +233,53 @@ Cette sous-section regroupe le fil narratif de la **Colonisation de systèmes**,
 
 - **31 octobre 2024** (réel, 31 octobre 3310 en jeu) : Zachary Hudson se retire de la Powerplay ; **Jerome Archer**, figure montante du parti Républicain, reprend le rôle de Power fédérale. Ce même jour, Frontier lance la mise à jour majeure **Elite Dangerous: Ascendancy**, qui refond intégralement le système **Powerplay** (« **Powerplay 2.0** ») : intégration au gameplay standard, cycles hebdomadaires de systèmes contestés, mécaniques de décroissance du score de contrôle. Une nouvelle Power rejoint également le roster de l'Alliance : **Nakato Kaine**.
   *(Correction de cohérence : une version antérieure de ce guide indiquait par erreur le 26 février 2025 pour cette mise à jour — date qui correspond en réalité à une mise à jour distincte, Trailblazers, voir 1.8. La date du 31 octobre 2024 est celle confirmée par les billets officiels Frontier ; voir [Chronologie canonique](./00-chronologie-canonique.md#1-powerplay-20--ascendancy--date-de-sortie).)*
-- Ascendancy introduit aussi le vaisseau d'exploration **Mandalay** (Zorgon Peterson) et une nouvelle génération de propulseurs, le **Supercruise Overcharge** (**SCO**, [glossaire](./00-glossaire.md)) : un mode de propulsion en supercroisière très supérieur en vitesse, initialement réservé à huit vaisseaux compatibles avant d'être progressivement généralisé à l'ensemble des Frame Shift Drives (Update 17 selon la documentation communautaire — la date réelle exacte de cette généralisation n'a pas pu être confirmée par une source primaire lors de la rédaction de ce guide). Voir la sous-section 3.7 pour la piste narrative reliant cette technologie à la recherche anti-thargoïde d'AEGIS et à l'arc Salvation.
+- Ascendancy introduit aussi le vaisseau d'exploration **Mandalay** (Zorgon Peterson), nativement conçu pour le
+  **Supercruise Overcharge** (**SCO**, [glossaire](./00-glossaire.md)) — mais **le SCO lui-même est antérieur à
+  Ascendancy**. *(Correction du 13 septembre 2026 : une version antérieure de ce guide attribuait l'introduction du
+  SCO à Ascendancy et sa généralisation à l'« Update 17 », sur la seule foi de la documentation communautaire, sans
+  date confirmée. C'est inexact : l'Update 17 (16 octobre 2023) porte sur le minage des matériaux de Titan, sans
+  rapport avec le SCO. Les premiers FSD SCO, en nombre limité et réservés à la notation C, apparaissent avec
+  l'**Update 18.02** du **10 avril 2024** ; ils sont généralisés à l'ensemble des tailles et notations par l'**Update
+  18.04** du **7 mai 2024**, sortie le même jour que le **Python Mk II**, premier vaisseau nativement pensé pour le
+  SCO — six mois avant Ascendancy. Voir [00-chronologie-canonique.md](./00-chronologie-canonique.md) pour la
+  chronologie complète du jeu.)* Voir la sous-section 3.7 pour la piste narrative reliant cette technologie à la
+  recherche anti-thargoïde d'AEGIS et à l'arc Salvation.
 - **2025-2026** : nouveaux vaisseaux ajoutés — Panther Clipper Mk II (Zorgon Peterson, disponible en accès anticipé ARX depuis le 22 juillet 2025), Type-11 Prospector (minier), Cobra Mk V (combat), Caspian Explorer (Zorgon Peterson, exploration longue distance, disponible depuis le 2 décembre 2025). Voir [Vaisseaux](./03-vaisseaux.md) pour les fiches techniques complètes.
 - **Juillet 2025** : ajustements d'équilibrage de Powerplay 2.0 (modificateurs de mérites de renforcement, bonus de sape, décroissance du score de contrôle) — voir [Powerplay](./02-powerplay.md) pour le détail des cycles successifs.
 - **Août 2026** (≈3312 en jeu) : 10e anniversaire de la région de **Colonia**, dont le Colonia Hub a été fondé le 9 septembre 2016 (réel) lors de l'expédition de Jaques Station — soit 3302 dans le calendrier interne, conformément au décalage de +1286 ans. L'anniversaire est célébré in-game par des balises touristiques et l'ouverture d'un « megamarket » à Jaques Station.
 - **30 juin - 1ᵉʳ juillet 2026** (réel, ≈3312 en jeu) : sortie de la mise à jour **Operations** (version 4.4.0.0), qui introduit des scénarios coopératifs d'escouade et, avec eux, le **Nomad** — premier *ship-launched vessel* (SLV) du jeu, un appareil compact d'exploration de surface planétaire lancé depuis une baie de vaisseau, proposé en accès anticipé ARX. Le billet officiel Frontier « Discover the Nomad » (2 juin 2026 13:03 UTC) le décrit comme *« a small and compact ship-launched vessel which is built to explore planetary surfaces »*, et les notes de version « Operations Update » (1ᵉʳ juillet 2026 14:01 UTC) confirment sa mise en service. Voir [Rhino & Nomad](./14-rhino.md) et [Opérations](./13-operations.md).
 - **Septembre 3312** (présent du jeu, septembre 2026 réel) : le Galnet documente une actualité essentiellement économique et industrielle (recherche minière, nouveaux véhicules SRV comme le **Rhino** de Vodel, sorti le 2 septembre 2026 — voir [Rhino & Nomad](./14-rhino.md)), traduisant une période de relative stabilité post-conflit centrée sur la reconstruction, l'expansion coloniale et la compétition Powerplay. *(Capture du 8 septembre 2026 ; l'actualité GalNet évolue en continu, à revérifier sur [inara.cz/elite/galnet](https://inara.cz/elite/galnet/).)*
+
+### 1.10 Le récit vivant 3311-3312 (2025-2026) : campagnes Powerplay, rééquilibrages et colonisation narrative
+
+Les deux dernières années de récit vivant ne sont pas restées en pause entre les grands jalons déjà datés en 1.8 et
+1.9 : elles ont été rythmées par des campagnes territoriales, des ajustements continus et une expansion narrative
+progressive, dont les pièces sont déjà documentées activité par activité ailleurs dans le corpus mais jamais
+rassemblées en un seul fil chronologique. Ce paragraphe fait ce travail de synthèse, sans rouvrir de recherche.
+
+- **Novembre-décembre 2025** : première grande campagne territoriale narrativisée de l'ère Powerplay 2.0, autour du
+  système **HIP 87621** (secteur Col 359, sites *The Ironbridge* / *Horizon's Glow*) — une « Opening Federal Campaign »
+  et une « Opening Alliance Campaign » concurrentes invitent les commandants à renforcer ou saper les systèmes voisins,
+  récompensées en mérites Powerplay et en un canon multiple pré-*engineered* (voir
+  [Community Goals §4](./24-community-goals.md)). C'est la première fois que Powerplay 2.0 s'habille d'un tel habillage
+  narratif événementiel plutôt que de rester un simple tableau de scores.
+- **Courant 2025** puis **été 2025** (« Trailblazers Update 3.4 ») : Frontier resserre à plusieurs reprises l'équilibrage
+  de Powerplay 2.0 — pénalité anti-*turtling* sur le renforcement passif, puis refonte de la formule de mérites et
+  introduction d'une décroissance hebdomadaire du score de contrôle (voir [Powerplay §5.7](./02-powerplay.md)) — signe
+  que le système continue d'être activement piloté plus d'un an après son lancement, plutôt que figé après Ascendancy.
+- **Depuis la bêta de Trailblazers (26 février 2025) puis le Dodec Update (11 novembre 2025)** : la Colonisation fait
+  progressivement basculer des systèmes auparavant inhabités vers un statut peuplé, chacun immédiatement éligible au
+  Powerplay et au BGS (voir [Colonisation](./18-colonisation.md)) — un flux narratif diffus, sans jalon unique, mais qui
+  redessine en continu la carte politique décrite en section 2.
+- **Mai 2026** : achèvement de l'expédition communautaire **Distant Worlds 3** (voir 7.3), dernier grand rendez-vous
+  communautaire en date.
+- **Juillet-août 2026** : 10e anniversaire de la fondation de **Colonia** (voir 7.6), célébré en jeu par des balises
+  touristiques et un mégamarché à Jaques Station — un exemple représentatif de la manière dont GalNet habille
+  narrativement un jalon calendaire plutôt qu'un événement de gameplay nouveau (voir
+  [17-sources-donnees.md §14](./17-sources-donnees.md) sur ce mécanisme de diffusion).
+
+Ce fil narratif reste, par construction, provisoire : chaque section renvoyée ci-dessus documente le mécanisme en
+détail et sera la première mise à jour lors d'une prochaine campagne Powerplay ou d'un nouveau rééquilibrage.
 
 ---
 
@@ -185,8 +290,27 @@ Cette sous-section regroupe le fil narratif de la **Colonisation de systèmes**,
 **La Fédération** est la plus ancienne et la plus vaste des superpuissances humaines, née des cendres de la Troisième Guerre mondiale et formalisée en 2242 par le Federal Accord.
 
 - **Régime** : démocratie représentative fortement dominée par les mégacorporations, dont Sirius Corporation.
+- **Institutions** : un **Congrès fédéral unicaméral** (500 Congressmen, siégeant à Olympus Village sur Mars),
+  élu au suffrage populaire direct comme le Président — un citoyen, une voix, par système. Mandat de huit ans, avec un
+  vote de confiance automatique à mi-mandat (un échec déclenche une nouvelle élection complète), et interdiction de
+  deux mandats consécutifs — la règle qui a écarté Zachary Hudson en 3309 (voir plus bas). Une **Federal High Court**
+  existe comme plus haute juridiction fédérale (compétente notamment en haute trahison), mais sa composition et son
+  mode de nomination ne sont documentés par aucune source consultée pour ce guide — à traiter comme non documenté
+  plutôt que comme une séparation des pouvoirs à l'américaine qu'on prêterait par extrapolation. Deux partis dominent
+  (Libéral, Républicain) ; le chef du parti non présidentiel porte le titre de **Shadow President**, sans pouvoir
+  exécutif.
+- **Titres et rangs** : aucun système nobiliaire — la seule échelle de distinction est le rang de la **Federal Navy
+  Auxiliary** (14 paliers, voir [29-missions-reputation-et-rangs.md §3.1](./29-missions-reputation-et-rangs.md)),
+  purement fonctionnel : les sources consultées ne lui prêtent aucune justification narrative au-delà de son rôle de
+  progression de jeu.
 - **Capitale** : Mars (depuis 2325, après la Bataille d'Achenar).
-- **Dirigeants successifs à l'époque du jeu** : Jasmina Halsey (disparue en 3301) → Zachary Hudson (3301-3310) → Felicia Winters, qui redevient présidente après avoir battu le président sortant lors de l'élection fédérale de 3309.
+- **Dirigeants successifs à l'époque du jeu** : Jasmina Halsey (disparue en 3301) → Zachary Hudson (3301-3310) →
+  Felicia Winters. *(Précision du 13 septembre 2026 : à l'élection fédérale d'octobre 3309, Hudson, en fin de mandat
+  de huit ans et constitutionnellement non rééligible pour un second mandat consécutif, ne se représente pas ; c'est
+  son vice-président et dauphin désigné, **Jerome Archer**, candidat républicain, que Winters bat de 4 points — et non
+  Hudson lui-même, contrairement à une formulation antérieure de ce guide. Hudson reste président par intérim durant
+  la transition, jusqu'à l'investiture de Winters le **31 octobre 3310**, jour où il se retire simultanément de la
+  Powerplay et cède son siège de Power fédérale à Archer — voir le portrait d'Archer en 6.2.)*
 
 ### 2.2 L'Empire d'Achenar (dynastie Duval, capitale Achenar)
 
@@ -194,7 +318,28 @@ Cette sous-section regroupe le fil narratif de la **Colonisation de systèmes**,
 
 - **Origine** : République d'Achenar fondée en 2292 par Marlin Duval, transformée en régime impérial entre 2296 et 2320 par Henson Duval, premier Empereur.
 - **Régime** : autoritaire et héréditaire, calqué sur la Rome antique — Sénat impérial, noblesse, et pratique historique de l'esclavage, contestée en interne par certaines factions (notamment autour d'Aisling Duval).
-- **Lignée impériale à l'époque du jeu** : Hengist Duval (15e Empereur, assassiné le 5 août 3301 par l'organisation Emperor's Dawn) → **Arissa Lavigny-Duval** (16e Empereur, première femme à accéder au trône ; populaire mais contestée par les traditionalistes ; a survécu à un an de captivité par les « Lords of Restoration » avant de reprendre le trône).
+- **Institutions** : un **Sénat impérial** de 1 000 sièges, occupés à vie sauf déchéance, sans élection classique —
+  une structure pyramidale de clientélisme (Citoyens → Clients → Patrons → Sénateur) où le poids de vote d'un
+  sénateur suit le nombre de citoyens qu'il représente indirectement. Un mécanisme de « pétition » permet à un Patron
+  populaire de défier le sénateur le moins populaire moyennant un dépôt d'un milliard de crédits (remboursé en cas de
+  succès) ; en pratique, la plupart des sièges se transmettent à un successeur désigné, ce qui en fait le point de
+  contact le plus proche d'une élection. Un **Chancelier**, nommé par l'Empereur, préside les débats en son absence.
+  Siège historique : le Senate House de Capitol (Achenar), aujourd'hui suivi surtout à distance.
+- **Succession impériale** : héréditaire par défaut, mais **le Sénat désigne et élit le nouvel Empereur** en
+  l'absence d'héritier incontesté — c'est ce qui s'est produit le 6 octobre 3301 pour Arissa Lavigny-Duval, face à
+  des prétendants concurrents (Aisling Duval, Denton Patreus), voir 6.2.
+- **Titres de noblesse** : une échelle de 14 rangs — **Outsider, Serf, Master, Squire, Knight, Lord, Baron, Viscount,
+  Count, Earl, Marquis, Duke, Prince, King** — porte à la fois le rang jouable **Imperial Navy Auxiliary** (voir
+  [29-missions-reputation-et-rangs.md §3.2](./29-missions-reputation-et-rangs.md) pour les déblocages exacts :
+  Imperial Clipper au rang Baron, Imperial Cutter au rang Duke) et l'habillage nobiliaire du lore. Les deux ne se
+  confondent pas entièrement : le lore présente le rang nobiliaire hérité (« royal standing ») comme *« separate from
+  political rank »* — porter un titre ne fait pas automatiquement de son détenteur un sénateur. **Ce que ce titre
+  confère concrètement** (droits, possessions, prérogatives graduées) **n'est documenté par aucune source
+  consultée** ; le lien entre un titre précis et un système de quartier général Powerplay (Torval à Synteini, Patreus
+  à Eotienses, Aisling Duval à Cubeo — voir [02-powerplay.md](./02-powerplay.md)) n'est nulle part établi explicitement
+  non plus — à traiter comme non documenté plutôt que comme un système féodal cohérent qu'on reconstruirait par
+  extrapolation.
+- **Lignée impériale à l'époque du jeu** : Hengist Duval (15e Empereur, assassiné le 5 août 3301 par l'organisation Emperor's Dawn) → **Arissa Lavigny-Duval** (élue par le Sénat le 6 octobre 3301, couronnée le 18 octobre 3301, 16e Empereur et première femme à accéder au trône ; populaire mais contestée par les traditionalistes ; détenue par les « Lords of Restoration » de janvier 3307 au 9 février 3308 avant de reprendre le trône — portrait complet en 6.2).
 
 ### 2.3 L'Alliance des Systèmes Indépendants (fondée en 3230, capitale Alioth)
 
@@ -202,8 +347,26 @@ Cette sous-section regroupe le fil narratif de la **Colonisation de systèmes**,
 
 - **Origine** : fondée en 3230 par Mic Turner et Meredith Argent, à la suite de la révolte d'Alioth de 3228 contre l'Empire et la Fédération (voir 1.4 pour le contexte des « siècles silencieux »).
 - **Régime** : démocratie parlementaire, la plus jeune et la plus petite des trois superpuissances.
+- **Institutions** : une **Assemblée de l'Alliance** composée de Councillors, un par État membre en général (le
+  nombre variant avec la population), élus localement selon des règles propres à chaque État — un fonctionnement
+  comparé par le lore lui-même à l'Union européenne : l'Assemblée fixe des politiques et traités communs mais
+  « *lacks lawmaking powers* », chaque système membre conservant son propre gouvernement et ses propres lois. Le
+  **Premier ministre** est élu par les Councillors à la majorité relative, pour un mandat de six ans non limité en
+  renouvellements — sans qu'aucun titulaire autre qu'Edmund Mahon n'ait jamais été réélu depuis 3230. Le pouvoir
+  militaire est détenu séparément par un **Conseil des Amiraux** (sept sièges depuis le 10 janvier 3308, incluant un
+  représentant de la Sirius Navy), responsable devant l'Assemblée a posteriori de ses actions.
+- **Titres et rangs** : aucun système nobiliaire, et **aucune échelle de rang naval verrouillant l'accès à des
+  vaisseaux ou systèmes** — une absence délibérée et documentée comme telle par le lore lui-même (« *the Alliance
+  does not have a navy auxiliary like the Federation and Empire* »), cohérente avec son ethos consensuel. Seul Alioth
+  (la capitale) reste soumis à une condition de réputation avec une faction mineure locale.
+- **Note historique** : de 3230 à 3305, l'Assemblée comptait *en plus* un « President of the Alliance », rôle
+  largement cérémoniel. En 3305, le président Gibson Kincaid, dont le mandat venait d'être étendu à trois ans avec
+  des pouvoirs diplomatiques élargis, est démasqué comme le cerveau d'un complot visant à transférer la capitale
+  d'Alioth à Zaonce pour s'ériger en dirigeant suprême ; destitué et inculpé de trahison, sa fonction est purement et
+  simplement abolie par un vote de l'Assemblée le 21 juin 3305, laissant le Premier ministre cumuler chef d'État et
+  chef de gouvernement depuis lors.
 - **Capitale** : Alioth.
-- **Dirigeant** : le Premier ministre **Edmund Mahon**, élu début 3301 par l'Assemblée de l'Alliance.
+- **Dirigeant** : le Premier ministre **Edmund Mahon**, élu début 3301 par l'Assemblée de l'Alliance, réélu en mai 3307 face à Nakato Kaine (voir 6.2).
 
 ### 2.4 Sirius Corporation, la « quatrième superpuissance » de facto
 
@@ -232,6 +395,34 @@ Contrairement à la Fédération, l'Empire et l'Alliance, la **Pilots Federation
 - **Rescue Rangers** : branche bénévole affiliée qui organise gratuitement la récupération des pilotes en détresse critique (à distinguer des **Fuel Rats**, initiative communautaire indépendante, voir section 7.7).
 
 Voir aussi [Combat spatial](./08-combat-spatial.md) pour les mécaniques détaillées de rebuy, de rang de combat et d'assurance de vaisseau. Pour situer ces capitales et Shinrarta Dezhra dans un référentiel spatial complet — rayon de la Bulle, distances, gazetteer d'une trentaine de systèmes fondateurs — voir [32-geographie-galactique.md](./32-geographie-galactique.md).
+
+### 2.7bis GalNet et le Codex : comment le lore est diffusé, et avec quelle autorité
+
+Le récit vivant d'*Elite Dangerous* n'atteint pas les commandants par un seul canal, et les quatre qui existent n'ont
+pas la même autorité canonique.
+
+1. **GalNet** (voir [glossaire](./00-glossaire.md)) — le fil d'actualité in-fiction contrôlé par la Pilots Federation
+   (2.7 ci-dessus), qui publie des articles narratifs datés (calendrier interne, avançant jour pour jour avec le
+   calendrier réel, voir [17-sources-donnees.md §14](./17-sources-donnees.md)) habillant chaque sortie réelle. C'est le
+   canal le **plus proche de la source** : il émane directement de Frontier et sert de matière première aux trois
+   suivants.
+2. **Le Codex in-jeu** — encyclopédie consultable directement dans le jeu, qui consigne les découvertes du commandant
+   (espèces exobiologiques, sites Guardian, structures thargoïdes) au fur et à mesure qu'il les rencontre ; il
+   reformule en entrées structurées une partie du contenu déjà publié sur GalNet, sans y ajouter de fait nouveau.
+3. **Les Community Goals** — objectifs temporaires (voir [Community Goals](./24-community-goals.md)) dont l'issue
+   (succès ou échec collectif) peut infléchir la suite du récit GalNet, comme lors des CG de la Seconde Guerre
+   Thargoïde (7.5) ou de la campagne HIP 87621 (1.10) : un canal narratif où les joueurs sont acteurs, pas seulement
+   lecteurs.
+4. **Les missions et scénarios en jeu** (dialogues, journaux de bord embarqués, PNJ) — le canal le plus fragmentaire et
+   le plus dispersé, qui livre parfois un détail (un nom, un lieu) absent des trois autres canaux.
+
+**Échelle d'autorité canonique retenue par ce corpus**, du plus certain au plus spéculatif : billets officiels
+GalNet/patch notes de Frontier (source primaire directe) > Codex in-jeu (reformulation officielle) > romans et
+transmedia sous licence (voir la nouvelle section 9) > continuité des jeux antérieurs de la saga *Elite* classique
+(1.3-1.4, statut « lore classique » explicitement signalé) > recherche communautaire Canonn (interprétation
+argumentée mais non confirmée par Frontier) > spéculation de forum. Cette échelle n'est pas publiée telle quelle par
+Frontier : c'est une convention éditoriale de ce corpus, reprise et appliquée explicitement par
+[00-chronologie-canonique.md](./00-chronologie-canonique.md) chaque fois qu'un arbitrage y est nécessaire.
 
 ---
 
@@ -343,7 +534,15 @@ Le consortium **AEGIS** est fondé le **4 août 3303** comme initiative conjoint
 
 #### Lien narratif entre AEGIS/Salvation et les propulseurs Supercruise Overcharge (SCO)
 
-La documentation communautaire présente les propulseurs **Supercruise Overcharge** (**SCO**, introduits avec Ascendancy le 31 octobre 2024, voir 1.9) comme un dividende technologique de cette période : à la fois de la recherche militaire d'AEGIS sur les systèmes propulsifs et énergétiques récupérés sur les carcasses des Titans thargoïdes abattus (voir 3.5), et de la technologie Guardian exploitée par le programme Salvation/Azimuth. Cette filiation reste une lecture communautaire plausible du lore plutôt qu'une confirmation littérale par une annonce GalNet officielle consultée pour ce guide — à traiter comme une interprétation narrative et non comme un fait canonique déclaré tel quel par Frontier.
+La documentation communautaire présente les propulseurs **Supercruise Overcharge** (**SCO**, généralisés par les
+Updates 18.02 et 18.04 d'avril-mai 2024 — *(correction du 13 septembre 2026 : une version antérieure de ce guide
+datait à tort cette généralisation d'Ascendancy, 31 octobre 2024 ; voir
+[00-chronologie-canonique.md](./00-chronologie-canonique.md) et 1.9)*) comme un dividende technologique de cette
+période : à la fois de la recherche militaire d'AEGIS sur les systèmes propulsifs et énergétiques récupérés sur les
+carcasses des Titans thargoïdes abattus (voir 3.5), et de la technologie Guardian exploitée par le programme
+Salvation/Azimuth. Cette filiation reste une lecture communautaire plausible du lore plutôt qu'une confirmation
+littérale par une annonce GalNet officielle consultée pour ce guide — à traiter comme une interprétation narrative et
+non comme un fait canonique déclaré tel quel par Frontier.
 
 ---
 
@@ -423,24 +622,167 @@ La civilisation guardian n'est redécouverte par les commandants d'*Elite Danger
 
 ---
 
-## 5. Mystères non résolus du lore d'Elite Dangerous : Raxxla, Barnacles, Nemesis Protocol
+## 5. Catalogue des mystères non résolus d'Elite Dangerous
 
-### 5.1 Raxxla — le mystère le plus ancien de la saga *Elite* (Omphalos Rift, *The Dark Wheel*)
+Cette section réunissait jusqu'ici trois sujets en 21 lignes ; huit mystères y figurent désormais, chacun avec le même
+gabarit — première apparition, faits établis, hypothèses communautaires, statut. Un point commun ressort de cette
+extension : la plupart de ces fils narratifs (5.4 à 5.7 notamment) partagent une origine, remontant à la cabale
+« Le Club » (5.7) et à son projet secret des années 3270, ce qui en fait moins une collection disparate qu'un même
+arc souterrain du lore, seulement partiellement relié dans le récit officiel.
 
-Le plus grand mystère de l'univers d'*Elite*, mais aussi le plus obscur.
+| Mystère | Première apparition | Statut (2026) |
+|---|---|---|
+| [Raxxla](#51-raxxla--le-mystère-le-plus-ancien-de-la-saga-elite) | 2296 (in-fiction), confirmé par Frontier en 2014 | Ouvert — jamais localisé |
+| [Phénomènes thargoïdes non résolus](#52-phénomènes-thargoïdes-non-résolus--barnacles-artefacts-ua-sondes-up-méta-alliages) | 3302-3303 / 2016-2017 | Ouvert |
+| [Nemesis Protocol de Salvation](#53-le--nemesis-protocol--de-salvation-survivance-présumée-de-caleb-wycherley) | 25 août 3308 / 2022 | Ouvert |
+| [Formidine Rift, Projet Dynasty et l'épave du Zurara](#54-formidine-rift-projet-dynasty-et-lépave-du-zurara) | 3270 (in-fiction) ; découverte joueurs 27 avril 3303 / 2017 | Ouvert |
+| [Le culte du Far God](#55-le-culte-du-far-god) | Fondé 3304 ; révélé 19 juillet 3307 / 2018 puis 2021 | Ouvert (secte active) |
+| [Les generation ships errants](#56-les-generation-ships-errants) | 2097 (réel, pré-jeu) ; premières découvertes 3303 / 2017 | Ouvert (16 épaves documentées) |
+| [« The Club »](#57--the-club) | ≈3302-3303 / 2016-2017 | Ouvert |
+| [Guardian Beacons](#58-guardian-beacons--mystère-narratif-au-delà-du-mini-jeu) | 28 août 3304 / 2018 | Mécanique résolue ; origine narrative ouverte |
 
-- Légende circulant parmi les spatiaux depuis des siècles ; première mention connue dans le journal du mécanicien de bord **Art Tornqvist** (système Tau Ceti), datée de **2296**.
-- Selon certaines versions, Raxxla serait lié à un artefact alien, l'« **Omphalos Rift** », une porte/tunnel permettant d'accéder à des univers parallèles.
-- La seule référence « canonique » directe se trouve dans la novella originelle ***The Dark Wheel*** de Robert Holdstock.
-- Malgré des décennies de recherches communautaires, Raxxla reste introuvable et fait l'objet de débats intenses parmi les joueurs.
+### 5.1 Raxxla — le mystère le plus ancien de la saga *Elite*
+
+**Faits établis.** Légende circulant parmi les spatiaux depuis des siècles ; première mention connue dans le journal
+du mécanicien de bord **Art Tornqvist** (système Tau Ceti), datée de 2296. David Braben lui-même confirme son
+existence en source primaire à deux reprises : le 8 juillet 2014, au BAFTA Games Showcase de Londres, il déclare au
+romancier officiel Drew Wagar *« It's out there and we (FD) know where it is »* ; en mars 2019, le lore-master
+Michael Brookes confirme à nouveau à Wagar *« Raxxla is indeed in the game »*, précisant *« it's in the Milky Way,
+but I can't tell you where it is »* et *« There will be no clues »*. **Correction du 13 septembre 2026** : une
+révision antérieure de ce guide présentait la novella ***The Dark Wheel*** de Robert Holdstock comme « la seule
+référence canonique directe » — c'est inexact. La propre page de lore de Canonn Research indique que cette novella,
+comme le reste de la fiction « Elite classique » (1984-1995), est **non canonique** dans l'univers d'*Elite
+Dangerous*, à l'exception de quelques personnages, organisations ou événements repris ponctuellement.
+
+**Hypothèses communautaires.** Un lien possible avec un artefact alien, l'« Omphalos Rift », porte ou tunnel vers des
+univers parallèles — hypothèse issue de la fiction non canonique elle-même, donc à traiter comme spéculation plutôt
+que comme piste sérieuse. Début 2025, à la sortie d'*Ascendancy*, des joueurs rapportent des « gravures » in-jeu
+mystérieuses que certains relient à Raxxla — non confirmé par Frontier, source unique non recroisée.
+
+**Statut.** Ouvert depuis 2014 au minimum ; aucune localisation n'a jamais été confirmée.
+
+*(Sources : canonn.science/lore/drewwagar-raxxla/, consulté le 13 septembre 2026 ; forums Frontier, reconfirmation
+publique par Wagar en juin 2021.)*
 
 ### 5.2 Phénomènes thargoïdes non résolus : Barnacles, artefacts (UA), sondes (UP), méta-alliages
 
-Barnacles thargoïdes, artefacts inconnus (UA), sondes inconnues (UP), structures inconnues : documentés par le groupe Canonn, ces phénomènes restent partiellement incompris — méta-alliages, cartes stellaires cryptées, corrosion, messages codés en morse.
+Barnacles thargoïdes, artefacts inconnus (UA), sondes inconnues (UP), structures inconnues : documentés par le groupe
+Canonn, ces phénomènes restent partiellement incompris — méta-alliages, cartes stellaires cryptées, corrosion,
+messages codés en morse. Voir [3.2](#32-le-conflit-ancien-entre-guardians-et-thargoïdes-il-y-a-plusieurs-millions-dannées) et [3.4bis](#34bis-les-pléiades-berceau-géographique-du-contact-thargoïde-moderne) pour l'ancrage narratif et géographique de ces phénomènes.
 
 ### 5.3 Le « Nemesis Protocol » de Salvation, survivance présumée de Caleb Wycherley
 
-Depuis la mort officielle de Caleb Wycherley/Salvation le 25 août 3308 (voir 3.7), plusieurs indices communautaires évoquent un hypothétique « Nemesis Protocol » qui aurait préservé sa conscience sous une forme numérique ou biotechnologique. Ni confirmé ni infirmé par une communication GalNet officielle à ce jour, ce fil narratif reste l'un des mystères ouverts les plus récents du lore, aux côtés de Raxxla et des Barnacles thargoïdes.
+Depuis la mort officielle de Caleb Wycherley/Salvation le 25 août 3308 (voir 3.7), plusieurs indices communautaires évoquent un hypothétique « Nemesis Protocol » qui aurait préservé sa conscience sous une forme numérique ou biotechnologique. Ni confirmé ni infirmé par une communication GalNet officielle à ce jour, ce fil narratif reste l'un des mystères ouverts les plus récents du lore.
+
+### 5.4 Formidine Rift, Projet Dynasty et l'épave du Zurara
+
+**Faits établis.** Le **Projet Dynasty** est une initiative secrète créée en 3270 par la cabale **« Le Club »**
+(voir 5.7), en anticipation d'une guerre civile thargoïde susceptible de déborder sur l'espace humain : repérer, dans
+trois régions reculées (le Conflux Scutum-Sagittarii, Hawking's Gap et le **Formidine Rift**), des mondes semblables
+à la Terre pouvant servir de refuges. Le mégavaisseau **Zurara**, équipé pour une exploration longue durée, part en
+avril 3270 et atteint le système Syreadiae JX-F c0 en octobre 3270 ; une fois une cible confirmée et balisée, des
+agents dormants infiltrés dans l'équipage (drogués au « Hexedit ») sabotent le vaisseau et massacrent leurs
+collègues pour garantir qu'aucun retour ne révèle l'opération — le dernier survivant meurt par épuisement du support
+de vie vers le 1ᵉʳ octobre 3270. Une ancienne membre du Club, « Rebecca », découvre l'épave et y laisse des logs le
+21 août 3273 ; le groupe communautaire « The Hamsters » déchiffre son message le 17 avril 3303, menant à la
+découverte officielle par les joueurs le 27 avril 3303. Le Formidine Rift lui-même porte quatre sites de balises
+communautaires (Alpha à Delta, cartographiés par Canonn), chacune diffusant un message chiffré au chiffre de César
+révélant un « point de ralliement » nommé Conflux.
+
+**Le chaînon Salomé.** La noble impériale **Kahina Tijani Loren, dite Salomé** (déjà connue de ce guide, voir 6.2),
+abandonne son siège sénatorial de Prism pour enquêter sur Le Club et recherchait précisément **la liste exhaustive
+des mondes-cibles du Projet Dynasty** — la preuve d'« une machination planifiée dans le vide », selon ses propres
+mots. Le 23 août 3302, son vaisseau est attaqué dans le système Cemiess ; son dernier message demande que « les
+Enfants de Raxxla » soient informés de sa capture et affirme que « le Rift, Hawking's Gap et le Conflux sont liés à
+d'étranges événements dans les Pléiades » — reliant explicitement ce mystère à l'escalade thargoïde documentée en
+3.4bis et 1.6bis. Accusée à tort d'avoir comploté contre l'amiral Denton Patreus, présumée morte après un procès, elle
+est retrouvée vivante puis abattue le 29 avril 3303 dans le système Arumclaw par le chasseur de primes **Besieger**,
+mandaté personnellement par Patreus pour la faire taire.
+
+**Hypothèses communautaires.** Le lien entre Le Club, le Projet Dynasty et Raxxla lui-même reste débattu sans
+tranchage officiel ; la recherche communautaire de Canonn continue d'y consacrer des ressources.
+
+**Statut.** Ouvert. *(Point de vigilance : un contenu de type journal de bord trouvé sur un site communautaire de
+profils de joueurs, daté d'environ janvier 2026, met en scène un commandant inscrit sous le nom « Kahina Tijani
+Loren » pour l'expédition Distant Worlds 3 — c'est un contenu de jeu de rôle communautaire non officiel, à ne surtout
+pas confondre avec une confirmation canonique de la survie de Salomé.)*
+
+*(Sources : canonn.science/codex/formidine-rift-alpha-site/ ; miroir communautaire du wiki Fandom, pages Project
+Dynasty, The Zurara, Mind the Gap, Kahina Tijani Loren, Hawking's Gap — consultées le 13 septembre 2026. Confiance
+haute sur les dates de Salomé, convergentes sur deux recherches indépendantes ; confiance moyenne sur la mécanique
+fine du Projet Dynasty, faute de recoupement direct avec une seconde source primaire.)*
+
+### 5.5 Le culte du Far God
+
+**Faits établis.** Secte fataliste formée en 3304 dans les Systèmes du Cœur, révélée au public par l'article
+rétrospectif GalNet « Galactic Mysteries: The Far God Cult » du 19 juillet 3307. Sa croyance centrale : un être
+inconnaissable, le « Far God », existerait au-delà de notre dimension, et les Thargoïdes seraient ses hérauts,
+préparant une arrivée qui effacerait instantanément toute vie. Ce n'est **pas** une cinquième colonne thargoïde : les
+adeptes n'offrent jamais de résistance, se retirant dans des complexes-temples (« The Sanctum », « The Prophet »,
+construits à Etain en 3304) où ils attendent en stase cryogénique.
+
+**Hypothèses communautaires.** Aucune n'a été retrouvée au-delà du texte GalNet lui-même — un cas rare de mystère
+entièrement porté par une seule source officielle, sans embranchement communautaire documenté.
+
+**Statut.** Ouvert ; décrit par Frontier lui-même, en 3307, comme ayant « grandi ces dernières années ».
+
+*(Source : elitedangerous.com/news/galnet/galactic-mysteries-far-god-cult, consulté le 13 septembre 2026.)*
+
+### 5.6 Les generation ships errants
+
+**Faits établis.** Environ 70 000 vaisseaux-générations ont quitté Sol à partir de 2097, rendus obsolètes par
+l'invention du Frame Shift Drive au XXIIe siècle. Seize épaves sont aujourd'hui documentées, retrouvées via les
+Listening Posts / le FSS, chacune porteuse d'une histoire tragique distincte : le *Lycaon* (première découverte, 23
+avril 3303, équipage tué par un micro-organisme extraterrestre), le *Thetis* (signal ayant rendu l'équipage fou,
+possiblement redétecté en 3309), l'*Achlys* (IA de pilotage ayant développé 92 % d'une capacité intellectuelle
+humaine, toujours en attente d'instructions). Cas unique, **The Golconda** (découvert le 5 novembre 3305) est la
+seule épave retrouvée avec une population vivante, ayant développé un culte isolationniste voué au vaisseau lui-même ;
+une crise sanitaire fin 3305 force la relocalisation des colons vers l'avant-poste « Forester's Choice », avant que le
+vaisseau, remis à niveau avec un hyperdrive moderne, ne reparte le 17 juin 3308.
+
+**Hypothèses communautaires.** L'origine du signal ayant rendu fou l'équipage du *Thetis* n'est pas expliquée.
+
+**Statut.** Ouvert pour le *Thetis* ; les quinze autres épaves sont documentées sans mystère résiduel majeur.
+
+*(Source : miroir communautaire du wiki Fandom, page Generation Ship (tableau des seize vaisseaux), consulté le
+13 septembre 2026 — confiance haute sur l'existence et les grandes lignes, arc communautaire connu depuis 2017 ;
+confiance moyenne sur le détail de chaque vaisseau, non recroisé individuellement.)*
+
+### 5.7 « The Club »
+
+**Faits établis.** Cabale transnationale secrète, dirigée par cinq responsables (Infrastructure, Finance, Exo,
+Personnel, Société), opérant au-dessus des lois sous couvert d'agir pour le bien de l'humanité. Née d'un groupe de
+pilotes de combat d'élite mécontents de la gouvernance galactique, devenue au fil des siècles un pouvoir occulte
+capable d'orchestrer des crises ; au XXXIVe siècle, sa mission centrale est de préparer l'humanité à une invasion
+thargoïde, y compris en supprimant des archives d'une guerre du XXXIIe siècle entre factions thargoïdes rivales. Le
+Club est à l'origine du Projet Dynasty (5.4) et impliqué dans la mort de Salomé.
+
+**Hypothèses communautaires.** Un rôle allégué dans la dissolution d'un traité historique et dans la disparition de
+la présidente fédérale Jasmina Halsey (voir 1.5) circule dans les théories communautaires, sans confirmation.
+
+**Statut.** Ouvert. **Confiance moyenne** sur l'ensemble de cette entrée : source tertiaire unique (miroir de wiki
+communautaire), non recroisée cette session avec une page de lore Canonn dédiée — à vérifier avant citation en
+contexte critique.
+
+*(Source : miroir communautaire du wiki Fandom, page The Club, consulté le 13 septembre 2026.)*
+
+### 5.8 Guardian Beacons — mystère narratif au-delà du mini-jeu
+
+**Faits établis.** Structures orbitales guardian dormantes depuis des millions d'années mais pleinement
+opérationnelles, réactivables par un mini-jeu de tir séquencé sur trois « Guardian Energy Pylons » en trois minutes
+(mécanique complète documentée dans [Guardians](./05-guardians.md)). Le mystère narratif, distinct du mini-jeu
+lui-même : le **28 août 3304**, trois signatures énergétiques inconnues sont détectées simultanément dans les
+secteurs NGC 2451A, IC 2391 et la région Synuefe (voir 1.6bis) ; Ram Tah sollicite les pilotes indépendants pour
+enquêter **sans connaître lui-même** l'origine ni la signification de ces signaux — vingt-sept balises sont
+aujourd'hui cartographiées, sans qu'aucune n'ait livré d'explication sur leur réactivation synchronisée initiale.
+
+**Hypothèses communautaires.** Aucune piste convaincante retrouvée sur la cause du réveil simultané des trois
+premiers sites en 3304.
+
+**Statut.** Mécanique de jeu résolue ; question narrative (pourquoi ce réveil précis, à cette date) ouverte.
+
+*(Sources : miroir communautaire du wiki Fandom, page Guardian Beacon ; citation GalNet directe de Ram Tah datée du
+28 août 3304 — consultées le 13 septembre 2026.)*
 
 ---
 
@@ -473,33 +815,89 @@ Les bonus chiffrés exacts de chaque Power évoluent au fil des rééquilibrages
 
 **Edmund Mahon** (Alliance, Premier ministre) — Né en 3187 sur Birmingham (système Diso) dans une famille d'agriculteurs de maïs. Boursier fédéral en droit, négociateur commercial précoce, il rejoint en 3214 la campagne pour la sécession de Diso vers l'Alliance (réussie en 3286). Élu représentant planétaire à plusieurs reprises, puis élu Premier ministre de l'Alliance début 3301. Homme de principes, empathique, humoriste, négociateur redouté.
 
+*Naissance : 3187 (Diso) — Système QG Powerplay : Gateway ([32-geographie-galactique.md](./32-geographie-galactique.md)) — Éthos Powerplay : Finance (Acquisition, Renforcement), Combat (Undermining) — voir [02-powerplay.md §5.6](./02-powerplay.md).*
+
 #### Felicia Winters — présidente de la Fédération, Power fédérale
 
-**Felicia Winters** (Fédération, Présidente) — Née en 3229 à Taylor Colony (Tau Ceti). Carrière chez Sirius Corporation jusqu'à 44 ans, puis politique fédérale (parti Libéral, siège de Rhea). Secrétaire d'État sous Halsey, elle devient présidente par intérim en 3301 après la disparition de celle-ci, avant d'être destituée par la motion de défiance portée par Zachary Hudson. Elle reconstruit le parti Libéral et remporte l'élection présidentielle fédérale de 3309 face au président sortant Zachary Hudson, redevenant présidente de la Fédération. C'est elle qui annonce la victoire finale contre les Thargoïdes à Sol en décembre 2024.
+**Felicia Winters** (Fédération, Présidente) — Née en 3229 à Taylor Colony (Tau Ceti). Carrière chez Sirius Corporation jusqu'à 44 ans, puis politique fédérale (parti Libéral, siège de Rhea). Secrétaire d'État sous Halsey, elle devient présidente par intérim en 3301 après la disparition de celle-ci, avant d'être destituée par la motion de défiance portée par Zachary Hudson. Elle reconstruit le parti Libéral et remporte l'élection présidentielle fédérale d'octobre 3309 avec quatre points d'avance sur **Jerome Archer**, candidat républicain désigné par Hudson — alors en fin de mandat et non candidat à sa propre succession (voir portrait d'Archer ci-dessous) — devenant présidente en titre le 31 octobre 3310, à l'issue de la période de transition. C'est elle qui annonce la victoire finale contre les Thargoïdes à Sol en décembre 2024.
+
+*Naissance : 3229 (Taylor Colony, Tau Ceti) — Système QG Powerplay : non recensé dans le gazetteer du corpus — Éthos
+Powerplay : Social (Acquisition), Finance (Renforcement, Undermining) — voir [02-powerplay.md §5.6](./02-powerplay.md).*
 
 #### Zachary Hudson — ancien président fédéral, retiré du Powerplay en 3310
 
-**Zachary Hudson** (ex-Fédération) — Né en 3218 à bord du vaisseau-cargo familial, aîné de cinq enfants. Élu représentant Républicain de Nanomam, il devient chef du parti. Conservateur fiscal, pro-business et pro-militaire, il devient président fédéral en 3301 en évinçant Winters. Il perd l'élection présidentielle de 3309 face à Felicia Winters, puis se retire également de la Powerplay le 31 octobre 3310, remplacé comme Power fédérale par Jerome Archer.
+**Zachary Hudson** (ex-Fédération) — Né en 3218 à bord du vaisseau-cargo familial, aîné de cinq enfants. Élu représentant Républicain de Nanomam, il devient chef du parti. Conservateur fiscal, pro-business et pro-militaire, il devient président fédéral en 3301 en évinçant Winters. Constitutionnellement non rééligible pour un second mandat consécutif au terme de ses huit ans, il ne se représente pas à l'élection d'octobre 3309 : c'est son vice-président et dauphin désigné, **Jerome Archer**, qui porte les couleurs républicaines et s'incline de justesse face à Felicia Winters. Hudson assure la transition comme président par intérim jusqu'à l'investiture de Winters, puis se retire de la Powerplay le 31 octobre 3310, jour où Archer lui succède comme Power fédérale.
+
+#### Jerome Archer — Power fédérale depuis le 31 octobre 2024, ancien vice-président de Zachary Hudson
+
+**Jerome Archer** (Fédération, Power) — Né le 1ᵉʳ janvier 3218 à Nanomam *(seule l'année est bien attestée par deux
+sources indépendantes ; le jour et le mois relèvent probablement d'un artefact de gabarit encyclopédique plutôt que
+d'une date de fiction établie)*. Ancien policier de rue à Nueva Vista, il gravit les échelons jusqu'à diriger la
+Federal Intelligence Agency, puis devient Secrétaire à la Sécurité du cabinet de Zachary Hudson. Le **24 mars 3307**,
+Hudson le nomme vice-président en remplacement de Brad Mitchell, tué dans les attentats des « Nine Martyrs » ; six
+jours plus tard, Archer fait adopter par le Congrès le *Domestic Counter-Terrorism Act* qu'il a lui-même rédigé,
+créant le *Proactive Detection Bureau* — un bureau de surveillance des communications civiles à des fins
+antiterroristes, révélateur de sa ligne sécuritaire assumée (« ma priorité a toujours été la même : assurer la
+sécurité des gens »). En octobre 3309, alors que Hudson ne peut briguer de second mandat consécutif, Archer porte les
+couleurs républicaines à l'élection présidentielle fédérale face à Felicia Winters (parti Libéral) et s'incline de
+quatre points — une défaite qu'un éditorial adverse impute à son incapacité à se démarquer du bilan de Hudson.
+Le **31 octobre 3310**, jour de l'investiture de Winters, Hudson se retire de la Powerplay ; Archer, devenu « Shadow
+President » et chef du parti républicain, reprend son siège de Power fédérale — spécialité Powerplay : primes de
+chasse à ~+100 % et coût des modules d'armement réduit de 30 %, en continuité directe avec la ligne sécuritaire de
+Hudson.
+
+*Naissance : 3218 (Nanomam, année seule attestée) — Système QG Powerplay : Nanomam ([32-geographie-galactique.md](./32-geographie-galactique.md)) — Éthos Powerplay : Combat (Acquisition, Renforcement), Covert (Undermining) — voir [02-powerplay.md §5.6](./02-powerplay.md).*
 
 #### Li Yong-Rui — COO de Sirius Corporation, Power indépendante
 
 **Li Yong-Rui** (Sirius Corporation / SiriusGov, indépendant) — Issu d'une dynastie familiale liée à Sirius Corp depuis près de 800 ans (l'entreprise elle-même remonte au XXIVe siècle, voir 1.4). Triple doctorat (physique, politique, économie) à 25 ans, ascension rapide chez Sirius (vice-président Prévisions à 35 ans) jusqu'au poste de Chief Operating Officer de Sirius Corporation et de SiriusGov. Sa puissance politico-économique fait parfois qualifier Sirius de « quatrième superpuissance ».
 
+*Naissance : non documentée dans les sources consultées — Système QG Powerplay : Sirius (siège historique de Sirius
+Corporation, voir 1.4) — Éthos Powerplay : Social (Acquisition), Finance (Renforcement, Undermining) — voir
+[02-powerplay.md §5.6](./02-powerplay.md).*
+
 #### Aisling Duval — princesse impériale abolitionniste, Power impériale
 
 **Aisling Duval** (Empire, Princesse) — Née illégitime en 3276 du Prince Harold Duval (assassiné par les terroristes du NMLA, [glossaire](./00-glossaire.md)) et de l'artiste Imogen Gabrielini. Surnommée « la Princesse du peuple », elle milite pour l'abolition de l'esclavage impérial et pour les causes humanitaires. Très engagée dans l'initiative anti-xéno (AEGIS, voir 3.7), sa Power bonifie fortement les paiements de recherche-et-sauvetage.
 
+*Naissance : 3276 (illégitime) — Système QG Powerplay : Cubeo ([32-geographie-galactique.md](./32-geographie-galactique.md)) — Éthos Powerplay : Finance (Renforcement), Social (Acquisition, Undermining) — voir [02-powerplay.md §5.6](./02-powerplay.md).*
+
 #### Arissa Lavigny-Duval — 16e Empereur d'Achenar, Power impériale
 
-**Arissa Lavigny-Duval** (Empire, Empereur) — 16e Empereur, première femme à accéder au trône impérial. Populaire mais contestée par les traditionalistes et les factions dures de l'Empire, elle est enlevée pendant un an par les « Lords of Restoration » avant de reprendre le pouvoir avec succès.
+**Arissa Lavigny-Duval** (Empire, Empereur) — Née en 3243, fille illégitime de l'Empereur Hengist Duval et de sa
+maîtresse Florence Lavigny, élevée par son père adoptif Aristide de Lavigny. Hengist avait fait modifier en 3238 la loi
+de succession impériale pour ouvrir le trône aux descendantes féminines, et révèle publiquement la filiation d'Arissa
+le 20 décembre 3300, annonçant deux jours plus tard son intention d'épouser Florence Lavigny pour la légitimer
+rétroactivement — un mariage jamais célébré : Hengist est assassiné le 5 août 3301, le jour même prévu pour la
+cérémonie, par Brendan Paul Darius, aide de camp du sénateur Denton Patreus agissant pour le mouvement ultra-
+traditionaliste « Emperor's Dawn ». Faute d'héritier direct incontesté (le prince Harold Duval, jugé inapte, avait été
+écarté de la succession), le **Sénat impérial élit Arissa le 6 octobre 3301**, face à des prétendants concurrents
+crédibles — la princesse Aisling Duval et le sénateur Denton Patreus lui-même — et elle est couronnée le
+**18 octobre 3301**, devenant le 16e Empereur et la première femme à accéder au trône. Traditionaliste sincère plutôt
+que réformatrice — elle défend le mode de vie impérial, esclavage compris, et fonde sa légitimité sur la probité et la
+lutte contre la corruption sénatoriale plutôt que sur l'abolitionnisme porté par Aisling Duval —, elle affronte une
+opposition continue de la frange la plus conservatrice de l'Empire, qui la juge illégitime du seul fait de son genre.
+Cette hostilité débouche sur son enlèvement, en **janvier 3307**, par un groupe de sénateurs se faisant appeler les
+« **Lords of Restoration** », bailleurs de fonds secrets de la NMLA, qui la détiennent au secret dans le système
+Summerland tout en masquant sa disparition par un simulacre virtuel validé à tort par des agents infiltrés
+d'Imperial Intelligence ; elle est localisée et secourue par la Garde impériale le **9 février 3308**, après un peu
+plus d'un an de captivité, et reprend officiellement le trône le 16 février 3308 par un discours de vengeance envers
+ses ravisseurs.
+
+*Naissance : 3243 — Système QG Powerplay : Achenar (capitale impériale) — Éthos Powerplay : Combat (Renforcement,
+Undermining), Social (Acquisition) — voir [02-powerplay.md §5.6](./02-powerplay.md).*
 
 #### Denton Patreus — sénateur et Amiral de la Flotte impériale, Power impériale
 
 **Denton Patreus** (Empire, Sénateur/Amiral) — Né en 3253, il bâtit sa fortune via des sociétés-écrans accordant des prêts « avantageux » à des gouvernements avant d'en durcir les taux et de saisir leurs actifs en cas de défaut. Il investit massivement dans une force militaire privée. Sénateur d'Eotienses, il est nommé Amiral de la Flotte par Arissa Lavigny-Duval le 22 février 3302. Homme d'affaires impitoyable et loyal serviteur de l'Empire, il est soupçonné d'ambitions impériales personnelles.
 
+*Naissance : 3253 — Système QG Powerplay : Eotienses ([32-geographie-galactique.md](./32-geographie-galactique.md)) — Éthos Powerplay : Combat (Renforcement, Undermining), Finance (Acquisition) — voir [02-powerplay.md §5.6](./02-powerplay.md).*
+
 #### Archon Delaine — « Pirate King » du Kumo Crew (secteur Pegasi), Power indépendante
 
 **Archon Delaine** (Kumo Crew, Pirate King) — Né en 3249, ses origines varient selon les versions du récit (bidonville, bordel, chantier naval). En 3264, à 15 ans, il défie et tue en duel le Pirate Lord Crabbe, prenant le contrôle du Kumo Crew. Entre 3264 et 3284, il transforme ce gang disparate en le cartel le plus redouté du secteur Pegasi. Autoritaire, invaincu en combat singulier, il instaure un code de sanctions graduées — les « cinq dépouillements » (rang, équipage, possessions, peau, vie) — pour les pirates qui trahissent les accords de tribut.
+
+*Naissance : 3249 — Système QG Powerplay : non recensé dans le gazetteer du corpus (secteur Pegasi) — Éthos Powerplay : Combat (Acquisition, Renforcement, Undermining) — voir [02-powerplay.md §5.6](./02-powerplay.md).*
 
 #### Salomé (Kahina Tijani Loren) — noble impériale assassinée, personnage de lore
 
@@ -509,17 +907,25 @@ Les bonus chiffrés exacts de chaque Power évoluent au fil des rééquilibrages
 
 **Yuri Grom** (Indépendant, Clarke's Reach) — Né le 1er janvier 3256 dans le système Euryale ; on sait peu de choses de sa jeunesse avant son entrée dans la Marine fédérale, où il gravit les échelons jusqu'à un poste d'instructeur prometteur. En 3301, il démissionne volontairement — la rumeur, jamais confirmée officiellement, l'attribue à un dégoût pour la corruption des échelons supérieurs de la Fédération. Il fonde alors les **EG Pilots** avec des pilotes fédéraux restés loyaux, et les mène à la victoire aux « Dangerous Games » de 3302, ce qui l'impose comme acteur galactique majeur ; dès 3307, son influence lui permet de négocier directement avec la Fédération. Conquérant habile et chef charismatique, il inspire une loyauté redoutable — un photographe rapporte son refus de dissimuler ses cicatrices de guerre au même titre que ses décorations. Sa philosophie, résumée par son slogan « La liberté parmi les étoiles », tient en une phrase : « la liberté ne signifie pas l'anarchie ; un ordre légal inflexible est indispensable ».
 
+*Naissance : 1er janvier 3256 (Euryale) — Système QG Powerplay : Clayakarma ([32-geographie-galactique.md](./32-geographie-galactique.md)) — Éthos Powerplay : Combat (Renforcement), Covert (Acquisition, Undermining) — voir [02-powerplay.md §5.6](./02-powerplay.md).*
+
 #### Zemina Torval — fondatrice de Torval Mining Ltd, Power impériale
 
 **Zemina Torval** (Empire) — Née le 1er janvier 3177 dans le système Synteini, issue des cercles fortunés de la noblesse impériale. Elle bâtit sa fortune sur le minage et l'esclavage impérial, devenant actionnaire majoritaire de Mastopolos Mining tout en menant une carrière sénatoriale de plusieurs décennies comme représentante de Synteini. Vers 3307, elle cède sa participation dans Mastopolos pour fonder sa propre société, **Torval Mining Ltd**, plaçant sa fille Constantia à sa direction — une stratégie de long terme visant à bâtir une dynastie familiale directe plutôt qu'un empire élargi. Traditionaliste, elle préfère la diplomatie et le levier financier à la force ouverte, tout en maintenant une capacité militaire substantielle. Elle défend l'esclavage impérial comme un pilier de la stabilité sociale, s'opposant frontalement aux positions abolitionnistes d'Aisling Duval.
+
+*Naissance : 1er janvier 3177 (Synteini) — Système QG Powerplay : Synteini ([32-geographie-galactique.md](./32-geographie-galactique.md)) — Éthos Powerplay : Finance (Acquisition, Renforcement), Covert (Undermining) — voir [02-powerplay.md §5.6](./02-powerplay.md).*
 
 #### Pranav Antal — Simguru d'Utopia, Power indépendante
 
 **Pranav Antal** (Indépendant, Utopia) — Né le 1er janvier 3225, il hérite de la direction du mouvement **Utopia** fondé par son père Rishi Antal, concepteur du Sim-Archive (une archive numérique préservant la mémoire des défunts). Élevé dans l'aisance mais astreint par son père à un travail manuel dans les tunnels de culture — une discipline dont il ne comprendra le sens qu'après avoir consulté les souvenirs paternels archivés — Pranav se révèle, à la différence de son père ascète, doté d'un sens aigu des affaires : il commercialise agressivement les technologies d'Utopia et étend son influence à plusieurs systèmes (Polevnic, Neris, HIP 117972, HIP 1389), au prix d'accusations de trahir l'idéal fondateur du mouvement au profit du profit. Son projet phare, l'**Acheron Interface**, vise le transfert de la conscience humaine sous forme numérique — une entreprise qu'il défend comme distincte de l'IA prohibée puisque l'esprit transféré resterait « essentiellement humain ». C'est lui qui propose, le 1er janvier 3307, le **Galactic Summit** (voir 2.5), première tentative de conférence réunissant les trois superpuissances — un projet de sécurité finalement confié à Sirius Corporation après une compétition logistique perdue face à Li Yong-Rui.
 
+*Naissance : 1er janvier 3225 — Système QG Powerplay : non recensé dans le gazetteer du corpus — Éthos Powerplay : Social (Acquisition, Undermining), Covert (Renforcement) — voir [02-powerplay.md §5.6](./02-powerplay.md).*
+
 #### Nakato Kaine — conseillère de Tionisla, Power alliancée
 
 **Nakato Kaine** (Alliance) — Ses origines et sa formation restent peu documentées dans les sources disponibles. Conseillère représentant Tionisla depuis environ une décennie au sein de l'Assemblée de l'Alliance, elle s'impose comme la voix de la faction « Old Worlds » et l'opposante la plus visible à l'agenda expansionniste du Premier ministre Edmund Mahon. Candidate principale contre lui à l'élection de mai 3307, elle perd le scrutin mais consolide sa stature de force incontournable de la politique alliancée. Sa victoire la plus marquante survient en février 3308, lorsqu'elle fait adopter une motion de censure contre Mahon concernant la présence controversée de Sirius Corporation en territoire alliancé, recueillant une majorité relative de l'Assemblée. Oratrice réputée pour la force de ses discours, elle défend une gouvernance transparente et se montre ouvertement méfiante envers l'influence jugée « préoccupante » des mégacorporations sur certains conseillers — une ligne qui explique sa nomination comme nouvelle Power de l'Alliance lors de la mise à jour Ascendancy (31 octobre 2024, voir 1.9).
+
+*Naissance : non documentée dans les sources consultées — Système QG Powerplay : Tionisla ([32-geographie-galactique.md](./32-geographie-galactique.md)) — Éthos Powerplay : Social (Acquisition, Undermining), Covert (Renforcement) — voir [02-powerplay.md §5.6](./02-powerplay.md).*
 
 ---
 
@@ -553,11 +959,42 @@ Les Community Goals de la Seconde Guerre Thargoïde ont structuré l'effort de g
 
 Célébrations du 10e anniversaire de la région de **Colonia**, dont le Colonia Hub a été fondé le 9 septembre 2016 (réel) par l'expédition de Jaques Station (voir 1.9) — soit l'an 3302 dans le calendrier interne. Ouverture d'un « megamarket » à Jaques Station, campagnes logistiques communautaires (Brewer Corporation).
 
-### 7.7 Initiatives communautaires permanentes : Fuel Rats, Anti-Xeno Initiative, Distant Worlds
+### 7.7 Le tissu communautaire : treize groupes de joueurs, au-delà du lore in-jeu
 
-- **Fuel Rats** : sauvetage bénévole d'explorateurs à court de carburant (initiative communautaire indépendante, à distinguer des Rescue Rangers de la Pilots Federation, voir 2.7).
-- **Anti-Xeno Initiative / AEGIS** : coordination de la lutte anti-thargoïde (voir 3.7).
-- **Expéditions Distant Worlds** : grandes expéditions communautaires ponctuelles, et non annuelles — Distant Worlds (fin 2015 - début 2016, voir 7.1), Distant Worlds II (janvier 2019, voir 7.2) puis Distant Worlds 3 (achevée le 18 mai 2026, voir 7.3). Aucune quatrième édition n'est annoncée à la date de ce guide.
+À côté des arcs narratifs déjà couverts (7.1-7.6), *Elite Dangerous* a fait naître, sur treize ans, un tissu
+d'organisations de joueurs à but non lucratif dont sept n'apparaissaient jusqu'ici dans aucun guide du corpus. Elles ne
+sont pas du lore : ce sont de vraies communautés, avec un site, un Discord et — pour la plupart — une activité
+mesurable en 2025-2026. Deux mises en garde ressortent de leur vérification. D'abord, une hypothèse répandue s'est
+révélée fausse : les Hull Seals ne sont pas nés d'une rupture avec les Fuel Rats, mais d'un besoin logistique distinct
+(préparer Distant Worlds II) — leur propre page de remerciements cite au contraire les Fuel Rats comme modèle fondateur.
+Ensuite, les « **Rescue Rangers** » cités en 2.7 comme branche bénévole de la Pilots Federation sont un **dispositif de
+lore mis en place par Frontier avec Odyssey (2021)**, pas un collectif de joueurs : un club Xbox non officiel a porté
+ce nom entre 2016 et 2018, sans suite documentée depuis. Ne pas les confondre avec les douze groupes réels ci-dessous.
+
+| Groupe | Domaine | Fondation | Contact | Service rendu | Actif en 2025-2026 |
+|---|---|---|---|---|---|
+| **Fuel Rats** | Sauvetage (carburant, coque) | Juin 2015, CMDR Surly Badger | fuelrats.com, Discord | Ravitaillement à distance et réparation de coque, gratuits, 24/7 | Oui — dépôts GitHub actifs jusqu'en sept. 2026 |
+| **Hull Seals** | Sauvetage (coque, SRV, verrière) | Janvier 2019 (« Fleet Mechanics », pour Distant Worlds II) | hullseals.space, Discord | Réparation de coque à distance, extraction de SRV, dépannage de verrière | Incertain — outil principal (HalpyBOT) figé depuis sept. 2024 |
+| **Operation Ida** | Reconstruction de stations endommagées | 2018, Pléiades (secteur Pleiades HR-W d1-41) | operationida.com, Discord | Convois de masse (jusqu'à 2,5 Mt) vers les stations endommagées | Confirmé jusqu'à janv. 2025 (fin des réparations de Sol) ; mission réduite depuis la fin de la guerre |
+| **Canonn Research** | Recherche communautaire (lore, xénoarchéologie) | 2015, Dr Arcanonn | canonn.science, Discord | Recherche collaborative, Codex, partenariat avec AXI | Oui — publications jusqu'en fév. 2026 |
+| **Anti-Xeno Initiative (AXI)** | Combat anti-thargoïde | 15 nov. 2017, CMDR Gluttony Fang | antixenoinitiative.com, Discord | Coordination du combat AX, wiki tactique, données Canonn | Oui — événement organisé en oct. 2025 |
+| **Hutton Orbital Truckers** | Culture communautaire (convois, radio) | ≈2015-2016, à la suite de la CG du Hutton Mug | forums Frontier, radio.forthemug.com | Convois humoristiques vers Hutton Orbital, radio/podcast | Oui — podcast actif, épisodes jusqu'en avril 2025 |
+| **DSSA** (Deep Space Support Array) | Logistique de secours longue distance | Conçu en 2019, lancé ≈juin 2020, projet porté par FleetComm | Discord FleetComm HQ, liste de réserve publique | Réseau de Fleet Carriers de secours postés en marge de la Bulle | Oui |
+| **Buckyball Racing Club** | Course longue distance | Août 2015 | forums Frontier | Courses et championnats ouverts à tout vaisseau | Oui — saison « Yes And 3311 » (2025) |
+| **Sagittarius Eye** | Média/presse communautaire | 2017 | sagittarius-eye.com | Magazine et podcast d'actualité du jeu | Non confirmé — mentions légales du site figées à 2021, dernier podcast connu nov. 2024 |
+| **PTN** (Pilots Trade Network) | Commerce via Fleet Carriers | ≈2021 (date non confirmée en source primaire) | pilotstradenetwork.com, Discord | Coordination logistique du commerce par Fleet Carriers | Plus de 400 carriers revendiqués ; date d'activité récente non confirmée |
+| **FCOC** (Fleet Carrier Owners Club) | Communauté de propriétaires de Fleet Carriers | Après juin 2020 (date précise introuvable) | Discord | Trajets gratuits, petites annonces, secours entre propriétaires | Vraisemblable (~29 000 membres allégués) mais non confirmé |
+| **Fleetcomm** | Coordination des grandes expéditions | Nov. 2015 (« Kamzel PG », CMDR Erimus Kamzel), renommé ≈2017 | Discord FleetComm HQ | Hub logistique des expéditions (Distant Worlds), héberge le projet DSSA | Oui — hub confirmé de Distant Worlds 3 |
+
+*(Sources : sites officiels de chaque groupe, dépôts GitHub, wiki Fandom et forums Frontier, tous consultés le
+13 septembre 2026 — voir la liste complète en fin de guide. Les cases « non confirmé » ou « incertain » le restent
+faute d'une preuve d'activité datée de 2025 ou 2026 ; elles ne signifient pas que le groupe a cessé d'exister.)*
+
+Les **expéditions Distant Worlds** elles-mêmes restent traitées comme un arc narratif ponctuel plutôt que comme un
+groupe permanent : Distant Worlds (fin 2015 - début 2016, voir 7.1), Distant Worlds II (janvier 2019, voir 7.2) puis
+Distant Worlds 3 (achevée le 18 mai 2026, voir 7.3) — trois éditions espacées de plusieurs années, sans cadence
+annuelle et sans quatrième édition annoncée à la date de ce guide ; c'est Fleetcomm, ci-dessus, qui en assure la
+coordination permanente d'une édition à l'autre.
 
 ---
 
@@ -569,6 +1006,60 @@ Célébrations du 10e anniversaire de la région de **Colonia**, dont le Colonia
 - **Politiquement** : Felicia Winters est présidente de la Fédération depuis sa victoire sur Zachary Hudson lors de l'élection fédérale de 3309, Arissa Lavigny-Duval a repris fermement le trône impérial après son enlèvement par les Lords of Restoration, Edmund Mahon dirige toujours l'Alliance — non sans opposition croissante de Nakato Kaine (voir 6.2).
 - Le Galnet de septembre 3312 (présent du jeu) documente une actualité dominée par l'économie, l'exploitation minière et la vie quotidienne des colonies plutôt que par un conflit existentiel — signe du glissement du lore vers une ère de reconstruction, d'expansion coloniale et de compétition politique feutrée entre superpuissances. La menace thargoïde résiduelle et les mystères non résolus (Raxxla, Guardians, artefacts inconnus, « Nemesis Protocol » de Salvation — voir section 5) demeurent toutefois des arcs narratifs latents que Frontier peut réactiver à tout moment.
 - Aucune information disponible n'indique une nouvelle guerre thargoïde majeure ou une découverte Guardian de rupture entre fin 2024 et septembre 2026 : la période est caractérisée par la consolidation (colonisation, Powerplay 2.0) plutôt que par une nouvelle rupture de lore.
+
+---
+
+## 9. Sources canoniques et transmedia
+
+Le lore d'*Elite Dangerous* ne vit pas que dans le jeu et sur GalNet (voir 2.7bis) : une dizaine d'œuvres publiées
+sous licence Frontier Developments l'étoffent depuis 2014, sans qu'aucune n'ait le même statut.
+
+### Tableau des œuvres officielles
+
+| Titre | Auteur | Année | Éditeur | Arc de lore couvert | Statut canonique |
+|---|---|---|---|---|---|
+| *Elite Dangerous: Docking is Difficult* | Gideon Defoe | 2014 | Gollancz | Comédie, hors arc politique | Sous licence, non recoupé en jeu |
+| *Elite Dangerous: Nemorensis* | Simon Spurrier | 2014 | Gollancz | — | Sous licence, non recoupé en jeu |
+| *Elite Dangerous: Wanted* | Stephen Deas & Gavin Smith (« Gavin Deas ») | 2014 | Gollancz | — | Sous licence, non recoupé en jeu |
+| *Elite: Reclamation* | Drew Wagar | 2014 | Fantastic Books Publishing | Front Empire/Fédération, sénatrice Kahina Tijani Loren (Salomé, voir 5.4 et 6.2) | Sous licence ; personnage et enregistrement audio repris en jeu |
+| *Elite: Mostly Harmless* | Kate Russell | 2014 | Fantastic Books Publishing | Comédie | Sous licence, non recoupé en jeu |
+| *Elite: And Here The Wheel* | John Harper | 2014 | Fantastic Books Publishing | Lien entre *The Dark Wheel* (classique) et *First Encounters* | Sous licence, non recoupé en jeu |
+| *Elite: Tales from the Frontier* | Anthologie (15 nouvelles) | 2014 | Fantastic Books Publishing | Divers | Sous licence, non recoupé en jeu |
+| *Elite: Out of the Darkness* | T. James | 2014 | — | Thargoïdes | Sous licence, non recoupé en jeu |
+| *Elite: Lave Revolution* | — | 2014 | — | Old Worlds, Lave | Sous licence, non recoupé en jeu |
+| *Elite: Legacy* | **Michael Brookes** (lore-master interne Frontier) | 2014 | — | — | Statut particulier : proche de la production interne |
+| *Elite Dangerous: Premonition* | Drew Wagar | 2017 | Frontier Developments (direct) | Suite de *Reclamation*, événements 3302-3303 | Le plus proche du canon officiel — publié directement par Frontier |
+| *Elite: The Dark Wheel* | Robert Holdstock | 1984 | Fourni avec *Elite* original | Fiction fondatrice de la saga classique | **Non canonique** dans *Elite Dangerous* (contact extraterrestre non hostile contredisant la chronologie *Dangerous*) |
+
+*(Autres œuvres de la continuité « Elite classique », également non canoniques sauf éléments ponctuels repris :
+*Imprint* d'Andy Redman, 1991 ; *Stories of Life on the Frontier*, 1993 ; *Further Stories of Life on the Frontier*.
+Existent aussi deux jeux de rôle sur table sous licence, *Elite Encounters RPG* et *Elite Dangerous Role Playing
+Game*, ainsi qu'une fan-fiction gratuite explicitement distinguée du reste, *Resistance* de J.E. Davis (2020).)*
+
+### Ce que Frontier a réellement intégré au canon jouable
+
+Un seul cas concret d'intégration directe a pu être établi : le personnage de **Salomé** (Kahina Tijani Loren),
+protagoniste de *Reclamation* et *Premonition*, dispose d'un enregistrement audio réellement présent en jeu dans une
+station hospitalière, à la suite d'un événement communautaire — la preuve qu'un roman sous licence peut basculer,
+ponctuellement et sélectivement, dans le contenu jouable. C'est l'exception qui confirme la règle : la plupart des
+autres œuvres de la liste ci-dessus n'ont, à ce jour, aucune trace vérifiée en jeu.
+
+### Il n'existe pas de hiérarchie d'autorité canonique publiée par Frontier
+
+**Point à ne pas perdre de vue** : l'échelle proposée en [2.7bis](#27bis-galnet-et-le-codex--comment-le-lore-est-diffusé-et-avec-quelle-autorité)
+(GalNet/patch notes > Codex > romans sous licence > jeux classiques > recherche Canonn > spéculation) est une
+**convention éditoriale de ce corpus**, pas une doctrine que Frontier aurait formulée. Un fil de discussion des
+forums officiels Frontier (mars 2024), dépouillé message par message, confirme qu'aucun intervenant n'appartient au
+studio : les joueurs y débattent sans trancher, entre une position stricte (« seul ce qui est dans le jeu est canon »)
+et une position nuancée admettant une intégration sélective (le cas Salomé, précisément). Même Canonn Research, source
+que ce corpus cite abondamment, reste prudent : sa page de référence qualifie les romans de Wagar de simples
+« recommended official books » donnant « a flavour to the game environment », une formule délibérément en retrait
+d'une affirmation de canonicité forte. **La conclusion la plus honnête est donc positive, pas une simple lacune** :
+il est établi qu'aucune hiérarchie officielle n'existe, plutôt que de suspecter qu'elle existe sans avoir été trouvée.
+
+*(Sources : miroir communautaire du wiki Fandom, page Fiction (liste complète par éditeur) ; drewwagar.com/elitedangerous
+(bibliographie de Drew Wagar) ; forums.frontier.co.uk, fil « Elite Dangerous Canon Books? » (mars 2024, vingt messages
+dépouillés un par un) ; canonn.science/lore/drewwagar-primer/ — toutes consultées le 13 septembre 2026.)*
 
 ---
 
@@ -586,6 +1077,9 @@ D'autres guides du corpus approfondissent des aspects mentionnés dans ce guide 
 - [Le Background Simulation (BGS)](./21-bgs.md) — mécanique sous-jacente à l'influence des superpuissances et des Powers sur les systèmes.
 - [Community Goals](./24-community-goals.md) — mécanique générique des CG évoquées en section 7.
 - [Rhino & Nomad](./14-rhino.md) — détail sur le SRV Rhino et sur le Nomad, tous deux mentionnés en 1.9.
+- [Missions, réputation et rangs de superpuissance](./29-missions-reputation-et-rangs.md) — détail complet des échelles Federal Navy et Imperial Navy évoquées en section 2.
+- [Sources de données](./17-sources-donnees.md) — endpoint GalNet et méthode d'archivage pour l'ingestion RAG, cités en 2.7bis.
+- [Jeu en groupe](./23-jeu-en-groupe.md) — activités communautaires organisées (courses, expéditions, secours) issues du tissu associatif recensé en 7.7.
 
 ---
 
@@ -674,3 +1168,22 @@ D'autres guides du corpus approfondissent des aspects mentionnés dans ce guide 
 - https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Guardian-Thargoid_War.md
   (cause, déroulement et issue de la guerre ancienne — section 4.4)
 - https://canonn.science/codex/professor-palins-mission/ (mission de collecte du Professeur Palin à Maia)
+- https://fuelrats.com/ ; https://confluence.fuelrats.com/display/public/FRKB/History (Fuel Rats, fondation juin 2015 — section 7.7)
+- https://hullseals.space/knowledge/books/acknowledgments/page/the-fuel-rats (Hull Seals, fondation janvier 2019, filiation avec les Fuel Rats — section 7.7)
+- https://www.operationida.com/about ; https://elite-dangerous.fandom.com/wiki/Operation_Ida (Operation Ida — section 7.7)
+- https://canonn.science/ ; https://canonn.science/about-us/ (Canonn Research, fondation 2015 — section 7.7)
+- https://antixenoinitiative.com/ ; https://wiki.antixenoinitiative.com/en/home (Anti-Xeno Initiative, fondation nov. 2017 — section 7.7)
+- https://community.elitedangerous.com/en/node/332 (Hutton Orbital Truckers — section 7.7)
+- https://forums.frontier.co.uk/threads/the-deep-space-support-array-dssa-a-fleetcomm-initiative.540166/ ; https://inara.cz/elite/squadron-about/13586/ (DSSA — section 7.7)
+- https://elite-dangerous.fandom.com/wiki/Buckyball_Racing_Club (Buckyball Racing Club, fondation août 2015 — section 7.7)
+- https://www.sagittarius-eye.com/ ; https://elite-dangerous.fandom.com/wiki/Sagittarius_Eye (Sagittarius Eye — section 7.7)
+- https://pilotstradenetwork.com/ ; https://inara.cz/elite/squadron-about/9890/ (Pilots Trade Network — section 7.7)
+- https://inara.cz/elite/squadron-about/7636/ (Fleet Carrier Owners Club — section 7.7)
+- https://elite-dangerous.fandom.com/wiki/Pilots_Federation_Rescue_Rangers (Rescue Rangers : dispositif de lore Odyssey 2021, pas un groupe de joueurs — section 7.7)
+- https://forums.frontier.co.uk/threads/announcing-fleetcomm-the-exploration-focused-private-pc-group.474455/ (Fleetcomm, fondation nov. 2015 sous le nom « Kamzel PG » — section 7.7)
+- Miroir communautaire du wiki Fandom (DarkSession/Elite-Dangerous-RAG-Knowledge), pages Federation, Empire, Alliance, Federation-Ranks, Empire-Ranks, Imperial-Senate — institutions des trois superpuissances, section 2 (consulté le 13 septembre 2026)
+- Miroir communautaire du wiki Fandom, pages Jerome-Archer, Zachary-Hudson, Felicia-Winters, Hengist-Duval, Arissa-Lavigny-Duval, Lords-of-Restoration — portraits et succession, sections 2 et 6.2 (consulté le 13 septembre 2026)
+- https://forums.frontier.co.uk/threads/galnet-president-winters-assumes-office-31-oct-3310.629029/ ; https://forums.frontier.co.uk/threads/arissa-lavigny-duval-stance-on-slavery.180428/ (recoupements sur l'élection de 3309 et la position d'Arissa sur l'esclavage)
+- Miroir communautaire du wiki Fandom, pages Neo-Marlinist-Liberation-Army, Harold-Duval, Marlinist-refugee-crisis, Marlinist-Colonies, Second-Thargoid-War, Maia — chronologie 3304-3308, section 1.6bis (consulté le 13 septembre 2026)
+- Miroir communautaire du wiki Fandom, pages Formidine-Rift, Project-Dynasty, The-Zurara, Mind-the-Gap, Kahina-Tijani-Loren, The-Far-God-Cult (ou équivalent), Generation-Ship, The-Club, Guardian-Beacon — catalogue des mystères, section 5 (consulté le 13 septembre 2026)
+- canonn.science/lore/drewwagar-raxxla/ ; canonn.science/lore/drewwagar-primer/ ; https://www.drewwagar.com/elitedangerous/ ; miroir du wiki Fandom, page Fiction ; forums.frontier.co.uk, fil « Elite Dangerous Canon Books? » (mars 2024) — section 9 (consultés le 13 septembre 2026)

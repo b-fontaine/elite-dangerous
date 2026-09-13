@@ -23,16 +23,16 @@ guides:
     fichier: 00-chronologie-canonique.md
     titre: "Chronologie canonique — Elite Dangerous"
     domaine: "transversal"
-    entites: ["Operations Update", "Nomad", "SRV Rhino", "Kestrel Mk II", "Lynx Highliner", "Caspian Explorer", "Panther Clipper Mk II", "Powerplay 2.0", "Thargoid War Epilogue", "Vessel Hangar", "Dodec Update", "Colonia"]
-    mots_cles_en: ["operations update", "nomad", "rhino srv", "vessel hangar", "kestrel mk ii", "lynx highliner", "caspian explorer", "thargoid war epilogue", "powerplay 2.0", "dodec update", "patch notes", "shipyard"]
+    entites: ["Operations Update", "Nomad", "SRV Rhino", "Kestrel Mk II", "Lynx Highliner", "Caspian Explorer", "Panther Clipper Mk II", "Powerplay 2.0", "Thargoid War Epilogue", "Vessel Hangar", "Dodec Update", "Colonia", "Kickstarter", "Horizons", "Beyond", "Odyssey", "Fleet Carriers Update", "Supercruise Overcharge", "Ascendancy"]
+    mots_cles_en: ["operations update", "nomad", "rhino srv", "vessel hangar", "kestrel mk ii", "lynx highliner", "caspian explorer", "thargoid war epilogue", "powerplay 2.0", "dodec update", "patch notes", "shipyard", "kickstarter", "horizons", "beyond", "odyssey", "fleet carriers update", "supercruise overcharge", "version history", "ascendancy"]
     version_jeu_couverte: "4.4.0.x"
     branche: "live"
-    date_verification: "2026-09-10"
+    date_verification: "2026-09-13"
     confiance_globale: "haute"
     volatilite: "moyenne"
-    sources_primaires: ["Steam News Frontier (App ID 359320)", "elitedangerous.com", "EDCD/FDevIDs", "EDCD/coriolis-data", "Inara.cz", "GalNet", "Wayback Machine", "Wikipédia"]
-    zones_incertaines: ["rattachement du numéro 4.4.0.3 au billet du 9 juillet 2026, plausible mais non prouvé — le billet se contredit sur son propre numéro", "date de fin d'accès anticipé ARX du Panther Clipper Mk II, non confirmée", "date exacte de destruction du Titan Raijin, antérieure au 5 décembre 2024 sans plus de précision", "baie Mk I ou Mk II exigée par le SRV Rhino, non tranchée par une source primaire", "plafond de 9 999 Merc Coins et allocation de 1 000 par semaine, de source communautaire seulement", "numéros de version 4.4.1.0 et 4.4.1.1 de septembre 2026, issus de pages officielles restées inaccessibles"]
-    guides_lies: [1, 3, 13, 14, 25]
+    sources_primaires: ["Steam News Frontier (App ID 359320)", "elitedangerous.com", "EDCD/FDevIDs", "EDCD/coriolis-data", "Inara.cz", "GalNet", "Wayback Machine", "Wikipédia", "wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge)", "presse spécialisée d'époque (PC Gamer, Massively Overpowered, TheSixthAxis, Engadget)"]
+    zones_incertaines: ["rattachement du numéro 4.4.0.3 au billet du 9 juillet 2026, plausible mais non prouvé — le billet se contredit sur son propre numéro", "date de fin d'accès anticipé ARX du Panther Clipper Mk II, non confirmée", "date exacte de destruction du Titan Raijin, antérieure au 5 décembre 2024 sans plus de précision", "baie Mk I ou Mk II exigée par le SRV Rhino, non tranchée par une source primaire", "plafond de 9 999 Merc Coins et allocation de 1 000 par semaine, de source communautaire seulement", "numéros de version 4.4.1.0 et 4.4.1.1 de septembre 2026, issus de pages officielles restées inaccessibles", "jour exact de la fin du Kickstarter (4 ou 5 janvier 2013 selon la source)", "terminologie exacte distinguant « Premium Beta » de « Beta 1 » en 2014", "retrait ou non du jeu des stores consoles après l'arrêt du développement, mars 2022 : non confirmé"]
+    guides_lies: [1, 3, 13, 14, 15, 19, 25]
 
   - id: 00-glossaire
     fichier: 00-glossaire.md
@@ -53,16 +53,16 @@ guides:
     fichier: 01-lore.md
     titre: "Elite Dangerous : lore et histoire de l'univers"
     domaine: "lore"
-    entites: ["Thargoïdes", "Guardians", "Fédération", "Empire d'Achenar", "Alliance des Systèmes Indépendants", "Pilots Federation", "AEGIS", "Salvation", "Raxxla", "Titans (Maelstroms)", "Colonia", "Distant Worlds", "Pléiades", "Maia", "Merope", "Barnacle", "Constructs", "Monolith Network"]
-    mots_cles_en: ["Thargoid", "Guardian", "Federation", "Empire", "Alliance", "Pilots Federation", "AEGIS", "Salvation", "Raxxla", "Maelstrom", "Titan", "Distant Worlds", "pleiades", "maia", "merope", "barnacle", "construct", "guardian civil war", "monolith network"]
+    entites: ["Thargoïdes", "Guardians", "Fédération", "Empire d'Achenar", "Alliance des Systèmes Indépendants", "Pilots Federation", "AEGIS", "Salvation", "Raxxla", "Titans (Maelstroms)", "Colonia", "Distant Worlds", "Pléiades", "Maia", "Merope", "Barnacle", "Constructs", "Monolith Network", "Jerome Archer", "NMLA", "Marlinist Colonies", "Lords of Restoration", "Formidine Rift", "Projet Dynasty", "Zurara", "Far God", "The Club", "Guardian Beacons", "GalNet", "Fuel Rats", "Hull Seals", "Fleetcomm"]
+    mots_cles_en: ["Thargoid", "Guardian", "Federation", "Empire", "Alliance", "Pilots Federation", "AEGIS", "Salvation", "Raxxla", "Maelstrom", "Titan", "Distant Worlds", "pleiades", "maia", "merope", "barnacle", "construct", "guardian civil war", "monolith network", "jerome archer", "nmla", "marlinist colonies", "lords of restoration", "formidine rift", "project dynasty", "zurara", "far god cult", "the club", "guardian beacon", "galnet", "canon", "transmedia", "fuel rats", "hull seals"]
     version_jeu_couverte: "4.4.0.x"
     branche: "live"
-    date_verification: "2026-09-12"
+    date_verification: "2026-09-13"
     confiance_globale: "moyenne"
     volatilite: "basse"
-    sources_primaires: ["Canonn", "GalNet mirroré sur Inara.cz", "Steam News Frontier", "elitedangerous.com", "Wikipédia", "wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge)", "distantworlds3.space"]
-    zones_incertaines: ["date réelle de généralisation des propulseurs SCO à toutes les FSD, non confirmée en source primaire", "rôle d'Arek Vandevar auprès du Guardian Tech Broker, documenté seulement en source communautaire", "date de départ, effectifs et parcours de l'expédition Distant Worlds 3", "filiation narrative entre la recherche AEGIS/Salvation et les propulseurs SCO, lecture communautaire et non fait canonique", "étendue du territoire thargoïde au plus fort du conflit, estimations communautaires divergentes", "taux exact de rebuy de la Pilots Federation, à revérifier en jeu", "divergence d'un jour entre deux pages du même wiki communautaire sur la date de découverte du premier Barnacle vs. du premier Meta-Alloy à Merope 5 C (15 vs 14 janvier 3302)", "absence de système de castes documenté chez les Guardians : structure sociale attestée en clans puis cités-États, sans hiérarchie de castes confirmée par une source consultée", "devenir des Constructs après l'extinction guardian : hypothèse de survie non tranchée, attribuée à Ram Tah"]
-    guides_lies: [0, 2, 5, 18, 24, 25, 32]
+    sources_primaires: ["Canonn", "GalNet mirroré sur Inara.cz", "Steam News Frontier", "elitedangerous.com", "Wikipédia", "wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge)", "distantworlds3.space", "forums.frontier.co.uk", "drewwagar.com"]
+    zones_incertaines: ["rôle d'Arek Vandevar auprès du Guardian Tech Broker, documenté seulement en source communautaire", "date de départ, effectifs et parcours de l'expédition Distant Worlds 3", "filiation narrative entre la recherche AEGIS/Salvation et les propulseurs SCO, lecture communautaire et non fait canonique", "étendue du territoire thargoïde au plus fort du conflit, estimations communautaires divergentes", "taux exact de rebuy de la Pilots Federation, à revérifier en jeu", "divergence d'un jour entre deux pages du même wiki communautaire sur la date de découverte du premier Barnacle vs. du premier Meta-Alloy à Merope 5 C (15 vs 14 janvier 3302)", "absence de système de castes documenté chez les Guardians : structure sociale attestée en clans puis cités-États, sans hiérarchie de castes confirmée par une source consultée", "devenir des Constructs après l'extinction guardian : hypothèse de survie non tranchée, attribuée à Ram Tah", "date et lieu exacts de l'assassinat du Prince Harold Duval (10-14 septembre 3306) reposent sur une source tertiaire unique", "événement daté précis du Kumo Crew/Archon Delaine entre 3304 et 3306 : non confirmé", "statut de recherche communautaire actuel (2026) sur le Formidine Rift et « The Club », estimé mais non vérifié page par page", "composition et mode de nomination de la Federal High Court, non documentés", "ce que confère concrètement un titre de noblesse impérial, non établi par une source consultée"]
+    guides_lies: [0, 2, 5, 17, 18, 19, 23, 24, 25, 29, 32]
 
   - id: 02-powerplay
     fichier: 02-powerplay.md
@@ -87,10 +87,10 @@ guides:
     mots_cles_en: ["shipyard", "hardpoints", "optional internals", "jump range", "supercruise overcharge", "vessel hangar", "ship-launched fighter", "ship-launched vessel", "rebuy", "Panther Clipper Mk II", "Lynx Highliner", "hull hardness", "base armour", "base shield strength", "hull mass", "mass lock", "boost speed", "heat capacity", "reserve fuel capacity", "hull cost", "retail cost"]
     version_jeu_couverte: "4.4.0.x"
     branche: "live"
-    date_verification: "2026-09-10"
+    date_verification: "2026-09-13"
     confiance_globale: "haute"
     volatilite: "haute"
-    sources_primaires: ["Inara.cz", "EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27)", "EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579)", "Steam News Frontier (appid 359320)", "EDCD/EDDI ticket 2849", "Wikipedia EN"]
+    sources_primaires: ["Inara.cz", "EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27)", "EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579)", "Steam News Frontier (appid 359320)", "EDCD/EDDI ticket 2849", "Wikipedia EN", "presse spécialisée d'époque sur les Updates 17 et 18 (Massively Overpowered)"]
     zones_incertaines: ["dureté de coque, mass lock, capacité thermique et coût de coque nue du Lynx Highliner absents des deux jeux de données EDCD, donc non documentés", "écart entre les valeurs de blindage et de bouclier des fiches individuelles (relevés Inara, équipement d'origine installé) et les valeurs de base d'EDCD/coriolis-data (châssis nu) : les deux séries ne mesurent pas la même chose", "portée de saut stock du Lynx Highliner non calculable, faute de masse de coque exploitable", "nombre d'emplacements utilitaires du Lynx Highliner non précisé par la source officielle", "capacité du Lynx Highliner à emporter deux baies de vaisseau déduite de ses emplacements, non confirmée", "fabricant, prix en crédits et gabarit de plateforme du Nomad non documentés par Frontier", "taux de rebuy d'environ 5 % de la valeur assurée donné comme ordre de grandeur, non comme valeur fixe", "prix Inara sujets à fluctuation, à revérifier avant tout achat important"]
     guides_lies: [4, 6, 10, 13, 14, 18, 20, 27]
 
@@ -293,16 +293,16 @@ guides:
     fichier: 17-sources-donnees.md
     titre: "Sources de données disponibles pour Elite Dangerous"
     domaine: "meta-outils"
-    entites: ["Player Journal", "Status.json", "EDDN", "Companion API (CAPI)", "EDSM", "Inara", "Spansh", "EDCD/FDevIDs", "EDCD/coriolis-data", "Canonn Research", "Ardent Insight", "Elite BGS", "blueprints.json", "specials.json", "outfitting.csv", "shipyard.csv", "commodity.csv", "rare_commodity.csv", "commit épinglé"]
-    mots_cles_en: ["player journal", "Status.json", "EDDN", "Companion API", "EDSM", "Inara", "Spansh", "galaxy dump", "nightly dumps", "FDevIDs", "coriolis-data", "ScanOrganic", "blueprints.json", "specials.json", "outfitting.csv", "shipyard.csv", "bulkheads", "pinned commit", "commit SHA", "shallow clone"]
+    entites: ["Player Journal", "Status.json", "EDDN", "Companion API (CAPI)", "EDSM", "Inara", "Spansh", "EDCD/FDevIDs", "EDCD/coriolis-data", "Canonn Research", "Ardent Insight", "Elite BGS", "blueprints.json", "specials.json", "outfitting.csv", "shipyard.csv", "commodity.csv", "rare_commodity.csv", "commit épinglé", "GalNet", "galnet_article"]
+    mots_cles_en: ["player journal", "Status.json", "EDDN", "Companion API", "EDSM", "Inara", "Spansh", "galaxy dump", "nightly dumps", "FDevIDs", "coriolis-data", "ScanOrganic", "blueprints.json", "specials.json", "outfitting.csv", "shipyard.csv", "bulkheads", "pinned commit", "commit SHA", "shallow clone", "galnet", "jsonapi", "published_at"]
     version_jeu_couverte: "4.4.0.x"
     branche: "live"
-    date_verification: "2026-09-10"
+    date_verification: "2026-09-13"
     confiance_globale: "haute"
     volatilite: "haute"
-    sources_primaires: ["étude interne de faisabilité du 19 août 2026", "EDCD/EDDN", "elite-journal.readthedocs.io", "Journal Manual v38 de Frontier", "edsm.net (api-v1 à api-logs-v1)", "docs.spansh.co.uk", "EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579)", "EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27)", "Steam News Frontier (appid 359320)"]
-    zones_incertaines: ["aucune source Frontier consultable ne confirme la date d'arrêt définitif des serveurs Legacy", "le contrat exact des routes d'API de Spansh est reconstitué par sondage, sans garantie de stabilité publiée", "divergence de domaine pour l'API Inara entre la documentation (inara.cn) et l'endpoint sondé (inara.cz)", "aucune limite de débit chiffrée n'est publiée pour Inara, Spansh et la CAPI", "la signification du booléen ScanOrganic.WasLogged, absent du manuel v38, reste une hypothèse", "la cadence réelle de mise à jour de EDCD/coriolis-data et de EDCD/FDevIDs n'est pas mesurable : les clones utilisés sont superficiels et ne portent que leur commit de tête", "EDCD/FDevIDs ne publie aucun fichier de licence, ce qui laisse indéterminé le statut de réutilisation de ses tables d'identifiants"]
-    guides_lies: [3, 4, 6, 10, 16, 18, 19, 20, 21, 28]
+    sources_primaires: ["étude interne de faisabilité du 19 août 2026", "EDCD/EDDN", "elite-journal.readthedocs.io", "Journal Manual v38 de Frontier", "edsm.net (api-v1 à api-logs-v1)", "docs.spansh.co.uk", "EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579)", "EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27)", "Steam News Frontier (appid 359320)", "cms.zaonce.net (endpoint GalNet, documenté par des projets tiers)"]
+    zones_incertaines: ["aucune source Frontier consultable ne confirme la date d'arrêt définitif des serveurs Legacy", "le contrat exact des routes d'API de Spansh est reconstitué par sondage, sans garantie de stabilité publiée", "divergence de domaine pour l'API Inara entre la documentation (inara.cn) et l'endpoint sondé (inara.cz)", "aucune limite de débit chiffrée n'est publiée pour Inara, Spansh et la CAPI", "la signification du booléen ScanOrganic.WasLogged, absent du manuel v38, reste une hypothèse", "la cadence réelle de mise à jour de EDCD/coriolis-data et de EDCD/FDevIDs n'est pas mesurable : les clones utilisés sont superficiels et ne portent que leur commit de tête", "EDCD/FDevIDs ne publie aucun fichier de licence, ce qui laisse indéterminé le statut de réutilisation de ses tables d'identifiants", "l'endpoint GalNet cms.zaonce.net/en-GB/jsonapi/node/galnet_article n'a pas pu être interrogé directement (HTTP 403)", "date de retrait du fil RSS GalNet officiel, non retrouvée"]
+    guides_lies: [1, 3, 4, 6, 10, 16, 18, 19, 20, 21, 28]
 
   - id: 18-colonisation
     fichier: 18-colonisation.md
@@ -327,10 +327,10 @@ guides:
     mots_cles_en: ["fleet carrier", "tritium", "tritium depot", "carrier jump", "decommissioning", "drydock", "shipyard", "outfitting", "landing pads", "stronghold carrier"]
     version_jeu_couverte: "4.4.0.x"
     branche: "live"
-    date_verification: "2026-09-09"
+    date_verification: "2026-09-13"
     confiance_globale: "haute"
     volatilite: "haute"
-    sources_primaires: ["roguey.co.uk", "guide PTN Fleet Carrier Owner's Guide", "elite-journal.readthedocs.io", "FC-Fuel-Estimator (GitHub)", "Wikipedia Elite Dangerous", "forums.frontier.co.uk"]
+    sources_primaires: ["roguey.co.uk", "guide PTN Fleet Carrier Owner's Guide", "elite-journal.readthedocs.io", "FC-Fuel-Estimator (GitHub)", "Wikipedia Elite Dangerous", "forums.frontier.co.uk", "PC Gamer (mai 2020)", "wiki Fandom « Fleet Carriers Update » (miroir)"]
     zones_incertaines: ["coûts hebdomadaires exacts des trois services Odyssey (Concourse, Vista Genomics, Pioneer Supplies), non retrouvés dans les sources accessibles", "date précise et caractère « stealth change » du déblocage du commerce de denrées rares sur un Porte-Vaisseau, appuyé sur une seule citation de forum", "répartition des seize baies d'appontage, documentée par roguey.co.uk seul, sans deuxième source indépendante", "application ou non du bonus de prix par distance des denrées rares sur le marché d'un Porte-Vaisseau"]
     guides_lies: [2, 4, 6, 11, 12, 18, 20, 22]
 
@@ -383,16 +383,16 @@ guides:
     fichier: 23-jeu-en-groupe.md
     titre: "Wings, Multicrew et CQC : jouer à plusieurs dans Elite Dangerous"
     domaine: "social"
-    entites: ["Wing", "Multicrew", "CQC", "Elite Dangerous: Arena", "nav-lock", "chasseur embarqué", "F63 Condor", "Taipan", "Gu-97", "Trident", "Crew Lounge", "équipage PNJ", "Squadron", "Utopixx Entertainment"]
-    mots_cles_en: ["wing", "multicrew", "cqc", "close quarters combat", "arena", "nav-lock", "ship-launched fighter", "slf", "fighter hangar", "crew lounge", "npc crew", "bounty voucher", "combat bond", "telepresence", "wing mission"]
+    entites: ["Wing", "Multicrew", "CQC", "Elite Dangerous: Arena", "nav-lock", "chasseur embarqué", "F63 Condor", "Taipan", "Gu-97", "Trident", "Crew Lounge", "équipage PNJ", "Squadron", "Utopixx Entertainment", "instance", "CGNAT", "matchmaking", "Fuel Rats", "Hull Seals", "DSSA", "Fleetcomm", "Buckyball Racing Club", "Hutton Orbital Truckers"]
+    mots_cles_en: ["wing", "multicrew", "cqc", "close quarters combat", "arena", "nav-lock", "ship-launched fighter", "slf", "fighter hangar", "crew lounge", "npc crew", "bounty voucher", "combat bond", "telepresence", "wing mission", "instancing", "peer-to-peer", "matchmaking", "nat type", "cgnat", "port forwarding", "fuel rats", "hull seals", "deep space support array", "buckyball racing", "canyon racing", "fleetcomm"]
     version_jeu_couverte: "4.4.0.x (mécaniques introduites entre 2015 et 2018, sans refonte majeure depuis)"
     branche: "live"
-    date_verification: "2026-09-10"
+    date_verification: "2026-09-13"
     confiance_globale: "moyenne"
     volatilite: "basse"
-    sources_primaires: ["Wikipédia EN/FR/DE", "fiche Steam officielle Elite Dangerous (appid 359320)", "guides Steam Community"]
-    zones_incertaines: ["date précise et numéro de version d'introduction des Wings en 2015", "date précise d'introduction du CQC dans le jeu de base, avant le renommage en Arena", "portée exacte de l'enrichissement des missions de wing par Beyond Chapter One en 2018", "valeurs précises du partage des revenus Multicrew entre capitaine et invités", "nombre maximal d'invités humains simultanés en Multicrew (deux, non confirmé)", "paliers intermédiaires de frais et de commission de l'équipage PNJ du Crew Lounge", "noms exacts et nombre des modes de jeu du CQC (Deathmatch / Team Deathmatch / Domination supposés)", "promotion gratuite d'Elite Dangerous: Arena en juillet 2016, non recoupée", "statistiques de fréquentation du CQC en 2025-2026"]
-    guides_lies: [3, 4, 8, 22, 27]
+    sources_primaires: ["Wikipédia EN/FR/DE", "fiche Steam officielle Elite Dangerous (appid 359320)", "guides Steam Community", "elite-dangerous.fandom.com (Instance, Game Mode, Background Simulation)", "forums.frontier.co.uk (architecture réseau, NAT/CGNAT, matchmaking, parité BGS entre modes)", "fuelrats.com, hullseals.space, forums Frontier (DSSA, FleetComm, Buckyball Racing Club)"]
+    zones_incertaines: ["date précise et numéro de version d'introduction des Wings en 2015", "date précise d'introduction du CQC dans le jeu de base, avant le renommage en Arena", "portée exacte de l'enrichissement des missions de wing par Beyond Chapter One en 2018", "valeurs précises du partage des revenus Multicrew entre capitaine et invités", "nombre maximal d'invités humains simultanés en Multicrew (deux, non confirmé)", "paliers intermédiaires de frais et de commission de l'équipage PNJ du Crew Lounge", "noms exacts et nombre des modes de jeu du CQC (Deathmatch / Team Deathmatch / Domination supposés)", "promotion gratuite d'Elite Dangerous: Arena en juillet 2016, non recoupée", "statistiques de fréquentation du CQC en 2025-2026", "plafond technique actuel de joueurs par instance : le chiffre de 32 date du Kickstarter et n'est confirmé par aucune source datée de la version 4.4.x", "statut d'activité 2025-2026 non confirmé pour plusieurs groupes communautaires cités en section 7 (détail en 01-lore.md §7.7)"]
+    guides_lies: [1, 2, 3, 4, 8, 19, 21, 22, 27, 30]
 
   - id: 24-community-goals
     fichier: 24-community-goals.md

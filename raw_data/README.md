@@ -199,7 +199,10 @@ celui défini par les *Notes d'ingestion RAG* en fin de document, qui n'indexe q
   (*App ID 359320*) : Powerplay 2.0 avec *Ascendancy* le 31 octobre 2024, bêta de la Colonisation le 26 février 2025 et
   sortie complète le 11 novembre 2025, mise à jour **Operations** (4.4.0.0) le 30 juin 2026 avec le **Nomad**, Kestrel
   Mk II, Lynx Highliner, Caspian Explorer, SRV Rhino, fin de la Seconde Guerre Thargoïde le 19 décembre 2024,
-  renommage du *Fighter Hangar* en **Vessel Hangar** et décompte de **48 vaisseaux** au chantier naval. En cas de
+  renommage du *Fighter Hangar* en **Vessel Hangar** et décompte de **48 vaisseaux** au chantier naval. Porte
+  désormais aussi une **chronologie complète du jeu** (43 jalons, Kickstarter 2012 → aujourd'hui), qui corrige au
+  passage la date du Fleet Carrier (9 juin 2020, pas le 9 avril) et celle de la généralisation du SCO (Updates 18.02-
+  18.04 d'avril-mai 2024, pas Ascendancy). En cas de
   divergence avec un autre fichier du dépôt — `raw_data/` comme `assets/` —, ce document prévaut : voir la règle de
   préséance ci-dessus.
 - [Glossaire](./00-glossaire.md) — Vingt-huit sigles et termes techniques classés par ordre alphabétique (institutions
@@ -229,10 +232,14 @@ Les 32 guides thématiques sont regroupés ci-dessous par domaine.
 
 - [Elite Dangerous : lore et histoire de l'univers](./01-lore.md) — Retrace le lore depuis la Troisième Guerre
   mondiale du XXIᵉ siècle jusqu'au présent du jeu, septembre 3312, soit septembre 2026 réel (décalage de **+1286
-  ans**). Décrit les trois superpuissances — Fédération, Empire d'Achenar, Alliance —, la Sirius Corporation et la
+  ans**). Décrit les trois superpuissances — Fédération, Empire d'Achenar, Alliance —, leurs institutions (Congrès
+  fédéral, Sénat impérial et ses 14 titres de noblesse, Assemblée de l'Alliance), la Sirius Corporation et la
   Pilots Federation, puis les deux civilisations extraterrestres du récit : les **Thargoïdes**, dont la Seconde Guerre
-  s'achève le 19 décembre 2024 avec la chute de **Cocijo** à Sol, et les **Guardians**. Raxxla, les Barnacles et le
-  « Nemesis Protocol » de Salvation y restent des énigmes ouvertes.
+  s'achève le 19 décembre 2024 avec la chute de **Cocijo** à Sol, et les **Guardians**. Comble le trou narratif
+  3304-3308 (terrorisme NMLA, exode marliniste, captivité d'Arissa Lavigny-Duval), porte désormais un portrait complet
+  de **Jerome Archer**, un catalogue de **huit mystères** (Raxxla, Formidine Rift/Projet Dynasty, Far God, generation
+  ships, « The Club »...), une fiche de treize groupes communautaires et une section sur le transmedia officiel et sa
+  canonicité.
 
 ## Systèmes de jeu structurants (Powerplay, BGS, Colonisation, Community Goals)
 
@@ -431,7 +438,9 @@ Les 32 guides thématiques sont regroupés ci-dessous par domaine.
   partagé et primes versées à pleine valeur à chaque contributeur. Le **Multicrew**, livré le 11 avril 2017, place
   jusqu'à trois Commandants sur un même vaisseau, aux tourelles ou aux commandes d'un chasseur embarqué. Le **CQC**,
   décliné en produit autonome *Elite Dangerous: Arena* de février 2016 à février 2017, est une arène PvP hors du monde
-  persistant, avec son rang propre.
+  persistant, avec son rang propre. Documente aussi les activités communautaires organisées en dehors de tout outil
+  Frontier — courses (Buckyball, SRV, canyon), rôle logistique des Fleet Carriers relais du réseau **DSSA**, et
+  procédure pour devenir secouriste bénévole (**Fuel Rats**, **Hull Seals**).
 
 ## Nouveautés récentes
 
@@ -468,7 +477,9 @@ Les 32 guides thématiques sont regroupés ci-dessous par domaine.
   EDSM, Inara, Spansh, Canonn Research —, quatre jeux de données hors ligne datés d'août 2026, et les deux dépôts d'où
   sortent les valeurs chiffrées du corpus : `EDCD/coriolis-data` (47 vaisseaux, 89 familles de modules, 81 blueprints,
   91 effets expérimentaux) et `EDCD/FDevIDs` (27 tables d'identifiants extraites du jeu), avec leur licence et la
-  pratique de citation par commit qui rend chaque chiffre re-vérifiable quand un service répond HTTP 403.
+  pratique de citation par commit qui rend chaque chiffre re-vérifiable quand un service répond HTTP 403. Documente
+enfin l'endpoint **GalNet** (`cms.zaonce.net`, API JSON:API Drupal bloquée en accès direct, miroirs de repli) et sa
+méthode d'archivage incrémental par date de publication.
 
 ## Notes d'ingestion RAG
 

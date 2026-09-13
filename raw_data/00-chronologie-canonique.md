@@ -2,16 +2,16 @@
 id: 00-chronologie-canonique
 titre: "Chronologie canonique — Elite Dangerous"
 domaine: transversal
-entites: [Operations Update, Nomad, SRV Rhino, Kestrel Mk II, Lynx Highliner, Caspian Explorer, Panther Clipper Mk II, Powerplay 2.0, Thargoid War Epilogue, Vessel Hangar, Dodec Update, Colonia]
-mots_cles_en: [operations update, nomad, rhino srv, vessel hangar, kestrel mk ii, lynx highliner, caspian explorer, thargoid war epilogue, powerplay 2.0, dodec update, patch notes, shipyard]
+entites: [Operations Update, Nomad, SRV Rhino, Kestrel Mk II, Lynx Highliner, Caspian Explorer, Panther Clipper Mk II, Powerplay 2.0, Thargoid War Epilogue, Vessel Hangar, Dodec Update, Colonia, Kickstarter, Horizons, Beyond, Odyssey, Fleet Carriers Update, Supercruise Overcharge, Ascendancy]
+mots_cles_en: [operations update, nomad, rhino srv, vessel hangar, kestrel mk ii, lynx highliner, caspian explorer, thargoid war epilogue, powerplay 2.0, dodec update, patch notes, shipyard, kickstarter, horizons, beyond, odyssey, fleet carriers update, supercruise overcharge, version history, ascendancy]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-13
 confiance_globale: haute
 volatilite: moyenne
-sources_primaires: [Steam News Frontier (App ID 359320), elitedangerous.com, EDCD/FDevIDs, EDCD/coriolis-data, Inara.cz, GalNet, Wayback Machine, Wikipédia]
-zones_incertaines: ["rattachement du numéro 4.4.0.3 au billet du 9 juillet 2026, plausible mais non prouvé — le billet se contredit sur son propre numéro", "date de fin d'accès anticipé ARX du Panther Clipper Mk II, non confirmée", "date exacte de destruction du Titan Raijin, antérieure au 5 décembre 2024 sans plus de précision", "baie Mk I ou Mk II exigée par le SRV Rhino, non tranchée par une source primaire", "plafond de 9 999 Merc Coins et allocation de 1 000 par semaine, de source communautaire seulement", "numéros de version 4.4.1.0 et 4.4.1.1 de septembre 2026, issus de pages officielles restées inaccessibles"]
-guides_lies: [1, 3, 13, 14, 25]
+sources_primaires: [Steam News Frontier (App ID 359320), elitedangerous.com, EDCD/FDevIDs, EDCD/coriolis-data, Inara.cz, GalNet, Wayback Machine, Wikipédia, wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge), presse spécialisée d'époque (PC Gamer, Massively Overpowered, TheSixthAxis, Engadget)]
+zones_incertaines: ["rattachement du numéro 4.4.0.3 au billet du 9 juillet 2026, plausible mais non prouvé — le billet se contredit sur son propre numéro", "date de fin d'accès anticipé ARX du Panther Clipper Mk II, non confirmée", "date exacte de destruction du Titan Raijin, antérieure au 5 décembre 2024 sans plus de précision", "baie Mk I ou Mk II exigée par le SRV Rhino, non tranchée par une source primaire", "plafond de 9 999 Merc Coins et allocation de 1 000 par semaine, de source communautaire seulement", "numéros de version 4.4.1.0 et 4.4.1.1 de septembre 2026, issus de pages officielles restées inaccessibles", "jour exact de la fin du Kickstarter (4 ou 5 janvier 2013 selon la source)", "terminologie exacte distinguant « Premium Beta » de « Beta 1 » en 2014", "retrait ou non du jeu des stores consoles après l'arrêt du développement, mars 2022 : non confirmé"]
+guides_lies: [1, 3, 13, 14, 15, 19, 25]
 ---
 # Chronologie canonique — Elite Dangerous
 
@@ -26,7 +26,11 @@ Ce document arbitre les dates et faits d'*Elite Dangerous* sur lesquels les guid
 **SRV Rhino** le 2 septembre 2026 ; **Thargoid War Epilogue** le **19 décembre 2024 à 15:00 UTC** ; fondation de
 **Colonia** le 9 septembre 2016 ; *Fighter Hangar* renommé **Vessel Hangar** (Mk I sur 13 vaisseaux, Mk II sur 3) ; et
 **48 vaisseaux jouables** au chantier naval (*shipyard*). En cas de conflit avec un autre fichier du dépôt, ce document prévaut.
-Les sigles employés ici (SLV, PP, BGS...) sont développés dans le [Glossaire](./00-glossaire.md).
+Les sigles employés ici (SLV, PP, BGS...) sont développés dans le [Glossaire](./00-glossaire.md). Une **chronologie
+complète du jeu** (Kickstarter 2012 → aujourd'hui, 43 jalons datés et sourcés) a été ajoutée le 13 septembre 2026 ; elle
+corrige au passage trois dates qui circulaient ailleurs dans le corpus — le Fleet Carrier date du **9 juin 2020** (pas
+le 9 avril, qui n'est que le début de sa première bêta), et le **Supercruise Overcharge** a été généralisé par les
+**Updates 18.02 et 18.04** d'avril-mai 2024 (pas par Ascendancy ni par l'Update 17).
 
 ## Note d'usage — portée de ce document et règles d'arbitrage du corpus
 
@@ -97,6 +101,121 @@ septembre 2026 proviennent de pages officielles restées inaccessibles (HTTP 403
 - https://www.elitedangerous.com/news/updates/4-4-0-0 (page officielle « Elite Dangerous: Operations - Available Now » ;
   URL et titre seuls, page non récupérée directement — HTTP 403 sur ce domaine)
 - https://github.com/EDCD/EDDI/issues/2849 (journal de jeu réel du 5 août 2026 portant `gameversion` 4.4.0.3)
+
+## Chronologie complète du jeu, du Kickstarter (2012) à aujourd'hui (2026)
+
+Ajoutée le 13 septembre 2026. Les quatorze faits ci-dessous arbitrent des contradictions ponctuelles ; cette table
+a un objet différent — situer chacun de ces faits, et tous les autres guides du corpus, sur un **axe unique et
+continu** couvrant treize ans de développement. Elle a été construite par recherche croisée (au moins deux sources
+indépendantes quand c'était possible), pas depuis la mémoire d'un modèle de langage : les dates antérieures à 2022
+n'étaient pas vérifiables autrement, et trois d'entre elles corrigent une hypothèse antérieure du corpus (voir les
+notes sous la table).
+
+| Date réelle | Date in-jeu | Version | Mise à jour | Contenu structurant |
+|---|---|---|---|---|
+| 5 nov. 2012 | — | — | Lancement du Kickstarter | Objectif 1 250 000 £ |
+| 4 janv. 2013 | — | — | Fin du financement | 25 681 souscripteurs, 1 578 316 £ (126 % de l'objectif) |
+| 20 déc. 2013 | — | Alpha | Premier Alpha livré aux souscripteurs (250 £ et plus) | |
+| 30 mai 2014 | — | Premium Beta | Sortie de l'Alpha, accès élargi | |
+| 30 juil. 2014 | — | Beta 1 | | |
+| 3 oct. 2014 | — | Beta 2 | | |
+| 30 oct. 2014 | — | Beta 3 | | |
+| 24 nov. 2014 | — | Gamma | Pré-lancement | |
+| **16 déc. 2014** | fin 3300 | **1.0** | **Sortie officielle** | « Welcome to the Galaxy, CMDR » |
+| 10 févr. 2015 | 3301 | 1.1 | Community Goals | |
+| 10 mars 2015 | 3301 | 1.2 | Wings | Multijoueur en petit groupe |
+| 5 juin 2015 | 3301 | 1.3 | Powerplay | 3 vaisseaux (Imperial Courier, Diamondback Scout/Explorer) |
+| 6 oct. 2015 | 3301 | 1.4 | CQC | Arène PvP arcade, sortie simultanée Xbox One |
+| 15 déc. 2015 | 3301 | **2.0 « Horizons »** | Planetary Landings | Premier atterrissage planétaire, SRV Scarab |
+| 26 mai 2016 | 3302 | 2.1 | The Engineers | Système d'ingénierie |
+| 25 oct. 2016 | 3302 | 2.2 | The Guardians | Passagers, chasseurs largables, premières ruines Guardian |
+| 11 avr. 2017 | 3303 | 2.3 | The Commanders | Multicrew, Holo-Me |
+| 26 sept. 2017 | 3303 | 2.4 | The Return | Retour officiel des Thargoïdes |
+| 27 févr. 2018 | 3304 | **3.0 « Beyond » Ch. 1** | | Alliance Chieftain, refonte Crime & Punishment, 1ʳᵉ refonte de l'ingénierie |
+| 28 juin 2018 | 3304 | 3.1 Beyond Ch. 2 | | **Krait Mk II**, Alliance Challenger |
+| 28 août 2018 | 3304 | 3.2 Beyond Ch. 3 | | Chasseurs hybrides Guardian, **Guardian Beacons**, ingénieurs de Colonia |
+| 11 déc. 2018 | 3304 | 3.3 Beyond Ch. 4 | | **Codex**, **FSS**, Squadrons, refonte complète du minage ; fin du support Mac |
+| **13 janv. 2019** | 3305 | — | **Distant Worlds II** | Voir [01-lore.md §7.2](./01-lore.md) |
+| **9 juin 2020** | 3306 | **3.7** | **Fleet Carriers Update** | Drake-Class Carrier (voir correction ci-dessous) |
+| **19 mai 2021** | 3307 | **4.0 « Odyssey »** | Sortie PC seule | Combat et vie à pied |
+| 10 mars 2022 | 3307 | — | Fin du développement console | Annulation du portage Xbox One/PS4, branche Legacy figée en v3.8 |
+| 9 août 2022 | 3308 | Update 13 | Fusion des branches Horizons/Odyssey (Live 4.0+) | Conclut l'arc Salvation/Azimuth |
+| 29 nov. 2022 | 3308 | Update 14 | Apparition des 8 Maelstroms | Début de la Seconde Guerre Thargoïde moderne |
+| 9 mai 2023 | 3309 | Update 15 | Titans atteignables (Thargoid Pulse Neutraliser) | |
+| 1er août 2023 | 3309 | Update 16 | Thargoïde Scythe, évacuations de passagers | |
+| 16 oct. 2023 | 3309 | Update 17 | Minage des matériaux de Titan | *(n'introduit pas le SCO, voir correction)* |
+| 26 févr. 2024 | 3310 | Update 18 | Guardian Nanite Torpedo Pylons | Permet la destruction du premier Titan (Taranis, 2 mars 2024) |
+| 10 avr. 2024 | 3310 | Update 18.02 | Premiers FSD **SCO**, en nombre limité (notation C) | |
+| 7 mai 2024 | 3310 | Update 18.04 | **Généralisation du SCO** à toutes tailles/notations | Sortie simultanée du Python Mk II |
+| 7 août 2024 | 3310 | Update 18.08 | Refonte de l'ingénierie (rolls fixes par grade) | Vaisseau Type-8 Transporter |
+| **31 oct. 2024** | 3310 | Update 19 « **Ascendancy** » | **Powerplay 2.0** | Vaisseau Mandalay (fait 1) |
+| 5 déc. 2024 | 3310 | — | *Titan Presence In Sol* | Invasion de Sol par Cocijo (fait 12) |
+| 12 déc. 2024 | 3310 | — | Cobra Mk V Update | 10ᵉ anniversaire du jeu |
+| **19 déc. 2024** | 3310 | — | *Thargoid War Epilogue* | Fin de la Seconde Guerre Thargoïde (fait 11) |
+| **26 févr. 2025** | 3311 | 4.1.0.0 « Trailblazers » | Bêta de la Colonisation (fait 2) | |
+| 19 août 2025 | 3311 | — | « Vanguards » | Refonte des Squadrons (voir [15-roadmap.md](./15-roadmap.md)) |
+| **11 nov. 2025** | 3311 | 4.2.2.0 « Dodec Update » | Fin de la bêta de Colonisation (fait 2) | |
+| 2 déc. 2025 | 3311 | 4.3.0.0 | Caspian Explorer (fait 5) | |
+| 24 févr. 2026 | 3311 | 4.3.1.0 | Kestrel Mk II (fait 6) | |
+| 28 avr. 2026 | 3311 | 4.3.3.0 | Lynx Highliner (fait 7) | |
+| **30 juin 2026** | 3312 | **4.4.0.0 « Operations »** | Nomad (faits 3, 8, 13) | |
+| 2 sept. 2026 | 3312 | — | Rhino SRV Update | Rhino, minage de surface (fait 4) |
+
+*Cases en gras : jalons majeurs (sorties, extensions payantes ou refontes structurantes). Dates in-jeu calculées par
+le décalage constant de +1286 ans (voir « En bref ») ; laissées à « — » avant le lancement du jeu (2012-2014, années
+purement réelles) ou quand aucune source datée en jeu n'a été retrouvée.*
+
+### Trois corrections apportées par cette recherche, à ne pas réintroduire dans le corpus
+
+1. **Le Fleet Carrier n'a pas été introduit le 9 avril 2020, mais le 9 juin 2020.** [19-fleet-carriers.md](./19-fleet-carriers.md)
+   citait la phrase de l'article Wikipédia anglais « On 9 April 2020, Fleet Carriers were added to the game », corrigée
+   par cette révision : le 9 avril 2020 est la date d'ouverture de la **première bêta fermée** (PC uniquement,
+   7-20 avril 2020) ; une seconde bêta a suivi du 11 au 26 mai 2020 (PC/Xbox/PS4) ; la fonctionnalité n'a été livrée à
+   tous les joueurs que le 9 juin 2020, avec la mise à jour v3.7 « Fleet Carriers Update ». Corrigé dans le guide cité.
+2. **Le Supercruise Overcharge (SCO) n'a pas été introduit par Ascendancy, ni généralisé par l'Update 17.**
+   [01-lore.md §1.9](./01-lore.md) attribuait par erreur au « Update 17 selon la documentation communautaire » la
+   généralisation du SCO à toutes les Frame Shift Drives. L'Update 17 (16 octobre 2023) porte en réalité sur le minage
+   des matériaux de Titan, sans rapport avec le SCO. Les premiers FSD SCO (nombre limité, notation C) datent de
+   l'**Update 18.02** (10 avril 2024) ; la généralisation complète date de l'**Update 18.04** (7 mai 2024) — soit six
+   mois avant Ascendancy (31 octobre 2024), qui introduit seulement un nouveau vaisseau nativement conçu pour cette
+   technologie déjà généralisée (le Mandalay). Corrigé dans le guide cité.
+3. **Le Full Spectrum Scanner (FSS) date de Beyond Chapter Four (11 décembre 2018), pas de Chapter Three.** Aucun
+   guide du corpus n'affirmait le contraire au moment de cette recherche, mais le risque de confusion existait (les
+   deux mises à jour Beyond de 2018 touchent toutes deux à l'exploration/à la découverte) : Chapter Three (28 août
+   2018) introduit les chasseurs hybrides Guardian et les Guardian Beacons ; c'est Chapter Four qui fusionne les trois
+   anciens scanners de découverte en un FSS unique, aux côtés du Codex, des Squadrons et de la refonte du minage.
+
+### Limites de cette table
+
+Les dates de 2012 à 2021 reposent sur des reprises secondaires convergentes (page « Version history » du wiki
+communautaire, articles de presse spécialisée contemporains des sorties — PC Gamer, Engadget, TheSixthAxis,
+Massively Overpowered, RoadToVR, Tom's Hardware) : `elitedangerous.com` a systématiquement renvoyé une erreur HTTP 403
+aux tentatives d'accès direct pour cette période, comme pour le reste du corpus. Le contenu détaillé des Updates 15 et
+16 n'a été vérifié que sur ses points saillants, pas ligne à ligne. Deux points mineurs restent non tranchés avec une
+certitude absolue : le jour exact de la fin du Kickstarter (4 ou 5 janvier 2013 selon la source) et la terminologie
+exacte distinguant « Premium Beta » de « Beta 1 » en 2014.
+
+**Sources :**
+- https://www.kickstarter.com/projects/1461411552/elite-dangerous (page de campagne, chiffres finaux)
+- https://elite-dangerous.fandom.com/wiki/Version_history (miroir GitHub DarkSession/Elite-Dangerous-RAG-Knowledge — historique complet des versions 1.0 à 2.4)
+- https://elite-dangerous.fandom.com/wiki/Elite_Dangerous:_Horizons et .../Elite_Dangerous:_Beyond et .../Elite_Dangerous:_Odyssey (miroirs GitHub — contenu détaillé de chaque saison)
+- https://www.pcgamer.com/elite-dangerous-leaves-alpha-may-30-gets-shipped-to-premium-beta-backers/
+- https://www.pcgamer.com/elite-dangerous-is-finally-getting-fleet-carriers-in-june-with-beta-tests-next-month/ (correction n°1 ci-dessus)
+- https://massivelyop.com/2015/06/05/elite-dangerous-launches-the-powerplay-update/
+- https://www.thesixthaxis.com/2017/09/15/the-thargoids-are-back-in-the-elite-dangerous-2-4-the-return-update/
+- https://www.thesixthaxis.com/2018/06/28/elite-dangerous-beyond-chapter-two-launches-today/
+- https://www.engadget.com/elite-dangerous-developer-cancels-further-console-development-to-focus-on-pc-091405266.html
+- https://massivelyop.com/2022/08/03/elite-dangerous-confirms-update-13-for-august-9-outlines-merging-of-horizons-and-odyssey-code-for-pc/
+- https://massivelyop.com/2022/11/23/elite-dangerous-confirms-update-14-for-november-29-along-with-live-and-legacy-versions-of-the-sandbox/
+- https://massivelyop.com/2023/05/09/elite-dangerous-update-15-goes-live-today-here-are-the-patch-notes/
+- https://massivelyop.com/2023/07/26/elite-dangerous-dates-update-16-for-august-1-releases-an-updated-launcher-and-halts-investigation-of-some-bugs/
+- https://massivelyop.com/2023/10/16/elite-dangerous-update-17-brings-forth-another-laundry-list-of-fixes-and-continued-tease-of-louder-rumbling/
+- https://massivelyop.com/2024/02/26/elite-dangerous-update-18-adds-new-weapon-multiple-bug-fixes-and-the-end-game-of-the-thargoid-war/
+- https://steamcommunity.com/games/elitedangerous/announcements/detail/4182229294572405790 (Update 18.02, SCO limité, 10 avril 2024)
+- https://steamdb.info/patchnotes/14241962/ (Update 18.04, généralisation du SCO, 7 mai 2024)
+- https://forums.frontier.co.uk/threads/elite-dangerous-type-8-update-18-08-wednesday-7th-august.627151/ (Update 18.08, 7 août 2024)
+- https://forums.frontier.co.uk/threads/elite-dangerous-cobra-mk-v-update-12-december-2024.631517/
+- https://simulationdaily.com/news/elite-dangerous-ascendancy-release-patch-notes/
 
 ## Table de réconciliation des faits datés du corpus
 
@@ -665,3 +784,6 @@ complétés et corrigés, décompte des catalogues de vaisseaux tranché, et rè
 absence formulée en section propre. **Révisé le 10 septembre 2026** : fait 14 ajouté (décompte des vaisseaux jouables
 recompté en direct sur les trois catalogues et promu en fait autonome), table de réconciliation regroupée par thème et
 numérotée, faits 3, 8 et 13 découpés en sous-sections, et règle de méthode déplacée en fin de document.
+**Révisé le 13 septembre 2026** : chronologie complète du jeu ajoutée (43 jalons, Kickstarter 2012 → aujourd'hui),
+avec deux corrections de dates propagées vers d'autres guides du corpus (Fleet Carrier : 9 juin 2020, pas le 9 avril ;
+généralisation du SCO : Updates 18.02-18.04 d'avril-mai 2024, pas Ascendancy ni l'Update 17).

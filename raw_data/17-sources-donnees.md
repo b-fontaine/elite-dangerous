@@ -2,16 +2,16 @@
 id: 17-sources-donnees
 titre: "Sources de données disponibles pour Elite Dangerous"
 domaine: meta-outils
-entites: [Player Journal, Status.json, EDDN, Companion API (CAPI), EDSM, Inara, Spansh, EDCD/FDevIDs, EDCD/coriolis-data, Canonn Research, Ardent Insight, Elite BGS, blueprints.json, specials.json, outfitting.csv, shipyard.csv, commodity.csv, rare_commodity.csv, commit épinglé]
-mots_cles_en: [player journal, Status.json, EDDN, Companion API, EDSM, Inara, Spansh, galaxy dump, nightly dumps, FDevIDs, coriolis-data, ScanOrganic, blueprints.json, specials.json, outfitting.csv, shipyard.csv, bulkheads, pinned commit, commit SHA, shallow clone]
+entites: [Player Journal, Status.json, EDDN, Companion API (CAPI), EDSM, Inara, Spansh, EDCD/FDevIDs, EDCD/coriolis-data, Canonn Research, Ardent Insight, Elite BGS, blueprints.json, specials.json, outfitting.csv, shipyard.csv, commodity.csv, rare_commodity.csv, commit épinglé, GalNet, galnet_article]
+mots_cles_en: [player journal, Status.json, EDDN, Companion API, EDSM, Inara, Spansh, galaxy dump, nightly dumps, FDevIDs, coriolis-data, ScanOrganic, blueprints.json, specials.json, outfitting.csv, shipyard.csv, bulkheads, pinned commit, commit SHA, shallow clone, galnet, jsonapi, published_at]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-13
 confiance_globale: haute
 volatilite: haute
-sources_primaires: [étude interne de faisabilité du 19 août 2026, EDCD/EDDN, elite-journal.readthedocs.io, Journal Manual v38 de Frontier, edsm.net (api-v1 à api-logs-v1), docs.spansh.co.uk, EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579), EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27), Steam News Frontier (appid 359320)]
-zones_incertaines: ["aucune source Frontier consultable ne confirme la date d'arrêt définitif des serveurs Legacy", "le contrat exact des routes d'API de Spansh est reconstitué par sondage, sans garantie de stabilité publiée", "divergence de domaine pour l'API Inara entre la documentation (inara.cn) et l'endpoint sondé (inara.cz)", "aucune limite de débit chiffrée n'est publiée pour Inara, Spansh et la CAPI", "la signification du booléen ScanOrganic.WasLogged, absent du manuel v38, reste une hypothèse", "la cadence réelle de mise à jour de EDCD/coriolis-data et de EDCD/FDevIDs n'est pas mesurable : les clones utilisés sont superficiels et ne portent que leur commit de tête", "EDCD/FDevIDs ne publie aucun fichier de licence, ce qui laisse indéterminé le statut de réutilisation de ses tables d'identifiants"]
-guides_lies: [3, 4, 6, 10, 16, 18, 19, 20, 21, 28]
+sources_primaires: [étude interne de faisabilité du 19 août 2026, EDCD/EDDN, elite-journal.readthedocs.io, Journal Manual v38 de Frontier, edsm.net (api-v1 à api-logs-v1), docs.spansh.co.uk, EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579), EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27), Steam News Frontier (appid 359320), cms.zaonce.net (endpoint GalNet, documenté par des projets tiers)]
+zones_incertaines: ["aucune source Frontier consultable ne confirme la date d'arrêt définitif des serveurs Legacy", "le contrat exact des routes d'API de Spansh est reconstitué par sondage, sans garantie de stabilité publiée", "divergence de domaine pour l'API Inara entre la documentation (inara.cn) et l'endpoint sondé (inara.cz)", "aucune limite de débit chiffrée n'est publiée pour Inara, Spansh et la CAPI", "la signification du booléen ScanOrganic.WasLogged, absent du manuel v38, reste une hypothèse", "la cadence réelle de mise à jour de EDCD/coriolis-data et de EDCD/FDevIDs n'est pas mesurable : les clones utilisés sont superficiels et ne portent que leur commit de tête", "EDCD/FDevIDs ne publie aucun fichier de licence, ce qui laisse indéterminé le statut de réutilisation de ses tables d'identifiants", "l'endpoint GalNet cms.zaonce.net/en-GB/jsonapi/node/galnet_article n'a pas pu être interrogé directement (HTTP 403) : son schéma repose sur des sources tierces, pas sur une réponse brute vérifiée par ce corpus", "date de retrait du fil RSS GalNet officiel, non retrouvée"]
+guides_lies: [1, 3, 4, 6, 10, 16, 18, 19, 20, 21, 28]
 ---
 
 # Sources de données disponibles pour Elite Dangerous
@@ -1466,6 +1466,82 @@ extraction du client : c'est un référentiel tenu à la main, dont le Lynx High
 retarder sur une mise à jour. Une valeur relevée en jeu prime donc sur lui, exactement comme elle prime sur les
 instantanés hors ligne.
 
+## 14. GalNet : endpoint des articles et méthode d'archivage pour l'ingestion RAG
+
+**GalNet** (voir [glossaire](./00-glossaire.md) et [01-lore.md §2.7bis](./01-lore.md)) est le fil d'actualité in-fiction
+du jeu, contrôlé narrativement par la Pilots Federation ; c'est aussi, pour un projet tiers, une **source de données
+textuelles datées** — chaque article porte un titre, un corps de texte et une date de publication — au même titre
+qu'un dump technique, à ceci près que son contenu est écrit en langage narratif plutôt qu'en enregistrements
+structurés.
+
+### Point d'accès public et endpoint sous-jacent
+
+Le portail humain officiel est `community.elitedangerous.com/en/galnet` (variante française :
+`elitedangerous.com/fr-FR/actus/galnet`) : ce sous-domaine `community.` reste directement joignable, alors que le
+domaine principal `www.elitedangerous.com` applique le même blocage anti-bot (HTTP 403) que celui déjà rencontré pour
+les notes de version (sections 3 et 13). Le portail est lui-même alimenté par une API JSON publique, bâtie sur le
+module **JSON:API de Drupal** (le CMS de Frontier), dont l'endpoint de collection est :
+
+```
+https://cms.zaonce.net/en-GB/jsonapi/node/galnet_article?sort=-published_at&page[offset]=0&page[limit]=12
+```
+
+Cet endpoint a répondu HTTP 403 aux tentatives directes de cette révision (même famille de blocage que
+`elitedangerous.com`), mais sa forme est documentée et republiée par plusieurs projets tiers qui l'ont eux
+interrogé avec succès (voir sources) : chaque article y est un nœud JSON:API standard (bloc `data[].attributes`)
+portant un titre, un corps de texte, une date de publication (`published_at`, utilisée pour le tri) et une image
+associée, récupérable séparément à `https://hosting.zaonce.net/elite-dangerous/galnet/{image}.png`. Remplacer le
+segment de langue `en-GB` par un autre code (`fr-FR`, `pt-BR`...) republie les mêmes articles traduits. La pagination
+suit le schéma JSON:API standard (`page[offset]`, `page[limit]`), avec un plafond par page de l'ordre de 50 relevé par
+un projet tiers — non documenté officiellement, donc à revérifier. Un endpoint frère, `node/news_article`, republie les
+actualités hors-fiction (annonces techniques, ARX, dev logs) selon la même structure. Aucun de ces deux endpoints n'a
+de rapport avec le flux Steam News (section 3 et 13) : ce sont deux canaux distincts d'un même éditeur, l'un narratif,
+l'autre technique.
+
+### Miroirs communautaires, quand l'endpoint direct est bloqué
+
+- **inara.cz/elite/galnet/** — miroir déjà cité ailleurs dans le corpus (01-lore.md, 00-chronologie-canonique.md) ;
+  republie les articles en lecture, sans API dédiée documentée.
+- **alpha-orbital.com/galnet-feed** — mini-API tierce non officielle (`GET` simple), qui renvoie les 15 derniers
+  articles sous une forme simplifiée à trois champs (`title`, `content`, `date`) ; son auteur la présente comme un
+  correctif au flux officiel, jugé « peu maniable » pour un usage logiciel — elle alimente notamment l'outil
+  communautaire COVAS:NEXT.
+- **dpss.space/galnet** et **ed-board.net/?m=galnet** — portails de lecture communautaires supplémentaires, utiles en
+  repli si `community.elitedangerous.com` et les deux miroirs ci-dessus sont indisponibles simultanément.
+
+Le fil RSS officiel qu'exposait autrefois GalNet a disparu à une date non déterminée par cette révision — un fil de
+discussion des forums Frontier (« What happened to the GalNet rss feed?!? ») en constate la disparition sans
+qu'aucune annonce officielle de retrait n'ait été retrouvée ; ne pas s'appuyer sur un flux RSS GalNet dans un projet
+neuf.
+
+### Fréquence de publication et méthode d'archivage incrémental
+
+GalNet ne publie pas à cadence fixe : la fréquence suit les jalons narratifs et les sorties réelles plutôt qu'un
+calendrier régulier (voir [15-roadmap.md, « GalNet, le fil d'actualité in-fiction du jeu »](./15-roadmap.md) pour des
+exemples datés). Point de méthode central pour l'ingestion : les dates affichées par GalNet sont des dates in-fiction
+(calendrier +1286 ans, voir [00-chronologie-canonique.md](./00-chronologie-canonique.md)) qui **avancent jour pour
+jour avec le calendrier réel** — un article daté « 3 SEP 3312 » a bien été publié le 3 septembre 2026 réel, ce qui
+permet d'utiliser `published_at` (ou la date convertie) comme clé d'archivage incrémental fiable : interroger l'endpoint
+trié par `-published_at` et ne conserver que les articles postérieurs au dernier relevé, sans repasser par l'historique
+complet à chaque passage. Pour un pipeline RAG, chaque article doit être archivé avec sa date réelle de publication et
+son titre en tête de chunk (voir [README.md, règle 3](./README.md#règle-3--préfixer-chaque-chunk-de-son-contexte-à-lindexation)) :
+un article GalNet, sorti de son contexte temporel, se lit comme un fait présent alors qu'il documente un instantané
+narratif daté.
+
+**Sources :**
+- https://github.com/charlesportwoodii/galnet-api (dépôt tiers documentant l'endpoint `cms.zaonce.net` et sa syntaxe
+  de requête JSON:API, consulté le 13 septembre 2026)
+- https://gist.github.com/corenting/b6ac5cf8f446f54856e08b6e287fe835 (notes tierces confirmant l'URL d'exemple, les
+  paramètres `sort`/`page[offset]`/`page[limit]` et l'URL des images, consulté le 13 septembre 2026)
+- https://edcodex.info/?m=tools&entry=445 (fiche de l'outil tiers `alpha-orbital.com/galnet-feed`, trois champs
+  `title`/`content`/`date`, consulté le 13 septembre 2026)
+- https://community.elitedangerous.com/en/galnet et https://inara.cz/elite/galnet/ (portails de lecture, déjà cités
+  ailleurs dans le corpus)
+- https://forums.frontier.co.uk/threads/what-happened-to-the-galnet-rss-feed.479057/ (constat communautaire de la
+  disparition du fil RSS officiel, sans date de retrait confirmée)
+- Tentative infructueuse (HTTP 403) : `https://cms.zaonce.net/en-GB/jsonapi/node/galnet_article` en accès direct,
+  13 septembre 2026.
+
 ## Tableau de synthèse des sources de données d'Elite Dangerous
 
 | Source         | Type d'accès                                | Temps réel / batch        | Authentification                                            | Rate limit documenté         |
@@ -1480,6 +1556,7 @@ instantanés hors ligne.
 | Ardent Insight | API/site web (marché)                       | Temps réel (via EDDN)     | Non documentée publiquement                                 | Non documenté                |
 | Elite BGS      | API REST (`/api/ebgs/v5/*`)                 | Les deux                  | Aucune pour la lecture publique                             | Non documenté                |
 | Jeux de données hors ligne | Fichiers locaux datés (voir section 12) | Instantané daté, hors ligne | Aucune (lecture disque)                        | Sans objet                   |
+| GalNet (`cms.zaonce.net`) | API JSON:API Drupal (bloquée en accès direct, section 14) | Batch (archivage incrémental par date) | Aucune pour la lecture publique | Non documenté ; page ~50 relevée par un tiers |
 
 ## Conclusion — un écosystème communautaire mature, mais sans aucune garantie
 

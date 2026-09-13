@@ -3,17 +3,20 @@ id: 23-jeu-en-groupe
 titre: "Wings, Multicrew et CQC : jouer à plusieurs dans Elite Dangerous"
 domaine: social
 entites: [Wing, Multicrew, CQC, "Elite Dangerous: Arena", nav-lock, chasseur embarqué, F63 Condor, Taipan, Gu-97, Trident,
-  Crew Lounge, équipage PNJ, Squadron, Utopixx Entertainment, instance, CGNAT, matchmaking]
+  Crew Lounge, équipage PNJ, Squadron, Utopixx Entertainment, instance, CGNAT, matchmaking, Fuel Rats, Hull Seals, DSSA,
+  Fleetcomm, Buckyball Racing Club, Hutton Orbital Truckers]
 mots_cles_en: [wing, multicrew, cqc, close quarters combat, arena, nav-lock, ship-launched fighter, slf, fighter hangar,
   crew lounge, npc crew, bounty voucher, combat bond, telepresence, wing mission, instancing, peer-to-peer,
-  matchmaking, nat type, cgnat, port forwarding]
+  matchmaking, nat type, cgnat, port forwarding, fuel rats, hull seals, deep space support array, buckyball racing,
+  canyon racing, fleetcomm]
 version_jeu_couverte: "4.4.0.x (mécaniques introduites entre 2015 et 2018, sans refonte majeure depuis)"
 branche: live
-date_verification: 2026-09-12
+date_verification: 2026-09-13
 confiance_globale: moyenne
 volatilite: basse
 sources_primaires: [Wikipédia EN/FR/DE, fiche Steam officielle Elite Dangerous (appid 359320), guides Steam Community,
-  "elite-dangerous.fandom.com (Instance, Game Mode, Background Simulation)", "forums.frontier.co.uk (architecture réseau, NAT/CGNAT, matchmaking, parité BGS entre modes)"]
+  "elite-dangerous.fandom.com (Instance, Game Mode, Background Simulation)", "forums.frontier.co.uk (architecture réseau, NAT/CGNAT, matchmaking, parité BGS entre modes)",
+  "fuelrats.com, hullseals.space, forums Frontier (DSSA, FleetComm, Buckyball Racing Club) — voir 01-lore.md §7.7 pour le détail par groupe"]
 zones_incertaines: ["date précise et numéro de version d'introduction des Wings en 2015",
   "date précise d'introduction du CQC dans le jeu de base, avant le renommage en Arena",
   "portée exacte de l'enrichissement des missions de wing par Beyond Chapter One en 2018",
@@ -26,8 +29,9 @@ zones_incertaines: ["date précise et numéro de version d'introduction des Wing
   "plafond technique actuel de joueurs par instance : le chiffre de 32 date du Kickstarter (2012-2013) et n'est confirmé par aucune source datée de la version 4.4.x",
   "effet du Squadron sur le matchmaking d'instance : non documenté par une source officielle",
   "compatibilité d'instanciation entre lanceurs PC (Steam/Epic/Frontier) : sources communautaires contradictoires",
-  "statut de résolution d'un signalement communautaire d'écart de mérites Powerplay entre Solo et jeu groupé (ticket officiel non lu directement)"]
-guides_lies: [2, 3, 4, 8, 21, 22, 27, 30]
+  "statut de résolution d'un signalement communautaire d'écart de mérites Powerplay entre Solo et jeu groupé (ticket officiel non lu directement)",
+  "statut d'activité 2025-2026 non confirmé pour plusieurs groupes communautaires cités en 7.1-7.3 (détail en 01-lore.md §7.7)"]
+guides_lies: [1, 2, 3, 4, 8, 19, 21, 22, 27, 30]
 ---
 
 # Wings, Multicrew et CQC : jouer à plusieurs dans Elite Dangerous
@@ -46,7 +50,10 @@ d'une baie de chasseurs. Le **CQC** (*Close Quarters Combat*, [glossaire](./00-g
 persistant, doté d'un rang propre suivi par la **Pilots Federation**. À ne pas confondre avec le **Squadron**, ni avec
 l'**équipage PNJ** du Crew Lounge. Une nouvelle section explique enfin **pourquoi deux joueurs ne se voient pas
 toujours** : l'instanciation pair-à-pair, distincte du BGS et de Powerplay qui restent partagés entre tous les modes
-de jeu, et les causes réseau (NAT, CGNAT) d'un échec d'instanciation.
+de jeu, et les causes réseau (NAT, CGNAT) d'un échec d'instanciation. Une dernière section documente les activités
+organisées **hors de tout outil Frontier** — courses (Buckyball, SRV, canyon), rôle logistique des Fleet Carriers
+relais du réseau **DSSA** dans les grandes expéditions, et procédure pour devenir secouriste bénévole (**Fuel Rats**,
+**Hull Seals**).
 
 ## Introduction — Wing, Multicrew et CQC, trois échelles de jeu à plusieurs
 
@@ -301,8 +308,70 @@ subi par un joueur qui choisit malgré tout l'Open, voir [30-piraterie-et-pvp.md
 
 ---
 
+## 7. Activités communautaires organisées : courses, expéditions et entraide
+
+Au-delà des structures de groupe formelles (Wing, Multicrew, Squadron), *Elite Dangerous* héberge depuis plus de dix
+ans des activités organisées par les joueurs eux-mêmes, sans aucun outil dédié fourni par Frontier — coordination
+entièrement externe, par Discord et forums. Le tissu associatif qui les porte est recensé en détail dans
+[01-lore.md §7.7](./01-lore.md) (treize groupes, fondation, contact, statut d'activité) ; cette section documente les
+trois familles d'activité elles-mêmes.
+
+### 7.1 Les courses communautaires : Buckyball, SRV et canyon racing
+
+Trois formats coexistent, sans mode de jeu dédié ni classement officiel :
+
+- **Le format « Buckyball »** (Buckyball Racing Club, actif depuis 2015) : course longue distance ouverte à tout
+  vaisseau, sur un itinéraire fixé à l'avance entre systèmes publics — l'essentiel du défi est la navigation et la
+  gestion de carburant, pas le combat.
+- **Les courses de SRV** : parcours au sol chronométrés sur un corps planétaire donné, souvent organisés en marge d'un
+  rassemblement communautaire (voir 7.3) plutôt que par un club dédié permanent.
+- **Le « canyon racing »** : vol de précision à très basse altitude dans les canyons de certains corps rocheux
+  (repérage communautaire de site plutôt que liste officielle), qui teste la maniabilité d'un vaisseau plus que sa
+  vitesse pure.
+
+Aucun de ces formats ne verse de récompense en jeu : la participation, le chronométrage et le classement reposent
+entièrement sur l'honneur et sur des outils tiers (chat vocal, feuilles de calcul partagées).
+
+### 7.2 Expéditions et rôle logistique des Fleet Carriers relais
+
+Les grandes expéditions communautaires (Distant Worlds, voir [01-lore.md §7.1-7.3](./01-lore.md)) reposent sur une
+coordination permanente assurée par **Fleetcomm**, et depuis 2020 sur un maillage de Fleet Carriers relais entretenu
+par le projet **DSSA** (Deep Space Support Array) : des porte-vaisseaux positionnés en marge de la Bulle, à un
+emplacement fixe et public pendant au moins un an, qui offrent a minima réparation et ravitaillement aux explorateurs
+de passage — un rôle que ne remplit aucune station en dehors de la Bulle (voir
+[19-fleet-carriers.md](./19-fleet-carriers.md) pour la mécanique du Fleet Carrier lui-même). Rejoindre une expédition
+en cours ne demande aucune inscription formelle : suivre le canal Discord de coordination et respecter l'itinéraire et
+les fenêtres de saut communiquées suffit.
+
+### 7.3 Devenir secouriste bénévole : Fuel Rats et Hull Seals
+
+Les deux principaux services de secours bénévoles (voir [01-lore.md §7.7](./01-lore.md) pour leur fiche complète)
+recrutent ouvertement et sans condition de rang :
+
+- **Build minimal côté Fuel Rats** : un vaisseau doté d'un **Fuel Transfer Limpet Controller** et d'un stock de
+  limpets, capable d'atteindre rapidement la position du commandant en détresse (FSD à portée confortable, pas
+  nécessairement ingénierée) ; l'appel se déclenche par le commandant en détresse lui-même (procédure documentée sur
+  fuelrats.com), qui poste sa position, reprise en charge par un « Rat » disponible.
+- **Build minimal côté Hull Seals** : un **Hull/Module Repair Limpet Controller** pour la réparation de coque à
+  distance, utile en complément (matériel distinct, service distinct : les Hull Seals ne traitent pas le carburant).
+- Les deux organisations opèrent en dehors de toute affiliation de faction ou de superpuissance : un secouriste
+  intervient quel que soit le mode de jeu ou l'allégeance du commandant secouru.
+
+### 7.4 Lieux de rendez-vous et folklore communautaire
+
+Trois lieux concentrent l'essentiel des rassemblements spontanés et du folklore du jeu : **Hutton Orbital** (système
+Alpha Centauri), rendu culte par sa distance orbitale extrême et les convois humoristiques des Hutton Orbital
+Truckers ; **Jameson Memorial** à Shinrarta Dezhra (voir [01-lore.md §2.7](./01-lore.md)), qui cumule le statut de
+meilleur point d'aménagement du jeu et de lieu de rassemblement de facto pour toute annonce communautaire majeure ; et
+**Colonia**, capitale de facto de la région du même nom, point de ralliement de toutes les expéditions vers la
+périphérie galactique depuis sa fondation en 2016.
+
+---
+
 ## Voir aussi
 
+- [01-lore.md §7.7](./01-lore.md) — fiche complète des treize groupes communautaires (fondation, contact, statut d'activité) résumés en section 7 ci-dessus.
+- [19-fleet-carriers.md](./19-fleet-carriers.md) — mécanique du Fleet Carrier, dont s'inspirent les porte-vaisseaux relais du réseau DSSA (7.2).
 - [08-combat-spatial.md](./08-combat-spatial.md) — échelle de rang de combat (Harmless → Elite), primes et notoriety hors Wing, coordination d'escadre en PvP.
 - [22-squadrons.md](./22-squadrons.md) — structure persistante du Squadron, à ne pas confondre avec le Wing temporaire.
 - [03-vaisseaux.md](./03-vaisseaux.md) — fiches techniques des vaisseaux compatibles Multicrew et dotés d'une baie de chasseurs.
@@ -321,3 +390,7 @@ subi par un joueur qui choisit malgré tout l'Open, voir [30-piraterie-et-pvp.md
 - https://store.steampowered.com/app/359320/Elite_Dangerous/
 - https://steamcommunity.com/app/359320/guides/
 - https://steamcommunity.com/sharedfiles/filedetails/?id=2439430996
+- https://fuelrats.com/ ; https://confluence.fuelrats.com/display/public/FRKB/History (fondation, juin 2015 ; consultés le 13 septembre 2026)
+- https://hullseals.space/knowledge/books/acknowledgments/page/the-fuel-rats (relation Hull Seals ↔ Fuel Rats, consulté le 13 septembre 2026)
+- https://forums.frontier.co.uk/threads/the-deep-space-support-array-dssa-a-fleetcomm-initiative.540166/ (DSSA, consulté le 13 septembre 2026)
+- https://forums.frontier.co.uk/threads/announcing-fleetcomm-the-exploration-focused-private-pc-group.474455/ (FleetComm, consulté le 13 septembre 2026)
