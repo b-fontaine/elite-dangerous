@@ -725,30 +725,22 @@ d'*Elite Dangerous* (appid Steam 359320), via l'API publique
 `api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320`, qui republie les annonces de Frontier sans
 intermédiaire :
 
-- « Elite Dangerous | An Update on Operations », **22 avril 2026 14:02 UTC** — report d'Operations en juin.
-- « Discover the Nomad », **2 juin 2026 13:03 UTC** — premier dévoilement du Nomad, sortie annoncée le 30 juin 2026
-  en accès anticipé Arx, aux côtés d'Operations.
-- « Elite Dangerous | Operations Update », **1er juillet 2026 14:01 UTC** — notes de version complètes : principe du
-  mode, Operation Runner, les six opérations de lancement, Merc Coin et catalogue MercGear, Nomad, statut
-  « Networking & Balancing Beta ».
-- « Elite Dangerous | Operations Update | Update 3 », **9 juillet 2026 10:24 UTC** — correctifs, restitution des
-  récompenses et des inventaires à pied, lisibilité du Merc Engineering.
-- « Elite Dangerous | Rhino SRV Update », **2 septembre 2026 11:20 UTC** — opération **Under Siege**, correctifs
-  Powerplay Squad et MercGear, problèmes connus.
+- « Elite Dangerous | An Update on Operations », **22 avril 2026 14:02 UTC** | primaire | consulté le 09/09/2026 | confirme : le report du mode Operations à juin 2026, le principe du système en plusieurs étapes pour escouades de 4 commandants, l'accès depuis les tableaux de missions (station, Fleet Carrier, Squadron Carrier) et le rôle de l'Operation Runner (hub, réapparition, extraction) | ne confirme pas : la date de sortie définitive (reportée une nouvelle fois par la suite au 30 juin 2026), ni que les six scénarios ici nommés (Counter Attack, Burning Rescue…) correspondent officiellement aux six opérations sorties au lancement — rapprochement éditorial de ce guide, non confirmé par Frontier
+- « Elite Dangerous | Discover the Nomad », **2 juin 2026 13:03 UTC** | primaire | consulté le 09/09/2026 | confirme : la date de sortie du 30 juin 2026 pour le mode Operations et pour le Nomad, ce dernier en accès anticipé Arx | ne confirme pas : le contenu détaillé des opérations, de l'Operation Runner ou du catalogue MercGear, révélés seulement le 1er juillet 2026
+- « Elite Dangerous | Operations Update », **1er juillet 2026 14:01 UTC** | primaire | consulté le 09/09/2026 | confirme : les notes de version complètes — principe du mode en escouade, composition d'équipe et matchmaking, rôle de l'Operation Runner, les six opérations de lancement, les modes Mercenary et Powerplay, le Merc Coin et le catalogue MercGear de quinze entrées, le Nomad, le statut « Networking & Balancing Beta » | ne confirme pas : le plafond de 9 999 Merc Coins ni la limite hebdomadaire de 1 000 (données communautaires non publiées par Frontier), ni la correspondance entre ces six opérations et les six scénarios annoncés en avril
+- « Elite Dangerous | Operations Update | Update 3 », **9 juillet 2026 10:24 UTC** | primaire | consulté le 09/09/2026 | confirme : les correctifs post-lancement — restitution des récompenses et inventaires à pied, restauration des données d'exploration, bouton « Resync Local Data », amélioration de la lisibilité du Merc Engineering | ne confirme pas : les numéros de version client 4.4.0.0/4.4.0.3, qui proviennent du ticket EDCD/EDDI n° 2849 et non de ce billet
+- « Elite Dangerous | Rhino SRV Update », **2 septembre 2026 11:20 UTC** | primaire | consulté le 09/09/2026 | confirme : l'ajout de la septième opération Under Siege, les correctifs Powerplay Squad et MercGear, et les deux problèmes connus signalés (fin prématurée d'Under Siege, interface de wing à pied absente) | ne confirme pas : le déroulé en deux temps d'Under Siege ni la nature de la « menace plus importante » en fin d'opération (voir la source MassivelyOP ci-dessous)
 - https://massivelyop.com/2026/08/27/elite-dangerous-takes-a-quick-look-at-the-rhino-vehicle-surface-mining-and-a-new-operation-arriving-september-2/ | tertiaire (presse, palier confirmé fiable — voir [00-methodologie-sourcing.md §7](./00-methodologie-sourcing.md)) | consulté le 13/09/2026 | confirme : déroulé en deux temps d'Under Siege (menaces aériennes puis combat au sol, puis « menace plus importante ») | ne confirme pas : la nature de cette menace additionnelle
-
-Corroboration technique communautaire, citée comme telle et non comme source officielle : ticket **EDCD/EDDI n° 2849**
-du 5 août 2026, dont le journal de jeu joint donne les versions client 4.4.0.0 (30 juin 2026) et 4.4.0.3
-(9 juillet 2026).
+- ticket **EDCD/EDDI n° 2849**, 5 août 2026 | secondaire | consulté le 09/09/2026 | confirme : les versions client 4.4.0.0 (30 juin 2026) et 4.4.0.3 (9 juillet 2026), relevées dans le journal de jeu joint au ticket | ne confirme pas : une numérotation de version officiellement publiée par Frontier — donnée communautaire, citée comme telle et non comme source officielle
 
 ### Sources des opérations au sol (partie B)
 
-- https://en.wikipedia.org/wiki/Elite_Dangerous
-- https://www.edsm.net/en/
-- https://canonn.science/
-- https://www.pcgamesn.com/elite-dangerous
-- https://steamcommunity.com/app/359320/guides/
-- https://steamcommunity.com/app/359320/guides/?searchText=odyssey+ground+combat
+- https://en.wikipedia.org/wiki/Elite_Dangerous | secondaire | consulté le 09/09/2026 | confirme : le contexte général de l'extension Odyssey (sortie le 19 mai 2021) et du gameplay à pied qu'elle introduit | ne confirme pas : le détail des mécaniques de settlement, de sécurité, d'équipement ou d'Engineers à pied propres à ce guide
+- https://www.edsm.net/en/ | secondaire | consulté le 09/09/2026 | confirme : le rôle d'EDSM comme base communautaire de référence, utile en recoupement général | ne confirme pas : un détail spécifique aux opérations au sol documenté dans cette partie
+- https://canonn.science/ | secondaire | consulté le 09/09/2026 | confirme : le rôle de Canonn Research comme base communautaire de recherche recoupée | ne confirme pas : un détail spécifique aux opérations au sol documenté dans cette partie
+- https://www.pcgamesn.com/elite-dangerous | tertiaire | consulté le 09/09/2026 | confirme : la couverture de presse spécialisée générale du jeu | ne confirme pas : un chiffre ou une mécanique précise des opérations au sol
+- https://steamcommunity.com/app/359320/guides/ | tertiaire | consulté le 09/09/2026 | confirme : l'existence du répertoire de guides communautaires Steam, dont les deux cités plus haut (ZanyScum, Sighman) | ne confirme pas : l'exactitude détaillée de leur contenu, non vérifiée ligne à ligne par ce guide
+- https://steamcommunity.com/app/359320/guides/?searchText=odyssey+ground+combat | tertiaire | consulté le 09/09/2026 | confirme : le repérage des deux guides Steam cités (*Ground Combat Modules*, *How to do Odyssey Assassination Missions*) | ne confirme pas : un contenu propre au-delà de ce repérage
 
 **Note de vérification (9 septembre 2026)** : la table de récompenses par niveau de menace n'a pas pu être recoupée
 avec une source primaire ou une base communautaire dans cette session (budget de recherche web épuisé ;

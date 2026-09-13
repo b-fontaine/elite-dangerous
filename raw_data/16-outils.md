@@ -596,45 +596,49 @@ contribuent au flux EDDN dont dépendent tous les autres outils.
 
 ## Sources
 
-- https://www.edsm.net/en/
-- https://inara.cz/elite/
-- https://inara.cz/elite/powerplay-stats/
-- https://canonn.science/
-- https://www.spansh.co.uk/
-- https://github.com/EDCD/EDMarketConnector
-- https://github.com/EDCD/EDMarketConnector/wiki/Plugins
-- https://github.com/EDCD/EDMarketConnector/wiki/Frontier-Authentication
-- https://github.com/EDDiscovery/EDDiscovery
-- https://github.com/EDDiscovery/EDDiscovery/releases/tag/Release_19.1.10
-- https://github.com/eyeonus/Trade-Dangerous
-- https://github.com/eyeonus/Trade-Dangerous/releases/tag/v13.1.0
-- https://github.com/jixxed/ed-odyssey-materials-helper
-- https://github.com/canonn-science/EDMC-Canonn
-- https://github.com/canonn-science/canonn-tools
-- https://github.com/aussig/BGS-Tally
-- https://github.com/dwomble/EDMC-NeutronDancer
-- https://github.com/wuuthradd/EDMC-SpanshTools
-- https://github.com/vanderaj/powerplayplanner
-- https://github.com/Celegast/powerplay-parser
-- https://github.com/EDCD/coriolis
-- https://edsy.org/
-- https://github.com/taleden/EDSY
-- https://github.com/msarilar/EDEngineer
-- https://github.com/EDCD/EDDI
-- https://github.com/EDCD/EDDI/wiki
-- https://github.com/EDCD/EDDN
-- https://github.com/EDCD/FDevIDs
-- https://www.razzafrag.com/
-- https://razzserver.com/dokuwiki/doku.php?id=getting_started
-- https://github.com/Razzafrag/EDCoPilot-Installer
-- https://github.com/BielefeldJ/EDCopilotDialogueLibrary
-- https://github.com/markhollingworth-worthit/edcopter
-- https://github.com/ArNeo-VR/EDVA
-- https://github.com/DawnTreader/VoiceAttack-VAP-for-EliteDangerousV4
-- https://www.fuelrats.com/
-- https://github.com/FuelRats/fuelrats.com
-- https://github.com/FuelRats/pipsqueak3
-- https://github.com/FuelRats/SwiftSqueak
-- https://github.com/njthomson/SrvSurvey
-- https://github.com/njthomson/RavenColonialWeb
-- https://ravencolonial.com/
+Format normalisé selon [00-methodologie-sourcing.md §9](./00-methodologie-sourcing.md#9-format-normalisé-dune-section-sources) ;
+voir aussi [11-commerce.md](./11-commerce.md) et [02-powerplay.md](./02-powerplay.md), premiers guides normalisés selon ce
+gabarit.
+
+- https://www.edsm.net/en/ | secondaire | consulté le 12/09/2026 | confirme : le périmètre fonctionnel d'EDSM (carte stellaire collaborative, suivi de journal de vol/flotte, carnet de bord, rangs de commandant, recherche de commodités/vaisseaux), son API v1 documentée et ses dumps nocturnes | ne confirme pas : la valeur exacte des compteurs de systèmes/corps célestes cités, qui progressent en continu et ne sont pas figés à une date donnée
+- https://inara.cz/elite/ | secondaire | consulté le 12/09/2026 | confirme : le périmètre fonctionnel d'Inara (commerce, exploration, équipement, squadrons, Powerplay, guerre thargoïde, engineering, journaux de bord multilingues) et son statut de site actif suivant l'actualité Frontier en direct | ne confirme pas : les statistiques Powerplay en temps réel (voir la ligne powerplay-stats/ ci-dessous)
+- https://inara.cz/elite/powerplay-stats/ | secondaire | consulté le 12/09/2026 | confirme : uniquement l'échec d'accès lui-même (HTTP 410 Gone) au moment du contrôle | ne confirme pas : le contenu des statistiques Powerplay attendu à cette URL — probablement une URL obsolète plutôt qu'un abandon de la fonctionnalité, le Powerplay restant couvert ailleurs sur le site (fiches de puissances et de systèmes, voir section 1 et `zones_incertaines`)
+- https://canonn.science/ | secondaire | consulté le 12/09/2026 | confirme : la présentation de Canonn Interstellar Research (fondation fictive en avril 3301, domaines de recherche archéologie/étoiles à neutrons/exobiologie/xéno-technologie), son statut actif et le Codex Canonn (canonn.science/codex/) | ne confirme pas : l'ampleur précise des campagnes de ravitaillement du Gnosis (nombre de participants, tonnage livré), faute de chiffre unique vérifiable
+- https://www.spansh.co.uk/ | secondaire | consulté le 12/09/2026 | confirme : l'existence de Spansh et sa vocation générale (plotter neutron, plotter galactique, Road to Riches, plotter Fleet Carrier, recherche de corps/stations) | ne confirme pas : le détail exact des fonctionnalités de colonisation ajoutées côté Spansh — site en SPA Ember.js non récupérable par un simple fetch (voir `zones_incertaines`)
+- https://github.com/EDCD/EDMarketConnector | primaire | consulté le 12/09/2026 | confirme : le rôle d'EDMC comme application compagnon de référence (lecture des Journal files, données via CAPI, redistribution vers EDDN, socle de plugins) et son système de plugins Python (dossier `plugins`, fichier `load.py`) | ne confirme pas : les compteurs d'étoiles/issues et dates de commit cités en instantané du 8 septembre 2026, qui évoluent en continu
+- https://github.com/EDCD/EDMarketConnector/wiki/Plugins | primaire | consulté le 12/09/2026 | confirme : la documentation officielle du système de plugins d'EDMC | ne confirme pas : la liste exhaustive à jour des plugins tiers, dont beaucoup sont hébergés hors de ce wiki
+- https://github.com/EDCD/EDMarketConnector/wiki/Frontier-Authentication | primaire | consulté le 12/09/2026 | confirme : le fonctionnement de l'authentification OAuth2 d'EDMC auprès de la Frontier Companion API (CAPI) | ne confirme pas : une documentation officielle de la CAPI par Frontier elle-même, qui n'existe pas
+- https://github.com/EDDiscovery/EDDiscovery | primaire | consulté le 12/09/2026 | confirme : la description officielle d'EDDiscovery (« Captain's log and 3D star map for Elite Dangerous »), son rôle d'alternative complète à EDMC et son module EDDLite | ne confirme pas : le détail des jalons de roadmap (voir la ligne release ci-dessous)
+- https://github.com/EDDiscovery/EDDiscovery/releases/tag/Release_19.1.10 | primaire | consulté le 12/09/2026 | confirme : la release « 19.1.10 — Rhino Additions » (2 septembre 2026) et son contenu (packs vocaux, plugin CANONN, refonte du routing Spansh, suivi des mérites Powerplay) | ne confirme pas : le numéro de mérites suivi à une date ultérieure, qui peut changer d'une version à l'autre
+- https://github.com/eyeonus/Trade-Dangerous | primaire | consulté le 12/09/2026 | confirme : la nature de Trade Dangerous (CLI Python d'optimisation d'itinéraires commerciaux) et le rôle du plugin EDMC comme source de données pour les outils de trading en ligne et hors ligne | ne confirme pas : des chiffres de rentabilité commerciale en jeu (hors périmètre de ce guide, voir [Commerce](./11-commerce.md))
+- https://github.com/eyeonus/Trade-Dangerous/releases/tag/v13.1.0 | primaire | consulté le 12/09/2026 | confirme : la release v13.1.0 (1er juillet 2026) et le dernier commit observé le 23 août 2026 | ne confirme pas : une activité plus récente que cet instantané du 8 septembre 2026
+- https://github.com/jixxed/ed-odyssey-materials-helper | primaire | consulté le 12/09/2026 | confirme : la nature de l'outil (gestion des matériaux d'engineering et de biologie sous Odyssey), la release v3.15.5 (8 septembre 2026), la licence MIT du code et la clause du fichier `NOTICE` sur les composants tiers propriétaires des binaires officiels | ne confirme pas : un compteur d'étoiles GitHub à une date ultérieure à cet instantané
+- https://github.com/canonn-science/EDMC-Canonn | primaire | consulté le 12/09/2026 | confirme : la nature du plugin (« Project Athens », collecte scientifique automatisée : signaux, glyphes thargoïdes, ruines) et sa version v7.8.0 « Seven Dwarfs Ride a Rhino » (6 septembre 2026) | ne confirme pas : une version plus récente publiée après cet instantané
+- https://github.com/canonn-science/canonn-tools | primaire | consulté le 12/09/2026 | confirme : le contenu du monorepo `canonn-tools` (Codex-Router, Link Decoder/Aurvandil, Signals, Thargoid Glyphs/Valknut) et sa mise à jour du 23 mars 2026 | ne confirme pas : le détail interne du calcul de triangulation de Link Decoder/Aurvandil au-delà de sa description fonctionnelle
+- https://github.com/aussig/BGS-Tally | primaire | consulté le 12/09/2026 | confirme : le périmètre de BGS-Tally (suivi BGS + Powerplay + Colonisation, overlay, publication Discord automatique) et sa release v5.6.0/dernier commit le 31 août 2026 | ne confirme pas : une version plus récente publiée après cet instantané du 8 septembre 2026
+- https://github.com/dwomble/EDMC-NeutronDancer | primaire | consulté le 12/09/2026 | confirme : la fonction du plugin (plotter de routes neutron/Spansh avancé) et sa version v2.0.1 (29 août 2026) | ne confirme pas : son niveau d'adoption réel par la communauté
+- https://github.com/wuuthradd/EDMC-SpanshTools | primaire | consulté le 12/09/2026 | confirme : la fonction du plugin (routing, visualisation de route, import/export, overlays) et sa mise à jour du 27 juillet 2026 | ne confirme pas : son niveau d'adoption réel par la communauté
+- https://github.com/vanderaj/powerplayplanner | primaire | consulté le 12/09/2026 | confirme : l'existence de l'outil de planification Powerplay et sa mise à jour du 2 juin 2026 | ne confirme pas : une adoption large au-delà d'un projet individuel de portée restreinte
+- https://github.com/Celegast/powerplay-parser | primaire | consulté le 12/09/2026 | confirme : la fonction de l'outil (extraction OCR de données Powerplay depuis des captures d'écran) et sa mise à jour du 7 septembre 2026 | ne confirme pas : sa précision d'OCR ou son taux d'adoption réel
+- https://github.com/EDCD/coriolis | primaire | consulté le 12/09/2026 | confirme : le statut de Coriolis comme ship-builder maintenu sous l'organisation officielle EDCD et son dernier commit observé le 29 avril 2026 | ne confirme pas : une activité de commit plus récente que cet instantané du 8 septembre 2026
+- https://edsy.org/ | primaire | consulté le 12/09/2026 | confirme : la nature d'EDSY (simulateur d'outillage de vaisseau web) et l'usage déclaré d'assets/imagerie du jeu « avec la permission de Frontier Developments plc, à des fins non commerciales » | ne confirme pas : un rattachement officiel à Frontier — le site précise explicitement ne pas être endossé par Frontier
+- https://github.com/taleden/EDSY | primaire | consulté le 12/09/2026 | confirme : le dépôt ouvert d'EDSY (environ 37 étoiles, dernier commit observé début septembre 2026) et sa gouvernance à développeur unique (`taleden`) | ne confirme pas : une activité plus récente que cet instantané du 8 septembre 2026
+- https://github.com/msarilar/EDEngineer | primaire | consulté le 12/09/2026 | confirme : le statut archivé du dépôt original d'EDEngineer (fin de maintenance active côté auteur d'origine) | ne confirme pas : le niveau d'activité réel des forks communautaires (RealMaxing/EDEngineer, PhilipG0ISW/EDEngineer), non confirmé en détail (voir `zones_incertaines`)
+- https://github.com/EDCD/EDDI | primaire | consulté le 12/09/2026 | confirme : l'architecture d'EDDI (Monitors et Responders), ses fonctionnalités (TTS multi-moteurs, plus de 275 types d'événements documentés, moteur Cottle, personnalités JSON) et son statut actif (dernier commit observé le 7 septembre 2026, environ 525 étoiles) | ne confirme pas : un compteur d'étoiles/commit plus récent que cet instantané du 8 septembre 2026
+- https://github.com/EDCD/EDDI/wiki | primaire | consulté le 12/09/2026 | confirme : la documentation des Monitors et Responders d'EDDI | ne confirme pas : le détail exhaustif des plus de 275 types d'événements listés un par un dans ce guide
+- https://github.com/EDCD/EDDN | primaire | consulté le 12/09/2026 | confirme : la description officielle d'EDDN comme bus de messages redistribuant les événements de journal, et la formule du README qualifiant Inara de « a popular alternative to the now defunct EDDB » | ne confirme pas : le dernier commit cité au tableau récapitulatif (12 juillet 2026) — à revérifier séparément sur le dépôt
+- https://github.com/EDCD/FDevIDs | primaire | consulté le 12/09/2026 | confirme : le rôle de `EDCD/FDevIDs` comme catalogue des identifiants renvoyés par la CAPI, issu d'une rétro-ingénierie collective | ne confirme pas : une documentation officielle de la CAPI par Frontier elle-même, qui n'existe pas
+- https://www.razzafrag.com/ | primaire | consulté le 12/09/2026 | confirme : le site officiel actuel d'EDCoPilot (après la redirection de l'ancien domaine `edcopilot.com`) et son modèle économique gratuit avec dons/Patreon facultatifs | ne confirme pas : un numéro de version plus récent que l'instantané v1.11.748 du 8 septembre 2026 — pas de dépôt GitHub public pour vérifier facilement
+- https://razzserver.com/dokuwiki/doku.php?id=getting_started | primaire | consulté le 12/09/2026 | confirme : l'existence du wiki de configuration d'EDCoPilot hébergé sur `razzserver.com/dokuwiki` | ne confirme pas : le détail exhaustif des plus de 40 panneaux d'information cités dans ce guide
+- https://github.com/Razzafrag/EDCoPilot-Installer | primaire | consulté le 12/09/2026 | confirme : le domaine officiel actuel d'EDCoPilot (razzafrag.com), retrouvé via ce dépôt d'installeur | ne confirme pas : le code source de l'application elle-même, EDCoPilot n'ayant pas de dépôt public pour l'application
+- https://github.com/BielefeldJ/EDCopilotDialogueLibrary | primaire | consulté le 12/09/2026 | confirme : l'existence de la bibliothèque de répliques additionnelles EDCopilotDialogueLibrary et sa mise à jour de mars 2026 | ne confirme pas : son niveau d'adoption par les utilisateurs d'EDCoPilot
+- https://github.com/markhollingworth-worthit/edcopter | primaire | consulté le 12/09/2026 | confirme : l'existence d'EDCoPTER (interface d'EDCoPilot reproduite dans un navigateur web local) et sa mise à jour de septembre 2025 | ne confirme pas : son niveau d'adoption ou de maintenance après cette date
+- https://github.com/ArNeo-VR/EDVA | primaire | consulté le 12/09/2026 | confirme : l'existence du profil VoiceAttack EDVA, sa dernière mise à jour (11 octobre 2025) et son statut actif | ne confirme pas : le contenu exhaustif des commandes couvertes par le profil
+- https://github.com/DawnTreader/VoiceAttack-VAP-for-EliteDangerousV4 | primaire | consulté le 12/09/2026 | confirme : l'existence du profil, sa dernière mise à jour (28 janvier 2026) et la recommandation explicite de coupler EDDI, BindED et EDCoPilot | ne confirme pas : le contenu exhaustif des commandes couvertes par le profil
+- https://www.fuelrats.com/ | primaire | consulté le 12/09/2026 | confirme : le fonctionnement général du ratsignal et la procédure d'appel de détresse | ne confirme pas : le détail exact du guide de secours officiel (`wiki.fuelrats.com`, page indisponible au moment du contrôle — voir section 9 et `zones_incertaines`)
+- https://github.com/FuelRats/fuelrats.com | primaire | consulté le 12/09/2026 | confirme : la description du site officiel par son propre dépôt GitHub (« Elite: Dangerous's premier emergency refueling service ») | ne confirme pas : le contenu du wiki de procédure (dépôt distinct, non consulté avec succès)
+- https://github.com/FuelRats/pipsqueak3 | primaire | consulté le 12/09/2026 | confirme : l'existence de la génération précédente du bot de dispatch (Python), aujourd'hui archivée | ne confirme pas : une maintenance active au-delà de l'archivage
+- https://github.com/FuelRats/SwiftSqueak | primaire | consulté le 12/09/2026 | confirme : la réécriture en Swift du bot de dispatch (aujourd'hui **Mecha**), dépôt actif (dernier commit observé fin août 2026, environ 8 étoiles) | ne confirme pas : une activité plus récente que cet instantané du 8 septembre 2026
+- https://github.com/njthomson/SrvSurvey | primaire | consulté le 12/09/2026 | confirme : la nature de SrvSurvey (overlay contextuel orienté exploration et colonisation) et son compteur d'environ 170 étoiles GitHub | ne confirme pas : une activité plus récente que cet instantané du 8 septembre 2026
+- https://github.com/njthomson/RavenColonialWeb | primaire | consulté le 12/09/2026 | confirme : le dépôt web principal de Raven Colonial et son compteur d'environ 14 étoiles GitHub | ne confirme pas : le détail des plugins EDMC tiers qui s'y connectent (`ravencolonial_edmc`, `EDRavenColonialAgent`, dépôts distincts)
+- https://ravencolonial.com/ | primaire | consulté le 12/09/2026 | confirme : l'existence de l'outil web Raven Colonial, dédié au suivi de la construction d'un système en cours de colonisation | ne confirme pas : le détail des plugins EDMC tiers qui alimentent automatiquement sa progression depuis le jeu

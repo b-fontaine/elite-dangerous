@@ -50,61 +50,63 @@ Les dates de mises à jour réelles citées dans ce guide ont été réconcilié
 
 Le calendrier interne d'*Elite Dangerous* est décalé d'exactement **+1286 ans** par rapport au calendrier réel depuis le lancement du jeu (16 décembre 2014 réel ≈ fin d'année 3300 in-game). Ce décalage constant est corroboré par plusieurs recoupements indépendants (voir [Chronologie canonique](./00-chronologie-canonique.md)) et permet de convertir les dates in-game postérieures à 3300 en dates réelles, et inversement. **Avant l'an 3300**, en revanche, les années citées sont des années purement fictionnelles internes au récit : elles ne correspondent à aucune date réelle vécue par les joueurs (le jeu n'existait pas encore) — la colonne « Date réelle » y est donc marquée « — ».
 
+*Toutes les tables de ce guide portent désormais une colonne terminale **Fiab.** (P = primaire, C = communautaire recoupée, E = estimation, N = non confirmé) ; voir [00-methodologie-sourcing.md §10](./00-methodologie-sourcing.md#10-la-colonne-fiab-des-tableaux-sans-attribution) pour la méthode d'attribution (ligne de base par table, exception par ligne signalée).*
+
 #### Partie 1 — chronologie pré-3300 : années purement fictionnelles, sans équivalent réel
 
-| Année in-game | Date réelle | Événement | Catégorie |
-|---|---|---|---|
-| Milieu du XXIe s. | — | Troisième Guerre mondiale ; mouvement d'unification planétaire | Fondation |
-| 2097 | — | Lancement des premiers vaisseaux-générations | Technologie |
-| XXIIe s. | — | Fossiles martiens ; invention de l'hyperdrive par Li Qin Jao | Technologie |
-| 2242 | — | Federal Accord : naissance de la Fédération | Fondation |
-| 2290 | — | Fin de la terraformation de Mars ; exode depuis la Terre | Politique |
-| 2292 | — | Fondation de la République d'Achenar par Marlin Duval | Fondation |
-| 2296 | — | Mort de Marlin Duval ; Henson Duval prend le contrôle du conseil | Politique |
-| 2320 | — | Henson Duval couronné premier Empereur d'Achenar | Fondation |
-| 2325 | — | Bataille d'Achenar ; capitale fédérale transférée sur Mars | Guerre |
-| 2382 | — | Traité de paix Fédération-Empire (« paix froide ») | Politique |
-| 2463 | — | Sirius Corporation s'implante à Alioth ; conflit minier | Politique |
-| 2696 | — | Fondation du Galactic Cooperative of Worlds (GalCop, [glossaire](./00-glossaire.md)) | Fondation |
-| ≈3125-3151 | — | Première Guerre Thargoïde (lore « classique ») ; arme Mycoïde | Guerre |
-| 3228 | — | Révolte d'Alioth contre la Fédération et l'Empire | Guerre |
-| 3230 | — | Fondation de l'Alliance des Systèmes Indépendants | Fondation |
+| Année in-game | Date réelle | Événement | Catégorie | Fiab. |
+|---|---|---|---|---|
+| Milieu du XXIe s. | — | Troisième Guerre mondiale ; mouvement d'unification planétaire | Fondation | C |
+| 2097 | — | Lancement des premiers vaisseaux-générations | Technologie | C |
+| XXIIe s. | — | Fossiles martiens ; invention de l'hyperdrive par Li Qin Jao | Technologie | C |
+| 2242 | — | Federal Accord : naissance de la Fédération | Fondation | C |
+| 2290 | — | Fin de la terraformation de Mars ; exode depuis la Terre | Politique | C |
+| 2292 | — | Fondation de la République d'Achenar par Marlin Duval | Fondation | C |
+| 2296 | — | Mort de Marlin Duval ; Henson Duval prend le contrôle du conseil | Politique | C |
+| 2320 | — | Henson Duval couronné premier Empereur d'Achenar | Fondation | C |
+| 2325 | — | Bataille d'Achenar ; capitale fédérale transférée sur Mars | Guerre | C |
+| 2382 | — | Traité de paix Fédération-Empire (« paix froide ») | Politique | C |
+| 2463 | — | Sirius Corporation s'implante à Alioth ; conflit minier | Politique | C |
+| 2696 | — | Fondation du Galactic Cooperative of Worlds (GalCop, [glossaire](./00-glossaire.md)) | Fondation | C |
+| ≈3125-3151 | — | Première Guerre Thargoïde (lore « classique ») ; arme Mycoïde | Guerre | C |
+| 3228 | — | Révolte d'Alioth contre la Fédération et l'Empire | Guerre | C |
+| 3230 | — | Fondation de l'Alliance des Systèmes Indépendants | Fondation | C |
 #### Partie 2 — chronologie 3300-3312 : période jouable, avec correspondance en dates réelles
 
-| Année in-game | Date réelle | Événement | Catégorie |
-|---|---|---|---|
-| 3300-3301 | 2014-2015 | Début de la période jouable | Communautaire |
-| 26 mai 3301 | mai 2015 | Disparition de la présidente fédérale Jasmina Halsey | Politique |
-| 2 juin 3301 | juin 2015 | Zachary Hudson devient président fédéral | Politique |
-| 5 août 3301 | août 2015 | Assassinat de l'Empereur Hengist Duval | Politique |
-| Fin 3301 - déb. 3302 | fin 2015 - déb. 2016 | Expédition communautaire Distant Worlds | Communautaire |
-| 15 janv. 3302 | janv. 2016 | Premier Barnacle thargoïde découvert par CMDR Octo86, à Merope 5 C (Pléiades) | Découverte |
-| Mai-sept. 3302 | mai-sept. 2016 | Naufrage, découverte et fondation de Colonia | Communautaire/Exploration |
-| 22 févr. 3302 | févr. 2016 | Denton Patreus nommé Amiral de la Flotte impériale | Politique |
-| 27 oct. 3302 | oct. 2016 | Découverte des Ruines Anciennes des Guardians | Découverte |
-| 10 janv. 3303 | janv. 2017 | Ram Tah lance le décryptage des logs Guardian | Découverte |
-| 3302-3303 | 2016-2017 | Retour officiel des Thargoïdes (USS/UA/UP) | Guerre |
-| 4 août 3303 | août 2017 | Fondation du consortium AEGIS | Guerre/Politique |
-| 11 janv. 3304 | janv. 2018 | Initiative fédérale-impériale anti-thargoïde depuis HIP 17692 ; plusieurs starports des Pléiades attaqués | Guerre |
-| 28 août 3304 | août 2018 | Ram Tah détecte trois signaux énergétiques inconnus (premiers Guardian Beacons) | Découverte |
-| 13 janv. 3305 | 13 janv. 2019 | Lancement de l'expédition Distant Worlds II | Communautaire |
-| 18 juil. 3305 | 18 juil. 2019 | Résurgence thargoïde massive dans les Pléiades ; évacuation de Maia | Guerre |
-| 10-14 sept. 3306 | sept. 2020 | Attentats de la NMLA contre quatre starports impériaux ; assassinat du Prince Harold Duval | Guerre |
-| déc. 3306 - 14 janv. 3307 | déc. 2020 - janv. 2021 | Exode marliniste ; fondation des huit Marlinist Colonies (secteur Hyades) | Politique |
-| 1er janv. 3307 | 2021 | Pranav Antal propose le Galactic Summit | Politique |
-| janv. 3307 - 9 févr. 3308 | 2021-2022 | Captivité de l'Empereur Arissa Lavigny-Duval par les « Lords of Restoration » | Politique |
-| 3307-3308 | 2021-2022 | Arc Salvation / Azimuth Biotech (Alexandria, Proteus) | Guerre |
-| Oct. 3309 | Oct. 2023 | Élection présidentielle fédérale : Felicia Winters bat Jerome Archer (candidat désigné par Zachary Hudson, en fin de mandat) | Politique |
-| ≈3308-3310 | 2022-2024 | Seconde Guerre Thargoïde | Guerre |
-| 31 oct. 3310 | **31 oct. 2024** | Ascendancy : Powerplay 2.0, vaisseau Mandalay natif SCO, Jerome Archer, Nakato Kaine | Politique/Technologie |
-| 19 déc. 3310 | **19 déc. 2024** | Bataille de Sol : destruction du Titan Cocijo ; billet « Thargoid War Epilogue » (15:00 UTC) ; suites GalNet en janv. 2025 | Guerre |
-| ≈26 févr. 3311 | 26 févr. 2025 | Trailblazers : bêta ouverte de la Colonisation | Technologie |
-| ≈11 nov. 3311 | 11 nov. 2025 | Dodec Update : sortie complète de la Colonisation | Technologie |
-| 18 mai 3312 | 18 mai 2026 | Achèvement de l'expédition communautaire Distant Worlds 3 | Communautaire |
-| ≈30 juin 3312 | 30 juin 2026 | Operations (4.4.0.0) : opérations d'escouade et SLV Nomad | Technologie |
-| ≈août 3312 | août 2026 | 10e anniversaire de Colonia | Communautaire |
-| 2 sept. 3312 (≈) | 2 sept. 2026 | SRV Rhino (Vodel) | Technologie |
-| Sept. 3312 | Sept. 2026 | Présent du jeu (rédaction de ce guide) | — |
+| Année in-game | Date réelle | Événement | Catégorie | Fiab. |
+|---|---|---|---|---|
+| 3300-3301 | 2014-2015 | Début de la période jouable | Communautaire | C |
+| 26 mai 3301 | mai 2015 | Disparition de la présidente fédérale Jasmina Halsey | Politique | C |
+| 2 juin 3301 | juin 2015 | Zachary Hudson devient président fédéral | Politique | C |
+| 5 août 3301 | août 2015 | Assassinat de l'Empereur Hengist Duval | Politique | C |
+| Fin 3301 - déb. 3302 | fin 2015 - déb. 2016 | Expédition communautaire Distant Worlds | Communautaire | C |
+| 15 janv. 3302 | janv. 2016 | Premier Barnacle thargoïde découvert par CMDR Octo86, à Merope 5 C (Pléiades) | Découverte | C |
+| Mai-sept. 3302 | mai-sept. 2016 | Naufrage, découverte et fondation de Colonia | Communautaire/Exploration | C |
+| 22 févr. 3302 | févr. 2016 | Denton Patreus nommé Amiral de la Flotte impériale | Politique | C |
+| 27 oct. 3302 | oct. 2016 | Découverte des Ruines Anciennes des Guardians | Découverte | C |
+| 10 janv. 3303 | janv. 2017 | Ram Tah lance le décryptage des logs Guardian | Découverte | C |
+| 3302-3303 | 2016-2017 | Retour officiel des Thargoïdes (USS/UA/UP) | Guerre | C |
+| 4 août 3303 | août 2017 | Fondation du consortium AEGIS | Guerre/Politique | C |
+| 11 janv. 3304 | janv. 2018 | Initiative fédérale-impériale anti-thargoïde depuis HIP 17692 ; plusieurs starports des Pléiades attaqués | Guerre | C |
+| 28 août 3304 | août 2018 | Ram Tah détecte trois signaux énergétiques inconnus (premiers Guardian Beacons) | Découverte | C |
+| 13 janv. 3305 | 13 janv. 2019 | Lancement de l'expédition Distant Worlds II | Communautaire | C |
+| 18 juil. 3305 | 18 juil. 2019 | Résurgence thargoïde massive dans les Pléiades ; évacuation de Maia | Guerre | C |
+| 10-14 sept. 3306 | sept. 2020 | Attentats de la NMLA contre quatre starports impériaux ; assassinat du Prince Harold Duval | Guerre | C |
+| déc. 3306 - 14 janv. 3307 | déc. 2020 - janv. 2021 | Exode marliniste ; fondation des huit Marlinist Colonies (secteur Hyades) | Politique | C |
+| 1er janv. 3307 | 2021 | Pranav Antal propose le Galactic Summit | Politique | C |
+| janv. 3307 - 9 févr. 3308 | 2021-2022 | Captivité de l'Empereur Arissa Lavigny-Duval par les « Lords of Restoration » | Politique | C |
+| 3307-3308 | 2021-2022 | Arc Salvation / Azimuth Biotech (Alexandria, Proteus) | Guerre | C |
+| Oct. 3309 | Oct. 2023 | Élection présidentielle fédérale : Felicia Winters bat Jerome Archer (candidat désigné par Zachary Hudson, en fin de mandat) | Politique | C |
+| ≈3308-3310 | 2022-2024 | Seconde Guerre Thargoïde | Guerre | C |
+| 31 oct. 3310 | **31 oct. 2024** | Ascendancy : Powerplay 2.0, vaisseau Mandalay natif SCO, Jerome Archer, Nakato Kaine | Politique/Technologie | P |
+| 19 déc. 3310 | **19 déc. 2024** | Bataille de Sol : destruction du Titan Cocijo ; billet « Thargoid War Epilogue » (15:00 UTC) ; suites GalNet en janv. 2025 | Guerre | P |
+| ≈26 févr. 3311 | 26 févr. 2025 | Trailblazers : bêta ouverte de la Colonisation | Technologie | P |
+| ≈11 nov. 3311 | 11 nov. 2025 | Dodec Update : sortie complète de la Colonisation | Technologie | P |
+| 18 mai 3312 | 18 mai 2026 | Achèvement de l'expédition communautaire Distant Worlds 3 | Communautaire | C |
+| ≈30 juin 3312 | 30 juin 2026 | Operations (4.4.0.0) : opérations d'escouade et SLV Nomad | Technologie | P |
+| ≈août 3312 | août 2026 | 10e anniversaire de Colonia | Communautaire | C |
+| 2 sept. 3312 (≈) | 2 sept. 2026 | SRV Rhino (Vodel) | Technologie | P |
+| Sept. 3312 | Sept. 2026 | Présent du jeu (rédaction de ce guide) | — | — |
 
 *Capture du 8 septembre 2026 ; les entrées post-2024 s'appuient sur les billets officiels Frontier et sur la réconciliation de [00-chronologie-canonique.md](./00-chronologie-canonique.md) — à revérifier en jeu ou sur GalNet pour toute actualité postérieure à cette date.*
 
@@ -379,11 +381,11 @@ Bien que formellement indépendante et non reconnue comme une superpuissance ter
 
 ### 2.6 Tableau comparatif des trois superpuissances (fondation, régime, capitale, dirigeant en 3312)
 
-| Puissance | Fondation | Régime politique | Capitale | Dirigeant (3312) |
-|---|---|---|---|---|
-| Fédération | 2242 (Federal Accord) | Démocratie représentative, influence corporatiste forte | Mars | Felicia Winters (présidente) |
-| Empire d'Achenar | 2296-2320 (Henson Duval) | Monarchie héréditaire autoritaire, Sénat impérial | Achenar | Arissa Lavigny-Duval (Empereur) |
-| Alliance des Systèmes Indépendants | 3230 | Démocratie parlementaire | Alioth | Edmund Mahon (Premier ministre) |
+| Puissance | Fondation | Régime politique | Capitale | Dirigeant (3312) | Fiab. |
+|---|---|---|---|---|---|
+| Fédération | 2242 (Federal Accord) | Démocratie représentative, influence corporatiste forte | Mars | Felicia Winters (présidente) | C |
+| Empire d'Achenar | 2296-2320 (Henson Duval) | Monarchie héréditaire autoritaire, Sénat impérial | Achenar | Arissa Lavigny-Duval (Empereur) | C |
+| Alliance des Systèmes Indépendants | 3230 | Démocratie parlementaire | Alioth | Edmund Mahon (Premier ministre) | C |
 
 ### 2.7 La Pilots Federation, organisation neutre au-dessus des superpuissances
 
@@ -444,13 +446,13 @@ Premier contact hostile suivi d'une guerre totale entre l'humanité (GalCop, INR
 
 Signaux et artefacts inconnus, sondes corrosives, épaves anciennes portant des traces du virus Mycoïde, intercepteurs qui ciblent systématiquement les stations abritant les laboratoires de recherche du consortium **AEGIS** (voir 3.7 pour sa structure complète).
 
-| Type d'intercepteur | Niveau de menace | Particularité |
-|---|---|---|
-| Scout | Faible | Éclaireur, souvent rencontré en essaim |
-| Cyclops | Modéré | Premier intercepteur de combat rencontré |
-| Basilisk | Élevé | Capacités offensives renforcées |
-| Medusa | Très élevé | Cible les vaisseaux de soutien et de ravitaillement |
-| Hydra | Extrême | Le plus dangereux, réservé aux flottes de combattants aguerris |
+| Type d'intercepteur | Niveau de menace | Particularité | Fiab. |
+|---|---|---|---|
+| Scout | Faible | Éclaireur, souvent rencontré en essaim | C |
+| Cyclops | Modéré | Premier intercepteur de combat rencontré | C |
+| Basilisk | Élevé | Capacités offensives renforcées | C |
+| Medusa | Très élevé | Cible les vaisseaux de soutien et de ravitaillement | C |
+| Hydra | Extrême | Le plus dangereux, réservé aux flottes de combattants aguerris | C |
 
 ### 3.4bis Les Pléiades, berceau géographique du contact thargoïde moderne
 
@@ -487,18 +489,18 @@ surface et les épaves thargoïdes qui s'y trouvent.
 
 Invasion à grande échelle via huit **Titans** (« Maelstroms »), méga-vaisseaux porteurs servant de bases d'opérations et de points de contrôle territorial.
 
-| Titan / Maelstrom | Rôle dans le conflit |
-|---|---|
-| Taranis | Huitième Titan ; premier des huit à être détruit par les commandants, le 2 mars 3310 (2 mars 2024 réel) |
-| Indra | Un des sept Titans ayant atteint les Systèmes du Cœur |
-| Leigong | idem |
-| Cocijo | Dernier Titan à tomber, détruit à Sol le 19 décembre 2024 (≈3310 en temps de jeu) |
-| Oya | Un des sept Titans ayant atteint les Systèmes du Cœur |
-| Thor | idem |
-| Raijin | idem ; avant-dernier Titan détruit, avant le 5 décembre 2024 (voir [Combat anti-Thargoïde (AX)](./25-combat-ax.md)) |
-| Hadad | Un des sept Titans ayant atteint les Systèmes du Cœur |
+| Titan / Maelstrom | Rôle dans le conflit | Fiab. |
+|---|---|---|
+| Taranis | Huitième Titan ; premier des huit à être détruit par les commandants, le 2 mars 3310 (2 mars 2024 réel) | E |
+| Indra | Un des sept Titans ayant atteint les Systèmes du Cœur | C |
+| Leigong | idem | C |
+| Cocijo | Dernier Titan à tomber, détruit à Sol le 19 décembre 2024 (≈3310 en temps de jeu) | P |
+| Oya | Un des sept Titans ayant atteint les Systèmes du Cœur | C |
+| Thor | idem | C |
+| Raijin | idem ; avant-dernier Titan détruit, avant le 5 décembre 2024 (voir [Combat anti-Thargoïde (AX)](./25-combat-ax.md)) | P |
+| Hadad | Un des sept Titans ayant atteint les Systèmes du Cœur | C |
 
-*Les huit Titans portent tous le nom d'une divinité de l'orage. La liste complète, **Taranis** compris, est confirmée par le codex du groupe communautaire [Canonn](https://canonn.science/codex/maelstrom/) (consulté le 9 septembre 2026), qui retient également la graphie **Raijin** — cohérente avec le billet Frontier *Titan Presence In Sol* du 5 décembre 2024 relevé dans [Combat anti-Thargoïde (AX)](./25-combat-ax.md), et qui corrige la graphie « Rajin » d'une révision antérieure de ce guide. La date de destruction de Taranis provient de la couverture presse de l'événement ([Massively OP](https://massivelyop.com/2024/03/04/elite-dangerous-players-successfully-destroy-the-first-thargoid-titan/), 4 mars 2024), les pages officielles Frontier étant inaccessibles lors de cette révision (HTTP 403).*
+*Les huit Titans portent tous le nom d'une divinité de l'orage. La liste complète, **Taranis** compris, est confirmée par le codex du groupe communautaire [Canonn](https://canonn.science/codex/maelstrom/) (consulté le 9 septembre 2026), qui retient également la graphie **Raijin** — cohérente avec le billet Frontier *Titan Presence In Sol* du 5 décembre 2024 relevé dans [Combat anti-Thargoïde (AX)](./25-combat-ax.md), et qui corrige la graphie « Rajin » d'une révision antérieure de ce guide. La date de destruction de Taranis provient de la couverture presse de l'événement ([Massively OP](https://massivelyop.com/2024/03/04/elite-dangerous-players-successfully-destroy-the-first-thargoid-titan/), 4 mars 2024), les pages officielles Frontier étant inaccessibles lors de cette révision (HTTP 403). Cette dépendance à une source tertiaire unique vaut à la ligne Taranis le code `E` dans la colonne Fiab. du tableau ci-dessus ; les lignes Cocijo et Raijin, adossées à des billets officiels Frontier (respectivement « Thargoid War Epilogue » et « Titan Presence In Sol »), portent le code `P` ; les autres lignes reprennent le code `C` de la liste Canonn elle-même.*
 
 - Extension du territoire thargoïde jusqu'à plusieurs centaines de systèmes occupés au plus fort du conflit, selon des estimations communautaires non officielles.
 - Mobilisation communautaire massive : Community Goals (voir [Community Goals](./24-community-goals.md) pour la mécanique générique) de récolte de matériaux anti-Titan, défense de stations assiégées, opérations de sauvetage de réfugiés.
@@ -628,18 +630,22 @@ Cette section réunissait jusqu'ici trois sujets en 21 lignes ; huit mystères y
 gabarit — première apparition, faits établis, hypothèses communautaires, statut. Un point commun ressort de cette
 extension : la plupart de ces fils narratifs (5.4 à 5.7 notamment) partagent une origine, remontant à la cabale
 « Le Club » (5.7) et à son projet secret des années 3270, ce qui en fait moins une collection disparate qu'un même
-arc souterrain du lore, seulement partiellement relié dans le récit officiel.
+arc souterrain du lore, seulement partiellement relié dans le récit officiel. *(Colonne Fiab. du tableau : codée
+ligne à ligne plutôt qu'en bloc, chaque mystère portant sa propre base de confiance déjà détaillée dans sa
+sous-section — citations directes de Frontier pour Raxxla et le Far God, citation GalNet pour Guardian Beacons,
+recherche Canonn/wiki recoupée pour les phénomènes thargoïdes, le Formidine Rift et les generation ships, source
+tertiaire unique non recroisée pour « The Club », absence de toute confirmation GalNet pour le Nemesis Protocol.)*
 
-| Mystère | Première apparition | Statut (2026) |
-|---|---|---|
-| [Raxxla](#51-raxxla--le-mystère-le-plus-ancien-de-la-saga-elite) | 2296 (in-fiction), confirmé par Frontier en 2014 | Ouvert — jamais localisé |
-| [Phénomènes thargoïdes non résolus](#52-phénomènes-thargoïdes-non-résolus--barnacles-artefacts-ua-sondes-up-méta-alliages) | 3302-3303 / 2016-2017 | Ouvert |
-| [Nemesis Protocol de Salvation](#53-le--nemesis-protocol--de-salvation-survivance-présumée-de-caleb-wycherley) | 25 août 3308 / 2022 | Ouvert |
-| [Formidine Rift, Projet Dynasty et l'épave du Zurara](#54-formidine-rift-projet-dynasty-et-lépave-du-zurara) | 3270 (in-fiction) ; découverte joueurs 27 avril 3303 / 2017 | Ouvert |
-| [Le culte du Far God](#55-le-culte-du-far-god) | Fondé 3304 ; révélé 19 juillet 3307 / 2018 puis 2021 | Ouvert (secte active) |
-| [Les generation ships errants](#56-les-generation-ships-errants) | 2097 (réel, pré-jeu) ; premières découvertes 3303 / 2017 | Ouvert (16 épaves documentées) |
-| [« The Club »](#57--the-club) | ≈3302-3303 / 2016-2017 | Ouvert |
-| [Guardian Beacons](#58-guardian-beacons--mystère-narratif-au-delà-du-mini-jeu) | 28 août 3304 / 2018 | Mécanique résolue ; origine narrative ouverte |
+| Mystère | Première apparition | Statut (2026) | Fiab. |
+|---|---|---|---|
+| [Raxxla](#51-raxxla--le-mystère-le-plus-ancien-de-la-saga-elite) | 2296 (in-fiction), confirmé par Frontier en 2014 | Ouvert — jamais localisé | P |
+| [Phénomènes thargoïdes non résolus](#52-phénomènes-thargoïdes-non-résolus--barnacles-artefacts-ua-sondes-up-méta-alliages) | 3302-3303 / 2016-2017 | Ouvert | C |
+| [Nemesis Protocol de Salvation](#53-le--nemesis-protocol--de-salvation-survivance-présumée-de-caleb-wycherley) | 25 août 3308 / 2022 | Ouvert | N |
+| [Formidine Rift, Projet Dynasty et l'épave du Zurara](#54-formidine-rift-projet-dynasty-et-lépave-du-zurara) | 3270 (in-fiction) ; découverte joueurs 27 avril 3303 / 2017 | Ouvert | C |
+| [Le culte du Far God](#55-le-culte-du-far-god) | Fondé 3304 ; révélé 19 juillet 3307 / 2018 puis 2021 | Ouvert (secte active) | P |
+| [Les generation ships errants](#56-les-generation-ships-errants) | 2097 (réel, pré-jeu) ; premières découvertes 3303 / 2017 | Ouvert (16 épaves documentées) | C |
+| [« The Club »](#57--the-club) | ≈3302-3303 / 2016-2017 | Ouvert | E |
+| [Guardian Beacons](#58-guardian-beacons--mystère-narratif-au-delà-du-mini-jeu) | 28 août 3304 / 2018 | Mécanique résolue ; origine narrative ouverte | P |
 
 ### 5.1 Raxxla — le mystère le plus ancien de la saga *Elite*
 
@@ -792,22 +798,22 @@ Le système **Powerplay** met en scène des dirigeants charismatiques que les jo
 
 ### 6.1 Tableau des douze Powers du Powerplay (roster depuis Ascendancy, 31 octobre 2024)
 
-| Power | Puissance affiliée | Fonction / rôle | Domaine de spécialité |
-|---|---|---|---|
-| Edmund Mahon | Alliance | Premier ministre de l'Alliance | Négociation, développement des factions mineures |
-| Felicia Winters | Fédération | Présidente de la Fédération | Recherche & sauvetage, stabilité |
-| Jerome Archer | Fédération | Power fédérale (depuis le 31 oct. 2024) | Armement à coût réduit |
-| Li Yong-Rui | Sirius Corporation / SiriusGov (indépendant) | COO de Sirius Corp | Économie, données d'exploration |
-| Aisling Duval | Empire | Princesse impériale | Recherche & sauvetage |
-| Arissa Lavigny-Duval | Empire | Empereur (16e) | Autorité impériale, primes |
-| Denton Patreus | Empire | Sénateur, Amiral de la Flotte | Militaire, réarmement à coût réduit |
-| Archon Delaine | Kumo Crew (pirate) | « Pirate King » du secteur Pegasi | Piraterie organisée, marché noir |
-| Yuri Grom | Indépendant (Clarke's Reach) | Fondateur des EG Pilots | Exploration, commerce, armement |
-| Zemina Torval | Empire | Fondatrice de Torval Mining Ltd | Minage, esclavage impérial |
-| Pranav Antal | Indépendant (Utopia) | Simguru | Données organiques, technologie |
-| Nakato Kaine | Alliance | Conseillère de Tionisla | Minage, réputation des factions mineures, sauvetage |
+| Power | Puissance affiliée | Fonction / rôle | Domaine de spécialité | Fiab. |
+|---|---|---|---|---|
+| Edmund Mahon | Alliance | Premier ministre de l'Alliance | Négociation, développement des factions mineures | C |
+| Felicia Winters | Fédération | Présidente de la Fédération | Recherche & sauvetage, stabilité | C |
+| Jerome Archer | Fédération | Power fédérale (depuis le 31 oct. 2024) | Armement à coût réduit | C |
+| Li Yong-Rui | Sirius Corporation / SiriusGov (indépendant) | COO de Sirius Corp | Économie, données d'exploration | C |
+| Aisling Duval | Empire | Princesse impériale | Recherche & sauvetage | C |
+| Arissa Lavigny-Duval | Empire | Empereur (16e) | Autorité impériale, primes | C |
+| Denton Patreus | Empire | Sénateur, Amiral de la Flotte | Militaire, réarmement à coût réduit | C |
+| Archon Delaine | Kumo Crew (pirate) | « Pirate King » du secteur Pegasi | Piraterie organisée, marché noir | C |
+| Yuri Grom | Indépendant (Clarke's Reach) | Fondateur des EG Pilots | Exploration, commerce, armement | C |
+| Zemina Torval | Empire | Fondatrice de Torval Mining Ltd | Minage, esclavage impérial | C |
+| Pranav Antal | Indépendant (Utopia) | Simguru | Données organiques, technologie | C |
+| Nakato Kaine | Alliance | Conseillère de Tionisla | Minage, réputation des factions mineures, sauvetage | C |
 
-Les bonus chiffrés exacts de chaque Power évoluent au fil des rééquilibrages successifs de Powerplay 2.0 : pour les pourcentages à jour, voir le tableau détaillé de [Powerplay](./02-powerplay.md) §6 *(capture du 8 septembre 2026, à revérifier en jeu avant toute décision d'affiliation)*.
+Les bonus chiffrés exacts de chaque Power évoluent au fil des rééquilibrages successifs de Powerplay 2.0 : pour les pourcentages à jour, voir le tableau détaillé de [Powerplay](./02-powerplay.md) §6 *(capture du 8 septembre 2026, à revérifier en jeu avant toute décision d'affiliation)*. *(Fiab. : roster et fonctions recoupés via le registre communautaire inara.cz/elite/powers/, code `C` uniforme — aucune ligne n'est individuellement signalée comme incertaine par ailleurs dans ce guide.)*
 
 ### 6.2 Portraits détaillés des douze Powers d'Elite Dangerous
 
@@ -971,24 +977,27 @@ Ensuite, les « **Rescue Rangers** » cités en 2.7 comme branche bénévole de 
 lore mis en place par Frontier avec Odyssey (2021)**, pas un collectif de joueurs : un club Xbox non officiel a porté
 ce nom entre 2016 et 2018, sans suite documentée depuis. Ne pas les confondre avec les douze groupes réels ci-dessous.
 
-| Groupe | Domaine | Fondation | Contact | Service rendu | Actif en 2025-2026 |
-|---|---|---|---|---|---|
-| **Fuel Rats** | Sauvetage (carburant, coque) | Juin 2015, CMDR Surly Badger | fuelrats.com, Discord | Ravitaillement à distance et réparation de coque, gratuits, 24/7 | Oui — dépôts GitHub actifs jusqu'en sept. 2026 |
-| **Hull Seals** | Sauvetage (coque, SRV, verrière) | Janvier 2019 (« Fleet Mechanics », pour Distant Worlds II) | hullseals.space, Discord | Réparation de coque à distance, extraction de SRV, dépannage de verrière | Incertain — outil principal (HalpyBOT) figé depuis sept. 2024 |
-| **Operation Ida** | Reconstruction de stations endommagées | 2018, Pléiades (secteur Pleiades HR-W d1-41) | operationida.com, Discord | Convois de masse (jusqu'à 2,5 Mt) vers les stations endommagées | Confirmé jusqu'à janv. 2025 (fin des réparations de Sol) ; mission réduite depuis la fin de la guerre |
-| **Canonn Research** | Recherche communautaire (lore, xénoarchéologie) | 2015, Dr Arcanonn | canonn.science, Discord | Recherche collaborative, Codex, partenariat avec AXI | Oui — publications jusqu'en fév. 2026 |
-| **Anti-Xeno Initiative (AXI)** | Combat anti-thargoïde | 15 nov. 2017, CMDR Gluttony Fang | antixenoinitiative.com, Discord | Coordination du combat AX, wiki tactique, données Canonn | Oui — événement organisé en oct. 2025 |
-| **Hutton Orbital Truckers** | Culture communautaire (convois, radio) | ≈2015-2016, à la suite de la CG du Hutton Mug | forums Frontier, radio.forthemug.com | Convois humoristiques vers Hutton Orbital, radio/podcast | Oui — podcast actif, épisodes jusqu'en avril 2025 |
-| **DSSA** (Deep Space Support Array) | Logistique de secours longue distance | Conçu en 2019, lancé ≈juin 2020, projet porté par FleetComm | Discord FleetComm HQ, liste de réserve publique | Réseau de Fleet Carriers de secours postés en marge de la Bulle | Oui |
-| **Buckyball Racing Club** | Course longue distance | Août 2015 | forums Frontier | Courses et championnats ouverts à tout vaisseau | Oui — saison « Yes And 3311 » (2025) |
-| **Sagittarius Eye** | Média/presse communautaire | 2017 | sagittarius-eye.com | Magazine et podcast d'actualité du jeu | Non confirmé — mentions légales du site figées à 2021, dernier podcast connu nov. 2024 |
-| **PTN** (Pilots Trade Network) | Commerce via Fleet Carriers | ≈2021 (date non confirmée en source primaire) | pilotstradenetwork.com, Discord | Coordination logistique du commerce par Fleet Carriers | Plus de 400 carriers revendiqués ; date d'activité récente non confirmée |
-| **FCOC** (Fleet Carrier Owners Club) | Communauté de propriétaires de Fleet Carriers | Après juin 2020 (date précise introuvable) | Discord | Trajets gratuits, petites annonces, secours entre propriétaires | Vraisemblable (~29 000 membres allégués) mais non confirmé |
-| **Fleetcomm** | Coordination des grandes expéditions | Nov. 2015 (« Kamzel PG », CMDR Erimus Kamzel), renommé ≈2017 | Discord FleetComm HQ | Hub logistique des expéditions (Distant Worlds), héberge le projet DSSA | Oui — hub confirmé de Distant Worlds 3 |
+| Groupe | Domaine | Fondation | Contact | Service rendu | Actif en 2025-2026 | Fiab. |
+|---|---|---|---|---|---|---|
+| **Fuel Rats** | Sauvetage (carburant, coque) | Juin 2015, CMDR Surly Badger | fuelrats.com, Discord | Ravitaillement à distance et réparation de coque, gratuits, 24/7 | Oui — dépôts GitHub actifs jusqu'en sept. 2026 | C |
+| **Hull Seals** | Sauvetage (coque, SRV, verrière) | Janvier 2019 (« Fleet Mechanics », pour Distant Worlds II) | hullseals.space, Discord | Réparation de coque à distance, extraction de SRV, dépannage de verrière | Incertain — outil principal (HalpyBOT) figé depuis sept. 2024 | E |
+| **Operation Ida** | Reconstruction de stations endommagées | 2018, Pléiades (secteur Pleiades HR-W d1-41) | operationida.com, Discord | Convois de masse (jusqu'à 2,5 Mt) vers les stations endommagées | Confirmé jusqu'à janv. 2025 (fin des réparations de Sol) ; mission réduite depuis la fin de la guerre | C |
+| **Canonn Research** | Recherche communautaire (lore, xénoarchéologie) | 2015, Dr Arcanonn | canonn.science, Discord | Recherche collaborative, Codex, partenariat avec AXI | Oui — publications jusqu'en fév. 2026 | C |
+| **Anti-Xeno Initiative (AXI)** | Combat anti-thargoïde | 15 nov. 2017, CMDR Gluttony Fang | antixenoinitiative.com, Discord | Coordination du combat AX, wiki tactique, données Canonn | Oui — événement organisé en oct. 2025 | C |
+| **Hutton Orbital Truckers** | Culture communautaire (convois, radio) | ≈2015-2016, à la suite de la CG du Hutton Mug | forums Frontier, radio.forthemug.com | Convois humoristiques vers Hutton Orbital, radio/podcast | Oui — podcast actif, épisodes jusqu'en avril 2025 | C |
+| **DSSA** (Deep Space Support Array) | Logistique de secours longue distance | Conçu en 2019, lancé ≈juin 2020, projet porté par FleetComm | Discord FleetComm HQ, liste de réserve publique | Réseau de Fleet Carriers de secours postés en marge de la Bulle | Oui | C |
+| **Buckyball Racing Club** | Course longue distance | Août 2015 | forums Frontier | Courses et championnats ouverts à tout vaisseau | Oui — saison « Yes And 3311 » (2025) | C |
+| **Sagittarius Eye** | Média/presse communautaire | 2017 | sagittarius-eye.com | Magazine et podcast d'actualité du jeu | Non confirmé — mentions légales du site figées à 2021, dernier podcast connu nov. 2024 | E |
+| **PTN** (Pilots Trade Network) | Commerce via Fleet Carriers | ≈2021 (date non confirmée en source primaire) | pilotstradenetwork.com, Discord | Coordination logistique du commerce par Fleet Carriers | Plus de 400 carriers revendiqués ; date d'activité récente non confirmée | E |
+| **FCOC** (Fleet Carrier Owners Club) | Communauté de propriétaires de Fleet Carriers | Après juin 2020 (date précise introuvable) | Discord | Trajets gratuits, petites annonces, secours entre propriétaires | Vraisemblable (~29 000 membres allégués) mais non confirmé | E |
+| **Fleetcomm** | Coordination des grandes expéditions | Nov. 2015 (« Kamzel PG », CMDR Erimus Kamzel), renommé ≈2017 | Discord FleetComm HQ | Hub logistique des expéditions (Distant Worlds), héberge le projet DSSA | Oui — hub confirmé de Distant Worlds 3 | C |
 
 *(Sources : sites officiels de chaque groupe, dépôts GitHub, wiki Fandom et forums Frontier, tous consultés le
 13 septembre 2026 — voir la liste complète en fin de guide. Les cases « non confirmé » ou « incertain » le restent
-faute d'une preuve d'activité datée de 2025 ou 2026 ; elles ne signifient pas que le groupe a cessé d'exister.)*
+faute d'une preuve d'activité datée de 2025 ou 2026 ; elles ne signifient pas que le groupe a cessé d'exister. Ces
+mêmes cases dictent la colonne Fiab. du tableau ci-dessus : `E` pour Hull Seals, Sagittarius Eye, PTN et FCOC —
+les quatre lignes que cette colonne « Actif en 2025-2026 » marque déjà « incertain » ou « non confirmé » — et `C`
+pour les huit autres, dont l'activité récente est positivement attestée.)*
 
 Les **expéditions Distant Worlds** elles-mêmes restent traitées comme un arc narratif ponctuel plutôt que comme un
 groupe permanent : Distant Worlds (fin 2015 - début 2016, voir 7.1), Distant Worlds II (janvier 2019, voir 7.2) puis
@@ -1016,25 +1025,31 @@ sous licence Frontier Developments l'étoffent depuis 2014, sans qu'aucune n'ait
 
 ### Tableau des œuvres officielles
 
-| Titre | Auteur | Année | Éditeur | Arc de lore couvert | Statut canonique |
-|---|---|---|---|---|---|
-| *Elite Dangerous: Docking is Difficult* | Gideon Defoe | 2014 | Gollancz | Comédie, hors arc politique | Sous licence, non recoupé en jeu |
-| *Elite Dangerous: Nemorensis* | Simon Spurrier | 2014 | Gollancz | — | Sous licence, non recoupé en jeu |
-| *Elite Dangerous: Wanted* | Stephen Deas & Gavin Smith (« Gavin Deas ») | 2014 | Gollancz | — | Sous licence, non recoupé en jeu |
-| *Elite: Reclamation* | Drew Wagar | 2014 | Fantastic Books Publishing | Front Empire/Fédération, sénatrice Kahina Tijani Loren (Salomé, voir 5.4 et 6.2) | Sous licence ; personnage et enregistrement audio repris en jeu |
-| *Elite: Mostly Harmless* | Kate Russell | 2014 | Fantastic Books Publishing | Comédie | Sous licence, non recoupé en jeu |
-| *Elite: And Here The Wheel* | John Harper | 2014 | Fantastic Books Publishing | Lien entre *The Dark Wheel* (classique) et *First Encounters* | Sous licence, non recoupé en jeu |
-| *Elite: Tales from the Frontier* | Anthologie (15 nouvelles) | 2014 | Fantastic Books Publishing | Divers | Sous licence, non recoupé en jeu |
-| *Elite: Out of the Darkness* | T. James | 2014 | — | Thargoïdes | Sous licence, non recoupé en jeu |
-| *Elite: Lave Revolution* | — | 2014 | — | Old Worlds, Lave | Sous licence, non recoupé en jeu |
-| *Elite: Legacy* | **Michael Brookes** (lore-master interne Frontier) | 2014 | — | — | Statut particulier : proche de la production interne |
-| *Elite Dangerous: Premonition* | Drew Wagar | 2017 | Frontier Developments (direct) | Suite de *Reclamation*, événements 3302-3303 | Le plus proche du canon officiel — publié directement par Frontier |
-| *Elite: The Dark Wheel* | Robert Holdstock | 1984 | Fourni avec *Elite* original | Fiction fondatrice de la saga classique | **Non canonique** dans *Elite Dangerous* (contact extraterrestre non hostile contredisant la chronologie *Dangerous*) |
+| Titre | Auteur | Année | Éditeur | Arc de lore couvert | Statut canonique | Fiab. |
+|---|---|---|---|---|---|---|
+| *Elite Dangerous: Docking is Difficult* | Gideon Defoe | 2014 | Gollancz | Comédie, hors arc politique | Sous licence, non recoupé en jeu | C |
+| *Elite Dangerous: Nemorensis* | Simon Spurrier | 2014 | Gollancz | — | Sous licence, non recoupé en jeu | C |
+| *Elite Dangerous: Wanted* | Stephen Deas & Gavin Smith (« Gavin Deas ») | 2014 | Gollancz | — | Sous licence, non recoupé en jeu | C |
+| *Elite: Reclamation* | Drew Wagar | 2014 | Fantastic Books Publishing | Front Empire/Fédération, sénatrice Kahina Tijani Loren (Salomé, voir 5.4 et 6.2) | Sous licence ; personnage et enregistrement audio repris en jeu | P |
+| *Elite: Mostly Harmless* | Kate Russell | 2014 | Fantastic Books Publishing | Comédie | Sous licence, non recoupé en jeu | C |
+| *Elite: And Here The Wheel* | John Harper | 2014 | Fantastic Books Publishing | Lien entre *The Dark Wheel* (classique) et *First Encounters* | Sous licence, non recoupé en jeu | C |
+| *Elite: Tales from the Frontier* | Anthologie (15 nouvelles) | 2014 | Fantastic Books Publishing | Divers | Sous licence, non recoupé en jeu | C |
+| *Elite: Out of the Darkness* | T. James | 2014 | — | Thargoïdes | Sous licence, non recoupé en jeu | C |
+| *Elite: Lave Revolution* | — | 2014 | — | Old Worlds, Lave | Sous licence, non recoupé en jeu | C |
+| *Elite: Legacy* | **Michael Brookes** (lore-master interne Frontier) | 2014 | — | — | Statut particulier : proche de la production interne | P |
+| *Elite Dangerous: Premonition* | Drew Wagar | 2017 | Frontier Developments (direct) | Suite de *Reclamation*, événements 3302-3303 | Le plus proche du canon officiel — publié directement par Frontier | P |
+| *Elite: The Dark Wheel* | Robert Holdstock | 1984 | Fourni avec *Elite* original | Fiction fondatrice de la saga classique | **Non canonique** dans *Elite Dangerous* (contact extraterrestre non hostile contredisant la chronologie *Dangerous*) | C |
 
 *(Autres œuvres de la continuité « Elite classique », également non canoniques sauf éléments ponctuels repris :
 *Imprint* d'Andy Redman, 1991 ; *Stories of Life on the Frontier*, 1993 ; *Further Stories of Life on the Frontier*.
 Existent aussi deux jeux de rôle sur table sous licence, *Elite Encounters RPG* et *Elite Dangerous Role Playing
 Game*, ainsi qu'une fan-fiction gratuite explicitement distinguée du reste, *Resistance* de J.E. Davis (2020).)*
+
+*(Fiab. : baseline `C` — existence et statut de chaque ouvrage recoupés via la page Fiction du wiki Fandom et
+drewwagar.com (voir Sources) — sauf trois lignes individuellement documentées comme émanant directement de Frontier
+et portées à `P` : *Reclamation* (personnage et enregistrement audio effectivement repris en jeu, voir ci-dessous),
+*Legacy* (rédigé par le lore-master interne de Frontier) et *Premonition* (publié directement par Frontier plutôt
+que sous licence à un studio tiers).)*
 
 ### Ce que Frontier a réellement intégré au canon jouable
 
@@ -1085,105 +1100,99 @@ D'autres guides du corpus approfondissent des aspects mentionnés dans ce guide 
 
 ## Sources
 
-- https://en.wikipedia.org/wiki/Elite_Dangerous
-- https://canonn.science/lore/
-- https://canonn.science/codex/the-guardians/
-- https://canonn.science/codex/maelstrom/ (liste des huit Maelstroms/Titans, dont Taranis, et graphie « Raijin » — consulté le 9 septembre 2026)
-- https://massivelyop.com/2024/03/04/elite-dangerous-players-successfully-destroy-the-first-thargoid-titan/ (destruction du premier Titan, Taranis, le 2 mars 2024)
-- https://distantworlds3.space/ (site officiel de l'expédition Distant Worlds 3 : statut « Complete », actualité « A successful conclusion » datée du 18 mai 3312 ; consulté le 10 septembre 2026)
-- https://wiki.alioth.net/index.php/Oolite_timeline
-- https://wiki.alioth.net/index.php/Raxxla
-- https://themetalvortex.com/elite-dangerous-thargoid-war-epilogue-analysis/
-- https://ricardosgaming.com/blog/elite-dangerous-news-updates-2026/
-- https://inara.cz/elite/powers/
-- https://inara.cz/elite/galnet/
-- https://inara.cz/elite/power/1/
-- https://inara.cz/elite/power/3/
-- https://inara.cz/elite/power/4/
-- https://elite-dangerous.fandom.com/wiki/Lore
-- https://elite-dangerous.fandom.com/wiki/Federation
-- https://elite-dangerous.fandom.com/wiki/Empire
-- https://elite-dangerous.fandom.com/wiki/Alliance
-- https://elite-dangerous.fandom.com/wiki/Thargoid
-- https://elite-dangerous.fandom.com/wiki/First_Thargoid_War
-- https://elite-dangerous.fandom.com/wiki/Guardian-Thargoid_War
-- https://elite-dangerous.fandom.com/wiki/Guardian
-- https://elite-dangerous.fandom.com/wiki/Ancient_Ruins
-- https://elite-dangerous.fandom.com/wiki/Raxxla
-- https://elite-dangerous.fandom.com/wiki/Republic_of_Achenar
-- https://elite-dangerous.fandom.com/wiki/Battle_of_Achenar
-- https://elite-dangerous.fandom.com/wiki/Edmund_Mahon
-- https://elite-dangerous.fandom.com/wiki/Felicia_Winters
-- https://elite-dangerous.fandom.com/wiki/Zachary_Hudson
-- https://elite-dangerous.fandom.com/wiki/Li_Yong-Rui
-- https://elite-dangerous.fandom.com/wiki/Aisling_Duval
-- https://elite-dangerous.fandom.com/wiki/Arissa_Lavigny-Duval
-- https://elite-dangerous.fandom.com/wiki/Denton_Patreus
-- https://elite-dangerous.fandom.com/wiki/Archon_Delaine
-- https://elite-dangerous.fandom.com/wiki/Kumo_Crew
-- https://elite-dangerous.fandom.com/wiki/Distant_Worlds
-- https://elite-dangerous.fandom.com/wiki/Distant_Worlds_II
-- https://elite-dangerous.fandom.com/wiki/Elite_Dangerous_Timeline
-- https://www.elitedangerous.com/news/thargoid-war-epilogue
-- https://www.elitedangerous.com/news/titan-presence-sol
-- https://www.elitedangerous.com/news/galnet/titan-cocijo-destroyed-sol-liberated
-- https://www.elitedangerous.com/update-notes/4-0-19-0
-- https://www.mmorpg.com/news/two-year-thargoid-war-ends-in-elite-dangerous-after-climactic-fight-against-final-titan-cucijo-2000133717
-- https://justabout.com/elite-dangerous/38056/thargoid-titan-cocijo-first-hand-reports-from-the-final-battle-for-sol
-- https://forums.frontier.co.uk/threads/elite-dangerous-thargoid-war-epilogue.631977/
-- https://forums.frontier.co.uk/threads/elite-dangerous-ascendancy-now-live.629020/
-- https://simulationdaily.com/news/elite-dangerous-ascendancy-release-patch-notes/
-- https://kotaku.com/10-000-elite-dangerous-players-start-an-18-week-journey-1831702968
-- https://www.elitedangerous.com/news/updates/4-1-0-0 (patch notes Trailblazers, 26 février 2025 — voir [00-chronologie-canonique.md](./00-chronologie-canonique.md))
-- https://www.elitedangerous.com/update-notes/4-2-2-0 (patch notes Dodec Update, 11 novembre 2025)
-- https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320 (billets officiels Frontier relayés sur Steam News : annonce, report, confirmation de sortie et suivi d'Ascendancy le 31 octobre 2024 ; « Discover the Nomad » du 2 juin 2026 13:03 UTC et « Operations Update » du 1ᵉʳ juillet 2026 14:01 UTC pour la mise à jour Operations et le Nomad, cités en 1.9)
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Pilots-Federation.md (mirroir communautaire du wiki Fandom, consulté en remplacement des pages Fandom directement bloquées lors de la rédaction)
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Aegis.md
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Salvation.md
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Azimuth-Biotech.md
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Sirius-Corporation.md
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Alliance.md
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Elite-Dangerous-Timeline.md
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Yuri-Grom.md
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Zemina-Torval.md
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Pranav-Antal.md
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Nakato-Kaine.md
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Shinrarta-Dezhra.md
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Maia.md (colonisation de Maia,
-  Obsidian Orbital, centre de recherche du Professeur Palin — section 3.4bis)
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Merope.md (découverte du
-  premier Barnacle thargoïde par CMDR Octo86, 15 janvier 3302 — section 3.4bis)
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Obsidian-Orbital.md
-  (chronologie des attaques thargoïdes sur la station, 3303-3304 — section 3.4bis)
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Meta-Alloys.md (date de
-  découverte du premier Meta-Alloy à Merope 5 C — section 3.4bis)
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Guardian.md (société en
-  clans, Monolith Network, expansion, Constructs, langage — sections 4.2-4.3)
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/First_Guardian_Civil_War.md
-  (unification par les clans du nord — section 4.2)
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Construct.md (filières
-  militaire/civile, rébellion — section 4.3)
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Second_Guardian_Civil_War.md
-  (schisme traditionalistes/progressistes — section 4.3)
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Guardian-Thargoid_War.md
-  (cause, déroulement et issue de la guerre ancienne — section 4.4)
-- https://canonn.science/codex/professor-palins-mission/ (mission de collecte du Professeur Palin à Maia)
-- https://fuelrats.com/ ; https://confluence.fuelrats.com/display/public/FRKB/History (Fuel Rats, fondation juin 2015 — section 7.7)
-- https://hullseals.space/knowledge/books/acknowledgments/page/the-fuel-rats (Hull Seals, fondation janvier 2019, filiation avec les Fuel Rats — section 7.7)
-- https://www.operationida.com/about ; https://elite-dangerous.fandom.com/wiki/Operation_Ida (Operation Ida — section 7.7)
-- https://canonn.science/ ; https://canonn.science/about-us/ (Canonn Research, fondation 2015 — section 7.7)
-- https://antixenoinitiative.com/ ; https://wiki.antixenoinitiative.com/en/home (Anti-Xeno Initiative, fondation nov. 2017 — section 7.7)
-- https://community.elitedangerous.com/en/node/332 (Hutton Orbital Truckers — section 7.7)
-- https://forums.frontier.co.uk/threads/the-deep-space-support-array-dssa-a-fleetcomm-initiative.540166/ ; https://inara.cz/elite/squadron-about/13586/ (DSSA — section 7.7)
-- https://elite-dangerous.fandom.com/wiki/Buckyball_Racing_Club (Buckyball Racing Club, fondation août 2015 — section 7.7)
-- https://www.sagittarius-eye.com/ ; https://elite-dangerous.fandom.com/wiki/Sagittarius_Eye (Sagittarius Eye — section 7.7)
-- https://pilotstradenetwork.com/ ; https://inara.cz/elite/squadron-about/9890/ (Pilots Trade Network — section 7.7)
-- https://inara.cz/elite/squadron-about/7636/ (Fleet Carrier Owners Club — section 7.7)
-- https://elite-dangerous.fandom.com/wiki/Pilots_Federation_Rescue_Rangers (Rescue Rangers : dispositif de lore Odyssey 2021, pas un groupe de joueurs — section 7.7)
-- https://forums.frontier.co.uk/threads/announcing-fleetcomm-the-exploration-focused-private-pc-group.474455/ (Fleetcomm, fondation nov. 2015 sous le nom « Kamzel PG » — section 7.7)
-- Miroir communautaire du wiki Fandom (DarkSession/Elite-Dangerous-RAG-Knowledge), pages Federation, Empire, Alliance, Federation-Ranks, Empire-Ranks, Imperial-Senate — institutions des trois superpuissances, section 2 (consulté le 13 septembre 2026)
-- Miroir communautaire du wiki Fandom, pages Jerome-Archer, Zachary-Hudson, Felicia-Winters, Hengist-Duval, Arissa-Lavigny-Duval, Lords-of-Restoration — portraits et succession, sections 2 et 6.2 (consulté le 13 septembre 2026)
-- https://forums.frontier.co.uk/threads/galnet-president-winters-assumes-office-31-oct-3310.629029/ ; https://forums.frontier.co.uk/threads/arissa-lavigny-duval-stance-on-slavery.180428/ (recoupements sur l'élection de 3309 et la position d'Arissa sur l'esclavage)
-- Miroir communautaire du wiki Fandom, pages Neo-Marlinist-Liberation-Army, Harold-Duval, Marlinist-refugee-crisis, Marlinist-Colonies, Second-Thargoid-War, Maia — chronologie 3304-3308, section 1.6bis (consulté le 13 septembre 2026)
-- Miroir communautaire du wiki Fandom, pages Formidine-Rift, Project-Dynasty, The-Zurara, Mind-the-Gap, Kahina-Tijani-Loren, The-Far-God-Cult (ou équivalent), Generation-Ship, The-Club, Guardian-Beacon — catalogue des mystères, section 5 (consulté le 13 septembre 2026)
-- canonn.science/lore/drewwagar-raxxla/ ; canonn.science/lore/drewwagar-primer/ ; https://www.drewwagar.com/elitedangerous/ ; miroir du wiki Fandom, page Fiction ; forums.frontier.co.uk, fil « Elite Dangerous Canon Books? » (mars 2024) — section 9 (consultés le 13 septembre 2026)
+Format normalisé selon [00-methodologie-sourcing.md §9](./00-methodologie-sourcing.md#9-format-normalisé-dune-section-sources),
+sur le modèle de [11-commerce.md](./11-commerce.md) et [02-powerplay.md](./02-powerplay.md).
+
+- https://en.wikipedia.org/wiki/Elite_Dangerous | secondaire | consulté le 13/09/2026 | confirme : le contexte général du jeu (développeur, sortie le 16 décembre 2014, galaxie simulée à l'échelle 1:1) | ne confirme pas : le détail narratif propre à ce guide (lore, personnages, mystères)
+- https://canonn.science/lore/ | secondaire | consulté le 13/09/2026 | confirme : l'existence et le périmètre de la recherche communautaire Canonn sur le lore Guardian/Thargoïde, citée dans tout le guide | ne confirme pas : un fait daté précis (portail général, pas une fiche datée)
+- https://canonn.science/codex/the-guardians/ | secondaire | consulté le 13/09/2026 | confirme : les grandes lignes de la civilisation Guardian (*Homo Custos*), disparue depuis 1 à 2 millions d'années | ne confirme pas : la chronologie interne détaillée (guerres civiles, Constructs), établie plutôt via les pages GitHub Guardian.md et suivantes ci-dessous
+- https://canonn.science/codex/maelstrom/ | secondaire | consulté le 09/09/2026 | confirme : la liste complète des huit Titans/Maelstroms (dont Taranis) et la graphie « Raijin » | ne confirme pas : la date exacte de destruction de chaque Titan (voir Massively OP et Combat anti-Thargoïde pour ces dates individuelles)
+- https://massivelyop.com/2024/03/04/elite-dangerous-players-successfully-destroy-the-first-thargoid-titan/ | tertiaire | consulté le 13/09/2026 | confirme : la date de destruction du Titan Taranis (2 mars 2024), les pages officielles Frontier étant alors inaccessibles (HTTP 403) | ne confirme pas : un bilan chiffré officiel de cette bataille
+- https://distantworlds3.space/ | secondaire | consulté le 10/09/2026 | confirme : le statut « Complete » de l'expédition Distant Worlds 3 et la date de sa conclusion (18 mai 3312 / 18 mai 2026) | ne confirme pas : la date de départ, le nombre de participants ni le parcours suivi (voir 7.3 et `zones_incertaines`)
+- https://wiki.alioth.net/index.php/Oolite_timeline | tertiaire | consulté le 13/09/2026 | confirme : des repères chronologiques de la continuité « lore classique » antérieure à *Elite Dangerous* (GalCop, INRA, Première Guerre Thargoïde ≈3125-3151) | ne confirme pas : leur statut canonique dans *Elite Dangerous* lui-même (source sur la saga classique, pas sur le jeu actuel)
+- https://wiki.alioth.net/index.php/Raxxla | tertiaire | consulté le 13/09/2026 | confirme : des éléments de la légende de Raxxla issus de la continuité classique de la saga *Elite* | ne confirme pas : sa confirmation par Frontier dans *Elite Dangerous* (voir les citations Braben/Brookes via canonn.science et drewwagar.com, sources primaires directes pour ce fait)
+- https://themetalvortex.com/elite-dangerous-thargoid-war-epilogue-analysis/ | tertiaire | consulté le 13/09/2026 | confirme : une analyse de presse du bilan de fin de guerre (Thargoid War Epilogue, 19 décembre 2024) | ne confirme pas : le texte officiel du billet Frontier lui-même (voir elitedangerous.com/news/thargoid-war-epilogue ci-dessous)
+- https://ricardosgaming.com/blog/elite-dangerous-news-updates-2026/ | tertiaire | consulté le 13/09/2026 | confirme : un panorama de presse des sorties 2025-2026 (Colonisation, nouveaux vaisseaux) | ne confirme pas : une date isolée sans recoupement avec des notes de version officielles
+- https://inara.cz/elite/powers/ | secondaire | consulté le 13/09/2026 | confirme : le roster courant des douze Powers et leur superpuissance de rattachement (tableau 6.1) | ne confirme pas : l'historique des Powers retirés ou fusionnés avant 2024
+- https://inara.cz/elite/galnet/ | secondaire | consulté le 13/09/2026 | confirme : l'existence d'un mirror GalNet à jour en continu, cité en 1.9 et 2.7bis pour la revérification de l'actualité postérieure à la capture de ce guide | ne confirme pas : un fait narratif daté à lui seul (mirror d'actualité continue, pas une fiche figée)
+- https://inara.cz/elite/power/1/ | secondaire | consulté le 13/09/2026 | confirme : la fiche individuelle d'un Power (identifiant interne Inara), utilisée pour le tableau 6.1 | ne confirme pas : le contenu biographique romancé au-delà des données factuelles listées par Inara
+- https://inara.cz/elite/power/3/ | secondaire | consulté le 13/09/2026 | confirme : la fiche individuelle d'un Power (identifiant interne Inara), utilisée pour le tableau 6.1 | ne confirme pas : le contenu biographique romancé au-delà des données factuelles listées par Inara
+- https://inara.cz/elite/power/4/ | secondaire | consulté le 13/09/2026 | confirme : la fiche individuelle d'un Power (identifiant interne Inara), utilisée pour le tableau 6.1 | ne confirme pas : le contenu biographique romancé au-delà des données factuelles listées par Inara
+- https://elite-dangerous.fandom.com/wiki/Lore | secondaire | consulté le 13/09/2026 | confirme : un panorama général du lore, portail de référence pour l'ensemble du guide | ne confirme pas : le détail des mises à jour postérieures à 2024 (page généraliste, moins à jour sur l'actualité récente)
+- https://elite-dangerous.fandom.com/wiki/Federation | secondaire | consulté le 13/09/2026 | confirme : les institutions fédérales (Congrès, rang naval, dirigeants successifs — section 2.1) | ne confirme pas : la composition et le mode de nomination de la Federal High Court (non documentés, voir `zones_incertaines`)
+- https://elite-dangerous.fandom.com/wiki/Empire | secondaire | consulté le 13/09/2026 | confirme : le régime impérial (Sénat, clientélisme, titres de noblesse — section 2.2) | ne confirme pas : ce que confère concrètement un titre nobiliaire (droits, possessions — voir `zones_incertaines`)
+- https://elite-dangerous.fandom.com/wiki/Alliance | secondaire | consulté le 13/09/2026 | confirme : les institutions de l'Alliance (Assemblée, Conseil des Amiraux, absence de rang naval verrouillant — section 2.3) | ne confirme pas : le détail du complot de Gibson Kincaid au-delà du fait de sa destitution en 3305
+- https://elite-dangerous.fandom.com/wiki/Thargoid | secondaire | consulté le 13/09/2026 | confirme : la nature biotechnologique et le comportement encore incompris des Thargoïdes (section 3.1) | ne confirme pas : l'étendue exacte du territoire thargoïde au plus fort du conflit (estimations communautaires divergentes, voir `zones_incertaines`)
+- https://elite-dangerous.fandom.com/wiki/First_Thargoid_War | secondaire | consulté le 13/09/2026 | confirme : le déroulé de la Première Guerre Thargoïde « lore classique » (≈3125-3151, arme Mycoïde — section 1.3/3.3) | ne confirme pas : un statut canonique fort dans *Elite Dangerous* proprement dit (voir l'échelle d'autorité de 2.7bis)
+- https://elite-dangerous.fandom.com/wiki/Guardian-Thargoid_War | secondaire | consulté le 13/09/2026 | confirme : le conflit ancien entre Guardians et Thargoïdes (ensemencement de Barnacles, repli thargoïde faute de campagne prolongée — sections 3.2/4.4) | ne confirme pas : une datation absolue (événement antérieur de plusieurs millions d'années, sans calendrier réel possible)
+- https://elite-dangerous.fandom.com/wiki/Guardian | secondaire | consulté le 13/09/2026 | confirme : la civilisation Guardian (*Homo Custos*) et sa disparition il y a 1 à 2 millions d'années (sections 4.1-4.3) | ne confirme pas : le devenir des Constructs après l'extinction guardian (hypothèse non tranchée, voir `zones_incertaines`)
+- https://elite-dangerous.fandom.com/wiki/Ancient_Ruins | secondaire | consulté le 13/09/2026 | confirme : la découverte des Ruines Anciennes Guardian (27 octobre 3302, système Synuefe XR-H d11-102) et le décryptage par Ram Tah (section 4.5) | ne confirme pas : le rôle d'Arek Vandevar auprès du Guardian Tech Broker (non vérifié par une source primaire, voir `zones_incertaines`)
+- https://elite-dangerous.fandom.com/wiki/Raxxla | secondaire | consulté le 13/09/2026 | confirme : la légende de Raxxla et sa première mention (journal d'Art Tornqvist, 2296 in-fiction — section 5.1) | ne confirme pas : sa localisation (jamais confirmée)
+- https://elite-dangerous.fandom.com/wiki/Republic_of_Achenar | secondaire | consulté le 13/09/2026 | confirme : la fondation de la République d'Achenar par Marlin Duval en 2292 et sa transformation en Empire (section 1.2) | ne confirme pas : le détail institutionnel actuel du Sénat impérial (voir la page Empire ci-dessus, plus à jour)
+- https://elite-dangerous.fandom.com/wiki/Battle_of_Achenar | secondaire | consulté le 13/09/2026 | confirme : la Bataille d'Achenar (2325) et le transfert de la capitale fédérale sur Mars (section 1.2) | ne confirme pas : un bilan chiffré des pertes
+- https://elite-dangerous.fandom.com/wiki/Edmund_Mahon | secondaire | consulté le 13/09/2026 | confirme : la biographie d'Edmund Mahon (naissance 3187 à Diso, élection comme Premier ministre — portrait 6.2) | ne confirme pas : le détail chiffré de son éthos Powerplay (voir [02-powerplay.md](./02-powerplay.md))
+- https://elite-dangerous.fandom.com/wiki/Felicia_Winters | secondaire | consulté le 13/09/2026 | confirme : la biographie de Felicia Winters jusqu'à sa victoire présidentielle d'octobre 3309 (portrait 6.2) | ne confirme pas : le détail chiffré de son éthos Powerplay (voir [02-powerplay.md](./02-powerplay.md))
+- https://elite-dangerous.fandom.com/wiki/Zachary_Hudson | secondaire | consulté le 13/09/2026 | confirme : la biographie de Zachary Hudson et son retrait de la Powerplay le 31 octobre 3310 (portrait 6.2) | ne confirme pas : le détail de la passation à Jerome Archer au-delà de la date officielle
+- https://elite-dangerous.fandom.com/wiki/Li_Yong-Rui | secondaire | consulté le 13/09/2026 | confirme : la biographie de Li Yong-Rui et son rôle à la tête de Sirius Corporation/SiriusGov (portrait 6.2) | ne confirme pas : sa date de naissance (non documentée, signalé comme tel dans le portrait)
+- https://elite-dangerous.fandom.com/wiki/Aisling_Duval | secondaire | consulté le 13/09/2026 | confirme : la biographie d'Aisling Duval (naissance illégitime en 3276, engagement abolitionniste — portrait 6.2) | ne confirme pas : ses liens précis avec Le Club ou le Formidine Rift (hors périmètre de cette fiche)
+- https://elite-dangerous.fandom.com/wiki/Arissa_Lavigny-Duval | secondaire | consulté le 13/09/2026 | confirme : la biographie d'Arissa Lavigny-Duval, son élection (6 octobre 3301) et sa captivité par les Lords of Restoration (janvier 3307 - 9 février 3308 — portrait 6.2) | ne confirme pas : sa position doctrinale exacte sur l'esclavage (voir le fil forums.frontier.co.uk dédié ci-dessous pour ce recoupement)
+- https://elite-dangerous.fandom.com/wiki/Denton_Patreus | secondaire | consulté le 13/09/2026 | confirme : la biographie de Denton Patreus (naissance 3253, nomination comme Amiral de la Flotte le 22 février 3302 — portrait 6.2) | ne confirme pas : la réalité de ses ambitions impériales personnelles (présentées comme un soupçon, non un fait établi)
+- https://elite-dangerous.fandom.com/wiki/Archon_Delaine | secondaire | consulté le 13/09/2026 | confirme : la biographie d'Archon Delaine (prise de contrôle du Kumo Crew en 3264, code des « cinq dépouillements » — portrait 6.2) | ne confirme pas : laquelle des origines rapportées (bidonville, bordel, chantier naval) est canonique (variations explicitement signalées)
+- https://elite-dangerous.fandom.com/wiki/Kumo_Crew | secondaire | consulté le 13/09/2026 | confirme : l'existence et l'activité du cartel Kumo Crew dans le secteur Pegasi (sections 1.6bis/6.2) | ne confirme pas : la date précise d'un incident isolé entre 3304 et 3306 (seule la tendance générale est confirmée, voir `zones_incertaines`)
+- https://elite-dangerous.fandom.com/wiki/Distant_Worlds | secondaire | consulté le 13/09/2026 | confirme : la première expédition Distant Worlds (fin 2015-début 2016, plus de 1 000 commandants, organisée par CMDR Erimus Kamzel — section 7.1) | ne confirme pas : un chiffre de participation au-delà de cet ordre de grandeur
+- https://elite-dangerous.fandom.com/wiki/Distant_Worlds_II | secondaire | consulté le 13/09/2026 | confirme : la date de lancement de Distant Worlds II (13 janvier 3305/2019) et son ampleur (~10 000 participants, 18 semaines — section 7.2) | ne confirme pas : un décompte définitif des participants (chiffre de couverture presse, non un total officiel)
+- https://elite-dangerous.fandom.com/wiki/Elite_Dangerous_Timeline | secondaire | consulté le 13/09/2026 | confirme : une chronologie généraliste recoupant les grandes dates du tableau-maître (section 1) | ne confirme pas : les dates propres à 2025-2026 (page moins à jour sur cette période récente)
+- https://www.elitedangerous.com/news/thargoid-war-epilogue | primaire | consulté le 13/09/2026 | confirme : le contenu et l'horodatage du billet officiel « Thargoid War Epilogue » (19 décembre 2024, 15:00 UTC — section 3.6) | ne confirme pas : un bilan chiffré exact des pertes (formulé en termes qualitatifs par le billet lui-même)
+- https://www.elitedangerous.com/news/titan-presence-sol | primaire | consulté le 13/09/2026 | confirme : le billet Frontier « Titan Presence In Sol » du 5 décembre 2024, utilisé pour dater la destruction de Raijin avant cette date (tableau 3.5) | ne confirme pas : la date de destruction de Cocijo elle-même (voir le billet « Thargoid War Epilogue » ci-dessus)
+- https://www.elitedangerous.com/news/galnet/titan-cocijo-destroyed-sol-liberated | primaire | consulté le 13/09/2026 | confirme : la destruction du Titan Cocijo à Sol et la libération du système | ne confirme pas : l'horodatage précis (voir le billet « Thargoid War Epilogue » pour la référence officielle, 15:00 UTC)
+- https://www.elitedangerous.com/update-notes/4-0-19-0 | primaire | consulté le 13/09/2026 | confirme : des notes de version officielles de la période Ascendancy/fin de guerre thargoïde (version 4.0.19.0) | ne confirme pas : le détail des mécaniques de Powerplay 2.0 (voir [02-powerplay.md](./02-powerplay.md), source de vérité pour ce guide)
+- https://www.mmorpg.com/news/two-year-thargoid-war-ends-in-elite-dangerous-after-climactic-fight-against-final-titan-cucijo-2000133717 | tertiaire | consulté le 13/09/2026 | confirme : la couverture presse de la fin de la Seconde Guerre Thargoïde (bataille finale contre Cocijo) | ne confirme pas : des détails non repris ailleurs (article corroborant, pas source de fait isolé)
+- https://justabout.com/elite-dangerous/38056/thargoid-titan-cocijo-first-hand-reports-from-the-final-battle-for-sol | tertiaire | consulté le 13/09/2026 | confirme : des témoignages de joueurs sur la bataille finale de Sol contre Cocijo | ne confirme pas : un bilan chiffré officiel (retours d'expérience communautaires, pas un bilan Frontier)
+- https://forums.frontier.co.uk/threads/elite-dangerous-thargoid-war-epilogue.631977/ | secondaire | consulté le 13/09/2026 | confirme : la republication et la discussion du billet officiel « Thargoid War Epilogue » sur les forums Frontier | ne confirme pas : un contenu distinct du billet officiel lui-même (voir elitedangerous.com/news/thargoid-war-epilogue ci-dessus)
+- https://forums.frontier.co.uk/threads/elite-dangerous-ascendancy-now-live.629020/ | secondaire | consulté le 13/09/2026 | confirme : l'annonce de la mise en ligne d'Ascendancy le 31 octobre 2024 | ne confirme pas : le détail chiffré de Powerplay 2.0 (voir [02-powerplay.md](./02-powerplay.md))
+- https://simulationdaily.com/news/elite-dangerous-ascendancy-release-patch-notes/ | tertiaire | consulté le 13/09/2026 | confirme : une synthèse de presse des notes de version d'Ascendancy | ne confirme pas : le texte intégral officiel (résumé secondaire, pas la source primaire elle-même)
+- https://kotaku.com/10-000-elite-dangerous-players-start-an-18-week-journey-1831702968 | tertiaire | consulté le 13/09/2026 | confirme : la couverture presse de Distant Worlds II (ampleur ~10 000 joueurs, trajet de 18 semaines — section 7.2) | ne confirme pas : un décompte officiel de participants (chiffre de presse, non confirmé par Frontier)
+- https://www.elitedangerous.com/news/updates/4-1-0-0 | primaire | consulté le 13/09/2026 | confirme : la sortie de la mise à jour Trailblazers (version 4.1.0.0) le 26 février 2025 et le lancement de la bêta ouverte de la Colonisation | ne confirme pas : la date du « System Colonisation Guide » complémentaire (28 février 2025, publié séparément)
+- https://www.elitedangerous.com/update-notes/4-2-2-0 | primaire | consulté le 13/09/2026 | confirme : la sortie complète de la Colonisation via le Dodec Update (version 4.2.2.0) le 11 novembre 2025 | ne confirme pas : le contenu du correctif « Dodec Update Patch 1 » du 13 novembre 2025 (patch distinct)
+- https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320 | primaire | consulté le 13/09/2026 | confirme : les billets officiels Frontier relayés sur Steam News (annonce, report, confirmation de sortie et suivi d'Ascendancy le 31 octobre 2024 ; « Discover the Nomad » du 2 juin 2026 13:03 UTC ; « Operations Update » du 1ᵉʳ juillet 2026 14:01 UTC) | ne confirme pas : un contenu narratif GalNet distinct des billets techniques (voir 2.7bis sur la distinction des canaux)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Pilots-Federation.md | secondaire | consulté le 13/09/2026 | confirme : les informations institutionnelles sur la Pilots Federation (section 2.7), consulté en remplacement des pages Fandom directement bloquées lors de la rédaction | ne confirme pas : le taux exact de rebuy (renvoyé à [08-combat-spatial.md](./08-combat-spatial.md), source de vérité)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Aegis.md | secondaire | consulté le 13/09/2026 | confirme : la structure d'AEGIS (trois divisions d'origine, crise de l'*Alexandria*, réforme de 3309 — section 3.7) | ne confirme pas : le rôle exact d'Arek Vandevar (non vérifié par une source primaire, voir `zones_incertaines`)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Salvation.md | secondaire | consulté le 13/09/2026 | confirme : la biographie de Caleb Wycherley/Salvation et le déroulé de l'arc Azimuth (Cornsar 3307, mort le 25 août 3308 — section 3.7) | ne confirme pas : la réalité du « Nemesis Protocol » (mystère ouvert et non tranché, voir 5.3)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Azimuth-Biotech.md | secondaire | consulté le 13/09/2026 | confirme : le changement de nom de Taurus Mining Ventures en Azimuth Biotech (juin 3308) et sa filiation avec Azimuth Biochemicals | ne confirme pas : le contenu exact du projet clandestin « Seraph » (mentionné sans détail dans ce guide)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Sirius-Corporation.md | secondaire | consulté le 13/09/2026 | confirme : le statut de Sirius Corporation comme « quatrième superpuissance » de facto et son implantation à Alioth depuis 2463 (section 2.4) | ne confirme pas : des données financières chiffrées (hors périmètre lore de ce guide)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Alliance.md | secondaire | consulté le 13/09/2026 | confirme : la fondation de l'Alliance en 3230 et ses institutions (Assemblée, Conseil des Amiraux — sections 1.4/2.3) | ne confirme pas : le détail du complot de Gibson Kincaid en 3305 (recoupé plutôt par la page Fandom Alliance ci-dessus)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Elite-Dangerous-Timeline.md | secondaire | consulté le 13/09/2026 | confirme : une chronologie communautaire recoupant les grandes dates du tableau-maître (section 1) | ne confirme pas : les événements les plus récents (2025-2026), absents de ce mirror figé
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Yuri-Grom.md | secondaire | consulté le 13/09/2026 | confirme : la biographie de Yuri Grom (naissance 1ᵉʳ janvier 3256, fondation des EG Pilots, victoire aux Dangerous Games de 3302 — portrait 6.2) | ne confirme pas : la raison exacte de sa démission de la Marine fédérale (rumeur non confirmée officiellement, signalé comme tel dans le portrait)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Zemina-Torval.md | secondaire | consulté le 13/09/2026 | confirme : la biographie de Zemina Torval (naissance à Synteini, fondation de Torval Mining Ltd vers 3307 — portrait 6.2) | ne confirme pas : des chiffres financiers précis de Mastopolos Mining ou de Torval Mining Ltd
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Pranav-Antal.md | secondaire | consulté le 13/09/2026 | confirme : la biographie de Pranav Antal (mouvement Utopia, projet Acheron Interface, proposition du Galactic Summit le 1ᵉʳ janvier 3307 — portrait 6.2) | ne confirme pas : le fonctionnement technique détaillé de l'Acheron Interface au-delà de son objectif déclaré
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Nakato-Kaine.md | secondaire | consulté le 13/09/2026 | confirme : la biographie de Nakato Kaine (conseillère de Tionisla, motion de censure de février 3308, nomination comme Power en 2024 — portrait 6.2) | ne confirme pas : sa date de naissance ni sa formation (non documentées, signalé comme tel)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Shinrarta-Dezhra.md | secondaire | consulté le 13/09/2026 | confirme : le statut de Shinrarta Dezhra comme siège de la Pilots Federation, à accès restreint (section 2.7) | ne confirme pas : le taux exact de rebuy (renvoyé à [08-combat-spatial.md](./08-combat-spatial.md))
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Maia.md (colonisation de Maia, Obsidian Orbital, centre de recherche du Professeur Palin — section 3.4bis) | secondaire | consulté le 13/09/2026 | confirme : la chronologie de la colonisation de Maia (construction d'Obsidian Orbital depuis novembre 3301) et la présence du centre de recherche du Professeur Palin jusqu'à l'évacuation du 18 juillet 3305 | ne confirme pas : le devenir du centre de recherche au-delà de sa relocalisation à Arque (voir [06-ingenieurs.md](./06-ingenieurs.md))
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Merope.md (découverte du premier Barnacle thargoïde par CMDR Octo86, 15 janvier 3302 — section 3.4bis) | secondaire | consulté le 13/09/2026 | confirme : la date de découverte du premier Barnacle thargoïde par CMDR Octo86 (15 janvier 3302, Merope 5 C) | ne confirme pas : la divergence d'un jour avec la date de découverte du premier Meta-Alloy sur le même site (voir la source Meta-Alloys.md ci-dessous et `zones_incertaines`)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Obsidian-Orbital.md (chronologie des attaques thargoïdes sur la station, 3303-3304 — section 3.4bis) | secondaire | consulté le 13/09/2026 | confirme : la chronologie des attaques thargoïdes sur Obsidian Orbital (rejoint le réseau Aegis le 2 décembre 3303, attaques à partir du 14 décembre 3303, réparation le 3 mars 3304) | ne confirme pas : un lien direct avec l'évacuation de Maia du 18 juillet 3305 (événement distinct, postérieur)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Meta-Alloys.md (date de découverte du premier Meta-Alloy à Merope 5 C — section 3.4bis) | secondaire | consulté le 13/09/2026 | confirme : une date de découverte du premier Meta-Alloy à Merope 5 C (14 janvier 3302) | ne confirme pas : laquelle des deux dates (14 ou 15 janvier) est la bonne — divergence mineure non tranchée avec Merope.md, signalée en `zones_incertaines`
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Guardian.md (société en clans, Monolith Network, expansion, Constructs, langage — sections 4.2-4.3) | secondaire | consulté le 13/09/2026 | confirme : la structure sociale en clans puis cités-États des Guardians et le rôle du Monolith Network | ne confirme pas : l'existence d'un système de castes (hypothèse non retrouvée, voir `zones_incertaines`)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/First_Guardian_Civil_War.md (unification par les clans du nord — section 4.2) | secondaire | consulté le 13/09/2026 | confirme : l'unification guardian par les clans du nord lors de la Première Guerre Civile guardian | ne confirme pas : une datation absolue (chronologie interne relative uniquement, ≈1 000 ans avant le vol spatial)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Construct.md (filières militaire/civile, rébellion — section 4.3) | secondaire | consulté le 13/09/2026 | confirme : la distinction entre Constructs militaires et civils et la rébellion de la filière civile contre la guerre | ne confirme pas : le devenir des Constructs après l'extinction guardian (spéculation attribuée à Ram Tah, non tranchée)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Second_Guardian_Civil_War.md (schisme traditionalistes/progressistes — section 4.3) | secondaire | consulté le 13/09/2026 | confirme : le schisme traditionalistes/progressistes à l'origine de la Seconde Guerre Civile guardian | ne confirme pas : une date absolue de ce conflit
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Guardian-Thargoid_War.md (cause, déroulement et issue de la guerre ancienne — section 4.4) | secondaire | consulté le 13/09/2026 | confirme : le déroulement de la guerre ancienne Guardians-Thargoïdes (repli diplomatique, machines de guerre autonomes, retrait thargoïde faute de campagne prolongée) | ne confirme pas : une date absolue de ce conflit (antérieur de plusieurs millions d'années)
+- https://canonn.science/codex/professor-palins-mission/ (mission de collecte du Professeur Palin à Maia) | secondaire | consulté le 13/09/2026 | confirme : la mission de collecte du Professeur Palin à Maia | ne confirme pas : sa relocalisation précise à Arque (voir [06-ingenieurs.md](./06-ingenieurs.md), source de vérité pour les Ingénieurs)
+- https://fuelrats.com/ ; https://confluence.fuelrats.com/display/public/FRKB/History | secondaire | consulté le 13/09/2026 | confirme : la fondation des Fuel Rats en juin 2015 par CMDR Surly Badger et leur activité continue (dépôts GitHub actifs jusqu'en septembre 2026 — section 7.7) | ne confirme pas : un chiffre précis d'interventions réalisées à ce jour
+- https://hullseals.space/knowledge/books/acknowledgments/page/the-fuel-rats | secondaire | consulté le 13/09/2026 | confirme : la fondation des Hull Seals en janvier 2019 pour préparer Distant Worlds II et leur filiation revendiquée avec les Fuel Rats, contredisant l'hypothèse d'une rupture (section 7.7) | ne confirme pas : l'état d'activité de leur outil principal HalpyBOT au-delà de septembre 2024 (figé depuis, voir tableau 7.7)
+- https://www.operationida.com/about ; https://elite-dangerous.fandom.com/wiki/Operation_Ida | secondaire | consulté le 13/09/2026 | confirme : la fondation d'Operation Ida en 2018 dans les Pléiades et son rôle de convoyage de masse vers les stations endommagées (section 7.7) | ne confirme pas : une activité confirmée au-delà de janvier 2025 (fin des réparations de Sol ; mission réduite depuis)
+- https://canonn.science/ ; https://canonn.science/about-us/ | secondaire | consulté le 13/09/2026 | confirme : la fondation de Canonn Research en 2015 par le Dr Arcanonn et son rôle de recherche communautaire (Codex, partenariat AXI — section 7.7) | ne confirme pas : le contenu détaillé de chaque publication de recherche individuelle
+- https://antixenoinitiative.com/ ; https://wiki.antixenoinitiative.com/en/home | secondaire | consulté le 13/09/2026 | confirme : la fondation de l'Anti-Xeno Initiative le 15 novembre 2017 par CMDR Gluttony Fang et son rôle de coordination du combat AX (section 7.7) | ne confirme pas : un chiffre de membres actifs à jour
+- https://community.elitedangerous.com/en/node/332 | secondaire | consulté le 13/09/2026 | confirme : l'origine des Hutton Orbital Truckers à la suite de la Community Goal du Hutton Mug (≈2015-2016 — section 7.7) | ne confirme pas : un chiffre d'auditeurs ou de participants au podcast
+- https://forums.frontier.co.uk/threads/the-deep-space-support-array-dssa-a-fleetcomm-initiative.540166/ ; https://inara.cz/elite/squadron-about/13586/ | secondaire | consulté le 13/09/2026 | confirme : la conception du DSSA en 2019 (lancement ≈juin 2020) porté par FleetComm, et son rôle de réseau de Fleet Carriers de secours (section 7.7) | ne confirme pas : un nombre exact de Fleet Carriers actuellement actifs dans le réseau
+- https://elite-dangerous.fandom.com/wiki/Buckyball_Racing_Club | secondaire | consulté le 13/09/2026 | confirme : la fondation du Buckyball Racing Club en août 2015 et son rôle dans les courses longue distance (section 7.7) | ne confirme pas : un chiffre de participants à la saison « Yes And 3311 » (2025) au-delà de sa simple existence confirmée
+- https://www.sagittarius-eye.com/ ; https://elite-dangerous.fandom.com/wiki/Sagittarius_Eye | secondaire | consulté le 13/09/2026 | confirme : l'existence de Sagittarius Eye depuis 2017 comme média communautaire (section 7.7) | ne confirme pas : une activité éditoriale après 2024 (mentions légales figées à 2021, dernier podcast connu novembre 2024 — statut classé « non confirmé » au tableau 7.7)
+- https://pilotstradenetwork.com/ ; https://inara.cz/elite/squadron-about/9890/ | secondaire | consulté le 13/09/2026 | confirme : l'existence du Pilots Trade Network (≈2021) et son rôle de coordination logistique du commerce par Fleet Carriers (section 7.7) | ne confirme pas : la date de fondation exacte (non confirmée en source primaire) ni le nombre exact de carriers actifs récemment
+- https://inara.cz/elite/squadron-about/7636/ | secondaire | consulté le 13/09/2026 | confirme : l'existence du Fleet Carrier Owners Club et un ordre de grandeur de membres allégués (~29 000 — section 7.7) | ne confirme pas : une date de fondation précise ni un chiffre de membres vérifié (tableau 7.7 le classe « non confirmé »)
+- https://elite-dangerous.fandom.com/wiki/Pilots_Federation_Rescue_Rangers | secondaire | consulté le 13/09/2026 | confirme : le statut des Rescue Rangers comme dispositif de lore introduit par Frontier avec Odyssey (2021), distinct d'un collectif de joueurs actif (section 7.7) | ne confirme pas : une activité de club Xbox non officiel au-delà de 2016-2018 (sans suite documentée depuis)
+- https://forums.frontier.co.uk/threads/announcing-fleetcomm-the-exploration-focused-private-pc-group.474455/ | secondaire | consulté le 13/09/2026 | confirme : la fondation de Fleetcomm en novembre 2015 sous le nom « Kamzel PG », renommé ≈2017, et son rôle de hub logistique des expéditions Distant Worlds (section 7.7) | ne confirme pas : un chiffre de membres actuel
+- https://github.com/DarkSession/Elite-Dangerous-RAG-Knowledge/tree/main/Wiki (pages Federation, Empire, Alliance, Federation-Ranks, Empire-Ranks, Imperial-Senate) | secondaire | consulté le 13/09/2026 | confirme : les institutions des trois superpuissances et leurs échelles de rang (Federal Navy Auxiliary, Imperial Navy Auxiliary, Sénat impérial — section 2) | ne confirme pas : la composition et le mode de nomination de la Federal High Court (non documentés, voir `zones_incertaines`)
+- https://github.com/DarkSession/Elite-Dangerous-RAG-Knowledge/tree/main/Wiki (pages Jerome-Archer, Zachary-Hudson, Felicia-Winters, Hengist-Duval, Arissa-Lavigny-Duval, Lords-of-Restoration) | secondaire | consulté le 13/09/2026 | confirme : les portraits et la séquence de succession politique de la section 6.2 (élection de 3309, captivité d'Arissa par les Lords of Restoration) | ne confirme pas : la date de naissance exacte de Jerome Archer au jour et au mois près (probable artefact de gabarit encyclopédique, signalé comme tel dans le portrait)
+- https://forums.frontier.co.uk/threads/galnet-president-winters-assumes-office-31-oct-3310.629029/ ; https://forums.frontier.co.uk/threads/arissa-lavigny-duval-stance-on-slavery.180428/ | secondaire | consulté le 13/09/2026 | confirme : le recoupement de l'élection fédérale d'octobre 3309 (investiture de Winters le 31 octobre 3310) et de la position officielle d'Arissa Lavigny-Duval sur l'esclavage | ne confirme pas : un fait nouveau au-delà de ce que confirment déjà les autres sources de la section 6.2 (utilisé en recoupement, pas en découverte)
+- https://github.com/DarkSession/Elite-Dangerous-RAG-Knowledge/tree/main/Wiki (pages Neo-Marlinist-Liberation-Army, Harold-Duval, Marlinist-refugee-crisis, Marlinist-Colonies, Second-Thargoid-War, Maia) | secondaire | consulté le 13/09/2026 | confirme : les bornes chronologiques de l'entre-deux-guerres 3304-3308 (attentats NMLA, exode marliniste, fondation des Marlinist Colonies — section 1.6bis) | ne confirme pas : le détail fin de l'assassinat de Harold Duval avec une seconde source primaire recoupée (confiance moyenne sur ce point précis, voir la note de 1.6bis et `zones_incertaines`)
+- https://github.com/DarkSession/Elite-Dangerous-RAG-Knowledge/tree/main/Wiki (pages Formidine-Rift, Project-Dynasty, The-Zurara, Mind-the-Gap, Kahina-Tijani-Loren, The-Far-God-Cult, Generation-Ship, The-Club, Guardian-Beacon) | secondaire | consulté le 13/09/2026 | confirme : les faits établis du catalogue des mystères (5.4-5.8) : chronologie du Projet Dynasty et du Zurara, culte du Far God, generation ships, Guardian Beacons | ne confirme pas : le lien entre Le Club, le Projet Dynasty et Raxxla lui-même (débat non tranché, voir 5.4), ni la fiabilité de la fiche « The Club » au-delà d'une source tertiaire unique (confiance moyenne assumée en 5.7)
+- https://canonn.science/lore/drewwagar-raxxla/ ; https://canonn.science/lore/drewwagar-primer/ ; https://www.drewwagar.com/elitedangerous/ ; https://elite-dangerous.fandom.com/wiki/Fiction ; https://forums.frontier.co.uk (fil « Elite Dangerous Canon Books? », mars 2024) | secondaire | consulté le 13/09/2026 | confirme : les citations directes de David Braben (2014) et Michael Brookes (2019) sur Raxxla, le statut non canonique de la fiction « Elite classique », et l'absence de hiérarchie d'autorité canonique officiellement publiée par Frontier (fil de forum dépouillé message par message, mars 2024 — section 9) | ne confirme pas : une doctrine canonique que Frontier aurait elle-même formulée (constat d'absence, pas une lacune de recherche)

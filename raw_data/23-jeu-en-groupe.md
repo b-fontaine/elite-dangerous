@@ -383,14 +383,19 @@ périphérie galactique depuis sa fondation en 2016.
 
 ## Sources
 
-- https://en.wikipedia.org/wiki/Elite_Dangerous
-- https://www.wikiwand.com/en/articles/Elite_Dangerous
-- https://fr.wikipedia.org/wiki/Elite_Dangerous
-- https://de.wikipedia.org/wiki/Elite_Dangerous
-- https://store.steampowered.com/app/359320/Elite_Dangerous/
-- https://steamcommunity.com/app/359320/guides/
-- https://steamcommunity.com/sharedfiles/filedetails/?id=2439430996
-- https://fuelrats.com/ ; https://confluence.fuelrats.com/display/public/FRKB/History (fondation, juin 2015 ; consultés le 13 septembre 2026)
-- https://hullseals.space/knowledge/books/acknowledgments/page/the-fuel-rats (relation Hull Seals ↔ Fuel Rats, consulté le 13 septembre 2026)
-- https://forums.frontier.co.uk/threads/the-deep-space-support-array-dssa-a-fleetcomm-initiative.540166/ (DSSA, consulté le 13 septembre 2026)
-- https://forums.frontier.co.uk/threads/announcing-fleetcomm-the-exploration-focused-private-pc-group.474455/ (FleetComm, consulté le 13 septembre 2026)
+Format normalisé selon [00-methodologie-sourcing.md §9](./00-methodologie-sourcing.md#9-format-normalisé-dune-section-sources) ;
+conversion réalisée au chantier 16bis (13 septembre 2026), sur le modèle de [11-commerce.md](./11-commerce.md) et
+[02-powerplay.md](./02-powerplay.md).
+
+- https://en.wikipedia.org/wiki/Elite_Dangerous | secondaire | consulté le 13/09/2026 | confirme : la limite de 4 joueurs par Wing, la date de sortie du Multicrew (Update 2.3, 11 avril 2017), les dates de lancement (16/02/2016) et de retrait de vente (10/02/2017) d'Elite Dangerous: Arena, et les noms des chasseurs embarqués | ne confirme pas : la date précise et le numéro de version d'introduction des Wings et du CQC intégré en 2015
+- https://www.wikiwand.com/en/articles/Elite_Dangerous | secondaire | consulté le 13/09/2026 | confirme : les mêmes points que l'article anglais de Wikipédia dont il reprend le contenu (miroir de lecture) | ne confirme pas : une information indépendante de la source Wikipédia qu'il reflète
+- https://fr.wikipedia.org/wiki/Elite_Dangerous | secondaire | consulté le 13/09/2026 | confirme : les mêmes points que la version anglaise (limite de 4 joueurs par Wing, dates Multicrew/Arena, noms des chasseurs), recoupés entre éditions linguistiques | ne confirme pas : la date précise d'introduction des Wings en 2015
+- https://de.wikipedia.org/wiki/Elite_Dangerous | secondaire | consulté le 13/09/2026 | confirme : les mêmes points, recoupés une troisième fois entre éditions linguistiques indépendantes | ne confirme pas : des éléments absents des versions anglaise et française
+- https://store.steampowered.com/app/359320/Elite_Dangerous/ | primaire | consulté le 13/09/2026 | confirme : la limite de quatre joueurs par Wing (citation exacte « Forge your path solo or with up to three friends in a Wing ») | ne confirme pas : la date d'introduction des Wings, ni le détail du Multicrew ou du CQC
+- https://steamcommunity.com/app/359320/guides/ | tertiaire | consulté le 13/09/2026 | confirme : l'existence d'un corpus de guides communautaires couvrant Multicrew, chasseurs embarqués et Crew Lounge | ne confirme pas : à elle seule, un chiffre précis — voir le guide spécifique ci-dessous
+- https://steamcommunity.com/sharedfiles/filedetails/?id=2439430996 | tertiaire | consulté le 13/09/2026 | confirme : le déploiement simultané d'un chasseur humain et d'un chasseur IA en Multicrew, les noms des quatre chasseurs embarqués (F63 Condor, Taipan, Gu-97, Trident) et les frais/commissions PNJ du Crew Lounge pour les rangs Harmless (15 000 CR / 2 %) et Expert (150 000 CR / 12 %) | ne confirme pas : les paliers de rang intermédiaires du Crew Lounge, ni les valeurs précises du partage des revenus Multicrew entre capitaine et invités
+- https://fuelrats.com/ | secondaire | consulté le 13/09/2026 | confirme : la procédure publique d'appel de détresse déclenchée par le commandant en détresse lui-même | ne confirme pas : le statut d'activité 2025-2026 de l'organisation (voir 01-lore.md §7.7)
+- https://confluence.fuelrats.com/display/public/FRKB/History | secondaire | consulté le 13/09/2026 | confirme : la fondation des Fuel Rats en juin 2015 | ne confirme pas : le statut d'activité courant de l'organisation
+- https://hullseals.space/knowledge/books/acknowledgments/page/the-fuel-rats | secondaire | consulté le 13/09/2026 | confirme : le lien historique entre Hull Seals et Fuel Rats | ne confirme pas : la date de fondation exacte de Hull Seals, ni son statut d'activité 2025-2026
+- https://forums.frontier.co.uk/threads/the-deep-space-support-array-dssa-a-fleetcomm-initiative.540166/ | secondaire | consulté le 13/09/2026 | confirme : le principe du réseau DSSA (Fleet Carriers relais en marge de la Bulle, emplacement fixe et public pendant au moins un an, réparation et ravitaillement) | ne confirme pas : le statut d'activité 2025-2026 du réseau (voir 01-lore.md §7.7)
+- https://forums.frontier.co.uk/threads/announcing-fleetcomm-the-exploration-focused-private-pc-group.474455/ | secondaire | consulté le 13/09/2026 | confirme : la nature de Fleetcomm comme groupe de coordination d'expéditions dédié à l'exploration | ne confirme pas : le statut d'activité courant du groupe en 2025-2026

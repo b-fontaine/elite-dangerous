@@ -40,19 +40,25 @@ les guides dédiés du corpus pour le détail de chaque système connexe (Powerp
 
 ### Chronologie des mises à jour ayant touché le transport (2024-2026)
 
-| Date                 | Mise à jour                                                                                       | Impact sur le transport                                                                                                                                  |
-|----------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7 août 2024          | Lancement du **Type-8 Transporter**                                                               | Nouveau vaisseau de fret moyen, 406 tonnes de capacité, efficace en carburant                                                                            |
-| 31 octobre 2024      | **Ascendancy** — Powerplay 2.0 + **Mandalay**                                                     | Refonte complète de la logistique Powerplay ; nouveau vaisseau d'exploration longue portée ; teasing de la colonisation                                  |
-| 22 novembre 2024     | Ajustements des gains Powerplay                                                                   | Réduction du temps nécessaire pour monter en rang et débloquer les premiers modules                                                                      |
-| 26 février 2025      | **Bêta** de la **colonisation** (mise à jour *Trailblazers*, patch 4.1.x)                         | Les joueurs peuvent revendiquer des systèmes et y construire des installations, créant une toute nouvelle logistique de fret                             |
-| 5 mars 2025          | Pause temporaire de la colonisation                                                               | Correction d'un problème après plus de 8 000 systèmes déjà colonisés (et 13 000 installations construites) durant la première semaine de la bêta ouverte |
-| 30 avril 2025        | Rééquilibrage économique de la colonisation                                                       | Introduction des liens économiques automatiques entre systèmes colonisés (forts/faibles)                                                                 |
-| 22 juillet 2025      | Accès anticipé du **Panther Clipper Mk II**                                                       | Nouveau vaisseau-cargo super-massif, 1200 à 1400 tonnes selon l'outillage, le plus gros transporteur non-capital du jeu                                  |
-| ~octobre 2025        | Panther Clipper Mk II disponible contre crédits                                                   | Fin de la fenêtre d'accès anticipé payant                                                                                                                |
-| **11 novembre 2025** | **Sortie complète de la colonisation** (« **Dodec Update** », version 4.2.2.0)                    | Fin officielle de la bêta ouverte de colonisation ; introduction de la station Dodec en accès anticipé ARX (correctif « Patch 1 » le 13 novembre 2025)   |
-| avril 2026           | **Lynx Highliner** (Zorgon Peterson) distribué gratuitement, puis achetable en crédits (28 avril) | Nouveau vaisseau de transport de passagers de taille moyenne (jusqu'à 225 passagers) ; retour des missions « stations en feu »                           |
-| 2 septembre 2026     | Mise à jour minage de surface (SRV **Rhino**)                                                     | Impact indirect sur la logistique de fret vers les zones minières                                                                                        |
+Colonne `Fiab.` : code de fiabilité à quatre valeurs (P/C/E/N — voir
+[00-methodologie-sourcing.md §10](./00-methodologie-sourcing.md#10-la-colonne-fiab-des-tableaux-sans-attribution) pour
+la méthode). Ligne de base `C` pour ce tableau (dates recoupées par plusieurs articles convergents, voir la section
+Sources), sauf la ligne « ~octobre 2025 » signalée non sourcée précisément dans `zones_incertaines`.
+
+| Date                 | Mise à jour                                                                                       | Impact sur le transport                                                                                                                                  | Fiab. |
+|----------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|-------|
+| 7 août 2024          | Lancement du **Type-8 Transporter**                                                               | Nouveau vaisseau de fret moyen, 406 tonnes de capacité, efficace en carburant                                                                            | C     |
+| 31 octobre 2024      | **Ascendancy** — Powerplay 2.0 + **Mandalay**                                                     | Refonte complète de la logistique Powerplay ; nouveau vaisseau d'exploration longue portée ; teasing de la colonisation                                  | C     |
+| 22 novembre 2024     | Ajustements des gains Powerplay                                                                   | Réduction du temps nécessaire pour monter en rang et débloquer les premiers modules                                                                      | C     |
+| 26 février 2025      | **Bêta** de la **colonisation** (mise à jour *Trailblazers*, patch 4.1.x)                         | Les joueurs peuvent revendiquer des systèmes et y construire des installations, créant une toute nouvelle logistique de fret                             | C     |
+| 5 mars 2025          | Pause temporaire de la colonisation                                                               | Correction d'un problème après plus de 8 000 systèmes déjà colonisés (et 13 000 installations construites) durant la première semaine de la bêta ouverte | C     |
+| 30 avril 2025        | Rééquilibrage économique de la colonisation                                                       | Introduction des liens économiques automatiques entre systèmes colonisés (forts/faibles)                                                                 | C     |
+| 22 juillet 2025      | Accès anticipé du **Panther Clipper Mk II**                                                       | Nouveau vaisseau-cargo super-massif, 1200 à 1400 tonnes selon l'outillage, le plus gros transporteur non-capital du jeu                                  | C     |
+| ~octobre 2025        | Panther Clipper Mk II disponible contre crédits                                                   | Fin de la fenêtre d'accès anticipé payant                                                                                                                | E     |
+| **11 novembre 2025** | **Sortie complète de la colonisation** (« **Dodec Update** », version 4.2.2.0)                    | Fin officielle de la bêta ouverte de colonisation ; introduction de la station Dodec en accès anticipé ARX (correctif « Patch 1 » le 13 novembre 2025)   | C     |
+| avril 2026           | **Lynx Highliner** (Zorgon Peterson) distribué gratuitement, puis achetable en crédits (28 avril) | Nouveau vaisseau de transport de passagers de taille moyenne (jusqu'à 225 passagers) ; retour des missions « stations en feu »                           | C     |
+| 2 septembre 2026     | Mise à jour minage de surface (SRV **Rhino**)                                                     | Impact indirect sur la logistique de fret vers les zones minières                                                                                        | C     |
+
 Cette chronologie constitue la toile de fond de toutes les mécaniques détaillées ci-dessous : missions de passagers,
 sauvetage de survivants, fret pour Powerplay, matériaux rares, logistique de colonisation et Fleet Carriers, et
 configurations optimales de vaisseaux.
@@ -88,22 +94,29 @@ passager bénéficiait d'une protection particulière.
 
 ### Classes de cabines passagers : l'arbitrage densité / rémunération
 
-| Classe de cabine | Densité de passagers | Rémunération par tête | Usage typique                                             |
-|------------------|----------------------|-----------------------|-------------------------------------------------------------|
-| Économique       | Très élevée          | Faible                | Missions de masse, évacuations, sauvetages                  |
-| Affaires         | Élevée               | Moyenne               | Missions courantes à bon rendement                           |
-| Première classe  | Modérée              | Élevée                | Contrats VIP, tourisme haut de gamme                         |
-| Luxe             | Faible               | Très élevée           | Circuits de luxe longue distance sur gros porteurs dédiés    |
+Colonne `Fiab.` ajoutée à partir d'ici (code P/C/E/N, voir
+[00-methodologie-sourcing.md §10](./00-methodologie-sourcing.md#10-la-colonne-fiab-des-tableaux-sans-attribution)) :
+ligne de base `C` pour ce comparatif qualitatif de mécanique générale, non individuellement signalé comme incertain.
+
+| Classe de cabine | Densité de passagers | Rémunération par tête | Usage typique                                             | Fiab. |
+|------------------|----------------------|-----------------------|-------------------------------------------------------------|-------|
+| Économique       | Très élevée          | Faible                | Missions de masse, évacuations, sauvetages                  | C     |
+| Affaires         | Élevée               | Moyenne               | Missions courantes à bon rendement                           | C     |
+| Première classe  | Modérée              | Élevée                | Contrats VIP, tourisme haut de gamme                         | C     |
+| Luxe             | Faible               | Très élevée           | Circuits de luxe longue distance sur gros porteurs dédiés    | C     |
 
 #### Capacité en passagers par taille de module de cabine (valeurs stock, tailles 2 à 6)
 
-| Taille du module | Économique | Affaires | Première classe | Luxe |
-|-------------------|------------|----------|-------------------|------|
-| 2                  | 8          | 4        | —                  | —    |
-| 3                  | 16         | 8        | 3                  | —    |
-| 4                  | 32         | 16       | 6                  | 3    |
-| 5                  | 64         | 32       | 12                 | 6    |
-| 6                  | 128        | 64       | 24                 | 12   |
+Ligne de base `E` pour ce tableau : il est explicitement signalé dans `zones_incertaines` et dans la note ci-dessous
+comme non reconfirmé en direct.
+
+| Taille du module | Économique | Affaires | Première classe | Luxe | Fiab. |
+|-------------------|------------|----------|-------------------|------|-------|
+| 2                  | 8          | 4        | —                  | —    | E     |
+| 3                  | 16         | 8        | 3                  | —    | E     |
+| 4                  | 32         | 16       | 6                  | 3    | E     |
+| 5                  | 64         | 32       | 12                 | 6    | E     |
+| 6                  | 128        | 64       | 24                 | 12   | E     |
 
 > **Fraîcheur des données :** ces chiffres correspondent aux valeurs historiquement documentées par la communauté
 > (EDSY, Inara, Coriolis) pour des cabines en configuration stock. Les recherches web nécessaires pour les revérifier en
@@ -115,14 +128,18 @@ passager bénéficiait d'une protection particulière.
 
 ### Vaisseaux dédiés au transport de passagers
 
-| Vaisseau                              | Fabricant        | Profil      | Points forts                                                                                                                   | Points faibles                                                                             | Usage recommandé                                                                        |
-|---------------------------------------|------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| **Dolphin**                           | Saud Kruger      | Petit-moyen | Rapide et agile pour sa catégorie, très abordable, bonne portée grâce à sa faible masse                                        | Capacité de cabines modeste                                                                    | Débuter dans le transport de passagers, missions à faible effectif et haute fréquence     |
-| **Orca**                              | Saud Kruger      | Moyen-large | Excellent rapport vitesse/portée de saut, bonne maniabilité                                                                    | Défense et armement faibles                                                                    | Missions VIP/Luxe longue distance où vitesse et autonomie priment                          |
-| **Beluga Liner**                      | Saud Kruger      | Grand       | Capacité de cabines la plus élevée parmi les vaisseaux spécialisés, maniabilité correcte pour sa taille                        | Défenses limitées, difficile à poser dans certains petits quais                                | Maximiser le nombre de passagers par rotation (mix Économique/Affaires/Première classe)   |
-| **Type-9 Heavy** (reconfiguré)        | Lakon            | Grand cargo | Slots internes énormes permettant une capacité massive en Économique                                                           | Lent, peu maniable, portée réduite une fois chargé                                             | Missions à très gros volume de passagers bon marché                                       |
-| **Anaconda**                          | Faulcon deLacy   | Polyvalent  | Combine cargo, cabines et emplacements d'armes/hangar de chasseur ; portée de saut très élevée avec ingénierie                 | Coût d'achat élevé                                                                              | Escorte auto-gérée de passagers VIP à haut risque                                          |
-| **Lynx Highliner** *(nouveauté 2026)* | **Zorgon Peterson** | Moyen       | Transporteur de passagers pouvant accueillir jusqu'à 225 personnes, en échange de moins de raffinement que l'Orca ou le Beluga | Confort moindre que les liners établis, vaisseau récent avec un fit d'ingénierie moins documenté | Alternative moderne à forte capacité pour le tourisme de milieu de gamme                   |
+Ligne de base `C` (communautaire recoupée : Inara.cz, EDSY et la fiche produit officielle, voir la correction
+ci-dessous pour le Lynx Highliner) — voir
+[00-methodologie-sourcing.md §10](./00-methodologie-sourcing.md#10-la-colonne-fiab-des-tableaux-sans-attribution).
+
+| Vaisseau                              | Fabricant        | Profil      | Points forts                                                                                                                   | Points faibles                                                                             | Usage recommandé                                                                        | Fiab. |
+|---------------------------------------|------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|-------|
+| **Dolphin**                           | Saud Kruger      | Petit-moyen | Rapide et agile pour sa catégorie, très abordable, bonne portée grâce à sa faible masse                                        | Capacité de cabines modeste                                                                    | Débuter dans le transport de passagers, missions à faible effectif et haute fréquence     | C     |
+| **Orca**                              | Saud Kruger      | Moyen-large | Excellent rapport vitesse/portée de saut, bonne maniabilité                                                                    | Défense et armement faibles                                                                    | Missions VIP/Luxe longue distance où vitesse et autonomie priment                          | C     |
+| **Beluga Liner**                      | Saud Kruger      | Grand       | Capacité de cabines la plus élevée parmi les vaisseaux spécialisés, maniabilité correcte pour sa taille                        | Défenses limitées, difficile à poser dans certains petits quais                                | Maximiser le nombre de passagers par rotation (mix Économique/Affaires/Première classe)   | C     |
+| **Type-9 Heavy** (reconfiguré)        | Lakon            | Grand cargo | Slots internes énormes permettant une capacité massive en Économique                                                           | Lent, peu maniable, portée réduite une fois chargé                                             | Missions à très gros volume de passagers bon marché                                       | C     |
+| **Anaconda**                          | Faulcon deLacy   | Polyvalent  | Combine cargo, cabines et emplacements d'armes/hangar de chasseur ; portée de saut très élevée avec ingénierie                 | Coût d'achat élevé                                                                              | Escorte auto-gérée de passagers VIP à haut risque                                          | C     |
+| **Lynx Highliner** *(nouveauté 2026)* | **Zorgon Peterson** | Moyen       | Transporteur de passagers pouvant accueillir jusqu'à 225 personnes, en échange de moins de raffinement que l'Orca ou le Beluga | Confort moindre que les liners établis, vaisseau récent avec un fit d'ingénierie moins documenté | Alternative moderne à forte capacité pour le tourisme de milieu de gamme                   | C     |
 
 > **Correction (audit corpus) :** le Lynx Highliner n'est **pas** un vaisseau Saud Kruger, contrairement à une confusion
 > répandue dans certaines sources communautaires (Saud Kruger étant le fabricant « attendu » pour ce type de
@@ -304,12 +321,16 @@ servant de base avancée pour raccourcir le dernier saut de livraison. Pour l'en
 
 ### Marchandises et tonnage de la colonisation (ordre de grandeur)
 
-| Type de projet                            | Tonnage total approximatif                          | Nombre de marchandises différentes typiques |
-|---------------------------------------------|--------------------------------------------------------|-------------------------------------------------|
-| Avant-poste simple                          | de l'ordre de quelques milliers de tonnes               | 5 à 10                                            |
-| Starport (Coriolis / Ocellus)               | de l'ordre de la dizaine de milliers de tonnes          | 15 à 20                                           |
-| Installation planétaire                     | de l'ordre du millier à quelques milliers de tonnes     | 5 à 8                                              |
-| Structure orbitale majeure (Orbis, etc.)    | plusieurs dizaines de milliers de tonnes                | 20 et plus                                        |
+Ligne de base `E` pour ce tableau (estimation composite, signalée à la fois dans `zones_incertaines` et dans la note
+de bas de tableau ci-dessous) — voir
+[00-methodologie-sourcing.md §10](./00-methodologie-sourcing.md#10-la-colonne-fiab-des-tableaux-sans-attribution).
+
+| Type de projet                            | Tonnage total approximatif                          | Nombre de marchandises différentes typiques | Fiab. |
+|---------------------------------------------|--------------------------------------------------------|-------------------------------------------------|-------|
+| Avant-poste simple                          | de l'ordre de quelques milliers de tonnes               | 5 à 10                                            | E     |
+| Starport (Coriolis / Ocellus)               | de l'ordre de la dizaine de milliers de tonnes          | 15 à 20                                           | E     |
+| Installation planétaire                     | de l'ordre du millier à quelques milliers de tonnes     | 5 à 8                                              | E     |
+| Structure orbitale majeure (Orbis, etc.)    | plusieurs dizaines de milliers de tonnes                | 20 et plus                                        | E     |
 
 > **Instantané capturé le 9 septembre 2026, à revérifier :** ces ordres de grandeur sont des estimations composites
 > issues de la connaissance générale du système de colonisation ; ils n'ont pas pu être revérifiés en direct pour cette
@@ -449,17 +470,21 @@ high-wake plutôt que d'engager le combat.
 
 ### Tableau récapitulatif : quel vaisseau de transport pour quel usage ?
 
-| Objectif                                  | Vaisseau recommandé                                            | Raison principale                                |
-|-------------------------------------------|------------------------------------------------------------------|-----------------------------------------------------|
-| Débuter dans le transport de passagers    | Dolphin                                                          | Abordable, agile, bonne portée                      |
-| Tourisme VIP/Luxe longue distance         | Orca                                                              | Meilleur rapport vitesse/portée                     |
-| Maximiser les passagers par rotation      | Beluga Liner ou Lynx Highliner                                    | Plus grande capacité dédiée                          |
-| Évacuation de masse / « stations en feu » / Search & Rescue | Type-9 Heavy ou Beluga en config Économique      | Volume maximal à faible coût par tête                |
-| Escorte de VIP à haut risque              | Anaconda                                                          | Cargo + cabines + armement                           |
-| Fret massif pour colonisation/Powerplay   | Panther Clipper Mk II, Type-9 Heavy, Imperial Cutter                | Tonnage maximal par rotation                         |
-| Boucles de marchandises rares             | Beluga, Orca, Dolphin (cabines + rares)                           | Rares peu volumineux, combinables avec passagers     |
-| Exploration et matériaux Gardiens         | Anaconda ou vaisseau d'exploration équipé Guardian FSD Booster    | Portée de saut étendue                               |
-| Base logistique avancée multi-rotation    | Fleet Carrier                                                     | Rapproche le stock du site de livraison final        |
+Ligne de base `C` pour ce tableau de synthèse (recommandations communautaires s'appuyant sur les caractéristiques déjà
+sourcées ci-dessus) — voir
+[00-methodologie-sourcing.md §10](./00-methodologie-sourcing.md#10-la-colonne-fiab-des-tableaux-sans-attribution).
+
+| Objectif                                  | Vaisseau recommandé                                            | Raison principale                                | Fiab. |
+|-------------------------------------------|------------------------------------------------------------------|-----------------------------------------------------|-------|
+| Débuter dans le transport de passagers    | Dolphin                                                          | Abordable, agile, bonne portée                      | C     |
+| Tourisme VIP/Luxe longue distance         | Orca                                                              | Meilleur rapport vitesse/portée                     | C     |
+| Maximiser les passagers par rotation      | Beluga Liner ou Lynx Highliner                                    | Plus grande capacité dédiée                          | C     |
+| Évacuation de masse / « stations en feu » / Search & Rescue | Type-9 Heavy ou Beluga en config Économique      | Volume maximal à faible coût par tête                | C     |
+| Escorte de VIP à haut risque              | Anaconda                                                          | Cargo + cabines + armement                           | C     |
+| Fret massif pour colonisation/Powerplay   | Panther Clipper Mk II, Type-9 Heavy, Imperial Cutter                | Tonnage maximal par rotation                         | C     |
+| Boucles de marchandises rares             | Beluga, Orca, Dolphin (cabines + rares)                           | Rares peu volumineux, combinables avec passagers     | C     |
+| Exploration et matériaux Gardiens         | Anaconda ou vaisseau d'exploration équipé Guardian FSD Booster    | Portée de saut étendue                               | C     |
+| Base logistique avancée multi-rotation    | Fleet Carrier                                                     | Rapproche le stock du site de livraison final        | C     |
 
 Avant tout achat ou refit important, il reste recommandé de vérifier les statistiques précises (slots de cabines,
 tonnage exact, coûts en crédits ou en Arx) sur un configurateur à jour comme EDSY.org, les valeurs de jeu évoluant au
@@ -493,44 +518,46 @@ fil des patchs d'équilibrage.
 
 ## Sources
 
-- https://www.edsm.net/en/
-- https://en.wikipedia.org/wiki/Elite_Dangerous
-- https://canonn.science/
-- https://www.edsy.org/
-- https://www.pcgamesn.com/elite-dangerous
-- https://www.pcgamesn.com/elite-dangerous/powerplay-2-0-released
-- https://www.pcgamesn.com/elite-dangerous/new-ship-type-8
-- https://massivelyop.com/2026/09/03/elite-dangerous-launches-mining-updates-surface-mining-and-the-rhino-mining-vehicle/
-- https://massivelyop.com/2026/08/27/elite-dangerous-takes-a-quick-look-at-the-rhino-vehicle-surface-mining-and-a-new-operation-arriving-september-2/
-- https://massivelyop.com/2026/04/29/elite-dangerous-hands-out-its-new-passenger-ship-for-free-and-brings-back-burning-stations-in-latest-patch/
-- https://massivelyop.com/2026/04/23/elite-dangerous-delays-dungeon-like-operations-to-june-makes-new-ship-available-for-credits-april-28/
-- https://massivelyop.com/2025/07/01/choose-my-adventure-defending-our-backyard-in-elite-dangerous-for-powerplay-profits/
-- https://massivelyop.com/2024/11/22/elite-dangerous-makes-changes-to-powerplay-earnings-and-highlights-the-top-five-powers-in-game/
-- https://massivelyop.com/2025/05/14/the-stream-team-first-steps-into-elite-dangerous-powerplay-system/
-- https://massivelyop.com/2024/05/30/elite-dangerous-introduces-its-next-new-ship-the-type-8-cargo-hauler/
-- https://massivelyop.com/2024/08/01/elite-dangerous-confirms-type-8-ship-launch-and-major-overhauls-to-engineering-for-august-7/
-- https://massivelyop.com/2024/08/07/elite-dangerous-deploys-its-new-ship-and-engineering-revamps-in-the-type-8-update/
-- https://massivelyop.com/2024/09/10/stick-and-rudder-elite-dangerous-type-8-update-engineering-revamp-saved-the-game/
-- https://massivelyop.com/2024/10/18/elite-dangerous-delays-this-months-mandalay-ship-and-powerplay-rework-by-a-week/
-- https://massivelyop.com/2024/08/29/elite-dangerous-confirms-a-third-new-ship-and-powerplay-2-0s-arrival-in-october-as-lave-radio-hits-500th-episode/
-- https://massivelyop.com/2024/10/31/elite-dangerous-launches-its-ascendancy-update-and-teases-a-brand-new-player-colonization-system/
-- https://massivelyop.com/2025/04/30/elite-dangerous-rebalances-colonization-economies-and-teases-its-next-new-ship/
-- https://massivelyop.com/2025/02/26/the-stream-team-discussing-and-examining-elite-dangerous-new-colonization-feature/
-- https://massivelyop.com/2025/01/30/elite-dangerous-dates-the-release-of-its-colonization-feature-for-february-26/
-- https://massivelyop.com/2024/12/20/elite-dangerous-begins-its-holiday-event-and-talks-space-colonization-as-the-thargoid-war-ends/
-- https://massivelyop.com/2025/03/05/elite-dangerous-pauses-new-colony-establishment-to-address-an-unspecified-important-issue/
-- https://massivelyop.com/2025/05/01/elite-dangerous-unveils-its-next-upcoming-new-ship-frontier-elite-iis-panther-clipper-mkii/
-- https://massivelyop.com/2025/06/26/elite-dangerous-outlines-the-upcoming-panther-clipper-mk2-ahead-of-its-paid-early-access-july-22/
-- https://massivelyop.com/2025/07/07/elite-dangerous-confirms-a-higher-cash-shop-cost-for-its-upcoming-clipper-mk2-and-other-large-ships/
-- https://massivelyop.com/2025/07/22/elite-dangerous-adds-the-mega-heavy-panther-clipper-mk2-to-the-early-access-cash-shop-in-latest-patch/
-- https://massivelyop.com/2025/07/23/the-stream-team-taking-the-panther-clipper-mk2-for-a-shakedown-flight-in-elite-dangerous/
-- https://massivelyop.com/2018/01/24/elite-dangerous-disables-part-of-its-passenger-transport-system-to-block-huge-credit-exploit/
-- https://massivelyop.com/2021/01/27/stick-and-rudder-nine-non-combat-activities-to-enjoy-in-elite-dangerous/
+Format normalisé selon [00-methodologie-sourcing.md §9](./00-methodologie-sourcing.md#9-format-normalisé-dune-section-sources).
+
+- https://www.edsm.net/en/ | secondaire | consulté le 13/09/2026 | confirme : l'existence et le rôle général d'EDSM comme outil cartographique et d'agrégation communautaire cité en arrière-plan de ce guide | ne confirme pas : un chiffre ou une mécanique précise de ce guide (EDSM n'est pas cité nommément dans le corps du texte, seulement en source de fond)
+- https://en.wikipedia.org/wiki/Elite_Dangerous | secondaire | consulté le 13/09/2026 | confirme : le contexte général du jeu | ne confirme pas : les mécaniques de transport détaillées dans ce guide
+- https://canonn.science/ | secondaire | consulté le 13/09/2026 | confirme : le rôle de Canonn Research comme référence communautaire pour la cartographie et la documentation scientifique des sites et matériaux Gardiens | ne confirme pas : de tonnage ou de taux de collecte chiffré pour le transport de matériaux Gardiens
+- https://www.edsy.org/ | secondaire | consulté le 13/09/2026 | confirme : le rôle d'EDSY.org comme configurateur de référence à consulter pour vérifier cabines, tonnage et coûts à jour | ne confirme pas : les valeurs de capacité de cabines du tableau ci-dessus, non reconfirmées en direct (voir `zones_incertaines`)
+- https://www.pcgamesn.com/elite-dangerous | tertiaire | consulté le 13/09/2026 | confirme : l'existence d'une couverture éditoriale PCGamesN dédiée au jeu | ne confirme pas : un fait chiffré précis de ce guide (page d'accueil générique, non un article daté)
+- https://www.pcgamesn.com/elite-dangerous/powerplay-2-0-released | tertiaire | consulté le 13/09/2026 | confirme : la sortie de Powerplay 2.0/Ascendancy | ne confirme pas : le détail chiffré des mérites et rangs (voir [02-powerplay.md](./02-powerplay.md), source unique de vérité)
+- https://www.pcgamesn.com/elite-dangerous/new-ship-type-8 | tertiaire | consulté le 13/09/2026 | confirme : le lancement et la capacité annoncée (406 t) du Type-8 Transporter | ne confirme pas : sa portée de saut chargée (non publiée par coriolis-data, voir [11-commerce.md](./11-commerce.md) `zones_incertaines`)
+- https://massivelyop.com/2026/09/03/elite-dangerous-launches-mining-updates-surface-mining-and-the-rhino-mining-vehicle/ | tertiaire | consulté le 13/09/2026 | confirme : la sortie de la mise à jour minage de surface (SRV Rhino) le 2 septembre 2026 | ne confirme pas : un chiffrage précis de son impact sur la logistique de fret vers les zones minières (qualifié d'« indirect » par ce guide)
+- https://massivelyop.com/2026/08/27/elite-dangerous-takes-a-quick-look-at-the-rhino-vehicle-surface-mining-and-a-new-operation-arriving-september-2/ | tertiaire | consulté le 13/09/2026 | confirme : l'annonce préalable du Rhino et d'une nouvelle opération pour le 2 septembre 2026 | ne confirme pas : le contenu détaillé de l'opération elle-même (hors périmètre de ce guide, voir [00-methodologie-sourcing.md §7](./00-methodologie-sourcing.md#7-étude-de-cas--la-fiabilité-de-massivelyop-comme-source-de-presse))
+- https://massivelyop.com/2026/04/29/elite-dangerous-hands-out-its-new-passenger-ship-for-free-and-brings-back-burning-stations-in-latest-patch/ | tertiaire | consulté le 13/09/2026 | confirme : la distribution gratuite du Lynx Highliner et le retour des missions « stations en feu » en avril 2026 | ne confirme pas : la date exacte du passage à l'achat en crédits (voir l'article suivant)
+- https://massivelyop.com/2026/04/23/elite-dangerous-delays-dungeon-like-operations-to-june-makes-new-ship-available-for-credits-april-28/ | tertiaire | consulté le 13/09/2026 | confirme : la date du 28 avril 2026 pour l'achat du Lynx Highliner contre crédits | ne confirme pas : les mécaniques d'Operations elles-mêmes évoquées dans le même article (hors périmètre de ce guide)
+- https://massivelyop.com/2025/07/01/choose-my-adventure-defending-our-backyard-in-elite-dangerous-for-powerplay-profits/ | tertiaire | consulté le 13/09/2026 | confirme : le contexte général du jeu Powerplay orienté fret/logistique | ne confirme pas : de chiffre ou de mécanique précise ajoutée par ce guide (article de type reportage/journal de bord, pas un barème)
+- https://massivelyop.com/2024/11/22/elite-dangerous-makes-changes-to-powerplay-earnings-and-highlights-the-top-five-powers-in-game/ | tertiaire | consulté le 13/09/2026 | confirme : les ajustements des gains Powerplay de novembre 2024 et la correction d'un exploit | ne confirme pas : le classement à jour des Puissances (renvoi vers [02-powerplay.md](./02-powerplay.md), source unique de vérité)
+- https://massivelyop.com/2025/05/14/the-stream-team-first-steps-into-elite-dangerous-powerplay-system/ | tertiaire | consulté le 13/09/2026 | confirme : le contexte général d'initiation à Powerplay | ne confirme pas : de mécanique ou de chiffre spécifique repris dans ce guide
+- https://massivelyop.com/2024/05/30/elite-dangerous-introduces-its-next-new-ship-the-type-8-cargo-hauler/ | tertiaire | consulté le 13/09/2026 | confirme : l'annonce du Type-8 Transporter avant son lancement | ne confirme pas : sa date de sortie effective (7 août 2024, confirmée par les deux articles suivants)
+- https://massivelyop.com/2024/08/01/elite-dangerous-confirms-type-8-ship-launch-and-major-overhauls-to-engineering-for-august-7/ | tertiaire | consulté le 13/09/2026 | confirme : la confirmation de la date de lancement du Type-8 (7 août 2024) | ne confirme pas : le détail des refontes d'ingénierie elles-mêmes (hors périmètre de ce guide, voir [06-ingenieurs.md](./06-ingenieurs.md))
+- https://massivelyop.com/2024/08/07/elite-dangerous-deploys-its-new-ship-and-engineering-revamps-in-the-type-8-update/ | tertiaire | consulté le 13/09/2026 | confirme : la mise en ligne effective du Type-8 Transporter le 7 août 2024 | ne confirme pas : sa capacité exacte de 406 tonnes (chiffre apporté par l'article PCGamesN ci-dessus)
+- https://massivelyop.com/2024/09/10/stick-and-rudder-elite-dangerous-type-8-update-engineering-revamp-saved-the-game/ | tertiaire | consulté le 13/09/2026 | confirme : un retour d'expérience communautaire positif sur la mise à jour Type-8/ingénierie | ne confirme pas : de fait chiffré nouveau pour ce guide (article d'opinion, pas un barème)
+- https://massivelyop.com/2024/10/18/elite-dangerous-delays-this-months-mandalay-ship-and-powerplay-rework-by-a-week/ | tertiaire | consulté le 13/09/2026 | confirme : le report d'une semaine de la sortie de Mandalay/Powerplay 2.0, cohérent avec la reconstitution chronologique détaillée dans [02-powerplay.md §3.4](./02-powerplay.md) | ne confirme pas : la date finale du 31 octobre 2024 en tant que telle (précisée par l'article suivant)
+- https://massivelyop.com/2024/08/29/elite-dangerous-confirms-a-third-new-ship-and-powerplay-2-0s-arrival-in-october-as-lave-radio-hits-500th-episode/ | tertiaire | consulté le 13/09/2026 | confirme : l'annonce d'une sortie de Powerplay 2.0 « en octobre » 2024 | ne confirme pas : le jour exact (31 octobre), précisé seulement par les communiqués ultérieurs
+- https://massivelyop.com/2024/10/31/elite-dangerous-launches-its-ascendancy-update-and-teases-a-brand-new-player-colonization-system/ | tertiaire | consulté le 13/09/2026 | confirme : la sortie effective de la mise à jour Ascendancy (Powerplay 2.0) le 31 octobre 2024 et le premier teasing de la colonisation | ne confirme pas : le détail des mécaniques de colonisation elles-mêmes (dévoilées plus tard, voir la suite de la chronologie)
+- https://massivelyop.com/2025/04/30/elite-dangerous-rebalances-colonization-economies-and-teases-its-next-new-ship/ | tertiaire | consulté le 13/09/2026 | confirme : le rééquilibrage économique de la colonisation du 30 avril 2025 et l'introduction des liens économiques automatiques entre systèmes colonisés | ne confirme pas : le barème exact de tonnage par type de projet (voir [18-colonisation.md](./18-colonisation.md), source unique de vérité)
+- https://massivelyop.com/2025/02/26/the-stream-team-discussing-and-examining-elite-dangerous-new-colonization-feature/ | tertiaire | consulté le 13/09/2026 | confirme : l'ouverture de la bêta de colonisation le 26 février 2025 | ne confirme pas : les chiffres de fréquentation de la bêta (voir l'article du 5 mars 2025 ci-dessous)
+- https://massivelyop.com/2025/01/30/elite-dangerous-dates-the-release-of-its-colonization-feature-for-february-26/ | tertiaire | consulté le 13/09/2026 | confirme : l'annonce préalable de la date de sortie de la bêta de colonisation (26 février 2025) | ne confirme pas : le déroulement effectif de cette bêta une fois lancée
+- https://massivelyop.com/2024/12/20/elite-dangerous-begins-its-holiday-event-and-talks-space-colonization-as-the-thargoid-war-ends/ | tertiaire | consulté le 13/09/2026 | confirme : le teasing de la colonisation fin 2024, avant l'annonce d'une date précise | ne confirme pas : une date de sortie (donnée seulement par l'article du 30 janvier 2025 ci-dessus)
+- https://massivelyop.com/2025/03/05/elite-dangerous-pauses-new-colony-establishment-to-address-an-unspecified-important-issue/ | tertiaire | consulté le 13/09/2026 | confirme : la pause de la colonisation début mars 2025 et les chiffres de 8 000 systèmes revendiqués / 13 000 installations construites en une semaine | ne confirme pas : la nature exacte du problème technique ayant motivé la pause (qualifié de « non précisé » par ce guide comme par la source elle-même)
+- https://massivelyop.com/2025/05/01/elite-dangerous-unveils-its-next-upcoming-new-ship-frontier-elite-iis-panther-clipper-mkii/ | tertiaire | consulté le 13/09/2026 | confirme : la première annonce du Panther Clipper Mk II | ne confirme pas : sa date de disponibilité effective (22 juillet 2025, précisée par les articles suivants)
+- https://massivelyop.com/2025/06/26/elite-dangerous-outlines-the-upcoming-panther-clipper-mk2-ahead-of-its-paid-early-access-july-22/ | tertiaire | consulté le 13/09/2026 | confirme : la date d'accès anticipé payant du Panther Clipper Mk II (22 juillet 2025) | ne confirme pas : son tonnage exact final (1200 à 1400 t, ordre de grandeur composite, voir `zones_incertaines`)
+- https://massivelyop.com/2025/07/07/elite-dangerous-confirms-a-higher-cash-shop-cost-for-its-upcoming-clipper-mk2-and-other-large-ships/ | tertiaire | consulté le 13/09/2026 | confirme : un coût boutique (ARX) plus élevé pour le Panther Clipper Mk II que pour les autres vaisseaux | ne confirme pas : un prix en crédits (non encore disponible contre crédits à cette date, voir `zones_incertaines`)
+- https://massivelyop.com/2025/07/22/elite-dangerous-adds-the-mega-heavy-panther-clipper-mk2-to-the-early-access-cash-shop-in-latest-patch/ | tertiaire | consulté le 13/09/2026 | confirme : la mise en ligne effective du Panther Clipper Mk II en accès anticipé le 22 juillet 2025 | ne confirme pas : la date de bascule vers l'achat en crédits (~octobre 2025, non sourcée précisément, voir `zones_incertaines`)
+- https://massivelyop.com/2025/07/23/the-stream-team-taking-the-panther-clipper-mk2-for-a-shakedown-flight-in-elite-dangerous/ | tertiaire | consulté le 13/09/2026 | confirme : un retour d'expérience communautaire sur le pilotage du Panther Clipper Mk II peu après sa sortie | ne confirme pas : de caractéristique chiffrée nouvelle (article d'impressions de vol, pas une fiche technique)
+- https://massivelyop.com/2018/01/24/elite-dangerous-disables-part-of-its-passenger-transport-system-to-block-huge-credit-exploit/ | tertiaire | consulté le 13/09/2026 | confirme : l'existence historique d'un exploit de crédits lié au système de transport de passagers, désactivé partiellement par Frontier en janvier 2018 | ne confirme pas : un fait actuellement décrit dans le corps de ce guide (épisode historique non repris dans le texte, conservé ici comme contexte de fiabilité du système de missions passagers)
+- https://massivelyop.com/2021/01/27/stick-and-rudder-nine-non-combat-activities-to-enjoy-in-elite-dangerous/ | tertiaire | consulté le 13/09/2026 | confirme : le transport (passagers, sauvetage, marchandises rares) comme activité non-combat reconnue par la presse spécialisée | ne confirme pas : de chiffre ou de mécanique précise de ce guide (article de synthèse généraliste, pas une fiche technique)
 - Correction du fabricant du Lynx Highliner (Zorgon Peterson, et non Saud Kruger) : fiche produit officielle du
   vaisseau et base de données communautaire Inara.cz, confirmées lors de l'audit du corpus. Aucune URL primaire n'a pu
   être citée littéralement depuis cet environnement (elitedangerous.com et forums.frontier.co.uk renvoient une erreur
-  HTTP 403 lors des tentatives d'accès direct).
+  HTTP 403 lors des tentatives d'accès direct — voir [00-methodologie-sourcing.md §4](./00-methodologie-sourcing.md#4-règle-des-url-et-des-échecs-de-consultation) pour la règle des échecs de consultation).
 - Sortie complète de la colonisation (« Dodec Update », version 4.2.2.0, 11 novembre 2025) : notes de version
   officielles à l'adresse elitedangerous.com/update-notes/4-2-2-0 (métadonnées CMS confirmées lors de l'audit du
   corpus). Accès direct à cette page bloqué depuis cet environnement (anti-bot), donnée reconstituée via des sources
-  miroirs convergentes.
+  miroirs convergentes (voir [00-methodologie-sourcing.md §4](./00-methodologie-sourcing.md#4-règle-des-url-et-des-échecs-de-consultation)).

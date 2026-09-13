@@ -64,13 +64,15 @@ août 2025 est effectivement un mardi). Cette date s'insère par ailleurs entre 
 2025) et le Panther Clipper Mk II (22 juillet 2025) dans la chronologie déjà établie du corpus — voir
 [Chronologie canonique](./00-chronologie-canonique.md).
 
-| Date (2025)       | Jour       | Événement                                                                 |
-|--------------------|------------|----------------------------------------------------------------------------|
-| 12 août            | mardi      | Teaser officiel : « Elite Dangerous: Vanguards – Arriving 19th August »   |
-| 19 août            | mardi      | Lancement effectif de la saison Vanguards                                |
-| 22 août            | vendredi   | Vanguards Patch 1                                                         |
-| 1er septembre      | lundi      | Vanguards Patch 2 (annoncé pour un déploiement le 2 septembre)            |
-| 11 septembre       | jeudi      | Vanguards Patch 3                                                         |
+*(Colonne **Fiab.** : code de fiabilité par ligne — P/C/E/N, voir [00-methodologie-sourcing.md §10](./00-methodologie-sourcing.md#10-la-colonne-fiab-des-tableaux-sans-attribution).)*
+
+| Date (2025)       | Jour       | Événement                                                                 | Fiab. |
+|--------------------|------------|----------------------------------------------------------------------------|-------|
+| 12 août            | mardi      | Teaser officiel : « Elite Dangerous: Vanguards – Arriving 19th August »   | P     |
+| 19 août            | mardi      | Lancement effectif de la saison Vanguards                                | P     |
+| 22 août            | vendredi   | Vanguards Patch 1                                                         | P     |
+| 1er septembre      | lundi      | Vanguards Patch 2 (annoncé pour un déploiement le 2 septembre)            | P     |
+| 11 septembre       | jeudi      | Vanguards Patch 3                                                         | P     |
 
 ### 1.1 Nouveautés des Squadrons annoncées au lancement de Vanguards
 
@@ -122,10 +124,10 @@ un ajustement bienvenu pour un jeu à forte communauté francophone et plus larg
 
 Les notes officielles du Patch 1 confirment verbatim les deux relèvements de plafond suivants :
 
-| Paramètre                                   | Avant Vanguards | Depuis le Patch 1 (22 août 2025) |
-|----------------------------------------------|-----------------|-----------------------------------|
-| Taille maximale d'un escadron                | 500 membres     | **600 membres**                   |
-| Candidatures en attente maximum              | 10              | **25**                            |
+| Paramètre                                   | Avant Vanguards | Depuis le Patch 1 (22 août 2025) | Fiab. |
+|----------------------------------------------|-----------------|-----------------------------------|-------|
+| Taille maximale d'un escadron                | 500 membres     | **600 membres**                   | P     |
+| Candidatures en attente maximum              | 10              | **25**                            | P     |
 
 Ces deux plafonds réapparaissent identiques dans les notes du « Caspian Explorer Update » (2 décembre 2025), ce qui
 confirme qu'ils sont restés stables plusieurs mois après la refonte.
@@ -214,11 +216,11 @@ notes officielles du « Type-11 Prospector Update 2 » (16 octobre 2025) décriv
 anti-« claim sniping » : lorsque le port primaire est achevé dans un système nouvellement colonisé, la priorité de
 revendication (« claim ») suit la temporalité suivante :
 
-| Délai depuis l'achèvement du port primaire | Qui peut revendiquer le système                          |
-|----------------------------------------------|-----------------------------------------------------------|
-| 0 à 30 minutes                                | Le **System Architect** exclusivement (le commandant à l'origine de la colonisation) |
-| 30 minutes à 24 heures (soit 23,5 heures de fenêtre) | **Tous les membres de l'escadron** du System Architect |
-| Au-delà de 24 heures                          | N'importe quel commandant                                  |
+| Délai depuis l'achèvement du port primaire | Qui peut revendiquer le système                          | Fiab. |
+|----------------------------------------------|-----------------------------------------------------------|-------|
+| 0 à 30 minutes                                | Le **System Architect** exclusivement (le commandant à l'origine de la colonisation) | P |
+| 30 minutes à 24 heures (soit 23,5 heures de fenêtre) | **Tous les membres de l'escadron** du System Architect | P |
+| Au-delà de 24 heures                          | N'importe quel commandant                                  | P     |
 
 Frontier précise explicitement que cette extension de la fenêtre de revendication à l'escadron s'applique **« even if
 the System Architect is in their own solo Squadron »** — c'est-à-dire même lorsque l'escadron concerné ne compte
@@ -302,15 +304,15 @@ point est à vérifier directement en jeu, dans l'onglet dédié aux classements
 
 ## 9. Plafonds et limites d'un escadron — récapitulatif
 
-| Paramètre                                      | Valeur (depuis le Patch 1, 22 août 2025) |
-|-------------------------------------------------|--------------------------------------------|
-| Taille maximale d'un escadron                   | 600 membres                                 |
-| Candidatures en attente maximum                 | 25                                           |
-| Rang habilité à acheter un Squadron Carrier     | Squadron Leader uniquement                  |
-| Rang exclu de la succession de leadership       | Le rang le plus bas de l'escadron           |
-| Délai d'inactivité déclenchant la succession    | 90 jours sans connexion du Leader           |
-| Fenêtre de revendication exclusive (colonisation) | 30 minutes (System Architect seul)        |
-| Fenêtre de revendication élargie à l'escadron   | 23,5 heures supplémentaires (30 min à 24h)  |
+| Paramètre                                      | Valeur (depuis le Patch 1, 22 août 2025) | Fiab. |
+|-------------------------------------------------|--------------------------------------------|-------|
+| Taille maximale d'un escadron                   | 600 membres                                 | P     |
+| Candidatures en attente maximum                 | 25                                           | P     |
+| Rang habilité à acheter un Squadron Carrier     | Squadron Leader uniquement                  | P     |
+| Rang exclu de la succession de leadership       | Le rang le plus bas de l'escadron           | P     |
+| Délai d'inactivité déclenchant la succession    | 90 jours sans connexion du Leader           | P     |
+| Fenêtre de revendication exclusive (colonisation) | 30 minutes (System Architect seul)        | P     |
+| Fenêtre de revendication élargie à l'escadron   | 23,5 heures supplémentaires (30 min à 24h)  | P     |
 
 ## 10. Outils communautaires pour les escadrons (annuaire Inara.cz)
 

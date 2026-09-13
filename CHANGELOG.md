@@ -66,7 +66,7 @@ pédagogie), chacune vérifiée de façon adverse puis complétée — 143 const
 | 13 | Lore vivant (trou 3304-3306, mystères, GalNet, transmedia) | Fait — 13 septembre 2026 | 01-lore.md |
 | 14 | Chiffrer les boucles de farming (synthèse, USS, megaships) | Fait — 13 septembre 2026 | fichiers de farming concernés (voir commit `1190e25`) |
 | 15 | Carte transversale des boucles de gameplay | Fait — 13 septembre 2026 | `00-boucles-de-gameplay.md` créé, 25-combat-ax.md, 08-combat-spatial.md, 12-transport.md, 10-exploration.md |
-| 16 | Gouvernance du sourcing et instrumentation | **En cours (ce chantier)** — 13 septembre 2026 | `00-methodologie-sourcing.md` créé, `00-chronologie-canonique.md` (registre d'incertitudes), `EVALUATION.md`, `eval/questions-reference.json`, `CHANGELOG.md`, `11-commerce.md`, `02-powerplay.md`, `13-operations.md` |
+| 16 | Gouvernance du sourcing et instrumentation | Fait — 13 septembre 2026, en deux passes le même jour | `00-methodologie-sourcing.md` créé ; registre d'incertitudes de `00-chronologie-canonique.md` étendu aux 32 guides (451 entrées) ; `EVALUATION.md`, `eval/questions-reference.json` (72 questions), `CHANGELOG.md` créés ; format Sources normalisé sur 12 guides (11-commerce, 02-powerplay, 01-lore, 07-equipement-a-pied, 08-combat-spatial, 09-combat-a-pied, 10-exploration, 12-transport, 13-operations, 16-outils, 18-colonisation, 23-jeu-en-groupe) ; colonne `Fiab.` ajoutée sur 4 guides (01-lore, 12-transport, 18-colonisation, 22-squadrons, 227 lignes) |
 | 17 | Maillage, lexique bilingue, index par question | À faire | — |
 | 18 | Guide 33 — client, éditions, branches Live/Legacy, périphériques et VR | À faire | — |
 

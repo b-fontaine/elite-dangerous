@@ -50,18 +50,26 @@ Ce guide constitue la référence unique sur la colonisation de systèmes pour c
 
 ## Chronologie officielle de la Colonisation de systèmes (2024-2025)
 
-| Date | Version | Événement |
-|---|---|---|
-| 20 octobre 2024 | — | Annonce de la fonctionnalité lors du livestream *Frontier Unlocked* |
-| 26 février 2025, 11:00 UTC | v4.1.0.0 | Lancement en **Bêta** avec *Elite Dangerous: Trailblazers* |
-| 28 février 2025 | — | Publication de l'article officiel « System Colonisation Guide » |
-| Fin février / début mars 2025 | — | « System Colonisation Claim Pause » : suspension temporaire du contact suite à un bug critique sur les revendications (plus de 8 000 systèmes colonisés et 13 000 installations complétées en quelques jours de Bêta) ; mégavaisseaux de CG retardés d'une semaine |
-| Quelques jours plus tard | — | « System Colonisation Unpaused » : réactivation, présentée comme faisant partie d'un test de charge de la Bêta |
-| 30 avril 2025 | v4.1.2.0 | *Trailblazers – Update 3* : refonte majeure de l'économie et de la croissance de population (liens forts/faibles) |
-| 4 juin 2025 | v4.1.2.102 | *Trailblazers – Update 3.3* : réécriture des conditions d'activation des services de station selon liens et niveau technologique |
-| 19 août 2025 | v4.2.0.0 | *Elite Dangerous: Vanguards* : refonte des escadrons, effets marginaux sur la colonisation |
-| 11 novembre 2025, 10:00 UTC | v4.2.2.0 | **Dodec Update** : fin officielle de la Bêta de System Colonisation, rééquilibrage des statistiques système, nombreux correctifs |
-| 13 novembre 2025 | v4.2.2.1 | *Dodec Update Patch 1* : correctifs mineurs |
+Chaque tableau chiffré de ce guide porte désormais une colonne terminale **`Fiab.`** (fiabilité), au code à quatre
+valeurs défini par [00-methodologie-sourcing.md §10](./00-methodologie-sourcing.md#10-la-colonne-fiab-des-tableaux-sans-attribution) :
+**P** = primaire (patch notes Frontier, journal du jeu, EDCD), **C** = communautaire recoupée (base ou guide
+communautaire), **E** = estimation (reconstruction non recoupée, y compris un calcul fait par ce corpus lui-même), **N** =
+non confirmé. Le code reflète la provenance documentée du tableau dans son ensemble ; les rangées individuellement
+signalées comme incertaines ailleurs dans ce guide ou dans le [registre d'incertitudes](./00-chronologie-canonique.md#registre-dincertitudes-du-corpus)
+portent leur propre code.
+
+| Date | Version | Événement | Fiab. |
+|---|---|---|---|
+| 20 octobre 2024 | — | Annonce de la fonctionnalité lors du livestream *Frontier Unlocked* | P |
+| 26 février 2025, 11:00 UTC | v4.1.0.0 | Lancement en **Bêta** avec *Elite Dangerous: Trailblazers* | P |
+| 28 février 2025 | — | Publication de l'article officiel « System Colonisation Guide » | P |
+| Fin février / début mars 2025 | — | « System Colonisation Claim Pause » : suspension temporaire du contact suite à un bug critique sur les revendications (plus de 8 000 systèmes colonisés et 13 000 installations complétées en quelques jours de Bêta) ; mégavaisseaux de CG retardés d'une semaine | P |
+| Quelques jours plus tard | — | « System Colonisation Unpaused » : réactivation, présentée comme faisant partie d'un test de charge de la Bêta | P |
+| 30 avril 2025 | v4.1.2.0 | *Trailblazers – Update 3* : refonte majeure de l'économie et de la croissance de population (liens forts/faibles) | P |
+| 4 juin 2025 | v4.1.2.102 | *Trailblazers – Update 3.3* : réécriture des conditions d'activation des services de station selon liens et niveau technologique | P |
+| 19 août 2025 | v4.2.0.0 | *Elite Dangerous: Vanguards* : refonte des escadrons, effets marginaux sur la colonisation | P |
+| 11 novembre 2025, 10:00 UTC | v4.2.2.0 | **Dodec Update** : fin officielle de la Bêta de System Colonisation, rééquilibrage des statistiques système, nombreux correctifs | P |
+| 13 novembre 2025 | v4.2.2.1 | *Dodec Update Patch 1* : correctifs mineurs | P |
 
 Au 4 octobre 3311 (date in-game), le total cumulé rapporté par la communauté atteignait **75 984 systèmes colonisés et 277 638 installations construites**, témoignant de l'ampleur de l'adoption de la fonctionnalité.
 
@@ -85,10 +93,10 @@ Le contact de station **« System Colonisation »** (l'exemple utilisé dans la 
 
 ### Délais impératifs : 24 heures pour la balise, 4 semaines pour le port primaire
 
-| Étape | Délai | Conséquence en cas de dépassement |
-|---|---|---|
-| Déploiement de la balise après l'enregistrement de la revendication | **24 heures** | La revendication expire et redevient disponible pour un autre commandant |
-| Achèvement du port primaire après le déploiement de la balise | **4 semaines** | La revendication expire ; le système ne peut pas être re-revendiqué immédiatement |
+| Étape | Délai | Conséquence en cas de dépassement | Fiab. |
+|---|---|---|---|
+| Déploiement de la balise après l'enregistrement de la revendication | **24 heures** | La revendication expire et redevient disponible pour un autre commandant | P |
+| Achèvement du port primaire après le déploiement de la balise | **4 semaines** | La revendication expire ; le système ne peut pas être re-revendiqué immédiatement | P |
 
 Une fois le port primaire achevé, une séquence de confirmation (Brewer Corporation) s'affiche, le mégavaisseau de colonisation quitte le système quelques minutes plus tard, et le commandant devient de façon **permanente et non transférable** l'**Architecte système**. Le système bascule alors dans la catégorie **« Uncontrolled Populated »**.
 
@@ -96,12 +104,12 @@ Une fois le port primaire achevé, une séquence de confirmation (Brewer Corpora
 
 À la création du système, jusqu'à quatre factions mineures peuvent être héritées, selon une répartition documentée par la communauté et confirmée verbatim dans le texte du mega-guide :
 
-| Rang | Poids | Origine de la faction |
-|---|---|---|
-| 1 | 60 % | Faction contrôlant la **station** d'où la revendication a été faite |
-| 2 | 20 % | Faction contrôlant le **système** d'origine (ou une deuxième faction locale par influence, si station et système partagent la même faction) |
-| 3 | 13 % | Faction alliée de l'**escadron** du joueur (mécanisme non documenté précisément si le joueur n'appartient à aucun escadron) |
-| 4 | 6 % | Faction **Anarchie** reprise du système existant le plus proche qui en possède une (s'applique même si la faction de la station est déjà elle-même une Anarchie) |
+| Rang | Poids | Origine de la faction | Fiab. |
+|---|---|---|---|
+| 1 | 60 % | Faction contrôlant la **station** d'où la revendication a été faite | C |
+| 2 | 20 % | Faction contrôlant le **système** d'origine (ou une deuxième faction locale par influence, si station et système partagent la même faction) | C |
+| 3 | 13 % | Faction alliée de l'**escadron** du joueur (mécanisme non documenté précisément si le joueur n'appartient à aucun escadron) | N |
+| 4 | 6 % | Faction **Anarchie** reprise du système existant le plus proche qui en possède une (s'applique même si la faction de la station est déjà elle-même une Anarchie) | C |
 
 Frontier présente explicitement ce mécanisme comme un moyen de « propager les factions du BGS en dehors de la Bulle » (voir la section [Impact sur le BGS](#impact-de-la-colonisation-sur-le-bgs)).
 
@@ -122,11 +130,11 @@ Quatre grandes catégories d'installations existent :
 
 ### Les trois niveaux d'installation (Tier 1 à 3) et les Points de Construction
 
-| Tier | Coût | Génère | Installations concernées |
-|---|---|---|---|
-| **Tier 1** | Aucun Point de Construction (CP) | CP de niveau 2 (« CP jaunes ») | Avant-poste civil/commercial orbital, avant-poste civil planétaire (ports « type colonie »), avant-poste industriel/scientifique/militaire/contrebande orbital ou planétaire (ports « spécialisés ») |
-| **Tier 2** | CP jaunes | CP de niveau 3 (« CP verts ») | **Coriolis** (type colonie), **base d'astéroïde** (spécialisée, économie Extraction) |
-| **Tier 3** | CP verts | Aucun | **Orbis**, **Ocellus**, **Port planétaire T3** (pas d'équivalent « spécialisé » à ce niveau) |
+| Tier | Coût | Génère | Installations concernées | Fiab. |
+|---|---|---|---|---|
+| **Tier 1** | Aucun Point de Construction (CP) | CP de niveau 2 (« CP jaunes ») | Avant-poste civil/commercial orbital, avant-poste civil planétaire (ports « type colonie »), avant-poste industriel/scientifique/militaire/contrebande orbital ou planétaire (ports « spécialisés ») | C |
+| **Tier 2** | CP jaunes | CP de niveau 3 (« CP verts ») | **Coriolis** (type colonie), **base d'astéroïde** (spécialisée, économie Extraction) | C |
+| **Tier 3** | CP verts | Aucun | **Orbis**, **Ocellus**, **Port planétaire T3** (pas d'équivalent « spécialisé » à ce niveau) | C |
 
 La plupart des installations Tier 2 coûtent 1 CP jaune pour générer 1 CP vert, à deux exceptions près : les grandes colonies planétaires (1 CP jaune → 2 CP verts), et les starports Tier 2 eux-mêmes (Coriolis, base d'astéroïde), qui coûtent plus de 3 CP jaunes pour ne générer qu'1 CP vert.
 
@@ -134,14 +142,14 @@ La plupart des installations Tier 2 coûtent 1 CP jaune pour générer 1 CP vert
 
 Chaque port Tier 2 ou Tier 3 construit dans un système coûte plus cher que le précédent — à l'exception du **port primaire**, qui ne compte jamais dans ce calcul, quel que soit son niveau. *(Exemption confirmée verbatim dans le mega-guide communautaire : « primární port se do tohoto limitu NEZAPOČÍTÁVÁ ».)* Cette exception a une conséquence stratégique majeure : construire directement le port primaire en Tier 3 (Orbis ou Ocellus) est « gratuit » vis-à-vis de cette mécanique de coût croissant.
 
-| N-ième port construit | Coût en CP T2 (Coriolis / base d'astéroïde) | Coût en CP T3 (Orbis / Ocellus / Port planétaire T3) |
-|---|---|---|
-| 1er | 3 | 6 |
-| 2e | 3 | 6 |
-| 3e | 5 | 12 |
-| 4e | 7 | 18 |
-| 5e | 9 | 24 |
-| N-ième | 3 + (n−2) × 2 | (n−1) × 6 |
+| N-ième port construit | Coût en CP T2 (Coriolis / base d'astéroïde) | Coût en CP T3 (Orbis / Ocellus / Port planétaire T3) | Fiab. |
+|---|---|---|---|
+| 1er | 3 | 6 | C |
+| 2e | 3 | 6 | C |
+| 3e | 5 | 12 | C |
+| 4e | 7 | 18 | C |
+| 5e | 9 | 24 | C |
+| N-ième | 3 + (n−2) × 2 | (n−1) × 6 | C |
 
 **Conséquence chiffrée** : construire dans l'ordre T2, T2, T3, T3 coûte 6 CP jaunes + **30** CP verts (soit un minimum de 36 installations de support pour générer ces CP), alors que l'ordre T3, T3, T2, T2 ne coûte que 16 CP jaunes + 12 CP verts (28 installations minimum). D'où la recommandation forte de la communauté : **construire les ports Tier 3 avant les ports Tier 2** dans un système donné.
 
@@ -162,18 +170,21 @@ Un système peut avoir jusqu'à **5 chantiers de construction simultanés** ; il
 
 D'après un post officiel des forums Frontier relatif à *Trailblazers – Update 3*, cité par le guide communautaire :
 
-| Type de corps céleste | Économie héritée |
-|---|---|
-| Trous noirs, étoiles à neutrons, naines blanches | HighTech, Tourisme |
-| Naines brunes et tous les autres types d'étoiles | Militaire |
-| Mondes de type terrestre (Earth-like) | Agriculture, HighTech, Militaire, Tourisme |
-| Mondes océaniques (Water world) | Agriculture, Tourisme |
-| Mondes ammoniaqués | HighTech, Tourisme |
-| Géantes gazeuses | HighTech, Industriel |
-| Corps riches en métaux / à haute teneur métallique | Extraction |
-| Corps rocheux glacés | Industriel, Raffinerie |
-| Corps rocheux | Raffinerie |
-| Corps glacés | Industriel |
+| Type de corps céleste | Économie héritée | Fiab. |
+|---|---|---|
+| Trous noirs, étoiles à neutrons, naines blanches | HighTech, Tourisme | P |
+| Naines brunes et tous les autres types d'étoiles | Militaire | P |
+| Mondes de type terrestre (Earth-like) | Agriculture, HighTech, Militaire, Tourisme | P |
+| Mondes océaniques (Water world) | Agriculture, Tourisme | P |
+| Mondes ammoniaqués | HighTech, Tourisme | P |
+| Géantes gazeuses | HighTech, Industriel | P |
+| Corps riches en métaux / à haute teneur métallique | Extraction | P |
+| Corps rocheux glacés | Industriel, Raffinerie | P |
+| Corps rocheux | Raffinerie | P |
+| Corps glacés | Industriel | P |
+
+*Fiab. `P`* : origine revendiquée comme un post officiel des forums Frontier, mais relayé uniquement par le mega-guide
+communautaire (le post original n'a pas été retrouvé indépendamment par ce corpus) — à nuancer en ce sens malgré le code P.
 
 **Modificateurs locaux additifs** :
 - Anneaux (y compris étoiles à ceinture d'astéroïdes) → +Extraction
@@ -212,20 +223,20 @@ Aucun barème fixe n'a été publié officiellement pour le tonnage de commodit�
 
 Le tonnage dépend donc conjointement du **type d'installation**, de son **niveau (Tier)**, et de la **population locale associée**. À titre d'illustration (exemples réels capturés par le guide communautaire, à ne pas généraliser comme table universelle) :
 
-| Exemple | Commodité | Tonnage |
-|---|---|---|
-| Port planétaire (Tier 3), exemple 1 | Titane | 34 580 t |
-| | Aluminium | 43 282 t |
-| | Polymères | 2 712 t |
-| | Cuivre | 2 442 t |
-| | Cartouches alimentaires | 544 t |
-| | Superconducteurs | 544 t |
-| | Semi-conducteurs | 458 t |
-| | Fruits et légumes | 390 t |
-| Port planétaire, type Contrebande, exemple 2 | Eau | 65 t |
-| | Titane | 1 594 t |
-| | Cuivre | 57 t |
-| | Aluminium | 1 233 t |
+| Exemple | Commodité | Tonnage | Fiab. |
+|---|---|---|---|
+| Port planétaire (Tier 3), exemple 1 | Titane | 34 580 t | C |
+| | Aluminium | 43 282 t | C |
+| | Polymères | 2 712 t | C |
+| | Cuivre | 2 442 t | C |
+| | Cartouches alimentaires | 544 t | C |
+| | Superconducteurs | 544 t | C |
+| | Semi-conducteurs | 458 t | C |
+| | Fruits et légumes | 390 t | C |
+| Port planétaire, type Contrebande, exemple 2 | Eau | 65 t | C |
+| | Titane | 1 594 t | C |
+| | Cuivre | 57 t | C |
+| | Aluminium | 1 233 t | C |
 
 L'écart entre les deux exemples (dizaines de milliers de tonnes de matériaux de structure contre quelques centaines à quelques milliers) confirme la forte variabilité selon le type d'installation et le corps céleste local. Un point chiffré fiable, en revanche : **le port primaire coûte 17 à 25 % de matériaux en plus** qu'un starport non-primaire équivalent, car il est construit via les mégavaisseaux de colonisation plutôt que par livraison directe.
 
@@ -241,11 +252,11 @@ Cette section comble une lacune du guide : les tonnages requis sont documentés 
 
 Un rack de cargaison (Cargo Rack) n'existe qu'en qualité E et a une capacité fixe de **2^classe tonnes** (classe 1 → 2 t, classe 2 → 4 t, classe 3 → 8 t... classe 8 → 256 t), quel que soit le vaisseau qui le porte. En appliquant cette règle aux emplacements internes optionnels réels de chaque vaisseau (source : EDCD/coriolis-data) :
 
-| Vaisseau | Rang requis | Emplacements internes optionnels utilisables pour du fret | Capacité de fret maximale (tous racks classe E, sans bouclier) | Capacité avec un générateur de bouclier dans le plus grand emplacement libre |
-|---|---|---|---|---|
-| **Type-8 Transporter** | Aucun | 9 emplacements : classes 7, 6, 6, 6, 5, 5, 4, 2, 1 | **406 t** | 406 − 64 = **342 t** |
-| **Type-9 Heavy** | Aucun | 11 emplacements : classes 8, 8, 7, 6, 5, 4, 4, 3, 3, 2, 1 | **790 t** | 790 − 64 = **726 t** |
-| **Imperial Cutter** | Vévoda (*Duke*) de la marine impériale ou rang supérieur | 10 emplacements utilisables : classes 8, 8, 6, 6, 6, 5, 5, 4, 3, 1 (+ 2 emplacements classe 5 supplémentaires verrouillés en « Military », qui n'acceptent jamais de rack de cargaison) | **794 t** | 794 − 64 = **730 t** |
+| Vaisseau | Rang requis | Emplacements internes optionnels utilisables pour du fret | Capacité de fret maximale (tous racks classe E, sans bouclier) | Capacité avec un générateur de bouclier dans le plus grand emplacement libre | Fiab. |
+|---|---|---|---|---|---|
+| **Type-8 Transporter** | Aucun | 9 emplacements : classes 7, 6, 6, 6, 5, 5, 4, 2, 1 | **406 t** | 406 − 64 = **342 t** | P |
+| **Type-9 Heavy** | Aucun | 11 emplacements : classes 8, 8, 7, 6, 5, 4, 4, 3, 3, 2, 1 | **790 t** | 790 − 64 = **726 t** | P |
+| **Imperial Cutter** | Vévoda (*Duke*) de la marine impériale ou rang supérieur | 10 emplacements utilisables : classes 8, 8, 6, 6, 6, 5, 5, 4, 3, 1 (+ 2 emplacements classe 5 supplémentaires verrouillés en « Military », qui n'acceptent jamais de rack de cargaison) | **794 t** | 794 − 64 = **730 t** | P |
 
 Quelques nuances tirées de ces mêmes données :
 - Le Type-9 Heavy et l'Imperial Cutter sont, avec le Panther Clipper Mk II (non chiffré ici faute de vérification), les seuls vaisseaux du jeu à disposer de **deux emplacements internes de classe 8**, ce qui explique leur écart de capacité avec le Type-8.
@@ -269,10 +280,13 @@ Le nombre de rotations minimal pour livrer un tonnage donné se calcule simpleme
 
 En appliquant cette formule aux tonnages déjà cités dans ce guide (voir [Tonnage de commodités requis](#tonnage-de-commodités-requis-pour-construire-une-installation)) avec les capacités « tout cargaison » du tableau ci-dessus :
 
-| Poste | Tonnage | Rotations Type-8 (406 t) | Rotations Type-9 (790 t) | Rotations Imperial Cutter (794 t) |
-|---|---|---|---|---|
-| Titane seul (port planétaire T3, exemple 1) | 34 580 t | 86 | 44 | 44 |
-| Total des huit commodités de l'exemple 1 (34 580 + 43 282 + 2 712 + 2 442 + 544 + 544 + 458 + 390 t) | **84 952 t** | 210 | 108 | 107 |
+| Poste | Tonnage | Rotations Type-8 (406 t) | Rotations Type-9 (790 t) | Rotations Imperial Cutter (794 t) | Fiab. |
+|---|---|---|---|---|---|
+| Titane seul (port planétaire T3, exemple 1) | 34 580 t | 86 | 44 | 44 | E |
+| Total des huit commodités de l'exemple 1 (34 580 + 43 282 + 2 712 + 2 442 + 544 + 544 + 458 + 390 t) | **84 952 t** | 210 | 108 | 107 | E |
+
+*Fiab. `E`* : rotations obtenues par un calcul (division arrondie au supérieur) fait par ce guide lui-même à partir de
+tonnages `C` (mega-guide) et de capacités `P` (coriolis-data) — une reconstruction du corpus, non une valeur publiée telle quelle.
 
 Ce calcul suppose un seul vaisseau dédié ; en pratique, plusieurs commandants se répartissent les commodités et les rotations en parallèle, ce qui réduit d'autant le temps total mais pas le nombre brut de trajets. À titre de calibration sur des chantiers plus lourds, le mega-guide communautaire donne un ordre de grandeur en unités de « charge de Cutter » : *« Stavba základny vyžaduje minimálně 29 kutrů (v praxi i několik dalších). Při stavbě Orbisu se toto číslo vyšplhá na 267 »* — soit, au minimum, **29 charges** d'Imperial Cutter pour un avant-poste (Tier 1) et **267 charges** pour un Orbis (Tier 3). En appliquant la capacité « tout cargaison » ci-dessus (794 t), cela représente un ordre de grandeur d'environ 23 000 t pour un avant-poste et 212 000 t pour un Orbis — cohérent avec l'écart de tonnage observé entre les deux exemples de la section Tonnage, mais à traiter comme un ordre de grandeur : la source ne précise pas la configuration exacte (bouclier ou non) du Cutter utilisé comme unité de compte.
 
@@ -336,10 +350,10 @@ Les installations peuvent être renommées gratuitement (choix dans une liste pr
 
 Le Dodec Update a corrigé une confusion d'interface persistante entre deux actions bien différentes :
 
-| Action | Effet | Corrections apportées au Dodec Update |
-|---|---|---|
-| **Cancel Construction** | Annule un chantier **en cours**, rembourse des Points de Construction | Le panneau affichait par erreur « Economy Points » au lieu de « Construction Points », et parlait à tort de « Demolition » au lieu de « Cancellation » pour le nombre de CP remboursés |
-| **Demolish Facility** | Démolit une installation **déjà terminée** | Un bug faisant traiter la démolition comme une simple annulation a été corrigé ; le panneau de démolition n'affichait pas le nom complet de l'installation ; la carte système continuait à tort d'afficher une installation démolie |
+| Action | Effet | Corrections apportées au Dodec Update | Fiab. |
+|---|---|---|---|
+| **Cancel Construction** | Annule un chantier **en cours**, rembourse des Points de Construction | Le panneau affichait par erreur « Economy Points » au lieu de « Construction Points », et parlait à tort de « Demolition » au lieu de « Cancellation » pour le nombre de CP remboursés | P |
+| **Demolish Facility** | Démolit une installation **déjà terminée** | Un bug faisant traiter la démolition comme une simple annulation a été corrigé ; le panneau de démolition n'affichait pas le nom complet de l'installation ; la carte système continuait à tort d'afficher une installation démolie | P |
 
 Un bouton « Cancel » du panneau « Cancel Demolition » a également été renommé « Back » pour éviter toute confusion supplémentaire.
 
@@ -366,13 +380,13 @@ Le **Dodec Update** a par ailleurs livré, dans le même paquet que la fin de la
 - Réactivation du score/mérite lié au transfert de données de pouvoir à pied.
 - Refonte des **Care Packages Powerplay** : expiration automatique après 30 jours, avec ouverture et conversion en crédits selon le barème suivant.
 
-| Grade du matériau | Valeur de conversion |
-|---|---|
-| 1 | 2 000 CR |
-| 2 | 4 000 CR |
-| 3 | 8 000 CR |
-| 4 | 16 000 CR |
-| 5 | 32 000 CR |
+| Grade du matériau | Valeur de conversion | Fiab. |
+|---|---|---|
+| 1 | 2 000 CR | P |
+| 2 | 4 000 CR | P |
+| 3 | 8 000 CR | P |
+| 4 | 16 000 CR | P |
+| 5 | 32 000 CR | P |
 
 Les matériaux spécifiques Odyssey ne sont plus versés aux joueurs sans Odyssey (correctif rétroactif). Pour plus de détails sur le fonctionnement général du Powerplay, voir le [Voir aussi](#voir-aussi) ci-dessous.
 
@@ -427,13 +441,13 @@ de ce que la Colonisation y change.
 
 ## Pièges fréquents et coûts cachés de la Colonisation
 
-| Piège | Conséquence chiffrée | Comment l'éviter |
-|---|---|---|
-| Laisser expirer le délai de 24 h sans déployer la balise | Revendication perdue, redevient disponible pour un autre commandant | Déployer la balise dès l'enregistrement de la revendication, pas après avoir organisé la logistique |
-| Laisser expirer le délai de 4 semaines sans achever le port primaire | Revendication perdue, système non re-revendicable immédiatement | Planifier le tonnage et les rotations de fret avant le déploiement de la balise |
-| Compter sur le brut du revenu hebdomadaire de l'Architecte | Impôt galactique prélevé au-delà de 5 M Cr cumulés par semaine | Ne pas se fier au chiffre affiché avant impôt (voir Récompenses économiques de l'Architecte) |
-| Se fier à la formule communautaire de revenu hebdomadaire comme à un chiffre garanti | Formule non officielle, facteur « Chance » non documenté | Traiter tout revenu annoncé comme un ordre de grandeur, pas un montant garanti |
-| Revendiquer sans capital de construction déjà réuni | 25 M Cr de revendication immobilisés sans pouvoir achever le port dans les 4 semaines | Réunir le tonnage de commodités avant de lancer la revendication, pas après |
+| Piège | Conséquence chiffrée | Comment l'éviter | Fiab. |
+|---|---|---|---|
+| Laisser expirer le délai de 24 h sans déployer la balise | Revendication perdue, redevient disponible pour un autre commandant | Déployer la balise dès l'enregistrement de la revendication, pas après avoir organisé la logistique | P |
+| Laisser expirer le délai de 4 semaines sans achever le port primaire | Revendication perdue, système non re-revendicable immédiatement | Planifier le tonnage et les rotations de fret avant le déploiement de la balise | P |
+| Compter sur le brut du revenu hebdomadaire de l'Architecte | Impôt galactique prélevé au-delà de 5 M Cr cumulés par semaine | Ne pas se fier au chiffre affiché avant impôt (voir Récompenses économiques de l'Architecte) | P |
+| Se fier à la formule communautaire de revenu hebdomadaire comme à un chiffre garanti | Formule non officielle, facteur « Chance » non documenté | Traiter tout revenu annoncé comme un ordre de grandeur, pas un montant garanti | N |
+| Revendiquer sans capital de construction déjà réuni | 25 M Cr de revendication immobilisés sans pouvoir achever le port dans les 4 semaines | Réunir le tonnage de commodités avant de lancer la revendication, pas après | P |
 
 ## Voir aussi
 
@@ -457,17 +471,22 @@ de ce que la Colonisation y change.
 
 ## Sources
 
-- https://www.elitedangerous.com/update-notes/4-1-0-0
-- https://www.elitedangerous.com/update-notes/4-2-2-0
-- https://www.elitedangerous.com/update-notes/4-1-2-0
-- https://www.elitedangerous.com/update-notes/4-1-2-102
-- https://www.elitedangerous.com/update-notes
-- https://www.elitedangerous.com/news
-- https://www.elitedangerous.com/news/system-colonisation-guide
-- https://www.elitedangerous.com/news/system-colonisation-claim-pause
-- https://www.elitedangerous.com/news/system-colonisation-unpaused
-- https://en.wikipedia.org/wiki/Elite_Dangerous
-- https://raw.githubusercontent.com/MikeCZ23/CCCL/main/MegaGuide-Colonisation.pdf
-- https://github.com/MikeCZ23/CCCL
-- https://github.com/aussig/BGS-Tally
-- https://github.com/EDCD/coriolis-data — données d'emplacements internes et de modules par vaisseau (Type-9 Heavy, Type-8 Transporter, Imperial Cutter), utilisées pour le calcul des capacités de fret de la section [Logistique de transport](#logistique-de-transport-capacité-utile-et-fleet-carrier-comme-dépôt-avancé)
+Format normalisé selon [00-methodologie-sourcing.md §9](./00-methodologie-sourcing.md#9-format-normalisé-dune-section-sources),
+sur le modèle de [11-commerce.md](./11-commerce.md) et [02-powerplay.md](./02-powerplay.md). Date de consultation reprise du
+champ `date_verification` de ce fichier (13/09/2026), aucune date par source n'étant présente dans la version antérieure de
+cette section.
+
+- https://www.elitedangerous.com/update-notes/4-1-0-0 | primaire | consulté le 13/09/2026 | confirme : la sortie en Bêta de System Colonisation le 26 février 2025 avec *Trailblazers* (v4.1.0.0) | ne confirme pas : les valeurs chiffrées communautaires (CP, tonnages, %) détaillées par le mega-guide ci-dessous
+- https://www.elitedangerous.com/update-notes/4-2-2-0 | primaire | consulté le 13/09/2026 | confirme : le contenu du Dodec Update (11 novembre 2025) — fin officielle de la Bêta, rééquilibrage des statistiques système, corrections d'interface (Cancel Construction/Demolish Facility, Care Packages, cooldown de 30 minutes) | ne confirme pas : une pondération chiffrée précise du port primaire sur les statistiques système (recherchée et retirée du guide, voir [Points d'incertitude](#points-dincertitude-à-garder-en-tête-sur-la-colonisation))
+- https://www.elitedangerous.com/update-notes/4-1-2-0 | primaire | consulté le 13/09/2026 | confirme : la refonte de l'économie et des liens forts/faibles apportée par *Trailblazers – Update 3* (30 avril 2025), et le principe officiel d'héritage de l'économie selon le type de corps céleste | ne confirme pas : le barème communautaire précis des coûts en Points de Construction
+- https://www.elitedangerous.com/update-notes/4-1-2-102 | primaire | consulté le 13/09/2026 | confirme : *Trailblazers – Update 3.3* (4 juin 2025), le niveau technologique minimal de 35 pour qu'un chantier naval soit en ligne, et la réécriture des conditions d'activation des services de station selon liens et niveau technologique | ne confirme pas : le détail des quinze services par type de station (voir [31-pilotage-navigation-et-stations.md §4](./31-pilotage-navigation-et-stations.md#4-types-de-stations-tailles-de-pad-et-services))
+- https://www.elitedangerous.com/update-notes | primaire | consulté le 13/09/2026 | confirme : l'existence et la liste chronologique des notes de version officielles citées dans ce guide | ne confirme pas : un contenu spécifique — page d'index seulement
+- https://www.elitedangerous.com/news | primaire | consulté le 13/09/2026 | confirme : l'existence du fil d'actualités officiel dont proviennent les articles cités ci-dessous | ne confirme pas : un contenu spécifique — page d'index seulement
+- https://www.elitedangerous.com/news/system-colonisation-guide | primaire | consulté le 13/09/2026 | confirme : la publication de l'article officiel « System Colonisation Guide » le 28 février 2025 | ne confirme pas : les mécaniques communautaires fines ajoutées ensuite (liens forts/faibles, coûts en CP)
+- https://www.elitedangerous.com/news/system-colonisation-claim-pause | primaire | consulté le 13/09/2026 | confirme : la suspension temporaire du contact de colonisation (« Claim Pause ») fin février/début mars 2025, après plus de 8 000 systèmes et 13 000 installations complétés en quelques jours de Bêta | ne confirme pas : un décompte exact au-delà de cet ordre de grandeur
+- https://www.elitedangerous.com/news/system-colonisation-unpaused | primaire | consulté le 13/09/2026 | confirme : la réactivation du contact (« Unpaused ») quelques jours après la pause | ne confirme pas : une date exacte de réactivation, non précisée par l'article
+- https://en.wikipedia.org/wiki/Elite_Dangerous | secondaire | consulté le 13/09/2026 | confirme : le contexte général du jeu et recoupe les dates clés (annonce du 20 octobre 2024, calendrier des mises à jour) | ne confirme pas : les mécaniques de colonisation elles-mêmes, absentes de l'article
+- https://raw.githubusercontent.com/MikeCZ23/CCCL/main/MegaGuide-Colonisation.pdf | secondaire | consulté le 13/09/2026 | confirme : la quasi-totalité des valeurs chiffrées communautaires du guide (portée de 15 al, coût de 25 M Cr, répartition des factions héritées 60/20/13/6 %, coûts en Points de Construction par palier, forces des liens forts/faibles, tonnages d'exemple, remise Cutter de 30 %, techniques de Fleet Carrier et de metahauling) | ne confirme pas : les corrections apportées par le Dodec Update de novembre 2025 — le document s'arrête à juin 2025
+- https://github.com/MikeCZ23/CCCL | secondaire | consulté le 13/09/2026 | confirme : l'existence du dépôt et du projet CCCL (auteur CMDR Mechan et contributeurs, licence CC BY-SA 4.0) portant le mega-guide | ne confirme pas : un contenu chiffré en propre — page de dépôt, pas le document lui-même (voir l'entrée du PDF ci-dessus)
+- https://github.com/aussig/BGS-Tally | secondaire | consulté le 13/09/2026 | confirme : l'existence et le rôle de l'outil communautaire BGS-Tally (suivi du BGS, de la Colonisation et du Powerplay), cité dans [Outils communautaires](#outils-communautaires-de-planification-de-colonisation) | ne confirme pas : des données chiffrées de colonisation en propre — outil de suivi local, pas une base de données publiée
+- https://github.com/EDCD/coriolis-data | primaire | consulté le 13/09/2026 | confirme : les emplacements internes et les capacités de fret utilisées dans la section [Logistique de transport](#logistique-de-transport-capacité-utile-et-fleet-carrier-comme-dépôt-avancé) pour le Type-9 Heavy, le Type-8 Transporter et l'Imperial Cutter | ne confirme pas : le prix d'achat ou le rang requis pour ces vaisseaux (voir [03-vaisseaux.md](./03-vaisseaux.md), source unique des prix)

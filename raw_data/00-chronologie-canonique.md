@@ -740,14 +740,17 @@ mécanique, attribution, décompte). Trois cycles avaient laissé s'accumuler 17
 corpus, chacun noyé dans son propre paragraphe — un registre central permet de les revoir tous d'un coup après un
 cycle, et de vérifier qu'un renvoi « à trancher » pointe encore vers une entrée qui existe.
 
-Ce premier passage migre les admissions des cinq guides les plus denses en aveux d'incertitude, identifiés par
-l'audit du cycle 3 : [07-equipement-a-pied.md](./07-equipement-a-pied.md) (30 entrées),
+Un premier passage a migré les admissions des cinq guides les plus denses identifiés par l'audit du cycle 3 —
+[07-equipement-a-pied.md](./07-equipement-a-pied.md) (30 entrées),
 [27-debuter-et-progresser.md](./27-debuter-et-progresser.md) (18), [14-rhino.md](./14-rhino.md) (16),
-[20-minage.md](./20-minage.md) (17) et [18-colonisation.md](./18-colonisation.md) (11) — **92 entrées** au total, contre
-les ~81 estimées par l'audit ; l'écart vient d'un relevé plus fin que le comptage original, pas d'un ajout de contenu.
-Les autres guides du corpus conservent leurs propres aveux d'incertitude en prose pour l'instant : les y migrer aussi
-est un travail mécanique de même nature, non fait ici faute de temps, à reprendre pour les guides restants dans un
-prochain chantier.
+[20-minage.md](./20-minage.md) (17) et [18-colonisation.md](./18-colonisation.md) (11), soit 92 entrées — puis un
+second passage, le même jour, a étendu la migration aux **32 guides thématiques du corpus dans leur intégralité**.
+Ce registre couvre désormais **451 admissions d'incertitude**, extraites guide par guide par lecture complète de
+chaque fichier (et non par simple reprise du champ `zones_incertaines` du front-matter, systématiquement plus court
+que ce que le corps du texte admet réellement). Ce total dépasse largement les 174 aveux estimés par l'audit du
+cycle 3 : l'écart vient d'un relevé plus fin que le comptage original — chaque admission en prose compte, y compris
+celles jamais remontées au front-matter —, pas d'un gonflement artificiel. Aucun guide n'est donc plus tenu par ce
+registre à migrer.
 
 **Lecture de la colonne Confiance** : échelle à quatre valeurs de
 [00-methodologie-sourcing.md §2](./00-methodologie-sourcing.md#2-échelle-de-confiance--quatre-valeurs-un-seul-vocabulaire).
@@ -872,6 +875,500 @@ information dans deux colonnes.
 | Quelle est la formule exacte du revenu hebdomadaire et du facteur « Chance » ? | Formule communautaire non officielle avancée à titre indicatif | Non confirmé | Documentation officielle de Frontier |
 | La pondération chiffrée du port primaire (Dodec Update) est-elle avérée ? | Chiffrage antérieur retiré du guide | Non confirmé | Source postérieure à juin 2025 confirmant un rééquilibrage chiffré |
 
+### 22-squadrons.md — 6 entrées (dernier examen : 2026-09-10)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Existe-t-il une condition de rang/ancienneté/coût pour fonder un escadron ? | Compréhension communautaire : création gratuite et ouverte à tout commandant | Non confirmé | Note de patch ou page officielle confirmant l'absence de condition |
+| Quels rangs existent entre Senior Officer et Recruit ? | Un ou plusieurs rangs intermédiaires existent probablement | Basse | Dénomination exacte de ces rangs |
+| Quel est le détail de l'interface des permission groups ? | Système retravaillé (bug de crash corrigé au Patch 2), fonctionnement fin non décrit | Non confirmé | Capture d'écran officielle ou test en jeu de l'interface |
+| Comment un escadron s'affilie-t-il formellement à un Power ? | Le Squadron Browser et les fiches Inara affichent un champ/filtre « Power » | Basse | Mécanisme d'affiliation au-delà du simple filtre de recherche |
+| Le Squadron Carrier est-il mécaniquement un Fleet Carrier ? | Déduction forte à partir des fonctionnalités décrites (livery, shipyard, décommissionnement calqués) | Basse | Une phrase officielle unique l'énonçant explicitement |
+| Quelles sont les catégories exactes des Squadron Leaderboards ? | Existence de nouvelles récompenses associées au classement | Non confirmé | Liste verbatim des catégories, à vérifier en jeu |
+
+### 23-jeu-en-groupe.md — 17 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| L'enrichissement des missions de wing par Beyond Chapter One (2018) a-t-il ajouté de nouveaux types de missions ou juste étendu le pool existant ? | L'enrichissement a bien eu lieu en 2018 | Basse | La nature exacte de l'enrichissement |
+| Quelles sont les valeurs précises du partage des revenus Multicrew entre capitaine et invités ? | Principe général en partie recoupé (commerce/minage/exploration au capitaine, primes/combat bonds partagés) | Basse | Valeurs chiffrées précises confirmées par une source primaire |
+| Combien d'invités humains simultanés le Multicrew autorise-t-il au maximum ? | Estimation communautaire : deux invités (trois joueurs au total) | Basse | Confirmation par une source consultée |
+| Quels sont les frais/commissions pour les rangs de PNJ intermédiaires (entre Harmless et Expert) ? | Seuls Harmless (15 000 Cr/2 %) et Expert (150 000 Cr/12 %) confirmés | Basse | Valeurs des paliers intermédiaires |
+| Quand le CQC a-t-il été introduit dans le jeu de base, avant son renommage en Arena (2016) ? | Seules les dates du spin-off standalone sont confirmées | Non confirmé | Date d'introduction du CQC intégré au jeu de base |
+| La liste des 4 vaisseaux et 4 arènes du CQC est-elle sourcée ? | Liste donnée (F63 Condor, Sidewinder Mk I, Eagle, Imperial Fighter) | Basse | Toute source confirmant cette liste |
+| Quels sont les noms exacts et le nombre de modes de jeu du CQC ? | Hypothèse par connaissance générale : Deathmatch, Team Deathmatch, Domination, 4v4 | Basse | Confirmation des noms et du nombre |
+| Quelle est la fréquentation actuelle (2025-2026) du CQC ? | Jugée qualitativement « nettement moins fréquentée qu'au lancement » | Non confirmé | Statistique chiffrée de fréquentation |
+| Date et version précises d'introduction des Wings en 2015 ? | Année 2015 retenue | Basse | Date précise et numéro de version |
+| Date précise d'introduction du CQC intégré (avant le spin-off) ? | Année 2015 retenue | Basse | Date précise |
+| La promotion « Arena gratuit sur Steam » (7-11 juillet 2016) est-elle recoupée ? | Fenêtre de dates retenue | Moyenne | Recoupement par une seconde source |
+| Quel est le plafond technique actuel de joueurs par instance ? | Chiffre historique de 32 (Kickstarter 2012-2013), qualifié d'approximatif à l'époque | Non confirmé | Documentation officielle datée de la version actuelle |
+| Le Squadron a-t-il un effet sur le matchmaking d'instance, comme le Wing ? | Le Wing force l'instanciation commune (nav-lock) ; rien d'équivalent documenté pour le Squadron | Non confirmé | Toute source officielle sur un effet du Squadron |
+| Les lanceurs PC (Steam/Epic/Frontier) sont-ils mutuellement compatibles pour l'instanciation ? | Mention isolée en front-matter, non développée en corps de texte | Non confirmé | Sources communautaires dites « contradictoires », jamais citées explicitement |
+| Un signalement communautaire d'écart de mérites Powerplay entre Solo et jeu groupé a-t-il été tranché ? | §6.5 documente une pétition sur le déséquilibre BGS entre modes, sans ce ticket précis | Non confirmé | Lecture directe du ticket officiel |
+| Les groupes communautaires cités (Buckyball, Fuel Rats, Hull Seals, DSSA, FleetComm...) sont-ils toujours actifs en 2025-2026 ? | Décrits au présent comme actifs, renvoi à 01-lore.md §7.7 | Basse | Statut d'activité confirmé pour plusieurs d'entre eux |
+| Ce guide a-t-il pu consulter toutes ses sources prévues ? | Wikipédia EN/FR/DE et Steam consultés avec succès | Basse | elitedangerous.com, forums Frontier et wikis Fandom/wiki.gg restés inaccessibles (402/403/404) |
+
+### 13-operations.md — 7 entrées (dernier examen : 2026-09-09)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Quel est le plafond de Merc Coins détenables et la limite de gain hebdomadaire ? | 9 999 Merc Coins de plafond, gain limité à 1 000/semaine (chiffres communautaires) | Basse | Confirmation Frontier — absents de tout billet officiel |
+| Les six scénarios nommés en avril 2026 sont-ils les six opérations sorties au lancement, sous d'autres noms ? | Rapprochement éditorial du guide, fondé sur la similarité des descriptions | Basse | Table de correspondance officielle, jamais publiée par Frontier |
+| Quels sont les gains réels par niveau de menace en mission/CZ au sol ? | Ordres de grandeur approximatifs par palier, mémoire communautaire | Basse | Recoupement avec une source primaire (fandom/Inara restés inaccessibles en session) |
+| Les numéros de version client 4.4.0.0 et 4.4.0.3 sont-ils officiels ? | Correspondent aux dates du 30 juin et du 9 juillet 2026, relevés via ticket EDCD/EDDI n°2849 | Moyenne | Confirmation par Frontier lui-même (absents des billets officiels) |
+| Quelles sont les spécialités précises des quatre Engineers à pied de Colonia ? | Seuls leur existence et leur rôle de déblocage collectif de Yi Shen sont documentés | Non confirmé | Détail des bonus/spécialités de chacun |
+| Quelle est la nature de la « menace plus importante » en fin d'opération Under Siege ? | Le déroulé en deux temps (aérien puis FPS) est confirmé par MassivelyOP | Non confirmé | Identité/nature de cette menace, non précisée même par cette source |
+| Quel build nommé recommander pour les armes du fabricant Takada ? | La table de builds nommés ne couvre que Kinematic Armaments et Manticore | Non confirmé | Un build Takada recoupé dans les sources communautaires |
+
+### 08-combat-spatial.md — 14 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Quel est l'effet chiffré des HRP et des MRP ? | HRP/MRP décrits qualitativement (points de coque, protection des modules) | Non confirmé | Valeur chiffrée (points, %, coût, masse) |
+| Comment se comparent réellement les DPS entre familles d'armes ? | Tableau de tendances (type de dégâts, chaleur, usage) | Basse | Agrégat DPS chiffré et équilibrage courant |
+| Quels sont les intitulés exacts des blueprints par Engineer ? | Grandes catégories d'orientation décrites | Basse | Intitulés précis, catalogues pouvant avoir évolué |
+| Quel est le coefficient exact de réduction des dégâts sous la dureté de coque ? | Le sens de la relation est confirmé (Corrosive Shell) ; champs bruts `hardness`/`piercing` publiés | Non confirmé | La formule exacte, non publiée par le jeu de données |
+| Quelle est la dureté de coque du Lynx Highliner (48ᵉ châssis) ? | Le jeu compte 48 châssis (fait 14) | Non confirmé | EDCD/coriolis-data n'en publie que 47, Lynx Highliner absent |
+| Comment se calculent les dégâts absolus et la pondération anti-xéno (marqueur X) ? | L'étiquette de type est publiée arme par arme | Non confirmé | La règle de calcul, non documentée |
+| Quel est le rendement réel en Cr/h du HazRES, des CZ et des missions de massacre ? | Ordres de grandeur communautaires (≈30 M Cr/h HazRES, ≈40 M Cr/30 cibles) | Basse | Barème Frontier stable par palier d'intensité |
+| Quel est l'état actuel du front thargoïde ? | Principe général de progression par campagnes/CG décrit | Non confirmé | Vérification en direct (accès web indisponible à la rédaction) |
+| Existe-t-il une table classe d'installation → contenu du piratage, comme pour les megaships ? | Table existante pour les Bulk Cruisers (classe → cargaison) | Non confirmé | Équivalent pour les installations spatiales |
+| Le piratage de megaships/installations déclenche-t-il la notoriety ? | Rapport de crime déclenché dès le lancement du limpet | Non confirmé | Confirmation du déclenchement spécifique de la notoriety |
+| Combien de megaships et de classes existent réellement aujourd'hui ? | Canonn (mai 2022) : plusieurs milliers de megaships, 23 classes | Basse | Chiffre daté de 2022, jamais revérifié |
+| Quel score exact fait passer d'un rang de combat au suivant ? | Échelle nominale à 14 paliers confirmée par EDCD/FDevIDs | Non confirmé | Seuils de score, jamais publiés par Frontier |
+| Quel est le montant moyen des bounty vouchers ? | Dépend du vaisseau, du rang et du contexte | Non confirmé | Moyenne chiffrée fiable vérifiée en direct |
+| Les choix de modules des 3 builds chiffrés sont-ils une référence officielle ? | Châssis recalés sur EDCD/coriolis-data (commit daté) | Basse | Choix de modules = méta communautaire non recalée |
+
+### 09-combat-a-pied.md — 9 entrées (dernier examen : 2026-09-12)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Un plafond d'ingénierie à 75 % de résistance a-t-il été introduit avec le Caspian Explorer ? | Date (2 déc. 2025) et association au vaisseau de haute confiance ; le chiffre de 75 % est isolé | Non confirmé | Source primaire (notes de version ou relevé en jeu) citant ce pourcentage |
+| La mise à jour Caspian Explorer a-t-elle causé une IA de PNJ au sol plus prudente ? | 14-rhino.md mentionne une IA ennemie à pied améliorée sur cette période | Basse | Confirmation en jeu du lien causal précis |
+| Existe-t-il un barème publié pour le rang Mercenaire (combat à pied) ? | Le rang conditionne le déblocage de grades/armes/suits | Non confirmé | Toute source documentant les seuils |
+| Quel est le grade précis (1-5) de chaque matériau d'ingénierie à pied nommé ? | Quatre catégories, sources et usages typiques connus | Basse | Grade exact par matériau nommé |
+| Les coûts en crédits des modifications à pied (500k-1M Cr) sont-ils toujours d'actualité ? | Fourchettes datées comme instantané du 9 septembre 2026 | Moyenne | Revérification en jeu (rééquilibrage possible) |
+| Les quatre Engineers de Colonia proposent-ils des modifications de combat à pied ? | Mécanique de déblocage convergente avec les Engineers de la bulle Core | Basse | Toute modification de combat recensée à leur nom |
+| Les six noms de travail du 22 avril 2026 correspondent-ils un à un aux six opérations finales ? | Descriptifs fortement recoupés, renommage suggéré | Basse | Table de correspondance officielle, jamais publiée |
+| Quand l'interface d'escouade à pied manquante sera-t-elle ajoutée ? | Frontier reconnaît le problème comme connu au 2 septembre 2026 | Non confirmé | Date ou billet de résolution |
+| Les valeurs numériques précises du guide restent-elles fiables dans la durée ? | Recoupées avec 07/13/14/00, mais volatiles par nature | Basse | Revérification directe en jeu avant décision engageante |
+
+### 11-commerce.md — 12 entrées (dernier examen : 2026-09-12)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Quel est le profil achat/vente des économies rares (Service, Terraforming, Prison, Rescue, Repair, Engineer, Private Enterprise/Carrier) ? | Rôle commercial confirmé par ailleurs, profil non établi | Non confirmé | Établissement du profil achat/vente |
+| Quels sont les seuils de profit cumulé en crédits pour chaque palier de Trade Rank ? | Neuf paliers nommés, sans seuils chiffrés | Non confirmé | Source primaire fiable (sites Frontier/wiki inaccessibles) |
+| EDMC 6.1.2 (29 janv. 2026) est-elle toujours la dernière version ? | Instantané relevé le 9 septembre 2026 | Basse | Revérification sur le dépôt GitHub |
+| BGS-Tally 5.6.0 (31 août 2026) est-elle toujours la dernière ? | Instantané relevé le 9 septembre 2026 | Basse | Revérification sur le dépôt GitHub |
+| Le chiffre de ≈90 M Cr/h pour la Robigo Run en Python est-il toujours d'actualité ? | Chiffre repris de GameRant comme repère | Basse | Revérification communautaire |
+| Les chiffres de &gt;100 M Cr/h (minage laser) et 3,5 Md Cr/cycle (PTN) sont-ils fiables ? | Chiffres repris de GameRant tels quels | Basse | Revérification, forte dépendance aux prix du moment |
+| Quel est l'ordre de grandeur de rentabilité horaire de la piraterie ? | Aucun chiffre avancé, manque signalé explicitement | Non confirmé | Relevé en jeu ou tracker communautaire à jour |
+| Un cargo marqué « volé » sur un marché légal est-il traité différemment du marché noir ? | Renvoyé vers les mêmes canaux que la contrebande, sans certitude | Non confirmé | Recoupement avec une source primaire |
+| La vente de cargo volé fait-elle progresser le Trade Rank comme une vente légale ? | Non tranché (les seuils de Trade Rank sont eux-mêmes non documentés) | Non confirmé | Confirmation qu'une vente de butin compte comme vente standard |
+| Les prix de l'exemple chiffré de route (4 750/6 900 Cr/t) reflètent-ils un relevé de marché réel ? | Exemple pédagogique construit sur des ordres de grandeur typiques | Basse | Revérification via Spansh/Inara avant de partir |
+| Quelle est la portée de saut laden/unladen du Keelback, du Type-8 et du Panther Clipper Mk II ? | Non fixe, dépend du FSD et de la masse embarquée | Non confirmé | Valeur vérifiée laden/unladen |
+| Existe-t-il un vaisseau de référence pour la piraterie, comme pour les autres activités ? | Tableau volontairement sans ligne piraterie | Non confirmé | Source vérifiée désignant un vaisseau de référence |
+
+### 15-roadmap.md — 15 entrées (dernier examen : 2026-09-09)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Le numéro de version 4.4.1.0 attribué au Rhino SRV Update est-il correct ? | Numéro retenu par défaut, marqué non attesté | Non confirmé | Pages de notes de version officielles (HTTP 403) |
+| Le hotfix 4.4.1.1 daté du 3 septembre 2026 a-t-il réellement été publié ? | Ligne retirée du tableau des versions, jugée non confirmée | Non confirmé | Billet officiel de hotfix |
+| Vodel, constructeur du Rhino, est-il une filiale de Core Dynamics ? | Rattachement à Vodel officiel ; lien Core Dynamics avancé ailleurs dans le corpus | Basse | Billet officiel étayant la filiation |
+| Quelles sont les valeurs des paramètres rééquilibrés du Surface Mining ? | Existence du rééquilibrage confirmée | Non confirmé | Publication des valeurs par Frontier |
+| Le rééquilibrage du Surface Mining s'étend-il aussi au minage d'astéroïdes classique ? | Ambigu, non précisé par le billet | Non confirmé | Le billet ne tranche pas le périmètre |
+| Quel est le temps de reconstitution d'un gisement minable en surface ? | Rien de chiffré ni de qualifié sur la rareté | Non confirmé | Valeur publiée par Frontier |
+| Le passage de 9 à 12 fragments collectés en minage de surface est-il déjà livré ? | Considéré comme encore à 9 fragments | Non confirmé | Billet de hotfix confirmant la livraison |
+| Les correctifs d'Under Siege et de l'interface d'escadrille à pied ont-ils été livrés ? | Hotfix annoncé sans détail, non livré | Non confirmé | Notes de version en jeu confirmant la livraison |
+| Les récompenses manquantes d'Operations ont-elles été attribuées rétroactivement ? | Attribution promise « at a later time », sans date | Non confirmé | Date précise et confirmation de livraison |
+| Quand sortiront de nouvelles opérations au-delà des sept existantes ? | Annoncé sans calendrier | Non confirmé | Dev Logs mensuels précisant une date |
+| En quoi consiste le « feature reboot » promis pour l'automne 2026 ? | Existence de l'annonce confirmée, contenu inconnu | Non confirmé | Dev Log de l'automne 2026 précisant le contenu |
+| Quels sont les deux véhicules d'automne et d'hiver 2026 de la feuille de route annuelle ? | Trois sorties sur six déjà livrées, Rhino en quatrième | Non confirmé | Identification officielle des deux véhicules restants |
+| Quelle est la prochaine grande saison après Operations, et quand sortira-t-elle ? | Extrapolation de cadence uniquement | Non confirmé | Annonce officielle ; aucune date engagée |
+| Les tarifs ARX en euros du tableau sont-ils toujours d'actualité ? | Instantané capturé le 8 septembre 2026 | Basse | Revérification sur la boutique officielle/Steam |
+| Les deux CG actives (Laser/Surface Mining Support) sont-elles toujours en cours ? | Instantané capturé le 8 septembre 2026 | Basse | Revérification en jeu ou sur Inara |
+
+### 17-sources-donnees.md — 15 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Que signifie le booléen `ScanOrganic.WasLogged` du journal ? | Hypothèse : signale si l'espèce était déjà enregistrée par ce commandant | Basse | Confirmation officielle, absente du manuel v38 |
+| Quelle est la date d'arrêt définitif des serveurs Legacy ? | Déclin acté, arrêt non daté | Non confirmé | Source officielle Frontier consultable |
+| Les mesures d'endpoints/tailles de dumps EDSM (19 août/9 sept. 2026) sont-elles encore valides ? | Instantanés datés, base en croissance continue | Basse | Revérification avant dimensionnement d'un pipeline |
+| L'API Inara est-elle documentée sur inara.cn ou servie sur inara.cz ? | Divergence de domaine constatée, non résolue | Non confirmé | Consultation directe d'Inara |
+| Existe-t-il une limite de débit officielle pour l'API Inara ? | Aucune limite chiffrée trouvée | Non confirmé | Confirmation officielle Inara |
+| Le contrat exact de l'API REST publique de Spansh est-il documenté ? | Descripteur OpenAPI ne couvre que 4 routes sur le total | Basse | Revérification avant toute implémentation |
+| Les tailles de dumps Spansh listées sont-elles stables ? | Mesures ponctuelles du 19 août 2026 | Basse | À ne pas coder en dur, à remesurer |
+| Les endpoints Spansh listés reflètent-ils un contrat d'API garanti ? | Table reconstituée par inspection du bundle JS | Basse | Documentation officielle stable, absente |
+| Les versions constatées d'Ardent OS (2.9.0) et d'EBGS (v5) sont-elles toujours à jour ? | Versions relevées par inspection le 9 septembre 2026 | Basse | Revérification avant toute intégration |
+| Existe-t-il une limite de débit officielle pour la CAPI, Inara et Spansh ? | Aucune limite officielle publiée pour ces trois sources | Non confirmé | Publication officielle par Frontier/Inara/Spansh |
+| Sous quelle licence les tables d'`EDCD/FDevIDs` sont-elles réutilisables ? | Dépôt sans fichier de licence, réserves d'usage dans le README | Non confirmé | Clarification du statut de réutilisation |
+| À quelle cadence `coriolis-data` et `FDevIDs` sont-ils réellement mis à jour ? | Seule la date du commit de tête est observable | Non confirmé | Mesure de cadence sur historique complet |
+| Le schéma de l'endpoint GalNet `cms.zaonce.net/.../galnet_article` a-t-il été vérifié sur une réponse brute ? | Forme documentée par des projets tiers, jamais interrogé avec succès | Non confirmé | Accès direct réussi (bloqué HTTP 403) |
+| Le plafond de pagination GalNet (~50 par page) est-il officiel ? | Valeur relevée par un projet tiers | Basse | Documentation officielle Frontier |
+| Quand le fil RSS officiel de GalNet a-t-il été retiré ? | Disparition constatée par la communauté, sans annonce retrouvée | Non confirmé | Date de retrait ou annonce officielle de Frontier |
+
+### 19-fleet-carriers.md — 5 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Quels sont les coûts hebdomadaires exacts des services Odyssey (Concourse, Vista Genomics, Pioneer Supplies) ? | Existence des services confirmée, coûts précis non retrouvés | Non confirmé | Vérification en jeu dans le panneau d'administration |
+| La répartition 4/4/8 des baies d'appontage est-elle confirmée par une deuxième source indépendante ? | Confiance moyenne à haute, une seule source détaille le point | Moyenne | Deuxième source totalement indépendante de roguey.co.uk |
+| Quand et comment le commerce de denrées rares a-t-il été débloqué sur les Porte-Vaisseaux ? | Changement discret rapporté depuis Trailblazers | Basse | Vérification humaine directe en jeu (source unique de forum) |
+| Le bonus de prix par distance des denrées rares s'applique-t-il sur le marché d'un Porte-Vaisseau ? | Probablement non (prix fixés manuellement par le propriétaire) | Non confirmé | Vérification humaine directe en jeu |
+| Le lien entre Porte-Vaisseaux et Powerplay 2.0 est-il une mécanique développée par Frontier ? | Simple sujet de discussion communautaire actif | Basse | Développement officiel confirmé par Frontier |
+
+### 21-bgs.md — 9 entrées (dernier examen : 2026-09-12)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Quel est l'horaire exact du tick quotidien du BGS ? | Fenêtre commune approximative, source communautaire à recouper | Non confirmé | Publication officielle par Frontier |
+| Le seuil d'influence déclenchant une Expansion est-il bien ≈35 % ? | Consensus communautaire non officiel retenu comme repère | Basse | Publication officielle des valeurs exactes |
+| Le seuil d'influence déclenchant un Retreat est-il bien 2,5 à 5 % ? | Consensus communautaire non officiel retenu comme repère | Basse | Publication officielle des valeurs exactes |
+| Quelle est la formule complète de calcul de l'influence BGS ? | Seuils indicatifs connus, formule inconnue | Non confirmé | Publication officielle de la formule |
+| Selon quel algorithme le système cible d'une Expansion est-il choisi ? | Critères de proximité/score partiellement empiriques | Non confirmé | Documentation officielle de l'algorithme |
+| Quel est le rapport de poids exact entre les cinq paliers de récompense de mission (BGS-Tally) ? | Existence de cinq paliers distincts confirmée | Non confirmé | Publication par Frontier ou par l'outil |
+| Quelle est la valeur numérique du plafond d'influence par tick (« tick cap ») ? | Phénomène largement corroboré par la communauté | Non confirmé | Valeur numérique fiable et à jour |
+| Existe-t-il un classement chiffré d'INF/heure entre les leviers BGS (missions, trade, CZ) ? | Classement qualitatif seulement | Non confirmé | Sources vérifiables et à jour |
+| Un commandant isolé complète-t-il en moyenne 8 à 12 missions par session ? | Chiffre donné à titre d'exemple illustratif | Basse | Vérification empirique propre à ce guide |
+
+### 29-missions-reputation-et-rangs.md — 20 entrées (dernier examen : 2026-09-12)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Le libellé « Boom Delivery » est-il un intitulé réel en jeu ? | Terme non retenu comme famille indépendante | Non confirmé | Page de référence ou datamine EDCD/FDevIDs |
+| Le cycle de ≈10 min de rafraîchissement partiel du tableau est-il officiel ? | Consensus communautaire convergent | Basse | Publication officielle Frontier pour la 4.4.0.x |
+| Existe-t-il une formule générale pour l'amende d'abandon de mission ? | Montant dépendant de chaque mission précise | Non confirmé | Une formule générale documentée |
+| Le plafond de 20 missions actives est-il toujours valide en 4.4.0.x ? | Chiffre d'un fil de forum de janvier 2018 | Basse | Revérification pour la version actuelle |
+| Les durées/seuils exacts des états BGS sur les missions sont-ils fiables ? | Effets qualitatifs retenus, source elle-même incertaine | Basse | Recoupement indépendant des durées/seuils |
+| Les seuils numériques d'Unfriendly et de Hostile sont-ils connus ? | Non chiffrés, contrairement à Cordial/Friendly/Allied | Non confirmé | Une source chiffrant ces deux paliers |
+| L'accès au marché noir exige-t-il un statut Cordial minimum ? | Contradiction rapportée sans trancher (gouvernement/BGS vs réputation) | Non confirmé | Réconciliation des deux sources communautaires |
+| La condition d'invitation de l'Ingénieur The Sarge est-elle vérifiée mot pour mot ? | Rang Midshipman retenu comme déclencheur | Basse | Recoupement verbatim |
+| L'absence de titres féminisés impériaux est-elle documentée directement ? | Déduite de plaintes de joueurs sur les forums | Basse | Une source documentant directement l'absence |
+| Une échelle de paliers du rang Mercenaire a-t-elle été publiée ? | Absence documentée à deux reprises | Non confirmé | Toute publication chiffrant les paliers |
+| Où se situe le mégaship *Spirit of Laelaps* (permis Sirius) ? | Localisation jugée contestée | Non confirmé | Recoupement entre Luyten's Star et Avik |
+| Le point de départ « Dromi » (permis Pilots' Federation District) existe-t-il encore ? | Probablement retiré depuis 2023 | Basse | Confirmation d'un retrait définitif ou d'une réintroduction |
+| Quelle est la date exacte du Community Goal ayant conditionné le permis Alioth ? | Deux CG distincts trouvés, aucun ne correspond à la date interne | Non confirmé | Réconciliation entre le corpus interne et les CG retrouvés |
+| Le point de départ Dromi a-t-il été réintroduit après l'Update 14 ? | Suppression tenue pour probable depuis 2023 | Non confirmé | Source 2024-2026 confirmant réintroduction ou retrait |
+| Un rang de marine offre-t-il un module pré-engineered en récompense ? | Hypothèse écartée de cette édition | Non confirmé | Vérification de l'hypothèse reprise d'un cycle antérieur |
+| Existe-t-il une formule officielle de tarification (Hyperspace Fee) d'Apex ? | Un seul exemple communautaire retenu comme ordre de grandeur | Basse | Formule officielle taux/année-lumière |
+| Que devient la cargaison du vaisseau resté à quai pendant un trajet Apex ? | Sort exact non tranché | Non confirmé | Confirmation (conservée ou perdue) |
+| Un commandant sans crédit peut-il obtenir un trajet Apex gratuit garanti ? | Recours rapportés au support joueur / Recover to Orbit | Non confirmé | Documentation d'un trajet gratuit garanti |
+| Frontline Solutions prête-t-il arme et combinaison pour la durée du contrat ? | Mention antérieure non confirmée ; joueur apporte probablement son équipement | Non confirmé | Vérification directe en jeu |
+| Une déconnexion complète force-t-elle un nouveau tirage du tableau (board flipping) ? | Mécanisme historique neutralisé en 2018 par le serveur de missions dédié | Non confirmé | Source 2025-2026 sur l'effet d'une déconnexion complète |
+
+### 30-piraterie-et-pvp.md — 12 entrées (dernier examen : 2026-09-12)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Le Frame Shift Wake Scanner alerte-t-il la cible scannée ? | Ligne du tableau laissée sans réponse | Non confirmé | Documentation confirmant ou infirmant l'alerte |
+| Le Colonia Bridge est-il un hotspot de ganking avéré ? | Traité comme risque plausible mais faiblement documenté | Basse | Témoignage direct de ganking ciblé |
+| Quelle est la taille réelle de la communauté Mobius PvE ? | Deux chiffres retenus sans trancher (40 000 vs 19 309) | Non confirmé | Réconciliation entre page de politique et compteur du forum |
+| Le blocage d'un joueur garantit-il la non-instanciation ? | Fiabilité jugée non garantie | Basse | Source datée 4.4.0.x confirmant un changement de comportement |
+| Le texte exact de l'EULA/Code of Conduct sanctionne-t-il nommément le combat logging ? | Formulation « exploit indésirable » relayée par sources secondaires | Basse | Texte légal primaire consulté directement |
+| L'écart de mérites Powerplay entre Solo et jeu groupé a-t-il été résolu ? | Signalement communautaire retenu, sans statut de résolution | Non confirmé | Confirmation du statut de résolution du ticket |
+| La légalité du scan d'un vaisseau innocent est-elle confirmée pour la version actuelle ? | Non sanctionnée d'après la page actuelle Crime & Punishment | Basse | Confirmation postérieure aux refontes de 2018/Odyssey |
+| Le plafond de 32 joueurs par instance est-il toujours d'actualité ? | Chiffre historique du Kickstarter (2012-2013) | Basse | Source datée 4.4.x confirmant ou infirmant |
+| L'instanciation est-elle homogène entre lanceurs PC (Steam/Epic/Frontier) ? | Aucune position tranchée | Non confirmé | Sources communautaires non contradictoires |
+| Le Squadron influence-t-il le matchmaking d'instance comme le Wing ? | Aucun effet documenté | Non confirmé | Source officielle sur l'effet du Squadron |
+| Quand exactement le Cargo Scanner a-t-il été renommé Manifest Scanner ? | Association large à Odyssey (mai 2021) | Basse | Note de patch primaire datant le renommage |
+| Quels sont les montants moyens de bounty vouchers par type de PNJ en RES/CZ ? | Aucun chiffre retenu, à lire en jeu | Non confirmé | Une moyenne fiable et sourcée |
+
+### 31-pilotage-navigation-et-stations.md — 18 entrées (dernier examen : 2026-09-12)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Existe-t-il une formule publiée du freinage gravitationnel en supercroisière ? | Décrit comme effet du plafond de vitesse | Non confirmé | Formule exacte publiée par Frontier |
+| La technique « 7 secondes / 75 % » est-elle officiellement documentée ? | Technique empirique communautaire retenue | Basse | Confirmation ou mécanique officielle publiée |
+| Le gravity assist en supercroisière est-il chiffré ? | Astuce communautaire retenue sans chiffrage | Non confirmé | Chiffrage officiel ou communautaire fiable |
+| Le délai avant destruction pour accostage non autorisé est-il de 90 s ou 60 s ? | Deux chiffres rapportés sans trancher | Non confirmé | Source officielle arbitrant entre les deux pages du wiki |
+| Quel est le délai de tolérance avant destruction sur un pad non assigné ? | Séquence amende puis destruction retenue, délai non chiffré | Non confirmé | Chiffrage officiel du délai |
+| Une prime active est-elle un motif de refus d'accostage ? | Hypothèse répandue jugée non confirmée | Non confirmé | Une source confirmant ce motif de refus |
+| Quelle est la gravité artificielle réelle d'une station Ocellus ? | Fourchette 0,7-0,99 g retenue, écart non résolu | Basse | Source unique réconciliant les valeurs divergentes |
+| Quelle est la gravité d'une base d'astéroïde ? | Seule la rotation (300 s) est documentée | Non confirmé | Une valeur en g documentée |
+| Un megaship accostable a-t-il un amarrage externe et une gravité connue ? | Amarrage externe supposé probable, gravité non précisée | Non confirmé | Confirmation directe de la géométrie et de la gravité |
+| Quelle est la gravité artificielle à bord d'un Porte-Vaisseau ? | Amarrage externe décrit, gravité non renseignée | Non confirmé | Une valeur ou une source documentant la gravité |
+| L'Interstellar Factors suit-il les seuils officiels de Colonisation ? | Corrélation à la sécurité système retenue par déduction | Basse | Confirmation explicite dans les seuils officiels |
+| Les touches par défaut du panneau Rôle sont-elles connues avec certitude ? | Existence/fonction confirmées, touches non arrêtées | Non confirmé | Sources cohérentes sur les touches par défaut |
+| La formule de consommation de carburant par saut FSD est-elle officielle ? | Qualifiée de spéculative par sa propre source | Non confirmé | Mécanique officiellement publiée par Frontier |
+| Quel est le rayon exact de la no-fire zone d'une station ? | Existence documentée, rayon non chiffré | Non confirmé | Source officielle chiffrant le rayon |
+| À partir de quel seuil (vitesse/G) un atterrissage endommage-t-il le train ? | Dégâts décrits qualitativement | Non confirmé | Seuil chiffré publié officiellement |
+| Quelle est la vraie capacité de soute du Scorpion (SRV) ? | Deux valeurs retenues sans trancher (2 t vs 30 t) | Non confirmé | Vérification en jeu ou correction de l'erreur d'affichage suspectée |
+| La formule de coût/délai de transfert de vaisseau ou module est-elle à jour ? | Formule de 2019 retenue par défaut | Basse | Revérification pour la version actuelle |
+| Le Material Trader et le Technology Broker suivent-ils les seuils officiels de Colonisation ? | Statut non tranché, absents de la liste officielle citée | Non confirmé | Mention explicite dans les seuils officiels publiés |
+
+### 32-geographie-galactique.md — 10 entrées (dernier examen : 2026-09-12)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Combien de systèmes peuplés compte la Bulle en 2026 ? | Chiffre de base historique (+20 000) retenu | Basse | Un chiffre à jour pour 2026 |
+| Existe-t-il une carte fixe et à jour des frontières Fédération/Empire/Alliance ? | Territoire jugé fluctuant en continu via BGS/Powerplay | Non confirmé | Une carte de démarcation figée et à jour |
+| Riedquat est-il Indépendant/Anarchie ou Fédération ? | Indépendant/Anarchie retenu, signalé contesté | Non confirmé | Réconciliation entre deux pages contradictoires du wiki |
+| Quelle est la distance exacte à la Nébuleuse Guardian ? | Seule une distance approximative retenue (« plusieurs centaines d'al ») | Basse | Une distance chiffrée précisément |
+| Existe-t-il un classement officiel distance-par-distance des bras spiraux du Codex ? | Ordre usuel repris de l'astronomie réelle | Non confirmé | Un classement officiel publié par Frontier |
+| Le format de nommage Stellar Forge (lettres de masse, boxels) est-il une spécification Frontier ? | Reconstruction communautaire de 2015, jamais démentie | Basse | Une spécification primaire publiée par Frontier |
+| Existe-t-il une portée de saut minimale officielle spécifique à Sagittarius A* ? | Seuils de 33-45 al retenus, rattachés à The Abyss/Beagle Point | Non confirmé | Une portée minimale officielle publiée pour Sagittarius A* isolément |
+| L'espacement en années-lumière du réseau DSSA est-il publié officiellement ? | Règle affichée « un porte-vaisseau par région, max. trois » | Non confirmé | Un espacement officiel publié (contrairement au Colonia Bridge) |
+| Les chiffres de 150 al (rayon Bulle) et 81 500 al (route Beagle Point) sont-ils retenus ? | Explicitement écartés faute de source primaire | Non confirmé | Une source primaire retraçant ces deux chiffres |
+| Le rôle de Varati (Canonn/Gnosis) est-il confirmé par une fiche système dédiée ? | Rôle reconstruit via des pages liées | Basse | Une fiche système dédiée à Varati sur le wiki communautaire |
+
+### 16-outils.md — 6 entrées (dernier examen : 2026-09-12)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Le lien Powerplay-stats d'Inara est-il mort ou juste déplacé (HTTP 410) ? | Inara reste actif, Powerplay couvert ailleurs sur le site | Basse | Confirmation qu'il s'agit d'une URL restructurée plutôt qu'abandonnée |
+| Que fait exactement l'outillage de colonisation de Spansh ? | Existence déduite de documentation croisée (dépôts GitHub, plugins tiers) | Basse | Accès direct au site (SPA Ember.js non récupérable par fetch simple) |
+| La version observée d'EDCoPilot (v1.11.748) est-elle la dernière disponible ? | Instantané du 8 septembre 2026 | Basse | Un dépôt public permettant une vérification mécanique (absent) |
+| Quelle est l'ampleur réelle des campagnes de ravitaillement du Gnosis ? | Cité comme exemple de mobilisation logistique, sans chiffre | Non confirmé | Un chiffre unique et vérifiable (participants, tonnage) |
+| Les forks communautaires d'EDEngineer sont-ils réellement actifs ? | Dépôt original archivé, communauté reportée vers d'autres outils | Basse | Relevé direct de l'activité des forks |
+| Que contient précisément le guide de secours officiel des Fuel Rats ? | Fonctionnement technique du bot connu via les dépôts GitHub | Basse | Contenu détaillé (page wiki indisponible côté serveur) |
+
+### 24-community-goals.md — 9 entrées (dernier examen : 2026-09-09)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Les barèmes exacts de paliers et de merits Powerplay sont-ils confirmés par une source primaire ? | Présentés comme indicatifs, pas comme standards fixes | Non confirmé | Confirmation par une source primaire |
+| Existe-t-il un barème unique et standardisé de paliers valable sur tout l'historique du jeu ? | Nombre de paliers variable, de quelques-uns à ≈9 | Non confirmé | Confirmation d'un barème unique standardisé |
+| Les tranches de contribution (centiles) suivent-elles une grille standardisée entre CG ? | Tranches usuelles citées (top 75/50/25/10) mais variables | Basse | Grille standardisée observable sur tout l'historique |
+| Quel est le barème exact des merits Powerplay distribués par une CG rattachée à une Power ? | Merits accordés en plus des crédits depuis Powerplay 2.0 | Non confirmé | Confirmation fiable au cas par cas |
+| Quel est le barème détaillé des récompenses de « Battle for Sol : Destroy Titan Cocijo » ? | Récompenses en crédits et modules engineered évoquées sans détail | Non confirmé | Barème détaillé confirmé pour cette CG précise |
+| Quel est le barème exact des merits Powerplay 2.0 de la CG HIP 87621 ? | Merits accordés avec multicanon et crédits | Non confirmé | Barème exact de ces merits |
+| Une CG crédite-t-elle le livreur final au carrier ou celui d'origine de la marchandise ? | Hypothèse que le livreur final à la station est crédité | Non confirmé | Test sur petit lot ou confirmation communautaire |
+| Un Squadron Carrier fonctionne-t-il mécaniquement comme un Fleet Carrier standard ? | Présumé équivalent, faute de mieux | Basse | Confirmation mécanique explicite de cette équivalence |
+| Les chiffres de rendement Cr/h de la section 4 viennent-ils d'une nouvelle recherche vérifiée cette session ? | Chiffres repris des guides d'activité internes déjà vérifiés | Basse | Nouvelle collecte web (budget de recherche épuisé) |
+
+### 25-combat-ax.md — 17 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Les mises à jour 2025-2026 n'ont-elles apporté que des correctifs cosmétiques aux Thargoïdes ? | Lecture des titres/résumés Steam News suggère du cosmétique résiduel | Basse | Citation exacte de chaque correctif / changelog complet |
+| Existe-t-il une sous-classification nommée des Scouts au-delà du terme générique ? | Aucune sous-classe nommée connue, seule une échelle de menace | Non confirmé | Recoupement wiki (accès bloqué en session) |
+| Le nombre de cœurs par classe d'Interceptor (1 à 4) est-il vérifié par une source ? | Chiffres 1/2/3/4, connaissance de jeu communautaire | Basse | Vérification via Wikipédia/Inara/Canonn ou wiki dédié |
+| La date de destruction de Taranis (4 mars 2024) est-elle confirmée par une source Frontier officielle ? | Date reprise de la couverture presse MassivelyOP | Basse | Accès aux pages officielles Frontier (HTTP 403) |
+| La fenêtre de tir de 15-20 s après désactivation du bouclier (SFN) est-elle vérifiée ? | Valeur indicative reprise telle quelle | Basse | Vérification en session (non recoupée) |
+| Les valeurs de dégâts/DPS d'un build AX sont-elles vérifiées et à jour ? | Structure de build stable, chiffres non vérifiés | Basse | Sources accessibles en session ; évoluent au gré des correctifs |
+| Le Cr/h de combat AX (≈20-60 M) est-il un barème officiel Frontier ? | Reconstitution communautaire à partir de primes et temps de neutralisation | Basse | Barème officiel Frontier, jamais publié |
+| Les dates de fondation/dissolution/reformation d'Aegis (3303, 3308, 3309) sont-elles recoupées indépendamment ? | Dates reprises telles quelles du corpus existant | Basse | Source primaire indépendante |
+| Quels sont les noms exacts des divisions et stations Aegis actuellement actives ? | S'en tient à ce qui figure déjà dans 01-lore.md | Basse | Revérification au-delà du corpus |
+| Le domaine axi.info est-il toujours actif comme lien de référence de l'AXI ? | Rôle communautaire de l'AXI bien établi de longue date | Non confirmé | Test direct du domaine |
+| Un piquant mûr de Barnacle livre-t-il 1 ou 2 unités de Meta-Alloy ? | Deux chiffres rapportés sans arbitrage (wiki vs Canonn) | Non confirmé | Source tranchant entre les deux |
+| Le « relog » sur un site de surface thargoïde réinitialise-t-il le rendement en Meta-Alloy ? | Pratique de joueurs rapportée, non officielle | Basse | Confirmation par une source officielle |
+| Que consigne précisément le Codex pour un scan de Probe/Sensor thargoïde ? | Mécanisme général du Codex connu, détail des scans non précisé | Non confirmé | Confirmation par une source consultée |
+| Quelle interaction précise permet de récolter les matériaux à la base d'un Spire ? | Description générale du déclenchement des réseaux à la base des pétales | Non confirmé | Documentation par une source consultée |
+| Le retrait des Spire Sites a-t-il fait l'objet d'une note de correctif officielle Frontier ? | Désactivation traitée comme conséquence narrative de la fin de la guerre | Non confirmé | Note de correctif officielle confirmant un retrait délibéré |
+| Le Titan Drive Component s'échange-t-il vraiment entre 150 et 250 M Cr en 2025 ? | Fourchette rapportée par des fils de discussion communautaires | Basse | Confirmation par un prix de marché officiel |
+| Le premier Meta-Alloy à Merope 5 C a-t-il été découvert le 14 ou le 15 janvier 3302 ? | Le corps du guide ne retient qu'une date (15 janvier 3302) | Basse | Résolution de la divergence entre deux pages du même wiki |
+
+### 26-ingenierie-a-pied-avancee.md — 13 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Quelles sont les valeurs exactes de score de troc au bartender pour chaque matériau à pied ? | Principe cumulatif connu ; seuls Graphene et Aerogel chiffrés | Non confirmé | Source donnant les valeurs des autres matériaux |
+| Le casier de bord (Ship Locker) plafonne-t-il vraiment à 1000 unités par catégorie ? | Chiffre de 1000 largement rapporté par la communauté | Basse | Reconfirmation par une source primaire |
+| Le plafond de stockage à pied sur Fleet Carrier est-il partagé entre les trois catégories ? | Comportement différent signalé par des joueurs, non expliqué | Non confirmé | Vérification en jeu (débat/bug communautaire) |
+| Quelle est la limite de stock du bartender NPC lui-même par visite ? | Rien de chiffré | Non confirmé | Toute source documentant cette limite |
+| Existe-t-il encore une liste exhaustive et à jour des recettes de tous les blueprints à pied ? | Douze recettes précises obtenues page par page sur Inara | Non confirmé | La feuille communautaire qui prétendait tout agréger est morte (HTTP 410) |
+| L'Odyssey Mapping Guide (OMG) est-il toujours accessible à l'URL rapportée ? | Outil cité pour localiser CMD/PWR/alarme par variante de settlement | Non confirmé | Site indisponible (erreur 521), jamais retesté |
+| Les montants en crédits des paliers de montée en grade de combinaison sont-ils fiables ? | Montants repris du seul wiki Fandom | Basse | Inara n'en liste aucun ; confirmation en jeu |
+| Quel est le tarif de comptoir (coût/cession) du Carbon Fibre Plating et du Titanium Plating ? | Ce sont des Assets donc revendus par principe, comme l'Aerogel | Non confirmé | Aucune source n'attribue de coût ni de valeur de cession |
+| Les coordonnées rapportées de Selenium Farm sont-elles des coordonnées Live confirmées ? | Coordonnées citées sans confirmation | Basse | Toute donnée de référence couvrant ce site |
+| Le contenu de « Falcon's Guide » sur l'ordre de déblocage des Engineers est-il vérifiable ? | Ordre alternatif mentionné comme point de vue, pas comme consensus | Non confirmé | Vérification directe (Reddit bloqué au fetch) |
+| La corrélation type d'économie du settlement / type de loot est-elle une règle codée en dur ? | Corrélation rapportée de façon concordante par plusieurs guides | Basse | Confirmation par Frontier plutôt qu'une tendance observée |
+| L'astuce du relog sur balise rapporte-t-elle vraiment ≈100 unités de Data en moins d'une heure ? | Rendement annoncé par un guide communautaire | Basse | Une moyenne garantie plutôt qu'une estimation ponctuelle |
+| Le détail exhaustif matériau par matériau des modifications d'Uma Laszlo a-t-il été extrait ? | Fourchette de 3-15 unités jugée cohérente avec la page Inara | Non confirmé | Extraction exhaustive matériau par matériau |
+
+### 28-marchandises.md — 14 entrées (dernier examen : 2026-09-10)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Ce référentiel donne-t-il des prix d'achat/vente du commerce courant pour les 270 commodités ? | Aucun prix du commerce courant n'est écrit dans ce guide, par choix | Non confirmé | Aucune source vérifiable stable retenue pour ces colonnes |
+| Les économies productrices/consommatrices sont-elles documentées pour toutes les 270 marchandises ? | 133 sur 270 documentées via la FAQ communautaire EDSM | Basse | Source pour les 137 restantes, dont les 96 de Salvage |
+| Le relevé des marchandises explicitement illégales (12/270) est-il exhaustif ? | Relevé partiel constitué à partir des catégories les plus exposées | Basse | Relevé exhaustif sur les 270 fiches |
+| Le type d'anneau des marchandises minables repose-t-il sur une source Frontier ? | Synthèse communautaire datée, agrégée de trois guides | Non confirmé | Frontier ne publie pas cette table de distribution |
+| Le type d'anneau du Gold, du Samarium, de la Benitoite et de la Monazite est-il tranché entre sources ? | Traitement marqué par un point d'interrogation dans le tableau | Non confirmé | Accord entre les trois sources communautaires citées |
+| Existe-t-il un seuil de réserve minimale conseillé par minéral, au-delà de la règle Pristine ? | Règle générale corroborée par trois sources | Non confirmé | Aucune source ne donne de seuil par minéral (résultat, pas un oubli) |
+| La colonne « Nom français » reflète-t-elle la localisation officielle du client français ? | Glose de lecture produite pour ce corpus | Basse | Consultation de la localisation officielle du client, non faite |
+| La position de la station Heart of Taurus (méga-vaisseau) est-elle à jour ? | Dernier relevé de marché retenu date du 9 août 2022 | Basse | Confirmation récente, la station étant mobile |
+| Existe-t-il un rendement et un prix par minéral extrait, fiables et à jour ? | Corpus a pris pour règle de ne pas figer les prix de minage par tonne | Non confirmé | Seul relevé trouvé jugé non fiable (CG suspectée d'avoir gonflé les valeurs) |
+| Quelle est l'allocation par cycle et la distance optimale de revente des denrées rares ? | Seul le stock instantané est exposé, qui n'est qu'un minorant | Non confirmé | Champ d'allocation absent des sources ; courbe prix/distance introuvable |
+| Quelle économie achète le mieux une denrée rare donnée ? | Seule l'économie de la station productrice est documentée | Non confirmé | Aucune source consultée ne répond à cette question |
+| Quel est le prix d'achat des Limpets et sont-ils revendables ? | Identifiés comme catégorie à part, hors commerce ordinaire | Non confirmé | Aucune source fiable trouvée |
+| Didi Vatermann, Zacariah Nemo et Lori Jameson exigent-ils des denrées rares précises pour leur déblocage ? | Associations réputées exister dans la communauté | Basse | Aucune source consultée ne porte ces associations ni les quantités |
+| Pourquoi Spansh et EDSM divergent-ils sur le système d'Heart of Taurus (Qarato vs HIP 22460) ? | Même station et même market_id chez les deux catalogues | Basse | Confirmation du renommage de système supposé |
+
+### 01-lore.md — 28 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Peut-on dater un raid précis du Kumo Crew entre 3304 et 3306 ? | Tendance générale de raids confirmée dans le secteur Pegasi | Non confirmé | Date d'un incident isolé attribuable |
+| La tentative d'assassinat visant un « Imperator Hadrian Augustus Duval » (27 oct. 3306) est-elle réelle ? | Écartée du guide, ne recoupe aucun autre fait établi | Non confirmé | Vérification par une seconde source |
+| Le détail fin de l'assassinat d'Harold Duval est-il fiable ? | Bornes chronologiques confirmées par ailleurs | Basse | Seconde source primaire directement consultée |
+| Quelle étendue a atteint le territoire thargoïde au plus fort du conflit ? | « Plusieurs centaines de systèmes » selon estimations communautaires | Basse | Chiffre officiel unique |
+| Comment est composée et nommée la Federal High Court ? | Existe comme plus haute juridiction fédérale | Non confirmé | Toute source documentant composition et nomination |
+| Le rang Federal Navy Auxiliary a-t-il une justification narrative ? | Purement fonctionnel, échelle de progression de jeu | Non confirmé | Toute justification narrative sourcée |
+| Que confère un titre de noblesse impérial, et est-il lié à un QG Powerplay ? | Distinct du rang sénatorial | Non confirmé | Toute source sur droits/possessions et le lien titre-QG |
+| Quel est le taux exact de rebuy de la Pilots Federation ? | Fraction de la valeur totale, détaillée ailleurs | Basse | Chiffre à revérifier en jeu |
+| Le Barnacle et le Meta-Alloy de Merope datent-ils du même jour ? | Barnacle le 15 janv. 3302 ; une autre page date le Meta-Alloy du 14 | Basse | Arbitrage entre deux pages du même wiki |
+| Arek Vandevar est-il associé au Guardian Tech Broker ? | Association reprise de la documentation communautaire | Basse | Source primaire directement accessible |
+| Caleb Wycherley/Salvation a-t-il survécu via un « Nemesis Protocol » ? | Indices communautaires évoquent l'hypothèse | Non confirmé | Communication GalNet officielle |
+| Le SCO est-il un dividende narratif d'AEGIS/Salvation ? | Lecture communautaire plausible | Basse | Confirmation littérale par une annonce GalNet |
+| Les Guardians avaient-ils un système de castes ? | Structure en clans puis cités-états coopératives | Non confirmé | Toute source confirmant une hiérarchie de castes |
+| Que sont devenus les Constructs après l'extinction guardian ? | Hypothèse de survie évoquée par Ram Tah | Non confirmé | Tranchage par le lore |
+| Les « gravures » découvertes début 2025 sont-elles liées à Raxxla ? | Lien avancé par des joueurs | Basse | Confirmation par Frontier, recoupement de sources |
+| Le Club, le Projet Dynasty et Raxxla sont-ils liés ? | Lien débattu communautairement | Basse | Tranchage officiel |
+| Le contenu de rôle-play « Kahina Tijani Loren » (DW3) prouve-t-il la survie de Salomé ? | Contenu de jeu de rôle communautaire non officiel | Non confirmé | Confirmation canonique |
+| Qu'est-ce qui a rendu fou l'équipage du generation ship *Thetis* ? | Signal détecté, possiblement redétecté en 3309 | Non confirmé | Origine du signal |
+| Le Club a-t-il causé la disparition de Jasmina Halsey ? | Rôle allégué dans les théories communautaires | Non confirmé | Confirmation |
+| L'entrée « The Club » est-elle fiable dans son ensemble ? | Confiance moyenne retenue, source tertiaire unique | Basse | Recoupement avec une page de lore Canonn dédiée |
+| Pourquoi les trois premiers Guardian Beacons se sont-ils réveillés simultanément en 3304 ? | Réactivation confirmée, cause non expliquée | Non confirmé | Toute piste convaincante |
+| Jerome Archer est-il né le 1er janvier 3218 ? | Seule l'année est attestée par deux sources | Basse | Confirmation du jour et du mois |
+| Yuri Grom a-t-il démissionné par dégoût de la corruption fédérale ? | Rumeur relayée par la communauté | Basse | Confirmation officielle |
+| Quand DW3 a-t-elle démarré, avec combien de participants et quel parcours ? | Rien au-delà de la date d'achèvement | Non confirmé | Site officiel réservé aux inscrits |
+| Les Hull Seals sont-ils toujours actifs en 2025-2026 ? | Activité jugée incertaine | Basse | Preuve d'activité récente (outil HalpyBOT figé depuis sept. 2024) |
+| Sagittarius Eye publie-t-il toujours ? | Non confirmé | Basse | Preuve d'activité récente (mentions légales figées à 2021) |
+| Depuis quand le PTN existe-t-il vraiment ? | ≈2021 avancé par le corpus | Basse | Confirmation en source primaire |
+| Le FCOC compte-t-il ≈29 000 membres depuis juin 2020 ? | Chiffre et date jugés vraisemblables | Basse | Confirmation |
+
+### 02-powerplay.md — 7 entrées (dernier examen : 2026-09-09)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Quel est le barème exact de mérites par rang de 6 à 99 ? | Extrapolation linéaire à ≈8 000 mérites/rang | Non confirmé | Barème officiel jamais publié |
+| Quel est le taux exact de conversion des mérites en points de contrôle par activité ? | Principe établi, valeurs jugées instables | Basse | Chiffre figé, vérification via outils communautaires |
+| La matrice éthos × axe par Power est-elle publiée officiellement ? | Reconstituée à partir des fiches Inara individuelles | Basse | Résumé officiel en jeu |
+| Quel est l'éthos exact de Zemina Torval ? | Valeur de repli via lavewiki.com | Basse | Fiche inara.cz (HTTP 503 le jour de la consultation) |
+| Un seuil de développement conditionne-t-il l'Acquisition Powerplay d'un système colonisé, et l'allégeance la restreint-elle ? | Rien de confirmé dans un sens ou l'autre | Non confirmé | Notes de mise à jour courantes |
+| Combien de temps dure le délai de latence avant de rejoindre un nouveau Power ? | Existence du délai évoquée, héritée de la 1.0 | Non confirmé | Valeur actuelle sous la 2.0 |
+| Un module Powerplay déjà débloqué reste-t-il utilisable après avoir quitté le Power ? | Suggéré fonctionnel (modules non-exclusifs depuis la 2.0) | Basse | Vérification directe contre une source officielle |
+
+### 03-vaisseaux.md — 8 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Quelle dureté de coque, mass lock et capacité thermique pour le Lynx Highliner ? | Vitesse/bouclier/armure/masse connus via Inara+Frontier | Non confirmé | Ces 4 champs, absents d'EDCD/coriolis-data |
+| Combien d'emplacements utilitaires porte le Lynx Highliner, et sa portée stock est-elle calculable ? | Specs officielles Frontier pour hardpoints/internes | Non confirmé | Nb d'emplacements utilitaires ; masse de coque pour la portée |
+| Quelle formule relie dureté de coque et pénétration d'arme ? | Les deux valeurs publiées séparément | Non confirmé | La formule qui les relie |
+| Le facteur ×2,6 donne-t-il un budget exact par vaisseau ? | Ordre de grandeur suffisant pour choisir un palier | Basse | Devis exact incluant ingénierie/armes/modules |
+| Quel fabricant, prix en crédits et gabarit pour le Nomad ? | Ces trois champs doivent rester vides | Non confirmé | Les billets officiels ne les donnent pas |
+| Le rebuy est-il exactement 5 % de la valeur assurée ? | ≈5 %, mécanisme standard connu | Basse | Valeur fixe au centime, variation selon assurance |
+| La formule de coût de transfert de vaisseau est-elle à jour ? | Délai corroboré par des témoignages récents | Basse | Formule non officielle, datée 2019, non revérifiée |
+| Le plafond global de 250 vaisseaux par commandant existe-t-il toujours ? | Signalé en 2015 comme source de bugs au-delà | Non confirmé | Confirmation 2024-2026 |
+
+### 04-equipements.md — 14 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Que signifient les paramètres fuelmul/fuelpower de la formule de portée de saut ? | Formule reproduite telle quelle | Non confirmé | Détail des paramètres par la source interne |
+| Les masses optimales en G5 sont-elles mesurées en jeu ou calculées ? | Calculées par ×1,55 sur les masses de référence | Basse | Relevé en jeu confirmant l'effet strictement multiplicatif |
+| De combien un FSD Increased Range G5 augmente-t-il vraiment la portée ? | Ordre de grandeur « +10 à 15 al » pour un vaisseau moyen | Basse | Valeur chiffrée par build |
+| Les attributs du FSD (SCO) sont-ils non modifiables par l'ingénierie ? | Établi via le mappage EDSY | Basse | Mappage marqué `// TODO verify`, contrôle en jeu requis |
+| Le Taipan Fighter et le Gu-97 sont-ils bien de Faulcon DeLacy et Zorgon Peterson ? | Association communautaire courante retenue | Basse | Revérification sur une source primaire (Inara.cz) |
+| Quelles sont les stats précises (PV, vitesse, DPS) des 4 chasseurs embarqués ? | Rien de chiffré dans ce guide | Non confirmé | Sourçage impossible par la méthode habituelle |
+| Dans quelles stations trouve-t-on les Guardian et Human Technology Brokers ? | Quelques stations spécifiques, non listées | Non confirmé | Emplacements précis, évolutifs avec les mises à jour |
+| Quels sont les compromis chiffrés exacts de chaque variante MercGear ? | Catalogue connu (blueprints, hardpoints pré-ingénierés) | Non confirmé | Compromis chiffrés, non publiés dans les notes de version |
+| Le tarif de transfert de module (+100 Cr) est-il toujours d'actualité ? | Même base que le transfert de vaisseau | Basse | Formule communautaire de 2019, non revérifiée |
+| L'outil « Nearest Outfitting » d'Inara est-il fiable ? | Confirmé par des mentions communautaires convergentes | Basse | Vérification par un accès direct |
+| Quel est le débit de collecte du Fuel Scoop par classe d'étoile KGBFOAM ? | Le débit caractérise le module, pas l'étoile | Non confirmé | Aucune source ne publie de débit par classe |
+| La cadence et le DPS des armes sont-ils relevés dans le jeu ou calculés ? | Calculées depuis `fireint` et `damage` | Basse | Aucun champ `rof` ni `dps` dans la source |
+| Quel nom MercGear correspond à quelle variante du Hpt_BasicMissileRack_Fixed_Medium ? | Les deux lignes portent par défaut « Lockdown Seeker » | Non confirmé | Aucune source reproductible ne permet de trancher |
+| Pourquoi le Mirrored Surface Composite du Diamondback Explorer pèse-t-il 26 t contre 47 t ailleurs ? | Anomalie reprise telle quelle de la source | Basse | Explication de l'écart, non corrigé |
+
+### 05-guardians.md — 13 entrées (dernier examen : 2026-09-12)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Contre qui les Guardians ont-ils mené leur guerre ancienne ? | Éléments tendent à relier cette guerre aux Thargoïdes | Non confirmé | Identité exacte de l'ennemi |
+| Le teaser Canonn du 30 août 2025 concerne-t-il les Guardians ? | Hypothèse communautaire répandue | Basse | Confirmation le rattachant spécifiquement aux Guardians |
+| Quel bâtiment (Foundry, Robotics...) chaque site Guardian abrite-t-il ? | Distances stables connues via EDSM | Basse | Vérification site par site via source primaire |
+| Existe-t-il une cartographie exhaustive des types d'obélisques par site ? | Cinq familles de Pattern Obelisk Data confirmées sur Inara | Basse | Détail exhaustif et cartographie complète site par site |
+| Quelles sont les plages exactes de bonus par grade (1-5) des armes Guardian ? | Blueprints confirmés via variantes pré-ingénierées | Basse | Plages exactes par grade, non revérifiées |
+| Quelles quantités pour les autres classes/tailles de modules et armes Guardian au Tech Broker ? | Quantités vérifiées pour une seule variante par plan | Basse | Revérification pour les autres classes |
+| Combien de temps pour charger les 6 pylônes d'un site Guardian au sol ? | Extrapolation des 3 min documentées pour une balise | Non confirmé | Minutage chiffré en source primaire |
+| Combien de temps dure un passage complet sur un Guardian Structure ? | Ordre de grandeur décomposé par étape | Non confirmé | Source primaire chiffrant la durée totale |
+| Le texte intégral des 28 logs Guardian est-il disponible quelque part ? | Rien retrouvé, lacune signalée explicitement | Non confirmé | Toute retranscription complète publiée |
+| La répartition thématique documente-t-elle le contenu exact de chaque log ? | Groupes thématiques et nombre de logs par groupe | Basse | Contenu exact log par log, source indépendante |
+| Une hiérarchie de castes existait-elle chez les Guardians ? | Rupture génétique nord-sud relevée par le lore | Non confirmé | Toute source documentant un système de castes |
+| Que sont devenus les Constructs après l'extinction guardian ? | Hypothèse de survie avancée par Ram Tah | Non confirmé | Tranchage par le lore |
+| Existe-t-il un alphabet ou une notation complète du langage guardian ? | Mécanique de scan d'obélisque connue | Non confirmé | Alphabet ou notation symbolique complète publiée |
+
+### 12-transport.md — 6 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Les capacités de cabines passagers par taille de module (2 à 6) sont-elles à jour ? | Valeurs communautaires historiques (EDSY/Inara/Coriolis) reprises telles quelles | Basse | Revérification en direct (recherche web indisponible en session) |
+| À quelle date précise le Panther Clipper Mk II est-il devenu achetable en crédits ? | Estimation « ≈octobre 2025 », fin de l'accès anticipé payant | Basse | Source précise de la date de bascule vers l'achat en crédits |
+| Le chiffre de ≈50 à 100 M Cr/h pour le transport de passagers est-il un barème officiel ? | Reconstitution communautaire datée du 13 septembre 2026 | Basse | Barème officiel Frontier ; validation indépendante |
+| Le Search & Rescue donne-t-il un bonus de mérites Powerplay ? | Aucun bonus propre mentionné dans Powerplay 2.0 | Non confirmé | Recherche indisponible en session ; aucune source ne confirme ni n'infirme |
+| Quelle était la nature exacte du problème ayant motivé la pause de la colonisation début mars 2025 ? | Pause volontaire, problème décrit comme affectant la revendication de systèmes | Non confirmé | Description technique précise, jamais publiée même par la source d'origine |
+| Quel est le tonnage exact requis par type de projet de colonisation ? | Ordres de grandeur composites (quelques milliers à dizaines de milliers de tonnes) | Basse | Revérification en direct ; détail exact tenu par 18-colonisation.md |
+
+### 06-ingenieurs.md — 18 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Quel ingénieur Odyssey modifie quelle combinaison/arme précisément ? | Bases des 13 ingénieurs confirmées, répartition fine non fixée | Basse | Vérification en jeu (onglet Ingénieurs) ou sur Inara |
+| Le prix/stock de Meta-Alloy pour débloquer Farseer sont-ils à jour ? | Instantané du 19 août 2026 donné comme référence | Basse | Revérification en jeu avant de partir (marché volatil) |
+| Combien de points fait gagner un module fabriqué / une vente de données chez un Ingénieur ? | Deux leviers qualitatifs connus, aucun chiffre | Non confirmé | Toute source chiffrant les points ou les seuils de rang 1→5 |
+| Les plafonds de stockage des matériaux (300 à G1, 100 à G5) sont-ils toujours d'actualité ? | Valeurs stables depuis plusieurs années, retenues comme correctes | Basse | Vérification en jeu si un changement récent est suspecté |
+| Crystal Shards (manufacturé) et Crystalline Shards (site Raw) désignent-ils le même objet ? | Très probablement le même objet, 4 des 8 critères divergent entre catalogues | Basse | Source affirmant explicitement l'identité, ou arbitrant les critères |
+| Les méthodes de farming reposent-elles sur des sources consultées en direct ? | Reconstruites via mécanique de jeu + outils alternatifs, faute de mieux | Basse | Accès direct au wiki communautaire, à Reddit, à la page Matériaux d'Inara |
+| Quel est le taux de rendement comparé des types d'USS de données, et la probabilité d'un grade sur un data point ? | Sources et conditions d'apparition connues, pas les statistiques | Non confirmé | Toute source chiffrant les probabilités de grade |
+| Le niveau de menace du type « Weapons Fire » est-il 1-5 ou 1-4 ? | Plage 1-5 retenue (wiki actuel) | Basse | Arbitrage avec la source Frontier Forums de 2017-2018 (1-4) |
+| Combien de temps dure un signal USS non ciblé, et le compte à rebours une fois stabilisé ? | ≈30 secondes (source 2017), mécanique confirmée sans valeur pour le compte à rebours | Basse | Vérification en jeu des deux durées |
+| Quelle est la nature exacte des matériaux rendus par une Operation (catégorie, grade, quantité) ? | Simplement annoncés comme « Materials » par les notes officielles | Non confirmé | Table officielle ou communautaire chiffrant ces récompenses |
+| La hiérarchie Raw &gt; Manufactured &gt; Encoded est-elle une donnée officielle ? | Consensus communautaire stable, pas une donnée chiffrée | Basse | Toute mesure officielle du temps de farming par catégorie |
+| Les paliers de montée en grade des trois combinaisons Odyssey sont-ils fiables ? | Montants repris tels que rapportés par le wiki Fandom | Basse | Confirmation en jeu ; Inara n'en liste aucun |
+| Peut-on établir la matrice Ingénieur × grade maximum pour l'ingénierie à pied (13 Odyssey) ? | Non couverte, absente des deux jeux de données | Non confirmé | Un jeu de données référençant les blueprints/grades des 13 Ingénieurs Odyssey |
+| Le mappage blueprint du FSD SCO (EDSY) est-il fiable ? | Increased Range s'applique au SCO, attributs propres non modifiables | Basse | Levée du commentaire « TODO verify » d'EDSY (Coriolis n'a aucune donnée SCO) |
+| Les effets expérimentaux ont-ils tous une valeur numérique chiffrée ? | Seuls Mass Manager et Deep Charge sont chiffrés, le reste descriptif | Non confirmé | Un champ source chiffrant les 64 autres effets |
+| Quel Ingénieur propose quel effet expérimental ? | Colonne portée « non couvert par le jeu de données » sur toutes les lignes | Non confirmé | Une source associant effet expérimental et Ingénieur |
+| L'ordre de priorité d'Engineering par rôle (combat/exploration/commerce) est-il une donnée officielle ? | Consensus communautaire de priorisation, pas une donnée Frontier | Basse | Toute source officielle sur un ordre recommandé |
+| Les recettes de synthèse embarquée (hors FSD Injection) sont-elles croisées avec une seconde source ? | Reposent sur le wiki Fandom seul | Basse | Recoupement via Inara.cz (erreur 503 au moment de la révision) |
+
+### 10-exploration.md — 37 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Les portées/temps de scan du Discovery Scanner, FSS, DSS sont-ils encore exacts ? | Valeurs présentées comme stables depuis plusieurs versions | Basse | Vérification sur une source à jour (wiki/Inara) |
+| Que désigne le signal de surface catégorisé « Other » ? | Deux occurrences relevées (Lune, Europa), rien de plus | Non confirmé | Toute source documentant ce que « Other » signale |
+| Le lien « DSS → liste des genres biologiques » est-il observé en jeu ou seulement codé ? | Structure du champ `Genuses` connue, jamais son contenu observé (0/15 rempli dans l'échantillon) | Basse | Un journal réel où `Genuses` est effectivement rempli |
+| Les signaux Guardian/Thargoïde/Anomalous sont-ils confirmés par un relevé de jeu réel ? | Uniquement leur existence dans le code | Basse | Une observation réelle (aucun dans l'échantillon collecté) |
+| Les 15 volcanismes correspondent-ils terme à terme aux 23 entrées de codex géologiques ? | Les deux listes séparément, sans table de correspondance | Non confirmé | Une tabulation croisée volcanisme ↔ entrée de codex |
+| La procédure de récolte au SRV sur un site géologique est-elle documentée par une source primaire ? | Description communautaire (approcher, fragmenter, collecter) | Basse | Toute source primaire décrivant cette boucle |
+| Quelles sont les vraies conditions d'apparition des Crystalline Shards ? | Deux fiches divergentes (ce guide vs 06-ingenieurs.md) sur classe, distance, Water Giant | Non confirmé | Un arbitrage entre les deux relevés |
+| Quelles sont les conditions d'apparition et la valeur de vente des Notable Stellar Phenomena (nuages de Lagrange) ? | Un décompte de 133 entrées codex, rien de plus | Non confirmé | Toute source sur conditions de spawn / valeur de vente |
+| Quelles classes stellaires sont réellement collectables au Fuel Scoop ? | Colonne dérivée du mnémonique KGBFOAM | Basse | Une source publiant un indicateur de scoopabilité par classe |
+| Quelles sont les bornes officielles de température par classe stellaire ? | Échantillon brut de 43 journaux (11/53 classes couvertes) | Non confirmé | Une source Frontier publiant des bornes de classe |
+| Le Mk II Supercharge Optimised FSD multiplie-t-il vraiment le boost par ×6 ? | Champ saisi à la main dans EDDiscovery, module confirmé par patch notes mais pas le chiffre | Basse | Un chiffrage officiel Frontier du gain |
+| Le boost neutron/naine blanche le plus fort l'emporte-t-il en cas de cumul ? | Rien — un seul `BoostUsed` par saut, cumul impossible dans les faits | Non confirmé | Une source confirmant/infirmant la règle de préséance |
+| Le bonus plat du Guardian FSD Booster est-il vraiment multiplié par le boost ? | Conséquence de l'écriture du code d'EDDiscovery, qui doute lui-même de sa formule | Basse | Une confirmation primaire |
+| Le barème de valeur de scan correspond-il à un montant réellement payé en jeu ? | Calcul reproduit depuis l'implémentation communautaire EDDiscovery | Basse | Une valeur de vente observée en jeu |
+| Les constantes du corps riche en métaux et du trou noir supermassif sont-elles fiables ? | Valeurs du code, explicitement marquées *not confirmed in game* par leurs auteurs | Basse | Une source de jeu confirmant ces deux constantes |
+| Pourquoi un corps non découvert mais déjà cartographié reçoit-il telle valeur ? | Comportement observé du code, non expliqué | Non confirmé | Une explication documentée de cet état de jeu |
+| Qui a organisé Distant Worlds II ? | Rien — le champ n'existe pas sur la fiche EDSM | Non confirmé | Une source nommant l'organisateur de DW2 |
+| Quand DW3 a-t-elle commencé, avec combien de participants, sur quel itinéraire ? | Seule la date de clôture (18 mai 2026) et le statut « Complete » | Non confirmé | Des compteurs de participants non vides côté serveur |
+| Le compteur du site officiel de DW3 permet-il de reconstituer une date de départ ? | Deux reconstitutions concurrentes, toutes deux fausses de plus de 100 jours | Non confirmé | Un champ de date fiable sur le site |
+| Le champ « Waypoints » d'EDSM compte-t-il le système de départ et d'arrivée ? | Inférence (écart constant de +2) vérifiée sur seulement 2 fiches | Basse | Une troisième fiche d'expédition pour généraliser |
+| Distant Worlds 1 s'est-elle déroulée « fin 2015-début 2016 » ou du 14/01 au 05/06/2016 ? | Deux guides du corpus en désaccord sur la borne de fin | Basse | Arbitrage entre 01-lore.md et la fiche EDSM |
+| La répartition en 3 catégories de l'onglet Discoveries du Codex vaut-elle encore en 2026 ? | Structure documentée pour 2018-2021 | Basse | Vérification en jeu sur une version 2026 |
+| Les montants du Codex Voucher (50 000/2 500 Cr) sont-ils toujours d'actualité ? | Montants du lancement de la fonctionnalité (2018) | Basse | Revérification en jeu en 2026 |
+| Le bonus de cartographie complète est-il vraiment indépendant du Codex ? | Inférence bien étayée (absence d'état « mapped » dans la taxonomie) | Basse | Une source officielle l'énonçant mot pour mot |
+| Pourquoi Bark Mound et Brain Tree n'ont-ils pas de fiche d'habitat rédigée ? | Leur existence et leur valeur de vente sont listées | Non confirmé | Une fiche d'habitat rédigée pour ces deux genres |
+| Le seuil « haute gravité » (≥1G) de BioScan correspond-il à une pénalité de jeu chiffrée ? | Seul le marquage de l'outil, pas d'effet chiffré | Non confirmé | Une source chiffrant une pénalité de mobilité |
+| À partir de quelle gravité le train d'atterrissage est-il endommagé ? | Booléen `LandingGear` dans le journal, sans valeur de seuil | Non confirmé | Une source associant une valeur de gravité aux dégâts |
+| Existe-t-il un seuil de gravité limitant le SRV ou le Nomad ? | Rien d'établi (un corps atterrissable à 45,32 G rend une absence de limite plausible) | Non confirmé | Toute source sur le comportement du SRV/Nomad en forte gravité |
+| Radicoida Unica vaut-elle 952 296 Cr (relevé) ou 119 037 Cr (catalogue) ? | 952 296 Cr retenue comme valeur observée en jeu | Basse | Une seconde vente confirmant le montant |
+| La distance minimale d'échantillonnage de Radicoida est-elle 15 m ou 100 m ? | 15 m retenue comme valeur relevée en jeu | Basse | Confirmation de l'écart avec le catalogue compilé (100 m) |
+| Combien des 109 espèces du catalogue ont une fréquence d'observation publiée ? | 66/109 seulement | Basse | Des relevés Canonn complémentaires pour les 43 manquantes |
+| Clypeus Speculumi exige-t-elle vraiment &gt;2 500 Ls de l'étoile ? | Contrainte présentée comme communautaire | Basse | Une confirmation par télémétrie |
+| Sinuefai, Sinuefe et Wredguia offrent-ils vraiment des taux de rencontre supérieurs ? | Témoignage d'un seul commandant | Basse | Un recoupement indépendant |
+| Les 100 000 000 Cr d'une Fonticulua Fluctus en First Logged ont-ils été payés en jeu ? | Un calcul (20 M × ×5), pas un relevé de caisse | Basse | Une vente réelle en First Logged confirmant ce montant |
+| Le Cr/h de 15-25 M pour l'exobiologie est-il un barème Frontier ? | Reconstitution communautaire datée du 13 septembre 2026 | Basse | Une cadence de scan documentée par une source primaire |
+| L'échelle Exobiologiste a-t-elle vraiment 7 paliers avant Elite, ou en manque-t-il un ? | 7 paliers relevés, aucun 8ᵉ trouvé | Basse | Une source nommant un 8ᵉ palier intermédiaire |
+| L'ordre exact des paliers intermédiaires Explorateur/Exobiologiste est-il vérifié ? | Reconstitution communautaire recoupée avec un seul article Canonn | Basse | Le wiki Fandom/forums officiels (bloqués en session) |
+
 **Test de non-régression.** Tout renvoi « trancher via 00-chronologie » ajouté dans l'un des 32 guides doit correspondre
 à une entrée existante de ce registre ou de la table de réconciliation ci-dessus ; une entrée résolue doit être
 retirée d'ici **et** de son guide d'origine dans le même geste, pour que les deux ne divergent jamais.
@@ -937,3 +1434,8 @@ portée du présent document explicitement étendue à toute incertitude non dat
 L'échelle de confiance à trois valeurs de ce document est désormais généralisée à quatre valeurs (ajout de *basse*)
 dans [00-methodologie-sourcing.md](./00-methodologie-sourcing.md), document créé le même jour, qui tranche aussi la
 fiabilité de MassivelyOP comme source de presse (P3, confirmée sur cinq articles relus en direct).
+**Révisé une troisième fois le 13 septembre 2026** (même chantier, poursuivi) : le registre d'incertitudes étendu
+aux 32 guides thématiques dans leur intégralité (451 entrées au total, contre 92 dans la première passe), et le
+format normalisé de section Sources ainsi que la colonne `Fiab.` étendus, dans les guides eux-mêmes, aux onze guides
+et quatre tableaux respectivement identifiés par l'audit — voir le détail dans
+[00-methodologie-sourcing.md §9 et §10](./00-methodologie-sourcing.md).

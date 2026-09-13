@@ -98,18 +98,23 @@ P4), généralise en une échelle unique à quatre valeurs les deux échelles de
 redondantes du corpus, et tranche un point de gouvernance resté ouvert depuis l'audit du 9 septembre 2026 : la
 lecture directe de cinq articles MassivelyOP consacrés à Operations confirme leur fiabilité comme source de presse
 (palier P3), ce qui valide les 54 citations du site dans le corpus sans en retirer aucune. Le format normalisé de
-section Sources qui en découle est appliqué à [11-commerce.md](./11-commerce.md) et
-[02-powerplay.md](./02-powerplay.md), pilotes d'une conversion qui reste à étendre aux neuf autres guides à
-bibliographie non annotée identifiés par l'audit. Le registre d'incertitudes ajouté à
-[00-chronologie-canonique.md](./00-chronologie-canonique.md) rassemble pour la première fois en une table unique
-92 aveux d'incertitude jusque-là dispersés en prose dans 07-equipement-a-pied, 27-debuter-et-progresser, 14-rhino,
-20-minage et 18-colonisation — les autres guides du corpus restent à migrer. Le corpus se dote enfin d'un instrument
-de mesure qui n'existait dans aucun des cycles précédents : [EVALUATION.md](../EVALUATION.md) et son jeu de
-[72 questions de référence](../eval/questions-reference.json), à rejouer après chaque cycle pour détecter une
+section Sources qui en découle a d'abord été posé en pilote sur [11-commerce.md](./11-commerce.md) et
+[02-powerplay.md](./02-powerplay.md), puis étendu, dans la même journée, aux neuf autres guides à bibliographie non
+annotée identifiés par l'audit — 01-lore, 07-equipement-a-pied, 08-combat-spatial, 09-combat-a-pied, 10-exploration,
+12-transport, 13-operations, 16-outils, 18-colonisation et 23-jeu-en-groupe — soit les **douze guides** que l'audit
+avait explicitement visés, intégralement convertis. La colonne `Fiab.` (P/C/E/N) a de même été ajoutée à la
+totalité des tableaux chiffrés des quatre guides qui en étaient dépourvus : 01-lore, 12-transport, 18-colonisation et
+22-squadrons (227 lignes au total). Le registre d'incertitudes ajouté à
+[00-chronologie-canonique.md](./00-chronologie-canonique.md) a été étendu, dans le même mouvement, des cinq premiers
+guides migrés à l'intégralité des **32 guides thématiques** — 451 admissions d'incertitude au total, chacune extraite
+par lecture complète du fichier plutôt que par simple reprise du front-matter. Le corpus se dote enfin d'un
+instrument de mesure qui n'existait dans aucun des cycles précédents : [EVALUATION.md](../EVALUATION.md) et son jeu
+de [72 questions de référence](../eval/questions-reference.json), à rejouer après chaque cycle pour détecter une
 régression avant qu'un lecteur ne la remarque, et [CHANGELOG.md](../CHANGELOG.md), qui historicise les cycles menés à
-ce jour et signale au passage une zone d'ombre que ce chantier a mise au jour sans la combler : les quatre derniers
-chantiers de contenu (12 à 15) n'ont pas reçu de paragraphe dans cet historique, contrairement à tous ceux qui les
-précèdent. Le corpus reste à 32 guides thématiques, portés à **4 documents transversaux**.
+ce jour et signale au passage une zone d'ombre que ce chantier a mise au jour sans la combler : les quatre chantiers
+de contenu 12 à 15 n'ont pas reçu de paragraphe dans cet historique, contrairement à tous ceux qui les précèdent — un
+suivi a été proposé pour l'écrire, distinct de ce chantier. Le corpus reste à 32 guides thématiques, portés à
+**4 documents transversaux**.
 
 ## Périmètre et non-objectifs
 
@@ -603,41 +608,34 @@ recouvre lexicalement l'ensemble du corpus. Indexées, elles remontent en tête 
 évincent les passages qui contiennent réellement la réponse. Les renvois croisés utiles restent accessibles au lecteur
 humain dans le fichier ; ils n'ont simplement pas leur place dans l'index vectoriel.
 
-**Relevé du 13 septembre 2026, après le chantier 16 (méthodologie de sourcing) : 72 sections, 24 906 mots, recompté
-par script plutôt qu'à la main.** Comptage : titres capturés par le motif ci-dessus dans les fichiers `NN-*.md`,
-contenu compté jusqu'au titre de même niveau ou de niveau supérieur suivant, découpage sur les espaces. Trente et un
-guides portent deux sections concernées (`## Voir aussi` et `## Sources`) — les trente guides déjà comptés au relevé
-précédent plus le nouveau [00-methodologie-sourcing.md](./00-methodologie-sourcing.md) —, trois en portent trois —
-[05-guardians.md](./05-guardians.md), [07-equipement-a-pied.md](./07-equipement-a-pied.md) et
+**Relevé du 13 septembre 2026, après la conversion complète des douze guides au format Sources normalisé (chantier
+16, fin) : 72 sections, 38 992 mots, produit par script.** Comptage : titres capturés par le motif ci-dessus dans les
+fichiers `NN-*.md`, contenu compté jusqu'au titre de même niveau ou de niveau supérieur suivant, découpage sur les
+espaces. Trente et un guides portent deux sections concernées (`## Voir aussi` et `## Sources`), trois en portent
+trois — [05-guardians.md](./05-guardians.md), [07-equipement-a-pied.md](./07-equipement-a-pied.md) et
 [10-exploration.md](./10-exploration.md), qui ajoutent chacun une section de ressources externes —,
-[00-glossaire.md](./00-glossaire.md) en porte une seule (`## Sources`, sans `## Voir aussi`), et
-[00-chronologie-canonique.md](./00-chronologie-canonique.md) n'en porte aucune (ses sources sont citées en prose sous
-un intitulé en gras, pas sous un titre Markdown). Soit 31 × 2 + 3 × 3 + 1 × 1 + 1 × 0 = 72 sections pour 36 fichiers.
-Les blocs les plus lourds restent, dans le même ordre qu'au relevé précédent, le `## Sources` de
-[06-ingenieurs.md](./06-ingenieurs.md) (2 140 mots, inchangé) et celui de [20-minage.md](./20-minage.md) (1 776 mots,
-inchangé), suivis de celui de [10-exploration.md](./10-exploration.md) (856 mots) et de celui de
-[28-marchandises.md](./28-marchandises.md) (749 mots) — aucun des guides suivants n'y figure, tous restant sous ce
-seuil, dont deux en forte hausse suite à la normalisation du chantier 16 :
-[02-powerplay.md](./02-powerplay.md) (`## Voir aussi` 161 mots, `## Sources` 644 mots — contre une bibliographie
-d'URL nues bien plus courte avant ce chantier) et [11-commerce.md](./11-commerce.md) (`## Voir aussi` 246 mots,
-`## Sources` 573 mots, même cause). Suivent [29-missions-reputation-et-rangs.md](./29-missions-reputation-et-rangs.md)
-(`## Voir aussi` 221 mots, `## Sources` 548 mots), [13-operations.md](./13-operations.md) (`## Voir aussi` 285 mots,
-`## Sources` 451 mots), [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) (`## Voir aussi` 143 mots, `## Sources`
-364 mots), [14-rhino.md](./14-rhino.md) (`## Voir aussi` 290 mots, `## Sources` 532 mots),
-[31-pilotage-navigation-et-stations.md](./31-pilotage-navigation-et-stations.md) (`## Voir aussi` 162 mots,
-`## Sources` 275 mots), et [32-geographie-galactique.md](./32-geographie-galactique.md) (`## Voir aussi` 120 mots,
-`## Sources` 269 mots).
+[00-glossaire.md](./00-glossaire.md) en porte une seule, et [00-chronologie-canonique.md](./00-chronologie-canonique.md)
+n'en porte aucune. Soit 31 × 2 + 3 × 3 + 1 × 1 + 1 × 0 = 72 sections pour 36 fichiers — le compte de sections est
+identique à celui d'avant cette conversion, puisqu'elle n'a rien ajouté ni retiré comme section, seulement réécrit
+leur contenu.
 
-**Écart avec le relevé précédent (13 septembre 2026, avant le chantier 16 : 70 sections/23 606 mots), expliqué ici
-plutôt que simplement corrigé.** L'écart de +2 sections vient entièrement du nouveau
-[00-methodologie-sourcing.md](./00-methodologie-sourcing.md) ; l'écart de mots (+1 300, bien supérieur aux 284 mots de
-ce seul fichier) vient de la normalisation des sections `## Sources` de [11-commerce.md](./11-commerce.md) et
-[02-powerplay.md](./02-powerplay.md) au format à puces annotées du chantier 16 (chaque source y gagne son palier, sa
-date de consultation et ce qu'elle confirme ou non), et d'une ligne ajoutée à celle de
-[13-operations.md](./13-operations.md). Ce relevé a été produit par un script plutôt qu'à la main — les deux écarts
-déjà documentés dans les révisions précédentes de cette section montraient qu'un recomptage manuel, aussi soigneux
-soit-il, dérive en quelques révisions ; automatiser la mesure est la seule façon de garder cette phrase vraie plus
-longtemps qu'une révision.
+**Le volume, en revanche, a plus que doublé (+14 086 mots, de 24 906 à 38 992) — attendu, et sans conséquence sur le
+RAG.** La conversion de 11-commerce, 02-powerplay, 01-lore, 12-transport, 18-colonisation, 08-combat-spatial,
+09-combat-a-pied, 10-exploration, 13-operations, 16-outils, 23-jeu-en-groupe et 07-equipement-a-pied au format à
+puces du [§9 de 00-methodologie-sourcing.md](./00-methodologie-sourcing.md#9-format-normalisé-dune-section-sources)
+ajoute à chaque ligne son palier, sa date de consultation et deux phrases (« confirme »/« ne confirme pas ») là où il
+n'y avait qu'une URL nue : le volume augmente par construction, et c'est le but du chantier — une bibliographie plus
+longue mais qui dit enfin ce qu'elle établit. Sans conséquence sur le RAG parce que la Règle 2 exclut ces sections de
+l'indexation quel que soit leur volume ; ce chiffre mesure un effort éditorial, pas un risque de bruit documentaire.
+Les blocs les plus lourds ont changé d'ordre en conséquence : le `## Sources` de [01-lore.md](./01-lore.md)
+(4 657 mots, 93 lignes annotées) dépasse désormais tous les autres, suivi de
+[10-exploration.md](./10-exploration.md) (2 960 mots, 57 lignes), [06-ingenieurs.md](./06-ingenieurs.md) (2 140 mots,
+non touché par cette conversion), [07-equipement-a-pied.md](./07-equipement-a-pied.md) (2 102 mots),
+[16-outils.md](./16-outils.md) (2 098 mots), [20-minage.md](./20-minage.md) (1 776 mots, non touché) et
+[12-transport.md](./12-transport.md) (1 588 mots). Les neuf guides restants que l'audit avait cités comme pratiquant
+« déjà » un format proche en prose libre (21-bgs, 19-fleet-carriers, 20-minage, 26-ingenierie-a-pied-avancee,
+27-debuter-et-progresser) n'ont pas été reformatés — voir [00-methodologie-sourcing.md §9](./00-methodologie-sourcing.md#9-format-normalisé-dune-section-sources)
+pour la justification de ce choix, pas un oubli.
 
 Deux écarts avec le relevé précédent, publié le même jour et corrigés ici, méritent d'être signalés parce qu'ils
 illustrent exactement le défaut que ce relevé est censé prévenir. Le décompte de **57 sections** était juste, mais la

@@ -10,7 +10,7 @@ date_verification: 2026-09-13
 confiance_globale: haute
 volatilite: basse
 sources_primaires: ["00-chronologie-canonique.md (échelle de confiance haute/moyenne/non confirmé, l.42-43, généralisée ici)", "README.md (gabarit de front-matter, champ confiance_globale)", "pratique de sourçage déjà observée dans 21-bgs.md, 19-fleet-carriers.md, 20-minage.md, 26-ingenierie-a-pied-avancee.md et 27-debuter-et-progresser.md", "5 articles massivelyop.com relus directement le 13 septembre 2026 (voir §7)"]
-zones_incertaines: ["le format de section Sources normalisé au §9 n'a été rétroactivement appliqué qu'à 11-commerce.md et 02-powerplay.md à ce jour ; les 9 autres guides à 100 % d'URL nues identifiés par l'audit restent à convertir", "les cinq guides cités comme pratiquant déjà « le format normalisé » par le plan de cycle 3 (21-bgs, 19-fleet-carriers, 20-minage, 26, 27) utilisent en réalité une prose annotée proche dans l'esprit mais pas dans la forme du gabarit à puces défini ici — voir la note du §9", "la colonne terminale « Fiab. » (P/C/E/N) prescrite par le chantier 16 pour les tableaux chiffrés de 01-lore.md, 22-squadrons.md, 12-transport.md et 18-colonisation.md n'a pas été ajoutée dans cette passe (232 lignes à trancher une par une, non fait faute de temps) — à traiter dans un prochain chantier plutôt qu'à bâcler ici", "le registre d'incertitudes de 00-chronologie-canonique.md ne couvre encore que 5 des 32 guides thématiques (les plus denses identifiés par l'audit) ; les aveux d'incertitude des 27 autres restent à y migrer"]
+zones_incertaines: ["les cinq guides cités par le plan de cycle 3 comme pratiquant déjà « le format normalisé » (21-bgs, 19-fleet-carriers, 20-minage, 26, 27) restent volontairement en prose annotée plutôt que convertis au gabarit à puces — décision délibérée de ne pas reformater un texte qui remplit déjà l'intention, pas un oubli", "le registre d'incertitudes couvre désormais les 32 guides thématiques en intégralité (451 entrées), mais pas les 3 autres documents transversaux (00-boucles-de-gameplay, 00-glossaire, ce document lui-même) ni les guides assets/guides/*.json", "les 5 % de lignes de tableau les plus atypiques (tableaux à cheval sur deux sujets, lignes de total/synthèse) peuvent porter un code Fiab. discutable ; aucune contre-vérification indépendante de l'ensemble des 227 lignes n'a été faite"]
 guides_lies: [0, 17]
 ---
 # Méthodologie de sourcing et gouvernance du corpus
@@ -148,21 +148,51 @@ consultation au format `JJ/MM/AAAA` ; ce que la source **confirme** ; ce qu'elle
 qui reste incertain malgré elle. Ce dernier champ est ce qui manque le plus aux bibliographies actuelles du corpus :
 une URL nue ne dit jamais ce qu'elle a servi à établir, ni ce qu'elle a laissé ouvert.
 
-**État d'adoption au 13 septembre 2026.** Ce gabarit est appliqué en entier à
-[11-commerce.md](./11-commerce.md) et [02-powerplay.md](./02-powerplay.md), les deux guides désignés en priorité par
-l'audit du cycle 3 (respectivement 3 attributions pour 77 lignes de tableau, et une bibliographie non annotée).
-L'audit avait identifié onze guides à 100 % d'URL nues : 16-outils, 12-transport, 01-lore, 10-exploration,
-02-powerplay, 07-equipement-a-pied, 18-colonisation, 09-combat-a-pied, 23-jeu-en-groupe, 13-operations,
-08-combat-spatial. Neuf d'entre eux restent à convertir — travail mécanique mais volumineux (plusieurs centaines de
-lignes cumulées), laissé en l'état pour un prochain chantier plutôt que bâclé ici. Les cinq guides que l'audit citait
-comme pratiquant « déjà » un format proche — [21-bgs.md](./21-bgs.md),
-[19-fleet-carriers.md](./19-fleet-carriers.md), [20-minage.md](./20-minage.md),
+**État d'adoption au 13 septembre 2026 (mis à jour en fin de chantier).** L'audit du cycle 3 avait identifié onze
+guides à 100 % d'URL nues : 16-outils, 12-transport, 01-lore, 10-exploration, 02-powerplay, 07-equipement-a-pied,
+18-colonisation, 09-combat-a-pied, 23-jeu-en-groupe, 13-operations, 08-combat-spatial — plus 11-commerce.md, désigné
+en priorité par le plan de cycle 3 sans figurer dans ce compte de onze. **Les douze sont désormais convertis au
+gabarit à puces ci-dessus**, chaque ligne relue dans le corps du guide pour écrire un couple confirme/ne confirme pas
+honnête plutôt qu'une annotation générique. Les cinq guides que l'audit citait comme pratiquant « déjà » un format
+proche — [21-bgs.md](./21-bgs.md), [19-fleet-carriers.md](./19-fleet-carriers.md), [20-minage.md](./20-minage.md),
 [26-ingenierie-a-pied-avancee.md](./26-ingenierie-a-pied-avancee.md) et
-[27-debuter-et-progresser.md](./27-debuter-et-progresser.md) — méritent une précision : à la relecture, ils annotent
-bien leurs sources d'une phrase disant ce qu'elles confirment ou non (21-bgs et 26 le font sérieusement), mais en
-**prose libre**, pas dans le gabarit à puces ci-dessus, et 27 en particulier ne fait que lister des URL nues suivies
-d'un seul paragraphe d'annotation collective. Ils ne sont donc pas de purs modèles à copier tels quels ; l'esprit
-(dire ce qu'une source établit) y est déjà, la forme normalisée reste à appliquer.
+[27-debuter-et-progresser.md](./27-debuter-et-progresser.md) — restent volontairement non convertis : à la relecture,
+ils annotent déjà leurs sources d'une phrase disant ce qu'elles confirment ou non, mais en **prose libre**, pas dans
+le gabarit à puces ci-dessus ; l'esprit (dire ce qu'une source établit) y est déjà, et forcer la forme normalisée sur
+un texte qui remplit déjà l'intention n'aurait rien ajouté. Les guides `00-*.md` transversaux et les guides créés
+après l'audit (28 à 32) suivent leurs propres conventions de sourçage et n'entrent pas dans ce périmètre.
+
+## 10. La colonne `Fiab.` des tableaux sans attribution
+
+Quatre guides ont été identifiés par l'audit du cycle 3 comme n'ayant **aucun** tableau portant trace d'attribution :
+[01-lore.md](./01-lore.md) (~75 lignes cumulées), [22-squadrons.md](./22-squadrons.md) (~25),
+[12-transport.md](./12-transport.md) (~51) et [18-colonisation.md](./18-colonisation.md) (~81). La colonne `Fiab.`
+ajoutée en fin de chacun de leurs tableaux chiffrés porte l'un de quatre codes :
+
+| Code | Signification | Correspondance avec la hiérarchie du §1 |
+|---|---|---|
+| **P** | Primaire | P1 — patch notes, journal du jeu, EDCD |
+| **C** | Communautaire recoupée | P2 — au moins deux sources communautaires convergentes |
+| **E** | Estimation | P3/P4 — presse isolée, reconstruction communautaire non recoupée |
+| **N** | Non confirmé | Aucune source ne documente cette ligne précise |
+
+**Méthode d'attribution : ligne de base par table, exception par ligne.** Reconstruire la source de chacune des
+quelque 227 lignes concernées serait une recherche à part entière, hors de portée d'une seule passe de gouvernance.
+Le code `Fiab.` reflète donc la provenance **documentée du tableau dans son ensemble** (ce que dit la section Sources
+ou `sources_primaires` du front-matter à propos de ce tableau), appliquée uniformément à ses lignes, **sauf** quand
+une ligne précise est individuellement signalée — dans `zones_incertaines`, dans le
+[registre d'incertitudes](./00-chronologie-canonique.md#registre-dincertitudes-du-corpus), ou dans une note de bas de
+tableau déjà présente — auquel cas cette ligne porte son propre code, généralement `E` ou `N`. Une colonne `Fiab.`
+homogène à `C` du premier au dernier rang n'est donc pas un signe de paresse : c'est le reflet honnête d'un tableau
+sourcé une fois, en bloc, comme la plupart le sont déjà dans ce corpus.
+
+**État d'adoption au 13 septembre 2026.** Les quatre guides visés par l'audit portent désormais la colonne `Fiab.` sur
+la totalité de leurs tableaux chiffrés : [01-lore.md](./01-lore.md) (9 tableaux, 107 lignes),
+[12-transport.md](./12-transport.md) (6 tableaux, 39 lignes), [18-colonisation.md](./18-colonisation.md)
+(12 tableaux, 64 lignes) et [22-squadrons.md](./22-squadrons.md) (4 tableaux, 17 lignes) — 227 lignes au total. Chaque
+déviation par rapport au code de base d'une table a été justifiée par un renvoi à une entrée déjà existante du
+`zones_incertaines` du guide ou du [registre d'incertitudes](./00-chronologie-canonique.md#registre-dincertitudes-du-corpus),
+jamais par une re-recherche ligne à ligne — conformément à la méthode ci-dessus.
 
 ## Voir aussi
 

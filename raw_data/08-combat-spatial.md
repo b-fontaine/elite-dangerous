@@ -1105,21 +1105,23 @@ détail châssis par châssis dans [03-vaisseaux.md](./03-vaisseaux.md) : ce gui
 
 ## Sources
 
-- https://en.wikipedia.org/wiki/Elite_Dangerous
-- https://canonn.science/
-- https://www.edsm.net/en/
-- https://www.spansh.co.uk/
-- EDCD/coriolis-data, commit `0db9234b5b9ce8c939ea84133d7ce336eea88e27` — `ships/` (47 fiches de vaisseau, dont
-  `properties.hardness` et `bulkheads`), `modules/hardpoints/` (`piercing`, `damagedist`), `modifications/`
-  (`blueprints.json`, `specials.json`, `modules.json`, `modifications.json`) et `spec/data-spec.js`.
-- EDCD/FDevIDs, commit `c35612952dd6a547d1a7ac4cffab9c7051e86579` — `outfitting.csv` (noms d'affichage des armes) et
-  `combatrank.csv` (échelle nominale du rang de combat).
-- https://elite-dangerous.fandom.com/wiki/Megaship, /wiki/Bulk_Cruiser, /wiki/Installation, /wiki/Salvager,
-  /wiki/Recon_Limpet_Controller, /wiki/Hackable_Data_Transmitter, /wiki/Hackable_Comms_Array (consultées le
-  13 septembre 2026, pour la section 4.6 — typologie des megaships et installations, procédure de piratage à
-  distance et contenu obtenu)
-- https://canonn.science/codex/non-dockable-megaships-an-introduction/ (22 mai 2022 — corrélation classe de
-  megaship → cargaison par défaut ; chiffre d'ensemble daté, traité comme ordre de grandeur historique)
+Format normalisé selon [00-methodologie-sourcing.md §9](./00-methodologie-sourcing.md#9-format-normalisé-dune-section-sources) ;
+voir aussi [11-commerce.md](./11-commerce.md) et [02-powerplay.md](./02-powerplay.md), guides pilotes de cette normalisation.
+
+- https://en.wikipedia.org/wiki/Elite_Dangerous | secondaire | consulté le 13/09/2026 | confirme : le contexte général du jeu (univers, superpuissances, grandes mécaniques) | ne confirme pas : un chiffre ou une règle de combat spatial propre à ce guide
+- https://canonn.science/ | secondaire | consulté le 13/09/2026 | confirme : l'existence et le rôle de Canonn Research Group comme organisation communautaire de recherche en jeu | ne confirme pas : un chiffre ou une mécanique propre à ce guide — voir l'article dédié aux megaships ci-dessous pour le contenu réellement cité en 4.6
+- https://www.edsm.net/en/ | secondaire | consulté le 13/09/2026 | confirme : le rôle d'EDSM comme base communautaire de données systèmes/vaisseaux | ne confirme pas : un fait de ce guide — aucune mécanique de combat n'y est directement rattachée
+- https://www.spansh.co.uk/ | secondaire | consulté le 13/09/2026 | confirme : le rôle de Spansh comme outil communautaire d'agrégation de données et de calcul de route | ne confirme pas : un fait de ce guide — aucune mécanique de combat n'y est directement rattachée
+- https://github.com/EDCD/coriolis-data/tree/0db9234b5b9ce8c939ea84133d7ce336eea88e27 | primaire | consulté le 10/09/2026 | confirme : dureté de coque et blindages (bulkheads) des 47 vaisseaux (répertoire `ships/`), pénétration et répartition des dégâts de chaque arme (`modules/hardpoints/`), compatibilité et effets des blueprints/specials (`modifications/`), et l'obligation des champs `hardness`/`piercing` (`spec/data-spec.js`) | ne confirme pas : le Lynx Highliner (48ᵉ châssis du jeu, absent du dépôt), le coefficient exact de réduction des dégâts sous la dureté de coque, ni la règle de calcul des dégâts absolus et anti-xéno
+- https://github.com/EDCD/FDevIDs/tree/c35612952dd6a547d1a7ac4cffab9c7051e86579 | primaire | consulté le 10/09/2026 | confirme : les noms d'affichage des armes (`outfitting.csv`) et l'échelle nominale à 14 paliers du rang de combat (`combatrank.csv`) | ne confirme pas : les seuils de score nécessaires pour passer d'un rang au suivant, jamais publiés par Frontier
+- https://elite-dangerous.fandom.com/wiki/Megaship | secondaire | consulté le 13/09/2026 | confirme : la définition générale de megaship et la distinction entre megaships accostables et non accostables (section 4.6) | ne confirme pas : le détail chiffré par sous-type, traité par la page Bulk_Cruiser ci-dessous
+- https://elite-dangerous.fandom.com/wiki/Bulk_Cruiser | secondaire | consulté le 13/09/2026 | confirme : les huit sous-types de Bulk Cruiser et leur plan de vol fixe à six escales, à cycle hebdomadaire | ne confirme pas : la corrélation classe → cargaison type (voir l'article Canonn ci-dessous)
+- https://elite-dangerous.fandom.com/wiki/Installation | secondaire | consulté le 13/09/2026 | confirme : les onze catégories d'installations spatiales fixes et leur détection au panneau de navigation jusqu'à 1 000 Ls | ne confirme pas : une corrélation classe d'installation → contenu du piratage, absente de toutes les sources consultées
+- https://elite-dangerous.fandom.com/wiki/Salvager | secondaire | consulté le 13/09/2026 | confirme : rien d'exploité dans ce guide — page consultée pour la section 4.6 mais son contenu n'y apparaît finalement pas | ne confirme pas : aucune information de cette page n'est reprise ici ; conservée en source par honnêteté de consultation
+- https://elite-dangerous.fandom.com/wiki/Recon_Limpet_Controller | secondaire | consulté le 13/09/2026 | confirme : le principe d'usage du Recon Limpet Controller (ciblage d'un sous-objet, temps de piratage) repris en 4.6 | ne confirme pas : les classes 1/3/5/7 et les temps précis (10 à 17 s), chiffrés dans 04-equipements.md, source de vérité
+- https://elite-dangerous.fandom.com/wiki/Hackable_Data_Transmitter | secondaire | consulté le 13/09/2026 | confirme : le Hackable Data Transmitter ne propose qu'un seul Limpet Docking Point et livre ses données directement en soute, sans limpet de collecte | ne confirme pas : les matériaux encodés précis qu'il rend (recoupés avec 06-ingenieurs.md)
+- https://elite-dangerous.fandom.com/wiki/Hackable_Comms_Array | secondaire | consulté le 13/09/2026 | confirme : le Hackable Comms Array propose deux Limpet Docking Points piratables en parallèle et éjecte des canisters à récupérer au Collector Limpet | ne confirme pas : les matériaux encodés précis qu'il rend (recoupés avec 06-ingenieurs.md)
+- https://canonn.science/codex/non-dockable-megaships-an-introduction/ | secondaire | consulté le 13/09/2026 | confirme : la corrélation classe de megaship → cargaison par défaut (table de la section 4.6) et un chiffre d'ensemble de megaships/classes recensés (article du 22 mai 2022) | ne confirme pas : que ce chiffre d'ensemble soit encore d'actualité en 2026 — traité comme ordre de grandeur historique probablement obsolète
 
 > **Ce que cette révision a pu vérifier, et ce qu'elle n'a pas pu vérifier.** Les chiffres ajoutés le 10 septembre 2026
 > — pénétration de blindage arme par arme, répartition des types de dégâts, dureté de coque des châssis, profils de

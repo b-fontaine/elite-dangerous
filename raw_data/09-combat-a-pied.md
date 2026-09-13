@@ -567,32 +567,29 @@ dans le corpus :
 
 ## Sources
 
-Corpus interne recoupé pour cette révision : 00-chronologie-canonique.md, 02-powerplay.md, 06-ingenieurs.md,
-07-equipement-a-pied.md, 13-operations.md, 14-rhino.md.
+Format normalisé selon [00-methodologie-sourcing.md §9](./00-methodologie-sourcing.md#9-format-normalisé-dune-section-sources)
+(chantier 16bis, 13 septembre 2026), sur le modèle de [11-commerce.md](./11-commerce.md) et
+[02-powerplay.md](./02-powerplay.md).
 
-**Source primaire de cette révision** — flux Steam News officiel d'Elite Dangerous (appid 359320), qui republie
-verbatim les annonces de Frontier, relevé le 9 septembre 2026 via
-https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320. Billets cités inline dans ce guide :
-
-| Billet | Horodatage UTC | Ce qu'il établit pour ce guide |
-|---|---|---|
-| « Elite Dangerous \| Kestrel Mk. II Update » | 24 février 2026 12:21 | Refonte de l'audio de combat à pied (section « On-Foot Combat Audio Rebalance ») |
-| « Elite Dangerous \| An Update on Operations » | 22 avril 2026 14:02 | Report d'Operations en juin ; format d'escouade à 4, modes Mercenary/Powerplay, Operation Runner, Merc Coin |
-| « Elite Dangerous \| Lynx Highliner Update Notes » | 28 avril 2026 13:11 | Portée des armes silencieuses portée de 40 à 128 m ; correctifs audio d'armes silencieuses |
-| « Elite Dangerous \| Operations Update » | 1ᵉʳ juillet 2026 14:01 | Sortie d'Operations ; six opérations ; MercGear ; correctifs de zones de conflit au sol |
-| « Elite Dangerous \| Operations Update \| Update 3 » | 9 juillet 2026 10:24 | Restitution des récompenses d'opération et des inventaires à pied |
-| « Elite Dangerous \| Rhino SRV Update » | 2 septembre 2026 11:20 | SRV Rhino ; septième opération « Under Siege » ; interface d'escouade à pied manquante |
-
-Sources externes (historique, contexte général, non ré-explorées intégralement pour cette révision) :
-
-- https://en.wikipedia.org/wiki/Elite_Dangerous
-- https://canonn.science
-- https://inara.cz/elite/
-- https://inara.cz/elite/database/
-- https://www.pcgamesn.com/elite-dangerous
-- https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320
-- https://www.spansh.co.uk/
-- https://steamcommunity.com/app/359320/guides/
+- [00-chronologie-canonique.md](./00-chronologie-canonique.md) | interne | consulté le 12/09/2026 | confirme : l'arbitrage daté des corrections chronologiques appliquées dans ce guide (Powerplay 2.0 vs Trailblazers, Colonisation, Rhino, Caspian Explorer, Kestrel Mk II, mode Operations) | ne confirme pas : le lien causal précis entre Caspian Explorer et un comportement de PNJ au sol plus prudent, qui reste à confirmer en jeu
+- [02-powerplay.md](./02-powerplay.md) | interne | consulté le 12/09/2026 | confirme : la date et le contenu de Powerplay 2.0 / l'extension Ascendancy (31 octobre 2024) et ses cycles hebdomadaires, à l'origine de nouvelles Ground CZ | ne confirme pas : un effet propre aux mécaniques de combat à pied elles-mêmes — Powerplay 2.0 n'affecte que l'apparition des zones, pas leur déroulé
+- [06-ingenieurs.md](./06-ingenieurs.md) | interne | consulté le 12/09/2026 | confirme : le principe général de l'ingénierie (apport de matériaux à un Engineer, modification irréversible) et le référentiel des grades de matériaux, commun aux vaisseaux et au combat à pied | ne confirme pas : le grade exact de chaque matériau à pied nommé dans ce guide, non détaillé exhaustivement (voir `zones_incertaines`)
+- [07-equipement-a-pied.md](./07-equipement-a-pied.md) | interne | consulté le 12/09/2026 | confirme : le catalogue complet des armes/combinaisons/outils par fabricant, les tables d'ingénierie détaillées (Engineers, blueprints, coûts) reprises ici en version condensée, et l'instantané des coûts au 9 septembre 2026 | ne confirme pas : que ces coûts en crédits resteront valables après un futur rééquilibrage — à revérifier en jeu
+- [13-operations.md](./13-operations.md) | interne | consulté le 12/09/2026 | confirme : la typologie des settlements, la mécanique complète de détection/suspicion/confinement et le système Operations dans son ensemble (lobby, appariement, difficulté, récompenses) | ne confirme pas : une table de correspondance entre les six noms de travail annoncés le 22 avril 2026 et les six noms d'opérations retenus au lancement — Frontier n'en a publié aucune
+- [14-rhino.md](./14-rhino.md) | interne | consulté le 12/09/2026 | confirme : la chronologie sourcée du SRV Rhino (2 septembre 2026) et du vaisseau Nomad (30 juin 2026) | ne confirme pas : un rôle de combat pour le Rhino, dont la fonction première reste le minage
+- https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320 | primaire | consulté le 09/09/2026 | confirme : billet « Elite Dangerous \| Kestrel Mk. II Update » (24/02/2026 12:21 UTC) — refonte complète de l'audio de combat à pied, levant la réserve d'une version antérieure de ce guide | ne confirme pas : des valeurs chiffrées précises d'atténuation (dB, distances) — le billet reste qualitatif
+- https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320 | primaire | consulté le 09/09/2026 | confirme : billet « Elite Dangerous \| An Update on Operations » (22/04/2026 14:02 UTC) — report d'Operations à juin 2026, format d'escouade à 4, modes Mercenary/Powerplay, Operation Runner, monnaie Merc Coin | ne confirme pas : la correspondance entre les six noms de travail cités ici (Counter Attack, Burning Rescue…) et les six noms retenus au lancement — non publiée par Frontier
+- https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320 | primaire | consulté le 09/09/2026 | confirme : billet « Elite Dangerous \| Lynx Highliner Update Notes » (28/04/2026 13:11 UTC) — portée des armes silencieuses portée de 40 à 128 m, correctifs audio du Karma AR-50 et du Manticore Executioner | ne confirme pas : une valeur de portée individuelle par arme — le billet parle de modes « comparables » sans détailler arme par arme
+- https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320 | primaire | consulté le 09/09/2026 | confirme : billet « Elite Dangerous \| Operations Update » (1ᵉʳ juillet 2026 14:01 UTC) — sortie d'Operations, six opérations nommées, catalogue MercGear, trois correctifs de zones de conflit au sol (Issue ID 80753, 78904, 78480) | ne confirme pas : la correction des bugs de récompenses et d'inventaires à pied signalés juste après le lancement — résolus seulement par le billet « Update 3 » ci-dessous
+- https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320 | primaire | consulté le 09/09/2026 | confirme : billet « Elite Dangerous \| Operations Update \| Update 3 » (09/07/2026 10:24 UTC) — restitution rétroactive des récompenses d'opération et des inventaires à pied effacés | ne confirme pas : la résolution de l'interface d'escouade à pied manquante, encore signalée comme problème connu par le billet suivant
+- https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320 | primaire | consulté le 09/09/2026 | confirme : billet « Elite Dangerous \| Rhino SRV Update » (02/09/2026 11:20 UTC) — SRV Rhino de Vodel, septième opération « Under Siege », interface d'escouade à pied toujours signalée manquante | ne confirme pas : une date de résolution pour cette interface manquante
+- https://en.wikipedia.org/wiki/Elite_Dangerous | secondaire | consulté le 12/09/2026 | confirme : le contexte général du jeu et la date d'introduction du combat à pied avec Odyssey (19 mai 2021) | ne confirme pas : un seul des faits datés 2025-2026 de ce guide — page non ré-explorée en détail pour cette révision
+- https://canonn.science | secondaire | consulté le 12/09/2026 | confirme : l'existence de Canonn Research comme base communautaire recoupée, citée en source générale du front-matter | ne confirme pas : un fait précis de ce guide — aucune citation inline de Canonn n'y figure
+- https://inara.cz/elite/ | secondaire | consulté le 12/09/2026 | confirme : le portail général Inara comme base communautaire recoupée | ne confirme pas : un chiffre précis de ce guide — portail générique, non cité inline
+- https://inara.cz/elite/database/ | secondaire | consulté le 12/09/2026 | confirme : l'existence de la base Inara des Engineers/Blueprints, dont s'inspire la structure du tableau condensé des neuf Engineers de combat à pied | ne confirme pas : les coûts précis de chaque modification, qui restent un instantané du 9 septembre 2026 à revérifier en jeu
+- https://www.pcgamesn.com/elite-dangerous | tertiaire | consulté le 12/09/2026 | confirme : l'existence d'une couverture de presse spécialisée suivie sur Elite Dangerous | ne confirme pas : un fait précis de ce guide — page-tag générique, non citée inline
+- https://www.spansh.co.uk/ | secondaire | consulté le 12/09/2026 | confirme : l'existence de Spansh comme outil communautaire recoupé, cité en source générale du front-matter | ne confirme pas : un fait de combat à pied — Spansh couvre le routage et l'exploration, pas le combat au sol
+- https://steamcommunity.com/app/359320/guides/ | tertiaire | consulté le 12/09/2026 | confirme : l'existence de guides communautaires Steam consacrés au jeu | ne confirme pas : un fait précis de ce guide — contenu utilisateur non recoupé, non cité inline
 
 ## Note sur la fiabilité des données chiffrées de ce guide
 

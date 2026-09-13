@@ -77,7 +77,7 @@ guides:
     confiance_globale: "haute"
     volatilite: "basse"
     sources_primaires: ["00-chronologie-canonique.md (échelle de confiance)", "README.md (gabarit de front-matter)", "5 articles massivelyop.com relus directement le 13 septembre 2026"]
-    zones_incertaines: ["le format de section Sources normalisé n'a été rétroactivement appliqué qu'à 11-commerce.md et 02-powerplay.md ; 9 guides à 100 % d'URL nues restent à convertir", "la colonne Fiab. prescrite pour 01-lore/22-squadrons/12-transport/18-colonisation n'a pas été ajoutée", "le registre d'incertitudes ne couvre encore que 5 des 32 guides thématiques"]
+    zones_incertaines: ["cinq guides (21-bgs, 19-fleet-carriers, 20-minage, 26, 27) restent en prose annotée plutôt qu'au gabarit à puces, par choix délibéré", "le registre d'incertitudes de 00-chronologie-canonique.md couvre les 32 guides thématiques mais pas les autres documents transversaux", "aucune contre-vérification indépendante des 227 lignes de la colonne Fiab. n'a été faite"]
     guides_lies: [0, 17]
 
   - id: 01-lore

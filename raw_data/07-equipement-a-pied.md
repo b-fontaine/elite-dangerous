@@ -988,44 +988,47 @@ contenu à enjeu élevé (raid de settlement de haute valeur, transport de gros 
 
 ## Sources
 
+Format normalisé selon [00-methodologie-sourcing.md §9](./00-methodologie-sourcing.md#9-format-normalisé-dune-section-sources) ;
+voir aussi [11-commerce.md](./11-commerce.md) et [02-powerplay.md](./02-powerplay.md), guides pilotes de cette normalisation.
+
 - Flux d'annonces officielles Frontier pour *Elite Dangerous*, relevé le 9 septembre 2026 — billets « An Update on
   Operations » (22 avril 2026, 14:02 UTC), « Discover the Nomad » (2 juin 2026, 13:03 UTC), « Operations Update »
   (1ᵉʳ juillet 2026, 14:01 UTC), « Operations Update | Update 3 » (9 juillet 2026, 10:24 UTC) et « Rhino SRV Update »
   (2 septembre 2026, 11:20 UTC) : source primaire des dates, du catalogue MercGear et des citations sur le Nomad.
-- https://massivelyop.com/2026/01/11/elite-dangerous-drops-preliminary-details-about-its-raid-like-multiplayer-operations-instances/
-- https://massivelyop.com/2025/11/05/elite-dangerous-announces-a-paid-station-a-new-ship-and-multi-step-operation-missions/
-- https://en.wikipedia.org/wiki/Elite_Dangerous
-- https://gamingwithdaopa.ellatha.com/elitedangerous/engineer/domino-green/
-- https://gamingwithdaopa.ellatha.com/elitedangerous/
-- https://edfieldmanual.com/
-- https://edfieldmanual.com/wiki/Engineers
-- https://edfieldmanual.com/wiki/Uma_Laszlo
-- https://edfieldmanual.com/wiki/Hero_Ferrari
-- https://edfieldmanual.com/wiki/Wellington_Beck
-- https://edfieldmanual.com/wiki/Jude_Navarro
-- https://edfieldmanual.com/wiki/Terra_Velasquez
-- https://edfieldmanual.com/wiki/Oden_Geiger
-- https://edfieldmanual.com/wiki/Kit_Fowler
-- https://edfieldmanual.com/wiki/Yarden_Bond
-- https://edfieldmanual.com/wiki/Category:Odyssey
-- https://edfieldmanual.com/wiki/Dominator_Suit
-- https://edfieldmanual.com/wiki/Pioneer_Supplies
-- https://www.starzen.space/t/elite-dangerous-odyssey-all-suits-explained-artemis-maverick-dominator-guide/32431
-- https://www.starzen.space/t/guide-on-foot-engineering-upgrading-elite-dangerous-odyssey/37839
-- https://gamerant.com/elite-dangerous-best-personal-weapon-builds/
-- https://gamerant.com/elite-dangerous-best-space-suit-builds/
-- https://k224p24mgt.wordpress.com/2025/05/11/elite-dangerous-exobiology-guide-how-to-discover-alien-life-and-make-a-fortune/
-- https://www.mmorpg.com/news/elite-dangerous-details-how-on-foot-weapons-will-work-in-upcoming-odyssey-expansion-2000121151
-- https://www.pilot-gaming.com/exobiology-guide-elite-dangerous/
-- https://gameplay.tips/guides/11223-elite-dangerous.html
-- https://justabout.com/elite-dangerous/37867/tell-us-how-to-get-into-exobiology-reward
-- https://steamcommunity.com/sharedfiles/filedetails/?id=2516179683
-- https://www.edsm.net/en/
-- https://www.pcgamesn.com/elite-dangerous
-- https://canonn.science/
-- https://www.magicgameworld.com/elite-dangerous-odyssey-what-happens-if-i-die-while-on-foot/ (mécanique de mort à pied)
-- https://steamcommunity.com/app/359320/discussions/0/3039355912932616546/ (perte de matériaux / sac à dos à la mort)
-- ./00-chronologie-canonique.md (arbitrage des dates Operations, Trailblazers, Caspian Explorer, Kestrel Mk II)
+- https://massivelyop.com/2026/01/11/elite-dangerous-drops-preliminary-details-about-its-raid-like-multiplayer-operations-instances/ | tertiaire | consulté le 13/09/2026 | confirme : nature « raid-like » d'Operations annoncée en amont, mélange vaisseau/armes à pied/SRV | ne confirme pas : le contenu final de l'équipement à pied déployé dans les six scénarios de lancement
+- https://massivelyop.com/2025/11/05/elite-dangerous-announces-a-paid-station-a-new-ship-and-multi-step-operation-missions/ | tertiaire | consulté le 13/09/2026 | confirme : le tout premier dévoilement d'Operations et sa fenêtre visée « early 2026 » | ne confirme pas : le contenu ni la date définitive, reportée deux fois avant la sortie du 30 juin 2026
+- https://en.wikipedia.org/wiki/Elite_Dangerous | secondaire | consulté le 13/09/2026 | confirme : le contexte général du jeu et la date de sortie d'Odyssey (19 mai 2021) | ne confirme pas : le détail chiffré de l'équipement à pied propre à ce guide
+- https://gamingwithdaopa.ellatha.com/elitedangerous/engineer/domino-green/ | tertiaire | consulté le 09/09/2026 | confirme : la fiche de l'Engineer Domino Green (système Orishis, spécialités suit/arme) reprise dans la table des treize Engineers à pied | ne confirme pas : le volet armes des quatre Engineers de Colonia, resté non couvert
+- https://gamingwithdaopa.ellatha.com/elitedangerous/ | tertiaire | consulté le 09/09/2026 | confirme : l'index des fiches Engineer consultées pour construire la table des treize Engineers à pied | ne confirme pas : les paliers de grade ou blueprints des quatre outils (Wave Scanner, Profile Analyser, Compact Multi-Tool, E-Breach)
+- https://edfieldmanual.com/ | tertiaire | consulté le 09/09/2026 | confirme : sert de portail communautaire pour les fiches de combinaisons et d'Engineers citées dans ce guide | ne confirme pas : l'existence de blueprints d'Engineer dédiés aux quatre outils à pied
+- https://edfieldmanual.com/wiki/Engineers | tertiaire | consulté le 09/09/2026 | confirme : la liste des treize Engineers à pied et leurs chaînes de déblocage | ne confirme pas : un second emplacement d'effet expérimental pour les suits et armes
+- https://edfieldmanual.com/wiki/Uma_Laszlo | tertiaire | consulté le 09/09/2026 | confirme : les spécialités d'Uma Laszlo (Damage Resistance, Faster Shield Regen côté suit ; Headshot Damage, Reload Speed, Stowed Reloading côté arme) et la recette Headshot Damage par fabricant | ne confirme pas : le grade des matériaux par palier pour cette modification
+- https://edfieldmanual.com/wiki/Hero_Ferrari | tertiaire | consulté le 09/09/2026 | confirme : les spécialités de Hero Ferrari (Increased Air Reserves, Increased Sprint Duration, Improved Jump Assist côté suit ; Noise Suppressor, Faster Handling côté arme) | ne confirme pas : le coût par palier de matériaux de ces modifications
+- https://edfieldmanual.com/wiki/Wellington_Beck | tertiaire | consulté le 09/09/2026 | confirme : les spécialités de Wellington Beck (Extra Backpack Capacity, Improved Battery Capacity, Reduced Tool Battery Consumption côté suit ; Greater Range, Scope côté arme) | ne confirme pas : les matériaux par fabricant pour Greater Range et Scope, relevés plutôt sur inara.cz (voir [26-ingenierie-a-pied-avancee.md](./26-ingenierie-a-pied-avancee.md))
+- https://edfieldmanual.com/wiki/Jude_Navarro | tertiaire | consulté le 09/09/2026 | confirme : les spécialités de Jude Navarro (Added Melee Damage, Extra Ammo Capacity côté suit ; Reload Speed, Magazine Size côté arme) | ne confirme pas : le grade des matériaux par palier
+- https://edfieldmanual.com/wiki/Terra_Velasquez | tertiaire | consulté le 09/09/2026 | confirme : les spécialités de Terra Velasquez (Combat Movement Speed, Increased Air Reserves, Increased Sprint Duration côté suit ; Improved Hip Fire Accuracy, Noise Suppressor côté arme) | ne confirme pas : le grade des matériaux par palier
+- https://edfieldmanual.com/wiki/Oden_Geiger | tertiaire | consulté le 09/09/2026 | confirme : les spécialités d'Oden Geiger (Improved Battery Capacity, Enhanced Tracking, Night Vision côté suit ; Scope, Stability côté arme), l'un des deux seuls Engineers à proposer Night Vision | ne confirme pas : le grade des matériaux par palier
+- https://edfieldmanual.com/wiki/Kit_Fowler | tertiaire | consulté le 09/09/2026 | confirme : les spécialités de Kit Fowler (Faster Shield Regen, Added Melee Damage, Extra Ammo Capacity côté suit ; Stowed Reloading, Magazine Size côté arme) | ne confirme pas : le grade des matériaux par palier
+- https://edfieldmanual.com/wiki/Yarden_Bond | tertiaire | consulté le 09/09/2026 | confirme : les spécialités de Yarden Bond (Combat Movement Speed, Improved Jump Assist, Quieter Footsteps côté suit ; Improved Hip Fire Accuracy, Audio Masking, Faster Handling côté arme) | ne confirme pas : le grade des matériaux par palier
+- https://edfieldmanual.com/wiki/Category:Odyssey | tertiaire | consulté le 09/09/2026 | confirme : la catégorie générale regroupant les fiches Odyssey (suits, armes, Engineers) consultées pour ce guide | ne confirme pas : un catalogue exhaustif d'armes par fabricant — cinq modèles seulement documentés
+- https://edfieldmanual.com/wiki/Dominator_Suit | tertiaire | consulté le 09/09/2026 | confirme : la fiche de la combinaison Dominator (deux emplacements d'armes principales, bouclier renforcé) | ne confirme pas : ses points de bouclier ou de vie chiffrés
+- https://edfieldmanual.com/wiki/Pioneer_Supplies | tertiaire | consulté le 09/09/2026 | confirme : le rôle du comptoir Pioneer Supplies (montée en grade des suits et armes, vente occasionnelle de combinaisons « premium ») | ne confirme pas : le tarif de comptoir du Carbon Fibre Plating et du Titanium Plating
+- https://www.starzen.space/t/elite-dangerous-odyssey-all-suits-explained-artemis-maverick-dominator-guide/32431 | tertiaire | consulté le 09/09/2026 | confirme : les rôles et builds recommandés des trois combinaisons spécialisées (Artemis, Maverick, Dominator) | ne confirme pas : leurs caractéristiques chiffrées (bouclier, points de vie, sac à dos, oxygène)
+- https://www.starzen.space/t/guide-on-foot-engineering-upgrading-elite-dangerous-odyssey/37839 | tertiaire | consulté le 09/09/2026 | confirme : l'absence de blueprints d'Engineer et de paliers de grade confirmés pour les quatre outils (Wave Scanner, Profile Analyser, Compact Multi-Tool, E-Break) | ne confirme pas : l'existence d'un second emplacement d'effet expérimental à pied
+- https://gamerant.com/elite-dangerous-best-personal-weapon-builds/ | tertiaire | consulté le 13/09/2026 | confirme : les builds d'armes communautaires (Karma P15 Infiltrator/Warfighter, Manticore Executioner/Terminator, lance-roquettes) et le rôle du Manticore Executioner comme fusil de précision | ne confirme pas : les statistiques de combat (dégâts, cadence, DPS, portée, prix par grade)
+- https://gamerant.com/elite-dangerous-best-space-suit-builds/ | tertiaire | consulté le 13/09/2026 | confirme : les builds de combinaison communautaires (Artemis Bio Suit, Maverick General Purpose/Farming/Infiltration, Dominator General Combat/War Suit) | ne confirme pas : les caractéristiques défensives chiffrées des combinaisons
+- https://k224p24mgt.wordpress.com/2025/05/11/elite-dangerous-exobiology-guide-how-to-discover-alien-life-and-make-a-fortune/ | tertiaire | consulté le 13/09/2026 | confirme : l'estimation communautaire d'environ 250 millions de crédits en deux heures pour une session d'exobiologie à forte prime de première découverte | ne confirme pas : qu'il s'agisse d'une moyenne garantie plutôt que d'un pic ponctuel
+- https://www.mmorpg.com/news/elite-dangerous-details-how-on-foot-weapons-will-work-in-upcoming-odyssey-expansion-2000121151 | tertiaire | consulté le 13/09/2026 | confirme : l'annonce initiale du fonctionnement des armes à pied (catégories pistolets/SMG/fusils à pompe/lance-roquettes/grenades) avant la sortie d'Odyssey | ne confirme pas : le catalogue nominatif des armes ni leurs statistiques de combat
+- https://www.pilot-gaming.com/exobiology-guide-elite-dangerous/ | tertiaire | consulté le 13/09/2026 | confirme : la mécanique générale de scan/prélèvement du Genetic Sampler et la vente aux comptoirs Vista Genomics | ne confirme pas : la fourchette de prix par échantillon propre à la version 4.4.0.x
+- https://gameplay.tips/guides/11223-elite-dangerous.html | tertiaire | consulté le 13/09/2026 | confirme : un aperçu généraliste du gameplay à pied d'Odyssey (combinaisons, outils, consommables) | ne confirme pas : un chiffre ou une recette vérifiable propre à ce guide — source de faible densité rédactionnelle, à recouper avant usage
+- https://justabout.com/elite-dangerous/37867/tell-us-how-to-get-into-exobiology-reward | tertiaire | consulté le 13/09/2026 | confirme : la mécanique générale des primes de première découverte en exobiologie | ne confirme pas : le montant chiffré des primes propre à la version actuelle
+- https://steamcommunity.com/sharedfiles/filedetails/?id=2516179683 | tertiaire | consulté le 13/09/2026 | confirme : un guide communautaire Steam couvrant l'équipement à pied (combinaisons, armes, outils) | ne confirme pas : des statistiques de combat vérifiées ni des recettes d'ingénierie
+- https://www.edsm.net/en/ | secondaire | consulté le 13/09/2026 | confirme : le rôle d'EDSM comme base communautaire recoupée, recommandée en complément pour les statistiques d'équipement à pied | ne confirme pas : de statistique d'équipement à pied propre — EDSM ne couvre pas l'équipement individuel
+- https://www.pcgamesn.com/elite-dangerous | tertiaire | consulté le 13/09/2026 | confirme : la couverture presse généraliste du jeu (contexte Odyssey/on-foot) | ne confirme pas : de donnée chiffrée propre à l'équipement à pied de ce guide
+- https://canonn.science/ | secondaire | consulté le 13/09/2026 | confirme : le rôle de Canonn Research comme base communautaire recoupée, pertinente pour l'exobiologie et les mystères du jeu | ne confirme pas : de donnée propre à l'équipement à pied (suits, armes, outils)
+- https://www.magicgameworld.com/elite-dangerous-odyssey-what-happens-if-i-die-while-on-foot/ | tertiaire | consulté le 09/09/2026 | confirme : la perte du contenu du sac à dos à la mort et la citation de la FAQ officielle relayée par la communauté | ne confirme pas : le montant exact du coût de rebuy à pied
+- https://steamcommunity.com/app/359320/discussions/0/3039355912932616546/ | tertiaire | consulté le 09/09/2026 | confirme : la perte des matériaux/sac à dos non transférés au moment de la mort à pied, corroborée par plusieurs retours de joueurs | ne confirme pas : le montant exact du coût de rebuy à pied
+- [00-chronologie-canonique.md](./00-chronologie-canonique.md) | interne | consulté le 13/09/2026 | confirme : l'arbitrage des dates contestées citées dans ce guide (Operations, Trailblazers, Caspian Explorer, Kestrel Mk II) | ne confirme pas : le contenu propre à l'équipement à pied, hors dates
 - Données de référence du dépôt, édition 2026-08 — relevé des blueprints : matériaux, crédits et emplacements de
   modification des quatre paliers des trois combinaisons ; **source amont déclarée pour ce volet à pied :
   `docs/faisabilite-spansh-temps-reel-materiaux.md` § 3.2 et 3.3, et elle seule**. Le champ `sources` du fichier cite

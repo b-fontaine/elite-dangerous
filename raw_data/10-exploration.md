@@ -2411,95 +2411,66 @@ Guides du corpus en lien direct avec l'exploration et l'exobiologie :
 
 ## Sources de ce guide (exploration et exobiologie)
 
-- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Codex.md (structure du
-  Codex in-jeu : onglets, catégories Discoveries, états Rumoured/Reported/Discovered, Codex Voucher — section 1.6bis)
-- https://steamcommunity.com/games/elitedangerous/announcements/detail/1711828601535410336 (patch notes *Beyond —
-  Chapitre Quatre* 3.3, 11 décembre 2018, date d'introduction du Codex — section 1.6bis)
-- https://massivelyop.com/2018/12/11/elite-dangerous-beyond-chapter-four-is-live-today-with-exploration-background-sim-and-guilds/
-  (catégories Stellar Bodies / Biological and Geological / Civilisations de l'onglet Discoveries — section 1.6bis)
-- https://canonn.science/codex/ (auto-description du « Codex Canonn » en quatre départements communautaires —
-  section 1.6bis)
-- https://canonn.science/
-- https://canonn.science/codex/
-- https://canonn.science/codex/geology-organics/
-- https://canonn.science/category/codex/geology/
-- https://canonn.science/category/codex/geology/page/2/
-- https://canonn.science/codex/odyssey-family-familia-odysseae/
-- https://canonn.science/codex/appendices/
-- https://canonn.science/codex/concha/
-- https://canonn.science/codex/bacteria-2/
-- https://canonn.science/codex/tussock/
-- https://canonn.science/codex/electricae/
-- https://canonn.science/codex/fonticulua/
-- https://canonn.science/codex/osseus/
-- https://canonn.science/codex/stratum/
-- https://canonn.science/codex/tubus/
-- https://canonn.science/codex/recepta/
-- https://canonn.science/codex/fumerola/
-- https://canonn.science/codex/aleoida-2/
-- https://canonn.science/codex/cactoida/
-- https://canonn.science/codex/clypeus/
-- https://canonn.science/codex/frutexa/
-- https://canonn.science/codex/fungoida/
-- https://canonn.science/codex/surface-biology/
-- https://canonn.science/codex/organic-scanning-guide/
-- https://canonn.science/codex/speed-scanning-challenge/
-- https://canonn.science/codex/a-secret-to-be-uncovered-a-trail-to-be-followed/
-- https://canonn.science/codex/the-road-to-exobiology-elite-v/
-- https://canonn.science/codex/neutron-stars/
-- https://canonn.science/codex/cmdr-panpiper-a-brief-history-of-brain-trees/
-- https://canonn.science/codex/the-guardians/
-- https://canonn.science/codex/iea-helium-rich-gas-giant-guide/
-- https://canonn.science/codex/cartographics/ghost-rings/
-- https://canonn.science/resources/
-- https://bioforge.canonn.tech/
-- https://github.com/Silarn/EDMC-BioScan
-- https://github.com/Spansh
-- https://www.edsm.net/en/
-- https://spansh.co.uk/
-- https://github.com/EDCD/coriolis-data (données de modules/vaisseaux : masses, FSD, prix, blueprints — consultées le
-  09/09/2026)
-- https://github.com/EDCD/coriolis (formule de calcul de portée de saut, `src/app/shipyard/Calculations.js`)
-- Annonces officielles Frontier republiées sur le flux Steam News d'*Elite Dangerous* (appid 359320), relevées via
-  `api.steampowered.com/ISteamNews/GetNewsForApp/v2/` le 09/09/2026 — billets *Discover the Nomad* (02/06/2026
-  13:03 UTC) et *Operations Update* (01/07/2026 14:01 UTC), cités en 2.2
-- https://github.com/EDCD/FDevIDs (libellés des modules *Vessel Hangar* et *Mk II Vessel Hangar* ; `outfitting.csv`
-  pour le nom de chantier naval du *Mk II Supercharge Optimised Frame Shift Drive (SCO)*, commit `c3561295`)
-- https://github.com/EDDiscovery/EliteDangerousCore — implémentation de référence de la communauté, commit
-  `f21533ba1609d309fd6a96b9b3bb488df178a36e` (07/09/2026), lue intégralement pour la partie 1 :
-  `FrontierData/Enumerations/EstimatedValues.cs` (valeurs de scan, formules, multiplicateurs),
-  `Enumerations/Stars.cs` et `Enumerations/Planets.cs` (énumérations `EDStar` et `EDPlanet`),
-  `Enumerations/FSDSpec.cs` et `Items/ModuleList.cs` (multiplicateurs de supercharge),
-  `3rdPartyInterfaces/Spansh/SpanshClassConvertEnums.cs` (sous-types Spansh/EDSM)
-- https://github.com/EDDiscovery/EDDiscovery — `UnitTest/StarScans/` (43 journaux de scan réels, commit `7b4726f3`),
-  utilisés pour les relevés de température et de masse stellaire
-- https://www.edsm.net/en/statistics/bodies — effectifs et parts par sous-type stellaire, page capturée et dépouillée
-  par script le 10/09/2026
-- https://www.elitedangerous.com/update-notes/4-3-0-0 — notes de la mise à jour 4.3.0.0 (*Caspian Explorer Update*,
-  02/12/2025), seule source primaire trouvée sur le Mk II Supercharge Optimised Frame Shift Drive (SCO)
-- https://github.com/EDDiscovery/EliteDangerousCore — même commit `f21533ba1609d309fd6a96b9b3bb488df178a36e`, fichiers
-  lus pour les signaux de surface et la gravité : `FrontierData/Enumerations/Signals.cs` (les huit prédicats de signal
-  et la classification des Notable Stellar Phenomena), `JournalStatus/Events/JournalDiscoveryScans.cs`
-  (`JournalSAASignalsFound` et `JournalFSSBodySignals`), `FrontierData/Enumerations/Planets.cs` (énumération
-  `EDVolcanism`), `FrontierData/Enumerations/PhysicalConstants.cs` (1 G = 9,80665 m/s²), `History/Queries/Queries.cs`
-  (seuil de la requête « Landable with High G »), `JournalStatus/UIScan/StatusReader.cs` (champ `Gravity` du fichier
-  d'état)
-- https://github.com/Silarn/EDMC-BioScan — plugin BioScan, commit `5f0d2e445a95681bf2e85223f883d5c552a7726b`
-  (11/07/2026) : `src/bio_scan/body_data/util.py` (fonction `get_gravity_warning`, bornes de gravité) et `README.md`,
-  cités en 2.2
-- API de codex de Canonn Research (`query/codex/ref`, 1 072 entrées, et les dumps CSV par entrée), interrogée par
-  script le 10/09/2026 : les 23 entrées de géologie de surface (222 898 relevés), les 4 482 relevés de Crystalline
-  Shards et les 133 entrées classées « Cloud »
-- https://www.edsm.net/en/expeditions/ — fiches « Distant Worlds Expedition (2016) » (identifiant 1) et « Distant
-  Worlds 2 - A Voyage of Discovery » (identifiant 58), consultées le 10/09/2026 : dates, systèmes de départ et
-  d'arrivée, participants, distances estimées et tables d'étapes
-- https://www.edsm.net/api-system-v1/bodies — corps du système KOI 1701, consulté le 10/09/2026 : `KOI 1701 1`, corps
-  riche en métaux déclaré atterrissable à 45,32 G
-- https://distantworlds3.space/ — site officiel de Distant Worlds 3, capturé le 10/09/2026 : statut, organisateur et
-  actualité de clôture ; compteurs de participants et libellé du prochain waypoint remplis côté client, donc vides à
-  la capture
-- https://www.elitedangerous.net/planetary-landings-guide.php — guide communautaire d'atterrissage planétaire (repère
-  de prudence des 4 G), consulté le 10/09/2026
+Format normalisé selon [00-methodologie-sourcing.md §9](./00-methodologie-sourcing.md#9-format-normalisé-dune-section-sources) ;
+guide pilote de cette normalisation avec [11-commerce.md](./11-commerce.md) et [02-powerplay.md](./02-powerplay.md).
+
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Codex.md | secondaire | consulté le 13/09/2026 | confirme : la structure du Codex in-jeu (4 onglets, catégories Discoveries, états Rumoured/Reported/Discovered, Codex Voucher — section 1.6bis) | ne confirme pas : que cette structure documentée pour 2018-2021 soit encore celle d'une version 2026 du jeu (non revérifié en jeu, voir `zones_incertaines`)
+- https://steamcommunity.com/games/elitedangerous/announcements/detail/1711828601535410336 | primaire | consulté le 13/09/2026 | confirme : la date de sortie du Codex (11 décembre 2018, mise à jour *Beyond — Chapitre Quatre* 3.3) | ne confirme pas : l'état de la fonctionnalité en 2026 (patch notes de 2018)
+- https://massivelyop.com/2018/12/11/elite-dangerous-beyond-chapter-four-is-live-today-with-exploration-background-sim-and-guilds/ | tertiaire | consulté le 13/09/2026 | confirme : les catégories Stellar Bodies / Biological and Geological / Civilisations de l'onglet Discoveries au lancement du Codex (section 1.6bis) | ne confirme pas : que cette répartition en 3 catégories soit encore celle de la version 2026 du jeu
+- https://canonn.science/codex/ | secondaire | consulté le 13/09/2026 | confirme : l'auto-description du « Codex Canonn » en quatre départements communautaires (Archéologie & Histoire, Cartographie & Exploration, Géologie & Organismes de Surface, Technologie Xéno — section 1.6bis/1.6ter) | ne confirme pas : une quelconque affiliation à Frontier (le Codex Canonn est un site tiers, voir la désambiguïsation de 1.6ter)
+- https://canonn.science/ | secondaire | consulté le 13/09/2026 | confirme : le portail général du groupe Canonn Research, point d'entrée des pages de genre citées ci-dessous | ne confirme pas : un contenu chiffré propre à un genre ou une espèce
+- https://canonn.science/codex/ | secondaire | consulté le 13/09/2026 | confirme : le même portail Codex Canonn, utilisé ici comme point de départ de la compilation du catalogue de la section 2.4 | ne confirme pas : les valeurs de vente Vista Genomics ni les fréquences d'observation (relevés Canonn Research distincts, arrêtés au 30/09/2025)
+- https://canonn.science/codex/geology-organics/ | secondaire | consulté le 13/09/2026 | confirme : le département communautaire « Géologie & Organismes de Surface », à l'origine du référentiel des 23 entrées de géologie de surface (section 1.3) | ne confirme pas : la correspondance entre les 15 volcanismes de l'énumération `EDVolcanism` et ces 23 entrées (non tabulée, voir `zones_incertaines`)
+- https://canonn.science/category/codex/geology/ | secondaire | consulté le 13/09/2026 | confirme : la liste des entrées de codex géologiques classées par catégorie, utilisée pour recouper le tableau de la section 1.3 | ne confirme pas : les effectifs chiffrés (222 898 relevés cumulés), obtenus par requête API et non par lecture de cette page
+- https://canonn.science/category/codex/geology/page/2/ | secondaire | consulté le 13/09/2026 | confirme : la suite paginée de la même liste d'entrées géologiques | ne confirme pas : un chiffre supplémentaire (les effectifs viennent de l'API, pas de cette page)
+- https://canonn.science/codex/odyssey-family-familia-odysseae/ | secondaire | consulté le 13/09/2026 | confirme : le classement des genres d'exobiologie Odyssey (« Familia Odysseae ») repris dans le catalogue de la section 2.4 | ne confirme pas : les valeurs de vente ou les fréquences chiffrées par espèce
+- https://canonn.science/codex/appendices/ | secondaire | consulté le 13/09/2026 | confirme : les annexes du Codex Canonn (glossaire, index), utilisées en vérification croisée de la terminologie de la partie 2 | ne confirme pas : un contenu chiffré propre
+- https://canonn.science/codex/concha/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat et les conditions d'apparition du genre Concha (section 2.4) | ne confirme pas : les valeurs de vente Vista Genomics ni les fréquences d'observation (relevés Canonn Research distincts, arrêtés au 30/09/2025)
+- https://canonn.science/codex/bacteria-2/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat et les conditions d'apparition du genre Bacterium (section 2.4) | ne confirme pas : les valeurs de vente Vista Genomics ni les fréquences d'observation (relevés Canonn Research distincts)
+- https://canonn.science/codex/tussock/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat et les conditions d'apparition du genre Tussock (section 2.4) | ne confirme pas : les valeurs de vente Vista Genomics ni les fréquences d'observation (relevés Canonn Research distincts)
+- https://canonn.science/codex/electricae/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat, la corrélation propre au genre et les conditions d'apparition d'Electricae (section 2.4) | ne confirme pas : les valeurs de vente Vista Genomics ni les fréquences d'observation (relevés Canonn Research distincts)
+- https://canonn.science/codex/fonticulua/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat et les conditions d'apparition du genre Fonticulua (section 2.4) | ne confirme pas : les 100 000 000 Cr calculés pour une Fonticulua Fluctus en First Logged (un calcul du corpus, pas un montant relevé — voir `zones_incertaines`)
+- https://canonn.science/codex/osseus/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat et les conditions d'apparition du genre Osseus (section 2.4) | ne confirme pas : les valeurs de vente Vista Genomics ni les fréquences d'observation (relevés Canonn Research distincts)
+- https://canonn.science/codex/stratum/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat et les conditions d'apparition du genre Stratum (section 2.4) | ne confirme pas : les valeurs de vente Vista Genomics ni les fréquences d'observation (relevés Canonn Research distincts)
+- https://canonn.science/codex/tubus/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat et les conditions d'apparition du genre Tubus (section 2.4) | ne confirme pas : les valeurs de vente Vista Genomics ni les fréquences d'observation (relevés Canonn Research distincts)
+- https://canonn.science/codex/recepta/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat et les conditions d'apparition du genre Recepta (section 2.4) | ne confirme pas : les valeurs de vente Vista Genomics ni les fréquences d'observation (relevés Canonn Research distincts)
+- https://canonn.science/codex/fumerola/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat, le type de volcanisme et le terrain propres au genre Fumerola (section 2.4) | ne confirme pas : les valeurs de vente Vista Genomics ni les fréquences d'observation (relevés Canonn Research distincts)
+- https://canonn.science/codex/aleoida-2/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat et les conditions d'apparition du genre Aleoida (section 2.4) | ne confirme pas : les valeurs de vente Vista Genomics ni les fréquences d'observation (relevés Canonn Research distincts)
+- https://canonn.science/codex/cactoida/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat et les conditions d'apparition du genre Cactoida (section 2.4) | ne confirme pas : les valeurs de vente Vista Genomics ni les fréquences d'observation (relevés Canonn Research distincts)
+- https://canonn.science/codex/clypeus/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat et les conditions d'apparition du genre Clypeus (section 2.4) | ne confirme pas : la contrainte des 2 500 Ls de Clypeus Speculumi, non confirmée par télémétrie (voir `zones_incertaines`)
+- https://canonn.science/codex/frutexa/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat et les conditions d'apparition du genre Frutexa (section 2.4) | ne confirme pas : la fréquence d'observation de trois espèces isolées du genre (Collum, Fera, Sponsae — voir 2.4)
+- https://canonn.science/codex/fungoida/ | secondaire | consulté le 13/09/2026 | confirme : l'habitat et les conditions d'apparition du genre Fungoida (section 2.4) | ne confirme pas : les valeurs de vente Vista Genomics ni les fréquences d'observation (relevés Canonn Research distincts)
+- https://canonn.science/codex/surface-biology/ | secondaire | consulté le 13/09/2026 | confirme : la vue d'ensemble de la biologie de surface (mécanique générale de l'exobiologie, section 2.1) | ne confirme pas : le détail chiffré par genre (voir les pages dédiées ci-dessus)
+- https://canonn.science/codex/organic-scanning-guide/ | secondaire | consulté le 13/09/2026 | confirme : la procédure de scan et d'échantillonnage à 3 prélèvements par espèce (section 2.3) | ne confirme pas : les seuils de gravité 2,69 G / 1,00 G (voir les entrées EDMC-BioScan ci-dessous)
+- https://canonn.science/codex/speed-scanning-challenge/ | secondaire | consulté le 13/09/2026 | confirme : l'existence d'un défi communautaire de vitesse de scan, cité en repère pour la procédure de 2.3 | ne confirme pas : un barème ou un temps de référence officiel Frontier
+- https://canonn.science/codex/a-secret-to-be-uncovered-a-trail-to-be-followed/ | secondaire | consulté le 13/09/2026 | confirme : un exemple communautaire de progression Rumoured → Reported → Discovered, illustrant le mécanisme du Codex décrit en 1.6bis | ne confirme pas : un mécanisme distinct du Codex officiel (la lecture reste communautaire)
+- https://canonn.science/codex/the-road-to-exobiology-elite-v/ | secondaire | consulté le 13/09/2026 | confirme : les paliers Taxonomist, Ecologist, Elite puis Elite V dans cet ordre de progression du rang Exobiologiste (section 2.6) | ne confirme pas : l'intitulé exact et l'ordre des paliers intermédiaires (wiki Fandom et forums officiels Frontier bloqués par erreurs HTTP 402/403 pendant la rédaction)
+- https://canonn.science/codex/neutron-stars/ | secondaire | consulté le 13/09/2026 | confirme : le fonctionnement communautaire des neutron highways et de la supercharge de FSD sur étoile à neutrons (section 1.4) | ne confirme pas : le multiplicateur exact ×4/×6 (relevé dans le code d'EDDiscovery, pas sur cette page)
+- https://canonn.science/codex/cmdr-panpiper-a-brief-history-of-brain-trees/ | secondaire | consulté le 13/09/2026 | confirme : un historique communautaire du Brain Tree | ne confirme pas : une fiche d'habitat chiffrée pour le Brain Tree (absente du catalogue de la section 2.4, voir `zones_incertaines`)
+- https://canonn.science/codex/the-guardians/ | secondaire | consulté le 13/09/2026 | confirme : le renvoi vers le contenu Guardian du Codex Canonn, croisé avec [05-guardians.md](./05-guardians.md) | ne confirme pas : un contenu propre à l'exploration ou à l'exobiologie de ce guide
+- https://canonn.science/codex/iea-helium-rich-gas-giant-guide/ | secondaire | consulté le 13/09/2026 | confirme : un guide communautaire d'identification des géantes gazeuses riches en hélium, cité en repère pour le scan stellaire/planétaire (partie 1) | ne confirme pas : les constantes chiffrées du barème de scan (établies par le code d'EDDiscovery, pas par ce guide)
+- https://canonn.science/codex/cartographics/ghost-rings/ | secondaire | consulté le 13/09/2026 | confirme : l'existence du phénomène « Ghost Rings » documenté par Canonn | ne confirme pas : un lien chiffré avec la vente de données à Universal Cartographics (section 1.5)
+- https://canonn.science/resources/ | secondaire | consulté le 13/09/2026 | confirme : la page de ressources générales de Canonn Research (également listée dans les ressources complémentaires de ce guide) | ne confirme pas : un contenu chiffré propre
+- https://bioforge.canonn.tech/ | secondaire | consulté le 13/09/2026 | confirme : l'existence et l'usage de Bioforge, l'outil de recherche de données biologiques par genre/espèce (section 1.6) | ne confirme pas : les valeurs chiffrées elles-mêmes (portées par les relevés Canonn Research cités séparément)
+- https://github.com/Silarn/EDMC-BioScan | secondaire | consulté le 13/09/2026 | confirme : l'existence et le principe général du plugin BioScan (prédiction de genre/espèce, guidage de distance en temps réel — section 2.2) | ne confirme pas : les seuils de gravité précis (voir l'entrée détaillée du même dépôt ci-dessous, avec numéros de ligne)
+- https://github.com/Spansh | secondaire | consulté le 13/09/2026 | confirme : l'organisation GitHub du projet Spansh (existence, dépôts publics) | ne confirme pas : le contenu ou les seuils des calculateurs de route eux-mêmes (voir spansh.co.uk)
+- https://www.edsm.net/en/ | secondaire | consulté le 13/09/2026 | confirme : la Galactic Map, le Route Planner et le flight log d'EDSM (section 1.2) | ne confirme pas : un décompte figé du nombre de systèmes enregistrés (progresse en continu, non figé ici)
+- https://spansh.co.uk/ | secondaire | consulté le 13/09/2026 | confirme : les quatre calculateurs de route (Galaxy Plotter, Exact Plotter, Road to Riches, Neutron Router — section 1.2) | ne confirme pas : le multiplicateur de supercharge par FSD (paramètre alimenté par le vaisseau du joueur, pas par Spansh)
+- https://github.com/EDCD/coriolis-data | primaire | consulté le 09/09/2026 | confirme : les données de modules/vaisseaux (masses, FSD, prix, blueprints) | ne confirme pas : les seuils de gravité ni les mécaniques d'exobiologie (hors périmètre de ce dépôt)
+- https://github.com/EDCD/coriolis | primaire | consulté le 13/09/2026 | confirme : la formule de calcul de portée de saut (`src/app/shipyard/Calculations.js`) | ne confirme pas : le multiplicateur de supercharge par étoile à neutrons (relevé chez EDDiscovery, pas ici)
+- https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=359320 | primaire | consulté le 09/09/2026 | confirme : les billets officiels *Discover the Nomad* (02/06/2026 13:03 UTC) et *Operations Update* (01/07/2026 14:01 UTC), cités en 2.2 | ne confirme pas : une fiche technique chiffrée du Mk II Biological Scanner (description marketing seulement)
+- https://github.com/EDCD/FDevIDs | primaire | consulté le 13/09/2026 | confirme : les libellés des modules *Vessel Hangar*/*Mk II Vessel Hangar* et le nom de chantier naval du Mk II Supercharge Optimised FSD (commit `c3561295`) | ne confirme pas : le multiplicateur ×6 lui-même (relevé chez EDDiscovery, pas dans FDevIDs)
+- https://github.com/EDDiscovery/EliteDangerousCore | secondaire | consulté le 13/09/2026 | confirme : les constantes et formules de valeur de scan (`EstimatedValues.cs`), les énumérations `EDStar`/`EDPlanet`, les multiplicateurs de supercharge de FSD (`FSDSpec.cs`/`ModuleList.cs`) et les sous-types Spansh/EDSM (`SpanshClassConvertEnums.cs`), commit `f21533ba1609d309fd6a96b9b3bb488df178a36e` (07/09/2026) | ne confirme pas : que ces valeurs soient confirmées par Frontier — ce sont des reconstructions communautaires (le code lui-même déclare le k du corps riche en métaux et du trou noir supermassif « not confirmed in game »)
+- https://github.com/EDDiscovery/EDDiscovery | secondaire | consulté le 13/09/2026 | confirme : les relevés de température et de masse sur 43 journaux de scan réels (commit `7b4726f3`), échantillon couvrant 11 des 53 classes stellaires | ne confirme pas : les bornes de classe stellaire complètes (42 classes absentes de l'échantillon)
+- https://www.edsm.net/en/statistics/bodies | secondaire | consulté le 10/09/2026 | confirme : les effectifs et parts par sous-type stellaire (113 883 869 corps enregistrés, 43 sous-types) | ne confirme pas : une fréquence galactique réelle (biais de sur-représentation de la Bulle et des routes fréquentées, assumé par le texte)
+- https://www.elitedangerous.com/update-notes/4-3-0-0 | primaire | consulté le 13/09/2026 | confirme : l'existence et la fonction du Mk II Supercharge Optimised Frame Shift Drive (SCO), mise à jour 4.3.0.0 *Caspian Explorer Update* du 02/12/2025 | ne confirme pas : le multiplicateur ×6 lui-même (non chiffré par Frontier, relevé uniquement chez EDDiscovery)
+- https://github.com/EDDiscovery/EliteDangerousCore | secondaire | consulté le 13/09/2026 | confirme : les huit prédicats de signal de surface (`Signals.cs`), l'énumération `EDVolcanism` (15 valeurs), la constante 1 G = 9,80665 m/s² (`PhysicalConstants.cs`), le seuil de 3 G de la requête « Landable with High G » (`Queries.cs`) et le champ `Gravity` du fichier d'état (`StatusReader.cs`), même commit `f21533ba1609d309fd6a96b9b3bb488df178a36e` | ne confirme pas : un seuil de gravité endommageant le train d'atterrissage (le journal n'expose qu'un booléen `LandingGear`, sans valeur associée)
+- https://github.com/Silarn/EDMC-BioScan | secondaire | consulté le 13/09/2026 | confirme : les seuils codés de gravité (`get_gravity_warning`, `body_data/util.py` : `> 2.69` G « extrême », `>= 1.0` G « haute »), commit `5f0d2e445a95681bf2e85223f883d5c552a7726b` (11/07/2026), avec l'écart relevé entre le code (`> 2.69`) et le README (« 2.7G or greater ») | ne confirme pas : qu'un seuil officiel Frontier existe pour ces mêmes paliers (BioScan rapporte une règle du jeu sans l'implémenter)
+- https://canonn.science/ | secondaire | interrogée le 10/09/2026 | confirme : via l'API de codex (`query/codex/ref`, 1 072 entrées), les 23 entrées de géologie de surface (222 898 relevés), les 4 482 relevés de Crystalline Shards (3 826 systèmes) et les 133 entrées classées « Cloud » | ne confirme pas : la correspondance entre les 15 volcanismes et les 23 entrées de géologie (non tabulée, voir `zones_incertaines`)
+- https://www.edsm.net/en/expeditions/ | secondaire | consulté le 10/09/2026 | confirme : les dates, systèmes de départ/arrivée, participants et distances estimées des expéditions « Distant Worlds Expedition (2016) » (fiche 1) et « Distant Worlds 2 » (fiche 58) | ne confirme pas : l'organisateur de Distant Worlds II (champ absent des fiches EDSM) ; les bornes données (14 janvier-5 juin 2016) divergent du « fin 2015-début 2016 » de [01-lore.md](./01-lore.md), non arbitré
+- https://www.edsm.net/api-system-v1/bodies | secondaire | consulté le 10/09/2026 | confirme : le corps `KOI 1701 1`, riche en métaux, atterrissable à 45,32 G | ne confirme pas : un plafond général de gravité pour l'atterrissage (un seul relevé, non généralisable)
+- https://distantworlds3.space/ | primaire (site officiel de l'événement) | consulté le 10/09/2026 | confirme : le statut et l'actualité de clôture de Distant Worlds 3 au moment de la capture | ne confirme pas : la date de départ, les effectifs et l'itinéraire (compteurs remplis côté client, vides à la capture — voir `zones_incertaines`)
+- https://www.elitedangerous.net/planetary-landings-guide.php | tertiaire | consulté le 10/09/2026 | confirme : le repère de prudence des 4 G pour l'atterrissage planétaire en exploration (conseil de pilotage communautaire, pas un seuil mécanique) | ne confirme pas : un seuil mécanique de dégât ou de comportement du vaisseau lié à la gravité
 
 > **Note sur l'accès aux sources pendant la rédaction** : elitedangerous.com, forums.frontier.co.uk et le wiki Fandom
 > (elite-dangerous.fandom.com) ont renvoyé des erreurs HTTP 402/403 (blocage anti-bot) lors des tentatives d'accès
