@@ -2304,7 +2304,8 @@ au-delà de 75-80 al pour ce châssis, au prix d'un temps de synthèse/farming p
 Pour la liste des matériaux requis par le blueprint *Increased Range* (Arsenic, Chemical Manipulators, Datamined Wake
 Exceptions au grade 5) et par l'effet expérimental *Mass Manager*, ainsi que leurs grades de rareté et leurs sources
 d'obtention détaillées, voir [Ingénieurs](./06-ingenieurs.md) — ce guide n'a pas vocation à dupliquer cette
-information.
+information. La recette exacte du « jumponium » (FSD Injection, ses trois paliers Basic/Standard/Premium à +25/+50/
++100 % de portée et les matériaux qu'elle consomme) y est également chiffrée, dans la section Synthèse.
 
 #### Équipement pilote et combinaison Artemis pour l'exobiologie à pied
 

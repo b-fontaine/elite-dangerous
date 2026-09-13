@@ -6,12 +6,12 @@ entites: [Lynx Highliner, Beluga Liner, Orca, Dolphin, Panther Clipper Mk II, Ty
 mots_cles_en: [passenger cabins, economy cabin, business class cabin, first class cabin, luxury cabin, Lynx Highliner, Beluga Liner, search and rescue, occupied escape pods, burning stations, rare goods, stronghold carrier, colonisation hauling, interdiction escape]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-09
+date_verification: 2026-09-13
 confiance_globale: moyenne
 volatilite: moyenne
 sources_primaires: [MassivelyOP, PCGamesN, EDSM, EDSY, Canonn Research, Inara.cz, notes de version officielles 4.2.2.0]
 zones_incertaines: ["capacités de cabines passagers par taille de module non reconfirmées en direct (valeurs communautaires EDSY/Inara/Coriolis)", "aucun bonus Powerplay propre au Search & Rescue n'a pu être ni confirmé ni infirmé", "tonnages de colonisation donnés en ordres de grandeur composites, non revérifiés", "date du passage du Panther Clipper Mk II à l'achat en crédits (~octobre 2025) non sourcée précisément"]
-guides_lies: [2, 3, 18, 19, 22]
+guides_lies: [2, 3, 6, 18, 19, 22]
 ---
 # Guide complet du transport dans Elite Dangerous
 
@@ -174,7 +174,9 @@ Les commodités concernées incluent notamment :
 
 Elles se transportent comme du fret classique (soute standard, pas besoin de cabine passagers dédiée), mais doivent être
 manipulées avec prudence : scanner ou détruire un vaisseau contenant des occupants vivants avant de les récupérer
-entraîne leur perte définitive.
+entraîne leur perte définitive. Les deux types d'USS concernés — **Distress Call** (marchand en détresse ou attaqué,
+menace variable) et **Search and Rescue Patrol** (vaisseau isolé non hostile) — font partie de la taxonomie complète
+des 12 types d'USS détaillée dans [06 — Ingénieurs](./06-ingenieurs.md).
 
 ### Livraison au contact Search and Rescue et récompenses associées
 

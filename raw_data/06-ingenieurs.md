@@ -6,7 +6,8 @@ entites: [Ingénieur, Felicity Farseer, Elvira Martuuk, Mel Brandon, Petra Olman
   Tod « The Blaster » McQuinn, Blueprint, Technology Broker, Merc Coin, MercGear, Material Trader,
   High Grade Emission, Frame Shift Wake Scanner, Effet expérimental, Mass Manager, Deep Charge, Dav's Hope,
   Meta-Alloys, Bulkheads, Hull Reinforcement Package, Shield Booster, Power Distributor, Professor Palin,
-  Sensor Fragment, Thargoid Sensor]
+  Sensor Fragment, Thargoid Sensor, Synthesis, FSD Injection, Jumponium, Unidentified Signal Source,
+  Combat Aftermath, Convoy Dispersal Pattern, Non-Human Signal Source, Caustic Sink Launcher]
 mots_cles_en: [engineers, blueprints, engineering materials, raw materials, manufactured materials, encoded data,
   high grade emission, material trader, technology broker, increased range, mass manager, experimental effects,
   merc coin, wake scanner, blueprint grades, engineer max grade, dirty drives, clean drives, drive strengthening,
@@ -15,10 +16,13 @@ mots_cles_en: [engineers, blueprints, engineering materials, raw materials, manu
   enhanced low power, kinetic resistant, thermal resistant, heavy duty shield booster, resistance augmented,
   heavy duty hull reinforcement, lightweight sensors, long range sensors, overcharged weapon, efficient weapon,
   long range weapon, rapid fire, sturdy, corrosive shell, thermal vent, double braced, stripped down,
-  experimental effect compatibility]
+  experimental effect compatibility, synthesis, fsd injection, jumponium, ammo synthesis, chaff launcher synthesis,
+  heat sink synthesis, afmu refill, limpet synthesis, life support synthesis, caustic sink launcher,
+  unidentified signal source, uss threat level, degraded emissions, encoded emissions, distress call,
+  weapons fire, mission target, ceremonial comms, cruise ship, search and rescue patrol]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-12
+date_verification: 2026-09-13
 confiance_globale: haute
 volatilite: moyenne
 sources_primaires:
@@ -27,13 +31,18 @@ sources_primaires:
   - "EDCD/FDevIDs — material.csv et engineers.csv, commit c35612952dd6a547d1a7ac4cffab9c7051e86579"
   - "EDCD/EDDI — Blueprint.cs, BlueprintTemplate.cs, Engineer.cs"
   - "Steam News Frontier (appid 359320) — annonces officielles 2026"
-  - "Wiki communautaire Elite Dangerous — fiches modules et Ingénieurs, consultées le 9 septembre 2026"
+  - "Wiki communautaire Elite Dangerous — fiches modules, Ingénieurs, Synthesis et Unidentified Signal Source,
+    consultées le 9 et le 13 septembre 2026"
   - "EDEngineer (msarilar) — plafonds de stockage par grade"
+  - "Forum officiel Frontier — post de Sandro Sammarco (Lead Designer) sur les quantités de la recette FSD Injection,
+    7 février 2018"
   - "Catalogues internes consolidés, édition 2026-08, et étude interne du 19 août 2026"
 zones_incertaines:
   - "Aucune source ne chiffre la montée en réputation chez un Ingénieur : ni les points par module fabriqué, ni les seuils des rangs 1 à 5."
   - "La nature exacte des matériaux rendus par une Operation (catégorie, grade, quantité par scénario) n'est pas chiffrée par les notes officielles."
-  - "Taux de rendement comparé des types d'USS de données et probabilité d'obtenir un grade donné sur un data point précis."
+  - "Taux de rendement comparé des types d'USS de données et probabilité d'obtenir un grade donné sur un data point précis — la taxonomie des 12 types est désormais couverte, pas leur statistique de tirage."
+  - "Les recettes de synthèse embarquée (munitions, chaff, heat sink, AFMU, limpets, life support, caustic sink) reposent sur une source communautaire unique (wiki Fandom) faute d'accès à Inara.cz au moment de la révision ; seule la FSD Injection est croisée avec un post officiel Frontier de 2018."
+  - "Durée de vie exacte (en secondes/minutes) d'un USS ciblé et stabilisé, et libellé exact affiché en jeu pour son niveau de menace : mécanique confirmée, valeur non trouvée."
   - "Les 13 Ingénieurs Odyssey n'apparaissent dans aucun des deux jeux de données de blueprints : la matrice
     Blueprint × Ingénieur × grade ne couvre que les 25 Ingénieurs classiques."
   - "specials.json ne porte aucune valeur numérique pour les effets expérimentaux, et n'associe aucun effet à un
@@ -47,7 +56,7 @@ zones_incertaines:
     d'exobiologie divergent sur quatre critères (classe de l'étoile primaire, température, distance à
     l'étoile, présence d'un Water Giant) ; aucune source consultable depuis ce chantier ne permet
     d'arbitrer."
-guides_lies: [2, 5, 7, 10, 13, 20, 25, 26, 30]
+guides_lies: [2, 4, 5, 7, 8, 10, 13, 20, 25, 26, 30]
 ---
 
 # Guide complet des Ingénieurs (Engineers) dans Elite Dangerous
@@ -64,6 +73,9 @@ publie la **matrice Blueprint × Ingénieur × grade maximum** (186 lignes, 25 I
 et jusqu'où. Les **66 effets expérimentaux** (91 recettes, variantes comprises) reçoivent matrice de compatibilité et coût en matériaux. Les
 **115 matériaux** restent plafonnés de **300 unités (grade 1) à 100 (grade 5)** ; les
 grades 4-5 manufacturés viennent des **High Grade Emissions**, dont le contenu suit l'**allégeance** de la faction.
+La **Synthèse** embarquée (neuf familles de recettes, dont la FSD Injection « jumponium » à +25/+50/+100 % de portée)
+et les **12 types d'Unidentified Signal Source (USS)**, avec leur seuil de menace et leur contenu type, sont
+désormais chiffrés dans ce guide.
 
 ## Vue d'ensemble du système Engineering (ingénierie des modules) dans Elite Dangerous
 
@@ -1137,6 +1149,59 @@ donne les sources et leurs conditions, pas de statistiques de tirage.
 >
 > *(Source : catalogue de matériaux consolidé `assets/data/materials.json`, édition 2026-08, catégorie des Wake
 > Scans ; étude interne `docs/faisabilite-spansh-temps-reel-materiaux.md`, § 3.3, étude du 19 août 2026.)*
+
+#### Taxonomie des Unidentified Signal Sources (USS) : les 12 types canoniques et leur seuil de menace
+
+Le panneau de signaux distingue exactement **12 types d'USS** (*Unidentified Signal Source*), chacun avec un contenu
+typique et, pour la plupart, un **niveau de menace affiché avant même de chuter dessus** : cibler un USS en
+supercroisière révèle son type précis, ce qui permet d'évaluer le risque avant de s'y engager. Le jeu utilise une
+échelle de menace globale allant de **0 (inoffensif) à 9 (extrêmement dangereux)**, mais chaque type n'en exploite
+qu'une sous-plage — il n'existe pas d'échelle 0-9 propre à chaque type pris individuellement, contrairement à une
+lecture répandue de cette valeur.
+
+| Type d'USS (nom en jeu)      | Contenu typique                                                                                                     | Dépendance BGS / économie                                                                    | Menace (sous-plage de l'échelle 0-9) |
+|-------------------------------|----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|----------------------------------------|
+| **Ceremonial Comms**          | 1 à 5 vaisseaux non hostiles en formation (Dolphin/Orca/Beluga/Type-9 « vaisseau de mariage/funérailles ») avec escorte | Non documentée                                                                                 | 0                                        |
+| **Combat Aftermath**          | Champ de débris, matériaux manufacturés, mission de scénario possible                                                | Explicitement indépendant de l'état système et du niveau de sécurité                          | 0-1                                      |
+| **Convoy Dispersal Pattern**  | Convoi marchand (souvent de Type-9 Heavy) escorté, parfois attaqué par des pirates — 5 niveaux déjà chiffrés en [30 — Piraterie et PvP](./30-piraterie-et-pvp.md#3-où-pirater--signaux-sites-de-minage-et-lanes-commerciales) | Fréquence liée aux lanes commerciales et à la sphère d'influence d'un système peuplé            | 0-4                                      |
+| **Cruise Ship**               | Un seul paquebot non hostile en tournée touristique                                                                  | Non documentée                                                                                 | 0                                        |
+| **Degraded Emissions**        | Le signal le plus commun : épave, matériaux manufacturés courants, exceptionnellement une sonde inconnue près des mondes ammoniaqués des Pléiades | Non dépendant de l'état système pour le spawn général                                          | 0-4                                      |
+| **Distress Call**             | Marchand en panne ou attaqué, vaisseau de la Federal Navy en détresse, embuscade de pirates déguisée en appel de détresse, épaves thargoïdes ponctuelles | Non documentée                                                                                 | 0-9                                      |
+| **Encoded Emissions**         | Balise de données privée, champ de débris, satellite (mondes habités de type terrestre) — voir le farming Encoded ci-dessus | Non documentée                                                                                 | 0                                        |
+| **High Grade Emissions**      | Matériaux manufacturés de grade 4-5 — voir la table complète « Ce qui décide du contenu d'une HGE » ci-dessus         | Déterminée par l'allégeance de la faction contrôlante et l'état du système (détaillé plus haut) | 0                                        |
+| **Mission Target**            | Objectif d'une mission acceptée (assassinat, sauvetage...)                                                            | Dépend entièrement de la mission en cours                                                      | 0-4                                      |
+| **Non-Human Signal Source**   | Rencontre thargoïde progressive : une Sonde isolée en bas de l'échelle, puis des Éclaireurs en nombre croissant, puis un Intercepteur (Cyclops, Basilisk, Medusa, jusqu'à Hydra au sommet) — voir [25 — Combat AX §2](./25-combat-ax.md) pour la taxonomie des vaisseaux thargoïdes | Zones connues : Pléiades, Witch Head, Coalsack, Californie, systèmes en incursion ou ciblés par Eagle Eye | 0-9, table complète par niveau publiée   |
+| **Search and Rescue Patrol**  | Un vaisseau non hostile isolé (ex. Asp Explorer) équipé d'un Fuel Transfer Limpet Controller, offrant du carburant     | Non documentée                                                                                 | 0                                        |
+| **Weapons Fire**              | Pirates, parfois vaisseaux de l'Autorité système ou neutres, déjà en plein combat                                    | Non documentée                                                                                 | 1-5 (une source alternative de 2017-2018 donne 1-4 ; l'écart n'a pas pu être tranché) |
+
+*(Sources : wiki communautaire Elite Dangerous, page « Unidentified Signal Source » et fiches individuelles par type,
+consultées le 13 septembre 2026 ; recoupement partiel avec un guide Frontier Forums de 2017-2018 pour Weapons Fire et
+pour deux types aujourd'hui disparus de la page canonique — voir encadré ci-dessous. Aucune deuxième source
+communautaire indépendante n'a pu être croisée pour cette table spécifique : Inara.cz, qui aurait permis un
+recoupement, était inaccessible au moment de cette révision.)*
+
+> **Deux types disparus de la liste actuelle, à ne pas réintroduire sans réserve.** Un guide communautaire de 2017
+> mentionnait aussi **Anomaly** (menace 4, à moins de 150 al de Merope, faisait apparaître une Sonde/Artefact inconnu)
+> et **Trading Beacon** (USS rare offrant des missions commerciales sans mission active requise) : ni l'un ni l'autre
+> n'apparaît plus dans la documentation actuelle, et la fiche « Anomaly » du wiki communautaire est aujourd'hui vide —
+> signe d'une absorption dans **Non-Human Signal Source** lors d'une refonte ultérieure du contenu thargoïde plutôt
+> que d'un oubli de ce guide.
+
+> **Ce qui reste non chiffré.** Le taux de rendement comparé d'un type de données à l'autre et la probabilité
+> d'obtenir un grade donné sur un data point précis (déjà signalés plus haut comme non couverts par le référentiel de
+> matériaux) restent également hors de portée des sources consultées pour cette taxonomie. La durée de vie d'un signal
+> non ciblé (« environ 30 secondes » selon une source communautaire de 2017, non revérifiée depuis) et celle du compte
+> à rebours qui s'affiche une fois un USS ciblé et stabilisé (mécanique confirmée, valeur en minutes non trouvée)
+> restent également à vérifier en jeu.
+
+> **Ne pas confondre avec les autres catégories de signaux du panneau de navigation.** Le jeu range dans des
+> catégories distinctes de la barre de signaux tout ce qui n'est pas un USS au sens strict : les signaux **Event**
+> (AX Conflict Zone, Combat Zone, Convoy Beacon Checkpoint, Pirate Activity Detected, Salvageable Wreckage), les
+> signaux **Powerplay** (Armed Revolt, Crime Sweep, Military Strike, Resistance Pocket, Violent Protest) et les
+> signaux **Persistent** (Debris Field, Experimental Habitat, [hotspot](./00-glossaire.md), Listening Post, Nav
+> Beacon, Notable Stellar Phenomena, [RES](./00-glossaire.md), Tourist Beacon, Unregistered Comms Beacon). Employer
+> « USS » pour désigner l'ensemble de ces signaux, comme le fait parfois le langage courant, brouille la distinction
+> que ce guide maintient avec les autres catégories.
 
 #### Les Operations, source de matériaux depuis juin 2026
 
@@ -2721,12 +2786,175 @@ haut pour les Wake Scans : **récolter n'importe quel grade, puis descendre**, p
 Raw « 6 pour 1 vers le haut, 1 pour 3 vers le bas » et le taux Encoded 1 pour 3 sont également déclarés par les
 sources de comptoir du catalogue de matériaux consolidé, édition 2026-08.)*
 
-### Synthèse (Synthesis)
+### Synthèse (Synthesis) : consommables et FSD Injection fabriqués depuis le vaisseau
 
 La **synthèse** (*Synthesis*) est accessible depuis le panneau droit (onglet Engineering → Synthesis) ; elle consomme
-des matériaux pour fabriquer directement des consommables (munitions, heat sinks, chaff, réparations AFMU, boost de
-carburant, kits de vie Odyssey) sans repasser par une station — utile pour prolonger une session de farming ou de
-combat plutôt que pour l'engineering des modules eux-mêmes.
+des matériaux d'Engineering pour fabriquer directement des consommables **sans repasser par une station**, ce qui en
+fait l'outil de prolongation de session le plus direct pour le farming ou le combat prolongé. Le mécanisme couvre
+exactement **neuf familles de recettes côté vaisseau** — FSD Injection, munitions (par catégorie d'arme), Chaff
+Launcher, Heat Sink Launcher, AFMU Refill, Limpets, Life Support et Caustic Sink Launcher — plus **trois recettes
+dédiées au SRV** (munitions, carburant, réparation), accessibles depuis le panneau du véhicule une fois déployé.
+**Aucune recette n'existe pour le Point Defence Turret ni pour les munitions des Ship-Launched Fighters** : le premier
+ne se restocke qu'à quai (Station Services → Advanced Maintenance), les seconds se réparent et se rechargent
+gratuitement en s'arrimant au Fighter Bay du vaisseau-mère — voir la mise en garde en fin de section.
+
+**Ce qui varie réellement d'un palier à l'autre.** Pour la quasi-totalité des recettes à plusieurs paliers
+(Basic/Standard/Premium), **la quantité de munitions ou de charges produite ne change pas** : la synthèse recharge le
+stock du module concerné jusqu'à sa capacité maximale, quel que soit le palier choisi. Ce qui varie, c'est **(a)** les
+matériaux requis, de plus en plus rares à mesure que le palier monte, et **(b)** un **bonus qualitatif additionnel**
+(dégâts, vitesse de réparation, durée d'effet, efficacité de carburant...) propre à chaque recette. Seule la
+**FSD Injection** fait exception : ses trois paliers changent directement l'ampleur de l'effet obtenu (portée de
+saut), pas de bonus secondaire.
+
+#### FSD Injection (« jumponium ») : la synthèse la plus rentable en exploration
+
+Boost de portée de saut FSD pour le **prochain saut uniquement** (affiché « FSD Boost » sur la carte galactique) ;
+une nouvelle synthèse remplace le boost précédent plutôt que de s'y ajouter. C'est la recette qui intéresse le plus
+directement la section « Build chiffré : portée de saut stock vs ingénierée du Diamondback Explorer » de
+[10 — Exploration](./10-exploration.md), où elle est citée comme pouvant pousser un Diamondback Explorer pleinement
+ingénieré au-delà de 75-80 al.
+
+| Palier       | Bonus                        | Matériaux Raw exacts (grade entre parenthèses)                                              |
+|--------------|-------------------------------|-----------------------------------------------------------------------------------------------|
+| **Basic**    | +25 % de portée de saut       | 1× Carbon (G1), 1× Vanadium (G2), 1× Germanium (G2)                                            |
+| **Standard** | +50 % de portée de saut       | 1× Carbon (G1), 1× Vanadium (G2), 1× Germanium (G2), 1× Cadmium (G3), 1× Niobium (G3)          |
+| **Premium**  | +100 % de portée de saut      | 1× Carbon (G1), 1× Germanium (G2), 1× Arsenic (G2), 1× Niobium (G3), 1× Yttrium (G4), 1× Polonium (G4) |
+
+Chaque palier ajoute un matériau de grade supérieur à la recette précédente — la même logique de coût croissant que
+celle déjà observée pour les blueprints de modules (voir plus haut). Les grades entre parenthèses reprennent le
+tableau des 28 matériaux bruts de ce guide (section « Matériaux bruts (Raw) » ci-dessus) : tous les matériaux de la
+FSD Injection se récoltent donc par prospection de surface, aucun ne relève du minage d'astéroïdes.
+
+*(Sources : wiki communautaire Elite Dangerous, page « Synthesis », consultée le 13 septembre 2026 ; recette
+confirmée mot pour mot par une source officielle antérieure — post de Sandro Sammarco, Lead Designer chez Frontier,
+sur le forum officiel, annonçant ces quantités exactes lors de la mise à jour 3.0 « Beyond Chapter One », 7 février
+2018. Aucun changement documenté depuis cette date.)*
+
+#### Munitions : la table complète par catégorie d'arme
+
+Chaque recette recharge l'arme visée à 100 % de sa capacité ; le palier n'ajoute que le bonus de dégâts indiqué (ou,
+pour les munitions Guardian/AX « Configurable », la capacité à infliger des dégâts anti-xéno). Les matériaux ne sont
+pas ré-annotés par grade individuel ici, à l'exception des Raw déjà couverts par le tableau des 28 matériaux bruts
+plus haut — croisez-le au besoin.
+
+| Arme visée                                          | Palier   | Bonus                       | Matériaux                                                                                  |
+|------------------------------------------------------|----------|------------------------------|-----------------------------------------------------------------------------------------------|
+| Multi-cannon (Small Calibre Munitions)               | Basic    | —                            | 2 Iron, 1 Nickel, 2 Sulphur                                                                    |
+|                                                        | Standard | +15 % dégâts                | 2 Iron, 2 Zinc, 2 Phosphorus, 2 Selenium, 2 Zirconium                                          |
+|                                                        | Premium  | +30 % dégâts                | 2 Sulphur, 2 Phosphorus, 2 Tungsten, 2 Zirconium, 2 Mercury, 1 Antimony                        |
+| Cannon / Fragment Cannon (Large Calibre Munitions)   | Basic    | —                            | 4 Nickel, 3 Carbon, 2 Sulphur                                                                  |
+|                                                        | Standard | +15 % dégâts                | 2 Tin, 3 Zinc, 3 Phosphorus, 1 Arsenic, 2 Zirconium                                            |
+|                                                        | Premium  | +30 % dégâts                | 8 Zinc, 2 Tungsten, 1 Arsenic, 1 Mercury, 2 Antimony                                           |
+| Railgun (High Velocity Munitions)                     | Basic    | —                            | 2 Iron, 1 Vanadium                                                                             |
+|                                                        | Standard | +15 % dégâts                | 4 Iron, 3 Vanadium, 2 Tungsten, 2 Zirconium                                                    |
+|                                                        | Premium  | +30 % dégâts                | 4 Vanadium, 4 Tungsten, 2 Zirconium, 2 Yttrium                                                 |
+| Plasma Accelerator (Plasma Munitions)                 | Basic    | —                            | 3 Sulphur, 4 Phosphorus, 1 Manganese                                                           |
+|                                                        | Standard | +15 % dégâts                | 5 Phosphorus, 3 Manganese, 1 Selenium, 4 Molybdenum                                            |
+|                                                        | Premium  | +30 % dégâts                | 5 Selenium, 4 Cadmium, 4 Molybdenum, 2 Technetium                                              |
+| Missile / Mine (Explosives Munitions)                 | Basic    | —                            | 3 Iron, 3 Nickel, 4 Carbon, 4 Sulphur                                                          |
+|                                                        | Standard | +15 % dégâts                | 6 Sulphur, 6 Phosphorus, 4 Arsenic, 2 Mercury                                                  |
+|                                                        | Premium  | +30 % dégâts                | 5 Phosphorus, 4 Arsenic, 5 Niobium, 5 Mercury, 5 Polonium                                      |
+| Seismic Charge Launcher (minage planétaire)           | Basic seul | —                          | 2 Iron, 2 Nickel, 2 Sulphur, 3 Phosphorus, 1 Mercury                                           |
+| Sub-surface Displacement Missile                      | Basic seul | —                          | 3 Nickel, 3 Carbon, 3 Sulphur, 2 Tungsten                                                      |
+| Remote Release Flechette Launcher                     | Basic    | —                            | 2 Boron, 1 Tungsten, 3 Electrochemical Arrays, 2 Mechanical Components                         |
+|                                                        | Standard | +5 % dégâts                 | 4 Boron, 4 Tungsten, 6 Electrochemical Arrays, 4 Mechanical Components                         |
+|                                                        | Premium  | +10 % dégâts                | 6 Boron, 6 Tungsten, 9 Electrochemical Arrays, 5 Mechanical Components                         |
+| Shock Cannon                                           | Basic    | —                            | 2 Lead, 3 Grid Resistors, 2 Heat Dispersion Plate, 2 Focus Crystals, 2 Phase Alloys            |
+|                                                        | Standard | +5 % dégâts                 | 3 Lead, 5 Grid Resistors, 3 Heat Dispersion Plate, 4 Focus Crystals, 5 Phase Alloys            |
+|                                                        | Premium  | +10 % dégâts                | 5 Lead, 7 Grid Resistors, 4 Heat Dispersion Plate, 6 Focus Crystals, 8 Phase Alloys            |
+| Enzyme Missile Rack                                   | Basic    | —                            | 3 Iron, 2 Lead, 3 Sulphur, 4 Bio-Mechanical Conduits, 3 Propulsion Elements, 2 Weapon Parts    |
+|                                                        | Standard | +15 % dégâts                | 4 Lead, 6 Sulphur, 4 Tungsten, 5 Bio-Mechanical Conduits, 6 Propulsion Elements, 4 Weapon Parts |
+|                                                        | Premium  | +30 % dégâts                | 6 Lead, 5 Phosphorus, 4 Tungsten, 6 Bio-Mechanical Conduits, 6 Propulsion Elements, 5 Weapon Parts |
+| AX Multi-cannon (AX Small Calibre Munitions)          | Basic    | —                            | 2 Iron, 1 Nickel, 1 Sulphur, 2 Weapon Parts                                                    |
+|                                                        | Standard | +5 % dégâts                 | 2 Iron, 2 Phosphorus, 2 Zirconium, 3 Sensor Fragment, 4 Weapon Parts                            |
+|                                                        | Premium  | +10 % dégâts                | 3 Iron, 2 Phosphorus, 2 Zirconium, 4 Sensor Fragment, 2 Thargoid Carapace, 6 Weapon Parts       |
+| AX Missile Rack (AX Explosive Munitions)              | Basic    | —                            | 3 Iron, 3 Nickel, 4 Carbon, 3 Propulsion Elements                                              |
+|                                                        | Standard | +5 % dégâts                 | 6 Sulphur, 6 Phosphorus, 2 Mercury, 4 Thargoid Organic Circuitry, 4 Propulsion Elements         |
+|                                                        | Premium  | +10 % dégâts                | 5 Tungsten, 4 Mercury, 2 Polonium, 5 Bio-Mechanical Conduits, 5 Propulsion Elements, 6 Ship Flight Data |
+| Remote Release Flak Launcher (AX Remote Flak Munitions) | Basic  | —                            | 4 Nickel, 3 Carbon, 2 Sulphur                                                                  |
+|                                                        | Standard | +5 % dégâts                 | 2 Tin, 3 Zinc, 1 Arsenic, 3 Thargoid Technology Components, 2 Wreckage Components               |
+|                                                        | Premium  | +10 % dégâts                | 8 Zinc, 2 Tungsten, 1 Arsenic, 3 Sensor Fragment, 4 Thargoid Technology Components, 1 Weapon Parts |
+| Advanced Multi-cannon (Configurable Small Calibre)    | Basic    | —                            | 2 Iron, 1 Nickel, 2 Sulphur                                                                    |
+|                                                        | Standard | Munitions à dégâts anti-xéno | 2 Tin, 3 Zinc, 3 Phosphorus, 1 Guardian Power Cell, 1 Guardian Power Conduit, 1 Guardian Technology Component |
+|                                                        | Premium  | *(n'existe pas)*            | —                                                                                              |
+| Advanced Missile Rack (Configurable Explosive)         | Basic    | —                            | 3 Iron, 3 Nickel, 4 Carbon, 4 Sulphur                                                          |
+|                                                        | Standard | Munitions à dégâts anti-xéno | 6 Phosphorus, 4 Arsenic, 2 Mercury, 1 Guardian Power Cell, 1 Guardian Power Conduit, 1 Guardian Technology Component |
+|                                                        | Premium  | *(n'existe pas)*            | —                                                                                              |
+| Guardian Gauss Cannon                                  | Basic    | —                            | 3 Manganese, 2 Focus Crystals, 2 Guardian Power Conduit, 4 Guardian Wreckage Components         |
+|                                                        | Standard | +15 % dégâts                | 5 Manganese, 3 Heat Resistant Ceramics, 5 Focus Crystals, 4 Guardian Power Conduit, 3 Guardian Sentinel Weapon Parts |
+|                                                        | Premium  | +30 % dégâts                | 8 Manganese, 6 Guardian Technology Component, 6 Filament Composites, 10 Focus Crystals          |
+| Guardian Plasma Charger                                | Basic    | —                            | 3 Chromium, 2 Heat Dispersion Plate, 3 Guardian Power Conduit, 4 Guardian Wreckage Components   |
+|                                                        | Standard | +15 % dégâts                | 4 Chromium, 2 Heat Exchangers, 2 Phase Alloys, 2 Guardian Power Cell, 2 Guardian Technology Component |
+|                                                        | Premium  | +30 % dégâts                | 6 Chromium, 2 Zirconium, 4 Heat Exchangers, 6 Phase Alloys, 4 Guardian Power Cell, 3 Guardian Sentinel Weapon Parts |
+| Guardian Shard Cannon                                  | Basic    | —                            | 3 Carbon, 2 Vanadium, 3 Crystal Shards, 3 Guardian Power Cell, 5 Guardian Wreckage Components   |
+|                                                        | Standard | +15 % dégâts                | 4 Crystal Shards, 2 Guardian Power Cell, 2 Guardian Sentinel Weapon Parts                       |
+|                                                        | Premium  | +30 % dégâts                | 8 Carbon, 4 Vanadium, 8 Crystal Shards, 6 Guardian Power Cell                                   |
+
+*(Source : wiki communautaire Elite Dangerous, page « Synthesis », consultée le 13 septembre 2026 — table reproduite
+sans sélection. Aucune deuxième source communautaire indépendante n'a pu être croisée pour cette table : Inara.cz,
+qui aurait permis un recoupement, était inaccessible au moment de cette révision. Voir la mise en garde de fiabilité
+en fin de section.)*
+
+#### Chaff, Heat Sink, AFMU Refill, Limpets, Life Support, Caustic Sink : les consommables utilitaires
+
+| Recette                     | Palier       | Bonus                              | Matériaux                                                              |
+|-------------------------------|--------------|--------------------------------------|---------------------------------------------------------------------------|
+| **Chaff Launcher**            | Basic        | —                                     | 1 Compact Composites, 1 Filament Composites                               |
+|                                | Standard     | +1 s de durée d'effet                | 1 Compact Composites, 2 Filament Composites, 1 Thermic Alloys              |
+|                                | Premium      | +2 s de durée d'effet                | 1 Compact Composites, 2 Filament Composites, 1 Thermic Alloys, 1 Proto Radiolic Alloys |
+| **Heat Sink Launcher**         | Basic        | —                                     | 2 Basic Conductors, 2 Heat Conduction Wiring                               |
+|                                | Standard     | +15 % de dissipation thermique       | 2 Basic Conductors, 2 Heat Conduction Wiring, 2 Heat Exchangers            |
+|                                | Premium      | +30 % de dissipation thermique       | 2 Basic Conductors, 2 Heat Conduction Wiring, 2 Heat Exchangers, 1 Proto Heat Radiators |
+| **AFMU Refill**                | Basic        | —                                     | 2 Nickel, 2 Zinc, 2 Chromium, 3 Vanadium                                   |
+|                                | Standard     | +50 % de vitesse de réparation       | 1 Tin, 2 Manganese, 6 Vanadium, 1 Molybdenum, 1 Zirconium                  |
+|                                | Premium      | +100 % de vitesse de réparation      | 2 Zinc, 4 Chromium, 6 Vanadium, 2 Zirconium, 1 Tellurium, 1 Ruthenium      |
+| **Limpets**                    | Basic (seul) | jusqu'à 4 Limpets (selon soute libre) | 10 Iron, 10 Nickel                                                         |
+| **Life Support**               | Basic (seul) | recharge l'oxygène d'urgence au maximum de sa capacité | 2 Iron, 1 Nickel                                     |
+| **Caustic Sink Launcher**      | Basic (seul) | —                                     | 1 Chemical Storage Units, 1 Galvanising Alloys, 4 Caustic Shard, 2 Corrosive Mechanisms |
+
+**Limpets** exige qu'un Limpet Controller (Collector, Prospector, Hatch Breaker, Fuel Transfer, Repair, Research,
+Decontamination, Recon ou un des Multi Limpet Controllers) soit installé pour apparaître au panneau de Synthèse — un
+seul type de recette suffit quel que soit le contrôleur équipé, le comportement du limpet dépendant ensuite du
+contrôleur actif au moment du lancement. **Life Support** ne rallonge pas une durée fixe : elle recharge la réserve
+d'oxygène d'urgence à sa capacité maximale, laquelle dépend de la classe/notation du module installé (5 à 25 minutes).
+**Caustic Sink Launcher** est un module utilitaire distinct dédié au combat de Titan (absorption automatique des
+dégâts caustiques) — voir [25 — Combat AX](./25-combat-ax.md) pour le contexte des nuages caustiques.
+
+#### SRV : munitions, carburant, réparation
+
+Trois recettes propres au SRV, accessibles depuis le panneau droit du véhicule une fois déployé :
+
+| Recette          | Palier   | Bonus                          | Matériaux                                       |
+|-------------------|----------|-----------------------------------|------------------------------------------------------|
+| **SRV Ammo Restock** | Basic    | —                              | 2 Sulphur, 1 Phosphorus                              |
+|                    | Standard | +15 % dégâts                    | 1 Phosphorus, 1 Manganese, 1 Selenium, 1 Molybdenum   |
+|                    | Premium  | +30 % dégâts                    | 2 Phosphorus, 2 Selenium, 1 Molybdenum, 1 Technetium  |
+| **SRV Refuel**       | Basic    | —                              | 1 Sulphur, 1 Phosphorus                              |
+|                    | Standard | +100 % d'efficacité de carburant | 1 Sulphur, 1 Phosphorus, 1 Arsenic, 1 Mercury         |
+|                    | Premium  | +200 % d'efficacité de carburant | 1 Sulphur, 1 Arsenic, 1 Mercury, 1 Technetium         |
+| **SRV Repair**       | Basic    | —                              | 2 Iron, 1 Nickel                                      |
+|                    | Standard | +50 % de résistance de coque    | 3 Nickel, 1 Manganese, 2 Vanadium, 1 Molybdenum       |
+|                    | Premium  | +100 % de résistance de coque   | 1 Zinc, 2 Chromium, 2 Vanadium, 1 Tungsten, 1 Tellurium |
+
+Le **Rhino**, plus grand SRV du jeu (voir [14 — Rhino et Nomad](./14-rhino.md)), utilise le même mécanisme de
+synthèse que le Scarab et le Scorpion — aucune source consultée ne documente de recette distincte pour ce véhicule.
+
+#### Ce qui n'existe pas : Point Defence Turret et munitions de chasseur
+
+Deux idées reçues à corriger explicitement. **Le Point Defence Turret n'a aucune recette de synthèse** : sa fiche de
+module porte un besoin de rechargement mais aucun champ « Synthesis », contrairement à l'AFMU, au Heat Sink Launcher,
+au Chaff Launcher et au Life Support qui en portent un — le seul rechargement possible se fait à quai (Station
+Services → Advanced Maintenance → Restock). **Les munitions des Ship-Launched Fighters ne se synthétisent pas non
+plus** : un chasseur à court de munitions ou endommagé doit s'arrimer au Fighter Bay du vaisseau-mère, qui le répare et
+recharge ses munitions gratuitement en quelques secondes, sans passer par le panneau Synthesis.
+
+> **Fiabilité de cette section.** À l'exception de la FSD Injection — confirmée par un post officiel de Frontier de
+> 2018 en plus du wiki communautaire — l'ensemble des recettes ci-dessus repose sur une **source communautaire
+> unique** (wiki Elite Dangerous, page « Synthesis », dernière révision notable le 21 janvier 2026, page suivie
+> depuis 2022-2023). Inara.cz, qui aurait permis un recoupement indépendant, renvoyait une erreur 503 au moment de
+> cette révision (13 septembre 2026) ; aucune contradiction n'a en revanche été trouvée entre les sources
+> effectivement consultées. À revérifier en jeu avant une session de farming ciblée si une quantité paraît incohérente
+> avec votre expérience.
 
 ### Fleet Carrier : un apport purement logistique à l'ingénierie
 
@@ -2792,10 +3020,15 @@ Operations », 22 avril 2026 14:02 UTC ; « Discover the Nomad », 2 juin 2026 1
 
 ## Voir aussi
 
+- [04 — Équipements](./04-equipements.md) — tableau chiffré du Recon Limpet Controller utilisé pour pirater les
+  megaships et installations dont ce guide donne la taxonomie des USS.
 - [05 — Guardians](./05-guardians.md) — localisation des sites de ruines, farming des matériaux Guardian et contexte
   narratif, référencés depuis la section Guardian Technology Broker de ce guide.
 - [07 — Équipement à pied](./07-equipement-a-pied.md) — détail complet de l'ingénierie Odyssey (Ingénieurs à pied,
-  blueprints de combinaison/arme, builds par style de jeu).
+  blueprints de combinaison/arme, builds par style de jeu) — et rappel qu'il n'existe **aucune synthèse à pied**,
+  contrairement à la synthèse embarquée détaillée dans ce guide.
+- [08 — Combat spatial](./08-combat-spatial.md) — piratage des megaships et installations spatiales par Recon Limpet,
+  qui s'appuie sur la taxonomie des USS et sur les matériaux encodés de ce guide.
 - [00 — Glossaire](./00-glossaire.md) — sigles utilisés dans ce guide (BGS, RES, etc.).
 - [02 — Powerplay](./02-powerplay.md) — système des Powers et refonte Powerplay 2.0 (31 octobre 2024), pour clarifier
   sa non-interférence avec le déblocage des Ingénieurs.
@@ -2813,6 +3046,8 @@ Operations », 22 avril 2026 14:02 UTC ; « Discover the Nomad », 2 juin 2026 1
   Rescue Megaships.
 - [27 — Débuter et progresser](./27-debuter-et-progresser.md) — quels deux ou trois Ingénieurs débloquer en priorité
   selon l'objectif visé, quand on démarre et que le temps comme les matériaux manquent.
+- [30 — Piraterie et PvP](./30-piraterie-et-pvp.md) — détail chiffré des 5 niveaux de menace du Convoy Dispersal
+  Pattern, un des 12 types d'USS listés dans ce guide.
 
 ## Sources
 
@@ -2902,6 +3137,15 @@ Operations », 22 avril 2026 14:02 UTC ; « Discover the Nomad », 2 juin 2026 1
   site, section « Où farmer efficacement les matériaux d'Engineering, type par type »)
 - https://www.edsm.net/ (consulté le 9 septembre 2026 — même constat que ci-dessus, aucun outil de repérage des HGE)
 - https://edastro.com/ (consulté le 9 septembre 2026 — même constat)
+- https://elite-dangerous.fandom.com/wiki/Synthesis (consulté le 13 septembre 2026 — table complète des recettes de
+  synthèse embarquée : FSD Injection, munitions par catégorie d'arme, Chaff Launcher, Heat Sink Launcher, AFMU
+  Refill, Limpets, Life Support, Caustic Sink Launcher ; historique de révision consulté, dernière modification
+  notable le 21 janvier 2026)
+- https://elite-dangerous.fandom.com/wiki/Unidentified_Signal_Source (consulté le 13 septembre 2026 — taxonomie des
+  12 types d'USS canoniques et échelle de menace 0-9)
+- https://forums.frontier.co.uk/threads/changes-to-fsd-synthesis-recipes.406037/ (post de Sandro Sammarco, Lead
+  Designer chez Frontier, 7 février 2018 — quantités officielles de la recette FSD Injection lors de la mise à jour
+  3.0 « Beyond Chapter One », identiques à celles reproduites par le wiki communautaire en 2026)
 
 *Corrections et ajouts de cette révision : voir le changelog associé pour le détail des points corrigés (blueprints
 douteux, dates, scission des Technology Brokers, et ajout de la section HGE/farming des matériaux manufacturés et
@@ -2965,3 +3209,19 @@ d'exobiologie et 1 fait accord. Cet écart n'est pas arbitré ici, faute de sour
 est reporté en* zones_incertaines. *Aucun chiffre nouveau n'est introduit : les valeurs confrontées sont recopiées
 telles quelles des deux guides, et la table d'écart comme le réalignement de la table des matériaux bruts sont générés
 par script.*
+
+*Révision du 13 septembre 2026 — chantier 14 (chiffrer les boucles de farming). La section Synthèse, jusqu'ici un
+unique paragraphe descriptif, devient une section complète : recette exacte de la FSD Injection (« jumponium ») à ses
+trois paliers, table des recettes de munitions pour une vingtaine de familles d'armes (conventionnelles, AX,
+Guardian), et tables des recettes utilitaires (Chaff, Heat Sink, AFMU Refill, Limpets, Life Support, Caustic Sink
+Launcher) et des trois recettes SRV. Correction méthodologique au passage : contrairement à une lecture répandue, le
+palier Basic/Standard/Premium ne change presque jamais la quantité produite (la synthèse recharge au maximum dans les
+trois cas), seulement les matériaux requis et un bonus qualitatif secondaire — seule la FSD Injection fait exception.
+Absence confirmée, et non plus supposée : ni le Point Defence Turret ni les munitions de chasseur n'ont de recette de
+synthèse. Ajout d'une taxonomie complète des 12 types d'*Unidentified Signal Source*, avec contenu typique,
+dépendance BGS/économie quand elle est documentée, et sous-plage de menace sur l'échelle globale 0-9 — la question de
+la « granularité type de source → grade obtenu », déjà signalée comme non couverte, reste non couverte : cette
+taxonomie chiffre les types, pas leurs probabilités de tirage. Fiabilité : ces ajouts reposent essentiellement sur une
+source communautaire unique (wiki Fandom, pages Synthesis et Unidentified Signal Source), faute d'accès à Inara.cz au
+moment de la révision (erreur 503) ; seule la recette FSD Injection est croisée avec une source officielle Frontier
+de 2018, sans divergence.*

@@ -2,14 +2,14 @@
 id: 08-combat-spatial
 titre: "Guide complet du combat spatial dans Elite Dangerous"
 domaine: combat
-entites: [Power Distributor, pips SYS/ENG/WEP, Flight Assist Off, Shield Cell Bank, Hull Reinforcement Package, Module Reinforcement Package, interdiction, mass lock, Resource Extraction Site, Combat Zone, notoriety, CQC, pénétration de blindage, dureté de coque, Corrosive shell, Phasing sequence, Thermal vent, Feedback Cascade, blueprint Focused, blueprint Sturdy, Cytoscrambler Burst Laser, Guardian Gauss Cannon, Plasma Accelerator, Rail Gun, Torpedo Pylon, bulkheads]
-mots_cles_en: [power distributor, pips, flight assist off, shield cell bank, hull reinforcement package, module reinforcement package, interdiction, mass lock, hazres, combat zone, bounty voucher, notoriety, armour piercing, hull hardness, damage distribution, thermal damage, kinetic damage, explosive damage, absolute damage, corrosive shell, phasing sequence, thermal vent, feedback cascade, weapon focused, weapon sturdy, bulkheads, hull boost, combat rank]
+entites: [Power Distributor, pips SYS/ENG/WEP, Flight Assist Off, Shield Cell Bank, Hull Reinforcement Package, Module Reinforcement Package, interdiction, mass lock, Resource Extraction Site, Combat Zone, notoriety, CQC, pénétration de blindage, dureté de coque, Corrosive shell, Phasing sequence, Thermal vent, Feedback Cascade, blueprint Focused, blueprint Sturdy, Cytoscrambler Burst Laser, Guardian Gauss Cannon, Plasma Accelerator, Rail Gun, Torpedo Pylon, bulkheads, Megaship, Bulk Cruiser, Installation, Recon Limpet Controller, Hatch Breaker Limpet Controller, Hackable Data Transmitter, Hackable Comms Array, Ship Log Uplink]
+mots_cles_en: [power distributor, pips, flight assist off, shield cell bank, hull reinforcement package, module reinforcement package, interdiction, mass lock, hazres, combat zone, bounty voucher, notoriety, armour piercing, hull hardness, damage distribution, thermal damage, kinetic damage, explosive damage, absolute damage, corrosive shell, phasing sequence, thermal vent, feedback cascade, weapon focused, weapon sturdy, bulkheads, hull boost, combat rank, megaship, bulk cruiser, installation, recon limpet controller, hatch breaker limpet controller, hackable data transmitter, hackable comms array, ship log uplink, manifest scanner, data link scanner]
 version_jeu_couverte: "mécaniques stables non rattachées à une version précise ; caractéristiques de vaisseaux, d'armes et de blindages relevées le 10 septembre 2026 dans EDCD/coriolis-data et EDCD/FDevIDs"
 branche: live
-date_verification: 2026-09-12
+date_verification: 2026-09-13
 confiance_globale: haute
 volatilite: moyenne
-sources_primaires: [Wikipedia Elite Dangerous, Canonn Research, EDSM, Spansh, Inara, EDCD/coriolis-data, EDCD/FDevIDs]
+sources_primaires: [Wikipedia Elite Dangerous, Canonn Research, EDSM, Spansh, Inara, EDCD/coriolis-data, EDCD/FDevIDs, "Wiki communautaire Elite Dangerous — Megaship/Installation/Recon Limpet Controller, consulté le 13 septembre 2026"]
 zones_incertaines:
   - "Coefficient exact de réduction des dégâts lorsque la pénétration de blindage d'une arme est inférieure à la dureté de coque de la cible : les deux champs sont publiés par EDCD/coriolis-data, la formule qui les combine ne l'est pas."
   - "Règle de calcul appliquée aux dégâts de type absolu et aux dégâts anti-xéno : le jeu de données porte l'étiquette de type, pas la règle."
@@ -19,7 +19,10 @@ zones_incertaines:
   - "État courant du front thargoïde (systèmes en alerte, invasion, reconquête), non vérifiable dans un guide statique."
   - "Effet chiffré des Hull Reinforcement Packages et des Module Reinforcement Packages, non couvert par ce guide."
   - "Choix de modules des trois builds de la section 8.5, issus de la méta communautaire ; seules les caractéristiques de châssis sont recalées sur EDCD/coriolis-data."
-guides_lies: [0, 3, 4, 6, 16, 21, 23, 25, 30]
+  - "Corrélation entre type d'installation spatiale et contenu du piratage : aucune source consultée ne documente de table équivalente à celle des megaships, dont la classe fixe le contenu."
+  - "Déclenchement de la notoriety par le piratage de megaships/installations : mentionné pour la mécanique générale de Crime & Punishment, non confirmé spécifiquement pour cette activité."
+  - "Chiffre global du nombre de megaships et de classes recensées (Canonn, mai 2022) : à traiter comme un ordre de grandeur historique, probablement obsolète en 2026."
+guides_lies: [0, 3, 4, 6, 16, 21, 23, 25, 30, 31]
 ---
 
 # Guide complet du combat spatial dans Elite Dangerous
@@ -35,7 +38,9 @@ confrontée à la **dureté de coque** de la cible (*hardness*, de 20 à 75), pu
 dégâts — **thermique**, **cinétique**, **explosif** ou **absolu**. Les armes se montent en **fixe**, **gimbal** ou
 **tourelle** ; la coque se renforce par **bulkheads**, **HRP** et **MRP**. L'**interdiction** et le **mass lock**
 contraignent la fuite. Les terrains PvE sont les **RES/HazRES**, les **Compromised Nav Beacons** et les **Combat
-Zones** ; le rang va de *Harmless* à **Elite V**, et détruire une cible « clean » génère prime et **notoriety**.
+Zones** ; le rang va de *Harmless* à **Elite V**, et détruire une cible « clean » génère prime et **notoriety**. Une
+boucle distincte, le **piratage à distance de megaships et d'installations spatiales** au **Recon Limpet
+Controller**, ne demande aucun combat.
 
 ## Introduction au combat spatial d'Elite Dangerous
 
@@ -652,6 +657,97 @@ Le combat AX nécessite par ailleurs :
   surchauffe rapide ;
 - une coordination d'escadre stricte face aux Interceptors Thargoïdes ou aux menaces liées aux Titans.
 
+### 4.6 Megaships et installations spatiales : piratage à distance
+
+Une boucle entièrement distincte des sites de signaux classiques (RES, CNB, CZ) : des cibles fixes ou semi-mobiles,
+non accostables, dont on pirate les données et parfois la cargaison **sans jamais s'y arrimer**, à l'aide du
+**Recon Limpet Controller** déjà chiffré dans [04 — Équipements](./04-equipements.md) (classes 1/3/5/7, notation E
+uniquement, 10 à 17 secondes de piratage selon la classe, 1 200 à 2 000 m de portée) mais dont aucun guide du corpus
+n'expliquait jusqu'ici l'usage.
+
+#### Deux familles de cibles, à ne pas confondre avec les megaships accostables
+
+- **Megaships non accostables (Bulk Cruisers)** — huit sous-types documentés : *Bulk Cargo Ship* (fret en vrac, le
+  plus courant), *Tanker* (carburant/liquides), *Agricultural Vessel* (denrées), *Science/Survey Vessel* (recherche,
+  le sous-type le plus rare), *Tourist Ship*, *Prison Ship* (transport de détenus) et le *Dredger* (cas marginal,
+  quasi unique en jeu). Chacun saute selon un **plan de vol fixe à 6 escales, révélé au scan, avec un cycle
+  hebdomadaire** (traditionnellement le jeudi) — leur position n'est donc jamais fixe et ne figure sur aucune carte
+  statique.
+- **Installations spatiales fixes** — Agricultural, Civilian, Comms, Government, Industrial, Medical, Military,
+  Scientific, Security, Tourist, Unauthorised : détectées comme point d'intérêt au panneau de navigation jusqu'à
+  1 000 Ls, jamais accostables.
+
+**Ne pas confondre ces deux familles avec les megaships accostables** — *Wells-class Carrier*, *Detention Centre* et
+*Rescue Vessel*, qui disposent de pads et de services et sont déjà traités dans
+[31 — Pilotage, navigation et stations](./31-pilotage-navigation-et-stations.md). Ce sont des cibles amicales, hors
+du périmètre de cette section.
+
+#### Procédure : Data Link Scanner, puis Recon Limpet, puis Hatch Breaker si besoin
+
+1. **Approche et scan général.** Une fois à portée (quelques km), scanner la coque avec le **Data Link Scanner** — un
+   module intégré, gratuit, sans masse ni emplacement, présent par défaut sur tout vaisseau. Il révèle la liste des
+   objets interactifs : *Ship Log Uplink* (plan de vol, non hostile à scanner), *Cargo Bay*/*Escape Hatch*,
+   *Automated Defence Turret*, *Hackable Data Transmitter*, *Hackable Comms Array*, *Fighter Bay*.
+2. **Cibler et scanner le sous-objet visé** à courte portée (quelques centaines de mètres) pour révéler son
+   **Limpet Docking Point** : un *Hackable Data Transmitter* n'en propose qu'un seul, un *Hackable Comms Array* en
+   propose deux, piratables en parallèle avec deux Recon Limpet Controllers classe 1E plutôt qu'un seul module de
+   classe supérieure — une classe plus élevée réduit le temps de piratage mais **n'augmente jamais le nombre de
+   limpets actifs simultanés** (toujours 1, voir la table de 04-equipements.md).
+3. **Lancer le Recon Limpet** sur le point ciblé et attendre le temps de piratage (10 à 17 s selon la classe du
+   contrôleur).
+4. **Récupération**, différente selon la cible :
+   - *Hackable Data Transmitter* : les données piratées vont directement en soute de données, sans limpet de
+     collecte.
+   - *Hackable Comms Array* : le piratage éjecte des canisters flottants, à récupérer au Collector Limpet ou
+     manuellement.
+   - *Cargo Bay*/*Escape Hatch* : nécessitent un **Hatch Breaker Limpet Controller** distinct du Recon (déjà chiffré
+     dans 04-equipements.md), précédé d'un scan au **Manifest Scanner** pour visualiser le contenu ; plusieurs
+     Hatch Breaks successifs vident progressivement une soute, qui finit par s'épuiser.
+
+Les données encodées obtenues recoupent le farming Encoded déjà détaillé dans
+[06 — Ingénieurs](./06-ingenieurs.md) : *Hackable Data Transmitter* rend notamment Anomalous Bulk Scan Data,
+Classified Scan Databanks/Fragment, Modified Embedded Firmware, Tagged Encryption Codes, Security Firmware Patch ;
+*Hackable Comms Array* rend Anomalous Bulk Scan Data, Divergent Scan Data, Unusual Encrypted Files, Untypical/
+Distorted/Inconsistent Shield Scan Data, Unidentified Scan Archives, Modified Consumer Firmware.
+
+#### Ce que transporte chaque classe de megaship : une règle fixe, indépendante du contexte politique
+
+Pour les Bulk Cruisers, la catégorie de marchandises et de biens rares transportés est **fixée par la classe du
+vaisseau**, indépendamment de la légalité du système visité, de l'état de la faction contrôlante, de sa population ou
+de son économie. Quelques exemples parmi la vingtaine de classes documentées :
+
+| Classe (sous-type)                          | Tonnage moyen | Biens rares typiques        | Marchandises courantes                                  |
+|-----------------------------------------------|---------------|-------------------------------|-------------------------------------------------------------|
+| Gordon-class Hauler (Bulk Cargo Ship)         | 250 t         | Metals                        | Industrial Materials, Metals                                 |
+| Alcatraz-class Reformatory (Prison Ship)      | 750 t         | Honesty Pills (exclusivement) | Legal Drugs, Machinery, Medicines, Personal Effects, Waste, Weapons |
+| Naphtha-class Tanker (Tanker)                 | 20 t          | Foods                          | Chemicals, Medicines, Metals                                 |
+| Freedom-class Surveyor (Survey Vessel)        | 550 t         | Metals                         | Machinery, Metals, Minerals                                   |
+| Demeter-class Cropper (Agricultural Vessel)   | 150 t         | Chemicals, Machinery           | Chemicals, Foods, Legal Drugs, Machinery, Medicines           |
+
+Un manifeste de cargaison qui s'écarte de ce profil par défaut signale qu'un megaship vient d'être ou va être
+attaqué. **Aucune corrélation équivalente n'a pu être établie pour les installations spatiales** : les sources
+consultées documentent le mécanisme de piratage mais pas de table type d'installation → contenu.
+
+#### Sécurité, amendes et évasion
+
+Le piratage déclenche un rapport de crime à la sécurité locale dès le lancement du limpet. Le **Silent Running**
+engagé avant l'accrochage et maintenu pendant tout le piratage **évite l'amende immédiate et l'identification**, mais
+**ne supprime pas le rapport de crime** : la sécurité du système est prévenue et patrouille la zone — en système
+**Anarchie**, en l'absence de forces de sécurité organisées, cette réponse n'a pas lieu. Pour effacer une amende ou
+une prime accumulée, passer par un **Interstellar Factor** dans un système non contrôlé par la faction lésée (voir la
+section 7.2 « Devenir wanted et Interstellar Factors » plus haut dans ce guide), puis écouler le butin volé au marché
+noir. Aucune
+source consultée ne confirme que cette activité déclenche spécifiquement la mécanique de *notoriety* — à traiter
+comme non établi plutôt que comme acquis.
+
+> **Fiabilité de cette section.** Sources principales : wiki communautaire Elite Dangerous (pages Megaship, Bulk
+> Cruiser, Installation, Recon/Hatch Breaker/Manifest Scanner, Hackable Data Transmitter, Hackable Comms Array,
+> Salvager) et Canonn Research Group, article « Non-Dockable Megaships. An Introduction » (22 mai 2022), consultés le
+> 13 septembre 2026. Le chiffre d'ensemble avancé par Canonn (plusieurs milliers de megaships recensés, 23 classes)
+> date de 2022 et doit être lu comme un ordre de grandeur historique, pas comme un inventaire actuel. L'article
+> Canonn sur les installations, lui, date de 2017 — antérieur à l'ajout du piratage par limpet sur les installations
+> (patch 3.1, 2018) — d'où l'absence de table butin par type d'installation signalée ci-dessus.
+
 ---
 
 ## 5. Tactiques PvP en combat spatial (Open Play, duels, wing PvP)
@@ -972,6 +1068,10 @@ détail châssis par châssis dans [03-vaisseaux.md](./03-vaisseaux.md) : ce gui
 - [Le Background Simulation (BGS)](./21-bgs.md) — impact des Combat Zones et du crime sur l'état des factions.
 - [Community Goals](./24-community-goals.md) — objectifs communautaires de combat et de sécurité.
 - [Porte-vaisseaux de joueur (Fleet Carriers)](./19-fleet-carriers.md) — logistique de combat en flotte, ravitaillement avancé.
+- [Piraterie et PvP](./30-piraterie-et-pvp.md) — piratage de vaisseaux marchands PNJ par interdiction, à distinguer du
+  piratage à distance de megaships et installations traité en 4.6.
+- [Pilotage, navigation et stations](./31-pilotage-navigation-et-stations.md) — megaships accostables (Wells-class
+  Carrier, Detention Centre, Rescue Vessel), à ne pas confondre avec les Bulk Cruisers non accostables de 4.6.
 - [Outils](./16-outils.md) — Coriolis, EDSY et autres outils de configuration pour valider tout build chiffré ci-dessus.
 - [Glossaire](./00-glossaire.md) — sigles courants (HRP, MRP, AX, CZ, RES…) utilisés dans ce guide.
 - [Débuter et progresser](./27-debuter-et-progresser.md) — monter le rang de combat (Harmless → Elite) efficacement :
@@ -991,6 +1091,12 @@ détail châssis par châssis dans [03-vaisseaux.md](./03-vaisseaux.md) : ce gui
   (`blueprints.json`, `specials.json`, `modules.json`, `modifications.json`) et `spec/data-spec.js`.
 - EDCD/FDevIDs, commit `c35612952dd6a547d1a7ac4cffab9c7051e86579` — `outfitting.csv` (noms d'affichage des armes) et
   `combatrank.csv` (échelle nominale du rang de combat).
+- https://elite-dangerous.fandom.com/wiki/Megaship, /wiki/Bulk_Cruiser, /wiki/Installation, /wiki/Salvager,
+  /wiki/Recon_Limpet_Controller, /wiki/Hackable_Data_Transmitter, /wiki/Hackable_Comms_Array (consultées le
+  13 septembre 2026, pour la section 4.6 — typologie des megaships et installations, procédure de piratage à
+  distance et contenu obtenu)
+- https://canonn.science/codex/non-dockable-megaships-an-introduction/ (22 mai 2022 — corrélation classe de
+  megaship → cargaison par défaut ; chiffre d'ensemble daté, traité comme ordre de grandeur historique)
 
 > **Ce que cette révision a pu vérifier, et ce qu'elle n'a pas pu vérifier.** Les chiffres ajoutés le 10 septembre 2026
 > — pénétration de blindage arme par arme, répartition des types de dégâts, dureté de coque des châssis, profils de
@@ -1010,3 +1116,11 @@ détail châssis par châssis dans [03-vaisseaux.md](./03-vaisseaux.md) : ce gui
 > version les plus récentes et un outil de configuration à jour (type Coriolis ou EDSY, voir
 > [16-outils.md](./16-outils.md)), ainsi qu'avec les discussions communautaires actuelles (forums Frontier, wiki
 > communautaire, r/EliteDangerous).
+
+*Révision du 13 septembre 2026 — chantier 14 (chiffrer les boucles de farming). Ajout de la section 4.6, qui explique
+pour la première fois l'usage du Recon Limpet Controller déjà chiffré dans 04-equipements.md : typologie des
+megaships non accostables (Bulk Cruisers, huit sous-types) et des installations spatiales fixes, procédure de
+piratage à distance (Data Link Scanner → Recon Limpet → Hatch Breaker si besoin), corrélation classe de megaship →
+cargaison, conséquences de sécurité et limites de l'évasion en Silent Running. Deux lacunes signalées explicitement
+plutôt que comblées par une supposition : l'absence de table butin par type d'installation, et l'absence de
+confirmation que cette activité déclenche la notoriety.*

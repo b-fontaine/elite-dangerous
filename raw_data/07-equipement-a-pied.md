@@ -6,10 +6,10 @@ entites: [Flight Suit, Artemis, Maverick, Dominator, Genetic Sampler, Arc Cutter
 mots_cles_en: [on-foot suit, Artemis bio suit, Maverick suit, Dominator suit, genetic sampler, Pioneer Supplies, suit grade upgrade, on-foot engineering, bartender, Merc Coin, Kinematic Armaments, Manticore, Takada, Karma P-15, Karma AR-50, Manticore Executioner, Manticore Intimidator, Manticore Terminator, Shield Disruptor, Shield Projector, E-Breach, on-foot consumable, microresource, weapon blueprint materials, suit modification slots]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-10
+date_verification: 2026-09-13
 confiance_globale: haute
 volatilite: haute
-sources_primaires: ["Flux d'annonces officielles Frontier", "EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27) — consulté comme contrôle négatif et pour le renvoi vers le volet vaisseau : ce dépôt ne porte aucune donnée d'équipement à pied", "EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579) — microresources.csv, seule source locale couvrant les micro-ressources et consommables Odyssey", "Inara", "edfieldmanual.com", "starzen.space"]
+sources_primaires: ["Flux d'annonces officielles Frontier", "EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27) — consulté comme contrôle négatif et pour le renvoi vers le volet vaisseau : ce dépôt ne porte aucune donnée d'équipement à pied", "EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579) — microresources.csv, seule source locale couvrant les micro-ressources et consommables Odyssey", "Inara", "edfieldmanual.com", "starzen.space", "Pilots Trade Network — guide « Odyssey Beginner's Guide », section Consumables/(Re)stocking, consulté le 13 septembre 2026"]
 zones_incertaines: ["Les montants en crédits des paliers de montée en grade viennent du wiki Fandom seul et restent à confirmer en jeu", "Le tarif au comptoir du Carbon Fibre Plating et du Titanium Plating est déduit de leur type et non relevé", "Aucun jeu de données local ne porte les statistiques de combat des armes à pied : dégâts par tir, cadence, DPS, chargeur, portée nominale, efficacité contre bouclier et blindage, prix par grade restent non chiffrés", "Aucun jeu de données local ne porte les caractéristiques chiffrées des combinaisons : bouclier, points de vie, capacité du sac à dos, réserve d'oxygène, nombre d'emplacements d'armes", "Le catalogue complet des armes à pied n'est pas dénombrable localement : cinq modèles seulement sont nommés par une source, contre les onze que suppose le calcul des 56 recettes", "Vingt-sept des trente-trois cellules de la matrice modification d'arme × fabricant restent sans recette relevée", "L'existence de blueprints d'Engineer et de paliers de grade pour les quatre outils n'est pas confirmée", "Aucune preuve d'un effet expérimental distinct n'a pu être établie pour les suits et armes d'Odyssey", "Le montant exact du rebuy à pied n'a pas pu être confirmé", "Le plafond de 9 999 Merc Coin et l'allocation hebdomadaire de 1 000 ne sont corroborés par aucune annonce officielle", "La date du Kestrel Mk II (24 février 2026) n'est établie qu'avec une confiance moyenne", "L'association du Caspian Explorer à un plafonnement de l'ingénierie de combat à pied n'a pas pu être vérifiée dans les notes officielles"]
 guides_lies: [0, 6, 9, 10, 13, 14, 18, 26]
 ---
@@ -622,13 +622,33 @@ emploient massivement les mauvais noms :
   **c'est bien « E-Breach » qu'il faut chercher en jeu**. Notez aussi que le jeu le classe en *Consumable*, et non
   comme un outil d'emplacement au même titre que le Genetic Sampler ou l'Arc Cutter.
 
-Pour les recettes de synthèse exactes (matériaux requis, quantités produites), consultez le wiki communautaire ou
-l'outil tiers **Elite Dangerous Odyssey Material Helper (EDOMH)** : la table d'identifiants du jeu nomme et compte les
-consommables, mais ne porte aucune recette de synthèse.
+### Pas de synthèse à pied : réapprovisionnement par achat ou par butin, à distinguer de la synthèse embarquée
+
+**Correction d'une confusion répandue, y compris dans des versions antérieures de ce guide.** Contrairement à la
+**synthèse embarquée** du vaisseau (panneau Engineering → Synthesis, qui fabrique des consommables à partir de
+matériaux — voir [06 — Ingénieurs](./06-ingenieurs.md)), **il n'existe aucun mécanisme de fabrication à partir de
+matériaux pour les six consommables à pied**. Le menu Accès Rapide à pied ne porte pas d'onglet « Synthèse » : ces
+objets se réapprovisionnent uniquement par deux voies.
+
+- **Achat au comptoir Pioneer Supplies**, contre crédits, pour cinq des six consommables (Medkit, Energy Cell, Frag
+  Grenade, Shield Disruptor, Shield Projector).
+- **Butin** trouvé sur le terrain (coffres, corps, caisses de settlement), pour les six.
+
+**L'E-Breach fait exception et ne s'achète jamais à un comptoir Pioneer Supplies légal** : c'est un article illégal,
+vendu uniquement dans les comptoirs Pioneer Supplies de stations contrôlées par une faction Anarchie ou Communiste (à
+un prix de l'ordre de 25 000 Cr), ou trouvé en butin — jamais fabriqué.
+
+Le casier du vaisseau (Ship Locker) stocke jusqu'à **100 unités par type de consommable** ; au débarquement, une
+partie de ce stock est automatiquement répartie dans le sac à dos selon la capacité de portage de la combinaison
+équipée. Il n'y a donc rien à « synthétiser » avant une sortie : la préparation consiste à vérifier son stock au
+casier et, si besoin, à passer au comptoir Pioneer Supplies le plus proche avant de débarquer.
 
 *Sourcage : EDCD/FDevIDs, `microresources.csv`, commit c35612952dd6 — les six lignes de catégorie `Consumable`,
-reproduites sans
-sélection ni ajout. Décompte refait par script le 10 septembre 2026.*
+reproduites sans sélection ni ajout, décompte refait par script le 10 septembre 2026 ; guide communautaire Pilots
+Trade Network, section « Consumables » et « (Re)stocking » (pilotstradenetwork.com/odyssey-beginners-guide/,
+consulté le 13 septembre 2026), pour l'absence de synthèse, le mécanisme d'achat/butin, le plafond de 100 unités et
+la répartition au débarquement ; wiki communautaire Elite Dangerous, page E-Breach, pour son statut d'article
+illégal vendu uniquement en station Anarchie/Communiste.*
 
 ## L'ingénierie à pied (Engineering) d'Odyssey : Engineers, blueprints et modifications irréversibles
 
@@ -957,7 +977,8 @@ contenu à enjeu élevé (raid de settlement de haute valeur, transport de gros 
 - [14-rhino.md](./14-rhino.md) — fiches détaillées du Rhino et du Nomad, et chronologie de la mise à jour
   « Operations » évoquée plus haut.
 - [10-exploration.md](./10-exploration.md) — exobiologie approfondie (espèces, rangs, primes de première découverte).
-- [06-ingenieurs.md](./06-ingenieurs.md) — mécanique générale de l'ingénierie (vaisseaux), grades, effets expérimentaux.
+- [06-ingenieurs.md](./06-ingenieurs.md) — mécanique générale de l'ingénierie (vaisseaux), grades, effets
+  expérimentaux, et la **synthèse embarquée** (FSD Injection, munitions, chaff...), qui n'a pas d'équivalent à pied.
 - [26-ingenierie-a-pied-avancee.md](./26-ingenierie-a-pied-avancee.md) — taxonomie des matériaux à pied, règles
   d'échange au barman et itinéraires de récolte pour les paliers de combinaison décrits ici.
 - [18-colonisation.md](./18-colonisation.md) — colonisation de systèmes et construction de settlements, contexte direct
@@ -1029,3 +1050,15 @@ contenu à enjeu élevé (raid de settlement de haute valeur, transport de gros 
 - `docs/faisabilite-spansh-temps-reel-materiaux.md`, étude interne du 19 août 2026, § 3.2 « Artemis : la table
   complète, sourcée » — table des paliers, sources des composants, listes d'ingénieurs vérifiées, réserve sur les
   crédits (wiki Fandom seul), combinaisons « premium » de Pioneer Supplies.
+- Pilots Trade Network, guide « Odyssey Beginner's Guide », sections « Consumables » et « (Re)stocking »
+  (pilotstradenetwork.com/odyssey-beginners-guide/, consulté le 13 septembre 2026) — absence de synthèse à pied,
+  mécanisme d'achat/butin, plafond de 100 unités par consommable au casier, répartition au sac à dos au débarquement.
+- Wiki communautaire Elite Dangerous, page E-Breach (consulté le 13 septembre 2026) — statut d'article illégal vendu
+  uniquement en station Anarchie/Communiste, jamais synthétisé.
+
+*Révision du 13 septembre 2026 — chantier 14 (chiffrer les boucles de farming). Correction d'une confusion héritée
+des versions antérieures de ce guide : la section « Les consommables à pied » renvoyait vers « le wiki communautaire
+ou l'outil EDOMH » pour des recettes de synthèse qui, en réalité, n'existent pas. Il n'existe aucun mécanisme de
+fabrication à partir de matériaux pour les six consommables à pied — seulement achat au comptoir Pioneer Supplies
+(cinq des six) et butin, avec un plafond de 100 unités par type au casier du vaisseau. Corrigé en conséquence, avec
+mise à jour symétrique du renvoi correspondant dans [13-operations.md](./13-operations.md).

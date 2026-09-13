@@ -6,7 +6,7 @@ entites: [Thargoïdes, Interceptor, Scout thargoïde, Titan, Maelstrom, Shutdown
 mots_cles_en: [thargoid, interceptor, hydra, caustic cloud, shutdown field neutraliser, guardian gauss cannon, anti-xeno combat zone, non-human signal source, maelstrom, titan, barnacle, meta-alloy, thargoid spire, revenant, banshee, titan drive component, thargoid surface site]
 version_jeu_couverte: "4.4.0.x — contenu thargoïde inchangé depuis fin 2024, recoupé sur le flux d'annonces 2025-2026"
 branche: live
-date_verification: 2026-09-12
+date_verification: 2026-09-13
 confiance_globale: moyenne
 volatilite: moyenne
 sources_primaires: [Flux Steam News officiel de Frontier Developments, Wikipédia EN Elite Dangerous, codex Maelstrom de Canonn, Inara, Massively OP, wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge), wiki communautaire Anti Xeno Initiative (wiki.antixenoinitiative.com)]
@@ -434,10 +434,10 @@ environnants s'étant dissipés depuis.
 ## Voir aussi
 
 - [Lore et chronologie](./01-lore.md) — contexte narratif complet de l'invasion thargoïde, chronologie des deux guerres, structure détaillée d'Aegis (section 3.7), et localisation des Pléiades comme berceau du contact thargoïde (section 3.4bis).
-- [Combat spatial](./08-combat-spatial.md) — mécaniques générales de combat (pips, énergie, Combat Zones) dont le combat AX est une branche spécialisée (section 4.5).
+- [Combat spatial](./08-combat-spatial.md) — mécaniques générales de combat (pips, énergie, Combat Zones) dont le combat AX est une branche spécialisée (section 4.5) ; section 4.6 pour les Bulk Cruisers piratables, à ne pas confondre avec les Rescue Megaships accostables et amicaux cités en 8bis.
 - [Équipements](./04-equipements.md) — détail des montages, tailles et conditions de déblocage de l'armement AX et Guardian (section 2.6-2.7).
 - [Guardians](./05-guardians.md) — armes et modules hybrides Guardian utilisés en combat AX, et synthèse des 28 logs Guardian sur la guerre ancienne contre les Thargoïdes (section 11).
-- [Ingénieurs](./06-ingenieurs.md) — déblocage de Felicity Farseer (Meta-Alloy) et de Professor Palin (Sensor Fragments), Human Technology Broker (section 8.1-8.3).
+- [Ingénieurs](./06-ingenieurs.md) — déblocage de Felicity Farseer (Meta-Alloy) et de Professor Palin (Sensor Fragments), Human Technology Broker (section 8.1-8.3), et recette de synthèse chiffrée du Caustic Sink Launcher (section Synthèse).
 - [Exploration et exobiologie](./10-exploration.md) — signal de surface « Thargoid » au DSS et mécanisme du Codex (section 8.2-8.3).
 - [Community Goals](./24-community-goals.md) — mécanique générique des campagnes communautaires, utilisée pendant la guerre pour la défense de systèmes et la collecte de matériaux anti-Titan.
 - [Outils](./16-outils.md) — configurateurs externes (Coriolis, EDSY) pour vérifier tout build AX avant usage compétitif, et outils Canonn de décodage des sondes/liens thargoïdes (section 8.3).

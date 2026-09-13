@@ -10,17 +10,19 @@ entites: [Bulkheads, Hull Reinforcement Package, Module Reinforcement Package, S
   Frame Shift Drive Interdictor, Cargo Rack, Meta Alloy Hull Reinforcement, Pulse Laser,
   Burst Laser, Beam Laser, Multi-Cannon, Fragment Cannon, Rail Gun, Plasma Accelerator,
   Plasma Shock Cannon, Guardian Gauss Cannon, Guardian Plasma Charger, Guardian Shard Cannon,
-  Mirrored Surface Composite, Reactive Surface Composite, Military Grade Composite]
+  Mirrored Surface Composite, Reactive Surface Composite, Military Grade Composite, Recon Limpet Controller,
+  Hatch Breaker Limpet Controller]
 mots_cles_en: [outfitting, hardpoint, hull reinforcement package, module reinforcement package, shield booster,
   frame shift drive SCO, guardian fsd booster, frame shift wake scanner, vessel bay, limpet controller,
   increased range, merc coin, power plant, thrusters, power distributor, life support, sensors,
   fuel tank, fuel scoop, shield cell bank, bi-weave, prismatic, auto field maintenance unit, refinery,
   fsd interdictor, cargo rack, meta alloy, pulse laser, burst laser, beam laser, multi-cannon,
   fragment cannon, rail gun, plasma accelerator, shock cannon, gauss cannon, shard cannon,
-  damage per second, distributor draw, armour hardness, bulkhead cost, module price, power draw]
+  damage per second, distributor draw, armour hardness, bulkhead cost, module price, power draw,
+  recon limpet controller, hatch breaker limpet controller]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-12
+date_verification: 2026-09-13
 confiance_globale: haute
 volatilite: moyenne
 sources_primaires:
@@ -1711,6 +1713,16 @@ Les quatre classes de confort sont regroupées ici en une seule table, chacune n
 
 Les huit familles de contrôleurs de limpets à fonction unique sont regroupées en une seule table : elles partagent exactement les mêmes colonnes et n'auraient donné que de très petites tables prises séparément. **Limpets simultanés** est le nombre de drones actifs en même temps, **Portée** la distance de travail en kilomètres, **Durée de vie** le temps avant auto-destruction du limpet. Les familles qui ne portent pas de durée de vie dans la source affichent un tiret.
 
+**À quoi sert chaque famille.** *Collector* récupère cargaison et matériaux flottants ; *Prospector* analyse la
+composition d'un astéroïde avant minage (voir [20 — Minage](./20-minage.md)) ; *Fuel Transfer* transfère du
+carburant à un autre vaisseau ; *Hatch Breaker* force l'ouverture d'une soute de cargaison (dont celles des megaships
+et installations spatiales, colonne « Durée de piratage » ci-dessous) ; *Repair* et *Decontamination* réparent
+respectivement la coque et retirent une contamination caustique d'un vaisseau tiers ; *Research* scanne les
+mégastructures Guardian. **Recon**, seule famille de la table sans usage documenté ailleurs dans ce corpus, sert
+exclusivement à **pirater à distance les points de données des megaships et installations spatiales**
+(*Hackable Data Transmitter*, *Hackable Comms Array*) — procédure complète, temps de piratage et conséquences de
+sécurité détaillés dans [08 — Combat spatial §4.6](./08-combat-spatial.md).
+
 | Famille         | Classe | Notation | Masse (t) | Consommation (MW) | Limpets simultanés | Portée (km) | Durée de vie (s) | Prix (Cr) |
 |-----------------|--------|----------|-----------|-------------------|--------------------|-------------|------------------|-----------|
 | Collector       | 1      | A        | 2         | 0,32              | 1                  | 1,2         | 720              | 9 600     |
@@ -2301,7 +2313,7 @@ Deux particularités du jeu de données méritent d'être signalées plutôt que
 - [Guide complet des Guardians](./05-guardians.md) — sites de ruines, puzzles et stats de combat des armes Guardian.
 - [Guide complet des Ingénieurs](./06-ingenieurs.md) — modification (engineering) de tous les modules listés ici.
 - [Guide complet du combat spatial](./08-combat-spatial.md) — builds chiffrés, renforts/blindage en contexte de
-  combat, rang de combat.
+  combat, rang de combat, et procédure de piratage de megaships/installations au Recon Limpet Controller (§4.6).
 - [Guide complet de l'exploration et de l'exobiologie](./10-exploration.md) — optimisation de la portée de saut, DSS,
   Fuel Scoop.
 - [Politique et Powerplay dans Elite Dangerous](./02-powerplay.md) — paliers, mérites et classement actuel des
@@ -2417,3 +2429,9 @@ de la source.
   EDCD/FDevIDs `material.csv`.
 - Étude interne du 19 août 2026, § 3.3 « Portée du FSD : pourquoi ça bloque, et la table exacte » (formule de portée,
   +30 % de masse du module, réserves sur le FSD SCO et sur EDSY).
+
+### Complément du 13 septembre 2026 (chantier 14)
+
+- https://elite-dangerous.fandom.com/wiki/Recon_Limpet_Controller (consulté le 13 septembre 2026 — usage réel du
+  module, jusque-là chiffré sans description fonctionnelle ; détail complet de la procédure dans
+  [08 — Combat spatial §4.6](./08-combat-spatial.md)).

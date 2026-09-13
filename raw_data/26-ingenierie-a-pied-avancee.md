@@ -6,10 +6,10 @@ entites: [Bartender, Ship Locker, Manufacturing Instructions, Suit Schematic, Po
 mots_cles_en: [bartender, ship locker, manufacturing instructions, suit schematic, on-foot materials, settlement raid, data point, power regulator, odyssey engineers, EDOMH]
 version_jeu_couverte: "mécaniques Odyssey inchangées depuis le Type-8 Update d'août 2024 ; données de référence édition 2026-08, non revues pour la 4.4.0.x"
 branche: live
-date_verification: 2026-09-09
+date_verification: 2026-09-13
 confiance_globale: haute
 volatilite: haute
-sources_primaires: [Manuel officiel du Journal Frontier v32, Inara.cz pages Engineer et Logbook, schemas.edomh.nl, forums Frontier, EDCD/FDevIDs, EDCD/coriolis-data]
+sources_primaires: [Manuel officiel du Journal Frontier v32, Inara.cz pages Engineer et Logbook, schemas.edomh.nl, forums Frontier, EDCD/FDevIDs, EDCD/coriolis-data, "Pilots Trade Network — Odyssey Beginner's Guide, consulté le 13 septembre 2026 (absence de synthèse à pied)"]
 zones_incertaines: ["Les valeurs de score de troc au bartender ne sont connues que pour le Graphene et l'Aerogel", "Le plafond du casier de bord de 1000 unités par catégorie n'a pas pu être reconfirmé sur une source primaire", "Le comportement du plafond de stockage sur Fleet Carrier n'est pas tranché", "La limite de stock du bartender lui-même n'est documentée nulle part", "Le tableau complet des quantités par blueprint n'existe plus en ligne", "L'URL et le statut actuel de l'Odyssey Mapping Guide sont inconnus, le site répondant en erreur 521", "Les montants en crédits des paliers de combinaison viennent du wiki Fandom seul", "Le tarif au comptoir du Carbon Fibre Plating et du Titanium Plating n'est relevé par aucune source", "Les coordonnées de Selenium Farm ne sont couvertes par aucune donnée de référence", "Le contenu de Falcon's Guide n'a pas pu être vérifié, Reddit étant bloqué"]
 guides_lies: [0, 6, 7, 9, 10, 13, 18]
 ---
@@ -213,6 +213,18 @@ concerne **pas** les matériaux Odyssey à pied : c'est un service dédié aux a
 vaisseau utilisant des matériaux Guardian (par exemple les Sirius Heatsinks). Si vous cherchez un contact d'échange
 pour vos matériaux à pied, c'est le **bartender** de la section 1.2-1.3 qu'il vous faut, pas le Tech Broker — les deux
 sont des PNJ de station totalement distincts avec des inventaires sans rapport.
+
+### 1.7 Ni avec la synthèse : elle n'existe pas à pied
+
+Troisième confusion à écarter, plus fondamentale que les deux précédentes : **il n'existe aucune synthèse à pied**
+(fabrication d'un consommable à partir de matériaux Odyssey), contrairement à la synthèse embarquée du vaisseau
+détaillée dans [06 — Ingénieurs](./06-ingenieurs.md). Les six consommables à pied (Medkit, Energy Cell, Frag
+Grenade, Shield Disruptor, Shield Projector, E-Breach) se réapprovisionnent uniquement par achat au comptoir Pioneer
+Supplies ou par butin — jamais en consommant des matériaux Odyssey via un menu de fabrication. Ce que ce guide décrit
+sous le nom d'**ingénierie** (Engineering, sections 3 et 4) est un système entièrement différent : des modifications
+irréversibles de combinaison/arme payées en matériaux chez un Engineer physique, sans rapport avec le
+réapprovisionnement des consommables. Voir [07 — Équipement à pied](./07-equipement-a-pied.md) pour le détail de ce
+réapprovisionnement.
 
 ## 2. Farming efficace par matériau et par méthode
 

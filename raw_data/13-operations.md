@@ -6,7 +6,7 @@ entites: [Operations, Operation Runner, Merc Coin, MercGear, Under Siege, Tactic
 mots_cles_en: [operations, operation runner, merc coin, mercgear, under siege, tactical takedown, on-foot combat zone, settlement, odyssey, matchmaking, powerplay mode]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-12
+date_verification: 2026-09-13
 confiance_globale: haute
 volatilite: haute
 sources_primaires: [Steam News Frontier (API ISteamNews), ticket EDCD/EDDI n° 2849, Wikipedia Elite Dangerous, EDSM, Canonn Research, Steam Community Guides]
@@ -536,8 +536,9 @@ En complément des armes, le joueur dispose d'emplacements « Suit Tool » et «
 - des **consommables de survie** (recharge d'oxygène, kits de soin) essentiels lors d'opérations prolongées loin du
   vaisseau.
 
-Pour le détail des recettes de synthèse et la liste exhaustive des consommables, voir
-[07-equipement-a-pied.md](./07-equipement-a-pied.md).
+Pour la liste exhaustive des six consommables à pied et leur mode de réapprovisionnement réel (achat au comptoir
+Pioneer Supplies ou butin — il n'existe pas de synthèse par matériaux à pied, contrairement au vaisseau), voir la
+section « Pas de synthèse à pied » de [07-equipement-a-pied.md](./07-equipement-a-pied.md).
 
 ## Progression et ingénierie de l'équipement à pied
 
