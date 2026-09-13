@@ -5,7 +5,8 @@ domaine: vaisseaux-equipement
 entites: [Ingénieur, Felicity Farseer, Elvira Martuuk, Mel Brandon, Petra Olmanova, Selene Jean, Marsha Hicks,
   Tod « The Blaster » McQuinn, Blueprint, Technology Broker, Merc Coin, MercGear, Material Trader,
   High Grade Emission, Frame Shift Wake Scanner, Effet expérimental, Mass Manager, Deep Charge, Dav's Hope,
-  Meta-Alloys, Bulkheads, Hull Reinforcement Package, Shield Booster, Power Distributor]
+  Meta-Alloys, Bulkheads, Hull Reinforcement Package, Shield Booster, Power Distributor, Professor Palin,
+  Sensor Fragment, Thargoid Sensor]
 mots_cles_en: [engineers, blueprints, engineering materials, raw materials, manufactured materials, encoded data,
   high grade emission, material trader, technology broker, increased range, mass manager, experimental effects,
   merc coin, wake scanner, blueprint grades, engineer max grade, dirty drives, clean drives, drive strengthening,
@@ -298,16 +299,16 @@ anti-Thargoïdes historiques et le module
 
 | Module/Arme débloqué(e)                                                                     | Grade* | Matériaux requis (extrait)                                                                                                       | Source d'obtention                                      |
 |---------------------------------------------------------------------------------------------|--------|----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
-| Corrosion Resistant Cargo Rack (classe 4)                                                   | Unlock | 16 Meta-Alloys, 26 Iron, 18 Chemical Manipulators, 22 Radiation Baffle, 12 Neofabric Insulation                                  | Meta-Alloys : sites Thargoïdes ; reste : loot classique |
+| Corrosion Resistant Cargo Rack (classe 4)                                                   | Unlock | 16 Meta-Alloys, 26 Iron, 18 Chemical Manipulators, 22 Radiation Baffle, 12 Neofabric Insulation                                  | Meta-Alloys : récolte sur Barnacle ou achat en commodity, voir [25-combat-ax.md §8.1](./25-combat-ax.md) ; reste : loot classique |
 | Enzyme Missile Rack (Fixed, classe 2)                                                       | Unlock | 15 Tungsten, 16 Thargoid Energy Cell, 18 Thargoid Organic Circuitry, 16 Molybdenum, 6 Radiation Baffle                           | Combat/sites Thargoïdes + loot classique                |
-| Meta Alloy Hull Reinforcement                                                               | Unlock | 16 Meta-Alloys, 25 Focus Crystals, 22 Aberrant Shield Pattern Analysis, 20 Configurable Components, 12 Reinforced Mounting Plate | Sites Thargoïdes + loot/scan classique                  |
+| Meta Alloy Hull Reinforcement                                                               | Unlock | 16 Meta-Alloys, 25 Focus Crystals, 22 Aberrant Shield Pattern Analysis, 20 Configurable Components, 12 Reinforced Mounting Plate | Meta-Alloys : voir [25-combat-ax.md §8.1](./25-combat-ax.md) ; reste : loot/scan classique |
 | Remote Release Flechette Launcher (Fixed/Turreted, classe 2)                                | Unlock | Rhenium, Iron, Molybdenum, Germanium + CMM Composite ou Articulation Motors                                                      | Loot classique                                          |
 | Shock Cannon (Fixed/Gimballed/Turreted, classes 1 à 3)                                      | Unlock | Vanadium, Tungsten, Rhenium, Technetium + Power Converter/Ion Distributor/Power Transfer Bus                                     | Loot classique                                          |
 | Engineered Detailed Surface Scanner V1 (pré-engineered)                                     | Achat  | Niobium, Mechanical Components, Germanium, Mechanical Scrap                                                                      | Loot classique                                          |
 | **Engineered FSD V1** (classe 5, pré-engineered *Increased Range* + *Faster Boot Sequence*) | Achat  | 18 Datamined Wake Exceptions, 26 Tellurium, 26 Electrochemical Arrays, 28 Chemical Processors                                    | Wakes FSD + loot classique                              |
 | Engineered Seeker Missile Rack V1 (pré-engineered)                                          | Achat  | Proto Radiolic Alloys, Conductive Ceramics, Hybrid Capacitors, Phosphorus, Osmium                                                | Loot classique                                          |
 | Modified Mining Laser (Fixed, classe 1, pré-engineered)                                     | Achat  | Arsenic, Rhenium, Phosphorus, Osmium                                                                                             | Loot classique                                          |
-| Thargoid Bobblehead (cosmétique, Livery)                                                    | Unlock | 10 Meta-Alloys, 1 Thargoid Heart                                                                                                 | Sites Thargoïdes                                        |
+| Thargoid Bobblehead (cosmétique, Livery)                                                    | Unlock | 10 Meta-Alloys, 1 Thargoid Heart                                                                                                 | Meta-Alloys : voir [25-combat-ax.md §8.1](./25-combat-ax.md) ; Thargoid Heart : cimetière de Titan détruit (voir [25-combat-ax.md §8bis](./25-combat-ax.md)) |
 
 *\*Même distinction Unlock/Achat que pour le comptoir Guardian.*
 
@@ -472,7 +473,10 @@ Matériaux manufacturés **spéciaux** (liés aux Thargoïdes ou aux Guardians, 
 - **Guardian** (source : sites de ruines Guardian, voir [05 — Guardians](./05-guardians.md)) : Guardian Power Cell (G1),
   Guardian Sentinel Wreckage Components (G1), Guardian Power Conduit (G2), Guardian Technology Component (G3), Guardian
   Sentinel Weapon Parts (G3) ;
-- **Autre** : Sensor Fragment (G5, provenant de sources de signal non-humaines).
+- **Autre** : Sensor Fragment (G5, provenant de la destruction au SRV d'un **Thargoid Sensor** — voir
+  [25-combat-ax.md §8.3](./25-combat-ax.md) pour la procédure — et qui débloque l'invitation de l'ingénieur
+  **Professor Palin**, à ne pas confondre avec le Meta-Alloy qui débloque Felicity Farseer, section « Cas travaillé »
+  plus haut).
 
 ### Données encodées (Encoded) — 30 données « standards » + 15 données spéciales
 

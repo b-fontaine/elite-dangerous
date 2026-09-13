@@ -5,12 +5,13 @@ domaine: exploration
 entites: ["Exobiologie", "Vista Genomics", "Universal Cartographics", "Canonn Research", "FSS", "DSS", "Combinaison
   Artemis", "Nomad", "Stratum Tectonicas", "Fonticulua Fluctus", "Neutron Highway", "First Logged", "EDDiscovery",
   "BioScan", "Earth-like World", "Crystalline Shards", "Notable Stellar Phenomena", "Distant Worlds", "Beagle Point",
-  "Pallaeni"]
+  "Pallaeni", "Codex", "Codex Voucher", "Galactic Region"]
 mots_cles_en: ["exobiology", "Vista Genomics", "Universal Cartographics", "Full Spectrum System Scanner", "Detailed
   Surface Scanner", "Artemis suit", "first logged", "first footfall", "neutron highway", "Road to Riches", "scan
   value", "Earth-like World", "star class", "FSD supercharge", "jet cone boost", "surface signal", "SAASignalsFound",
   "geological signal", "Crystalline Shards", "Notable Stellar Phenomena", "Lagrange Cloud", "surface gravity",
-  "landable body", "Distant Worlds", "Beagle Point"]
+  "landable body", "Distant Worlds", "Beagle Point", "codex", "codex voucher", "galactic region", "rumoured reported
+  discovered"]
 version_jeu_couverte: "4.4.0.x"
 branche: live
 date_verification: 2026-09-12
@@ -19,7 +20,9 @@ volatilite: haute
 sources_primaires: ["Canonn Research", "wiki Elite Dangerous", "EDDiscovery/EliteDangerousCore (commit
   f21533ba1609d309fd6a96b9b3bb488df178a36e)", "EDDiscovery/EDDiscovery (commit 7b4726f3, 43 journaux de scan réels)",
   "catalogue d'exobiologie compilé du corpus (édition 2026-08)", "EDCD/coriolis-data", "EDCD/FDevIDs",
-  "Silarn/EDMC-BioScan (commit 5f0d2e44)", "Steam News Frontier", "Spansh", "EDSM", "distantworlds3.space"]
+  "Silarn/EDMC-BioScan (commit 5f0d2e44)", "Steam News Frontier", "Spansh", "EDSM", "distantworlds3.space",
+  "wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge)", "Massively Overpowered (couverture Beyond
+  Chapitre Quatre, décembre 2018)"]
 zones_incertaines: ["valeur de 952 296 Cr de Radicoida Unica : observation unique en jeu, à reconfirmer", "distance
   minimale de 15 m pour Radicoida, relevée en jeu contre 100 m au catalogue compilé", "contrainte des 2 500 Ls de
   Clypeus Speculumi, non confirmée par télémétrie", "intitulés et ordre exacts des paliers des rangs Explorateur et
@@ -44,8 +47,12 @@ zones_incertaines: ["valeur de 952 296 Cr de Radicoida Unica : observation uniqu
   non chiffrée, seul le marquage « haute gravité » de BioScan est établi", "organisateur de Distant Worlds II : non
   établi, les fiches EDSM ne portent pas ce champ", "date de départ, effectifs et itinéraire de Distant Worlds 3 : non
   établis, compteurs du site officiel remplis côté client", "bornes de la première expédition Distant Worlds : la
-  fiche EDSM donne 14 janvier - 5 juin 2016, plus large que le « fin 2015 - début 2016 » de 01-lore.md"]
-guides_lies: [0, 1, 4, 5, 6, 7, 13, 14, 17, 18, 19, 20, 21, 23, 24, 25, 27, 32]
+  fiche EDSM donne 14 janvier - 5 juin 2016, plus large que le « fin 2015 - début 2016 » de 01-lore.md", "structure
+  exacte en 3 ou 4 catégories de l'onglet Discoveries du Codex : documentée pour 2018-2021, non revérifiée sur une
+  version 2026 du jeu", "montants du Codex Voucher (50 000 / 2 500 Cr) : datés du lancement de la fonctionnalité en
+  2018, probablement obsolètes", "absence de tout état « cartographié » dans la taxonomie du Codex : inférence bien
+  étayée mais non énoncée mot pour mot par une source officielle"]
+guides_lies: [0, 1, 4, 5, 6, 7, 13, 14, 16, 17, 18, 19, 20, 21, 23, 24, 25, 27, 32]
 ---
 
 # Guide complet de l'exploration et de l'exobiologie dans Elite Dangerous
@@ -58,7 +65,9 @@ comptoirs Universal Cartographics. Ce guide chiffre la valeur de scan corps par 
 type terrestre au simple scan, 3 546 696 Cr en première découverte et première cartographie, 500 Cr au plancher —
 détaille les 53 classes stellaires du journal de bord et la supercharge du FSD (×4 sur étoile à neutrons, ×1,5 sur
 naine blanche, ×6 avec un seul module du jeu). Il recense aussi ce qu'un scan de surface révèle : huit catégories de
-signaux, 23 sites géologiques au codex Canonn, les champs de Crystalline Shards et les Notable Stellar Phenomena.
+signaux, 23 sites géologiques au codex Canonn, les champs de Crystalline Shards et les Notable Stellar Phenomena. Le
+**Codex in-jeu** — introduit le 11 décembre 2018, 4 onglets, entrées réparties sur les 42 régions galactiques — est
+expliqué en 1.6bis, avec sa distinction impérative d'avec le « Codex Canonn » cité ci-dessus.
 Depuis Odyssey s'y ajoute l'exobiologie : prélever à pied, en combinaison **Artemis**, trois échantillons d'une même
 espèce pour les vendre à **Vista Genomics**. Le catalogue compte **118 espèces**, de 952 296 Cr à 20 000 000 Cr, avec
 un multiplicateur **First Logged ×5**.
@@ -969,6 +978,68 @@ En complément d'EDSM et Spansh, l'écosystème **Canonn Research** propose des 
 | EDMC-Canonn            | github.com/canonn-science/EDMC-Canonn  | Plugin EDMC officiel : capture les événements de jeu et alimente les bases Canonn                       |
 | Bifrost                | ruins.canonn.tech                      | Catalogue et visualise les sites de ruines Gardiennes (Guardian)                                        |
 | Unknown Structures Map | map.canonn.tech                        | Carte 3D des sites de structures Thargoïdes — voir aussi [Combat AX](./25-combat-ax.md)                 |
+
+### 1.6bis Le Codex in-game : mécanisme, branches et limites
+
+Le tableau de la section 1.6 cite déjà deux outils Canonn qui exploitent ou complètent le **Codex** (Codex-Regions,
+Undiscovered-Codex), sans que ce guide n'ait jamais expliqué ce système lui-même — une lacune d'autant plus risquée
+que le nom « Codex » désigne **deux choses distinctes** dans le corpus (voir l'encart de désambiguïsation en fin de
+sous-section).
+
+**Origine et structure.** Le Codex est une fonctionnalité intégrée au client du jeu, introduite le **11 décembre
+2018** avec la mise à jour *Elite Dangerous: Beyond — Chapitre Quatre* (version 3.3), présentée à sa sortie comme
+« une base de données en réseau… initiative conjointe de la Pilots Federation et d'Universal Cartographics ». Il se
+compose de **4 onglets** : **Commander** (statistiques personnelles, et une **Archive** de logs audio/texte trouvés
+sur le terrain — voir plus bas), **Discoveries** (le journal de découvertes proprement dit, détaillé ci-dessous),
+**Knowledge Base** (hub de lore : superpuissances, figures clés, organisations, histoire thargoïde) et **Pilot's
+Handbook** (guide in-fiction des activités du jeu).
+
+**Organisation par région galactique.** À l'intérieur de l'onglet Discoveries, la galaxie est découpée en **42
+régions galactiques** — exactement le découpage détaillé en
+[32-geographie-galactique.md §4](./32-geographie-galactique.md) — et chaque région affiche ses entrées réparties
+en trois catégories documentées (Stellar Bodies ; Biological and Geological ; Civilisations, cette dernière
+regroupant Guardian, Thargoïde et sites humains). *Cette répartition en 3 catégories est celle documentée au
+lancement de la fonctionnalité (2018-2021) ; elle n'a pas pu être revérifiée sur une version 2026 du jeu lors de
+cette révision — à confirmer en jeu avant de l'affirmer comme la structure actuelle.* Chaque entrée progresse en
+trois états : **Rumoured** (indice non confirmé), **Reported** (un autre commandant l'a trouvée en premier, visible
+pour tous dans la région) puis **Discovered** (scannée personnellement) — ce qui fait du Codex, de facto, une
+**checklist de complétion** par région et par catégorie.
+
+**Crédit de première découverte.** Le mécanisme originel (2018) attribuait un « Codex Voucher » — 50 000 Cr pour un
+premier type de corps stellaire, une première espèce biologique ou une première découverte xénologique dans une
+région, 2 500 Cr pour les scans suivants d'une même catégorie — à encaisser en station, sans quoi il se perd à la
+destruction du vaisseau. *Ces montants datent du lancement de la fonctionnalité et n'ont pas été reconfirmés comme
+actuels ; ne pas les citer comme un tarif 2026.* Le bonus **exobiologie** documenté ailleurs dans ce guide
+(« First Logged », multiplicateur ×5 retenu par ce guide, voir 2.5) est très probablement la déclinaison moderne et
+spécifique-à-la-biologie de ce même principe de « première mondiale en région » plutôt qu'un système entièrement
+distinct : dans les deux cas, le **log Codex** est instantané et gratuit dès le scan, alors que le **crédit** ne se
+touche qu'à la vente/l'encaissement en station. Une lecture agrégée de fils communautaires (hors de ce guide)
+rapporte parfois un multiplicateur ×4 concurrent pour ce même bonus : ce guide retient ×5, conformément à sa propre
+section 2.5, plutôt que de trancher entre les deux ici.
+
+### 1.6ter Ce que le Codex ne fait pas, et sa distinction avec le Codex Canonn
+
+**Ce que le Codex NE fait PAS.** Aucune des trois catégories de Discoveries ne porte d'état « cartographié » : le
+Codex logge des **types** de découvertes (tel corps stellaire, telle espèce, tel site), pas la cartographie
+individuelle d'une planète. Le bonus de **première cartographie** (*first mapped*, au DSS — voir section 1.5) est un
+système de paiement distinct, propre à la vente de données d'exploration à Universal Cartographics, suivi
+indépendamment du Codex — une inférence bien étayée par l'absence de tout état « mapped » dans la taxonomie
+documentée, mais qu'aucune source consultée n'énonce mot pour mot.
+
+**Lore exclusif au Codex.** L'onglet Commander → Archive conserve les logs audio/texte trouvés en jeu (colonies
+abandonnées, vaisseaux-générations, ruines Guardian) — c'est le cas des **28 Guardian Logs** de Ram Tah (voir
+[05-guardians.md §11](./05-guardians.md#11-ce-que-révèlent-les-28-logs-guardian)), un contenu narratif qui n'existe
+nulle part ailleurs (ni article GalNet, ni page officielle) que dans cette archive in-jeu, transcrit ensuite par la
+communauté à titre de référence.
+
+> **Désambiguïsation impérative : Codex du jeu vs Codex Canonn.** Le **Codex in-jeu**, décrit ci-dessus, est une
+> fonctionnalité first-party de Frontier Developments, intégrée au client. Le **« Codex Canonn »**
+> (canonn.science/codex/) est un **site communautaire** tenu par le groupe de recherche Canonn, organisé en quatre
+> départements **définis par la communauté** — Archéologie & Histoire, Cartographie & Exploration, Géologie &
+> Organismes de Surface, Technologie Xéno (voir [05-guardians.md](./05-guardians.md) et
+> [16-outils.md §4](./16-outils.md)) — qui complète le Codex officiel avec de la recherche et des logs transcrits par
+> les joueurs, sans être affilié à Frontier ni s'y substituer. Les deux portent le même nom par hommage/convergence,
+> mais ne doivent jamais être cités l'un pour l'autre dans une réponse.
 
 ### 1.7 Exploration et colonisation : repérer un système éligible à l'implantation
 
@@ -2273,7 +2344,10 @@ Guides du corpus en lien direct avec l'exploration et l'exobiologie :
 - [BGS](./21-bgs.md) — contrôle des factions dans les systèmes ciblés pour la colonisation
 - [Wings, Multicrew et CQC](./23-jeu-en-groupe.md) — organisation en Wing pour les expéditions type Distant Worlds
 - [Community Goals](./24-community-goals.md) — mécanique générique des expéditions/événements communautaires
-- [Combat anti-Thargoïde (AX)](./25-combat-ax.md) — sites de ruines et structures inconnues croisés en exploration
+- [Combat anti-Thargoïde (AX)](./25-combat-ax.md) — sites de ruines et structures inconnues croisés en exploration,
+  et récolte de Meta-Alloys sur les Barnacles des Pléiades (§8.1)
+- [Guardians](./05-guardians.md) — les 28 Guardian Logs, contenu Codex-exclusif détaillé en §11
+- [Outils](./16-outils.md) — outils Canonn qui exploitent le Codex in-jeu (Codex-Regions, Undiscovered-Codex, §1.6)
 - [Le Rhino et le Nomad](./14-rhino.md) — fiche complète du Nomad, du Mk II Biological Scanner et des modules
   Vessel Bay évoqués en 2.2
 - [Operations](./13-operations.md) — la mise à jour du 30 juin 2026 qui introduit le Nomad
@@ -2286,6 +2360,14 @@ Guides du corpus en lien direct avec l'exploration et l'exobiologie :
 
 ## Sources de ce guide (exploration et exobiologie)
 
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Codex.md (structure du
+  Codex in-jeu : onglets, catégories Discoveries, états Rumoured/Reported/Discovered, Codex Voucher — section 1.6bis)
+- https://steamcommunity.com/games/elitedangerous/announcements/detail/1711828601535410336 (patch notes *Beyond —
+  Chapitre Quatre* 3.3, 11 décembre 2018, date d'introduction du Codex — section 1.6bis)
+- https://massivelyop.com/2018/12/11/elite-dangerous-beyond-chapter-four-is-live-today-with-exploration-background-sim-and-guilds/
+  (catégories Stellar Bodies / Biological and Geological / Civilisations de l'onglet Discoveries — section 1.6bis)
+- https://canonn.science/codex/ (auto-description du « Codex Canonn » en quatre départements communautaires —
+  section 1.6bis)
 - https://canonn.science/
 - https://canonn.science/codex/
 - https://canonn.science/codex/geology-organics/

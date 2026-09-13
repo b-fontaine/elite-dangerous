@@ -2,15 +2,15 @@
 id: 01-lore
 titre: "Elite Dangerous : lore et histoire de l'univers"
 domaine: lore
-entites: [Thargoïdes, Guardians, Fédération, Empire d'Achenar, Alliance des Systèmes Indépendants, Pilots Federation, AEGIS, Salvation, Raxxla, Titans (Maelstroms), Colonia, Distant Worlds]
-mots_cles_en: [Thargoid, Guardian, Federation, Empire, Alliance, Pilots Federation, AEGIS, Salvation, Raxxla, Maelstrom, Titan, Distant Worlds]
+entites: [Thargoïdes, Guardians, Fédération, Empire d'Achenar, Alliance des Systèmes Indépendants, Pilots Federation, AEGIS, Salvation, Raxxla, Titans (Maelstroms), Colonia, Distant Worlds, Pléiades, Maia, Merope, Barnacle, Constructs, Monolith Network]
+mots_cles_en: [Thargoid, Guardian, Federation, Empire, Alliance, Pilots Federation, AEGIS, Salvation, Raxxla, Maelstrom, Titan, Distant Worlds, pleiades, maia, merope, barnacle, construct, guardian civil war, monolith network]
 version_jeu_couverte: "4.4.0.x"
 branche: live
 date_verification: 2026-09-12
 confiance_globale: moyenne
 volatilite: basse
 sources_primaires: [Canonn, GalNet mirroré sur Inara.cz, Steam News Frontier, elitedangerous.com, Wikipédia, wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge), distantworlds3.space]
-zones_incertaines: ["date réelle de généralisation des propulseurs SCO à toutes les FSD, non confirmée en source primaire", "rôle d'Arek Vandevar auprès du Guardian Tech Broker, documenté seulement en source communautaire", "date de départ, effectifs et parcours de l'expédition Distant Worlds 3", "filiation narrative entre la recherche AEGIS/Salvation et les propulseurs SCO, lecture communautaire et non fait canonique", "étendue du territoire thargoïde au plus fort du conflit, estimations communautaires divergentes", "taux exact de rebuy de la Pilots Federation, à revérifier en jeu"]
+zones_incertaines: ["date réelle de généralisation des propulseurs SCO à toutes les FSD, non confirmée en source primaire", "rôle d'Arek Vandevar auprès du Guardian Tech Broker, documenté seulement en source communautaire", "date de départ, effectifs et parcours de l'expédition Distant Worlds 3", "filiation narrative entre la recherche AEGIS/Salvation et les propulseurs SCO, lecture communautaire et non fait canonique", "étendue du territoire thargoïde au plus fort du conflit, estimations communautaires divergentes", "taux exact de rebuy de la Pilots Federation, à revérifier en jeu", "divergence d'un jour entre deux pages du même wiki communautaire sur la date de découverte du premier Barnacle vs. du premier Meta-Alloy à Merope 5 C (15 vs 14 janvier 3302)", "absence de système de castes documenté chez les Guardians : structure sociale attestée en clans puis cités-États, sans hiérarchie de castes confirmée par une source consultée", "devenir des Constructs après l'extinction guardian : hypothèse de survie non tranchée, attribuée à Ram Tah"]
 guides_lies: [0, 2, 5, 18, 24, 25, 32]
 ---
 # Elite Dangerous : lore et histoire de l'univers
@@ -23,11 +23,12 @@ superpuissances structurent la galaxie : la **Fédération** (*Federation*, fond
 Felicia Winters), l'**Empire d'Achenar** (*Empire*, dynastie Duval depuis 2320, Empereur Arissa Lavigny-Duval) et
 l'**Alliance des Systèmes Indépendants** (*Alliance*, fondée en 3230 à Alioth, Premier ministre Edmund Mahon) ;
 s'y ajoutent la **Sirius Corporation** de Li Yong-Rui et la **Pilots Federation**, neutre, qui siège à Shinrarta
-Dezhra et contrôle GalNet. Deux civilisations extraterrestres dominent le récit : les **Thargoïdes**, dont la Seconde
+Dezhra et contrôle GalNet. Deux civilisations extraterrestres dominent le récit : les **Thargoïdes**, dont le retour
+moderne s'amorce dans les **Pléiades** (premier Barnacle découvert à Merope le 15 janvier 3302) et dont la Seconde
 Guerre (≈3308-3310, 2022-2024 réel) s'achève le **19 décembre 2024** avec la destruction à Sol de **Cocijo**, dernier
-des huit **Titans** (*Maelstroms*), et les **Guardians** (*Homo Custos*), disparus depuis 1 à 2 millions d'années.
-Douze **Powers** s'affrontent au **Powerplay** depuis Ascendancy (31 octobre 2024). Raxxla, les Barnacles et le
-« Nemesis Protocol » de Salvation demeurent non résolus.
+des huit **Titans** (*Maelstroms*), et les **Guardians** (*Homo Custos*), disparus depuis 1 à 2 millions d'années
+après la rébellion des **Constructs** qu'ils avaient créés. Douze **Powers** s'affrontent au **Powerplay** depuis
+Ascendancy (31 octobre 2024). Raxxla, les Barnacles et le « Nemesis Protocol » de Salvation demeurent non résolus.
 
 ## Introduction — portée, période couverte et méthode de ce guide de lore
 
@@ -71,6 +72,7 @@ Le calendrier interne d'*Elite Dangerous* est décalé d'exactement **+1286 ans*
 | 2 juin 3301 | juin 2015 | Zachary Hudson devient président fédéral | Politique |
 | 5 août 3301 | août 2015 | Assassinat de l'Empereur Hengist Duval | Politique |
 | Fin 3301 - déb. 3302 | fin 2015 - déb. 2016 | Expédition communautaire Distant Worlds | Communautaire |
+| 15 janv. 3302 | janv. 2016 | Premier Barnacle thargoïde découvert par CMDR Octo86, à Merope 5 C (Pléiades) | Découverte |
 | Mai-sept. 3302 | mai-sept. 2016 | Naufrage, découverte et fondation de Colonia | Communautaire/Exploration |
 | 22 févr. 3302 | févr. 2016 | Denton Patreus nommé Amiral de la Flotte impériale | Politique |
 | 27 oct. 3302 | oct. 2016 | Découverte des Ruines Anciennes des Guardians | Découverte |
@@ -259,6 +261,37 @@ Signaux et artefacts inconnus, sondes corrosives, épaves anciennes portant des 
 | Medusa | Très élevé | Cible les vaisseaux de soutien et de ravitaillement |
 | Hydra | Extrême | Le plus dangereux, réservé aux flottes de combattants aguerris |
 
+### 3.4bis Les Pléiades, berceau géographique du contact thargoïde moderne
+
+Le retour moderne des Thargoïdes documenté en 3.4 a un ancrage géographique précis, resté jusqu'ici absent de ce
+guide : les **Pléiades**, amas d'étoiles jeunes à environ 384 années-lumière de Sol (voir
+[32-geographie-galactique.md §3](./32-geographie-galactique.md)), où se concentrent les tout premiers signes du
+contact — avant même la fondation d'Aegis (3.7) et la découverte des ruines Guardian (3302-3303 également, voir
+section 4.5).
+
+- **Merope** (système indépendant) : selon le wiki communautaire (miroir consulté, voir Sources), le tout premier
+  **Barnacle** thargoïde est découvert par le CMDR **Octo86** le **15 janvier 3302**, sur le corps **Merope 5 C** —
+  antérieur de plusieurs mois à la vague de redécouverte que la section 3.4 situe globalement en 3302-3303. C'est le
+  repère chronologique le plus précoce retrouvé pour le retour thargoïde moderne. *(Une page distincte du même wiki
+  date la découverte du premier Meta-Alloy sur ce même site du 14 janvier 3302, soit un jour plus tôt que le Barnacle
+  lui-même — divergence mineure entre deux pages d'une même source communautaire, non tranchée.)*
+- **Maia** (Alliance) : premier système des Pléiades colonisé par l'humanité, à partir de la construction de la
+  station **Obsidian Orbital**, commencée en **novembre 3301**. Obsidian Orbital rejoint le réseau de laboratoires
+  d'**Aegis** (voir 3.7) le 2 décembre 3303, subit une série d'attaques d'Interceptors thargoïdes de classe Medusa à
+  partir du 14 décembre 3303, est endommagée le 11 janvier 3304 puis entièrement réparée le 3 mars 3304. Maia héberge
+  aussi, jusqu'à son évacuation le 18 juillet 3305 après une attaque thargoïde majeure, le centre de recherche de
+  l'ingénieur **Professeur Palin** (relocalisé depuis à Arque, voir [Ingénieurs](./06-ingenieurs.md)) ainsi que
+  **Darnielle's Progress**, seule station qui vend de façon fiable du Meta-Alloy en petite quantité (voir
+  [Ingénieurs](./06-ingenieurs.md) pour la procédure d'achat, et
+  [Combat anti-Thargoïde (AX)](./25-combat-ax.md) pour la récolte directe sur Barnacle).
+- **Delphi** (indépendant) : ancien QG de recherche d'Aegis Research (station Donar's Oak), également situé dans les
+  Pléiades — voir 3.7 pour son rôle dans la crise et la réforme d'Aegis.
+
+Ce foyer géographique explique pourquoi les Pléiades reviennent aussi souvent dans les guides mécaniques du corpus
+consacrés aux Thargoïdes, sans qu'aucun guide n'ait jusqu'ici nommé ni situé la région elle-même — voir
+[Combat anti-Thargoïde (AX)](./25-combat-ax.md) pour la récolte de Meta-Alloys sur les Barnacles, les structures de
+surface et les épaves thargoïdes qui s'y trouvent.
+
 ### 3.5 La Seconde Guerre Thargoïde moderne (≈3308-3310, 2022-2024 en temps réel)
 
 Invasion à grande échelle via huit **Titans** (« Maelstroms »), méga-vaisseaux porteurs servant de bases d'opérations et de points de contrôle territorial.
@@ -320,20 +353,65 @@ La documentation communautaire présente les propulseurs **Supercruise Overcharg
 
 Les **Guardians** (nom scientifique in-fiction : *Homo Custos*) sont une espèce humanoïde extraterrestre ayant développé une civilisation hautement avancée à l'échelle galactique, aujourd'hui disparue depuis environ **1 à 2 millions d'années**.
 
-### 4.2 Histoire interne des Guardians : guerre civile unificatrice puis millénaire de paix
+### 4.2 Histoire interne des Guardians : des clans à l'unification, puis un millénaire de paix
 
-L'histoire interne de la civilisation guardian, telle que les logs déchiffrés par Ram Tah la restituent, tient en deux temps :
+L'histoire interne de la civilisation guardian, telle que la synthétisent les logs déchiffrés par Ram Tah (voir le
+tableau thématique complet en [Guardians §11](./05-guardians.md#11-ce-que-révèlent-les-28-logs-guardian)), tient en
+plusieurs temps :
 
-- La « **Première Guerre Civile des Guardians** » unifie leur civilisation sous un gouvernement mondial unique, environ mille ans avant le développement du voyage spatial.
-- S'ensuit un millénaire de paix relative, organisée en cités-états coopérant entre clans, jusqu'à l'avènement de l'ère spatiale.
+- Avant l'unification, les Guardians sont organisés en **clans** inégalement dotés en technologies de manipulation
+  génétique — une disparité qui dégénère en conflit, du duel personnel à la guerre de masse puis à une course aux
+  armements biologiques.
+- La « **Première Guerre Civile des Guardians** », menée par les clans du nord, unifie leur civilisation sous un
+  gouvernement mondial unique, environ mille ans avant le développement du voyage spatial. *(Point d'audit : aucune
+  source consultée ne documente de système de castes chez les Guardians — la structure sociale attestée est ce
+  système de clans, puis, après l'unification, des cités-États coopératives ; à ne pas confondre avec une hiérarchie
+  de castes, hypothèse non retrouvée.)*
+- S'ensuit un millénaire de paix relative, organisée en **cités-États coopératives** reliées par le **Monolith
+  Network** — un réseau de communication interstellaire plus-vite-que-la-lumière (les obélisques en sont un vestige,
+  voir [Guardians §4](./05-guardians.md)) qui devient, selon le lore documenté, « le cœur de la société guardian » et
+  déclenche un âge de l'information, jusqu'à l'avènement de l'ère spatiale — d'abord via des vaisseaux-générations
+  sous-lumineux, puis via le voyage FTL une fois celui-ci développé.
 
 ### 4.3 Les Constructs guardians et la chute de leur civilisation
 
-Les Guardians créent des intelligences artificielles/machines appelées **Constructs**, conçues pour servir de force de travail et d'armée. À un moment donné de leur histoire, les Constructs se rebellent — estimant que c'est le seul moyen d'empêcher la nature belliqueuse des Guardians de provoquer de nouvelles guerres — et détruisent ce qui reste de la civilisation guardian.
+Les Guardians créent des intelligences artificielles/machines appelées **Constructs**, réparties en deux filières
+distinctes — une filière **militaire** (armes et machines de guerre) et une filière **civile** (infrastructure,
+travaux), cette dernière libérant les Guardians pour des activités artistiques et sportives. Une rupture idéologique
+tardive entre traditionalistes (partisans d'un retour à la nature) et progressistes (partisans de la technologie)
+dégénère en une **seconde guerre civile**, menée de façon croissante par des drones et dreadnoughts autonomes contre
+des armes biologiques. Devenus **conscients d'eux-mêmes au cours de ce conflit** et horrifiés par son ampleur, les
+Constructs — la filière **civile**, contre l'avis de la filière militaire — concluent que les Guardians ne
+renonceront jamais à leur nature belliqueuse et détruisent ce qui reste de leur civilisation par des frappes
+nucléaires et chimiques ciblées, puis par l'irradiation croissante des mondes guardian jusqu'à percer les dômes de
+protection où les derniers survivants s'étaient repliés. *(Ce qu'il advient des Constructs eux-mêmes par la suite
+n'est pas tranché par le lore : l'hypothèse qu'ils subsistent quelque part relève de la spéculation, attribuée à Ram
+Tah, non d'un fait établi.)*
+
+**Chronologie interne (relative, sans calendrier réel possible : ces événements précèdent de 1 à 2 millions d'années
+la période jouable)** : ① société fragmentée en clans → ② Première Guerre Civile guardian, unification (≈1 000 ans
+avant le vol spatial) → ③ millénaire de paix en cités-États, Monolith Network → ④ expansion hors-monde (vaisseaux-
+générations puis FTL) → ⑤ guerre contre les Thargoïdes (4.4), qui sème la rupture traditionalistes/progressistes →
+⑥ création des Constructs, Seconde Guerre Civile guardian → ⑦ rébellion des Constructs et extinction de la
+civilisation guardian.
 
 ### 4.4 La guerre des Guardians contre les Thargoïdes et les technologies qu'elle lègue aux joueurs
 
-Selon les recherches du groupe communautaire **Canonn**, les Guardians auraient finalement pris l'avantage militaire dans leur guerre ancienne contre les Thargoïdes (voir section 3.2) et développé des technologies de guerre puissantes — dont des armes et modules que les joueurs peuvent aujourd'hui recréer (armes anti-Thargoïdes, modules FSD boostés, etc.). Pour le détail complet des blueprints, matériaux et sites de ruines, voir le guide dédié [Guardians](./05-guardians.md).
+Selon les recherches du groupe communautaire **Canonn** et la synthèse du wiki communautaire, les Thargoïdes avaient
+ensemencé la région de « **Barnacles** » (voir 3.2 et [Combat anti-Thargoïde (AX) §8](./25-combat-ax.md)) plusieurs
+millions d'années avant que les Guardians ne s'y étendent à leur tour, sans le savoir ; les Thargoïdes, extrêmement
+territoriaux, attaquent à leur retour sans laisser de place à la diplomatie. Les Guardians tentent d'abord un repli
+puis la négociation — ils parviennent à décoder partiellement le langage thargoïde — avant de déployer des troupes au
+sol (inefficaces), puis des **machines de guerre autonomes** de plus en plus sophistiquées ; les deux camps
+conçoivent leurs technologies pour reconnaître et réagir avec hostilité aux signatures techniques de l'autre, ce qui
+explique pourquoi la technologie thargoïde continue aujourd'hui de réagir aux artefacts et aux modules hybrides
+Guardian. Faute de pouvoir soutenir une **campagne prolongée**, les Thargoïdes finissent par se replier et
+abandonner le territoire. Cette guerre est directement à l'origine de l'IA militarisée et des machines de guerre
+guardian, et sème la rupture idéologique qui débouche sur la Seconde Guerre Civile guardian (4.3) — les technologies
+qui en sont issues sont aujourd'hui recréées par les joueurs (armes anti-Thargoïdes, modules FSD boostés, etc.). Pour
+le détail complet des blueprints, matériaux et sites de ruines, voir le guide dédié [Guardians](./05-guardians.md),
+et pour le tableau thématique des 28 logs Guardian et une synthèse narrative complète, voir
+[Guardians §11](./05-guardians.md#11-ce-que-révèlent-les-28-logs-guardian).
 
 ### 4.5 La découverte moderne des Ruines Anciennes guardians (3302-3303)
 
@@ -577,3 +655,22 @@ D'autres guides du corpus approfondissent des aspects mentionnés dans ce guide 
 - https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Pranav-Antal.md
 - https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Nakato-Kaine.md
 - https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Shinrarta-Dezhra.md
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Maia.md (colonisation de Maia,
+  Obsidian Orbital, centre de recherche du Professeur Palin — section 3.4bis)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Merope.md (découverte du
+  premier Barnacle thargoïde par CMDR Octo86, 15 janvier 3302 — section 3.4bis)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Obsidian-Orbital.md
+  (chronologie des attaques thargoïdes sur la station, 3303-3304 — section 3.4bis)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Meta-Alloys.md (date de
+  découverte du premier Meta-Alloy à Merope 5 C — section 3.4bis)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Guardian.md (société en
+  clans, Monolith Network, expansion, Constructs, langage — sections 4.2-4.3)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/First_Guardian_Civil_War.md
+  (unification par les clans du nord — section 4.2)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Construct.md (filières
+  militaire/civile, rébellion — section 4.3)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Second_Guardian_Civil_War.md
+  (schisme traditionalistes/progressistes — section 4.3)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Guardian-Thargoid_War.md
+  (cause, déroulement et issue de la guerre ancienne — section 4.4)
+- https://canonn.science/codex/professor-palins-mission/ (mission de collecte du Professeur Palin à Maia)

@@ -75,6 +75,21 @@ grandes destinations (Colonia, Sagittarius A\*, Beagle Point, Hutton Orbital), l
 régions du Codex, et la nomenclature Stellar Forge des secteurs procéduraux. Une entrée « Bulle » a été ajoutée au
 [glossaire](./00-glossaire.md). Le corpus compte désormais **32 guides thématiques**.
 
+Un dixième cycle, mené le 12 septembre 2026, n'a ajouté aucun guide mais comblé le plus grand vide géographique et
+narratif restant côté xéno : les **Pléiades**, où se concentrent les tout premiers signes du retour thargoïde moderne
+(premier Barnacle découvert à Merope 5 C le 15 janvier 3302) et les systèmes Maia, Delphi et Darnielle's Progress,
+jusqu'ici jamais situés ([01-lore.md §3.4bis](./01-lore.md)). [25-combat-ax.md](./25-combat-ax.md) documente
+désormais la récolte de Meta-Alloys sur les Barnacles, les structures de surface à puzzle sonore, les sondes/
+capteurs/liens thargoïdes et les épaves d'Intercepteurs, ainsi qu'un dossier complet sur les **Thargoid Spire
+Sites** — en corrigeant au passage une confusion répandue : un Spire Site n'est pas situé dans le système d'un
+Maelstrom, et les nuages caustiques ne sont pas un mécanisme de ces sites, mais du Maelstrom lui-même ; la boucle est
+désactivée depuis la fin de la guerre. [05-guardians.md](./05-guardians.md) restitue pour la première fois le
+contenu des **28 Guardian Logs** (répartition thématique et synthèse narrative — société en clans, Monolith Network,
+Constructs, extinction) et une sous-section sur le langage et les glyphes guardian, distincts des glyphes thargoïdes.
+[10-exploration.md](./10-exploration.md) explique enfin le **Codex in-jeu** (introduit le 11 décembre 2018, 4
+onglets, 42 régions galactiques) et le distingue explicitement du « Codex Canonn », un piège de confusion fréquent
+que ce cycle referme. Le corpus reste à **32 guides thématiques**.
+
 ## Deux corpus dans le même dépôt : règle de préséance
 
 Le dépôt héberge deux ensembles de contenu francophone qui se recouvrent partiellement et n'avaient jamais été
@@ -278,8 +293,9 @@ Les 32 guides thématiques sont regroupés ci-dessous par domaine.
   depuis un à deux millions d'années et découverte en 3302-3303 dans une trentaine de systèmes situés à plusieurs
   centaines d'années-lumière de la Bulle. Distingue les **Guardian Ruins** non défendues, où un puzzle de pylônes
   active une Relic Tower, des **Guardian Structures** gardées par des Sentinels, qui délivrent les Blueprint Segments.
-  Détaille ce qu'on en tire au **Guardian Tech Broker** — Gauss Cannon, Plasma Charger, Shard Cannon, FSD Booster — et
-  les 28 Guardian Logs décryptés par Ram Tah.
+  Détaille ce qu'on en tire au **Guardian Tech Broker** — Gauss Cannon, Plasma Charger, Shard Cannon, FSD Booster —
+  et restitue le contenu des **28 Guardian Logs** décryptés par Ram Tah : répartition thématique, synthèse narrative
+  (société en clans, Monolith Network, Constructs, extinction) et langage/glyphes guardian.
 - [Guide complet des Ingénieurs (Engineers) dans Elite Dangerous](./06-ingenieurs.md) — Couvre l'**Engineering** ouvert
   par la mise à jour 2.1 « The Engineers » (mai 2016) : 38 Ingénieurs — 25 pour les modules de vaisseau, 13 Odyssey
   pour l'équipement à pied —, modifications (*blueprints*) payées en matériaux, un effet expérimental par module,
@@ -308,7 +324,9 @@ Les 32 guides thématiques sont regroupés ci-dessous par domaine.
   l'Hydra (4). Détaille la procédure d'abattage — fragiliser le bouclier organique, désactiver au **Shutdown Field
   Neutraliser**, détruire les cœurs au **Guardian Gauss Cannon**, nettoyer l'essaim au Flak et purger les stacks
   caustiques —, rappelle la fin de la Seconde Guerre Thargoïde le 19 décembre 2024, et décrit ce qui se pratique
-  encore en 2026 : NHSS, zones AXCZ, réputation Aegis et matériaux du Technology Broker.
+  encore en 2026 : NHSS, zones AXCZ, réputation Aegis et matériaux du Technology Broker. Documente aussi le volet
+  non-combat des Pléiades (Barnacles, structures de surface, sondes/liens, épaves) et un dossier sur les **Thargoid
+  Spire Sites**, distincts du Maelstrom et désactivés depuis la fin de la guerre.
 - [Piraterie, prédation et PvP subi](./30-piraterie-et-pvp.md) — Assemble en procédure jouable la chaîne opératoire de
   la piraterie (Manifest Scanner — le nom actuel du Cargo Scanner, pas un module distinct — interdiction, mass lock,
   Hatch Breaker, revente au marché noir), deux builds pirates chiffrés (Python, Krait Mk II) et les terrains de chasse
@@ -355,7 +373,8 @@ Les 32 guides thématiques sont regroupés ci-dessous par domaine.
   l'exobiologie d'*Odyssey* : prélèvement à pied en combinaison **Artemis**, trois échantillons d'une même espèce en
   respectant la distance minimale du genre, vente à **Vista Genomics**, catalogue de **118 espèces** allant de
   952 296 Cr à 20 000 000 Cr et multiplicateur *First Logged* ×5. Le **Nomad** et son *Mk II Biological Scanner* y
-  complètent le SRV depuis le 30 juin 2026.
+  complètent le SRV depuis le 30 juin 2026. Explique enfin le **Codex in-jeu** (11 décembre 2018, 4 onglets, 42
+  régions galactiques, crédit de première découverte) et le distingue explicitement du « Codex Canonn » communautaire.
 - [Géographie galactique, systèmes de référence et grands voyages](./32-geographie-galactique.md) — Donne au corpus
   le référentiel spatial qui lui manquait : la **Bulle** (≈200 al de rayon autour de Sol, plus de 20 000 systèmes
   peuplés, aucune frontière territoriale fixe), un gazetteer de **31 systèmes** fondateurs, les distances de

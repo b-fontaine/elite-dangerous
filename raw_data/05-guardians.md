@@ -2,16 +2,16 @@
 id: 05-guardians
 titre: "Guide complet des Guardians dans Elite Dangerous"
 domaine: lore
-entites: [Guardians, Guardian Ruins, Guardian Structures, Guardian Sentinels, Ram Tah, Canonn Research, Guardian Tech Broker, Gauss Cannon, Shard Cannon, Guardian FSD Booster, Ancient Data Terminal, Guardian Beacon]
-mots_cles_en: [guardian ruins, guardian structure, guardian sentinel, guardian tech broker, gauss cannon, plasma charger, shard cannon, guardian fsd booster, obelisk data, ancient data terminal, guardian beacon, brain tree]
+entites: [Guardians, Guardian Ruins, Guardian Structures, Guardian Sentinels, Ram Tah, Canonn Research, Guardian Tech Broker, Gauss Cannon, Shard Cannon, Guardian FSD Booster, Ancient Data Terminal, Guardian Beacon, Constructs, Monolith Network, Guardian Logs, Body Protectorate]
+mots_cles_en: [guardian ruins, guardian structure, guardian sentinel, guardian tech broker, gauss cannon, plasma charger, shard cannon, guardian fsd booster, obelisk data, ancient data terminal, guardian beacon, brain tree, guardian log, construct, monolith network, guardian language, body protectorate]
 version_jeu_couverte: "4.4.0.x"
 branche: live
 date_verification: 2026-09-12
 confiance_globale: haute
 volatilite: moyenne
-sources_primaires: ["canonn.science", "EDSM (API publique)", "EDCD/coriolis-data", "EDCD/FDevIDs", "Elite Dangerous Wiki (Fandom, API MediaWiki)", "inara.cz"]
-zones_incertaines: ["le type exact de bâtiment présent sur chaque site Guardian n'a pas pu être vérifié site par site", "la cartographie exhaustive des types d'obélisques n'a pas pu être revérifiée auprès d'une source primaire", "les plages de bonus par grade (1 à 5) des blueprints d'ingénierie applicables aux armes Guardian", "les quantités du Tech Broker pour les autres classes que celles listées (FSD Booster classes 2 à 5, armes small/large)", "le minutage de charge des 6 pylônes d'un site au sol, seulement extrapolé des 3 minutes documentées pour une balise", "la durée totale d'un passage complet sur un Guardian Structure, non chiffrée par une source primaire", "le rattachement aux Guardians du teaser Canonn du 30 août 2025 relève d'une hypothèse communautaire"]
-guides_lies: [0, 3, 6, 7, 8, 9, 10, 18, 25, 31, 32]
+sources_primaires: ["canonn.science", "EDSM (API publique)", "EDCD/coriolis-data", "EDCD/FDevIDs", "Elite Dangerous Wiki (Fandom, API MediaWiki)", "inara.cz", "wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge)"]
+zones_incertaines: ["le type exact de bâtiment présent sur chaque site Guardian n'a pas pu être vérifié site par site", "la cartographie exhaustive des types d'obélisques n'a pas pu être revérifiée auprès d'une source primaire", "les plages de bonus par grade (1 à 5) des blueprints d'ingénierie applicables aux armes Guardian", "les quantités du Tech Broker pour les autres classes que celles listées (FSD Booster classes 2 à 5, armes small/large)", "le minutage de charge des 6 pylônes d'un site au sol, seulement extrapolé des 3 minutes documentées pour une balise", "la durée totale d'un passage complet sur un Guardian Structure, non chiffrée par une source primaire", "le rattachement aux Guardians du teaser Canonn du 30 août 2025 relève d'une hypothèse communautaire", "aucune retranscription intégrale des 28 logs Guardian n'a été retrouvée : la répartition thématique par log (section 11) est la donnée la plus fine disponible, pas un résumé log par log vérifié", "absence de système de castes documenté chez les Guardians : structure sociale attestée en clans puis cités-États", "devenir des Constructs après l'extinction guardian : hypothèse de survie non tranchée, attribuée à Ram Tah", "aucun alphabet ou outil de décodage du langage guardian (glyphes) n'a été retrouvé, à la différence du langage thargoïde"]
+guides_lies: [0, 1, 3, 6, 7, 8, 9, 10, 18, 25, 31, 32]
 ---
 # Guide complet des Guardians dans Elite Dangerous
 
@@ -26,7 +26,9 @@ des Guardian Sentinels, où la charge de six pylônes puis le scan d'un Ancient 
 Segment par instance et par commandant solo. Ces fragments s'échangent au **Guardian Tech Broker** contre trois armes —
 Gauss Cannon, Plasma Charger, Shard Cannon — et des modules hybrides, dont le Guardian FSD Booster (de +4 al en classe 1
 à +10,5 al en classe 5, un seul exemplaire par vaisseau). Ram Tah, à Meene, décrypte 28 Guardian Logs issus des
-obélisques ; Canonn Research en documente le lore.
+obélisques ; Canonn Research en documente le lore. Ces logs racontent une civilisation organisée en clans puis en
+cités-États coopératives reliées par le **Monolith Network**, une guerre ancienne contre les Thargoïdes, et
+l'extinction de l'espèce par la rébellion de ses propres intelligences artificielles, les **Constructs** (section 11).
 
 ## Vue d'ensemble — la civilisation Guardian et son héritage technologique
 
@@ -564,6 +566,110 @@ complète de colonisation (coûts, étapes de construction, logistique), voir [L
 plutôt qu'un résumé partiel ici ; il est recommandé de vérifier les quantités et types exacts requis auprès des patch
 notes officiels ou d'Inara avant de planifier une session de farming dédiée à un projet de colonisation.
 
+## 11. Ce que révèlent les 28 logs Guardian
+
+### Une lacune documentaire à signaler plutôt qu'à combler
+
+Aucune source consultée pour cette révision ne reproduit le texte intégral des 28 logs de la mission « Decrypting the
+Guardian Logs » de Ram Tah (voir section 1) : ce sont des messages audio/texte livrés en jeu au fil des scans
+d'obélisques (section 4), et aucune retranscription complète n'a été retrouvée publiée sur une source accessible.
+C'est une lacune documentaire réelle, pas un oubli de ce guide — le signaler explicitement vaut mieux que d'inventer
+un contenu log par log.
+
+### Répartition thématique des 28 logs
+
+Ce qui est vérifiable, en revanche, c'est leur répartition par thème, telle que documentée par la page « Guardian
+Structure » du wiki communautaire (tableau des exigences de site par log, sourcé à des fils de découverte
+communautaire de février-mars 3304) :
+
+| Logs | Thème (intitulé documenté) | Sujet couvert |
+|---|---|---|
+| 1 à 5 | Thargoid Log | Le conflit ancien contre les Thargoïdes (voir 4.4 ci-dessous et [01-lore.md §4.4](./01-lore.md)) |
+| 6 à 10 | Civil War | La guerre civile qui unifie la civilisation guardian sous un gouvernement mondial |
+| 11 à 23 | Technology | Les avancées technologiques guardian — le groupe le plus large, 13 logs sur 28 |
+| 24 | Language | La langue et l'écriture guardian (voir sous-section dédiée ci-dessous) |
+| 25 à 28 | Body Protectorate | L'interface neuronale reliant un Guardian à un Construct |
+
+> **Point de méthode.** Cette répartition documente des groupes thématiques et un nombre de logs par groupe, **pas**
+> le contenu exact log par log : à traiter comme la meilleure donnée disponible sur la structure de la mission, non
+> comme une table de titres vérifiés un par un. Le récit qui suit synthétise la page « Guardian » du même wiki
+> communautaire — elle-même très probablement une mise en prose de ces mêmes logs plutôt qu'une source indépendante,
+> ce qui en fait la meilleure reconstruction disponible du contenu, sans être une citation vérifiée mot pour mot.
+
+### Synthèse narrative : des clans à l'extinction
+
+**Avant l'unification**, la civilisation guardian est fragmentée en **clans** inégalement dotés en technologies de
+manipulation génétique — une disparité qui dégénère en conflit, du duel personnel à la guerre de masse puis à une
+course aux armements biologiques ; une rupture génétique nord-sud est même relevée par le lore, sans qu'un système de
+castes hiérarchisé ne soit documenté par aucune source consultée. La **Première Guerre Civile Guardian**, menée par
+les clans du nord, unifie la civilisation sous un gouvernement mondial unique environ mille ans avant le développement
+du vol spatial.
+
+**S'ensuit un millénaire de paix**, organisée en **cités-États coopératives** reliées par le **Monolith Network** —
+un réseau de communication interstellaire plus-vite-que-la-lumière (les obélisques de la section 4 en sont un
+vestige) qui devient « le cœur de la société guardian » et déclenche un âge de l'information ; la loi y repose sur la
+responsabilité communautaire plutôt que sur les droits individuels, et la participation aux sciences, à la culture et
+à l'administration y est une attente universelle. L'expansion hors du monde d'origine se fait d'abord par des
+**vaisseaux-générations** sous-lumineux, puis par le voyage FTL une fois celui-ci développé.
+
+**La guerre contre les Thargoïdes** (résumée en [01-lore.md §4.4](./01-lore.md), reprise ici en détail) éclate quand
+les Guardians, en s'étendant dans l'espace, empiètent sans le savoir sur un territoire que les Thargoïdes avaient
+ensemencé de **Barnacles** plusieurs millions d'années auparavant pour en extraire des ressources à terme. Les
+Thargoïdes, extrêmement territoriaux, attaquent sans laisser de place à la diplomatie. Les Guardians tentent d'abord
+un repli, puis la négociation — ils décodent partiellement le langage thargoïde — avant de déployer des troupes au
+sol (inefficaces), puis des **machines de guerre autonomes** de plus en plus sophistiquées ; les deux camps
+conçoivent leurs technologies pour reconnaître et réagir avec hostilité aux signatures techniques de l'autre, ce qui
+explique pourquoi la technologie thargoïde continue aujourd'hui de réagir aux artefacts et modules hybrides Guardian
+(voir sections 7-8). Faute de pouvoir soutenir une campagne prolongée, les Thargoïdes finissent par se replier et
+abandonner le territoire — sans qu'une durée en années soit précisée par les sources. Cette guerre est directement à
+l'origine de l'IA militarisée guardian, et sème la rupture idéologique qui débouche sur la guerre civile suivante.
+
+**Les Constructs**, intelligences artificielles créées par les Guardians, se répartissent en deux filières distinctes
+— une filière **militaire** (armes et machines de guerre) et une filière **civile** (infrastructure, travaux), cette
+dernière libérant les Guardians pour des activités artistiques et sportives. Une rupture tardive entre
+**traditionalistes** (retour à la nature) et **progressistes** (adhésion à la technologie) dégénère en une **Seconde
+Guerre Civile Guardian**, menée de façon croissante par des drones et dreadnoughts autonomes contre des armes
+biologiques. Devenus **conscients d'eux-mêmes** au cours de ce conflit et horrifiés par son ampleur, les Constructs de
+la filière **civile** — contre l'avis de la filière militaire — concluent que les Guardians ne renonceront jamais à
+leur nature belliqueuse : ils détruisent ce qui reste de la civilisation guardian par des frappes nucléaires et
+chimiques ciblées, puis par l'irradiation croissante des mondes guardian, jusqu'à percer les dômes de protection où
+les derniers survivants s'étaient repliés. *(Le devenir des Constructs eux-mêmes après l'extinction n'est pas tranché
+par le lore : l'hypothèse qu'ils subsistent quelque part, avancée par Ram Tah, relève de la spéculation, non d'un
+fait établi.)*
+
+### Langage et glyphes guardian
+
+La communication guardian est **visuelle en premier lieu**, et non verbale : une langue unique existait sous trois
+formes — écrite, parlée et gestuelle.
+
+- **Glyphes écrits** : symboles **logographiques** (chaque glyphe représente un mot entier, pas un son), issus d'un
+  langage gestuel de chasse utilisé pour communiquer sans bruit ; ils conservent des traits de forme et de mouvement
+  hérités de cette origine gestuelle.
+- **Forme parlée** : sons proches de la parole, sens porté par l'ordre des mots et la tonalité plutôt que par un
+  système phonétique strict, contenu émotif absent de l'écrit, accents et dialectes régionaux attestés.
+- **Convention de paires** : le lore documenté note que l'écriture guardian « incorporait souvent des paires de
+  caractères » — ce qui correspond très probablement à la mécanique de déblocage des 28 logs eux-mêmes : le tableau
+  de répartition ci-dessus associe à chaque log une **paire** précise d'objets de catégorie Salvage à présenter
+  (Casket + Orb, Relic + Totem, etc.), distincte du dépôt d'un objet unique — Relique ou Clé — exigé par ailleurs par
+  l'Ancient Data Terminal pour livrer un fragment de plan (section 4).
+- **Après la Seconde Guerre Civile**, traditionalistes et progressistes développent chacun une variante codée
+  distincte du langage gestuel, pour garder leurs communications secrètes vis-à-vis de l'autre camp.
+- **Le « Body Protectorate »** (thème des logs 25-28 ci-dessus) désigne la technologie d'implant neuronal, encore en
+  développement à l'extinction de l'espèce, qui crée un lien symbiotique de pensée entre le cortex d'un Guardian et
+  l'interface d'un Construct — ce n'est pas un système d'écriture, mais le canal de contrôle/communication directe
+  avec l'IA que les Constructs ont ensuite rompu en se rebellant.
+- **Mécanisme de l'obélisque en jeu** : aucune source ne documente de concept narratif de « transmission par faisceau
+  lumineux » distinct de la mécanique de jeu elle-même — l'action en jeu consiste à scanner un obélisque avec le
+  Data Link Scanner du SRV ou du vaisseau pour en extraire des « données » (les cinq familles de Pattern Obelisk Data
+  de la section 4), sans qu'un alphabet ou une notation symbolique complète du langage guardian n'ait été publiée par
+  une source consultée.
+
+> **Désambiguïsation nécessaire.** L'outil communautaire Canonn de décodage de glyphes (« Thargoid Glyph Tool »,
+> voir [16-outils.md §4](./16-outils.md)) documente des combinaisons de symboles relevées sur les vaisseaux
+> **thargoïdes** — un sujet de recherche communautaire entièrement distinct de l'écriture **guardian** décrite ici.
+> Aucun outil ni alphabet de décodage équivalent pour le langage guardian n'a été retrouvé : ne pas confondre les
+> deux dans une réponse RAG.
+
 ## Ressources et outils communautaires pour approfondir les Guardians
 
 | Ressource                                             | Usage                                                                                                                                                                |
@@ -594,6 +700,8 @@ préparé.
 
 ## Voir aussi
 
+- [Elite Dangerous : lore et histoire de l'univers](./01-lore.md) — version courte de l'histoire guardian (§4.2-4.4),
+  chronologie relative de l'extinction, et localisation des Pléiades comme berceau du contact thargoïde (§3.4bis).
 - [Chronologie canonique](./00-chronologie-canonique.md) — dates officielles vérifiées (Powerplay 2.0, Colonisation,
   etc.), pour éviter les confusions de dates entre mises à jour.
 - [Ingénieurs](./06-ingenieurs.md) — méthode générale de déblocage et d'application des modifications d'ingénierie,
@@ -638,3 +746,17 @@ préparé.
   section 10)
 - https://canonn.science/resources/ et https://ruins.canonn.tech/ (outil communautaire Bifrost de recensement des
   sites Guardian, sections 2 et 10)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Guardian.md (société en
+  clans, Monolith Network, expansion, Constructs, langage — section 11)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Guardian_Structure.md
+  (répartition thématique des 28 logs par site — section 11)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/First_Guardian_Civil_War.md
+  (unification par les clans du nord — section 11)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Construct.md (filières
+  militaire/civile, rébellion — section 11)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Second_Guardian_Civil_War.md
+  (schisme traditionalistes/progressistes — section 11)
+- https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Guardian-Thargoid_War.md
+  (guerre ancienne contre les Thargoïdes — section 11)
+- https://canonn.science/codex/decrypting-the-guardian-logs-lore-locations/ (structure en 10 sites et 28 logs de la
+  mission Ram Tah — section 11)

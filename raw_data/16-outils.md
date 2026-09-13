@@ -2,16 +2,16 @@
 id: 16-outils
 titre: "Elite Dangerous : le guide des outils communautaires"
 domaine: meta-outils
-entites: [EDDN, Frontier Companion API (CAPI), EDMC, EDSM, Inara, Spansh, EDDiscovery, EDDI, Coriolis, EDSY, BGS-Tally, Fuel Rats]
-mots_cles_en: [eddn, edmc, journal files, companion api, edsm, inara, spansh, coriolis, edsy, bgs-tally, trade dangerous, fuel rats, ratsignal]
+entites: [EDDN, Frontier Companion API (CAPI), EDMC, EDSM, Inara, Spansh, EDDiscovery, EDDI, Coriolis, EDSY, BGS-Tally, Fuel Rats, Link Decoder, Codex Canonn]
+mots_cles_en: [eddn, edmc, journal files, companion api, edsm, inara, spansh, coriolis, edsy, bgs-tally, trade dangerous, fuel rats, ratsignal, link decoder, aurvandil, canonn codex]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-08
+date_verification: 2026-09-12
 confiance_globale: haute
 volatilite: haute
-sources_primaires: ["dépôts GitHub EDCD (EDDN, EDMarketConnector, coriolis, EDDI)", "edsm.net", "inara.cz", "spansh.co.uk", "canonn.science", "fuelrats.com"]
+sources_primaires: ["dépôts GitHub EDCD (EDDN, EDMarketConnector, coriolis, EDDI)", "edsm.net", "inara.cz", "spansh.co.uk", "canonn.science", "fuelrats.com", "tools.canonn.tech"]
 zones_incertaines: ["le détail exact des fonctionnalités de colonisation annoncées par Spansh, son site étant une SPA non récupérable par un simple fetch", "le niveau d'activité réel des forks communautaires d'EDEngineer", "le contenu du guide de secours officiel wiki.fuelrats.com, page indisponible au moment du contrôle", "l'erreur HTTP 410 de la page inara.cz/elite/powerplay-stats est probablement une URL obsolète, sans confirmation"]
-guides_lies: [0, 6, 17, 18, 19, 21, 22, 25]
+guides_lies: [0, 5, 6, 10, 17, 18, 19, 21, 22, 25]
 ---
 # Elite Dangerous : le guide des outils communautaires
 
@@ -346,6 +346,18 @@ dépôt de chaque outil.*
 organismes), qui sont ensuite consommées par des outils plus orientés « aide en jeu », au premier rang desquels l'ED
 Odyssey Materials Helper (voir section dédiée) via son onglet biologie.
 
+**Ce que fait précisément Link Decoder/Aurvandil.** Ce n'est pas un simple visualiseur : l'outil calcule, à partir
+du signal audio livré par un **Thargoid Link** déployé dans l'espace, les distances triangulées vers le système
+cible du prochain site de surface thargoïde à visiter — voir la procédure complète (structures de surface, puzzle
+sonore, sondes et liens) en [25-combat-ax.md §8.2-8.3](./25-combat-ax.md). Les « glyphes thargoïdes » que compose
+Thargoid Glyphs/Valknut sont un sujet distinct des sites Guardian (obélisques, langage) traités en
+[05-guardians.md §11](./05-guardians.md) — ne pas confondre les deux dans une réponse.
+
+**Le « Codex » cité au fil de ce tableau** désigne le **Codex Canonn** (canonn.science/codex/), un site communautaire
+distinct de la fonctionnalité **Codex** intégrée au client du jeu — voir
+[10-exploration.md §1.6bis](./10-exploration.md) pour la désambiguïsation complète entre les deux et le
+fonctionnement du Codex in-jeu (onglets, régions galactiques, crédit de première découverte).
+
 ---
 
 ## 5. Outils de commerce : Trade Dangerous
@@ -572,7 +584,11 @@ contribuent au flux EDDN dont dépendent tous les autres outils.
 - [Porte-vaisseaux de joueur (Fleet Carriers)](./19-fleet-carriers.md) — couverts par le plotter dédié de Spansh
 - [Le Background Simulation (BGS)](./21-bgs.md) — la mécanique suivie par BGS-Tally et les pages dédiées d'Inara
 - [Escadrons de joueurs (Squadrons)](./22-squadrons.md) — profils et classements suivis par Inara
-- [Combat anti-Thargoïde (AX) approfondi](./25-combat-ax.md) — le volet militaire complémentaire des outils Canonn
+- [Combat anti-Thargoïde (AX) approfondi](./25-combat-ax.md) — le volet militaire complémentaire des outils Canonn,
+  et la mécanique des sondes/liens thargoïdes que décode Link Decoder/Aurvandil (§8.2-8.3)
+- [Guardians](./05-guardians.md) — le lore que documente le Codex Canonn, dont les 28 logs Guardian (§11)
+- [Exploration et exobiologie](./10-exploration.md) — le Codex in-jeu (§1.6bis), à ne pas confondre avec le Codex
+  Canonn cité dans ce guide
 - [Les ingénieurs](./06-ingenieurs.md) — la mécanique d'engineering modélisée par Coriolis, EDSY et EDEngineer
 - [Glossaire](./00-glossaire.md) — sigles courants (BGS et autres) utilisés dans ce guide
 
