@@ -347,6 +347,7 @@ officielle avant d'être présentés comme des faits établis :
 - [Chronologie canonique](./00-chronologie-canonique.md) — repères de dates officielles pour tout le corpus, dont la
   saison Vanguards.
 - [Outils](./16-outils.md) — panorama des outils communautaires, dont l'annuaire d'escadrons d'Inara.cz.
+- [Glossaire](./00-glossaire.md) — sigles utilisés dans ce guide (BGS, PP, bartender).
 
 ## Sources
 

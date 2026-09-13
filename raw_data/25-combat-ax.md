@@ -18,7 +18,7 @@ guides_lies: [0, 1, 4, 5, 6, 8, 10, 16, 24]
 
 ## En bref
 
-Le combat anti-Thargoïde (AX, *anti-xeno*) oppose les Commandants aux vaisseaux organiques des Thargoïdes : les
+Le combat anti-Thargoïde (AX, [glossaire](./00-glossaire.md), *anti-xeno*) oppose les Commandants aux vaisseaux organiques des Thargoïdes : les
 **Scouts**, capables d'hyperdiction, et quatre classes d'**Interceptors** — Cyclops (1 cœur), Basilisk (2), Medusa (3)
 et Hydra (4), du niveau de menace modéré à extrême. Abattre un Interceptor suppose de fragiliser son bouclier organique
 aux tirs AX, de le désactiver au **Shutdown Field Neutraliser (SFN)**, puis de détruire ses cœurs (*hearts*) pendant une
@@ -441,6 +441,7 @@ environnants s'étant dissipés depuis.
 - [Exploration et exobiologie](./10-exploration.md) — signal de surface « Thargoid » au DSS et mécanisme du Codex (section 8.2-8.3).
 - [Community Goals](./24-community-goals.md) — mécanique générique des campagnes communautaires, utilisée pendant la guerre pour la défense de systèmes et la collecte de matériaux anti-Titan.
 - [Outils](./16-outils.md) — configurateurs externes (Coriolis, EDSY) pour vérifier tout build AX avant usage compétitif, et outils Canonn de décodage des sondes/liens thargoïdes (section 8.3).
+- [Glossaire](./00-glossaire.md) — entités et sigles utilisés dans ce guide (AX, AEGIS, Thargoïde, Titan/Maelstrom, Barnacle, Meta-Alloy, Interceptor, Scout, Spire, Revenant, SFN).
 
 ## Sources
 

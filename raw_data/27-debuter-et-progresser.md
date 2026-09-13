@@ -192,6 +192,7 @@ Faute de données fiables sur ces trois points, la seule recommandation actionna
 - **[Guide complet de l'exploration et de l'exobiologie](./10-exploration.md)** — planification de route, Road to Riches, taxonomie exobiologique et rangs Explorateur/Exobiologiste.
 - **[Wings, Multicrew et CQC](./23-jeu-en-groupe.md)** — mécaniques multijoueur, vaisseaux et arènes du CQC.
 - **[Guide du transport de passagers](./12-transport.md)** — vaisseaux à cabines, missions et contrebande de passagers cités en 1.2.
+- **[Glossaire](./00-glossaire.md)** — sigles utilisés dans ce guide (RES, CZ, CQC, rebuy).
 
 ---
 

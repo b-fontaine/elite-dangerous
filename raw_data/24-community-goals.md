@@ -17,7 +17,7 @@ guides_lies: [1, 10, 11, 20, 21]
 
 ## En bref
 
-Une **Community Goal** (CG) est un objectif temporaire publié par Frontier sur GalNet et au tableau des missions,
+Une **Community Goal** (CG, [glossaire](./00-glossaire.md)) est un objectif temporaire publié par Frontier sur GalNet et au tableau des missions,
 rattaché à une station ou un système, auquel tous les commandants contribuent quels que soient leur plateforme et leur
 mode de jeu : livrer une commodité, miner un minerai, rendre des primes (*bounty vouchers*) ou des combat bonds,
 soumettre des données d'exploration ou d'exobiologie. Sa fenêtre dure généralement une à trois semaines. La récompense
@@ -225,6 +225,7 @@ Les Community Goals ne sont pas un système isolé : elles recoupent plusieurs a
 - [Powerplay](./02-powerplay.md) — intégration des merits aux CG depuis Powerplay 2.0 (31 octobre 2024).
 - [Chronologie canonique du corpus](./00-chronologie-canonique.md) — dates réelles arbitrées pour trois événements croisés avec des CG : invasion de Sol par le Titan Cocijo (5 décembre 2024) puis fin de la Seconde Guerre Thargoïde (19 décembre 2024, 15:00 UTC), fondation de Colonia le 9 septembre 2016 dont découle le 10ᵉ anniversaire de 2026, et sortie du SRV Rhino le 2 septembre 2026. Ce document arbitre des dates, il ne raconte pas les événements.
 - [Le guide des outils communautaires](./16-outils.md) — panorama des outils tiers (EDMC, EDDiscovery...) utilisés pour soumettre les données de journal exploitées par Inara.
+- [Glossaire](./00-glossaire.md) — sigles utilisés dans ce guide (CG, RES, USS).
 
 ## Sources
 

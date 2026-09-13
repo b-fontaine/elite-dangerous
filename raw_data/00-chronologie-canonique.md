@@ -26,6 +26,7 @@ Ce document arbitre les dates et faits d'*Elite Dangerous* sur lesquels les guid
 **SRV Rhino** le 2 septembre 2026 ; **Thargoid War Epilogue** le **19 décembre 2024 à 15:00 UTC** ; fondation de
 **Colonia** le 9 septembre 2016 ; *Fighter Hangar* renommé **Vessel Hangar** (Mk I sur 13 vaisseaux, Mk II sur 3) ; et
 **48 vaisseaux jouables** au chantier naval (*shipyard*). En cas de conflit avec un autre fichier du dépôt, ce document prévaut.
+Les sigles employés ici (SLV, PP, BGS...) sont développés dans le [Glossaire](./00-glossaire.md).
 
 ## Note d'usage — portée de ce document et règles d'arbitrage du corpus
 

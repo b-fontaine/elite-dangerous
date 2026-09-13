@@ -202,10 +202,11 @@ celui défini par les *Notes d'ingestion RAG* en fin de document, qui n'indexe q
   renommage du *Fighter Hangar* en **Vessel Hangar** et décompte de **48 vaisseaux** au chantier naval. En cas de
   divergence avec un autre fichier du dépôt — `raw_data/` comme `assets/` —, ce document prévaut : voir la règle de
   préséance ci-dessus.
-- [Glossaire](./00-glossaire.md) — Vingt-sept sigles et termes techniques classés par ordre alphabétique, chacun
-  développé puis défini : institutions et lore (AEGIS, GalCop, INRA, NMLA), mécaniques de fond (BGS, INF, PMF,
-  Powerplay), formats de jeu (CG, CZ, RES, USS, PvE, PvP, NPC, CMDR) et matériel de bord (FSD et sa variante SCO, DSS,
-  FSS, HRP, MRP, SRV, FC). Les entrées de modules précisent leur catégorie d'emplacement.
+- [Glossaire](./00-glossaire.md) — Vingt-huit sigles et termes techniques classés par ordre alphabétique (institutions
+  et lore — AEGIS, GalCop, INRA, NMLA, corrigés et sourcés —, mécaniques de fond BGS/INF/PMF/Powerplay, formats de jeu
+  CG/CZ/RES/USS/PvE/PvP/NPC/CMDR, matériel de bord FSD/SCO/DSS/FSS/HRP/MRP/SRV/FC), suivis d'une seconde partie de 48
+  entrées de résolution d'entités (Thargoïde, Guardian, Titan/Maelstrom, Barnacle, Raxxla, Colonia, Pilots Federation,
+  GalNet, hotspot, wake, mass lock, rebuy, notoriety...). Chaque entrée porte un lien vers son guide de référence.
 
 Les 32 guides thématiques sont regroupés ci-dessous par domaine.
 

@@ -424,6 +424,7 @@ de ce que la Colonisation y change.
 - [Outils](16-outils.md) — planificateurs et calculateurs communautaires de colonisation
 - [Sources et données](17-sources-donnees.md) — méthodologie de collecte des données officielles et communautaires
 - [Fleet Carriers](./19-fleet-carriers.md) — prix, entretien, Tritium, portée et cycle de saut du porteur servant de dépôt avancé
+- [Glossaire](./00-glossaire.md) — sigles et termes utilisés dans ce guide (CP, Tritium, Bulle)
 
 ## Sources
 

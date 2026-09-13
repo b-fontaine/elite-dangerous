@@ -177,7 +177,7 @@ la majorité des joueurs.
 
 Juste avant la refonte, en mai 2024, Frontier a déclenché un important « review bombing » sur Steam (la note globale du
 jeu est tombée dans la catégorie « Mixed », autour de 66 %) en annonçant la vente du vaisseau Python Mk II contre de
-l'ARX (monnaie payante) en accès anticipé exclusif. Cette décision a été perçue par une partie de la communauté comme
+l'**ARX** ([glossaire](./00-glossaire.md), monnaie payante) en accès anticipé exclusif. Cette décision a été perçue par une partie de la communauté comme
 une trahison d'un engagement pris en 2019, selon lequel l'ARX resterait strictement cosmétique. Bien que distincte de
 Powerplay au sens strict, cette controverse a nourri la défiance de la communauté à l'approche de la sortie de Powerplay
 2.0, expliquant en partie le scepticisme initial des joueurs face à cette refonte.
@@ -626,6 +626,7 @@ communautaires (voir [Outils](./16-outils.md)).
   complémentaire des objectifs Powerplay.
 - [Outils](./16-outils.md) — comparatif détaillé des outils communautaires de suivi (Inara, EDPowerPlay, ED-Board,
   etc.) utiles pour jouer Powerplay efficacement.
+- [Glossaire](./00-glossaire.md) — sigles et entités utilisés dans ce guide (ARX, Power, Bulle).
 
 ## Sources
 

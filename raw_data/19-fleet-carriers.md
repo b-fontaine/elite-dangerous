@@ -18,7 +18,7 @@ guides_lies: [2, 4, 6, 11, 12, 18, 20, 22, 31, 32]
 
 ## En bref
 
-Le **Porte-Vaisseau de joueur** (*Fleet Carrier*, **FC**), introduit le 9 avril 2020, est une méga-structure mobile
+Le **Porte-Vaisseau de joueur** (*Fleet Carrier*, **FC**, [glossaire](./00-glossaire.md)), introduit le 9 avril 2020, est une méga-structure mobile
 privée achetée **5 000 000 000 Cr** auprès du vendeur installé dans un système doté d'un chantier naval (*Drydock*).
 Il facture **5 000 000 Cr d'entretien hebdomadaire** à vide, plus **100 000 Cr par saut** et le coût de chaque service
 optionnel installé — de 1,5 M Cr pour Refuel, Repair ou Rearm jusqu'à **6,5 M Cr pour le Shipyard**. Il offre
@@ -377,6 +377,7 @@ synergie) qu'une mécanique pleinement développée par Frontier — à formuler
 - [00 — Chronologie canonique](./00-chronologie-canonique.md) — date de référence de la mise à jour Trailblazers (26 février 2025).
 - [32 — Géographie galactique](./32-geographie-galactique.md) — Colonia Bridge (≈56 mégavaisseaux relais entre Alcor
   et Colonia) et réseau communautaire DSSA, deux logistiques de Porte-Vaisseau à grande distance.
+- [Glossaire](./00-glossaire.md) — sigles et entités utilisés dans ce guide (FC, Tritium, Drydock).
 
 ## Sources
 

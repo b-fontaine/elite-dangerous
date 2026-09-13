@@ -41,7 +41,7 @@ valeur à chaque contributeur**, sans division — d'où l'intérêt de la chass
 **CNB**. Le **Multicrew**, livré le **11 avril 2017** avec l'Update 2.3 « The Commanders », place jusqu'à trois
 Commandants sur un **même** vaisseau : le capitaine pilote, les invités tiennent les tourelles ou pilotent un **chasseur
 embarqué** (*Ship-Launched Fighter*, rayon d'environ 30 km) en télé-présence holographique, dix vaisseaux disposant
-d'une baie de chasseurs. Le **CQC** (*Close Quarters Combat*), décliné en produit autonome **Elite Dangerous: Arena** le
+d'une baie de chasseurs. Le **CQC** (*Close Quarters Combat*, [glossaire](./00-glossaire.md)), décliné en produit autonome **Elite Dangerous: Arena** le
 **16 février 2016** puis retiré de la vente le **10 février 2017**, est un mode d'arène PvP arcade hors du monde
 persistant, doté d'un rang propre suivi par la **Pilots Federation**. À ne pas confondre avec le **Squadron**, ni avec
 l'**équipage PNJ** du Crew Lounge. Une nouvelle section explique enfin **pourquoi deux joueurs ne se voient pas
@@ -310,6 +310,7 @@ subi par un joueur qui choisit malgré tout l'Open, voir [30-piraterie-et-pvp.md
 - [27-debuter-et-progresser.md](./27-debuter-et-progresser.md) — comparatif des huit échelles de rang du jeu, dont le rang CQC séparé décrit en 4.5, et ce qui reste confirmé ou non sur sa progression.
 - [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) — piraterie, PvP subi, groupes privés PvE (Mobius), blocage et combat logging ; s'appuie sur l'architecture réseau décrite en section 6.
 - [21-bgs.md](./21-bgs.md), [02-powerplay.md](./02-powerplay.md) — les deux systèmes persistants partagés entre modes de jeu (section 6.5).
+- [Glossaire](./00-glossaire.md) — sigles utilisés dans ce guide (CQC, PvE, PvP, notoriety).
 
 ## Sources
 

@@ -38,16 +38,16 @@ guides:
     fichier: 00-glossaire.md
     titre: "Glossaire Elite Dangerous"
     domaine: "transversal"
-    entites: ["AEGIS", "ARX", "BGS", "Powerplay", "Fleet Carrier", "Frame Shift Drive", "Supercruise Overcharge", "Detailed Surface Scanner", "Full Spectrum Scanner", "Hull Reinforcement Package", "Module Reinforcement Package", "SRV"]
-    mots_cles_en: ["glossary", "acronym", "Background Simulation", "Community Goal", "Conflict Zone", "Fleet Carrier", "Frame Shift Drive", "Supercruise Overcharge", "Detailed Surface Scanner", "Full Spectrum Scanner", "Resource Extraction Site", "Unidentified Signal Source"]
+    entites: ["AEGIS", "ARX", "BGS", "Bulle", "Powerplay", "Fleet Carrier", "Frame Shift Drive", "Supercruise Overcharge", "Detailed Surface Scanner", "Full Spectrum Scanner", "Hull Reinforcement Package", "Module Reinforcement Package", "SRV", "Thargoïde", "Guardian", "Titan", "Maelstrom", "Barnacle", "Meta-Alloy", "Raxxla", "Colonia", "Shinrarta Dezhra", "Pilots Federation", "GalNet", "Canonn", "Salvation", "Salomé", "Interceptor", "Construct"]
+    mots_cles_en: ["glossary", "acronym", "Background Simulation", "Community Goal", "Conflict Zone", "Fleet Carrier", "Frame Shift Drive", "Supercruise Overcharge", "Detailed Surface Scanner", "Full Spectrum Scanner", "Resource Extraction Site", "Unidentified Signal Source", "the bubble", "core systems", "Thargoid", "Guardian", "Titan", "Maelstrom", "Barnacle", "meta-alloy", "Raxxla", "Colonia", "Shinrarta Dezhra", "Pilots Federation", "GalNet", "Canonn", "hotspot", "wake", "hardpoint", "rebuy", "mass lock", "interdictor", "notoriety", "tritium", "drydock", "mailslot", "glide", "first footfall"]
     version_jeu_couverte: "4.4.0.x"
     branche: "live"
-    date_verification: "2026-09-10"
+    date_verification: "2026-09-13"
     confiance_globale: "moyenne"
     volatilite: "basse"
-    sources_primaires: ["guides du corpus (04-equipements.md pour la catégorie des modules)", "Codex in-jeu / Almanach"]
-    zones_incertaines: ["développement exact du sigle NMLA, à vérifier au Codex in-jeu", "sigle INRA attesté au Codex mais non recoupé sur une source in-jeu stricte"]
-    guides_lies: [4]
+    sources_primaires: ["guides du corpus (01-lore.md, 05-guardians.md, 25-combat-ax.md, 32-geographie-galactique.md, 17-sources-donnees.md, 04-equipements.md)", "Codex in-jeu / Almanach", "elitedangerous.com/news/galnet", "wiki Fandom (consultation directe bloquée cette session, HTTP 402 ; contenu recoupé par recherche)"]
+    zones_incertaines: ["développement du sigle NMLA confirmé par des sources externes (GalNet officiel, wiki communautaire) mais non encore repris littéralement dans 01-lore.md", "statut du « Nemesis Protocol » de Salvation et de Raxxla : mystères non résolus par nature du lore lui-même, pas des lacunes de sourcing de ce glossaire"]
+    guides_lies: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 13, 14, 17, 18, 19, 20, 21, 24, 25, 29, 30, 31, 32]
 
   - id: 01-lore
     fichier: 01-lore.md

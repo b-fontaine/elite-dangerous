@@ -28,7 +28,7 @@ guides_lies: [2, 8, 11, 16, 18, 22, 24, 29, 30]
 
 ## En bref
 
-Le **Background Simulation** (**BGS**) est le moteur qui simule en permanence, dans chaque système peuplé
+Le **Background Simulation** (**BGS**, [glossaire](./00-glossaire.md)) est le moteur qui simule en permanence, dans chaque système peuplé
 d'*Elite Dangerous*, l'**influence** (*influence*) des **factions mineures** (*minor factions*) — de 3 à 10 par système,
 pour une somme toujours égale à **100 %**. Il se met à jour une fois par cycle de 24 heures lors d'un **tick**, dont
 l'horaire n'a jamais été publié : une session de jeu ne produit donc jamais d'effet visible avant le lendemain. La
@@ -378,7 +378,7 @@ donc un **ordre de classement qualitatif**, construit à partir de faits déjà 
 | Trade en état **Famine** ou **Outbreak** | Marges et primes de vente très supérieures à la normale (3.1) ; effet de levier largement reconnu par la communauté BGS pour ce type d'état | Fenêtre temporaire (l'état finit par se résorber) ; nécessite souvent un aller-retour d'approvisionnement hors du système en état |
 | Trade en état **Boom** | Influence et primes accrues pour les activités commerciales (3.1) ; achat et vente parfois possibles dans le même système en croissance | Effet de levier généralement moins spectaculaire que Famine/Outbreak en marge unitaire |
 | Trade en conditions normales | Toujours disponible, aucune dépendance à un état particulier | Effet d'influence par unité vendue le plus faible des options de trade |
-| Conflict Zones (War/Civil War) | Seul levier capable de faire basculer directement l'issue d'un conflit et donc le contrôle d'un système ; forte valeur symbolique pour un groupe coordonné | Ne s'applique qu'en présence d'un état de conflit actif ; temps par CZ variable selon l'intensité et la classe de vaisseau engagée |
+| Conflict Zones (War/Civil War, [glossaire : CZ](./00-glossaire.md)) | Seul levier capable de faire basculer directement l'issue d'un conflit et donc le contrôle d'un système ; forte valeur symbolique pour un groupe coordonné | Ne s'applique qu'en présence d'un état de conflit actif ; temps par CZ variable selon l'intensité et la classe de vaisseau engagée |
 
 **Pour obtenir un vrai chiffre d'INF/heure applicable à son propre cas**, la seule méthode fiable consiste à mesurer
 directement, avec BGS-Tally (protocole en 5.7.4), le volume d'activité produit par heure de jeu pour un levier donné,
@@ -500,6 +500,7 @@ dédié (voir [Community Goals](./24-community-goals.md)).
   « combat » décrit en 5.3.
 - [Escadrons de joueurs](./22-squadrons.md) — outil de jeu pour structurer le groupe organisé qui mène une campagne
   BGS (voir la section 5.6).
+- [Glossaire](./00-glossaire.md) — sigles utilisés dans ce guide (BGS, INF, PMF, CZ).
 
 ## Sources
 
