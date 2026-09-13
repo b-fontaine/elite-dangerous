@@ -90,12 +90,63 @@ Constructs, extinction) et une sous-section sur le langage et les glyphes guardi
 onglets, 42 régions galactiques) et le distingue explicitement du « Codex Canonn », un piège de confusion fréquent
 que ce cycle referme. Le corpus reste à **32 guides thématiques**.
 
+Un nouveau cycle, mené le 13 septembre 2026 (chantier 16 du plan de cycle 3), n'a ajouté aucune connaissance sur le
+jeu : il a doté le corpus de sa méthodologie de sourcing et de son instrumentation, deux manques que trois cycles
+successifs avaient laissés de côté. Le nouveau document transversal
+[00-methodologie-sourcing.md](./00-methodologie-sourcing.md) fixe une hiérarchie de sources à quatre paliers (P1 à
+P4), généralise en une échelle unique à quatre valeurs les deux échelles de confiance jusque-là partiellement
+redondantes du corpus, et tranche un point de gouvernance resté ouvert depuis l'audit du 9 septembre 2026 : la
+lecture directe de cinq articles MassivelyOP consacrés à Operations confirme leur fiabilité comme source de presse
+(palier P3), ce qui valide les 54 citations du site dans le corpus sans en retirer aucune. Le format normalisé de
+section Sources qui en découle est appliqué à [11-commerce.md](./11-commerce.md) et
+[02-powerplay.md](./02-powerplay.md), pilotes d'une conversion qui reste à étendre aux neuf autres guides à
+bibliographie non annotée identifiés par l'audit. Le registre d'incertitudes ajouté à
+[00-chronologie-canonique.md](./00-chronologie-canonique.md) rassemble pour la première fois en une table unique
+92 aveux d'incertitude jusque-là dispersés en prose dans 07-equipement-a-pied, 27-debuter-et-progresser, 14-rhino,
+20-minage et 18-colonisation — les autres guides du corpus restent à migrer. Le corpus se dote enfin d'un instrument
+de mesure qui n'existait dans aucun des cycles précédents : [EVALUATION.md](../EVALUATION.md) et son jeu de
+[72 questions de référence](../eval/questions-reference.json), à rejouer après chaque cycle pour détecter une
+régression avant qu'un lecteur ne la remarque, et [CHANGELOG.md](../CHANGELOG.md), qui historicise les cycles menés à
+ce jour et signale au passage une zone d'ombre que ce chantier a mise au jour sans la combler : les quatre derniers
+chantiers de contenu (12 à 15) n'ont pas reçu de paragraphe dans cet historique, contrairement à tous ceux qui les
+précèdent. Le corpus reste à 32 guides thématiques, portés à **4 documents transversaux**.
+
+## Périmètre et non-objectifs
+
+Un « manque » ne se juge pas à l'intuition : cette section dit ce que le corpus doit savoir répondre, ce qu'il
+délègue délibérément à des outils vivants, et ce qu'il refuse de faire. Sans cette déclaration, trois cycles
+d'audit ont dû redécouvrir le périmètre à chaque fois plutôt que de le lire quelque part.
+
+**Ce que le corpus doit savoir répondre.** Toute question sur une mécanique de jeu stable (comment fonctionne
+l'ingénierie, l'accostage, le BGS, la colonisation, le combat anti-Thargoïde), sur un ordre de grandeur chiffré daté
+(prix d'un vaisseau, coût d'un blueprint, rendement d'une boucle de gameplay), sur une entité nommée (un vaisseau, un
+module, une espèce d'exobiologie, un Power, un Ingénieur), ou sur le lore et la chronologie du jeu. C'est le contrat
+que remplissent les 32 guides thématiques.
+
+**Ce que le corpus délègue explicitement à des outils live.** Les prix de marché instantanés (denrées, matériaux),
+les routes de commerce ou d'exploration optimisées à la minute, l'état courant du BGS d'un système précis, le
+classement en temps réel des Powers ou des Community Goals en cours : ces données périment en heures ou en jours, pas
+en mois, et aucun corpus statique ne doit prétendre les tenir à jour. Le corpus documente la **mécanique** (comment
+lire un état BGS) et renvoie vers l'**outil** qui porte la valeur du jour ([16-outils.md](./16-outils.md) : EDSM,
+Inara, Spansh, Trade Dangerous, BGS-Tally). C'est une frontière déjà tenue par construction dans les guides chiffrés
+existants (28-marchandises.md le dit explicitement de ses propres colonnes de prix), formalisée ici pour l'ensemble
+du corpus.
+
+**Ce que le corpus refuse.** Inventer un chiffre là où aucune source ne le donne — la règle constante depuis le
+premier cycle est de **signaler l'absence** plutôt que d'estimer sans le dire (voir la politique de source unique et
+l'échelle de confiance de [00-methodologie-sourcing.md](./00-methodologie-sourcing.md)). Conclure à l'inexistence
+d'une mécanique sur la seule absence d'un catalogue qui n'est pas censé la contenir — la leçon de l'épisode
+Nomad/Operations, formulée en règle opposable dans
+[00-chronologie-canonique.md](./00-chronologie-canonique.md#règle-de-méthode--ce-que-prouve-une-absence). Fournir du
+conseil de jeu situationnel en temps réel (où PvP se trouve-t-il maintenant, quel Power domine tel système
+aujourd'hui) : c'est le rôle d'un outil connecté, pas d'un corpus versionné.
+
 ## Deux corpus dans le même dépôt : règle de préséance
 
 Le dépôt héberge deux ensembles de contenu francophone qui se recouvrent partiellement et n'avaient jamais été
 réconciliés. Cette section pose la règle qui les départage.
 
-- **`raw_data/`** — 35 fichiers markdown (32 guides thématiques et 3 documents transversaux) : la base de
+- **`raw_data/`** — 36 fichiers markdown (32 guides thématiques et 4 documents transversaux) : la base de
   connaissances de référence sur **le jeu**, écrite pour alimenter le RAG. C'est le présent répertoire. Chaque guide
   porte un front-matter YAML et un encart « En bref » ; [`index.yaml`](./index.yaml) en agrège les métadonnées et sert
   de routeur de requête. Le gabarit du front-matter et l'usage de l'index sont spécifiés dans les *Notes d'ingestion
@@ -217,6 +268,13 @@ celui défini par les *Notes d'ingestion RAG* en fin de document, qui n'indexe q
   CG/CZ/RES/USS/PvE/PvP/NPC/CMDR, matériel de bord FSD/SCO/DSS/FSS/HRP/MRP/SRV/FC), suivis d'une seconde partie de 48
   entrées de résolution d'entités (Thargoïde, Guardian, Titan/Maelstrom, Barnacle, Raxxla, Colonia, Pilots Federation,
   GalNet, hotspot, wake, mass lock, rebuy, notoriety...). Chaque entrée porte un lien vers son guide de référence.
+- [Méthodologie de sourcing et gouvernance du corpus](./00-methodologie-sourcing.md) — Fixe la hiérarchie de sources à
+  quatre paliers (**P1** patch notes/journal/EDCD, **P2** communautaire recoupée, **P3** presse spécialisée, **P4**
+  estimation), généralise en une échelle unique à quatre valeurs les deux échelles de confiance jusque-là partielles
+  du corpus, et pose les règles de date, d'URL (dont le marqueur `[ÉCHEC <code>]` pour les tentatives infructueuses),
+  de citation courte et de source unique. Tranche au passage la fiabilité de **MassivelyOP** comme source de presse
+  (P3, confirmée sur cinq articles relus en direct) et documente le format normalisé de section Sources, appliqué en
+  pilote à [11-commerce.md](./11-commerce.md) et [02-powerplay.md](./02-powerplay.md).
 
 Les 32 guides thématiques sont regroupés ci-dessous par domaine.
 
@@ -500,7 +558,7 @@ quels par un humain.
 ### Règle 1 — N'indexer que les guides
 
 Indexer `raw_data/*.md` **à l'exclusion de `README.md`**, et ne pas indexer `raw_data/index.yaml`, qui n'est pas un
-guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 35 fichiers dont le
+guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 36 fichiers dont le
 nom correspond à `^\d{2}-.*\.md$` à la racine de `raw_data/`.
 
 Ce glob doit rester **non récursif** et ignorer les répertoires cachés : `raw_data/` peut contenir un `.omc/`
@@ -545,35 +603,41 @@ recouvre lexicalement l'ensemble du corpus. Indexées, elles remontent en tête 
 évincent les passages qui contiennent réellement la réponse. Les renvois croisés utiles restent accessibles au lecteur
 humain dans le fichier ; ils n'ont simplement pas leur place dans l'index vectoriel.
 
-**Relevé du 13 septembre 2026, après l'ajout du guide transversal des boucles de gameplay : 70 sections, 23 606
-mots.** Comptage : titres capturés par le motif ci-dessus dans les fichiers `NN-*.md`, contenu compté jusqu'au titre de
-même niveau ou de niveau supérieur suivant, `split()` sur les espaces. Trente guides portent deux sections concernées
-(`## Voir aussi` et `## Sources`) — les vingt-neuf guides numérotés plus le nouveau
-[00-boucles-de-gameplay.md](./00-boucles-de-gameplay.md) —, trois en portent trois —
+**Relevé du 13 septembre 2026, après le chantier 16 (méthodologie de sourcing) : 72 sections, 24 906 mots, recompté
+par script plutôt qu'à la main.** Comptage : titres capturés par le motif ci-dessus dans les fichiers `NN-*.md`,
+contenu compté jusqu'au titre de même niveau ou de niveau supérieur suivant, découpage sur les espaces. Trente et un
+guides portent deux sections concernées (`## Voir aussi` et `## Sources`) — les trente guides déjà comptés au relevé
+précédent plus le nouveau [00-methodologie-sourcing.md](./00-methodologie-sourcing.md) —, trois en portent trois —
 [05-guardians.md](./05-guardians.md), [07-equipement-a-pied.md](./07-equipement-a-pied.md) et
 [10-exploration.md](./10-exploration.md), qui ajoutent chacun une section de ressources externes —,
 [00-glossaire.md](./00-glossaire.md) en porte une seule (`## Sources`, sans `## Voir aussi`), et
 [00-chronologie-canonique.md](./00-chronologie-canonique.md) n'en porte aucune (ses sources sont citées en prose sous
-un intitulé en gras, pas sous un titre Markdown). Soit 30 × 2 + 3 × 3 + 1 × 1 + 1 × 0 = 70 sections pour 35 fichiers.
-Les blocs les plus lourds sont désormais le `## Sources` de [06-ingenieurs.md](./06-ingenieurs.md) (2 140 mots, en
-forte hausse depuis le relevé précédent) et celui de [20-minage.md](./20-minage.md) (1 776 mots, inchangé), suivis de
-celui de [10-exploration.md](./10-exploration.md) (856 mots) et de celui de
-[28-marchandises.md](./28-marchandises.md) (749 mots, inchangé) — aucun des guides suivants n'y figure, tous restant
-sous ce seuil : [29-missions-reputation-et-rangs.md](./29-missions-reputation-et-rangs.md) (`## Voir aussi` 221 mots,
-`## Sources` 548 mots), [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) (`## Voir aussi` 143 mots, `## Sources`
+un intitulé en gras, pas sous un titre Markdown). Soit 31 × 2 + 3 × 3 + 1 × 1 + 1 × 0 = 72 sections pour 36 fichiers.
+Les blocs les plus lourds restent, dans le même ordre qu'au relevé précédent, le `## Sources` de
+[06-ingenieurs.md](./06-ingenieurs.md) (2 140 mots, inchangé) et celui de [20-minage.md](./20-minage.md) (1 776 mots,
+inchangé), suivis de celui de [10-exploration.md](./10-exploration.md) (856 mots) et de celui de
+[28-marchandises.md](./28-marchandises.md) (749 mots) — aucun des guides suivants n'y figure, tous restant sous ce
+seuil, dont deux en forte hausse suite à la normalisation du chantier 16 :
+[02-powerplay.md](./02-powerplay.md) (`## Voir aussi` 161 mots, `## Sources` 644 mots — contre une bibliographie
+d'URL nues bien plus courte avant ce chantier) et [11-commerce.md](./11-commerce.md) (`## Voir aussi` 246 mots,
+`## Sources` 573 mots, même cause). Suivent [29-missions-reputation-et-rangs.md](./29-missions-reputation-et-rangs.md)
+(`## Voir aussi` 221 mots, `## Sources` 548 mots), [13-operations.md](./13-operations.md) (`## Voir aussi` 285 mots,
+`## Sources` 451 mots), [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) (`## Voir aussi` 143 mots, `## Sources`
 364 mots), [14-rhino.md](./14-rhino.md) (`## Voir aussi` 290 mots, `## Sources` 532 mots),
 [31-pilotage-navigation-et-stations.md](./31-pilotage-navigation-et-stations.md) (`## Voir aussi` 162 mots,
 `## Sources` 275 mots), et [32-geographie-galactique.md](./32-geographie-galactique.md) (`## Voir aussi` 120 mots,
 `## Sources` 269 mots).
 
-**Écart avec le relevé précédent (12 septembre 2026, 67 sections/20 676 mots), corrigé ici.** Il annonçait deux
-fichiers `00-*.md` sans section concernée ; [00-glossaire.md](./00-glossaire.md) en porte en réalité une (`## Sources`,
-ajoutée le 13 septembre 2026 lors du chantier de glossaire, avant même la présente révision) — l'ancien relevé n'avait
-simplement pas été refait depuis. Les chantiers 12 à 14 (glossaire, lore vivant, boucles de farming), tous datés du
-13 septembre 2026, avaient déjà fait grossir plusieurs blocs `## Sources` (celui de
-[06-ingenieurs.md](./06-ingenieurs.md) en particulier, de 1 783 à 2 140 mots) sans que ce relevé soit recompté entre
-temps : preuve, comme les deux écarts déjà documentés ci-dessous, que la mesure doit être refaite à **chaque**
-révision touchant une section concernée, pas seulement à celles qui en ajoutent une nouvelle.
+**Écart avec le relevé précédent (13 septembre 2026, avant le chantier 16 : 70 sections/23 606 mots), expliqué ici
+plutôt que simplement corrigé.** L'écart de +2 sections vient entièrement du nouveau
+[00-methodologie-sourcing.md](./00-methodologie-sourcing.md) ; l'écart de mots (+1 300, bien supérieur aux 284 mots de
+ce seul fichier) vient de la normalisation des sections `## Sources` de [11-commerce.md](./11-commerce.md) et
+[02-powerplay.md](./02-powerplay.md) au format à puces annotées du chantier 16 (chaque source y gagne son palier, sa
+date de consultation et ce qu'elle confirme ou non), et d'une ligne ajoutée à celle de
+[13-operations.md](./13-operations.md). Ce relevé a été produit par un script plutôt qu'à la main — les deux écarts
+déjà documentés dans les révisions précédentes de cette section montraient qu'un recomptage manuel, aussi soigneux
+soit-il, dérive en quelques révisions ; automatiser la mesure est la seule façon de garder cette phrase vraie plus
+longtemps qu'une révision.
 
 Deux écarts avec le relevé précédent, publié le même jour et corrigés ici, méritent d'être signalés parce qu'ils
 illustrent exactement le défaut que ce relevé est censé prévenir. Le décompte de **57 sections** était juste, mais la
@@ -589,7 +653,7 @@ sur lui.
 **Méthode de comptage, à reproduire à l'identique après toute révision.** Ces deux chiffres ne sont comparables dans
 le temps que si la mesure l'est aussi. La convention retenue est la suivante :
 
-1. **Périmètre** : les 35 fichiers du périmètre indexé défini à la règle 1 ; `README.md`, `index.yaml` et les
+1. **Périmètre** : les 36 fichiers du périmètre indexé défini à la règle 1 ; `README.md`, `index.yaml` et les
    sous-répertoires en sont exclus.
 2. **Détection** : une section est retenue si sa ligne de titre correspond au motif ci-dessus et ne figure pas dans la
    liste des exceptions, vide à ce jour.
@@ -636,7 +700,7 @@ Il permet aussi de restituer une réponse en citant sa source exacte.
 
 ### Règle 4 — Router la requête sur `index.yaml` avant la recherche vectorielle
 
-[`index.yaml`](./index.yaml) agrège le front-matter des 34 guides. Il est **généré** depuis ces front-matter et doit
+[`index.yaml`](./index.yaml) agrège le front-matter des 36 guides. Il est **généré** depuis ces front-matter et doit
 être régénéré après toute modification de l'un d'eux ; il n'est **pas** indexé comme un guide.
 
 Il s'emploie en amont de la recherche vectorielle, comme routeur de requête :

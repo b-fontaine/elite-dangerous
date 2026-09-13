@@ -630,26 +630,26 @@ communautaires (voir [Outils](./16-outils.md)).
 
 ## Sources
 
-- https://elite-dangerous.fandom.com/wiki/Powerplay
-- https://elite-dangerous.fandom.com/wiki/Alliance
-- https://elite-dangerous.fandom.com/wiki/Empire
-- https://elite-dangerous.fandom.com/wiki/Federation
-- https://elite-dangerous.fandom.com/wiki/Category:Factions
-- https://elite-dangerous.fandom.com/wiki/Zachary_Hudson
-- https://elite-dangerous.fandom.com/wiki/Denton_Patreus
-- https://elite-dangerous.fandom.com/wiki/Category:Power
-- https://en.wikipedia.org/wiki/Elite_Dangerous
-- https://inara.cz/elite/logbook/84502/
-- https://inara.cz/elite/powers/
-- https://inara.cz/elite/powerplay/
-- https://inara.cz/elite/power/ (fiches individuelles de chaque Power, consultées le 9 septembre 2026 pour la matrice
-  d'éthos et le tableau des systèmes Bastion de la section 6 ; la fiche de Zemina Torval, id 8, a renvoyé une erreur
-  HTTP 503 temporaire ce jour-là)
-- https://www.lavewiki.com/powerplay (source secondaire pour l'éthos de Zemina Torval, partiellement recoupée avec
-  inara.cz — voir la note en 5.6)
-- https://edpowerplay.com/guide
-- https://edpowerplay.com
-- https://gamerant.com/elite-dangerous-powerplay-20-ascendancy-update/
+Format normalisé selon [00-methodologie-sourcing.md §9](./00-methodologie-sourcing.md#9-format-normalisé-dune-section-sources) ;
+guide pilote de cette normalisation avec [11-commerce.md](./11-commerce.md).
+
+- https://elite-dangerous.fandom.com/wiki/Powerplay | secondaire | consulté le 09/09/2026 | confirme : les règles générales de Powerplay (Pledge, mérites, axes Acquisition/Renforcement/Undermining) | ne confirme pas : le détail chiffré de la refonte Powerplay 2.0/Ascendancy (31 octobre 2024)
+- https://elite-dangerous.fandom.com/wiki/Alliance | secondaire | consulté le 09/09/2026 | confirme : le contexte institutionnel de l'Alliance | ne confirme pas : les Powers alignés sur l'Alliance spécifiquement
+- https://elite-dangerous.fandom.com/wiki/Empire | secondaire | consulté le 09/09/2026 | confirme : le contexte institutionnel de l'Empire d'Achenar | ne confirme pas : le détail des Powers impériaux
+- https://elite-dangerous.fandom.com/wiki/Federation | secondaire | consulté le 09/09/2026 | confirme : le contexte institutionnel de la Fédération | ne confirme pas : le détail des Powers fédéraux
+- https://elite-dangerous.fandom.com/wiki/Category:Factions | secondaire | consulté le 09/09/2026 | confirme : la liste des factions majeures rattachées aux trois superpuissances | ne confirme pas : le roster actuel des douze Powers (voir inara.cz ci-dessous)
+- https://elite-dangerous.fandom.com/wiki/Zachary_Hudson | secondaire | consulté le 09/09/2026 | confirme : la biographie et l'éthos du Power Zachary Hudson | ne confirme pas : ses statistiques de contrôle territorial courantes
+- https://elite-dangerous.fandom.com/wiki/Denton_Patreus | secondaire | consulté le 09/09/2026 | confirme : la biographie et l'éthos du Power Denton Patreus | ne confirme pas : ses statistiques de contrôle territorial courantes
+- https://elite-dangerous.fandom.com/wiki/Category:Power | secondaire | consulté le 09/09/2026 | confirme : la liste des douze Powers jouables | ne confirme pas : le barème de rang 6 à 99 (extrapolation du corpus, voir `zones_incertaines`)
+- https://en.wikipedia.org/wiki/Elite_Dangerous | secondaire | consulté le 09/09/2026 | confirme : le contexte général du jeu | ne confirme pas : les mécaniques Powerplay détaillées
+- https://inara.cz/elite/logbook/84502/ | secondaire | consulté le 09/09/2026 | confirme : un exemple concret de progression de rang Powerplay observé en jeu | ne confirme pas : une formule officielle de conversion mérites → rang
+- https://inara.cz/elite/powers/ | secondaire | consulté le 09/09/2026 | confirme : le roster courant des douze Powers et leur superpuissance de rattachement | ne confirme pas : l'historique des Powers retirés ou fusionnés avant 2024
+- https://inara.cz/elite/powerplay/ | secondaire | consulté le 09/09/2026 | confirme : le fonctionnement général de la page Powerplay communautaire (rangs, systèmes contrôlés) | ne confirme pas : le détail des taux de conversion de mérites (voir `zones_incertaines`)
+- https://inara.cz/elite/power/ | secondaire | consulté le 09/09/2026 | confirme : la matrice d'éthos et le tableau des systèmes Bastion de la section 6, fiche par fiche | ne confirme pas : l'éthos de Zemina Torval (id 8), dont la fiche a renvoyé une erreur HTTP 503 temporaire ce jour-là — voir la ligne lavewiki.com ci-dessous pour la source de repli
+- https://www.lavewiki.com/powerplay | secondaire (repli, partiellement recoupé) | consulté le 09/09/2026 | confirme : l'éthos de Zemina Torval, en repli sur l'indisponibilité ponctuelle d'inara.cz (voir §5.6) | ne confirme pas : une valeur aussi à jour qu'une fiche inara.cz directement consultée
+- https://edpowerplay.com/guide | tertiaire (outil communautaire) | consulté le 09/09/2026 | confirme : l'existence et l'usage général de l'outil de suivi EDPowerplay | ne confirme pas : des seuils numériques officiels de Frontier
+- https://edpowerplay.com | tertiaire (outil communautaire) | consulté le 09/09/2026 | confirme : la page d'accueil et le périmètre de l'outil EDPowerplay | ne confirme pas : des seuils numériques officiels de Frontier
+- https://gamerant.com/elite-dangerous-powerplay-20-ascendancy-update/ | tertiaire | consulté le 09/09/2026 | confirme : la date de sortie de Powerplay 2.0 dans le cadre d'Ascendancy (31 octobre 2024) et ses grandes lignes | ne confirme pas : le détail chiffré des mérites et des points de contrôle (voir `zones_incertaines`)
 - https://gamerant.com/elite-dangerous-review-bombed-why/
 - https://www.pcgamer.com/games/sim/elite-dangerous-gets-its-own-kick-in-the-steam-ratings-shin-over-real-money-ship-sales/
 - https://ricardosgaming.com/blog/elite-dangerous-powerplay-2-0-guide-choose-a-power-earn-merits-and-unlock-modules/

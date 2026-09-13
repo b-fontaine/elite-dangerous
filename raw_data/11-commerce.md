@@ -680,19 +680,22 @@ riposte) plutôt que ceux du fret. Voir [Combat spatial](./08-combat-spatial.md)
 
 ## Sources
 
-- https://en.wikipedia.org/wiki/Elite_Dangerous
-- https://raw.githubusercontent.com/eyeonus/Trade-Dangerous/master/README.md
-- https://www.edsm.net/en/
-- https://www.thegamer.com/elite-dangerous-trading-guide/
-- https://www.thegamer.com/elite-dangerous-guide-to-mining/
-- https://gamerant.com/elite-dangerous-best-ways-to-make-money/
-- https://twistedvoxel.com/elite-dangerous-vanguards-patch-1-expands-squadron-features-and-fixes-major-bugs/
-- https://raw.githubusercontent.com/EDCD/coriolis-data/master/ships/type_9_heavy.json
-- https://raw.githubusercontent.com/EDCD/coriolis-data/master/ships/imperial_cutter.json
-- https://raw.githubusercontent.com/EDCD/coriolis-data/master/ships/type_10_defender.json
-- https://raw.githubusercontent.com/EDCD/coriolis-data/master/ships/anaconda.json
-- https://raw.githubusercontent.com/EDCD/coriolis-data/master/ships/keelback.json
-- https://raw.githubusercontent.com/EDCD/coriolis-data/master/ships/type_8_transport.json
+Format normalisé selon [00-methodologie-sourcing.md §9](./00-methodologie-sourcing.md#9-format-normalisé-dune-section-sources) ;
+guide pilote de cette normalisation avec [02-powerplay.md](./02-powerplay.md).
+
+- https://en.wikipedia.org/wiki/Elite_Dangerous | secondaire | consulté le 12/09/2026 | confirme : le contexte général du commerce et de l'économie du jeu | ne confirme pas : les barèmes chiffrés propres à 2026 (Trade Rank, rentabilités)
+- https://raw.githubusercontent.com/eyeonus/Trade-Dangerous/master/README.md | primaire (documentation du projet) | consulté le 12/09/2026 | confirme : l'existence et le principe de Trade Dangerous (optimisation de route par calcul de marge) | ne confirme pas : des chiffres de rentabilité en jeu
+- https://www.edsm.net/en/ | secondaire | consulté le 12/09/2026 | confirme : le rôle d'EDSM dans la cartographie et l'agrégation de marché communautaire | ne confirme pas : des prix de marché instantanés
+- https://www.thegamer.com/elite-dangerous-trading-guide/ | tertiaire | consulté le 12/09/2026 | confirme : le principe général du trading (acheter à la production, vendre à la consommation) et l'effet des états du BGS sur les prix | ne confirme pas : des montants Cr précis pour 2026
+- https://www.thegamer.com/elite-dangerous-guide-to-mining/ | tertiaire | consulté le 12/09/2026 | confirme : le principe du *mining-to-trade* (revente du minerai raffiné) | ne confirme pas : des rendements chiffrés à jour
+- https://gamerant.com/elite-dangerous-best-ways-to-make-money/ | tertiaire | consulté le 12/09/2026 | confirme : le classement qualitatif des méthodes de profit, dont le commerce | ne confirme pas : des Cr/h vérifiés pour la version 4.4.0.x — instantanés non redatés (voir `zones_incertaines`)
+- https://twistedvoxel.com/elite-dangerous-vanguards-patch-1-expands-squadron-features-and-fixes-major-bugs/ | tertiaire | consulté le 12/09/2026 | confirme : le contenu du patch Vanguards (19 août 2025) affectant les Squadrons | ne confirme pas : un lien direct avec les mécaniques de commerce — cité pour la datation du patch, non pour son contenu commercial
+- https://raw.githubusercontent.com/EDCD/coriolis-data/master/ships/type_9_heavy.json | primaire | consulté le 12/09/2026 | confirme : la soute maximale et les emplacements internes du Type-9 Heavy | ne confirme pas : son prix d'achat courant (voir [03-vaisseaux.md](./03-vaisseaux.md), source unique des prix)
+- https://raw.githubusercontent.com/EDCD/coriolis-data/master/ships/imperial_cutter.json | primaire | consulté le 12/09/2026 | confirme : la soute maximale et les emplacements internes de l'Imperial Cutter | ne confirme pas : son prix d'achat courant (voir [03-vaisseaux.md](./03-vaisseaux.md))
+- https://raw.githubusercontent.com/EDCD/coriolis-data/master/ships/type_10_defender.json | primaire | consulté le 12/09/2026 | confirme : la soute maximale et les emplacements internes du Type-10 Defender | ne confirme pas : son prix d'achat courant (voir [03-vaisseaux.md](./03-vaisseaux.md))
+- https://raw.githubusercontent.com/EDCD/coriolis-data/master/ships/anaconda.json | primaire | consulté le 12/09/2026 | confirme : la soute maximale et les emplacements internes de l'Anaconda | ne confirme pas : son prix d'achat courant (voir [03-vaisseaux.md](./03-vaisseaux.md))
+- https://raw.githubusercontent.com/EDCD/coriolis-data/master/ships/keelback.json | primaire | consulté le 12/09/2026 | confirme : la soute maximale et les emplacements internes du Keelback | ne confirme pas : sa portée de saut chargée (non publiée par coriolis-data, voir `zones_incertaines`)
+- https://raw.githubusercontent.com/EDCD/coriolis-data/master/ships/type_8_transport.json | primaire | consulté le 12/09/2026 | confirme : la soute maximale et les emplacements internes du Type-8 Transporter | ne confirme pas : sa portée de saut chargée (non publiée par coriolis-data, voir `zones_incertaines`)
 - https://raw.githubusercontent.com/EDCD/coriolis-data/master/ships/panther_clipper.json
 - https://api.github.com/repos/EDCD/coriolis-data/contents/ships
 - https://raw.githubusercontent.com/EDCD/FDevIDs/master/TradeRank.csv

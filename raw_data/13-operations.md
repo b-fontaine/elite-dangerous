@@ -140,6 +140,13 @@ jour » (« Operations Update », 1er juillet 2026) ; une septième a été ajou
 | **Terminal Prosecution** | Un élément criminel écume le système depuis des semaines : le nettoyer                                                                                                                                                                                         | 1er juillet 2026 |
 | **Under Siege**          | Répondre à l'appel de détresse d'un settlement planétaire où une aide urgente est requise : lever le blocus et neutraliser les forces ennemies qui tentent de s'emparer du site                                                                                | 2 septembre 2026 |
 
+**Déroulé d'Under Siege en deux temps.** L'annonce préalable du 27 août 2026 (« Elite Dangerous previews the Rhino,
+surface mining, and a new operation arriving September 2 », MassivelyOP) précise un enchaînement que les notes de
+version elles-mêmes ne détaillent pas : l'escouade commence par dégager les menaces aériennes au-dessus du settlement,
+puis se pose pour reprendre le contrôle du site au sol en combat à pied, avant l'arrivée d'« une menace plus
+importante » dont la nature n'est pas précisée par cette source. Relevé de sourçage : voir
+[00-methodologie-sourcing.md §7](./00-methodologie-sourcing.md#7-étude-de-cas--la-fiabilité-de-massivelyop-comme-source-de-presse), qui a tranché la fiabilité de MassivelyOP comme source de presse (P3) sur cette même série d'articles.
+
 **Sur la liste annoncée en avril 2026.** Le billet du 22 avril 2026 annonçait six scénarios sous d'autres intitulés —
 *Counter Attack*, *Burning Rescue*, *Megaship Massacre Reclaim*, *Megaship Massacre Strike*, *Surface Rescue*,
 *Pirate Hunt* — dont les descriptions recoupent très largement celles publiées au lancement. Le
@@ -728,6 +735,7 @@ intermédiaire :
   récompenses et des inventaires à pied, lisibilité du Merc Engineering.
 - « Elite Dangerous | Rhino SRV Update », **2 septembre 2026 11:20 UTC** — opération **Under Siege**, correctifs
   Powerplay Squad et MercGear, problèmes connus.
+- https://massivelyop.com/2026/08/27/elite-dangerous-takes-a-quick-look-at-the-rhino-vehicle-surface-mining-and-a-new-operation-arriving-september-2/ | tertiaire (presse, palier confirmé fiable — voir [00-methodologie-sourcing.md §7](./00-methodologie-sourcing.md)) | consulté le 13/09/2026 | confirme : déroulé en deux temps d'Under Siege (menaces aériennes puis combat au sol, puis « menace plus importante ») | ne confirme pas : la nature de cette menace additionnelle
 
 Corroboration technique communautaire, citée comme telle et non comme source officielle : ticket **EDCD/EDDI n° 2849**
 du 5 août 2026, dont le journal de jeu joint donne les versions client 4.4.0.0 (30 juin 2026) et 4.4.0.3

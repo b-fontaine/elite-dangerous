@@ -1,7 +1,7 @@
 # Index de routage du corpus Elite Dangerous
 #
 # FICHIER GÉNÉRÉ — ne pas éditer à la main.
-# Il agrège le front-matter YAML des 35 fichiers `raw_data/NN-*.md` (32 guides thématiques et 3
+# Il agrège le front-matter YAML des 36 fichiers `raw_data/NN-*.md` (32 guides thématiques et 4
 # documents transversaux) et sert de routeur de requête : on le lit d'abord pour sélectionner les
 # deux ou trois guides candidats, puis on ne lance la recherche vectorielle que dans ceux-là. Il
 # n'est pas lui-même un guide et ne doit pas être indexé.
@@ -12,7 +12,7 @@
 # impose de régénérer ce fichier.
 
 date_generation: 2026-09-13
-nombre_de_guides: 35
+nombre_de_guides: 36
 genere_depuis: "front-matter YAML des fichiers raw_data/NN-*.md"
 indexer_ce_fichier: false
 
@@ -39,7 +39,7 @@ guides:
     fichier: 00-chronologie-canonique.md
     titre: "Chronologie canonique — Elite Dangerous"
     domaine: "transversal"
-    entites: ["Operations Update", "Nomad", "SRV Rhino", "Kestrel Mk II", "Lynx Highliner", "Caspian Explorer", "Panther Clipper Mk II", "Powerplay 2.0", "Thargoid War Epilogue", "Vessel Hangar", "Dodec Update", "Colonia", "Kickstarter", "Horizons", "Beyond", "Odyssey", "Fleet Carriers Update", "Supercruise Overcharge", "Ascendancy"]
+    entites: ["Operations Update", "Nomad", "SRV Rhino", "Kestrel Mk II", "Lynx Highliner", "Caspian Explorer", "Panther Clipper Mk II", "Powerplay 2.0", "Thargoid War Epilogue", "Vessel Hangar", "Dodec Update", "Colonia", "Kickstarter", "Horizons", "Beyond", "Odyssey", "Fleet Carriers Update", "Supercruise Overcharge", "Ascendancy", "registre d'incertitudes", "MassivelyOP"]
     mots_cles_en: ["operations update", "nomad", "rhino srv", "vessel hangar", "kestrel mk ii", "lynx highliner", "caspian explorer", "thargoid war epilogue", "powerplay 2.0", "dodec update", "patch notes", "shipyard", "kickstarter", "horizons", "beyond", "odyssey", "fleet carriers update", "supercruise overcharge", "version history", "ascendancy"]
     version_jeu_couverte: "4.4.0.x"
     branche: "live"
@@ -48,7 +48,7 @@ guides:
     volatilite: "moyenne"
     sources_primaires: ["Steam News Frontier (App ID 359320)", "elitedangerous.com", "EDCD/FDevIDs", "EDCD/coriolis-data", "Inara.cz", "GalNet", "Wayback Machine", "Wikipédia", "wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge)", "presse spécialisée d'époque (PC Gamer, Massively Overpowered, TheSixthAxis, Engadget)"]
     zones_incertaines: ["rattachement du numéro 4.4.0.3 au billet du 9 juillet 2026, plausible mais non prouvé — le billet se contredit sur son propre numéro", "date de fin d'accès anticipé ARX du Panther Clipper Mk II, non confirmée", "date exacte de destruction du Titan Raijin, antérieure au 5 décembre 2024 sans plus de précision", "baie Mk I ou Mk II exigée par le SRV Rhino, non tranchée par une source primaire", "plafond de 9 999 Merc Coins et allocation de 1 000 par semaine, de source communautaire seulement", "numéros de version 4.4.1.0 et 4.4.1.1 de septembre 2026, issus de pages officielles restées inaccessibles", "jour exact de la fin du Kickstarter (4 ou 5 janvier 2013 selon la source)", "terminologie exacte distinguant « Premium Beta » de « Beta 1 » en 2014", "retrait ou non du jeu des stores consoles après l'arrêt du développement, mars 2022 : non confirmé"]
-    guides_lies: [1, 3, 13, 14, 15, 19, 25]
+    guides_lies: [1, 3, 7, 13, 14, 15, 18, 19, 20, 25, 27]
 
   - id: 00-glossaire
     fichier: 00-glossaire.md
@@ -64,6 +64,21 @@ guides:
     sources_primaires: ["guides du corpus (01-lore.md, 05-guardians.md, 25-combat-ax.md, 32-geographie-galactique.md, 17-sources-donnees.md, 04-equipements.md)", "Codex in-jeu / Almanach", "elitedangerous.com/news/galnet", "wiki Fandom (consultation directe bloquée cette session, HTTP 402 ; contenu recoupé par recherche)"]
     zones_incertaines: ["développement du sigle NMLA confirmé par des sources externes (GalNet officiel, wiki communautaire) mais non encore repris littéralement dans 01-lore.md", "statut du « Nemesis Protocol » de Salvation et de Raxxla : mystères non résolus par nature du lore lui-même, pas des lacunes de sourcing de ce glossaire"]
     guides_lies: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 13, 14, 17, 18, 19, 20, 21, 24, 25, 29, 30, 31, 32]
+
+  - id: 00-methodologie-sourcing
+    fichier: 00-methodologie-sourcing.md
+    titre: "Méthodologie de sourcing et gouvernance du corpus"
+    domaine: "transversal"
+    entites: ["hiérarchie de sources", "P1", "P2", "P3", "P4", "échelle de confiance", "clé de citation", "registre d'incertitudes", "ÉCHEC 403", "politique de source unique", "MassivelyOP"]
+    mots_cles_en: ["source hierarchy", "confidence scale", "citation key", "single-source policy", "uncertainty registry", "primary source", "dead link", "press coverage"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-13"
+    confiance_globale: "haute"
+    volatilite: "basse"
+    sources_primaires: ["00-chronologie-canonique.md (échelle de confiance)", "README.md (gabarit de front-matter)", "5 articles massivelyop.com relus directement le 13 septembre 2026"]
+    zones_incertaines: ["le format de section Sources normalisé n'a été rétroactivement appliqué qu'à 11-commerce.md et 02-powerplay.md ; 9 guides à 100 % d'URL nues restent à convertir", "la colonne Fiab. prescrite pour 01-lore/22-squadrons/12-transport/18-colonisation n'a pas été ajoutée", "le registre d'incertitudes ne couvre encore que 5 des 32 guides thématiques"]
+    guides_lies: [0, 17]
 
   - id: 01-lore
     fichier: 01-lore.md

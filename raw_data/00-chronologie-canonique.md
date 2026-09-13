@@ -2,7 +2,7 @@
 id: 00-chronologie-canonique
 titre: "Chronologie canonique — Elite Dangerous"
 domaine: transversal
-entites: [Operations Update, Nomad, SRV Rhino, Kestrel Mk II, Lynx Highliner, Caspian Explorer, Panther Clipper Mk II, Powerplay 2.0, Thargoid War Epilogue, Vessel Hangar, Dodec Update, Colonia, Kickstarter, Horizons, Beyond, Odyssey, Fleet Carriers Update, Supercruise Overcharge, Ascendancy]
+entites: [Operations Update, Nomad, SRV Rhino, Kestrel Mk II, Lynx Highliner, Caspian Explorer, Panther Clipper Mk II, Powerplay 2.0, Thargoid War Epilogue, Vessel Hangar, Dodec Update, Colonia, Kickstarter, Horizons, Beyond, Odyssey, Fleet Carriers Update, Supercruise Overcharge, Ascendancy, registre d'incertitudes, MassivelyOP]
 mots_cles_en: [operations update, nomad, rhino srv, vessel hangar, kestrel mk ii, lynx highliner, caspian explorer, thargoid war epilogue, powerplay 2.0, dodec update, patch notes, shipyard, kickstarter, horizons, beyond, odyssey, fleet carriers update, supercruise overcharge, version history, ascendancy]
 version_jeu_couverte: "4.4.0.x"
 branche: live
@@ -11,7 +11,7 @@ confiance_globale: haute
 volatilite: moyenne
 sources_primaires: [Steam News Frontier (App ID 359320), elitedangerous.com, EDCD/FDevIDs, EDCD/coriolis-data, Inara.cz, GalNet, Wayback Machine, Wikipédia, wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge), presse spécialisée d'époque (PC Gamer, Massively Overpowered, TheSixthAxis, Engadget)]
 zones_incertaines: ["rattachement du numéro 4.4.0.3 au billet du 9 juillet 2026, plausible mais non prouvé — le billet se contredit sur son propre numéro", "date de fin d'accès anticipé ARX du Panther Clipper Mk II, non confirmée", "date exacte de destruction du Titan Raijin, antérieure au 5 décembre 2024 sans plus de précision", "baie Mk I ou Mk II exigée par le SRV Rhino, non tranchée par une source primaire", "plafond de 9 999 Merc Coins et allocation de 1 000 par semaine, de source communautaire seulement", "numéros de version 4.4.1.0 et 4.4.1.1 de septembre 2026, issus de pages officielles restées inaccessibles", "jour exact de la fin du Kickstarter (4 ou 5 janvier 2013 selon la source)", "terminologie exacte distinguant « Premium Beta » de « Beta 1 » en 2014", "retrait ou non du jeu des stores consoles après l'arrêt du développement, mars 2022 : non confirmé"]
-guides_lies: [1, 3, 13, 14, 15, 19, 25]
+guides_lies: [1, 3, 7, 13, 14, 15, 18, 19, 20, 25, 27]
 ---
 # Chronologie canonique — Elite Dangerous
 
@@ -732,6 +732,150 @@ un châssis.
 
 ---
 
+## Registre d'incertitudes du corpus
+
+Ajouté le 13 septembre 2026 (chantier 16). Ce document arbitrait déjà des **dates** contradictoires ; cette section
+étend son rôle à toute **incertitude non datée** admise en prose par un guide, quelle que soit sa nature (prix,
+mécanique, attribution, décompte). Trois cycles avaient laissé s'accumuler 174 aveux d'incertitude dispersés dans le
+corpus, chacun noyé dans son propre paragraphe — un registre central permet de les revoir tous d'un coup après un
+cycle, et de vérifier qu'un renvoi « à trancher » pointe encore vers une entrée qui existe.
+
+Ce premier passage migre les admissions des cinq guides les plus denses en aveux d'incertitude, identifiés par
+l'audit du cycle 3 : [07-equipement-a-pied.md](./07-equipement-a-pied.md) (30 entrées),
+[27-debuter-et-progresser.md](./27-debuter-et-progresser.md) (18), [14-rhino.md](./14-rhino.md) (16),
+[20-minage.md](./20-minage.md) (17) et [18-colonisation.md](./18-colonisation.md) (11) — **92 entrées** au total, contre
+les ~81 estimées par l'audit ; l'écart vient d'un relevé plus fin que le comptage original, pas d'un ajout de contenu.
+Les autres guides du corpus conservent leurs propres aveux d'incertitude en prose pour l'instant : les y migrer aussi
+est un travail mécanique de même nature, non fait ici faute de temps, à reprendre pour les guides restants dans un
+prochain chantier.
+
+**Lecture de la colonne Confiance** : échelle à quatre valeurs de
+[00-methodologie-sourcing.md §2](./00-methodologie-sourcing.md#2-échelle-de-confiance--quatre-valeurs-un-seul-vocabulaire).
+La colonne « Ce qui manque pour trancher » fait aussi office de « source à consulter » quand l'aveu d'origine la
+nomme : les deux se recoupaient presque toujours dans le texte source, et les séparer aurait dupliqué la même
+information dans deux colonnes.
+
+### 07-equipement-a-pied.md — 30 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Le Carbon Fibre Plating / Titanium Plating s'achètent-ils au barman comme l'Aerogel ? | Achat au barman déduit par analogie de type (Asset) | Basse | Tarif de comptoir relevé pour ces deux composants |
+| Le chiffre de 56 recettes de Manufacturing Instructions est-il vérifié ? | Calcul arithmétique (3+11)×4=56, ordre de grandeur retenu | Basse | Catalogue réel des onze armes supposées, jamais établi |
+| Combien de points de bouclier personnel par grade de combinaison ? | Rien de chiffré, seule la progression par paliers est connue | Non confirmé | Toute donnée locale (blueprints.json, FDevIDs, coriolis-data) |
+| Combien de points de vie possède le commandant ? | Aucune valeur avancée | Non confirmé | Statistique dans les jeux de données locaux |
+| Quelle est la capacité de base du sac à dos par combinaison ? | Seule la modification qui l'augmente est documentée | Non confirmé | Valeur de base chiffrée |
+| Quelle est la réserve d'oxygène de base par combinaison ? | Seule la modification qui la double est documentée | Non confirmé | Valeur de base chiffrée |
+| Le nombre d'emplacements d'armes de la Dominator est-il chiffré par une source fiable ? | Deux emplacements principaux affirmés | Basse | Relevé chiffré ; l'affirmation reste communautaire |
+| Les montants en crédits des paliers de combinaison sont-ils fiables ? | Chiffres repris du wiki Fandom, matériaux corroborés par Inara | Basse | Confirmation en jeu ; Inara n'en liste aucun |
+| Le plafond de 9 999 Merc Coin et l'allocation hebdo de 1 000 sont-ils officiels ? | Chiffres avancés par une étude interne du dépôt | Basse | Corroboration par une annonce officielle Frontier |
+| Takada a-t-il au moins un modèle d'arme nommé confirmé ? | Kinematic Armaments et Manticore ont des modèles confirmés | Non confirmé | Une source consultable rattachant un modèle à Takada |
+| Quel est le type / type de dégâts du Manticore Intimidator ? | Nom et fabricant confirmés par un billet officiel | Non confirmé | Type d'arme et type de dégâts, non déductibles sans risque |
+| Le jeu compte-t-il cinq ou onze armes à pied au total ? | Cinq armes documentées par une source citable | Non confirmé | Confirmation ou infirmation du chiffre de onze |
+| Quelles sont les stats de combat (dégâts, cadence, DPS, portée) des armes à pied ? | Rien n'est chiffré localement, jugé préférable à l'invention | Non confirmé | Toute source locale reproductible |
+| La fourchette de prix des échantillons du Genetic Sampler (50 000-1 000 000 Cr) est-elle à jour ? | Fourchette capturée le 9 septembre 2026 | Moyenne | Revérification sur Inara ou en jeu |
+| Peut-on vraiment gagner ≈250 M Cr en deux heures d'exobiologie ? | Chiffre relayé d'un guide communautaire de 2025 | Basse | Une moyenne garantie plutôt qu'une estimation ponctuelle |
+| La montée en grade améliore-t-elle Wave Scanner / Profile Analyser / Compact Multi-Tool ? | Effet attendu décrit (portée, fiabilité, marge de manœuvre) | Basse | Confirmation dans les sources consultées |
+| Existe-t-il des blueprints d'Engineer dédiés aux quatre outils à pied ? | Rien n'infirme ni ne confirme leur existence | Non confirmé | Documentation communautaire à jour confirmant ou non |
+| Quelles sont les spécialités suit d'Eleanor Bresa ? | Rien n'est reconstitué pour cet Engineer | Non confirmé | Toute ligne vérifiée la mentionnant |
+| Quelles sont les spécialités arme des quatre Engineers de Colonia ? | Seules certaines spécialités suit ont pu être reconstituées | Non confirmé | Toute source sur le volet armes |
+| Existe-t-il un effet expérimental distinct de l'effet primaire à pied ? | Seul un système d'emplacements de modification uniques est confirmé | Non confirmé | Toute preuve d'un second emplacement d'effet expérimental |
+| Les modifications de combinaison ont-elles des paliers G1-G5 comme les modules de vaisseau ? | Colonne « Grade des matériaux » volontairement non chiffrée | Non confirmé | Toute source détaillant un tel palier à pied |
+| Les quatorze coûts en crédits des mods de combinaison sont-ils tous vérifiés indépendamment ? | Six montants revérifiés et confirmés exacts | Moyenne | Recoupement indépendant pour les huit autres montants |
+| Les modifications d'armes ont-elles des paliers de matériaux détaillés ? | Effet et Engineer(s) connus par modification | Non confirmé | Détail des paliers de matériaux |
+| Un effet expérimental existe-t-il pour les modifications d'armes à pied ? | Renvoi à la note méthodologique générale | Non confirmé | Confirmation indépendante par modification |
+| Les 33 recettes modification × fabricant sont-elles toutes connues ? | Six recettes sur trente-trois effectivement relevées | Basse | Source consultable pour les 27 autres cellules |
+| À quel fabricant s'appliquent les recettes de Scope, Noise Suppressor et Faster Handling ? | Trois recettes précises connues (matériaux, coût) | Basse | Attribution à un fabricant d'arme précis |
+| Les quantités de matériaux des recettes d'armes sont-elles vérifiées ? | Les 32 noms de matériaux existent, orthographe confirmée | Moyenne | Vérification indépendante des quantités |
+| Quel est le montant exact du rebuy à la mort à pied ? | Un coût d'assurance modéré est bien appliqué | Non confirmé | Confirmation du montant exact (403 sur forums.frontier.co.uk) |
+| Le Caspian Explorer est-il lié à un plafonnement de l'ingénierie de combat à pied ? | Association reprise par cohérence avec 09-combat-a-pied | Basse | Vérification directe dans les notes de patch (403) |
+| Le Kestrel Mk II est-il sorti le 24 février 2026 ? | Date retenue, corroborée indirectement par un commit EDCD/FDevIDs | Moyenne | Confirmation directe par une source officielle datée — **tranché depuis par le [fait 6](#6-kestrel-mk-ii--date-de-sortie) de ce document, à confiance haute** |
+
+### 27-debuter-et-progresser.md — 18 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Les seuils numériques exacts de progression de rang ont-ils été publiés par Frontier ? | Rangs suivis via score/expérience approximative | Non confirmé | Toute publication officielle d'un barème chiffré |
+| Le menu Pilot Training compte-t-il ≈9 simulations et ≈10 défis ? | Décompte relevé sur un guide communautaire récent | Basse | Confirmation par une page officielle (HTTP 403) |
+| Combien de temps dure chaque scénario de Pilot Training ? | Estimation indicative de 10 à 20 minutes | Basse | Aucune durée officielle confirmée |
+| La portée de saut stock du Hauler (12,1 al) est-elle à jour ? | Valeur reprise telle quelle de 03-vaisseaux.md | Moyenne | Recoupement par une recherche web indépendante |
+| Existe-t-il des Cr/h fiables pour un vaisseau starter non ingénierié ? | Comparatif qualitatif proposé à la place de chiffres | Non confirmé | Source ayant confirmé des chiffres Cr/h fiables et à jour |
+| Comment débloquer The Dweller (500 000 Cr ou 5 marchés noirs) ? | Deux conditions rapportées, sans trancher | Basse | Confirmation par 06-ingenieurs.md ou en jeu |
+| Tod McQuinn exige-t-il 15 bons de prime + 100 000 Cr ? | Chiffres rapportés tels quels | Basse | Recoupement avec une source primaire |
+| Lei Cheung exige-t-il 50 marchés visités + 200 unités d'or ? | Chiffres rapportés tels quels | Basse | Recoupement avec une source primaire |
+| Les conditions de déblocage des Ingénieurs secondaires sont-elles corroborées par une 3ᵉ source ? | Seul le rang « Scout » de Farseer est corroboré en interne | Basse | Recoupement avec une troisième source primaire |
+| Existe-t-il une échelle de paliers ordonnée pour le rang Mercenaire ? | Existence de la filière attestée | Non confirmé | Une source donnant l'échelle de paliers ordonnée |
+| Connaît-on l'échelle complète et ordonnée des paliers de rang CQC ? | Inara montre les paliers hauts (Legend, Hero, Elite I/III/V) | Basse | Les paliers bas et intermédiaires |
+| Le multiplicateur exact du score pondéré de rang de combat est-il connu ? | Principe du score pondéré par rang d'adversaire établi | Non confirmé | Le multiplicateur exact, jamais publié par Frontier |
+| L'ordre exact des paliers du rang Exobiologiste est-il fiable ? | Ordre reconstitué à partir d'un seul article Canonn | Basse | Accès au wiki Fandom et aux forums officiels |
+| Achat-revente, minerai et missions comptent-ils à parts égales pour le rang Commerce ? | Rang progresse selon le profit cumulé, sans plus de détail | Non confirmé | Confirmation du mécanisme exact par une source primaire |
+| La contrebande (marché noir) fait-elle progresser le rang Commerce comme une vente standard ? | Rendement chiffré ailleurs dans le corpus (≈90 M Cr/h) | Non confirmé | Confirmation que le marché noir compte comme vente standard |
+| La liste des quatre vaisseaux jouables en CQC est-elle sourcée ? | Liste reprise de 23-jeu-en-groupe.md | Basse | Une source citée ; risque de confusion F63 Condor/Multicrew |
+| Quels sont le nom exact et le nombre de modes de jeu du CQC ? | Hypothèse Deathmatch / Team Deathmatch / Domination | Basse | Confirmation de cette hypothèse |
+| Existe-t-il un horaire ou une fréquence recommandé pour trouver un match CQC ? | Aucune recommandation formulée | Non confirmé | Statistique de fréquentation du mode en 2025-2026 |
+
+### 14-rhino.md — 16 entrées (dernier examen : 2026-09-12)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Le constructeur Vodel est-il rattaché à Core Dynamics ? | Rattachement mentionné ailleurs dans le corpus | Basse | Confirmation officielle Frontier |
+| Les numéros de version 4.4.1.0/4.4.1.1 attribués au Rhino sont-ils corrects ? | Numéros jugés plausibles mais non établis | Basse | Accès aux pages de notes de version officielles (HTTP 403) |
+| Quelles sont les caractéristiques chiffrées du Rhino (vitesse, soute, blindage) ? | Aucune valeur retenue | Non confirmé | Communication officielle Frontier |
+| Le hotfix portant la collecte de 9 à 12 fragments est-il déjà livré ? | Collecte considérée comme encore à 9 fragments | Non confirmé | Billet officiel confirmant le hotfix livré |
+| La liste de 3 vaisseaux compatibles rapportée par massivelyop.com est-elle exhaustive ? | Sous-ensemble jugé incomplet du Mk I Vessel Bay | Basse | Liste officielle spécifique au Rhino |
+| Quelle est la répartition réelle des trois sièges du Rhino ? | Répartition plausible déduite par le guide | Basse | Attribution officielle des rôles par Frontier |
+| Le Rhino suit-il la règle générale d'absence de coût de rebuy des SRV ? | Probable par analogie, non confirmé | Basse | Confirmation explicite de Frontier |
+| Le rééquilibrage du 2 sept. 2026 s'étend-il au minage d'astéroïdes ? | Guide limite la portée à la seule boucle de surface | Non confirmé | Source tranchant explicitement le périmètre |
+| Les 13 nouvelles matières sont-elles des marchandises ou du matériel d'ingénierie ? | Terme « commodities » oriente vers marchandises | Basse | Vérification directe à l'écran de marché en jeu |
+| Quels sont les prix de revente des 13 nouvelles matières du Rhino ? | Tableau laissé en « squelette à compléter » | Non confirmé | Relevé de prix (Inara, EDDB) |
+| Le Rhino sera-t-il disponible à l'achat en crédits plus tard ? | Pratique habituelle de Frontier le suggère, sans engagement | Non confirmé | Annonce officielle documentée |
+| La soute du Scorpion est-elle de 2 t ou de 30 t ? | Contradiction non tranchée, suspicion d'erreur d'affichage | Basse | Clarification officielle de l'écart |
+| Le bouclier du Scarab est-il de 40 (officiel) ou 25 (wiki) ? | Valeur du site officiel retenue par défaut | Basse | Source expliquant l'écart wiki/officiel |
+| Un second joueur peut-il rejoindre à distance le siège arrière d'un Scorpion déjà déployé ? | Mécanisme débattu par la communauté | Basse | Confirmation officielle Frontier |
+| Les prix d'achat du Scarab (5 270 Cr) et du Scorpion (24 863 Cr) sont-ils fiables ? | Valeurs données, sourcées au seul wiki communautaire | Basse | Confirmation via inara.cz (resté inaccessible) |
+| Existe-t-il un seuil chiffré officiel de dégâts de chute pour les SRV ? | Aucune valeur donnée | Non confirmé | Publication officielle de Frontier |
+
+### 20-minage.md — 17 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Quel est le rôle fonctionnel exact du Sub-Surface Extraction Missile ? | Existence et specs confirmées ; rôle précis non établi | Basse | Notes de patch descriptives |
+| Quels vaisseaux/classes de module permettent d'embarquer un Rhino ? | Rien publié officiellement | Non confirmé | Liste officielle Frontier |
+| Le Rhino sera-t-il vendu en crédits au chantier naval ? | Billets ne mentionnent que l'achat en Arx | Basse | Confirmation ou infirmation explicite |
+| Quelle est la relation exacte entre une Location et un Deposit de minage ? | Deux échelles distinctes citées sans lien expliqué | Basse | Description explicite de Frontier |
+| Le passage de 9 à 12 fragments est-il déjà déployé ? | Correction annoncée « dès que possible », non confirmée livrée | Non confirmé | Numéro de version / date du correctif |
+| Quels prix de vente et usages en ingénierie pour les 13 nouvelles marchandises ? | Rien précisé par Frontier | Non confirmé | Établir en jeu ou via outil de marché vivant |
+| Le rééquilibrage du 2 sept. 2026 touche-t-il aussi le minage d'astéroïdes ? | Tout indique un rééquilibrage limité à la surface | Non confirmé | Délimitation explicite du périmètre par Frontier |
+| Existe-t-il un système hotspot confirmé pour le Platine ? | Aucun système précis confirmé | Non confirmé | Outils bloqués (CAPTCHA / résultats hors-sujet) |
+| Existe-t-il un système reconnu spécifiquement pour les Low Temperature Diamonds seuls ? | Aucun trouvé ; « 17 Lyrae » infirmé par EDSM | Non confirmé | Vérification indépendante d'un système LTD dédié |
+| Les étapes décrites pour Spansh Ring Finder correspondent-elles à l'interface actuelle ? | Étapes reposent sur le fonctionnement générique connu | Basse | Vérification directe (page 100 % JS dynamique) |
+| La table de correspondance minerai × technique × anneau est-elle une donnée officielle ? | Synthèse de deux relevés communautaires distants de 7 ans | Basse | Table de distribution officielle Frontier |
+| Quel est le type d'anneau des 16 marchandises sans donnée établie ? | Case laissée vide plutôt que devinée | Non confirmé | Source confirmant le mode d'obtention |
+| Existe-t-il un seuil de réserve minimale conseillé par minéral ? | Seule règle générale établie (viser Pristine) | Non confirmé | Donnée chiffrée par minéral |
+| Quel est le rendement en tonnes par minéral extrait ? | Seuls des Cr/h existent pour 5 métaux, pas de tonnage | Non confirmé | Source publiant un rendement en tonnes |
+| Le chiffre de 3,5 Md Cr/cycle pour le wing mining PTN est-il fiable ? | Chiffre cité par la presse spécialisée, non confirmé par PTN | Basse | Statistique publiée par PTN lui-même |
+| Les bonus miniers de Torval/Kaine (+45 %/+50 %) sont-ils toujours d'actualité ? | Taux anciens cités communautairement, non revérifiés | Basse | Accès complet aux fiches Power sur Inara.cz (accès partiel) |
+| Le minage rapporte-t-il vraiment 25 000-75 000 mérites Powerplay/heure ? | Chiffre cité communautairement, non confirmé | Basse | Vérification au cas par cas |
+
+### 18-colonisation.md — 11 entrées (dernier examen : 2026-09-13)
+
+| Question | Ce que le corpus retient | Confiance | Ce qui manque pour trancher |
+|---|---|---|---|
+| Que devient la 3ᵉ faction héritée (13 %) si le joueur n'a pas d'escadron ? | Mécanisme non précisé pour ce cas | Non confirmé | Documentation officielle du cas sans escadron |
+| Le problème de sniping des revendications a-t-il été résolu par le Dodec Update ? | Corrections d'interface mentionnées, disparition du sniping non confirmée | Basse | Confirmation explicite de Frontier |
+| Quelle est l'ampleur exacte de chaque installation sur les statistiques système ? | Chevrons indicatifs seulement, effet non quantifié | Non confirmé | Documentation officielle détaillée |
+| Quel est l'effet précis de la Richesse et du Niveau de vie sur un système ? | Effet qualitatif connu, non chiffré | Non confirmé | Confirmation officielle détaillée |
+| Quelle est la capacité de fret réelle du Panther Clipper Mk II en colonisation ? | Non chiffrée dans ce guide | Non confirmé | Vérification/source pour ce vaisseau |
+| Quelle portée de saut atteint un porteur de fret ingénieré (FSD amélioré) ? | Recommandation qualitative seulement | Non confirmé | Simulateur externe accessible (Coriolis/EDSY) pour un chiffrage exact |
+| Le contrôleur de limpets collecteurs est-il vraiment utile en contexte de colonisation ? | Recommandation déduite de la mécanique générale | Basse | Témoignage communautaire direct sur ce point précis |
+| Combien de « charges de Cutter » faut-il pour un avant-poste / un Orbis ? | Ordre de grandeur communautaire (29 / 267 charges) retenu | Basse | Configuration exacte (bouclier ou non) du Cutter de référence |
+| Les noms anglais complets de SCCN et CTN sont-ils exacts ? | Traduction littérale du tchèque retenue par défaut | Basse | Confirmation du nom anglais officiel |
+| Quelle est la formule exacte du revenu hebdomadaire et du facteur « Chance » ? | Formule communautaire non officielle avancée à titre indicatif | Non confirmé | Documentation officielle de Frontier |
+| La pondération chiffrée du port primaire (Dodec Update) est-elle avérée ? | Chiffrage antérieur retiré du guide | Non confirmé | Source postérieure à juin 2025 confirmant un rééquilibrage chiffré |
+
+**Test de non-régression.** Tout renvoi « trancher via 00-chronologie » ajouté dans l'un des 32 guides doit correspondre
+à une entrée existante de ce registre ou de la table de réconciliation ci-dessus ; une entrée résolue doit être
+retirée d'ici **et** de son guide d'origine dans le même geste, pour que les deux ne divergent jamais.
+
 ## Règle de méthode : ce que prouve une absence
 
 Entrée ajoutée le 9 septembre 2026. Elle ne porte sur aucun fait du jeu : elle énonce la règle de raisonnement dont la
@@ -787,3 +931,9 @@ numérotée, faits 3, 8 et 13 découpés en sous-sections, et règle de méthode
 **Révisé le 13 septembre 2026** : chronologie complète du jeu ajoutée (43 jalons, Kickstarter 2012 → aujourd'hui),
 avec deux corrections de dates propagées vers d'autres guides du corpus (Fleet Carrier : 9 juin 2020, pas le 9 avril ;
 généralisation du SCO : Updates 18.02-18.04 d'avril-mai 2024, pas Ascendancy ni l'Update 17).
+**Révisé une seconde fois le 13 septembre 2026** (chantier 16) : ajout du registre d'incertitudes du corpus (92
+entrées migrées depuis 07-equipement-a-pied, 27-debuter-et-progresser, 14-rhino, 20-minage et 18-colonisation) ;
+portée du présent document explicitement étendue à toute incertitude non datée, pas aux seuls faits chronologiques.
+L'échelle de confiance à trois valeurs de ce document est désormais généralisée à quatre valeurs (ajout de *basse*)
+dans [00-methodologie-sourcing.md](./00-methodologie-sourcing.md), document créé le même jour, qui tranche aussi la
+fiabilité de MassivelyOP comme source de presse (P3, confirmée sur cinq articles relus en direct).
