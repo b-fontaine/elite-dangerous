@@ -11,7 +11,7 @@ confiance_globale: haute
 volatilite: haute
 sources_primaires: [étude interne de faisabilité du 19 août 2026, EDCD/EDDN, elite-journal.readthedocs.io, Journal Manual v38 de Frontier, edsm.net (api-v1 à api-logs-v1), docs.spansh.co.uk, EDCD/FDevIDs (commit c35612952dd6a547d1a7ac4cffab9c7051e86579), EDCD/coriolis-data (commit 0db9234b5b9ce8c939ea84133d7ce336eea88e27), Steam News Frontier (appid 359320), cms.zaonce.net (endpoint GalNet, documenté par des projets tiers)]
 zones_incertaines: ["aucune source Frontier consultable ne confirme la date d'arrêt définitif des serveurs Legacy", "le contrat exact des routes d'API de Spansh est reconstitué par sondage, sans garantie de stabilité publiée", "divergence de domaine pour l'API Inara entre la documentation (inara.cn) et l'endpoint sondé (inara.cz)", "aucune limite de débit chiffrée n'est publiée pour Inara, Spansh et la CAPI", "la signification du booléen ScanOrganic.WasLogged, absent du manuel v38, reste une hypothèse", "la cadence réelle de mise à jour de EDCD/coriolis-data et de EDCD/FDevIDs n'est pas mesurable : les clones utilisés sont superficiels et ne portent que leur commit de tête", "EDCD/FDevIDs ne publie aucun fichier de licence, ce qui laisse indéterminé le statut de réutilisation de ses tables d'identifiants", "l'endpoint GalNet cms.zaonce.net/en-GB/jsonapi/node/galnet_article n'a pas pu être interrogé directement (HTTP 403) : son schéma repose sur des sources tierces, pas sur une réponse brute vérifiée par ce corpus", "date de retrait du fil RSS GalNet officiel, non retrouvée"]
-guides_lies: [1, 3, 4, 6, 10, 16, 18, 19, 20, 21, 28]
+guides_lies: [1, 3, 4, 6, 10, 16, 18, 19, 20, 21, 28, 33]
 ---
 
 # Sources de données disponibles pour Elite Dangerous
@@ -633,6 +633,11 @@ taguées `CAPI-Legacy-*` devrait donc :
   EDDN ne disparaissent pas rétroactivement des bases tierces qui les ont ingérées ;
 - éviter de coder en dur une hypothèse « il n'existe plus que `Live` » dans un schéma de stockage, pour ne pas casser le
   parsing d'anciens exports contenant encore la valeur `Legacy`.
+
+Ce point n'était traité ici que du point de vue du format de données ; le point de vue du joueur — comment
+distinguer les deux branches au lancement, ce qui manque concrètement en Legacy, le statut des consoles (qui **sont**
+Legacy) et la liaison des comptes Frontier/Steam/Epic — est désormais couvert par
+[33-client-editions-peripheriques-et-vr.md §1](./33-client-editions-peripheriques-et-vr.md#1-sur-quelle-version-jouez-vous--live-40-contre-legacy-38).
 
 ### Données de référence associées à la CAPI : le dépôt `EDCD/FDevIDs`
 

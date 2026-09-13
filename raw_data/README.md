@@ -133,6 +133,22 @@ réparation la plus concrète de ce chantier. [`index.yaml`](./index.yaml) recen
 guides thématiques** et **5 documents transversaux**. Le recomptage des sections Sources/Voir aussi exclues de
 l'index, laissé de côté par ce chantier, reste à faire dans un cycle ultérieur dédié.
 
+Un douzième cycle, mené le 13 septembre 2026 (chantier 18 du plan de cycle 3, dernier chantier du plan), a documenté
+la couche « avant de jouer » qui manquait entièrement au corpus. Le nouveau guide
+[33-client-editions-peripheriques-et-vr.md](./33-client-editions-peripheriques-et-vr.md) explique la scission du
+client en deux branches serveur depuis Odyssey — **Live** (4.0+, mises à jour continues) et **Legacy** (figée en 3.8
+depuis l'Update 14 du 29 novembre 2022, sans Odyssey ni Colonisation ni Powerplay 2.0) —, un risque de réponse fausse
+jusqu'ici documenté seulement comme un problème de format de champ `gameversion` pour EDDN
+([17-sources-donnees.md](./17-sources-donnees.md)). Il tranche que **Horizons n'est plus un produit séparé** mais un
+mode de contenu inclus gratuitement dans le jeu de base depuis 2020, détaille la configuration PC, les quatre schémas
+de contrôle et l'emplacement exact du fichier de bindings (`Custom.4.0.binds`), l'état de la VR — cockpit et SRV en
+stéréoscopie complète, jeu à pied d'Odyssey resté en écran plat sans date d'ajout annoncée — et les lacunes réelles
+d'accessibilité (aucun mode daltonien natif, aucun sous-titre). Il chiffre enfin, pour la première fois, la boucle de
+gain **gratuit** des ARX (400 ARX/semaine, reset le jeudi), par opposition à leurs prix d'achat déjà tenus dans
+[15-roadmap.md](./15-roadmap.md) et [14-rhino.md](./14-rhino.md), qui restent la source de vérité pour ces montants.
+Le corpus compte désormais **34 guides thématiques**, portés à **39 fichiers** au total. Ce chantier clôt les 18
+chantiers du plan de cycle 3.
+
 ## Périmètre et non-objectifs
 
 Un « manque » ne se juge pas à l'intuition : cette section dit ce que le corpus doit savoir répondre, ce qu'il
@@ -143,7 +159,7 @@ d'audit ont dû redécouvrir le périmètre à chaque fois plutôt que de le lir
 l'ingénierie, l'accostage, le BGS, la colonisation, le combat anti-Thargoïde), sur un ordre de grandeur chiffré daté
 (prix d'un vaisseau, coût d'un blueprint, rendement d'une boucle de gameplay), sur une entité nommée (un vaisseau, un
 module, une espèce d'exobiologie, un Power, un Ingénieur), ou sur le lore et la chronologie du jeu. C'est le contrat
-que remplissent les 33 guides thématiques.
+que remplissent les 34 guides thématiques.
 
 **Ce que le corpus délègue explicitement à des outils live.** Les prix de marché instantanés (denrées, matériaux),
 les routes de commerce ou d'exploration optimisées à la minute, l'état courant du BGS d'un système précis, le
@@ -168,7 +184,7 @@ aujourd'hui) : c'est le rôle d'un outil connecté, pas d'un corpus versionné.
 Le dépôt héberge deux ensembles de contenu francophone qui se recouvrent partiellement et n'avaient jamais été
 réconciliés. Cette section pose la règle qui les départage.
 
-- **`raw_data/`** — 38 fichiers markdown (33 guides thématiques et 5 documents transversaux) : la base de
+- **`raw_data/`** — 39 fichiers markdown (34 guides thématiques et 5 documents transversaux) : la base de
   connaissances de référence sur **le jeu**, écrite pour alimenter le RAG. C'est le présent répertoire. Chaque guide
   porte un front-matter YAML et un encart « En bref » ; [`index.yaml`](./index.yaml) en agrège les métadonnées et sert
   de routeur de requête. Le gabarit du front-matter et l'usage de l'index sont spécifiés dans les *Notes d'ingestion
@@ -303,7 +319,7 @@ celui défini par les *Notes d'ingestion RAG* en fin de document, qui n'indexe q
   qui la développe — le point d'entrée le mieux adapté à une requête RAG posée comme une question plutôt que comme un
   sujet.
 
-Les 33 guides thématiques sont regroupés ci-dessous par domaine.
+Les 34 guides thématiques sont regroupés ci-dessous par domaine.
 
 ## Débuter et progresser
 
@@ -319,6 +335,13 @@ Les 33 guides thématiques sont regroupés ci-dessous par domaine.
   paliers (Hostile à Allied, seuils à 15/35/75 %), un tableau des systèmes à permis, et les deux services Odyssey qui
   donnent accès au combat organisé sans y poser son propre vaisseau : **Apex Interstellar** et **Frontline
   Solutions**.
+- [Client, éditions, branches Live/Legacy, périphériques et VR](./33-client-editions-peripheriques-et-vr.md) —
+  La couche « avant de jouer », entièrement absente jusqu'ici. Distingue les branches **Live** (4.0+) et **Legacy**
+  (figée en 3.8 depuis novembre 2022, sans Odyssey ni Colonisation), tranche qu'**Horizons** n'est plus un produit
+  séparé mais un mode inclus gratuitement dans le jeu de base, détaille la configuration PC, les quatre schémas de
+  contrôle et le fichier de bindings (`Custom.4.0.binds`), l'état de la VR — jeu à pied d'Odyssey resté en écran plat
+  — et les lacunes d'accessibilité (aucun mode daltonien, aucun sous-titre). Chiffre pour la première fois la boucle
+  de gain **gratuit** des ARX (400/semaine, reset le jeudi).
 
 ## Lore & Politique
 
@@ -588,7 +611,7 @@ quels par un humain.
 ### Règle 1 — N'indexer que les guides
 
 Indexer `raw_data/*.md` **à l'exclusion de `README.md`**, et ne pas indexer `raw_data/index.yaml`, qui n'est pas un
-guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 38 fichiers dont le
+guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 39 fichiers dont le
 nom correspond à `^\d{2}-.*\.md$` à la racine de `raw_data/`.
 
 Ce glob doit rester **non récursif** et ignorer les répertoires cachés : `raw_data/` peut contenir un `.omc/`
@@ -723,7 +746,7 @@ Il permet aussi de restituer une réponse en citant sa source exacte.
 
 ### Règle 4 — Router la requête sur `index.yaml` avant la recherche vectorielle
 
-[`index.yaml`](./index.yaml) agrège le front-matter des 38 guides. Il est **généré** depuis ces front-matter et doit
+[`index.yaml`](./index.yaml) agrège le front-matter des 39 guides. Il est **généré** depuis ces front-matter et doit
 être régénéré après toute modification de l'un d'eux ; il n'est **pas** indexé comme un guide.
 
 Il s'emploie en amont de la recherche vectorielle, comme routeur de requête :

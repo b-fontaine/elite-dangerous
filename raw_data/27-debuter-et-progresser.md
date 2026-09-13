@@ -27,7 +27,7 @@ zones_incertaines: ["seuils numériques de progression de rang, jamais publiés 
   "aucun Cr/h fiable pour un vaisseau starter non ingénierié",
   "portée de saut stock du Hauler, non recoupée par une recherche indépendante cette édition",
   "décompte exact des scénarios Pilot Training (neuf simulations, dix défis) et leur durée, non confirmés par une page officielle (HTTP 403 sur community.elitedangerous.com)"]
-guides_lies: [0, 1, 3, 6, 8, 10, 11, 12, 18, 19, 20, 23, 25, 28, 29, 31]
+guides_lies: [0, 1, 3, 6, 8, 10, 11, 12, 18, 19, 20, 23, 25, 28, 29, 31, 33]
 ---
 
 # Débuter et progresser dans Elite Dangerous : premiers pas et rangs
@@ -57,6 +57,12 @@ Deux règles de prudence traversent tout le document : les seuils numériques ex
 ---
 
 ## Volet 1 — Le parcours du nouveau Commandant
+
+Avant même l'Assessment ci-dessous, deux questions se posent en amont du jeu lui-même : sur quelle version joue-t-on
+(un Commandant en branche Legacy n'a ni Odyssey, ni Colonisation, ni Powerplay 2.0), et avec quel matériel (clavier+
+souris suffit pour débuter, un HOTAS ou une manette s'envisagent ensuite). Voir
+[33-client-editions-peripheriques-et-vr.md](./33-client-editions-peripheriques-et-vr.md) pour la distinction
+Live/Legacy, la synthèse acheteur par édition, et le comparatif des schémas de contrôle.
 
 ### 1.0 Avant la première sortie : l'Assessment et les scénarios « Pilot Training »
 

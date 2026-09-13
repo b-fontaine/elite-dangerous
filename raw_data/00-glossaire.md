@@ -11,7 +11,7 @@ confiance_globale: moyenne
 volatilite: basse
 sources_primaires: [guides du corpus (01-lore.md, 05-guardians.md, 25-combat-ax.md, 32-geographie-galactique.md, 17-sources-donnees.md, 04-equipements.md), Codex in-jeu / Almanach, elitedangerous.com/news/galnet, wiki Fandom (consultation directe bloquée cette session, HTTP 402 ; contenu recoupé par recherche)]
 zones_incertaines: ["développement du sigle NMLA confirmé par des sources externes (GalNet officiel, wiki communautaire) mais non encore repris littéralement dans 01-lore.md", "statut du « Nemesis Protocol » de Salvation et de Raxxla : mystères non résolus par nature du lore lui-même, pas des lacunes de sourcing de ce glossaire"]
-guides_lies: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 13, 14, 17, 18, 19, 20, 21, 24, 25, 29, 30, 31, 32]
+guides_lies: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 13, 14, 17, 18, 19, 20, 21, 24, 25, 29, 30, 31, 32, 33]
 ---
 
 # Glossaire Elite Dangerous
@@ -46,8 +46,8 @@ de chaque partie.
 
 ### ARX — monnaie cosmétique d'Elite Dangerous
 **Développement complet :** aucun (nom propre de la monnaie).
-**Définition :** monnaie virtuelle cosmétique d'Elite Dangerous, utilisée pour acheter des éléments purement esthétiques (peintures de coque, décalcomanies, objets de cabine) et, depuis mi-2024, pour l'accès anticipé (~3 mois) aux vaisseaux neufs avant leur mise en vente en crédits. Elle s'obtient en jouant (récompenses hebdomadaires, événements) ou par achat en argent réel.
-**Guide de référence :** [03 — Vaisseaux](./03-vaisseaux.md), qui détaille les vaisseaux en accès anticipé ARX et leurs dates de bascule en crédits.
+**Définition :** monnaie virtuelle cosmétique d'Elite Dangerous, utilisée pour acheter des éléments purement esthétiques (peintures de coque, décalcomanies, objets de cabine) et, depuis mi-2024, pour l'accès anticipé (~3 mois) aux vaisseaux neufs avant leur mise en vente en crédits. Elle se gagne aussi gratuitement en jouant, plafonnée à 400 ARX par semaine (réinitialisés le jeudi), ou s'achète en argent réel — jamais transférable d'une plateforme à l'autre.
+**Guide de référence :** [03 — Vaisseaux](./03-vaisseaux.md) et [15 — Roadmap](./15-roadmap.md), qui détaillent les vaisseaux en accès anticipé ARX et leurs prix ; [33 — Client, éditions, périphériques et VR](./33-client-editions-peripheriques-et-vr.md#7-la-boucle-de-gain-gratuit-des-arx), qui détaille le mécanisme de gain gratuit.
 
 ### AX — préfixe « anti-Thargoïde » (armes, modules, zones de conflit)
 **Développement complet :** Anti-Xeno.

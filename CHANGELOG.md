@@ -41,7 +41,7 @@ synthèse en deux phrases de [raw_data/README.md](./raw_data/README.md) (§ intr
 cycle 1, il n'a pas laissé de document de travail archivé. À signaler comme une lacune de traçabilité plutôt qu'à
 combler rétroactivement par une reconstitution non sourcée.
 
-## Cycle 3 — audit à 10 dimensions et 18 chantiers (en cours, 9 → 13 septembre 2026)
+## Cycle 3 — audit à 10 dimensions et 18 chantiers (achevé, 9 → 13 septembre 2026)
 
 **Portée** : audit du 9 septembre 2026 sur 10 dimensions indépendantes (couverture des boucles de gameplay, lore,
 données référentielles, structure RAG, fraîcheur, questions joueur, écosystème externe, cohérence interne, sourcing,
@@ -67,8 +67,8 @@ pédagogie), chacune vérifiée de façon adverse puis complétée — 143 const
 | 14 | Chiffrer les boucles de farming (synthèse, USS, megaships) | Fait — 13 septembre 2026 | fichiers de farming concernés (voir commit `1190e25`) |
 | 15 | Carte transversale des boucles de gameplay | Fait — 13 septembre 2026 | `00-boucles-de-gameplay.md` créé, 25-combat-ax.md, 08-combat-spatial.md, 12-transport.md, 10-exploration.md |
 | 16 | Gouvernance du sourcing et instrumentation | Fait — 13 septembre 2026, en deux passes le même jour | `00-methodologie-sourcing.md` créé ; registre d'incertitudes de `00-chronologie-canonique.md` étendu aux 32 guides (451 entrées) ; `EVALUATION.md`, `eval/questions-reference.json` (72 questions), `CHANGELOG.md` créés ; format Sources normalisé sur 12 guides (11-commerce, 02-powerplay, 01-lore, 07-equipement-a-pied, 08-combat-spatial, 09-combat-a-pied, 10-exploration, 12-transport, 13-operations, 16-outils, 18-colonisation, 23-jeu-en-groupe) ; colonne `Fiab.` ajoutée sur 4 guides (01-lore, 12-transport, 18-colonisation, 22-squadrons, 227 lignes) |
-| 17 | Maillage, lexique bilingue, index par question | À faire | — |
-| 18 | Guide 33 — client, éditions, branches Live/Legacy, périphériques et VR | À faire | — |
+| 17 | Maillage, lexique bilingue, index par question | Fait — 13 septembre 2026 | `34-lexique-fr-en.md` et `00-faq.md` créés ; sections « Questions fréquentes » et gloses bilingues sur les 32 guides existants ; index.yaml et README.md mis à jour (38 fichiers) |
+| 18 | Guide 33 — client, éditions, branches Live/Legacy, périphériques et VR | Fait — 13 septembre 2026 | `33-client-editions-peripheriques-et-vr.md` créé ; 15-roadmap.md, 17-sources-donnees.md, 16-outils.md, 13-operations.md, 06-ingenieurs.md, 03-vaisseaux.md, 27-debuter-et-progresser.md, 00-glossaire.md, index.yaml et README.md mis à jour (39 fichiers) |
 
 **Limite constatée pour les chantiers 5 et 1/4** : ce chantier de gouvernance n'a pas eu pour objet de ré-auditer le
 contenu factuel des chantiers précédents. Les statuts « Fait » du tableau ci-dessus reposent sur la présence

@@ -17,7 +17,7 @@ zones_incertaines:
   - "Numéros de version client 4.4.0.0 et 4.4.0.3 : relevés communautaires de journaux de jeu, non officiels."
   - "Spécialités des quatre Engineers à pied de Colonia, non détaillées dans les sources consultées."
   - "Aucun build nommé recoupé pour le fabricant d'armes Takada."
-guides_lies: [0, 2, 6, 7, 9, 14, 18, 23, 26, 29]
+guides_lies: [0, 2, 6, 7, 9, 14, 18, 23, 26, 29, 33]
 ---
 
 # Elite Dangerous : Guide complet des Opérations — mode multijoueur (2026) et gameplay à pied (Odyssey)
@@ -656,7 +656,10 @@ de dupliquer ce contenu ici.
 - Un correctif ultérieur introduit les **missions partagées**, permettant de réaliser à plusieurs les missions et
   opérations au sol — un changement significatif pour l'accessibilité des CZ High.
 - **10 mars 2022** : la version console d'Odyssey est officiellement annulée, Frontier ayant choisi de concentrer
-  ses efforts sur une base de code unique post-Odyssey, développée pour PC.
+  ses efforts sur une base de code unique post-Odyssey, développée pour PC. Les versions PS4/Xbox One restent
+  achetables mais figées sur la branche Legacy (3.8) — voir
+  [33-client-editions-peripheriques-et-vr.md §1.3](./33-client-editions-peripheriques-et-vr.md#13-le-cas-des-consoles-ps4-et-xbox-one)
+  pour le détail (statut d'achat actuel, portail de copie console → PC, absence de cross-play).
 - **22 avril 2026** : Frontier annonce le report du mode multijoueur **Operations**, « which will now be arriving in
   June » (« An Update on Operations », 22 avril 2026 14:02 UTC).
 - **30 juin 2026** : sortie du mode **Operations** et du **Nomad**, en accès anticipé Arx pour ce dernier (date

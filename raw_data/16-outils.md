@@ -11,7 +11,7 @@ confiance_globale: haute
 volatilite: haute
 sources_primaires: ["dépôts GitHub EDCD (EDDN, EDMarketConnector, coriolis, EDDI)", "edsm.net", "inara.cz", "spansh.co.uk", "canonn.science", "fuelrats.com", "tools.canonn.tech"]
 zones_incertaines: ["le détail exact des fonctionnalités de colonisation annoncées par Spansh, son site étant une SPA non récupérable par un simple fetch", "le niveau d'activité réel des forks communautaires d'EDEngineer", "le contenu du guide de secours officiel wiki.fuelrats.com, page indisponible au moment du contrôle", "l'erreur HTTP 410 de la page inara.cz/elite/powerplay-stats est probablement une URL obsolète, sans confirmation"]
-guides_lies: [0, 5, 6, 10, 17, 18, 19, 21, 22, 25]
+guides_lies: [0, 5, 6, 10, 17, 18, 19, 21, 22, 25, 33]
 ---
 # Elite Dangerous : le guide des outils communautaires
 
@@ -270,7 +270,9 @@ de bord de vaisseau externe et un assistant vocal piloté par IA. Ses fonctionna
   Google Cloud, Azure, ElevenLabs) ;
 - intégration complète avec VoiceAttack pour les commandes vocales ;
 - support multi-écran et tablette (SpaceDesk) ;
-- support VR (Oculus Dash, Desktop+, OVRDrop, OVRToolkit).
+- support VR (Oculus Dash, Desktop+, OVRDrop, OVRToolkit) — pour l'état général de la VR dans le jeu lui-même
+  (casques compatibles, jeu à pied resté en écran plat, options de confort), voir
+  [33-client-editions-peripheriques-et-vr.md §5](./33-client-editions-peripheriques-et-vr.md#5-vr--casques-compatibles-ce-qui-fonctionne-et-le-confort).
 
 **Version observée.** v1.11.748 (instantané du 8 septembre 2026 — le projet n'a pas de dépôt GitHub public permettant de
 vérifier facilement une version plus récente ; se référer au site officiel razzafrag.com ou au Discord de l'auteur).

@@ -1,7 +1,7 @@
 # Index de routage du corpus Elite Dangerous
 #
 # FICHIER GÉNÉRÉ — ne pas éditer à la main.
-# Il agrège le front-matter YAML des 38 fichiers `raw_data/NN-*.md` (33 guides thématiques et 5
+# Il agrège le front-matter YAML des 39 fichiers `raw_data/NN-*.md` (34 guides thématiques et 5
 # documents transversaux) et sert de routeur de requête : on le lit d'abord pour sélectionner les
 # deux ou trois guides candidats, puis on ne lance la recherche vectorielle que dans ceux-là. Il
 # n'est pas lui-même un guide et ne doit pas être indexé.
@@ -12,7 +12,7 @@
 # impose de régénérer ce fichier.
 
 date_generation: 2026-09-13
-nombre_de_guides: 38
+nombre_de_guides: 39
 genere_depuis: "front-matter YAML des fichiers raw_data/NN-*.md"
 indexer_ce_fichier: false
 
@@ -574,6 +574,21 @@ guides:
     sources_primaires: ["elite-dangerous.fandom.com (Core Systems, Galactic regions, Inner Orion Spur et bras nommés, Galaxy, Stellar Forge, Colonia, Jaques Station, Colonia Bridge, Sagittarius A*, Explorer's Anchorage, Beagle Point, Hutton Orbital, Pleiades/Witch Head/California Nebula, fiches des systèmes du gazetteer)", "hosting.zaonce.net (Player Journal Manual v32, champ StarPos)", "edsm.net (API publique, coordonnées vérifiées)", "wiki.herzbube.ch (nomenclature Stellar Forge)", "forums.frontier.co.uk (fil officiel DSSA)", "corpus interne (01-lore, 02-powerplay, 05-guardians, 10-exploration, 19-fleet-carriers)"]
     zones_incertaines: ["rayon exact de la Bulle : ~200 al mesuré sur trois axes, une valeur de 150 al circule sans source primaire retrouvée", "nombre total actuel de systèmes peuplés dans/autour de la Bulle après plusieurs années de colonisation joueur", "aucune carte officielle de frontières fixes Fédération/Empire/Alliance", "allégeance actuelle de Riedquat : contradiction entre deux pages du même wiki communautaire", "nombre exact et espacement en années-lumière des porte-vaisseaux du réseau DSSA, non publié officiellement", "distance de route réelle jusqu'à Beagle Point, par opposition à la distance en ligne droite de 65 279 al", "classement officiel distance-par-distance des bras spiraux du Codex, non publié par Frontier", "format de nommage Stellar Forge (lettres de masse, tailles de boxel), reconstruction communautaire jamais démentie mais non documentée par une source primaire", "fiche système dédiée à Varati introuvable sur le wiki communautaire"]
     guides_lies: [1, 2, 5, 10, 19]
+
+  - id: 33-client-editions-peripheriques-et-vr
+    fichier: 33-client-editions-peripheriques-et-vr.md
+    titre: "Elite Dangerous : client, éditions, branches Live/Legacy, périphériques et VR"
+    domaine: "transversal"
+    entites: ["Live", "Legacy", "Odyssey", "Horizons", "ARX", "Frontier Account", "Steam", "Epic Games Store", "Xbox Game Pass", "HOTAS", "HOSAS", "TrackIR", "SteamVR", "Meta Quest", "Steam Frame", "Valve Index", "Windows Mixed Reality", "Custom.4.0.binds", "Deluxe Edition"]
+    mots_cles_en: ["live mode", "legacy mode", "odyssey", "horizons", "arx", "frontier account", "steam", "epic games store", "xbox game pass", "hotas", "hosas", "trackir", "steamvr", "meta quest", "steam frame", "valve index", "windows mixed reality", "key bindings", "custom binds", "deluxe edition", "colorblind mode", "accessibility"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-13"
+    confiance_globale: "moyenne"
+    volatilite: "haute"
+    sources_primaires: ["elitedangerous.com (buy, news, store, support)", "store.steampowered.com (app 359320 et 1336350)", "store.epicgames.com", "customersupport.frontier.co.uk", "forums.frontier.co.uk", "elite-dangerous.fandom.com", "edrefcard.info", "roadtovr.com", "vkbsimcontrollers.com", "virpil-controls.us.com", "gaming.tobii.com", "corpus interne (15-roadmap.md, 14-rhino.md, 16-outils.md, 17-sources-donnees.md, 02-powerplay.md, 21-bgs.md)"]
+    zones_incertaines: ["aucune source datée 2024-2026 ne confirme que le portail de copie console → PC fonctionne toujours aujourd'hui", "aucune déclaration officielle Frontier datée de 2025-2026 ne confirme l'absence de projet de fermeture des serveurs Legacy", "la citation « Legacy mode will not receive any major updates » n'a été retrouvée que via une reprise secondaire, pas le billet officiel lui-même", "visibilité et fonctionnement des Fleet Carriers en mode Legacy : source communautaire unique, non recoupée", "date et périmètre exact de l'arrivée du jeu au catalogue Xbox Game Pass (12 mai 2026) : un seul article de presse, non recoupé", "aucune note de patch officielle Frontier 2025-2026 ne documente de travail d'optimisation FPS", "PCGamingWiki, source habituellement la plus détaillée pour les réglages de configuration, est resté inaccessible pendant la recherche", "aucune touche par défaut fiable pour les commandes du SRV : Frontier les livre entièrement vierges", "date et prix officiels du Steam Frame (successeur du Valve Index) non arrêtés à la date de rédaction", "citation exacte de Frontier sur l'absence de VR à pied : seule une déclaration de 2020 a pu être sourcée, aucune reconfirmation plus récente trouvée", "heure exacte du reset hebdomadaire des ARX (~07:00 UTC le jeudi) : seul le jour est confirmé par une source officielle"]
+    guides_lies: [0, 3, 6, 13, 15, 16, 17, 27]
 
   - id: 34-lexique-fr-en
     fichier: 34-lexique-fr-en.md

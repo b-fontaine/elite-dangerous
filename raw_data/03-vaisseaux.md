@@ -28,7 +28,7 @@ zones_incertaines: ["dureté de coque, mass lock, capacité thermique et coût d
   "taux de rebuy d'environ 5 % de la valeur assurée donné comme ordre de grandeur, non comme valeur fixe",
   "prix Inara sujets à fluctuation, à revérifier avant tout achat important",
   "la matrice Rôle × Budget applique le facteur ×2,6 établi sur l'exemple de l'Anaconda à tous les autres vaisseaux : un ordre de grandeur, pas un devis exact par châssis"]
-guides_lies: [0, 4, 6, 10, 13, 14, 18, 20, 25, 27, 29, 31]
+guides_lies: [0, 4, 6, 10, 13, 14, 18, 20, 25, 27, 29, 31, 33]
 ---
 
 # Liste complète des vaisseaux d'Elite Dangerous
@@ -110,7 +110,10 @@ publié deux jours plus tard) via la mise à jour gratuite *Trailblazers*, puis 
 
 Depuis mi-2024, chaque nouveau vaisseau bénéficie par ailleurs d'une période d'accès anticipé d'environ trois mois via
 la monnaie premium ARX, avant de devenir achetable en crédits standards — ce qui explique pourquoi certains des
-vaisseaux les plus récents ne sont, au lancement, disponibles qu'en ARX. Dates de sortie confirmées pour certains
+vaisseaux les plus récents ne sont, au lancement, disponibles qu'en ARX. Ces montants ARX s'achètent en argent réel,
+mais se gagnent aussi gratuitement en jouant (jusqu'à 400 ARX/semaine) : voir
+[33-client-editions-peripheriques-et-vr.md §7](./33-client-editions-peripheriques-et-vr.md#7-la-boucle-de-gain-gratuit-des-arx)
+pour ce mécanisme et un tableau du nombre de semaines nécessaires par palier. Dates de sortie confirmées pour certains
 d'entre eux : Mandalay — 31 octobre 2024 (extension *Ascendancy*, Powerplay 2.0) ; Panther Clipper Mk II — 22 juillet
 2025 (accès anticipé ARX) ; Caspian Explorer — 2 décembre 2025 (accès anticipé ARX) ; Kestrel Mk II — **24 février
 2026**, date désormais confirmée par une source primaire (billet officiel Frontier « Elite Dangerous | Kestrel Mk. II

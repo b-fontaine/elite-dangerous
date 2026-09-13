@@ -56,7 +56,7 @@ zones_incertaines:
     d'exobiologie divergent sur quatre critères (classe de l'étoile primaire, température, distance à
     l'étoile, présence d'un Water Giant) ; aucune source consultable depuis ce chantier ne permet
     d'arbitrer."
-guides_lies: [2, 4, 5, 7, 8, 10, 13, 20, 25, 26, 30]
+guides_lies: [2, 4, 5, 7, 8, 10, 13, 20, 25, 26, 30, 33]
 ---
 
 # Guide complet des Ingénieurs (Engineers) dans Elite Dangerous
@@ -3011,7 +3011,10 @@ directement de matériaux d'Engineering classiques — c'est une activité disti
 
 Le développement du jeu se poursuit avec une équipe réduite depuis l'arrêt du support console : Frontier a annoncé, le
 **10 mars 2022**, que le développement de nouveau contenu pour les versions PlayStation 4 et Xbox One était abandonné,
-et **David Braben** a quitté la direction du développement du studio en **août 2022**. Le fait marquant récent est la
+et **David Braben** a quitté la direction du développement du studio en **août 2022**. Ces versions console restent
+achetables aujourd'hui mais figées sur la branche Legacy (3.8, sans Odyssey ni Engineering à pied) — voir
+[33-client-editions-peripheriques-et-vr.md §1](./33-client-editions-peripheriques-et-vr.md#1-sur-quelle-version-jouez-vous--live-40-contre-legacy-38)
+pour la distinction Live/Legacy et son effet sur l'accès aux Ingénieurs. Le fait marquant récent est la
 mise à jour **[Colonisation](./18-colonisation.md)** : les joueurs peuvent revendiquer des systèmes stellaires et
 développer des installations au sol et des stations — bêta lancée le **26 février 2025** dans le cadre de la mise à
 jour *Trailblazers* (et non le 28 février, date d'un simple article-guide publié deux jours plus tard sur le site

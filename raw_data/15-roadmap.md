@@ -11,7 +11,7 @@ confiance_globale: haute
 volatilite: haute
 sources_primaires: [Steam News Frontier (appid 359320), elitedangerous.com/news, store.steampowered.com, inara.cz]
 zones_incertaines: ["le numéro de version 4.4.1.0 attribué au Rhino SRV Update n'est pas attesté, les pages officielles de notes de version renvoyant une erreur HTTP 403", "le hotfix 4.4.1.1 du 3 septembre 2026 n'est confirmé par aucun billet officiel relevé", "le passage de 9 à 12 fragments pour le minage de surface du Rhino est annoncé mais non livré au 9 septembre 2026", "Frontier ne publie pas les valeurs des paramètres rééquilibrés du Surface Mining, ni le temps de reconstitution d'un gisement", "le contenu du « feature reboot » promis pour l'automne 2026 n'est pas détaillé", "les deux véhicules d'automne et d'hiver 2026 de la feuille de route annuelle ne sont pas identifiés"]
-guides_lies: [0, 2, 12, 13, 14, 18, 20, 22, 24]
+guides_lies: [0, 2, 12, 13, 14, 18, 20, 22, 24, 33]
 ---
 # Elite Dangerous : la roadmap des développeurs (fin 2024 – septembre 2026)
 
@@ -279,7 +279,11 @@ avec une correction annoncée, jusqu'à vérification en jeu.
 Les prix des vaisseaux et véhicules cités dans ce guide sont exprimés en **ARX**, la monnaie premium du jeu, achetable
 en argent réel via la boutique intégrée ou la boutique Steam (jusqu'à 400 ARX/semaine peuvent aussi être obtenus
 gratuitement en jouant). Les taux ne sont pas linéaires — les gros paquets sont proportionnellement moins chers — et
-changent occasionnellement.
+changent occasionnellement. Pour le détail de ce mécanisme de gain gratuit (catégories d'actions, jour et heure du
+reset hebdomadaire, ce qui reste exclusivement réservé à l'argent réel) et un tableau du nombre de semaines
+nécessaires pour financer chaque palier sans dépenser un centime, voir
+[33-client-editions-peripheriques-et-vr.md §7](./33-client-editions-peripheriques-et-vr.md#7-la-boucle-de-gain-gratuit-des-arx) —
+ce guide-ci reste la source de référence pour les prix eux-mêmes.
 
 📸 **Instantané capturé le 8 septembre 2026** sur la boutique Steam d'*Elite Dangerous* (source :
 [store.steampowered.com/itemstore/359320](https://store.steampowered.com/itemstore/359320/browse/)), à revérifier sur
