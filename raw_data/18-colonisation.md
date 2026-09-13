@@ -9,7 +9,7 @@ mots_cles_en: [system colonisation, system architect, system colonisation beacon
   primary port, trailblazers, dodec update, strong link, weak link, construction effort, metahauling, uncontrolled populated]
 version_jeu_couverte: "4.2.2.x (Dodec Update du 11 novembre 2025, dernière mise à jour couverte)"
 branche: live
-date_verification: 2026-09-12
+date_verification: 2026-09-13
 confiance_globale: moyenne
 volatilite: moyenne
 sources_primaires: [elitedangerous.com update-notes 4.1.0.0 / 4.1.2.0 / 4.1.2.102 / 4.2.2.0, mega-guide communautaire
@@ -22,7 +22,7 @@ zones_incertaines: ["formule exacte du revenu hebdomadaire de l'Architecte et fo
   "capacité de fret du Panther Clipper Mk II, non vérifiée",
   "noms anglais complets des organisations logistiques SCCN et CTN, non confirmés",
   "usage documenté du contrôleur de limpets collecteurs en contexte de colonisation, déduit de la mécanique générale"]
-guides_lies: [2, 3, 11, 12, 13, 16, 19, 21, 31]
+guides_lies: [0, 2, 3, 11, 12, 13, 16, 19, 21, 27, 31]
 ---
 
 # La Colonisation de systèmes
@@ -408,8 +408,37 @@ de ce que la Colonisation y change.
 - Une pondération chiffrée précise du poids du port primaire par rapport aux installations suivantes sur les statistiques système, attribuée à un rééquilibrage rétroactif du Dodec Update, a été **recherchée et non confirmée** par les sources disponibles (le mega-guide communautaire s'arrête à juin 2025, avant le Dodec Update) ; elle a été retirée de ce guide plutôt que présentée comme fiable.
 - Les caractéristiques propres du **Fleet Carrier** (réservoir de Tritium, consommation par saut, portée de saut, temps de recharge, coût d'achat et d'entretien) ne constituent **plus un point d'incertitude** : elles sont chiffrées, sourcées et affectées d'un niveau de confiance dans [Fleet Carriers](./19-fleet-carriers.md), et rappelées en raccourci dans la section [Logistique de transport](#logistique-de-transport-capacité-utile-et-fleet-carrier-comme-dépôt-avancé).
 
+## Check-list : de la revendication (claim) à la première livraison
+
+- **Avant de revendiquer** : confirmer le système cible dans le rayon de 15 al et le type de port primaire visé
+  (orientation économique, voir section « Choix de l'orientation économique »).
+- Réunir les **25 M Cr** de coût de revendication avant de contacter le point de colonisation — non remboursables en
+  cas d'abandon.
+- **Dans les 24 heures** suivant l'enregistrement de la revendication : déployer la Balise de colonisation système
+  (*System Colonisation Beacon*), sous peine d'expiration automatique de la revendication.
+- Planifier la logistique de fret avant le déploiement de la balise, pas après : calculer le tonnage requis (section
+  « Tonnage de commodités ») et le nombre de rotations nécessaires (section « Logistique de transport »).
+- **Dans les 4 semaines** suivant le déploiement de la balise : achever le port primaire, sous peine d'expiration de
+  la revendication et d'impossibilité de la re-revendiquer immédiatement.
+- Positionner un Fleet Carrier comme dépôt avancé si le système cible est éloigné d'une route commerciale établie
+  (voir « Le Fleet Carrier comme dépôt avancé »).
+- Après achèvement : attendre la séquence de confirmation Brewer Corporation avant de considérer le statut
+  d'Architecte système comme acquis (permanent et non transférable).
+
+## Pièges fréquents et coûts cachés de la Colonisation
+
+| Piège | Conséquence chiffrée | Comment l'éviter |
+|---|---|---|
+| Laisser expirer le délai de 24 h sans déployer la balise | Revendication perdue, redevient disponible pour un autre commandant | Déployer la balise dès l'enregistrement de la revendication, pas après avoir organisé la logistique |
+| Laisser expirer le délai de 4 semaines sans achever le port primaire | Revendication perdue, système non re-revendicable immédiatement | Planifier le tonnage et les rotations de fret avant le déploiement de la balise |
+| Compter sur le brut du revenu hebdomadaire de l'Architecte | Impôt galactique prélevé au-delà de 5 M Cr cumulés par semaine | Ne pas se fier au chiffre affiché avant impôt (voir Récompenses économiques de l'Architecte) |
+| Se fier à la formule communautaire de revenu hebdomadaire comme à un chiffre garanti | Formule non officielle, facteur « Chance » non documenté | Traiter tout revenu annoncé comme un ordre de grandeur, pas un montant garanti |
+| Revendiquer sans capital de construction déjà réuni | 25 M Cr de revendication immobilisés sans pouvoir achever le port dans les 4 semaines | Réunir le tonnage de commodités avant de lancer la revendication, pas après |
+
 ## Voir aussi
 
+- [Carte des boucles de gameplay](./00-boucles-de-gameplay.md) — la colonisation comparée aux 21 autres boucles du
+  jeu (temps avant premier revenu, capital d'entrée) et sa place dans la matrice boucle × système structurant.
 - [Powerplay](02-powerplay.md) — fonctionnement complet du méta-jeu politique et des Care Packages
 - [Vaisseaux](03-vaisseaux.md) — Type-9 Heavy, Type-8 et Imperial Cutter pour le fret de construction
 - [Équipements](04-equipements.md) — modules utiles au transport de commodités de construction

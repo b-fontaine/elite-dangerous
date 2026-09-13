@@ -4,11 +4,11 @@ titre: "Liste complète des vaisseaux d'Elite Dangerous"
 domaine: vaisseaux-equipement
 entites: [Panther Clipper Mk II, Lynx Highliner, Caspian Explorer, Kestrel Mk II, Mandalay, Nomad, Vessel Hangar,
   Frame Shift Drive (SCO), Federal Corvette, Imperial Cutter, Anaconda, Type-11 Prospector, Type-10 Defender,
-  Sidewinder Mk I, Hauler, Viper Mk III, Cobra Mk V]
+  Sidewinder Mk I, Hauler, Viper Mk III, Cobra Mk V, Matrice Rôle × Budget]
 mots_cles_en: [shipyard, hardpoints, optional internals, jump range, supercruise overcharge, vessel hangar,
   ship-launched fighter, ship-launched vessel, rebuy, Panther Clipper Mk II, Lynx Highliner, hull hardness,
   base armour, base shield strength, hull mass, mass lock, boost speed, heat capacity, reserve fuel capacity,
-  hull cost, retail cost]
+  hull cost, retail cost, role budget matrix]
 version_jeu_couverte: "4.4.0.x"
 branche: live
 date_verification: 2026-09-13
@@ -26,8 +26,9 @@ zones_incertaines: ["dureté de coque, mass lock, capacité thermique et coût d
   "capacité du Lynx Highliner à emporter deux baies de vaisseau déduite de ses emplacements, non confirmée",
   "fabricant, prix en crédits et gabarit de plateforme du Nomad non documentés par Frontier",
   "taux de rebuy d'environ 5 % de la valeur assurée donné comme ordre de grandeur, non comme valeur fixe",
-  "prix Inara sujets à fluctuation, à revérifier avant tout achat important"]
-guides_lies: [4, 6, 10, 13, 14, 18, 20, 27, 29, 31]
+  "prix Inara sujets à fluctuation, à revérifier avant tout achat important",
+  "la matrice Rôle × Budget applique le facteur ×2,6 établi sur l'exemple de l'Anaconda à tous les autres vaisseaux : un ordre de grandeur, pas un devis exact par châssis"]
+guides_lies: [0, 4, 6, 10, 13, 14, 18, 20, 25, 27, 29, 31]
 ---
 
 # Liste complète des vaisseaux d'Elite Dangerous
@@ -840,6 +841,45 @@ sélection de vaisseau ci-dessous.
 | Type-10 Defender                     | Lakon Spaceways                            | Grand                 | Fret minier protégé                                                                            | Coûteux                                         |
 | Python / Anaconda / Imperial Clipper | Faulcon DeLacy / Faulcon DeLacy / Gutamaya | Moyen / Grand / Grand | Polyvalents, capables en configuration minière                                                 | Non spécialisés, moins efficaces que le Type-11 |
 
+## Matrice Rôle × Budget : quel vaisseau pour quel rôle et quel budget
+
+Les tableaux ci-dessus classent par rôle ; celui-ci classe par **budget total** — coque **et** équipement
+fonctionnel, pas le seul prix de coque affiché au chantier naval. La méthode reprend le facteur **≈ 2,6×** déjà établi
+plus loin dans ce guide (voir « [Le coût réel d'un vaisseau équipé](#le-coût-réel-dun-vaisseau-équipé-rebuy-inclus) »,
+calculé sur l'exemple de l'Anaconda en core internals de qualité A) : chaque cellule applique ce facteur au prix de
+coque du tableau de prix pour estimer un budget total réaliste, arrondi. Ce n'est pas un devis exact par vaisseau —
+l'ingénierie, les armes et les modules optionnels varient le total réel — mais un ordre de grandeur suffisant pour
+choisir un palier. Quatre paliers, repris de la pratique communautaire : **< 5 M Cr**, **5-50 M Cr**, **50-300 M Cr**,
+**> 300 M Cr**, chacun avec une recommandation principale et une alternative.
+
+| Rôle | < 5 M Cr | 5-50 M Cr | 50-300 M Cr | > 300 M Cr |
+|---|---|---|---|---|
+| Combat | Viper Mk III (≈ 0,37 M Cr équipé) — alt. Eagle Mk II | Vulture (≈ 12,8 M Cr) — alt. Viper Mk IV (≈ 1,1 M Cr, entrée basse) | Fer-de-Lance (≈ 134 M Cr) — alt. Python Mk II (≈ 176 M Cr) | **Federal Corvette** (≈ 489 M Cr, rang Rear Admiral requis) — alt. Imperial Cutter (≈ 543 M Cr, rang Duke requis, plus polyvalent) |
+| Exploration | Diamondback Scout (≈ 1,5 M Cr) — alt. Sidewinder Mk I (≈ 0,08 M Cr) | Asp Explorer (≈ 17,3 M Cr) — alt. Diamondback Explorer (≈ 4,9 M Cr, entrée basse) | Krait Phantom (≈ 97 M Cr) — alt. Krait Mk II (≈ 119 M Cr) | **Anaconda** (≈ 382 M Cr) — alt. Caspian Explorer (≈ 507 M Cr, meilleure portée Large) |
+| Commerce / fret | Hauler (≈ 0,14 M Cr) — alt. Adder (≈ 0,23 M Cr) | Keelback (≈ 8,1 M Cr) — alt. Type-7 Transporter (≈ 45 M Cr, entrée haute) | Type-8 Transporter (≈ 100 M Cr) — alt. Type-9 Heavy (≈ 199 M Cr) | **Panther Clipper Mk II** (≈ 784 M Cr) — alt. Type-10 Defender (≈ 324 M Cr, fret armé) |
+| Transport de passagers | Dolphin (≈ 3,5 M Cr) — pas d'alternative dédiée à ce palier | *Aucun vaisseau à cabines dédié dans ce palier* — un Adder/Cobra Mk III avec cabine en soute peut dépanner | Orca (≈ 126 M Cr) — alt. Beluga Liner (≈ 220 M Cr) | *Aucun vaisseau à cabines dédié ne dépasse 300 M Cr équipé* — au-delà, on ajoute des cabines à un Type-9 Heavy ou un Panther Clipper Mk II |
+| Minage | *Aucun vaisseau minier dédié à ce palier* — un Hauler/Adder avec laser minier basique peut démarrer | *Aucun vaisseau minier dédié à ce palier* — un Cobra Mk III/Asp Explorer équipé en minage basique convient en attendant | **Type-11 Prospector** (≈ 176 M Cr) — alt. Type-9 Heavy (≈ 199 M Cr) | Type-10 Defender (≈ 324 M Cr) — au-delà, un Anaconda ou un Imperial Cutter reconvertis restent moins efficaces que le Type-11 |
+| Multi-rôle | Cobra Mk III (≈ 0,91 M Cr) — alt. Cobra Mk IV (≈ 2,0 M Cr) | Cobra Mk V (≈ 5,2 M Cr) — alt. Imperial Clipper (≈ 58 M Cr, entrée haute) | Python Mk II (≈ 176 M Cr) — alt. Corsair (≈ 206 M Cr) | **Imperial Cutter** (≈ 543 M Cr, rang Duke requis) — seule option à ce palier |
+
+*Les rôles en gras dans une cellule signalent le vaisseau le plus souvent cité par la communauté comme référence du
+palier — pas un jugement absolu. Voir l'arbre de décision « quel objectif, quel vaisseau » en
+[27-debuter-et-progresser.md §3.1](./27-debuter-et-progresser.md) pour partir de l'objectif plutôt que du budget.*
+
+### Configurations de référence pour les cinq châssis les plus joués et jamais configurés
+
+Cinq vaisseaux récents n'ont, ailleurs dans ce guide, que des données brutes (masse, prix, hardpoints) ou une fiche
+descriptive sans orientation de build. Ce qui suit est une **orientation qualitative** — rôle et priorité
+d'équipement — et non un plan de modules module par module : pour un build chiffré précis, croiser cette orientation
+avec un outil de configuration (Coriolis, EDSY) reste nécessaire, comme pour tout vaisseau de ce guide.
+
+| Vaisseau | Palier budgétaire | Rôle recommandé | Priorité d'équipement |
+|---|---|---|---|
+| Krait Mk II | 50-300 M Cr | Exploration/commerce hybride — meilleur équilibre cargo/combat/portée du segment Medium | FSD Increased Range en premier, puis Shield Generator + 2 Hull Reinforcement Package avant tout hardpoint offensif |
+| Krait Phantom | 50-300 M Cr | Exploration ou combat léger — mieux protégé que le Krait Mk II, moins de cargo | FSD Increased Range, puis Shield Booster ; hardpoints en Multi-cannon si combat, en Fuel Scoop/DSS si exploration |
+| Python Mk II | 50-300 M Cr | Combat moyen ou multi-rôle — 4 hardpoints larges, agilité élevée | Power Distributor en premier (soutient les 4 hardpoints larges), puis Shield Generator classe A |
+| Alliance Chieftain | 5-50 M Cr | Combat léger sans rang requis — 2 hardpoints larges, baie de chasseur | Thrusters et Power Plant en priorité (masse élevée pour un Medium), puis boucliers |
+| Mandalay | 5-50 M Cr | Exploration pure — meilleure portée de saut du segment Medium (≈ 22 al stock) | FSD Increased Range en tout premier ; le gain de portée du Mandalay dépend directement de ce module |
+
 ## Le cas du Nomad — vaisseau embarqué (SLV) absent des catalogues de chantier naval
 
 Le **Nomad** existe. Il est sorti le **30 juin 2026** et est bel et bien en jeu. Mais **ce n'est pas un vaisseau de
@@ -1022,6 +1062,16 @@ sur le flux Steam News du jeu (voir Sources), chacun cité inline avec son titre
 - Le **Vulture** est fabriqué par **Core Dynamics**, le **Corsair** par **Gutamaya** et le **Lynx Highliner** par
   **Zorgon Peterson** (et non Saud Kruger) ; ces attributions sont corroborées par EDCD/coriolis-data.
 
+## Pièges fréquents et coûts cachés à l'achat d'un vaisseau
+
+| Piège | Conséquence chiffrée | Comment l'éviter |
+|---|---|---|
+| Ne budgéter que le prix de coque affiché au chantier naval | Coût réel ≈ 2,6× le prix de coque une fois équipé en qualité A (Anaconda : ≈ 387 M Cr contre 147 M Cr de coque) | Utiliser la matrice Rôle × Budget ci-dessus, qui compte déjà l'équipement |
+| Confondre la masse de coque du Panther Clipper Mk II (1 200 t) avec une capacité de fret | Aucune tonne de cargo garantie par ce chiffre — la soute dépend des Cargo Racks installés | Vérifier la capacité réelle en Cargo Rack dans le panneau du vaisseau, pas la masse de coque |
+| Viser un Federal Corvette ou un Imperial Cutter sans le rang requis | Achat bloqué faute de rang Rear Admiral (Fédération) ou Duke (Empire) | Vérifier son rang de marine avant de viser ces vaisseaux (voir [29-missions-reputation-et-rangs.md §3](./29-missions-reputation-et-rangs.md)) |
+| Décoller sans avoir vérifié le coût de rebuy | Vaisseau perdu et rebuy à payer sans réserve en cas de destruction | Vérifier le rebuy affiché au panneau du vaisseau avant chaque sortie risquée |
+| Changer de vaisseau sans utiliser le transfert de flotte | Perte de temps ou frais de transfert mal anticipés (≈ 0,00006 × valeur totale × distance + 0,0002 × valeur totale + 1 000 Cr) | Calculer le coût de transfert avant de décider entre acheter neuf et faire venir un vaisseau déjà possédé |
+
 ## Voir aussi
 
 - [Équipements et modules](./04-equipements.md) — détail des modules installés dans les emplacements listés ci-dessus.
@@ -1042,6 +1092,9 @@ sur le flux Steam News du jeu (voir Sources), chacun cité inline avec son titre
   débloquer les châssis Fédération/Empire listés ci-dessus.
 - [Pilotage, navigation et stations](./31-pilotage-navigation-et-stations.md) — accostage, tailles de pad par
   vaisseau, et logistique de flotte vue côté modules.
+- [Carte des boucles de gameplay](./00-boucles-de-gameplay.md) — matrice Rôle × Budget reprise dans la carte
+  transversale, et parcours-types chiffrés (0 → 100 M Cr → 1 Md Cr → Porte-Vaisseau) qui s'appuient sur le coût réel
+  d'un vaisseau équipé documenté ci-dessus.
 
 ## Sources
 

@@ -11,10 +11,10 @@ mots_cles_en: ["exobiology", "Vista Genomics", "Universal Cartographics", "Full 
   value", "Earth-like World", "star class", "FSD supercharge", "jet cone boost", "surface signal", "SAASignalsFound",
   "geological signal", "Crystalline Shards", "Notable Stellar Phenomena", "Lagrange Cloud", "surface gravity",
   "landable body", "Distant Worlds", "Beagle Point", "codex", "codex voucher", "galactic region", "rumoured reported
-  discovered"]
+  discovered", "credits per hour"]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-12
+date_verification: 2026-09-13
 confiance_globale: haute
 volatilite: haute
 sources_primaires: ["Canonn Research", "wiki Elite Dangerous", "EDDiscovery/EliteDangerousCore (commit
@@ -22,7 +22,8 @@ sources_primaires: ["Canonn Research", "wiki Elite Dangerous", "EDDiscovery/Elit
   "catalogue d'exobiologie compilé du corpus (édition 2026-08)", "EDCD/coriolis-data", "EDCD/FDevIDs",
   "Silarn/EDMC-BioScan (commit 5f0d2e44)", "Steam News Frontier", "Spansh", "EDSM", "distantworlds3.space",
   "wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge)", "Massively Overpowered (couverture Beyond
-  Chapitre Quatre, décembre 2018)"]
+  Chapitre Quatre, décembre 2018)", "Steam Community — discussions générales sur l'exobiologie, consultées le
+  13 septembre 2026", "Elite Dangerous Wiki Fandom — Exobiologist, consulté le 13 septembre 2026"]
 zones_incertaines: ["valeur de 952 296 Cr de Radicoida Unica : observation unique en jeu, à reconfirmer", "distance
   minimale de 15 m pour Radicoida, relevée en jeu contre 100 m au catalogue compilé", "contrainte des 2 500 Ls de
   Clypeus Speculumi, non confirmée par télémétrie", "intitulés et ordre exacts des paliers des rangs Explorateur et
@@ -51,8 +52,10 @@ zones_incertaines: ["valeur de 952 296 Cr de Radicoida Unica : observation uniqu
   exacte en 3 ou 4 catégories de l'onglet Discoveries du Codex : documentée pour 2018-2021, non revérifiée sur une
   version 2026 du jeu", "montants du Codex Voucher (50 000 / 2 500 Cr) : datés du lancement de la fonctionnalité en
   2018, probablement obsolètes", "absence de tout état « cartographié » dans la taxonomie du Codex : inférence bien
-  étayée mais non énoncée mot pour mot par une source officielle"]
-guides_lies: [0, 1, 4, 5, 6, 7, 13, 14, 16, 17, 18, 19, 20, 21, 23, 24, 25, 27, 32]
+  étayée mais non énoncée mot pour mot par une source officielle", "le Cr/h de l'exobiologie (≈ 15-25 M Cr/h) est une
+  reconstitution communautaire datée du 13 septembre 2026, pas un barème Frontier, faute de cadence de scan
+  documentée par une source primaire"]
+guides_lies: [0, 1, 4, 5, 6, 7, 13, 14, 16, 17, 18, 19, 20, 21, 23, 24, 25, 27, 31, 32]
 ---
 
 # Guide complet de l'exploration et de l'exobiologie dans Elite Dangerous
@@ -2199,6 +2202,23 @@ place et de mettre les données à l'abri sans rentrer dans la Bulle.
 > Le chiffre de ×5 est concordant entre ces sources ; en revanche, **aucune d'elles ne chiffre un gain propre au
 > First Footfall**, ce qui est cohérent avec l'idée qu'il n'en verse aucun.
 
+##### Rentabilité chiffrée de l'exobiologie (≈ 15 à 25 M Cr/h sans bonus) — reconstitution communautaire
+
+Ce guide chiffre les 118 espèces et le bonus First Logged, mais ne documente aucune cadence de scan (temps de trajet
+entre les 3 échantillons, temps de traitement du Genetic Sampler) permettant de dériver un Cr/h depuis les seules
+données internes du corpus — recherche exhaustive du présent fichier à l'appui. **Ce qui suit est une reconstitution
+communautaire datée du 13 septembre 2026, pas un barème officiel Frontier** — voir la note de méthode de
+[00-boucles-de-gameplay.md](./00-boucles-de-gameplay.md) avant de la recopier ailleurs.
+
+Un retour d'expérience communautaire daté (deux corps visités sans bonus First Footfall, plus de 20 M Cr en une
+heure) donne un ordre de grandeur de **≈ 15 à 25 M Cr/h** en configuration courante. Ce chiffre grimpe fortement —
+sans qu'un palier stable soit documenté — sur un corps confirmé vierge (voir « Vérifier qu'un corps est vierge »
+ci-dessus), où chaque espèce bénéficie du ×5 First Logged : une seule *Fonticulua Fluctus* (20 M Cr de base) y vaut
+alors 100 M Cr à elle seule.
+
+*Source de cette reconstitution : Steam Community (Elite Dangerous General Discussions) et Elite Dangerous Wiki
+(Fandom, « Exobiologist »), consultées le 13 septembre 2026.*
+
 ### 2.6 Rangs Explorateur et Exobiologiste : les paliers jusqu'à Elite V
 
 Comme les autres activités du jeu (combat, commerce, CQC…), l'exploration et l'exobiologie disposent chacune d'une
@@ -2320,6 +2340,34 @@ information. La recette exacte du « jumponium » (FSD Injection, ses trois pali
 
 ---
 
+## Check-list avant une expédition d'exploration longue
+
+- Vérifier la portée de saut réelle une fois chargé (carburant plein, modules optionnels installés) plutôt que la
+  portée stock affichée au chantier naval — voir [03-vaisseaux.md](./03-vaisseaux.md).
+- Emporter un Fuel Scoop de classe adaptée à la classe stellaire visée (mnémonique KGBFOAM, §1.3) pour ne jamais
+  dépendre d'un retour à la Bulle pour le carburant.
+- Confirmer l'installation du DSS, du FSS et du Detailed Surface Scanner (série depuis Beyond Chapter Four) avant le
+  départ — aucun de ces trois instruments ne s'ajoute après coup sans escale.
+- Pour l'exobiologie : embarquer la combinaison Artemis, le Genetic Sampler et le SRV/Vehicle Hangar, et vérifier le
+  plugin BioScan (voir ci-dessus) pour éviter les allers-retours inutiles.
+- Vérifier qu'un corps est confirmé vierge (carte galactique, carte du système, Spansh Body Search) avant d'y engager
+  du temps si le First Logged ×5 fait partie de l'objectif de rentabilité — voir « Vérifier qu'un corps est vierge »
+  ci-dessus.
+- Vendre régulièrement les données accumulées (tous les 5-6 sauts au maximum) plutôt que d'attendre la fin de
+  l'expédition : un vaisseau détruit perd des données non vendues.
+- Prévoir la procédure Fuel Rats en cas de panne sèche loin de toute route commerciale — voir
+  [31-pilotage-navigation-et-stations.md §7.3](./31-pilotage-navigation-et-stations.md).
+
+## Pièges fréquents et coûts cachés en exploration
+
+| Piège | Conséquence chiffrée | Comment l'éviter |
+|---|---|---|
+| Vendre une espèce après qu'un autre CMDR l'a « First Logged » sur le même corps | Perte du bonus ×5, vente à la seule valeur de base | Vérifier la fraîcheur du corps avant d'y consacrer du temps (voir ci-dessus) |
+| Se fier à un Cr/h de fin de partie pour calibrer une session d'exobiologie | Attentes déçues — aucune cadence de scan stable n'est documentée | Traiter le Cr/h d'exobiologie comme une fourchette non calibrée, pas un chiffre garanti |
+| Garder les données non vendues trop longtemps en soute | Perte totale en cas de destruction du vaisseau | Vendre à intervalles réguliers, ou stocker via un module Vista Genomics embarqué sur Fleet Carrier |
+| Manquer de carburant loin de toute route commerciale | Immobilisation, appel aux Fuel Rats en dernier recours | Fuel Scoop de classe adaptée, vérifié avant le départ (voir check-list ci-dessus) |
+| Confondre First Footfall et First Logged | Attente d'un gain en crédits pour le seul First Footfall, qui n'en verse aucun | Voir « Le bonus de première empreinte » ci-dessus : seul First Logged (×5) rapporte des crédits |
+
 ## Ressources complémentaires : sites et outils d'exploration et d'exobiologie
 
 | Ressource          | Adresse                               | Usage principal                                               |
@@ -2336,6 +2384,8 @@ information. La recette exacte du « jumponium » (FSD Injection, ses trois pali
 
 Guides du corpus en lien direct avec l'exploration et l'exobiologie :
 
+- [Carte des boucles de gameplay](./00-boucles-de-gameplay.md) — l'exploration et l'exobiologie comparées aux 20
+  autres boucles du jeu, et méthode de reconstitution du Cr/h appliquée aux autres zones aveugles du corpus.
 - [Colonisation](./18-colonisation.md) — utiliser les données d'exploration pour repérer un système éligible (voir 1.7)
 - [Lore](./01-lore.md) — récit et chronologie des trois expéditions Distant Worlds dont la partie 1 donne la
   logistique

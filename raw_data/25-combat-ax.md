@@ -3,15 +3,15 @@ id: 25-combat-ax
 titre: "Combat anti-Thargoïde (AX) approfondi"
 domaine: combat
 entites: [Thargoïdes, Interceptor, Scout thargoïde, Titan, Maelstrom, Shutdown Field Neutraliser, Guardian Gauss Cannon, Caustic Sink Launcher, Nuage caustique, Aegis, AXI, Zone de Combat Anti-Xéno, Barnacle, Meta-Alloy, Thargoid Spire, Revenant, Banshee, Titan Drive Component]
-mots_cles_en: [thargoid, interceptor, hydra, caustic cloud, shutdown field neutraliser, guardian gauss cannon, anti-xeno combat zone, non-human signal source, maelstrom, titan, barnacle, meta-alloy, thargoid spire, revenant, banshee, titan drive component, thargoid surface site]
+mots_cles_en: [thargoid, interceptor, hydra, caustic cloud, shutdown field neutraliser, guardian gauss cannon, anti-xeno combat zone, non-human signal source, maelstrom, titan, barnacle, meta-alloy, thargoid spire, revenant, banshee, titan drive component, thargoid surface site, credits per hour]
 version_jeu_couverte: "4.4.0.x — contenu thargoïde inchangé depuis fin 2024, recoupé sur le flux d'annonces 2025-2026"
 branche: live
 date_verification: 2026-09-13
 confiance_globale: moyenne
 volatilite: moyenne
-sources_primaires: [Flux Steam News officiel de Frontier Developments, Wikipédia EN Elite Dangerous, codex Maelstrom de Canonn, Inara, Massively OP, wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge), wiki communautaire Anti Xeno Initiative (wiki.antixenoinitiative.com)]
-zones_incertaines: ["Le nombre exact de cœurs par classe d'Interceptor n'a pas pu être recoupé sur source accessible", "La durée de la fenêtre de tir après shutdown (15 à 20 secondes) est une valeur indicative non vérifiée", "L'absence de sous-classes nommées de Scouts n'a pas pu être recoupée sur wiki", "Les valeurs de dégâts et de DPS des builds AX ne sont pas vérifiées et évoluent avec l'équilibrage", "La chronologie d'Aegis (3303, 3308, 3309) est reprise du corpus sans source primaire indépendante", "L'absence de mise à jour thargoïde depuis fin 2024 repose sur les titres et résumés du flux Steam News, pas sur les changelogs complets", "Le statut du domaine axi.info n'a pas pu être testé", "Rendement exact de Meta-Alloy par piquant de Barnacle mûr : 1 unité (wiki communautaire) contre 2 (fiche Canonn), non tranché", "Divergence d'un jour entre deux pages du même wiki communautaire sur la date de découverte du premier Barnacle vs. du premier Meta-Alloy à Merope 5 C (15 vs 14 janvier 3302)", "Mécanique de « relog » sur un site de surface thargoïde pour réinitialiser le rendement en Meta-Alloy : attestée seulement par des discussions de joueurs, aucune source officielle", "Ce que le Codex enregistre précisément pour un scan de Probe/Sensor thargoïde n'a pas été confirmé", "Interaction précise de récolte à la base des pétales d'un Spire (outil, mécanique) non documentée par une source consultée", "Aucune note de correctif officielle ne confirme un retrait délibéré des Spire Sites : la désactivation est présentée comme une conséquence narrative de la fin de la guerre"]
-guides_lies: [0, 1, 4, 5, 6, 8, 10, 16, 24]
+sources_primaires: [Flux Steam News officiel de Frontier Developments, Wikipédia EN Elite Dangerous, codex Maelstrom de Canonn, Inara, Massively OP, wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge), wiki communautaire Anti Xeno Initiative (wiki.antixenoinitiative.com), Elite Dangerous Wiki Fandom — Combat Bond Voucher (consulté le 13 septembre 2026)]
+zones_incertaines: ["Le nombre exact de cœurs par classe d'Interceptor n'a pas pu être recoupé sur source accessible", "La durée de la fenêtre de tir après shutdown (15 à 20 secondes) est une valeur indicative non vérifiée", "L'absence de sous-classes nommées de Scouts n'a pas pu être recoupée sur wiki", "Les valeurs de dégâts et de DPS des builds AX ne sont pas vérifiées et évoluent avec l'équilibrage", "La chronologie d'Aegis (3303, 3308, 3309) est reprise du corpus sans source primaire indépendante", "L'absence de mise à jour thargoïde depuis fin 2024 repose sur les titres et résumés du flux Steam News, pas sur les changelogs complets", "Le statut du domaine axi.info n'a pas pu être testé", "Rendement exact de Meta-Alloy par piquant de Barnacle mûr : 1 unité (wiki communautaire) contre 2 (fiche Canonn), non tranché", "Divergence d'un jour entre deux pages du même wiki communautaire sur la date de découverte du premier Barnacle vs. du premier Meta-Alloy à Merope 5 C (15 vs 14 janvier 3302)", "Mécanique de « relog » sur un site de surface thargoïde pour réinitialiser le rendement en Meta-Alloy : attestée seulement par des discussions de joueurs, aucune source officielle", "Ce que le Codex enregistre précisément pour un scan de Probe/Sensor thargoïde n'a pas été confirmé", "Interaction précise de récolte à la base des pétales d'un Spire (outil, mécanique) non documentée par une source consultée", "Aucune note de correctif officielle ne confirme un retrait délibéré des Spire Sites : la désactivation est présentée comme une conséquence narrative de la fin de la guerre", "Le Cr/h de combat AX (5.3) est une reconstitution communautaire à partir de primes par classe et de temps de neutralisation de bouclier, pas un barème Frontier"]
+guides_lies: [0, 1, 4, 5, 6, 8, 10, 16, 24, 27]
 ---
 
 # Combat anti-Thargoïde (AX) approfondi
@@ -215,6 +215,34 @@ Les valeurs exactes de dégâts/DPS n'ont pas pu être vérifiées via les sourc
 | **Gestion thermique** | Heat Sink Launcher, particulièrement recommandé pendant les phases d'assaut de Titan (chaleur élevée à proximité du cœur central). |
 
 > Recommandation avant publication ou usage compétitif : confirmer ces slots et valeurs via un configurateur externe à jour (Coriolis, EDSY — voir [16-outils.md](./16-outils.md)) et via l'ingénierie appliquée aux modules concernés (voir [06-ingenieurs.md](./06-ingenieurs.md)), les stats stock présentées ici n'intégrant aucune modification G1-G5.
+
+### 5.3 Rentabilité chiffrée du combat AX (≈ 20 à 60 M Cr/h) — reconstitution communautaire
+
+Ce guide ne donnait, avant cette édition, aucune valeur en crédits pour le combat AX pratiqué en 2026 (les seules
+occurrences de « Cr » du fichier concernaient la boucle historique désactivée des Spire Sites, voir section 8bis).
+**Ce qui suit est une reconstitution communautaire datée du 13 septembre 2026, pas un barème officiel Frontier** —
+voir la note de méthode de [00-boucles-de-gameplay.md](./00-boucles-de-gameplay.md) avant de la recopier ailleurs.
+
+**Prime par classe d'Interceptor**, partagée entre tous les Commandants ayant endommagé la cible avant sa
+destruction :
+
+| Classe | Prime (Cr) |
+|---|---|
+| Cyclops | ≈ 6 500 000 |
+| Basilisk | ≈ 20 000 000 |
+| Medusa | ≈ 34 000 000 |
+| Hydra | ≈ 50 000 000 |
+
+**Temps de neutralisation du bouclier organique** observé en combat solo (hors phase de mise à mort des cœurs) :
+1 min 45 s pour un Cyclops, 3 min pour un Basilisk, 4 min pour une Medusa, 5 min pour une Hydra. En comptant la phase
+de cœurs (3.2) et le repositionnement post-destruction (3.4), un pilote compétent enchaîne un Interceptor toutes les
+10 à 20 minutes selon la classe visée — d'où une fourchette de **≈ 20 à 60 M Cr/h**, plus élevée en ciblant des
+classes lourdes (Medusa/Hydra) avec un build éprouvé (5.2), plus basse en début d'apprentissage sur Cyclops/Basilisk.
+Ce chiffre ne compte pas le temps de recherche d'un Interceptor (voir section 7) ni les pertes en cas d'échec.
+
+*Sources de cette reconstitution : Anti-Xeno Initiative wiki (wiki.antixenoinitiative.com, « Finding Thargoids » et
+« Basic Thargoid Combat Guide ») et Elite Dangerous Wiki (Fandom, « Combat Bond Voucher »), consultés le
+13 septembre 2026.*
 
 ---
 
@@ -431,8 +459,28 @@ environnants s'étant dissipés depuis.
 
 ---
 
+## Check-list avant une sortie contre un Interceptor thargoïde
+
+- Vérifier le déblocage et l'ingénierie du **Shutdown Field Neutraliser** — sans lui, aucun accès aux cœurs (3.1).
+- Emporter au moins un **Guardian Gauss Cannon** dédié au heart-sniping, et de l'armement d'attrition (AX Multi-Cannon
+  ou Enzyme Missile Rack) pour user l'armure entre deux fenêtres de shutdown (5.1-5.2).
+- Équiper un **Remote Release Flak/Flechette Launcher** pour l'essaim de Thargons et un **Caustic Sink Launcher**
+  pour les stacks caustiques (3.3, section 4).
+- Prévoir un Heat Sink Launcher si l'engagement se déroule près d'un cœur de Titan (chaleur élevée, section 2.3).
+- Confirmer la classe d'Interceptor visée et le temps de neutralisation de bouclier associé (5.3) pour calibrer
+  l'endurance de la sortie plutôt que de découvrir la classe en vol.
+- Prévoir la manœuvre d'éloignement immédiat après la destruction, pour éviter le nuage caustique terminal
+  (« death cloud », 3.4).
+- Repérer à l'avance un NHSS ou une AXCZ actifs (section 7) plutôt que de partir sans cible confirmée.
+- Débutant : s'entraîner d'abord sur Scouts et Cyclops avant de viser Medusa/Hydra (voir aussi le scénario Combat de
+  [27-debuter-et-progresser.md §1.0](./27-debuter-et-progresser.md)).
+
+---
+
 ## Voir aussi
 
+- [Carte des boucles de gameplay](./00-boucles-de-gameplay.md) — le combat AX comparé aux 21 autres boucles du jeu, et
+  la méthode de reconstitution du Cr/h (5.3) appliquée aux autres zones aveugles du corpus.
 - [Lore et chronologie](./01-lore.md) — contexte narratif complet de l'invasion thargoïde, chronologie des deux guerres, structure détaillée d'Aegis (section 3.7), et localisation des Pléiades comme berceau du contact thargoïde (section 3.4bis).
 - [Combat spatial](./08-combat-spatial.md) — mécaniques générales de combat (pips, énergie, Combat Zones) dont le combat AX est une branche spécialisée (section 4.5) ; section 4.6 pour les Bulk Cruisers piratables, à ne pas confondre avec les Rescue Megaships accostables et amicaux cités en 8bis.
 - [Équipements](./04-equipements.md) — détail des montages, tailles et conditions de déblocage de l'armement AX et Guardian (section 2.6-2.7).

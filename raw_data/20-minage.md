@@ -6,12 +6,12 @@ entites: [Mining Laser, Abrasion Blaster, Pulse Wave Analyser, Seismic Charge La
 mots_cles_en: [mining, laser mining, core mining, deep core mining, subsurface deposit, abrasion blaster, pulse wave analyser, seismic charge launcher, prospector limpet, hotspot, surface mining, Rhino SRV, void opals, painite, low temperature diamonds, ring type, icy ring, rocky ring, metallic ring, metal rich ring, pristine reserve, bertrandite, platinum, palladium, gold, silver, osmium, samarium, praseodymium, coltan, indite, gallite, uraninite, lepidolite, rutile, bauxite, cobalt, bromellite, monazite, musgravite, serendibite, rhodplumsite, benitoite, grandidierite, alexandrite, tritium]
 version_jeu_couverte: "4.4.0.x"
 branche: live
-date_verification: 2026-09-12
+date_verification: 2026-09-13
 confiance_globale: haute
 volatilite: haute
 sources_primaires: ["Steam News Frontier (API ISteamNews, billets Frontier intégraux)", "EDCD/FDevIDs (outfitting.csv, commodity.csv, rings.csv, commit c356129)", "EDDiscovery/EliteDangerousCore (énumération RingClassEnum)", "EDSM (API bodies, FAQ Commodities)", "Inara.cz", "EDTools.cc", "pilotstradenetwork.com", "Guides et discussions Steam Community sur le minage (types d'anneau)"]
-zones_incertaines: ["Frontier a publié les douze axes d'équilibrage du minage de surface sans aucune valeur chiffrée", "rôle fonctionnel exact du Sub-Surface Extraction Missile non confirmé par des notes de patch", "correctif « 9 → 12 fragments » du Rhino : ni numéro de version ni date publiés au 9 septembre 2026", "vaisseaux et classes de module permettant d'embarquer un Rhino, et existence d'un achat en crédits", "prix de vente, économies acheteuses et usages en ingénierie des treize marchandises de surface", "pourcentages de bonus Powerplay au minage (Torval, Kaine) et rendement PTN de 3,5 Md Cr par cycle, tous deux d'origine communautaire", "aucun système hotspot n'a pu être confirmé pour le Platine ni pour les Low Temperature Diamonds seuls", "section 4.5 : aucune source primaire Frontier ne publie la distribution des minéraux par type d'anneau ; les colonnes « technique » et « type d'anneau » sont une synthèse de guides de joueurs datés, non vérifiée en jeu", "section 4.5 : le type d'anneau reste non établi pour 16 des 63 marchandises Minerals et Metals, et aucune source ne publie de réserve minimale ni de rendement en tonnes par minéral"]
-guides_lies: [2, 4, 11, 14, 16, 28, 31]
+zones_incertaines: ["Frontier a publié les douze axes d'équilibrage du minage de surface sans aucune valeur chiffrée", "rôle fonctionnel exact du Sub-Surface Extraction Missile non confirmé par des notes de patch", "correctif « 9 → 12 fragments » du Rhino : ni numéro de version ni date publiés au 9 septembre 2026", "vaisseaux et classes de module permettant d'embarquer un Rhino, et existence d'un achat en crédits", "prix de vente, économies acheteuses et usages en ingénierie des treize marchandises de surface", "pourcentages de bonus Powerplay au minage (Torval, Kaine) et rendement PTN de 3,5 Md Cr par cycle, tous deux d'origine communautaire", "aucun système hotspot n'a pu être confirmé pour le Platine ni pour les Low Temperature Diamonds seuls", "section 4.5 : aucune source primaire Frontier ne publie la distribution des minéraux par type d'anneau ; les colonnes « technique » et « type d'anneau » sont une synthèse de guides de joueurs datés, non vérifiée en jeu", "section 4.5 : le type d'anneau reste non établi pour 16 des 63 marchandises Minerals et Metals, et aucune source ne publie de réserve minimale ni de rendement en tonnes par minéral", "aucun Cr/h chiffré pour le minage subsurface et le core mining, seulement qualitatif"]
+guides_lies: [0, 2, 4, 11, 14, 16, 27, 28, 31]
 ---
 # Le Minage (Mining) dans Elite Dangerous
 
@@ -786,6 +786,33 @@ et gains en mérites Powerplay simultanément.
 
 ---
 
+## Check-list avant une session de minage
+
+- Confirmer la technique visée (laser, subsurface, core) et embarquer les modules correspondants — prospector et
+  collector limpets dans tous les cas, Abrasion Blaster ou Seismic Charge Launcher selon la technique (section 2).
+- Vérifier la capacité de raffinerie embarquée : 2 à 3 emplacements dédiés recommandés pour ne pas devoir jeter du
+  minerai brut faute de place en session intensive (section 2.3).
+- Repérer un hotspot à jour via EDTools.cc, Inara ou Spansh avant de partir, plutôt que de chercher à l'aveugle
+  (section 4).
+- Vérifier le type d'anneau visé (glacé, rocheux, métallique, riche en métaux) et ce qu'il contient réellement —
+  un anneau glacé porte aussi du Tritium, de l'eau et d'autres `Chemicals`, pas seulement des `Minerals`/`Metals`
+  (voir le piège ci-dessous).
+- Prévoir plusieurs stations de vente pour écouler la cargaison sans faire chuter le prix local d'un seul coup.
+- Si l'objectif inclut des mérites Powerplay : confirmer que le système visé est en acquisition ou en renforcement
+  avant de s'y rendre (section 6).
+
+## Pièges fréquents et coûts cachés du minage
+
+| Piège | Conséquence chiffrée | Comment l'éviter |
+|---|---|---|
+| Cibler un anneau glacé en pensant n'y trouver que des `Minerals` | Tritium, eau et autres `Chemicals` non repérés — mauvaise cible de minage | Consulter [28-marchandises.md](./28-marchandises.md) pour la répartition complète par catégorie (section 4.5) |
+| Vendre toute sa cargaison minée d'un coup au même marché | Effondrement du prix de vente en cours de session | Répartir les ventes entre plusieurs stations |
+| Considérer sa cargaison minée comme acquise avant la vente | Perte totale en cas de destruction du vaisseau (voir « Bonnes pratiques », section 5) | Vendre à intervalles réguliers plutôt que d'accumuler une cargaison de grande valeur |
+| Manquer d'emplacements de raffinerie en session intensive | Minerai brut jeté faute de place dans les bacs de raffinage | Réserver 2 à 3 emplacements dédiés à la raffinerie (section 2.3) |
+| Se fier à un pourcentage de bonus Powerplay non revérifié | Stratégie construite sur un taux potentiellement obsolète | Consulter la fiche à jour de la Power sur Inara.cz avant de baser une stratégie dessus |
+
+---
+
 ## Note sur la fiabilité des données chiffrées
 
 Sauf mention contraire, les rendements horaires, prix Arx et statistiques d'équipement cités dans ce guide sont des
@@ -808,6 +835,8 @@ normalement pas, mais son intérêt économique (prix de vente, concurrence, sé
 
 ## Voir aussi
 
+- **[Carte des boucles de gameplay](./00-boucles-de-gameplay.md)** — le minage comparé aux 21 autres boucles du jeu,
+  matrice Rôle × Budget des vaisseaux miniers reprise depuis [03-vaisseaux.md](./03-vaisseaux.md).
 - **[Le Commerce dans Elite Dangerous](./11-commerce.md)** — lien minage → revente, exemple chiffré de route
   commerciale, outils de routage (Trade Dangerous, Spansh).
 - **[Les marchandises](./28-marchandises.md)** — nommage et classification complète des 270 marchandises et des

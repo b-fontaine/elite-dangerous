@@ -2,16 +2,16 @@
 id: 12-transport
 titre: "Guide complet du transport dans Elite Dangerous"
 domaine: economie
-entites: [Lynx Highliner, Beluga Liner, Orca, Dolphin, Panther Clipper Mk II, Type-8 Transporter, Search & Rescue, Occupied Escape Pods, Stronghold Carrier, cabines passagers, marchandises rares, stations en feu]
-mots_cles_en: [passenger cabins, economy cabin, business class cabin, first class cabin, luxury cabin, Lynx Highliner, Beluga Liner, search and rescue, occupied escape pods, burning stations, rare goods, stronghold carrier, colonisation hauling, interdiction escape]
+entites: [Lynx Highliner, Beluga Liner, Orca, Dolphin, Panther Clipper Mk II, Type-8 Transporter, Search & Rescue, Occupied Escape Pods, Stronghold Carrier, cabines passagers, marchandises rares, stations en feu, Robigo]
+mots_cles_en: [passenger cabins, economy cabin, business class cabin, first class cabin, luxury cabin, Lynx Highliner, Beluga Liner, search and rescue, occupied escape pods, burning stations, rare goods, stronghold carrier, colonisation hauling, interdiction escape, credits per hour, robigo run]
 version_jeu_couverte: "4.4.0.x"
 branche: live
 date_verification: 2026-09-13
 confiance_globale: moyenne
 volatilite: moyenne
-sources_primaires: [MassivelyOP, PCGamesN, EDSM, EDSY, Canonn Research, Inara.cz, notes de version officielles 4.2.2.0]
-zones_incertaines: ["capacités de cabines passagers par taille de module non reconfirmées en direct (valeurs communautaires EDSY/Inara/Coriolis)", "aucun bonus Powerplay propre au Search & Rescue n'a pu être ni confirmé ni infirmé", "tonnages de colonisation donnés en ordres de grandeur composites, non revérifiés", "date du passage du Panther Clipper Mk II à l'achat en crédits (~octobre 2025) non sourcée précisément"]
-guides_lies: [2, 3, 6, 18, 19, 22]
+sources_primaires: [MassivelyOP, PCGamesN, EDSM, EDSY, Canonn Research, Inara.cz, notes de version officielles 4.2.2.0, "GameRant — 12 Best Ways To Make Money, consulté le 13 septembre 2026", "Pilots Trade Network — guide du débutant Odyssey, consulté le 13 septembre 2026"]
+zones_incertaines: ["capacités de cabines passagers par taille de module non reconfirmées en direct (valeurs communautaires EDSY/Inara/Coriolis)", "aucun bonus Powerplay propre au Search & Rescue n'a pu être ni confirmé ni infirmé", "tonnages de colonisation donnés en ordres de grandeur composites, non revérifiés", "date du passage du Panther Clipper Mk II à l'achat en crédits (~octobre 2025) non sourcée précisément", "le Cr/h du transport de passagers est une reconstitution communautaire datée du 13 septembre 2026, pas un barème Frontier"]
+guides_lies: [0, 2, 3, 6, 11, 18, 19, 22, 29]
 ---
 # Guide complet du transport dans Elite Dangerous
 
@@ -138,6 +138,26 @@ passager bénéficiait d'une protection particulière.
 > que ce guide, afin d'éviter toute duplication de données susceptibles de diverger après un patch d'équilibrage.
 > Ces valeurs sont données en configuration stock ; l'ingénierie (voir [06-ingenieurs.md](./06-ingenieurs.md)) peut les
 > modifier significativement.
+
+### Rentabilité chiffrée du transport de passagers (≈ 50 à 100 M Cr/h) — reconstitution communautaire
+
+Ce guide ne chiffrait jusqu'ici aucune récompense de mission passager ni d'évacuation en crédits — seules les classes
+de cabines étaient comparées qualitativement (tableau ci-dessus). **Ce qui suit est une reconstitution communautaire
+datée du 13 septembre 2026, pas un barème officiel Frontier** — voir la note de méthode de
+[00-boucles-de-gameplay.md](./00-boucles-de-gameplay.md) avant de la recopier ailleurs.
+
+Un vaisseau à cabines mixtes (Économique/Affaires/Première classe) exploité dans un système touristique dense, avec
+des contrats groupés vers une même destination (mission stacking, voir
+[29-missions-reputation-et-rangs.md §1.6](./29-missions-reputation-et-rangs.md) pour la limite de 20 missions actives
+simultanées), rapporte de l'ordre de **≈ 50 à 100 M Cr/h**. La route historique **Robigo → Sothis** (≈ 60 al), qui
+mélange passagers légaux et illégaux (d'où le brouilleur de scan recommandé plus haut), est spécifiquement documentée
+jusqu'à **≈ 90 M Cr/h** — c'est le même repère chiffré déjà utilisé pour la contrebande en
+[11-commerce.md](./11-commerce.md), car il s'agit largement de la même boucle vue sous deux angles (marchandise
+interdite vs passager recherché). Aucun de ces chiffres n'est garanti : marché, réputation de faction, sélection des
+missions et distance de vol font varier le rendement réel d'une session à l'autre.
+
+*Sources de cette reconstitution : GameRant, « Elite Dangerous: 12 Best Ways To Make Money » ; Pilots Trade Network,
+guide du débutant Odyssey — consultés le 13 septembre 2026.*
 
 ### Missions spéciales : évacuations et « stations en feu »
 
@@ -447,6 +467,8 @@ fil des patchs d'équilibrage.
 
 ## Voir aussi
 
+- [00-boucles-de-gameplay.md](./00-boucles-de-gameplay.md) — le transport de passagers comparé aux 21 autres boucles
+  du jeu, et méthode de reconstitution du Cr/h appliquée aux autres zones aveugles du corpus.
 - [00-glossaire.md](./00-glossaire.md) — tous les sigles utilisés dans ce guide (CZ, CG, etc.)
 - [02-powerplay.md](./02-powerplay.md) — mécaniques Powerplay complètes et classement à jour des Puissances (source
   unique de vérité pour cette donnée)

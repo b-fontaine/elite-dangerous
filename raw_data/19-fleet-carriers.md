@@ -11,7 +11,7 @@ confiance_globale: haute
 volatilite: haute
 sources_primaires: [roguey.co.uk, guide PTN Fleet Carrier Owner's Guide, elite-journal.readthedocs.io, FC-Fuel-Estimator (GitHub), Wikipedia Elite Dangerous, forums.frontier.co.uk, PC Gamer (mai 2020), wiki Fandom « Fleet Carriers Update » (miroir)]
 zones_incertaines: ["coûts hebdomadaires exacts des trois services Odyssey (Concourse, Vista Genomics, Pioneer Supplies), non retrouvés dans les sources accessibles", "date précise et caractère « stealth change » du déblocage du commerce de denrées rares sur un Porte-Vaisseau, appuyé sur une seule citation de forum", "répartition des seize baies d'appontage, documentée par roguey.co.uk seul, sans deuxième source indépendante", "application ou non du bonus de prix par distance des denrées rares sur le marché d'un Porte-Vaisseau"]
-guides_lies: [2, 4, 6, 11, 12, 18, 20, 22, 31, 32]
+guides_lies: [0, 2, 4, 6, 11, 12, 18, 20, 22, 27, 31, 32]
 ---
 
 # Porte-vaisseaux de joueur (Fleet Carriers)
@@ -370,8 +370,35 @@ joueur dans un système donné. Le lien entre Porte-Vaisseaux de joueur et Power
 sujet de discussion communautaire actif (des propositions circulent sur les forums Frontier pour renforcer cette
 synergie) qu'une mécanique pleinement développée par Frontier — à formuler avec prudence.
 
+## Check-list avant l'achat d'un Porte-Vaisseau
+
+- **Avant l'achat** : provisionner au moins 4 à 8 semaines d'entretien hebdomadaire réaliste (10 à 20 M Cr/semaine
+  avec plusieurs services actifs, voir section 1) en plus des 5 Md Cr d'achat — un Porte-Vaisseau acheté sans cette
+  réserve entre en dette dès la première semaine.
+- Décider à l'avance quels services optionnels resteront actifs en permanence (Shipyard, Outfitting) et lesquels
+  seront suspendus entre deux sessions, pour limiter le coût hebdomadaire de base.
+- **Avant le premier saut** : vérifier le réservoir de Tritium (1 000 t max) et prévoir une réserve de secours si le
+  premier saut vise une zone sans marché de Tritium à proximité.
+- Calculer le coût en Tritium du premier saut avec la formule de la section 3 plutôt que de partir à l'estimation.
+- **Provision continue** : transférer ou vendre le cargo, le Tritium et les modules avant tout décommissionnement
+  volontaire, pour ne pas en perdre la valeur (section 5).
+- Mettre en place un rappel de paiement hebdomadaire — la semaine de grâce en cas d'impayé mène au décommissionnement
+  involontaire, dette déduite du remboursement (section 5).
+
+## Pièges fréquents et coûts cachés du Porte-Vaisseau
+
+| Piège | Conséquence chiffrée | Comment l'éviter |
+|---|---|---|
+| Acheter un Porte-Vaisseau sans provisionner l'entretien hebdomadaire | Décommissionnement involontaire après une semaine de grâce impayée, dette déduite du remboursement | Budgéter 10 à 20 M Cr/semaine avant l'achat (voir check-list ci-dessus) |
+| Décommissionner sans retirer cargo, Tritium et modules au préalable | Perte de leur valeur totale | Toujours vider la soute et le réservoir avant de lancer la procédure |
+| Confondre Stronghold Carrier et Porte-Vaisseau de joueur | Attente d'un accès ou d'un usage qui n'existe pas pour ce type d'installation | Voir la distinction ci-dessus : le Stronghold Carrier n'est pas un Porte-Vaisseau de joueur |
+| Sous-estimer le coût en Tritium d'un saut à pleine charge | Jusqu'à ≈ 260 t consommées contre ≈ 135 t à vide sur 500 al | Calculer avec la formule de la section 3 avant de planifier un saut long |
+| Installer un Material Trader ou un Technology Broker en pensant qu'ils sont disponibles sur un Porte-Vaisseau | Service inexistant — seuls Shipyard/Outfitting, stockage gratuit et transport sont disponibles | Voir la liste des services embarqués (section 4) |
+
 ## Voir aussi
 
+- [Carte des boucles de gameplay](./00-boucles-de-gameplay.md) — le Porte-Vaisseau comme jalon de progression (5 Md
+  Cr) dans les parcours-types chiffrés, et sa place dans la matrice boucle × système structurant.
 - [Commerce](./11-commerce.md) — carrier trading, réseaux PTN/FCOC, denrées rares.
 - [Transport](./12-transport.md) — Porte-Vaisseau comme base logistique mobile pour le fret.
 - [Le Minage](./20-minage.md) — techniques et équipement de minage, dépôt mobile sur hotspot.

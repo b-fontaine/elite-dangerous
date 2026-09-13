@@ -9,7 +9,7 @@ branche: live
 date_verification: 2026-09-13
 confiance_globale: haute
 volatilite: moyenne
-sources_primaires: [Wikipedia Elite Dangerous, Canonn Research, EDSM, Spansh, Inara, EDCD/coriolis-data, EDCD/FDevIDs, "Wiki communautaire Elite Dangerous — Megaship/Installation/Recon Limpet Controller, consulté le 13 septembre 2026"]
+sources_primaires: [Wikipedia Elite Dangerous, Canonn Research, EDSM, Spansh, Inara, EDCD/coriolis-data, EDCD/FDevIDs, "Wiki communautaire Elite Dangerous — Megaship/Installation/Recon Limpet Controller, consulté le 13 septembre 2026", "Steam Community — discussions générales Elite Dangerous sur le bounty hunting et les Combat Zones, consultées le 13 septembre 2026"]
 zones_incertaines:
   - "Coefficient exact de réduction des dégâts lorsque la pénétration de blindage d'une arme est inférieure à la dureté de coque de la cible : les deux champs sont publiés par EDCD/coriolis-data, la formule qui les combine ne l'est pas."
   - "Règle de calcul appliquée aux dégâts de type absolu et aux dégâts anti-xéno : le jeu de données porte l'étiquette de type, pas la règle."
@@ -22,7 +22,8 @@ zones_incertaines:
   - "Corrélation entre type d'installation spatiale et contenu du piratage : aucune source consultée ne documente de table équivalente à celle des megaships, dont la classe fixe le contenu."
   - "Déclenchement de la notoriety par le piratage de megaships/installations : mentionné pour la mécanique générale de Crime & Punishment, non confirmé spécifiquement pour cette activité."
   - "Chiffre global du nombre de megaships et de classes recensées (Canonn, mai 2022) : à traiter comme un ordre de grandeur historique, probablement obsolète en 2026."
-guides_lies: [0, 3, 4, 6, 16, 21, 23, 25, 30, 31]
+  - "Le Cr/h de HazRES/CZ/massacre (§4.3bis) est une reconstitution communautaire datée du 13 septembre 2026, pas un barème Frontier."
+guides_lies: [0, 3, 4, 6, 16, 21, 23, 25, 27, 30, 31]
 ---
 
 # Guide complet du combat spatial dans Elite Dangerous
@@ -611,6 +612,24 @@ trois niveaux d'intensité : **basse**, **moyenne** et **haute**.
   influence l'état du conflit dans le système, et certains [Community Goals](./24-community-goals.md) portent
   spécifiquement sur des objectifs de combat en CZ.
 
+### 4.3bis Rentabilité chiffrée : HazRES, Combat Zones et missions de massacre (≈ 30 M Cr/h) — reconstitution communautaire
+
+Ni §4.1 (RES/HazRES), ni §4.3 (Combat Zones), ni §7.1 (bounty vouchers) ne chiffraient jusqu'ici de rendement en
+crédits — ce dernier constate même explicitement qu'« aucune moyenne chiffrée fiable n'a pu être vérifiée ». **Ce qui
+suit est une reconstitution communautaire datée du 13 septembre 2026, pas un barème officiel Frontier** — voir la
+note de méthode de [00-boucles-de-gameplay.md](./00-boucles-de-gameplay.md) avant de la recopier ailleurs.
+
+- **HazRES** avec un vaisseau de combat engagé et un bonus de Power (Powerplay) actif : de l'ordre de **≈ 30 M Cr/h**.
+- **Missions de massacre/assassinat** (§4.4) empilées auprès de plusieurs factions pour un même lot de cibles :
+  typiquement **≈ 40 M Cr pour 30 cibles** par mission, jusqu'à **200 M Cr et plus** en cumulant plusieurs contrats
+  sur le même lot de kills.
+- **Combat Zones** (basse/moyenne/haute intensité) : la communauté les considère comparables au HazRES en
+  rentabilité, mais aucun chiffre stable par palier d'intensité n'a pu être établi — le rendement dépend fortement de
+  la densité de vagues et du nombre de cibles à prime dans l'instance.
+
+*Source de cette reconstitution : discussions communautaires Steam Community (Elite Dangerous General Discussions),
+consultées le 13 septembre 2026.*
+
 ### 4.4 Missions d'assassinat et de massacre en vaisseau
 
 - **Missions d'assassinat** : ciblent un NPC nommé unique, souvent escorté, avec un niveau de menace corrélé à la
@@ -864,6 +883,8 @@ augmentant le montant total récupérable sur un même kill.
 Le montant des vouchers dépend du vaisseau, du rang et du contexte (bonus d'événements, Community Goals de sécurité) et
 fluctue avec les correctifs d'équilibrage : aucune moyenne chiffrée fiable n'a pu être vérifiée en direct pour cette
 révision — consultez les valeurs affichées en jeu ou un tracker communautaire à jour plutôt qu'un chiffre figé ici.
+Pour un ordre de grandeur global (pas voucher par voucher), voir la reconstitution communautaire de rentabilité en
+§4.3bis.
 
 ### 7.2 Devenir « wanted » et Interstellar Factors
 
@@ -1057,6 +1078,8 @@ détail châssis par châssis dans [03-vaisseaux.md](./03-vaisseaux.md) : ce gui
 
 ## Voir aussi
 
+- [Carte des boucles de gameplay](./00-boucles-de-gameplay.md) — HazRES/CZ/massacre comparés aux 21 autres boucles du
+  jeu, et méthode de reconstitution du Cr/h (§4.3bis) appliquée aux autres zones aveugles du corpus.
 - [Lore et chronologie](./01-lore.md) — contexte narratif de l'invasion thargoïde et des Titans.
 - [Ingénieurs](./06-ingenieurs.md) — modifications G1-G5 et matrice complète des effets expérimentaux résumés en 3.3.
 - [Équipements](./04-equipements.md) — prix, masses et consommations des modules, et résistances chiffrées des bulkheads par vaisseau.

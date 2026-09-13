@@ -690,6 +690,21 @@ unanime à suivre telle quelle.
 | **Inara.cz — Logbook**                   | Guides de farming communautaires détaillés et datés (inara.cz/elite/logbook/) — bonne source de veille continue | Confirmé, sources principales de la section 2 de ce guide |
 | **EDSM — recherche de stations**         | Recherche de stations par service, incluant « Material Trader » (edsm.net/en/search/stations/index/service/71) — utile pour localiser un bartender proche | Confirmé (service EDSM existant) |
 
+## Check-list avant une session de farming à pied
+
+- Choisir la méthode selon l'objectif : missions de réactivation/restauration de settlement pour un rendement
+  général (2.1), farming ciblé par schéma d'arme pour un composant précis (2.4), astuce du relog sur balise pour de
+  la Data (2.5), ou farming furtif sans combat pour rester discret (2.6).
+- Vérifier les volumes de matériaux nécessaires avant de partir (section 3.4), pour ne pas s'arrêter en cours de
+  session faute d'objectif chiffré.
+- En farming furtif : surveiller triangle (ligne de vue directe) et cercle (scan hors ligne de vue) sur le HUD avant
+  de piller chaque casier — ignorer le triangle casse la boucle « sans combat » (2.6).
+- Confirmer le niveau de sécurité du settlement visé (2.3) plutôt que de le découvrir sur place.
+- Vérifier le seuil exact d'échange attendu par le bartender pour un déblocage d'Engineer ciblé (ex. 15 unités pour
+  Wellington Beck, section 1.4) avant de s'arrêter en pensant avoir terminé.
+- Emporter un tracker d'inventaire à jour (EDOMH ou alternative, section 5) pour éviter de récolter un matériau déjà
+  au plafond de stockage.
+
 ## Lacunes de recherche à garder à l'esprit sur l'ingénierie à pied
 
 Ce guide assume explicitement ces limites plutôt que de les combler par des chiffres inventés :
@@ -729,6 +744,8 @@ correspondante ci-dessus plutôt que d'être ajoutée à côté.
 
 ## Voir aussi
 
+- [00-boucles-de-gameplay.md](./00-boucles-de-gameplay.md) — le farming à pied comparé aux 21 autres boucles du jeu
+  (ici en matériaux/session, pas en Cr/h) et sa place dans la matrice boucle × système structurant.
 - [07-equipement-a-pied.md](./07-equipement-a-pied.md) — combinaisons, armes, outils et tableaux complets des
   blueprints à pied (effets, Engineers, coûts) dont ce guide ne reprend que des extraits ciblés.
 - [06-ingenieurs.md](./06-ingenieurs.md) — mécanique générale de l'ingénierie (vaisseaux), grades, matériaux

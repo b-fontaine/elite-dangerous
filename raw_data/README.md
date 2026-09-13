@@ -95,7 +95,7 @@ que ce cycle referme. Le corpus reste à **32 guides thématiques**.
 Le dépôt héberge deux ensembles de contenu francophone qui se recouvrent partiellement et n'avaient jamais été
 réconciliés. Cette section pose la règle qui les départage.
 
-- **`raw_data/`** — 34 fichiers markdown (32 guides thématiques et 2 documents transversaux) : la base de
+- **`raw_data/`** — 35 fichiers markdown (32 guides thématiques et 3 documents transversaux) : la base de
   connaissances de référence sur **le jeu**, écrite pour alimenter le RAG. C'est le présent répertoire. Chaque guide
   porte un front-matter YAML et un encart « En bref » ; [`index.yaml`](./index.yaml) en agrège les métadonnées et sert
   de routeur de requête. Le gabarit du front-matter et l'usage de l'index sont spécifiés dans les *Notes d'ingestion
@@ -194,6 +194,13 @@ celui défini par les *Notes d'ingestion RAG* en fin de document, qui n'indexe q
 
 ## Documents de référence transversaux
 
+- [Carte des boucles de gameplay](./00-boucles-de-gameplay.md) — **Point d'entrée du corpus pour la question la plus
+  posée par les joueurs : quelle boucle rapporte le plus, et avec quel vaisseau.** Un tableau unique compare 22
+  boucles de gameplay (Cr/h, capital d'entrée, rang progressé, guide propriétaire) et chiffre pour la première fois
+  trois zones jusque-là aveugles — combat anti-Thargoïde, primes/Combat Zones, transport de passagers — ainsi que
+  l'exobiologie, via des reconstitutions communautaires datées et explicitement marquées comme telles. Complété par
+  trois parcours-types chiffrés (0 → 100 M Cr, 100 M → 1 Md Cr, débloquer un Porte-Vaisseau à 5 Md Cr) et une matrice
+  croisant chaque boucle avec les systèmes qu'elle fait progresser (BGS, Powerplay, ingénierie, rang).
 - [Chronologie canonique](./00-chronologie-canonique.md) — Tranche quatorze faits datés d'*Elite Dangerous* sur
   lesquels les fichiers du dépôt se contredisaient, en s'appuyant en priorité sur le flux **Steam News** de Frontier
   (*App ID 359320*) : Powerplay 2.0 avec *Ascendancy* le 31 octobre 2024, bêta de la Colonisation le 26 février 2025 et
@@ -493,7 +500,7 @@ quels par un humain.
 ### Règle 1 — N'indexer que les guides
 
 Indexer `raw_data/*.md` **à l'exclusion de `README.md`**, et ne pas indexer `raw_data/index.yaml`, qui n'est pas un
-guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 34 fichiers dont le
+guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 35 fichiers dont le
 nom correspond à `^\d{2}-.*\.md$` à la racine de `raw_data/`.
 
 Ce glob doit rester **non récursif** et ignorer les répertoires cachés : `raw_data/` peut contenir un `.omc/`
@@ -538,24 +545,35 @@ recouvre lexicalement l'ensemble du corpus. Indexées, elles remontent en tête 
 évincent les passages qui contiennent réellement la réponse. Les renvois croisés utiles restent accessibles au lecteur
 humain dans le fichier ; ils n'ont simplement pas leur place dans l'index vectoriel.
 
-**Relevé du 12 septembre 2026, après l'ajout du guide de géographie galactique : 67 sections, 20 676 mots.**
-Comptage : titres capturés par le motif ci-dessus dans les fichiers `NN-*.md`, contenu compté jusqu'au titre de
-même niveau ou de niveau supérieur suivant, `split()` sur les espaces. Vingt-neuf guides
-portent deux sections concernées (`## Voir aussi` et `## Sources`), trois en portent trois —
+**Relevé du 13 septembre 2026, après l'ajout du guide transversal des boucles de gameplay : 70 sections, 23 606
+mots.** Comptage : titres capturés par le motif ci-dessus dans les fichiers `NN-*.md`, contenu compté jusqu'au titre de
+même niveau ou de niveau supérieur suivant, `split()` sur les espaces. Trente guides portent deux sections concernées
+(`## Voir aussi` et `## Sources`) — les vingt-neuf guides numérotés plus le nouveau
+[00-boucles-de-gameplay.md](./00-boucles-de-gameplay.md) —, trois en portent trois —
 [05-guardians.md](./05-guardians.md), [07-equipement-a-pied.md](./07-equipement-a-pied.md) et
-[10-exploration.md](./10-exploration.md), qui ajoutent chacun une section de ressources externes —, et deux n'en
-portent aucune : [00-chronologie-canonique.md](./00-chronologie-canonique.md) et
-[00-glossaire.md](./00-glossaire.md). Soit 29 × 2 + 3 × 3 + 2 × 0 = 67 sections pour 34 fichiers. Les blocs les plus
-lourds sont les `## Sources` de [06-ingenieurs.md](./06-ingenieurs.md) (1 783 mots) et de
-[20-minage.md](./20-minage.md) (1 776 mots), suivis de celui de
-[10-exploration.md](./10-exploration.md) (788 mots) et de celui de
-[28-marchandises.md](./28-marchandises.md) (749 mots) — aucun des guides suivants n'y figure, tous restant sous ce
-seuil : [29-missions-reputation-et-rangs.md](./29-missions-reputation-et-rangs.md) (`## Voir aussi` 221 mots,
+[10-exploration.md](./10-exploration.md), qui ajoutent chacun une section de ressources externes —,
+[00-glossaire.md](./00-glossaire.md) en porte une seule (`## Sources`, sans `## Voir aussi`), et
+[00-chronologie-canonique.md](./00-chronologie-canonique.md) n'en porte aucune (ses sources sont citées en prose sous
+un intitulé en gras, pas sous un titre Markdown). Soit 30 × 2 + 3 × 3 + 1 × 1 + 1 × 0 = 70 sections pour 35 fichiers.
+Les blocs les plus lourds sont désormais le `## Sources` de [06-ingenieurs.md](./06-ingenieurs.md) (2 140 mots, en
+forte hausse depuis le relevé précédent) et celui de [20-minage.md](./20-minage.md) (1 776 mots, inchangé), suivis de
+celui de [10-exploration.md](./10-exploration.md) (856 mots) et de celui de
+[28-marchandises.md](./28-marchandises.md) (749 mots, inchangé) — aucun des guides suivants n'y figure, tous restant
+sous ce seuil : [29-missions-reputation-et-rangs.md](./29-missions-reputation-et-rangs.md) (`## Voir aussi` 221 mots,
 `## Sources` 548 mots), [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) (`## Voir aussi` 143 mots, `## Sources`
 364 mots), [14-rhino.md](./14-rhino.md) (`## Voir aussi` 290 mots, `## Sources` 532 mots),
 [31-pilotage-navigation-et-stations.md](./31-pilotage-navigation-et-stations.md) (`## Voir aussi` 162 mots,
 `## Sources` 275 mots), et [32-geographie-galactique.md](./32-geographie-galactique.md) (`## Voir aussi` 120 mots,
 `## Sources` 269 mots).
+
+**Écart avec le relevé précédent (12 septembre 2026, 67 sections/20 676 mots), corrigé ici.** Il annonçait deux
+fichiers `00-*.md` sans section concernée ; [00-glossaire.md](./00-glossaire.md) en porte en réalité une (`## Sources`,
+ajoutée le 13 septembre 2026 lors du chantier de glossaire, avant même la présente révision) — l'ancien relevé n'avait
+simplement pas été refait depuis. Les chantiers 12 à 14 (glossaire, lore vivant, boucles de farming), tous datés du
+13 septembre 2026, avaient déjà fait grossir plusieurs blocs `## Sources` (celui de
+[06-ingenieurs.md](./06-ingenieurs.md) en particulier, de 1 783 à 2 140 mots) sans que ce relevé soit recompté entre
+temps : preuve, comme les deux écarts déjà documentés ci-dessous, que la mesure doit être refaite à **chaque**
+révision touchant une section concernée, pas seulement à celles qui en ajoutent une nouvelle.
 
 Deux écarts avec le relevé précédent, publié le même jour et corrigés ici, méritent d'être signalés parce qu'ils
 illustrent exactement le défaut que ce relevé est censé prévenir. Le décompte de **57 sections** était juste, mais la
@@ -571,7 +589,7 @@ sur lui.
 **Méthode de comptage, à reproduire à l'identique après toute révision.** Ces deux chiffres ne sont comparables dans
 le temps que si la mesure l'est aussi. La convention retenue est la suivante :
 
-1. **Périmètre** : les 34 fichiers du périmètre indexé défini à la règle 1 ; `README.md`, `index.yaml` et les
+1. **Périmètre** : les 35 fichiers du périmètre indexé défini à la règle 1 ; `README.md`, `index.yaml` et les
    sous-répertoires en sont exclus.
 2. **Détection** : une section est retenue si sa ligne de titre correspond au motif ci-dessus et ne figure pas dans la
    liste des exceptions, vide à ce jour.
