@@ -34,7 +34,8 @@ Elite Dangerous, développé et édité par Frontier Developments, fonctionne de
 jeu-service » gratuit pour ses mises à jour majeures : le studio publie régulièrement de grandes mises à jour nommées
 (les « saisons »), entrecoupées de mises à jour plus ciblées centrées sur un nouveau vaisseau ou véhicule, elles-mêmes
 suivies de patchs correctifs et de hotfixs. Cette synthèse dresse l'état de cette feuille de route au 9 septembre 2026,
-à partir des communications officielles de Frontier (site officiel, Dev Logs mensuels, notes de mise à jour, GalNet).
+à partir des communications officielles de Frontier (site officiel, Dev Logs mensuels (billets de développement du
+studio), notes de mise à jour, GalNet).
 
 Ce guide reste volontairement synthétique sur les sujets qui ont leur propre guide dédié dans le corpus : les
 sections « Operations », « Nomad » et « Rhino » ci-dessous ne résument que ce qui concerne la feuille de route
@@ -67,9 +68,9 @@ Le jeu suit un système de versions au format `4.x.y.z`. Trois niveaux de sortie
 | Saison            | Date de sortie   | Contenu principal                                                                                                                                                                                                                                 |
 |-------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Ascendancy**    | 31 octobre 2024 | Refonte complète du Powerplay (**Powerplay 2.0**) et nouveau vaisseau **Mandalay**. Absente des premières versions de cette synthèse, qui commençaient à tort en février 2025 alors que le titre du guide couvre bien « fin 2024 » — voir [Powerplay](./02-powerplay.md). |
-| **Trailblazers**  | 26 février 2025 | Introduction de la Colonisation de systèmes (*System Colonisation*) en bêta : les joueurs peuvent revendiquer et développer leurs propres systèmes stellaires (économie locale, hub commercial, port d'opérations). Voir le suivi dédié ci-dessous et [18-colonisation.md](./18-colonisation.md). |
+| **Trailblazers**  | 26 février 2025 | Introduction de la Colonisation de systèmes (*System Colonisation*) en bêta : les joueurs peuvent revendiquer et développer leurs propres systèmes stellaires (économie locale, hub commercial, port d'opérations). Voir le [suivi dédié](#suivi-des-jalons-de-la-colonisation-de-systèmes-2025) ci-dessous et [18-colonisation.md](./18-colonisation.md). |
 | **Vanguards**     | 19 août 2025    | Refonte complète du système des Squadrons (escadrons) : Squadron Carrier dédié (voir [Fleet Carriers](./19-fleet-carriers.md)), Squadron Bank pour partager ressources et vaisseaux, navigateur d'escadron enrichi (bannières, devises, logos personnalisables) et nouveaux avantages collectifs — voir [Squadrons](./22-squadrons.md). |
-| **Operations**    | 30 juin 2026    | Contenu multijoueur en escouade (version 4.4.0.0) : six opérations scénarisées, vaisseau de déploiement **Operation Runner**, monnaie **Merc Coin** et catalogue **MercGear**, lobby et matchmaking dédiés, mode Powerplay optionnel. La mise à jour amène également le **Nomad** (voir ci-dessous). Notes de version publiées le 1er juillet 2026 (billet « Operations Update », 14:01 UTC). Voir [13-operations.md](./13-operations.md) et la section dédiée plus bas. |
+| **Operations**    | 30 juin 2026    | Contenu multijoueur en escouade (version 4.4.0.0) : six opérations scénarisées, vaisseau de déploiement **Operation Runner**, monnaie **Merc Coin** et catalogue **MercGear**, lobby et matchmaking (appariement) dédiés, mode Powerplay optionnel. La mise à jour amène également le **Nomad** (voir [ci-dessous](#loperations-update-et-le-nomad-30-juin-2026)). Notes de version publiées le 1er juillet 2026 (billet « Operations Update », 14:01 UTC). Voir [13-operations.md](./13-operations.md) et la [section dédiée](#loperations-update-et-le-nomad-30-juin-2026) plus bas. |
 
 > **Correction (8 septembre 2026)** : la date de Trailblazers a été corrigée de « 25 février » à **26 février 2025**
 > (date de lancement officielle de la bêta de la Colonisation, confirmée par les métadonnées de publication du site
@@ -93,7 +94,7 @@ n'a été annoncée à ce jour.
 | 4.2.1.0 / .1 / .2 | 29 sept., 2 et 16 oct. 2025 | Type-11 Prospector Update | Nouveau vaisseau minier, le Type-11 Prospector, accompagné d'ajustements de la Colonisation (voir sous-section dédiée)                                          |
 | 4.2.2.0 / .1      | 11 et 13 nov. 2025          | Dodec Update              | Station Dodec de la Brewer Corporation (entrée en pleine production confirmée en lore GalNet en mai 2026). Selon les notes de version officielles, cette mise à jour marque aussi la **fin de la bêta de la Colonisation de systèmes** (voir sous-section dédiée). |
 | 4.3.0.0 / .1      | 2 et 11 déc. 2025           | Caspian Explorer Update   | Nouveau vaisseau d'exploration, le Caspian Explorer (Zorgon Peterson)                                                                                           |
-| 4.3.1.0           | 24 fév. 2026                | Kestrel Mk II Update      | Vaisseau de combat léger de Core Dynamics, propulseurs Mk II Agile Boost et Mk II Plasma Shock Accelerator, accompagné d'une refonte massive de l'audio du combat à pied (voir détail plus bas) |
+| 4.3.1.0           | 24 fév. 2026                | Kestrel Mk II Update      | Vaisseau de combat léger de Core Dynamics, propulseurs Mk II Agile Boost et Mk II Plasma Shock Accelerator, accompagné d'une refonte massive de l'audio du combat à pied (voir [détail plus bas](#les-mises-à-jour-de-vaisseaux-de-2026-en-détail-kestrel-mk-ii-lynx-highliner)) |
 | 4.3.3.0           | 28 avril 2026               | Lynx Highliner Update     | Nouveau vaisseau de ligne pour passagers (Zorgon Peterson — et non Saud Kruger, malgré une confusion fréquente puisqu'il s'agit du premier paquebot de ce fabricant), pouvant accueillir jusqu'à 225 passagers |
 | **4.4.0.0**       | **30 juin 2026**            | **Operations Update**     | Contenu multijoueur en escouade et sortie du **Nomad** en accès anticipé Arx ; notes de version publiées le 1er juillet 2026 (billet « Operations Update », 14:01 UTC) |
 | 4.4.0.3           | 9 juillet 2026              | Operations Update 3       | Correctifs Operations (récompenses manquantes, données d'exploration perdues, inventaires à pied) — billet « Operations Update — Update 3 » (10:24 UTC) ; version attestée par les journaux de jeu (voir [14-rhino.md, §3.8](./14-rhino.md#38-nom-interne--lander01--du-nomad-et-effets-de-bord-sur-les-outils-tiers)) |
@@ -106,7 +107,7 @@ deux patchs correctifs dans les semaines suivantes.
 lendemain) circulaient dans une révision antérieure de ce guide ; ils proviennent des pages de notes de version du
 site officiel, inaccessibles lors de la vérification du 9 septembre 2026 (HTTP 403). Le flux d'annonces officielles ne
 comporte, après le 2 septembre, aucun billet de hotfix : la ligne « 4.4.1.1 » a donc été retirée de cette table (voir
-« Ajustements annoncés après le lancement » plus bas). Les seuls numéros de version étayés pour l'été 2026 sont **4.4.0.0** et
+[« Ajustements annoncés après le lancement »](#ajustements-annoncés-après-le-lancement-du-rhino-problèmes-connus) plus bas). Les seuls numéros de version étayés pour l'été 2026 sont **4.4.0.0** et
 **4.4.0.3**.
 
 ### Les mises à jour de vaisseaux de 2026 en détail (Kestrel Mk II, Lynx Highliner)
@@ -129,7 +130,7 @@ pour la première fois sur le marché des paquebots avec un vaisseau de classe m
 **225 passagers**, disponible **contre crédits au chantier naval** pour tous les possesseurs d'Odyssey — une exception
 au modèle habituel, en compensation du report d'Operations annoncé six jours plus tôt. La formule **Standard est à
 0 Arx** ; les upgrades Stellar (16 480 Arx) et Galactic (43 480 Arx) sont proposés à tarif réduit. Côté gameplay, la
-mise à jour introduit les **cabines passagers Mk II** (Business et Economy, capacité multipliée par 1,5), de
+mise à jour introduit les **cabines passagers Mk II** (Business et Economy, soit Affaires et Économique, capacité multipliée par 1,5), de
 nouvelles **missions d'évacuation de passagers en masse**, des variantes de missions passagers compatibles avec les
 plateformes d'atterrissage moyennes, et une hausse du taux d'apparition des missions passagers dans les systèmes
 colonisés. Pour le détail du gameplay passager, voir [12-transport.md](./12-transport.md).
@@ -176,7 +177,7 @@ programme, pour le fil roadmap :
 - l'**Operation Runner**, vaisseau de déploiement qui transporte l'escouade vers le système de l'opération et sert de
   point de réapparition et d'extraction ;
 - la monnaie **Merc Coin** et le catalogue **MercGear** (blueprints et modules pré-ingénieurés) ;
-- un déploiement en **Networking & Balancing Beta**, Frontier se réservant des ajustements serveurs fréquents ;
+- un déploiement en **Networking & Balancing Beta** (bêta de réseau et d'équilibrage), Frontier se réservant des ajustements serveurs fréquents ;
 - des **ajustements de l'éclairage stellaire** (« Made adjustments to Stellar Lighting », Issue ID 45769) et du fond
   galactique, recalibré à partir d'images de référence réelles.
 
@@ -205,7 +206,7 @@ communication officielle elle-même.
 ### Une septième opération, « Under Siege », le 2 septembre 2026
 
 Le Rhino SRV Update (2 septembre 2026, 11:20 UTC) ajoute l'opération **« Under Siege »** : les commandants répondent à
-un appel de détresse émis par un settlement planétaire, doivent lever un blocus et neutraliser les forces ennemies qui
+un appel de détresse émis par un settlement (installation au sol) planétaire, doivent lever un blocus et neutraliser les forces ennemies qui
 tentent de s'en emparer. Elle figure au lancement parmi les problèmes connus, l'opération pouvant « sometimes complete
 early ».
 
@@ -331,11 +332,11 @@ Rhino :
 
 Les deux CG invitaient les commandants à tester sur le terrain le nouveau rig de minage déployable et le SRV Rhino,
 pour le compte de Wreaken Corporation et Vodel — un exemple typique de la manière dont Frontier articule ses CG avec
-la sortie d'un nouveau contenu (ici le Rhino, voir plus haut) plutôt que de les traiter comme un système isolé.
+la sortie d'un nouveau contenu (ici le Rhino, voir [plus haut](#le-rhino-et-le-surface-mining-2-septembre-2026)) plutôt que de les traiter comme un système isolé.
 
 Trois campagnes de distribution communautaire à Colonia venaient par ailleurs de s'achever (Carcosa et Randgnid à
 100 %, Einheriar à 39,56 % avant clôture anticipée début août 2026), illustrant l'usage des CG également comme
-habillage narratif du 10ᵉ anniversaire de Colonia (voir plus bas).
+habillage narratif du 10ᵉ anniversaire de Colonia (voir [plus bas](#galnet-le-fil-dactualité-in-fiction-du-jeu)).
 
 ## Contenu annoncé mais pas encore sorti (au 9 septembre 2026)
 
@@ -423,14 +424,14 @@ Plusieurs tendances de fond se dégagent de cette période :
   transport commun — signe d'un investissement soutenu dans la diversification des véhicules de surface plutôt que
   dans de nouveaux gros vaisseaux capitaux.
 - **Modèle économique constant.** Chaque nouveau véhicule ou vaisseau sort d'abord en accès anticipé payant (ARX Early
-  Access — voir la table de conversion ci-dessus), avant de devenir accessible contre crédits in-jeu plusieurs mois plus
+  Access — voir la [table de conversion ci-dessus](#comprendre-les-prix--convertir-les-arx-en-monnaie-réelle)), avant de devenir accessible contre crédits in-jeu plusieurs mois plus
   tard. Cette logique de pré-achat cosmétique/anticipé est assumée par Frontier comme le modèle de financement du
   développement continu, le jeu de base restant par ailleurs gratuit d'accès aux mises à jour majeures. La grille est
   d'ailleurs stable d'une sortie à l'autre — 16 520 / 33 000 / 60 000 Arx pour le Kestrel Mk II, le Nomad et le Rhino.
   Le Lynx Highliner fait exception : disponible en crédits dès sa sortie, en compensation du report d'Operations.
 - **Transparence sur les défauts au lancement.** Frontier publie désormais, dans les notes de version elles-mêmes, une
-  rubrique « Known Issues » énumérant les défauts identifiés et les correctifs prévus — trois cas au lancement du
-  Rhino, dont le plafond de collecte à 9 fragments au lieu de 12 (voir plus haut). Le suivi de ces engagements reste à
+  rubrique « Known Issues » (problèmes connus) énumérant les défauts identifiés et les correctifs prévus — trois cas au lancement du
+  Rhino, dont le plafond de collecte à 9 fragments au lieu de 12 (voir [plus haut](#ajustements-annoncés-après-le-lancement-du-rhino-problèmes-connus)). Le suivi de ces engagements reste à
   vérifier en jeu : à la date de rédaction, aucun billet de hotfix ne les couvre.
 - **Livraison assumée en plusieurs vagues.** Operations est sorti en « Networking & Balancing Beta » revendiquée, avec
   un Update 3 correctif neuf jours plus tard, puis une septième opération deux mois après. Le report annoncé en avril
@@ -444,6 +445,65 @@ Plusieurs tendances de fond se dégagent de cette période :
 - **Renforcement de la transparence éditoriale.** Rythme mensuel systématique de Dev Logs détaillés avec interviews
   nommées de l'équipe et FAQ vivante mise à jour au fil des retours — une densité de communication supérieure à
   d'autres périodes de la vie du jeu.
+
+## Questions fréquentes
+
+**Quelle est la dernière mise à jour (update) d'Elite Dangerous en date, au 9 septembre 2026 ?**
+Le **Rhino SRV Update**, sorti le 2 septembre 2026 (11:20 UTC) : il ajoute le SRV minier Vodel's Rhino, la mécanique
+de Surface Mining, treize nouvelles matières premières minables en surface et l'opération « Under Siege ». Son numéro
+de version exact (4.4.1.0) n'est en revanche pas attesté par une source vérifiable. Voir
+[Le Rhino et le Surface Mining](#le-rhino-et-le-surface-mining-2-septembre-2026).
+
+**Le Nomad est-il sorti en même temps que l'Operations Update ?**
+Oui, tous les deux le **30 juin 2026** (version 4.4.0.0) : Operations est le contenu multijoueur en escouade (six
+opérations, Operation Runner, Merc Coin, MercGear), et le Nomad son premier vaisseau lancé depuis un vaisseau, sorti
+le même jour en accès anticipé Arx. Voir [L'Operations Update et le Nomad](#loperations-update-et-le-nomad-30-juin-2026).
+
+**Le Rhino collecte-t-il déjà 12 fragments en minage de surface (surface mining), au lieu de 9 ?**
+Non : au 9 septembre 2026, aucun billet officiel ne confirme un hotfix en ce sens, et le dernier billet du flux
+d'annonces reste celui du 2 septembre. Le plafond reste donc à **9 fragments**, la hausse à 12 étant seulement
+annoncée « as soon as possible ». Voir
+[Ajustements annoncés après le lancement du Rhino](#ajustements-annoncés-après-le-lancement-du-rhino-problèmes-connus).
+
+**Combien coûte un vaisseau ou véhicule en accès anticipé (Arx Early Access) ?**
+La grille est stable d'une sortie à l'autre : **16 520 Arx** pour l'édition Standard (~9 €), **33 000 Arx** pour la
+Stellar (~18 €) et **60 000 Arx** pour la Galactic (~33 €), au tarif indicatif du plus gros palier ARX. Le Kestrel
+Mk II, le Nomad et le Rhino partagent cette même grille. Voir
+[Comprendre les prix : convertir les ARX en monnaie réelle](#comprendre-les-prix--convertir-les-arx-en-monnaie-réelle).
+
+**Le Lynx Highliner est-il gratuit ou faut-il payer en Arx comme les autres véhicules ?**
+C'est une exception au modèle habituel : son édition Standard est accessible **contre crédits in-jeu** dès la sortie
+(0 Arx), en compensation du report d'Operations annoncé six jours plus tôt. Seules les éditions Stellar (16 480 Arx)
+et Galactic (43 480 Arx) restent payantes, à tarif réduit.
+
+**Tous les combien de temps sort une nouvelle saison (season) sur Elite Dangerous ?**
+La cadence s'est nettement allongée : environ 4 mois entre Ascendancy et Trailblazers, un peu moins de 6 mois entre
+Trailblazers et Vanguards, puis un peu plus de 10 mois entre Vanguards et Operations (avec un report en cours de
+route). Aucune saison suivante n'est annoncée à ce jour.
+
+**C'est quoi le Surface Mining introduit par le Rhino ?**
+Une mécanique de minage entièrement nouvelle, distincte du minage d'astéroïdes classique : scanner de gisements
+planétaires intégré au véhicule, raffinerie embarquée, et module de déploiement de « mining rigs ». Elle donne accès
+à treize nouvelles matières premières exclusivement minables en surface. Voir
+[Le Rhino et le Surface Mining](#le-rhino-et-le-surface-mining-2-septembre-2026).
+
+**Le hotfix 4.4.1.1 du Rhino, daté du 3 septembre 2026, existe-t-il vraiment ?**
+Ce numéro a circulé dans une révision antérieure de ce guide, mais aucun billet officiel relevé au 9 septembre 2026
+ne le confirme — le flux d'annonces ne comporte aucun billet de hotfix après le 2 septembre. Les seuls numéros de
+version étayés pour cette période restent **4.4.0.0** et **4.4.0.3**.
+
+**Quelle sera la prochaine grosse mise à jour (update) après Operations ?**
+Elle n'est pas annoncée à ce jour. Seule la cadence observée sur les quatre saisons précédentes (Ascendancy,
+Trailblazers, Vanguards, Operations) permet une extrapolation, sans qu'aucune date soit engagée par Frontier.
+
+**Combien de temps sépare deux mises à jour « vaisseau/véhicule » ?**
+Généralement 1 à 3 mois entre chaque grande saison, chaque mise à jour vaisseau étant elle-même suivie d'un ou deux
+patchs correctifs dans les semaines suivantes.
+
+**Combien de matières premières le Rhino SRV Update ajoute-t-il ?**
+Treize nouvelles matières premières exclusivement minables en surface (Bastnäsite, Deutérium, Diamant, Hélium,
+Hélium-3, Iridium, Magnésite, Olivine, Periclase dunite, Quartz pyroxenite, Rubis, Saphir, Thortveitite). Voir
+[14-rhino.md, §2.6](./14-rhino.md#26-les-treize-nouvelles-matières-premières-minables-en-surface-avec-le-rhino).
 
 ## Voir aussi
 
@@ -461,7 +521,7 @@ Plusieurs tendances de fond se dégagent de cette période :
 - [Le Transport de passagers](./12-transport.md) — gameplay passager, enrichi par le Lynx Highliner et ses cabines
   Mk II (avril 2026).
 - [La Colonisation de systèmes](./18-colonisation.md) — mécaniques complètes de la fonctionnalité de colonisation,
-  dont le suivi des patchs est amorcé plus haut.
+  dont le [suivi des patchs](#suivi-des-jalons-de-la-colonisation-de-systèmes-2025) est amorcé plus haut.
 - [Porte-vaisseaux de joueur (Fleet Carriers)](./19-fleet-carriers.md) — pour approfondir le Squadron Carrier
   mentionné dans la saison Vanguards.
 - [Le Minage (Mining)](./20-minage.md) — mécaniques de minage classique (astéroïdes), à distinguer du minage de

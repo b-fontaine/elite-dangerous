@@ -22,7 +22,7 @@ deux de l'Alliance, quatre indépendants — se disputent le contrôle territori
 mise à jour 1.3, il a été entièrement refondu le 31 octobre 2024 par la mise à jour *Ascendancy*
 (« Powerplay 2.0 ») : les mérites (merits) gagnés en s'engageant (pledge) auprès d'un Power sont désormais permanents
 et non décroissants, et presque toute activité du jeu en rapporte. Trois axes structurent le jeu territorial :
-Acquisition, Renforcement (reinforcement) et Undermining. Le score de contrôle d'un système détermine son état —
+Acquisition, Renforcement (reinforcement) et Undermining (déstabilisation). Le score de contrôle d'un système détermine son état —
 Exploité (exploited, 0 à 350 000 points), Fortifié (fortified, 350 000 à 1 000 000, bulle de 20 années-lumière) ou
 Bastion (stronghold, au-delà d'un million, bulle de 30 années-lumière) — et les bascules sont appliquées au tick
 hebdomadaire du jeudi à 07:00 UTC. Les rangs vont de 1 à 100 (environ 775 000 mérites cumulés) et débloquent douze
@@ -153,7 +153,7 @@ succession impériale (vers 2017), portant le total à dix.
 Vers 2018, dans le cadre du chapitre *Beyond*, **Yuri Grom** a rejoint à son tour les rangs des Powers après avoir mené
 sa milice (les EG Pilots) à la victoire lors des « Dangerous Games » de 3302 — épisode fictionnel qui a porté le nombre
 de Powers à onze, chiffre resté stable jusqu'à la refonte 2.0. Particularité notable : contrairement aux Powers
-d'origine, qui disposent chacun d'un « Powerplay Group » officiel, Grom s'appuie sur un groupe de joueurs communautaire
+d'origine, qui disposent chacun d'un « Powerplay Group » (groupe de joueurs officiel dédié à chaque Power), Grom s'appuie sur un groupe de joueurs communautaire
 baptisé « The Eyes of Leshak ».
 
 ### 3.2 Powerplay 1.0 : une décennie de critiques (2016-2024)
@@ -175,8 +175,8 @@ la majorité des joueurs.
 
 ### 3.3 Le contexte de mai 2024 : la controverse « pay-to-win » du Python Mk II
 
-Juste avant la refonte, en mai 2024, Frontier a déclenché un important « review bombing » sur Steam (la note globale du
-jeu est tombée dans la catégorie « Mixed », autour de 66 %) en annonçant la vente du vaisseau Python Mk II contre de
+Juste avant la refonte, en mai 2024, Frontier a déclenché un important « review bombing » (vague coordonnée d'avis négatifs) sur Steam (la note globale du
+jeu est tombée dans la catégorie « Mixed » (mitigée), autour de 66 %) en annonçant la vente du vaisseau Python Mk II contre de
 l'**ARX** ([glossaire](./00-glossaire.md), monnaie payante) en accès anticipé exclusif. Cette décision a été perçue par une partie de la communauté comme
 une trahison d'un engagement pris en 2019, selon lequel l'ARX resterait strictement cosmétique. Bien que distincte de
 Powerplay au sens strict, cette controverse a nourri la défiance de la communauté à l'approche de la sortie de Powerplay
@@ -186,7 +186,7 @@ Powerplay au sens strict, cette controverse a nourri la défiance de la communau
 
 Le **31 octobre 2024**, la mise à jour **« Ascendancy »** a introduit une refonte quasi complète de Powerplay,
 accompagnée de plusieurs autres nouveautés : le vaisseau d'exploration **Mandalay** (Zorgon Peterson) avec un accès
-anticipé via l'ARX, des « care packages » de récompenses, un classement hebdomadaire compétitif (leaderboard), et une
+anticipé via l'ARX, des « care packages » (colis de récompenses), un classement hebdomadaire compétitif (leaderboard), et une
 carte galactique enrichie. Ce même jour, Zachary Hudson s'est retiré de Powerplay tandis que **Jerome Archer** et
 **Nakato Kaine** rejoignaient les rangs des Powers actifs, portant le total à douze. Cette mise à jour a globalement été
 perçue comme un succès, restaurant une bonne partie de la confiance de la communauté après les tensions du printemps
@@ -202,10 +202,10 @@ perçue comme un succès, restaurant une bonne partie de la confiance de la comm
 > ») confirme que « Powerplay 2.0 has been out for a few weeks now », ce qui recoupe bien un lancement fin octobre
 > 2024.
 >
-> Certains guides du corpus (voir [Lore](./01-lore.md), section 1.8) citent par erreur le **26 février 2025** pour la
+> Certains guides du corpus (voir [Lore](./01-lore.md), [section 1.8](./01-lore.md#18-trailblazers--la-colonisation-une-transition-vers-lexpansion)) citent par erreur le **26 février 2025** pour la
 > mise à jour Ascendancy/Powerplay 2.0. Cette date réelle correspond en fait au lancement, ce jour-là, d'une mise à
 > jour **distincte** : **« Elite Dangerous: Trailblazers »**, qui a introduit la mécanique de **Colonisation de
-> systèmes** (voir [Colonisation](./18-colonisation.md) et la section 5.8 ci-dessous) — sortie près de quatre mois
+> systèmes** (voir [Colonisation](./18-colonisation.md) et la [section 5.8](#58-powerplay-et-colonisation) ci-dessous) — sortie près de quatre mois
 > après Ascendancy. La confusion vient vraisemblablement du fait que les deux mises à jour ont chacune constitué un
 > tournant majeur pour le jeu, à quelques mois d'écart. La date de référence pour Ascendancy/Powerplay 2.0 dans ce
 > guide, et à retenir pour le reste du corpus, est donc bien le **31 octobre 2024**.
@@ -225,7 +225,7 @@ reste du jeu, et la décroissance des mérites.
   lancement de la 2.0 : chacun repart de zéro et choisit (ou re-choisit) un nouveau Power.
 - **Mérites permanents et non-décroissants** — contrairement à la version 1.0, les mérites gagnés ne se dégradent plus
   jamais avec le temps : la progression individuelle est cumulative et définitive. Seul le contrôle territorial
-  collectif d'un système peut, lui, régresser (voir section 5).
+  collectif d'un système peut, lui, régresser (voir [section 5](#5-mécaniques-détaillées-de-powerplay-20)).
 - **Intégration au gameplay normal** — quasiment toute activité du jeu (combat, chasse de primes, commerce, minage,
   exploration, missions Odyssey à pied, sauvetage, piraterie, etc.) peut désormais rapporter des mérites Powerplay selon
   le système et l'activité concernés, alors qu'en 1.0 il fallait mener des activités dédiées et largement déconnectées
@@ -242,7 +242,7 @@ reste du jeu, et la décroissance des mérites.
 - **Salaire hebdomadaire basé sur la performance relative** — les commandants reçoivent un paiement calculé selon leur
   classement relatif au sein de leur Power, allant de 500 000 Cr. pour l'ensemble de la base de joueurs jusqu'à environ
   1 milliard de Cr. pour le top 1 %. *(Valeurs instantanées au 9 septembre 2026, sujettes à ajustement lors des
-  rééquilibrages — voir 5.7.)*
+  rééquilibrages — voir [5.7](#57-rééquilibrages-continus-de-powerplay-20-2025-2026).)*
 
 ## 5. Mécaniques détaillées de Powerplay 2.0
 
@@ -262,8 +262,8 @@ reste du jeu, et la décroissance des mérites.
 
 Les mérites individuels gagnés par les joueurs alimentent un score de contrôle collectif par système : chaque activité
 menée dans un système donné contribue à ce score, selon un taux de conversion propre à l'activité (le détail précis de
-ces taux a fait l'objet d'ajustements répétés au fil des mises à jour d'équilibrage — voir 5.7 — et il est recommandé de
-vérifier les valeurs courantes via les outils communautaires cités en section 7.3 plutôt que de se fier à un chiffre
+ces taux a fait l'objet d'ajustements répétés au fil des mises à jour d'équilibrage — voir [5.7](#57-rééquilibrages-continus-de-powerplay-20-2025-2026) — et il est recommandé de
+vérifier les valeurs courantes via les outils communautaires cités en [section 7.3](#73-stratégie-territoriale-powerplay-acquisition-decay-hebdomadaire-coordination) plutôt que de se fier à un chiffre
 figé). Ce qui est stable, en revanche, ce sont les seuils de points de contrôle définissant les états d'un système,
 détaillés ci-dessous.
 
@@ -291,7 +291,7 @@ basculer entièrement sous le contrôle d'un Power adverse lors du tick hebdomad
   mérites supplémentaires ; le rang 100 nécessite environ **775 000 mérites** cumulés.
 - **Récompenses de rang** — « mini-packages » (250 000 Cr. + matériaux d'ingénierie vaisseau et à pied) obtenus à
   intervalles réguliers ; avantages économiques permanents propres à chaque Power (bonus de profit, réduction de coûts
-  d'armement, etc. — voir section 6) ; déblocage progressif des modules exclusifs, généralement complet à partir du
+  d'armement, etc. — voir [section 6](#6-les-12-powers-actuels-depuis-le-31-octobre-2024)) ; déblocage progressif des modules exclusifs, généralement complet à partir du
   rang ~97.
 
 #### Tableau de progression des rangs Powerplay (mérites cumulés, estimation par palier)
@@ -317,22 +317,22 @@ ci-dessus pour les rangs 6 à 99 — à traiter comme une **estimation indicativ
 | 99      | ~767 000                              | Estimation.                                                                                   |
 | **100** | **~775 000**                          | Valeur haute couramment citée par la communauté ; déblocage généralement complet des modules exclusifs dès ~97. |
 
-**Estimation du temps nécessaire pour atteindre le rang 100.** En reprenant les rendements indiqués en 7.2 (environ
+**Estimation du temps nécessaire pour atteindre le rang 100.** En reprenant les rendements indiqués en [7.2](#72-méthodes-efficaces-pour-engranger-des-mérites-méta-2025-2026) (environ
 25 000 à 75 000 mérites/heure en minage optimisé dans un système d'acquisition ou de renforcement, 10 000 à 25 000
 mérites/heure en combat/chasse de primes), atteindre ~775 000 mérites cumulés représente très approximativement :
 
 - **~10 à 30 heures** de jeu actif dans le meilleur cas (méthode la plus rentable du moment, jouée sans interruption) ;
 - **~50 à 75 heures**, voire davantage, pour un joueur mixant des activités moins optimisées, jouant en session courtes,
-  ou visant des activités secondaires (commerce, exobiologie, données Odyssey — voir 7.2).
+  ou visant des activités secondaires (commerce, exobiologie, données Odyssey — voir [7.2](#72-méthodes-efficaces-pour-engranger-des-mérites-méta-2025-2026)).
 
-Instantané au 9 septembre 2026, à revérifier sur les rendements courants (voir 7.2 et [Outils](./16-outils.md)) : les
-taux de conversion mérites ont été révisés à plusieurs reprises depuis le lancement de la 2.0 (voir 5.7), ce qui change
+Instantané au 9 septembre 2026, à revérifier sur les rendements courants (voir [7.2](#72-méthodes-efficaces-pour-engranger-des-mérites-méta-2025-2026) et [Outils](./16-outils.md)) : les
+taux de conversion mérites ont été révisés à plusieurs reprises depuis le lancement de la 2.0 (voir [5.7](#57-rééquilibrages-continus-de-powerplay-20-2025-2026)), ce qui change
 directement ces estimations d'heures.
 
 ### 5.6 Le système d'éthos Powerplay (bonus de mérites d'environ +50 %)
 
 Chaque Power associe l'une des quatre catégories d'activités suivantes à chacun de ses trois axes d'action
-(Acquisition, Renforcement, Undermining — voir 5.1) :
+(Acquisition, Renforcement, Undermining — voir [5.1](#51-les-trois-axes-dactivité-territoriale--acquisition-renforcement-undermining)) :
 
 | Éthos       | Activités concernées                                                  |
 |-------------|-----------------------------------------------------------------------|
@@ -351,7 +351,7 @@ L'association précise entre chaque axe et chaque catégorie est propre à chaqu
 dans l'interface officielle sous cette forme ; la matrice ci-dessous a été reconstituée à partir des fiches
 individuelles de chaque Power sur inara.cz (une par Power), **instantané capturé le 9 septembre 2026** — à revérifier
 dans le panneau Powerplay en jeu, Frontier ayant par le passé modifié certaines associations lors de ses
-rééquilibrages (voir 5.7). Chaque cellule indique le ou les axes (Acquisition / Renforcement / Undermining) qui
+rééquilibrages (voir [5.7](#57-rééquilibrages-continus-de-powerplay-20-2025-2026)). Chaque cellule indique le ou les axes (Acquisition / Renforcement / Undermining) qui
 utilisent la catégorie d'éthos de la colonne pour ce Power :
 
 | Power                    | Combat                              | Finance                    | Social                  | Covert                |
@@ -403,7 +403,7 @@ de problèmes d'équilibrage persistants :
       contrôle acquis passivement.
 
   Les pourcentages exacts de ces bonus/malus ont eux-mêmes été révisés à plusieurs reprises depuis leur introduction ;
-  consulter les notes de mise à jour officielles ou un site de suivi communautaire (voir section 7.3) pour connaître les
+  consulter les notes de mise à jour officielles ou un site de suivi communautaire (voir [section 7.3](#73-stratégie-territoriale-powerplay-acquisition-decay-hebdomadaire-coordination)) pour connaître les
   valeurs en vigueur au moment de jouer.
 
 - **Ajustements ponctuels ultérieurs (fin 2025 / 2026)** — désactivation temporaire des gains de mérites/score liés aux
@@ -424,7 +424,7 @@ peuvent fonder de nouvelles installations dans des systèmes auparavant inhabit�
 
 Du point de vue de Powerplay, un système nouvellement colonisé apparaît, comme n'importe quel système non revendiqué,
 parmi les systèmes **inoccupés** de la carte Powerplay : il ne bascule sous le contrôle d'un Power que lorsque celui-ci
-y mène une opération d'**Acquisition / Expansion** réussie (voir 5.1), selon les mêmes règles générales que pour un
+y mène une opération d'**Acquisition / Expansion** réussie (voir [5.1](#51-les-trois-axes-dactivité-territoriale--acquisition-renforcement-undermining)), selon les mêmes règles générales que pour un
 système indépendant préexistant. La fondation d'un système via la Colonisation et son rattachement éventuel à un Power
 via Powerplay sont donc deux processus **distincts et découplés** : le premier détermine l'existence et le
 développement du système, le second détermine séparément s'il finit sous influence d'un Power, et lequel.
@@ -439,7 +439,7 @@ courantes pour les règles exactes en vigueur au moment de jouer.
 ## 6. Les 12 Powers actuels (depuis le 31 octobre 2024)
 
 Les bonus ci-dessous sont ceux en vigueur au **9 septembre 2026** ; Frontier les ajuste occasionnellement lors de ses
-rééquilibrages (voir 5.7) — vérifier les valeurs courantes dans le panneau Powerplay en jeu avant de choisir un Power
+rééquilibrages (voir [5.7](#57-rééquilibrages-continus-de-powerplay-20-2025-2026)) — vérifier les valeurs courantes dans le panneau Powerplay en jeu avant de choisir un Power
 sur la seule base de ce tableau.
 
 | Power                    | Superpuissance | Bonus / avantages caractéristiques                                                                                     |
@@ -510,7 +510,7 @@ Comme tous les modules finissent par être accessibles quel que soit le Power ch
 souvent recommandé par la communauté repose sur trois axes :
 
 1. **Le rôle de jeu recherché** — les avantages économiques du Power correspondent-ils à votre style de jeu (minage,
-   combat, sauvetage, commerce, exploration, criminalité) ? La [matrice des éthos](#matrice-des-éthos-par-power) en 5.6
+   combat, sauvetage, commerce, exploration, criminalité) ? La [matrice des éthos](#matrice-des-éthos-par-power) en [5.6](#56-le-système-déthos-powerplay-bonus-de-mérites-denviron-50-)
    permet d'affiner ce choix activité par activité.
 2. **L'affinité de rôle-play** avec la faction (Fédération, Empire, Alliance ou Indépendants).
 3. **Le Power qui contrôle votre système d'attache** — pour profiter des bonus locaux sans avoir à se déplacer.
@@ -520,7 +520,7 @@ de mérites et progression des modules.
 
 Attention : rejoindre un Power vous rend automatiquement **hostile aux autres Powers** dans les systèmes qu'ils
 contrôlent (interdictions possibles en territoire adverse), et **changer de Power fait perdre les avantages acquis**
-avec le précédent (voir 7.5 pour le détail de ce qui est conservé ou perdu).
+avec le précédent (voir [7.5](#75-basculer-ou-quitter-un-power) pour le détail de ce qui est conservé ou perdu).
 
 ### 7.2 Méthodes efficaces pour engranger des mérites (méta 2025-2026)
 
@@ -529,10 +529,10 @@ avec le précédent (voir 7.5 pour le détail de ce qui est conservé ou perdu).
 | **Minage de commodités** dans un système d'acquisition ou de renforcement, avec hotspot de ressources et prix de vente élevé sur place | ~25 000 à 75 000 mérites/heure   | L'écart s'explique par les rééquilibrages successifs ; l'une des méthodes les plus citées actuellement |
 | **Zones de combat Powerplay / chasse de primes**, dans des systèmes contestés ou autour de Stronghold Carriers ennemis                 | ~10 000 à 25 000 mérites/heure   | Nécessite un vaisseau de combat bien équipé                                                            |
 | **Missions en escadre (wing missions)** empilées, notamment de primes                                                                  | Bon rendement combiné            | Gains en mérites, crédits et matériaux d'ingénierie                                                    |
-| **Commerce à haute marge (>40 % de profit), exobiologie, données Odyssey**                                                             | Sources secondaires mais viables | Exploiter le bonus d'éthos de +50 % quand l'activité correspond au profil du Power choisi (voir 5.6)   |
+| **Commerce à haute marge (>40 % de profit), exobiologie, données Odyssey**                                                             | Sources secondaires mais viables | Exploiter le bonus d'éthos de +50 % quand l'activité correspond au profil du Power choisi (voir [5.6](#56-le-système-déthos-powerplay-bonus-de-mérites-denviron-50-))   |
 
 *Rendements instantanés au 9 septembre 2026, à revérifier via [Outils](./16-outils.md) : les taux de conversion mérites
-évoluent à chaque rééquilibrage (voir 5.7).*
+évoluent à chaque rééquilibrage (voir [5.7](#57-rééquilibrages-continus-de-powerplay-20-2025-2026)).*
 
 **À éviter / obsolète** : la collecte de capsules de sauvetage et la vente de biens rares, désactivées comme sources de
 mérites peu après le lancement de la 2.0 en raison d'abus trop importants ; les données d'exploration et les
@@ -542,7 +542,7 @@ stratégie sur ces activités, la situation évoluant rapidement.
 
 Depuis l'Update 3.4 (Trailblazers, été 2025), il est conseillé de privilégier l' **undermining** et le renforcement de
 systèmes **activement contestés**, plutôt que le renforcement passif de bastions déjà tranquilles, pénalisé par la
-nouvelle formule (voir 5.7).
+nouvelle formule (voir [5.7](#57-rééquilibrages-continus-de-powerplay-20-2025-2026)).
 
 ### 7.3 Stratégie territoriale Powerplay (acquisition, decay hebdomadaire, coordination)
 
@@ -585,43 +585,127 @@ Voici ce qui a pu être vérifié, et ce qui n'a pas pu l'être, lors de cette m
 
 **Confirmé :**
 
-- **Progression propre à chaque Power** — dans la logique des mérites permanents introduite par la 2.0 (voir section
-  4), le rang et les mérites accumulés restent attachés au Power auprès duquel ils ont été gagnés ; ils ne se
+- **Progression propre à chaque Power** — dans la logique des mérites permanents introduite par la 2.0 (voir [section 4](#4-powerplay-20--les-changements-fondamentaux)), le rang et les mérites accumulés restent attachés au Power auprès duquel ils ont été gagnés ; ils ne se
   transfèrent pas vers un nouveau Power. Rejoindre un Power différent de celui déjà progressé fait donc repartir de
   rang 1 auprès de ce nouveau Power.
 - **Perte des avantages actifs** — quitter un Power, ou en rejoindre un autre, fait perdre l'accès immédiat aux bonus
-  économiques et au statut propres au Power quitté (voir section 6), remplacés le cas échéant par ceux, potentiellement
+  économiques et au statut propres au Power quitté (voir [section 6](#6-les-12-powers-actuels-depuis-le-31-octobre-2024)), remplacés le cas échéant par ceux, potentiellement
   très différents, du nouveau Power.
 - **Hostilité territoriale** — rejoindre un Power vous rend hostile aux autres Powers dans leurs systèmes contrôlés
-  (voir 7.1) ; rester non engagé (n'avoir quitté aucun Power pour en rejoindre un autre) neutralise cette hostilité.
+  (voir [7.1](#71-choisir-son-power-sengager--pledge-)) ; rester non engagé (n'avoir quitté aucun Power pour en rejoindre un autre) neutralise cette hostilité.
 
 **Non confirmé via les sources consultées pour cette mise à jour** (documentation officielle inaccessible en accès
-direct — voir la limite méthodologique en 3.4 — et guides communautaires disponibles insuffisamment précis ou
+direct — voir la limite méthodologique en [3.4](#34-le-lancement-de-powerplay-20-31-octobre-2024) — et guides communautaires disponibles insuffisamment précis ou
 contradictoires sur ce point) :
 
 - la durée exacte, en heures ou en jours, d'un éventuel **délai de latence (« cooldown »)** avant de pouvoir se
   réengager après avoir quitté ou changé de Power ; plusieurs sources évoquent l'existence d'un tel délai, hérité de
   Powerplay 1.0, sans en documenter la valeur actuelle sous la 2.0 ;
 - si un module Powerplay déjà débloqué et monté sur un vaisseau reste utilisable après avoir quitté le Power concerné
-  (les modules ne sont plus exclusifs à un Power depuis la 2.0, voir section 4, ce qui suggère qu'il devrait rester
+  (les modules ne sont plus exclusifs à un Power depuis la 2.0, voir [section 4](#4-powerplay-20--les-changements-fondamentaux), ce qui suggère qu'il devrait rester
   fonctionnel une fois acquis, mais cela n'a pas pu être vérifié directement contre une source officielle).
 
 **Recommandation pratique.** Avant de basculer ou de tout quitter, vérifier ces deux points directement dans le panneau
 Powerplay en jeu (un texte d'avertissement y est généralement affiché avant confirmation) ou sur les outils de suivi
 communautaires (voir [Outils](./16-outils.md)).
 
+## Questions fréquentes
+
+**Comment rejoindre un Power (pledge) dans Elite Dangerous ?**
+
+On choisit son Power via l'onglet Powerplay du panneau droit du cockpit, qui affiche pour chaque Power son système
+d'origine, sa philosophie et ses avantages propres. Le choix se fait le plus souvent selon trois critères : le rôle de
+jeu recherché, l'affinité de rôle-play avec la superpuissance, et le Power qui contrôle déjà le système d'attache. Voir
+[7.1 Choisir son Power](#71-choisir-son-power-sengager--pledge-).
+
+**Comment gagner des mérites (merits) rapidement en Powerplay 2.0 ?**
+
+La méthode la plus rentable actuellement est le minage de commodités dans un système d'acquisition ou de renforcement
+(~25 000 à 75 000 mérites/heure), suivi par les zones de combat Powerplay et la chasse de primes (~10 000 à 25 000
+mérites/heure). Réaliser l'activité qui correspond à l'éthos assigné par son Power ajoute un bonus d'environ +50 % sur
+l'axe concerné. Voir [7.2 Méthodes efficaces](#72-méthodes-efficaces-pour-engranger-des-mérites-méta-2025-2026).
+
+**Quelle est la différence entre Exploité, Fortifié et Bastion (stronghold) ?**
+
+Ce sont les trois états de contrôle d'un système, selon son score de points de contrôle : Exploité de 0 à 350 000
+points, Fortifié de 350 000 à 1 000 000 (bulle logistique de 20 années-lumière), et Bastion au-delà d'un million de
+points (bulle de 30 années-lumière, seul palier où apparaissent les Stronghold Carriers). Voir
+[5.3 États des systèmes](#53-états-des-systèmes-powerplay--exploité-fortifié-bastion-paliers-de-contrôle).
+
+**Combien de temps faut-il pour atteindre le rang 100 en Powerplay ?**
+
+Le rang 100 demande environ 775 000 mérites cumulés. Avec la méthode la plus rentable jouée sans interruption, cela
+représente environ 10 à 30 heures ; pour un joueur mixant des activités moins optimisées ou en sessions courtes,
+comptez plutôt 50 à 75 heures, voire davantage. Voir [5.5 Rangs Powerplay](#55-rangs-powerplay-1-à-100-et-récompenses).
+
+**C'est quoi l'éthos (ethos) d'un Power en Powerplay ?**
+
+Chaque Power associe l'une des quatre catégories d'activités (Combat, Finance, Social, Covert) à chacun de ses trois
+axes (Acquisition, Renforcement, Undermining). Réaliser l'activité correspondant à l'éthos assigné sur l'axe travaillé
+confère un bonus de mérites d'environ +50 % sur cet axe. Voir
+[5.6 Le système d'éthos](#56-le-système-déthos-powerplay-bonus-de-mérites-denviron-50-).
+
+**Le tick Powerplay, c'est à quelle heure exactement ?**
+
+Les bascules de territoire (changement de Power contrôlant un système, changement d'état) sont appliquées chaque
+semaine au tick hebdomadaire, le jeudi à 07:00 UTC. Voir
+[5.4 Fortification contre undermining](#54-fortification-contre-undermining--la-dynamique-hebdomadaire).
+
+**Que se passe-t-il si je quitte ou change de Power (unpledge) ?**
+
+Le rang et les mérites accumulés restent attachés au Power quitté et ne se transfèrent pas : on repart de rang 1 chez
+le nouveau Power, et on perd immédiatement les avantages économiques du Power quitté. En revanche, la durée exacte
+d'un éventuel délai de latence (cooldown) avant de pouvoir se réengager n'a pas pu être confirmée pour la 2.0. Voir
+[7.5 Basculer ou quitter un Power](#75-basculer-ou-quitter-un-power).
+
+**Combien y a-t-il de Powers et comment sont-ils répartis entre les superpuissances ?**
+
+Il y a 12 Powers au total depuis le 31 octobre 2024 : 2 fédéraux (Jerome Archer, Felicia Winters), 4 impériaux (Denton
+Patreus, Zemina Torval, Aisling Duval, Arissa Lavigny-Duval), 2 de l'Alliance (Edmund Mahon, Nakato Kaine) et 4
+indépendants (Li Yong-Rui, Archon Delaine, Pranav Antal, Yuri Grom). Voir
+[section 6](#6-les-12-powers-actuels-depuis-le-31-octobre-2024).
+
+**C'est quoi Powerplay 2.0 (Ascendancy) et en quoi ça change de l'ancien système ?**
+
+Lancé le 31 octobre 2024 avec la mise à jour Ascendancy, Powerplay 2.0 a rendu les mérites permanents et
+non-décroissants, intégré presque toute activité du jeu comme source de mérites, rendu les modules exclusifs
+accessibles à tous les Powers, et ajouté deux nouveaux Powers (Jerome Archer et Nakato Kaine), portant le total à
+douze. Voir [section 4](#4-powerplay-20--les-changements-fondamentaux).
+
+**Quels modules exclusifs peut-on débloquer avec Powerplay ?**
+
+Depuis la 2.0, les douze modules exclusifs — dont les Prismatic Shields, le Concord Cannon et l'Advanced Plasma
+Accelerator — sont communs à tous les Powers et se débloquent par la progression de rang, généralement complète à
+partir du rang ~97. Voir [Modules exclusifs Powerplay](#modules-exclusifs-powerplay).
+
+**Powerplay et Colonisation, quel est le rapport entre les deux ?**
+
+Ce sont deux mécaniques distinctes et découplées : la Colonisation détermine la fondation et le développement d'un
+système, tandis que Powerplay détermine séparément, via une opération d'Acquisition/Expansion, s'il finit sous le
+contrôle d'un Power (et lequel). Un système nouvellement colonisé apparaît d'abord comme un système inoccupé sur la
+carte Powerplay. Voir [5.8 Powerplay et Colonisation](#58-powerplay-et-colonisation).
+
+**C'est quoi l'Undermining (déstabilisation) en Powerplay ?**
+
+C'est l'axe qui consiste à agir contre des systèmes tenus par un Power ennemi ou rival afin de faire baisser leur
+score de contrôle, avec pour objectif ultime de les faire basculer sous son propre contrôle ou de les faire régresser
+d'état. Depuis l'Update 3.4 (été 2025), l'undermining bénéficie d'un bonus de mérites revu à la hausse par rapport à
+la formule précédente. Voir
+[5.1 Les trois axes](#51-les-trois-axes-dactivité-territoriale--acquisition-renforcement-undermining) et
+[5.7 Rééquilibrages continus](#57-rééquilibrages-continus-de-powerplay-20-2025-2026).
+
 ## Voir aussi
 
 - [Chronologie canonique](./00-chronologie-canonique.md) — repères de dates officielles pour tout le corpus, dont la
-  sortie d'Ascendancy/Powerplay 2.0 et de la Colonisation (voir la précision chronologique en 3.4).
+  sortie d'Ascendancy/Powerplay 2.0 et de la Colonisation (voir la précision chronologique en [3.4](#34-le-lancement-de-powerplay-20-31-octobre-2024)).
 - [Lore](./01-lore.md) — contexte politique et historique complet des trois superpuissances et des Powers.
 - [Colonisation](./18-colonisation.md) — mécanique de fondation de systèmes ; son articulation avec Powerplay est
-  résumée en 5.8.
+  résumée en [5.8](#58-powerplay-et-colonisation).
 - [Fleet Carriers](./19-fleet-carriers.md) — fonctionnement général des porte-vaisseaux, dont les Stronghold Carriers
-  propres aux systèmes Bastion (voir 5.3).
+  propres aux systèmes Bastion (voir [5.3](#53-états-des-systèmes-powerplay--exploité-fortifié-bastion-paliers-de-contrôle)).
 - [Le Background Simulation (BGS)](./21-bgs.md) — l'autre grande couche de méta-jeu politique du jeu, à ne pas
   confondre avec Powerplay.
-- [Escadrons de joueurs (Squadrons)](./22-squadrons.md) — coordination en groupe autour d'un Power (voir 7.3).
+- [Escadrons de joueurs (Squadrons)](./22-squadrons.md) — coordination en groupe autour d'un Power (voir [7.3](#73-stratégie-territoriale-powerplay-acquisition-decay-hebdomadaire-coordination)).
 - [Community Goals](./24-community-goals.md) — mécanique générique de community goal, distincte mais parfois
   complémentaire des objectifs Powerplay.
 - [Outils](./16-outils.md) — comparatif détaillé des outils communautaires de suivi (Inara, EDPowerPlay, ED-Board,
@@ -645,8 +729,8 @@ guide pilote de cette normalisation avec [11-commerce.md](./11-commerce.md).
 - https://inara.cz/elite/logbook/84502/ | secondaire | consulté le 09/09/2026 | confirme : un exemple concret de progression de rang Powerplay observé en jeu | ne confirme pas : une formule officielle de conversion mérites → rang
 - https://inara.cz/elite/powers/ | secondaire | consulté le 09/09/2026 | confirme : le roster courant des douze Powers et leur superpuissance de rattachement | ne confirme pas : l'historique des Powers retirés ou fusionnés avant 2024
 - https://inara.cz/elite/powerplay/ | secondaire | consulté le 09/09/2026 | confirme : le fonctionnement général de la page Powerplay communautaire (rangs, systèmes contrôlés) | ne confirme pas : le détail des taux de conversion de mérites (voir `zones_incertaines`)
-- https://inara.cz/elite/power/ | secondaire | consulté le 09/09/2026 | confirme : la matrice d'éthos et le tableau des systèmes Bastion de la section 6, fiche par fiche | ne confirme pas : l'éthos de Zemina Torval (id 8), dont la fiche a renvoyé une erreur HTTP 503 temporaire ce jour-là — voir la ligne lavewiki.com ci-dessous pour la source de repli
-- https://www.lavewiki.com/powerplay | secondaire (repli, partiellement recoupé) | consulté le 09/09/2026 | confirme : l'éthos de Zemina Torval, en repli sur l'indisponibilité ponctuelle d'inara.cz (voir §5.6) | ne confirme pas : une valeur aussi à jour qu'une fiche inara.cz directement consultée
+- https://inara.cz/elite/power/ | secondaire | consulté le 09/09/2026 | confirme : la matrice d'éthos et le tableau des systèmes Bastion de la [section 6](#6-les-12-powers-actuels-depuis-le-31-octobre-2024), fiche par fiche | ne confirme pas : l'éthos de Zemina Torval (id 8), dont la fiche a renvoyé une erreur HTTP 503 temporaire ce jour-là — voir la ligne lavewiki.com ci-dessous pour la source de repli
+- https://www.lavewiki.com/powerplay | secondaire (repli, partiellement recoupé) | consulté le 09/09/2026 | confirme : l'éthos de Zemina Torval, en repli sur l'indisponibilité ponctuelle d'inara.cz (voir [§5.6](#56-le-système-déthos-powerplay-bonus-de-mérites-denviron-50-)) | ne confirme pas : une valeur aussi à jour qu'une fiche inara.cz directement consultée
 - https://edpowerplay.com/guide | tertiaire (outil communautaire) | consulté le 09/09/2026 | confirme : l'existence et l'usage général de l'outil de suivi EDPowerplay | ne confirme pas : des seuils numériques officiels de Frontier
 - https://edpowerplay.com | tertiaire (outil communautaire) | consulté le 09/09/2026 | confirme : la page d'accueil et le périmètre de l'outil EDPowerplay | ne confirme pas : des seuils numériques officiels de Frontier
 - https://gamerant.com/elite-dangerous-powerplay-20-ascendancy-update/ | tertiaire | consulté le 09/09/2026 | confirme : la date de sortie de Powerplay 2.0 dans le cadre d'Ascendancy (31 octobre 2024) et ses grandes lignes | ne confirme pas : le détail chiffré des mérites et des points de contrôle (voir `zones_incertaines`)

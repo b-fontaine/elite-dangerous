@@ -22,9 +22,9 @@ Le commerce (*trading*) consiste à acheter une commodité là où une économie
 bas) pour la revendre là où une autre la consomme (forte demande), selon l'état de simulation de fond (**BGS**) de la
 faction locale : **Boom** favorise la vente, **Famine** fait exploser la demande alimentaire, **Outbreak** celle des
 produits médicaux. Cinq familles coexistent : le vrac, les données, la contrebande (*smuggling*, dont la **Robigo
-Run**, ~90 M Cr/h en Python), le **mining-to-trade** (plus de 100 M Cr/h en laser) et la **piraterie**, qui prend sa
+Run**, ~90 M Cr/h en Python), le **mining-to-trade** (minage puis revente, plus de 100 M Cr/h en laser) et la **piraterie**, qui prend sa
 cargaison par interdiction et l'écoule au marché noir, au prix d'une prime et d'une *notoriety* qui ne se paie pas. Le
-**Trade Rank** compte neuf paliers, de Penniless à Elite, ce dernier subdivisé en Elite I à V. Une route en Type-6
+**Trade Rank** (rang de commerce) compte neuf paliers, de Penniless à Elite, ce dernier subdivisé en Elite I à V. Une route en Type-6
 Transporter (114 t, marge 2 150 Cr/t) rapporte ~1,2 M Cr/heure. Le **Type-9 Heavy**, l' **Imperial Cutter** (rang de
 Duc), le **Type-10 Defender** et le **Panther Clipper Mk II** couvrent le haut de gamme ; **Spansh** et **Trade
 Dangerous** calculent les routes.
@@ -106,6 +106,9 @@ naturelle ailleurs dans le corpus.
 
 ### Rang de commerce (Trade Rank)
 
+*Répond à : « Comment monter en Trade Rank ? », « Combien de rangs de commerce y a-t-il ? », « À quoi sert le rang de
+commerce (Trade Rank) ? »*
+
 Comme pour le combat ou l'exploration, le commerce dispose de son propre rang de réputation, basé sur le **profit
 cumulé** réalisé en vendant des marchandises. La progression suit neuf paliers officiels (source : fichier de référence
 `TradeRank.csv` du dépôt communautaire EDCD/FDevIDs, qui reprend les identifiants internes du jeu), le dernier palier «
@@ -135,7 +138,7 @@ seuil exact du prochain palier, ou un wiki communautaire à jour.
 commerce les mieux rémunérées (visibilité et fréquence accrues dans le tableau des missions), et sert de filtre
 d'affichage dans certains outils communautaires de recherche de missions. Il n'ouvre en revanche pas de déblocage de
 vaisseau ou de module spécifique, contrairement au rang impérial/fédéral qui conditionne l'achat de certains vaisseaux
-(voir Imperial Cutter plus bas). Pour situer cette échelle par rapport aux sept autres et savoir quelles méthodes de
+(voir [Imperial Cutter](#imperial-cutter-gutamaya--le-vaisseau-de-commerce--premium-) plus bas). Pour situer cette échelle par rapport aux sept autres et savoir quelles méthodes de
 profit décrites ci-dessous font effectivement monter le rang de commerce, voir
 [27 — Débuter et progresser](./27-debuter-et-progresser.md).
 
@@ -179,14 +182,14 @@ Progression classique de vaisseaux recommandée par les guides communautaires :
 | Confirmé        | Type-6 Transporter                                     | ~1 M Cr        | 114 t                                       |
 | Confirmé avancé | Type-8 Transporter *(nouveau)*                         | ~38,5 M Cr     | jusqu'à ~400 t selon configuration          |
 | Avancé          | Asp Explorer                                           | ~6,6 M Cr      | 130 t                                       |
-| Expert          | Type-9 Heavy / Imperial Cutter / Panther Clipper Mk II | voir section 5 | voir section 5                              |
+| Expert          | Type-9 Heavy / Imperial Cutter / Panther Clipper Mk II | [voir section 5](#5-vaisseaux-de-commerce-optimaux--spécifications-vérifiées) | [voir section 5](#5-vaisseaux-de-commerce-optimaux--spécifications-vérifiées) |
 
 Le **Keelback** (Lakon Spaceways) occupe une niche particulière : c'est un cargo de gabarit moyen doté d'une **baie de
 chasseur** (*fighter bay*), ce qui en fait une bonne transition pour qui veut commencer à transporter du fret dans des
 systèmes un peu moins sûrs sans encore investir dans un vaisseau de fret pur. Le **Type-8 Transporter**, introduit le 7
 août 2024, se positionne juste au-dessus du Type-6/Keelback : bonne capacité de chargement, gestion supérieure du FSD en
 régime **[SCO](./00-glossaire.md)** (Supercruise Overcharge), au prix d'un armement minimal. Voir la fiche détaillée de
-chacun en section 5, et [Vaisseaux](./03-vaisseaux.md) pour la liste complète et les fabricants.
+chacun en [section 5](#5-vaisseaux-de-commerce-optimaux--spécifications-vérifiées), et [Vaisseaux](./03-vaisseaux.md) pour la liste complète et les fabricants.
 
 > **Encart outils — EDMC et BGS-Tally.** Pour suivre concrètement sa progression de rang de commerce et les opportunités
 > de marché, deux outils communautaires reviennent systématiquement : **EDMC** (Elite Dangerous Market Connector),
@@ -211,6 +214,9 @@ une grosse soute. Cette activité recoupe également :
   (voir [Powerplay](./02-powerplay.md)).
 
 ### 2.3 Commerce noir et marché illégal (Smuggling)
+
+*Répond à : « Comment fonctionne la Robigo Run ? », « Combien rapporte la contrebande de passagers ? », « What is
+the Robigo Run? »*
 
 Les marchandises illégales (stupéfiants, esclaves, armes interdites, biotechnologie de contrebande) s'achètent et se
 vendent exclusivement sur les **marchés noirs** (*Black Markets*), disponibles principalement dans les systèmes en état
@@ -237,6 +243,9 @@ communauté avant de bâtir un plan de jeu dessus, ce type d'estimation évoluan
 mécaniques détaillées de transport de passagers légal/illégal, voir [Transport](./12-transport.md).
 
 ### 2.4 Mining-to-trade (minage puis revente)
+
+*Répond à : « Le minage est-il plus rentable que le commerce classique ? », « Comment revendre le minerai miné ? »,
+« Is mining better than trading? »*
 
 Le minage alimente le commerce en fournissant des matières premières à forte valeur ajoutée (Platine, Painite, Diamants
 basse température, Void Opals). **Contrairement à une idée répandue, les économies de raffinage et d'extraction ne sont
@@ -265,7 +274,7 @@ stockage/maniabilité) → Imperial Cutter en avancé (rapide, grande soute, ass
 
 Selon GameRant, l'extraction laser bien optimisée avec un Python ou un Type-9, correctement équipé (refinery, prospector
 et collector limpet controllers, surface scanners, cargo racks en nombre), peut rapporter **bien plus de 100 millions de
-crédits par heure**. Le « wing mining » organisé via des réseaux communautaires comme le **Pilots Trade Network (
+crédits par heure**. Le « wing mining » (minage en groupe, *wing* signifiant « escadre ») organisé via des réseaux communautaires comme le **Pilots Trade Network (
 PTN)** — où un groupe complète 60 à 80 missions de minage en équipage de quatre commandants — peut générer jusqu'à **3,5
 milliards de crédits par cycle** pour l'équipage au complet (chiffres instantanés, capturés lors de la rédaction de
 l'article GameRant source — à revérifier, ces estimations dépendant fortement des prix de marché du moment). Ce mode de
@@ -285,7 +294,7 @@ taxonomie : le pirate est un acteur du marché, avec un coût d'acquisition nul 
 |-------|-----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------|
 | 1     | Repérer une soute qui vaut le détour, en supercroisière ou en espace normal | **Cargo Scanner** (utilitaire)                                                                  | classe 0, notations A–E                 |
 | 2     | Sortir la cible de supercroisière                                           | **Frame Shift Drive Interdictor**                                                               | classes 1 à 4, notations A–E            |
-| 3     | Empêcher la fuite pendant la négociation ou le tir                          | pas de module dédié : **mass lock** exercé par la masse du vaisseau, éventuellement à plusieurs | —                                       |
+| 3     | Empêcher la fuite pendant la négociation ou le tir                          | pas de module dédié : **mass lock** (verrouillage de masse) exercé par la masse du vaisseau, éventuellement à plusieurs | —                                       |
 | 4     | Forcer l'éjection du fret, puis le ramasser                                 | **Hatch Breaker Limpet Controller**, puis **Collector Limpet Controller**                       | classes impaires 1/3/5/7, notations A–E |
 
 *(Source des tailles, notations et fonctions : fiches modules du guide [Équipements](./04-equipements.md), elles-mêmes
@@ -307,9 +316,9 @@ en supercroisière y sont également plus exposés : selon ce même guide, un va
 Anarchie subit statistiquement davantage de tentatives d'interdiction opportunistes.
 
 **Ce qu'elle rapporte.** Le produit d'une prise, c'est la valeur marchande du fret saisi, sans capital engagé à
-l'achat — contrairement au commerce en vrac de la section 2.1, où l'achat de la cargaison immobilise la trésorerie avant
+l'achat — contrairement au commerce en vrac de la [section 2.1](#21-commerce-simple--commodités-légales-en-vrac), où l'achat de la cargaison immobilise la trésorerie avant
 même d'avoir vendu. En revanche la cargaison prise à un autre vaisseau entre en soute marquée **volée**
-(*stolen*), ce qui la renvoie vers les mêmes canaux d'écoulement que la contrebande de la section 2.3 : contact de
+(*stolen*), ce qui la renvoie vers les mêmes canaux d'écoulement que la contrebande de la [section 2.3](#23-commerce-noir-et-marché-illégal-smuggling) : contact de
 **marché noir**, stations d'Anarchie.
 
 **Nous n'avons retrouvé aucun ordre de grandeur vérifiable de rentabilité horaire de la piraterie** — ni chez les
@@ -317,7 +326,7 @@ sources chiffrées utilisées ailleurs dans ce guide (GameRant, TheGamer), ni da
 publient pas de prix de marché. Plutôt que d'avancer un chiffre, nous signalons le manque : à établir par relevé en jeu,
 ou auprès d'un tracker communautaire à jour. Deux points restent également non recoupés : le traitement exact d'un cargo
 marqué volé s'il est présenté à un marché légal, et la question de savoir si ces ventes font monter le **Trade Rank** au
-même titre qu'une vente légale (voir la sous-section « Rang de commerce » plus haut, dont les seuils ne sont eux-mêmes
+même titre qu'une vente légale (voir la sous-section [« Rang de commerce »](#rang-de-commerce-trade-rank) plus haut, dont les seuils ne sont eux-mêmes
 pas documentés).
 
 **Ce qu'elle coûte en réputation.** C'est le poste de dépense réel de cette activité, et il est décrit en détail dans
@@ -334,7 +343,7 @@ pas documentés).
 
 **Ce qu'elle coûte en risque.** Le pirate encaisse le risque qu'il fait courir aux autres : réponse de la sécurité
 locale en système surveillé, riposte d'une cible mieux armée qu'elle n'en avait l'air, et perte du vaisseau, sachant que
-l'assurance (*rebuy*) ne rembourse jamais la cargaison — la règle de prudence de la section 1 vaut ici comme ailleurs, à
+l'assurance (*rebuy*) ne rembourse jamais la cargaison — la règle de prudence de la [section 1](#1-mécanique-générale-du-commerce) vaut ici comme ailleurs, à
 ceci près que le butin embarqué est intégralement à risque et n'a coûté aucun crédit à acquérir. Voyager en *wing*
 change l'équilibre des deux côtés : voir [Wings, Multicrew et CQC](./23-jeu-en-groupe.md).
 
@@ -345,17 +354,22 @@ levier, ses limites et la façon dont il se combine aux autres sont traités dan
 > **Note de couverture.** Ce guide décrit la piraterie sous l'angle commercial — acquisition et écoulement de
 > marchandise. La chaîne opératoire complète (choix de cible, scan de cargaison, interdiction, Hatch Breaker,
 > récupération), l'équipement type, deux builds pirates chiffrés et le volet PvP subi (lieux à risque, groupes PvE,
-> combat logging) sont dans [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) ; les mécaniques de combat associées
+> combat logging — déconnexion volontaire pour échapper à un combat PvP en cours) sont dans
+> [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) ; les mécaniques de combat associées
 > (interdiction, mass lock, traque au *Frame Shift Wake Scanner*, crime et notoriety) restent dans
 > [Combat spatial](./08-combat-spatial.md), et l'effet sur les factions dans [Le BGS](./21-bgs.md).
 
 ## 3. Exemple chiffré complet d'une route de commerce légal en vrac
 
+*Répond à : « Combien peut-on gagner par heure en faisant du commerce ? », « Comment calculer la rentabilité d'une
+route commerciale ? », « How much Cr/hour can you make trading? »*
+
 L'exemple ci-dessous illustre la méthode de calcul de rentabilité d'une route de commerce en vrac. **Il s'agit d'un
 exemple pédagogique construit à partir d'ordres de grandeur typiques du commerce de composants industriels/high-tech**
 et non d'un relevé de marché en direct — les prix réels doivent impérativement être revérifiés via Spansh ou Inara juste
 avant de partir, car ils fluctuent en continu selon l'offre, la demande et l'état de [BGS](./00-glossaire.md) de chaque
-station (voir la sous-section « Mécanique des prix » ci-dessus). Instantané pédagogique daté du 9 septembre
+station (voir la sous-section [« Mécanique des prix »](#mécanique-des-prix-du-commerce--offre-demande-et-économies-de-station)
+ci-dessus). Instantané pédagogique daté du 9 septembre
 
 2026.
 
@@ -382,7 +396,7 @@ station (voir la sous-section « Mécanique des prix » ci-dessus). Instantané 
 
 Ce chiffre de profit horaire suppose un marché qui ne s'épuise pas d'un aller à l'autre (l'achat/la vente répétés font
 en réalité baisser l'offre et la demande locales, donc la marge réelle se dégrade progressivement — d'où l'intérêt des
-outils de routage multi-étapes comme Trade Dangerous ou Spansh, voir section 4, qui recalculent la meilleure boucle
+outils de routage multi-étapes comme Trade Dangerous ou Spansh, voir [section 4](#4-trouver-des-routes-commerciales-rentables--les-outils), qui recalculent la meilleure boucle
 disponible plutôt que de répéter un aller simple jusqu'à épuisement du marché). Trouver un **fret retour** rentable sur
 le trajet inverse permettrait, en théorie, de doubler le profit horaire pour un temps de trajet quasiment identique.
 
@@ -409,6 +423,9 @@ trade.py run --credits 5000 --capacity 8 --ly-per 8.56 --jumps 2 --hops 2
 ```
 
 ## 5. Vaisseaux de commerce optimaux : spécifications vérifiées
+
+*Répond à : « Quel est le meilleur vaisseau de commerce ? », « Quelle est la soute maximale du Type-9 Heavy ou de
+l'Imperial Cutter ? », « Best trading ship Elite Dangerous? »*
 
 *(Données extraites des fichiers officiels du dépôt communautaire EDCD/coriolis-data, base de référence utilisée par les
 calculateurs de configuration comme Coriolis et EDSY)*
@@ -613,7 +630,7 @@ dédié [Community Goals](./24-community-goals.md).
   dernière date correspond en réalité à la mise à jour « Trailblazers » (colonisation), sortie près de quatre mois plus
   tard. Détails et sources dans [Powerplay](./02-powerplay.md).
 - **Panther Clipper Mk II** : disponible en jeu depuis le **22 juillet 2025** en accès anticipé ARX — voir tableau de la
-  section 5 pour ses spécifications.
+  [section 5](#5-vaisseaux-de-commerce-optimaux--spécifications-vérifiées) pour ses spécifications.
 - **Type-8 Transporter** : lancé le **7 août 2024**, 406 tonnes de capacité annoncées, efficace en carburant — voir
   [Transport](./12-transport.md) pour la chronologie complète des mises à jour touchant le fret.
 - **Patch « Vanguards » (Patch 1, août 2025)** : ce patch a notamment augmenté le plafond de membres d'escadron (500 →
@@ -648,20 +665,101 @@ dédié [Community Goals](./24-community-goals.md).
 | Mining-to-trade                           | Python (intermédiaire) → Imperial Cutter (avancé) | Bon compromis stockage/maniabilité, puis grande soute et résistance |
 | Contrebande de passagers                  | Python                                            | Vitesse et discrétion adaptées aux boucles type Robigo              |
 
-Ce tableau ne comporte volontairement **pas de ligne pour la piraterie** (section 2.5) : aucune source vérifiée n'a été
+Ce tableau ne comporte volontairement **pas de ligne pour la piraterie** ([section 2.5](#25-piraterie--prendre-la-cargaison-plutôt-que-lacheter)) : aucune source vérifiée n'a été
 retrouvée qui désigne un vaisseau de référence pour cette activité, et les critères y sont ceux du combat (maniabilité
 pour gagner l'interdiction, emplacement interne impair pour le Hatch Breaker Limpet Controller, capacité à encaisser une
 riposte) plutôt que ceux du fret. Voir [Combat spatial](./08-combat-spatial.md) pour les builds correspondants.
 
+## Questions fréquentes
+
+**Combien peut-on gagner par heure en faisant du commerce (trading) dans Elite Dangerous ?**
+
+Cela dépend entièrement de l'activité choisie. Un commerce classique en vrac en Type-6 Transporter rapporte environ
+1,2 M Cr/heure sur un aller simple (245 100 Cr de profit pour un trajet de ~12 minutes dans l'exemple chiffré de ce
+guide). Le mining-to-trade optimisé dépasse les 100 M Cr/heure en solo, et la contrebande de passagers façon Robigo
+Run atteint environ 90 M Cr/heure en Python. Voir l'[exemple chiffré complet](#3-exemple-chiffré-complet-dune-route-de-commerce-légal-en-vrac).
+
+**Quel est le meilleur vaisseau pour débuter dans le commerce ?**
+
+La progression communautaire classique part du Hauler (~50 000 Cr, 26 t) puis passe par le Cobra Mk III
+(~340 000 Cr, 64 t) avant le Type-6 Transporter (~1 M Cr, 114 t). Le Keelback (~3,1 M Cr, ~112 t) est une bonne
+transition pour qui veut une soute correcte tout en gardant une baie de chasseur défensive.
+
+**Quel vaisseau a la plus grosse soute pour le commerce ?**
+
+Le Panther Clipper Mk II, en jeu depuis le 22 juillet 2025 (~301,35 M Cr), dispose de deux emplacements internes
+classe 8 — un record chez les vaisseaux non-capitaux — devant le Type-9 Heavy (soute théorique ~790 t) et l'Imperial
+Cutter (~760 t, qui nécessite le rang impérial de Duc). Voir le [comparatif des vaisseaux de commerce](#5-vaisseaux-de-commerce-optimaux--spécifications-vérifiées).
+
+**Qu'est-ce que le Trade Rank et combien de paliers comporte-t-il ?**
+
+Le Trade Rank (rang de commerce) est basé sur le profit cumulé réalisé en vente de marchandises. Il comporte neuf
+paliers officiels, de Penniless à Elite, ce dernier étant subdivisé en cinq sous-niveaux Elite I à V. Les seuils de
+crédits exacts de chaque palier ne sont pas documentés par une source primaire retrouvée ; consultez le panneau
+Réputation en jeu. Voir la [sous-section dédiée](#rang-de-commerce-trade-rank).
+
+**Comment fonctionne la Robigo Run et combien ça rapporte ?**
+
+C'est une boucle de contrebande de passagers illégaux reliant le système de Sothis à la station Robigo Mines, sur
+une distance d'environ 60 années-lumière : elle consiste à empiler plusieurs missions de passagers illégaux et à
+éviter tout balayage de cargo pendant le trajet. Un Python bien équipé peut rapporter environ 90 M Cr/heure sur des
+allers-retours réussis (chiffre instantané, à revérifier auprès de la communauté). Voir la [section contrebande](#23-commerce-noir-et-marché-illégal-smuggling).
+
+**Le minage (mining) est-il plus rentable que le commerce classique ?**
+
+Oui, très largement selon les estimations disponibles : le mining-to-trade en laser optimisé (Python ou Type-9 bien
+équipé) peut rapporter bien plus de 100 M Cr/heure, contre environ 1,2 M Cr/heure pour une route classique en
+Type-6. Le wing mining coordonné via le réseau communautaire PTN peut même générer jusqu'à 3,5 milliards de Cr par
+cycle pour un équipage de quatre commandants. Voir la [section mining-to-trade](#24-mining-to-trade-minage-puis-revente).
+
+**Que risque-t-on à se faire scanner avec du cargo illégal (cargo scan) ?**
+
+Un balayage de cargo (cargo scan) positif entraîne amendes, saisie de la cargaison, voire poursuite et prime sur la
+tête du pilote. Pour limiter ce risque : éviter les zones surveillées, privilégier les systèmes d'Anarchie pour
+écouler l'illégal, et utiliser le silent running pour réduire sa signature thermique. Voir la [section contrebande](#23-commerce-noir-et-marché-illégal-smuggling).
+
+**Combien rapporte la piraterie (piracy) en Elite Dangerous ?**
+
+Aucun chiffre horaire vérifiable n'a été retrouvé pour cette activité, ni chez les sources chiffrées utilisées
+ailleurs dans ce guide ni dans les fichiers de référence EDCD, qui ne publient pas de prix de marché pour du fret
+volé. Ce qui est certain, c'est son coût en réputation : la piraterie fait grimper la notoriety, qui bloque
+l'accostage même après paiement d'une prime et ne décroît qu'avec le temps. Voir la [section piraterie](#25-piraterie--prendre-la-cargaison-plutôt-que-lacheter).
+
+**Faut-il un rang particulier pour acheter l'Imperial Cutter ?**
+
+Oui : l'Imperial Cutter (~200,5 M Cr en coque, ~209 M Cr équipé) nécessite d'avoir atteint le rang impérial de Duc.
+C'est le vaisseau de commerce « tout-terrain » préféré de la communauté une fois ce rang débloqué, grâce à son
+compromis vitesse/portée de saut/robustesse. Voir la [fiche Imperial Cutter](#imperial-cutter-gutamaya--le-vaisseau-de-commerce--premium-).
+
+**Quels outils utiliser pour trouver les meilleures routes commerciales (trade routes) ?**
+
+Les références actives sont Trade Dangerous (optimiseur de routes en ligne de commande), Spansh (calculateur web,
+référence principale pour le routage commercial) et Inara (marché galactique, comparateur de vaisseaux). EDSM sert
+surtout à la cartographie galactique. EDDB.io est fermé depuis 2022 et ne doit plus être utilisé. Voir la [section outils](#4-trouver-des-routes-commerciales-rentables--les-outils).
+
+**Comment commencer à trader sans grosse soute (cargo) ?**
+
+Le commerce de données (data trading) est le point d'entrée recommandé : missions de courrier de données, données
+d'exploration ou de renseignement occupent peu ou pas de soute, ce qui permet d'accumuler des crédits sans investir
+dans un gros cargo. Voir la [section commerce de données](#22-commerce-de-données-data-trading).
+
+**Comment se protéger de l'interdiction avec un vaisseau de commerce ?**
+
+Il n'existe pas de module anti-interdiction dédié : la défense combine l'ingénierie des propulseurs (Dirty Drive
+Tuning) pour maximiser vitesse et boost, la gestion des répartiteurs d'énergie (pips) vers SYS/ENG pendant la
+tentative d'interdiction, et un FSD à portée maximisée pour réduire le nombre de sauts exposés sur la route. Voir la
+[section anti-interdiction](#anti-interdiction--pas-de-module-dédié-une-stratégie-combinée).
+
 ## Voir aussi
 
 - [Marchandises, denrées rares et minerais](./28-marchandises.md) — référentiel nominatif des marchandises, de leurs
-  catégories officielles et des denrées rares, complément direct des sections 1 et 2 de ce guide.
+  catégories officielles et des denrées rares, complément direct des [sections 1](#1-mécanique-générale-du-commerce)
+  et [2](#2-les-cinq-types-de-commerce) de ce guide.
 - [Vaisseaux](./03-vaisseaux.md) — liste complète des vaisseaux, fabricants et fiches détaillées.
 - [Équipements](./04-equipements.md) — fiches modules (Cargo Rack, Refinery, Fuel Scoop, AFMU, Cargo Scanner, FSD
   Interdictor, Hatch Breaker et Collector Limpet Controllers, etc.).
 - [Combat spatial](./08-combat-spatial.md) — interdiction, mass lock, crime, primes et notoriety : les mécaniques qui
-  encadrent la piraterie décrite en section 2.5.
+  encadrent la piraterie décrite en [section 2.5](#25-piraterie--prendre-la-cargaison-plutôt-que-lacheter).
 - [Ingénieurs](./06-ingenieurs.md) — ingénierie des modules cités dans ce guide.
 - [Guardians](./05-guardians.md) — Guardian FSD Booster.
 - [Transport](./12-transport.md) — passagers légaux/illégaux, chronologie des vaisseaux de fret.

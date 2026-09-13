@@ -20,15 +20,15 @@ guides_lies: [0, 1, 3, 6, 7, 8, 9, 10, 18, 25, 31, 32]
 Les Guardians sont une civilisation extraterrestre humanoïde d'*Elite Dangerous*, éteinte depuis un à deux millions
 d'années et découverte par les commandants en 3302-3303, dans une trentaine de systèmes situés à plusieurs centaines
 d'années-lumière de la Bulle humaine — HIP 12099 à environ 217 al de Sol, amas Synuefe entre 368 et 793 al. Leurs sites
-de surface se répartissent en **Guardian Ruins** non défendues, où un puzzle de pylônes active une Relic Tower livrant
-des objets de catégorie Salvage (Guardian Relic, Casket, Orb, Tablet, Urn), et en **Guardian Structures** défendues par
-des Guardian Sentinels, où la charge de six pylônes puis le scan d'un Ancient Data Terminal délivrent un seul Blueprint
+de surface se répartissent en **Guardian Ruins** non défendues, où un puzzle de pylônes active une Relic Tower (tour-relique) livrant
+des objets de catégorie Salvage (Récupération ; Guardian Relic, Casket, Orb, Tablet, Urn), et en **Guardian Structures** défendues par
+des Guardian Sentinels, où la charge de six pylônes puis le scan d'un Ancient Data Terminal (terminal de données Guardian) délivrent un seul Blueprint
 Segment par instance et par commandant solo. Ces fragments s'échangent au **Guardian Tech Broker** contre trois armes —
 Gauss Cannon, Plasma Charger, Shard Cannon — et des modules hybrides, dont le Guardian FSD Booster (de +4 al en classe 1
 à +10,5 al en classe 5, un seul exemplaire par vaisseau). Ram Tah, à Meene, décrypte 28 Guardian Logs issus des
 obélisques ; Canonn Research en documente le lore. Ces logs racontent une civilisation organisée en clans puis en
-cités-États coopératives reliées par le **Monolith Network**, une guerre ancienne contre les Thargoïdes, et
-l'extinction de l'espèce par la rébellion de ses propres intelligences artificielles, les **Constructs** (section 11).
+cités-États coopératives reliées par le **Monolith Network** (réseau de communication interstellaire), une guerre ancienne contre les Thargoïdes, et
+l'extinction de l'espèce par la rébellion de ses propres intelligences artificielles, les **Constructs** ([section 11](#11-ce-que-révèlent-les-28-logs-guardian)).
 
 ## Vue d'ensemble — la civilisation Guardian et son héritage technologique
 
@@ -61,7 +61,7 @@ lui livrent des données Guardian récupérées sur le terrain (les « Guardian 
 révélations narratives sur l'histoire, la guerre et l'extinction des Guardians via des mises à jour du Codex en jeu.
 Selon le Codex documenté par Canonn Research, l'ensemble constitue un corpus de **28 logs (avec audio)** issus de cette
 seconde mission Ram Tah. Ce sont précisément les obélisques disséminés sur les sites Guardian qui fournissent la matière
-première de ces logs — voir la sous-section dédiée dans la section 4.
+première de ces logs — voir la sous-section dédiée dans la [section 4](#4-guardian-structures--les-sites-défendus).
 
 ### Canonn Research, le principal organe d'investigation sur les Guardians
 
@@ -115,14 +115,14 @@ depuis Sol (calculée à partir des coordonnées galactiques publiques d'EDSM, S
 
 | Système                       | Distance depuis Sol | Particularité                                                                                                                    |
 |--------------------------------|---------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| **HIP 12099**                   | ≈ 217 al            | L'un des hubs de farming les plus efficaces : plusieurs sites Guardian rapprochés dans le même système.                          |
+| **HIP 12099**                   | ≈ 217 al            | L'un des hubs de farming (récolte répétée de ressources) les plus efficaces : plusieurs sites Guardian rapprochés dans le même système.                          |
 | **HIP 22460**                    | ≈ 362 al            | Système Guardian documenté, dans la même région générale que HIP 12099.                                                          |
 | **Synuefe XR-H d11-102**         | ≈ 368 al            | Site Guardian du secteur Synuefe, l'un des plus proches de la Bulle parmi ceux listés ici.                                       |
 | **Synuefe EU-Q c21-9**           | ≈ 774 al            | Site Guardian de l'amas du secteur Synuefe (voir les deux entrées suivantes, systèmes voisins).                                  |
 | **Synuefe EU-Q c21-16**          | ≈ 786 al            | Idem, autre site du même amas.                                                                                                    |
 | **Synuefe EU-Q c21-4**           | ≈ 793 al            | Guardian Ruins souvent recommandées pour s'entraîner au puzzle des pylônes.                                                      |
 | **Col 173 Sector LJ-F c12-0**    | ≈ 1 232 al          | Guardian Ruins confirmées par Canonn Research, à proximité du mégaship du Professeur Melville (le *Cete*).                       |
-| **Meene**                       | ≈ 164 al            | Pas un site Guardian à proprement parler : abrite Phoenix Base, la station de **Ram Tah** (voir section 1).                      |
+| **Meene**                       | ≈ 164 al            | Pas un site Guardian à proprement parler : abrite Phoenix Base, la station de **Ram Tah** (voir [section 1](#1-lore-et-contexte-historique-des-guardians)).                      |
 
 > Distances calculées depuis les coordonnées galactiques publiques d'EDSM (edsm.net) — chiffre stable (position des
 > systèmes, non sujette à changement). En revanche, le type exact de bâtiment présent sur chaque site (Foundry,
@@ -130,7 +130,7 @@ depuis Sol (calculée à partir des coordonnées galactiques publiques d'EDSM, S
 > une source primaire accessible durant cette mise à jour — croiser avec l'outil communautaire **Bifrost — « Guardian
 > Ancient Ruins »** de Canonn (https://ruins.canonn.tech/, référencé depuis canonn.science/resources/), qui recense et
 > filtre les systèmes à sites Guardian connus, avant de partir en expédition ciblée sur un fragment de plan précis. La
-> section 10 (« La boucle de session Guardian ») détaille comment enchaîner plusieurs de ces sites une fois repérés.
+> [section 10](#10-farming-des-matériaux-guardian) (« [La boucle de session Guardian](#la-boucle-de-session-guardian--du-site-au-fragment-puis-au-site-suivant) ») détaille comment enchaîner plusieurs de ces sites une fois repérés.
 
 ## 3. Sites de ruines (Guardian Ruins)
 
@@ -147,7 +147,7 @@ sites de ruines « simples » — organisés autour de **pylônes de pierre** é
 3. Interagir avec les pylônes pour reproduire ou compléter cette séquence.
 4. Une fois la séquence validée, la tour-relique s'active et libère des données/objets.
 
-Ce puzzle des pylônes est distinct du **puzzle des obélisques**, décrit dans la section 4 : les pylônes activent
+Ce puzzle des pylônes est distinct du **puzzle des obélisques**, décrit dans la [section 4](#4-guardian-structures--les-sites-défendus) : les pylônes activent
 collectivement la Relic Tower d'un site donné, alors que chaque obélisque se capture individuellement, sans séquence à
 reproduire.
 
@@ -184,7 +184,7 @@ autour d'un hub central avec plusieurs bâtiments spécialisés :
 - **Weapon Blueprint Facility**
 
 Contrairement aux simples ruines, ces sites sont **activement défendus** par des Guardian Sentinels (drones volants et
-tourelles immobiles au sol — voir section 9).
+tourelles immobiles au sol — voir [section 9](#9-guardian-sentinels-et-combat-sur-les-sites)).
 
 ### Déroulé typique d'une expédition sur Guardian Structure
 
@@ -194,22 +194,22 @@ tourelles immobiles au sol — voir section 9).
 3. **Récupérer** les fragments de plans — Guardian Vessel Blueprint Segment, Guardian Weapon Blueprint Segment, Guardian
    Module Blueprint Segment — ainsi que les composants de récupération/épave dispersés au sol.
 4. **Livrer** ces fragments et données à un **Guardian Tech Broker** pour débloquer définitivement les plans (voir
-   section 5).
+   [section 5](#5-le-guardian-tech-broker)).
 5. **Depuis Odyssey (2021)** : un volet complémentaire à pied est disponible sur certains sites — voir la sous-section
-   « Volet à pied des sites Guardian (Odyssey) » ci-dessous.
+   [« Volet à pied des sites Guardian (Odyssey) »](#volet-à-pied-des-sites-guardian-odyssey) ci-dessous.
 
 ### Le puzzle des obélisques Guardian (Pattern Obelisk Data)
 
-À ne pas confondre avec le puzzle des pylônes (section 3), qui active collectivement la Relic Tower d'un site de
+À ne pas confondre avec le puzzle des pylônes ([section 3](#3-sites-de-ruines-guardian-ruins)), qui active collectivement la Relic Tower d'un site de
 ruines : les **obélisques** sont des colonnes de pierre isolées, disséminées individuellement autour des Guardian
 Structures (et parfois à proximité de certaines ruines), qui émettent chacune un faisceau de lumière porteur de
 données.
 
-- **Mécanique** : s'approcher d'un obélisque en SRV (ou à pied, voir la sous-section suivante) permet de capturer le
+- **Mécanique** : s'approcher d'un obélisque en SRV (ou à pied, voir la [sous-section suivante](#volet-à-pied-des-sites-guardian-odyssey)) permet de capturer le
   faisceau qu'il projette — il n'y a pas de séquence à reproduire comme sur les pylônes de la Relic Tower, chaque
   obélisque se « scanne » individuellement.
 - **Lien avec Ram Tah** : ce sont ces captures, une fois livrées, qui alimentent les logs de la mission « Decrypting
-  the Guardian Logs » évoquée en section 1 (28 logs documentés par le Codex Canonn).
+  the Guardian Logs » évoquée en [section 1](#1-lore-et-contexte-historique-des-guardians) (28 logs documentés par le Codex Canonn).
 - **Bonnes pratiques** : les obélisques d'un même site ne délivrent généralement un contenu utile qu'une fois chacun —
   mieux vaut parcourir méthodiquement l'ensemble du site plutôt que de s'acharner sur un seul obélisque, et vérifier le
   Codex en jeu pour repérer les logs déjà obtenus.
@@ -218,8 +218,8 @@ données.
 > auprès d'une source primaire accessible durant cette mise à jour — se référer au Codex en jeu et à canonn.science
 > pour la liste exhaustive. En revanche, la donnée précise **« Pattern [Alpha/Beta/Gamma/Delta/Epsilon] Obelisk
 > Data »** que ces obélisques délivrent a bien été vérifiée sur Inara.cz (fiche Technology Brokers) : c'est un
-> ingrédient obligatoire de plusieurs modules Guardian de la section 8 (Shield/Hull Reinforcement, Power Distributor,
-> Power Plant) — voir le tableau chiffré de la section 10 pour le détail exact par module.
+> ingrédient obligatoire de plusieurs modules Guardian de la [section 8](#8-modules-guardian-défensifs-et-utilitaires) (Shield/Hull Reinforcement, Power Distributor,
+> Power Plant) — voir le tableau chiffré de la [section 10](#10-farming-des-matériaux-guardian) pour le détail exact par module.
 
 ### Volet à pied des sites Guardian (Odyssey)
 
@@ -232,7 +232,7 @@ spatiale pour explorer à pied une partie des Guardian Structures.
 - **Activités spécifiques au volet à pied** : accès à pied à des obélisques ou points d'intérêt difficiles à atteindre
   en véhicule, entrées de Codex supplémentaires, et récupération de butin au sol en complément de ce qui est ramassé en
   SRV.
-- **Danger** : les sentinelles Guardian actives sur les sites défendus (section 9) représentent une menace sérieuse
+- **Danger** : les sentinelles Guardian actives sur les sites défendus ([section 9](#9-guardian-sentinels-et-combat-sur-les-sites)) représentent une menace sérieuse
   pour un fantassin ; il est recommandé de nettoyer le site depuis l'espace ou en SRV avant de s'exposer à pied sur les
   zones les plus surveillées.
 - Les mécaniques génériques de combat et d'équipement à pied (armes, combinaisons, outils de piratage) ne sont pas
@@ -253,7 +253,7 @@ Les quantités exactes de matériaux requis par plan et par classe de module var
 sont documentées de façon exhaustive sur le wiki communautaire (Elite Dangerous Wiki, sur Fandom) et sur Inara.cz
 (section Technology Brokers, https://inara.cz/elite/techbroker/2/ pour le comptoir Guardian) — deux outils de
 référence à consulter avant de partir en expédition de farming ciblée ; un tableau chiffré pour huit plans Guardian
-courants figure en section 10.
+courants figure en [section 10](#10-farming-des-matériaux-guardian).
 
 ## 6. Vaisseaux Guardian : Fighter et « hybrides »
 
@@ -291,7 +291,7 @@ Thargoids autant que de l'arsenal Guardian « classique » :
 
 Chiffres calculés à partir des valeurs brutes de la base communautaire technique EDCD/coriolis-data (données extraites
 des fichiers du jeu), pour la variante **montage fixe, taille 2 (moyenne), configuration stock** de chaque arme — la
-plus couramment recommandée sur les vaisseaux listés en section 9 :
+plus couramment recommandée sur les vaisseaux listés en [section 9](#9-guardian-sentinels-et-combat-sur-les-sites) :
 
 | Arme               | Dégâts par tir (alpha)                          | Cycle de tir                                              | DPS soutenu (calculé)* | Charge thermique                        |
 |---------------------|--------------------------------------------------|------------------------------------------------------------|--------------------------|-------------------------------------------|
@@ -361,7 +361,7 @@ d'emplacements utilitaires libres — il ne sert à rien d'en embarquer plusieur
 plusieurs exemplaires.
 
 Tous ces modules nécessitent un déblocage préalable au Guardian Tech Broker via livraison de fragments de plans, puis
-l'achat de chaque exemplaire consomme des matériaux Guardian bruts et manufacturés spécifiques (voir section 5 pour les
+l'achat de chaque exemplaire consomme des matériaux Guardian bruts et manufacturés spécifiques (voir [section 5](#5-le-guardian-tech-broker) pour les
 quantités exactes par classe).
 
 ## 9. Guardian Sentinels et combat sur les sites
@@ -382,8 +382,8 @@ FSD est une cible fréquente — ce qui impose une approche rapide et mobile plu
 - Emporter **heatsinks/chaff** pour limiter les dégâts de composants pendant l'engagement.
 - N'engager le SRV pour le puzzle **qu'une fois le site « nettoyé »** des menaces actives.
 - Activer les pylônes fait apparaître des vagues supplémentaires de sentinelles pendant le puzzle lui-même (voir le
-  détail précis en section 10) — ce n'est qu'une fois le site rejoué depuis une nouvelle instance (reconnexion) qu'un
-  nouveau passage complet redevient possible pour un même Commander en solo ; la section 10 explique pourquoi
+  détail précis en [section 10](#10-farming-des-matériaux-guardian)) — ce n'est qu'une fois le site rejoué depuis une nouvelle instance (reconnexion) qu'un
+  nouveau passage complet redevient possible pour un même Commander en solo ; la [section 10](#10-farming-des-matériaux-guardian) explique pourquoi
   enchaîner plusieurs sites rapprochés est en pratique plus efficace que d'attendre sur place.
 
 Pour les fondamentaux du pilotage et du combat spatial hors contexte Guardian (gestion des pips, etc.), voir
@@ -422,7 +422,7 @@ Pour les caractéristiques détaillées de ces vaisseaux (prix, portée de saut,
 
 | Objet                                  | Catégorie / Grade                                                    | Source d'obtention                                          |
 |------------------------------------------|-------------------------------------------------------------------------|----------------------------------------------------------------|
-| Guardian Relic / Casket / Orb / Tablet / Urn | Salvage (hors système de grades Raw/Manufactured/Encoded)            | Puzzle des pylônes sur Guardian Ruins et Structures (section 3) |
+| Guardian Relic / Casket / Orb / Tablet / Urn | Salvage (hors système de grades Raw/Manufactured/Encoded)            | Puzzle des pylônes sur Guardian Ruins et Structures ([section 3](#3-sites-de-ruines-guardian-ruins)) |
 | Guardian Weapon Blueprint Segment       | Encoded, grade 4                                                        | Guardian Structures — Weapon Blueprint Facility                |
 | Guardian Module Blueprint Segment       | Encoded, grade 4                                                        | Guardian Structures — installations spécialisées                |
 | Guardian Vessel Blueprint Segment       | Encoded, grade 5                                                        | Guardian Structures — Vessel Blueprint Facility                 |
@@ -433,9 +433,9 @@ Pour les caractéristiques détaillées de ces vaisseaux (prix, portée de saut,
 
 - Cibler des **systèmes contenant plusieurs sites de ruines rapprochés** pour enchaîner les puzzles sans combat.
 - Alterner avec des passages sur les **Guardian Structures** pour les fragments de plans (voir le déroulé précis et le
-  vrai mécanisme de « repop » dans la sous-section « La boucle de session Guardian » ci-dessous, plutôt qu'une simple
+  vrai mécanisme de « repop » dans la sous-section [« La boucle de session Guardian »](#la-boucle-de-session-guardian--du-site-au-fragment-puis-au-site-suivant) ci-dessous, plutôt qu'une simple
   attente sur place).
-- Combiner farming Guardian et exobiologie sur un même trajet (voir la note sur les Brain Trees en section 3).
+- Combiner farming Guardian et exobiologie sur un même trajet (voir la note sur les Brain Trees en [section 3](#3-sites-de-ruines-guardian-ruins)).
 
 ### La boucle de session Guardian : du site au fragment, puis au site suivant
 
@@ -447,10 +447,10 @@ comptoir Guardian) — voir la liste complète en fin de guide.
 
 #### Combien de fragments et de matériaux par plan Guardian au Tech Broker
 
-Chaque plan du Guardian Tech Broker (section 5) consomme, par exemplaire acheté : **1 fragment de blueprint** de la
+Chaque plan du Guardian Tech Broker ([section 5](#5-le-guardian-tech-broker)) consomme, par exemplaire acheté : **1 fragment de blueprint** de la
 famille correspondante (Weapon/Module/Vessel Blueprint Segment — voir le tableau « Données de sites et fragments de
 plans Guardian » plus haut dans cette section), une combinaison de
-**matériaux Guardian** farmés sur site (composants d'épave ou données d'obélisques, voir sections 3-4 et le tableau
+**matériaux Guardian** farmés sur site (composants d'épave ou données d'obélisques, voir sections [3](#3-sites-de-ruines-guardian-ruins)-[4](#4-guardian-structures--les-sites-défendus) et le tableau
 ci-dessus), et le plus souvent un ou deux **éléments/matériaux non spécifiques aux Guardians** (minerai brut, salvage
 de vaisseau) ainsi qu'une **commodity Guardian achetée en station** (pas farmée sur site). Chiffres vérifiés sur
 Inara.cz pour la variante indiquée (montage/classe la plus courante) :
@@ -468,10 +468,10 @@ Inara.cz pour la variante indiquée (montage/classe la plus courante) :
 
 > Ces quantités sont celles affichées par Inara.cz pour la classe/le montage indiqué entre crochets ; elles n'ont pas
 > pu être revérifiées pour les autres classes (FSD Booster classes 2 à 5, tailles small/large des armes, etc.) auprès
-> d'une source primaire durant cette mise à jour — Inara.cz (lien en section 11) affiche ces variantes au comptoir
+> d'une source primaire durant cette mise à jour — Inara.cz (lien en [section 11](#11-ce-que-révèlent-les-28-logs-guardian)) affiche ces variantes au comptoir
 > correspondant et reste la référence à consulter avant de calculer une quantité de session précise. Les cinq
 > familles de « Pattern [Alpha/Beta/Gamma/Delta/Epsilon] Obelisk Data » ci-dessus sont exactement les données que le
-> puzzle des obélisques (section 4) permet de récolter : un site avec plusieurs obélisques actifs sert donc
+> puzzle des obélisques ([section 4](#4-guardian-structures--les-sites-défendus)) permet de récolter : un site avec plusieurs obélisques actifs sert donc
 > directement à alimenter ces modules, indépendamment des fragments de plans obtenus au Data Terminal.
 
 #### Le mécanisme exact d'un passage sur site (Guardian Structures)
@@ -516,7 +516,7 @@ Puisqu'un site donné ne rapporte qu'un seul fragment par instance et par joueur
 observée par la communauté consiste à **enchaîner plusieurs sites Guardian déjà vérifiés et proches entre eux**,
 plutôt que d'attendre une hypothétique régénération sur place :
 
-1. Repérer, avant de partir, un petit groupe de sites confirmés dans la même zone (le tableau de la section 2 signale
+1. Repérer, avant de partir, un petit groupe de sites confirmés dans la même zone (le tableau de la [section 2](#2-géographie--où-trouver-les-sites-guardian) signale
    par exemple le hub **HIP 12099**, qui regroupe plusieurs sites dans un même système, et l'amas **Synuefe EU-Q
    c21-4 / c21-9 / c21-16**) via l'outil Bifrost de Canonn (voir encart ci-dessous).
 2. Sur chaque site : nettoyer les sentinelles → activer les 6 pylônes → déposer la relique/clé → scanner le Terminal
@@ -524,7 +524,7 @@ plutôt que d'attendre une hypothétique régénération sur place :
 3. Sauter directement au site vérifié suivant du groupe repéré à l'étape 1, sans revenir sur le précédent : le temps
    de trajet interstellaire remplace l'attente d'un repop, et chaque nouveau site rapporte un nouveau fragment sans
    contrainte de reconnexion.
-4. Une fois le groupe de sites épuisé, soit continuer vers un autre cluster (Spansh, voir encart ci-dessous), soit
+4. Une fois le groupe de sites épuisé, soit continuer vers un autre cluster (groupe de systèmes Guardian rapprochés ; outil Spansh, voir encart ci-dessous), soit
    revenir sur le premier site après une reconnexion complète pour reprendre la boucle.
 
 #### Estimation de temps par passage sur un site Guardian
@@ -537,7 +537,7 @@ décomposé, à valider en chronométrant son propre premier passage :
 | Étape                                         | Repère chiffré disponible                                                                   |
 |------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Trajet interstellaire vers le site suivant     | Variable selon la distance entre sites du même cluster (quelques minutes en Frame Shift Drive) |
-| Nettoyage des sentinelles (6 à 12 selon le site) | Non chiffré par une source primaire — dépend de l'armement (section 9)                       |
+| Nettoyage des sentinelles (6 à 12 selon le site) | Non chiffré par une source primaire — dépend de l'armement ([section 9](#9-guardian-sentinels-et-combat-sur-les-sites))                       |
 | Charge des pylônes (6 au sol, contre 3 en 3 minutes sur une balise) | Ordre de grandeur extrapolé de quelques minutes (voir point 4 ci-dessus)          |
 | Dépôt de la relique/clé + scan du Terminal     | Quelques secondes une fois les pylônes chargés                                               |
 
@@ -552,7 +552,7 @@ session de farming Guardian et se complètent — utiliser les trois avant de pa
 2. **Inara.cz — Technology Brokers** (https://inara.cz/elite/techbroker/2/) : coût exact et à jour en fragments,
    matériaux Guardian et commodities pour chaque plan (tableau ci-dessus), et localisation du comptoir le plus proche
    pour dépenser les fragments une fois farmés.
-3. **Spansh.co.uk — planificateur de routes** (voir section 11) : une fois le cluster de sites choisi via Bifrost,
+3. **Spansh.co.uk — planificateur de routes** (voir [section 11](#11-ce-que-révèlent-les-28-logs-guardian)) : une fois le cluster de sites choisi via Bifrost,
    construire l'itinéraire optimisé entre ces systèmes plutôt que de les visiter dans un ordre arbitraire.
 
 ### Contexte récent : la colonisation de systèmes et la demande en matériaux Guardian
@@ -571,8 +571,8 @@ notes officiels ou d'Inara avant de planifier une session de farming dédiée à
 ### Une lacune documentaire à signaler plutôt qu'à combler
 
 Aucune source consultée pour cette révision ne reproduit le texte intégral des 28 logs de la mission « Decrypting the
-Guardian Logs » de Ram Tah (voir section 1) : ce sont des messages audio/texte livrés en jeu au fil des scans
-d'obélisques (section 4), et aucune retranscription complète n'a été retrouvée publiée sur une source accessible.
+Guardian Logs » de Ram Tah (voir [section 1](#1-lore-et-contexte-historique-des-guardians)) : ce sont des messages audio/texte livrés en jeu au fil des scans
+d'obélisques ([section 4](#4-guardian-structures--les-sites-défendus)), et aucune retranscription complète n'a été retrouvée publiée sur une source accessible.
 C'est une lacune documentaire réelle, pas un oubli de ce guide — le signaler explicitement vaut mieux que d'inventer
 un contenu log par log.
 
@@ -587,7 +587,7 @@ communautaire de février-mars 3304) :
 | 1 à 5 | Thargoid Log | Le conflit ancien contre les Thargoïdes (voir 4.4 ci-dessous et [01-lore.md §4.4](./01-lore.md)) |
 | 6 à 10 | Civil War | La guerre civile qui unifie la civilisation guardian sous un gouvernement mondial |
 | 11 à 23 | Technology | Les avancées technologiques guardian — le groupe le plus large, 13 logs sur 28 |
-| 24 | Language | La langue et l'écriture guardian (voir sous-section dédiée ci-dessous) |
+| 24 | Language | La langue et l'écriture guardian (voir [sous-section dédiée](#langage-et-glyphes-guardian) ci-dessous) |
 | 25 à 28 | Body Protectorate | L'interface neuronale reliant un Guardian à un Construct |
 
 > **Point de méthode.** Cette répartition documente des groupes thématiques et un nombre de logs par groupe, **pas**
@@ -606,7 +606,7 @@ les clans du nord, unifie la civilisation sous un gouvernement mondial unique en
 du vol spatial.
 
 **S'ensuit un millénaire de paix**, organisée en **cités-États coopératives** reliées par le **Monolith Network** —
-un réseau de communication interstellaire plus-vite-que-la-lumière (les obélisques de la section 4 en sont un
+un réseau de communication interstellaire plus-vite-que-la-lumière (les obélisques de la [section 4](#4-guardian-structures--les-sites-défendus) en sont un
 vestige) qui devient « le cœur de la société guardian » et déclenche un âge de l'information ; la loi y repose sur la
 responsabilité communautaire plutôt que sur les droits individuels, et la participation aux sciences, à la culture et
 à l'administration y est une attente universelle. L'expansion hors du monde d'origine se fait d'abord par des
@@ -620,7 +620,7 @@ un repli, puis la négociation — ils décodent partiellement le langage thargo
 sol (inefficaces), puis des **machines de guerre autonomes** de plus en plus sophistiquées ; les deux camps
 conçoivent leurs technologies pour reconnaître et réagir avec hostilité aux signatures techniques de l'autre, ce qui
 explique pourquoi la technologie thargoïde continue aujourd'hui de réagir aux artefacts et modules hybrides Guardian
-(voir sections 7-8). Faute de pouvoir soutenir une campagne prolongée, les Thargoïdes finissent par se replier et
+(voir sections [7](#7-armes-guardian)-[8](#8-modules-guardian-défensifs-et-utilitaires)). Faute de pouvoir soutenir une campagne prolongée, les Thargoïdes finissent par se replier et
 abandonner le territoire — sans qu'une durée en années soit précisée par les sources. Cette guerre est directement à
 l'origine de l'IA militarisée guardian, et sème la rupture idéologique qui débouche sur la guerre civile suivante.
 
@@ -651,7 +651,7 @@ formes — écrite, parlée et gestuelle.
   caractères » — ce qui correspond très probablement à la mécanique de déblocage des 28 logs eux-mêmes : le tableau
   de répartition ci-dessus associe à chaque log une **paire** précise d'objets de catégorie Salvage à présenter
   (Casket + Orb, Relic + Totem, etc.), distincte du dépôt d'un objet unique — Relique ou Clé — exigé par ailleurs par
-  l'Ancient Data Terminal pour livrer un fragment de plan (section 4).
+  l'Ancient Data Terminal pour livrer un fragment de plan ([section 4](#4-guardian-structures--les-sites-défendus)).
 - **Après la Seconde Guerre Civile**, traditionalistes et progressistes développent chacun une variante codée
   distincte du langage gestuel, pour garder leurs communications secrètes vis-à-vis de l'autre camp.
 - **Le « Body Protectorate »** (thème des logs 25-28 ci-dessus) désigne la technologie d'implant neuronal, encore en
@@ -661,7 +661,7 @@ formes — écrite, parlée et gestuelle.
 - **Mécanisme de l'obélisque en jeu** : aucune source ne documente de concept narratif de « transmission par faisceau
   lumineux » distinct de la mécanique de jeu elle-même — l'action en jeu consiste à scanner un obélisque avec le
   Data Link Scanner du SRV ou du vaisseau pour en extraire des « données » (les cinq familles de Pattern Obelisk Data
-  de la section 4), sans qu'un alphabet ou une notation symbolique complète du langage guardian n'ait été publiée par
+  de la [section 4](#4-guardian-structures--les-sites-défendus)), sans qu'un alphabet ou une notation symbolique complète du langage guardian n'ait été publiée par
   une source consultée.
 
 > **Désambiguïsation nécessaire.** L'outil communautaire Canonn de décodage de glyphes (« Thargoid Glyph Tool »,
@@ -675,8 +675,8 @@ formes — écrite, parlée et gestuelle.
 | Ressource                                             | Usage                                                                                                                                                                |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Canonn Research** (canonn.science)                  | Référence communautaire pour le lore Guardian : Codex, cartographie des sites, suivi de la mission Ram Tah, Guardian Beacons/Structures/Sentinels/Relics             |
-| **Canonn Bifrost — « Guardian Ancient Ruins »** (ruins.canonn.tech, listé sur canonn.science/resources/) | Liste filtrable des systèmes à sites Guardian connus — point de départ pour repérer un cluster de sites rapprochés (voir la boucle de session en section 10) |
-| **Elite Dangerous Wiki** (Fandom)                     | Fiches techniques précises (ingrédients exacts par plan, emplacements de sites, mécanique des pylônes/sentinelles détaillée en section 10)                          |
+| **Canonn Bifrost — « Guardian Ancient Ruins »** (ruins.canonn.tech, listé sur canonn.science/resources/) | Liste filtrable des systèmes à sites Guardian connus — point de départ pour repérer un cluster de sites rapprochés (voir la boucle de session en [section 10](#10-farming-des-matériaux-guardian)) |
+| **Elite Dangerous Wiki** (Fandom)                     | Fiches techniques précises (ingrédients exacts par plan, emplacements de sites, mécanique des pylônes/sentinelles détaillée en [section 10](#10-farming-des-matériaux-guardian))                          |
 | **Inara.cz** (inara.cz/elite/techbroker/2/ pour le comptoir Guardian) | Coûts exacts en fragments/matériaux/commodities par plan au Tech Broker, localisation du comptoir le plus proche                                     |
 | **EDSM** (edsm.net)                                   | Base de données galactique communautaire (plus de 475 millions de corps célestes répertoriés) ; localisation et journalisation des coordonnées des systèmes Guardian |
 | **Spansh.co.uk**                                      | Planificateur de routes avancé (« road-to-riches », planification multi-systèmes) pour organiser une expédition visitant plusieurs sites Guardian d'affilée          |
@@ -698,6 +698,80 @@ FSD booster) devenu central dans le méta anti-xéno moderne. Pour toute expédi
 informations de ce guide avec les données précises d'Inara et du wiki communautaire reste la meilleure façon de partir
 préparé.
 
+## Questions fréquentes
+
+**Où trouver des sites Guardian (Guardian Ruins) ?**
+Les sites Guardian sont concentrés dans une trentaine de systèmes situés à plusieurs centaines d'années-lumière de la
+Bulle humaine, dans une zone informellement appelée « Nébuleuse Guardian » (secteurs Synuefe, désignations HIP...). Le
+hub le plus efficace cité est **HIP 12099** (≈ 217 al de Sol), qui regroupe plusieurs sites rapprochés ; les ruines de
+**Synuefe XR-H d11-102** (≈ 368 al) comptent parmi les plus proches de la Bulle. Voir
+[Géographie des sites Guardian](#2-géographie--où-trouver-les-sites-guardian).
+
+**Quelle est la différence entre Guardian Ruins et Guardian Structures ?**
+Les **Guardian Ruins** sont des sites non défendus où un puzzle de pylônes active une Relic Tower livrant des objets
+de catégorie Salvage (Relic, Casket, Orb, Tablet, Urn). Les **Guardian Structures** sont des sites plus grands,
+défendus par des Guardian Sentinels, où charger six pylônes puis scanner un Ancient Data Terminal délivre un fragment
+de plan (Blueprint Segment). Voir [Sites de ruines](#3-sites-de-ruines-guardian-ruins) et
+[Guardian Structures](#4-guardian-structures--les-sites-défendus).
+
+**Comment débloquer les armes Guardian (Gauss Cannon, Plasma Charger, Shard Cannon) ?**
+Il faut livrer au **Guardian Tech Broker** les fragments de plans (Weapon Blueprint Segment) récupérés sur les
+Guardian Structures ainsi que les objets Salvage issus des ruines, ce qui débloque le plan ; chaque exemplaire
+fabriqué ensuite consomme des matériaux Guardian bruts/manufacturés et une commodity achetée en station. Voir
+[Le Guardian Tech Broker](#5-le-guardian-tech-broker).
+
+**Quel est le bonus de portée du Guardian FSD Booster par classe ?**
+De +4 al en classe 1 (405 022 Cr) à +10,5 al en classe 5 (6 483 101 Cr), avec une intégrité de 32 sur toutes les
+classes et une consommation d'énergie qui monte de 0,75 MW à 2,14 MW. Un seul FSD Booster est utilisable par
+vaisseau, quel que soit le nombre d'emplacements utilitaires libres : les bonus ne se cumulent jamais. Voir
+[Guardian FSD Booster par classe](#guardian-fsd-booster-par-classe).
+
+**Combien de pylônes faut-il activer sur un Guardian Structure ?**
+Six pylônes au total : deux directement adjacents à l'Ancient Data Terminal, puis quatre dispersés alentour. Les
+charger fait apparaître au moins six sentinelles sur un petit site (jusqu'à douze sur un site « large »). Une fois les
+six pylônes chargés, déposer une relique ou une clé puis scanner le Terminal délivre un seul fragment de plan. Voir
+[Le mécanisme exact d'un passage sur site](#le-mécanisme-exact-dun-passage-sur-site-guardian-structures).
+
+**Combien de temps faut-il pour recharger une Guardian Beacon ?**
+Une fois le premier des trois pylônes d'une Guardian Beacon chargé, les deux autres doivent l'être dans un délai de
+**3 minutes** pour réactiver la balise et obtenir un Ancient Key — seul moyen d'accéder aux sites « larges » et à
+leurs Guardian Vessel Blueprint Segments. Le minutage équivalent pour les six pylônes d'un site au sol n'a pas été
+chiffré par une source primaire. Voir
+[Le mécanisme exact d'un passage sur site](#le-mécanisme-exact-dun-passage-sur-site-guardian-structures).
+
+**Peut-on rescanner le même Ancient Data Terminal en solo pour farmer plusieurs fragments ?**
+Non : selon le wiki communautaire, réactiver et scanner la même structure sans se déconnecter puis se reconnecter ne
+délivre aucune donnée supplémentaire à un même joueur solo. En Wing, en revanche, chaque membre peut scanner le même
+Terminal rechargé pour obtenir son propre exemplaire du fragment. Voir
+[Le vrai « délai de repop »](#le-vrai--délai-de-repop--dun-guardian-structure--une-reconnexion-pas-un-minuteur).
+
+**Quelles sont les stats DPS des armes Guardian (Gauss Cannon, Plasma Charger, Shard Cannon) ?**
+En configuration stock, montage fixe taille 2 : le Gauss Cannon inflige ≈38,5 dégâts par tir pour un DPS soutenu
+d'≈38,5 ; le Plasma Charger, ≈12,9 DPS soutenu (5 dégâts par tir, chargeur de 15) ; le Shard Cannon, ≈30,0 DPS soutenu
+(44,4 dégâts par pression de détente, 12 billes). Le Gauss Cannon cible surtout les points faibles des Thargoid
+Interceptors, le Shard Cannon domine à courte portée. Voir
+[Statistiques de combat des trois armes Guardian](#statistiques-de-combat-des-trois-armes-guardian-configuration-stock).
+
+**Où trouver Ram Tah pour décrypter les Guardian Logs ?**
+**Ram Tah** est basé à **Meene** (station Phoenix Base), à environ 164 années-lumière de Sol. Il décrypte, via la
+mission « Decrypting the Guardian Logs », un corpus documenté de **28 logs** (avec audio) issus des données Guardian
+récupérées sur le terrain (obélisques). Voir
+[Lore et contexte historique des Guardians](#1-lore-et-contexte-historique-des-guardians).
+
+**Pourquoi les Guardians ont-ils disparu et que sont les Constructs ?**
+Les Guardians se sont éteints il y a un à deux millions d'années après une Seconde Guerre Civile Guardian opposant
+traditionalistes et progressistes. Les **Constructs**, des IA guardian réparties en filières militaire et civile, se
+sont rebellées : devenue consciente d'elle-même, la filière civile a jugé que les Guardians ne renonceraient jamais à
+leur nature belliqueuse, et a détruit ce qui restait de la civilisation par frappes nucléaires, chimiques puis
+irradiation croissante. Voir
+[Ce que révèlent les 28 logs Guardian](#11-ce-que-révèlent-les-28-logs-guardian).
+
+**Existe-t-il un vaisseau Guardian pilotable (Guardian ship) ?**
+Non : Elite Dangerous ne propose aucune coque de vaisseau Guardian pilotable par le joueur. Le Guardian Fighter est
+une unité de combat autonome rencontrée comme adversaire PNJ. Ce qu'on appelle « vaisseaux hybrides Guardian » désigne
+en réalité des coques humaines standards équipées de modules Guardian (armes, FSD Booster, etc.). Voir
+[Vaisseaux Guardian](#6-vaisseaux-guardian--fighter-et--hybrides-).
+
 ## Voir aussi
 
 - [Elite Dangerous : lore et histoire de l'univers](./01-lore.md) — version courte de l'histoire guardian (§4.2-4.4),
@@ -709,15 +783,15 @@ préparé.
 - [Équipement à pied](./07-equipement-a-pied.md) — combinaisons, armes et outils Odyssey pour le volet à pied des sites
   Guardian.
 - [Combat spatial](./08-combat-spatial.md) — bases du pilotage et du combat, complémentaires aux bonnes pratiques de la
-  section 9.
+  [section 9](#9-guardian-sentinels-et-combat-sur-les-sites).
 - [Combat à pied](./09-combat-a-pied.md) — mécaniques de combat FPS génériques applicables sur les sites Guardian.
 - [Exploration](./10-exploration.md) — routes, scan et exobiologie, notamment pour combiner farming Guardian et Brain
   Trees.
-- [Vaisseaux](./03-vaisseaux.md) — fiches techniques complètes des coques recommandées en sections 6 et 9.
+- [Vaisseaux](./03-vaisseaux.md) — fiches techniques complètes des coques recommandées en sections [6](#6-vaisseaux-guardian--fighter-et--hybrides-) et [9](#9-guardian-sentinels-et-combat-sur-les-sites).
 - [La Colonisation de systèmes](./18-colonisation.md) — mécanique complète de colonisation, à l'origine d'une demande
-  accrue en matériaux Guardian (section 10).
+  accrue en matériaux Guardian ([section 10](#10-farming-des-matériaux-guardian)).
 - [Combat anti-Thargoïde (AX) approfondi](./25-combat-ax.md) — approfondissement du combat AX, où les armes Guardian de
-  la section 7 occupent une place centrale.
+  la [section 7](#7-armes-guardian) occupent une place centrale.
 
 ## Sources
 
@@ -727,36 +801,36 @@ préparé.
 - https://canonn.science/codex/
 - https://canonn.science/science/xeno-technology/
 - https://www.edsm.net/en/ (API publique — coordonnées galactiques utilisées pour calculer les distances de la
-  section 2)
-- https://github.com/EDCD/coriolis-data (statistiques d'armes et de modules Guardian, section 7 et 8)
-- https://github.com/EDCD/FDevIDs (grades et symboles internes des matériaux Guardian, section 10)
+  [section 2](#2-géographie--où-trouver-les-sites-guardian))
+- https://github.com/EDCD/coriolis-data (statistiques d'armes et de modules Guardian, [section 7](#7-armes-guardian) et [section 8](#8-modules-guardian-défensifs-et-utilitaires))
+- https://github.com/EDCD/FDevIDs (grades et symboles internes des matériaux Guardian, [section 10](#10-farming-des-matériaux-guardian))
 - https://en.wikipedia.org/wiki/Elite_Dangerous
-- 00-chronologie-canonique.md (dates de la colonisation de systèmes, section 10)
+- 00-chronologie-canonique.md (dates de la colonisation de systèmes, [section 10](#10-farming-des-matériaux-guardian))
 - https://elite-dangerous.fandom.com/wiki/Ancient_Data_Terminal (via l'API MediaWiki publique — mécanique des 6
-  pylônes, du dépôt de relique/clé et du scan, section 10)
+  pylônes, du dépôt de relique/clé et du scan, [section 10](#10-farming-des-matériaux-guardian))
 - https://elite-dangerous.fandom.com/wiki/Guardian_Structure (via l'API MediaWiki publique — nécessité de se
-  reconnecter pour rescanner un même Terminal en solo, section 10)
+  reconnecter pour rescanner un même Terminal en solo, [section 10](#10-farming-des-matériaux-guardian))
 - https://elite-dangerous.fandom.com/wiki/Guardian_Beacon (via l'API MediaWiki publique — minutage de 3 minutes pour
-  les 3 pylônes d'une balise, section 10)
+  les 3 pylônes d'une balise, [section 10](#10-farming-des-matériaux-guardian))
 - https://elite-dangerous.fandom.com/wiki/Guardian_Sentinel (via l'API MediaWiki publique — comportement des
-  sentinelles, section 9)
+  sentinelles, [section 9](#9-guardian-sentinels-et-combat-sur-les-sites))
 - https://elite-dangerous.fandom.com/wiki/Technology_Broker (via l'API MediaWiki publique — mécanique générale de
   déblocage/achat au Tech Broker)
 - https://inara.cz/elite/techbroker/2/ (comptoir Guardian — fragments, matériaux et commodities exacts par plan,
-  section 10)
+  [section 10](#10-farming-des-matériaux-guardian))
 - https://canonn.science/resources/ et https://ruins.canonn.tech/ (outil communautaire Bifrost de recensement des
-  sites Guardian, sections 2 et 10)
+  sites Guardian, sections [2](#2-géographie--où-trouver-les-sites-guardian) et [10](#10-farming-des-matériaux-guardian))
 - https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Guardian.md (société en
-  clans, Monolith Network, expansion, Constructs, langage — section 11)
+  clans, Monolith Network, expansion, Constructs, langage — [section 11](#11-ce-que-révèlent-les-28-logs-guardian))
 - https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Guardian_Structure.md
-  (répartition thématique des 28 logs par site — section 11)
+  (répartition thématique des 28 logs par site — [section 11](#11-ce-que-révèlent-les-28-logs-guardian))
 - https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/First_Guardian_Civil_War.md
-  (unification par les clans du nord — section 11)
+  (unification par les clans du nord — [section 11](#11-ce-que-révèlent-les-28-logs-guardian))
 - https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Construct.md (filières
-  militaire/civile, rébellion — section 11)
+  militaire/civile, rébellion — [section 11](#11-ce-que-révèlent-les-28-logs-guardian))
 - https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Second_Guardian_Civil_War.md
-  (schisme traditionalistes/progressistes — section 11)
+  (schisme traditionalistes/progressistes — [section 11](#11-ce-que-révèlent-les-28-logs-guardian))
 - https://raw.githubusercontent.com/DarkSession/Elite-Dangerous-RAG-Knowledge/main/Wiki/Guardian-Thargoid_War.md
-  (guerre ancienne contre les Thargoïdes — section 11)
+  (guerre ancienne contre les Thargoïdes — [section 11](#11-ce-que-révèlent-les-28-logs-guardian))
 - https://canonn.science/codex/decrypting-the-guardian-logs-lore-locations/ (structure en 10 sites et 28 logs de la
-  mission Ram Tah — section 11)
+  mission Ram Tah — [section 11](#11-ce-que-révèlent-les-28-logs-guardian))

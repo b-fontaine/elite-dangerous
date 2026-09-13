@@ -107,7 +107,7 @@ restreinte ou technologiquement particuliers :
 | I        | Modules utilitaires ou d'exploration spécialisés (ex. Detailed Surface Scanner, lance-chaff, point de défense) |
 
 Certains modules dérogent à la hiérarchie standard A > B > C > D > E : le **Hull Reinforcement Package**, le
-**Module Reinforcement Package** et la **baie de vaisseau** (ex-Fighter Hangar, voir sections 3.2, 3.3 et 13)
+**Module Reinforcement Package** et la **baie de vaisseau** (ex-Fighter Hangar, voir [§3.2 Hull Reinforcement Package (HRP)](#32-hull-reinforcement-package-hrp), [§3.3 Module Reinforcement Package (MRP)](#33-module-reinforcement-package-mrp) et [§13 Baies de vaisseau](#13-baies-de-vaisseau--chasseurs-embarqués-et-nomad))
 n'existent par exemple qu'en notations D et/ou E, D étant alors la meilleure des deux — ne pas présumer qu'une
 notation D ou E est automatiquement inférieure sans vérifier la fiche du module concerné.
 
@@ -219,7 +219,7 @@ Les variantes « Enhanced » (V2) se débloquent auprès du Human Technology Bro
 **Aegis** dédiée à la défense anti-Thargoïde. Le déblocage combine généralement un rang de combat AX suffisant et la
 fourniture de matériaux et commodités spécifiques issus de l'affrontement des Thargoïdes (composants et échantillons
 récupérés en combat ou sur des sites Thargoïdes), plutôt que les matériaux d'ingénieur classiques utilisés par les
-ingénieurs traditionnels. Pour l'anatomie des Interceptors et les stratégies de combat AX approfondies, voir
+ingénieurs traditionnels. Pour l'anatomie des Interceptors (vaisseaux de combat Thargoïdes) et les stratégies de combat AX approfondies, voir
 [25-combat-ax.md](./25-combat-ax.md).
 
 ### 2.7 Armes Guardian (technologie Précurseur)
@@ -301,7 +301,7 @@ coup direct sur son propre emplacement.
 
 Les renforts de coque et de module d'origine Guardian (**Guardian Hull Reinforcement**, **Guardian Module
 Reinforcement**) suivent une logique de protection similaire mais se débloquent exclusivement auprès du Guardian
-Technology Broker — voir section 14 « Modules Guardian » pour leur détail et leurs conditions de déblocage.
+Technology Broker — voir [§14 Modules Guardian — récapitulatif et déblocage](#14-modules-guardian--récapitulatif-et-déblocage) pour leur détail et leurs conditions de déblocage.
 
 ## 4. Boucliers et générateurs de bouclier
 
@@ -452,8 +452,8 @@ Blaster, rendement horaire), voir [20-minage.md](./20-minage.md) ; pour l'usage 
 
 | Module                                                           | Tailles | Notation                            | Fonction / obtention                                                                                                                                                                      |
 |---------------------------------------------------------------------|---------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Frame Shift Drive (FSD)** standard                             | 2–8     | A–E                                 | Moteur de saut hyperspatial ; classe et notation déterminent la portée de saut — voir §11.1 pour les valeurs                                                                            |
-| **Frame Shift Drive ([SCO](./00-glossaire.md))**                 | 2–8     | A–E                                 | Variante « Supercruise Overcharge » : vitesse de supercroisière très supérieure en accumulant de l'énergie de saut ; voir §11.1 pour les valeurs de masse optimale                    |
+| **Frame Shift Drive (FSD)** standard                             | 2–8     | A–E                                 | Moteur de saut hyperspatial ; classe et notation déterminent la portée de saut — voir [§11.1 Portée de saut du FSD](#111-portée-de-saut-du-fsd--masse-optimale-par-classe-et-notation) pour les valeurs                                                                            |
+| **Frame Shift Drive ([SCO](./00-glossaire.md))**                 | 2–8     | A–E                                 | Variante « Supercruise Overcharge » : vitesse de supercroisière très supérieure en accumulant de l'énergie de saut ; voir [§11.1 Portée de saut du FSD](#111-portée-de-saut-du-fsd--masse-optimale-par-classe-et-notation) pour les valeurs de masse optimale                    |
 | **Guardian FSD Booster**                                         | 1–5     | H (un seul exemplaire par vaisseau) | Ajoute un bonus fixe de portée de saut — **Guardian Technology Broker**                                                                                                                   |
 | **Frame Shift Drive Interdictor**                                | 1–4     | A–E                                 | Permet d'intercepter un vaisseau en supercroisière (PvP/piraterie)                                                                                                                        |
 | **Discovery Scanner**                                            | —       | —                                   | Historiquement en 3 niveaux (Basique/Intermédiaire/Avancé) ; le scanner Basique est aujourd'hui intégré gratuitement, le module payant ayant été retiré après la refonte de l'exploration |
@@ -464,7 +464,7 @@ Blaster, rendement horaire), voir [20-minage.md](./20-minage.md) ; pour l'usage 
 
 **Partage des rôles avec le guide d'exploration.** Ce guide-ci est la référence sur les **caractéristiques** de ces
 modules : tailles, notations, masse, consommation, prix et effet principal, chiffrés dans le « Référentiel chiffré des
-modules » plus bas — et, pour le FSD, aux §11.1 et §11.2. Leur **usage sur le terrain** relève de
+modules » plus bas — et, pour le FSD, aux [§11.1](#111-portée-de-saut-du-fsd--masse-optimale-par-classe-et-notation) et [§11.2](#112-ce-que-lingénierie-fait-à-la-masse-optimale--et-pourquoi-la-portée-y-est-linéaire). Leur **usage sur le terrain** relève de
 [10-exploration.md](./10-exploration.md), qui traite ce que révèle une cartographie au **Detailed Surface Scanner**
 (ressources de surface révélées, statut « mapped », bonus de première cartographie) et recense les classes
 stellaires qui se laissent écoper au **Fuel Scoop**. Les deux fiches détaillées de ces modules, plus bas, y renvoient
@@ -510,11 +510,11 @@ La **notation A** offre systématiquement la masse optimale la plus élevée (do
 coût, la masse et la consommation d'énergie les plus importants — c'est le choix quasi systématique des builds
 d'exploration longue distance. Pour la méthodologie complète d'optimisation de la portée de saut (masse du vaisseau,
 carburant embarqué, Guardian FSD Booster, engineering « Increased Range »), voir [10-exploration.md](./10-exploration.md) ;
-l'effet chiffré du blueprint « Increased Range » sur ces mêmes masses optimales est détaillé au §11.2 ci-dessous.
+l'effet chiffré du blueprint « Increased Range » sur ces mêmes masses optimales est détaillé au [§11.2](#112-ce-que-lingénierie-fait-à-la-masse-optimale--et-pourquoi-la-portée-y-est-linéaire) ci-dessous.
 
 ### 11.2 Ce que l'ingénierie fait à la masse optimale — et pourquoi la portée y est linéaire
 
-La masse optimale du §11.1 est la valeur *d'origine* du module. C'est aussi la seule grandeur sur laquelle agit le
+La masse optimale du [§11.1](#111-portée-de-saut-du-fsd--masse-optimale-par-classe-et-notation) est la valeur *d'origine* du module. C'est aussi la seule grandeur sur laquelle agit le
 blueprint **« Increased Range »** (`FSD_LongRange`), le plus demandé du jeu. La portée de saut est **linéaire** en
 masse optimale, selon la formule employée par les calculateurs de build :
 
@@ -523,11 +523,11 @@ saut (AL) = (carburant / fuelmul) ^ (1 / fuelpower) × masse_optimale / (masse d
 ```
 
 `fuelmul` et `fuelpower` sont deux paramètres du FSD ; `bonus` est le terme additif constant du calcul, auquel
-contribue le **Guardian FSD Booster** décrit au §11. La formule elle-même est reproduite telle quelle depuis la source
+contribue le **Guardian FSD Booster** décrit au [§11](#11-modules-dexploration--fsd-scanners-et-modules-associés). La formule elle-même est reproduite telle quelle depuis la source
 interne, qui n'en détaille pas les paramètres. Ce qu'elle établit et qui compte ici : à masse de vaisseau constante,
 un pourcentage gagné sur la masse optimale se retrouve **tel quel** en pourcentage de portée.
 
-| Grade du blueprint | Gain sur la masse optimale | Rolls nécessaires à réputation 5 chez l'ingénieur |
+| Grade du blueprint | Gain sur la masse optimale | Rolls (tentatives de modification) nécessaires à réputation 5 chez l'ingénieur |
 |---|---:|---:|
 | **G1** | +15 % | 1 |
 | **G2** | +25 % | 2 |
@@ -537,10 +537,10 @@ un pourcentage gagné sur la masse optimale se retrouve **tel quel** en pourcent
 
 #### 11.2.1 Masses optimales de notation A une fois « Increased Range » monté au grade 5 (table dérivée)
 
-Appliqué aux valeurs du §11.1, cela donne pour la **notation A** — la seule qui intéresse un build de portée — les
+Appliqué aux valeurs du [§11.1](#111-portée-de-saut-du-fsd--masse-optimale-par-classe-et-notation), cela donne pour la **notation A** — la seule qui intéresse un build de portée — les
 masses optimales suivantes une fois le blueprint monté au grade 5. **Cette table est dérivée par calcul, et non
 relevée** : aucune source ne publie ces valeurs, elles sont obtenues en multipliant par 1,55 les masses optimales de
-référence du §11.1, conformément au +55 % annoncé par le blueprint au grade 5. Elles sont donc exactes dans la mesure
+référence du [§11.1](#111-portée-de-saut-du-fsd--masse-optimale-par-classe-et-notation), conformément au +55 % annoncé par le blueprint au grade 5. Elles sont donc exactes dans la mesure
 où le +55 % s'applique bien de façon strictement multiplicative, ce que la formule de portée ci-dessus suppose mais
 qu'aucun relevé en jeu ne vient ici confirmer — à traiter comme un ordre de grandeur de travail, pas comme une mesure.
 
@@ -555,7 +555,7 @@ qu'aucun relevé en jeu ne vient ici confirmer — à traiter comme un ordre de 
 | 8 | — | — | 4 670 | 7 238,5 |
 
 *(Colonnes « en G5 » : produit de la colonne « d'origine » par 1,55, arrondi au dixième de tonne. Les valeurs
-d'origine proviennent des tables du §11.1 — EDCD/coriolis-data ; le coefficient de +55 % au grade 5 provient du
+d'origine proviennent des tables du [§11.1](#111-portée-de-saut-du-fsd--masse-optimale-par-classe-et-notation) — EDCD/coriolis-data ; le coefficient de +55 % au grade 5 provient du
 catalogue de blueprints hors ligne, édition 2026-08, lui-même dérivé d'EDCD/coriolis-data.)*
 
 #### 11.2.2 Pourquoi le gain net de portée reste inférieur au +55 % annoncé
@@ -571,7 +571,7 @@ mais reste un ordre de grandeur, pas une valeur.
 
 **Effets expérimentaux applicables au FSD, et le choix qu'ils imposent.** Deux effets seulement se posent sur un
 Frame Shift Drive, et ils s'excluent l'un l'autre. Ce qui relève du **module** — donc de ce guide — tient en deux
-grandeurs : *Mass Manager* agit sur la **masse optimale**, la valeur qui pilote la portée de saut au §11.1, en la
+grandeurs : *Mass Manager* agit sur la **masse optimale**, la valeur qui pilote la portée de saut au [§11.1](#111-portée-de-saut-du-fsd--masse-optimale-par-classe-et-notation), en la
 relevant de **+4 %** contre **−8 % d'intégrité** du module ; *Deep Charge* ne touche pas à la masse optimale et agit
 sur le **carburant maximal injecté à la charge**, **+10 %**, au prix d'une consommation électrique accrue.
 
@@ -592,7 +592,7 @@ supercroisière, chaleur, consommation de carburant en overcharge — **ne sont 
 ingénier un SCO améliore sa portée de saut, pas sa survitesse. Deux réserves accompagnent ce point. D'abord, il est
 établi via le mappage module → blueprints d'EDSY, qui porte lui-même un commentaire `// TODO verify` dans son code
 source. Ensuite, la note interne dont provient cette information indique que **Coriolis ne dispose d'aucune donnée
-SCO** et recommande EDSY pour planifier un build SCO ingénié — alors que la table de masse optimale SCO du §11.1
+SCO** et recommande EDSY pour planifier un build SCO ingénié — alors que la table de masse optimale SCO du [§11.1](#111-portée-de-saut-du-fsd--masse-optimale-par-classe-et-notation)
 provient du jeu de données `EDCD/coriolis-data`. Les deux constats ne sont pas nécessairement contradictoires
 (données de module d'un côté, mappage des blueprints de l'autre), mais ce point demande un contrôle en jeu avant
 d'être considéré comme acquis.
@@ -615,11 +615,11 @@ EDCD/coriolis-data (`modifications/blueprints.json` et `specials.json`).*
 | **Caustic Sink Launcher**           | —        | Protège contre les nuages caustiques Thargoïdes                                                           |
 | **Thargoid Pulse Neutraliser**      | E        | Contre-mesure anti-Thargoïde                                                                              |
 | **Frame Shift Wake Scanner**        | A–E      | Scanne un sillage hyperspatial (*high energy wake*) ; **seule source des matériaux encodés de la catégorie « Wake Scans »** — voir ci-dessous |
-| **Shield Booster**                  | A–E      | Voir section 4 (Boucliers), notamment §4.2 pour le cumul et le rendement décroissant                       |
+| **Shield Booster**                  | A–E      | Voir [§4 Boucliers et générateurs de bouclier](#4-boucliers-et-générateurs-de-bouclier), notamment [§4.2](#42-cumul-des-shield-boosters-et-rendement-décroissant) pour le cumul et le rendement décroissant                       |
 
 Ces modules varient en notation (A à I selon le module) mais restent tous de classe 0.
 
-**Le Frame Shift Wake Scanner mérite un paragraphe à lui seul.** Utility mount de classe 0 décliné de la notation **E**
+**Le Frame Shift Wake Scanner mérite un paragraphe à lui seul.** Utility mount (emplacement utilitaire) de classe 0 décliné de la notation **E**
 à la notation **A**, il coûte de **13 544 Cr** à **1 097 095 Cr** selon la notation, porte à **2 à 4 km** et demande
 **10 secondes** de scan sur une cible tenue. Détail d'usage qui fait perdre du temps à beaucoup de commandants : comme
 les autres scanners, **il doit être assigné à un groupe de tir** pour être activable.
@@ -636,7 +636,7 @@ Son intérêt dépasse largement son usage tactique. C'est la **seule source** d
 | Datamined Wake Exceptions | 5 | 100 |
 
 **Quatre de ces cinq** — Atypical Disrupted Wake Echoes, Strange Wake Solutions, Eccentric Hyperspace Trajectories et
-Datamined Wake Exceptions — sont exigés par le blueprint FSD « Increased Range » décrit au §11.2. Sans ce module, ce
+Datamined Wake Exceptions — sont exigés par le blueprint FSD « Increased Range » décrit au [§11.2](#112-ce-que-lingénierie-fait-à-la-masse-optimale--et-pourquoi-la-portée-y-est-linéaire). Sans ce module, ce
 blueprint est **impossible à compléter**, quel que soit le temps passé à prospecter des matériaux bruts en SRV — c'est
 la raison, rarement explicitée, pour laquelle une montée en portée de saut peut rester bloquée indéfiniment. La méthode
 consiste à camper les sillages près d'une station fréquentée et à récolter n'importe quel Wake Scan, quitte à convertir
@@ -652,7 +652,7 @@ l'étude interne du 19 août 2026, § 3.3. Sources amont déclarées par le cata
 
 Le module historiquement appelé **Fighter Hangar** est un module interne qui permet de stocker, réparer et lancer un ou
 plusieurs chasseurs monoplaces, pilotables soit par un membre d'équipage (Multicrew), soit par un PNJ recruté. Depuis
-la mise à jour Operations, il n'embarque plus seulement des chasseurs et son libellé a changé : voir le §13.2.
+la mise à jour Operations, il n'embarque plus seulement des chasseurs et son libellé a changé : voir le [§13.2](#132-de-la-baie-de-chasseur-à-la-baie-de-vaisseau--mk-i-mk-ii-et-le-nomad).
 Contrairement à la plupart des modules internes, il n'existe **qu'en notation D**, en classes 5, 6 et 7 :
 
 | Classe | Notation | Baies | Reconstructions par baie |
@@ -686,7 +686,7 @@ l'interface de la baie de vaisseau (choix du modèle, armement fixe limité prop
 chantier naval classique — leurs statistiques précises (PV, vitesse, DPS) ne peuvent donc pas être sourcées de la
 même façon que le reste de ce guide ; se référer à un calculateur communautaire (Coriolis, EDSY) ou à Inara.cz pour
 des valeurs exactes. Pour la liste des vaisseaux capables d'embarquer une baie de vaisseau (Anaconda, Federal Corvette,
-Imperial Cutter, Type-10 Defender, etc.), voir [03-vaisseaux.md](./03-vaisseaux.md) et le §13.2 ci-dessous.
+Imperial Cutter, Type-10 Defender, etc.), voir [03-vaisseaux.md](./03-vaisseaux.md) et le [§13.2](#132-de-la-baie-de-chasseur-à-la-baie-de-vaisseau--mk-i-mk-ii-et-le-nomad) ci-dessous.
 
 ### 13.2 De la baie de chasseur à la baie de vaisseau — Mk I, Mk II et le Nomad
 
@@ -704,7 +704,7 @@ affiche doit suivre.
 | **Mk II Vessel Bay** | 5 à 7 selon le vaisseau | Caspian Explorer (5–7), Panther Clipper Mk II (5–7), Type-11 Prospector (5–6)                                                                                                                                    |
 
 **Le Nomad.** Dévoilé le 2 juin 2026 (« Discover the Nomad », 13:03 UTC) et sorti le 30 juin 2026 en accès anticipé
-ARX aux côtés d'Operations, le Nomad est décrit par Frontier comme « un vaisseau lancé depuis un vaisseau, petit et
+ARX (monnaie premium payante du jeu) aux côtés d'Operations, le Nomad est décrit par Frontier comme « un vaisseau lancé depuis un vaisseau, petit et
 compact, conçu pour explorer les surfaces planétaires ». Ce n'est donc **ni un SRV ni un chasseur**, mais une
 troisième catégorie de véhicule embarqué (*ship-launched vessel*, SLV) : il ne s'achète pas au chantier naval et
 n'entre pas dans le décompte des vaisseaux pilotables du [guide des vaisseaux](./03-vaisseaux.md). Le véhicule
@@ -736,7 +736,7 @@ aujourd'hui trois familles de véhicules embarqués : chasseurs, Nomad et Rhino.
 | **Pulse Lasers**             | Laser à impulsions sur montage **fixe**, armement du Nomad                                                            |
 
 Le nom officiel de ce scanner est bien **Mk II Biological Scanner** ; il ne s'agit ni d'un Discovery Scanner ni d'un
-Detailed Surface Scanner, et il ne remplace ni l'un ni l'autre (voir §11 et [10-exploration.md](./10-exploration.md)).
+Detailed Surface Scanner, et il ne remplace ni l'un ni l'autre (voir [§11](#11-modules-dexploration--fsd-scanners-et-modules-associés) et [10-exploration.md](./10-exploration.md)).
 
 **Note d'usage pour les outils tiers.** Le Nomad renseigne dans `Status.json` le bit « In SRV » et non le bit « In
 Fighter » ; son identifiant interne est `Lander01`. Ce point, corroboré par des outils communautaires et non par
@@ -832,7 +832,7 @@ classement des Powers étant une donnée volatile à revérifier régulièrement
 | **Ingénieurs (systèmes dédiés)**    | Modifications (blueprints) et effets expérimentaux sur presque tous les modules ; certains modules exclusifs comme l'Enhanced Performance Thrusters                                    |
 | **Guardian Technology Broker**      | Armes Guardian, renforts Guardian, Guardian FSD Booster, centrale/distributeur Hybrid Guardian, Guardian Nanite Torpedo Pylon (avec matériaux Thargoïdes)                              |
 | **Human Technology Broker (Aegis)** | Variantes AX améliorées (Enhanced AX Multi-Cannon, Enhanced AX Missile Rack)                                                                                                           |
-| **Powerplay**                       | Armes et modules exclusifs listés en section 17, dont le Prismatic Shield Generator                                                                                                    |
+| **Powerplay**                       | Armes et modules exclusifs listés en [§17 Powerplay — équipements exclusifs](#17-powerplay--équipements-exclusifs), dont le Prismatic Shield Generator                                                                                                    |
 | **Merc Coin (Operations)**          | **MercGear** : blueprints et modules pré-ingénierés achetés avec la monnaie gagnée en Opérations — voir ci-dessous                                                                               |
 
 **MercGear.** La mise à jour Operations introduit une monnaie dédiée, le **Merc Coin**, obtenue en terminant des
@@ -880,12 +880,12 @@ mécanique des Opérations elles-mêmes et l'acquisition du Merc Coin, voir [13-
   dont la capacité est multipliée par 1,5 par rapport aux cabines existantes. *(« Elite Dangerous | Lynx Highliner
   Update Notes », 28 avril 2026, 13:11 UTC.)*
 - **2 juin 2026** : premier dévoilement du **Nomad**, « vaisseau lancé depuis un vaisseau » conçu pour l'exploration
-  des surfaces planétaires. *(« Discover the Nomad », 2 juin 2026, 13:03 UTC — voir §13.2.)*
+  des surfaces planétaires. *(« Discover the Nomad », 2 juin 2026, 13:03 UTC — voir [§13.2](#132-de-la-baie-de-chasseur-à-la-baie-de-vaisseau--mk-i-mk-ii-et-le-nomad).)*
 - **30 juin – 1er juillet 2026** : sortie de la mise à jour **Operations** — le Nomad était annoncé pour le 30 juin en
   accès anticipé ARX, les notes de version ont été publiées le 1er juillet. Côté équipement, elle apporte : les
   **baies de vaisseau Mk I et Mk II** en
   remplacement de la baie de chasseur, le **Nomad** et ses modules propres (**Mk II Biological Scanner**, **Pulse
-  Lasers**), et le catalogue **MercGear** acheté en Merc Coin (voir sections 13 et 18). *(« Elite Dangerous |
+  Lasers**), et le catalogue **MercGear** acheté en Merc Coin (voir [§13](#13-baies-de-vaisseau--chasseurs-embarqués-et-nomad) et [§18](#18-où-obtenir-chaque-famille-déquipement--synthèse)). *(« Elite Dangerous |
   Operations Update », 1er juillet 2026, 14:01 UTC.)*
 - **9 juillet 2026** : **Update 3** d'Operations, correctifs. *(« Elite Dangerous | Operations Update | Update 3 »,
   9 juillet 2026, 10:24 UTC. La version de jeu correspondante, 4.4.0.3, est relevée dans des journaux de commandants
@@ -894,7 +894,7 @@ mécanique des Opérations elles-mêmes et l'acquisition du Merc Coin, voir [13-
   depuis la baie de vaisseau et non par la trappe à cargo, et de la boucle de **minage de surface**. Trois modules
   l'accompagnent (**Planetary Mining Deposit Scanner**, **Refinery**, **Mining Rig Deployment Module**), et le
   **Detailed Surface Scanner** est mis à jour pour détecter les emplacements de minage planétaire — un changement de
-  périmètre du DSS listé au §11. *(« Elite Dangerous | Rhino SRV Update », 2 septembre 2026, 11:20 UTC, et « Beneath
+  périmètre du DSS listé au [§11](#11-modules-dexploration--fsd-scanners-et-modules-associés). *(« Elite Dangerous | Rhino SRV Update », 2 septembre 2026, 11:20 UTC, et « Beneath
   the Surface: Your First Look at the Rhino », 6 août 2026, 14:19 UTC.)*
 - Au 17 juin 2026, environ **195,5 millions de systèmes stellaires** avaient été catalogués par les joueurs (dont
   environ 97,7 millions explorés directement), soit environ 0,0489 % de la galaxie — signe d'une activité d'exploration
@@ -912,7 +912,7 @@ avec *Beyond Chapter One* → 200 avec Odyssey Update 7 → 600 avec Odyssey Upd
 vaisseaux, qui est par station (voir 03-vaisseaux.md).
 
 **Transfert entre stations.** Payant et proportionnel à la distance, sur la même base que le transfert de vaisseau
-(section « Gestion de flotte » de 03-vaisseaux.md) mais avec un frais fixe de +100 Cr au lieu de +1 000 Cr — formule
+([section « Gestion de flotte »](./03-vaisseaux.md#gestion-de-flotte--transférer-et-stocker-un-vaisseau) de 03-vaisseaux.md) mais avec un frais fixe de +100 Cr au lieu de +1 000 Cr — formule
 communautaire de 2019, non revérifiée depuis.
 
 **Outils de recherche d'une station.** Pour trouver où acheter un module ou un vaisseau précis :
@@ -2190,7 +2190,7 @@ Les emplacements utilitaires, de classe 0, n'accueillent pas d'armes mais des sc
 
 ### Shield Booster — gain de capacité et résistances par notation
 
-Le Shield Booster occupe lui aussi un emplacement utilitaire, mais sa seule statistique est un pourcentage de capacité de bouclier ajouté. Les cinq notations vont de +4 % à +20 % ; aucune n'apporte de résistance en configuration stock, les colonnes de résistance étant à zéro tant qu'aucun blueprint n'est appliqué. Le cumul de plusieurs boosters subit un rendement décroissant, décrit à la section 4.2 de ce guide.
+Le Shield Booster occupe lui aussi un emplacement utilitaire, mais sa seule statistique est un pourcentage de capacité de bouclier ajouté. Les cinq notations vont de +4 % à +20 % ; aucune n'apporte de résistance en configuration stock, les colonnes de résistance étant à zéro tant qu'aucun blueprint n'est appliqué. Le cumul de plusieurs boosters subit un rendement décroissant, décrit à la [section 4.2](#42-cumul-des-shield-boosters-et-rendement-décroissant) de ce guide.
 
 | Classe | Notation | Masse (t) | Intégrité | Consommation (MW) | Gain de capacité | Résistances (K / T / E) | Prix (Cr) |
 |--------|----------|-----------|-----------|-------------------|------------------|-------------------------|-----------|
@@ -2306,6 +2306,87 @@ La table qui suit donne, pour les 47 châssis du jeu de données, l'armure de ba
 
 Deux particularités du jeu de données méritent d'être signalées plutôt que lissées. Le **Caspian Explorer** ne porte pas les cinq grades habituels mais un Lightweight Alloy gratuit suivi de cinq blindages nommés *Mk II Ablative* ; ses quatre grades payants repris ci-dessus sont les *Mk II Ablative Reinforced*, *Military Grade*, *Mirrored* et *Reactive*, aux mêmes résistances que leurs équivalents standards. Le **Diamondback Explorer** porte une masse de 26 tonnes pour son Mirrored Surface Composite là où ses autres grades lourds pèsent 47 tonnes : l'écart est présent tel quel dans la source amont et n'a pas été corrigé ici.
 
+## Questions fréquentes
+
+**Combien de grades de blindage de coque (bulkheads) existe-t-il, et lequel choisir contre les lasers ?**
+Cinq grades existent : Lightweight Alloy (+80 % d'intégrité, gratuit et déjà monté d'origine), Reinforced Alloy
+(+152 %), puis trois grades lourds qui apportent tous le même bonus de +250 % — Military Grade Composite, Mirrored
+Surface Composite et Reactive Surface Composite — mais avec des profils de résistance opposés. Le Mirrored Surface
+Composite résiste au thermique (+50 %) au prix d'une vulnérabilité cinétique extrême (−75 %) : c'est le blindage
+anti-laser du jeu, à réserver aux coques qui encaissent au bouclier. Voir [Les cinq grades de
+blindage](#les-cinq-grades-de-blindage--résistances-et-multiplicateur-de-coque).
+
+**Quelle est la différence entre Shield Generator, Bi-Weave et Prismatic Shield Generator ?**
+Les trois partagent le même profil de résistance de base (+40 % cinétique, +50 % explosif, −20 % thermique). Le
+Shield Generator standard offre un compromis normal (multiplicateur optimal 1,2 en notation A) ; le Bi-Weave
+(notation C uniquement) régénère nettement plus vite pour un multiplicateur plus faible (0,9) ; le Prismatic
+(notation A, récompense Powerplay) maximise la capacité (multiplicateur 1,5) mais régénère plus lentement et
+consomme davantage. Voir [Bi-Weave et Prismatic Shield
+Generator](#bi-weave-et-prismatic-shield-generator--les-deux-variantes-de-générateur).
+
+**Combien de Shield Boosters peut-on cumuler, et y a-t-il un rendement décroissant (diminishing returns) ?**
+Chaque Shield Booster ajoute un bonus fixe de capacité selon sa notation, de +4 % (E) à +20 % (A), jusqu'à 8
+emplacements utilitaires selon le vaisseau. D'après le code source du calculateur Coriolis (capture du 9 septembre
+2026), ce cumul de capacité brute n'est actuellement soumis à aucun rendement décroissant en jeu ; en revanche, les
+résistances apportées par des boosters ingénierés subissent, elles, un rendement décroissant au-delà d'environ 30 %
+de réduction cumulée. Voir [Cumul des Shield Boosters et rendement
+décroissant](#42-cumul-des-shield-boosters-et-rendement-décroissant).
+
+**Comment fonctionne la priorité d'alimentation des modules (Power Priority) ?**
+Chaque module reçoit une priorité de 1 (la plus haute) à 5 (la plus basse) dans le panneau des modules du vaisseau.
+En cas de sous-alimentation, le jeu coupe d'abord les modules en priorité 5 puis remonte progressivement vers la
+priorité 1. Life Support et Power Distributor sont fixés en priorité 1 par défaut et ne peuvent jamais être
+désactivés manuellement. Voir [Priorité d'alimentation des
+modules](#14-priorité-dalimentation-des-modules-power-priority).
+
+**Où débloquer les armes Guardian (Gauss Cannon, Plasma Charger, Shard Cannon) ?**
+Les trois familles d'armes Guardian se débloquent exclusivement auprès du Guardian Technology Broker, un PNJ présent
+dans certaines stations, contre des matériaux et données Guardian (Guardian Power Cell, Wreckage Components,
+Obelisk Data, artefacts Casket/Orb/Urn/Tablet/Totem/Vessel) plus un paiement en crédits. Voir [Armes Guardian
+(technologie Précurseur)](#27-armes-guardian-technologie-précurseur).
+
+**Quelle est la différence entre le FSD standard et le FSD (SCO), et jusqu'à quelle classe montent-ils ?**
+Le FSD standard couvre les classes 2 à 7 ; le FSD (SCO, Supercruise Overcharge) étend la gamme jusqu'à la classe 8
+et offre une masse optimale légèrement supérieure à classe et notation égales (par exemple 1 175 t contre 1 050 t
+en classe 5A), en plus de sa fonction de survitesse en supercroisière — mais il consomme davantage de carburant par
+saut. Voir [Portée de saut du FSD](#111-portée-de-saut-du-fsd--masse-optimale-par-classe-et-notation).
+
+**Le blueprint Increased Range du FSD augmente-t-il vraiment la portée de saut de +55 % au grade 5 ?**
+Le blueprint relève la masse optimale du FSD de +55 % au grade 5 (contre +15 % au grade 1), et la portée de saut est
+linéaire en masse optimale. Mais le gain net reste inférieur à ces +55 %, car le blueprint ajoute aussi +30 % de
+masse au module lui-même, ce qui pèse dans le calcul : l'écart est négligeable sur un gros vaisseau et plus sensible
+sur un petit. Voir [Ce que l'ingénierie fait à la masse
+optimale](#112-ce-que-lingénierie-fait-à-la-masse-optimale--et-pourquoi-la-portée-y-est-linéaire).
+
+**Pourquoi je n'arrive pas à compléter le blueprint Increased Range de mon FSD ?**
+Quatre des cinq matériaux encodés de la catégorie « Wake Scans » (Atypical Disrupted Wake Echoes, Strange Wake
+Solutions, Eccentric Hyperspace Trajectories, Datamined Wake Exceptions) sont exigés par ce blueprint, et le Frame
+Shift Wake Scanner en est la seule source en jeu. Sans ce module monté et assigné à un groupe de tir, le blueprint
+reste impossible à compléter, quel que soit le temps passé à prospecter des matériaux bruts en SRV. Voir [Modules
+utilitaires](#12-modules-utilitaires-emplacements-de-classe-0).
+
+**Qu'est-ce que le Nomad, et comment le déployer (ship-launched vessel) ?**
+Le Nomad est un véhicule embarqué sorti le 30 juin 2026, qui n'est ni un SRV ni un chasseur mais une troisième
+catégorie de véhicule embarqué (ship-launched vessel, SLV) dédiée à l'exploration des surfaces planétaires. Il se
+déploie depuis n'importe quelle baie de vaisseau compatible, y compris les modules Mk I et Mk II Vessel Bay : le
+Mk II n'est donc pas une condition d'emport. Voir [De la baie de chasseur à la baie de
+vaisseau](#132-de-la-baie-de-chasseur-à-la-baie-de-vaisseau--mk-i-mk-ii-et-le-nomad).
+
+**Quelle est la différence entre Hull Reinforcement Package (HRP) et Module Reinforcement Package (MRP) ?**
+Le HRP ajoute un bonus fixe de points de vie de coque et une petite résistance aux dégâts physiques ; le MRP réduit
+les dégâts subis par les autres modules internes une fois le bouclier tombé et la coque touchée. Les deux
+n'existent qu'en classes 1 à 5 et en notations D/E, où D est la variante haut de gamme (plus de PV ou de
+protection, pour un coût environ triplé) — l'échelle A–E habituelle ne s'applique pas. Voir [Hull Reinforcement
+Package (HRP)](#32-hull-reinforcement-package-hrp) et [Module Reinforcement Package
+(MRP)](#33-module-reinforcement-package-mrp).
+
+**Qu'est-ce que le MercGear et comment l'obtenir ?**
+MercGear est un catalogue d'équipement pré-ingénieré (blueprints, hardpoints, modules standards et internes)
+introduit avec la mise à jour Operations, acheté avec le Merc Coin — une monnaie gagnée en terminant des Opérations
+et non achetable en ARX. Vingt-deux identifiants de modules du jeu portent ainsi une double entrée, l'une de
+chantier naval et l'autre en catégorie MercGear. Voir [Où obtenir chaque famille
+d'équipement](#18-où-obtenir-chaque-famille-déquipement--synthèse).
+
 ## Voir aussi
 
 - [Liste complète des vaisseaux d'Elite Dangerous](./03-vaisseaux.md) — emplacements, hardpoints et prix par
@@ -2313,7 +2394,7 @@ Deux particularités du jeu de données méritent d'être signalées plutôt que
 - [Guide complet des Guardians](./05-guardians.md) — sites de ruines, puzzles et stats de combat des armes Guardian.
 - [Guide complet des Ingénieurs](./06-ingenieurs.md) — modification (engineering) de tous les modules listés ici.
 - [Guide complet du combat spatial](./08-combat-spatial.md) — builds chiffrés, renforts/blindage en contexte de
-  combat, rang de combat, et procédure de piratage de megaships/installations au Recon Limpet Controller (§4.6).
+  combat, rang de combat, et procédure de piratage de megaships/installations au Recon Limpet Controller ([§4.6](./08-combat-spatial.md#46-megaships-et-installations-spatiales--piratage-à-distance)).
 - [Guide complet de l'exploration et de l'exobiologie](./10-exploration.md) — optimisation de la portée de saut, DSS,
   Fuel Scoop.
 - [Politique et Powerplay dans Elite Dangerous](./02-powerplay.md) — paliers, mérites et classement actuel des
@@ -2328,9 +2409,9 @@ Deux particularités du jeu de données méritent d'être signalées plutôt que
 - [Guide complet de l'équipement à pied (Odyssey)](./07-equipement-a-pied.md) — équipement des personnages, distinct
   des modules de vaisseau couverts ici.
 - [Le Rhino et le Nomad](./14-rhino.md) — les deux véhicules embarqués qui se déploient depuis la baie de
-  vaisseau du §13.
+  vaisseau du [§13](#13-baies-de-vaisseau--chasseurs-embarqués-et-nomad).
 - [Les Opérations](./13-operations.md) — la mécanique dont provient le Merc Coin et le catalogue MercGear de la
-  section 18.
+  [section 18](#18-où-obtenir-chaque-famille-déquipement--synthèse).
 - [Sources de données](./17-sources-donnees.md) — pour le périmètre exact d'`outfitting.csv` et de `shipyard.csv`, et
   pour les drapeaux `Status.json` du Nomad.
 
@@ -2345,12 +2426,12 @@ module) et, pour le mécanisme de rendement décroissant des boucliers, du code 
 calculateurs de build (Coriolis, EDSY). Les mécanismes précis de déblocage (stations hébergeant les Brokers Guardian
 et Human, coûts exacts en matériaux par palier) sont sujets à évolution au fil des mises à jour du jeu ; il est
 recommandé de les recouper sur **Inara.cz** (section Engineering/Broker) avant toute planification nécessitant une
-précision au matériau près. Les statistiques précises des 4 chasseurs de la baie de vaisseau (section 13) n'ont pas pu
+précision au matériau près. Les statistiques précises des 4 chasseurs de la baie de vaisseau ([section 13](#13-baies-de-vaisseau--chasseurs-embarqués-et-nomad)) n'ont pas pu
 être vérifiées sur une source primaire dans le cadre de cette révision — seuls les fabricants de deux des quatre ont
 pu être confirmés (Wikipédia).
 
-Le §13.2 (baies de vaisseau Mk I et Mk II, Nomad, Mk II Biological Scanner, Pulse Lasers), le catalogue MercGear de la
-section 18 et les entrées 2026 de la section 19 reposent sur les **notes de version officielles de Frontier**, citées
+Le [§13.2](#132-de-la-baie-de-chasseur-à-la-baie-de-vaisseau--mk-i-mk-ii-et-le-nomad) (baies de vaisseau Mk I et Mk II, Nomad, Mk II Biological Scanner, Pulse Lasers), le catalogue MercGear de la
+[section 18](#18-où-obtenir-chaque-famille-déquipement--synthèse) et les entrées 2026 de la [section 19](#19-contexte-récent-pertinent-pour-léquipement-20232026) reposent sur les **notes de version officielles de Frontier**, citées
 inline avec leur titre et leur date UTC. Deux éléments seulement viennent d'ailleurs et sont signalés comme tels : le
 libellé « Vessel Hangar » / « Mk II Vessel Hangar » d'`outfitting.csv` (référentiel communautaire `EDCD/FDevIDs`) et
 le comportement du Nomad dans `Status.json` avec son identifiant interne `Lander01` (corroborations d'outils
@@ -2360,9 +2441,9 @@ davantage — les tarifs en Merc Coin et les compromis annoncés par Frontier re
 suffixées « (pré-ingénieré) » des référentiels chiffrés en donnent les caractéristiques telles que
 **EDCD/coriolis-data** les porte, ce qui est une source distincte des notes de version et signalée comme telle.
 
-Les chiffres ajoutés dans la présente révision (§11.2 sur l'effet du blueprint « Increased Range », et le Frame Shift
-Wake Scanner au §12) proviennent des catalogues hors ligne d'ingénierie et de matériaux, édition 2026-08, eux-mêmes
-dérivés de l'étude interne du 19 août 2026 et d'EDCD/coriolis-data. La table du §11.2 est **dérivée par calcul** à
+Les chiffres ajoutés dans la présente révision ([§11.2](#112-ce-que-lingénierie-fait-à-la-masse-optimale--et-pourquoi-la-portée-y-est-linéaire) sur l'effet du blueprint « Increased Range », et le Frame Shift
+Wake Scanner au [§12](#12-modules-utilitaires-emplacements-de-classe-0)) proviennent des catalogues hors ligne d'ingénierie et de matériaux, édition 2026-08, eux-mêmes
+dérivés de l'étude interne du 19 août 2026 et d'EDCD/coriolis-data. La table du [§11.2](#112-ce-que-lingénierie-fait-à-la-masse-optimale--et-pourquoi-la-portée-y-est-linéaire) est **dérivée par calcul** à
 partir de ces sources et n'est portée telle quelle par aucune d'elles.
 
 ### Le chiffrage des modules : d'où viennent ces nombres et ce qu'ils ne disent pas
@@ -2385,7 +2466,7 @@ DPS ignore le temps de rechargement. Ensuite, deux irrégularités du jeu de don
 plutôt que lissées : les cinq blindages du **Caspian Explorer** portent la nomenclature *Mk II Ablative* au lieu des
 noms habituels, et le **Diamondback Explorer** affiche 26 tonnes pour son Mirrored Surface Composite là où ses autres
 grades lourds en pèsent 47. Une correction du guide est à signaler : la table des résistances de blindage donnée
-jusqu'ici en section 3.1 en inversait le sens — la coque nue est **vulnérable** au cinétique et à l'explosif, le
+jusqu'ici en [section 3.1](#31-bulkheads--les-5-grades) en inversait le sens — la coque nue est **vulnérable** au cinétique et à l'explosif, le
 Mirrored Surface Composite résiste au **thermique** et non au cinétique. Les valeurs publiées désormais sont celles
 de la source.
 

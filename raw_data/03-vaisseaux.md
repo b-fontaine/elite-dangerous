@@ -43,7 +43,9 @@ publiés par EDCD/coriolis-data : masse de coque de **14 t** (Hauler) à **1 200
 bouclier de base jusqu'à **600 MJ** (Imperial Cutter) et **dureté de coque** — la valeur qui commande l'encaissement
 des dégâts — de **20** (Sidewinder Mk I, Hauler) à **75** (Type-10 Defender). Sept châssis exigent un rang de
 réputation ; **36 vaisseaux sur 48** ont un emplacement interne assez grand pour une baie embarquée (*Vessel Hangar*). Le prix affiché n'est que
-celui de la coque nue : un Anaconda en core internals de qualité A revient à ≈ **387 M Cr**, rebuy ≈ **19,4 M Cr**.
+celui de la coque nue : un Anaconda en *core internals* (modules internes standards obligatoires : réacteur,
+propulseurs, FSD, support de vie, distributeur, capteurs, réservoir) de qualité A revient à ≈ **387 M Cr**, rebuy
+(coût de remplacement du vaisseau) ≈ **19,4 M Cr**.
 
 ## Convention de lecture des valeurs chiffrées
 
@@ -66,7 +68,8 @@ pilote depuis un shipyard. Il exclut par construction les véhicules embarqués,
 les **SRV** (Scarab, Scorpion, Rhino), les **chasseurs embarqués (SLF)** et, depuis le 30 juin 2026, le **Nomad**,
 premier **vaisseau embarqué (*ship-launched vessel*, SLV)** du jeu. Aucun de ces véhicules n'apparaît dans la liste des
 vaisseaux d'Inara ni dans le `shipyard.csv` d'EDCD, et cette absence ne dit rien de leur existence : elle traduit
-seulement le périmètre de ces catalogues. Voir plus bas la section « Le cas du Nomad » ainsi que
+seulement le périmètre de ces catalogues. Voir plus bas la section
+« [Le cas du Nomad](#le-cas-du-nomad--vaisseau-embarqué-slv-absent-des-catalogues-de-chantier-naval) » ainsi que
 [Le Rhino et le Nomad](./14-rhino.md).
 
 Parmi ces 48, sept sont soumis à une **condition de rang de réputation** en plus de leur prix en crédits : **Imperial
@@ -76,6 +79,9 @@ répandue, l'Imperial Eagle et les trois vaisseaux de la gamme Alliance (Chiefta
 aucun rang** : ils s'achètent avec des crédits, comme n'importe quel autre vaisseau.
 
 ### Le Supercruise Overcharge (SCO) : disponible sur tout FSD, pas réservé à huit vaisseaux
+
+*Répond à : « Quels vaisseaux ont le SCO (Supercruise Overcharge) d'origine ? », « C'est quoi le Frame Shift Drive
+(SCO) ? », « Which ships have SCO by default? »*
 
 Le **Supercruise Overcharge** (SCO — voir [glossaire](./00-glossaire.md)) est un **mode d'utilisation du FSD**, pas un
 module à part : depuis sa généralisation par les **Updates 18.02 et 18.04** (avril-mai 2024 — *correction du
@@ -154,7 +160,7 @@ relevée : c'est la **portée stock imprimée × 1,5, arrondie au dixième d'ann
 reproductibles par script à partir de la seule colonne de portée stock. Le facteur 1,5 est le bonus moyen de masse
 optimale du plan FSD *Increased Range* grade 5 (+45 % à +55 % selon tirage d'après `modifications/blueprints.json`
 d'EDCD/coriolis-data) ; l'effet expérimental *Mass Manager* n'est pas inclus et améliore encore la portée réelle — voir
-[Les ingénieurs](./06-ingenieurs.md). **Hardpoints** inclut les emplacements utilitaires. **al** = années-lumière.
+[Les ingénieurs](./06-ingenieurs.md). **Hardpoints** (points d'ancrage d'armes) inclut les emplacements utilitaires. **al** = années-lumière.
 
 ### Petits vaisseaux (plateforme Small) — 17 châssis, du Sidewinder Mk I (32 000 Cr) au Kestrel Mk II (14,3 M Cr)
 
@@ -310,7 +316,8 @@ aucun point utilitaire ») ; le Mandalay a **4 emplacements utilitaires** (et no
 
 ## Caractéristiques chiffrées des vaisseaux — masse, vitesse, agilité, blindage, boucliers et dureté de coque
 
-Le tableau « Emplacements et hardpoints » ci-dessus dit **ce que l'on peut monter** sur un vaisseau ; celui-ci dit
+Le tableau « [Emplacements et hardpoints](#emplacements-et-hardpoints-des-48-vaisseaux--tableau-de-référence) »
+ci-dessus dit **ce que l'on peut monter** sur un vaisseau ; celui-ci dit
 **ce que vaut le châssis lui-même**, coque nue et sans aucun module optionnel. Il couvre les **47 vaisseaux**
 référencés par EDCD/coriolis-data, par ordre alphabétique, et il est scindé en deux tableaux qui partagent la même
 colonne « Vaisseau » : le premier pour la mobilité et la survie, le second pour la logistique et le prix. Source
@@ -493,6 +500,9 @@ le Panther Clipper Mk II.
 
 ## Rangs de réputation requis — les sept vaisseaux Fédération et Empire sous condition de rang
 
+*Répond à : « Quel rang faut-il pour le Federal Corvette / l'Imperial Cutter ? », « What rank do I need for the
+Corvette? », « Est-ce que l'Imperial Eagle demande un rang ? »*
+
 Sept vaisseaux à accès conditionné, avec le rang exact (texte relevé directement sur les fiches Inara de chaque
 vaisseau, instantané du 9 septembre 2026 — un rang de réputation ne varie pas dans le temps comme un prix, mais reste à
 revérifier en cas de changement d'équilibrage) :
@@ -517,6 +527,9 @@ aucun vaisseau) et leur mécanisme de promotion, voir
 [29-missions-reputation-et-rangs.md §3](./29-missions-reputation-et-rangs.md#3-les-deux-échelles-de-marine-de-superpuissance).
 
 ## Chasseurs embarqués (Ship-Launched Fighters)
+
+*Répond à : « Quels vaisseaux peuvent embarquer un chasseur (fighter bay) ? », « Mon vaisseau peut-il avoir un
+Vessel Hangar ? », « Which ships can carry a fighter? »*
 
 Un chasseur embarqué (*Ship-Launched Fighter*, SLF) se loge dans un **Fighter Hangar**, module qui n'existe qu'en
 classe 5 (1 baie), 6 ou 7 (2 baies chacun) d'après `modules/internal/fighter_hangar.json` d'EDCD/coriolis-data. Un
@@ -602,7 +615,8 @@ Thargoïdes. *(Voir le disclaimer stats en tête de guide : ces caractéristique
 - **Points faibles :** vitesse modérée (285 m/s, boost 357 m/s)
 - **Caractéristiques :** équipage 2, bouclier de base 269 MJ, armure 414, agilité 163, mass-lock factor 11, hardpoints
   4 moyens + 2 petits (6 au total) + 4 emplacements utilitaires (et non « aucun point utilitaire » comme parfois
-  avancé — voir tableau « Emplacements et hardpoints »)
+  avancé — voir tableau
+  « [Emplacements et hardpoints](#emplacements-et-hardpoints-des-48-vaisseaux--tableau-de-référence) »)
 - **Prix :** 17 639 220 Cr — disponible en crédits (Odyssey) ou via ARX
 
 ### Corsair — multi-rôle moyen Gutamaya (79,3 M Cr, 6 hardpoints)
@@ -693,7 +707,8 @@ Thargoïdes. *(Voir le disclaimer stats en tête de guide : ces caractéristique
 
 - **Constructeur :** Zorgon Peterson
 - **Gabarit :** Grand — 950 t
-- **Sortie :** 2 décembre 2025, en accès anticipé ARX (révélé le 25 novembre 2025 lors du *November Dev Blog*)
+- **Sortie :** 2 décembre 2025, en accès anticipé ARX (révélé le 25 novembre 2025 lors du *November Dev Blog*,
+  billet de blog mensuel des développeurs)
 - **Rôle principal :** exploration galactique longue distance avec capacités polyvalentes
 - **Points forts :** excellente autonomie de saut (≈ 20,9 al stock, ≈ 31,4 al en repère G5 — la meilleure du segment
   Large), 7 compartiments internes optionnels, bonne capacité de fret, assistance amarrage/approche automatique,
@@ -709,7 +724,7 @@ Thargoïdes. *(Voir le disclaimer stats en tête de guide : ces caractéristique
 ### Lynx Highliner — paquebot moyen Zorgon Peterson (69,3 M Cr, 225 passagers, sorti le 28 avril 2026)
 
 - **Constructeur :** Zorgon Peterson (et non Saud Kruger, malgré une confusion fréquente — voir la section
-  « Constructeurs » plus haut)
+  « [Les six constructeurs](#les-six-constructeurs-de-vaisseaux-delite-dangerous) » plus haut)
 - **Gabarit :** Moyen — 260 t
 - **Sortie :** **28 avril 2026** (billet officiel Frontier « Elite Dangerous | Lynx Highliner Update Notes »,
   28 avril 2026 13:11 UTC), **directement en crédits aux chantiers navals** pour tous les possesseurs d'Odyssey —
@@ -843,6 +858,9 @@ sélection de vaisseau ci-dessous.
 
 ## Matrice Rôle × Budget : quel vaisseau pour quel rôle et quel budget
 
+*Répond à : « Quel vaisseau acheter avec X millions de crédits ? », « Best ship for my budget? », « Quel vaisseau
+choisir pour débuter en combat/exploration/commerce ? »*
+
 Les tableaux ci-dessus classent par rôle ; celui-ci classe par **budget total** — coque **et** équipement
 fonctionnel, pas le seul prix de coque affiché au chantier naval. La méthode reprend le facteur **≈ 2,6×** déjà établi
 plus loin dans ce guide (voir « [Le coût réel d'un vaisseau équipé](#le-coût-réel-dun-vaisseau-équipé-rebuy-inclus) »,
@@ -881,6 +899,9 @@ avec un outil de configuration (Coriolis, EDSY) reste nécessaire, comme pour to
 | Mandalay | 5-50 M Cr | Exploration pure — meilleure portée de saut du segment Medium (≈ 22 al stock) | FSD Increased Range en tout premier ; le gain de portée du Mandalay dépend directement de ce module |
 
 ## Le cas du Nomad — vaisseau embarqué (SLV) absent des catalogues de chantier naval
+
+*Répond à : « Le Nomad existe-t-il vraiment ? », « Comment obtenir le Nomad (SLV) ? », « Pourquoi le Nomad
+n'apparaît pas dans la liste des vaisseaux ? », « Is the Nomad a real ship? »*
 
 Le **Nomad** existe. Il est sorti le **30 juin 2026** et est bel et bien en jeu. Mais **ce n'est pas un vaisseau de
 chantier naval** : c'est le premier **vaisseau embarqué** (*ship-launched vessel*, SLV) d'Elite Dangerous. Cette
@@ -958,6 +979,9 @@ Pour la fiche complète du Nomad — équipement, usage en exploration, place au
 **[Opérations](./13-operations.md)**.
 
 ## Le coût réel d'un vaisseau équipé (rebuy inclus)
+
+*Répond à : « Combien coûte vraiment un Anaconda tout équipé ? », « C'est quoi le rebuy et combien ça coûte ? »,
+« How much does it really cost to outfit a ship? »*
 
 Le prix affiché dans les tableaux ci-dessus n'est que le prix de la **coque nue** : c'est rarement le vrai coût
 d'entrée dans un vaisseau. Deux postes s'y ajoutent systématiquement :
@@ -1047,7 +1071,8 @@ sur le flux Steam News du jeu (voir Sources), chacun cité inline avec son titre
   FSD. Elle peut donc différer légèrement d'un relevé en jeu si un joueur a par exemple installé des modules
   optionnels supplémentaires qui alourdissent le vaisseau.
 - Les caractéristiques détaillées (vitesse, bouclier, blindage, agilité, mass-lock) ne sont indiquées en fiche
-  individuelle que pour les dix vaisseaux ajoutés depuis 2024 ; le tableau « Emplacements et hardpoints » couvre en
+  individuelle que pour les dix vaisseaux ajoutés depuis 2024 ; le tableau
+  « [Emplacements et hardpoints](#emplacements-et-hardpoints-des-48-vaisseaux--tableau-de-référence) » couvre en
   revanche les 47 vaisseaux disponibles dans EDCD/coriolis-data, plus le Lynx Highliner d'après la spécification
   officielle Frontier du 22 avril 2026.
 - **Un catalogue de chantier naval ne recense que les vaisseaux de chantier naval.** Ni Inara, ni `shipyard.csv`
@@ -1071,6 +1096,78 @@ sur le flux Steam News du jeu (voir Sources), chacun cité inline avec son titre
 | Viser un Federal Corvette ou un Imperial Cutter sans le rang requis | Achat bloqué faute de rang Rear Admiral (Fédération) ou Duke (Empire) | Vérifier son rang de marine avant de viser ces vaisseaux (voir [29-missions-reputation-et-rangs.md §3](./29-missions-reputation-et-rangs.md)) |
 | Décoller sans avoir vérifié le coût de rebuy | Vaisseau perdu et rebuy à payer sans réserve en cas de destruction | Vérifier le rebuy affiché au panneau du vaisseau avant chaque sortie risquée |
 | Changer de vaisseau sans utiliser le transfert de flotte | Perte de temps ou frais de transfert mal anticipés (≈ 0,00006 × valeur totale × distance + 0,0002 × valeur totale + 1 000 Cr) | Calculer le coût de transfert avant de décider entre acheter neuf et faire venir un vaisseau déjà possédé |
+
+## Questions fréquentes
+
+**Combien y a-t-il de vaisseaux jouables dans Elite Dangerous ?**
+Le jeu compte **48 vaisseaux de chantier naval** (*shipyard*), répartis en trois gabarits (Small, Medium, Large) et
+produits par six constructeurs (Faulcon DeLacy, Core Dynamics, Gutamaya, Lakon Spaceways, Saud Kruger, Zorgon
+Peterson). Ce chiffre exclut les SRV, les chasseurs embarqués (SLF) et le Nomad (SLV), qui relèvent d'autres
+catégories de véhicules. Voir
+[Vue d'ensemble](#vue-densemble--48-vaisseaux-de-chantier-naval-six-constructeurs-trois-gabarits).
+
+**Quel est le vaisseau le moins cher pour débuter (starter ship) ?**
+Le Sidewinder Mk I, à 32 000 Cr chez Faulcon DeLacy, avec une portée de saut stock de 9,2 al ; c'est le vaisseau de
+départ classique du jeu. Le Hauler (52 720 Cr) et l'Eagle Mk II (44 800 Cr) suivent parmi les moins chers. Voir le
+[tableau complet des prix](#tableau-complet-des-48-vaisseaux--prix-portée-de-saut-hardpoints-et-emplacements).
+
+**Quel vaisseau a la meilleure portée de saut (jump range) en configuration stock ?**
+Le Type-8 Transporter, avec ≈ 24,1 al stock (≈ 36,2 al en repère d'ingénierie G5) — la meilleure portée de toute la
+flotte, qui s'étend de 6,7 al à 24,1 al. Le Mandalay (≈ 22,0 al) domine le segment Medium et le Caspian Explorer
+(≈ 20,9 al) le segment Large. Voir le
+[tableau complet des prix et portées](#tableau-complet-des-48-vaisseaux--prix-portée-de-saut-hardpoints-et-emplacements).
+
+**Combien coûte réellement un Anaconda entièrement équipé, rebuy compris ?**
+Rien qu'en *core internals* de qualité A (sans arme ni bouclier), le budget grimpe à ≈ 387 M Cr contre 147 M Cr pour
+la seule coque, soit 2,6 fois le prix affiché au chantier naval. Le rebuy (coût de remplacement en cas de
+destruction, environ 5 % de la valeur assurée) s'élève alors à ≈ 19,4 M Cr. Voir
+[Le coût réel d'un vaisseau équipé](#le-coût-réel-dun-vaisseau-équipé-rebuy-inclus).
+
+**Quels vaisseaux demandent un rang de réputation (rank) pour être achetés ?**
+Sept vaisseaux : côté Fédération, Federal Dropship (Midshipman), Federal Assault Ship (Chief Petty Officer), Federal
+Gunship (Ensign) et Federal Corvette (Rear Admiral) ; côté Empire, Imperial Courier (Master), Imperial Clipper
+(Baron) et Imperial Cutter (Duke). L'Imperial Eagle et toute la gamme Alliance ne demandent aucun rang. Voir
+[Rangs de réputation requis](#rangs-de-réputation-requis--les-sept-vaisseaux-fédération-et-empire-sous-condition-de-rang).
+
+**Quels vaisseaux ont le Supercruise Overcharge (SCO) d'origine ?**
+Le SCO est un mode utilisable par tout FSD standard depuis les Updates 18.02/18.04, mais huit vaisseaux sont livrés
+d'origine avec un FSD (SCO) dédié : Python Mk II, Type-8 Transporter, Mandalay, Caspian Explorer, Cobra Mk V,
+Corsair, Panther Clipper Mk II et Type-11 Prospector. Voir
+[Le Supercruise Overcharge (SCO)](#le-supercruise-overcharge-sco--disponible-sur-tout-fsd-pas-réservé-à-huit-vaisseaux).
+
+**Quels vaisseaux peuvent embarquer un chasseur (fighter bay / Vessel Hangar) ?**
+36 vaisseaux sur 48 (35 des 47 vaisseaux référencés par EDCD, plus le Lynx Highliner) ont un emplacement optionnel
+assez grand — classe 5 minimum — pour un Vessel Hangar (ex-Fighter Hangar) ; le Vulture, malgré son faible tonnage,
+en fait partie avec 1 baie. Voir [Chasseurs embarqués](#chasseurs-embarqués-ship-launched-fighters).
+
+**C'est quoi le Nomad et comment l'obtenir ?**
+Le Nomad est le premier vaisseau embarqué (*ship-launched vessel*, SLV) du jeu, sorti le 30 juin 2026. Ce n'est pas
+un vaisseau de chantier naval : il ne s'achète qu'en ARX (formules Standard 16 520 ARX, Stellar 33 000 ARX, Galactic
+60 000 ARX) et sert à l'exploration de surfaces planétaires. Voir
+[Le cas du Nomad](#le-cas-du-nomad--vaisseau-embarqué-slv-absent-des-catalogues-de-chantier-naval).
+
+**Quel est le vaisseau le plus gros ou le plus cher du jeu ?**
+Le Panther Clipper Mk II, à 301 348 585 Cr, avec une masse de coque de 1 200 t (à égalité avec le Type-10 Defender) ;
+c'est le plus gros transporteur non-capital du jeu. Voir
+[Les extrêmes du chantier naval](#les-extrêmes-du-chantier-naval-lus-dans-ces-deux-tableaux).
+
+**Quel vaisseau choisir pour miner (mining ship) ?**
+Le Type-11 Prospector est le seul vaisseau conçu nativement pour le minage : 6 emplacements internes dont trois de
+classe 6, FSD (SCO) d'origine. Le Type-9 Heavy et le Type-10 Defender restent des alternatives capables mais moins
+spécialisées. Voir
+[Vaisseaux de minage](#vaisseaux-de-minage-type-11-prospector-type-9-heavy-type-10-defender).
+
+**Combien coûte un transfert de vaisseau entre deux stations, et combien de temps ça prend ?**
+Coût indicatif ≈ (0,00006 × valeur totale × distance en al) + (0,0002 × valeur totale) + 1 000 Cr ; délai ≈ 300
+secondes + 10 secondes par année-lumière. Un transfert bulle → Colonia (≈ 22 000 al) prend ainsi environ 61 heures,
+et chaque station stocke gratuitement jusqu'à 40 vaisseaux. Voir
+[Gestion de flotte](#gestion-de-flotte--transférer-et-stocker-un-vaisseau).
+
+**Quel vaisseau acheter selon mon rôle et mon budget ?**
+Le guide croise quatre paliers de budget (< 5 M Cr, 5-50 M Cr, 50-300 M Cr, > 300 M Cr) et six rôles (combat,
+exploration, commerce/fret, transport de passagers, minage, multi-rôle) : par exemple en combat, le Viper Mk III
+(≈ 0,37 M Cr équipé) pour débuter puis le Federal Corvette (≈ 489 M Cr, rang Rear Admiral requis) au sommet. Voir
+[Matrice Rôle × Budget](#matrice-rôle--budget--quel-vaisseau-pour-quel-rôle-et-quel-budget).
 
 ## Voir aussi
 

@@ -25,7 +25,7 @@ aux tirs AX, de le désactiver au **Shutdown Field Neutraliser (SFN)**, puis de 
 fenêtre d'une quinzaine de secondes, au **Guardian Gauss Cannon**, en nettoyant l'essaim au *Remote Release Flak
 Launcher* et en purgeant les stacks caustiques au *Caustic Sink Launcher*. La Seconde Guerre Thargoïde est close : le
 dernier des huit **Titans** (*Maelstroms*), **Cocijo**, est tombé à Sol le 19 décembre 2024 à 15:00 UTC, après Raijin
-et Taranis (2 mars 2024). En 2026, le combat AX se pratique encore en **Non-Human Signal Sources (NHSS)** et en **Zones
+et Taranis (2 mars 2024). En 2026, le combat AX se pratique encore en **Non-Human Signal Sources (NHSS)** (sources de signal non-humain) et en **Zones
 de Combat Anti-Xéno (AXCZ)**, pour la réputation **Aegis**, les matériaux du Technology Broker et l'entraînement.
 Le volet non-combat se joue dans les **Pléiades** : récolte de Meta-Alloys sur les **Barnacles**, structures de
 surface à puzzle sonore, sondes/capteurs/liens, épaves d'Intercepteurs — et les **Thargoid Spire Sites**, boucle de
@@ -76,7 +76,7 @@ En 2026, la guerre thargoïde est un **événement historique conclu** dans le l
 - les **Zones de Combat Anti-Xéno (AXCZ)**, pendant thargoïde des Combat Zones classiques décrites en [08-combat-spatial.md](./08-combat-spatial.md) (section 4.3), restent disponibles comme terrain d'entraînement et de farming de récompenses/matériaux ;
 - les carcasses de Titans, dont celle de Sol, demeurent des **vestiges explorables**, sans mécanique de combat actif associée à ce jour.
 
-Ce combat AX pérenne sert avant tout à l'entraînement, à la collecte de matériaux pour le Human/Guardian Technology Broker (voir section 6 et [04-equipements.md](./04-equipements.md) section 2.6), et au maintien d'une communauté active en cas de résurgence future — le lore officiel ne présente pas les Thargoïdes comme éradiqués, seulement repoussés lors de ce cycle de conflit (voir [01-lore.md](./01-lore.md), section 3.6).
+Ce combat AX pérenne sert avant tout à l'entraînement, à la collecte de matériaux pour le Human/Guardian Technology Broker (voir la [section 6](#6-ressources-et-organisations--aegis-et-axi) et [04-equipements.md](./04-equipements.md) section 2.6), et au maintien d'une communauté active en cas de résurgence future — le lore officiel ne présente pas les Thargoïdes comme éradiqués, seulement repoussés lors de ce cycle de conflit (voir [01-lore.md](./01-lore.md), section 3.6).
 
 ---
 
@@ -101,7 +101,7 @@ Les **Interceptors** sont la classe de vaisseaux de combat lourds thargoïdes re
 |---|---|---|---|
 | **Cyclops** | Modéré | 1 | Premier Interceptor rencontré en progression normale ; sert d'introduction au combat de cœurs. |
 | **Basilisk** | Élevé | 2 | Capacités offensives renforcées par rapport au Cyclops. |
-| **Medusa** | Très élevé | 3 | Usage intensif de projectiles/mines caustiques (voir section 4). |
+| **Medusa** | Très élevé | 3 | Usage intensif de projectiles/mines caustiques (voir [section 4](#4-nuages-caustiques--mécanique-et-contre-mesures)). |
 | **Hydra** | Extrême | 4 | Le plus dangereux ; capacités de brouillage étendues, tirs les plus destructeurs, rencontré dans les zones de guerre de haute intensité et à proximité des Maelstroms/Titans. |
 
 > Cette table complète le tableau déjà présent en [01-lore.md](./01-lore.md) (section 3.4, qui ne détaille pas le nombre de cœurs) en y ajoutant le nombre de cœurs par classe. **Le nombre exact de cœurs par classe n'a pas pu être vérifié via les sources accessibles cette session** (Wikipédia, Inara et Canonn ont été consultés mais ne détaillent pas ce point ; le wiki communautaire dédié était inaccessible) — il s'agit d'une donnée de connaissance de jeu largement citée par la communauté depuis les mises à jour « Thargoid War » 2020-2022, à confirmer en jeu ou via un wiki à jour avant toute utilisation dans un contexte critique (guide de raid, calcul de DPS requis, etc.).
@@ -131,9 +131,9 @@ portent tous le nom d'une divinité de l'orage.*
 
 Chaque Titan était dissimulé dans un **Maelstrom** (nébuleuse rouge/violet visible à grande distance) et sa neutralisation suivait une progression en plusieurs phases — connaissance de jeu établie, cohérente avec [08-combat-spatial.md](./08-combat-spatial.md) (section 4.5), mais non re-détaillée sur wiki cette session :
 
-1. **Sites « Spire »** au sol : opérations à pied et en vaisseau (façon Odyssey, voir [09-combat-a-pied.md](./09-combat-a-pied.md) pour le combat FPS générique) visant à réduire l'emprise régionale du Titan sur les systèmes sous son contrôle depuis des installations de surface dédiées, réparties dans la région et distinctes du Maelstrom lui-même — voir la section 8bis pour le détail complet de la procédure et de son statut actuel (2026).
+1. **Sites « Spire »** au sol : opérations à pied et en vaisseau (façon Odyssey, voir [09-combat-a-pied.md](./09-combat-a-pied.md) pour le combat FPS générique) visant à réduire l'emprise régionale du Titan sur les systèmes sous son contrôle depuis des installations de surface dédiées, réparties dans la région et distinctes du Maelstrom lui-même — voir la [section 8bis](#8bis-thargoid-spire-sites--dossier-dune-boucle-de-guerre-aujourdhui-désactivée) pour le détail complet de la procédure et de son statut actuel (2026).
 2. **AXCZ orbitales** autour du Maelstrom, pour réduire les défenses spatiales du Titan.
-3. **Mise à nu des cœurs du Titan**, à détruire en séquence — le **Guardian Nanite Torpedo Pylon** (voir section 5 et [04-equipements.md](./04-equipements.md) section 2.6), arme hybride combinant matériaux Guardian et Thargoïdes, a été ajouté spécifiquement pour empêcher un Titan d'évacuer sa chaleur pendant cette phase d'assaut.
+3. **Mise à nu des cœurs du Titan**, à détruire en séquence — le **Guardian Nanite Torpedo Pylon** (voir la [section 5](#5-armement-et-builds-ax-chiffrés) et [04-equipements.md](./04-equipements.md) section 2.6), arme hybride combinant matériaux Guardian et Thargoïdes, a été ajouté spécifiquement pour empêcher un Titan d'évacuer sa chaleur pendant cette phase d'assaut.
 4. **Neutralisation finale** du cœur central, entraînant la destruction du Titan.
 
 La récompense post-guerre la plus notable issue de la recherche sur la technologie des Titans est la technologie **Supercruise Overcharge (SCO)**, aujourd'hui intégrée aux mécaniques de propulsion courantes du jeu (voir [01-lore.md](./01-lore.md), section 3.7, et [08-combat-spatial.md](./08-combat-spatial.md)/[03-vaisseaux.md](./03-vaisseaux.md) pour son usage).
@@ -148,20 +148,20 @@ Un Interceptor thargoïde ne se traite pas comme un vaisseau humain classique : 
 
 - Le bouclier d'un Interceptor est **organique** et ne se réduit pas comme un bouclier humain classique sous de simples dégâts de bouclier.
 - Il doit d'abord être **fragilisé** par des tirs conventionnels/AX jusqu'à un certain seuil.
-- Il est ensuite **désactivé** via le module utilitaire dédié **Shutdown Field Neutraliser (SFN)**, lui-même préalablement chargé en le ciblant avec une arme « chargeuse » de SFN dédiée sur un hardpoint séparé.
+- Il est ensuite **désactivé** via le module utilitaire dédié **Shutdown Field Neutraliser (SFN)**, lui-même préalablement chargé en le ciblant avec une arme « chargeuse » de SFN dédiée sur un hardpoint (point d'ancrage d'armes) séparé.
 - Une fois le bouclier neutralisé, une **fenêtre de tir limitée** (de l'ordre de 15 à 20 secondes, valeur indicative non vérifiée cette session) s'ouvre pour exposer les cœurs.
 
 ### 3.2 Les cœurs (« hearts ») d'un Interceptor thargoïde : la cible prioritaire
 
 - Les **cœurs** sont des organes internes vulnérables, visibles sous forme de points lumineux une fois le bouclier abaissé (mécanique confirmée en [08-combat-spatial.md](./08-combat-spatial.md), section 4.5).
 - Ils constituent la **cible prioritaire** : leur destruction inflige des dégâts catastrophiques au vaisseau et est nécessaire pour le vaincre.
-- Le nombre de cœurs varie selon la classe d'Interceptor (voir tableau section 2.2) : de 1 (Cyclops) à 4 (Hydra), selon les connaissances de jeu établies non vérifiées via les sources accessibles cette session.
-- Le tir sur les cœurs bénéficie particulièrement des armes à haut dégât d'alpha-strike et haute précision, comme le **Guardian Gauss Cannon** (voir section 5).
+- Le nombre de cœurs varie selon la classe d'Interceptor (voir tableau [section 2.2](#22-interceptors--les-quatre-classes-nommées-cyclops-basilisk-medusa-hydra)) : de 1 (Cyclops) à 4 (Hydra), selon les connaissances de jeu établies non vérifiées via les sources accessibles cette session.
+- Le tir sur les cœurs bénéficie particulièrement des armes à haut dégât d'alpha-strike et haute précision, comme le **Guardian Gauss Cannon** (voir [section 5](#5-armement-et-builds-ax-chiffrés)).
 
 ### 3.3 L'essaim de Thargons et les batteries caustiques des Interceptors
 
 - Beaucoup d'Interceptors déploient un **essaim de petites unités autonomes** (parfois désignées « Thargons » dans la communauté) qui interceptent une partie des tirs destinés au vaisseau principal — un Flak Cannon ou un Remote Release Flak Launcher est généralement recommandé pour nettoyer cet essaim avant de se concentrer sur les cœurs.
-- Les classes **Medusa** et **Hydra** disposent en outre de **batteries/lance-missiles caustiques**, projetant des mines ou missiles qui libèrent des nuages corrosifs à l'impact (voir section 4).
+- Les classes **Medusa** et **Hydra** disposent en outre de **batteries/lance-missiles caustiques**, projetant des mines ou missiles qui libèrent des nuages corrosifs à l'impact (voir [section 4](#4-nuages-caustiques--mécanique-et-contre-mesures)).
 
 ### 3.4 L'éruption terminale (« death cloud ») à la destruction d'un Interceptor
 
@@ -199,8 +199,8 @@ Cet armement se débloque via la réputation auprès d'**Aegis** et la fournitur
 | **Guardian Nanite Torpedo Pylon** | Empêche l'évacuation thermique des Titans | Arme hybride Guardian/Thargoïde | Débloqué au Guardian Technology Broker ; utile principalement en phase d'assaut de Titan (voir 2.3). |
 | **Shutdown Field Neutraliser (SFN)** | Désactivation du bouclier organique | Module utilitaire | Indispensable pour exposer les cœurs (voir 3.1). |
 | **Thargoid Pulse Neutraliser** | Neutralisation des Scouts | Module utilitaire | Coupe les capacités offensives et d'hyperdiction des Scouts. |
-| **Remote Release Flak Launcher / Flechette Launcher** | Nettoyage d'essaim et de projectiles caustiques | Module utilitaire | Voir 3.3 et section 4. |
-| **Caustic Sink Launcher** | Neutralisation des stacks caustiques | Module utilitaire | Voir section 4. |
+| **Remote Release Flak Launcher / Flechette Launcher** | Nettoyage d'essaim et de projectiles caustiques | Module utilitaire | Voir 3.3 et [section 4](#4-nuages-caustiques--mécanique-et-contre-mesures). |
+| **Caustic Sink Launcher** | Neutralisation des stacks caustiques | Module utilitaire | Voir [section 4](#4-nuages-caustiques--mécanique-et-contre-mesures). |
 
 ### 5.2 Archétype de build AX (structure générale)
 
@@ -212,14 +212,14 @@ Les valeurs exactes de dégâts/DPS n'ont pas pu être vérifiées via les sourc
 | **Armement offensif principal** | 1 à 2 **Guardian Gauss Cannon** en emplacements fixes, dédiés au heart-sniping. |
 | **Armement d'attrition** | **AX Multi-Cannons** et/ou **Enzyme Missile Racks**, pour l'usure de l'armure entre deux fenêtres de shutdown. |
 | **Emplacements utilitaires** | 1 **Shutdown Field Neutraliser**, 1 à 2 **Caustic Sink Launcher**, 1 **Remote Release Flak/Flechette Launcher**, Shield Boosters, Hull Reinforcement Package, **Guardian Shield Reinforcement Package**. |
-| **Gestion thermique** | Heat Sink Launcher, particulièrement recommandé pendant les phases d'assaut de Titan (chaleur élevée à proximité du cœur central). |
+| **Gestion thermique** | Heat Sink Launcher (dissipation thermique instantanée), particulièrement recommandé pendant les phases d'assaut de Titan (chaleur élevée à proximité du cœur central). |
 
 > Recommandation avant publication ou usage compétitif : confirmer ces slots et valeurs via un configurateur externe à jour (Coriolis, EDSY — voir [16-outils.md](./16-outils.md)) et via l'ingénierie appliquée aux modules concernés (voir [06-ingenieurs.md](./06-ingenieurs.md)), les stats stock présentées ici n'intégrant aucune modification G1-G5.
 
 ### 5.3 Rentabilité chiffrée du combat AX (≈ 20 à 60 M Cr/h) — reconstitution communautaire
 
 Ce guide ne donnait, avant cette édition, aucune valeur en crédits pour le combat AX pratiqué en 2026 (les seules
-occurrences de « Cr » du fichier concernaient la boucle historique désactivée des Spire Sites, voir section 8bis).
+occurrences de « Cr » du fichier concernaient la boucle historique désactivée des Spire Sites, voir [section 8bis](#8bis-thargoid-spire-sites--dossier-dune-boucle-de-guerre-aujourdhui-désactivée)).
 **Ce qui suit est une reconstitution communautaire datée du 13 septembre 2026, pas un barème officiel Frontier** —
 voir la note de méthode de [00-boucles-de-gameplay.md](./00-boucles-de-gameplay.md) avant de la recopier ailleurs.
 
@@ -238,7 +238,7 @@ destruction :
 de cœurs (3.2) et le repositionnement post-destruction (3.4), un pilote compétent enchaîne un Interceptor toutes les
 10 à 20 minutes selon la classe visée — d'où une fourchette de **≈ 20 à 60 M Cr/h**, plus élevée en ciblant des
 classes lourdes (Medusa/Hydra) avec un build éprouvé (5.2), plus basse en début d'apprentissage sur Cyclops/Basilisk.
-Ce chiffre ne compte pas le temps de recherche d'un Interceptor (voir section 7) ni les pertes en cas d'échec.
+Ce chiffre ne compte pas le temps de recherche d'un Interceptor (voir [section 7](#7-où-pratiquer-le-combat-ax-en-2026)) ni les pertes en cas d'échec.
 
 *Sources de cette reconstitution : Anti-Xeno Initiative wiki (wiki.antixenoinitiative.com, « Finding Thargoids » et
 « Basic Thargoid Combat Guide ») et Elite Dangerous Wiki (Fandom, « Combat Bond Voucher »), consultés le
@@ -313,7 +313,7 @@ rechargeables en quittant puis rejoignant le site (reconnexion).
 
 **Achat en commodity, en alternative à la récolte** : Meta-Alloy s'achète aussi directement comme marchandise —
 **Darnielle's Progress**, dans le système Maia des Pléiades (voir [01-lore.md §3.4bis](./01-lore.md)), reste le seul
-marché fiable, avec une allocation plafonnée à environ 2 unités, et des Fleet Carriers en revendent avec une forte
+marché fiable, avec une allocation plafonnée à environ 2 unités, et des Fleet Carriers (Porte-Vaisseaux) en revendent avec une forte
 marge. Voir [06-ingenieurs.md](./06-ingenieurs.md) pour la procédure d'achat détaillée et chiffrée.
 
 **Usage des Meta-Alloys** : débloquer l'invitation de l'ingénieur **Felicity Farseer** (1 unité, voir
@@ -339,7 +339,7 @@ du site, pointe vers un nouveau site à visiter.
 **Butin** : structures organiques cassables au SRV pour des matériaux (Fer, Soufre… jusqu'au Meta-Alloy) ; des
 « Thargoid Uplink Devices » et échantillons technologiques scannables livrant Thargoid Material Composition Data /
 Residue Data / Structural Data (voir [06-ingenieurs.md](./06-ingenieurs.md) pour leur usage en ingénierie) ; des
-drones « Scavengers » non hostiles sauf provocation, qui laissent tomber Thargoid Fragments, Carapaces, Energy
+drones « Scavengers » (pilleurs) non hostiles sauf provocation, qui laissent tomber Thargoid Fragments, Carapaces, Energy
 Cells, Organic Circuitry, Technological Components, Ship Signatures et Wake Data. **Risque** : un Intercepteur
 thargoïde peut survenir et scanner le commandant une fois l'appareil activé.
 
@@ -349,7 +349,7 @@ précisément ce qui débloque ces sites, les Barnacles et les Thargoid Links da
 ### 8.3 Sondes, capteurs et liens thargoïdes : mécanique et outils Canonn
 
 - **Thargoid Probe** (ex-« Unknown Probe ») : trouvée dans les Non-Human Signal Sources ; pointe vers Merope 5 C.
-  Activer un Discovery Scanner à proximité déclenche une impulsion électromagnétique et un signal audio. Premier
+  Activer un Discovery Scanner (scanner de découverte) à proximité déclenche une impulsion électromagnétique et un signal audio. Premier
   décodage le 18 juillet 3302 par CMDR Rizal.
 - **Thargoid Sensor** (ex-« Unknown Artefact ») : émet un bruit constant ; détruit au SRV, il livre des **Sensor
   Fragments**, matériau d'ingénierie qui débloque l'invitation de l'ingénieur **Professor Palin** (voir
@@ -391,10 +391,12 @@ atmosphère ténue (ammoniac, néon, argon, dioxyde de soufre, méthane…). Le 
 
 **Point à ne pas confondre** : un Spire Site **n'est pas** situé dans le système du Maelstrom/Titan lui-même — ce
 sont des installations de surface séparées, réparties sur une **quarantaine de systèmes** tombés sous le contrôle
-régional d'un Titan, tandis que le **Maelstrom** (la nébuleuse caustique en orbite autour du Titan, section 2.3) est
+régional d'un Titan, tandis que le **Maelstrom** (la nébuleuse caustique en orbite autour du Titan,
+[section 2.3](#23-titans-maelstroms--les-huit-méga-vaisseaux-de-linvasion-thargoïde)) est
 un lieu et un mécanisme distincts, purement spatial. Le sabotage des Spires réduisait l'emprise régionale d'un Titan
 (jusqu'à la reprise de contrôle des dix systèmes les plus périphériques sous son emprise), un front parallèle à
-l'assaut orbital sur le cœur du Titan lui-même (section 2.3) — pas une étape de celui-ci.
+l'assaut orbital sur le cœur du Titan lui-même
+([section 2.3](#23-titans-maelstroms--les-huit-méga-vaisseaux-de-linvasion-thargoïde)) — pas une étape de celui-ci.
 
 ### Procédure historique d'extraction et de sabotage
 
@@ -402,7 +404,7 @@ Le vaisseau se pose sur les « pétales » du Spire, assez vastes pour l'accueil
 « déclenchent en surchargeant divers amas de nerfs », livrant des matériaux thargoïdes — l'outil ou l'interaction
 précise de cette étape au sol n'est documentée par aucune source consultée (lacune signalée plutôt que comblée). La
 boucle nommée par la communauté est le **sabotage de Spire** : récolter des matériaux, prendre une mission auprès
-d'un Rescue Megaship pour obtenir un composé modifié, le rapporter pour contaminer les quatre sous-flèches du Spire
+d'un Rescue Megaship (mégavaisseau de secours) pour obtenir un composé modifié, le rapporter pour contaminer les quatre sous-flèches du Spire
 jusqu'à leur destruction — avec une escalade des défenseurs (un Basilisk pendant le sabotage, une meute de Medusa une
 fois le Spire entièrement saboté). En parallèle, le combat en vaisseau contre les Intercepteurs thargoïdes présents
 autour d'un Spire (majoritairement des Orthrus) réduisait aussi le contrôle régional du Titan.
@@ -414,7 +416,8 @@ tir à pied classique, sans contre-mesure spécifique documentée, dommageable a
 
 **Correction à noter** : contrairement à une hypothèse répandue, **les nuages caustiques ne sont pas un mécanisme
 des Spire Sites** — c'est une mécanique propre au Maelstrom (section 2.3-4), en orbite autour du Titan. Au sol d'un
-Spire, le risque caustique le plus proche est celui des missiles de Scouts (section 3.3), pas un nuage ambiant du
+Spire, le risque caustique le plus proche est celui des missiles de Scouts
+([section 3.3](#33-lessaim-de-thargons-et-les-batteries-caustiques-des-interceptors)), pas un nuage ambiant du
 site lui-même.
 
 ### Butin et valeur : à ne pas confondre avec le « cimetière » d'un Titan détruit
@@ -433,15 +436,16 @@ Spire pouvait alors rapporter plusieurs centaines de millions de Cr par heure, a
 
 **En vaisseau** : Shutdown Field Neutraliser (contre les champs de mise hors service des Banshees/Orthrus), Thargoid
 Pulse Neutraliser (contre l'impulsion électromagnétique du Maelstrom, pas des Spires eux-mêmes), armement AX
-(section 5), Caustic Sink Launcher et Decontamination Limpet Controller si l'on opère aussi en zone de Maelstrom.
+([section 5](#5-armement-et-builds-ax-chiffrés)), Caustic Sink Launcher et Decontamination Limpet Controller si l'on opère aussi en zone de Maelstrom.
 **À pied** : aucune contre-mesure caustique spécifique n'a été retrouvée pour l'équipement à pied — le Caustic Sink
 Launcher reste un module de vaisseau exclusivement ; un équipement de combat standard (voir
 [07-equipement-a-pied.md](./07-equipement-a-pied.md)) suffit contre les Revenants et Banshees au sol.
 
 ### Statut actuel (2026) : une boucle désactivée depuis la fin de la guerre
 
-Depuis la fin de la Seconde Guerre Thargoïde (19 décembre 2024, section 1.1), **les Spire Sites sont inertes** :
-selon le wiki communautaire de l'Anti Xeno Initiative (AXI, section 6.2), « il ne reste aucun Spire Site actif dans
+Depuis la fin de la Seconde Guerre Thargoïde (19 décembre 2024,
+[section 1.1](#11-chronologie-vérifiée-de-la-fin-de-la-seconde-guerre-thargoïde)), **les Spire Sites sont inertes** :
+selon le wiki communautaire de l'Anti Xeno Initiative (AXI, [section 6.2](#62-axi-anti-xeno-initiative)), « il ne reste aucun Spire Site actif dans
 le jeu actuel — ils étaient liés aux mécaniques de la guerre thargoïde de 3309-3310 ». Le wiki Fandom communautaire
 converge : les sites sont passés en « état d'arrêt » après contamination et destruction du Titan qui les contrôlait —
 visitables et explorables, mais production et hostilité désactivées. Cette désactivation s'est faite progressivement
@@ -465,15 +469,85 @@ environnants s'étant dissipés depuis.
 - Emporter au moins un **Guardian Gauss Cannon** dédié au heart-sniping, et de l'armement d'attrition (AX Multi-Cannon
   ou Enzyme Missile Rack) pour user l'armure entre deux fenêtres de shutdown (5.1-5.2).
 - Équiper un **Remote Release Flak/Flechette Launcher** pour l'essaim de Thargons et un **Caustic Sink Launcher**
-  pour les stacks caustiques (3.3, section 4).
-- Prévoir un Heat Sink Launcher si l'engagement se déroule près d'un cœur de Titan (chaleur élevée, section 2.3).
+  pour les stacks caustiques (3.3, [section 4](#4-nuages-caustiques--mécanique-et-contre-mesures)).
+- Prévoir un Heat Sink Launcher si l'engagement se déroule près d'un cœur de Titan (chaleur élevée,
+  [section 2.3](#23-titans-maelstroms--les-huit-méga-vaisseaux-de-linvasion-thargoïde)).
 - Confirmer la classe d'Interceptor visée et le temps de neutralisation de bouclier associé (5.3) pour calibrer
   l'endurance de la sortie plutôt que de découvrir la classe en vol.
 - Prévoir la manœuvre d'éloignement immédiat après la destruction, pour éviter le nuage caustique terminal
   (« death cloud », 3.4).
-- Repérer à l'avance un NHSS ou une AXCZ actifs (section 7) plutôt que de partir sans cible confirmée.
+- Repérer à l'avance un NHSS ou une AXCZ actifs ([section 7](#7-où-pratiquer-le-combat-ax-en-2026)) plutôt que de partir sans cible confirmée.
 - Débutant : s'entraîner d'abord sur Scouts et Cyclops avant de viser Medusa/Hydra (voir aussi le scénario Combat de
   [27-debuter-et-progresser.md §1.0](./27-debuter-et-progresser.md)).
+
+---
+
+## Questions fréquentes
+
+**Q : Comment désactiver le bouclier organique d'un Interceptor thargoïde (Shutdown Field Neutraliser) ?**
+Le bouclier organique doit d'abord être fragilisé par des tirs conventionnels/AX, puis désactivé via le module
+utilitaire **Shutdown Field Neutraliser (SFN)**, lui-même chargé au préalable par une arme « chargeuse » de SFN
+dédiée sur un hardpoint séparé. Une fois désactivé, une fenêtre de tir d'environ 15 à 20 secondes (valeur indicative
+non vérifiée cette session) s'ouvre pour exposer les cœurs. Voir la
+[section 3.1](#31-le-bouclier-organique-et-le-shutdown-field-neutraliser-sfn).
+
+**Q : Combien de cœurs (hearts) a chaque classe d'Interceptor thargoïde ?**
+De 1 cœur pour un Cyclops à 4 pour un Hydra, en passant par 2 pour un Basilisk et 3 pour une Medusa — une donnée de
+connaissance de jeu communautaire non recoupée sur source primaire accessible cette session. Voir le tableau de la
+[section 2.2](#22-interceptors--les-quatre-classes-nommées-cyclops-basilisk-medusa-hydra).
+
+**Q : Quelle est la rentabilité en crédits par heure (Cr/h) du combat anti-Thargoïde (AX) en 2026 ?**
+Une reconstitution communautaire du 13 septembre 2026 (pas un barème officiel Frontier) situe le combat AX entre
+**≈ 20 et 60 millions de Cr/h**, avec des primes par classe allant d'≈6,5 M Cr (Cyclops) à ≈50 M Cr (Hydra) et un
+Interceptor abattu toutes les 10 à 20 minutes selon la classe visée. Voir la
+[section 5](#5-armement-et-builds-ax-chiffrés) (5.3).
+
+**Q : La guerre contre les Thargoïdes (Thargoid War) est-elle terminée en 2026 ?**
+Oui : le dernier Titan, Cocijo, est tombé à Sol le 19 décembre 2024 à 15:00 UTC, ce qui marque la fin officielle de
+la Seconde Guerre Thargoïde. Le combat AX reste toutefois praticable en NHSS et en AXCZ pour l'entraînement et la
+collecte de matériaux. Voir la
+[section 1.1](#11-chronologie-vérifiée-de-la-fin-de-la-seconde-guerre-thargoïde).
+
+**Q : Où trouver des Interceptors ou des Scouts thargoïdes à combattre en 2026 ?**
+Dans les Non-Human Signal Sources (NHSS), pour des Scouts et parfois des Interceptors isolés, et dans les Zones de
+Combat Anti-Xéno (AXCZ), pendant thargoïde des Combat Zones classiques, pour un entraînement structuré. Les
+carcasses de Titans restent visitables mais sans mécanique de combat actif documentée à ce jour. Voir la
+[section 7](#7-où-pratiquer-le-combat-ax-en-2026).
+
+**Q : Comment éviter le nuage caustique terminal (death cloud) à la mort d'un Interceptor ?**
+Un Interceptor libère à sa destruction une explosion de résine/gaz caustique à grand rayon ; la règle de sécurité
+standard consiste à s'éloigner immédiatement après le coup de grâce pour ne pas être pris dans ce nuage terminal.
+Voir la
+[section 3.4](#34-léruption-terminale--death-cloud--à-la-destruction-dun-interceptor).
+
+**Q : Comment neutraliser les stacks de dégâts caustiques déjà accumulés sur mon vaisseau ?**
+Seul le module utilitaire **Caustic Sink Launcher** neutralise les stacks caustiques déjà accumulés sur le vaisseau ;
+s'éloigner de la zone stoppe uniquement l'accumulation de **nouveaux** stacks, sans retirer ceux déjà présents. Voir
+la [section 4](#4-nuages-caustiques--mécanique-et-contre-mesures).
+
+**Q : Comment récolter du Meta-Alloy sur un Barnacle thargoïde ?**
+Au sol en SRV, un tir sur un piquant (Barnacle Barb) « mûr » (renflement plus gros et lumineux) en détache un
+fragment livrant du Meta-Alloy — 1 unité selon le wiki communautaire, 2 selon une fiche Canonn (rendement non
+tranché entre les deux sources). Les autres piquants livrent des matériaux bruts ordinaires. Voir la
+[section 8.1](#81-barnacles-thargoïdes-et-récolte-de-meta-alloys).
+
+**Q : Les Thargoid Spire Sites sont-ils encore actifs en 2026 ?**
+Non : depuis la fin de la guerre (19 décembre 2024), les Spire Sites sont inertes selon le wiki communautaire de
+l'Anti Xeno Initiative — visitables et explorables, mais production et hostilité désactivées, sans note de correctif
+officielle confirmant un retrait délibéré. Voir
+[Statut actuel (2026)](#statut-actuel-2026--une-boucle-désactivée-depuis-la-fin-de-la-guerre) en section 8bis.
+
+**Q : Quel équipement emporter pour affronter un Interceptor thargoïde en combat AX ?**
+Au minimum : un **Shutdown Field Neutraliser**, un ou deux **Guardian Gauss Cannon** pour le heart-sniping, de
+l'armement d'attrition (AX Multi-Cannon ou Enzyme Missile Rack), un **Remote Release Flak/Flechette Launcher** contre
+l'essaim de Thargons, et un **Caustic Sink Launcher** contre les stacks caustiques. Voir la
+[section 5](#5-armement-et-builds-ax-chiffrés) et la check-list avant sortie.
+
+**Q : Quelle est la différence entre un Thargoid Spire et un Maelstrom ?**
+Un Spire est une installation de surface (environ 6 km de haut), l'une d'une quarantaine réparties sur les systèmes
+sous contrôle régional d'un Titan ; le Maelstrom est la nébuleuse caustique en orbite autour du Titan lui-même — un
+lieu et un mécanisme purement spatiaux, distincts du Spire. Voir la
+[section 8bis](#8bis-thargoid-spire-sites--dossier-dune-boucle-de-guerre-aujourdhui-désactivée).
 
 ---
 

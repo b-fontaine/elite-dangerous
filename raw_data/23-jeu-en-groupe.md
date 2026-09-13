@@ -39,20 +39,22 @@ guides_lies: [1, 2, 3, 4, 8, 19, 21, 22, 27, 30]
 ## En bref
 
 *Elite Dangerous* propose trois façons distinctes de jouer à plusieurs. Le **Wing** (escadre) réunit jusqu'à
-**quatre joueurs**, chacun dans son propre vaisseau, dans le monde persistant : **nav-lock** partagé, panneau Wing
-affichant position et cap des membres, missions de wing partagées, et surtout **primes et combat bonds versés à pleine
-valeur à chaque contributeur**, sans division — d'où l'intérêt de la chasse aux primes en Wing dans les **RES** et les
-**CNB**. Le **Multicrew**, livré le **11 avril 2017** avec l'Update 2.3 « The Commanders », place jusqu'à trois
+**quatre joueurs**, chacun dans son propre vaisseau, dans le monde persistant : **nav-lock** (verrouillage de
+navigation) partagé, panneau Wing affichant position et cap des membres, missions de wing partagées, et surtout
+**primes et combat bonds versés à pleine valeur à chaque contributeur**, sans division — d'où l'intérêt de la chasse
+aux primes en Wing dans les **RES** (sites d'extraction de ressources) et les **CNB** (Nav Beacons compromis). Le
+**Multicrew**, livré le **11 avril 2017** avec l'Update 2.3 « The Commanders », place jusqu'à trois
 Commandants sur un **même** vaisseau : le capitaine pilote, les invités tiennent les tourelles ou pilotent un **chasseur
 embarqué** (*Ship-Launched Fighter*, rayon d'environ 30 km) en télé-présence holographique, dix vaisseaux disposant
 d'une baie de chasseurs. Le **CQC** (*Close Quarters Combat*, [glossaire](./00-glossaire.md)), décliné en produit autonome **Elite Dangerous: Arena** le
 **16 février 2016** puis retiré de la vente le **10 février 2017**, est un mode d'arène PvP arcade hors du monde
 persistant, doté d'un rang propre suivi par la **Pilots Federation**. À ne pas confondre avec le **Squadron**, ni avec
-l'**équipage PNJ** du Crew Lounge. Une nouvelle section explique enfin **pourquoi deux joueurs ne se voient pas
-toujours** : l'instanciation pair-à-pair, distincte du BGS et de Powerplay qui restent partagés entre tous les modes
-de jeu, et les causes réseau (NAT, CGNAT) d'un échec d'instanciation. Une dernière section documente les activités
-organisées **hors de tout outil Frontier** — courses (Buckyball, SRV, canyon), rôle logistique des Fleet Carriers
-relais du réseau **DSSA** dans les grandes expéditions, et procédure pour devenir secouriste bénévole (**Fuel Rats**,
+l'**équipage PNJ** du **Crew Lounge** (comptoir de recrutement d'équipage). Une nouvelle section explique enfin
+**pourquoi deux joueurs ne se voient pas toujours** : l'instanciation pair-à-pair, distincte du BGS et de Powerplay qui
+restent partagés entre tous les modes de jeu, et les causes réseau (NAT, ou traduction d'adresse réseau, et CGNAT)
+d'un échec d'instanciation. Une dernière section documente les activités organisées **hors de tout outil Frontier** —
+courses (Buckyball, SRV, canyon), rôle logistique des **Fleet Carriers** (porte-vaisseaux) relais du réseau **DSSA**
+dans les grandes expéditions, et procédure pour devenir secouriste bénévole (**Fuel Rats**,
 **Hull Seals**).
 
 ## Introduction — Wing, Multicrew et CQC, trois échelles de jeu à plusieurs
@@ -72,7 +74,7 @@ Wings, Multicrew et CQC sont les trois mécaniques par lesquelles Elite Dangerou
 |---|---|---|---|---|
 | **Wing** (escadre) | Jusqu'à 4 joueurs, chacun dans son propre vaisseau | Temporaire (dure la session) | Monde persistant (Open, Groupe privé, Solo) | Coopération en combat, exploration, minage, missions groupées |
 | **Multicrew** | Jusqu'à 3 joueurs sur **un seul** vaisseau (1 capitaine + invités) | Temporaire (dure la session) | Monde persistant | Coopération à bord d'un vaisseau moyen/gros (tourelles, chasseur embarqué) |
-| **CQC** (Close Quarters Combat / Arena) | Matchs à petite échelle (équipes) | Aucune (matchmaking par partie) | Arènes dédiées, hors monde persistant | PvP arcade en petits vaisseaux, progression de rang séparée |
+| **CQC** (Close Quarters Combat / Arena) | Matchs à petite échelle (équipes) | Aucune (matchmaking — appariement des joueurs — par partie) | Arènes dédiées, hors monde persistant | PvP arcade en petits vaisseaux, progression de rang séparée |
 | **Squadron** (pour mémoire) | Dizaines à centaines de membres | Persistante (adhésion durable) | Structure administrative + monde persistant | Communauté, classements, Squadron Carrier — voir [22-squadrons.md](./22-squadrons.md) |
 
 ---
@@ -274,7 +276,7 @@ Trois critères se combinent :
 3. **La qualité de connexion** — le matchmaking privilégie des paires à latence comparable et proches
    géographiquement, ce qui peut empêcher deux amis très éloignés (même système, même mode) de s'instancier ensemble.
 
-Le **Wing** (section 2) force activement l'instanciation commune de ses membres via son mécanisme de nav-lock : une
+Le **Wing** ([section 2](#2-les-wings-escadres)) force activement l'instanciation commune de ses membres via son mécanisme de nav-lock : une
 fois deux joueurs mutuellement visibles en survitesse, former un Wing place le coéquipier qui en sort dans l'instance
 de son coéquipier — c'est le remède le plus fiable pour se retrouver entre amis. Le **Squadron** (structure
 persistante, voir [22-squadrons.md](./22-squadrons.md)), à la différence du Wing, n'a aucun effet connu et confirmé
@@ -294,7 +296,7 @@ pare-feu nécessaires, et, en dernier recours derrière du CGNAT, recourir à IP
 
 ### 6.5 Modes de jeu, BGS et Powerplay : un état partagé, une exposition différente
 
-Le [BGS](./21-bgs.md#11-quest-ce-que-le-background-simulation) et Powerplay (voir
+Le [BGS](./21-bgs.md#1-quest-ce-que-le-background-simulation-) et Powerplay (voir
 [02-powerplay.md](./02-powerplay.md)) sont gérés par le système persistant, **indépendamment** de l'instanciation
 P2P : une mission accomplie, une vente en marché ou un combat pèse de façon identique sur l'influence d'une faction,
 que le joueur soit en Solo, Groupe privé ou Open. C'est une parité de principe, pas nécessairement perçue comme
@@ -324,7 +326,7 @@ Trois formats coexistent, sans mode de jeu dédié ni classement officiel :
   vaisseau, sur un itinéraire fixé à l'avance entre systèmes publics — l'essentiel du défi est la navigation et la
   gestion de carburant, pas le combat.
 - **Les courses de SRV** : parcours au sol chronométrés sur un corps planétaire donné, souvent organisés en marge d'un
-  rassemblement communautaire (voir 7.3) plutôt que par un club dédié permanent.
+  rassemblement communautaire (voir [7.3](#73-devenir-secouriste-bénévole--fuel-rats-et-hull-seals)) plutôt que par un club dédié permanent.
 - **Le « canyon racing »** : vol de précision à très basse altitude dans les canyons de certains corps rocheux
   (repérage communautaire de site plutôt que liste officielle), qui teste la maniabilité d'un vaisseau plus que sa
   vitesse pure.
@@ -368,17 +370,107 @@ périphérie galactique depuis sa fondation en 2016.
 
 ---
 
+## Questions fréquentes
+
+### Combien de joueurs peut-on mettre dans un Wing (wing) ?
+
+Un Wing réunit au maximum **quatre joueurs** au total : le Commandant qui l'initie plus jusqu'à trois autres, chacun
+aux commandes de son propre vaisseau. Cette limite est confirmée par la fiche Steam officielle du jeu (« *Forge your
+path solo or with up to three friends in a Wing* »). Rejoindre un Wing est gratuit et ne demande aucun rang minimum.
+Voir [2.1](#21-formation-et-taille-dun-wing--quatre-joueurs-au-maximum).
+
+### Les primes (bounty vouchers) et les combat bonds sont-ils partagés entre les membres d'un Wing ?
+
+Non : chaque membre du Wing présent dans la même instance et ayant contribué à la destruction d'une cible reçoit son
+**propre voucher, à pleine valeur**, sans aucune division entre les participants. Un groupe de quatre joueurs qui abat
+ensemble un vaisseau touche donc chacun l'intégralité de la prime — d'où l'intérêt de la chasse aux primes en Wing
+dans les RES et les CNB. Voir [2.3](#23-wing--partage-des-primes-des-combat-bonds-et-du-rang-de-combat).
+
+### C'est quoi le Multicrew et il est sorti quand ?
+
+Le Multicrew place jusqu'à **trois Commandants** humains sur un **même** vaisseau : un capitaine qui garde les
+commandes de pilotage, et des invités qui tiennent les tourelles ou pilotent un chasseur embarqué. Il a été livré le
+**11 avril 2017** avec l'Update 2.3 « The Commanders », dans le cadre du cycle de contenu de l'extension Horizons.
+Voir [3.1](#31-le-multicrew--présentation-et-introduction-en-avril-2017).
+
+### Quels vaisseaux ont une baie de chasseurs (fighter hangar) pour le Multicrew ?
+
+Dix vaisseaux en disposent : Alliance Crusader, Anaconda, Beluga Liner, Federal Corvette, Federal Gunship, Imperial
+Cutter, Keelback, Krait Mk II, Type-9 Heavy et Type-10 Defender. Les petits chasseurs (Sidewinder, Eagle, Viper...)
+n'ont aucun poste d'équipage et ne peuvent donc pas accueillir d'invités. Voir
+[3.2](#32-vaisseaux-compatibles-avec-le-multicrew).
+
+### Peut-on avoir deux chasseurs embarqués (ship-launched fighter) déployés en même temps ?
+
+Oui, mais seulement en Multicrew : un invité humain peut piloter un chasseur pendant qu'un second, piloté par une IA,
+est déployé simultanément — un guide Steam Community dédié aux SLF le confirme explicitement. En solo (sans invité),
+un seul chasseur est déployable à la fois, dans un rayon d'environ **30 km** autour du vaisseau-mère. Voir
+[3.5](#35-rôle-du-chasseur-embarqué-en-télé-présence-ship-launched-fighter).
+
+### Qui touche l'argent du commerce et du minage en Multicrew : le capitaine ou les invités ?
+
+Le commerce, le minage et la vente de données d'exploration ne rapportent qu'au **capitaine**, propriétaire du
+vaisseau et de sa cargaison. Les primes et combat bonds, en revanche, versent une rémunération à chaque invité
+(tourelleur ou pilote de chasseur) proportionnelle à sa contribution aux combats, sans réduire la part du capitaine.
+Voir [3.6](#36-multicrew--partage-des-revenus-entre-le-capitaine-et-les-invités).
+
+### Faut-il acheter Elite Dangerous: Arena séparément pour jouer au CQC ?
+
+Non. Le CQC (Close Quarters Combat) a été décliné le **16 février 2016** en produit autonome *Elite Dangerous: Arena*,
+retiré de la vente sur Steam le **10 février 2017** tout en restant accessible **gratuitement** au sein du jeu de
+base. Le mode CQC/Arena n'a donc jamais nécessité d'achat séparé pour les possesseurs d'Elite Dangerous. Voir
+[4.2](#42-historique--de-cqc-à-elite-dangerous-arena).
+
+### Le rang CQC, c'est le même que le rang de combat classique (Harmless → Elite) ?
+
+Non : ce sont deux échelles séparées. Le rang CQC est suivi spécifiquement par la **Pilots Federation** et ne progresse
+qu'en participant aux matchs d'arène, tandis que le rang de combat principal découle des activités du monde
+persistant. Un Commandant peut donc être Elite en CQC sans l'être en combat spatial classique, et réciproquement.
+Voir [4.5](#45-le-rang-cqc-séparé-et-suivi-par-la-pilots-federation).
+
+### Pourquoi je ne vois pas un ami en Open alors qu'on est dans le même système ?
+
+Trois critères doivent se combiner pour partager la même instance : le même mode de jeu, la même localisation fine
+(pas seulement le même système, mais le même point local), et une qualité de connexion suffisamment proche entre les
+deux joueurs. Un type de NAT restrictif ou du CGNAT chez l'un des deux peut aussi empêcher l'instanciation P2P. Voir
+[6.3](#63-ce-qui-regroupe-deux-joueurs-dans-la-même-instance) et [6.4](#64-échecs-dinstanciation--causes-et-remèdes).
+
+### Comment forcer l'instanciation avec un ami pour être sûr de le retrouver ?
+
+Le moyen le plus fiable est de former un **Wing** : dès que deux joueurs sont mutuellement visibles en survitesse,
+activer le nav-lock et rejoindre le Wing place le coéquipier qui en sort dans l'instance de son ami. Le Squadron, à
+l'inverse, n'a aucun effet connu et confirmé sur le matchmaking d'instance. Voir
+[2.2](#22-le-nav-lock-partagé-entre-membres-dun-wing) et [6.3](#63-ce-qui-regroupe-deux-joueurs-dans-la-même-instance).
+
+### Le BGS et Powerplay sont-ils les mêmes en Solo, Groupe privé et Open ?
+
+Oui : ils sont gérés par le système persistant **indépendamment de l'instanciation** — une mission, une vente ou un
+combat pèse de façon identique sur l'influence d'une faction quel que soit le mode choisi. Cette parité de principe
+reste un point de friction communautaire, un joueur agissant uniquement en Solo obtenant de fait une immunité totale
+au risque de rétorsion PvP. Voir
+[6.5](#65-modes-de-jeu-bgs-et-powerplay--un-état-partagé-une-exposition-différente).
+
+### Comment devenir secouriste bénévole (Fuel Rats ou Hull Seals) ?
+
+Les deux services recrutent ouvertement, sans condition de rang. Côté Fuel Rats, un vaisseau doté d'un Fuel Transfer
+Limpet Controller et d'un stock de limpets suffit pour rejoindre rapidement un commandant en détresse ; côté Hull
+Seals, un Hull/Module Repair Limpet Controller sert à la réparation de coque à distance. L'appel se déclenche par le
+commandant en détresse lui-même, via la procédure documentée sur fuelrats.com. Voir
+[7.3](#73-devenir-secouriste-bénévole--fuel-rats-et-hull-seals).
+
+---
+
 ## Voir aussi
 
-- [01-lore.md §7.7](./01-lore.md) — fiche complète des treize groupes communautaires (fondation, contact, statut d'activité) résumés en section 7 ci-dessus.
-- [19-fleet-carriers.md](./19-fleet-carriers.md) — mécanique du Fleet Carrier, dont s'inspirent les porte-vaisseaux relais du réseau DSSA (7.2).
+- [01-lore.md §7.7](./01-lore.md) — fiche complète des treize groupes communautaires (fondation, contact, statut d'activité) résumés en [section 7](#7-activités-communautaires-organisées--courses-expéditions-et-entraide) ci-dessus.
+- [19-fleet-carriers.md](./19-fleet-carriers.md) — mécanique du Fleet Carrier, dont s'inspirent les porte-vaisseaux relais du réseau DSSA ([7.2](#72-expéditions-et-rôle-logistique-des-fleet-carriers-relais)).
 - [08-combat-spatial.md](./08-combat-spatial.md) — échelle de rang de combat (Harmless → Elite), primes et notoriety hors Wing, coordination d'escadre en PvP.
 - [22-squadrons.md](./22-squadrons.md) — structure persistante du Squadron, à ne pas confondre avec le Wing temporaire.
 - [03-vaisseaux.md](./03-vaisseaux.md) — fiches techniques des vaisseaux compatibles Multicrew et dotés d'une baie de chasseurs.
 - [04-equipements.md](./04-equipements.md) — équipement des postes de tourelleur et modules liés aux chasseurs embarqués.
-- [27-debuter-et-progresser.md](./27-debuter-et-progresser.md) — comparatif des huit échelles de rang du jeu, dont le rang CQC séparé décrit en 4.5, et ce qui reste confirmé ou non sur sa progression.
-- [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) — piraterie, PvP subi, groupes privés PvE (Mobius), blocage et combat logging ; s'appuie sur l'architecture réseau décrite en section 6.
-- [21-bgs.md](./21-bgs.md), [02-powerplay.md](./02-powerplay.md) — les deux systèmes persistants partagés entre modes de jeu (section 6.5).
+- [27-debuter-et-progresser.md](./27-debuter-et-progresser.md) — comparatif des huit échelles de rang du jeu, dont le rang CQC séparé décrit en [4.5](#45-le-rang-cqc-séparé-et-suivi-par-la-pilots-federation), et ce qui reste confirmé ou non sur sa progression.
+- [30-piraterie-et-pvp.md](./30-piraterie-et-pvp.md) — piraterie, PvP subi, groupes privés PvE (Mobius), blocage et combat logging ; s'appuie sur l'architecture réseau décrite en [section 6](#6-comment-fonctionne-le-réseau--instanciation-p2p-et-simulation-persistante).
+- [21-bgs.md](./21-bgs.md), [02-powerplay.md](./02-powerplay.md) — les deux systèmes persistants partagés entre modes de jeu ([section 6.5](#65-modes-de-jeu-bgs-et-powerplay--un-état-partagé-une-exposition-différente)).
 - [Glossaire](./00-glossaire.md) — sigles utilisés dans ce guide (CQC, PvE, PvP, notoriety).
 
 ## Sources

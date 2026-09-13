@@ -1,7 +1,7 @@
 # Index de routage du corpus Elite Dangerous
 #
 # FICHIER GÉNÉRÉ — ne pas éditer à la main.
-# Il agrège le front-matter YAML des 36 fichiers `raw_data/NN-*.md` (32 guides thématiques et 4
+# Il agrège le front-matter YAML des 38 fichiers `raw_data/NN-*.md` (33 guides thématiques et 5
 # documents transversaux) et sert de routeur de requête : on le lit d'abord pour sélectionner les
 # deux ou trois guides candidats, puis on ne lance la recherche vectorielle que dans ceux-là. Il
 # n'est pas lui-même un guide et ne doit pas être indexé.
@@ -12,7 +12,7 @@
 # impose de régénérer ce fichier.
 
 date_generation: 2026-09-13
-nombre_de_guides: 36
+nombre_de_guides: 38
 genere_depuis: "front-matter YAML des fichiers raw_data/NN-*.md"
 indexer_ce_fichier: false
 
@@ -49,6 +49,21 @@ guides:
     sources_primaires: ["Steam News Frontier (App ID 359320)", "elitedangerous.com", "EDCD/FDevIDs", "EDCD/coriolis-data", "Inara.cz", "GalNet", "Wayback Machine", "Wikipédia", "wiki Fandom mirroré (DarkSession/Elite-Dangerous-RAG-Knowledge)", "presse spécialisée d'époque (PC Gamer, Massively Overpowered, TheSixthAxis, Engadget)"]
     zones_incertaines: ["rattachement du numéro 4.4.0.3 au billet du 9 juillet 2026, plausible mais non prouvé — le billet se contredit sur son propre numéro", "date de fin d'accès anticipé ARX du Panther Clipper Mk II, non confirmée", "date exacte de destruction du Titan Raijin, antérieure au 5 décembre 2024 sans plus de précision", "baie Mk I ou Mk II exigée par le SRV Rhino, non tranchée par une source primaire", "plafond de 9 999 Merc Coins et allocation de 1 000 par semaine, de source communautaire seulement", "numéros de version 4.4.1.0 et 4.4.1.1 de septembre 2026, issus de pages officielles restées inaccessibles", "jour exact de la fin du Kickstarter (4 ou 5 janvier 2013 selon la source)", "terminologie exacte distinguant « Premium Beta » de « Beta 1 » en 2014", "retrait ou non du jeu des stores consoles après l'arrêt du développement, mars 2022 : non confirmé"]
     guides_lies: [1, 3, 7, 13, 14, 15, 18, 19, 20, 25, 27]
+
+  - id: 00-faq
+    fichier: 00-faq.md
+    titre: "FAQ transversale : les questions que se posent les joueurs d'Elite Dangerous"
+    domaine: "transversal"
+    entites: ["Sidewinder Mk I", "Cobra Mk III", "Felicity Farseer", "Fleet Carrier", "Powerplay 2.0", "Background Simulation", "Colonisation de systèmes", "Engineering", "Thargoïde", "Guardian", "EDDN", "EDSM", "Inara", "Spansh", "Squadron", "Wing", "Multicrew", "CQC", "Community Goal", "Nomad", "Rhino", "Manifest Scanner", "Fuel Rats"]
+    mots_cles_en: ["new commander", "starter ship", "credits per hour", "engineering", "powerplay", "background simulation", "system colonisation", "thargoid", "guardian", "fleet carrier", "wing", "multicrew", "squadron", "cqc", "community goal", "tools", "player journal", "faq"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-13"
+    confiance_globale: "haute"
+    volatilite: "moyenne"
+    sources_primaires: ["corpus interne : les 32 guides thématiques et les 3 autres documents transversaux de raw_data/, chacun cité question par question ci-dessous"]
+    zones_incertaines: ["chaque réponse hérite du niveau de confiance et des réserves du guide qu'elle résume : consulter le lien cité pour le détail des sources et des zones d'ombre propres à ce sujet", "les fourchettes de Cr/h citées dans la section « Gagner des crédits » sont, sauf mention contraire, des reconstitutions communautaires datées du 13 septembre 2026 et non des barèmes publiés par Frontier — voir 00-boucles-de-gameplay.md", "plusieurs seuils de progression (rang Mercenaire, paliers du rang CQC, seuils exacts de Trade Rank) ne sont publiés par aucune source consultée par le corpus, et cette FAQ le signale plutôt que d'inventer un chiffre"]
+    guides_lies: [1, 2, 3, 4, 5, 6, 8, 10, 11, 12, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 27, 28, 29, 30, 31, 32]
 
   - id: 00-glossaire
     fichier: 00-glossaire.md
@@ -559,3 +574,18 @@ guides:
     sources_primaires: ["elite-dangerous.fandom.com (Core Systems, Galactic regions, Inner Orion Spur et bras nommés, Galaxy, Stellar Forge, Colonia, Jaques Station, Colonia Bridge, Sagittarius A*, Explorer's Anchorage, Beagle Point, Hutton Orbital, Pleiades/Witch Head/California Nebula, fiches des systèmes du gazetteer)", "hosting.zaonce.net (Player Journal Manual v32, champ StarPos)", "edsm.net (API publique, coordonnées vérifiées)", "wiki.herzbube.ch (nomenclature Stellar Forge)", "forums.frontier.co.uk (fil officiel DSSA)", "corpus interne (01-lore, 02-powerplay, 05-guardians, 10-exploration, 19-fleet-carriers)"]
     zones_incertaines: ["rayon exact de la Bulle : ~200 al mesuré sur trois axes, une valeur de 150 al circule sans source primaire retrouvée", "nombre total actuel de systèmes peuplés dans/autour de la Bulle après plusieurs années de colonisation joueur", "aucune carte officielle de frontières fixes Fédération/Empire/Alliance", "allégeance actuelle de Riedquat : contradiction entre deux pages du même wiki communautaire", "nombre exact et espacement en années-lumière des porte-vaisseaux du réseau DSSA, non publié officiellement", "distance de route réelle jusqu'à Beagle Point, par opposition à la distance en ligne droite de 65 279 al", "classement officiel distance-par-distance des bras spiraux du Codex, non publié par Frontier", "format de nommage Stellar Forge (lettres de masse, tailles de boxel), reconstruction communautaire jamais démentie mais non documentée par une source primaire", "fiche système dédiée à Varati introuvable sur le wiki communautaire"]
     guides_lies: [1, 2, 5, 10, 19]
+
+  - id: 34-lexique-fr-en
+    fichier: 34-lexique-fr-en.md
+    titre: "Lexique bilingue français-anglais des termes d'Elite Dangerous"
+    domaine: "transversal"
+    entites: ["Frame Shift Drive", "Fleet Carrier", "Hardpoint", "Mass Lock", "Wake", "Notoriety", "Thargoïde", "Guardian", "Powerplay", "Background Simulation", "Community Goal", "Manifest Scanner"]
+    mots_cles_en: ["frame shift drive", "fleet carrier", "hardpoint", "mass lock", "wake", "notoriety", "thargoid", "guardian", "powerplay", "background simulation", "community goal", "manifest scanner", "hatch breaker", "heat sink", "fuel scoop", "power distributor", "shield cell bank", "point defence", "chaff launcher", "fsd interdictor", "nav beacon", "compromised nav beacon", "mission board", "interstellar factors", "universal cartographics", "material trader", "technology broker", "rebuy", "silent running"]
+    version_jeu_couverte: "4.4.0.x"
+    branche: "live"
+    date_verification: "2026-09-13"
+    confiance_globale: "haute"
+    volatilite: "basse"
+    sources_primaires: ["corpus interne — lecture intégrale et vérification par grep des 32 guides thématiques et du glossaire (raw_data/*.md)", "00-glossaire.md", "04-equipements.md", "08-combat-spatial.md", "06-ingenieurs.md", "31-pilotage-navigation-et-stations.md"]
+    zones_incertaines: ["la colonne « Synonymes et abréviations communauté » restitue un usage communautaire anglophone ou francophone général, pas nécessairement attesté mot pour mot dans un guide du corpus", "quelques termes très recherchés par les joueurs (Passenger Lounge notamment) ne sont nommés par aucun guide du corpus sous ce nom exact ; la ligne correspondante le signale plutôt que d'inventer une source", "le « Guide de référence » indiqué est celui qui traite le terme le plus en détail, mais la plupart des termes apparaissent aussi, en passant, dans plusieurs autres guides"]
+    guides_lies: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 29, 30, 31, 32]

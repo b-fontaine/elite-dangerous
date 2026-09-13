@@ -49,7 +49,8 @@ complémentaires :
 
 Autour de ces trois piliers gravitent des **agrégateurs communautaires** qui republient des données dérivées via leurs
 propres API publiques : EDSM (Elite Dangerous Star Map), Inara, Spansh (successeur de fait d'EDDB), ainsi que des
-projets thématiques spécialisés comme Canonn Research pour les ruines Guardian et l'exobiologie, ou des outils de niche
+projets thématiques spécialisés comme Canonn Research pour les ruines Guardian (civilisation extraterrestre disparue,
+voir [glossaire](./00-glossaire.md)) et l'exobiologie, ou des outils de niche
 comme Ardent Insight (marché) et Elite BGS (BGS, voir [glossaire](./00-glossaire.md)).
 
 Pour un projet tiers, le choix de la ou des sources dépend essentiellement de trois questions : a-t-on besoin de temps
@@ -143,7 +144,8 @@ Le format du journal est **versionné et documenté par un changelog** (la versi
 dernière révision publiée du *Journal Manual* est la **v38**, de mai 2026, couvrant Odyssey jusqu'à l'update 26 — les
 révisions ultérieures renvoient une erreur 404, constat de l'étude interne du 19 août 2026),
 avec des ajouts continus à chaque mise à jour majeure du jeu — par exemple la restauration de l'événement `CarrierJump`,
-l'ajout de paramètres liés aux Thargoids sur les événements de saut, ou l'ajout de `SupercruiseDestinationDrop`. Le
+l'ajout de paramètres liés aux Thargoids (civilisation extraterrestre hostile, voir [glossaire](./00-glossaire.md))
+sur les événements de saut, ou l'ajout de `SupercruiseDestinationDrop`. Le
 format continue d'évoluer au rythme des extensions du jeu : Odyssey (voyage à pied) puis la fonctionnalité de
 **Colonisation** (voir [Colonisation](./18-colonisation.md), bêta le 26 février 2025, sortie complète le 11 novembre
 2025) ont chacune ajouté de nouveaux événements. Tout pipeline d'ingestion doit donc être conçu comme tolérant à des
@@ -210,7 +212,7 @@ données d'exobiologie.
 
 **Le journal ne contient aucune table de prix.** La valeur d'un échantillon n'apparaît qu'au moment de la vente. Pour
 estimer la valeur de données biologiques non encore vendues, il faut une table externe **par espèce** (les variantes de
-couleur partagent la même valeur) — d'où l'intérêt du catalogue hors ligne décrit en section 12.
+couleur partagent la même valeur) — d'où l'intérêt du catalogue hors ligne décrit en [section 12](#12-sources-hors-ligne--quatre-instantanés-datés).
 
 **Aucun événement ne signale la perte des données biologiques à la mort.** Il faut l'inférer de la séquence `Died` puis
 `Resurrect`, en filtrant sur `Resurrect.Option ∈ {escape, recover, rejoin}` : c'est la stratégie retenue par BioScan,
@@ -321,7 +323,8 @@ Deux conséquences importantes pour un consommateur :
   d'analyse JSON.
 
 À l'inverse, un point favorable : le jeu **réécrit `Statistics`, `EngineerProgress`, `Loadout`, `Reputation`,
-`ShipLocker` et `Powerplay` à chaque démarrage de session**. Un outil qui surveille le journal récupère donc
+`ShipLocker` et `Powerplay`** (méta-jeu de conquête territoriale entre puissances, voir [glossaire](./00-glossaire.md))
+**à chaque démarrage de session**. Un outil qui surveille le journal récupère donc
 gratuitement l'état courant du commandant dès que le pilote lance le jeu, sans avoir à interroger la CAPI.
 
 #### Table des bitfields `Flags` de `Status.json` (32 bits, état du vaisseau)
@@ -338,7 +341,7 @@ gratuitement l'état courant du commandant dès que le pilote lance le jeu, sans
 | 4   | 16            | 0000 0010   | Supercruise                                     |
 | 5   | 32            | 0000 0020   | FlightAssist Off                                |
 | 6   | 64            | 0000 0040   | Hardpoints Deployed                             |
-| 7   | 128           | 0000 0080   | In Wing                                         |
+| 7   | 128           | 0000 0080   | In Wing (en groupe temporaire)                  |
 | 8   | 256           | 0000 0100   | LightsOn                                        |
 | 9   | 512           | 0000 0200   | Cargo Scoop Deployed                            |
 | 10  | 1 024         | 0000 0400   | Silent Running                                  |
@@ -474,8 +477,8 @@ d'upload, avec un **slash final obligatoire**. Le corps de la requête est un ob
     - `uploaderID` : le pseudo du commandant, obfusqué côté relais pour éviter tout tracking à long terme ;
     - `softwareName` et `softwareVersion` : nom et version uniques identifiant l'outil émetteur ;
     - `gameversion` : dérivé du champ `Fileheader`/`LoadGame` du journal, ou au format `"CAPI-[Live|Legacy]-[endpoint]"`
-      lorsque la donnée provient de la CAPI plutôt que du journal (voir plus bas, section 3, la sous-section sur la fin
-      des serveurs Legacy et son impact sur ce champ) ;
+      lorsque la donnée provient de la CAPI plutôt que du journal (voir plus bas, [section 3](#3-api-frontier-companion-app--cmdrs-api--capi), la
+      [sous-section sur la fin des serveurs Legacy](#fin-des-serveurs-legacy-delite-dangerous-et-impact-sur-le-format-gameversion-deddn) et son impact sur ce champ) ;
     - `gamebuild` : recopié tel quel depuis le journal ou la CAPI.
 - un `message` conforme au schéma référencé par `$schemaRef`.
 
@@ -579,7 +582,7 @@ détecter une rupture de compatibilité simplement en observant le champ `$schem
 ### EDDN : écosystème logiciel émetteur et consommateur (EDMC, EDDI, EDSM, Spansh)
 
 - **Émission** (PC uniquement) : E:D Market Connector (EDMC), EDDI, EDDiscovery, Elite Log Agent.
-- **Consommation** : EDSM, Inara, Spansh et des outils de niche comme Ardent Insight (voir section 9) construisent une
+- **Consommation** : EDSM, Inara, Spansh et des outils de niche comme Ardent Insight (voir [section 9](#9-canonn-research-guardians-et-exobiologie-et-autres-agrégateurs-de-niche)) construisent une
   part importante de leurs bases de données à partir du flux EDDN.
 - **Support communautaire** : canal Discord `#eddn` et forum développeurs Frontier.
 
@@ -607,7 +610,7 @@ flux OAuth2 ainsi que les tables de correspondance des identifiants renvoyés pa
 Depuis le lancement d'Odyssey (2021), le jeu a coexisté sous **deux branches distinctes** côté serveur : la branche
 **« Live »** (4.0, avec Odyssey) et la branche **« Legacy »** (3.8, sans Odyssey, maintenue pour les joueurs qui ne
 souhaitaient pas migrer). Cette coexistence est directement visible dans le format du champ `gameversion` envoyé à EDDN
-(voir section 2) : lorsque la donnée provient de la CAPI plutôt que du journal, EDDN attend un identifiant au format
+(voir [section 2](#2-eddn-elite-dangerous-data-network)) : lorsque la donnée provient de la CAPI plutôt que du journal, EDDN attend un identifiant au format
 `"CAPI-Live-<endpoint>"` ou `"CAPI-Legacy-<endpoint>"` (par exemple `CAPI-Legacy-market`, `CAPI-Legacy-shipyard`,
 `CAPI-Legacy-journal`), afin que les consommateurs du flux puissent distinguer la provenance exacte des données et ne
 pas mélanger, par exemple, des prix de marché issus des deux branches dans une même série temporelle.
@@ -657,7 +660,7 @@ identifiants internes renvoyés par la CAPI et par le journal de jeu en libellé
 
 Le dépôt précise que ces valeurs correspondent aux libellés affichés **en anglais** dans le jeu, et reste explicitement
 **incomplet** sur certains objets cosmétiques. Pour les **valeurs chiffrées** des vaisseaux et modules eux-mêmes (au-delà
-des simples identifiants/libellés), voir la section 8 ci-dessous (`EDCD/coriolis-data`).
+des simples identifiants/libellés), voir la [section 8](#8-edcdcoriolis-data-référentiel-de-stats-vaisseauxmodules) ci-dessous (`EDCD/coriolis-data`).
 
 #### Le périmètre de `shipyard.csv`, et l'erreur de catégorie qu'il induit
 
@@ -674,7 +677,7 @@ chasseur embarqué dans Coriolis. Ces véhicules apparaissent ailleurs :
 | Où chercher                    | Ce qu'on y trouve                                                                                                       |
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | `outfitting.csv`               | Le **module porteur** — la baie qui embarque le véhicule                                                                 |
-| Journal de jeu / `Status.json` | Les **événements de déploiement** et les drapeaux d'état (voir section 1, et le cas du Nomad)                            |
+| Journal de jeu / `Status.json` | Les **événements de déploiement** et les drapeaux d'état (voir [section 1](#1-le-journal-de-jeu-local-player-journal), et le cas du Nomad)                            |
 | Notes de version de Frontier   | L'**annonce** du véhicule, sa date de sortie et sa catégorie                                                              |
 
 L'illustration la plus nette est le renommage qui accompagne l'arrivée du Nomad. Depuis un commit du **3 juillet 2026**
@@ -735,13 +738,13 @@ daté, à revérifier puisque la base grossit en continu :
   demandée au-delà de 200 al au lieu de renvoyer une erreur — un client qui ne vérifie pas croit couvrir un volume plus
   grand qu'il ne l'est ;
 - les endpoints par système (`bodies`, `stations`, `factions`) **ne comportent aucun champ biologique** : EDSM n'est
-  pas une source d'exobiologie, contrairement à Spansh (voir section 6) ;
+  pas une source d'exobiologie, contrairement à Spansh (voir [section 6](#6-spanshcouk--calculateurs-ditinéraires-et-dumps-de-la-galaxie)) ;
 - ces endpoints renvoient un en-tête CORS permissif (`*`), ce qui les rend appelables directement depuis un
   navigateur — contrairement à ceux de Spansh, qui n'en renvoient aucun.
 
 **Accès à la documentation** : les pages de documentation d'EDSM sont servies derrière Cloudflare et répondent **HTTP
 403 aux clients automatisés** ; les endpoints eux-mêmes, en revanche, répondent normalement. C'est exactement le type
-de blocage qui a motivé la constitution des jeux de données hors ligne décrits en section 12.
+de blocage qui a motivé la constitution des jeux de données hors ligne décrits en [section 12](#12-sources-hors-ligne--quatre-instantanés-datés).
 
 ### EDSM : API d'écriture Journal (`api-journal-v1`)
 
@@ -751,7 +754,7 @@ renvoyer le contenu brut du journal du joueur vers EDSM.
 - Authentification obligatoire par `commanderName` + `apiKey` (générée dans les paramètres du compte EDSM).
 - Paramètres logiciels obligatoires : `fromSoftware`, `fromSoftwareVersion`.
 - Depuis **novembre 2022**, `fromGameVersion` et `fromGameBuild` sont devenus **obligatoires** pour distinguer les
-  versions LIVE et Legacy du jeu (voir section 3 pour le contexte de cette distinction côté CAPI).
+  versions LIVE et Legacy du jeu (voir [section 3](#3-api-frontier-companion-app--cmdrs-api--capi) pour le contexte de cette distinction côté CAPI).
 - Le paramètre `message` transporte la ligne de journal brute (le batch, plusieurs lignes à la fois, est supporté).
 - Des paramètres optionnels préfixés par `_` (par exemple `_systemAddress`, `_systemName`, `_marketId`) permettent de
   fournir du contexte manquant à certains événements.
@@ -760,7 +763,7 @@ renvoyer le contenu brut du journal du joueur vers EDSM.
 
 ### EDSM : API Commandant (`api-commander-v1`) — rangs, crédits, matériaux
 
-- `get-ranks` : rangs Combat/Trade/Explore/CQC/factions et leur progression.
+- `get-ranks` : rangs Combat/Trade/Explore/CQC (Close Quarters Combat, arène de duel dédiée)/factions et leur progression.
 - `get-credits` : solde, emprunts, historique sur 7 jours/1/3/6 mois via le paramètre `period`.
 - `get-materials` : matériaux, données encodées, cargo.
 
@@ -799,7 +802,7 @@ de dimensionner un pipeline de chargement :
 **Absence à connaître** : le dump complet des corps célestes d'EDSM (`bodies.json.gz`) **a été retiré vers 2020** ; il
 ne subsiste que l'incrémental « 7 derniers jours » listé ci-dessus. L'URL historique renvoie une erreur 404 (constat de
 l'étude interne du 19 août 2026). Un pipeline qui a besoin d'un référentiel complet de corps célestes doit donc se
-tourner vers les dumps galaxie de Spansh (voir section 6), qui, eux, contiennent les corps.
+tourner vers les dumps galaxie de Spansh (voir [section 6](#6-spanshcouk--calculateurs-ditinéraires-et-dumps-de-la-galaxie)), qui, eux, contiennent les corps.
 
 Ces dumps sont l'équivalent fonctionnel de ce que proposait autrefois EDDB pour le chargement en masse (batch) d'une
 base locale, sans avoir à interroger l'API requête par requête. La seule taille du dump « systèmes avec coordonnées »
@@ -857,14 +860,14 @@ d'envisager Inara comme source de données :
 - sur les **49 événements** du protocole, **deux seulement sont des lectures** — l'API est conçue pour *pousser* l'état
   d'un commandant vers Inara, pas pour en extraire des données ;
 - **aucun endpoint ne renvoie de données de stations**. Pour du référentiel station/marché, il faut se tourner vers
-  EDSM, Spansh ou Ardent Insight (voir sections 4, 6 et 9).
+  EDSM, Spansh ou Ardent Insight (voir [section 4](#4-edsm-elite-dangerous-star-map), [section 6](#6-spanshcouk--calculateurs-ditinéraires-et-dumps-de-la-galaxie) et [section 9](#9-canonn-research-guardians-et-exobiologie-et-autres-agrégateurs-de-niche)).
 
 ## 6. Spansh.co.uk — calculateurs d'itinéraires et dumps de la galaxie
 **Avertissement** : le site principal spansh.co.uk est une application JavaScript côté client (SPA) ; le contrat exact
 de l'API REST publique doit être revérifié avant implémentation. **Correction datée du 19 août 2026** : l'URL
 `spansh.co.uk/api` ne sert pas de documentation — elle renvoie une erreur 404. Le descripteur OpenAPI officiel est
 servi par `docs.spansh.co.uk` et ne couvre que quatre endpoints ; tout le reste est non documenté. Voir la sous-section
-« Ce que la documentation couvre réellement » plus bas.
+[« Ce que la documentation couvre réellement »](#spansh--ce-que-la-documentation-couvre-réellement-et-ce-quelle-passe-sous-silence) plus bas.
 
 ### Spansh : calculateur de routes et successeur de fait d'EDDB
 
@@ -914,7 +917,7 @@ régulièrement à partir de l'ingestion du flux EDDN — c'est le successeur di
 
 Deux prémisses répandues sont fausses et coûtent du temps : **`systems.csv` n'existe pas** (404 sur `systems.csv`,
 `systems.csv.gz` et `galaxy.csv.gz` — Spansh ne publie pas de CSV), et le dump complet des corps d'EDSM
-(`bodies.json.gz`) a été retiré vers 2020 (voir section 4). Autre piège de nommage : le delta hebdomadaire de la
+(`bodies.json.gz`) a été retiré vers 2020 (voir [section 4](#4-edsm-elite-dangerous-star-map)). Autre piège de nommage : le delta hebdomadaire de la
 famille *galaxy* s'appelle `galaxy_7days.json.gz`, et non `galaxy_1week.json.gz`, qui renvoie une 404.
 
 Le delta quotidien donne une idée du débit réel de la galaxie : `systems_1day.json.gz`, à 3,15 Mo, contenait
@@ -962,7 +965,7 @@ routes :
 | `GET /api/body/<id>`               | Détail d'un corps céleste — **enveloppe `record`**, tableau `landmarks` |
 | `GET /api/station/<id>`            | Détail d'une station                                                  |
 | `GET /api/ship/<id>`               | Détail d'un vaisseau référencé                                        |
-| `POST /api/route`                  | Route de saut simple point A → point B (paramètres `from`, `to`, `range`) — **corps en formulaire, asynchrone**, voir ci-dessous |
+| `POST /api/route`                  | Route de saut simple point A → point B (paramètres `from`, `to`, `range`) — **corps en formulaire, asynchrone**, voir [ci-dessous](#spansh--routes-asynchrones-absence-de-cors-et-pièges-des-signaux-biologiques) |
 | `POST /api/generic/route`          | Route multi-étapes (plusieurs systèmes à visiter dans l'ordre)        |
 | `POST /api/exobiology/route`       | Route d'exobiologie (paramètres `from`, `range`, `radius`, `max_results`) — **formulaire, asynchrone** |
 | `POST /api/riches/route`           | Route « Road to Riches » (corps riches en exobiologie à forte valeur) — **formulaire, asynchrone** |
@@ -1000,7 +1003,7 @@ GET https://spansh.co.uk/api/station/{marketId}
 ```
 
 **Le point d'articulation avec le journal de jeu** : `id64` est exactement le `SystemAddress` que le journal écrit dans
-`Location`, `FSDJump` et `CarrierJump` (voir section 1). Une requête suffit donc pour obtenir un système et ses corps à
+`Location`, `FSDJump` et `CarrierJump` (voir [section 1](#1-le-journal-de-jeu-local-player-journal)). Une requête suffit donc pour obtenir un système et ses corps à
 partir d'un événement de journal, sans recherche par nom. Attention toutefois : pour `/api/body/{id64}`, l'identifiant
 attendu est celui **du corps**, pas celui du système.
 
@@ -1117,7 +1120,7 @@ rapports de bug applicatifs sont à ouvrir sur le dépôt principal `coriolis` p
 
 Le dépôt `EDCD/coriolis-data` est la source la plus utilisée par l'écosystème tiers pour obtenir des **valeurs chiffrées fiables et
 maintenues par la communauté** sur les vaisseaux et modules (portée de saut, blindage, capacité de cargo, DPS des
-armes, etc.), en complément des simples identifiants/libellés fournis par `EDCD/FDevIDs` (voir section 3). C'est ce même
+armes, etc.), en complément des simples identifiants/libellés fournis par `EDCD/FDevIDs` (voir [section 3](#3-api-frontier-companion-app--cmdrs-api--capi)). C'est ce même
 référentiel, ou des données dérivées de celui-ci, que consultent également EDSY (Elite Dangerous Shipyard) et d'autres
 outils de fitting concurrents de Coriolis.
 
@@ -1214,10 +1217,10 @@ précis (marché, BGS, exploration, combat AX, etc.) plutôt que pour une couver
   figé.
 - **Nouveaux vaisseaux SCO** (voir [glossaire](./00-glossaire.md)) : plusieurs vaisseaux dédiés à cette technologie (dont
   le Python Mk II et le Cobra Mk V) ont été introduits — pertinent pour les référentiels de type FDevIDs/coriolis-data
-  (voir sections 3 et 8), qui doivent être tenus à jour côté outils tiers.
-- **Fin des serveurs Legacy** : voir la sous-section dédiée en section 3, qui détaille l'impact sur le format
+  (voir [section 3](#3-api-frontier-companion-app--cmdrs-api--capi) et [section 8](#8-edcdcoriolis-data-référentiel-de-stats-vaisseauxmodules)), qui doivent être tenus à jour côté outils tiers.
+- **[Fin des serveurs Legacy](#fin-des-serveurs-legacy-delite-dangerous-et-impact-sur-le-format-gameversion-deddn)** : voir la sous-section dédiée en [section 3](#3-api-frontier-companion-app--cmdrs-api--capi), qui détaille l'impact sur le format
   `gameversion` des messages EDDN issus de la CAPI.
-- **Échelle des bases de données communautaires** : les dumps nocturnes publiés par EDSM (voir section 4) donnent une
+- **Échelle des bases de données communautaires** : les dumps nocturnes publiés par EDSM (voir [section 4](#4-edsm-elite-dangerous-star-map)) donnent une
   mesure concrète de l'ampleur atteinte par les bases tierces alimentées par EDDN — plusieurs gigaoctets de données sur
   les systèmes, stations et corps célestes, régénérés quotidiennement, et une croissance continue au rythme de
   l'exploration des joueurs. Cela illustre la nécessité, pour tout projet tiers d'envergure, de concevoir dès le départ
@@ -1302,7 +1305,7 @@ guides continuent de les citer. Liste de sondages négatifs datés du **19 août
 | `galaxy_1week.json.gz`                                                  | 404 — le fichier s'appelle `galaxy_7days.json.gz`           |
 | `edsm.net/dump/bodies.json.gz`                                          | 404 — retiré vers 2020, seul l'incrémental 7 jours subsiste |
 | `edtools.cc/mat`, `edtools.cc/hge`, `edtools.cc/station`                | 404                                                         |
-| `api.canonn.tech`                                                       | délai d'attente dépassé — voir les fonctions cloud, section 9 |
+| `api.canonn.tech`                                                       | délai d'attente dépassé — voir les fonctions cloud, [section 9](#9-canonn-research-guardians-et-exobiologie-et-autres-agrégateurs-de-niche) |
 
 Comme toujours dans ce guide, il s'agit d'un **instantané daté** : une ressource peut réapparaître, et une ressource
 vivante aujourd'hui peut disparaître demain. La leçon durable n'est pas la liste elle-même mais le réflexe : sonder
@@ -1310,9 +1313,9 @@ avant de coder, et ne jamais supposer qu'une URL citée dans un tutoriel de 2019
 
 ## 12. Sources hors ligne : quatre instantanés datés
 
-Les sources décrites dans les sections 1 à 11 sont toutes **externes** : elles supposent un réseau disponible, un
+Les sources décrites dans les [sections 1](#1-le-journal-de-jeu-local-player-journal) à [11](#11-bonnes-pratiques-pour-enregistrer-et-exploiter-ces-données-côté-serveur) sont toutes **externes** : elles supposent un réseau disponible, un
 service en ligne et une politique d'accès accueillante. Aucune de ces trois conditions n'est acquise — les pages de
-documentation d'EDSM répondent HTTP 403 aux clients automatisés (section 4), les wikis communautaires et les forums
+documentation d'EDSM répondent HTTP 403 aux clients automatisés ([section 4](#4-edsm-elite-dangerous-star-map)), les wikis communautaires et les forums
 Frontier bloquent régulièrement les clients automatisés par le même mécanisme, et des endpoints historiques
 disparaissent sans préavis (voir la liste des 404 ci-dessus).
 
@@ -1339,7 +1342,7 @@ mieux qu'une absence de donnée — à condition de citer son édition et de dir
 
 ## 13. Les deux dépôts EDCD dont sortent les chiffres de ce corpus, et pourquoi ils sont cités par commit
 
-Les sections 3 et 8 présentent `EDCD/FDevIDs` et `EDCD/coriolis-data` pour ce qu'ils apportent à un projet tiers :
+Les [sections 3](#3-api-frontier-companion-app--cmdrs-api--capi) et [8](#8-edcdcoriolis-data-référentiel-de-stats-vaisseauxmodules) présentent `EDCD/FDevIDs` et `EDCD/coriolis-data` pour ce qu'ils apportent à un projet tiers :
 des libellés lisibles en face des identifiants internes pour le premier, des statistiques de vaisseaux et de modules
 pour le second. Ils remplissent un second rôle, propre à ce corpus : ce sont **les deux sources dont proviennent les
 valeurs chiffrées** que les guides publient sur les vaisseaux, les modules, les armes, les blindages et les
@@ -1418,7 +1421,7 @@ détermine ce qu'un consommateur peut en attendre : elles ne portent **aucun pri
 **aucun rattachement d'un minerai à une classe d'anneau** — `commodity.csv` et `rings.csv` ne se croisent nulle part.
 Le `market_id` de `rare_commodity.csv` est un entier nu : il n'y a ni nom de station, ni système, ni allocation par
 cycle, ni distance optimale de revente. Résoudre ce `market_id` suppose d'interroger un agrégateur, Spansh
-(`/api/station/<market_id>`, section 6) ou EDSM (section 4), avec les réserves de disponibilité qui y sont posées. Le
+(`/api/station/<market_id>`, [section 6](#6-spanshcouk--calculateurs-ditinéraires-et-dumps-de-la-galaxie)) ou EDSM ([section 4](#4-edsm-elite-dangerous-star-map)), avec les réserves de disponibilité qui y sont posées. Le
 corpus tient ces colonnes pour non couvertes plutôt que de les inventer, et
 [28-marchandises.md](./28-marchandises.md) en dresse la liste en propre.
 
@@ -1438,7 +1441,7 @@ toujours la chaîne renvoyée par la Companion API ni celle qui circule sur EDDN
 
 **La cadence n'est pas mesurable sur les clones utilisés ici** : ce sont des clones superficiels, qui ne contiennent
 que le commit de tête. Ce qui est observable est la date de ce commit — 24 avril 2026 pour `coriolis-data`,
-5 septembre 2026 pour `FDevIDs` — et un fait déjà relevé en section 3 : `FDevIDs` suit les mises à jour du jeu de
+5 septembre 2026 pour `FDevIDs` — et un fait déjà relevé en [section 3](#3-api-frontier-companion-app--cmdrs-api--capi) : `FDevIDs` suit les mises à jour du jeu de
 près, son commit du 3 juillet 2026 ayant intégré les libellés d'*Operations* deux jours après les notes de version.
 L'écart de quatre mois entre les deux commits de tête va dans le même sens que l'absence du Lynx Highliner : les deux
 dépôts ne vieillissent pas au même rythme, et c'est `coriolis-data` qui traîne.
@@ -1451,8 +1454,8 @@ main, et **citer le commit** dans le guide, sous la forme employée partout dans
 
 Trois raisons, dont la première est purement pratique. **Elle immunise contre les blocages d'accès.** Des révisions
 antérieures de ce corpus ont renoncé à chiffrer faute de pouvoir lire leurs sources : les pages de documentation des
-agrégateurs, les wikis communautaires et les forums Frontier répondent HTTP 403 aux clients automatisés (sections 4
-et 12). Un dépôt Git se clone une fois et se relit indéfiniment hors ligne. **Elle nomme un état immuable.** Une URL
+agrégateurs, les wikis communautaires et les forums Frontier répondent HTTP 403 aux clients automatisés ([section 4](#4-edsm-elite-dangerous-star-map)
+et [section 12](#12-sources-hors-ligne--quatre-instantanés-datés)). Un dépôt Git se clone une fois et se relit indéfiniment hors ligne. **Elle nomme un état immuable.** Une URL
 vers la branche par défaut d'un dépôt désigne une cible mouvante : le chiffre lu aujourd'hui n'est pas forcément celui
 que le lecteur trouvera demain, et rien ne le lui dira. Un SHA désigne un arbre de fichiers qui ne changera jamais.
 **Elle rend le chiffre re-vérifiable.** Un lecteur muni du nom du dépôt, du chemin du fichier et du SHA reconstitue
@@ -1460,7 +1463,7 @@ l'état exact d'où sort la valeur par un `git clone` suivi d'un `git checkout`,
 aujourd'hui, y compris si le dépôt a depuis changé d'avis.
 
 Une limite, enfin, pour ne pas prêter à ces chiffres plus qu'ils ne portent. Un commit épinglé reste un
-**instantané**, au même titre que les jeux de données hors ligne de la section 12 : il dit ce que le jeu de données
+**instantané**, au même titre que les jeux de données hors ligne de la [section 12](#12-sources-hors-ligne--quatre-instantanés-datés) : il dit ce que le jeu de données
 communautaire contenait ce jour-là, pas ce que le jeu contient aujourd'hui. Et `coriolis-data` n'est pas une
 extraction du client : c'est un référentiel tenu à la main, dont le Lynx Highliner manquant rappelle qu'il peut
 retarder sur une mise à jour. Une valeur relevée en jeu prime donc sur lui, exactement comme elle prime sur les
@@ -1479,7 +1482,7 @@ structurés.
 Le portail humain officiel est `community.elitedangerous.com/en/galnet` (variante française :
 `elitedangerous.com/fr-FR/actus/galnet`) : ce sous-domaine `community.` reste directement joignable, alors que le
 domaine principal `www.elitedangerous.com` applique le même blocage anti-bot (HTTP 403) que celui déjà rencontré pour
-les notes de version (sections 3 et 13). Le portail est lui-même alimenté par une API JSON publique, bâtie sur le
+les notes de version ([section 3](#3-api-frontier-companion-app--cmdrs-api--capi) et [section 13](#13-les-deux-dépôts-edcd-dont-sortent-les-chiffres-de-ce-corpus-et-pourquoi-ils-sont-cités-par-commit)). Le portail est lui-même alimenté par une API JSON publique, bâtie sur le
 module **JSON:API de Drupal** (le CMS de Frontier), dont l'endpoint de collection est :
 
 ```
@@ -1495,7 +1498,7 @@ segment de langue `en-GB` par un autre code (`fr-FR`, `pt-BR`...) republie les m
 suit le schéma JSON:API standard (`page[offset]`, `page[limit]`), avec un plafond par page de l'ordre de 50 relevé par
 un projet tiers — non documenté officiellement, donc à revérifier. Un endpoint frère, `node/news_article`, republie les
 actualités hors-fiction (annonces techniques, ARX, dev logs) selon la même structure. Aucun de ces deux endpoints n'a
-de rapport avec le flux Steam News (section 3 et 13) : ce sont deux canaux distincts d'un même éditeur, l'un narratif,
+de rapport avec le flux Steam News ([section 3](#3-api-frontier-companion-app--cmdrs-api--capi) et [section 13](#13-les-deux-dépôts-edcd-dont-sortent-les-chiffres-de-ce-corpus-et-pourquoi-ils-sont-cités-par-commit)) : ce sont deux canaux distincts d'un même éditeur, l'un narratif,
 l'autre technique.
 
 ### Miroirs communautaires, quand l'endpoint direct est bloqué
@@ -1555,8 +1558,8 @@ narratif daté.
 | EDCD/coriolis-data | Dépôt Git de fichiers JSON              | Batch (mises à jour par commit) | Aucune (dépôt public)                                  | Sans objet                   |
 | Ardent Insight | API/site web (marché)                       | Temps réel (via EDDN)     | Non documentée publiquement                                 | Non documenté                |
 | Elite BGS      | API REST (`/api/ebgs/v5/*`)                 | Les deux                  | Aucune pour la lecture publique                             | Non documenté                |
-| Jeux de données hors ligne | Fichiers locaux datés (voir section 12) | Instantané daté, hors ligne | Aucune (lecture disque)                        | Sans objet                   |
-| GalNet (`cms.zaonce.net`) | API JSON:API Drupal (bloquée en accès direct, section 14) | Batch (archivage incrémental par date) | Aucune pour la lecture publique | Non documenté ; page ~50 relevée par un tiers |
+| Jeux de données hors ligne | Fichiers locaux datés (voir [section 12](#12-sources-hors-ligne--quatre-instantanés-datés)) | Instantané daté, hors ligne | Aucune (lecture disque)                        | Sans objet                   |
+| GalNet (`cms.zaonce.net`) | API JSON:API Drupal (bloquée en accès direct, [section 14](#14-galnet--endpoint-des-articles-et-méthode-darchivage-pour-lingestion-rag)) | Batch (archivage incrémental par date) | Aucune pour la lecture publique | Non documenté ; page ~50 relevée par un tiers |
 
 ## Conclusion — un écosystème communautaire mature, mais sans aucune garantie
 
@@ -1572,18 +1575,106 @@ sources pour la redondance et la validation croisée.
 
 Une leçon supplémentaire s'est imposée à l'usage, et elle vaut autant pour un projet logiciel que pour un corpus
 documentaire : **une donnée locale, datée et sourcée vaut mieux qu'une source en ligne indisponible**. Les jeux de
-données hors ligne de la section 12 existent pour cette raison — ils ne prétendent pas remplacer EDSM, Spansh ou
+données hors ligne de la [section 12](#12-sources-hors-ligne--quatre-instantanés-datés) existent pour cette raison — ils ne prétendent pas remplacer EDSM, Spansh ou
 Canonn, mais ils restent lisibles quand ceux-ci répondent 403, et ils portent leur édition, ce qui permet de savoir
 exactement ce que l'on cite et à quelle date.
 
 Une seconde leçon, tirée d'une erreur commise par ce corpus lui-même, mérite d'être posée à côté de la première :
 **une liste ne prouve que ce qu'elle prétend énumérer**. Chercher le Nomad dans `shipyard.csv` ou dans la liste des
 vaisseaux d'Inara, puis conclure de son absence qu'il n'existe pas, revient à confondre « catalogue de chantier
-naval » et « inventaire des véhicules du jeu » (voir section 3). Quand les sites communautaires répondent 403 et que
+naval » et « inventaire des véhicules du jeu » (voir [section 3](#3-api-frontier-companion-app--cmdrs-api--capi)). Quand les sites communautaires répondent 403 et que
 les référentiels consultables ont un périmètre plus étroit qu'on ne le croit, le réflexe qui sauve est d'aller
 chercher la **source primaire** — ici, les notes de version publiées par Frontier, republiées mot pour mot sur le flux
 d'annonces Steam du jeu (appid 359320), joignable sans authentification via
 `api.steampowered.com/ISteamNews/GetNewsForApp/v2/` quand `elitedangerous.com` et les forums ne le sont pas.
+
+## Questions fréquentes
+
+### Elite Dangerous a-t-il une API officielle pour récupérer mes données de jeu ?
+
+Non : Frontier Developments ne publie aucune API officiellement documentée (pas de portail développeur, pas de clé
+publique, pas de SLA). L'écosystème tiers s'appuie sur trois piliers — le Player Journal local, EDDN (bus pub/sub
+communautaire) et la Companion API (CAPI), non officielle — complétés par des agrégateurs comme EDSM, Inara et
+Spansh. Voir [Vue d'ensemble de l'écosystème de données](#vue-densemble-de-lécosystème-de-données-delite-dangerous--journal-eddn-capi).
+
+### Où se trouve le fichier du journal de jeu (Player Journal) et comment le lire en direct ?
+
+Le client écrit un fichier texte *append-only* par session, nommé `Journal.<timestamp>.<part>.log`, une ligne JSON
+complète par événement, avec rotation à **500 000 lignes**. La bonne pratique de lecture est le **polling** (les
+trois lecteurs de référence — EDMC, EDDI, EliteJournalReader — s'y appuient, à des cadences de 100 ms à 1 s), et non
+l'observateur de fichiers seul. Voir [Le journal de jeu local](#1-le-journal-de-jeu-local-player-journal).
+
+### Quel événement du journal donne mon système actuel (`FSDJump`) ?
+
+Seuls trois événements portent le système courant : `FSDJump`, `CarrierJump` et `Location` — c'est d'ailleurs la
+règle qu'EDDN impose à ses contributeurs. `Location` n'est réécrit qu'au démarrage (ou à une résurrection en
+station) et jamais après une rotation de fichier : un lecteur qui n'ouvre que le fichier le plus récent peut donc
+perdre système et corps jusqu'au saut suivant. Voir
+[Localisation et corps courant dans le Player Journal](#localisation-et-corps-courant-dans-le-player-journal--les-quatre-règles-contre-intuitives).
+
+### Qu'est-ce qu'EDDN (Elite Dangerous Data Network) et comment s'y abonner ?
+
+EDDN est un bus pub/sub communautaire maintenu par EDCD, qui relaie en temps réel les journaux de joueurs volontaires
+sans jamais rien archiver. La publication se fait en `POST HTTPS` vers `eddn.edcd.io:4430` (message plafonné à
+**1 MiB compressé**), et l'abonnement par un listener ZeroMQ sur le port **9500**, en messages compressés zlib. Voir
+[EDDN](#2-eddn-elite-dangerous-data-network).
+
+### Quelle est la limite de requêtes par heure de l'API EDSM (rate limit) ?
+
+**360 requêtes par heure** sur l'API Logs (`get-position`, `get-logs`...), soit environ une requête toutes les
+10 secondes ; au-delà, l'API renvoie un code HTTP 429. C'est la seule limite de débit explicitement chiffrée trouvée
+dans la documentation EDSM, à retenir par prudence comme plafond par défaut pour le reste de l'API. Voir
+[EDSM](#4-edsm-elite-dangerous-star-map).
+
+### Quelle taille fait le dump complet de la galaxie de Spansh (`galaxy.json.gz`) ?
+
+**115,8 Go** compressés (mesure du 19 août 2026), régénéré vers 05:38 GMT. C'est un **instantané daté** : ces dumps
+croissent de façon monotone et ce chiffre ne doit pas être codé en dur dans un pipeline. Voir
+[Spansh](#6-spanshcouk--calculateurs-ditinéraires-et-dumps-de-la-galaxie).
+
+### La Companion API (CAPI) de Frontier est-elle fiable et documentée ?
+
+Non : elle n'est pas officiellement documentée, n'a aucun rate limit publié, et casse régulièrement lors des grosses
+mises à jour du jeu (ce fut le cas au lancement d'Odyssey). Les outils tiers en lecture seule sont tolérés, mais
+l'automatisation d'actions de jeu via cette API est explicitement interdite. Voir
+[API Frontier (CAPI)](#3-api-frontier-companion-app--cmdrs-api--capi).
+
+### Pourquoi mon SRV ou mon Nomad n'apparaissent-ils pas dans `shipyard.csv` ?
+
+Parce que `shipyard.csv` (comme la liste de vaisseaux d'Inara) n'énumère que les vaisseaux pilotables achetables au
+chantier naval : ni les SRV (Scarab, Scorpion, Rhino), ni les chasseurs embarqués (SLF), ni les vaisseaux lancés
+depuis un vaisseau (SLV) comme le Nomad n'y figurent. Leur absence de ce catalogue ne prouve donc rien sur leur
+existence en jeu. Voir [API Frontier (CAPI)](#3-api-frontier-companion-app--cmdrs-api--capi).
+
+### Pourquoi mon overlay affiche « en SRV » alors que je pilote un Nomad ?
+
+Parce qu'aucun bit dédié n'a été attribué au Nomad dans `Status.json` : ce véhicule lève le bit 26 (« In SRV ») et
+non le bit 25 (« In Fighter »). Un parseur qui déduit du seul bit 26 que le commandant conduit un SRV se trompe donc
+de véhicule ; le vrai indice est l'identifiant interne `Lander01` (`SRVType_Localised: "Nomad"`). Voir
+[Le piège du Nomad dans `Status.json`](#le-piège-du-nomad-dans-statusjson--trois-véhicules-pour-deux-bits-détat).
+
+### Comment trier les articles GalNet par date de publication (`published_at`) ?
+
+En interrogeant l'endpoint `cms.zaonce.net/.../galnet_article` trié par `-published_at` et en ne conservant que les
+articles postérieurs au dernier relevé : les dates in-fiction affichées par GalNet avancent jour pour jour avec le
+calendrier réel, ce qui rend `published_at` fiable comme clé d'archivage incrémental. Voir
+[GalNet](#14-galnet--endpoint-des-articles-et-méthode-darchivage-pour-lingestion-rag).
+
+### Combien de vaisseaux et de modules sont référencés dans `EDCD/coriolis-data` ?
+
+**47 vaisseaux**, **89 familles de modules** (7 familles de modules cœur, 39 familles de modules optionnels, 43
+types d'armes/utilitaires), **81 blueprints** d'ingénierie et **91 effets expérimentaux**, au commit `0db9234b5b9c`
+du 24 avril 2026. Un vaisseau manque toutefois : le **Lynx Highliner**, présent dans `shipyard.csv` (48 vaisseaux)
+mais absent de ce dépôt tenu à la main par la communauté. Voir
+[Contenu relevé de `EDCD/coriolis-data`](#contenu-relevé-de-edcdcoriolis-data-fichier-par-fichier).
+
+### Que veut dire le tag `CAPI-Legacy` dans les messages EDDN ?
+
+Il distingue les données issues de l'ancienne branche serveur « Legacy » (3.8, sans Odyssey) de la branche « Live »
+(4.0+), au format `"CAPI-Legacy-<endpoint>"` (par exemple `CAPI-Legacy-market`). Aucune source Frontier consultable
+ne confirme de date précise d'arrêt définitif des serveurs Legacy ; un pipeline doit donc continuer à tolérer ce tag
+dans des données déjà archivées. Voir
+[Fin des serveurs Legacy](#fin-des-serveurs-legacy-delite-dangerous-et-impact-sur-le-format-gameversion-deddn).
 
 ## Voir aussi
 
@@ -1630,7 +1721,7 @@ d'annonces Steam du jeu (appid 359320), joignable sans authentification via
 
 ### Dépôts de référence clonés en local, cités par leur commit
 
-Relevés du 10 septembre 2026, obtenus par lecture directe des dépôts clonés aux commits ci-dessous (voir section 13) :
+Relevés du 10 septembre 2026, obtenus par lecture directe des dépôts clonés aux commits ci-dessous (voir [section 13](#13-les-deux-dépôts-edcd-dont-sortent-les-chiffres-de-ce-corpus-et-pourquoi-ils-sont-cités-par-commit)) :
 
 - `EDCD/coriolis-data`, commit `0db9234b5b9ce8c939ea84133d7ce336eea88e27` (24 avril 2026) — `ships/` (47 fiches et
   leurs `bulkheads`), `modules/standard/`, `modules/internal/`, `modules/hardpoints/`, `modifications/blueprints.json`,
@@ -1695,7 +1786,7 @@ répondent HTTP 403 :
 - Fonctions cloud Canonn : `us-central1-canonn-api-236217.cloudfunctions.net/query/codex/ref` et `…/query/biostats`
   (non documentées, sondées le 19 août 2026)
 - https://github.com/EDCD/EDDI et EliteJournalReader — lecteurs de journal de référence dont le comportement est cité
-  en section 1
+  en [section 1](#1-le-journal-de-jeu-local-player-journal)
 - https://github.com/njthomson/SrvSurvey — critères biologiques utilisés par le catalogue d'exobiologie embarqué
 - https://elitebgs.app/ (endpoints reconstitués par inspection du bundle JS de production, 9 septembre 2026)
 - https://en.wikipedia.org/wiki/Elite_Dangerous

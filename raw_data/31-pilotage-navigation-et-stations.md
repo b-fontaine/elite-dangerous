@@ -72,7 +72,8 @@ devant le vaisseau via le FSD (1c = 300 Mm/s ; parcourir 1 année-lumière à 20
 - **Supercruise Assist** (classe 1, notation E, ~9 121 Cr, installé de série depuis l'*April Update* du 23 avril
   2019) : automatise l'approche vers une destination ciblée une fois aligné, manette en zone bleue ; option
   « Hyperspace Dethrottle » qui stoppe le vaisseau après un saut. **Ce n'est pas un autopilote complet** : il ne
-  contourne aucun obstacle, se désactive en cas d'interdiction, et n'assiste pas l'atterrissage planétaire (section 3).
+  contourne aucun obstacle, se désactive en cas d'interdiction, et n'assiste pas l'atterrissage planétaire
+  ([section 3, « Atterrissage planétaire »](#3-atterrissage-planétaire)).
 
 Pour la mécanique du FSD lui-même (classes, notations, Guardian FSD Booster, SCO) voir
 [03-vaisseaux.md](./03-vaisseaux.md) et [04-equipements.md](./04-equipements.md), qui la documentent déjà.
@@ -83,7 +84,8 @@ Pour la mécanique du FSD lui-même (classes, notations, Guardian FSD Booster, S
 
 ### 2.1 Procédure standard, étape par étape
 
-1. **Demande d'autorisation** — à moins de **7 500 m** de la station, onglet Contacts (panneau gauche, section 6),
+1. **Demande d'autorisation** — à moins de **7 500 m** de la station, onglet Contacts (panneau gauche,
+   [section 6, « Le HUD hors combat anti-Thargoïde »](#6-le-hud-hors-combat-anti-thargoïde--panneaux-et-ciblage)),
    sélectionner la station puis « Request Docking Permission ». Au-delà de cette distance, la demande est refusée
    automatiquement.
 2. **Attribution d'un pad** — en cas d'acceptation, un numéro de pad s'affiche (« Proceed to landing pad XX ») avec
@@ -100,7 +102,8 @@ Pour la mécanique du FSD lui-même (classes, notations, Guardian FSD Booster, S
    communautaire donne deux chiffres contradictoires selon la page (90 s ou 60 s), non tranchés par une source
    officielle. Flâner sur un pad non assigné vaut une amende puis la destruction (délai non chiffré officiellement).
 6. **Motifs de refus documentés** : distance excessive, nouvelle demande depuis l'intérieur de la station, tous les
-   pads occupés, ou vaisseau trop grand pour les pads disponibles (aucun avant-poste n'a de pad Large, section 5).
+   pads occupés, ou vaisseau trop grand pour les pads disponibles (aucun avant-poste n'a de pad Large,
+   [section 5, « Taille de vaisseau et pad requis »](#5-taille-de-vaisseau-et-pad-requis)).
    **Une prime active n'est pas confirmée comme motif de refus par les sources consultées**, contrairement à une
    hypothèse répandue — un vaisseau recherché semble pouvoir accoster, au risque d'y être scanné puis pris pour
    cible par la sécurité.
@@ -110,7 +113,7 @@ Pour la mécanique du FSD lui-même (classes, notations, Guardian FSD Booster, S
 
 Numérotation des 45 pads d'un starport classique : 12 lignes, le pad 01 au centre-bas près du corridor, la
 numérotation croît en s'éloignant du corridor puis reprend à 1 sur la ligne suivante (dizaines à gauche, vingtaines
-en haut, trentaines à droite). Un **Docking Computer** (Standard ou Advanced) automatise tout le processus une fois
+en haut, trentaines à droite). Un **Docking Computer** (ordinateur d'accostage ; Standard ou Advanced) automatise tout le processus une fois
 la permission demandée et la manette à zéro — évitez de l'activer à l'exact opposé du corridor d'accès à l'intérieur
 de la station. La gravité artificielle à quai (rotation de la station) avoisine 0,1 g.
 
@@ -118,7 +121,8 @@ de la station. La gravité artificielle à quai (rotation de la station) avoisin
 
 Les avant-postes ne tournent pas et n'ont pas de corridor d'accès : leurs pads sont exposés directement à l'espace,
 le vaisseau est maintenu par verrouillage magnétique. Ils comptent 2 à 5 pads (typiquement 4 Small + 1 Medium),
-**sans aucun pad Large** — voir la liste des vaisseaux concernés en section 5.
+**sans aucun pad Large** — voir la liste des vaisseaux concernés en
+[section 5, « Taille de vaisseau et pad requis »](#5-taille-de-vaisseau-et-pad-requis).
 
 ### 2.3 Variante planétaire : le Surface Port, pas un « Coriolis au sol »
 
@@ -168,7 +172,7 @@ au contact du pad.
 | **Base d'astéroïde** | Large (4 S/8 M/6 L) | Interne (mailslot) | Rotation lente (300 s), valeur en g non documentée | Anneaux/clusters d'astéroïdes | Services variables d'une base à l'autre (marché noir/outfitting/shipyard optionnels) |
 | **Avant-poste (Outpost)** | Medium — **aucun pad Large** (2-4 S + 1 M) | Externe (verrouillage magnétique) | Aucune (pas de rotation) | N'importe quel système, souvent peu peuplé | 7 sous-types (Civil, Commercial, Industriel, Militaire, Minier, Scientifique, Non sanctionné) |
 | **Surface Port** | Large (2-4 S/2-4 M/2-8 L) | Externe (pads à l'air libre) | Gravité naturelle de la planète | Surface planétaire/lunaire | Sous-types Planetary Outpost (petit) et Planetary Port (grand) ; SRV déployable |
-| **Settlement Odyssey** | Variable, jusqu'à Large (1-2 S/0-1 M/0-1 L) | Externe | Gravité planétaire (bottes magnétiques dans le Concourse) | Surface, +400 000 settlements | Pas de hangar interne : Outfitting/Shipyard/Livery indisponibles au sol |
+| **Settlement Odyssey** | Variable, jusqu'à Large (1-2 S/0-1 M/0-1 L) | Externe | Gravité planétaire (bottes magnétiques dans le Concourse, zone sociale à pied) | Surface, +400 000 settlements | Pas de hangar interne : Outfitting/Shipyard/Livery indisponibles au sol |
 | **Megaship** (accostable) | Large, un seul (4 S/2 M/1 L) | Externe (probable, non confirmé) | Non documentée | Espace profond, fixe ou mobile | Seuls les Wells-class Carrier/Detention Centre/Rescue Vessel s'accostent ; jamais de Shipyard |
 | **Porte-Vaisseau (Fleet Carrier)** | Large majoritaire — cas unique (8 L/4 M/4 S) | Externe (pads exposés sur le pont) | Non documentée | Mobile, jusqu'à 500 al par saut | Services entièrement modulaires, payants à l'installation et à l'entretien |
 
@@ -210,9 +214,9 @@ de seuil dans un système colonisé, citée ici mot pour mot pour les deux plus 
   1,5 M Cr/semaine).
 - **Pioneer Supplies** — à l'inverse, quasi universel : présent même dans les avant-postes et petits Settlements ;
   condition triviale dans la règle officielle de Colonisation (« tout port orbital ou planétaire »).
-- **Crew Lounge** — port Tier 2/3, avant-poste Criminel/Civil, port planétaire Tier 1 Civil, ou tout autre Tier 1
+- **Crew Lounge** (recrutement d'équipage PNJ) — port Tier 2/3, avant-poste Criminel/Civil, port planétaire Tier 1 Civil, ou tout autre Tier 1
   avec une installation Bar dans le système.
-- **Mission Board** et **Refuel/Repair/Rearm** — quasi systématiques sur toute infrastructure accostable, désactivés
+- **Mission Board** (tableau des missions) et **Refuel/Repair/Rearm** — quasi systématiques sur toute infrastructure accostable, désactivés
   en cas de station endommagée ; sur un Porte-Vaisseau, ce sont des modules payants optionnels (« Advanced
   Maintenance »), contrairement au jeu de base où ils sont gratuits.
 
@@ -257,7 +261,7 @@ Quatre onglets, pas trois :
 Sept sections : Home, **Modules** (nom/classe/notation/type/consommation/priorité/intégrité de chaque module,
 priorité modifiable, extinction possible sauf réacteur et verrière), **Fire Groups** (jusqu'à 8 groupes, cercle jaune
 = tir primaire, bleu = secondaire), **Ship** (sous-onglets Functions — feux, vision nocturne, train, écope à cargo,
-balise d'escadron, reboot/repair, mode tourelle, silent running, autodestruction —, Flight Assistance, Pilot
+balise d'escadron, reboot/repair, mode tourelle, mode furtif (silent running), autodestruction —, Flight Assistance, Pilot
 Preferences, Statistics), Inventory, Status, Playlist.
 
 ### 6.3 Panneau central, Comms et panneau Rôle
@@ -329,6 +333,93 @@ confluence.fuelrats.com/display/FRKB/Rescue+Standard+Operating+Procedures, consu
 
 ---
 
+## Questions fréquentes
+
+### À quelle distance faut-il demander l'autorisation d'accoster (docking request) ?
+
+Il faut être à moins de **7 500 m** de la station : onglet Contacts (panneau gauche), sélectionner la station puis
+« Request Docking Permission ». Au-delà de cette distance, la demande est automatiquement refusée. Voir
+[section 2.1, « Procédure standard, étape par étape »](#21-procédure-standard-étape-par-étape).
+
+### Combien de temps ai-je pour rejoindre mon pad une fois l'accostage accepté ?
+
+Un délai de **dix minutes** s'affiche avec le numéro de pad attribué (« Proceed to landing pad XX »). Après le
+décollage, il faut ensuite quitter la zone de la station dans les **cinq minutes**, sous peine d'être considéré en
+flânerie. Voir [section 2.1, « Procédure standard, étape par étape »](#21-procédure-standard-étape-par-étape).
+
+### Quelle est la taille du mailslot (access corridor) d'une station ?
+
+Le corridor d'accès mesure environ **222 m de large sur 52 m de haut**. Il est gardé par des tourelles de défense qui
+ouvrent le feu sur tout vaisseau flânant ou intrus, d'où l'intérêt d'activer l'option « Rotational Correction » pour
+synchroniser sa rotation avec celle de la station. Voir
+[section 2.1, « Procédure standard, étape par étape »](#21-procédure-standard-étape-par-étape).
+
+### Quelle est la vitesse en supercroisière (supercruise) et le temps pour parcourir une année-lumière ?
+
+La supercroisière va de **29,9 km/s à 2001c** ; à cette vitesse maximale, parcourir une année-lumière prend environ
+**4 h 23 min**. Le freinage gravitationnel n'est pas un système dédié mais une conséquence directe du plafond de
+vitesse, qui diminue à l'approche d'un corps massif. Voir [section 1, « Supercroisière »](#1-supercroisière).
+
+### Quelle est la différence entre Safe Disengage et Emergency Drop pour sortir de la supercroisière ?
+
+**Safe Disengage** s'obtient sous 1 Mm/s avec la cible verrouillée à moins de 1 Mm, cooldown FSD de 10 s et aucun
+dégât. **Emergency Drop** (double appui à plus de 1 Mm/s, interdiction, carburant ≤ 5 %...) inflige 1-2 % de dégâts
+sur coque et modules avec un cooldown de 40 s, jusqu'à ~30 % avec un FSD SCO engagé. Voir
+[section 1, « Supercroisière »](#1-supercroisière).
+
+### Pourquoi mon Anaconda (ou un autre gros vaisseau) ne peut pas se poser sur un avant-poste (outpost) ?
+
+Aucun avant-poste n'a de pad Large : **onze vaisseaux** en sont exclus (Anaconda, Beluga Liner, Federal Corvette,
+Imperial Cutter, Type-9 Heavy, Type-10 Defender...). À l'inverse, des ajouts récents comme le **Type-8 Transporter**
+sont conçus spécifiquement pour desservir ces plateformes. Voir
+[section 5, « Taille de vaisseau et pad requis »](#5-taille-de-vaisseau-et-pad-requis).
+
+### Qu'est-ce qu'un Surface Port et en quoi diffère-t-il d'un Coriolis/Orbis/Ocellus ?
+
+Coriolis, Orbis et Ocellus sont exclusivement des classes de stations **orbitales** dotées d'un mailslot ; il
+n'existe pas de variante posée au sol. L'équivalent planétaire s'appelle **Surface Port** (Planetary Outpost ou
+Planetary Port) : mêmes règles de demande à 7,5 km, mais pads à l'air libre sans corridor, soumis à la gravité réelle
+de la planète. Voir
+[section 2.3, « Variante planétaire : le Surface Port, pas un Coriolis au sol »](#23-variante-planétaire--le-surface-port-pas-un--coriolis-au-sol-).
+
+### Comment se déroule un atterrissage planétaire (Orbital Cruise puis Glide) ?
+
+L'**Orbital Cruise** s'active automatiquement à l'approche d'un corps atterrissable (tangage entre -5° et +5°,
+plancher à **25 km**), puis le **Glide** prend le relais à vitesse constante de **2 500 m/s** jusqu'à **3 km**
+d'altitude, où le vol normal reprend. Piquer trop fort dans l'un ou l'autre régime déclenche une chute d'urgence.
+Voir [section 3, « Atterrissage planétaire »](#3-atterrissage-planétaire).
+
+### Quel niveau technologique faut-il pour avoir un Chantier Naval (Shipyard) ou l'Équipement (Outfitting) ?
+
+Les deux services exigent toujours un **niveau technologique système minimum de 35**, automatiquement atteint par un
+port Tier 2 ou 3 ; un Tier 1 doit s'appuyer sur une installation qualifiante. Un avant-poste, dont les pads plafonnent
+à Medium, a donc structurellement presque aucune chance d'obtenir un Chantier Naval complet. Voir
+[section 4.2, « Disponibilité réelle des services de station »](#42-disponibilité-réelle-des-services-de-station).
+
+### Quelles étoiles puis-je écoper avec un Fuel Scoop et à quel taux ?
+
+Seules les étoiles de séquence principale **O, B, A, F, G, K, M** sont scoopables (pas les naines blanches, étoiles à
+neutrons ni naines brunes). Le taux d'écopage va de **18 kg/s** pour un module 1E à **1 680 kg/s** pour un 8A, plus
+rapide près de l'étoile mais avec un risque de surchauffe accru. Voir
+[section 7.1, « Écopage (Fuel Scoop) »](#71-écopage-fuel-scoop).
+
+### Que se passe-t-il en cas de panne sèche de carburant ?
+
+Quand le réservoir principal et la réserve sont tous deux vides, le Power Plant s'éteint intégralement : plus de FSD,
+propulseurs, support de vie ni boucliers. Le pilote respire alors l'oxygène limité de sa combinaison Remlok, puis
+s'éjecte (Redeployment) avant que le vaisseau ne s'autodétruise. Voir
+[section 7.2, « Panne sèche »](#72-panne-sèche).
+
+### Comment appeler les Fuel Rats si je suis à sec de carburant ?
+
+Sur `fuelrats.com`, cliquer « I Need Fuel! » (quitter au menu principal immédiatement si un compte à rebours
+« oxygen depleted » s'affiche), puis remplir le formulaire `qms.fuelrats.com`. Le bot **MechaSqueak** ouvre un
+dossier sur IRC et un Dispatcher coordonne l'intervention ; les rats transfèrent ensuite **1 tonne de carburant par
+limpet** (~5 s chacun) via un Fuel Transfer Limpet Controller, service **gratuit**. Voir
+[section 7.3, « Appeler les Fuel Rats »](#73-appeler-les-fuel-rats).
+
+---
+
 ## Voir aussi
 
 - **[Vaisseaux](./03-vaisseaux.md)** — caractéristiques de châssis, FSD/SCO, et la section « Gestion de flotte »
@@ -340,7 +431,8 @@ confluence.fuelrats.com/display/FRKB/Rescue+Standard+Operating+Procedures, consu
 - **[Combat spatial](./08-combat-spatial.md)** — interdiction, mass lock, crime et notoriety, rang de combat.
 - **[Piraterie et PvP](./30-piraterie-et-pvp.md)** — Manifest Scanner, sous-ciblage en contexte de piraterie.
 - **[Porte-vaisseaux (Fleet Carriers)](./19-fleet-carriers.md)** — détail des 16 pads et des services modulaires.
-- **[La Colonisation](./18-colonisation.md)** — origine des seuils de niveau technologique cités en section 4.2.
+- **[La Colonisation](./18-colonisation.md)** — origine des seuils de niveau technologique cités en
+  [section 4.2, « Disponibilité réelle des services de station »](#42-disponibilité-réelle-des-services-de-station).
 - **[Le Minage](./20-minage.md)** — Wave Scanner du Scarab et Planetary Mining Deposit Scanner du Rhino.
 - **[Débuter et progresser](./27-debuter-et-progresser.md)** — première heure de jeu, dont l'accostage fait partie.
 - **[Le guide des outils communautaires](./16-outils.md)** — Fuel Rats parmi les initiatives d'entraide.

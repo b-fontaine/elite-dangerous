@@ -21,9 +21,10 @@ Le transport recouvre quatre métiers distincts dans *Elite Dangerous*. Le **tra
 cabines de quatre conforts — Économique, Affaires, Première classe, Luxe (*economy, business, first class, luxury*) —,
 un module de taille 6 embarquant 128 passagers en Économique contre 12 en Luxe ; les vaisseaux dédiés sont le Dolphin,
 l'Orca et le Beluga Liner, rejoints en avril 2026 par le **Lynx Highliner** de **Zorgon Peterson** (jusqu'à 225
-passagers), qui ramène les missions « stations en feu » (*burning stations*). Le **Search & Rescue** consiste à
-ramasser Occupied Escape Pods, Black Boxes et Wreckage Components sur épaves et USS, puis à les livrer au contact
-dédié en station. Le **fret** sert Powerplay et surtout la **colonisation**, achevée le 11 novembre 2025 (« Dodec
+passagers), qui ramène les missions « stations en feu » (*burning stations*). Le **Search & Rescue** (recherche et
+sauvetage de survivants) consiste à ramasser Occupied Escape Pods (capsules de sauvetage occupées), Black Boxes
+(boîtes noires) et Wreckage Components (composants d'épave) sur épaves et USS, puis à les livrer au contact dédié en
+station. Le **fret** sert Powerplay et surtout la **colonisation**, achevée le 11 novembre 2025 (« Dodec
 Update », 4.2.2.0), qui exige des milliers à des dizaines de milliers de tonnes par chantier et impose les gros
 porteurs : Type-9 Heavy, Imperial Cutter et **Panther Clipper Mk II** (1200 à 1400 t, sorti le 22 juillet 2025),
 relayés par un Fleet Carrier en base avancée. Les **marchandises rares** (*rare goods*) se bonifient jusqu'à 150-200
@@ -183,8 +184,9 @@ une station spatiale en train de brûler pour en évacuer les civils. Cette méc
 les capacités de transport de passagers en masse, typiquement avec des **cabines Économiques** pour maximiser le nombre
 de survivants évacués en un minimum de rotations. Un Beluga Liner, un Lynx Highliner ou un Type-9 Heavy reconfiguré en
 configuration Économique dense sont particulièrement adaptés à ce type d'opération d'urgence. Cette mécanique est
-étroitement liée au **Search & Rescue** détaillé dans la section suivante, qui couvre le sauvetage de survivants au sens
-large (au-delà des seules missions passagers).
+étroitement liée au **Search & Rescue** détaillé dans la section
+[Sauvetage et transport de survivants (Search & Rescue)](#sauvetage-et-transport-de-survivants-search--rescue),
+qui couvre le sauvetage de survivants au sens large (au-delà des seules missions passagers).
 
 ## Sauvetage et transport de survivants (Search & Rescue)
 
@@ -200,8 +202,9 @@ Les marchandises de type sauvetage se trouvent typiquement :
 - dans les **sites de signal non identifiés (USS)** signalés « détresse » ou « combat » lors du survol d'un système ;
 - lors de combats, y compris dans les **zones de conflit** (CZ, voir [00-glossaire.md](./00-glossaire.md)), où des
   vaisseaux détruits laissent parfois des survivants à récupérer ;
-- lors des missions d'évacuation type « stations en feu » décrites plus haut, qui produisent directement ce type de
-  cargaison.
+- lors des missions d'évacuation type « stations en feu » décrites dans
+  [Missions spéciales : évacuations et « stations en feu »](#missions-spéciales--évacuations-et--stations-en-feu-),
+  qui produisent directement ce type de cargaison.
 
 Les commodités concernées incluent notamment :
 
@@ -221,9 +224,9 @@ La livraison au contact **Search and Rescue** d'une station rapporte :
 
 - une récompense en crédits, généralement supérieure à la revente sur le marché libre de la même marchandise ;
 - un gain de réputation avec la faction locale ;
-- occasionnellement, une contribution à des **Community Goals** (CG, voir [00-glossaire.md](./00-glossaire.md) et
-  [24-community-goals.md](./24-community-goals.md)) à thème « évacuation » ou « secours », lorsqu'un tel objectif est
-  actif dans le secteur.
+- occasionnellement, une contribution à des **Community Goals** (objectifs communautaires, CG — voir
+  [00-glossaire.md](./00-glossaire.md) et [24-community-goals.md](./24-community-goals.md)) à thème « évacuation » ou
+  « secours », lorsqu'un tel objectif est actif dans le secteur.
 
 ### Search & Rescue et Powerplay : bonus de mérites non confirmé à ce jour
 
@@ -235,7 +238,9 @@ aucune source déjà en main ne documente un multiplicateur de mérites propre a
 
 Ce qui est établi avec confiance sur la mécanique générale (voir [02-powerplay.md](./02-powerplay.md) pour le détail à
 jour) : les mérites Powerplay se gagnent par combat ou par livraison de la marchandise d'acquisition propre à chaque
-Puissance auprès d'un contact Powerplay local (voir la section suivante). Rien dans les sources consultées ne confirme
+Puissance auprès d'un contact Powerplay local (voir
+[Merits et logistique de fret pour les Puissances](#merits-et-logistique-de-fret-pour-les-puissances)). Rien dans les
+sources consultées ne confirme
 ni n'infirme que les marchandises de sauvetage comptent dans cette seconde catégorie pour une Puissance donnée.
 **N'ajoutez pas ce bonus à une stratégie de mérites sans l'avoir vérifié vous-même via les notes de mise à jour
 officielles ou [02-powerplay.md](./02-powerplay.md).**
@@ -337,7 +342,9 @@ de bas de tableau ci-dessous) — voir
 > mise à jour (recherche web indisponible — budget épuisé, puis erreurs HTTP 402/403 sur les sources habituelles). Le
 > détail exact et à jour des marchandises requises, projet par projet, est tenu par
 > **[18-colonisation.md](./18-colonisation.md)**, qui sert de **source unique de vérité** sur ce sujet ; ces besoins ont
-> déjà été ajustés une fois par le passé (rééquilibrage du 30 avril 2025 décrit ci-dessous) et peuvent l'être de nouveau.
+> déjà été ajustés une fois par le passé (voir
+> [Liens économiques automatiques entre systèmes colonisés](#liens-économiques-automatiques-entre-systèmes-colonisés-depuis-avril-2025),
+> rééquilibrage du 30 avril 2025) et peuvent l'être de nouveau.
 
 ### Liens économiques automatiques entre systèmes colonisés (depuis avril 2025)
 
@@ -358,14 +365,17 @@ Ces liens modifient dynamiquement l'offre, la demande et la disponibilité des m
   1400 tonnes selon l'outillage — bien au-delà du Type-9 Heavy ou de l'Imperial Cutter — idéal pour les livraisons
   massives en une seule rotation.
 - **Fleet Carrier** : base avancée permettant de rapprocher le stock de matériaux de construction du site final,
-  réduisant le nombre de sauts nécessaires par rotation (voir sous-section dédiée ci-dessous).
+  réduisant le nombre de sauts nécessaires par rotation (voir la sous-section
+  [Fleet Carriers : base logistique mobile](#fleet-carriers--base-logistique-mobile) ci-dessous).
 - **Convois d'escadron coordonnés** : répartir la charge entre plusieurs joueurs accélère considérablement la
   construction d'une installation — voir [22-squadrons.md](./22-squadrons.md) pour l'organisation d'escadron.
 
 ### Fleet Carriers : base logistique mobile
 
 Le **Fleet Carrier** (porte-vaisseau appartenant à un joueur ou à un escadron — à ne pas confondre avec les
-**Stronghold Carriers** de Powerplay, propriété d'une Puissance et non d'un joueur, décrits plus haut) est un outil de
+**Stronghold Carriers** de Powerplay, propriété d'une Puissance et non d'un joueur, décrits plus haut dans
+[Stronghold Carriers : la logistique en territoire bastion](#stronghold-carriers--la-logistique-en-territoire-bastion))
+est un outil de
 transport à part entière : il permet de déplacer un stock de marchandises, de vaisseaux et de modules sur de longues
 distances en un minimum de sauts, puis de servir de **base avancée** pour raccourcir la dernière portion d'une rotation
 de fret — un usage déjà cité ci-dessus pour la logistique de colonisation, et tout aussi pertinent pour approvisionner
@@ -438,8 +448,8 @@ L'autonomie de saut est le nerf de la guerre pour tout transporteur longue dista
   D'où l'intérêt fréquent de multiplier les trajets partiels plutôt que de charger au maximum sur de très longues
   distances, ou de dédier un vaisseau « éclaireur » allégé pour reconnaître la route avant d'envoyer le gros porteur.
 - **Circuits longue distance** (tourisme de luxe, colonisation en périphérie, boucles de rares étendues) : une soute à
-  carburant adaptée, voire un fuel scoop, devient pertinente — contrairement aux rotations courtes de commerce
-  classique.
+  carburant adaptée, voire un fuel scoop (collecteur de carburant), devient pertinente — contrairement aux rotations
+  courtes de commerce classique.
 
 ### Évasion d'interdiction pour un transporteur peu armé
 
@@ -489,6 +499,102 @@ sourcées ci-dessus) — voir
 Avant tout achat ou refit important, il reste recommandé de vérifier les statistiques précises (slots de cabines,
 tonnage exact, coûts en crédits ou en Arx) sur un configurateur à jour comme EDSY.org, les valeurs de jeu évoluant au
 fil des patchs d'équilibrage.
+
+## Questions fréquentes
+
+**Combien de passagers peut transporter un module de cabine de taille 6 en classe Économique (economy cabin) ?**
+
+Un module de cabine passagers de taille 6 (le plus grand) embarque 128 passagers en Économique, contre 64 en
+Affaires, 24 en Première classe et 12 en Luxe — ce sont des valeurs stock communautaires (EDSY/Inara/Coriolis) non
+reconfirmées en direct par ce guide. Vérifiez-les sur un configurateur comme EDSY.org avant de planifier un fit
+précis. Voir [Capacité en passagers par taille de module de
+cabine](#capacité-en-passagers-par-taille-de-module-de-cabine-valeurs-stock-tailles-2-à-6).
+
+**Quel est le meilleur vaisseau pour débuter dans le transport de passagers (passenger missions) ?**
+
+Le Dolphin (Saud Kruger) est recommandé pour débuter : rapide et agile pour sa catégorie, très abordable, avec une
+bonne portée grâce à sa faible masse — idéal pour les missions à faible effectif et haute fréquence. Sa capacité de
+cabines reste modeste comparée à l'Orca ou au Beluga Liner, réservés aux volumes plus importants. Voir [Vaisseaux
+dédiés au transport de passagers](#vaisseaux-dédiés-au-transport-de-passagers).
+
+**Combien de passagers peut transporter le Lynx Highliner, le nouveau vaisseau passagers ?**
+
+Le Lynx Highliner, du fabricant Zorgon Peterson (et non Saud Kruger, malgré une confusion communautaire répandue),
+peut accueillir jusqu'à 225 passagers. Distribué gratuitement en avril 2026 puis achetable en crédits à partir du
+28 avril 2026, il offre moins de raffinement que l'Orca ou le Beluga Liner mais davantage de capacité. Voir [Vaisseaux
+dédiés au transport de passagers](#vaisseaux-dédiés-au-transport-de-passagers).
+
+**Combien rapporte le transport de passagers en Cr/h (credits per hour) ?**
+
+Un vaisseau à cabines mixtes exploité dans un système touristique dense avec mission stacking rapporte de l'ordre de
+**50 à 100 M Cr/h** ; la route historique Robigo → Sothis (≈ 60 al) est spécifiquement documentée jusqu'à **≈ 90 M
+Cr/h**. Ce sont des reconstitutions communautaires datées du 13 septembre 2026, pas un barème officiel Frontier — le
+rendement réel varie selon marché, réputation de faction et missions disponibles. Voir [Rentabilité chiffrée du
+transport de
+passagers](#rentabilité-chiffrée-du-transport-de-passagers--50-à-100-m-crh--reconstitution-communautaire).
+
+**Comment fonctionne le Search & Rescue (sauvetage de survivants) et que faut-il livrer ?**
+
+Le Search & Rescue consiste à récupérer des Occupied Escape Pods (capsules de sauvetage occupées), Black Boxes
+(boîtes noires), Personal Effects et Wreckage Components (composants d'épave) sur des épaves, dans des USS de
+détresse ou en zone de conflit, puis à les livrer au contact Search and Rescue d'une station. Attention : scanner ou
+détruire un vaisseau contenant des occupants vivants avant de les récupérer entraîne leur perte définitive. Voir
+[Livraison au contact Search and Rescue et récompenses
+associées](#livraison-au-contact-search-and-rescue-et-récompenses-associées).
+
+**Le Search & Rescue rapporte-t-il des mérites Powerplay (Powerplay merits) ?**
+
+Ce n'est ni confirmé ni infirmé par les sources consultées pour ce guide : aucune ne documente de multiplicateur de
+mérites Powerplay propre au Search & Rescue. Les mérites se gagnent avec certitude par le combat ou par la livraison
+de la marchandise d'acquisition propre à chaque Puissance — n'ajoutez pas de bonus Search & Rescue à une stratégie de
+mérites sans l'avoir vérifié vous-même. Voir [Sauvetage et transport de
+survivants](#sauvetage-et-transport-de-survivants-search--rescue).
+
+**Quel est le plus gros vaisseau de fret pour la colonisation (colonisation hauling) ?**
+
+Le Panther Clipper Mk II, en accès anticipé depuis le 22 juillet 2025, est le plus gros transporteur non-capital du
+jeu avec une capacité estimée entre **1200 et 1400 tonnes** selon l'outillage — bien au-delà du Type-9 Heavy ou de
+l'Imperial Cutter. Un Fleet Carrier en base avancée complète souvent ce type de convoi pour raccourcir le dernier
+saut de livraison. Voir [Vaisseaux et méthodes recommandés pour la logistique de
+colonisation](#vaisseaux-et-méthodes-recommandés-pour-la-logistique-de-colonisation).
+
+**Combien de tonnes faut-il livrer pour construire une installation de colonisation (colonisation) ?**
+
+Ce sont des ordres de grandeur composites non revérifiés en direct : un avant-poste simple demande de l'ordre de
+quelques milliers de tonnes (5 à 10 marchandises différentes), un starport la dizaine de milliers de tonnes (15 à 20
+marchandises), une installation planétaire du millier à quelques milliers de tonnes (5 à 8 marchandises), et une
+structure orbitale majeure plusieurs dizaines de milliers de tonnes (20 marchandises et plus). Le détail exact et à
+jour est tenu par [18-colonisation.md](./18-colonisation.md). Voir [Marchandises et tonnage de la
+colonisation](#marchandises-et-tonnage-de-la-colonisation-ordre-de-grandeur).
+
+**Jusqu'à quelle distance le bonus des marchandises rares (rare goods) augmente-t-il ?**
+
+Le prix de vente d'une marchandise rare augmente avec la distance parcourue depuis sa station source unique, jusqu'à
+un plafond situé généralement autour de **150 à 200 années-lumière**, au-delà duquel le bonus n'augmente plus. La
+demande par station reste faible (de quelques dizaines à environ 130 unités), d'où l'intérêt de combiner plusieurs
+rares sur une même boucle. Voir [Marchandises rares](#marchandises-rares-rare-goods).
+
+**Comment échapper à une interdiction (interdiction escape) avec un transporteur peu armé ?**
+
+On peut se soumettre immédiatement (drop contrôlé) ou résister en maintenant le réticule à l'opposé de l'icône de
+l'interdicteur tout en boostant. Une fois « dropé » en espace normal, il faut s'éloigner du mass lock puis charger un
+saut high-wake (autre système) ou low-wake (repositionnement local) ; chaff, banques de cellules de bouclier,
+tourelles Point Defence et silent running aident à tenir en attendant le saut. Voir [Évasion d'interdiction pour un
+transporteur peu armé](#évasion-dinterdiction-pour-un-transporteur-peu-armé).
+
+**Quelle est la différence entre un Fleet Carrier et un Stronghold Carrier ?**
+
+Le Fleet Carrier appartient à un joueur ou à un escadron et sert de base logistique mobile pour rapprocher stocks et
+vaisseaux d'un site de livraison (colonisation, Powerplay). Le Stronghold Carrier, lui, appartient à une Puissance :
+il n'existe que dans les systèmes Powerplay au statut bastion, offre des installations supérieures à un port
+classique, mais constitue une cible de grande valeur pour les Puissances rivales. Voir [Fleet Carriers : base
+logistique mobile](#fleet-carriers--base-logistique-mobile).
+
+**Combien de missions actives peut-on cumuler pour faire du mission stacking (mission stacking) ?**
+
+La limite est de **20 missions actives simultanées**, ce qui permet de grouper plusieurs contrats de passagers vers
+une même destination et d'augmenter le rendement horaire d'une rotation. Voir
+[29-missions-reputation-et-rangs.md §1.6](./29-missions-reputation-et-rangs.md) pour le détail de cette limite.
 
 ## Voir aussi
 

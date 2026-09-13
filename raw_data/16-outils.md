@@ -23,10 +23,11 @@ disque du commandant, complété par la **Frontier Companion API (CAPI)** pour l
 chantier naval. Sur le poste du joueur, **E:D Market Connector (EDMC)** est la brique de base à installer en premier :
 c'est le socle de plugins de l'écosystème (BGS-Tally, EDMC-Canonn, trackers Powerplay), aux côtés d'EDDiscovery (carte
 3D, EDDLite) et d'EDDI (synthèse vocale, Monitors et Responders). Côté web, **EDSM** couvre la cartographie et le journal
-de vol, **Inara** le volet social, le Powerplay et l'engineering — EDDB, longtemps la référence, est morte — et
+de vol, **Inara** le volet social, le Powerplay et l'engineering (l'ingénierie des modules) — EDDB, longtemps la
+référence, est morte — et
 **Spansh** la planification de route (plotter neutron, Road to Riches, Fleet Carrier). **Coriolis** et **EDSY** dominent
 la construction de vaisseaux, Trade Dangerous le calcul d'itinéraires commerciaux, ED Odyssey Materials Helper la gestion
-des matériaux, et les **Fuel Rats** le secours d'urgence par *ratsignal*.
+des matériaux, et les **Fuel Rats** le secours d'urgence par *ratsignal* (appel de détresse).
 
 ## Vue d'ensemble : un écosystème bâti sur EDDN
 
@@ -41,7 +42,7 @@ services tiers comme EDSM, Inara, Spansh, Coriolis ou EDSY qui écoutent ce flux
 bases de données. Sur PC, les « capteurs » qui alimentent EDDN sont des applications compagnons qui tournent en tâche de
 fond pendant que vous jouez — au premier rang desquelles **E:D Market Connector (EDMC)**, mais aussi EDDI ou
 EDDiscovery. Sur console, où l'accès aux fichiers de journal est plus restreint, les joueurs dépendent d'outils
-spécifiques comme le *console updater* d'EDSM ou Journal Limpet.
+spécifiques comme le *console updater* (outil de synchronisation du journal sur consoles) d'EDSM ou Journal Limpet.
 
 **Frontier Companion API (CAPI).** En complément d'EDDN, une partie des outils — au premier rang desquels EDMC et EDDI
 — s'appuie aussi sur la **Frontier Companion API**, plus connue sous son abréviation **CAPI**. À la différence d'EDDN,
@@ -124,8 +125,8 @@ essais de minage de surface de Wreaken Corporation). Le site est actif.
 **Description et utilité principale.** Spansh (`spansh.co.uk`) est devenu la référence pour la planification de route en
 exploration longue distance. Sa suite d'outils comprend notamment :
 
-- un **plotter neutron**, qui exploite les « autoroutes à étoiles à neutrons » (utilisation du supercharge FSD) pour
-  calculer les trajets les plus rapides entre systèmes éloignés ;
+- un **plotter neutron**, qui exploite les « autoroutes à étoiles à neutrons » (utilisation du supercharge FSD, la
+  surcharge du FSD) pour calculer les trajets les plus rapides entre systèmes éloignés ;
 - un plotter galactique classique ;
 - **Road to Riches**, un générateur d'itinéraires optimisés pour la première découverte et la première cartographie de
   corps célestes (lucratif en exploration) ;
@@ -171,7 +172,8 @@ redistribuent leur contenu vers EDDN et vers d'autres services.
 référence de tout l'écosystème. Elle lit les *Journal files*, télécharge les données de marché et de station (via la
 CAPI, voir plus haut), les redistribue vers EDDN ainsi que vers des outils de trading en ligne et hors ligne, et sert
 surtout de **socle de plugins** pour la quasi-totalité des utilitaires communautaires (Canonn, BGS-Tally, trackers
-Powerplay, overlays, synthèse vocale, etc.), via un système de plugins Python documenté officiellement (dossier
+Powerplay, overlays [affichages superposés en jeu], synthèse vocale, etc.), via un système de plugins Python documenté
+officiellement (dossier
 `plugins`, fichier `load.py`).
 
 **Statut de maintenance.** Très actif. Instantané pris le 8 septembre 2026 (à revérifier sur le dépôt
@@ -344,7 +346,8 @@ dépôt de chaque outil.*
 
 **Pour l'exobiologie précisément**, Canonn fournit surtout les données de référence (Codex, classification des
 organismes), qui sont ensuite consommées par des outils plus orientés « aide en jeu », au premier rang desquels l'ED
-Odyssey Materials Helper (voir section dédiée) via son onglet biologie.
+Odyssey Materials Helper ([voir la section dédiée](#6-gestion-des-matériaux--ed-odyssey-materials-helper)) via son
+onglet biologie.
 
 **Ce que fait précisément Link Decoder/Aurvandil.** Ce n'est pas un simple visualiseur : l'outil calcule, à partir
 du signal audio livré par un **Thargoid Link** déployé dans l'espace, les distances triangulées vers le système
@@ -438,11 +441,14 @@ notamment :
   (instantané du 8 septembre 2026, à revérifier sur le dépôt).
 - Un grand nombre de petits projets individuels existent par ailleurs (par exemple `ed-colonisation-planner`,
   `EDColonisationAsst`, ou des outils de sélection de systèmes candidats pour une faction mineure comme
-  `anthonylangsworth/Colonisation`) : le paysage rappelle celui des profils VoiceAttack (section 3) — fragmenté, sans
-  outil unique qui fasse consensus au-delà de BGS-Tally et de Raven Colonial.
+  `anthonylangsworth/Colonisation`) : le paysage rappelle celui des profils VoiceAttack (voir la section
+  [3. Commandes vocales et retour audio](#3-commandes-vocales-et-retour-audio--edcopilot-et-voiceattack)) — fragmenté,
+  sans outil unique qui fasse consensus au-delà de BGS-Tally et de Raven Colonial.
 
-**Point de méthode.** Spansh annonce disposer d'outils liés à la colonisation (voir section 1), mais leur détail exact
-n'a pas pu être confirmé directement (site en SPA non récupérable par un simple fetch) ; à vérifier sur place.
+**Point de méthode.** Spansh annonce disposer d'outils liés à la colonisation (voir la section
+[1. Bases de données et plateformes web communautaires](#1-bases-de-données-et-plateformes-web-communautaires-edsm-inara-spansh)),
+mais leur détail exact n'a pas pu être confirmé directement (site en SPA non récupérable par un simple fetch) ; à
+vérifier sur place.
 
 ---
 
@@ -470,8 +476,8 @@ naval, d'appliquer des plans d'engineering, de calculer des coûts, de générer
 achats et changements nécessaires pour passer d'une configuration à une autre), et de personnaliser les modules par
 catégorie (armes, utilitaires, composants du noyau, etc.). Le site précise utiliser des assets et de l'imagerie du jeu
 « avec la permission de Frontier Developments plc, à des fins non commerciales », et n'est pas endossé par Frontier.
-EDDLite (voir section 2) connecte d'ailleurs Coriolis et EDSY côte à côte, signe que les deux sont traités comme
-équivalents par l'écosystème.
+EDDLite (voir la section [2. Applications compagnons locales](#2-applications-compagnons-locales-journal-watchers))
+connecte d'ailleurs Coriolis et EDSY côte à côte, signe que les deux sont traités comme équivalents par l'écosystème.
 
 **Gouvernance et écosystème.** Maintenu par un développeur unique (pseudonyme GitHub `taleden`), joignable via Discord,
 forums et Reddit — une gouvernance plus proche d'EDCoPilot que de Coriolis, mais avec un code source public.
@@ -504,9 +510,10 @@ refueling service* ».
 
 **Fonctionnement : ratsignal et dispatch.** Un commandant en panne lance un appel de détresse — un **ratsignal** —
 généralement sur le Discord officiel de l'organisation (historiquement sur IRC). Ce signal est pris en charge par un
-bot de dispatch, aujourd'hui appelé **Mecha** (alias historiques : *Mechasqueak*, *SPARK*), qui ouvre un dossier de
-secours (« case »), y attache les informations pertinentes (système, CMDR, plateforme) et alerte les « rats »
-(bénévoles) disponibles pour qu'ils se rendent sur place livrer le carburant ou l'assistance nécessaire.
+bot de dispatch (de répartition des secours), aujourd'hui appelé **Mecha** (alias historiques : *Mechasqueak*,
+*SPARK*), qui ouvre un dossier de secours (« case »), y attache les informations pertinentes (système, CMDR,
+plateforme) et alerte les « rats » (bénévoles) disponibles pour qu'ils se rendent sur place livrer le carburant ou
+l'assistance nécessaire.
 
 **Écosystème technique.** Le bot de dispatch a connu plusieurs générations : `pipsqueak3` (Python, dépôt désormais
 archivé) a été remplacé par une réécriture en Swift, `SwiftSqueak` (dépôt actif — dernier commit observé fin août 2026,
@@ -576,6 +583,97 @@ contribuent au flux EDDN dont dépendent tous les autres outils.
 
 ---
 
+## Questions fréquentes
+
+**Comment fonctionne EDDN (Elite Dangerous Data Network) ?**
+
+EDDN est un bus de messages qui redistribue en temps réel les événements des *Journal files* que le jeu écrit sur le
+disque de chaque commandant ; il ne stocke rien lui-même, ce sont des services tiers comme EDSM, Inara, Spansh,
+Coriolis ou EDSY qui l'écoutent pour construire leurs bases de données. Sur PC, les « capteurs » qui l'alimentent sont
+des applications compagnons tournant en tâche de fond (EDMC en tête, mais aussi EDDI ou EDDiscovery) ; sur console,
+l'accès aux fichiers de journal est plus restreint et passe par des outils dédiés comme le *console updater* d'EDSM.
+Voir [Applications compagnons locales](#2-applications-compagnons-locales-journal-watchers).
+
+**Quel outil installer en premier pour utiliser les outils communautaires (EDMC) ?**
+
+Dans presque tous les cas, **E:D Market Connector (EDMC)** est la brique de base à installer en premier : il lit les
+fichiers de journal, récupère les données de marché via la CAPI, les redistribue vers EDDN, et sert de socle de
+plugins pour la quasi-totalité des utilitaires communautaires (BGS-Tally, EDMC-Canonn, trackers Powerplay...).
+Installer EDMC garantit aussi que vos propres données de jeu contribuent au flux EDDN dont dépendent tous les autres
+outils. Voir [Applications compagnons locales](#2-applications-compagnons-locales-journal-watchers).
+
+**Quelle est la différence entre EDSM et Inara ?**
+
+EDSM (Elite Dangerous Star Map) est perçu comme l'outil de référence pour l'exploration et la cartographie brute :
+carte stellaire collaborative, suivi de journal de vol et de flotte, carnet de bord, rangs de commandant. Inara couvre
+un périmètre plus large et social : commerce, squadrons, Powerplay, guerre Thargoïde et engineering (ingénieurs,
+plans, effets expérimentaux). Le README d'EDDN qualifie d'ailleurs Inara de remplaçant populaire de l'ancien EDDB,
+aujourd'hui mort. Voir [Bases de données et plateformes web communautaires](#1-bases-de-données-et-plateformes-web-communautaires-edsm-inara-spansh).
+
+**Quel est le meilleur outil pour planifier une route en exploration longue distance (route plotter) ?**
+
+**Spansh** est devenu la référence pour la planification de route longue distance : un plotter neutron exploitant les
+autoroutes à étoiles à neutrons (supercharge FSD) pour calculer les trajets les plus rapides, un plotter galactique
+classique, Road to Riches pour optimiser la première découverte et la première cartographie, et un plotter dédié aux
+Fleet Carriers. Voir [Bases de données et plateformes web communautaires](#1-bases-de-données-et-plateformes-web-communautaires-edsm-inara-spansh).
+
+**Qu'est-ce que la Frontier Companion API (CAPI) et est-elle officielle ?**
+
+La CAPI est une API HTTP appartenant à Frontier Developments, à laquelle un outil s'authentifie par OAuth2 au nom du
+commandant qui l'autorise ; elle expose des données que le journal ne fournit pas toujours (profil, cargaison,
+matériaux, missions, ainsi que le marché, l'outfitting et le chantier naval de la station). Elle n'est pas
+officiellement documentée par Frontier pour les développeurs tiers : son usage communautaire repose sur une
+tolérance de fait et sur une rétro-ingénierie collective (dépôt `EDCD/FDevIDs`). Voir
+[Sources de données et API](./17-sources-donnees.md) pour le détail technique complet.
+
+**Quel plugin EDMC utiliser pour suivre le BGS et le Powerplay (BGS-Tally) ?**
+
+**BGS-Tally** (auteur aussig) est l'outil dominant de la catégorie : il suit le Background Simulation (BGS), le
+Powerplay et la Colonisation, avec overlay dédié, suivi de progression et publication automatique sur Discord. Sa
+release la plus récente observée est v5.6.0, avec un dernier commit au dépôt le 31 août 2026 (instantané du 8
+septembre 2026). Voir [Outils Powerplay et colonisation de systèmes](#7-outils-powerplay-et-colonisation-de-systèmes).
+
+**Coriolis ou EDSY : quel ship-builder choisir pour construire un vaisseau ?**
+
+Les deux sont traités comme équivalents par l'écosystème (EDDLite les connecte d'ailleurs côte à côte) : **Coriolis**
+est le ship-builder historique désormais maintenu sous l'organisation officielle EDCD, tandis qu'**EDSY** est une
+alternative indépendante maintenue par un développeur unique (pseudonyme `taleden`), avec des rapports de retrofit et
+une gestion de configurations de chantier naval. Les deux simulent l'impact des plans d'engineering sur les
+statistiques du vaisseau. Voir [Outils Engineering : construire un vaisseau](#8-outils-engineering--construire-un-vaisseau).
+
+**Comment appeler les Fuel Rats en cas de panne de carburant (ratsignal) ?**
+
+Un commandant en détresse lance un **ratsignal**, généralement sur le Discord officiel des Fuel Rats (historiquement
+sur IRC) ; le bot de dispatch **Mecha** ouvre alors un dossier de secours (« case »), y attache les informations
+pertinentes (système, CMDR, plateforme) et alerte les « rats » bénévoles disponibles pour livrer carburant ou
+assistance, gratuitement et sans jugement, quelle que soit l'allégeance ou l'ancienneté du commandant. Voir
+[Entraide en jeu : Fuel Rats](#9-entraide-en-jeu--fuel-rats).
+
+**EDDB (Elite Dangerous Database) fonctionne-t-il encore ?**
+
+Non : le README d'EDDN décrit lui-même Inara comme « a popular alternative to the now defunct EDDB ». EDDB, longtemps
+une référence, est donc officiellement mort et a été remplacé dans l'usage communautaire par Inara et Spansh. Voir
+[Bases de données et plateformes web communautaires](#1-bases-de-données-et-plateformes-web-communautaires-edsm-inara-spansh).
+
+**Quels outils suivre pour la colonisation de systèmes ?**
+
+**BGS-Tally** suit désormais la contribution d'un commandant aux projets de colonisation, en plus du BGS et du
+Powerplay ; **SrvSurvey** (environ 170 étoiles GitHub) est un overlay contextuel qui aide à repérer les corps
+colonisables ; **Raven Colonial** (`ravencolonial.com`) suit la construction d'un système en cours de colonisation, et
+se relie à des plugins EDMC comme `ravencolonial_edmc` et `EDRavenColonialAgent`. Ce sont, avec BGS-Tally, les deux
+outils qui font consensus dans un paysage par ailleurs fragmenté. Voir
+[Outils de planification de colonisation](#outils-de-planification-de-colonisation).
+
+**EDEngineer est-il toujours maintenu ?**
+
+Non : le dépôt original `msarilar/EDEngineer` est archivé (fin de maintenance active côté auteur d'origine). Des forks
+communautaires existent (RealMaxing/EDEngineer, PhilipG0ISW/EDEngineer) mais leur niveau d'activité réel n'a pas pu
+être confirmé en détail. La communauté s'est largement reportée vers **ED Odyssey Materials Helper** (qui couvre
+Horizons et Odyssey) et vers les pages Engineering d'Inara. Voir
+[Outils Engineering : construire un vaisseau](#8-outils-engineering--construire-un-vaisseau).
+
+---
+
 ## Voir aussi
 
 - [Sources de données et API](./17-sources-donnees.md) — détail technique d'EDDN et de la Frontier Companion API (CAPI)
@@ -602,7 +700,7 @@ gabarit.
 
 - https://www.edsm.net/en/ | secondaire | consulté le 12/09/2026 | confirme : le périmètre fonctionnel d'EDSM (carte stellaire collaborative, suivi de journal de vol/flotte, carnet de bord, rangs de commandant, recherche de commodités/vaisseaux), son API v1 documentée et ses dumps nocturnes | ne confirme pas : la valeur exacte des compteurs de systèmes/corps célestes cités, qui progressent en continu et ne sont pas figés à une date donnée
 - https://inara.cz/elite/ | secondaire | consulté le 12/09/2026 | confirme : le périmètre fonctionnel d'Inara (commerce, exploration, équipement, squadrons, Powerplay, guerre thargoïde, engineering, journaux de bord multilingues) et son statut de site actif suivant l'actualité Frontier en direct | ne confirme pas : les statistiques Powerplay en temps réel (voir la ligne powerplay-stats/ ci-dessous)
-- https://inara.cz/elite/powerplay-stats/ | secondaire | consulté le 12/09/2026 | confirme : uniquement l'échec d'accès lui-même (HTTP 410 Gone) au moment du contrôle | ne confirme pas : le contenu des statistiques Powerplay attendu à cette URL — probablement une URL obsolète plutôt qu'un abandon de la fonctionnalité, le Powerplay restant couvert ailleurs sur le site (fiches de puissances et de systèmes, voir section 1 et `zones_incertaines`)
+- https://inara.cz/elite/powerplay-stats/ | secondaire | consulté le 12/09/2026 | confirme : uniquement l'échec d'accès lui-même (HTTP 410 Gone) au moment du contrôle | ne confirme pas : le contenu des statistiques Powerplay attendu à cette URL — probablement une URL obsolète plutôt qu'un abandon de la fonctionnalité, le Powerplay restant couvert ailleurs sur le site (fiches de puissances et de systèmes, voir la section [1. Bases de données et plateformes web communautaires](#1-bases-de-données-et-plateformes-web-communautaires-edsm-inara-spansh) et `zones_incertaines`)
 - https://canonn.science/ | secondaire | consulté le 12/09/2026 | confirme : la présentation de Canonn Interstellar Research (fondation fictive en avril 3301, domaines de recherche archéologie/étoiles à neutrons/exobiologie/xéno-technologie), son statut actif et le Codex Canonn (canonn.science/codex/) | ne confirme pas : l'ampleur précise des campagnes de ravitaillement du Gnosis (nombre de participants, tonnage livré), faute de chiffre unique vérifiable
 - https://www.spansh.co.uk/ | secondaire | consulté le 12/09/2026 | confirme : l'existence de Spansh et sa vocation générale (plotter neutron, plotter galactique, Road to Riches, plotter Fleet Carrier, recherche de corps/stations) | ne confirme pas : le détail exact des fonctionnalités de colonisation ajoutées côté Spansh — site en SPA Ember.js non récupérable par un simple fetch (voir `zones_incertaines`)
 - https://github.com/EDCD/EDMarketConnector | primaire | consulté le 12/09/2026 | confirme : le rôle d'EDMC comme application compagnon de référence (lecture des Journal files, données via CAPI, redistribution vers EDDN, socle de plugins) et son système de plugins Python (dossier `plugins`, fichier `load.py`) | ne confirme pas : les compteurs d'étoiles/issues et dates de commit cités en instantané du 8 septembre 2026, qui évoluent en continu
@@ -635,7 +733,7 @@ gabarit.
 - https://github.com/markhollingworth-worthit/edcopter | primaire | consulté le 12/09/2026 | confirme : l'existence d'EDCoPTER (interface d'EDCoPilot reproduite dans un navigateur web local) et sa mise à jour de septembre 2025 | ne confirme pas : son niveau d'adoption ou de maintenance après cette date
 - https://github.com/ArNeo-VR/EDVA | primaire | consulté le 12/09/2026 | confirme : l'existence du profil VoiceAttack EDVA, sa dernière mise à jour (11 octobre 2025) et son statut actif | ne confirme pas : le contenu exhaustif des commandes couvertes par le profil
 - https://github.com/DawnTreader/VoiceAttack-VAP-for-EliteDangerousV4 | primaire | consulté le 12/09/2026 | confirme : l'existence du profil, sa dernière mise à jour (28 janvier 2026) et la recommandation explicite de coupler EDDI, BindED et EDCoPilot | ne confirme pas : le contenu exhaustif des commandes couvertes par le profil
-- https://www.fuelrats.com/ | primaire | consulté le 12/09/2026 | confirme : le fonctionnement général du ratsignal et la procédure d'appel de détresse | ne confirme pas : le détail exact du guide de secours officiel (`wiki.fuelrats.com`, page indisponible au moment du contrôle — voir section 9 et `zones_incertaines`)
+- https://www.fuelrats.com/ | primaire | consulté le 12/09/2026 | confirme : le fonctionnement général du ratsignal et la procédure d'appel de détresse | ne confirme pas : le détail exact du guide de secours officiel (`wiki.fuelrats.com`, page indisponible au moment du contrôle — voir la section [9. Entraide en jeu : Fuel Rats](#9-entraide-en-jeu--fuel-rats) et `zones_incertaines`)
 - https://github.com/FuelRats/fuelrats.com | primaire | consulté le 12/09/2026 | confirme : la description du site officiel par son propre dépôt GitHub (« Elite: Dangerous's premier emergency refueling service ») | ne confirme pas : le contenu du wiki de procédure (dépôt distinct, non consulté avec succès)
 - https://github.com/FuelRats/pipsqueak3 | primaire | consulté le 12/09/2026 | confirme : l'existence de la génération précédente du bot de dispatch (Python), aujourd'hui archivée | ne confirme pas : une maintenance active au-delà de l'archivage
 - https://github.com/FuelRats/SwiftSqueak | primaire | consulté le 12/09/2026 | confirme : la réécriture en Swift du bot de dispatch (aujourd'hui **Mecha**), dépôt actif (dernier commit observé fin août 2026, environ 8 étoiles) | ne confirme pas : une activité plus récente que cet instantané du 8 septembre 2026

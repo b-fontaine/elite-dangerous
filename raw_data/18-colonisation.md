@@ -38,7 +38,7 @@ non remboursables, puis d'en devenir l'**Architecte système** (*System Architec
 primaire** sous **4 semaines**, en livrant les commodités au **mégavaisseau de colonisation**. La construction ensuite
 s'organise en trois **Tiers**, financés par des **Points de Construction** (CP jaunes puis verts), avec un coût croissant
 par port supplémentaire, une orientation économique héritée du corps céleste et des **liens forts** (0,35–0,80) et
-**faibles** (0,05). Le système devient « Uncontrolled Populated », donc immédiatement éligible au Powerplay et au BGS.
+**faibles** (0,05). Le système devient « Uncontrolled Populated » (littéralement « peuplé non contrôlé »), donc immédiatement éligible au Powerplay et au BGS.
 
 ## Introduction — objet et périmètre de ce guide de la Colonisation
 
@@ -88,7 +88,7 @@ Le contact de station **« System Colonisation »** (l'exemple utilisé dans la 
 
 1. **Trouver le contact de colonisation** dans un système éligible.
 2. **Créer la revendication** : choisir le système cible dans le rayon de 15 al, puis le **port primaire** (type d'installation et orientation économique).
-3. **Déployer la Balise de colonisation système** (*System Colonisation Beacon*) via le module **« System Colonisation Suite »**, présent par défaut sur tous les vaisseaux au même titre que le Discovery Scanner.
+3. **Déployer la Balise de colonisation système** (*System Colonisation Beacon*) via le module **« System Colonisation Suite »** (suite d'outils de colonisation système), présent par défaut sur tous les vaisseaux au même titre que le Discovery Scanner.
 4. **Construire le port primaire** en livrant les commodités requises au **Mégavaisseau de colonisation** (*Colonisation Ship*), qui sert de dépôt temporaire pendant le chantier.
 
 ### Délais impératifs : 24 heures pour la balise, 4 semaines pour le port primaire
@@ -242,7 +242,7 @@ L'écart entre les deux exemples (dizaines de milliers de tonnes de matériaux d
 
 Pour le fret de construction, la communauté recommande couramment le **Type-9 Heavy** et le **Type-8** (gros tonnage), l'**Imperial Cutter** restant une option haut de gamme. Pour simuler à l'avance le coût total en Points de Construction d'un système complet, l'outil de référence cité par la communauté est la **feuille de calcul « DaftMav »** (voir [Outils communautaires](#outils-communautaires-de-planification-de-colonisation)).
 
-Pour le détail des capacités de fret utiles de ces trois vaisseaux, l'outillage recommandé, une méthode de calcul du nombre de rotations à partir de ces tonnages, et l'usage d'un Fleet Carrier comme dépôt avancé, voir la section [Logistique de transport](#logistique-de-transport-capacité-utile-et-fleet-carrier-comme-dépôt-avancé) ci-dessous.
+Pour le détail des capacités de fret utiles de ces trois vaisseaux, l'outillage recommandé, une méthode de calcul du nombre de rotations à partir de ces tonnages, et l'usage d'un Fleet Carrier (Porte-Vaisseau) comme dépôt avancé, voir la section [Logistique de transport](#logistique-de-transport-capacité-utile-et-fleet-carrier-comme-dépôt-avancé) ci-dessous.
 
 ## Logistique de transport, capacité utile et Fleet Carrier comme dépôt avancé
 
@@ -256,7 +256,7 @@ Un rack de cargaison (Cargo Rack) n'existe qu'en qualité E et a une capacité f
 |---|---|---|---|---|---|
 | **Type-8 Transporter** | Aucun | 9 emplacements : classes 7, 6, 6, 6, 5, 5, 4, 2, 1 | **406 t** | 406 − 64 = **342 t** | P |
 | **Type-9 Heavy** | Aucun | 11 emplacements : classes 8, 8, 7, 6, 5, 4, 4, 3, 3, 2, 1 | **790 t** | 790 − 64 = **726 t** | P |
-| **Imperial Cutter** | Vévoda (*Duke*) de la marine impériale ou rang supérieur | 10 emplacements utilisables : classes 8, 8, 6, 6, 6, 5, 5, 4, 3, 1 (+ 2 emplacements classe 5 supplémentaires verrouillés en « Military », qui n'acceptent jamais de rack de cargaison) | **794 t** | 794 − 64 = **730 t** | P |
+| **Imperial Cutter** | Duc (*Duke*) de la marine impériale ou rang supérieur | 10 emplacements utilisables : classes 8, 8, 6, 6, 6, 5, 5, 4, 3, 1 (+ 2 emplacements classe 5 supplémentaires verrouillés en « Military » (militaire), qui n'acceptent jamais de rack de cargaison) | **794 t** | 794 − 64 = **730 t** | P |
 
 Quelques nuances tirées de ces mêmes données :
 - Le Type-9 Heavy et l'Imperial Cutter sont, avec le Panther Clipper Mk II (non chiffré ici faute de vérification), les seuls vaisseaux du jeu à disposer de **deux emplacements internes de classe 8**, ce qui explique leur écart de capacité avec le Type-8.
@@ -312,7 +312,7 @@ C'est la technique la plus rentable documentée par la communauté pour les chan
 
 #### Organisations communautaires d'aide logistique à une colonisation
 
-**Organisations communautaires d'aide logistique** citées par le mega-guide comme apportant un soutien gratuit ou contractuel aux commandants engagés dans une colonisation (voir aussi [Opérations](13-operations.md) pour l'organisation d'une campagne à plusieurs) :
+**Organisations communautaires d'aide logistique** citées par le mega-guide comme apportant un soutien gratuit ou contractuel aux commandants engagés dans une colonisation (voir aussi [Opérations](./13-operations.md) pour l'organisation d'une campagne à plusieurs) :
 - **Systémoví kolonizační kontraktoři (SCCN)** — littéralement « Contractants de colonisation systémique », nom anglais complet non confirmé par les sources consultées
 - **Opération Ida (OIDA)**
 - **F.R.E.I.G.H.T. (FRHT)**
@@ -324,7 +324,7 @@ C'est la technique la plus rentable documentée par la communauté pour les chan
 
 #### Repères chiffrés du Fleet Carrier utiles à une opération de colonisation
 
-**Caractéristiques propres du Fleet Carrier** : elles sont documentées, sourcées et datées dans [Fleet Carriers](./19-fleet-carriers.md), fichier de référence unique du corpus sur ce sujet — s'y reporter plutôt qu'aux valeurs redonnées ici en raccourci. Les repères utiles à une opération de colonisation : **prix d'achat 5 000 000 000 Cr** (5 milliards) ; **entretien hebdomadaire de base 5 000 000 Cr** pour un porteur nu, hors services optionnels, plus **100 000 Cr par saut** ; **dépôt de Tritium de 1 000 t**, séparé de la soute et donc sans effet sur le pool de 25 000 t de cargaison ; **portée maximale de saut de 500 al**, valeur fixe et non améliorable par ingénierie (champ brut `JumpRangeMax: 500` du journal de jeu) ; **consommation d'environ 135 t de Tritium** pour un saut de 500 al à vide et **d'environ 260 t** soute et réserve pleines (plancher de 10 t pour un saut à distance nulle ; formule complète dans le guide dédié) ; **cycle de saut complet d'environ 20 minutes** (charge-up d'au moins ~15 min, puis cooldown d'environ 5 min avant de replanifier). Ces six valeurs sont données avec un niveau de **confiance haute** dans [Fleet Carriers](./19-fleet-carriers.md) (sources concordantes : guide PTN, roguey.co.uk, journal de jeu). Voir aussi [Outils](16-outils.md) pour un calculateur de carburant à jour.
+**Caractéristiques propres du Fleet Carrier** : elles sont documentées, sourcées et datées dans [Fleet Carriers](./19-fleet-carriers.md), fichier de référence unique du corpus sur ce sujet — s'y reporter plutôt qu'aux valeurs redonnées ici en raccourci. Les repères utiles à une opération de colonisation : **prix d'achat 5 000 000 000 Cr** (5 milliards) ; **entretien hebdomadaire de base 5 000 000 Cr** pour un porteur nu, hors services optionnels, plus **100 000 Cr par saut** ; **dépôt de Tritium de 1 000 t**, séparé de la soute et donc sans effet sur le pool de 25 000 t de cargaison ; **portée maximale de saut de 500 al**, valeur fixe et non améliorable par ingénierie (champ brut `JumpRangeMax: 500` du journal de jeu) ; **consommation d'environ 135 t de Tritium** pour un saut de 500 al à vide et **d'environ 260 t** soute et réserve pleines (plancher de 10 t pour un saut à distance nulle ; formule complète dans le guide dédié) ; **cycle de saut complet d'environ 20 minutes** (charge-up d'au moins ~15 min, puis cooldown d'environ 5 min avant de replanifier). Ces six valeurs sont données avec un niveau de **confiance haute** dans [Fleet Carriers](./19-fleet-carriers.md) (sources concordantes : guide PTN, roguey.co.uk, journal de jeu). Voir aussi [Outils](./16-outils.md) pour un calculateur de carburant à jour.
 
 ## Interface du contact « System Colonisation »
 
@@ -425,7 +425,7 @@ de ce que la Colonisation y change.
 ## Check-list : de la revendication (claim) à la première livraison
 
 - **Avant de revendiquer** : confirmer le système cible dans le rayon de 15 al et le type de port primaire visé
-  (orientation économique, voir section « Choix de l'orientation économique »).
+  (orientation économique, voir section [Choix de l'orientation économique d'un port colonisé](#choix-de-lorientation-économique-dun-port-colonisé)).
 - Réunir les **25 M Cr** de coût de revendication avant de contacter le point de colonisation — non remboursables en
   cas d'abandon.
 - **Dans les 24 heures** suivant l'enregistrement de la revendication : déployer la Balise de colonisation système
@@ -445,27 +445,70 @@ de ce que la Colonisation y change.
 |---|---|---|---|
 | Laisser expirer le délai de 24 h sans déployer la balise | Revendication perdue, redevient disponible pour un autre commandant | Déployer la balise dès l'enregistrement de la revendication, pas après avoir organisé la logistique | P |
 | Laisser expirer le délai de 4 semaines sans achever le port primaire | Revendication perdue, système non re-revendicable immédiatement | Planifier le tonnage et les rotations de fret avant le déploiement de la balise | P |
-| Compter sur le brut du revenu hebdomadaire de l'Architecte | Impôt galactique prélevé au-delà de 5 M Cr cumulés par semaine | Ne pas se fier au chiffre affiché avant impôt (voir Récompenses économiques de l'Architecte) | P |
+| Compter sur le brut du revenu hebdomadaire de l'Architecte | Impôt galactique prélevé au-delà de 5 M Cr cumulés par semaine | Ne pas se fier au chiffre affiché avant impôt (voir [Récompenses économiques de l'Architecte système](#récompenses-économiques-de-larchitecte-système)) | P |
 | Se fier à la formule communautaire de revenu hebdomadaire comme à un chiffre garanti | Formule non officielle, facteur « Chance » non documenté | Traiter tout revenu annoncé comme un ordre de grandeur, pas un montant garanti | N |
 | Revendiquer sans capital de construction déjà réuni | 25 M Cr de revendication immobilisés sans pouvoir achever le port dans les 4 semaines | Réunir le tonnage de commodités avant de lancer la revendication, pas après | P |
+
+## Questions fréquentes
+
+**Combien coûte de revendiquer un système en colonisation (system colonisation claim) et jusqu'où peut-on viser ?**
+
+Le coût est de **25 000 000 Cr**, payés d'avance et non remboursés en cas d'échec (expiration de la balise ou du délai de construction), pour un système situé à **15 années-lumière au maximum** du contact « System Colonisation » utilisé. Voir [Mécanique de revendication d'un système inhabité (claim)](#mécanique-de-revendication-dun-système-inhabité-claim).
+
+**Combien de temps ai-je pour déployer la balise puis terminer le port primaire (primary port) après avoir revendiqué un système ?**
+
+24 heures pour déployer la Balise de colonisation système après l'enregistrement de la revendication, puis 4 semaines supplémentaires pour achever le port primaire. Passé l'un ou l'autre délai, la revendication expire et le système ne peut pas être re-revendiqué immédiatement. Voir [Mécanique de revendication d'un système inhabité (claim)](#mécanique-de-revendication-dun-système-inhabité-claim).
+
+**Quel vaisseau utiliser pour transporter le fret de construction (cargo hauling) d'une colonisation ?**
+
+Le Type-9 Heavy (790 t tout cargaison, 726 t avec un bouclier) et l'Imperial Cutter (794 t / 730 t, rang impérial de Duc requis) offrent la plus grande capacité utile ; le Type-8 Transporter (406 t / 342 t) reste pertinent pour les relais longue distance grâce à son FSD de classe 5 de série sur une coque plus légère. Voir [Logistique de transport, capacité utile et Fleet Carrier comme dépôt avancé](#logistique-de-transport-capacité-utile-et-fleet-carrier-comme-dépôt-avancé).
+
+**Faut-il construire les ports Tier 3 avant les Tier 2 pour économiser des Points de Construction (Construction Points) ?**
+
+Oui : construire dans l'ordre T3, T3, T2, T2 coûte 16 CP jaunes + 12 CP verts, contre 6 CP jaunes + 30 CP verts pour l'ordre inverse T2, T2, T3, T3 — le port primaire, lui, ne compte jamais dans ce calcul de coût croissant, quel que soit son niveau. Voir [Le coût croissant en CP de chaque port supplémentaire d'un système](#le-coût-croissant-en-cp-de-chaque-port-supplémentaire-dun-système).
+
+**C'est quoi un lien fort et un lien faible (strong link / weak link) entre les installations d'un système colonisé ?**
+
+Un lien fort relie un port à une installation de support sur le **même corps céleste** (force de base 0,35 à 0,80, modulée selon l'économie, plancher à 0,1) ; un lien faible relie un port à une installation du même type économique **ailleurs dans le système**, à une valeur fixe et non modulable de 0,05. Voir [Liens forts et liens faibles entre installations d'un système colonisé](#liens-forts-et-liens-faibles-entre-installations-dun-système-colonisé).
+
+**Comment utiliser un Fleet Carrier comme dépôt avancé pour une colonisation loin de la Bulle ?**
+
+On parcourt la longue distance une seule fois pour remplir le Fleet Carrier positionné près du chantier, puis on enchaîne des rotations courtes en supercruise entre le porteur et le site de construction. En réduisant ses services au strict minimum (Réarmement, Ravitaillement en carburant, Réparation), le porteur atteint une capacité de fret maximale de **24 070 t** — technique dite « metahauling ». Voir [Logistique de transport, capacité utile et Fleet Carrier comme dépôt avancé](#logistique-de-transport-capacité-utile-et-fleet-carrier-comme-dépôt-avancé).
+
+**Quelles récompenses touche l'Architecte système (system architect) une fois le port primaire terminé ?**
+
+Un paiement hebdomadaire (formule officielle non documentée), une remise de **3 %** sur les vaisseaux et l'équipement dans tout système où il a fait construire au moins 10 installations, et un léger bonus de prix pour toute livraison de commodités sur un chantier — un impôt galactique étant prélevé au-delà de 5 000 000 Cr de revenu hebdomadaire cumulé. Voir [Récompenses économiques de l'Architecte système](#récompenses-économiques-de-larchitecte-système).
+
+**Un système colonisé devient-il jouable en Powerplay tout de suite ?**
+
+Oui : il devient « Uncontrolled Populated » dès l'achèvement du port primaire, ce qui le rend immédiatement éligible à l'expansion et au contrôle Powerplay, en dehors de la Bulle historique. Voir [Impact de la Colonisation sur le Powerplay](#impact-de-la-colonisation-sur-le-powerplay).
+
+**D'où viennent les factions mineures (minor factions) d'un système qu'on vient de coloniser ?**
+
+Jusqu'à quatre factions sont héritées à la création : 60 % la faction contrôlant la station d'origine, 20 % celle du système d'origine, 13 % une faction alliée de l'escadron du joueur, et 6 % une faction Anarchie reprise du système existant le plus proche qui en possède une. Voir [Héritage des factions mineures par un système colonisé (mécanique communautaire)](#héritage-des-factions-mineures-par-un-système-colonisé-mécanique-communautaire).
+
+**Le sniping des revendications de colonisation marche-t-il encore après le Dodec Update ?**
+
+Non vérifié officiellement : les notes du Dodec Update (novembre 2025) mentionnent des « corrections significatives de l'interface de revendication » sans confirmer explicitement la disparition du sniping — ce point reste à traiter au conditionnel tant qu'aucune source ne le confirme. Voir [Concurrence et « sniping » des revendications de colonisation](#concurrence-et--sniping--des-revendications-de-colonisation).
 
 ## Voir aussi
 
 - [Carte des boucles de gameplay](./00-boucles-de-gameplay.md) — la colonisation comparée aux 21 autres boucles du
   jeu (temps avant premier revenu, capital d'entrée) et sa place dans la matrice boucle × système structurant.
-- [Powerplay](02-powerplay.md) — fonctionnement complet du méta-jeu politique et des Care Packages
-- [Vaisseaux](03-vaisseaux.md) — Type-9 Heavy, Type-8 et Imperial Cutter pour le fret de construction
-- [Équipements](04-equipements.md) — modules utiles au transport de commodités de construction
-- [Guardians](05-guardians.md) — technologies et sites liés aux civilisations précurseures, en périphérie de la Bulle
-- [Équipement à pied](07-equipement-a-pied.md) — matériel Odyssey pertinent sur les installations colonisées
-- [Combat à pied](09-combat-a-pied.md) — activités possibles sur les settlements et avant-postes nouvellement construits
-- [Exploration](10-exploration.md) — repérage des systèmes et corps célestes candidats à la colonisation
-- [Commerce](11-commerce.md) — routes commerciales et fret dans les systèmes colonisés
-- [Transport](12-transport.md) — logistique de livraison des commodités de construction
-- [Opérations](13-operations.md) — organisation d'une campagne de colonisation à plusieurs commandants
-- [Roadmap](15-roadmap.md) — calendrier des mises à jour touchant la colonisation
-- [Outils](16-outils.md) — planificateurs et calculateurs communautaires de colonisation
-- [Sources et données](17-sources-donnees.md) — méthodologie de collecte des données officielles et communautaires
+- [Chronologie canonique](./00-chronologie-canonique.md) — arbitrage daté des événements officiels cités dans ce guide (annonce, Bêta, mises à jour, Dodec Update).
+- [Powerplay](./02-powerplay.md) — fonctionnement complet du méta-jeu politique et des Care Packages
+- [Vaisseaux](./03-vaisseaux.md) — Type-9 Heavy, Type-8 et Imperial Cutter pour le fret de construction
+- [Équipements](./04-equipements.md) — modules utiles au transport de commodités de construction
+- [Guardians](./05-guardians.md) — technologies et sites liés aux civilisations précurseures, en périphérie de la Bulle
+- [Équipement à pied](./07-equipement-a-pied.md) — matériel Odyssey pertinent sur les installations colonisées
+- [Combat à pied](./09-combat-a-pied.md) — activités possibles sur les settlements et avant-postes nouvellement construits
+- [Exploration](./10-exploration.md) — repérage des systèmes et corps célestes candidats à la colonisation
+- [Commerce](./11-commerce.md) — routes commerciales et fret dans les systèmes colonisés
+- [Transport](./12-transport.md) — logistique de livraison des commodités de construction
+- [Opérations](./13-operations.md) — organisation d'une campagne de colonisation à plusieurs commandants
+- [Roadmap](./15-roadmap.md) — calendrier des mises à jour touchant la colonisation
+- [Outils](./16-outils.md) — planificateurs et calculateurs communautaires de colonisation
+- [Sources et données](./17-sources-donnees.md) — méthodologie de collecte des données officielles et communautaires
 - [Fleet Carriers](./19-fleet-carriers.md) — prix, entretien, Tritium, portée et cycle de saut du porteur servant de dépôt avancé
 - [Glossaire](./00-glossaire.md) — sigles et termes utilisés dans ce guide (CP, Tritium, Bulle)
 

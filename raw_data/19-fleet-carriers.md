@@ -21,7 +21,7 @@ guides_lies: [0, 2, 4, 6, 11, 12, 18, 20, 22, 27, 31, 32]
 Le **Porte-Vaisseau de joueur** (*Fleet Carrier*, **FC**, [glossaire](./00-glossaire.md)), introduit le 9 juin 2020, est une méga-structure mobile
 privée achetée **5 000 000 000 Cr** auprès du vendeur installé dans un système doté d'un chantier naval (*Drydock*).
 Il facture **5 000 000 Cr d'entretien hebdomadaire** à vide, plus **100 000 Cr par saut** et le coût de chaque service
-optionnel installé — de 1,5 M Cr pour Refuel, Repair ou Rearm jusqu'à **6,5 M Cr pour le Shipyard**. Il offre
+optionnel installé — de 1,5 M Cr pour Refuel, Repair ou Rearm jusqu'à **6,5 M Cr pour le Shipyard** (vente et stockage de vaisseaux). Il offre
 **25 000 tonnes** de soute mutualisée, **16 baies d'appontage** (4 petites, 4 moyennes, 8 grandes), un dépôt
 de Tritium séparé de **1 000 tonnes** et une portée de saut de **500 années-lumière**, valeur fixe non améliorable par
 ingénierie. Chaque saut consomme au minimum **10 tonnes** de Tritium, environ 135 t à vide sur 500 al et jusqu'à 260 t
@@ -41,7 +41,7 @@ s'appuyant sur une phrase de l'article Wikipédia anglais — « On 9 April 2020
 (7-20 avril 2020) ; une seconde bêta a suivi du 11 au 26 mai 2020 (PC/Xbox/PS4) ; la fonctionnalité n'est réellement
 livrée à tous les joueurs que le 9 juin 2020. Voir [00-chronologie-canonique.md](./00-chronologie-canonique.md) pour
 la chronologie complète du jeu et cette correction.)* Il a ensuite été considérablement enrichi (commerce de denrées
-rares, services Odyssey — dont les intérieurs du Concourse, ajoutés seulement avec Odyssey Update 11, 15 mars 2022).
+rares, services Odyssey — dont les intérieurs du Concourse (zone sociale à pied), ajoutés seulement avec Odyssey Update 11, 15 mars 2022).
 Ce guide couvre l'achat,
 l'entretien hebdomadaire, la capacité de soute, le carburant Tritium, les services embarqués, le décommissionnement,
 et les usages spécialisés (commerce, minage, colonisation, ingénierie, Powerplay) — avec, pour chaque chiffre, un
@@ -52,7 +52,8 @@ niveau de confiance explicite lorsque les sources divergent ou n'ont pas pu êtr
 > [Le Minage](./20-minage.md), [La Colonisation](./18-colonisation.md), [Ingénieurs](./06-ingenieurs.md),
 > [Powerplay](./02-powerplay.md), [Équipements](./04-equipements.md) et [Combat spatial](./08-combat-spatial.md). Pour
 > l'infrastructure statique propre à une Power (le *Stronghold Carrier*, non pilotable par un joueur), voir la
-> sous-section dédiée de la section 6 ci-dessous et le guide [Powerplay](./02-powerplay.md).
+> [sous-section dédiée de la section 6](#powerplay-et-porte-vaisseau--à-distinguer-du-stronghold-carrier-installation-de-power)
+> ci-dessous et le guide [Powerplay](./02-powerplay.md).
 
 ## 1. Achat et prix
 
@@ -62,7 +63,7 @@ Un Porte-Vaisseau ne s'achète pas depuis n'importe quelle station : il faut se 
 installation spécifique, désignée familièrement par la communauté sous le nom de **« Drydock »** (chantier naval), qui
 propose le vendeur de Porte-Vaisseaux. Ce n'est pas un service embarqué du Porte-Vaisseau lui-même une fois acheté —
 une fois en votre possession, il n'existe aucun module « Drydock » dans son interface d'administration ; l'entretien et
-la réparation des vaisseaux *visiteurs* sont couverts par le service **Repair** décrit en section 4. Le terme
+la réparation des vaisseaux *visiteurs* sont couverts par le service **Repair** décrit en [section 4](#4-services-embarqués). Le terme
 « Drydock » désigne donc uniquement le **lieu d'achat**, pas une fonctionnalité du Porte-Vaisseau.
 
 ### Prix d'achat d'un Porte-Vaisseau — 5 000 000 000 Cr pour la coque nue
@@ -71,7 +72,7 @@ la réparation des vaisseaux *visiteurs* sont couverts par le service **Repair**
 |--------------------------------------------|--------------------|----------------------------------------------------------------------|
 | Prix d'achat (Porte-Vaisseau « nu »)      | **5 000 000 000 Cr** (5 milliards) | Haute — calculateur PTN et guide PTN *Fleet Carrier Owner's Guide*, concordants. |
 
-Ce prix couvre uniquement la coque et les services par défaut non désactivables (voir section 4). Tout service
+Ce prix couvre uniquement la coque et les services par défaut non désactivables (voir [section 4](#4-services-embarqués)). Tout service
 optionnel (Refuel, Repair, Shipyard, etc.) s'active séparément après l'achat et ajoute son propre coût hebdomadaire.
 
 ### Coût de maintenance hebdomadaire d'un Porte-Vaisseau — 5 M Cr de base et coût des services
@@ -86,7 +87,7 @@ incompatible avec les autres sources, et a été écarté comme peu fiable.
 | Poste                                                  | Coût de base            |
 |----------------------------------------------------------|--------------------------|
 | Coût de base (Porte-Vaisseau nu, aucun service optionnel actif) | **5 000 000 Cr/semaine** |
-| Frais par saut (en plus du Tritium consommé, voir section 3) | **100 000 Cr par saut** |
+| Frais par saut (en plus du Tritium consommé, voir [section 3](#3-carburant-tritium--consommation-portée-cooldown)) | **100 000 Cr par saut** |
 
 À ce socle s'ajoute le coût hebdomadaire de **chaque service optionnel installé**, qu'il soit activement utilisable ou
 « suspendu » (installé mais désactivé temporairement — coûte moins cher qu'actif, mais reste facturé) :
@@ -104,7 +105,8 @@ incompatible avec les autres sources, et a été écarté comme peu fiable.
 
 *(Source : table de coûts roguey.co.uk, consultée par accès direct. Confiance haute pour l'ensemble du tableau.)*
 
-Les services Odyssey (Concourse/Bar, Vista Genomics, Pioneer Supplies) existent bien comme options installables
+Les services Odyssey (Concourse/Bar, Vista Genomics — revente de données d'exobiologie, Pioneer Supplies — achat
+d'équipement à pied) existent bien comme options installables
 (confirmées par le guide PTN), mais leurs coûts hebdomadaires précis n'ont pas pu être retrouvés dans les sources
 accessibles — **à vérifier en jeu** dans le panneau d'administration du Porte-Vaisseau si une confirmation exacte est
 nécessaire.
@@ -132,7 +134,7 @@ concordant avec le champ brut `TotalCapacity: 25000` de l'événement `CarrierSt
 elite-journal.readthedocs.io (confiance haute). Contrairement à une attente répandue, cette capacité n'est **pas
 subdivisée en baies chiffrées séparément** : aucune source ne documente de répartition en compartiments de soute
 distincts — il s'agit d'un pool global, pas d'un ensemble de baies avec des tonnages individuels. Les vaisseaux et
-modules stockés via les services Shipyard/Outfitting (jusqu'à 40 vaisseaux, voir section 4) **n'utilisent pas** cette
+modules stockés via les services Shipyard/Outfitting (jusqu'à 40 vaisseaux, voir [section 4](#4-services-embarqués)) **n'utilisent pas** cette
 capacité de 25 000 t : c'est un stockage séparé, hors quota.
 
 ### Baies d'appontage d'un Porte-Vaisseau (landing pads) — 16 pads, dont 8 grands
@@ -159,11 +161,11 @@ maximale de **1 000 tonnes**, qui ne consomme donc pas le pool de 25 000 t (conf
 « Tritium is stored in its 1,000 unit fuel tank, making it possible to travel roughly 1,500ly before refuelling » —
 confiance haute). Ce dépôt se ravitaille de deux façons :
 
-- **En l'achetant** via le service Refuel actif (voir section 4) — le Tritium est alors acheté au prix courant.
+- **En l'achetant** via le service Refuel actif (voir [section 4](#4-services-embarqués)) — le Tritium est alors acheté au prix courant.
 - **Gratuitement**, en transférant directement du Tritium miné depuis la soute d'un vaisseau visiteur vers le dépôt via
   le panneau de transfert du Porte-Vaisseau — méthode confirmée par plusieurs threads forums.frontier.co.uk et
   discussions Steam, largement utilisée par les opérations de minage pour maintenir un Porte-Vaisseau approvisionné à
-  coût nul (voir section 6, sous-section Minage).
+  coût nul (voir [section 6, sous-section Minage](#minage-avec-un-porte-vaisseau--dépôt-mobile-posé-sur-un-hotspot)).
 
 ## 3. Carburant Tritium : consommation, portée, cooldown
 
@@ -234,14 +236,14 @@ un ordre de grandeur prudent et réaliste pour une utilisation mixte, pas une va
 - **Bridge Crew** — équipage de base du Porte-Vaisseau.
 - **Commodities Market** — marché de commodités paramétrable par le propriétaire (prix d'achat/vente définis
   manuellement, dans une fourchette autorisée).
-- **Tritium Depot** — dépôt de carburant décrit en section 2.
+- **Tritium Depot** — dépôt de carburant décrit en [section 2](#2-infrastructure-et-capacité-de-soute).
 
 *(Les trois services par défaut, sans coût associé, sont confirmés par accès direct à la page « services » de
 roguey.co.uk.)*
 
 ### Services optionnels payants d'un Porte-Vaisseau — Refuel, Repair, Shipyard, Outfitting, Odyssey
 
-Coûts détaillés en section 1. Description fonctionnelle de chacun :
+Coûts détaillés en [section 1](#1-achat-et-prix). Description fonctionnelle de chacun :
 
 | Service              | Fonction                                                                                          |
 |-----------------------|----------------------------------------------------------------------------------------------------|
@@ -341,14 +343,15 @@ Voir [Le Minage](./20-minage.md) pour l'équipement et les techniques. Le Porte-
 positionné directement sur un point chaud (*hotspot*) de minage : les vaisseaux mineurs livrent leur minerai au marché
 du Porte-Vaisseau sans aller-retour vers une station lointaine, et le propriétaire peut ensuite déplacer le
 Porte-Vaisseau chargé vers le meilleur acheteur. Le Tritium peut lui-même être miné et déposé gratuitement dans le
-dépôt (voir section 2), rendant l'opération quasi autonome en carburant.
+dépôt (voir [section 2](#2-infrastructure-et-capacité-de-soute)), rendant l'opération quasi autonome en carburant.
 
 ### Colonisation avec un Porte-Vaisseau — dépôt avancé de matériaux de construction
 
 Voir [La Colonisation](./18-colonisation.md) pour la mécanique complète. Bien que la colonisation de système soit
 réalisable sans Porte-Vaisseau, en posséder un facilite grandement la préparation logistique : pré-chargement des
 matériaux de construction requis, le Porte-Vaisseau servant de **dépôt avancé** près du site de construction pour
-réduire les temps de trajet des *haulers*. Plusieurs outils communautaires tiers récents (« Raven Colonial »,
+réduire les temps de trajet des *haulers* (vaisseaux assurant le transport de fret). Plusieurs outils communautaires
+tiers récents (« Raven Colonial »,
 edcolony.com) sont spécifiquement conçus pour planifier ce pré-chargement de commodités de colonisation sur des
 Porte-Vaisseaux et suivre la progression des chantiers.
 
@@ -356,7 +359,7 @@ Porte-Vaisseaux et suivre la progression des chantiers.
 
 Voir [Ingénieurs](./06-ingenieurs.md) pour le système complet. Rôle purement **logistique** : stockage gratuit de
 modules (y compris déjà ingénierés) et transport de matériaux bruts à proximité d'une base d'Ingénieur — voir la mise
-en garde de la section 4 sur l'absence d'Ingénieur (PNJ) embarqué et l'absence confirmée de Material Trader/Technology
+en garde de la [section 4](#4-services-embarqués) sur l'absence d'Ingénieur (PNJ) embarqué et l'absence confirmée de Material Trader/Technology
 Broker parmi les services disponibles.
 
 ### Powerplay et Porte-Vaisseau — à distinguer du Stronghold Carrier (installation de Power)
@@ -373,17 +376,17 @@ synergie) qu'une mécanique pleinement développée par Frontier — à formuler
 ## Check-list avant l'achat d'un Porte-Vaisseau
 
 - **Avant l'achat** : provisionner au moins 4 à 8 semaines d'entretien hebdomadaire réaliste (10 à 20 M Cr/semaine
-  avec plusieurs services actifs, voir section 1) en plus des 5 Md Cr d'achat — un Porte-Vaisseau acheté sans cette
+  avec plusieurs services actifs, voir [section 1](#1-achat-et-prix)) en plus des 5 Md Cr d'achat — un Porte-Vaisseau acheté sans cette
   réserve entre en dette dès la première semaine.
 - Décider à l'avance quels services optionnels resteront actifs en permanence (Shipyard, Outfitting) et lesquels
   seront suspendus entre deux sessions, pour limiter le coût hebdomadaire de base.
 - **Avant le premier saut** : vérifier le réservoir de Tritium (1 000 t max) et prévoir une réserve de secours si le
   premier saut vise une zone sans marché de Tritium à proximité.
-- Calculer le coût en Tritium du premier saut avec la formule de la section 3 plutôt que de partir à l'estimation.
+- Calculer le coût en Tritium du premier saut avec la formule de la [section 3](#3-carburant-tritium--consommation-portée-cooldown) plutôt que de partir à l'estimation.
 - **Provision continue** : transférer ou vendre le cargo, le Tritium et les modules avant tout décommissionnement
-  volontaire, pour ne pas en perdre la valeur (section 5).
+  volontaire, pour ne pas en perdre la valeur ([section 5](#5-décommissionnement)).
 - Mettre en place un rappel de paiement hebdomadaire — la semaine de grâce en cas d'impayé mène au décommissionnement
-  involontaire, dette déduite du remboursement (section 5).
+  involontaire, dette déduite du remboursement ([section 5](#5-décommissionnement)).
 
 ## Pièges fréquents et coûts cachés du Porte-Vaisseau
 
@@ -392,8 +395,85 @@ synergie) qu'une mécanique pleinement développée par Frontier — à formuler
 | Acheter un Porte-Vaisseau sans provisionner l'entretien hebdomadaire | Décommissionnement involontaire après une semaine de grâce impayée, dette déduite du remboursement | Budgéter 10 à 20 M Cr/semaine avant l'achat (voir check-list ci-dessus) |
 | Décommissionner sans retirer cargo, Tritium et modules au préalable | Perte de leur valeur totale | Toujours vider la soute et le réservoir avant de lancer la procédure |
 | Confondre Stronghold Carrier et Porte-Vaisseau de joueur | Attente d'un accès ou d'un usage qui n'existe pas pour ce type d'installation | Voir la distinction ci-dessus : le Stronghold Carrier n'est pas un Porte-Vaisseau de joueur |
-| Sous-estimer le coût en Tritium d'un saut à pleine charge | Jusqu'à ≈ 260 t consommées contre ≈ 135 t à vide sur 500 al | Calculer avec la formule de la section 3 avant de planifier un saut long |
-| Installer un Material Trader ou un Technology Broker en pensant qu'ils sont disponibles sur un Porte-Vaisseau | Service inexistant — seuls Shipyard/Outfitting, stockage gratuit et transport sont disponibles | Voir la liste des services embarqués (section 4) |
+| Sous-estimer le coût en Tritium d'un saut à pleine charge | Jusqu'à ≈ 260 t consommées contre ≈ 135 t à vide sur 500 al | Calculer avec la formule de la [section 3](#3-carburant-tritium--consommation-portée-cooldown) avant de planifier un saut long |
+| Installer un Material Trader ou un Technology Broker en pensant qu'ils sont disponibles sur un Porte-Vaisseau | Service inexistant — seuls Shipyard/Outfitting, stockage gratuit et transport sont disponibles | Voir la liste des services embarqués ([section 4](#4-services-embarqués)) |
+
+## Questions fréquentes
+
+**Combien coûte un Porte-Vaisseau (Fleet Carrier) à l'achat ?**
+
+La coque nue coûte **5 000 000 000 Cr** (5 milliards), payés auprès du vendeur installé dans un système doté d'un
+« Drydock » (chantier naval). Ce prix ne couvre que la coque et les trois services par défaut non désactivables
+(Bridge Crew, marché, dépôt de Tritium) : chaque service optionnel (Refuel, Repair, Shipyard...) s'active et se
+facture séparément. Voir [section 1](#1-achat-et-prix).
+
+**Combien coûte l'entretien hebdomadaire (weekly upkeep) d'un Porte-Vaisseau ?**
+
+Le socle est de **5 000 000 Cr par semaine** à vide, plus **100 000 Cr par saut** effectué et le coût de chaque
+service optionnel actif ou suspendu — de 1,5 M Cr pour Refuel/Repair/Rearm jusqu'à 6,5 M Cr pour le Shipyard. Des
+retours de joueurs évoquent un total typique de **10 à 20 millions de Cr/semaine** pour une configuration avec
+plusieurs services actifs. Voir [section 1](#1-achat-et-prix).
+
+**Combien de Tritium consomme un saut de Porte-Vaisseau (carrier jump) ?**
+
+La formule est Tritium(t) = 10 + (Distance/4) × [1 + (Cargo + Réserve)/25 000], avec un plancher de **10 tonnes**
+même à distance nulle. Un saut de 500 al à vide coûte environ **135 t**, et jusqu'à **260 t** à pleine charge (soute
+et réserve à 25 000 t cumulées) — soit près du double. Voir [section 3](#3-carburant-tritium--consommation-portée-cooldown).
+
+**Quelle est la portée de saut maximale (jump range) d'un Porte-Vaisseau ?**
+
+**500 années-lumière** par saut, une valeur fixe qui ne peut pas être améliorée par ingénierie, contrairement au FSD
+d'un vaisseau classique. Avec un plein de Tritium (1 000 t), l'autonomie pratique repère est d'environ **1 500 al**
+avant besoin de ravitaillement. Voir [section 3](#3-carburant-tritium--consommation-portée-cooldown).
+
+**Combien de temps dure un saut de Porte-Vaisseau (jump charge-up et cooldown) ?**
+
+Le compte à rebours de charge dure au minimum **~15 minutes** (jamais sous 15:06), le saut devient non annulable à
+partir de 3:20 restantes, puis un cooldown d'environ **5 minutes** précède toute replanification. Le cycle complet le
+plus rapide pour deux sauts de 500 al est donc d'environ **20 minutes**. Voir
+[section 3](#3-carburant-tritium--consommation-portée-cooldown).
+
+**Combien de baies d'appontage (landing pads) a un Porte-Vaisseau ?**
+
+**16 baies** au total : 4 petites (Small), 4 moyennes (Medium) et 8 grandes (Large) — la seule infrastructure du jeu
+où les pads Large sont majoritaires. Voir [section 2](#2-infrastructure-et-capacité-de-soute).
+
+**Quelle est la capacité de soute (cargo capacity) d'un Porte-Vaisseau ?**
+
+**25 000 tonnes**, un pool unique mutualisé entre marchandises et Tritium excédentaire, non subdivisé en baies
+séparées. Les vaisseaux et modules stockés via Shipyard/Outfitting (jusqu'à 40 vaisseaux) n'utilisent pas cette
+capacité — c'est un stockage à part. Voir [section 2](#2-infrastructure-et-capacité-de-soute).
+
+**Combien de Tritium peut stocker le dépôt d'un Porte-Vaisseau (Tritium Depot) ?**
+
+**1 000 tonnes**, dans un réservoir séparé de la soute de 25 000 t. Il se ravitaille soit en achetant du Tritium via
+le service Refuel actif, soit gratuitement en transférant du Tritium miné directement depuis la soute d'un vaisseau
+visiteur. Voir [section 2](#2-infrastructure-et-capacité-de-soute).
+
+**Combien récupère-t-on en décommissionnant (decommissioning) son Porte-Vaisseau ?**
+
+Le remboursement volontaire restitue les 5 milliards de Cr d'achat moins **150 000 000 Cr de frais fixes**. Le
+Tritium restant, les marchandises stockées et la valeur des services optionnels installés ne sont en revanche jamais
+remboursés. Voir [section 5](#5-décommissionnement).
+
+**Que se passe-t-il si je ne paie pas l'entretien de mon Porte-Vaisseau ?**
+
+Il entre en « décommissionnement en attente », avec un délai de grâce d'environ **une semaine** pour régulariser la
+dette. Passé ce délai, Frontier le démantèle automatiquement et **déduit la dette accumulée du remboursement**, au
+lieu d'appliquer les frais fixes du décommissionnement volontaire. Voir [section 5](#5-décommissionnement).
+
+**Peut-on ingénierer ses modules (engineering) directement sur un Porte-Vaisseau ?**
+
+Non : aucun Ingénieur (PNJ) n'est présent à bord, et un Porte-Vaisseau ne recense ni Material Trader ni Technology
+Broker parmi ses services. Son rôle reste purement logistique — stocker des modules déjà ingénierés et transporter
+des matériaux bruts à proximité d'une base d'Ingénieur. Voir [section 4](#4-services-embarqués).
+
+**Quelle est la différence entre un Porte-Vaisseau de joueur et un Stronghold Carrier ?**
+
+Le Stronghold Carrier est une installation statique propre à une Power, introduite avec Powerplay 2.0 (31 octobre
+2024) — non pilotable, réservé aux membres alliés à cette Power. Un Porte-Vaisseau de joueur, lui, est mobile, acheté
+5 Md Cr, et peut être utilisé en soutien logistique de Powerplay 2.0 (transport de commodités stratégiques). Voir la
+[sous-section dédiée](#powerplay-et-porte-vaisseau--à-distinguer-du-stronghold-carrier-installation-de-power).
 
 ## Voir aussi
 
@@ -460,5 +540,5 @@ forums.frontier.co.uk, non re-vérifiable en direct à cause du blocage anti-rob
 indépendante de roguey.co.uk pour la répartition des baies d'appontage (roguey.co.uk reste la seule source trouvée à
 documenter ce détail, sur plusieurs de ses propres pages). Ces chiffres sont un **instantané capturé le 9 septembre
 2026** : la maintenance, les frais de décommissionnement et les coûts de service ont déjà évolué par le passé (voir
-section 5) et peuvent être révisés par Frontier — à revérifier dans le panneau d'administration du Porte-Vaisseau en
+[section 5](#5-décommissionnement)) et peuvent être révisés par Frontier — à revérifier dans le panneau d'administration du Porte-Vaisseau en
 jeu avant toute décision financière importante.

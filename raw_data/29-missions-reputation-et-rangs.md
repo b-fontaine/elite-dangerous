@@ -54,8 +54,8 @@ permis, et les deux services Odyssey qui donnent accès au combat organisé (Ape
 > EDCD et des guides Steam Community datés. Plusieurs de ses propres tableaux portent un bandeau interne signalant des
 > zones obsolètes ou non sourcées ; ces réserves sont reportées ici plutôt que lissées. Plusieurs affirmations d'une
 > édition précédente du corpus n'ont pas pu être recoupées et sont signalées comme divergentes, sans être corrigées
-> d'autorité — voir en particulier la date du Community Goal Alioth (section 5) et le prêt d'équipement Frontline
-> Solutions (section 7.2).
+> d'autorité — voir en particulier la date du Community Goal Alioth ([section 5](#5-tableau-des-systèmes-à-permis)) et le prêt d'équipement Frontline
+> Solutions ([section 7.2](#72-frontline-solutions--sengager-dans-une-zone-de-conflit-au-sol)).
 
 ---
 
@@ -74,7 +74,7 @@ retient sept, par lesquelles il regroupe l'ensemble du tableau de missions d'une
 | **Massacre**          | Détruire un nombre donné de vaisseaux d'une faction, souvent lié à une Guerre Civile               | Élevé     | Élevé      | Factions Anarchy : cible nommée « Civilian » ; factions légales : « Spec/Black Ops » |
 | **Theft / Liberation**| Voler ou récupérer un bien ou un otage détenu par une cible                                        | Élevé     | Élevé      | —                                                                                     |
 | **Recovery**          | Récupérer un objet en espace profond ou en surface planétaire                                      | Moyen     | Moyen      | **Illegal Recovery**, **Civil War Recovery**                                          |
-| **Surface Operations**| Scanner un Data Point en SRV (Data Recovery/Theft) ou saboter un générateur de settlement            | Moyen     | Moyen      | À la frontière missions-vaisseau / missions au sol — nécessite un SRV                |
+| **Surface Operations**| Scanner un Data Point (point de données) en SRV (Data Recovery/Theft) ou saboter un générateur de settlement (installation au sol) | Moyen     | Moyen      | À la frontière missions-vaisseau / missions au sol — nécessite un SRV                |
 
 À ces familles s'ajoutent deux carrières transversales au tableau, avec leur propre profil risque/récompense :
 **Salvager** (récupération de cargaison/matériaux légaux ou volés — risque moyen, récompense faible) et
@@ -86,7 +86,7 @@ faible récompense, faible risque, alimentent surtout l'Influence BGS et le rang
 
 > **Correspondance avec des intitulés attendus.** Les termes « Boom Delivery » et « Source and Return », parfois
 > cités dans la documentation communautaire, ne sont pas des familles indépendantes du tableau solo : « Source and
-> Return » est un des quatre types de **mission d'équipe** (section 1.3), et le libellé exact « Boom Delivery » n'a
+> Return » est un des quatre types de **mission d'équipe** ([section 1.3](#13-missions-déquipe-teamwing-missions)), et le libellé exact « Boom Delivery » n'a
 > pas pu être confirmé sur une page de référence — seuls des fils de discussion l'évoquent sans citer le texte d'une
 > mission en jeu. « Wetwork » n'est pas non plus une famille : c'est un sous-titre d'Assassination. Un rédacteur
 > voulant vérifier le libellé exact affiché en jeu devra le faire directement en jeu ou via un datamine EDCD/FDevIDs,
@@ -120,7 +120,7 @@ flipping »** désignait le fait de changer de mode de jeu (Solo / Groupe privé
 du tableau ; cette possibilité a été neutralisée dès **2018** par l'introduction d'un serveur de missions dédié
 (*Beyond*, chapitre 4, v3.3), qui rend le tableau cohérent entre tous les modes de jeu. Le terme survit dans l'usage
 communautaire de 2024, mais désigne aujourd'hui une pratique différente : visiter plusieurs stations et factions pour
-accumuler des contrats compatibles entre eux (voir stacking, 1.6), plutôt qu'un vrai changement de tirage.
+accumuler des contrats compatibles entre eux (voir stacking, [1.6](#16-cumul-de-missions-mission-stacking)), plutôt qu'un vrai changement de tirage.
 *(elite-dangerous.fandom.com — Mission Board ; forums.frontier.co.uk, fils « Now that board flipping is gone... »
 2019 et « Elite Dangerous Money Making in 2024 », consultés le 12 septembre 2026.)*
 
@@ -169,7 +169,7 @@ plus haut :
 | Hostile     | non chiffré par la source     | Attaqué à vue par les PNJ affiliés à cette faction                             |
 | Unfriendly  | non chiffré par la source     | —                                                                                |
 | Neutral     | 0 à 15 %                       | Palier de départ par défaut                                                     |
-| Cordial     | ≥ 15 %                         | Accès aux missions de promotion Navy (Federal/Imperial, voir section 3)         |
+| Cordial     | ≥ 15 %                         | Accès aux missions de promotion Navy (Federal/Imperial, voir [section 3](#3-les-deux-échelles-de-marine-de-superpuissance))         |
 | Friendly    | ≥ 35 %                         | Accès à des missions mieux rémunérées                                          |
 | Allied      | ≥ 75 %                         | Accès aux missions les mieux rémunérées ; condition la plus fréquente d'un permis|
 
@@ -178,7 +178,7 @@ Les seuils numériques d'Unfriendly et de Hostile ne sont chiffrés par aucune s
 
 ### 2.2 Ce que le palier conditionne réellement
 
-Un statut **Allié** est la condition la plus répandue des missions d'invitation à un permis de système (section 5) et
+Un statut **Allié** est la condition la plus répandue des missions d'invitation à un permis de système ([section 5](#5-tableau-des-systèmes-à-permis)) et
 d'un Ingénieur (exemple déjà présent dans le corpus : **Bill Turner ⇒ Allié avec Alioth Independents**, cité en
 [06-ingenieurs.md](./06-ingenieurs.md)). Un statut **Hostile** déclenche une attaque à vue par les PNJ de la faction
 concernée. L'accès au **marché noir** d'une station est documenté par le wiki communautaire comme dépendant
@@ -205,7 +205,7 @@ reste acquis tant qu'aucune action négative ne l'entame. *(elite-dangerous.fand
 
 Les deux échelles ci-dessous comptent chacune **quinze paliers numérotés de 0 à 14**, le palier 0 étant « None »
 (aucun rang) — soit **quatorze rangs titrés** à proprement parler. Elles conditionnent l'achat de **sept vaisseaux**
-(déjà recensés dans [03-vaisseaux.md](./03-vaisseaux.md)), plusieurs permis de système (section 5) et au moins une
+(déjà recensés dans [03-vaisseaux.md](./03-vaisseaux.md)), plusieurs permis de système ([section 5](#5-tableau-des-systèmes-à-permis)) et au moins une
 invitation d'Ingénieur.
 
 ### 3.1 Federal Navy Auxiliary
@@ -260,13 +260,13 @@ forums.frontier.co.uk, confiance moyenne.)*
 
 Le rang de marine se construit en deux temps. D'abord, accomplir des missions (ou dons, transport, contrats
 divers) pour des factions mineures alignées à la superpuissance visée fait progresser une **jauge de réputation
-interne au rang**, distincte de la réputation de faction (section 2). Une fois cette jauge pleine, les factions de
+interne au rang**, distincte de la réputation de faction ([section 2](#2-léchelle-de-réputation-de-faction-mineure)). Une fois cette jauge pleine, les factions de
 cette superpuissance avec lesquelles le commandant a un statut **Cordial ou supérieur** commencent à proposer des
 **missions de promotion** explicitement titrées (par exemple « Federal Navy Acquisition Contract » ou son équivalent
 impérial) ; terminer une telle mission fait monter le rang d'un palier. La progression de réputation excédentaire
 n'est pas perdue en attendant qu'une mission de promotion apparaisse. Tout commandant indépendant de la Pilots
 Federation peut servir dans l'une ou l'autre marine sans démarche d'adhésion formelle — contrairement à Powerplay, où
-il faut se *pledge* à un Power (voir [02-powerplay.md](./02-powerplay.md), système de réputation entièrement
+il faut se *pledge* (s'engager) à un Power (voir [02-powerplay.md](./02-powerplay.md), système de réputation entièrement
 distinct : aucune des deux échelles de marine ne recoupe un rang Powerplay). Ces rangs sont honorifiques et ne
 confèrent aucune autorité réelle : seulement l'achat de certains vaisseaux et l'accès à des systèmes restreints.
 *(elite-dangerous.fandom.com — Federation/Ranks, Empire/Ranks, Federal_Navy, consultés le 12 septembre 2026.)*
@@ -340,9 +340,9 @@ consultés le 12 septembre 2026.)*
 
 Les rangs et la réputation documentés dans ce guide débloquent, au-delà des crédits :
 
-- **Des vaisseaux** — sept au total, tous listés en section 3 et déjà recensés dans
+- **Des vaisseaux** — sept au total, tous listés en [section 3](#3-les-deux-échelles-de-marine-de-superpuissance) et déjà recensés dans
   [03-vaisseaux.md](./03-vaisseaux.md).
-- **Des permis de système** — section 5.
+- **Des permis de système** — [section 5](#5-tableau-des-systèmes-à-permis).
 - **Des invitations d'Ingénieur** — The Sarge (Federal Navy Midshipman, condition exacte non recoupée verbatim),
   Hera Tani (Imperial Navy Outsider, cumulée avec une condition Liz Ryder et 50 Kamitra Cigars), et plus généralement
   toute invitation conditionnée à un statut Allié avec une faction (exemple déjà présent dans le corpus : Bill Turner,
@@ -365,7 +365,7 @@ son vaisseau. Deux services Odyssey comblent ce trou.
 
 ### 7.1 Apex Interstellar : la navette rapide
 
-**Réservation.** En station, un comptoir Apex Interstellar Transport se trouve dans la plupart des Concourses. Depuis
+**Réservation.** En station, un comptoir Apex Interstellar Transport se trouve dans la plupart des Concourses (zones sociales à pied). Depuis
 un settlement, sans comptoir physique, la navette se commande à distance via le menu personnel du joueur.
 
 **Tarification.** Le coût combine un **Supercruise Fee** de base (100 Cr) pour la portion intra-système, plus un
@@ -383,7 +383,7 @@ un supplément. Apex n'est **pas** proposé dans les Concourses des Fleet Carrie
 documentée : c'est un service de transport du personnage à pied, pas de la cargaison du vaisseau laissé à quai — dont
 le sort exact (conservée ou perdue) n'a pas pu être confirmé. Aucune source ne documente non plus de trajet gratuit
 garanti pour un commandant sans le moindre crédit ; les joueurs bloqués rapportent recourir au support joueur ou à
-l'option « Recover to Orbit » du menu principal, des mécanismes indépendants d'Apex.
+l'option « Recover to Orbit » (récupération en orbite) du menu principal, des mécanismes indépendants d'Apex.
 
 **Confirmation d'une mention du corpus, et un complément.** [26-ingenierie-a-pied-avancee.md](./26-ingenierie-a-pied-avancee.md)
 cite « voyager 100 années-lumière en navette/taxi (Apex) » comme condition de déblocage de l'Ingénieure **Domino
@@ -405,7 +405,7 @@ zone.
 
 **Intensité, pas grade.** Les Ground CZ n'ont pas de « grade » de contrat nommé mais trois niveaux de **Conflict
 Intensity** — Low, Medium, High — visibles uniquement sur la carte du comptoir Frontline Solutions, indépendants du
-« Threat Level » affiché dans le panneau système standard. La paie totale observée va d'environ **500 000 Cr** en
+« Threat Level » (niveau de menace) affiché dans le panneau système standard. La paie totale observée va d'environ **500 000 Cr** en
 intensité Low à **5-20 millions de Cr** en intensité High, selon la compétence du joueur et son équipement ; la
 capture d'un point de contrôle rapporte en plus un bond fixe de 3 000 Cr par joueur du camp capturant, au-dessus des
 primes de combat individuelles.
@@ -428,6 +428,72 @@ Solutions au déploiement rapide d'escouades vers le mode **Operations**, avec u
 
 *(elite-dangerous.fandom.com — Apex Interstellar Transport, Domino Green, Conflict Zone (On Foot), Frontline
 Solutions, Bonds ; elitedangerous.com/news/updates/4-4-0-0 ; consultés le 12 septembre 2026.)*
+
+---
+
+## Questions fréquentes
+
+**Combien de missions actives je peux cumuler en même temps (mission stacking) ?**
+Un plafond de 20 missions actives simultanées, partagé avec les contrats passagers, est documenté par un fil de
+forum Frontier de janvier 2018 — non revérifié depuis pour la version 4.4.0.x actuelle. Le cumul fonctionne surtout
+pour les missions Massacre et Assassination : une même élimination compte pour plusieurs missions à condition
+qu'elles proviennent de factions différentes ciblant la même faction hostile. Voir
+[section 1.6](#16-cumul-de-missions-mission-stacking).
+
+**Le board flipping, ça marche encore pour rafraîchir le tableau de missions ?**
+Non : cette pratique, qui consistait à changer de mode de jeu (Solo / Groupe privé / Ouvert) pour forcer un
+nouveau tirage, a été neutralisée dès 2018 par l'introduction d'un serveur de missions dédié qui rend le tableau
+cohérent entre tous les modes. Le terme survit dans l'usage communautaire mais désigne aujourd'hui une pratique
+différente : visiter plusieurs stations pour accumuler des contrats compatibles entre eux. Voir
+[section 1.4](#14-rafraîchissement-du-tableau-et--board-flipping-).
+
+**Combien de missions d'équipe (team/wing missions) peut-on avoir en cours en même temps ?**
+Quatre familles de missions existent en version partagée entre membres d'une équipe (Assassination, Delivery,
+Massacre, Source and Return). Une équipe de quatre joueurs au maximum peut mener jusqu'à quatre missions d'équipe
+actives simultanément, chaque joueur ne pouvant partager qu'une seule mission à la fois. Voir
+[section 1.3](#13-missions-déquipe-teamwing-missions).
+
+**Il faut quel palier de réputation pour débloquer les missions les mieux payées ?**
+Le statut Allied (≥ 75 %) donne accès aux missions les mieux rémunérées et conditionne le plus souvent l'invitation
+à un permis de système ; Friendly (≥ 35 %) donne déjà accès à des missions mieux payées, et Cordial (≥ 15 %) ouvre
+les missions de promotion Navy. Voir [section 2.1](#21-six-paliers-de-hostile-à-allied).
+
+**La réputation de faction redescend toute seule avec le temps (reputation decay) ?**
+Non pour les factions mineures : un statut Allié acquis reste acquis tant qu'aucune action négative ne l'entame.
+La décroissance ne s'applique qu'aux trois superpuissances majeures (Fédération, Empire, Alliance) : au-dessus de
+75 % elle redescend lentement vers ce plancher, et en dessous de Neutral mais au-dessus de 25 % elle remonte
+lentement vers ce plafond. Voir
+[section 2.3](#23-la-réputation-de-faction-ne-se-dégrade-pas--celle-des-superpuissances-si).
+
+**Le rang Federal Navy et le rang Imperial Navy, ça débloque quoi exactement ?**
+Chaque échelle compte quinze paliers numérotés de 0 à 14 (dont « None »), soit quatorze rangs titrés. À elles deux
+elles conditionnent l'achat de sept vaisseaux — dont le Federal Corvette au palier Rear Admiral côté Fédération, et
+l'Imperial Cutter au palier Duke (et non King) côté Empire — plusieurs permis de système et au moins une invitation
+d'Ingénieur. Voir [section 3](#3-les-deux-échelles-de-marine-de-superpuissance).
+
+**Le rang Mercenaire (Mercenary), c'est quoi les paliers ?**
+Aucune source consultée pour ce guide, ni pour l'édition précédente du corpus, ne publie une échelle de paliers
+ordonnée pour ce rang de combat à pied : il s'agit d'une absence documentée à deux reprises, pas d'un oubli de
+rédaction. La seule méthode fiable reste de suivre sa propre progression dans le panneau Statut > Réputation en
+jeu. Voir [section 4](#4-le-rang-mercenaire-combat-à-pied).
+
+**Comment débloquer le permis pour Alioth ?**
+La voie documentée comme standard est une réputation Alliée avec les Alioth Independents suivie d'une mission
+d'invitation à bord du mégaship *Meredith's Dream*, dans le système voisin Alcor. Une divergence de sourçage sur un
+Community Goal historique associé à ce permis est signalée sans être tranchée. Voir
+[section 5](#5-tableau-des-systèmes-à-permis).
+
+**Apex Interstellar, combien ça coûte et jusqu'où ça peut m'emmener ?**
+Le coût combine un Supercruise Fee de base (100 Cr) plus un Hyperspace Fee variable selon la distance ; un exemple
+communautaire cite environ 100 + 43 900 Cr pour un trajet d'environ 88 années-lumière. La navette a une portée
+typique de six à sept sauts (21,68 al à vide de cargaison, 23,88 al à vide) : un Sol → Colonia direct est donc hors
+de portée d'un aller Apex. Voir [section 7.1](#71-apex-interstellar--la-navette-rapide).
+
+**Frontline Solutions, ça paie combien pour une zone de conflit au sol ?**
+La paie totale observée va d'environ 500 000 Cr en intensité Low à 5-20 millions de Cr en intensité High, selon la
+compétence du joueur et son équipement ; la capture d'un point de contrôle rapporte en plus un bond fixe de 3 000 Cr
+par joueur du camp capturant, au-dessus des primes de combat individuelles. Voir
+[section 7.2](#72-frontline-solutions--sengager-dans-une-zone-de-conflit-au-sol).
 
 ---
 
@@ -517,5 +583,5 @@ permis, missions/réputation, Apex/Frontline), chacune sourcée et datée sépar
 Contrairement à [28-marchandises.md](./28-marchandises.md), aucune donnée n'est issue d'un script traitant un jeu de
 données structuré : le sujet de ce guide (mécaniques de jeu, pas catalogue chiffré) ne s'y prête pas. Les
 contradictions relevées entre sources, ou entre une source et une affirmation antérieure du corpus, sont rapportées
-telles quelles plutôt que tranchées d'autorité — voir en particulier la date du Community Goal Alioth (section 5) et
-le prêt d'équipement Frontline Solutions (section 7.2).
+telles quelles plutôt que tranchées d'autorité — voir en particulier la date du Community Goal Alioth ([section 5](#5-tableau-des-systèmes-à-permis)) et
+le prêt d'équipement Frontline Solutions ([section 7.2](#72-frontline-solutions--sengager-dans-une-zone-de-conflit-au-sol)).

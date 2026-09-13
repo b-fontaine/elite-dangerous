@@ -31,15 +31,17 @@ que ce cycle corrige — plus le Kill Warrant Scanner et le Frame Shift Wake Sca
 Krait Mk II) ; et le sort légal du butin. Côté défensif : les lieux à risque réellement documentés par la communauté
 (Deciat, Shinrarta Dezhra, stations de Community Goal — mais pas le Colonia Bridge, hypothèse non confirmée), la
 procédure d'évasion, les groupes privés PvE (Mobius), le blocage et le signalement, et une définition sourcée du
-combat logging. Une réserve traverse tout le guide : plusieurs de ces sujets (fréquence réelle du ganking, texte exact
-des règles Frontier, fiabilité du blocage) ne sont documentés que par la communauté, jamais par une source primaire
-consultée directement.
+combat logging (déconnexion volontaire du client en plein combat pour échapper à une défaite). Une réserve traverse
+tout le guide : plusieurs de ces sujets (fréquence réelle du ganking — traque et destruction d'un joueur sans intérêt
+pour son butin —, texte exact des règles Frontier, fiabilité du blocage) ne sont documentés que par la communauté,
+jamais par une source primaire consultée directement.
 
 ## Ce que couvre ce guide, et ce qu'il ne couvre pas
 
 Chaque brique de la piraterie existe déjà, séparément, dans le corpus : le Hatch Breaker et le FSD Interdictor
 étiquetés « piraterie » dans [04-equipements.md](./04-equipements.md), le mini-jeu d'interdiction et le mass lock dans
-[08-combat-spatial.md §2](./08-combat-spatial.md), les marchés noirs et systèmes Anarchy dans
+[08-combat-spatial.md §2](./08-combat-spatial.md), les marchés noirs et systèmes **Anarchy** (où le marché noir opère et où tous les vaisseaux apparaissent « Clean » par
+défaut) dans
 [11-commerce.md §2](./11-commerce.md) et [21-bgs.md](./21-bgs.md), le bonus de marché noir d'Archon Delaine dans
 [02-powerplay.md](./02-powerplay.md). Aucun guide ne les relie en une procédure : une requête « comment pirater un
 vaisseau » ne pouvait récupérer qu'un fragment de catalogue. Ce guide assemble la chaîne opératoire et ajoute ce qui
@@ -52,8 +54,9 @@ interdiction, mass lock, notoriety, marché noir — il y renvoie.
 ## 1. La chaîne opératoire de la piraterie, étape par étape
 
 1. **Choisir une cible chargée** — un PNJ marchand (types courants : Type-9 Heavy, Type-7 Transporter, Lakon lourds)
-   repéré sur une lane commerciale ou dans un signal (section 3).
-2. **Lire le manifeste avant d'agir** — scanner la cargaison au **Manifest Scanner** (section 2) pour vérifier qu'elle
+   repéré sur une lane commerciale ou dans un signal ([section 3, « Où pirater »](#3-où-pirater--signaux-sites-de-minage-et-lanes-commerciales)).
+2. **Lire le manifeste avant d'agir** — scanner la cargaison au **Manifest Scanner** ([section 2, « Les scanners de
+   piraterie »](#2-les-scanners-de-piraterie--un-seul-module-renommé-pas-quatre)) pour vérifier qu'elle
    vaut le coup avant d'engager l'interdiction : un vaisseau vide n'a rien à céder.
 3. **Interdire proprement** — déclencher le mini-jeu d'interdiction en supercroisière ; voir la mécanique complète en
    [08-combat-spatial.md §2.1](./08-combat-spatial.md#21-le-mini-jeu-dinterdiction--résister-ou-se-soumettre).
@@ -64,7 +67,7 @@ interdiction, mass lock, notoriety, marché noir — il y renvoie.
    soute et forcent l'éjection de conteneurs de marchandise, sans nécessairement détruire le vaisseau cible.
 6. **Récupérer** — un **Collector Limpet Controller** ramasse les conteneurs éjectés flottant dans l'espace.
 7. **Écouler** — la cargaison récupérée est marquée **volée** (*stolen*) : elle ne se revend que sur un marché noir ou
-   via un Interstellar Factors Contact (section 5).
+   via un Interstellar Factors Contact ([section 5, « Le statut légal du butin »](#5-le-statut-légal-du-butin)).
 
 ---
 
@@ -90,10 +93,10 @@ Portées et temps de scan proviennent des tableaux déjà chiffrés de
 vaisseau ; seul le **high wake** (saut hyperespace) exige le Frame Shift Wake Scanner — voir
 [08-combat-spatial.md §2.3](./08-combat-spatial.md#23-low-wake-et-high-wake--traquer-une-cible-au-frame-shift-wake-scanner).
 
-**Légalité de l'acte de scanner.** D'après la documentation communautaire actuelle, scanner un vaisseau « Clean »
+**Légalité de l'acte de scanner.** D'après la documentation communautaire actuelle, scanner un vaisseau « Clean » (statut « propre », sans prime ni infraction active)
 n'est listé nulle part comme un délit pour le scanneur : c'est la cible, si elle transporte du fret volé ou illégal,
 qui écope d'une amende une fois démasquée — pas l'auteur du scan. Un vaisseau scanné peut réagir : fuir, activer le
-*Silent Running*, déployer ses affûts (ce qui interrompt un scan de sécurité par précaution) ou larguer du chaff pour
+*Silent Running* (mode furtif), déployer ses affûts (ce qui interrompt un scan de sécurité par précaution) ou larguer du chaff pour
 empêcher l'achèvement d'un Kill Warrant Scanner. Attention : scanner une prime au KWS ne rend pas pour autant licite
 d'attaquer une cible « Clean » dans le système courant — sauf en système **Anarchy**, où tous les vaisseaux
 apparaissent « Clean » localement par défaut, ce qui rend le Kill Warrant Scanner indispensable à la chasse aux primes
@@ -107,7 +110,8 @@ sont corrigés pour refléter un seul module sous son nom actuel.
 
 ## 3. Où pirater : signaux, sites de minage et lanes commerciales
 
-- **Convoy Dispersal Pattern** — signal (USS) spontané apparaissant dans les systèmes peuplés, en priorité sur les
+- **Convoy Dispersal Pattern** — signal (USS, *Unidentified Signal Source* — source de signal non identifiée) spontané
+  apparaissant dans les systèmes peuplés, en priorité sur les
   lanes commerciales et dans la sphère d'influence d'un système. Cinq niveaux de menace (0 à 4) : du petit groupe de
   vaisseaux neutres scannables et pillables sans risque (niveau 0) jusqu'à un convoi de Type-9 Heavy escorté par des
   PNJ armés que le joueur peut choisir d'attaquer ou de défendre (niveau 2, récompense en crédits ou en réputation
@@ -129,7 +133,7 @@ sont corrigés pour refléter un seul module sous son nom actuel.
 ## 4. Deux builds pirates chiffrés : Python et Krait Mk II
 
 Les deux builds ci-dessous suivent le gabarit déjà établi en
-[08-combat-spatial.md §8.5](./08-combat-spatial.md#85-trois-builds-de-combat-chiffrés-vulture-federal-corvette-fer-de-lance) :
+[08-combat-spatial.md §8.5](./08-combat-spatial.md#85-trois-builds-de-combat-chiffrés--vulture-federal-corvette-fer-de-lance) :
 les choix de modules sont des configurations de référence de la méta communautaire, à valider dans un outil de
 configuration à jour ([16-outils.md](./16-outils.md)) ; les caractéristiques de châssis viennent d'EDCD/coriolis-data,
 déjà recalées dans [03-vaisseaux.md](./03-vaisseaux.md). Aucun des deux vaisseaux n'exige de rang de superpuissance.
@@ -185,8 +189,9 @@ réduction ou suppression des amendes pour activité criminelle en territoire qu
 La piraterie et la contrebande contribuent à l'influence de la faction qui contrôle le marché noir où le butin est
 écoulé — généralement une faction en Anarchie — un levier déjà quantifié en
 [21-bgs.md §5.5](./21-bgs.md#55-autres-leviers-bgs--contrebande-dons-et-sauvetage). La piraterie **PvE** (contre des
-PNJ, section 3) ne pose pas de question d'étiquette : c'est une activité de jeu normale. La piraterie **PvP** (contre
-un autre joueur) en pose une, traitée en détail à la section 7 : la communauté distingue nettement le pirate qui
+PNJ, [section 3](#3-où-pirater--signaux-sites-de-minage-et-lanes-commerciales)) ne pose pas de question d'étiquette :
+c'est une activité de jeu normale. La piraterie **PvP** (contre un autre joueur) en pose une, traitée en détail à la
+[section 7, « Survivre au PvP non consenti »](#7-survivre-au-pvp-non-consenti) : la communauté distingue nettement le pirate qui
 demande une rançon en cargaison et laisse repartir sa cible du **ganker** qui recherche la destruction sans intérêt
 pour le butin.
 
@@ -205,7 +210,8 @@ Ces lieux existent déjà dans le corpus sans jamais y être signalés comme dan
   [01-lore.md](./01-lore.md)), documenté depuis 2017 comme lieu où des vaisseaux moyens endommagés ou sans bouclier
   (explorateurs de retour, notamment) sont pris pour cible : le risque financier est nul pour l'attaquant, qui n'y
   perd presque jamais son propre vaisseau.
-- **Stations où se déroule une Community Goal active** — la forte concentration de joueurs en Open qu'attire une CG
+- **Stations où se déroule une Community Goal active** — la forte concentration de joueurs en **Open** (mode de jeu
+  ouvert à tous, par opposition à Solo ou Groupe privé) qu'attire une CG
   active en fait, d'après des témoignages de joueurs, une cible privilégiée de PvP non consenti pendant l'événement.
 - **Colonia Bridge** — cité par le plan de ce cycle comme hotspot documenté, cette recherche ne le confirme **pas** :
   aucun témoignage direct de ganking ciblé sur les mégaships du Colonia Bridge n'a été trouvé, seulement des mises en
@@ -216,10 +222,12 @@ Ces lieux existent déjà dans le corpus sans jamais y être signalés comme dan
 
 La défense contre une interdiction ou un engagement PvP repose sur des mécaniques déjà chiffrées ailleurs dans le
 corpus plutôt que sur un module dédié : soumettre volontairement à l'interdiction pour contrôler sa position de
-sortie, gérer les pips SYS/ENG pendant le mini-jeu (section 1, renvoi 08 §2.1), booster hors du rayon de mass lock
+sortie, gérer les pips SYS/ENG pendant le mini-jeu ([section 1](#1-la-chaîne-opératoire-de-la-piraterie-étape-par-étape),
+renvoi [08-combat-spatial.md §2.1](./08-combat-spatial.md#21-le-mini-jeu-dinterdiction--résister-ou-se-soumettre)), booster hors du rayon de mass lock
 avant de charger un **high wake** — jamais un low wake sous mass lock, qui laisse la cible à portée — puis Silent
 Running, Heat Sink et Chaff pour couvrir la manœuvre. Détail complet en
-[08-combat-spatial.md §2](./08-combat-spatial.md#2-interdiction-en-supercroisière-et-évasion) et §9.
+[08-combat-spatial.md §2](./08-combat-spatial.md#2-interdiction-en-supercroisière-et-évasion) et
+[§9, « Conseils avancés pour dominer en combat spatial »](./08-combat-spatial.md#9-conseils-avancés-pour-dominer-en-combat-spatial).
 
 ### 7.3 Builds de fuite pour vaisseaux de fret
 
@@ -257,6 +265,92 @@ consulté le même jour — un écart non résolu par cette recherche.
   rapportent que Frontier qualifie cette pratique d'« exploit indésirable, ne faisant pas partie du jeu » et
   susceptible de sanction — mais aucun texte légal primaire (EULA, Code of Conduct) nommant explicitement le terme
   n'a pu être consulté directement pour confirmer ce libellé dans la version actuelle.
+
+---
+
+## Questions fréquentes
+
+### Le Manifest Scanner et le Cargo Scanner, c'est le même module ?
+
+Oui : le **Manifest Scanner** est le nom actuel du **Cargo Scanner**, renommé et étendu au scan des cabines
+passagers — pas un module distinct. Il n'existe donc que **trois** scanners utilitaires de piraterie (Manifest, Kill
+Warrant, Frame Shift Wake Scanner), tous en portée 2 000 à 4 000 m avec 10 secondes de scan à maintenir. Voir
+[2](#2-les-scanners-de-piraterie--un-seul-module-renommé-pas-quatre).
+
+### Scanner un vaisseau avec le Kill Warrant Scanner, c'est illégal ?
+
+Non pour le scanneur : d'après la documentation communautaire actuelle, scanner un vaisseau « Clean » n'est listé
+nulle part comme un délit — c'est la cible, si elle transporte du fret volé ou illégal, qui écope d'une amende une
+fois démasquée. Cela ne rend toutefois pas licite d'attaquer ensuite une cible Clean, sauf en système **Anarchy**, où
+tous les vaisseaux apparaissent Clean par défaut. Voir [2](#2-les-scanners-de-piraterie--un-seul-module-renommé-pas-quatre).
+
+### Où trouver des PNJ à pirater (Convoy Dispersal Pattern, RES) ?
+
+Trois terrains documentés : le **Convoy Dispersal Pattern**, un signal (USS) à cinq niveaux de menace (0 à 4) ; les
+**Resource Extraction Sites**, en quatre intensités dont le HazRES, où les crimes ne sont pas signalés à la sécurité
+locale ; et les lanes commerciales, où un système en état **Boom** augmente les missions commerciales et, combiné à
+l'état secondaire **Pirate Attack**, la fréquence des interdictions de marchands. Voir
+[3](#3-où-pirater--signaux-sites-de-minage-et-lanes-commerciales).
+
+### Quel vaisseau pour pirater, Python ou Krait Mk II ?
+
+Les deux builds de référence partagent le même gabarit (3 Large + 2 Medium + 4 utilitaires) et fabricant. Le
+**Python** (**56 978 180 Cr**, dureté de coque 65) mise sur la robustesse et le volume de soute ; le **Krait Mk II**
+(**45 814 210 Cr**, dureté de coque 55) mise sur la maniabilité et la vitesse pour l'interdiction et la fuite. Aucun
+rang de superpuissance requis pour les deux. Voir [4](#4-deux-builds-pirates-chiffrés--python-et-krait-mk-ii).
+
+### Ma cargaison volée (stolen goods), je peux la revendre où ?
+
+Deux canaux seulement : le **marché noir** (*Black Market*, surtout en systèmes Anarchy) ou un **Interstellar Factors
+Contact**, qui paie une prime émise dans un autre système sans déplacement moyennant commission — mais qui ne réduit
+**pas** la notoriety. Le Power Archon Delaine offre en plus à ses partisans un bonus de **+30 %** sur les profits du
+marché noir. Voir [5](#5-le-statut-légal-du-butin).
+
+### C'est quoi la différence entre un pirate et un ganker (ganking) ?
+
+La communauté distingue nettement le **pirate**, qui demande une rançon en cargaison et laisse repartir sa cible une
+fois le butin cédé, du **ganker**, qui recherche la destruction sans intérêt pour le butin. La piraterie contre des
+PNJ ne pose pas de question d'étiquette ; c'est la piraterie contre un autre joueur qui en pose une. Voir
+[6](#6-impact-bgs-piraterie-pvp-contre-pve-étiquette).
+
+### Quels sont les endroits où je risque de me faire ganker ?
+
+Trois lieux réellement documentés par la communauté : **Deciat** (base de Felicity Farseer, guet classique contre des
+vaisseaux non armés, documenté depuis 2020), **Shinrarta Dezhra**/Jameson Memorial (vaisseaux endommagés ou sans
+bouclier pris pour cible sans risque pour l'attaquant, documenté depuis 2017), et les stations en **Community Goal**
+active. Le Colonia Bridge, parfois cité, n'est **pas** confirmé par cette recherche comme un hotspot avéré. Voir
+[7.1](#71-lieux-à-risque-documentés-par-la-communauté).
+
+### Comment échapper à une interdiction ou fuir un combat PvP ?
+
+Se soumettre volontairement à l'interdiction pour contrôler sa position de sortie, gérer les pips SYS/ENG pendant le
+mini-jeu, puis booster hors du rayon de mass lock avant de charger un **high wake** — jamais un low wake sous mass
+lock, qui laisse la cible à portée — en couvrant la manœuvre au Silent Running, Heat Sink et Chaff. Voir
+[7.2](#72-procédure-dévasion).
+
+### C'est quoi Mobius PvE et comment le rejoindre ?
+
+**Mobius PvE** est un Groupe privé (*Private Group*) fondé sur une règle unique : interdiction totale du PvP non
+consenti, même contre un commandant recherché. Pour le rejoindre sur PC : remplir le formulaire du site du groupe,
+puis en jeu Social > Groups, rechercher « MOBIUS PVE EURASIA », « MOBIUS PVE AMERICA » ou « MOBIUS FACTIONS » et
+envoyer une demande d'adhésion (acceptée manuellement). Sa taille reste incertaine : **19 309** membres selon le
+compteur du forum contre **40 000** selon la page de politique du groupe, un écart non résolu. Voir
+[7.4](#74-groupes-privés-pve--mobius-et-équivalents).
+
+### Si je bloque un joueur (block player), je suis sûr de ne plus jamais le croiser ?
+
+Non, pas de garantie absolue : un test communautaire de 2017 montrait que rester **ami** avec un joueur bloqué
+annulait l'effet du blocage sur l'instanciation, et des fils plus récents suggèrent que le blocage coupe les
+communications sans bloquer l'instanciation de façon fiable. Aucune source datée de la version 4.4.0.x ne confirme si
+ce comportement a changé. Voir [7.5](#75-blocage-signalement-et-combat-logging).
+
+### C'est quoi le combat logging, et c'est puni par Frontier ?
+
+Le **combat logging** désigne la déconnexion brutale du client (processus tué, réseau coupé) pendant un engagement
+pour empêcher l'enregistrement d'une issue défavorable, par opposition à une sortie normale par le menu qui impose
+environ **15 secondes** de temporisation. Les sources secondaires rapportent que Frontier qualifie cette pratique
+d'« exploit indésirable » susceptible de sanction, mais aucun texte légal primaire n'a pu être consulté pour confirmer
+ce libellé exact dans la version actuelle. Voir [7.5](#75-blocage-signalement-et-combat-logging).
 
 ---
 
@@ -302,13 +396,16 @@ consulté le même jour — un écart non résolu par cette recherche.
 ### Sources du corpus relues pour ce guide
 
 - [08-combat-spatial.md](./08-combat-spatial.md) — interdiction, mass lock, wakes, crime/notoriety, modes de jeu,
-  gabarit des builds chiffrés (§8.5), repris ici sans modification.
-- [11-commerce.md](./11-commerce.md) — marché noir, contrebande, configurations défensives (§6), repris sans
-  modification.
+  gabarit des builds chiffrés
+  ([§8.5](./08-combat-spatial.md#85-trois-builds-de-combat-chiffrés--vulture-federal-corvette-fer-de-lance)), repris ici
+  sans modification.
+- [11-commerce.md](./11-commerce.md) — marché noir, contrebande, configurations défensives
+  ([§6](./11-commerce.md#6-configurations-recommandées-dun-vaisseau-de-commerce)), repris sans modification.
 - [21-bgs.md](./21-bgs.md), [02-powerplay.md](./02-powerplay.md) — impact BGS de la piraterie et bonus Archon
   Delaine, repris sans modification.
 - [04-equipements.md](./04-equipements.md), [06-ingenieurs.md](./06-ingenieurs.md) — corrigés à ce cycle pour
-  refléter un seul module « Manifest Scanner » plutôt que deux entrées distinctes (voir section 2).
+  refléter un seul module « Manifest Scanner » plutôt que deux entrées distinctes (voir
+  [section 2, « Les scanners de piraterie »](#2-les-scanners-de-piraterie--un-seul-module-renommé-pas-quatre)).
 
 ### Méthode et limites
 

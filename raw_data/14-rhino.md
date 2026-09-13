@@ -38,7 +38,7 @@ guides_lies: [3, 4, 13, 15, 16, 17, 20, 30, 31]
 l'**Operations Update** (version 4.4.0.0), inaugure la catégorie du **vaisseau lancé depuis un vaisseau**
 (*ship-launched vessel*) : compact, doté de patins inspirés de l'hélicoptère et de moteurs pivotants, il se pose là où
 un gros vaisseau ne peut pas et embarque un **Mk II Biological Scanner** détectant les signaux biologiques depuis le
-cockpit, plus des **Pulse Lasers**. Le **Rhino**, SRV minier à six roues du constructeur **Vodel** sorti le
+cockpit, plus des **Pulse Lasers** (lasers à impulsions). Le **Rhino**, SRV minier à six roues du constructeur **Vodel** sorti le
 **2 septembre 2026**, accueille **3 occupants**, n'est pas armé, et ouvre la boucle du **minage de surface planétaire**
 (*surface mining*) avec scanner de gisements, raffinerie embarquée et rigs de minage : il collecte **9 fragments** par
 passage (12 annoncés après correctif) et débloque **treize nouvelles commodités** (Diamant, Rubis, Saphir, Hélium-3,
@@ -57,9 +57,9 @@ Deutérium, Bastnäsite, Iridium, Thortveitite…). Les deux se déploient depui
 Ce guide documente les deux véhicules ajoutés à *Elite Dangerous* au cours de l'été 2026 :
 
 - le **Nomad**, premier **vaisseau lancé depuis un vaisseau** dédié à l'exploration de surface, sorti le
-  **30 juin 2026** en accès anticipé Arx avec l'**Operations Update** (section 3) ;
+  **30 juin 2026** en accès anticipé Arx avec l'**Operations Update** ([section 3](#3-le-nomad-premier-vaisseau-lancé-depuis-un-vaisseau-30-juin-2026)) ;
 - le **Rhino**, **SRV** de **minage planétaire** à six roues, sorti le **2 septembre 2026** avec le **Rhino SRV
-  Update** et la nouvelle boucle de gameplay du minage de surface (section 2).
+  Update** et la nouvelle boucle de gameplay du minage de surface ([section 2](#2-le-rhino-srv-de-minage-de-surface-planétaire-vodel-2-septembre-2026)).
 
 Les deux véhicules partagent un même module de transport, la **baie de véhicule** (*vessel bay*) introduite par
 l'Operations Update, et une même logique commerciale : sortie en accès anticipé Arx, en trois formules Standard /
@@ -80,7 +80,7 @@ la communauté, par la presse spécialisée ou par des outils tiers est signalé
 > au chantier naval**. Ils ne contiennent ni les SRV (Scarab, Scorpion, Rhino), ni les chasseurs SLF, ni les vaisseaux
 > lancés depuis un vaisseau. Y chercher le Nomad revenait à chercher un chasseur SLF dans Coriolis : l'absence n'y a
 > aucune valeur probante. Combinée à des erreurs HTTP 403 sur elitedangerous.com, sur Fandom et sur Reddit, cette
-> erreur de catégorie a produit un faux négatif, désormais corrigé. Voir la section 4 pour la portée de cette
+> erreur de catégorie a produit un faux négatif, désormais corrigé. Voir la [section 4](#4-loperations-update-du-30-juin-2026-cadre-de-sortie-du-nomad) pour la portée de cette
 > correction sur le reste du corpus.
 
 ---
@@ -103,8 +103,8 @@ Le programme annoncé prévoyait **six sorties de véhicules** dans l'année, r�
 |-----------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
 | 24 février 2026 | **Kestrel Mk II** — vaisseau de combat léger de Core Dynamics, propulseurs Mk II, Plasma Shock Accelerator | Sorti le 24 février 2026, accompagné d'une refonte du système audio du combat à pied           |
 | Avril 2026      | **Lynx Highliner** — vaisseau passager de taille moyenne (jusqu'à 225 personnes)          | Sorti le 28 avril 2026, l'édition Standard étant offerte en crédits à tous les commandants     |
-| 30 juin 2026    | **Operations Update** — contenu multijoueur en escouade, et le **Nomad** (voir section 3) | Sorti le 30 juin 2026 (version 4.4.0.0), après un report annoncé le 22 avril 2026              |
-| Été 2026        | **Rhino** — véhicule de minage de surface (voir section 2)                                | Sorti le 2 septembre 2026, avec la nouvelle opération « Under Siege »                          |
+| 30 juin 2026    | **Operations Update** — contenu multijoueur en escouade, et le **Nomad** (voir [section 3](#3-le-nomad-premier-vaisseau-lancé-depuis-un-vaisseau-30-juin-2026)) | Sorti le 30 juin 2026 (version 4.4.0.0), après un report annoncé le 22 avril 2026              |
+| Été 2026        | **Rhino** — véhicule de minage de surface (voir [section 2](#2-le-rhino-srv-de-minage-de-surface-planétaire-vodel-2-septembre-2026)) | Sorti le 2 septembre 2026, avec la nouvelle opération « Under Siege »                          |
 | Automne 2026    | Véhicule non identifié                                                                    | Non annoncé à ce jour                                                                          |
 | Hiver 2026      | Véhicule non identifié                                                                    | Non annoncé à ce jour                                                                          |
 
@@ -126,9 +126,9 @@ Pour resituer le contexte, voici les sorties majeures précédant la feuille de 
 | 2 décembre 2025   | Caspian Explorer              | Vaisseau d'exploration + IA ennemie à pied améliorée |
 | 24 février 2026   | Kestrel Mk II                 | Vaisseau de combat léger                             |
 
-Le Rhino est d'ailleurs vendu en bundle avec le Type-11 Prospector (voir §2.7), ce qui souligne la filiation
+Le Rhino est d'ailleurs vendu en bundle avec le Type-11 Prospector (voir [§2.7](#27-coût-et-disponibilité-du-rhino--bundles-arx-de-16-520-à-100-000-arx)), ce qui souligne la filiation
 thématique « minage » entre ces deux ajouts. Symétriquement, le Nomad a été présenté comme le compagnon naturel d'un
-gros vaisseau d'exploration comme le Caspian Explorer (voir §3.4).
+gros vaisseau d'exploration comme le Caspian Explorer (voir [§3.4](#34-rôle-du-nomad--lexploration-organique-de-proximité-exobiologie)).
 
 ---
 
@@ -170,7 +170,7 @@ comme le rapportent certains relais de presse (massivelyop.com), qui publiaient 
 le corpus ne figurent dans aucun des billets officiels relevés : ils proviennent des pages de notes de version du site
 officiel, inaccessibles lors de cette vérification (HTTP 403). Ils sont donc plausibles mais non corroborés par la
 source primaire, et ne doivent pas être cités comme des faits établis. Les seuls numéros de version étayés pour l'été
-2026 sont **4.4.0.0** (Operations, 30 juin) et **4.4.0.3** (Update 3, 9 juillet — voir §3.8).
+2026 sont **4.4.0.0** (Operations, 30 juin) et **4.4.0.3** (Update 3, 9 juillet — voir [§3.8](#38-nom-interne--lander01--du-nomad-et-effets-de-bord-sur-les-outils-tiers)).
 
 ### 2.3 Équipements du Rhino : scanner de gisements, raffinerie et rigs de minage
 
@@ -203,7 +203,7 @@ vérification en jeu. Les deux autres problèmes connus listés sont la complét
 Le Rhino ne se déploie **pas par la trappe à cargo** utilisée par le Scarab et le Scorpion : « So big in fact that it
 cannot be deployed through the regular cargo hatch like the other SRVs! Instead the Rhino is dropped from the new
 vehicle bay » (billet « Beneath the Surface », 6 août 2026, 14:19 UTC). Il partage donc le module de baie de véhicule
-introduit par l'Operations Update, dont la liste complète des vaisseaux porteurs est détaillée en **§3.6**. Les billets
+introduit par l'Operations Update, dont la liste complète des vaisseaux porteurs est détaillée en **[§3.6](#36-déploiement-du-nomad--baie-de-véhicule-mk-i-13-vaisseaux-et-mk-ii-3-vaisseaux)**. Les billets
 officiels ne redonnent pas de liste de vaisseaux compatibles spécifique au Rhino ; la liste restreinte à trois
 vaisseaux (Type-9 Heavy, Alliance Crusader, Panther Clipper Mk II) rapportée par massivelyop.com est un sous-ensemble
 de la liste officielle du Mk I Vessel Bay et doit être lue comme incomplète. Pour la fiche technique complète d'un
@@ -212,15 +212,15 @@ vaisseau porteur (soutes, hardpoints, portée de saut), voir [03-vaisseaux.md](.
 ### 2.4 Le Rhino, véhicule utilitaire non armé : blindage, sièges et rebuy
 
 Aucun billet officiel relevé ne mentionne de système d'armement offensif embarqué sur le Rhino, à la différence du
-Scorpion (SRV de combat) ou du Nomad (doté de lasers à impulsion, voir §3.5). Le Rhino apparaît conçu comme un
-véhicule **utilitaire non armé**, dont la survie sur le terrain repose sur son blindage renforcé (voir §2.3) plutôt
+Scorpion (SRV de combat) ou du Nomad (doté de lasers à impulsion, voir [§3.5](#35-équipement-du-nomad--mk-ii-biological-scanner-et-pulse-lasers)). Le Rhino apparaît conçu comme un
+véhicule **utilitaire non armé**, dont la survie sur le terrain repose sur son blindage renforcé (voir [§2.3](#23-équipements-du-rhino--scanner-de-gisements-raffinerie-et-rigs-de-minage)) plutôt
 que sur une capacité de riposte propre — un choix cohérent avec le discours de Frontier sur un « utility vehicle,
 armoured to protect it from the eyes of those seeking an easy pay day » (billet « Beneath the Surface », 6 août 2026,
 14:19 UTC).
 
 **Répartition des rôles (3 places) — hypothèse opérationnelle, non confirmée officiellement par Frontier :** aucun
 billet consulté ne détaille l'attribution précise des trois sièges. À partir de la liste d'équipements confirmée
-(§2.3), une répartition plausible serait : un **pilote/conducteur** (navigation sur terrain accidenté), un
+([§2.3](#23-équipements-du-rhino--scanner-de-gisements-raffinerie-et-rigs-de-minage)), une répartition plausible serait : un **pilote/conducteur** (navigation sur terrain accidenté), un
 **opérateur de scanner/foreuse** (Planetary Mining Deposit Scanner et Mining Rig Deployment Module), et un troisième
 équipier libre pour la logistique (raffinerie embarquée, gestion de la soute, ou vigilance en cas de menace). Cette
 répartition reste une déduction du guide, à vérifier en jeu, et non une donnée officielle.
@@ -230,7 +230,7 @@ déployés depuis un vaisseau n'ont historiquement **pas de coût de rebuy** pro
 à une franchise d'assurance) : un SRV détruit peut être rappelé gratuitement depuis le vaisseau tant que celui-ci
 reste intact. Frontier n'a toutefois publié aucune confirmation explicite que le Rhino suive cette même règle plutôt
 qu'un modèle de coût dédié, compte tenu de son statut de véhicule premium vendu exclusivement en Arx au lancement
-(§2.7). À vérifier directement en jeu avant toute session risquant sa perte en zone hostile.
+([§2.7](#27-coût-et-disponibilité-du-rhino--bundles-arx-de-16-520-à-100-000-arx)). À vérifier directement en jeu avant toute session risquant sa perte en zone hostile.
 
 ### 2.5 Le minage de surface planétaire du Rhino : une nouvelle boucle de gameplay
 
@@ -242,7 +242,7 @@ minage d'astéroïdes existant. Son fonctionnement, tel que décrit par les note
 2. une fois posé, le **Planetary Mining Deposit Scanner** du Rhino localise précisément les gisements exploitables au
    sol ;
 3. la **raffinerie embarquée** et le **module de déploiement de rigs** permettent d'extraire et de traiter le minerai
-   directement sur place (9 fragments par passage à la sortie, 12 annoncés après correctif — voir §2.3).
+   directement sur place (9 fragments par passage à la sortie, 12 annoncés après correctif — voir [§2.3](#23-équipements-du-rhino--scanner-de-gisements-raffinerie-et-rigs-de-minage)).
 
 Un premier passage d'équilibrage porte sur la capacité des gisements selon leur niveau de densité, le temps de
 reconstitution d'un gisement, la pondération des commodités par gisement, ainsi que la taille et le nombre des
@@ -275,7 +275,7 @@ marchés plutôt que vers des matériaux d'ingénierie ; la mention est toutefoi
 et le point reste à vérifier dans l'écran de marché en jeu. Selon [15-roadmap.md](./15-roadmap.md), ces gisements sont
 conçus comme une ressource **rare, à régénération très lente** — un choix délibéré des développeurs pour encourager
 soit le partage communautaire des bons emplacements, soit au contraire leur dissimulation compétitive ; cette lecture
-est cohérente avec l'équilibrage du temps de reconstitution des gisements évoqué en §2.5, mais la formulation
+est cohérente avec l'équilibrage du temps de reconstitution des gisements évoqué en [§2.5](#25-le-minage-de-surface-planétaire-du-rhino--une-nouvelle-boucle-de-gameplay), mais la formulation
 d'intention elle-même n'apparaît pas dans les billets relevés.
 
 #### Valorisation des treize matières de surface — squelette à compléter (prix non relevés)
@@ -320,7 +320,7 @@ officielles du 2 septembre 2026 :
 
 Une révision antérieure de ce guide affirmait que tout achat incluait la baie de véhicule et un scanner minéral
 planétaire : les notes officielles ne listent, pour la formule Standard, que le véhicule et le décalque. La baie de
-véhicule est un module d'équipement à part, à acheter et à monter sur le vaisseau porteur (voir §3.6). De même,
+véhicule est un module d'équipement à part, à acheter et à monter sur le vaisseau porteur (voir [§3.6](#36-déploiement-du-nomad--baie-de-véhicule-mk-i-13-vaisseaux-et-mk-ii-3-vaisseaux)). De même,
 l'annonce d'une disponibilité ultérieure en crédits, mentionnée ailleurs dans le corpus, n'apparaît dans aucun billet
 relevé ; elle correspond à la pratique habituelle de Frontier (voir [15-roadmap.md](./15-roadmap.md)) mais n'est pas
 un engagement documenté pour le Rhino.
@@ -346,7 +346,7 @@ explore planetary surfaces » (billet « Discover the Nomad », 2 juin 2026, 13:
 |----------------------------------|-------------------------|------------------|--------------------------------|-------------------------|
 | Vaisseau pilotable               | Anaconda, Krait Mk II   | Espace + surface | Aucun (vaisseau principal)     | Oui                     |
 | Chasseur embarqué (SLF)          | Taipan, Condor          | Espace           | Fighter Hangar                 | Non                     |
-| **Vaisseau lancé (Nomad)**       | **Nomad**               | **Vol de surface** | **Baie de véhicule (§3.6)**  | **Non**                 |
+| **Vaisseau lancé (Nomad)**       | **Nomad**               | **Vol de surface** | **Baie de véhicule ([§3.6](#36-déploiement-du-nomad--baie-de-véhicule-mk-i-13-vaisseaux-et-mk-ii-3-vaisseaux))**  | **Non**                 |
 | Véhicule de surface (SRV)        | Scarab, Scorpion, Rhino | Surface (roues)  | Trappe à cargo / baie (Rhino)  | Non                     |
 
 Frontier écrit « ship-launched vessel » et « ship-launched utility vessel » ; le sigle **SLV** employé ailleurs dans le
@@ -398,7 +398,7 @@ Le Nomad crée « a new kind of exploration approach » (billet « Discover the 
 que de poser son gros vaisseau d'exploration à la surface, le commandant peut désormais **le laisser au-dessus de la
 planète** et descendre en Nomad pour approcher les organiques difficiles d'accès. Frontier cite explicitement le
 **Caspian Explorer** comme exemple de vaisseau porteur bénéficiant de cette souplesse nouvelle dans le scan des
-organiques — sans en faire une exclusivité (voir §3.6 pour la liste réelle des porteurs).
+organiques — sans en faire une exclusivité (voir [§3.6](#36-déploiement-du-nomad--baie-de-véhicule-mk-i-13-vaisseaux-et-mk-ii-3-vaisseaux) pour la liste réelle des porteurs).
 
 Ce rôle s'articule directement avec l'exobiologie : pour la boucle complète de scan et de vente des données
 biologiques (Composition Scanner, Genetic Sampler, distances minimales entre échantillons, primes de première
@@ -477,7 +477,7 @@ contenu, tels que listés dans les notes du 1er juillet 2026 :
 | Nomad Galactic Bundle  | 60 000 Arx  | Tout le contenu Stellar + holo-kit « Signal Blue » + kits « Rambler » + kit « Internal Science » + décalque « Owners Club » |
 
 *Prix Arx instantané capturé le 9 septembre 2026, à revérifier en boutique in-jeu.* La grille est identique à celle du
-Rhino (§2.7) et à celle du Kestrel Mk II sorti en février 2026 : 16 520 / 33 000 / 60 000 Arx est le triptyque
+Rhino ([§2.7](#27-coût-et-disponibilité-du-rhino--bundles-arx-de-16-520-à-100-000-arx)) et à celle du Kestrel Mk II sorti en février 2026 : 16 520 / 33 000 / 60 000 Arx est le triptyque
 standard de Frontier pour un accès anticipé. Pour la conversion indicative des Arx en euros, voir
 [15-roadmap.md](./15-roadmap.md).
 
@@ -556,21 +556,20 @@ dans cinq guides sans fiche technique ni caractéristiques comparées. Cette sec
 | Soute | 4 t | 2 t selon les notes de patch 2021, **30 t** selon le site officiel actuel — contradiction non résolue, voir zones incertaines | Non chiffrée officiellement |
 | Vitesse de pointe | 38 m/s, jets propulseurs (saut/glisse) | 32 m/s, pas de jets propulseurs | Non chiffrée officiellement |
 | Blindage / Bouclier | 108 / 40 (site officiel ; 25 selon le wiki, écart non résolu) | 162 / 130 | « Heavily armoured », non chiffré |
-| Wave Scanner | Oui (exclusif) | Non | Scanner de gisements dédié (§2.3), pas de Wave Scanner généraliste |
+| Wave Scanner | Oui (exclusif) | Non | Scanner de gisements dédié ([§2.3](#23-équipements-du-rhino--scanner-de-gisements-raffinerie-et-rigs-de-minage)), pas de Wave Scanner généraliste |
 | Modifiable (ingénierie) | Non | Non | Non documenté, présumé non |
-| Hangar requis | Planetary Vehicle Hangar (véhicule par défaut) | Planetary Vehicle Hangar + extension Odyssey, vente réservée aux économies Militaires | Baie de véhicule dédiée (§2.3), pas la trappe à cargo du Scarab/Scorpion |
-| Coût d'achat | 5 270 Cr | 24 863 Cr | Vendu en Arx au lancement (§2.7), pas en crédits |
+| Hangar requis | Planetary Vehicle Hangar (véhicule par défaut) | Planetary Vehicle Hangar + extension Odyssey, vente réservée aux économies Militaires | Baie de véhicule dédiée ([§2.3](#23-équipements-du-rhino--scanner-de-gisements-raffinerie-et-rigs-de-minage)), pas la trappe à cargo du Scarab/Scorpion |
+| Coût d'achat | 5 270 Cr | 24 863 Cr | Vendu en Arx au lancement ([§2.7](#27-coût-et-disponibilité-du-rhino--bundles-arx-de-16-520-à-100-000-arx)), pas en crédits |
 | Rôle | Exploration/reconnaissance légère | Combat et soutien au sol anti-personnel/anti-petit vaisseau | Minage de surface planétaire |
 
 *(Sources : elite-dangerous.fandom.com — Scarab, Scorpion, Vehicles, Planetary Vehicle Hangar ; site officiel
 elitedangerous.com/store/vehicles ; forums.frontier.co.uk — Elite Dangerous: Odyssey Update 9 Notes ; consultées le
-12 septembre 2026. Rhino : §2.1-2.4 de ce guide.)*
+12 septembre 2026. Rhino : [§2.1](#21-le-rhino-en-bref--srv-minier-vodel-à-six-roues-et-trois-occupants)-[§2.4](#24-le-rhino-véhicule-utilitaire-non-armé--blindage-sièges-et-rebuy) de ce guide.)*
 
 ### 5.2 Mécaniques de conduite communes
 
 Les SRV utilisent le même système de **6 pips** (SYS/ENG/WEP) que les vaisseaux : SYS renforce le bouclier, ENG
-accélère les déplacements et la recharge des jets/boost, WEP prolonge le tir avant surchauffe. Le **Drive Assist**
-propose deux modes : activé, la SRV maintient la vitesse choisie (mais tourner fait déraper, le système compensant
+accélère les déplacements et la recharge des jets/boost, WEP prolonge le tir avant surchauffe. Le **Drive Assist** (assistance de conduite) propose deux modes : activé, la SRV maintient la vitesse choisie (mais tourner fait déraper, le système compensant
 en accélérant à fond) ; désactivé, le pilotage se fait « à l'ancienne » (accélérateur et frein progressifs). Le
 **saut** (boost du Scarab uniquement, barre espace) active des jets propulseurs verticaux consommant l'énergie ENG,
 pour sauter, planer brièvement en faible gravité ou se redresser — le Scorpion n'en dispose pas. Sur une planète à
@@ -581,7 +580,7 @@ n'est publié par Frontier.
 
 ### 5.3 Lecture du Wave Scanner
 
-Le Wave Scanner (exclusif au Scarab) distingue **trois** catégories de signaux, pas quatre — il n'existe **aucune**
+Le **Wave Scanner** (scanner de détection à courte portée, exclusif au Scarab) distingue **trois** catégories de signaux, pas quatre — il n'existe **aucune**
 catégorie « biologique » : **natural** (fragments minables/minéraux, fréquence basse, son grave — inclut les cibles
 de type geysers/fumerolles), **vessel** (vaisseaux et épaves, fréquence moyenne), **artificial** (points de données
 et settlements, fréquence haute). La faune et la flore (exobiologie) n'y sont **pas** détectées : leur repérage
@@ -604,13 +603,95 @@ officielle.
 ### 5.5 Maintenance : carburant, munitions, réparation, et l'absence de rebuy
 
 La coque d'un SRV se répare **automatiquement et gratuitement** en réintégrant la baie du vaisseau porteur — mais
-cela ne recharge ni le carburant ni les munitions, reconstituables sur le terrain par **Synthesis** : « SRV Refuel »
+cela ne recharge ni le carburant ni les munitions, reconstituables sur le terrain par **Synthesis** (synthèse de consommables à partir de matériaux collectés) : « SRV Refuel »
 (1 Sulphur + 1 Phosphorus), « SRV Ammo Restock » (2 Sulphur + 1 Phosphorus), « SRV Repair » (2 Iron + 1 Nickel),
 chacune en versions Standard/Premium plus efficaces. **Confirmé : un SRV détruit n'a aucun coût de rebuy** — le
-commandant reprend simplement le contrôle de son vaisseau sans passer par l'écran de Redeployment ; il doit
+commandant reprend simplement le contrôle de son vaisseau sans passer par l'écran de **Redeployment** (rachat d'un véhicule détruit) ; il doit
 seulement racheter un nouveau véhicule au prix plein pour en redéployer un, sans pénalité en pourcentage ni perte de
-progression. Cette règle, déjà pressentie pour le Rhino sans confirmation officielle (§2.4), est ici confirmée pour
+progression. Cette règle, déjà pressentie pour le Rhino sans confirmation officielle ([§2.4](#24-le-rhino-véhicule-utilitaire-non-armé--blindage-sièges-et-rebuy)), est ici confirmée pour
 le Scarab et le Scorpion par la documentation générale des véhicules.
+
+---
+
+## Questions fréquentes
+
+### Combien de places a le Rhino (Rhino SRV) ?
+
+Le Rhino accueille jusqu'à **3 occupants** simultanément — contre 1 place pour le Scarab et 2 pour le Scorpion
+(conducteur + tireur). Frontier le présente comme « the largest SRV which a Commander can deploy from their ship ».
+Voir [§2.1](#21-le-rhino-en-bref--srv-minier-vodel-à-six-roues-et-trois-occupants).
+
+### Le Rhino, c'est armé ou pas (armed) ?
+
+Non : aucun billet officiel ne mentionne de système d'armement offensif sur le Rhino, à la différence du Scorpion
+(SRV de combat) ou du Nomad (Pulse Lasers). C'est un véhicule utilitaire non armé dont la survie repose sur son
+blindage renforcé plutôt que sur une capacité de riposte. Voir
+[§2.4](#24-le-rhino-véhicule-utilitaire-non-armé--blindage-sièges-et-rebuy).
+
+### Le Rhino coûte combien en Arx ?
+
+Trois formules d'accès anticipé : **16 520 Arx** (Standard), **33 000 Arx** (Stellar) et **60 000 Arx** (Galactic) ;
+un bundle combiné avec le Type-11 Prospector est vendu **100 000 Arx**. Aucune option d'achat en crédits n'existe au
+lancement. Voir [§2.7](#27-coût-et-disponibilité-du-rhino--bundles-arx-de-16-520-à-100-000-arx).
+
+### Le Rhino sort par la trappe à cargo comme les autres SRV ?
+
+Non : trop volumineux, il ne peut pas être déployé par la trappe à cargo classique utilisée par le Scarab et le
+Scorpion. Il est largué depuis la nouvelle **baie de véhicule** (Vessel Bay / Vessel Hangar), le même module que
+celui du Nomad. Voir [§2.3](#23-équipements-du-rhino--scanner-de-gisements-raffinerie-et-rigs-de-minage).
+
+### Le Rhino ramasse combien de fragments par minage de surface (surface mining) ?
+
+À la sortie du 2 septembre 2026, seulement **9 fragments** par passage au lieu des **12** prévus : Frontier a listé
+ce point comme un problème connu et promis une correction « as soon as possible », mais aucun billet officiel relevé
+au 9 septembre 2026 ne confirme que ce correctif a été livré. Voir
+[§2.3](#23-équipements-du-rhino--scanner-de-gisements-raffinerie-et-rigs-de-minage).
+
+### Quelles sont les nouvelles matières minables avec le Rhino ?
+
+**Treize** commodités exclusivement minables en surface : Diamant, Rubis, Saphir, Hélium, Hélium-3, Deutérium,
+Magnésite, Olivine, Periclase dunite, Quartz pyroxenite, Bastnäsite, Iridium et Thortveitite. Aucun prix de revente
+n'a encore été relevé pour ces treize matières. Voir
+[§2.6](#26-les-treize-nouvelles-matières-premières-minables-en-surface-avec-le-rhino).
+
+### Le Nomad (ship-launched vessel), il est sorti quand ?
+
+Le **30 juin 2026**, en accès anticipé Arx, avec l'**Operations Update** (version 4.4.0.0) — après un dévoilement le
+2 juin 2026 et un report annoncé le 22 avril 2026. Voir
+[§3.2](#32-chronologie-du-nomad--dévoilement-du-2-juin-et-sortie-du-30-juin-2026).
+
+### Sur quels vaisseaux peut-on embarquer un Nomad (vessel bay) ?
+
+**Treize vaisseaux** disposent du Mk I Vessel Bay compatible (dont Anaconda, Imperial Cutter, Type-9 Heavy...) ; trois
+d'entre eux — Caspian Explorer, Panther Clipper Mk II et Type-11 Prospector — disposent en plus du Mk II Vessel Bay.
+Le Nomad lui-même n'est pas limité à ces trois vaisseaux, contrairement à une idée reçue. Voir
+[§3.6](#36-déploiement-du-nomad--baie-de-véhicule-mk-i-13-vaisseaux-et-mk-ii-3-vaisseaux).
+
+### C'est quoi le nom interne du Nomad dans les logs (Lander01) ?
+
+**Lander01** : le journal du joueur enregistre un événement `DockSRV` avec `SRVType` = `lander01`, et le Nomad
+positionne le drapeau SRV (pas le drapeau chasseur) dans `status.json` — ce qui a cassé le suivi de plusieurs outils
+tiers à la sortie. Voir [§3.8](#38-nom-interne--lander01--du-nomad-et-effets-de-bord-sur-les-outils-tiers).
+
+### Le Rhino, ça a un rebuy si je le perds ?
+
+Pas confirmé spécifiquement pour le Rhino par Frontier. La règle générale des SRV lancés depuis un vaisseau — aucun
+coût de rebuy, juste un rachat plein tarif pour en redéployer un — est en revanche bien confirmée pour le Scarab et
+le Scorpion. À vérifier en jeu avant toute session risquée. Voir
+[§2.4](#24-le-rhino-véhicule-utilitaire-non-armé--blindage-sièges-et-rebuy) et
+[§5.5](#55-maintenance--carburant-munitions-réparation-et-labsence-de-rebuy).
+
+### Le Rhino a un Wave Scanner comme le Scarab ?
+
+Non : le Wave Scanner est exclusif au Scarab. Le Rhino dispose à la place d'un scanner de gisements dédié au minage
+de surface (Planetary Mining Deposit Scanner), sans fonction de détection généraliste des vaisseaux ou des
+settlements. Voir [§5.1](#51-tableau-comparatif).
+
+### Qui construit le Rhino, c'est Core Dynamics ?
+
+Le constructeur crédité par Frontier est **Vodel**. Un rattachement à Core Dynamics circule dans la communauté, mais
+n'est étayé par aucun billet officiel relevé : c'est à ce stade une affirmation communautaire non vérifiée. Voir
+[§2.1](#21-le-rhino-en-bref--srv-minier-vodel-à-six-roues-et-trois-occupants).
 
 ---
 
@@ -619,18 +700,18 @@ le Scarab et le Scorpion par la documentation générale des véhicules.
 - **[00 — Chronologie canonique](./00-chronologie-canonique.md)** — arbitrage sourcé des dates et des contradictions
   chronologiques du corpus, dont celles concernant Operations, le Nomad et le Rhino.
 - **[00 — Glossaire](./00-glossaire.md)** — définitions des sigles utilisés dans le corpus (SRV, SLF, CG, SCO, etc.).
-- **[03 — Vaisseaux](./03-vaisseaux.md)** — fiches techniques des vaisseaux porteurs listés en §3.6, et décompte des
-  vaisseaux jouables (non affecté par le Nomad, voir §3.9).
+- **[03 — Vaisseaux](./03-vaisseaux.md)** — fiches techniques des vaisseaux porteurs listés en [§3.6](#36-déploiement-du-nomad--baie-de-véhicule-mk-i-13-vaisseaux-et-mk-ii-3-vaisseaux), et décompte des
+  vaisseaux jouables (non affecté par le Nomad, voir [§3.9](#39-ce-que-le-nomad-ne-change-pas--le-décompte-de-48-vaisseaux-jouables)).
 - **[04 — Équipements](./04-equipements.md)** — référentiel des modules et des classes d'emplacements internes, pour
-  situer le Vessel Hangar et le Mk II Biological Scanner (§3.5 et §3.6).
+  situer le Vessel Hangar et le Mk II Biological Scanner ([§3.5](#35-équipement-du-nomad--mk-ii-biological-scanner-et-pulse-lasers) et [§3.6](#36-déploiement-du-nomad--baie-de-véhicule-mk-i-13-vaisseaux-et-mk-ii-3-vaisseaux)).
 - **[06 — Ingénieurs](./06-ingenieurs.md)** — référentiel des grades de matériaux ; base pour situer (ou non) les
-  treize nouvelles matières du Rhino (§2.6).
-- **[10 — Exploration](./10-exploration.md)** — boucle d'exobiologie complète, que le Nomad vient servir (§3.4).
+  treize nouvelles matières du Rhino ([§2.6](#26-les-treize-nouvelles-matières-premières-minables-en-surface-avec-le-rhino)).
+- **[10 — Exploration](./10-exploration.md)** — boucle d'exobiologie complète, que le Nomad vient servir ([§3.4](#34-rôle-du-nomad--lexploration-organique-de-proximité-exobiologie)).
 - **[13 — Opérations (gameplay à pied, Odyssey 2021)](./13-operations.md)** — le sujet homonyme visé par l'encadré de
-  désambiguïsation, et point d'entrée pour le détail des opérations en escouade (§4).
+  désambiguïsation, et point d'entrée pour le détail des opérations en escouade ([§4](#4-loperations-update-du-30-juin-2026-cadre-de-sortie-du-nomad)).
 - **[15 — Roadmap](./15-roadmap.md)** — chronologie détaillée des mises à jour 2024-2026 et conversion des Arx.
 - **[16 — Outils](./16-outils.md)** — outils tiers exploitant le journal du jeu, affectés par la convention
-  `status.json` du Nomad (§3.8).
+  `status.json` du Nomad ([§3.8](#38-nom-interne--lander01--du-nomad-et-effets-de-bord-sur-les-outils-tiers)).
 - **[17 — Sources de données](./17-sources-donnees.md)** — jeux de données EDCD (`outfitting.csv`, `shipyard.csv`) et
   leur périmètre exact, au cœur de la correction décrite en tête de guide.
 - **[20 — Minage](./20-minage.md)** — boucle de gameplay complète du minage (spatial et, désormais, de surface) ; ce
@@ -696,8 +777,8 @@ Relevées le 9 septembre 2026 sur le flux Steam News d'*Elite Dangerous* (appid 
 
 - Les pages de notes de version du site officiel (elitedangerous.com), Fandom et Reddit renvoient des erreurs HTTP 403
   depuis cette session : les numéros de version 4.4.1.0 et 4.4.1.1 attribués au Rhino n'ont pas pu y être vérifiés
-  (voir §2.2).
-- Aucun prix de revente n'a pu être relevé pour les treize nouvelles matières de surface (voir §2.6).
+  (voir [§2.2](#22-chronologie-du-rhino--révélation-du-6-août-et-sortie-du-2-septembre-2026)).
+- Aucun prix de revente n'a pu être relevé pour les treize nouvelles matières de surface (voir [§2.6](#26-les-treize-nouvelles-matières-premières-minables-en-surface-avec-le-rhino)).
 
 ### Sources ajoutées le 12 septembre 2026 (section 5 — comparatif Scarab/Scorpion/Rhino)
 

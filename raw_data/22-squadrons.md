@@ -33,7 +33,7 @@ Leaderboards**, une trésorerie commune (**Squadron Bank**), des bonus sélectio
 Carrier** collectif que seul le **Squadron Leader** peut acheter. Un escadron peut être rattaché à une faction
 mineure du Background Simulation, dont il devient le bras opérationnel. Si le Leader ne s'est pas connecté depuis
 **90 jours**, un nouveau leader est tiré au sort parmi les membres actifs du rang immédiatement inférieur. En
-colonisation, les membres de l'escadron du **System Architect** bénéficient d'une fenêtre de revendication élargie,
+colonisation, les membres de l'escadron du **System Architect** (l'architecte système ayant initié la colonisation) bénéficient d'une fenêtre de revendication élargie,
 de **30 minutes à 24 heures** après l'achèvement du port primaire.
 
 ## Introduction — ce qu'est un Squadron (escadron) dans Elite Dangerous
@@ -81,7 +81,7 @@ Frontier a présenté les apports suivants comme le cœur de la refonte :
 - un **logo et une bannière personnalisés** pour l'escadron, applicables également sur les vaisseaux des membres ;
 - une **devise (« motto »)** d'escadron ;
 - un **Squadron Browser** repensé pour découvrir les escadrons et leurs membres, filtrable notamment par Power
-  (Powerplay) — voir la section 6 ;
+  (Powerplay) — voir la [section 7.1](#71-découverte-des-escadrons-et-filtres-du-squadron-browser) ;
 - des **Squadron Leaderboards** (classements) étendus, avec de nouvelles récompenses ;
 - une **Squadron Bank** pour partager des ressources entre membres ;
 - un **Squadron Carrier** dédié, avec une Squadron Bank étendue pour stocker marchandises, objets et vaisseaux ;
@@ -139,7 +139,7 @@ confirme qu'ils sont restés stables plusieurs mois après la refonte.
 Les notes de patch confirment explicitement l'existence des rangs suivants, du plus élevé au plus bas :
 
 - **Squadron Leader** — rang le plus élevé. C'est le seul habilité à **acheter un Squadron Carrier** et à gérer les
-  commandes d'achat du bar embarqué (voir section 7). Les notes du Patch 2 le confirment explicitement en corrigeant
+  commandes d'achat du bar embarqué (voir [section 6.3](#63-services-embarqués-dun-squadron-carrier-vista-genomics-pioneer-supplies-bar)). Les notes du Patch 2 le confirment explicitement en corrigeant
   un bug : « Fixed Senior Officers of Squadrons incorrectly having the ability to purchase Squadron Carriers,
   resulting in an error and disconnect. Only Squadron Leaders should have this ability. »
 - **Senior Officer** — rang intermédiaire, disposant de capacités de gestion étendues mais pas de celles réservées au
@@ -152,11 +152,11 @@ via les sources consultées.
 
 Le **rang le plus bas d'un escadron est explicitement exclu de la succession de leadership** (« The lowest rank
 within a squadron will not be eligible for leadership transfer ») — voir la mécanique de succession automatique en
-3.3.
+[section 3.3](#33-succession-automatique-du-squadron-leader-après-90-jours-dinactivité).
 
 ### 3.2 Groupes de permissions personnalisables d'un escadron
 
-Au-delà de la hiérarchie de rangs, un système de **« permission groups »** personnalisables permet d'attribuer des
+Au-delà de la hiérarchie de rangs, un système de **« permission groups »** (groupes de permissions) personnalisables permet d'attribuer des
 droits de gestion plus fins que le simple rang. Ce système a été retravaillé pendant la saison Vanguards : un bug de
 crash « when editing permission groups for a Squadron » a été corrigé au Patch 2, ce qui indique un remaniement actif
 de cette fonctionnalité durant la refonte. Par ailleurs, depuis le Patch 1, le **propriétaire fondateur** de
@@ -190,12 +190,12 @@ verbatim dans les notes de patch :
    rien d'autre que de le masquer du Squadron Browser public — et redevient visible dès qu'un de ses membres se
    reconnecte.
 8. Le nouveau leader désigné par tirage au sort peut ensuite retransférer librement le leadership à un autre membre
-   via l'interface **« Roster »**.
+   via l'interface **« Roster »** (liste des membres).
 9. Frontier précise que pour les escadrons dont le leader était déjà inactif depuis plus de 90 jours au moment du
    Patch 3, ce processus démarre immédiatement.
 
 Cette mécanique est directe pour tout escadron important, mais elle intervient également en toile de fond de la
-mécanique de colonisation décrite en section 4.2, où l'appartenance à un escadron — même réduit à un seul membre — a
+mécanique de colonisation décrite en [section 4.2](#42-colonisation--la-fenêtre-de-revendication-à-léchelle-de-lescadron), où l'appartenance à un escadron — même réduit à un seul membre — a
 un effet concret sur le jeu.
 
 ## 4. Escadron et Background Simulation (BGS)
@@ -213,7 +213,7 @@ l'influence de cette faction dans les systèmes où elle est présente. Pour le 
 
 Le lien le plus concret et le mieux documenté entre Squadrons et BGS concerne la **colonisation de systèmes**. Les
 notes officielles du « Type-11 Prospector Update 2 » (16 octobre 2025) décrivent verbatim un nouveau mécanisme
-anti-« claim sniping » : lorsque le port primaire est achevé dans un système nouvellement colonisé, la priorité de
+anti-« claim sniping » (l'accaparement précoce d'une revendication par un tiers) : lorsque le port primaire est achevé dans un système nouvellement colonisé, la priorité de
 revendication (« claim ») suit la temporalité suivante :
 
 | Délai depuis l'achèvement du port primaire | Qui peut revendiquer le système                          | Fiab. |
@@ -246,7 +246,7 @@ La **Squadron Bank** est la trésorerie commune de l'escadron : elle permet aux 
 (crédits) pour financer des projets collectifs. Depuis le Patch 2 (1er septembre 2025), le solde du Squadron Carrier
 lui-même est directement rattaché à la Squadron Bank (« Carrier balance is now accessible via the Squadron Bank »), et
 les membres peuvent y contribuer directement pour financer l'achat ou l'entretien du porte-vaisseaux d'escadron — voir
-section 6.
+[section 6](#6-squadron-carrier).
 
 ## 6. Squadron Carrier
 
@@ -255,7 +255,7 @@ section 6.
 Le **Squadron Carrier** est un porte-vaisseaux dédié à l'escadron, financé et géré via la Squadron Bank. Il offre un
 stockage étendu pour les marchandises, les objets et les vaisseaux des membres. D'après les fonctionnalités décrites
 dans les notes de patch — livrée (« Livery ») personnalisable, service de chantier naval (« shipyard ») activable ou
-désactivable, procédures d'achat et de « decommissioning » calquées sur celles d'un Fleet Carrier personnel, et des
+désactivable, procédures d'achat et de « decommissioning » (décommissionnement) calquées sur celles d'un Fleet Carrier personnel, et des
 restrictions d'accostage spécifiques ajoutées au « Type-11 Prospector Update » (« Added additional docking
 restrictions on Squadron Fleet Carriers ») — le Squadron Carrier apparaît, avec une forte probabilité mais sans
 qu'une phrase officielle unique ne l'énonce explicitement, comme un **Fleet Carrier au sens mécanique**, simplement
@@ -264,7 +264,7 @@ fonctionnement général des Fleet Carriers, voir le guide dédié [19-fleet-car
 
 ### 6.2 Achat d'un Squadron Carrier : une prérogative du Squadron Leader
 
-Seul le **Squadron Leader** peut acheter un Squadron Carrier (voir section 3.1). Un bug corrigé au Patch 2 avait
+Seul le **Squadron Leader** peut acheter un Squadron Carrier (voir [section 3.1](#31-rangs-descadron--squadron-leader-senior-officer-recruit)). Un bug corrigé au Patch 2 avait
 permis par erreur aux Senior Officers d'effectuer cet achat, provoquant une erreur et une déconnexion ; ce
 comportement a été confirmé non intentionnel et corrigé, ce qui fixe cette prérogative comme réservée au rang le plus
 élevé de l'escadron.
@@ -338,12 +338,97 @@ officielle avant d'être présentés comme des faits établis :
   Squadron Browser ;
 - les catégories exactes des Squadron Leaderboards.
 
+## Questions fréquentes
+
+**Combien de membres maximum peut avoir un escadron (squadron) ?**
+
+Depuis le Patch 1 de la refonte Vanguards (22 août 2025), un escadron peut compter jusqu'à **600 membres** (contre 500
+auparavant) et accepter au maximum **25 candidatures** en attente (contre 10 auparavant). Ces deux plafonds sont
+réapparus identiques dans les notes du Caspian Explorer Update (2 décembre 2025). Voir
+[2.3 Limites numériques d'un escadron](#23-limites-numériques-dun-escadron--600-membres-25-candidatures-en-attente).
+
+**Qui a le droit d'acheter un Squadron Carrier ?**
+
+Seul le **Squadron Leader** peut acheter un Squadron Carrier. Un bug corrigé au Patch 2 (1er septembre 2025) permettait
+par erreur aux Senior Officers de le faire, ce qui provoquait une erreur et une déconnexion ; cette prérogative est
+désormais confirmée comme réservée au rang le plus élevé de l'escadron. Voir
+[6.2 Achat d'un Squadron Carrier](#62-achat-dun-squadron-carrier--une-prérogative-du-squadron-leader).
+
+**Quand est sortie la refonte Vanguards des escadrons (squadrons) ?**
+
+La saison **« Vanguards »** a été lancée le **19 août 2025** (un mardi) — en 2025, et non en 2024 comme certains
+résumés automatisés l'ont indiqué par erreur — puis corrigée par trois patches : le 22 août, le 1er septembre et le 11
+septembre 2025. Voir [1. Chronologie de la refonte Vanguards](#1-chronologie-de-la-refonte--vanguards-).
+
+**Que se passe-t-il si le chef de mon escadron (Squadron Leader) ne se connecte plus ?**
+
+Si le Squadron Leader ne s'est pas connecté depuis **90 jours**, un message in-game est envoyé aux membres actifs du
+rang immédiatement inférieur ; s'il ne se reconnecte pas avant la maintenance hebdomadaire suivante, un nouveau leader
+est **tiré au sort** parmi eux. Le rang le plus bas de l'escadron n'est jamais éligible à cette succession. Voir
+[3.3 Succession automatique du Squadron Leader](#33-succession-automatique-du-squadron-leader-après-90-jours-dinactivité).
+
+**Un escadron peut-il être rattaché à une faction mineure du BGS ?**
+
+Oui : un escadron peut être associé à une faction mineure du Background Simulation portant généralement le même nom —
+c'est le cas de l'escadron « New Pilots Initiative » sur Inara.cz — et fonctionne alors comme son bras opérationnel,
+les activités de ses membres contribuant à l'influence de cette faction. Voir
+[4.1 Rattachement à une faction mineure](#41-rattachement-dun-escadron-à-une-faction-mineure-du-bgs).
+
+**Comment fonctionne la fenêtre de revendication (claim) d'un système en colonisation pour un escadron ?**
+
+Une fois le port primaire achevé, le **System Architect** dispose de **30 minutes** d'exclusivité ; puis, jusqu'à
+**24 heures** après l'achèvement (soit 23,5 heures de fenêtre supplémentaire), tous les membres de son escadron
+peuvent revendiquer le système, même s'il s'agit d'un escadron solo. Au-delà de 24 heures, n'importe quel commandant
+le peut. Voir
+[4.2 La fenêtre de revendication à l'échelle de l'escadron](#42-colonisation--la-fenêtre-de-revendication-à-léchelle-de-lescadron).
+
+**À quoi sert la Squadron Bank ?**
+
+C'est la trésorerie commune de l'escadron, qui permet aux membres de mutualiser des crédits pour financer des projets
+collectifs. Depuis le Patch 2 (1er septembre 2025), le solde du Squadron Carrier lui-même y est directement rattaché,
+ce qui permet d'y contribuer pour financer son achat ou son entretien. Voir
+[5. La Squadron Bank](#5-la-squadron-bank-trésorerie-commune-de-lescadron).
+
+**Comment trouver un escadron à rejoindre (Squadron Browser) ?**
+
+Le **Squadron Browser**, entièrement repensé par Vanguards, permet de rechercher des escadrons et leurs membres selon
+plusieurs critères, dont le Power soutenu en Powerplay. L'annuaire communautaire Inara.cz propose en complément un tri
+par nombre de membres actifs, allégeance, langue ou fuseau horaire. Voir
+[7.1 Découverte des escadrons et filtres du Squadron Browser](#71-découverte-des-escadrons-et-filtres-du-squadron-browser).
+
+**Peut-on rendre son escadron privé ou invisible aux autres joueurs ?**
+
+Oui : depuis le Patch 2, un escadron peut choisir un niveau de visibilité parmi plusieurs, dont **« Private »** et
+**« Squadron only »**, qui masquent sa localisation et d'autres détails aux commandants non-membres. Voir
+[7.2 Visibilité et confidentialité d'un escadron](#72-visibilité-et-confidentialité-dun-escadron-private-squadron-only).
+
+**Quels sont les rangs (ranks) dans un escadron ?**
+
+Les rangs confirmés, du plus élevé au plus bas, sont **Squadron Leader** (seul habilité à acheter un Squadron
+Carrier), **Senior Officer** (capacités de gestion étendues) et **Recruit** ; un ou plusieurs rangs intermédiaires
+existent probablement mais leur dénomination exacte n'a pas pu être confirmée par les sources consultées. Voir
+[3.1 Rangs d'escadron](#31-rangs-descadron--squadron-leader-senior-officer-recruit).
+
+**Quels champs sont obligatoires pour créer un escadron ?**
+
+Un escadron doit obligatoirement comporter un logo, une bannière, une **devise** (motto), une **déclaration de
+mission** (mission statement) et des **conditions de candidature** (application requirements) ; ces trois derniers
+champs ne peuvent plus être laissés vides depuis la correction apportée par le Patch 3. Voir
+[2.1 Champs obligatoires à la création](#21-champs-obligatoires-à-la-création-dun-escadron).
+
+**Est-ce gratuit de fonder un escadron (squadron) ?**
+
+Ce point n'est pas confirmé par une source primaire consultée : la compréhension communautaire générale est que la
+création est gratuite et ouverte à tout commandant, mais aucune note de patch ou page officielle ne le confirme
+explicitement, ni ne mentionne une éventuelle condition de rang, d'ancienneté ou de coût. Voir
+[2.1 Champs obligatoires à la création](#21-champs-obligatoires-à-la-création-dun-escadron).
+
 ## Voir aussi
 
 - [Politique et Powerplay](./02-powerplay.md) — fonctionnement complet de Powerplay, dont le filtrage par Power du
-  Squadron Browser (section 7.1) n'est qu'un point de contact.
+  Squadron Browser ([section 7.1](#71-découverte-des-escadrons-et-filtres-du-squadron-browser)) n'est qu'un point de contact.
 - [Le Background Simulation (BGS)](./21-bgs.md) — mécanique complète des factions mineures, de l'influence et de leur
-  articulation avec la colonisation évoquée en section 4.
+  articulation avec la colonisation évoquée en [section 4](#4-escadron-et-background-simulation-bgs).
 - [Jeu en groupe : Wings, Multicrew et CQC](./23-jeu-en-groupe.md) — distinction avec les Squadrons (structure
   persistante) et les autres formes de jeu en groupe (temps réel, session par session).
 - [Chronologie canonique](./00-chronologie-canonique.md) — repères de dates officielles pour tout le corpus, dont la

@@ -18,11 +18,12 @@ guides_lies: [0, 2, 4, 11, 14, 16, 27, 28, 31]
 ## En bref
 
 Le minage (*mining*) extrait des minéraux d'astéroïdes en anneau planétaire ou, depuis le 2 septembre 2026, à la
-surface des planètes. Trois techniques d'anneau coexistent : le **laser mining** (Mining Laser), le **minage de
-gisements de subsurface** (Abrasion Blaster) et le **core mining**, le plus rentable — Pulse Wave Analyser,
-Sub-Surface Displacement Missile puis Seismic Charge Launcher pour faire éclater un noyau qui libère des
-dizaines de tonnes de Void Opals, Low Temperature Diamonds ou Alexandrite. Le jeu ne reconnaît que **quatre
-types d'anneau** : glacé, rocheux, métallique, riche en métaux. La section 4.5 donne la correspondance minerai ×
+surface des planètes. Trois techniques d'anneau coexistent : le **laser mining** (minage au laser ; Mining Laser),
+le **minage de gisements de subsurface** (Abrasion Blaster) et le **core mining** (minage de noyau), le plus
+rentable — Pulse Wave Analyser, Sub-Surface Displacement Missile puis Seismic Charge Launcher pour faire éclater un
+noyau qui libère des dizaines de tonnes de Void Opals, Low Temperature Diamonds ou Alexandrite. Le jeu ne reconnaît que **quatre
+types d'anneau** : glacé, rocheux, métallique, riche en métaux. La
+[section 4.5](#45-quel-minerai-dans-quel-type-danneau--table-de-correspondance) donne la correspondance minerai ×
 technique × type d'anneau pour les 63 marchandises `Minerals` et `Metals` — la Bertrandite se mine au laser en
 anneau métallique ou riche en métaux. Trente de ces lignes portent un type d'anneau ; les autres sont déclarées
 non établies plutôt que comblées. Le **Type-11 Prospector** (29 septembre 2025) est le premier vaisseau dédié au
@@ -36,9 +37,11 @@ Le **minage** (*mining*) est, avec le commerce, l'exploration et le combat, l'un
 l'espace (astéroïdes en anneau planétaire) ou, depuis septembre 2026, à la surface des astres, pour les revendre ou
 les utiliser en ingénierie. Ce guide couvre les trois techniques de minage (laser, gisements de subsurface, minage de
 noyau/profond), l'équipement dédié complet (armes minières, contrôleurs de limpets, raffinerie, scanners), les
-hotspots et les outils de repérage — avec des exemples concrets de systèmes/anneaux et un mode d'emploi pas à pas des
-outils communautaires —, la **quatrième technique** apparue le 2 septembre 2026, le **minage de surface planétaire**
-en Rhino (sections 3.2 à 3.4), les rendements chiffrés et la revente, ainsi que les liens avec Powerplay.
+hotspots (concentrations minérales) et les outils de repérage — avec des exemples concrets de systèmes/anneaux et un
+mode d'emploi pas à pas des outils communautaires —, la **quatrième technique** apparue le 2 septembre 2026, le
+**minage de surface planétaire** en Rhino ([section 3.2](#32-le-rhino-vodel-srv-du-minage-de-surface-planétaire) à
+[3.4](#34-portée-du-rééquilibrage-du-2-septembre-2026--ce-que-les-notes-de-version-disent-et-ce-quelles-ne-disent-pas)),
+les rendements chiffrés et la revente, ainsi que les liens avec Powerplay.
 
 > **Voir aussi.** Ce guide se concentre sur la boucle de minage proprement dite. Pour les mécaniques annexes qui
 > l'alimentent ou la recoupent, voir : [Commerce](./11-commerce.md) (lien minage → revente, outils de routage),
@@ -53,7 +56,8 @@ en Rhino (sections 3.2 à 3.4), les rendements chiffrés et la revente, ainsi qu
 Les mécaniques de minage en anneau sont stables depuis l'extension *Beyond*/*Chapter Four* (2019) et reposent sur
 trois techniques distinctes, de complexité et de rendement croissants, que l'on peut combiner sur un même astéroïde.
 Le **minage de surface planétaire**, ajouté le 2 septembre 2026, est une boucle séparée : il ne se pratique pas en
-anneau, n'utilise aucun des outils ci-dessous et ne produit pas les mêmes marchandises — voir la section 3.3.
+anneau, n'utilise aucun des outils ci-dessous et ne produit pas les mêmes marchandises — voir la
+[section 3.3](#33-la-boucle-de-minage-de-surface-planétaire-mise-à-jour-du-2-septembre-2026).
 
 | Technique                          | Type d'astéroïde ciblé                              | Outil principal                                                        | Complexité | Rendement typique |
 |-------------------------------------|-------------------------------------------------------|----------------------------------------------------------------------------|------------|--------------------|
@@ -70,7 +74,7 @@ Le rendement est modéré mais la mise en œuvre est rapide : c'est la méthode 
 et l'Osmium en anneaux métalliques.
 
 Une variante avancée existe : la **Mining Lance**, récompense **Powerplay** de rating D (voir
-[Équipements §2.1](./04-equipements.md), la section 6 de ce guide et
+[Équipements §2.1](./04-equipements.md), la [section 6](#6-minage-et-powerplay) de ce guide et
 [Powerplay, « Modules exclusifs Powerplay »](./02-powerplay.md)).
 
 ### 1.2 Le minage de gisements de subsurface (Abrasion Blaster)
@@ -95,12 +99,13 @@ Technique à plus haut rendement, réservée aux astéroïdes « à noyau ». La
 
 Un seul noyau peut livrer des dizaines de tonnes du minéral cible : Void Opals, Low Temperature Diamonds, Musgravite,
 Serendibite, Alexandrite, Grandidierite, Benitoite, Rhodplumsite, Monazite. Le type d'anneau où chercher chacun
-d'eux, et la technique applicable à chacune des 63 marchandises minières du jeu, sont donnés en **section 4.5**.
+d'eux, et la technique applicable à chacune des 63 marchandises minières du jeu, sont donnés en
+[**section 4.5**](#45-quel-minerai-dans-quel-type-danneau--table-de-correspondance).
 
 > **Point à vérifier avant usage stratégique.** [Équipements §2.5](./04-equipements.md) liste également un
 > **Sub-Surface Extraction Missile** (fixe, taille 2, notation B, type de projectile « Seeker »). Son existence et
 > ses caractéristiques techniques sont confirmées indépendamment par le registre officiel des identifiants de jeu
-> (EDCD/FDevIDs, fichier `outfitting.csv`, entrée `Hpt_Human_Extraction_Fixed_Medium` — voir Sources) : il s'agit
+> (EDCD/FDevIDs, fichier `outfitting.csv`, entrée `Hpt_Human_Extraction_Fixed_Medium` — voir [Sources](#sources)) : il s'agit
 > bien d'une arme minière distincte du Sub-Surface Displacement Missile, portant un identifiant numérique nettement
 > plus récent que les armes de core mining historiques de 2019, ce qui suggère un ajout plus tardif au jeu. En
 > revanche, sa mécanique fonctionnelle précise (rôle exact dans la boucle de core mining, complémentarité ou
@@ -121,10 +126,10 @@ d'eux, et la technique applicable à chacune des 63 marchandises minières du je
 | **Abrasion Blaster**                    | Fixe / Tourelle   | 1         | Chantier naval standard — extraction des gisements de subsurface en une salve |
 | **Sub-Surface Displacement Missile**    | Fixe / Tourelle   | 1–2       | Chantier naval standard — fait monter la pression dans les fissures d'un astéroïde à noyau |
 | **Seismic Charge Launcher**             | Fixe / Tourelle   | 2         | Chantier naval standard — fait exploser le noyau une fois la pression suffisante |
-| **Sub-Surface Extraction Missile**      | Fixe              | 2         | Notation B, type de projectile Seeker (confirmé EDCD/FDevIDs) — rôle fonctionnel exact non confirmé par notes de patch (voir 1.3) |
+| **Sub-Surface Extraction Missile**      | Fixe              | 2         | Notation B, type de projectile Seeker (confirmé EDCD/FDevIDs) — rôle fonctionnel exact non confirmé par notes de patch (voir [1.3](#13-le-minage-de-noyau--minage-profond-core-mining-deep-core-mining)) |
 
 *(Source des classes/montages : voir [Équipements §2.1, §2.2 et §2.5](./04-equipements.md), qui reprend le
-référentiel EDCD/FDevIDs, recoupé indépendamment lors de cette révision avec `outfitting.csv` — voir Sources.)*
+référentiel EDCD/FDevIDs, recoupé indépendamment lors de cette révision avec `outfitting.csv` — voir [Sources](#sources).)*
 
 ### 2.2 Contrôleurs de limpets pour le minage (Prospector, Collector, Multi)
 
@@ -150,16 +155,16 @@ de devoir jeter du minerai brut faute de place pendant une session de minage int
 ### 2.4 Scanners et détection : Pulse Wave Analyser, DSS, Planetary Mining Deposit Scanner
 
 - **Pulse Wave Analyser** (utilitaire) — une fois sur zone, scanne un astéroïde à noyau et révèle ses fissures ;
-  indispensable au core mining (voir 1.3).
+  indispensable au core mining (voir [1.3](#13-le-minage-de-noyau--minage-profond-core-mining-deep-core-mining)).
 - **Detailed Surface Scanner (DSS)** — repère les points chauds (*hotspots*) de ressources à l'échelle d'un système,
-  en complément du FSS (voir section 4). Depuis le **2 septembre 2026**, le module a été « mis à jour pour détecter
+  en complément du FSS (voir [section 4](#4-hotspots-et-outils-de-repérage)). Depuis le **2 septembre 2026**, le module a été « mis à jour pour détecter
   les Planetary Mining Locations sur les planètes » (notes de version *Rhino SRV Update*) : le même sondage sert donc
-  désormais au repérage des sites de minage de surface (voir section 3.3).
+  désormais au repérage des sites de minage de surface (voir [section 3.3](#33-la-boucle-de-minage-de-surface-planétaire-mise-à-jour-du-2-septembre-2026)).
 - **Planetary Mining Deposit Scanner** — scanner embarqué sur le Rhino, qui localise les gisements exploitables à
-  l'intérieur d'un site repéré au DSS (voir section 3.3).
+  l'intérieur d'un site repéré au DSS (voir [section 3.3](#33-la-boucle-de-minage-de-surface-planétaire-mise-à-jour-du-2-septembre-2026)).
 - **SRV embarqué (Scarab)** : sur le SRV de base, un « wave scanner » intégré permet déjà de repérer ressources et
   épaves en **surface planétaire** — une mécanique distincte et plus rudimentaire que le scanner dédié du Rhino (voir
-  section 3.3). Détail des trois catégories de signaux qu'il distingue (natural/vessel/artificial, aucune catégorie
+  [section 3.3](#33-la-boucle-de-minage-de-surface-planétaire-mise-à-jour-du-2-septembre-2026)). Détail des trois catégories de signaux qu'il distingue (natural/vessel/artificial, aucune catégorie
   biologique) dans [14-rhino.md §5.3](./14-rhino.md#53-lecture-du-wave-scanner).
 
 ---
@@ -170,7 +175,7 @@ de devoir jeter du minerai brut faute de place pendant une session de minage int
 
 Annoncé le **9 septembre 2025**, initialement prévu pour le 23 septembre puis reporté (annonce du report confirmée
 le **22 septembre**), le **Type-11 Prospector** est sorti effectivement le **29 septembre 2025** — dates confirmées
-via l'API JSON officielle Steam News de Frontier (voir Sources), qui contient les billets d'annonce et de notes de
+via l'API JSON officielle Steam News de Frontier (voir [Sources](#sources)), qui contient les billets d'annonce et de notes de
 patch d'origine. C'est le **premier vaisseau spatial entièrement dédié au minage** de l'histoire du jeu (formulation
 reprise du billet officiel Frontier lui-même), avec un lien thématique fort avec la colonisation de systèmes (voir
 [15-roadmap.md](./15-roadmap.md)). Caractéristiques confirmées par les notes de patch et billets officiels Frontier :
@@ -193,7 +198,7 @@ que ceux repris un an plus tard pour le Rhino : **Standard** (16 520 Arx), **Ste
 avec le Rhino, associe les deux véhicules : **Type-11 Prospector Galactic Mining Pack, 100 000 Arx** (voir
 [Rhino et Nomad](./14-rhino.md)), ce qui souligne la filiation thématique entre les deux ajouts. Une
 **Update 2** du **16 octobre 2025** a ajouté une protection anti « claim sniping » pour les claims de **colonisation**
-de systèmes (verrou d'exclusivité temporaire pour l'architecte système et sa Squadron) — confirmé par les notes de
+de systèmes (verrou d'exclusivité temporaire pour l'architecte système et sa Squadron (Escadron)) — confirmé par les notes de
 patch officielles ; voir aussi [15-roadmap.md](./15-roadmap.md).
 
 ### 3.2 Le Rhino (Vodel), SRV du minage de surface planétaire
@@ -201,7 +206,7 @@ patch officielles ; voir aussi [15-roadmap.md](./15-roadmap.md).
 Le corpus dispose d'un guide dédié à ce véhicule : **[Rhino et Nomad](./14-rhino.md)**. Pour éviter la
 duplication, ce guide n'en donne que le résumé utile au mineur, établi directement sur les billets officiels Frontier
 (« Beneath the Surface: Your First Look at the Rhino », 6 août 2026 14:19 UTC, et « Elite Dangerous | Rhino SRV
-Update », 2 septembre 2026 11:20 UTC — voir Sources) :
+Update », 2 septembre 2026 11:20 UTC — voir [Sources](#sources)) :
 
 - Le **Rhino**, fabriqué par **Vodel**, est un SRV à six roues (confirmé par une citation du directeur artistique de
   Frontier dans le billet de présentation), sorti le **2 septembre 2026** via la mise à jour officielle *Rhino SRV
@@ -230,7 +235,8 @@ Update », 2 septembre 2026 11:20 UTC — voir Sources) :
 
 Le minage de surface est une boucle **entièrement nouvelle**, introduite par la mise à jour du 2 septembre 2026 sous
 l'intitulé « Surface Mining gameplay added ». Elle se joue au sol, en SRV, et ne partage ni ses outils ni ses
-marchandises avec le minage d'astéroïdes des sections 1 et 2.
+marchandises avec le minage d'astéroïdes des [sections 1](#1-les-trois-techniques-de-minage-dastéroïdes) et
+[2](#2-équipement-dédié-au-minage).
 
 #### 3.3.1 Enchaînement des étapes du minage de surface : DSS, Deposit Scanner, foreuse
 
@@ -304,12 +310,13 @@ dans la boucle sans se confondre.
 | Thortveitite               | Thortveitite         |
 
 **Attention à un homonyme.** Le *Diamond* de cette liste est une marchandise nouvelle, distincte des **Low
-Temperature Diamonds** extraits au core mining en anneau (voir section 1.3) : les deux entrées coexistent désormais
+Temperature Diamonds** extraits au core mining en anneau (voir
+[section 1.3](#13-le-minage-de-noyau--minage-profond-core-mining-deep-core-mining)) : les deux entrées coexistent désormais
 dans le jeu, et confondre l'une avec l'autre fausse toute recherche de prix.
 
 Les billets officiels ne précisent ni les prix de vente, ni les stations ou économies acheteuses, ni un éventuel
 usage en ingénierie de ces treize marchandises : ces points sont à établir en jeu ou via un outil de marché vivant
-(voir section 4.2).
+(voir [section 4.2](#42-outils-communautaires-spécialisés--edtoolscc-inara-edsm-spansh)).
 
 #### 3.3.4 Problème connu au lancement : le Rhino ne collecte que 9 fragments sur 12
 
@@ -345,8 +352,9 @@ non parce qu'un rééquilibrage documenté les aurait invalidés.
 - Le **FSS** (Full Spectrum Scanner) repère les signaux d'anneaux depuis le système, avant même de s'y rendre.
 - Le **Detailed Surface Scanner (DSS)** cartographie les corps du système et peut révéler des points d'intérêt liés
   au minage — dont, depuis le 2 septembre 2026, les **Planetary Mining Locations** à la surface des planètes, point
-  d'entrée du minage de surface (voir 3.3).
-- Le **Pulse Wave Analyser**, une fois sur l'astéroïde ciblé, révèle ses fissures pour le core mining (voir 1.3).
+  d'entrée du minage de surface (voir [3.3](#33-la-boucle-de-minage-de-surface-planétaire-mise-à-jour-du-2-septembre-2026)).
+- Le **Pulse Wave Analyser**, une fois sur l'astéroïde ciblé, révèle ses fissures pour le core mining (voir
+  [1.3](#13-le-minage-de-noyau--minage-profond-core-mining-deep-core-mining)).
 
 Les outils communautaires décrits ci-dessous (EDTools.cc, Spansh Ring Finder) portent tous sur les **anneaux**. Ce
 guide n'a identifié, au 9 septembre 2026 — soit une semaine après l'introduction du minage de surface —, aucun outil
@@ -382,7 +390,7 @@ issus de guides communautaires anciens.
 **Méthodologie et limite honnête.** L'accès direct (sans navigateur, sans exécution JavaScript) aux pages de
 résultats d'EDTools.cc/hotspot et de Spansh (Ring Finder) ne renvoie que le formulaire de recherche vide, ces outils
 calculant leurs résultats côté client une fois la recherche lancée dans un vrai navigateur (confirmé lors de cette
-révision — voir Sources). Il n'a donc **pas été possible de faire dire à ces outils, depuis cette session, quel
+révision — voir [Sources](#sources)). Il n'a donc **pas été possible de faire dire à ces outils, depuis cette session, quel
 minéral précis est en hotspot sur quel anneau aujourd'hui**, ni combien de hotspots y sont actifs, ni le prix courant
 en Cr/tonne — ces trois informations sont les plus volatiles de tout ce guide (elles dépendent des scans FSS/DSS
 soumis par la communauté à EDDN, et des prix de marché du moment). Ce qui a pu être confirmé en direct, en revanche,
@@ -401,9 +409,10 @@ comme revérifiée hotspot par hotspot cette semaine.
 > anneaux métalliques sans qu'un hotspot spécifique soit nécessaire (c'est un minerai « de base » d'anneau
 > métallique, contrairement au Painite ou aux Void Opals qui bénéficient de hotspots dédiés). Les moteurs de recherche
 > accessibles ont soit bloqué l'accès par un CAPTCHA, soit renvoyé des résultats sans
-> rapport avec le jeu pour les requêtes tentées lors de cette révision — voir Sources. Plutôt que de reprendre de
+> rapport avec le jeu pour les requêtes tentées lors de cette révision — voir [Sources](#sources). Plutôt que de reprendre de
 > mémoire un nom de système « hotspot à Platine » non vérifiable dans ces conditions, ce guide préfère l'admettre
-> explicitement et renvoyer à la méthode de la section 4.4 pour que le lecteur obtienne une réponse à jour en
+> explicitement et renvoyer à la méthode de la
+> [section 4.4](#44-mode-demploi-pas-à-pas--trouver-un-hotspot-à-jour-avec-edtoolscc-et-spansh) pour que le lecteur obtienne une réponse à jour en
 > quelques minutes.
 
 > **Sur les Low Temperature Diamonds isolément.** De la même façon, aucun système *spécifiquement* et
@@ -424,8 +433,9 @@ plutôt que de se fier à un nom de système imprimé dans un guide.
 
 1. Ouvrir https://edtools.cc/hotspot dans un navigateur.
 2. Dans le champ **« Reference system »**, entrer son système actuel (laissé vide, l'outil part de Sol par défaut).
-3. Choisir le minéral visé dans le menu déroulant **Mineral** — les 13 minéraux couverts sont listés dans le tableau
-   4.2 ci-dessus (Painite, Platinum, Void Opal *(affiché « Opal » dans l'interface)*, Low Temperature Diamond, etc.).
+3. Choisir le minéral visé dans le menu déroulant **Mineral** — les 13 minéraux couverts sont listés dans le
+   [tableau 4.2](#42-outils-communautaires-spécialisés--edtoolscc-inara-edsm-spansh) ci-dessus (Painite, Platinum,
+   Void Opal *(affiché « Opal » dans l'interface)*, Low Temperature Diamond, etc.).
 4. Renseigner si besoin le champ **« Minimum Hotspots »** pour n'afficher que les anneaux cumulant au moins N
    hotspots confirmés — utile pour repérer un anneau à plusieurs hotspots du même minéral, plus rentable qu'un
    anneau à un seul.
@@ -468,15 +478,17 @@ distance de trajet une fois un système candidat identifié, via son Neutron Rou
 
 Les sous-sections précédentes expliquent comment interroger les outils de repérage ; celle-ci répond à la
 question qui vient juste avant. Le menu **Mineral** d'`edtools.cc/hotspot` et son filtre par type d'anneau
-(voir 4.4) supposent en effet que le lecteur sache déjà **dans quel type d'anneau chercher le minerai qu'il
+(voir [4.4](#44-mode-demploi-pas-à-pas--trouver-un-hotspot-à-jour-avec-edtoolscc-et-spansh)) supposent en effet que le lecteur sache déjà **dans quel type d'anneau chercher le minerai qu'il
 vise** — une correspondance que ce guide ne portait pas jusqu'ici. La voici, marchandise par marchandise.
 
 > **Ce que vaut cette table, et ce qu'elle ne vaut pas.** Frontier ne publie aucune table de distribution des
 > minéraux par type d'anneau. Les colonnes « Technique » et « Type d'anneau » ci-dessous sont donc une
 > **synthèse de sources communautaires datées**, consultées le 10 septembre 2026, et non une donnée de jeu
-> officielle : elles doivent être traitées comme les exemples de la section 4.3, c'est-à-dire vérifiées au
+> officielle : elles doivent être traitées comme les exemples de la
+> [section 4.3](#43-exemples-concrets-de-systèmes-et-anneaux-à-hotspot-connu-borann-paesia), c'est-à-dire vérifiées au
 > Prospector Limpet avant d'engager une session. Elles sont recoupées entre deux relevés indépendants séparés
-> de sept ans chaque fois que la marchandise figure dans les deux, et les désaccords sont listés en 4.5.5
+> de sept ans chaque fois que la marchandise figure dans les deux, et les désaccords sont listés en
+> [4.5.5](#455-divergences-entre-sources-et-ce-que-cette-table-ne-couvre-pas)
 > plutôt que masqués. **Une case vide signifie « non établi », jamais « aucun ».**
 >
 > Le **nommage et la classification complète des 270 marchandises** du jeu — les seize catégories, les denrées
@@ -495,8 +507,9 @@ vise** — une correspondance que ce guide ne portait pas jusqu'ici. La voici, m
 
 **Il n'existe que ces quatre types d'anneau** : c'est un relevé intégral du registre d'identifiants EDCD/FDevIDs
 (fichier `rings.csv`, quatre lignes), corroboré par l'énumération `RingClassEnum` du lecteur de journaux
-EliteDangerousCore, qui normalise lui-même « Metalic » en « Metallic » (voir Sources). Toute réponse qui en cite
-un cinquième est fausse. Conséquence pratique pour la section 4.4 : le Hotspot finder d'EDTools.cc, qui se
+EliteDangerousCore, qui normalise lui-même « Metalic » en « Metallic » (voir [Sources](#sources)). Toute réponse qui en cite
+un cinquième est fausse. Conséquence pratique pour la
+[section 4.4](#44-mode-demploi-pas-à-pas--trouver-un-hotspot-à-jour-avec-edtoolscc-et-spansh) : le Hotspot finder d'EDTools.cc, qui se
 limite aux anneaux glacés, rocheux et métalliques, **laisse de côté le quatrième type**, alors que dix-huit des
 marchandises du tableau ci-dessous y sont documentées — la recherche d'un anneau riche en métaux passe donc par
 un autre outil ou par le FSS en jeu.
@@ -578,15 +591,17 @@ sources communautaires ci-dessous, **ou restent vides quand aucune source n'a pu
 S2 = guide Steam *Mining 3.3 Update in progress for 4.0* (décembre 2018), section « Ring types », qui donne la
 liste inverse, minéraux par anneau · S3 = discussion Steam *Mining Filter*, réponse retenue d'Edwyndham
 (1er octobre 2025), témoignage de core miner · S4 = EDSM, FAQ Commodities, colonne « Produced by » ·
-L1 = ce guide lui-même, section 3.3.3. Références complètes en Sources.
+L1 = ce guide lui-même,
+[section 3.3.3](#333-les-treize-nouvelles-marchandises-du-minage-de-surface-planétaire). Références complètes en
+[Sources](#sources).
 
 **Lecture des marqueurs.** *(?)* signale un type d'anneau sur lequel les deux relevés fermés se contredisent —
 l'un l'affirme, l'autre donne pour la même marchandise une liste qui l'omet. *(noyau)* signale un type d'anneau
 que la source ne cite que pour les astéroïdes à noyau, et non pour le minage laser. Les deux cas sont détaillés
-en 4.5.5. La mention *hors anneau* n'est pas une case vide : elle signifie qu'une source atteste que la
+en [4.5.5](#455-divergences-entre-sources-et-ce-que-cette-table-ne-couvre-pas). La mention *hors anneau* n'est pas une case vide : elle signifie qu'une source atteste que la
 marchandise s'obtient ailleurs qu'en anneau — soit parce qu'EDSM la donne produite par une économie
 d'extraction de surface, soit parce qu'elle fait partie des treize marchandises du minage de surface planétaire
-du 2 septembre 2026 déjà listées en 3.3.3.
+du 2 septembre 2026 déjà listées en [3.3.3](#333-les-treize-nouvelles-marchandises-du-minage-de-surface-planétaire).
 
 **Décompte recalculé sur le tableau ci-dessus, et non de mémoire :**
 
@@ -621,7 +636,8 @@ deux et ne la placent nulle part ailleurs — ni en anneau glacé, ni en anneau 
 
 > **Piège de découpage à connaître : les anneaux glacés ne contiennent pas que des `Minerals`.** Le tableau
 > ci-dessus ne couvre que les catégories `Minerals` et `Metals`. Or le **Tritium** — carburant des Fleet
-> Carriers, et l'un des treize minéraux du Hotspot finder cité en 4.2 —, le **Hydrogen Peroxide**, le
+> Carriers (Porte-Vaisseaux), et l'un des treize minéraux du Hotspot finder cité en
+> [4.2](#42-outils-communautaires-spécialisés--edtoolscc-inara-edsm-spansh) —, le **Hydrogen Peroxide**, le
 > **Liquid Oxygen** et l'**Eau** sont extraits en anneau glacé mais classés `Chemicals` par le jeu. Le nombre
 > « 8 » de la ligne Glacé ne dit donc pas combien de choses se minent dans un anneau glacé ; il dit combien de
 > `Minerals` et `Metals` y sont documentés. Voir [Les marchandises](./28-marchandises.md) pour la répartition
@@ -641,15 +657,16 @@ relevés tels que la source les énumère :
 | Depleted                       | Épuisée      | À éviter                                                                 |
 
 **Aucune source consultée ne publie de seuil de réserve minimale par minéral.** Il serait tentant d'ajouter au
-tableau 4.5.2 une colonne « réserve minimale conseillée » ; elle serait vide sur les 63 lignes, et la remplir
+[tableau 4.5.2](#452-les-63-marchandises-minerals-et-metals--technique-et-type-danneau) une colonne « réserve minimale conseillée » ; elle serait vide sur les 63 lignes, et la remplir
 « Pristine » partout reviendrait à transformer un conseil global en donnée par minéral. Ce qui est établi est
 la règle générale, corroborée par trois voies indépendantes : le relevé ci-dessus, la restriction que
-`edtools.cc/hotspot` s'impose à lui-même (« Pristine systems only », voir 4.4), et la vérification EDSM des
-anneaux cités en 4.3, tous en réserve Pristine. À type d'anneau égal, viser une réserve Pristine.
+`edtools.cc/hotspot` s'impose à lui-même (« Pristine systems only », voir
+[4.4](#44-mode-demploi-pas-à-pas--trouver-un-hotspot-à-jour-avec-edtoolscc-et-spansh)), et la vérification EDSM des
+anneaux cités en [4.3](#43-exemples-concrets-de-systèmes-et-anneaux-à-hotspot-connu-borann-paesia), tous en réserve Pristine. À type d'anneau égal, viser une réserve Pristine.
 
 #### 4.5.5 Divergences entre sources, et ce que cette table ne couvre pas
 
-| Marchandise       | Ce que dit le relevé de 2025 (S1)                                | Ce que dit l'autre relevé                                                           | Traitement retenu dans le tableau 4.5.2                        |
+| Marchandise       | Ce que dit le relevé de 2025 (S1)                                | Ce que dit l'autre relevé                                                           | Traitement retenu dans le [tableau 4.5.2](#452-les-63-marchandises-minerals-et-metals--technique-et-type-danneau) |
 |-------------------|------------------------------------------------------------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|
 | Gold              | Métallique seul (tableau laser)                                  | S2 (2018) range l'Or dans les anneaux métalliques **et** riches en métaux           | « Riche en métaux » marqué *(?)*                               |
 | Samarium          | Métallique, Riche en métaux **et Rocheux**                       | S2 (2018) ne range le Samarium que dans les anneaux métalliques et riches en métaux | « Rocheux » marqué *(?)*                                       |
@@ -668,16 +685,19 @@ inaccessible (erreurs 402 et 403) comme lors des révisions précédentes, et n'
 **Ce que cette table ne donne pas, et où le chercher.**
 
 - **Les prix par tonne.** Volontairement absents, conformément à la règle que ce guide s'est donnée (voir la
-  note sur la fiabilité des données chiffrées) : les seuls prix disponibles pour ces minéraux forment un relevé
+  [note sur la fiabilité des données chiffrées](#note-sur-la-fiabilité-des-données-chiffrées)) : les seuls prix disponibles pour ces minéraux forment un relevé
   Inara unique du 3 octobre 2025, dont l'auteur signale lui-même deux valeurs possiblement gonflées par un
-  Community Goal alors en cours. Consulter `edtools.cc/miner` ou Inara avant de partir (voir 4.4).
+  Community Goal alors en cours. Consulter `edtools.cc/miner` ou Inara avant de partir (voir
+  [4.4](#44-mode-demploi-pas-à-pas--trouver-un-hotspot-à-jour-avec-edtoolscc-et-spansh)).
 - **Le rendement par minéral en tonnes.** Aucune source ne le publie. Les seuls chiffres par minéral que S1
-  fournit sont des estimations de crédits par heure pour cinq métaux au laser ; ils ne sont pas repris ici,
-  la section 5 s'en tenant à un ordre de grandeur global pour la technique.
-- **La réserve minimale par minéral.** Voir 4.5.4 : la donnée n'existe pas publiquement.
-- **Le type d'anneau de 16 marchandises sur 63.** Voir la liste nominative en 4.5.2. La piste serait le wiki
+  fournit sont des estimations de crédits par heure pour cinq métaux au laser ; ils ne sont pas repris ici, la
+  [section 5](#5-rendements-chiffrés-du-minage-et-revente) s'en tenant à un ordre de grandeur global pour la technique.
+- **La réserve minimale par minéral.** Voir [4.5.4](#454-réserves-danneau--la-seule-règle-générale-établie) : la donnée n'existe pas publiquement.
+- **Le type d'anneau de 16 marchandises sur 63.** Voir la liste nominative en
+  [4.5.2](#452-les-63-marchandises-minerals-et-metals--technique-et-type-danneau). La piste serait le wiki
   Fandom, page par marchandise, aujourd'hui inaccessible — à défaut, un relevé au Prospector Limpet en jeu.
-- **Les économies acheteuses et productrices**, traitées pour les seules marchandises de valeur en section 5 et
+- **Les économies acheteuses et productrices**, traitées pour les seules marchandises de valeur en
+  [section 5](#5-rendements-chiffrés-du-minage-et-revente) et
   dans leur ensemble par [Les marchandises](./28-marchandises.md).
 
 ---
@@ -735,9 +755,10 @@ réinventés, pour rester cohérent avec le reste du corpus :
 
 - **Minage laser bien optimisé** (Python ou Type-9 Heavy, équipé de refinery, prospector/collector limpets, surface
   scanners et cargo racks en nombre) : **bien plus de 100 millions de Cr/heure** (source : GameRant).
-- **Wing mining organisé** via le réseau communautaire **Pilots Trade Network (PTN)** — une organisation Discord/
-  Reddit réelle et active pour *Elite Dangerous*, dont l'existence et l'activité (guides de « Wing Mining Missions »,
-  gestion de plus de 400 Fleet Carriers) ont été confirmées directement sur son site officiel
+- **Wing mining organisé** (minage en escadre organisé) via le réseau communautaire **Pilots Trade Network (PTN)**
+  — une organisation Discord/Reddit réelle et active pour *Elite Dangerous*, dont l'existence et l'activité (guides
+  de « Wing Mining Missions », gestion de plus de 400 Fleet Carriers) ont été confirmées directement
+  sur son site officiel
   (pilotstradenetwork.com) lors de cette révision — permettrait, selon la presse spécialisée citée par le corpus
   (TheGamer/GameRant), à une escouade de 4 commandants complétant 60 à 80 missions de minage de générer jusqu'à
   **3,5 milliards de Cr par cycle** pour l'équipage complet. Ce chiffre précis n'a pas pu être revérifié de façon
@@ -775,9 +796,9 @@ Le minage est l'une des activités reconnues par le système de **Powerplay** (v
 - Le minage de commodités dans un système d'**acquisition** ou de **renforcement**, sur un hotspot de ressources et
   avec un prix de vente élevé sur place, rapporte environ **25 000 à 75 000 mérites/heure** — l'une des méthodes de
   farm de mérites les plus citées par la communauté (chiffre à revérifier au cas par cas, comme les taux ci-dessus).
-- La **Mining Lance** (voir section 2.1) fait partie des modules exclusifs Powerplay débloqués par la progression
+- La **Mining Lance** (voir [section 2.1](#21-armes-minières-de-vaisseau-hardpoints)) fait partie des modules exclusifs Powerplay débloqués par la progression
   de rang — confirmé indépendamment par son marqueur interne dans les données de jeu (EDCD/FDevIDs,
-  `outfitting.csv`, tag `ELITE_SPECIFIC_V_POWER_200120` sur l'entrée Mining Lance — voir Sources), aux côtés d'armes
+  `outfitting.csv`, tag `ELITE_SPECIFIC_V_POWER_200120` sur l'entrée Mining Lance — voir [Sources](#sources)), aux côtés d'armes
   comme le Pacifier Frag-Cannon ou l'Advanced Plasma Accelerator.
 
 Sous réserve de vérification des taux exacts ci-dessus, ces bonus font potentiellement du minage une activité
@@ -789,26 +810,27 @@ et gains en mérites Powerplay simultanément.
 ## Check-list avant une session de minage
 
 - Confirmer la technique visée (laser, subsurface, core) et embarquer les modules correspondants — prospector et
-  collector limpets dans tous les cas, Abrasion Blaster ou Seismic Charge Launcher selon la technique (section 2).
+  collector limpets dans tous les cas, Abrasion Blaster ou Seismic Charge Launcher selon la technique
+  ([section 2](#2-équipement-dédié-au-minage)).
 - Vérifier la capacité de raffinerie embarquée : 2 à 3 emplacements dédiés recommandés pour ne pas devoir jeter du
-  minerai brut faute de place en session intensive (section 2.3).
+  minerai brut faute de place en session intensive ([section 2.3](#23-raffinerie-embarquée-refinery)).
 - Repérer un hotspot à jour via EDTools.cc, Inara ou Spansh avant de partir, plutôt que de chercher à l'aveugle
-  (section 4).
+  ([section 4](#4-hotspots-et-outils-de-repérage)).
 - Vérifier le type d'anneau visé (glacé, rocheux, métallique, riche en métaux) et ce qu'il contient réellement —
   un anneau glacé porte aussi du Tritium, de l'eau et d'autres `Chemicals`, pas seulement des `Minerals`/`Metals`
   (voir le piège ci-dessous).
 - Prévoir plusieurs stations de vente pour écouler la cargaison sans faire chuter le prix local d'un seul coup.
 - Si l'objectif inclut des mérites Powerplay : confirmer que le système visé est en acquisition ou en renforcement
-  avant de s'y rendre (section 6).
+  avant de s'y rendre ([section 6](#6-minage-et-powerplay)).
 
 ## Pièges fréquents et coûts cachés du minage
 
 | Piège | Conséquence chiffrée | Comment l'éviter |
 |---|---|---|
-| Cibler un anneau glacé en pensant n'y trouver que des `Minerals` | Tritium, eau et autres `Chemicals` non repérés — mauvaise cible de minage | Consulter [28-marchandises.md](./28-marchandises.md) pour la répartition complète par catégorie (section 4.5) |
+| Cibler un anneau glacé en pensant n'y trouver que des `Minerals` | Tritium, eau et autres `Chemicals` non repérés — mauvaise cible de minage | Consulter [28-marchandises.md](./28-marchandises.md) pour la répartition complète par catégorie ([section 4.5](#45-quel-minerai-dans-quel-type-danneau--table-de-correspondance)) |
 | Vendre toute sa cargaison minée d'un coup au même marché | Effondrement du prix de vente en cours de session | Répartir les ventes entre plusieurs stations |
-| Considérer sa cargaison minée comme acquise avant la vente | Perte totale en cas de destruction du vaisseau (voir « Bonnes pratiques », section 5) | Vendre à intervalles réguliers plutôt que d'accumuler une cargaison de grande valeur |
-| Manquer d'emplacements de raffinerie en session intensive | Minerai brut jeté faute de place dans les bacs de raffinage | Réserver 2 à 3 emplacements dédiés à la raffinerie (section 2.3) |
+| Considérer sa cargaison minée comme acquise avant la vente | Perte totale en cas de destruction du vaisseau (voir [« Bonnes pratiques »](#bonnes-pratiques--ne-jamais-considérer-sa-cargaison-minée-comme-acquise), section 5) | Vendre à intervalles réguliers plutôt que d'accumuler une cargaison de grande valeur |
+| Manquer d'emplacements de raffinerie en session intensive | Minerai brut jeté faute de place dans les bacs de raffinage | Réserver 2 à 3 emplacements dédiés à la raffinerie ([section 2.3](#23-raffinerie-embarquée-refinery)) |
 | Se fier à un pourcentage de bonus Powerplay non revérifié | Stratégie construite sur un taux potentiellement obsolète | Consulter la fiche à jour de la Power sur Inara.cz avant de baser une stratégie dessus |
 
 ---
@@ -820,16 +842,97 @@ Sauf mention contraire, les rendements horaires, prix Arx et statistiques d'équ
 avant toute décision de session — ces valeurs fluctuent avec les prix de marché, l'état du [BGS](./00-glossaire.md)
 local et les correctifs de Frontier. **Point d'attention particulier** : la mise à jour *Rhino SRV Update*
 (« Elite Dangerous | Rhino SRV Update », 2 septembre 2026 11:20 UTC — voir [Rhino et Nomad](./14-rhino.md)) a
-introduit le **minage de surface planétaire**, une boucle entièrement nouvelle traitée en section 3.3, et
+introduit le **minage de surface planétaire**, une boucle entièrement nouvelle traitée en
+[section 3.3](#33-la-boucle-de-minage-de-surface-planétaire-mise-à-jour-du-2-septembre-2026), et
 accompagné cet ajout d'une passe d'équilibrage dont Frontier a publié les **axes** mais **aucune valeur chiffrée**
-(voir le tableau de la section 3.3 et la mise au point de portée en section 3.4). Les rendements de minage
-d'astéroïdes cités en section 5 restent donc des **ordres de grandeur**. De même, les prix unitaires par tonne des
+(voir le tableau de la
+[section 3.3](#33-la-boucle-de-minage-de-surface-planétaire-mise-à-jour-du-2-septembre-2026) et la mise au point de
+portée en [section 3.4](#34-portée-du-rééquilibrage-du-2-septembre-2026--ce-que-les-notes-de-version-disent-et-ce-quelles-ne-disent-pas)).
+Les rendements de minage d'astéroïdes cités en [section 5](#5-rendements-chiffrés-du-minage-et-revente) restent donc
+des **ordres de grandeur**. De même, les prix unitaires par tonne des
 minéraux (Painite, Void Opals, Tritium, etc.) ne sont volontairement pas figés dans ce guide : ils fluctuent en
 continu par station, par [BGS](./00-glossaire.md) et par Power — consulter un outil vivant (Inara, EDTools, Spansh)
 plutôt qu'un chiffre imprimé. **Cette réserve
-s'applique en particulier à la section 4.3** : les systèmes et anneaux qui y sont cités sont des exemples
+s'applique en particulier à la [section 4.3](#43-exemples-concrets-de-systèmes-et-anneaux-à-hotspot-connu-borann-paesia)** : les systèmes et anneaux qui y sont cités sont des exemples
 concrets pour illustrer la méthode, pas une liste figée de bons plans — le statut de hotspot d'un anneau ne change
 normalement pas, mais son intérêt économique (prix de vente, concurrence, sécurité du système) si.
+
+---
+
+## Questions fréquentes
+
+**Core mining ou laser mining : quelle technique de minage est la plus rentable ?**
+
+Le core mining (minage de noyau) est la technique au rendement le plus élevé : un seul noyau brisé peut livrer des
+dizaines de tonnes d'un minéral comme les Void Opals ou l'Alexandrite. Le laser mining reste plus rapide à mettre en
+œuvre, pour un rendement modéré. Voir [1. Les trois techniques de minage d'astéroïdes](#1-les-trois-techniques-de-minage-dastéroïdes).
+
+**Comment miner un astéroïde à noyau (core mining) étape par étape ?**
+
+Quatre étapes : le Pulse Wave Analyser révèle les fissures de l'astéroïde, le Sub-Surface Displacement Missile fait
+monter la pression interne, le Seismic Charge Launcher largue une charge à retardement (il faut s'éloigner avant la
+détonation), puis on finit de casser le noyau (motherlode) au laser ou à l'Abrasion Blaster avant de tout collecter
+aux Collector Limpets. Voir [1.3 Le minage de noyau / minage profond](#13-le-minage-de-noyau--minage-profond-core-mining-deep-core-mining).
+
+**Dans quel type d'anneau (ring) trouver le Painite ?**
+
+D'après la table de correspondance de ce guide, le Painite se mine au laser et au core mining, principalement en
+anneau métallique ; au core mining seulement, un anneau riche en métaux est aussi documenté. Voir
+[4.5.2 Les 63 marchandises Minerals et Metals](#452-les-63-marchandises-minerals-et-metals--technique-et-type-danneau).
+
+**Combien peut-on gagner en Cr/heure avec le minage laser (laser mining) ?**
+
+Un minage laser bien optimisé (Python ou Type-9 Heavy équipé de refinery, prospector/collector limpets et cargo
+racks en nombre) dépasse 100 millions de Cr/heure selon la source citée par ce guide (GameRant). Voir
+[Rendements horaires observés](#rendements-horaires-observés).
+
+**Combien y a-t-il de types d'anneaux dans Elite Dangerous ?**
+
+Seulement quatre : glacé (Icy), rocheux (Rocky), métallique (Metallic) et riche en métaux (Metal Rich) — un relevé
+intégral du registre d'identifiants EDCD/FDevIDs, corroboré indépendamment par le lecteur de journaux
+EliteDangerousCore. Voir [4.5.1 Les quatre types d'anneau reconnus par le jeu](#451-les-quatre-types-danneau-reconnus-par-le-jeu).
+
+**C'est quoi le Rhino et à quoi il sert pour miner ?**
+
+Le Rhino est le SRV de minage de surface planétaire, fabriqué par Vodel et sorti le 2 septembre 2026. Il embarque un
+équipage de trois occupants et trois équipements signature : Planetary Mining Deposit Scanner, Refinery et Mining
+Rig Deployment Module. Voir [3.2 Le Rhino (Vodel)](#32-le-rhino-vodel-srv-du-minage-de-surface-planétaire).
+
+**Quelles sont les nouvelles marchandises du minage de surface (surface mining) ?**
+
+Treize marchandises ont été ajoutées le 2 septembre 2026 : Bastnäsite, Deutérium, Diamant, Hélium, Hélium-3, Iridium,
+Magnésite, Olivine, Périclase dunite, Quartz pyroxénite, Rubis, Saphir et Thortveitite. Voir
+[3.3.3 Les treize nouvelles marchandises](#333-les-treize-nouvelles-marchandises-du-minage-de-surface-planétaire).
+
+**Comment trouver un hotspot à jour pour un minéral précis ?**
+
+Sur edtools.cc/hotspot : renseigner son système de référence, choisir le minéral dans le menu Mineral, filtrer si
+besoin par nombre minimum de hotspots ou par « Populated systems only », puis confirmer visuellement le hotspot en
+jeu (FSS puis approche de l'anneau) avant d'engager la session. Voir
+[4.4 Mode d'emploi pas à pas](#44-mode-demploi-pas-à-pas--trouver-un-hotspot-à-jour-avec-edtoolscc-et-spansh).
+
+**Le Type-11 Prospector, combien d'emplacements pour miner ?**
+
+Sorti le 29 septembre 2025, il dispose de 8 points d'ancrage (dont 4 exclusivement miniers) et de 12 emplacements
+internes optionnels, en plus d'outils exclusifs comme le Mk II Mining Repeater et le Mk II Mining Multi Limpet
+Controller. Voir [3.1 Le Type-11 Prospector](#31-le-type-11-prospector-lakon-spaceways-premier-vaisseau-entièrement-dédié-au-minage).
+
+**Où revendre le Platine et l'Or : dans une station de raffinage (refinery) ou d'extraction ?**
+
+Ni l'un ni l'autre : d'après EDSM, le Platine, l'Or, le Palladium et l'Argent se vendent partout sauf dans les
+économies agricoles, de raffinage, d'extraction et militaires — précisément les économies qui les produisent. Voir
+[section 5, Rendements chiffrés du minage et revente](#5-rendements-chiffrés-du-minage-et-revente).
+
+**Combien rapporte le minage en mérites Powerplay par heure ?**
+
+Miner des commodités dans un système d'acquisition ou de renforcement, sur un hotspot avec un prix de vente élevé
+sur place, rapporte environ 25 000 à 75 000 mérites/heure selon les estimations communautaires — un chiffre à
+revérifier au cas par cas. Voir [6. Minage et Powerplay](#6-minage-et-powerplay).
+
+**Combien faut-il d'emplacements de raffinerie (refinery) pour une session de minage sérieuse ?**
+
+2 à 3 emplacements dédiés à la raffinerie sont recommandés, pour ne pas devoir jeter du minerai brut faute de place
+pendant une session de minage intensive. Voir [2.3 Raffinerie embarquée](#23-raffinerie-embarquée-refinery).
 
 ---
 
@@ -841,7 +944,7 @@ normalement pas, mais son intérêt économique (prix de vente, concurrence, sé
   commerciale, outils de routage (Trade Dangerous, Spansh).
 - **[Les marchandises](./28-marchandises.md)** — nommage et classification complète des 270 marchandises et des
   142 denrées rares du jeu, catégorie par catégorie : ce guide-ci n'en traite que les 63 entrées `Minerals` et
-  `Metals`, et sous le seul angle du minage (section 4.5).
+  `Metals`, et sous le seul angle du minage ([section 4.5](#45-quel-minerai-dans-quel-type-danneau--table-de-correspondance)).
 - **[Liste complète des équipements](./04-equipements.md)** — fiches techniques complètes de toutes les armes
   minières, des contrôleurs de limpets et des scanners cités dans ce guide.
 - **[Guide complet du Rhino et du Nomad](./14-rhino.md)** — chronologie, spécifications et prix détaillés du
@@ -887,7 +990,7 @@ résumé, pour les deux premières) :
 - https://raw.githubusercontent.com/EDCD/FDevIDs/master/outfitting.csv — registre communautaire de référence des
   identifiants internes du jeu (EDCD/FDevIDs), récupéré en brut (`curl`) et filtré sur les entrées liées au minage :
   confirme indépendamment l'existence, les tailles, montages et notations de toutes les armes minières listées en
-  section 2.1, dont le Sub-Surface Extraction Missile et la Mining Lance (avec son tag Powerplay).
+  [section 2.1](#21-armes-minières-de-vaisseau-hardpoints), dont le Sub-Surface Extraction Missile et la Mining Lance (avec son tag Powerplay).
 - https://edtools.cc/ , https://edtools.cc/hotspot et https://edtools.cc/miner — outils communautaires de repérage
   de hotspots et de prix de minage ; contenu et fonctionnalités revérifiés lors de cette révision.
 
@@ -901,18 +1004,19 @@ résumé, pour les deux premières) :
   (rendements horaires, sourcé TheGamer et GameRant), [04-equipements.md](./04-equipements.md) (tableaux d'armes
   minières et de contrôleurs de limpets, sourcé EDCD/FDevIDs et EDCD/coriolis-data), [02-powerplay.md](./02-powerplay.md)
   (bonus de minage Torval/Kaine et mérites, sourcé inara.cz et lavewiki.com — taux non revérifiés indépendamment
-  ici, voir section 6).
+  ici, voir [section 6](#6-minage-et-powerplay)).
 
 
 ### Sources ajoutées lors de la révision du 10 septembre 2026 (section 4.5 — minerai × technique × type d'anneau)
 
 - https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv — registre EDCD/FDevIDs, commit
-  `c35612952dd6a547d1a7ac4cffab9c7051e86579` (5 septembre 2026), lu en local. **Assiette du tableau 4.5.2** :
+  `c35612952dd6a547d1a7ac4cffab9c7051e86579` (5 septembre 2026), lu en local. **Assiette du
+  [tableau 4.5.2](#452-les-63-marchandises-minerals-et-metals--technique-et-type-danneau)** :
   270 marchandises réparties en seize catégories, dont `Minerals` 39 et `Metals` 24, soit les 63 lignes du tableau.
   Ce fichier ne contient **ni prix, ni économie, ni type d'anneau** : il ne donne que l'identifiant, le symbole, la
   catégorie et le nom.
 - https://raw.githubusercontent.com/EDCD/FDevIDs/master/rings.csv — même commit : les quatre types d'anneau du
-  tableau 4.5.1 (`eRingClass_Icy`, `eRingClass_Metalic`, `eRingClass_MetalRich`, `eRingClass_Rocky`), relevé
+  [tableau 4.5.1](#451-les-quatre-types-danneau-reconnus-par-le-jeu) (`eRingClass_Icy`, `eRingClass_Metalic`, `eRingClass_MetalRich`, `eRingClass_Rocky`), relevé
   intégral.
 - Dépôt EDDiscovery/EliteDangerousCore, fichier
   `EliteDangerous/FrontierData/Enumerations/Rings.cs` — énumération `RingClassEnum { Unknown, Rocky, Metallic, Icy,
@@ -925,17 +1029,19 @@ résumé, pour les deux premières) :
   fait autorité.
 - **S2** — https://steamcommunity.com/sharedfiles/filedetails/?id=1594281413 — guide Steam *Mining 3.3 Update in
   progress for 4.0*, par Yousseff., décembre 2018 ; consulté le 10 septembre 2026. Sections « Where to mine »
-  (les cinq niveaux de réserve du tableau 4.5.4) et « Ring types » (listes de minéraux par type d'anneau, avec
+  (les cinq niveaux de réserve du [tableau 4.5.4](#454-réserves-danneau--la-seule-règle-générale-établie)) et « Ring types » (listes de minéraux par type d'anneau, avec
   l'avertissement de l'auteur « This list is subject to change »). Périmé de l'aveu de son auteur dès 2019 :
   employé ici uniquement comme contrôle indépendant du relevé de 2025.
 - **S3** — https://steamcommunity.com/app/359320/discussions/0/596287304340200947/ — discussion Steam *Mining
   Filter*, réponse retenue d'Edwyndham (1er octobre 2025), consultée le 10 septembre 2026 : types d'anneau
   pratiqués en core mining, et jugement selon lequel core-miner du Platine ou de la Painite est possible mais
-  contre-productif, ces deux-là étant bien plus efficaces au laser — ce que la section 1.1 de ce guide disait déjà.
+  contre-productif, ces deux-là étant bien plus efficaces au laser — ce que la
+  [section 1.1](#11-le-minage-au-laser-laser-mining) de ce guide disait déjà.
 - **S4** — https://www.edsm.net/en/faq/commodities/index/id/9/name/Minerals et
   https://www.edsm.net/en/faq/commodities/index/id/8/name/Metals — colonnes « Produced by » et « Consumed by »
-  d'EDSM, consultées le 10 septembre 2026 : source des mentions *hors anneau* du tableau 4.5.2 et du tableau des
-  économies de la section 5. Attention en cas de recoupement : la page « Minerals » d'EDSM compte 41 entrées
+  d'EDSM, consultées le 10 septembre 2026 : source des mentions *hors anneau* du
+  [tableau 4.5.2](#452-les-63-marchandises-minerals-et-metals--technique-et-type-danneau) et du tableau des
+  économies de la [section 5](#5-rendements-chiffrés-du-minage-et-revente). Attention en cas de recoupement : la page « Minerals » d'EDSM compte 41 entrées
   contre 39 dans FDevIDs, l'écart venant de deux denrées rares qu'EDSM range dans les minerais ; un croisement
   naïf des deux référentiels fabriquerait donc de faux minerais minables.
 - **S5** — https://www.elitedangerous.net/mining.php (Pilots Trade Network, dernière mise à jour du
@@ -958,7 +1064,8 @@ les treize marchandises et le problème connu de collecte 9/12.
 Ce qui reste réellement absent des sources officielles, et doit être vérifié en jeu plutôt qu'estimé :
 
 - **Les valeurs numériques de la boucle de minage de surface.** Frontier a publié les axes d'équilibrage, jamais les
-  chiffres (voir le tableau de la section 3.3).
+  chiffres (voir le tableau de la
+  [section 3.3](#33-la-boucle-de-minage-de-surface-planétaire-mise-à-jour-du-2-septembre-2026)).
 - **Le numéro de version et la date du correctif « 9 → 12 chunks »** du Rhino : annoncé « dès que possible » le
   2 septembre 2026, sans publication ultérieure dans le flux officiel au 9 septembre 2026.
 - **Les prix de vente, économies acheteuses et usages en ingénierie** des treize nouvelles marchandises.
@@ -992,7 +1099,8 @@ consulter un outil vivant (Inara, EDTools, Spansh) avant toute planification éc
   d'après la page elle-même).
 - https://spansh.co.uk/riches — tenté en accès brut lors de cette révision : ne renvoie qu'une coquille
   d'application JavaScript (titre de page seul, sans formulaire ni résultat), l'outil étant entièrement dynamique
-  côté client. Son fonctionnement décrit en 4.4 repose donc sur la connaissance générale de l'outil, **non
+  côté client. Son fonctionnement décrit en
+  [4.4](#44-mode-demploi-pas-à-pas--trouver-un-hotspot-à-jour-avec-edtoolscc-et-spansh) repose donc sur la connaissance générale de l'outil, **non
   revérifiée mot pour mot sur l'interface actuelle** — limite signalée explicitement dans le texte.
 - Moteurs de recherche web tentés en repli : DuckDuckGo
   (`html.duckduckgo.com` et `lite.duckduckgo.com`) a bloqué chaque requête derrière un CAPTCHA anti-robot ; Bing

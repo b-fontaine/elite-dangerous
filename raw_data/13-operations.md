@@ -33,8 +33,9 @@ existent — *Tactical Takedown*, *Firestorm Rescue*, *Reclamation Point*, *Bioh
 **Powerplay** (déstabilisation, *undermining*, uniquement). Elles rapportent crédits, matériaux, mérites et **Merc
 Coin**, monnaie gagnée en jeu et non achetable en Arx, qui donne accès au catalogue **MercGear** de quinze modules de
 vaisseau et blueprints pré-ingénierés. Les **opérations au sol** désignent, elles, le gameplay à pied d'**Odyssey**
-(19 mai 2021) : settlements classés par activité économique et par niveau de sécurité, huit familles de missions,
-infiltration et piratage au *Suit Tool*, zones de conflit à pied et combinaisons Dominator, Maverick et Artemis.
+(19 mai 2021) : settlements (installations au sol) classés par activité économique et par niveau de sécurité, huit
+familles de missions, infiltration et piratage au *Suit Tool* (emplacement d'outil de combinaison), zones de conflit
+à pied et combinaisons Dominator, Maverick et Artemis.
 
 ## Vue d'ensemble — deux contenus nommés « Operations » à ne pas confondre
 
@@ -164,7 +165,8 @@ Le billet du 22 avril 2026 décrit deux modes de jeu pour une même opération :
 | **Powerplay Mode** | Les systèmes éligibles dépendent de l'alignement du chef d'escouade et de sa position courante | L'escouade **déstabilise** (*undermine*) un Power choisi ; impossible de viser son propre Power ; les commandants non alignés peuvent participer mais ne gagnent **aucun mérite** |
 
 Le mode Powerplay branche donc les Operations sur le cycle décrit dans [02-powerplay.md](./02-powerplay.md), du côté
-de l'axe **Undermining** uniquement. Les **Powerplay Squads** d'Operations sont une entité de jeu distincte : le
+de l'axe **Undermining** uniquement. Les **Powerplay Squads** (escouades dédiées à l'axe Powerplay des Operations)
+d'Operations sont une entité de jeu distincte : le
 billet du 2 septembre 2026 corrige d'ailleurs « un crash lors de la tentative de création d'une Powerplay Squad pour
 les Operations pendant un saut en hyperespace ».
 
@@ -221,7 +223,8 @@ modules (« Merc Engineering / Merc Modules telegraphing ») dans l'outfitting e
 ### Le Nomad, ship-launched vessel livré par la mise à jour Operations
 
 La mise à jour Operations a également introduit le **Nomad** : « Cette mise à jour amène également avec elle le
-puissant Nomad ! » (« Operations Update », 1er juillet 2026). Il s'agit d'un **ship-launched vessel** (SLV) compact
+puissant Nomad ! » (« Operations Update », 1er juillet 2026). Il s'agit d'un **ship-launched vessel** (véhicule lancé
+depuis un vaisseau, SLV) compact
 dédié à l'exploration des surfaces planétaires, doté d'un **Mk II Biological Scanner** permettant de détecter les
 signaux biologiques depuis le cockpit, et déployable « depuis une soute à vaisseau compatible, y compris les modules
 MK I et MK II ». Le Nomad n'est pas un vaisseau de chantier naval et ne modifie donc pas le décompte des vaisseaux
@@ -258,7 +261,8 @@ Nomad revenait à chercher un chasseur embarqué dans une liste de chantier nava
 valeur probante. Combinée aux erreurs d'accès HTTP rencontrées sur les sites d'actualité et les wikis communautaires,
 cette erreur de catégorie a produit un faux négatif.
 
-Toute la partie A ci-dessus est rétablie à partir des billets d'annonce officiels de Frontier Developments, chacun
+Toute la [partie A](#partie-a--le-mode-operations-multijoueur-en-escouade-2026) ci-dessus est rétablie à partir des
+billets d'annonce officiels de Frontier Developments, chacun
 cité avec son titre et son horodatage UTC.
 
 ## Partie B — Les opérations au sol d'Odyssey
@@ -288,9 +292,9 @@ Il existe plusieurs façons de rejoindre une opération au sol :
 - **Atterrissage à proximité, puis approche à pied ou en véhicule** : pour les settlements non autorisés, hostiles, ou
   lorsque la mission exige la discrétion, il est préférable de se poser hors du périmètre de détection et d'approcher
   à pied ou en SRV (véhicule terrestre).
-- **Forçage de l'accès** : en l'absence d'autorisation, certaines missions demandent d'obtenir un code de bypass, de
-  pirater le contrôle d'accès, ou d'entrer par une voie non surveillée (conduit technique, porte non verrouillée,
-  faille dans le périmètre).
+- **Forçage de l'accès** : en l'absence d'autorisation, certaines missions demandent d'obtenir un code de bypass
+  (contournement du contrôle d'accès), de pirater le contrôle d'accès, ou d'entrer par une voie non surveillée
+  (conduit technique, porte non verrouillée, faille dans le périmètre).
 
 Une fois sur place, le déplacement se fait en vue première personne, avec une gestion de l'oxygène (réserve de la
 combinaison, rechargeable via des bonbonnes ou en retournant au vaisseau/à une station), un système de posture
@@ -342,9 +346,11 @@ Interstellar** est une navette rapide, réservable à un comptoir en station ou 
 tarifée à la distance (frais de base + frais hyperespace variable), qui dépose son passager n'importe où — y compris
 à proximité d'un settlement distant. **Frontline Solutions** est spécifique à l'engagement en **zone de conflit au
 sol** : un comptoir dédié, actif uniquement dans un système en état Guerre ou Guerre Civile, permet de choisir un
-settlement en conflit et un camp, puis d'embarquer à bord d'un dropship dédié (jusqu'à cinq autres commandants ou
+settlement en conflit et un camp, puis d'embarquer à bord d'un dropship (navette de débarquement) dédié (jusqu'à cinq
+autres commandants ou
 PNJ) sans que le trajet compte pour la réputation du joueur envers les factions belligérantes. Le détail complet des
-deux services — tarification, limites, niveaux de « Conflict Intensity », paie observée — est traité dans
+deux services — tarification, limites, niveaux de « Conflict Intensity » (intensité du conflit), paie observée — est
+traité dans
 [29-missions-reputation-et-rangs.md §7](./29-missions-reputation-et-rangs.md#7-apex-interstellar-et-frontline-solutions--les-deux-portes-dentrée-dodyssey),
 qui couvre aussi la correction du 30 juin 2026 mentionnée plus haut au sujet de la réservation systématique d'un
 dropship.
@@ -512,12 +518,13 @@ l'infiltration.
 
 ### Armes à pied nommées par archétype de mission (Karma P15, Manticore Terminator…)
 
-Pour faire le lien avec le tableau de missions plus haut, voici les modèles nommés qui reviennent le plus souvent
-dans la documentation communautaire pour chaque archétype (source : builds nommés recensés dans
-[07-equipement-a-pied.md](./07-equipement-a-pied.md), à recouper avec 09-combat-a-pied.md pour la cohérence
-tactique) :
+Pour faire le lien avec
+[le tableau de missions](#le-tableau-de-missions-et-les-huit-familles-dopérations-au-sol-assassinat-sabotage-hacking)
+plus haut, voici les modèles nommés qui reviennent le plus souvent dans la documentation communautaire pour chaque
+archétype (source : builds nommés recensés dans [07-equipement-a-pied.md](./07-equipement-a-pied.md), à recouper avec
+[09-combat-a-pied.md](./09-combat-a-pied.md) pour la cohérence tactique) :
 
-| Archétype de mission (voir tableau plus haut) | Arme recommandée               | Fabricant           | Pourquoi                                                                 |
+| Archétype de mission (voir [tableau plus haut](#le-tableau-de-missions-et-les-huit-familles-dopérations-au-sol-assassinat-sabotage-hacking)) | Arme recommandée               | Fabricant           | Pourquoi                                                                 |
 |------------------------------------------------|-----------------------------------|-----------------------|-------------------------------------------------------------------------|
 | Assassinat (covert) / Infiltration            | Karma P15 Infiltrator           | Kinematic Armaments | Masquage audio + suppresseur : neutralise sans déclencher l'alarme      |
 | Vol de marchandises / Sabotage                | Karma P15 Infiltrator           | Kinematic Armaments | Discrétion pour l'approche ; utile en solution de repli si repéré       |
@@ -545,7 +552,9 @@ En complément des armes, le joueur dispose d'emplacements « Suit Tool » et «
 
 Pour la liste exhaustive des six consommables à pied et leur mode de réapprovisionnement réel (achat au comptoir
 Pioneer Supplies ou butin — il n'existe pas de synthèse par matériaux à pied, contrairement au vaisseau), voir la
-section « Pas de synthèse à pied » de [07-equipement-a-pied.md](./07-equipement-a-pied.md).
+section [« Pas de synthèse à
+pied »](./07-equipement-a-pied.md#pas-de-synthèse-à-pied--réapprovisionnement-par-achat-ou-par-butin-à-distinguer-de-la-synthèse-embarquée)
+de [07-equipement-a-pied.md](./07-equipement-a-pied.md).
 
 ## Progression et ingénierie de l'équipement à pied
 
@@ -568,8 +577,9 @@ l'ingénierie (voir [06-ingenieurs.md](./06-ingenieurs.md)) peut les modifier si
 
 Neuf Engineers à pied sont présents dans la bulle « Core », auxquels s'ajoutent quatre Engineers dans la région de
 Colonia (déblocage convergent plutôt que séquentiel). Le tableau ci-dessous reprend leurs spécialités documentées
-dans [07-equipement-a-pied.md](./07-equipement-a-pied.md) et les rapproche de l'archétype de mission (voir le
-tableau de missions plus haut, et [06-ingenieurs.md](./06-ingenieurs.md) pour la mécanique générale d'ingénierie) le
+dans [07-equipement-a-pied.md](./07-equipement-a-pied.md) et les rapproche de l'archétype de mission (voir
+[le tableau de missions](#le-tableau-de-missions-et-les-huit-familles-dopérations-au-sol-assassinat-sabotage-hacking)
+plus haut, et [06-ingenieurs.md](./06-ingenieurs.md) pour la mécanique générale d'ingénierie) le
 plus cohérent avec ce que chaque Engineer permet d'améliorer :
 
 | Engineer        | Système   | Spécialité dominante (suit / arme)                                             | Archétype de mission le plus cohérent           | Source |
@@ -669,7 +679,8 @@ ci-dessus et
 - **Choisir la combinaison selon le style de mission dominant** plutôt que de tout miser sur un seul modèle :
   Dominator pour le combat frontal et les CZ, Maverick pour l'infiltration et le piratage, Artemis pour la
   polyvalence et le combat discret à distance.
-- **Prioriser l'accès aux Engineers d'équipement à pied** dès que possible (voir le tableau par archétype plus
+- **Prioriser l'accès aux Engineers d'équipement à pied** dès que possible (voir
+  [le tableau des Engineers par archétype](#les-engineers-à-pied-par-archétype-de-mission) plus
   haut) : l'écart entre équipement stock et équipement engineeré est déterminant, en particulier pour les CZ High.
 - **Jouer les opérations les plus difficiles en groupe**, via les missions partagées, afin de répartir la pression
   de détection et de combat et de sécuriser l'extraction.
@@ -689,6 +700,95 @@ ce document pour les commandants souhaitant approfondir certains détails d'équ
 - *Ground Combat Modules (Elite Dangerous)* par ZanyScum — recensement des modules disponibles pour combinaisons et
   armes de poing.
 - *How to do Odyssey Assassination Missions* par Sighman — guide dédié aux missions d'assassinat à pied.
+
+## Questions fréquentes
+
+**Le mode Operations et les « opérations au sol » (ground operations), c'est la même chose ?**
+
+Non : ce sont deux contenus distincts qui portent tous les deux le nom « Operations ». Le **mode Operations**
+(multijoueur, escouades de 4 commandants) est sorti le **30 juin 2026** ; les **opérations au sol** désignent le
+gameplay à pied introduit par l'extension **Odyssey**, sortie le **19 mai 2021** (settlements, missions,
+infiltration, zones de conflit à pied). Voir [Vue d'ensemble — deux contenus nommés « Operations » à ne pas
+confondre](#vue-densemble--deux-contenus-nommés--operations--à-ne-pas-confondre).
+
+**Combien de commandants peuvent former une escouade (squad) pour une Operation ?**
+
+Jusqu'à **4 commandants**, en escouade déjà constituée ou complétée par un appariement (*matchmaking*) optionnel pour
+les places restantes. Chaque opération se déroule dans un environnement isolé et instancié, découpé en plusieurs
+étapes de difficulté croissante — ce n'est donc pas une activité de la galaxie persistante. Voir [Principe du mode
+Operations](#principe-du-mode-operations--une-couche-de-gameplay-en-escouade-jusquà-4-commandants).
+
+**Comment lancer une Operation (comment y accéder) ?**
+
+Depuis un **tableau de missions**, à quai dans un starport, sur un Fleet Carrier ou sur un Squadron Carrier — il faut
+être à quai pour sélectionner l'opération et envoyer les invitations. Une opération peut être lancée seul ou par une
+escouade déjà formée, les places restantes pouvant être comblées par appariement. Voir [Lancer une opération
+Operations](#lancer-une-opération-operations--escouade-appariement-et-accès-depuis-les-tableaux-de-missions).
+
+**C'est quoi l'Operation Runner ?**
+
+Le vaisseau de déploiement spécialisé qui transporte toute l'escouade vers le système du scénario. Il sert aussi de
+**point de réapparition** (un commandant mis hors de combat y revient avec un vaisseau entièrement réparé, ravitaillé
+et réarmé) et de **point d'extraction final** de l'opération. Voir [L'Operation
+Runner](#loperation-runner--vaisseau-de-déploiement-de-réapparition-et-dextraction).
+
+**Combien y a-t-il d'Operations différentes, et lesquelles ?**
+
+**Sept** : Tactical Takedown, Firestorm Rescue, Reclamation Point, Biohazard Takedown, Rapid Response et Terminal
+Prosecution (les six sorties le 1er juillet 2026), plus **Under Siege**, ajoutée le **2 septembre 2026**. Voir
+[Les sept opérations disponibles](#les-sept-opérations-disponibles-de-tactical-takedown-à-under-siege).
+
+**Le Merc Coin, ça s'achète avec de l'Arx ?**
+
+Non : le **Merc Coin** est une monnaie gagnée uniquement en réussissant un scénario d'Operations (avec un bonus
+hebdomadaire pour certaines activités), explicitement **non achetable en Arx**. Un plafond de 9 999 Merc Coins et un
+gain limité à 1 000 par semaine circulent dans la documentation communautaire, mais Frontier n'a publié aucun des
+deux chiffres — à confirmer en jeu. Voir [Récompenses du mode
+Operations](#récompenses-du-mode-operations--la-monnaie-merc-coin-et-le-catalogue-mercgear).
+
+**Le MercGear, ça contient combien d'objets (modules et blueprints) ?**
+
+**Quinze entrées** au lancement : 2 blueprints (Thermal Plasma Conversion, Scoop Rate Enhanced), 8 hardpoints
+pré-ingénierés, 2 core internals pré-ingénierés et 3 internes optionnels pré-ingénierés. Le MercGear reste
+ingénierable après achat, comme un module classique. Voir [Récompenses du mode
+Operations](#récompenses-du-mode-operations--la-monnaie-merc-coin-et-le-catalogue-mercgear).
+
+**Le mode Operations a-t-il encore des bugs (known issues) en ce moment ?**
+
+Oui : Frontier le livre sous le statut explicite de « Networking & Balancing Beta », sujet à des ajustements serveur
+réguliers. Au 2 septembre 2026, deux problèmes connus subsistent : l'opération **Under Siege peut se terminer
+prématurément**, et l'**interface de wing à pied est absente**. Voir
+[partie A](#partie-a--le-mode-operations-multijoueur-en-escouade-2026).
+
+**Comment savoir le niveau de sécurité (security level) d'un settlement avant d'y poser le vaisseau ?**
+
+Chaque settlement affiche l'un de quatre niveaux — aucune/civile, faible, moyenne, élevée — qui conditionne le
+nombre de gardes, la présence de tourelles ou de drones, et la vitesse de réaction en cas d'alerte (renforts limités
+en sécurité faible, verrouillage total et scans au décollage en sécurité élevée). Voir [Niveaux de sécurité d'un
+settlement](#niveaux-de-sécurité-dun-settlement-civile-faible-moyenne-élevée).
+
+**Quelle combinaison (suit) choisir pour le combat à pied ?**
+
+Quatre familles existent : la **Flight Suit** de départ (polyvalente, peu de modules), la **Dominator** (combat
+lourd, résistance et bouclier élevés), la **Maverick** (mobilité et discrétion, pour l'infiltration/piratage) et
+l'**Artemis** (utilitaire/reconnaissance, exobiologie). Voir [les quatre combinaisons Flight, Dominator, Maverick,
+Artemis](#séquiper-à-pied--les-quatre-combinaisons-suits-flight-dominator-maverick-artemis).
+
+**Combien rapporte une mission au sol selon son niveau de menace (threat level) ?**
+
+Ce sont des **ordres de grandeur communautaires non vérifiés en session**, à confirmer en jeu : quelques dizaines de
+milliers de Cr en menace faible, plusieurs dizaines à ~100 000+ Cr en menace moyenne, et de l'ordre de plusieurs
+centaines de milliers de Cr en menace élevée (davantage pour les zones de conflit High soutenues). Voir
+[Récompenses des opérations au sol par niveau de
+menace](#récompenses-des-opérations-au-sol-par-niveau-de-menace).
+
+**Comment rester discret (stealth) pendant une mission au sol ?**
+
+La détection dépend du champ de vision des gardes et des caméras, du bruit produit (courir est bien plus détectable
+que marcher accroupi) et de l'état apparent du joueur (dégainer une arme en zone surveillée déclenche la suspicion).
+Être repéré fait monter un niveau de suspicion progressif, qui peut redescendre hors de vue ou déclencher une alerte
+complète. Voir [Infiltration, détection et système
+d'alarme](#infiltration-détection-et-système-dalarme).
 
 ## Voir aussi
 

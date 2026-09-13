@@ -36,8 +36,8 @@ faction la plus influente est la **faction contrôlante** (*controlling faction*
 marché noir. Les factions traversent des **états** (*states*) économiques — **Boom**, **Bust**, **Famine**, **Outbreak**,
 **Lockdown**, **Investment** — ou de conflit — **War**, **Civil War**, **Election**, **Expansion** (autour de 35 %
 d'influence selon le consensus communautaire), **Retreat** (2,5 à 5 %). Un commandant pèse sur le BGS par ses missions,
-ses ventes, ses primes, ses **Conflict Zones**, ses dons et ses données d'exploration ; les groupes organisés pilotent
-leurs campagnes au tick et instrumentent leur effort avec le plugin **BGS-Tally**.
+ses ventes, ses primes, ses **Conflict Zones** (zones de conflit), ses dons et ses données d'exploration ; les groupes
+organisés pilotent leurs campagnes au tick et instrumentent leur effort avec le plugin [**BGS-Tally**](./16-outils.md).
 
 ## Introduction — ce que simule le BGS et ce que couvre ce guide
 
@@ -86,7 +86,7 @@ Points importants sur le tick :
   l'essentiel des systèmes bascule dans une fenêtre commune.
 - L'horaire précis de cette fenêtre commune varie selon les périodes et les rapports communautaires (des groupes
   spécialisés en BGS republient régulièrement l'horaire observé, par exemple via le plugin BGS-Tally — documenté dans
-  [Outils](./16-outils.md) — ou les outils cités en 5.6) ; aucun horaire fixe ne doit être considéré comme garanti
+  [Outils](./16-outils.md) — ou les outils cités en [5.6](#56-jouer-le-bgs-en-groupe-organisé)) ; aucun horaire fixe ne doit être considéré comme garanti
   sans le recouper avec une source communautaire à jour au moment de jouer.
 - Les groupes de joueurs qui pratiquent le BGS de façon intensive organisent généralement leurs campagnes en cycles
   correspondant à ces ticks quotidiens (« faire du BGS » se compte en général en jours de tick, pas en heures de jeu).
@@ -179,7 +179,7 @@ incidents, aléas) plutôt qu'une confrontation directe entre factions. Plusieur
 | **Public Holiday** | Événement festif | Ambiance positive, hausse ponctuelle de la demande de biens de loisir/luxe ; impact généralement neutre à léger sur l'influence. |
 | **Drought** (sécheresse) | Pénurie en eau/ressources agricoles | Effets similaires à la Famine, centrés sur les commodités liées à l'eau et à l'agriculture. |
 | **Civil Unrest** (troubles civils) | Mécontentement local, souvent après une Bust ou une attaque | Sécurité dégradée, hausse de la criminalité et des opportunités de chasse aux primes ; peut fragiliser la faction contrôlante. |
-| **Lockdown** | Suite d'une attaque, d'une guerre ou de troubles graves | Restriction de l'accès aux services de station (docking, marché) ; contraint fortement l'activité commerciale locale. |
+| **Lockdown** | Suite d'une attaque, d'une guerre ou de troubles graves | Restriction de l'accès aux services de station (docking/accostage, marché) ; contraint fortement l'activité commerciale locale. |
 | **Pirate Attack / Terrorist Attack** | Incident de sécurité ponctuel | Dégradation temporaire de la sécurité et de l'influence de la faction visée ; opportunités de missions de représailles. |
 | **Natural Disaster** | Catastrophe naturelle | Perte de population/influence, opportunités de missions humanitaires. |
 | **Investment** | État préparatoire, précède une Expansion | Signale qu'une faction approche du seuil d'expansion ; les activités de soutien y sont particulièrement efficaces pour préparer la future expansion. |
@@ -205,7 +205,7 @@ communautaires non officielles**, issues d'années d'observation par des groupes
 Developments n'a jamais publié les valeurs exactes ni la formule complète de calcul. Ils doivent être traités comme des
 ordres de grandeur indicatifs plutôt que comme des règles absolues, d'autant qu'ils peuvent avoir été ajustés au fil
 des mises à jour sans annonce officielle. Un commandant qui planifie une campagne BGS précise a intérêt à recouper ces
-valeurs avec un outil communautaire à jour (voir 5.6) avant de s'y fier au tick près.
+valeurs avec un outil communautaire à jour (voir [5.6](#56-jouer-le-bgs-en-groupe-organisé)) avant de s'y fier au tick près.
 
 ## 4. Expansion et rétraction d'une faction mineure : la mécanique de territoire
 
@@ -219,7 +219,7 @@ de cet algorithme de sélection ne sont pas documentés officiellement et resten
 
 Une expansion réussie installe la faction comme nouvelle présence dans le système cible, avec une influence de départ
 généralement modeste, qui devra ensuite être développée comme celle de toute autre faction du système par les
-activités décrites en section 5.
+activités décrites en [section 5](#5-comment-un-joueur-ou-un-groupe-influence-le-bgs).
 
 ### 4.2 Comment une faction mineure se retire d'un système (Retreat)
 
@@ -265,7 +265,7 @@ dans certains contextes :
 
 - vendre des marchandises de forte valeur pendant un état **Boom** ;
 - livrer des denrées alimentaires pendant une **Famine**, ou des médicaments pendant un **Outbreak** ;
-- vendre des données d'exploration ou d'exobiologie à un comptoir universel rattaché à une faction (voir 5.4).
+- vendre des données d'exploration ou d'exobiologie à un comptoir universel rattaché à une faction (voir [5.4](#54-exploration-et-exobiologie-comme-levier-bgs)).
 
 ### 5.3 Combat, primes et Conflict Zones comme levier BGS
 
@@ -306,7 +306,7 @@ escadres, communautés Discord, alliances inter-groupes — qui coordonnent des 
 - défendre une faction en guerre en remplissant massivement les Conflict Zones qui la soutiennent ;
 - provoquer le retrait forcé d'une faction hostile en cessant tout soutien à son égard et en accélérant sa chute sous
   le seuil bas ;
-- faire progresser et défendre une PMF créée à la demande du groupe (voir 4.3).
+- faire progresser et défendre une PMF créée à la demande du groupe (voir [4.3](#43-les-factions-mineures-créées-par-des-joueurs-pmf)).
 
 Pour suivre ces campagnes, la communauté s'appuie largement sur des outils tiers dédiés — notamment le plugin
 **BGS-Tally**, qui enregistre automatiquement les activités pertinentes du journal de jeu (missions, ventes, kills,
@@ -323,7 +323,7 @@ de mesure directe est proposée à la place plutôt qu'un chiffre inventé.
 
 #### 5.7.1 Ce qui est structurellement vérifiable sur l'effort BGS
 
-Trois faits, contrairement aux seuils numériques exacts d'expansion/retrait déjà signalés en 3.2, reposent sur une
+Trois faits, contrairement aux seuils numériques exacts d'expansion/retrait déjà signalés en [3.2](#32-états-de-conflit-bgs-expansion-retreat-war-civil-war-election), reposent sur une
 observation directe du comportement du jeu et de ses outils communautaires plutôt que sur une seule source volatile :
 
 - **Le poids d'une mission dépend de son palier de récompense.** Le plugin **BGS-Tally** — l'outil de référence de la
@@ -333,12 +333,12 @@ observation directe du comportement du jeu et de ses outils communautaires plut�
   exact entre paliers n'est publié ni par Frontier Developments ni, à notre connaissance, par la documentation de
   l'outil lui-même.
 - **L'effet d'un même volume d'activité est dilué par la population du système.** L'influence étant une part d'un
-  total de 100 % réparti entre toutes les factions présentes (voir 2.2), un système peu peuplé à 3 factions bascule
-  pour un volume d'activité qu'un hub très peuplé et très fréquenté absorbera presque sans effet visible sur le
+  total de 100 % réparti entre toutes les factions présentes (voir [2.2](#22-linfluence-bgs-une-jauge-à-somme-constante-100--par-système)), un système peu peuplé à 3 factions bascule
+  pour un volume d'activité qu'un hub (plaque tournante commerciale) très peuplé et très fréquenté absorbera presque sans effet visible sur le
   pourcentage. Deux systèmes comptant le même nombre de factions peuvent donc exiger des volumes d'activité très
   différents pour un même gain d'influence en points de pourcentage.
 - **Un tick agrège une fenêtre de 24 h et non un flux continu.** Toute activité produite après l'agrégation du jour
-  n'apparaît qu'au tick suivant (rappel de 1.2) : un groupe qui pousse fort le jour J ne voit jamais le résultat avant
+  n'apparaît qu'au tick suivant (rappel de [1.2](#12-le-tick-quotidien-du-bgs--une-agrégation-des-actions-sur-24-heures)) : un groupe qui pousse fort le jour J ne voit jamais le résultat avant
   J+1, ce qui interdit tout ajustement fin en cours de journée — la seule granularité de pilotage possible est le jour
   de tick.
 
@@ -350,10 +350,10 @@ d'influence marginal supplémentaire s'effondre ou devient nul — un phénomèn
 **« cap de tick »** (*tick cap*). L'existence du phénomène est largement corroborée par le retour d'expérience des
 groupes BGS organisés ; en revanche, **aucune valeur numérique fiable et à jour n'a pu être confirmée lors de la
 préparation de ce guide** : les recherches effectuées se sont heurtées aux mêmes obstacles d'accès que ceux déjà
-rencontrés lors de la rédaction de 3.2, avec en plus le budget de recherche web de l'outil épuisé au moment de
+rencontrés lors de la rédaction de [3.2](#32-états-de-conflit-bgs-expansion-retreat-war-civil-war-election), avec en plus le budget de recherche web de l'outil épuisé au moment de
 chercher spécifiquement ce chiffre (détail complet dans les Sources, en fin de document). Toute valeur chiffrée de
 plafond par tick trouvée ailleurs (anciens threads, vidéos, mémoire d'un joueur) doit donc être traitée comme
-potentiellement obsolète, dépendante du système considéré, et recoupée empiriquement (méthode en 5.7.4) plutôt que
+potentiellement obsolète, dépendante du système considéré, et recoupée empiriquement (méthode en [5.7.4](#574-protocole-de-mesure-et-dajustement-avec-bgs-tally)) plutôt que
 prise pour une constante universelle.
 
 Conséquence pratique pour un groupe organisé : **répartir l'effort sur plusieurs jours de tick plutôt que de le
@@ -363,32 +363,35 @@ convertisse linéairement en gain d'influence.
 
 #### 5.7.3 Efficacité comparée des leviers BGS (INF par heure de jeu)
 
-Un classement chiffré et universel de l'INF/heure par levier (missions courtes vs longues, trade en Boom/Famine vs
-normal, Conflict Zones) n'a pas pu être établi à partir de sources vérifiables et à jour lors de la préparation de ce
-guide : c'est précisément le type de donnée la plus volatile, la plus dépendante du contexte (état économique en
-cours, distance entre station de départ et cible, classe de vaisseau, prix locaux du jour) et la moins documentée
-officiellement — les tentatives de recherche dédiées ont échoué pour les mêmes raisons qu'en 5.7.2. Ce qui suit est
-donc un **ordre de classement qualitatif**, construit à partir de faits déjà établis dans ce guide (sections 3.1 et
-5.1-5.5), et non des chiffres d'INF/heure vérifiés :
+Un classement chiffré et universel de l'INF/heure par levier (missions courtes vs longues, trade (commerce) en
+Boom/Famine vs normal, Conflict Zones) n'a pas pu être établi à partir de sources vérifiables et à jour lors de la
+préparation de ce guide : c'est précisément le type de donnée la plus volatile, la plus dépendante du contexte (état
+économique en cours, distance entre station de départ et cible, classe de vaisseau, prix locaux du jour) et la moins
+documentée officiellement — les tentatives de recherche dédiées ont échoué pour les mêmes raisons qu'en
+[5.7.2](#572-le-plafond-dinfluence-par-tick--une-observation-communautaire-répandue-non-quantifiée-officiellement). Ce
+qui suit est donc un **ordre de classement qualitatif**, construit à partir de faits déjà établis dans ce guide
+(sections [3.1](#31-états-bgs-économiques-et-situationnels-boom-famine-outbreak-lockdown) et
+[5.1](#51-missions--le-levier-bgs-le-plus-direct-et-le-plus-contrôlable) à
+[5.5](#55-autres-leviers-bgs--contrebande-dons-et-sauvetage)), et non des chiffres d'INF/heure vérifiés :
 
 | Levier | Facteur favorable | Facteur défavorable |
 |---|---|---|
 | Missions courtes et répétables (livraison locale, mini-massacre) | Cycle très court entre deux complétions ⇒ nombre de missions/heure élevé ; chaque complétion compte comme une unité d'influence indépendamment du temps de trajet | Poids d'influence par mission généralement plus faible (paliers bas ➊/➋) |
 | Missions longues ou à forte récompense (livraison longue distance, haut risque) | Poids d'influence par mission plus élevé (paliers hauts ➍/➎) | Cycle beaucoup plus long ⇒ peu de complétions par heure ; effet total par heure de jeu incertain sans mesure directe |
-| Trade en état **Famine** ou **Outbreak** | Marges et primes de vente très supérieures à la normale (3.1) ; effet de levier largement reconnu par la communauté BGS pour ce type d'état | Fenêtre temporaire (l'état finit par se résorber) ; nécessite souvent un aller-retour d'approvisionnement hors du système en état |
-| Trade en état **Boom** | Influence et primes accrues pour les activités commerciales (3.1) ; achat et vente parfois possibles dans le même système en croissance | Effet de levier généralement moins spectaculaire que Famine/Outbreak en marge unitaire |
+| Trade en état **Famine** ou **Outbreak** | Marges et primes de vente très supérieures à la normale ([3.1](#31-états-bgs-économiques-et-situationnels-boom-famine-outbreak-lockdown)) ; effet de levier largement reconnu par la communauté BGS pour ce type d'état | Fenêtre temporaire (l'état finit par se résorber) ; nécessite souvent un aller-retour d'approvisionnement hors du système en état |
+| Trade en état **Boom** | Influence et primes accrues pour les activités commerciales ([3.1](#31-états-bgs-économiques-et-situationnels-boom-famine-outbreak-lockdown)) ; achat et vente parfois possibles dans le même système en croissance | Effet de levier généralement moins spectaculaire que Famine/Outbreak en marge unitaire |
 | Trade en conditions normales | Toujours disponible, aucune dépendance à un état particulier | Effet d'influence par unité vendue le plus faible des options de trade |
 | Conflict Zones (War/Civil War, [glossaire : CZ](./00-glossaire.md)) | Seul levier capable de faire basculer directement l'issue d'un conflit et donc le contrôle d'un système ; forte valeur symbolique pour un groupe coordonné | Ne s'applique qu'en présence d'un état de conflit actif ; temps par CZ variable selon l'intensité et la classe de vaisseau engagée |
 
 **Pour obtenir un vrai chiffre d'INF/heure applicable à son propre cas**, la seule méthode fiable consiste à mesurer
-directement, avec BGS-Tally (protocole en 5.7.4), le volume d'activité produit par heure de jeu pour un levier donné,
+directement, avec BGS-Tally (protocole en [5.7.4](#574-protocole-de-mesure-et-dajustement-avec-bgs-tally)), le volume d'activité produit par heure de jeu pour un levier donné,
 puis à recouper ce volume avec le gain d'influence en points de pourcentage effectivement constaté au tick suivant
 pour la faction ciblée dans le système visé. Ce ratio (points d'influence gagnés ÷ heures investies) est spécifique à
 chaque système, chaque faction et chaque période, et ne se généralise pas de façon fiable d'un cas à l'autre.
 
 #### 5.7.4 Protocole de mesure et d'ajustement avec BGS-Tally
 
-BGS-Tally (voir 5.6) est l'outil de référence pour transformer les principes qualitatifs ci-dessus en pilotage chiffré
+BGS-Tally (voir [5.6](#56-jouer-le-bgs-en-groupe-organisé)) est l'outil de référence pour transformer les principes qualitatifs ci-dessus en pilotage chiffré
 d'une campagne. Protocole recommandé pour un groupe organisé :
 
 1. **Avant de commencer**, noter l'influence exacte de la faction ciblée dans le système visé (panneau de la faction
@@ -396,8 +399,10 @@ d'une campagne. Protocole recommandé pour un groupe organisé :
    départ fiable.
 2. **Activer le suivi BGS-Tally** pour le système et la faction concernés : le plugin détecte automatiquement les
    événements pertinents du journal de jeu (missions par palier de récompense, ventes de marché par niveau de
-   demande, marché noir, primes, Combat Bonds, Conflict Zones au sol et dans l'espace, données cartographiques,
-   sauvetage — voir le détail en 5.1-5.5).
+   demande, marché noir, primes, Combat Bonds (récompenses de combat propres aux Conflict Zones), Conflict Zones au
+   sol et dans l'espace, données cartographiques, sauvetage — voir le détail en
+   [5.1](#51-missions--le-levier-bgs-le-plus-direct-et-le-plus-contrôlable) à
+   [5.5](#55-autres-leviers-bgs--contrebande-dons-et-sauvetage)).
 3. **Jouer une journée de tick normale** en laissant BGS-Tally agréger, pour chaque commandant du groupe, le volume
    d'activité produit ; l'outil génère un rapport prêt à publier sur Discord.
 4. **Relever l'influence après le tick suivant** et calculer la variation en points de pourcentage.
@@ -406,14 +411,14 @@ d'une campagne. Protocole recommandé pour un groupe organisé :
    local du système visé — il remplace avantageusement toute estimation générique trouvée en ligne.
 6. **Répéter sur plusieurs ticks consécutifs** avant de tirer une conclusion : un seul tick peut être bruité par
    l'activité d'autres commandants non coordonnés avec le groupe (positive ou négative pour la faction visée), par un
-   plafond de tick (5.7.2), ou par un changement d'état économique en cours de période.
+   plafond de tick ([5.7.2](#572-le-plafond-dinfluence-par-tick--une-observation-communautaire-répandue-non-quantifiée-officiellement)), ou par un changement d'état économique en cours de période.
 7. **Ajuster le volume quotidien** à la hausse ou à la baisse selon l'écart entre le ratio mesuré et l'objectif du
-   groupe (voir l'exemple méthodologique en 5.7.5), et republier le rapport BGS-Tally à jour pour que le reste du
+   groupe (voir l'exemple méthodologique en [5.7.5](#575-exemple-méthodologique-chiffré-dune-campagne-bgs-illustratif)), et republier le rapport BGS-Tally à jour pour que le reste du
    groupe recalibre son propre effort en conséquence.
 
 Ce protocole a un avantage supplémentaire pour un groupe nombreux : en centralisant les rapports d'activité
 individuels dans un canal Discord commun via BGS-Tally, il évite qu'une faction reçoive un volume d'activité largement
-supérieur à ce qu'un éventuel plafond de tick (5.7.2) peut convertir en influence réelle — un effort mal coordonné
+supérieur à ce qu'un éventuel plafond de tick ([5.7.2](#572-le-plafond-dinfluence-par-tick--une-observation-communautaire-répandue-non-quantifiée-officiellement)) peut convertir en influence réelle — un effort mal coordonné
 au-delà de ce plafond est, pour l'objectif BGS visé, du temps de jeu gaspillé, même s'il reste par ailleurs rentable
 en crédits ou en équipement.
 
@@ -424,7 +429,7 @@ ci-dessus). Les chiffres d'activité et de ratio utilisés ici sont des **valeur
 démonstration**, et non une donnée vérifiée universelle : ils doivent être remplacés par le ratio réellement mesuré
 pour le système et la faction concernés avant toute planification réelle.
 
-> Un groupe souhaite faire passer sa PMF de **25 % à 35 %** d'influence (le seuil d'expansion indicatif, section 3.2)
+> Un groupe souhaite faire passer sa PMF de **25 % à 35 %** d'influence (le seuil d'expansion indicatif, [section 3.2](#32-états-de-conflit-bgs-expansion-retreat-war-civil-war-election))
 > dans un système donné, en **10 jours de tick**.
 >
 > - Gain total nécessaire : 35 − 25 = **10 points d'influence**, soit en moyenne **1 point par jour de tick**.
@@ -440,7 +445,7 @@ pour le système et la faction concernés avant toute planification réelle.
 >
 > Ce calcul ne devient fiable pour une vraie campagne qu'une fois le ratio (ici 0,2 point pour 10 missions) remplacé
 > par la valeur réellement observée via BGS-Tally sur le système visé, sur plusieurs ticks consécutifs, comme décrit
-> en 5.7.4.
+> en [5.7.4](#574-protocole-de-mesure-et-dajustement-avec-bgs-tally).
 
 ## 6. Articulation du BGS avec les autres systèmes de jeu
 
@@ -486,20 +491,109 @@ pour accélérer des évolutions de lore ou de territoire que le BGS seul mettra
 fonctionnement générique des Community Goals, leur historique et la manière de les repérer sont couverts dans le guide
 dédié (voir [Community Goals](./24-community-goals.md)).
 
+## Questions fréquentes
+
+### Quand se met à jour le BGS ? C'est quoi le tick ?
+
+Le BGS se met à jour une fois par cycle de 24 heures lors du **tick**, dont l'horaire exact n'a jamais été publié par
+Frontier Developments et a dérivé plusieurs fois au fil des années selon les rapports de la communauté. Toute action
+effectuée après le tick du jour n'est comptabilisée qu'au tick suivant : une session de jeu ne produit donc jamais
+d'effet visible avant le lendemain. Voir [1.2](#12-le-tick-quotidien-du-bgs--une-agrégation-des-actions-sur-24-heures).
+
+### Comment savoir quelle faction contrôle (controlling faction) mon système ?
+
+C'est la faction ayant l'influence la plus élevée parmi les 3 à 10 factions mineures présentes dans le système, la
+somme des influences de toutes les factions faisant toujours 100 %. Cette faction contrôlante fixe l'allégeance
+affichée du système, les taxes locales et l'accès (ou non) au marché noir. Voir
+[2.3](#23-la-faction-contrôlante-dun-système-et-ce-quelle-détermine).
+
+### Comment déclencher une Expansion et faire progresser l'influence (influence) de ma faction ?
+
+Une faction qui approche du seuil d'expansion entre d'abord dans l'état préparatoire **Investment**, puis bascule en
+**Expansion** si son influence reste suffisamment élevée au tick suivant — le consensus communautaire (non officiel)
+situe ce seuil autour de 35 % ou plus. Elle s'implante alors dans un système voisin choisi selon des critères de
+proximité et de score qui restent partiellement empiriques. Voir
+[4.1](#41-comment-une-faction-mineure-sétend-investment-puis-expansion).
+
+### Comment faire disparaître (Retreat) une faction hostile de mon système ?
+
+En cessant tout soutien à son égard (missions, ventes, dons), voire en ciblant ses activités pour accélérer sa chute :
+son influence tombe alors sous le seuil bas estimé par la communauté entre 2,5 et 5 % (valeur non officielle elle
+aussi), la faction entre en **Retreat**, et si la situation ne se redresse pas elle perd toute présence dans le
+système, cédant son influence aux factions restantes. Voir
+[4.2](#42-comment-une-faction-mineure-se-retire-dun-système-retreat).
+
+### Quelles missions rapportent le plus d'influence pour le BGS ?
+
+Le plugin BGS-Tally ventile lui-même l'influence de mission en **cinq paliers de récompense distincts** (notés ➊ à
+➎) : une mission à récompense élevée pèse donc plus qu'une mission à récompense minimale, même si le rapport de
+poids exact entre paliers n'est publié ni par Frontier Developments ni par la documentation de l'outil. Voir
+[5.7.1](#571-ce-qui-est-structurellement-vérifiable-sur-leffort-bgs).
+
+### Le trade (commerce) en Famine ou en Boom, ça vaut le coup pour le BGS ?
+
+Oui : livrer des denrées alimentaires pendant une Famine ou vendre pendant un Boom augmente nettement les primes et
+l'influence gagnée par unité vendue par rapport au trade en conditions normales, mais ce sont des fenêtres temporaires
+qui finissent par se résorber. Aucun chiffre universel d'INF/heure n'a pu être établi pour comparer les leviers ; seule
+une mesure locale avec BGS-Tally donne un ratio fiable. Voir
+[5.7.3](#573-efficacité-comparée-des-leviers-bgs-inf-par-heure-de-jeu).
+
+### C'est quoi le « cap de tick » (tick cap) ?
+
+C'est un phénomène largement rapporté par la communauté BGS : au-delà d'un certain volume d'activité produit pour une
+même faction dans un même système sur un même tick, le gain d'influence marginal supplémentaire s'effondre ou devient
+nul. Aucune valeur numérique officielle n'a pu être confirmée ; la conséquence pratique est de répartir l'effort sur
+plusieurs jours de tick plutôt que de le concentrer sur une seule journée. Voir
+[5.7.2](#572-le-plafond-dinfluence-par-tick--une-observation-communautaire-répandue-non-quantifiée-officiellement).
+
+### Comment créer une faction de joueurs (PMF, Player Minor Faction) ?
+
+Un groupe de joueurs (escadre ou communauté organisée) peut demander la création d'une PMF, rattachée dès sa création
+à un système donné. Une fois créée, elle suit exactement les mêmes règles de BGS qu'une faction non-joueur : elle
+gagne ou perd de l'influence selon l'activité enregistrée en son nom et peut entrer en Boom, en Guerre, en Expansion
+ou en Retreat comme n'importe quelle autre faction. Voir
+[4.3](#43-les-factions-mineures-créées-par-des-joueurs-pmf).
+
+### Comment mesurer précisément l'impact de mon groupe sur le BGS avec BGS-Tally ?
+
+En notant l'influence de la faction ciblée juste avant un tick, en laissant BGS-Tally agréger l'activité du groupe
+pendant une journée de tick, puis en relevant l'influence après le tick suivant pour calculer le ratio (points
+d'influence gagnés ÷ volume d'activité produit). Ce ratio local, propre à chaque système et chaque faction, remplace
+avantageusement toute estimation générique trouvée en ligne. Voir
+[5.7.4](#574-protocole-de-mesure-et-dajustement-avec-bgs-tally).
+
+### Le BGS et Powerplay, c'est la même chose ?
+
+Non : ce sont deux couches distinctes qui coexistent sans être calculées par le même moteur. Le BGS gère l'allégeance,
+les taxes et l'accès au marché noir via les factions mineures, tandis que Powerplay — depuis sa refonte du 31 octobre
+2024 avec l'extension *Ascendancy* — gère en parallèle l'influence des Powers (fortification, exploitation,
+contestation) au-dessus de ces mêmes factions. Voir
+[6.1](#61-bgs-et-powerplay--deux-couches-distinctes-sur-un-même-système).
+
+### Un système en cours de Colonisation est-il soumis au BGS ?
+
+Pas tant qu'il reste en cours de colonisation par un seul commandant : il n'héberge encore aucune faction mineure et
+échappe donc au cycle BGS. Une fois le système suffisamment développé et peuplé, il finit par générer ses propres
+factions mineures, qui entrent alors dans le cycle normal d'influence, d'expansion et d'états décrit dans ce guide.
+Voir [6.2](#62-bgs-et-colonisation-de-systèmes).
+
 ## Voir aussi
 
 - [Politique et Powerplay dans Elite Dangerous](./02-powerplay.md) — fonctionnement complet de Powerplay, la couche de
-  méta-jeu politique qui coexiste avec le BGS sans être calculée par le même moteur (voir la section 6.1 ci-dessus).
+  méta-jeu politique qui coexiste avec le BGS sans être calculée par le même moteur (voir la [section 6.1](#61-bgs-et-powerplay--deux-couches-distinctes-sur-un-même-système) ci-dessus).
 - [Colonisation](./18-colonisation.md) — mécanique de revendication et de construction de systèmes, point d'entrée
-  piloté par le joueur qui finit par générer de nouvelles factions mineures soumises au BGS (voir la section 6.2).
+  piloté par le joueur qui finit par générer de nouvelles factions mineures soumises au BGS (voir la [section 6.2](#62-bgs-et-colonisation-de-systèmes)).
 - [Community Goals](./24-community-goals.md) — objectifs galactiques ponctuels dont l'issue peut injecter un gain ou
-  une perte d'influence massif pour une faction, en plus du calcul BGS organique quotidien (voir la section 6.3).
+  une perte d'influence massif pour une faction, en plus du calcul BGS organique quotidien (voir la [section 6.3](#63-bgs-et-community-goals-cg)).
 - [Commerce](./11-commerce.md) — marchandises, marchés et routes rentables, matière première du levier « ventes en
-  marché » décrit en 5.2.
+  marché » décrit en [5.2](#52-commerce-et-ventes-en-marché-comme-levier-bgs).
 - [Combat spatial](./08-combat-spatial.md) — primes, Conflict Zones et builds de combat, matière première du levier
-  « combat » décrit en 5.3.
+  « combat » décrit en [5.3](#53-combat-primes-et-conflict-zones-comme-levier-bgs).
 - [Escadrons de joueurs](./22-squadrons.md) — outil de jeu pour structurer le groupe organisé qui mène une campagne
-  BGS (voir la section 5.6).
+  BGS (voir la [section 5.6](#56-jouer-le-bgs-en-groupe-organisé)).
+- [Outils](./16-outils.md) — BGS-Tally et les autres outils communautaires cités dans ce guide pour suivre l'horaire
+  du tick et instrumenter une campagne BGS (voir [5.6](#56-jouer-le-bgs-en-groupe-organisé) et
+  [5.7](#57-quantifier-leffort--plafonds-par-tick-efficacité-comparée-des-leviers-et-méthode-de-mesure-avec-bgs-tally)).
 - [Glossaire](./00-glossaire.md) — sigles utilisés dans ce guide (BGS, INF, PMF, CZ).
 
 ## Sources
@@ -510,7 +604,7 @@ dédié (voir [Community Goals](./24-community-goals.md)).
   Powerplay 2.0/Ascendancy.
 - https://fr.wikipedia.org/wiki/Elite_Dangerous — consulté directement, confirmation générale du contexte du jeu.
 - [Chronologie canonique du corpus](./00-chronologie-canonique.md) — document interne de réconciliation factuelle
-  déjà établi pour cette base de connaissances, qui fait foi pour les dates citées en section 6 : Powerplay 2.0 sorti
+  déjà établi pour cette base de connaissances, qui fait foi pour les dates citées en [section 6](#6-articulation-du-bgs-avec-les-autres-systèmes-de-jeu) : Powerplay 2.0 sorti
   le 31 octobre 2024 dans le cadre de l'extension *Ascendancy* (sourcé via les billets officiels Frontier
   Developments relayés sur Steam News, dont « Ascendancy | Available Now! » et le suivi « Ascendancy Update 1» du 21
   novembre 2024), et Colonisation passée en bêta le 26 février 2025 via la mise à jour *Trailblazers* puis sortie
@@ -529,7 +623,7 @@ dédié (voir [Community Goals](./24-community-goals.md)).
   page wiki communautaire r/EliteDangerous sur le BGS (accès refusé par l'outil de récupération), archive.org (accès
   refusé par l'outil de récupération), https://elitebgs.app/ (contenu insuffisant récupéré), moteurs de recherche
   Bing/DuckDuckGo (résultats hors sujet ou bloqués par un CAPTCHA lors des tentatives de vérification complémentaire
-  des seuils numériques de la section 3.2 et de l'horaire du tick). Lors de l'ajout de la section 5.7 (plafonds
+  des seuils numériques de la [section 3.2](#32-états-de-conflit-bgs-expansion-retreat-war-civil-war-election) et de l'horaire du tick). Lors de l'ajout de la [section 5.7](#57-quantifier-leffort--plafonds-par-tick-efficacité-comparée-des-leviers-et-méthode-de-mesure-avec-bgs-tally) (plafonds
   d'influence par tick, efficacité INF/heure des leviers) : quota de recherche web de la session épuisé avant d'avoir
   pu interroger des sources supplémentaires sur ces deux points précis ; domaine reddit.com (y compris
   old.reddit.com et les wikis communautaires r/EliteDangerous et r/EliteBGS) bloqué par l'outil de récupération ;
@@ -539,9 +633,9 @@ dédié (voir [Community Goals](./24-community-goals.md)).
   consulté avec succès mais ne contient aucune donnée de mécanique BGS pertinente (simple base de factions).
 - https://github.com/aussig/BGS-Tally et son wiki (notamment la page « Usage – BGS and TW Tracking »,
   https://github.com/aussig/BGS-Tally/wiki/Usage-%E2%80%93-BGS-and-TW-Tracking) — consultés avec succès lors de la
-  préparation de la section 5.7 ; confirment que le plugin ventile l'influence de mission en cinq paliers de
+  préparation de la [section 5.7](#57-quantifier-leffort--plafonds-par-tick-efficacité-comparée-des-leviers-et-méthode-de-mesure-avec-bgs-tally) ; confirment que le plugin ventile l'influence de mission en cinq paliers de
   récompense distincts (➊ à ➎) et liste l'ensemble des activités suivies (missions, achats/ventes de trade par
   niveau de demande, marché noir, primes, Combat Bonds, Conflict Zones au sol et dans l'espace, données
   cartographiques, sauvetage). Ces pages ne documentent en revanche aucun seuil numérique de plafond d'influence par
   tick ni de formule d'efficacité INF/heure — d'où le classement qualitatif et le protocole de mesure proposés en
-  5.7 plutôt que des chiffres inventés.
+  [5.7](#57-quantifier-leffort--plafonds-par-tick-efficacité-comparée-des-leviers-et-méthode-de-mesure-avec-bgs-tally) plutôt que des chiffres inventés.

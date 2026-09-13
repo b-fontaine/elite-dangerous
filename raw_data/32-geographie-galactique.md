@@ -24,7 +24,8 @@ Ce guide donne au corpus le référentiel spatial qui lui manquait entièrement 
 Bulle**, jamais définie malgré 13 fichiers qui l'emploient, mesure environ 200 années-lumière de rayon autour de
 Sol, plus de 20 000 systèmes peuplés, sans frontière territoriale fixe entre Fédération, Empire et Alliance — leur
 territoire fluctue en continu via le BGS et Powerplay. Un **gazetteer de 31 systèmes** fondateurs ou emblématiques
-(les trois capitales, le siège de la Pilots Federation, les Old Worlds, les QG Powerplay, Colonia). Les
+(les trois capitales, le siège de la Pilots Federation, les **Old Worlds** — littéralement « Vieux Mondes » —, les
+QG Powerplay, Colonia). Les
 **destinations hors-Bulle** avec leurs distances exactes depuis Sol : Colonia (22 000 al), Sagittarius A*
 (25 900 al), Beagle Point (65 279 al **en ligne droite**, à ne pas confondre avec une distance de route), Hutton
 Orbital (0,22 al, un rite de passage comique). La **structure galactique** : bras spiraux, 42 régions du Codex,
@@ -45,13 +46,14 @@ référentiel spatial qui les situe.
 ## 1. La Bulle : définition chiffrée
 
 La **Bulle** (*The Bubble*, alias *Core Systems*) est une région ellipsoïdale d'environ **200 années-lumière de
-rayon** autour de Sol, dans la région galactique Inner Orion Spur — mesures précises sur les trois axes de la Galaxy
-Map depuis Sol (0,0,0) : environ 398 al en X, 595 al en Y, 393 al en Z (donc allongée sur l'axe Y, pas une sphère
-parfaite). Elle contient plus de **20 000 systèmes peuplés** et plus de **470 000 installations** (starports,
+rayon** autour de Sol, dans la région galactique Inner Orion Spur — mesures précises sur les trois axes de la
+**Galaxy Map** (la carte galactique du jeu) depuis Sol (0,0,0) : environ 398 al en X, 595 al en Y, 393 al en Z (donc
+allongée sur l'axe Y, pas une sphère parfaite). Elle contient plus de **20 000 systèmes peuplés** et plus de
+**470 000 installations** (starports,
 avant-postes, bases d'astéroïde, ports de surface, settlements) sur un volume d'environ 13,8 millions d'années-lumière
 cubiques — un chiffre de base historique, la colonisation de systèmes par les joueurs (depuis 2025) ayant depuis fait
 croître ce total sans qu'un chiffre à jour ait pu être confirmé pour 2026. Elle recoupe **28 des 42 régions** du
-Codex (section 4).
+Codex ([section 4](#4-structure-de-la-galaxie--bras-régions-coordonnées-et-nomenclature)).
 
 **Aucune frontière territoriale fixe n'existe.** Fédération, Empire et Alliance gouvernent chacune directement des
 centaines à des milliers de systèmes (ordres de grandeur datés de janvier 3308 : environ 3 730 pour la Fédération,
@@ -90,7 +92,7 @@ des systèmes de la Bulle reste indépendante. Le territoire réel varie en cont
 | **Reorte** | Alliance | Old World, siège historique de Faulcon DeLacy | — | Non |
 | **Orerve** | Fédération | Old World, site test du traitement anti-fléau des cultures (3305) | — | Non |
 | **Sirius** | Indépendant | Premier système colonisé par une mégacorporation (Sirius Corp, 2339) | — | Oui (réputation Alliée) |
-| **Colonia** | Indépendant | Capitale de facto de la région de Colonia (≈22 000 al de Sol, section 3) | Jaques Station | Non |
+| **Colonia** | Indépendant | Capitale de facto de la région de Colonia (≈22 000 al de Sol, [section 3](#3-destinations-hors-bulle--distances-de-référence)) | Jaques Station | Non |
 | **Asellus Primus** | Pilots Federation | Système de départ historique pour un nouveau Commandant | Baker's Prospect | Non |
 | **Clayakarma** | Indépendant | QG Powerplay du dictateur Yuri Grom | — | Non |
 | **Gateway** | Alliance | QG Powerplay d'Edmund Mahon ; point de départ de *Frontier: First Encounters* (1995) | Old Blackelk | Non |
@@ -109,11 +111,11 @@ Permits/Independent, consultées le 12 septembre 2026. Les capitales et Shinrart
 
 | Destination | Distance depuis Sol | Note |
 |---|---|---|
-| **Colonia** / Jaques Station | ≈ 22 000 al | Née de l'échouage accidentel de Jaques Station lors d'un saut extrême manqué vers Beagle Point (21 mai 3302). Voir section 5. |
+| **Colonia** / Jaques Station | ≈ 22 000 al | Née de l'échouage accidentel de Jaques Station lors d'un saut extrême manqué vers Beagle Point (21 mai 3302). Voir [section 5](#5-les-grands-voyages). |
 | **Sagittarius A\*** / Explorer's Anchorage | ≈ 25 900 al | Trou noir supermassif au centre galactique ; Explorer's Anchorage, la station habitée la plus distante de Sol, en est à seulement 3,66 al. |
 | **Beagle Point** | ≈ 65 279 al **en ligne droite** | Distance directe, pas la distance de route (toujours plus longue à cause des détours). Premier atteint le 18 janvier 3301 par CMDR Erimus Kamzel. |
 | **Hutton Orbital** (Alpha Centauri) | ≈ 0,22 al **en supercroisière** (6 784 404 ls) | Rite de passage comique de la communauté — environ 1h30 de trajet à pleine vitesse stock ; deux denrées rares exclusives (Centauri Mega Gin, The Hutton Mug). |
-| **Nébuleuse des Pléiades** (Maia) | ≈ 384 al | Voir section 2 ; diamètre d'environ 10 al. |
+| **Nébuleuse des Pléiades** (Maia) | ≈ 384 al | Voir [section 2](#2-gazetteer-des-systèmes-fondateurs-et-emblématiques) ; diamètre d'environ 10 al. |
 | **Witch Head Nebula** | ≈ 890 al | Site de colonisation « The Enclave » (2025), exploitation de méta-alliages issus de Barnacles thargoïdes. |
 | **California Nebula** | ≈ 1 000 al | Développée par l'Alliance depuis fin 3302 ; éclairée par l'étoile Menkib. |
 | **Nébuleuse Guardian** | « Plusieurs centaines d'al » (non chiffré précisément) | Voir [05-guardians.md](./05-guardians.md), qui ne donne pas de distance exacte. |
@@ -201,11 +203,12 @@ généralement citée : **34 al** sans recours au *jumponium* (boosts de synthè
 
 Le corpus documente déjà l'essentiel du fit d'exploration en
 [10-exploration.md](./10-exploration.md#build-chiffré--portée-de-saut-stock-vs-ingénierée-du-diamondback-explorer-177-à-74-al) —
-FSD classe A ingénierié + Guardian FSD Booster, Fuel Scoop classe A, AFMU, hangar SRV. En complément pour une
+FSD classe A ingénierié + Guardian FSD Booster, Fuel Scoop (collecteur de carburant) classe A, AFMU (unité de
+maintenance automatique), hangar SRV. En complément pour une
 expédition de type Distant Worlds/Beagle Point :
 
-- **Limpets de réparation** et **heat sinks** en réserve, au-delà de l'AFMU seul, pour les réparations d'urgence loin
-  de tout support.
+- **Limpets de réparation** et **heat sinks** (charges de dissipation thermique instantanée) en réserve, au-delà de
+  l'AFMU seul, pour les réparations d'urgence loin de tout support.
 - **Synthèse de carburant** (jumponium) pour franchir ponctuellement un seuil de portée de saut trop juste.
 - **Marge de sécurité** sur la portée de saut plutôt que le minimum théorique (33-34 al) — les routes calculées ne
   garantissent pas toujours une étoile scoopable à chaque étape.
@@ -221,10 +224,86 @@ expédition de type Distant Worlds/Beagle Point :
 
 ---
 
+## Questions fréquentes
+
+**Où se trouve Colonia par rapport à Sol ?**
+Colonia est à environ 22 000 années-lumière de Sol. Elle est née d'un accident : Jaques Station tentait le plus long
+saut FSD jamais enregistré (21 890 al) vers Beagle Point et s'est échouée le 21 mai 3302 dans le système aujourd'hui
+nommé Colonia, redécouvert le 29 juin 3302. Voir [Colonia](#51-colonia).
+
+**Quelle est la taille de la Bulle (The Bubble) ?**
+La Bulle mesure environ 200 années-lumière de rayon autour de Sol (précisément ≈398 al en X, ≈595 al en Y, ≈393 al
+en Z, donc allongée sur l'axe Y). Elle contient plus de 20 000 systèmes peuplés et plus de 470 000 installations, sur
+un volume d'environ 13,8 millions d'années-lumière cubiques. Voir
+[La Bulle : définition chiffrée](#1-la-bulle--définition-chiffrée).
+
+**Combien de temps faut-il pour rejoindre Hutton Orbital ?**
+Hutton Orbital n'est qu'à 0,22 al de Sol (dans Alpha Centauri) mais représente 6 784 404 secondes-lumière en
+supercroisière, soit environ 1h30 de trajet à pleine vitesse stock — un rite de passage comique de la communauté,
+récompensé par deux denrées rares exclusives (Centauri Mega Gin, The Hutton Mug). Voir
+[Destinations hors-Bulle](#3-destinations-hors-bulle--distances-de-référence).
+
+**Quelle est la distance jusqu'à Beagle Point ?**
+Beagle Point est à environ 65 279 années-lumière de Sol en ligne droite — une distance directe qui ne correspond pas
+à la distance de route réellement parcourue (toujours plus longue à cause des détours). Le record a été établi le
+18 janvier 3301 par CMDR Erimus Kamzel. Voir
+[Beagle Point et le bord de la galaxie](#53-beagle-point-et-le-bord-de-la-galaxie).
+
+**Combien y a-t-il de systèmes peuplés dans la Bulle (Core Systems) ?**
+Plus de 20 000 systèmes peuplés et plus de 470 000 installations (starports, avant-postes, bases d'astéroïde, ports
+de surface, settlements) — un chiffre de base historique, la colonisation de systèmes par les joueurs depuis 2025
+ayant depuis fait croître ce total sans qu'un chiffre à jour ait pu être confirmé pour 2026.
+
+**À quelle distance se trouve Sagittarius A\* du centre galactique ?**
+Sagittarius A\*, le trou noir supermassif au centre de la galaxie, est à environ 25 900 années-lumière de Sol. La
+station habitée la plus proche, Explorer's Anchorage (mise en service le 21 février 3305), n'en est qu'à 3,66 al —
+c'est aussi la station la plus proche de Beagle Point. Voir
+[Sagittarius A* et le centre galactique](#52-sagittarius-a-et-le-centre-galactique).
+
+**Combien d'Ingénieurs (Engineers) sont accessibles depuis Colonia ?**
+8 Ingénieurs sont accessibles à Colonia : 4 ajoutés avec Beyond (à Los, Tir, Luchtaine, Asura) et 4 avec Odyssey (à
+Deriso, Desy, Kojeara, Einheriar), via une invitation du Colonia Council plutôt que par la voie habituelle des
+Ingénieurs de la Bulle. Jaques Station elle-même n'héberge aucun Ingénieur. Voir [Colonia](#51-colonia).
+
+**Comment fonctionne le Colonia Bridge ?**
+Le Colonia Bridge relie Alcor à Colonia le long de la Colonia Connection Highway : environ 56 mégavaisseaux (Flight
+Operations Carrier, classe Wells) espacés de 400 à 500 années-lumière, complétés par 6 starports Ocellus
+permanents — 62 installations au total, financées en 4 phases par Brewer Corporation (octobre 3307 à février 3308).
+Voir [Colonia](#51-colonia).
+
+**C'est quoi le réseau DSSA (Deep Space Support Array) ?**
+Le DSSA est un réseau communautaire (initiative FleetComm), à ne pas confondre avec le Colonia Bridge officiel, qui
+maille la galaxie d'environ un Porte-Vaisseau par région (règle affichée : maximum trois par région), chacun offrant
+au minimum ravitaillement et réparation ouverts à tous. Aucun espacement en années-lumière n'est publié
+officiellement. Voir
+[Check-list d'une expédition longue distance](#54-check-list-dune-expédition-longue-distance).
+
+**Combien de régions galactiques (Galactic Regions) le Codex compte-t-il ?**
+42 « Galactic Regions » découpent la galaxie depuis décembre 3304, dont 28 recoupent la Bulle. Sol et la Bulle se
+trouvent dans l'Inner Orion Spur (#18) ; Colonia dans le Scutum-Centaurus Inner (#9). Voir
+[Structure de la galaxie](#4-structure-de-la-galaxie--bras-régions-coordonnées-et-nomenclature).
+
+**Quelle portée de saut minimale pour une expédition vers Beagle Point ?**
+Le seuil généralement cité est de 34 al sans recours au jumponium (boosts de synthèse de carburant). Une marge de
+sécurité au-delà de ce minimum théorique (33-34 al) est recommandée, car les routes calculées ne garantissent pas
+toujours une étoile scoopable à chaque étape. Voir
+[Beagle Point et le bord de la galaxie](#53-beagle-point-et-le-bord-de-la-galaxie).
+
+**Comment sont nommés les systèmes procéduraux (Stellar Forge) ?**
+Un système non nommé manuellement porte un nom du type « Nom-de-secteur AA-A h0 » : le secteur mesure 1 280
+années-lumière de côté, subdivisé en huit catégories de masse (lettres A à H, de 10 al à 1 280 al) qui encodent la
+masse ZAMS de l'étoile primaire. C'est une reconstruction communautaire de 2015, jamais démentie depuis mais non
+documentée officiellement par Frontier. Voir
+[Structure de la galaxie](#4-structure-de-la-galaxie--bras-régions-coordonnées-et-nomenclature).
+
+---
+
 ## Voir aussi
 
 - **[Elite Dangerous : lore et histoire de l'univers](./01-lore.md)** — capitales des trois superpuissances et
-  siège de la Pilots Federation (§2.6-2.7), repris sans modification dans le gazetteer.
+  siège de la Pilots Federation
+  ([§2.6](./01-lore.md#26-tableau-comparatif-des-trois-superpuissances-fondation-régime-capitale-dirigeant-en-3312)-[§2.7](./01-lore.md#27-la-pilots-federation-organisation-neutre-au-dessus-des-superpuissances)),
+  repris sans modification dans le gazetteer.
 - **[Politique et Powerplay](./02-powerplay.md)** — les QG Powerplay cités dans le gazetteer (Cubeo, Synteini,
   Clayakarma, Gateway, Eotienses, Nanomam).
 - **[Guide complet des Guardians](./05-guardians.md)** — Nébuleuse Guardian, distance non chiffrée précisément.
@@ -243,7 +322,8 @@ expédition de type Distant Worlds/Beagle Point :
   (Norma, Scutum-Centaurus Inner/Outer, Orion-Cygnus, Sagittarius-Carina, Perseus, Outer Arm, Outer Orion Spur),
   Galaxy, Stellar Forge, Colonia, Jaques Station, Colonia Bridge, Sagittarius A*, Explorer's Anchorage, Beagle
   Point, Hutton Orbital, Pleiades/Witch Head/California Nebula, Engineers, et la fiche de chacun des 31 systèmes du
-  gazetteer (section 2), plus Permits/Federation, Permits/Empire, Permits/Independent.
+  gazetteer ([section 2](#2-gazetteer-des-systèmes-fondateurs-et-emblématiques)), plus Permits/Federation,
+  Permits/Empire, Permits/Independent.
 - `hosting.zaonce.net/community/journal/v32/Journal_Manual-v32.pdf` — Player Journal Manual officiel, champ
   `StarPos`.
 - `edsm.net/api-v1/system` — API publique, coordonnées vérifiées directement (Sol, Alpha Centauri, Colonia,

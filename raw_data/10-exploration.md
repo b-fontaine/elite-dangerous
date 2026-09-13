@@ -68,12 +68,12 @@ comptoirs Universal Cartographics. Ce guide chiffre la valeur de scan corps par 
 type terrestre au simple scan, 3 546 696 Cr en première découverte et première cartographie, 500 Cr au plancher —
 détaille les 53 classes stellaires du journal de bord et la supercharge du FSD (×4 sur étoile à neutrons, ×1,5 sur
 naine blanche, ×6 avec un seul module du jeu). Il recense aussi ce qu'un scan de surface révèle : huit catégories de
-signaux, 23 sites géologiques au codex Canonn, les champs de Crystalline Shards et les Notable Stellar Phenomena. Le
+signaux, 23 sites géologiques au codex Canonn, les champs de Crystalline Shards et les **Notable Stellar Phenomena** (phénomènes stellaires remarquables). Le
 **Codex in-jeu** — introduit le 11 décembre 2018, 4 onglets, entrées réparties sur les 42 régions galactiques — est
 expliqué en 1.6bis, avec sa distinction impérative d'avec le « Codex Canonn » cité ci-dessus.
 Depuis Odyssey s'y ajoute l'exobiologie : prélever à pied, en combinaison **Artemis**, trois échantillons d'une même
 espèce pour les vendre à **Vista Genomics**. Le catalogue compte **118 espèces**, de 952 296 Cr à 20 000 000 Cr, avec
-un multiplicateur **First Logged ×5**.
+un multiplicateur **First Logged** (première consignation d'exobiologie) **×5**.
 
 ## Introduction à l'exploration spatiale et à l'exobiologie
 
@@ -333,7 +333,7 @@ Quatre enseignements, tous DÉRIVÉS de ces comptages :
   recoupe le journal de test, où Europa porte deux signaux géologiques.
 
 Ce que rapportent ces sites relève de l'ingénierie plus que de l'exploration, et le corpus le documente déjà : un
-*outcrop* rend 3 unités par morceau ; les dépôts volcaniques suivent une échelle de grade — Piceous Cobble en G1,
+*outcrop* (affleurement rocheux) rend 3 unités par morceau ; les dépôts volcaniques suivent une échelle de grade — Piceous Cobble en G1,
 Crystalline Fragments en G2-G3, Crystalline Cluster en G3-G4, Needle Crystals en G4 et uniquement sur les sites *Lava
 Spout* ; chaque corps atterrissable porte une composition **fixe** de 11 matériaux — 5 G1, 3 G2, 2 G3 et 1 G4 — qu'un
 DSS à 90 % de couverture révèle définitivement, les signaux devenant alors des points d'atterrissage sélectionnables.
@@ -641,7 +641,7 @@ Les expéditions **Distant Worlds** sont des voyages communautaires massifs et o
 confins de la galaxie, et plus précisément jusqu'à **Beagle Point**. Elles sont documentées dans les archives Canonn
 (« Distant Worlds 2 » citée comme community goal, « Distant Worlds 3302 » dans les actualités Canonn), relèvent de la
 mécanique générique des **Community Goals** (voir [Community Goals](./24-community-goals.md)) et se déroulent le plus
-souvent en **Wing** organisé (voir [Wings, Multicrew et CQC](./23-jeu-en-groupe.md)). Leur récit et leur place dans la
+souvent en **Wing** (escadre) organisé (voir [Wings, Multicrew et CQC](./23-jeu-en-groupe.md)). Leur récit et leur place dans la
 chronologie figurent dans [Lore](./01-lore.md) ; ce qui suit en donne la logistique vérifiable, telle que
 l'enregistrent les fiches d'expédition d'EDSM et le site officiel de la dernière édition. Les distances de route
 listées ci-dessous (parcours réel, en sauts successifs) ne doivent pas être confondues avec la distance **en ligne
@@ -1024,7 +1024,7 @@ section 2.5, plutôt que de trancher entre les deux ici.
 
 **Ce que le Codex NE fait PAS.** Aucune des trois catégories de Discoveries ne porte d'état « cartographié » : le
 Codex logge des **types** de découvertes (tel corps stellaire, telle espèce, tel site), pas la cartographie
-individuelle d'une planète. Le bonus de **première cartographie** (*first mapped*, au DSS — voir section 1.5) est un
+individuelle d'une planète. Le bonus de **première cartographie** (*first mapped*, au DSS — voir [section 1.5](#15-vendre-ses-données-dexploration-aux-comptoirs-universal-cartographics)) est un
 système de paiement distinct, propre à la vente de données d'exploration à Universal Cartographics, suivi
 indépendamment du Codex — une inférence bien étayée par l'absence de tout état « mapped » dans la taxonomie
 documentée, mais qu'aucune source consultée n'énonce mot pour mot.
@@ -2344,7 +2344,7 @@ information. La recette exacte du « jumponium » (FSD Injection, ses trois pali
 
 - Vérifier la portée de saut réelle une fois chargé (carburant plein, modules optionnels installés) plutôt que la
   portée stock affichée au chantier naval — voir [03-vaisseaux.md](./03-vaisseaux.md).
-- Emporter un Fuel Scoop de classe adaptée à la classe stellaire visée (mnémonique KGBFOAM, §1.3) pour ne jamais
+- Emporter un Fuel Scoop de classe adaptée à la classe stellaire visée (mnémonique KGBFOAM, [§1.3](#13-scan-des-systèmes-en-exploration--discovery-scanner-fss-dss)) pour ne jamais
   dépendre d'un retour à la Bulle pour le carburant.
 - Confirmer l'installation du DSS, du FSS et du Detailed Surface Scanner (série depuis Beyond Chapter Four) avant le
   départ — aucun de ces trois instruments ne s'ajoute après coup sans escale.
@@ -2380,6 +2380,77 @@ information. La recette exacte du « jumponium » (FSD Injection, ses trois pali
 | EDMC-Canonn        | github.com/canonn-science/EDMC-Canonn | Plugin de capture d'événements pour les bases Canonn          |
 | EDCD/coriolis-data | github.com/EDCD/coriolis-data         | Données ouvertes des modules/vaisseaux (masses, FSD, prix)    |
 
+## Questions fréquentes
+
+**Combien rapporte la vente d'un monde de type terrestre (Earth-like World) ?**
+Un Earth-like World d'une masse terrestre rapporte 283 628 Cr au scan seul, 737 434 Cr en première découverte, et
+jusqu'à 3 546 696 Cr en cumulant première découverte et première cartographie (bonus Odyssey actif). Ces montants sont
+ceux que calcule l'implémentation de référence de la communauté (EDDiscovery), pas un barème publié par Frontier. Voir
+[Combien vaut le scan d'un corps](#barème-de-la-valeur-de-scan-dune-planète-type-par-type).
+
+**Qu'est-ce que le bonus First Logged en exobiologie et comment le calculer ?**
+Le First Logged récompense le premier commandant à faire enregistrer une espèce donnée sur un corps donné : il
+multiplie la valeur de base par ×5 (base + 400 %), réclamé à la vente et non au scan. Par exemple, un Stratum
+Tectonicas passe de 19 010 800 Cr à 95 054 000 Cr. Voir
+[Où trouver les espèces les plus rentables](#25-où-trouver-les-espèces-dexobiologie-les-plus-rentables).
+
+**Quelle est la différence entre First Logged et First Footfall (première empreinte) ?**
+Le First Logged verse un bonus en crédits (×5) au premier commandant qui vend une espèce depuis un corps donné. Le
+First Footfall, lui, ne rapporte aucun crédit : il inscrit seulement le nom du premier humain à avoir posé le pied sur
+le corps sur la carte du système. Les deux sont souvent confondus dans les guides communautaires. Voir
+[Où trouver les espèces les plus rentables](#25-où-trouver-les-espèces-dexobiologie-les-plus-rentables).
+
+**Combien d'échantillons faut-il prélever par espèce en exobiologie (Genetic Sampler) ?**
+Trois échantillons complets de la même espèce sont nécessaires pour pouvoir la vendre à Vista Genomics, en respectant
+une distance minimale entre chaque prélèvement qui varie selon le genre (de 15 m pour Radicoida à 1 000 m pour
+Electricae). Un seul jeu d'échantillons partiels peut être conservé en mémoire à la fois. Voir
+[Procédure de scan et d'échantillonnage](#23-procédure-de-scan-et-déchantillonnage-exobiologique-3-prélèvements-par-espèce).
+
+**Quel est le multiplicateur de supercharge du FSD sur une étoile à neutrons (neutron highway) ?**
+Une supercharge sur étoile à neutrons multiplie la portée du saut suivant par ×4 pour la quasi-totalité des FSD du
+jeu, à une exception près : le Mk II Supercharge Optimised Frame Shift Drive (SCO), qui atteint ×6. Sur naine blanche
+(jet cone), le multiplicateur n'est que de ×1,5. Voir
+[Neutron Highways](#neutron-highways--surcharge-du-fsd-sur-étoile-à-neutrons).
+
+**Quelle est l'espèce d'exobiologie la plus chère du jeu ?**
+Fonticulua Fluctus, à 20 000 000 Cr de valeur de base — le maximum du catalogue des 118 espèces recensées par ce
+guide. Avec le bonus First Logged (×5) sur un corps vierge, elle atteindrait 100 000 000 Cr, un montant calculé et non
+relevé en jeu. Voir
+[le classement des 118 espèces](#les-118-espèces-dexobiologie-classées-par-valeur-de-vente-vista-genomics).
+
+**Combien de genres et d'espèces d'exobiologie ce guide recense-t-il ?**
+Ce guide documente 20 genres et 109 espèces en détail (habitat, atmosphère, température, gravité), auxquels s'ajoutent
+Bark Mound et Brain Tree (9 espèces supplémentaires sans fiche d'habitat rédigée), pour un total de 118 espèces
+classées par valeur de vente. Voir
+[le catalogue d'exobiologie](#les-118-espèces-dexobiologie-classées-par-valeur-de-vente-vista-genomics).
+
+**Quels sont les paliers des rangs Explorateur et Exobiologiste avant Elite ?**
+Le rang Explorateur compte huit paliers avant Elite (Aimless, Mostly Aimless, Scout, Surveyor, Trailblazer,
+Pathfinder, Ranger, Pioneer), et le rang Exobiologiste en compte sept (Directionless, Mostly Directionless,
+Taxonomist, Collector, Cataloguer, Surveyor, Ecologist) dans les relevés dont dispose ce corpus. Le rang Elite se
+subdivise ensuite en Elite I à Elite V. Voir
+[Rangs Explorateur et Exobiologiste](#26-rangs-explorateur-et-exobiologiste--les-paliers-jusquà-elite-v).
+
+**Quelle est la différence entre le Codex in-jeu et le « Codex Canonn » ?**
+Le Codex in-jeu est une fonctionnalité officielle de Frontier intégrée au client depuis le 11 décembre 2018 (4
+onglets, dont Discoveries organisé par région galactique). Le « Codex Canonn » est un site communautaire distinct
+(canonn.science/codex/) tenu par le groupe Canonn Research, sans affiliation à Frontier. Les deux portent le même nom
+par convergence, mais ne doivent jamais être confondus. Voir
+[la désambiguïsation Codex vs Codex Canonn](#16ter-ce-que-le-codex-ne-fait-pas-et-sa-distinction-avec-le-codex-canonn).
+
+**Combien rapporte l'exobiologie en crédits par heure (Cr/h), et ce chiffre est-il officiel ?**
+Un retour d'expérience communautaire cite environ 15 à 25 M Cr/h sans bonus, un chiffre qui peut grimper fortement sur
+un corps confirmé vierge (bonus First Logged ×5 sur chaque espèce). Ce n'est pas un barème Frontier : c'est une
+reconstitution communautaire datée du 13 septembre 2026, faute de cadence de scan documentée par une source primaire.
+Voir [Où trouver les espèces les plus rentables](#25-où-trouver-les-espèces-dexobiologie-les-plus-rentables).
+
+**À quoi sert le Nomad, et quels vaisseaux peuvent l'emporter ?**
+Le Nomad est un véhicule de surface *ship-launched vessel*, introduit le 30 juin 2026 avec la mise à jour Operations,
+équipé d'un Mk II Biological Scanner qui détecte les signaux biologiques depuis le cockpit. Il se déploie depuis un
+Vessel Bay Mk I ou Mk II ; parmi les vaisseaux d'exploration comparés dans ce guide, seul l'Anaconda dispose d'un tel
+emplacement. Voir
+[Équipement nécessaire à l'exobiologie](#22-équipement-nécessaire-à-lexobiologie--combinaison-artemis-scanners-bioscan).
+
 ## Voir aussi : autres guides du corpus liés à l'exploration
 
 Guides du corpus en lien direct avec l'exploration et l'exobiologie :
@@ -2396,8 +2467,8 @@ Guides du corpus en lien direct avec l'exploration et l'exobiologie :
 - [Wings, Multicrew et CQC](./23-jeu-en-groupe.md) — organisation en Wing pour les expéditions type Distant Worlds
 - [Community Goals](./24-community-goals.md) — mécanique générique des expéditions/événements communautaires
 - [Combat anti-Thargoïde (AX)](./25-combat-ax.md) — sites de ruines et structures inconnues croisés en exploration,
-  et récolte de Meta-Alloys sur les Barnacles des Pléiades (§8.1)
-- [Guardians](./05-guardians.md) — les 28 Guardian Logs, contenu Codex-exclusif détaillé en §11
+  et récolte de Meta-Alloys sur les Barnacles des Pléiades ([§8.1](./25-combat-ax.md#81-barnacles-thargoïdes-et-récolte-de-meta-alloys))
+- [Guardians](./05-guardians.md) — les 28 Guardian Logs, contenu Codex-exclusif détaillé en [§11](./05-guardians.md#11-ce-que-révèlent-les-28-logs-guardian)
 - [Outils](./16-outils.md) — outils Canonn qui exploitent le Codex in-jeu (Codex-Regions, Undiscovered-Codex, §1.6)
 - [Le Rhino et le Nomad](./14-rhino.md) — fiche complète du Nomad, du Mk II Biological Scanner et des modules
   Vessel Bay évoqués en 2.2

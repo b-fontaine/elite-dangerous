@@ -21,7 +21,7 @@ guides_lies: [0, 6, 7, 9, 10, 13, 18]
 L'ingénierie avancée de l'équipement à pied porte sur le farming, le troc et l'ordre de déblocage des Engineers. Le
 journal du jeu ne connaît que quatre catégories de matériaux — `Item`, `Component`, `Data`, `Consumable` — et
 « Chemical », « Circuit » et « Tech » n'en sont qu'une subdivision interne, regroupée sous le nom d'**Assets** : seuls
-ces Assets s'échangent entre eux au comptoir du **bartender**, selon un score de troc cumulatif dont l'excédent est
+ces Assets s'échangent entre eux au comptoir du **bartender** (le PNJ d'échange de matériaux à pied), selon un score de troc cumulatif dont l'excédent est
 perdu (Graphene : coût 23, cession 13 ; Aerogel : 9 et 5). Le bartender achète les *Goods* et les *Data* sans jamais en
 revendre, si bien que **Suit Schematic**, **Health Monitor** et **Manufacturing Instructions** ne s'obtiennent que par
 pillage de settlement ou récompense de mission ; le troisième est le goulot d'étranglement, avec 22 unités à réunir
@@ -53,15 +53,15 @@ et « Non confirmé » ci-dessous, et le détail en fin de document).
 Deux clarifications structurantes ressortent de cette recherche et conditionnent tout le reste du guide :
 
 1. **La terminologie des catégories de matériaux à pied est plus précise que ce que l'UI laisse penser** (voir
-   section 1) — un point qui change concrètement ce qu'on peut espérer échanger contre quoi.
+   [section 1](#1-catégories-de-matériaux-à-pied-et-règles-déchange)) — un point qui change concrètement ce qu'on peut espérer échanger contre quoi.
 2. **L'exobiologie (Genetic Sampler) n'alimente pas l'ingénierie à pied** — une hypothèse plausible à première vue,
-   mais infirmée par les sources consultées (voir section 2.7). Le matériau « Biological Sample », dont le nom prête
+   mais infirmée par les sources consultées (voir [section 2.7](#27-correction-importante--lexobiologie-nalimente-pas-lingénierie-à-pied)). Le matériau « Biological Sample », dont le nom prête
    à confusion, provient en réalité des settlements et non du scan de faune.
 3. **Une partie des lacunes ci-dessus est comblée hors ligne par un jeu de données de référence daté et sourcé** —
    ajout postérieur à la recherche initiale. Là où le guide constatait l'inaccessibilité des wikis en ligne, ces
    données donnent les provenances de terrain des composants et les conditions qui s'y attachent, les coordonnées des
-   deux sites fixes de récolte, et les paliers chiffrés des trois combinaisons. Les sections **1.2**, **1.3**, **1.5**,
-   **2.8**, **2.9** et **3.4** en sont issues et le signalent chacune par une ligne de sourcage.
+   deux sites fixes de récolte, et les paliers chiffrés des trois combinaisons. Les sections [**1.2**](#12-le-mécanisme-du-bartender--un-score-de-troc-pas-un-taux-fixe), [**1.3**](#13-ce-qui-est-échangeable-au-comptoir-du-bartender-ce-qui-ne-lest-pas), [**1.5**](#15-limites-de-stock-des-matériaux-à-pied-ship-locker-fleet-carrier),
+   [**2.8**](#28-lieux-de-farming-cités-par-la-communauté-iah-bulu-davs-hope-jameson-crash-site), [**2.9**](#29-les-sept-composants-de-combinaison--provenance-conditions-et-goulot-détranglement) et [**3.4**](#34-montée-en-grade-de-la-combinaison--ce-que-la-récolte-doit-préparer) en sont issues et le signalent chacune par une ligne de sourcage.
 
 ## 1. Catégories de matériaux à pied et règles d'échange
 
@@ -83,13 +83,13 @@ recoupement confirme la version à quatre catégories retenue ici plutôt que l'
 Autrement dit, **« Chemical », « Circuit » et « Tech » ne sont pas des catégories officielles au sens du journal** :
 ce sont une subdivision interne de la catégorie `Component`, que l'UI et la communauté regroupent sous le nom
 générique **« Assets »**. Ce point n'est pas qu'une curiosité terminologique : c'est cette subdivision précise (et
-elle seule) qui détermine ce qui est échangeable au bartender (section 1.3).
+elle seule) qui détermine ce qui est échangeable au bartender ([section 1.3](#13-ce-qui-est-échangeable-au-comptoir-du-bartender-ce-qui-ne-lest-pas)).
 
 | Terme communautaire (UI) | Catégorie officielle du journal (`Category`) | Contenu                                                   | Échangeable au bartender ? |
 |---------------------------|------------------------------------------------|------------------------------------------------------------|-------------------------------|
 | **Goods**                | `Item`                                          | Biens divers (données imprimées, objets physiques variés) | Non documenté comme tel        |
 | **Assets**                | `Component`, subdivisé en **Chemical / Circuit / Tech** | Composants manufacturés à pied                     | **Oui, entre les trois sous-catégories Assets uniquement** |
-| **Data**                  | `Data`                                          | Données encodées (rapports, journaux, relevés)             | **Non**, sauf remise ciblée en quête (voir 1.4) |
+| **Data**                  | `Data`                                          | Données encodées (rapports, journaux, relevés)             | **Non**, sauf remise ciblée en quête (voir [1.4](#14-le-cas-particulier-des-quêtes-de-déblocage-dengineer)) |
 | **Consumables**           | `Consumable`                                    | Medkits, grenades, etc. — hors ingénierie                  | Non concerné                   |
 
 *Source : Manuel officiel du Journal Frontier v32 pour la colonne `Category` ; recoupement structurel via le schéma
@@ -112,12 +112,12 @@ ou plusieurs objets dont la somme des scores atteint au moins ce seuil (par exem
 contre Y unités » communiqué publiquement par Frontier. **Relu lors de la révision** (fil rouvert via proxy lecteur
 r.jina.ai) : un témoignage y confirme explicitement qu'« only one [class of materials] is tradeable », c'est-à-dire
 qu'une seule des classes de matériaux à pied est réellement échangeable — cohérent avec le tableau de la section
-1.1/1.3 (Assets échangeables entre eux, Data non échangeable en troc libre).
+[1.1](#11-les-quatre-catégories-officielles-du-journal-vs-le-regroupement-communautaire-goodsassetsdata)/[1.3](#13-ce-qui-est-échangeable-au-comptoir-du-bartender-ce-qui-ne-lest-pas) (Assets échangeables entre eux, Data non échangeable en troc libre).
 
 **Lacune de recherche assumée : aucune source consultée, y compris lors de la révision, ne donne les valeurs de
 score exactes par matériau.** Ne pas inventer de tableau de taux de conversion ici serait plus honnête que de
 produire des chiffres plausibles mais non vérifiés — utilisez le comptoir en jeu (qui affiche le score requis au
-moment de l'échange) ou un outil communautaire à jour (EDOMH, voir section 5) pour connaître le score exact d'un
+moment de l'échange) ou un outil communautaire à jour (EDOMH, voir [section 5](#5-outils-communautaires-et-suivi-dinventaire)) pour connaître le score exact d'un
 matériau donné avant de vous déplacer.
 
 **Deux tarifs de comptoir connus (lacune partiellement comblée).** Cette lacune n'est plus totale : le coût
@@ -146,7 +146,7 @@ valeur de cession.
 | Chemical ↔ Circuit ↔ Tech (entre les trois sous-catégories d'Assets)  | **Oui**                                                      | 3 sources indépendantes (sites.google.com/view/elite-materials, guide Steam « Goods, Assets, Data », fil Frontier « three classes ») + témoignage relu en révision confirmant qu'une seule classe est réellement échangeable |
 | Data ↔ n'importe quelle autre catégorie                               | **Non**                                                      | Absence de toute mention contraire ; un fil Reddit demandant cette fonctionnalité (« Bartenders should be able to trade on foot data materials ») confirme par son existence même qu'elle n'existe pas. À ne pas confondre avec l'**Encoded Material Trader** des matériaux de vaisseau (Raw/Manufactured/Encoded, voir [06-ingenieurs.md](./06-ingenieurs.md)) : ce dernier est un service totalement distinct, réservé aux matériaux d'ingénierie de vaisseau, et ne concerne pas le `Data` à pied de ce guide |
 | Item/Goods ↔ Assets ou Data                                            | Non documenté comme praticable                                | — |
-| Remise ciblée de Data pour valider une condition de déblocage/parrainage d'Engineer | **Oui, mais ce n'est pas un troc matériau-contre-matériau** — voir 1.4 | Pages Engineer Inara + fil Frontier « Which Items to keep, trade & sell with bartender » |
+| Remise ciblée de Data pour valider une condition de déblocage/parrainage d'Engineer | **Oui, mais ce n'est pas un troc matériau-contre-matériau** — voir [1.4](#14-le-cas-particulier-des-quêtes-de-déblocage-dengineer) | Pages Engineer Inara + fil Frontier « Which Items to keep, trade & sell with bartender » |
 
 **Précision décisive : le comptoir est asymétrique.** La règle se formule sans ambiguïté — le bartender ne revend que
 les *Assets* ; il achète les *Goods* et les *Data* contre crédits, mais n'en revend jamais. Trois conséquences que le
@@ -156,7 +156,7 @@ tableau ci-dessus ne disait pas explicitement :
    Ce qu'il ne fait jamais, c'est en **fournir** en échange de quoi que ce soit.
 2. **Suit Schematic**, **Health Monitor** (Goods) et **Manufacturing Instructions** (Data) ne s'obtiennent donc
    **que par pillage de settlement ou par récompense de mission** — aucun raccourci par le comptoir n'existe.
-3. Corollaire pratique pendant une montée en grade de combinaison (section 3.4) : ne vendez surtout pas ces trois
+3. Corollaire pratique pendant une montée en grade de combinaison ([section 3.4](#34-montée-en-grade-de-la-combinaison--ce-que-la-récolte-doit-préparer)) : ne vendez surtout pas ces trois
    composants au bartender pour faire des crédits, vous ne pourrez pas les racheter. L'avertissement vaut nommément
    pour le **Suit Schematic**, le plus cher des cinq à 50 000 Cr : ne jamais le céder au comptoir pendant une montée
    en grade.
@@ -178,7 +178,7 @@ le troc général :
   Data / Genetic Research aux bartenders pour valider son parrainage. Ce chiffre est corroboré par deux sources
   indépendantes (pages Engineer Inara et fil Frontier relu en révision) qui s'accordent toutes deux sur 20.
 
-Il ne s'agit **pas** d'un échange de matériau contre matériau au sens de la section 1.3, mais d'une remise ciblée qui
+Il ne s'agit **pas** d'un échange de matériau contre matériau au sens de la [section 1.3](#13-ce-qui-est-échangeable-au-comptoir-du-bartender-ce-qui-ne-lest-pas), mais d'une remise ciblée qui
 coche une case de quête — les matériaux remis ne reviennent pas sous une autre forme. Ne planifiez donc pas de
 farming de ces matériaux dans l'idée de les revendre ensuite : gardez-en un compte large plutôt que de viser un total
 au plus juste.
@@ -188,7 +188,7 @@ au plus juste.
 | Niveau de stockage                              | Plafond                                                | Statut de confirmation |
 |---------------------------------------------------|-----------------------------------------------------------|---------------------------|
 | Casier de bord du vaisseau — *Ship Locker*, structure confirmée par le schéma journal (par catégorie `Items`/`Components`/`Data`, séparément) | **Rapporté par la communauté à 1000 unités par catégorie** | **Non retrouvé dans une source primaire lors de la révision** — le schéma `ShipLocker` confirme la structure en catégories séparées, mais aucun document Frontier ni fil consulté cette fois-ci n'a pu reconfirmer le chiffre précis de 1000 ; à vérifier en jeu (l'écran d'inventaire affiche le plafond courant) avant de s'y fier pour planifier un farming de masse |
-| Fleet Carrier                                       | Comportement différent signalé par des joueurs (plafond potentiellement partagé entre les 3 catégories) | **Non tranché** — sujet à débat/bug reporté par la communauté, à vérifier en jeu avant de s'y fier |
+| Fleet Carrier (Porte-Vaisseau)                       | Comportement différent signalé par des joueurs (plafond potentiellement partagé entre les 3 catégories) | **Non tranché** — sujet à débat/bug reporté par la communauté, à vérifier en jeu avant de s'y fier |
 | Stock du bartender NPC lui-même (quantité qu'il peut offrir par visite) | —                                                       | **Non documenté** dans les sources consultées, y compris lors de la révision |
 
 Contrairement aux matériaux de vaisseau, dont les plafonds de stockage sont documentés par grade dans
@@ -211,7 +211,7 @@ s'applique pas** à l'équipement à pied, ce qui est cohérent avec le paragrap
 Le **Tech Broker** (service distinct, vérifié sur sites.google.com/view/elite-materials/others/tech-broker) ne
 concerne **pas** les matériaux Odyssey à pied : c'est un service dédié aux armes Guardian hybrides et aux modules de
 vaisseau utilisant des matériaux Guardian (par exemple les Sirius Heatsinks). Si vous cherchez un contact d'échange
-pour vos matériaux à pied, c'est le **bartender** de la section 1.2-1.3 qu'il vous faut, pas le Tech Broker — les deux
+pour vos matériaux à pied, c'est le **bartender** de la section [1.2](#12-le-mécanisme-du-bartender--un-score-de-troc-pas-un-taux-fixe)-[1.3](#13-ce-qui-est-échangeable-au-comptoir-du-bartender-ce-qui-ne-lest-pas) qu'il vous faut, pas le Tech Broker — les deux
 sont des PNJ de station totalement distincts avec des inventaires sans rapport.
 
 ### 1.7 Ni avec la synthèse : elle n'existe pas à pied
@@ -246,7 +246,7 @@ C'est la méthode la plus documentée et la plus recommandée par la communauté
   d'énergie (Power Regulator) pour le garder — au prix d'une perte de réputation et d'une amende de **100 000 Cr**.
   Méthode dédiée si votre seul objectif est de farmer des Power Regulators.
 - **Double bénéfice** : ce grind sert aussi à débloquer l'Engineer **Jude Navarro** (10 missions de
-  réactivation/restauration requises, voir section 4.1) — le farming de matériaux et le déblocage d'Engineer avancent
+  réactivation/restauration requises, voir [section 4.1](#41-effort-de-déblocage-des-trois-engineers-de-départ)) — le farming de matériaux et le déblocage d'Engineer avancent
   donc en parallèle.
 
 ### 2.2 Corrélation entre type d'économie du settlement et loot
@@ -279,7 +279,7 @@ Deux précisions pour éviter les confusions fréquentes en forum :
 - Les symboles **« + »** accolés au nom d'un settlement (ex. « Baldock Extraction Rigs ++ ») indiquent sa **taille**,
   pas son niveau de sécurité — ce sont deux systèmes d'information distincts affichés côte à côte.
 - Le **niveau d'autorisation** (de 0 à 3, obtenu par piratage ou fourni automatiquement par certaines missions comme
-  en 2.1) est encore un troisième système, propre à l'accès aux zones et aux casiers d'un settlement donné — il n'est
+  en [2.1](#21-méthode-reine--missions-de-réactivationrestauration-de-settlement)) est encore un troisième système, propre à l'accès aux zones et aux casiers d'un settlement donné — il n'est
   pas une propriété du settlement lui-même mais de votre situation à un instant T.
 
 ### 2.4 Farming ciblé : schémas d'armes (Item/Goods) via missions de larcin
@@ -334,7 +334,7 @@ Frontier, le Fandom (via extraits recoupés) et les forums communautaires confir
 Genetic Sampler ne servent qu'à débloquer des entrées **Codex** et à être vendus contre des crédits à **Vista
 Genomics** (voir [10-exploration.md](./10-exploration.md)) — ce n'est pas un matériau d'ingénierie.
 
-Le matériau nommé **« Biological Sample »** (utilisé par exemple dans le parrainage d'Oden Geiger, section 1.4) est en
+Le matériau nommé **« Biological Sample »** (utilisé par exemple dans le parrainage d'Oden Geiger, [section 1.4](#14-le-cas-particulier-des-quêtes-de-déblocage-dengineer)) est en
 réalité obtenu **dans les settlements** — pas via le scan exobiologique. Il s'agit d'une simple coïncidence de
 nommage thématique entre deux systèmes de jeu par ailleurs indépendants : ne planifiez pas une session
 d'exobiologie dans l'espoir d'en tirer des matériaux d'ingénierie à pied.
@@ -351,7 +351,7 @@ Industrial Silo**, qui sont des installations procédurales ordinaires et peuven
 | Lieu                                                    | Intérêt principal                                                                  |
 |-----------------------------------------------------------|----------------------------------------------------------------------------------|
 | **Iah Bulu** (système)                                     | Cité comme le plus populaire pour le farming toutes catégories, regroupe trois économies proches : *Arai's Mine* (Extraction), *Bhule Engineering Hub* (Industriel), *Mitchell Resort* (Tourisme) |
-| **Jameson Crash Site** (HIP 12099 1 B, coord. -54.375358 \| -50.353342) | Data encodées, via scan des balises de données + relog (méthode 2.5), sans combat ; site fixe non procédural |
+| **Jameson Crash Site** (HIP 12099 1 B, coord. -54.375358 \| -50.353342) | Data encodées, via scan des balises de données + relog (méthode [2.5](#25-farming-ciblé--data-via-lastuce-du-relog-sur-balise)), sans combat ; site fixe non procédural |
 | **Dav's Hope** (Hyades Sector DR-V c2-23 A 5, coord. Live 50.5426 \| 137.415) | Settlement abandonné, parcouru en SRV, matériaux manufacturés variés ; cité aussi comme meilleure source précoce de Chemical Processors ; site fixe non procédural |
 | **Selenium Farm** (HR 3230 3AA, coord. 52.6000 \| -165.8786) | Matériaux bruts au SRV — pertinent surtout pour l'ingénierie de vaisseau, moins pour l'équipement à pied |
 | **Friedrich Industrial Silo** (HIP 7869)                    | Pad de données SEC à ~20 m de l'entrée, spécifiquement pour farmer les Settlement Defence Plans (spawn rare, environ une fois tous les 20 cycles ; il en faut 15 pour un déblocage complet, soit environ 10h de répétition selon l'auteur du guide) |
@@ -394,8 +394,8 @@ conformément au principe d'une source de vérité unique par sujet.
 
 #### 2.9.1 Les sept composants de combinaison : catégorie Odyssey, valeur et provenance exacte
 
-Ces sept matériaux sont ceux qui alimentent la **montée en grade des combinaisons** (section 3.4). Ils sont typés avec
-la terminologie *Good / Data / Asset* de la section 1.1, ce qui recoupe indépendamment le regroupement communautaire
+Ces sept matériaux sont ceux qui alimentent la **montée en grade des combinaisons** ([section 3.4](#34-montée-en-grade-de-la-combinaison--ce-que-la-récolte-doit-préparer)). Ils sont typés avec
+la terminologie *Good / Data / Asset* de la [section 1.1](#11-les-quatre-catégories-officielles-du-journal-vs-le-regroupement-communautaire-goodsassetsdata), ce qui recoupe indépendamment le regroupement communautaire
 retenu dans ce guide.
 
 | Composant                      | Catégorie Odyssey | Valeur (Cr) | Où le trouver à pied                                                                                                                                                                                                                                 | Achetable au comptoir bartender ?                                                             |
@@ -412,7 +412,7 @@ Deux enseignements que ce tableau rend visibles d'un coup d'œil :
 
 - **Manufacturing Instructions est le goulot d'étranglement de toute la progression à pied.** Il n'est ni achetable
   ni vendable, et Rosa Dayette en réclame **10** pour sa recommandation vers Yi Shen. La chaîne de parrainage vers Yi
-  Shen — celle qui mène à Night Vision, voir section 4.2 — est donc **en concurrence directe** avec la montée en grade
+  Shen — celle qui mène à Night Vision, voir [section 4.2](#42-priorité-de-déblocage-des-engineers-selon-lobjectif-de-jeu) — est donc **en concurrence directe** avec la montée en grade
   des combinaisons pour la même ressource. Il n'existe aucun moyen d'en acheter : seuls les data ports et les
   récompenses de mission en fournissent. *(Le chiffre de « 56 recettes » parfois cité pour ce composant est un calcul
   et non un relevé — voir la mise au point dans
@@ -426,22 +426,22 @@ déclarées, EDCD/FDevIDs et l'étude interne `docs/faisabilite-spansh-temps-ree
 #### 2.9.2 Les trois provenances communes aux sept composants de combinaison, et leurs conditions
 
 Chaque provenance est typée et assortie de conditions rédigées. Trois d'entre elles valent pour les sept composants de
-combinaison sans exception ; deux composants en ajoutent une pour leur compte propre, ce que la section 2.9.4 détaille.
+combinaison sans exception ; deux composants en ajoutent une pour leur compte propre, ce que la [section 2.9.4](#294-les-matériaux-de-vaisseau--renvoi-et-un-décompte-à-corriger) détaille.
 
 | Provenance                 | Ce qu'elle donne                                                                                                                                                                                                          | Conditions attachées                                                                                                                                                                                                                                                                        |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Pillage de settlement** | Les settlements contrôlés par une faction **Anarchy** n'infligent **aucune amende** : c'est le terrain de farm à privilégier.                                                                            | On peut s'octroyer une **autorisation de sécurité de niveau 3** depuis un terminal du **Command Centre** — le **niveau 2 suffit à éteindre les tourelles** — et **les gardes n'entrent pas dans un bâtiment dont ils n'ont pas le niveau d'accès**. **Rétablir le courant d'abord empêche les scavengers d'apparaître.** |
+| **Pillage de settlement** | Les settlements contrôlés par une faction **Anarchy** (gouvernement Anarchie) n'infligent **aucune amende** : c'est le terrain de farm à privilégier.                                                                            | On peut s'octroyer une **autorisation de sécurité de niveau 3** depuis un terminal du **Command Centre** (centre de commandement) — le **niveau 2 suffit à éteindre les tourelles** — et **les gardes n'entrent pas dans un bâtiment dont ils n'ont pas le niveau d'accès**. **Rétablir le courant d'abord empêche les scavengers d'apparaître.** |
 | **Récompense de mission**  | Depuis le **Type-8 Update (août 2024)**, les récompenses de mission couvrent **les cinq composants de combinaison**, avec des quantités **trois à quatre fois supérieures** à l'avant.                     | Aucune condition attachée. Conséquence directe : **sélectionner ses missions par récompense est devenu plus efficace que piller.**                                                                                                                                            |
 | **Comptoir bartender**     | Le bartender **ne revend que les Assets**. Il achète les Goods et les Data contre crédits mais n'en revend jamais.                                                                                          | Aucune condition attachée. Conséquence : Suit Schematic, Health Monitor et Manufacturing Instructions s'obtiennent **uniquement** par pillage ou par mission.                                                                                                                                   |
 
-**Ce que cela change par rapport à la section 2.1.** Les trois conditions de la ligne « pillage » recoupent et
-précisent la méthode décrite en 2.1 sur trois points concrets : le niveau d'autorisation 3 peut s'**obtenir sur
+**Ce que cela change par rapport à la [section 2.1](#21-méthode-reine--missions-de-réactivationrestauration-de-settlement).** Les trois conditions de la ligne « pillage » recoupent et
+précisent la méthode décrite en [2.1](#21-méthode-reine--missions-de-réactivationrestauration-de-settlement) sur trois points concrets : le niveau d'autorisation 3 peut s'**obtenir sur
 place** depuis un terminal du Command Centre (et pas seulement être fourni par une mission de réactivation) ; le
 **niveau 2 suffit** si l'objectif se limite à neutraliser les tourelles ; et le comportement des gardes — qui
 n'entrent pas dans un bâtiment dont ils n'ont pas le niveau d'accès — donne une règle de repli exploitable en cas
-d'alerte. La priorité donnée en 2.1 au rétablissement du courant est, elle, confirmée telle quelle.
+d'alerte. La priorité donnée en [2.1](#21-méthode-reine--missions-de-réactivationrestauration-de-settlement) au rétablissement du courant est, elle, confirmée telle quelle.
 
-**Une correction de calendrier à intégrer à la section 2.1.** La « méthode reine » décrite en 2.1 reste valable, mais
+**Une correction de calendrier à intégrer à la [section 2.1](#21-méthode-reine--missions-de-réactivationrestauration-de-settlement).** La « méthode reine » décrite en [2.1](#21-méthode-reine--missions-de-réactivationrestauration-de-settlement) reste valable, mais
 un rééquilibrage daté en déplace le centre de gravité : depuis le **Type-8 Update d'août 2024**, la
 **récompense** de la mission pèse plus lourd que le **butin** ramassé pendant son exécution. Lisez donc le libellé des
 missions avant de les accepter, plutôt que de les choisir uniquement pour le settlement où elles vous emmènent.
@@ -455,7 +455,7 @@ que ce guide n'énonçait pas jusqu'ici :
 > le set rend un **Data Point Intel Package** en crédits. Plus la sécurité du site est haute, plus les données sont
 > rares — et les défenses fortes. »
 
-Trois conséquences pour la méthode de farming de la section 2.5 :
+Trois conséquences pour la méthode de farming de la [section 2.5](#25-farming-ciblé--data-via-lastuce-du-relog-sur-balise) :
 
 1. **Le set de quatre est l'unité de travail, pas le point individuel.** Interrompre une boucle après deux scans
    laisse le set incomplet et vous prive du **Data Point Intel Package**, la récompense en crédits versée à la
@@ -464,10 +464,10 @@ Trois conséquences pour la méthode de farming de la section 2.5 :
    utile, alors qu'une pause la laisse s'épuiser. C'est un argument pour repérer les quatre points avant de scanner
    le premier plutôt que de les chercher un par un.
 3. **La sécurité du site est un curseur à double tranchant** : plus elle est haute, plus les données obtenues sont
-   rares, mais plus les défenses sont fortes. C'est la contrepartie exacte de la méthode furtive de la section 2.6,
+   rares, mais plus les défenses sont fortes. C'est la contrepartie exacte de la méthode furtive de la [section 2.6](#26-farming-furtif-sans-combat-dans-un-settlement-actif),
    qui privilégie au contraire les sites civils peu défendus.
 
-Les données de référence précisent en outre que les data points exploitables comprennent les **Private Data Beacons**
+Les données de référence précisent en outre que les data points exploitables comprennent les **Private Data Beacons** (balises de données privées)
 des *Degraded* et *Encoded Emissions*, les **satellites**, les **Planetary Outposts** scannés au *Data Link Scanner*
 du SRV — **les
 Starports ne comptent pas** — et les **missions de scan de surface**, qui rendent souvent des données rares. Pour le
@@ -498,17 +498,17 @@ particulier, et elle ne vaut alors que pour lui. Ne compter que les premières f
 | **Total de types distincts**             | **11**                                                                                                                                                          | **5**                                                                     |
 
 Le « trois » de la version antérieure n'était donc exact que pour les provenances déclarées au niveau de la catégorie
-« Composants de combinaison » (celles de la section 2.9.2), présentées à tort comme le total. Deux composants ajoutent
+« Composants de combinaison » (celles de la [section 2.9.2](#292-les-trois-provenances-communes-aux-sept-composants-de-combinaison-et-leurs-conditions)), présentées à tort comme le total. Deux composants ajoutent
 en effet pour leur compte propre une provenance que ce décompte faisait disparaître : le **Manufacturing Instructions**
 avec les **points de données**, et le **Health Monitor** avec la **récupération sur épave de surface** — la seule des
-sept fiches à porter cette provenance, comme le signale déjà le tableau de la section 2.9.1.
+sept fiches à porter cette provenance, comme le signale déjà le tableau de la [section 2.9.1](#291-les-sept-composants-de-combinaison--catégorie-odyssey-valeur-et-provenance-exacte).
 
 **Le détail des provenances côté vaisseau n'est pas repris ici** — économies des material traders, taux de conversion,
 comportement des High Grade Emissions, composition fixe des corps atterrissables : il relève de
 [06-ingenieurs.md](./06-ingenieurs.md), qui en est la source de vérité pour le corpus. Retenez seulement, pour éviter
 la confusion la plus fréquente à pied, que le **material trader** (Raw / Manufactured / Encoded, matériaux de vaisseau)
 et le **bartender** (Goods / Assets / Data, matériaux à pied) sont deux services distincts, aux inventaires disjoints —
-voir déjà la section 1.6 pour la distinction d'avec le Tech Broker.
+voir déjà la [section 1.6](#16-ne-pas-confondre-le-bartender-avec-le-tech-broker) pour la distinction d'avec le Tech Broker.
 
 *Sourcage : décompte refait par script le 9 septembre 2026 sur les données de référence du dépôt (édition 2026-08), en
 additionnant les provenances déclarées au niveau des catégories et celles déclarées au niveau des matériaux.*
@@ -529,7 +529,7 @@ non graduée. Il ne vaut **pas** pour la **montée en grade de la combinaison el
 elle, parfaitement graduée en quatre paliers chiffrés — matériaux, crédits et emplacements de modification gagnés.
 Cette table existe : elle figure dans
 [07-equipement-a-pied.md](./07-equipement-a-pied.md#monter-une-combinaison-en-grade--la-table-de-référence), et la
-section 3.4 ci-dessous n'en retient que les volumes à préparer avant une session de récolte. La distinction est
+[section 3.4](#34-montée-en-grade-de-la-combinaison--ce-que-la-récolte-doit-préparer) ci-dessous n'en retient que les volumes à préparer avant une session de récolte. La distinction est
 structurante : on **améliore la combinaison** par paliers pour gagner des emplacements, puis on **remplit ces
 emplacements** avec des modifications à recette fixe.
 
@@ -580,7 +580,7 @@ exhaustive et à jour des quantités par blueprint, plutôt qu'un tableau figé 
 
 ### 3.4 Montée en grade de la combinaison : ce que la récolte doit préparer
 
-Contrairement aux modifications (section 3.1), la **montée en grade de la combinaison** est graduée : quatre paliers
+Contrairement aux modifications ([section 3.1](#31-pourquoi-il-ny-a-pas-de-paliers-g1-g5-côté-équipement-à-pied)), la **montée en grade de la combinaison** est graduée : quatre paliers
 mènent du Grade 1 au Grade 5, chacun consommant cinq composants et des crédits, et chacun débloquant un **emplacement
 de modification** supplémentaire.
 
@@ -597,22 +597,22 @@ pour la Maverick, Titanium Plating pour la Dominator.
 
 - **Le blindage et le Graphene dominent le volume** : 28 unités de chacun contre 12 pour les trois autres composants.
   Ce sont aussi les deux seuls composants de type *Asset* de la recette, donc les seuls que le comptoir bartender
-  puisse fournir (section 1.3) — c'est là, et là seulement, que le troc a un intérêt réel pendant une montée en grade.
+  puisse fournir ([section 1.3](#13-ce-qui-est-échangeable-au-comptoir-du-bartender-ce-qui-ne-lest-pas)) — c'est là, et là seulement, que le troc a un intérêt réel pendant une montée en grade.
   Pour l'**Artemis**, dont le blindage est l'Aerogel, ce sont exactement les deux matériaux dont le tarif de troc est
-  chiffré (section 1.2) ; pour la Maverick et la Dominator, le tarif du blindage reste à relever au comptoir.
+  chiffré ([section 1.2](#12-le-mécanisme-du-bartender--un-score-de-troc-pas-un-taux-fixe)) ; pour la Maverick et la Dominator, le tarif du blindage reste à relever au comptoir.
 - **Le palier G3 → G4 est celui qui casse un plan de récolte** : il double la marche précédente au lieu de la
   prolonger. C'est là que l'on se retrouve typiquement à court de **Manufacturing Instructions**, le goulot
-  d'étranglement identifié en 2.9.1 — un matériau qui ne s'achète nulle part et ne se ramasse que sur data port
-  (méthode 2.5) ou en récompense de mission.
+  d'étranglement identifié en [2.9.1](#291-les-sept-composants-de-combinaison--catégorie-odyssey-valeur-et-provenance-exacte) — un matériau qui ne s'achète nulle part et ne se ramasse que sur data port
+  (méthode [2.5](#25-farming-ciblé--data-via-lastuce-du-relog-sur-balise)) ou en récompense de mission.
 - **Planifiez la montée en grade et le parrainage de Rosa Dayette ensemble.** Les 12 Manufacturing Instructions d'une
-  montée complète et les 10 qu'elle réclame pour sa recommandation vers Yi Shen (section 2.9.1) font **22 unités** d'un
+  montée complète et les 10 qu'elle réclame pour sa recommandation vers Yi Shen ([section 2.9.1](#291-les-sept-composants-de-combinaison--catégorie-odyssey-valeur-et-provenance-exacte)) font **22 unités** d'un
   même matériau introuvable au comptoir. Les découvrir l'une après l'autre, par surprise, coûte une session entière.
 - **Sur le seul critère du blindage, la Maverick est la plus rapide à monter** : le **Carbon Fibre Plating** est
-  précisément l'un des matériaux que la boucle furtive de la section 2.6 apprend à ramasser sans engager de combat,
-  dans les settlements d'extraction de taille moyenne. C'est aussi la combinaison recommandée en 2.1 pour les missions
+  précisément l'un des matériaux que la boucle furtive de la [section 2.6](#26-farming-furtif-sans-combat-dans-un-settlement-actif) apprend à ramasser sans engager de combat,
+  dans les settlements d'extraction de taille moyenne. C'est aussi la combinaison recommandée en [2.1](#21-méthode-reine--missions-de-réactivationrestauration-de-settlement) pour les missions
   de réactivation : les deux méthodes s'alimentent l'une l'autre.
 
-**Ne confondez pas les deux barèmes.** Les coûts de modification cités en section 3.2 (500 000, 750 000 ou
+**Ne confondez pas les deux barèmes.** Les coûts de modification cités en [section 3.2](#32-recettes-exactes-vérifiées-de-douze-blueprints-hero-ferrari-wellington-beck) (500 000, 750 000 ou
 1 000 000 Cr selon le blueprint) relèvent d'un barème entièrement distinct de celui des paliers de grade : on améliore
 la combinaison par paliers pour gagner des emplacements, puis on remplit ces emplacements avec des modifications à
 recette fixe, facturées séparément.
@@ -628,9 +628,9 @@ trois combinaisons), dont les sources amont déclarées sont EDCD/coriolis-data 
 | Engineer            | Condition de déblocage                                           | Effort relatif                                                                 |
 |-----------------------|-------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | **Domino Green**      | Voyager 100 années-lumière en navette/taxi (Apex)                | **Le plus rapide et le plus facile — zéro combat.**                          |
-| **Jude Navarro**      | 10 missions de restauration/réactivation de settlement           | Effort modéré ; **ce grind sert en même temps de méthode principale de farming de matériaux** (section 2.1) — double bénéfice |
-| **Hero Ferrari**      | 10 zones de conflit de surface (combat)                          | **Le plus long/difficile pour un joueur non orienté combat**, mais nécessaire tôt si l'objectif est le combat ; existence et spécialité reconfirmées en révision (voir 3.2) |
-| **Terra Velasquez** (2ᵉ maillon de la chaîne Jude Navarro) | 6 Covert Heists + 6 Covert Thefts | Signalé comme le maillon le plus long à débloquer toutes chaînes confondues |
+| **Jude Navarro**      | 10 missions de restauration/réactivation de settlement           | Effort modéré ; **ce grind sert en même temps de méthode principale de farming de matériaux** ([section 2.1](#21-méthode-reine--missions-de-réactivationrestauration-de-settlement)) — double bénéfice |
+| **Hero Ferrari**      | 10 zones de conflit de surface (combat)                          | **Le plus long/difficile pour un joueur non orienté combat**, mais nécessaire tôt si l'objectif est le combat ; existence et spécialité reconfirmées en révision (voir [3.2](#32-recettes-exactes-vérifiées-de-douze-blueprints-hero-ferrari-wellington-beck)) |
+| **Terra Velasquez** (2ᵉ maillon de la chaîne Jude Navarro) | 6 Covert Heists (casses furtives) + 6 Covert Thefts (vols furtifs) | Signalé comme le maillon le plus long à débloquer toutes chaînes confondues |
 
 *Pour la liste complète des neuf Engineers Core et des quatre Engineers de Colonia (positions dans les chaînes,
 spécialités), voir le tableau déjà établi dans
@@ -640,10 +640,10 @@ spécialités), voir le tableau déjà établi dans
 
 | Objectif                              | Ordre recommandé                                                                         | Justification |
 |------------------------------------------|-------------------------------------------------------------------------------------------|----------------|
-| **Polyvalent / early game**             | Domino Green → Jude Navarro                                                              | Les deux chaînes les moins coûteuses à démarrer ; le grind Jude Navarro finance déjà le farming de matériaux (2.1) ; couvrent à elles deux Extra Backpack Capacity, Enhanced Tracking, Reload Speed, Extra Ammo Capacity |
+| **Polyvalent / early game**             | Domino Green → Jude Navarro                                                              | Les deux chaînes les moins coûteuses à démarrer ; le grind Jude Navarro finance déjà le farming de matériaux ([2.1](#21-méthode-reine--missions-de-réactivationrestauration-de-settlement)) ; couvrent à elles deux Extra Backpack Capacity, Enhanced Tracking, Reload Speed, Extra Ammo Capacity |
 | **Combat**                              | Hero Ferrari en priorité, malgré son coût plus élevé                                    | Ses mods et ceux de sa chaîne (Wellington Beck, Uma Laszlo) couvrent Faster Handling, Damage Resistance, Faster Shield Regen, Headshot Damage, Reload Speed — pertinent dès que le joueur engage des zones de conflit de toute façon |
 | **Exploration / exobiologie**           | Domino Green → Kit Fowler → Yarden Bond, et/ou Hero Ferrari → Terra Velasquez → Oden Geiger | Couvrent Improved Jump Assist, Increased Air Reserves/Sprint Duration, Night Vision — cohérent avec le tableau playstyle de [07-equipement-a-pied.md](./07-equipement-a-pied.md#exploration-et-exobiologie-à-pied--la-combinaison-artemis) |
-| **Discrétion / infiltration**           | Jude Navarro → Terra Velasquez → Oden Geiger, et Domino Green → Kit Fowler → Yarden Bond   | Nécessaires pour Quieter Footsteps, Audio Masking, Night Vision — mais Terra Velasquez impose la barrière la plus lourde (6 covert heists + 6 covert thefts, voir 4.1) : à planifier en dernier ou en parallèle d'un farming déjà lancé, pas comme premier objectif isolé |
+| **Discrétion / infiltration**           | Jude Navarro → Terra Velasquez → Oden Geiger, et Domino Green → Kit Fowler → Yarden Bond   | Nécessaires pour Quieter Footsteps, Audio Masking, Night Vision — mais Terra Velasquez impose la barrière la plus lourde (6 covert heists + 6 covert thefts, voir [4.1](#41-effort-de-déblocage-des-trois-engineers-de-départ)) : à planifier en dernier ou en parallèle d'un farming déjà lancé, pas comme premier objectif isolé |
 
 ### 4.3 Un ordre de déblocage alternatif (« Falcon's Guide »), à ne pas citer comme consensus
 
@@ -675,7 +675,7 @@ unanime à suivre telle quelle.
   - Import de wishlist depuis EDSY/Coriolis.
   - Son schéma de documentation des événements journal (`schemas.edomh.nl`), consulté pour ce guide, confirme au
     passage la structure en quatre catégories `Items/Components/Consumables/Data` du fichier `ShipLocker.json`
-    (section 1.1).
+    ([section 1.1](#11-les-quatre-catégories-officielles-du-journal-vs-le-regroupement-communautaire-goodsassetsdata)).
 - **A évolué pour couvrir aussi l'ingénierie de vaisseau**, pas seulement l'équipement à pied (confirmé par un fil
   d'annonce sur les forums Frontier) — un seul outil peut donc servir aux deux volets du corpus (celui-ci et
   [06-ingenieurs.md](./06-ingenieurs.md)).
@@ -693,15 +693,15 @@ unanime à suivre telle quelle.
 ## Check-list avant une session de farming à pied
 
 - Choisir la méthode selon l'objectif : missions de réactivation/restauration de settlement pour un rendement
-  général (2.1), farming ciblé par schéma d'arme pour un composant précis (2.4), astuce du relog sur balise pour de
-  la Data (2.5), ou farming furtif sans combat pour rester discret (2.6).
-- Vérifier les volumes de matériaux nécessaires avant de partir (section 3.4), pour ne pas s'arrêter en cours de
+  général ([2.1](#21-méthode-reine--missions-de-réactivationrestauration-de-settlement)), farming ciblé par schéma d'arme pour un composant précis ([2.4](#24-farming-ciblé--schémas-darmes-itemgoods-via-missions-de-larcin)), astuce du relog sur balise pour de
+  la Data ([2.5](#25-farming-ciblé--data-via-lastuce-du-relog-sur-balise)), ou farming furtif sans combat pour rester discret ([2.6](#26-farming-furtif-sans-combat-dans-un-settlement-actif)).
+- Vérifier les volumes de matériaux nécessaires avant de partir ([section 3.4](#34-montée-en-grade-de-la-combinaison--ce-que-la-récolte-doit-préparer)), pour ne pas s'arrêter en cours de
   session faute d'objectif chiffré.
 - En farming furtif : surveiller triangle (ligne de vue directe) et cercle (scan hors ligne de vue) sur le HUD avant
-  de piller chaque casier — ignorer le triangle casse la boucle « sans combat » (2.6).
-- Confirmer le niveau de sécurité du settlement visé (2.3) plutôt que de le découvrir sur place.
+  de piller chaque casier — ignorer le triangle casse la boucle « sans combat » ([2.6](#26-farming-furtif-sans-combat-dans-un-settlement-actif)).
+- Confirmer le niveau de sécurité du settlement visé ([2.3](#23-niveaux-de-sécurité-des-settlements--ne-pas-confondre-avec-le-niveau-dautorisation)) plutôt que de le découvrir sur place.
 - Vérifier le seuil exact d'échange attendu par le bartender pour un déblocage d'Engineer ciblé (ex. 15 unités pour
-  Wellington Beck, section 1.4) avant de s'arrêter en pensant avoir terminé.
+  Wellington Beck, [section 1.4](#14-le-cas-particulier-des-quêtes-de-déblocage-dengineer)) avant de s'arrêter en pensant avoir terminé.
 - Emporter un tracker d'inventaire à jour (EDOMH ou alternative, section 5) pour éviter de récolter un matériau déjà
   au plafond de stockage.
 
@@ -709,25 +709,25 @@ unanime à suivre telle quelle.
 
 Ce guide assume explicitement ces limites plutôt que de les combler par des chiffres inventés :
 
-1. **Valeurs exactes du « score de troc » par matériau** au bartender (section 1.2) — **partiellement comblée
+1. **Valeurs exactes du « score de troc » par matériau** au bartender ([section 1.2](#12-le-mécanisme-du-bartender--un-score-de-troc-pas-un-taux-fixe)) — **partiellement comblée
    depuis** : le **Graphene** (coût 23, cession 13) et l'**Aerogel** (coût 9, cession 5) sont chiffrés, seuls des
    sept composants de combinaison à l'être. Les **cinq autres ne sont couverts par aucune source**, et rien ne donne
    encore le score des matériaux de
-   modification. Le principe reste celui décrit en 1.2 (score cumulatif, perte de l'excédent, une seule classe
+   modification. Le principe reste celui décrit en [1.2](#12-le-mécanisme-du-bartender--un-score-de-troc-pas-un-taux-fixe) (score cumulatif, perte de l'excédent, une seule classe
    réellement échangeable).
 2. **Plafond exact du casier de bord (Ship Locker)** : la structure en catégories séparées est confirmée par le
    schéma journal, mais le chiffre de 1000 unités par catégorie, largement rapporté par la communauté, **n'a pas pu
    être reconfirmé par une source primaire lors de la révision** — traitez-le comme une estimation communautaire non
    garantie, à vérifier en jeu. Les données de référence **ne couvrent pas ce point** : elles donnent bien un plafond
    par grade pour les matériaux de vaisseau (300/250/200/150/100), mais n'en attribuent aucun aux sept composants de
-   combinaison (section 1.5).
+   combinaison ([section 1.5](#15-limites-de-stock-des-matériaux-à-pied-ship-locker-fleet-carrier)).
 3. ~~Nombre exact d'unités requises pour débloquer Wellington Beck~~ — résolu depuis : **15 unités**, confirmé par
-   relecture directe de la page Engineer d'Inara.cz le 9 septembre 2026 (voir section 1.4).
+   relecture directe de la page Engineer d'Inara.cz le 9 septembre 2026 (voir [section 1.4](#14-le-cas-particulier-des-quêtes-de-déblocage-dengineer)).
 4. **Limite de stock du bartender NPC lui-même** (par opposition au plafond de stockage joueur — point 2 ci-dessus)
    — non documentée dans les sources consultées, initiales comme en révision.
-5. **Tableau complet des quantités par blueprint**, au-delà des douze exemples de la section 3.2 — la ressource qui
+5. **Tableau complet des quantités par blueprint**, au-delà des douze exemples de la [section 3.2](#32-recettes-exactes-vérifiées-de-douze-blueprints-hero-ferrari-wellington-beck) — la ressource qui
    prétendait l'agréger (Google Sheet communautaire) n'est plus en ligne ; utilisez Inara.cz ou EDOMH en lien vivant.
-6. **URL exacte et statut actuel de l'Odyssey Mapping Guide (OMG)** (section 5.2) — site source indisponible au
+6. **URL exacte et statut actuel de l'Odyssey Mapping Guide (OMG)** ([section 5.2](#52-alternatives-et-compléments-à-edomh-edengineer-omg-inara-logbook-edsm)) — site source indisponible au
    moment de la recherche initiale et non retesté en révision.
 7. **Coût en crédits des paliers de montée en grade des combinaisons** — les montants proviennent du **wiki Fandom
    seul**, **Inara n'en listant aucun** : une source unique face au silence d'une autre, **à confirmer en jeu au
@@ -735,12 +735,90 @@ Ce guide assume explicitement ces limites plutôt que de les combler par des chi
    paliers ne sont pas concernées par cette réserve. Les montants eux-mêmes, et la réserve dans sa forme complète,
    figurent dans
    [07-equipement-a-pied.md](./07-equipement-a-pied.md#monter-une-combinaison-en-grade--la-table-de-référence).
-8. **Tarif au comptoir des composants Carbon Fibre Plating et Titanium Plating** (section 2.9.1) — ce sont des
-   *Assets*, donc revendus par le bartender sur le principe énoncé en 1.3, mais aucune source ne leur attribue de coût
+8. **Tarif au comptoir des composants Carbon Fibre Plating et Titanium Plating** ([section 2.9.1](#291-les-sept-composants-de-combinaison--catégorie-odyssey-valeur-et-provenance-exacte)) — ce sont des
+   *Assets*, donc revendus par le bartender sur le principe énoncé en [1.3](#13-ce-qui-est-échangeable-au-comptoir-du-bartender-ce-qui-ne-lest-pas), mais aucune source ne leur attribue de coût
    d'acquisition ni de valeur de cession. Le chiffre exact reste à relever au comptoir.
 
 Si vous disposez d'une source fiable et à jour comblant l'une de ces lacunes, elle mérite de remplacer la mention
 correspondante ci-dessus plutôt que d'être ajoutée à côté.
+
+## Questions fréquentes
+
+### Le bartender peut-il me revendre un Suit Schematic ou un Manufacturing Instructions (bartender trading) ?
+
+Non : le bartender **achète** les *Goods* (Suit Schematic, Health Monitor) et les *Data* (Manufacturing Instructions)
+contre crédits, mais ne les **revend** jamais — seules les trois sous-catégories d'*Assets* (Chemical, Circuit, Tech)
+s'échangent entre elles à son comptoir. Ces trois composants ne s'obtiennent donc que par pillage de settlement ou
+récompense de mission. Voir [1.3](#13-ce-qui-est-échangeable-au-comptoir-du-bartender-ce-qui-ne-lest-pas).
+
+### Comment marche le troc (bartering) au comptoir du bartender ?
+
+Chaque matériau porte une valeur de **score** ; pour obtenir un objet d'un score donné, il faut apporter un ou
+plusieurs matériaux dont la somme atteint ce seuil, et tout excédent est perdu. Les deux seules valeurs connues : le
+**Graphene** coûte 23 et se cède pour 13, l'**Aerogel** coûte 9 et se cède pour 5 — échanger du Graphene contre de
+l'Aerogel est donc rentable, l'inverse ne l'est pas. Voir [1.2](#12-le-mécanisme-du-bartender--un-score-de-troc-pas-un-taux-fixe).
+
+### Combien de Manufacturing Instructions faut-il au total pour monter une combinaison et parrainer Rosa Dayette ?
+
+Une montée complète du Grade 1 au Grade 5 consomme **12** Manufacturing Instructions, et Rosa Dayette en réclame
+**10** de plus pour sa recommandation vers Yi Shen, soit **22 unités** d'un même matériau qui ne s'achète nulle part —
+seuls les data ports et les récompenses de mission en fournissent. C'est le goulot d'étranglement de toute la
+progression à pied. Voir [3.4](#34-montée-en-grade-de-la-combinaison--ce-que-la-récolte-doit-préparer).
+
+### Comment farmer des Power Regulators efficacement ?
+
+La méthode reine consiste à accepter une mission de réactivation/restauration de settlement, foncer rétablir le
+courant au bâtiment PWR pour empêcher l'apparition des pillards, puis — en option — abandonner la mission après avoir
+reçu le régulateur d'énergie pour le garder, au prix d'une perte de réputation et d'une amende de **100 000 Cr**. Voir
+[2.1](#21-méthode-reine--missions-de-réactivationrestauration-de-settlement).
+
+### L'exobiologie (exobiology) alimente-t-elle l'ingénierie à pied ?
+
+Non : les échantillons du Genetic Sampler ne servent qu'à débloquer des entrées Codex et à être vendus contre des
+crédits à Vista Genomics. Le matériau « Biological Sample », utilisé pour le parrainage d'Oden Geiger, provient en
+réalité des settlements et non du scan exobiologique — une simple coïncidence de nom entre deux systèmes de jeu
+indépendants. Voir [2.7](#27-correction-importante--lexobiologie-nalimente-pas-lingénierie-à-pied).
+
+### Quelles sont les coordonnées exactes de Dav's Hope et du Jameson Crash Site ?
+
+Dav's Hope (Hyades Sector DR-V c2-23, corps A 5) est à **50.5426 | 137.415** (repère *Abandoned Base*), et le Jameson
+Crash Site (HIP 12099, corps 1 B) à **-54.375358 | -50.353342** (repère *Wrecked Ship*). Ce sont les coordonnées Live :
+les anciens guides citent souvent les coordonnées Legacy de Dav's Hope (44.8180, -31.3893), qui mènent au mauvais
+endroit. Voir [2.8](#28-lieux-de-farming-cités-par-la-communauté-iah-bulu-davs-hope-jameson-crash-site).
+
+### Peut-on farmer un settlement sans combat (stealth farming) ?
+
+Oui : cibler un settlement d'extraction de taille moyenne, voler le profil de sécurité d'un PNJ extérieur, scanner
+les PNJ civils intérieurs, puis piller les casiers en surveillant triangle (ligne de vue directe, à éviter) et cercle
+(scanné hors champ, moins critique) sur le HUD. Rendement annoncé : **5 à 10 matériaux par boucle de 10 à 15
+minutes**, sans combat. Voir [2.6](#26-farming-furtif-sans-combat-dans-un-settlement-actif).
+
+### Combien d'unités faut-il vendre au bartender pour débloquer Wellington Beck et Oden Geiger ?
+
+Wellington Beck exige **15 unités** cumulées de Multimedia Entertainment / Classic Entertainment / Cat Media ; Oden
+Geiger exige **20 unités** cumulées de Biological Sample / Employee Genetic Data / Genetic Research. Ce n'est pas un
+troc mais une remise ciblée qui coche une case de quête : gardez-en un compte large plutôt que de viser un total au
+plus juste. Voir [1.4](#14-le-cas-particulier-des-quêtes-de-déblocage-dengineer).
+
+### Dans quel ordre débloquer les Engineers à pied selon mon style de jeu ?
+
+En polyvalent/early game : **Domino Green** (100 années-lumière en Apex, zéro combat) puis **Jude Navarro** (10
+missions de réactivation/restauration, qui finance déjà le farming de matériaux). En combat : **Hero Ferrari** en
+priorité malgré son coût plus élevé, pour ses mods et ceux de sa chaîne. Voir [4.2](#42-priorité-de-déblocage-des-engineers-selon-lobjectif-de-jeu).
+
+### Quelle est la limite de stockage du Ship Locker pour les matériaux à pied ?
+
+La communauté rapporte couramment **1000 unités par catégorie** (Items/Components/Data séparément), mais ce chiffre
+n'a pas pu être reconfirmé par une source primaire lors de la révision de ce guide — vérifiez le plafond affiché sur
+votre écran d'inventaire en jeu avant de planifier un farming de masse. Voir
+[1.5](#15-limites-de-stock-des-matériaux-à-pied-ship-locker-fleet-carrier).
+
+### Quel outil communautaire utiliser pour suivre ses matériaux à pied (materials tracker) ?
+
+**EDOMH** (Elite Dangerous Odyssey Materials Helper, par Jixxed) lit les fichiers journal et l'API Frontier pour un
+suivi d'inventaire en temps réel, affiche les matériaux nécessaires par blueprint ou déblocage d'Engineer, et propose
+un overlay in-game aux terminaux de données. Il couvre aussi désormais l'ingénierie de vaisseau. Voir
+[5.1](#51-edomh-elite-dangerous-odyssey-materials-helper).
 
 ## Voir aussi
 
@@ -753,7 +831,7 @@ correspondante ci-dessus plutôt que d'être ajoutée à côté.
 - [09-combat-a-pied.md](./09-combat-a-pied.md) — déroulement tactique du combat au sol, pertinent pour les missions
   de la section 2 impliquant un raid actif.
 - [13-operations.md](./13-operations.md) — gameplay au sol générique (settlements, missions, piratage).
-- [10-exploration.md](./10-exploration.md) — exobiologie complète (espèces, rangs, primes) ; voir la section 2.7 de
+- [10-exploration.md](./10-exploration.md) — exobiologie complète (espèces, rangs, primes) ; voir la [section 2.7](#27-correction-importante--lexobiologie-nalimente-pas-lingénierie-à-pied) de
   ce guide pour la clarification sur ce qu'elle n'alimente pas.
 - [18-colonisation.md](./18-colonisation.md) — colonisation de systèmes et construction de settlements, contexte
   direct de nombreux lieux de farming évoqués ici.
@@ -761,7 +839,7 @@ correspondante ci-dessus plutôt que d'être ajoutée à côté.
 
 ## Sources
 
-Données de référence du dépôt, hors ligne, exploitées pour les sections 1.2, 1.3, 1.5, 2.8, 2.9 et 3.4 (**édition
+Données de référence du dépôt, hors ligne, exploitées pour les sections [1.2](#12-le-mécanisme-du-bartender--un-score-de-troc-pas-un-taux-fixe), [1.3](#13-ce-qui-est-échangeable-au-comptoir-du-bartender-ce-qui-ne-lest-pas), [1.5](#15-limites-de-stock-des-matériaux-à-pied-ship-locker-fleet-carrier), [2.8](#28-lieux-de-farming-cités-par-la-communauté-iah-bulu-davs-hope-jameson-crash-site), [2.9](#29-les-sept-composants-de-combinaison--provenance-conditions-et-goulot-détranglement) et [3.4](#34-montée-en-grade-de-la-combinaison--ce-que-la-récolte-doit-préparer) (**édition
 2026-08** pour les deux) :
 
 - Relevé des matériaux — provenances de terrain typées et leurs conditions rédigées, plafonds de stockage par grade

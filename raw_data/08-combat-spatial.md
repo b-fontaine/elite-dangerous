@@ -39,7 +39,8 @@ confrontée à la **dureté de coque** de la cible (*hardness*, de 20 à 75), pu
 dégâts — **thermique**, **cinétique**, **explosif** ou **absolu**. Les armes se montent en **fixe**, **gimbal** ou
 **tourelle** ; la coque se renforce par **bulkheads**, **HRP** et **MRP**. L'**interdiction** et le **mass lock**
 contraignent la fuite. Les terrains PvE sont les **RES/HazRES**, les **Compromised Nav Beacons** et les **Combat
-Zones** ; le rang va de *Harmless* à **Elite V**, et détruire une cible « clean » génère prime et **notoriety**. Une
+Zones** ; le rang va de *Harmless* à **Elite V**, et détruire une cible « clean » (sans prime) génère prime et
+**notoriety** (réputation criminelle qui ne se paie pas et ne décroît qu'avec le temps). Une
 boucle distincte, le **piratage à distance de megaships et d'installations spatiales** au **Recon Limpet
 Controller**, ne demande aucun combat.
 
@@ -91,7 +92,7 @@ relâchées et aligne son nez sur son vecteur de déplacement réel. Le désacti
 stabilisation : le vaisseau conserve son inertie et dérive librement, ce qui permet d'orienter le nez indépendamment de
 la trajectoire réelle.
 
-C'est la technique reine du dogfight avancé. Elle permet notamment de garder un adversaire dans le viseur pendant une
+C'est la technique reine du dogfight (combat rapproché entre chasseurs) avancé. Elle permet notamment de garder un adversaire dans le viseur pendant une
 dérive latérale, ou d'exécuter un demi-tour serré sans réduire sa vitesse — contrairement au virage classique en FA on,
 limité par la vitesse de rotation angulaire du vaisseau.
 
@@ -182,7 +183,7 @@ l'explosif**, et neutre face au thermique ; seuls les deux derniers grades réor
 | Menace dominante attendue                                      | Blindage à monter          | Ce que fait son profil                                                                      | Ce qu'il coûte tactiquement                                    |
 |----------------------------------------------------------------|----------------------------|----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | Aucune (interceptor léger, priorité vitesse et portée de saut) | Lightweight Alloy          | Profil de base ; le multiplicateur de points de coque le plus faible des cinq grades          | Coque minimale : toute perte de bouclier devient critique       |
-| Menace mixte, farming PvE prolongé                             | Military Grade Composite   | Même profil de base, multiplicateur de points de coque maximal                                | Masse la plus élevée à profil constant : maniabilité et saut    |
+| Menace mixte, farming (répétition ciblée de combats pour un gain régulier) PvE prolongé | Military Grade Composite   | Même profil de base, multiplicateur de points de coque maximal                                | Masse la plus élevée à profil constant : maniabilité et saut    |
 | Lasers adverses (escortes PNJ, PvP orienté laser)              | Mirrored Surface Composite | Renforce le thermique, dégrade lourdement le cinétique et sensiblement l'explosif             | Un adversaire qui bascule sur multi-canons vous punit aussitôt  |
 | Multi-canons, canons, missiles (HazRES, CZ, brawl PvP)         | Reactive Surface Composite | Renforce le cinétique et l'explosif, dégrade le thermique                                     | Vulnérabilité accrue aux lasers, très courants en escorte PNJ   |
 | Bouclier délibérément absent (hull tank pur)                   | Reactive ou Military Grade | Choix dicté par l'arme adverse la plus probable, pas par le chiffre brut de points de coque   | Aucun filet : la moindre erreur de lecture de menace se paie    |
@@ -290,7 +291,7 @@ l'Advanced Multi-Cannon ou les racks de missiles Seeker.
 
 | Style de combat                               | Effet expérimental à viser | Pourquoi il change l'issue du combat                                                                                                                                                                                                         |
 |-----------------------------------------------|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Escadre organisée, focus-fire sur une cible   | **Corrosive shell**        | Affaiblit temporairement la dureté de coque de la cible et augmente tous les dégâts qu'elle encaisse : c'est le seul effet qui agit sur le deuxième filtre décrit en 3.6, donc le seul qui amplifie les tirs de tous les équipiers à la fois |
+| Escadre organisée, focus-fire (concentrer les tirs de toute l'escadre sur une même cible) | **Corrosive shell**        | Affaiblit temporairement la dureté de coque de la cible et augmente tous les dégâts qu'elle encaisse : c'est le seul effet qui agit sur le deuxième filtre décrit en [3.6](#36-comment-un-tir-est-encaissé--bouclier-puis-dureté-de-coque-contre-pénétration-de-blindage-puis-résistances), donc le seul qui amplifie les tirs de tous les équipiers à la fois |
 | Duel PvP contre un shield tank lourd          | **Phasing sequence**       | Fait passer une fraction des dégâts à travers le bouclier directement sur la coque, au prix d'une légère baisse de dégâts bruts                                                                                                              |
 | Combat long, gestion thermique tendue         | **Thermal vent**           | Évacue de la chaleur du tireur à chaque tir qui touche, et en génère davantage à chaque tir manqué : récompense directement la précision                                                                                                     |
 | Casser un adversaire qui se recharge au SCB   | **Feedback Cascade**       | Un tir qui frappe une cible en train de déployer une Shield Cell endommage la banque et réduit la recharge obtenue                                                                                                                           |
@@ -319,7 +320,7 @@ Types de modifications de base fréquemment recherchés sur les armes de combat 
   combat long (« Efficient ») ;
 - une modification orientée **portée**, augmentant la distance efficace et réduisant la chute de dégâts (« Long
   range »), indispensable pour un build sniper ;
-- deux modifications qui relèvent la **pénétration de blindage** — « Focused » et « Sturdy » — détaillées en 3.7.
+- deux modifications qui relèvent la **pénétration de blindage** — « Focused » et « Sturdy » — détaillées en [3.7](#37-pénétration-de-blindage-piercing-de-chaque-arme-taille-daffût-par-taille-daffût).
 
 ### 3.4 Modules utilitaires de combat indispensables selon le rôle (chaff, heat sink, point defence)
 
@@ -329,10 +330,10 @@ Types de modifications de base fréquemment recherchés sur les armes de combat 
 | Point defence                   | Interception automatique des missiles, torpilles et mines entrantes | Quasi obligatoire en PvP et contre les Thargoïdes |
 | Chaff launcher                  | Contre-mesure anti-gimbal / anti-tourelle                           | Essentiel en dogfight                              |
 | Heat sink launcher              | Évacuation de chaleur + contre-verrouillage                         | Fuite, gestion thermique, anti-missile             |
-| Kill warrant scanner            | Révèle les primes émises par d'autres systèmes/factions sur la cible visée | Chasse aux primes (PvE), voir section 7            |
+| Kill warrant scanner            | Révèle les primes émises par d'autres systèmes/factions sur la cible visée | Chasse aux primes (PvE), voir [section 7](#7-crime-primes-et-notoriety)            |
 | Electronic countermeasure (ECM) | Contre les missiles à tête chercheuse                               | Défense anti-missile                               |
 | Shutdown field neutraliser      | Contre les interdicteurs de champ                                   | Combat Zones, contre certains NPC/joueurs          |
-| Frame Shift Wake Scanner        | Lit les low/high wakes laissés par une cible (voir section 2.3)     | Traque, chasse aux primes, PvP                     |
+| Frame Shift Wake Scanner        | Lit les low/high wakes laissés par une cible (voir [section 2.3](#23-low-wake-et-high-wake--traquer-une-cible-au-frame-shift-wake-scanner))     | Traque, chasse aux primes, PvP                     |
 | Xeno scanner + armes AX dédiées | Détection et dégâts bonus contre les Thargoïdes                     | Combat anti-Thargoïdes uniquement                  |
 
 ### 3.5 Ingénierie G5 des modules clés de combat (distributeur, bouclier, propulseurs)
@@ -378,7 +379,7 @@ dureté augmente donc bien les dégâts reçus. L'ampleur chiffrée de cette ré
 sources : elle n'est pas donnée ici plutôt que d'être devinée.
 
 **Troisième filtre — les résistances de coque par type de dégâts.** Les dégâts qui ont franchi le filtre de dureté
-sont enfin modulés par le profil de résistance du blindage et des renforts, type par type (voir 1.6).
+sont enfin modulés par le profil de résistance du blindage et des renforts, type par type (voir [1.6](#16-renforts-et-blindage-hrpmrp-bulkheads)).
 
 **Ce que cela change pour choisir une arme.** Le jeu compte **48 châssis** ; c'est le fait 14 de
 [00-chronologie-canonique.md](./00-chronologie-canonique.md) qui fait autorité sur ce décompte. EDCD/coriolis-data,
@@ -392,7 +393,7 @@ coque » ; elle n'est pas reproduite ici. Deux conséquences pratiques en décou
 taille perd l'essentiel de son intérêt contre un gros châssis, indépendamment de son DPS affiché : c'est la
 pénétration, pas le DPS, qui décide si le tir compte vraiment. D'autre part, quelques familles d'armes franchissent
 toutes les duretés mesurables du jeu sans exception et se comportent donc de façon identique quelle que soit la
-cible — le tableau de la section 3.7 les identifie.
+cible — le tableau de la [section 3.7](#37-pénétration-de-blindage-piercing-de-chaque-arme-taille-daffût-par-taille-daffût) les identifie.
 
 *Source : EDCD/coriolis-data, répertoire `ships/` (champ `properties.hardness`), répertoire `modules/hardpoints/`
 (champ `piercing`), `spec/data-spec.js` et `modifications/specials.json`, commit 0db9234b5b9c.*
@@ -401,7 +402,7 @@ cible — le tableau de la section 3.7 les identifie.
 
 Le tableau ci-dessous donne, pour chacune des 25 familles d'armes offensives du jeu de données, la pénétration de
 blindage de son modèle standard dans chaque taille d'affût. Ces valeurs se comparent directement à la
-dureté de coque de la cible décrite en 3.6 : à pénétration égale ou supérieure à la dureté, le tir porte à plein. En
+dureté de coque de la cible décrite en [3.6](#36-comment-un-tir-est-encaissé--bouclier-puis-dureté-de-coque-contre-pénétration-de-blindage-puis-résistances) : à pénétration égale ou supérieure à la dureté, le tir porte à plein. En
 règle générale, les affûts fixe, gimbal et tourelle d'un même modèle et d'une même taille partagent **la même
 pénétration** — le mode de montage change la précision et les dégâts, jamais la capacité à percer la coque. Un
 balayage exhaustif des 43 fichiers de `modules/hardpoints/` ne relève qu'**une seule exception dans tout le jeu de
@@ -475,7 +476,7 @@ d'arme qui n'a de sens qu'en escadre, avec un équipier chargé des dégâts de 
 **Combien de châssis résistent à quelle arme.** Le tableau suivant est dérivé des deux précédents : pour chaque arme
 et chaque taille, il compte les vaisseaux, sur les 47 châssis que publie EDCD/coriolis-data (le jeu en compte 48, le
 Lynx Highliner étant absent de la source), dont la dureté de coque **dépasse** la pénétration de l'arme, c'est-à-dire
-ceux contre lesquels cette arme subit la réduction décrite en 3.6. Un zéro signifie que l'arme perce toutes les
+ceux contre lesquels cette arme subit la réduction décrite en [3.6](#36-comment-un-tir-est-encaissé--bouclier-puis-dureté-de-coque-contre-pénétration-de-blindage-puis-résistances). Un zéro signifie que l'arme perce toutes les
 coques mesurées, sans exception.
 
 | Arme (nom en jeu)     | Small   | Medium  | Large   | Huge    |
@@ -568,7 +569,7 @@ explosif et thermique.
 
 Deux réserves de lecture. Le fait que les dégâts **absolus** ignorent les résistances est une règle de jeu établie que
 ce jeu de données **ne documente pas** : il porte l'étiquette du type, pas la règle de calcul qui s'y applique — au
-même titre que le coefficient de dureté évoqué en 3.6. Par ailleurs, les armes anti-xéno portent, en plus de leur type
+même titre que le coefficient de dureté évoqué en [3.6](#36-comment-un-tir-est-encaissé--bouclier-puis-dureté-de-coque-contre-pénétration-de-blindage-puis-résistances). Par ailleurs, les armes anti-xéno portent, en plus de leur type
 conventionnel, un **marqueur X** propre au registre anti-thargoïde ; leurs pondérations ne totalisent pas 100 % dans
 la source et le détail de leur combinaison n'y est pas explicité. Le traitement complet du combat anti-thargoïde est
 dans [25-combat-ax.md](./25-combat-ax.md).
@@ -614,13 +615,13 @@ trois niveaux d'intensité : **basse**, **moyenne** et **haute**.
 
 ### 4.3bis Rentabilité chiffrée : HazRES, Combat Zones et missions de massacre (≈ 30 M Cr/h) — reconstitution communautaire
 
-Ni §4.1 (RES/HazRES), ni §4.3 (Combat Zones), ni §7.1 (bounty vouchers) ne chiffraient jusqu'ici de rendement en
+Ni [§4.1](#41-resource-extraction-sites-res-et-hazardous-res-hazres) (RES/HazRES), ni [§4.3](#43-combat-zones-spatiales-cz--basse-moyenne-et-haute-intensité) (Combat Zones), ni [§7.1](#71-bounty-vouchers--encaisser-en-station-les-primes-dune-cible-recherchée) (bounty vouchers) ne chiffraient jusqu'ici de rendement en
 crédits — ce dernier constate même explicitement qu'« aucune moyenne chiffrée fiable n'a pu être vérifiée ». **Ce qui
 suit est une reconstitution communautaire datée du 13 septembre 2026, pas un barème officiel Frontier** — voir la
 note de méthode de [00-boucles-de-gameplay.md](./00-boucles-de-gameplay.md) avant de la recopier ailleurs.
 
 - **HazRES** avec un vaisseau de combat engagé et un bonus de Power (Powerplay) actif : de l'ordre de **≈ 30 M Cr/h**.
-- **Missions de massacre/assassinat** (§4.4) empilées auprès de plusieurs factions pour un même lot de cibles :
+- **Missions de massacre/assassinat** ([§4.4](#44-missions-dassassinat-et-de-massacre-en-vaisseau)) empilées auprès de plusieurs factions pour un même lot de cibles :
   typiquement **≈ 40 M Cr pour 30 cibles** par mission, jusqu'à **200 M Cr et plus** en cumulant plusieurs contrats
   sur le même lot de kills.
 - **Combat Zones** (basse/moyenne/haute intensité) : la communauté les considère comparables au HazRES en
@@ -754,7 +755,7 @@ engagé avant l'accrochage et maintenu pendant tout le piratage **évite l'amend
 **ne supprime pas le rapport de crime** : la sécurité du système est prévenue et patrouille la zone — en système
 **Anarchie**, en l'absence de forces de sécurité organisées, cette réponse n'a pas lieu. Pour effacer une amende ou
 une prime accumulée, passer par un **Interstellar Factor** dans un système non contrôlé par la faction lésée (voir la
-section 7.2 « Devenir wanted et Interstellar Factors » plus haut dans ce guide), puis écouler le butin volé au marché
+[section 7.2](#72-devenir--wanted--et-interstellar-factors) « Devenir wanted et Interstellar Factors » plus haut dans ce guide), puis écouler le butin volé au marché
 noir. Aucune
 source consultée ne confirme que cette activité déclenche spécifiquement la mécanique de *notoriety* — à traiter
 comme non établi plutôt que comme acquis.
@@ -771,7 +772,7 @@ comme non établi plutôt que comme acquis.
 
 ## 5. Tactiques PvP en combat spatial (Open Play, duels, wing PvP)
 
-Le PvP se pratique principalement en mode **Open Play** (voir section 6.2) : interdiction en supercruise (section 2),
+Le PvP se pratique principalement en mode **Open Play** (voir [section 6.2](#62-modes-de-jeu--open-groupe-privé-et-solo)) : interdiction en supercruise ([section 2](#2-interdiction-en-supercroisière-et-évasion)),
 embuscade en système ou en station, duels organisés en zone neutre. Il se distingue nettement du PvE par l'exigence de
 maîtrise du FA off, de la gestion fine des pips en temps réel, et de la lecture du build adverse (arme fixe ou gimbal,
 présence de chaff ou de heat sink, capacité de fuite).
@@ -786,11 +787,11 @@ Points clés de la méta PvP :
 - En combat de groupe (**wing PvP**), la coordination du focus-fire et la synchronisation des contre-mesures (chaff,
   heat sink, SCB) déterminent l'issue plus que la puissance individuelle d'un seul vaisseau — voir
   [23-jeu-en-groupe.md](./23-jeu-en-groupe.md) pour la mécanique de Wing.
-- Le **hull-tank pur** (miser sur une coque massive plutôt que sur le bouclier, voir section 1.6) est une philosophie
+- Le **hull-tank pur** (miser sur une coque massive plutôt que sur le bouclier, voir [section 1.6](#16-renforts-et-blindage-hrpmrp-bulkheads)) est une philosophie
   PvP alternative utilisée par certains pilotes expérimentés pour absorber les dégâts après la chute du bouclier, tout
   en conservant un profil de masse permettant encore l'esquive active.
 - Un adversaire vaincu en PvP dans un système où il est « clean » vous rend potentiellement redevable d'une prime locale
-  — voir section 7 sur le crime et la notoriety avant de s'engager en Open Play dans un système à sécurité élevée.
+  — voir [section 7](#7-crime-primes-et-notoriety) sur le crime et la notoriety avant de s'engager en Open Play dans un système à sécurité élevée.
 
 Le niveau le plus élevé de jeu compétitif repose sur des centaines d'heures d'entraînement au flick, la connaissance des
 temps de recharge adverses selon le vaisseau identifié à vue, et des builds ultra-spécialisés poussés à l'extrême de
@@ -846,7 +847,7 @@ Le choix du mode ne change ni l'économie ni le [BGS](./21-bgs.md) (partagés en
 radicalement l'exposition au risque en combat :
 
 - **Open Play** : instance partagée où n'importe quel autre joueur peut apparaître à proximité. C'est le seul mode où le
-  PvP non consenti (embuscade, interdiction par un joueur, ganking) est possible — voir section 5.
+  PvP non consenti (embuscade, interdiction par un joueur, ganking) est possible — voir [section 5](#5-tactiques-pvp-en-combat-spatial-open-play-duels-wing-pvp).
 - **Groupe privé** (Private Group) : instance restreinte à une liste fermée de joueurs (groupes communautaires
   thématiques PvE ou PvP). Le Wing et les duels organisés y restent possibles, mais uniquement entre membres du groupe.
 - **Solo** : seuls les PNJ partagent l'instance du joueur, aucun autre commandant humain n'y apparaît jamais.
@@ -863,7 +864,7 @@ deux joueurs du même système ne se voient pas toujours, voir
 ### 6.3 CQC (Close Quarters Combat)
 
 Le CQC est un mode d'arène PvP arcade totalement séparé du jeu principal : vaisseaux et modules préconfigurés,
-matchmaking dédié, et progression de rang indépendante du rang de combat de la galaxie principale décrit en 6.1. Il ne
+matchmaking dédié, et progression de rang indépendante du rang de combat de la galaxie principale décrit en [6.1](#61-léchelle-de-rang-de-combat-de-harmless-à-elite). Il ne
 demande ni vaisseau possédé ni crédits, ce qui en fait un bon terrain d'entraînement au dogfight pur (visée, esquive)
 sans les enjeux économiques du monde persistant. Le détail des règles, files d'attente et cartes du CQC est traité dans
 [23-jeu-en-groupe.md](./23-jeu-en-groupe.md), aux côtés des Wings et du Multicrew.
@@ -877,7 +878,7 @@ sans les enjeux économiques du monde persistant. Le détail des règles, files 
 Éliminer (porter le coup de grâce sur) un vaisseau déjà recherché — PNJ ou joueur « wanted » selon la faction locale —
 génère un ou plusieurs **bounty vouchers**, un par faction ayant émis une prime sur la cible. Ces vouchers ne sont pas
 crédités automatiquement : ils doivent être encaissés au contact « Redeem Vouchers » d'une station. Scanner la cible au
-préalable avec un **Kill warrant scanner** (voir section 3.4) révèle des primes émises par d'autres systèmes/factions,
+préalable avec un **Kill warrant scanner** (voir [section 3.4](#34-modules-utilitaires-de-combat-indispensables-selon-le-rôle-chaff-heat-sink-point-defence)) révèle des primes émises par d'autres systèmes/factions,
 augmentant le montant total récupérable sur un même kill.
 
 Le montant des vouchers dépend du vaisseau, du rang et du contexte (bonus d'événements, Community Goals de sécurité) et
@@ -929,7 +930,7 @@ nombreux vaisseaux peuvent être adaptés à plusieurs rôles selon la configura
 |------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------|--------------------------------------------------|-----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Interceptor léger/rapide** | Viper, Vulture, Fer-de-Lance, Mamba, Imperial Courier/Eagle modifiés         | ENG (boost, esquive active)                                       | Bi-weave (régénération rapide entre les passes) | Fixe ou mixte fixe/gimbal léger                                                 | Interception rapide de cibles isolées, harcèlement en essaim                                                                               |
 | **Brawler tanky**            | Federal Corvette, Imperial Cutter, Type-10 Defender, Anaconda (config. tank) | SYS (survie sur la durée)                                         | Standard/prismatique + nombreux boosters et SCB | Mixte avec tourelles pour compenser la faible maniabilité                       | Absorber un feu soutenu en CZ haute intensité ou HazRES prolongé                                                                           |
-| **Sniper longue portée**     | Fer-de-Lance, Mamba (version sniper), gros vaisseaux en kiting (Anaconda)    | WEP (soutenir la consommation d'armes à forte puissance par coup) | Selon châssis                                     | Full fixe : rail guns, canons ou accélérateurs à plasma modifiés « long range » | Engager à distance maximale sans exposition au corps-à-corps                                                                               |
+| **Sniper longue portée**     | Fer-de-Lance, Mamba (version sniper), gros vaisseaux en kiting (maintien de la distance en tirant, ex. Anaconda) | WEP (soutenir la consommation d'armes à forte puissance par coup) | Selon châssis                                     | Full fixe : rail guns, canons ou accélérateurs à plasma modifiés « long range » | Engager à distance maximale sans exposition au corps-à-corps                                                                               |
 | **Multi-rôle de combat**     | Krait Mk II, Python/Python Mk II, Alliance Chieftain/Crusader/Challenger     | Équilibré selon la phase                                          | Équilibre bouclier/coque                          | Mixte fixe + gimbal                                                                | RES, CNB, missions d'assassinat et CZ sans reconfiguration lourde, au prix d'un plafond de performance plus bas que les builds spécialisés |
 
 ### 8.1 Interceptor léger/rapide (Viper, Vulture, Fer-de-Lance, Mamba)
@@ -982,7 +983,7 @@ détail châssis par châssis dans [03-vaisseaux.md](./03-vaisseaux.md) : ce gui
 | Renfort               | 1 HRP dans l'unique emplacement militaire du châssis, de classe 5      |
 | Pips typiques         | 2-2-0 en approche → 0-4-0 en fenêtre de tir → 0-0-4 en repositionnement |
 | Affûts du châssis     | 2× Large — EDCD/coriolis-data, `ships/vulture.json`, commit 0db9234b5b9c |
-| Dureté de coque       | 55 : un multi-canon Small adverse (pénétration 22) subit une forte réduction contre cette coque, un canon Large (70) porte à plein — voir 3.6 |
+| Dureté de coque       | 55 : un multi-canon Small adverse (pénétration 22) subit une forte réduction contre cette coque, un canon Large (70) porte à plein — voir [3.6](#36-comment-un-tir-est-encaissé--bouclier-puis-dureté-de-coque-contre-pénétration-de-blindage-puis-résistances) |
 | Prix du châssis nu    | 4 925 615 Cr (Core Dynamics) — EDCD/coriolis-data, `ships/vulture.json`, champ `retailCost`, commit 0db9234b5b9c |
 | Portée de saut stock  | Faible (l'un des points faibles reconnus du châssis) — priorité d'ingénierie FSD, voir [06-ingenieurs.md](./06-ingenieurs.md) |
 | Source                | Archétype de méta communautaire pour le farming HazRES/CZ basse-moyenne intensité (forums Frontier, Coriolis, EDSY) |
@@ -1000,7 +1001,7 @@ détail châssis par châssis dans [03-vaisseaux.md](./03-vaisseaux.md) : ce gui
 | SCB                           | 2× Shield Cell Bank en emplacements internes lourds                     |
 | Renforts                      | 2× HRP en emplacements militaires + Bulkheads Military Grade Composite |
 | Pips typiques                 | SYS dominant (4-0-0 ou 3-1-0) la majorité du combat, bascule ponctuelle sur WEP pour les salves |
-| Dureté de coque                | 70, parmi les plus élevées du jeu (le maximum est 75) : seules les armes à forte pénétration (section 3.7) y portent à plein |
+| Dureté de coque                | 70, parmi les plus élevées du jeu (le maximum est 75) : seules les armes à forte pénétration ([section 3.7](#37-pénétration-de-blindage-piercing-de-chaque-arme-taille-daffût-par-taille-daffût)) y portent à plein |
 | Prix du châssis nu             | 187 969 450 Cr (Core Dynamics) + rang Fédération « Rear Admiral » requis — EDCD/coriolis-data, `ships/federal_corvette.json`, champ `retailCost`, commit 0db9234b5b9c |
 | Source                        | Configuration « tank » de référence pour CZ haute intensité relayée par la communauté PvE (forums, Coriolis, EDSY) |
 
@@ -1023,7 +1024,7 @@ détail châssis par châssis dans [03-vaisseaux.md](./03-vaisseaux.md) : ce gui
 
 > **Correction apportée le 10 septembre 2026.** La révision précédente annonçait « 3× Large + 2× Medium » et des rail
 > guns en taille Large. Le châssis porte en réalité 1× Huge + 4× Medium, et le Rail Gun n'existe qu'en tailles Small
-> et Medium dans le jeu de données (section 3.7) : un rail gun Large est impossible à monter.
+> et Medium dans le jeu de données ([section 3.7](#37-pénétration-de-blindage-piercing-de-chaque-arme-taille-daffût-par-taille-daffût)) : un rail gun Large est impossible à monter.
 
 ---
 
@@ -1039,14 +1040,14 @@ détail châssis par châssis dans [03-vaisseaux.md](./03-vaisseaux.md) : ce gui
 - **Ne jamais engager un combat sérieux** (CZ haute intensité, cible de rang Elite, duel PvP) sans ingénierie G5
   complète sur au moins le distributeur, le bouclier et l'arme principale : l'écart de performance entre un module stock
   et un module G5 est considérable (temps de recharge, capacités, dégâts).
-- **Garder toujours une option d'échappement** : FSD chargée dès que possible hors zone de mass lock (section 2.2),
+- **Garder toujours une option d'échappement** : FSD chargée dès que possible hors zone de mass lock ([section 2.2](#22-le-mass-lock-mass-lock-factor--empêcher-une-cible-de-sauter)),
   boost disponible, heat sink en réserve, et si possible se soumettre proprement plutôt que de perdre une résistance
-  à l'interdiction (section 2.1). La survie prime sur l'élimination, aussi bien en PvP qu'en PvE profond.
+  à l'interdiction ([section 2.1](#21-le-mini-jeu-dinterdiction--résister-ou-se-soumettre)). La survie prime sur l'élimination, aussi bien en PvP qu'en PvE profond.
 - **En combat d'escadre**, désigner une cible de focus-fire et synchroniser les contre-mesures (chaff, heat sink) au
   niveau du groupe plutôt qu'individuellement ; répartir les rôles entre un tank qui absorbe l'agressivité adverse, un
   ou deux DPS burst, et éventuellement un support appliquant des effets corrosifs pour amplifier les dégâts du groupe.
-- **Choisir son mode de jeu (Open/Groupe privé/Solo, section 6.2) en fonction du risque recherché**, et garder à l'esprit
-  l'impact d'un crime en Open Play sur la prime et la notoriety locales (section 7) avant d'engager une cible clean.
+- **Choisir son mode de jeu (Open/Groupe privé/Solo, [section 6.2](#62-modes-de-jeu--open-groupe-privé-et-solo)) en fonction du risque recherché**, et garder à l'esprit
+  l'impact d'un crime en Open Play sur la prime et la notoriety locales ([section 7](#7-crime-primes-et-notoriety)) avant d'engager une cible clean.
 - **Vérifier régulièrement les notes de version officielles** de Frontier Developments et les discussions communautaires
   (forums Frontier, wiki communautaire, r/EliteDangerous) avant de finaliser un build compétitif, afin de tenir compte
   de tout changement d'équilibrage récent des armes ou des modules.
@@ -1062,17 +1063,122 @@ détail châssis par châssis dans [03-vaisseaux.md](./03-vaisseaux.md) : ce gui
 | Chaleur           | Gérer via heat sinks et silent running ; éviter la surchauffe des modules                                                             |
 | Renforts          | Bulkheads/HRP pour la coque, MRP pour les modules internes ; complète le shield tank pour un profil hull tank                          |
 | Armes             | Fixe = DPS max mais précision manuelle ; gimbal = confort mais contré par le chaff ; tourelle = pour les gros vaisseaux peu maniables |
-| Calcul des dégâts | Trois filtres : bouclier, puis pénétration de blindage contre dureté de coque, puis résistances de coque — voir 3.6 |
-| Pénétration       | De 1 (Cytoscrambler) à 10 000 (Torpedo Pylon) ; plasma, rail gun et Gauss percent les 47 coques publiées par la source — voir 3.7 |
-| Types de dégâts   | Thermique contre les boucliers, cinétique contre la coque, explosif contre les modules, absolu insensible aux résistances — voir 3.8 |
+| Calcul des dégâts | Trois filtres : bouclier, puis pénétration de blindage contre dureté de coque, puis résistances de coque — voir [3.6](#36-comment-un-tir-est-encaissé--bouclier-puis-dureté-de-coque-contre-pénétration-de-blindage-puis-résistances) |
+| Pénétration       | De 1 (Cytoscrambler) à 10 000 (Torpedo Pylon) ; plasma, rail gun et Gauss percent les 47 coques publiées par la source — voir [3.7](#37-pénétration-de-blindage-piercing-de-chaque-arme-taille-daffût-par-taille-daffût) |
+| Types de dégâts   | Thermique contre les boucliers, cinétique contre la coque, explosif contre les modules, absolu insensible aux résistances — voir [3.8](#38-ce-que-chaque-arme-inflige-réellement--thermique-cinétique-explosif-ou-absolu) |
 | Interdiction      | Résister (mini-jeu) ou se soumettre ; mass lock immobilise ; low/high wake trahissent la destination d'une cible en fuite             |
 | PvE               | RES/HazRES et CNB pour la chasse aux primes ; CZ pour le combat de masse et la réputation de faction                                  |
 | PvP               | Maîtrise du FA off, lecture du build adverse, coordination d'escadre                                                                  |
 | Rang & modes      | Harmless → Elite puis Elite I à Elite V (score pondéré, pas un compteur de kills) ; Open/Groupe privé/Solo selon le risque PvP ; CQC séparé |
 | Crime             | Bounty vouchers à encaisser en station ; Interstellar Factors pour les primes hors système ; notoriety qui ne se paie pas             |
-| Builds            | Interceptor (vitesse), brawler (tank), sniper (portée), multi-rôle (polyvalence) — voir builds chiffrés en 8.5                        |
+| Builds            | Interceptor (vitesse), brawler (tank), sniper (portée), multi-rôle (polyvalence) — voir builds chiffrés en [8.5](#85-trois-builds-de-combat-chiffrés--vulture-federal-corvette-fer-de-lance)                        |
 | Ingénierie        | G5 sur distributeur, bouclier et arme principale : prérequis pour le combat de haut niveau                                            |
 | AX                | Interceptors à hearts + essaim, nuages caustiques ; état du front à vérifier en direct, pas figé dans ce guide                         |
+
+---
+
+## Questions fréquentes
+
+### Comment répartir mes pips (power distributor) en combat ?
+
+Le vaisseau dispose de **4 pips** à répartir entre trois banques — **SYS** (bouclier), **ENG** (moteurs, boost) et
+**WEP** (condensateur d'armes) —, jusqu'à 4 sur une seule banque à la fois. Le cycle type d'un engagement va de SYS en
+approche (encaisser les premiers tirs), à WEP en fenêtre de tir (cadence soutenue), puis ENG en repositionnement ou
+fuite (vitesse, boost). Automatiser ces bascules via des raccourcis clavier dédiés à des configurations préréglées
+(4-0-0, 0-4-0, 0-0-4, 2-2-0…) est considéré comme la compétence la plus fondamentale du combat. Voir
+[1.1](#11-le-distributeur-dénergie-power-distributor-et-la-gestion-des-pips).
+
+### Comment faire un flick en Flight Assist Off (FA off) ?
+
+Couper le Flight Assist (**FA off**) fait perdre la stabilisation automatique : le vaisseau conserve son inertie et
+peut orienter son nez indépendamment de sa trajectoire réelle. Le **flick** (« 180 flick ») se joue en quatre temps —
+couper le FA en pleine vitesse, appliquer un fort yaw/pitch pour retourner le nez de 180°, tirer sur la cible qu'on
+vient de dépasser, puis rallumer le FA ou continuer en dérive — et distingue nettement un pilote intermédiaire d'un
+pilote expérimenté en PvP. Voir [1.3](#13-flight-assist-off-fa-off-et-le-flick).
+
+### Comment gérer la chaleur (heat management) et éviter la surchauffe ?
+
+La température grimpe avec le boost, les armes énergétiques et la proximité d'une étoile ; au-delà de **100 %**, les
+modules internes s'endommagent, et au-delà d'environ **150 %**, le vaisseau peut être détruit. Les **heat sinks**
+évacuent instantanément une grande quantité de chaleur et brouillent temporairement les verrouillages adverses ; le
+**silent running** masque la signature du vaisseau au prix d'une montée en chaleur rapide et n'est pas tenable
+longtemps. Voir [1.4](#14-gestion-de-la-chaleur-heat-management).
+
+### Shield tank ou hull tank : quelle philosophie de survie choisir ?
+
+Le **shield tank** mise sur le bouclier : Shield Cell Banks pour une recharge instantanée en combat long, générateurs
+bi-weave (recharge rapide, adapté au PvP) ou standard/prismatique (capacité maximale, adapté au PvE/CZ). Le **hull
+tank** mise sur la coque : bulkheads (cinq niveaux), HRP pour les points de coque et MRP pour protéger les modules
+internes contre les dégâts qui traversent bouclier et coque. Un hull tank compétitif garde souvent assez de mobilité
+pour conserver l'esquive active plutôt que d'encaisser passivement. Voir
+[1.5](#15-boucliers-et-absorption-des-dégâts--shield-tank-scb-bi-weave-et-prismatique).
+
+### Fixe, gimbal ou tourelle : quel montage d'arme (fixed, gimballed, turreted) choisir ?
+
+Le **fixe** exige une visée manuelle totale mais inflige les dégâts les plus élevés, sans contre-mesure automatique
+efficace hormis l'esquive adverse. Le **gimbal** suit automatiquement la cible dans un cône limité à dégâts réduits,
+contré par le **chaff**. La **tourelle** vise sur une large plage d'angles pour les dégâts les plus faibles des trois,
+réservée aux gros vaisseaux peu maniables (Anaconda, Cutter, Corvette, Type-10). Voir
+[3.1](#31-modes-de-montage-des-armes--fixe-gimbal-et-tourelle).
+
+### Comment fonctionne la pénétration de blindage (armour piercing) face à la dureté de coque ?
+
+Une fois le bouclier tombé, chaque arme oppose sa **pénétration de blindage** (*piercing*, de 1 pour le Cytoscrambler
+Burst Laser à 10 000 pour le Torpedo Pylon) à la **dureté de coque** de la cible (*hardness*, de 20 à 75 sur les 47
+châssis publiés par la source). Si la pénétration égale ou dépasse la dureté, le tir porte à pleine valeur ; sinon les
+dégâts sont réduits, sans que le coefficient exact de cette réduction soit publié. Plasma Accelerator, Rail Gun et
+Guardian Gauss Cannon percent toutes les coques mesurées du jeu. Voir
+[3.6](#36-comment-un-tir-est-encaissé--bouclier-puis-dureté-de-coque-contre-pénétration-de-blindage-puis-résistances).
+
+### Quel type de dégâts (thermal, kinetic, explosive, absolute damage) infligent les lasers, multi-canons et le Plasma Accelerator ?
+
+Les trois lasers (Pulse, Burst, Beam) sont **100 % thermiques** ; multi-canons, canons et canons à fragmentation sont
+**100 % cinétiques** ; missiles et torpilles sont **100 % explosifs**. Le **Plasma Accelerator** est la seule arme
+humaine à panacher les trois types (20 % thermique, 20 % cinétique, 60 % absolu — insensible aux résistances) ; le
+**Rail Gun** est 67 % thermique et 33 % cinétique. Voir
+[3.8](#38-ce-que-chaque-arme-inflige-réellement--thermique-cinétique-explosif-ou-absolu).
+
+### Comment fonctionnent l'interdiction (interdiction) et le mass lock pour échapper à un poursuivant ?
+
+En supercroisière, l'interdiction déclenche un mini-jeu de type « tir à la corde » : résister en gardant le nez dans la
+zone d'échappement, ou se soumettre immédiatement — souvent l'option la plus sûre. Une fois éjecté en espace normal,
+le **Mass Lock Factor** d'un vaisseau, d'une station ou d'une installation massive à proximité empêche tout saut tant
+que la cible reste dans son rayon ; s'éloigner de toutes les sources de mass lock (ou les détruire) fait disparaître
+l'indicateur. Voir [2.1](#21-le-mini-jeu-dinterdiction--résister-ou-se-soumettre) et
+[2.2](#22-le-mass-lock-mass-lock-factor--empêcher-une-cible-de-sauter).
+
+### RES, HazRES ou Combat Zone (CZ) : où farmer des primes en PvE, et pour quel rendement en Cr/h ?
+
+Les **RES** ciblent les pirates portant une prime sans provoquer la sécurité locale ; les **HazRES** proposent des
+adversaires bien plus dangereux (jusqu'au rang Deadly/Elite) pour un meilleur rendement, au prix d'un vaisseau robuste ;
+les **Combat Zones** (basse/moyenne/haute intensité) opposent des factions en conflit BGS. Une reconstitution
+communautaire — pas un barème Frontier — situe le HazRES avec bonus de Power actif à environ **30 M Cr/h**. Voir
+[4.1](#41-resource-extraction-sites-res-et-hazardous-res-hazres).
+
+### Comment progresse le rang de combat (combat rank), de Harmless à Elite ?
+
+L'échelle compte neuf paliers (Harmless à Elite) puis cinq paliers de prestige supplémentaires (Elite I à Elite V),
+soit **14 valeurs** au total selon EDCD/FDevIDs. La progression suit un score de combat pondéré — éliminer un
+adversaire Deadly ou Elite rapporte bien plus qu'un Harmless — mais Frontier Developments n'a jamais publié les seuils
+exacts de progression. Voir [6.1](#61-léchelle-de-rang-de-combat-de-harmless-à-elite).
+
+### Comment fonctionnent les bounty vouchers, le statut wanted et la notoriety ?
+
+Éliminer une cible déjà recherchée génère un ou plusieurs **bounty vouchers** (un par faction émettrice), à encaisser
+au contact « Redeem Vouchers » d'une station — un **Kill warrant scanner** révèle des primes émises par d'autres
+systèmes pour augmenter le montant récupérable. Attaquer une cible « clean » (sans prime) génère une prime contre le
+joueur, et la répétition d'infractions graves fait monter la **notoriety**, qui bloque l'accostage même après paiement
+et ne décroît qu'avec le temps. Les **Interstellar Factors Contacts** paient les primes émises ailleurs, mais ne
+réduisent jamais la notoriety. Voir [7.2](#72-devenir--wanted--et-interstellar-factors).
+
+### Comment pirater un megaship ou une installation spatiale (megaship piracy) sans s'y arrimer ?
+
+Avec un **Recon Limpet Controller** (classes 1/3/5/7, 10 à 17 secondes de piratage) : scanner d'abord la cible au
+**Data Link Scanner** (gratuit, intégré à tout vaisseau), cibler un sous-objet comme un *Hackable Data Transmitter* ou
+un *Hackable Comms Array* pour révéler son Limpet Docking Point, puis lancer le Recon Limpet. Pour une soute ou une
+trappe de secours, il faut un **Hatch Breaker Limpet Controller** distinct, précédé d'un scan au Manifest Scanner. Le
+Silent Running évite l'amende immédiate mais jamais le rapport de crime. Voir
+[4.6](#46-megaships-et-installations-spatiales--piratage-à-distance).
 
 ---
 
@@ -1081,10 +1187,10 @@ détail châssis par châssis dans [03-vaisseaux.md](./03-vaisseaux.md) : ce gui
 - [Carte des boucles de gameplay](./00-boucles-de-gameplay.md) — HazRES/CZ/massacre comparés aux 21 autres boucles du
   jeu, et méthode de reconstitution du Cr/h (§4.3bis) appliquée aux autres zones aveugles du corpus.
 - [Lore et chronologie](./01-lore.md) — contexte narratif de l'invasion thargoïde et des Titans.
-- [Ingénieurs](./06-ingenieurs.md) — modifications G1-G5 et matrice complète des effets expérimentaux résumés en 3.3.
+- [Ingénieurs](./06-ingenieurs.md) — modifications G1-G5 et matrice complète des effets expérimentaux résumés en [3.3](#33-effets-spéciaux-dingénierie-sur-les-armes).
 - [Équipements](./04-equipements.md) — prix, masses et consommations des modules, et résistances chiffrées des bulkheads par vaisseau.
 - [Vaisseaux](./03-vaisseaux.md) — fiches techniques des 48 châssis du jeu, dont la dureté de coque des 47 que publie
-  EDCD/coriolis-data, référence de la section 3.6.
+  EDCD/coriolis-data, référence de la [section 3.6](#36-comment-un-tir-est-encaissé--bouclier-puis-dureté-de-coque-contre-pénétration-de-blindage-puis-résistances).
 - [Combat anti-Thargoïde (AX) approfondi](./25-combat-ax.md) — builds AX dédiés, escadrons et procédures de défense de système.
 - [Wings, Multicrew et CQC](./23-jeu-en-groupe.md) — coordination d'escadre en combat et détail du mode CQC.
 - [Escadrons de joueurs (Squadrons)](./22-squadrons.md) — organisation de groupes de combat à grande échelle.
@@ -1092,9 +1198,9 @@ détail châssis par châssis dans [03-vaisseaux.md](./03-vaisseaux.md) : ce gui
 - [Community Goals](./24-community-goals.md) — objectifs communautaires de combat et de sécurité.
 - [Porte-vaisseaux de joueur (Fleet Carriers)](./19-fleet-carriers.md) — logistique de combat en flotte, ravitaillement avancé.
 - [Piraterie et PvP](./30-piraterie-et-pvp.md) — piratage de vaisseaux marchands PNJ par interdiction, à distinguer du
-  piratage à distance de megaships et installations traité en 4.6.
+  piratage à distance de megaships et installations traité en [4.6](#46-megaships-et-installations-spatiales--piratage-à-distance).
 - [Pilotage, navigation et stations](./31-pilotage-navigation-et-stations.md) — megaships accostables (Wells-class
-  Carrier, Detention Centre, Rescue Vessel), à ne pas confondre avec les Bulk Cruisers non accostables de 4.6.
+  Carrier, Detention Centre, Rescue Vessel), à ne pas confondre avec les Bulk Cruisers non accostables de [4.6](#46-megaships-et-installations-spatiales--piratage-à-distance).
 - [Outils](./16-outils.md) — Coriolis, EDSY et autres outils de configuration pour valider tout build chiffré ci-dessus.
 - [Glossaire](./00-glossaire.md) — sigles courants (HRP, MRP, AX, CZ, RES…) utilisés dans ce guide.
 - [Débuter et progresser](./27-debuter-et-progresser.md) — monter le rang de combat (Harmless → Elite) efficacement :
@@ -1109,19 +1215,19 @@ Format normalisé selon [00-methodologie-sourcing.md §9](./00-methodologie-sour
 voir aussi [11-commerce.md](./11-commerce.md) et [02-powerplay.md](./02-powerplay.md), guides pilotes de cette normalisation.
 
 - https://en.wikipedia.org/wiki/Elite_Dangerous | secondaire | consulté le 13/09/2026 | confirme : le contexte général du jeu (univers, superpuissances, grandes mécaniques) | ne confirme pas : un chiffre ou une règle de combat spatial propre à ce guide
-- https://canonn.science/ | secondaire | consulté le 13/09/2026 | confirme : l'existence et le rôle de Canonn Research Group comme organisation communautaire de recherche en jeu | ne confirme pas : un chiffre ou une mécanique propre à ce guide — voir l'article dédié aux megaships ci-dessous pour le contenu réellement cité en 4.6
+- https://canonn.science/ | secondaire | consulté le 13/09/2026 | confirme : l'existence et le rôle de Canonn Research Group comme organisation communautaire de recherche en jeu | ne confirme pas : un chiffre ou une mécanique propre à ce guide — voir l'article dédié aux megaships ci-dessous pour le contenu réellement cité en [4.6](#46-megaships-et-installations-spatiales--piratage-à-distance)
 - https://www.edsm.net/en/ | secondaire | consulté le 13/09/2026 | confirme : le rôle d'EDSM comme base communautaire de données systèmes/vaisseaux | ne confirme pas : un fait de ce guide — aucune mécanique de combat n'y est directement rattachée
 - https://www.spansh.co.uk/ | secondaire | consulté le 13/09/2026 | confirme : le rôle de Spansh comme outil communautaire d'agrégation de données et de calcul de route | ne confirme pas : un fait de ce guide — aucune mécanique de combat n'y est directement rattachée
 - https://github.com/EDCD/coriolis-data/tree/0db9234b5b9ce8c939ea84133d7ce336eea88e27 | primaire | consulté le 10/09/2026 | confirme : dureté de coque et blindages (bulkheads) des 47 vaisseaux (répertoire `ships/`), pénétration et répartition des dégâts de chaque arme (`modules/hardpoints/`), compatibilité et effets des blueprints/specials (`modifications/`), et l'obligation des champs `hardness`/`piercing` (`spec/data-spec.js`) | ne confirme pas : le Lynx Highliner (48ᵉ châssis du jeu, absent du dépôt), le coefficient exact de réduction des dégâts sous la dureté de coque, ni la règle de calcul des dégâts absolus et anti-xéno
 - https://github.com/EDCD/FDevIDs/tree/c35612952dd6a547d1a7ac4cffab9c7051e86579 | primaire | consulté le 10/09/2026 | confirme : les noms d'affichage des armes (`outfitting.csv`) et l'échelle nominale à 14 paliers du rang de combat (`combatrank.csv`) | ne confirme pas : les seuils de score nécessaires pour passer d'un rang au suivant, jamais publiés par Frontier
-- https://elite-dangerous.fandom.com/wiki/Megaship | secondaire | consulté le 13/09/2026 | confirme : la définition générale de megaship et la distinction entre megaships accostables et non accostables (section 4.6) | ne confirme pas : le détail chiffré par sous-type, traité par la page Bulk_Cruiser ci-dessous
+- https://elite-dangerous.fandom.com/wiki/Megaship | secondaire | consulté le 13/09/2026 | confirme : la définition générale de megaship et la distinction entre megaships accostables et non accostables ([section 4.6](#46-megaships-et-installations-spatiales--piratage-à-distance)) | ne confirme pas : le détail chiffré par sous-type, traité par la page Bulk_Cruiser ci-dessous
 - https://elite-dangerous.fandom.com/wiki/Bulk_Cruiser | secondaire | consulté le 13/09/2026 | confirme : les huit sous-types de Bulk Cruiser et leur plan de vol fixe à six escales, à cycle hebdomadaire | ne confirme pas : la corrélation classe → cargaison type (voir l'article Canonn ci-dessous)
 - https://elite-dangerous.fandom.com/wiki/Installation | secondaire | consulté le 13/09/2026 | confirme : les onze catégories d'installations spatiales fixes et leur détection au panneau de navigation jusqu'à 1 000 Ls | ne confirme pas : une corrélation classe d'installation → contenu du piratage, absente de toutes les sources consultées
-- https://elite-dangerous.fandom.com/wiki/Salvager | secondaire | consulté le 13/09/2026 | confirme : rien d'exploité dans ce guide — page consultée pour la section 4.6 mais son contenu n'y apparaît finalement pas | ne confirme pas : aucune information de cette page n'est reprise ici ; conservée en source par honnêteté de consultation
-- https://elite-dangerous.fandom.com/wiki/Recon_Limpet_Controller | secondaire | consulté le 13/09/2026 | confirme : le principe d'usage du Recon Limpet Controller (ciblage d'un sous-objet, temps de piratage) repris en 4.6 | ne confirme pas : les classes 1/3/5/7 et les temps précis (10 à 17 s), chiffrés dans 04-equipements.md, source de vérité
+- https://elite-dangerous.fandom.com/wiki/Salvager | secondaire | consulté le 13/09/2026 | confirme : rien d'exploité dans ce guide — page consultée pour la [section 4.6](#46-megaships-et-installations-spatiales--piratage-à-distance) mais son contenu n'y apparaît finalement pas | ne confirme pas : aucune information de cette page n'est reprise ici ; conservée en source par honnêteté de consultation
+- https://elite-dangerous.fandom.com/wiki/Recon_Limpet_Controller | secondaire | consulté le 13/09/2026 | confirme : le principe d'usage du Recon Limpet Controller (ciblage d'un sous-objet, temps de piratage) repris en [4.6](#46-megaships-et-installations-spatiales--piratage-à-distance) | ne confirme pas : les classes 1/3/5/7 et les temps précis (10 à 17 s), chiffrés dans 04-equipements.md, source de vérité
 - https://elite-dangerous.fandom.com/wiki/Hackable_Data_Transmitter | secondaire | consulté le 13/09/2026 | confirme : le Hackable Data Transmitter ne propose qu'un seul Limpet Docking Point et livre ses données directement en soute, sans limpet de collecte | ne confirme pas : les matériaux encodés précis qu'il rend (recoupés avec 06-ingenieurs.md)
 - https://elite-dangerous.fandom.com/wiki/Hackable_Comms_Array | secondaire | consulté le 13/09/2026 | confirme : le Hackable Comms Array propose deux Limpet Docking Points piratables en parallèle et éjecte des canisters à récupérer au Collector Limpet | ne confirme pas : les matériaux encodés précis qu'il rend (recoupés avec 06-ingenieurs.md)
-- https://canonn.science/codex/non-dockable-megaships-an-introduction/ | secondaire | consulté le 13/09/2026 | confirme : la corrélation classe de megaship → cargaison par défaut (table de la section 4.6) et un chiffre d'ensemble de megaships/classes recensés (article du 22 mai 2022) | ne confirme pas : que ce chiffre d'ensemble soit encore d'actualité en 2026 — traité comme ordre de grandeur historique probablement obsolète
+- https://canonn.science/codex/non-dockable-megaships-an-introduction/ | secondaire | consulté le 13/09/2026 | confirme : la corrélation classe de megaship → cargaison par défaut (table de la [section 4.6](#46-megaships-et-installations-spatiales--piratage-à-distance)) et un chiffre d'ensemble de megaships/classes recensés (article du 22 mai 2022) | ne confirme pas : que ce chiffre d'ensemble soit encore d'actualité en 2026 — traité comme ordre de grandeur historique probablement obsolète
 
 > **Ce que cette révision a pu vérifier, et ce qu'elle n'a pas pu vérifier.** Les chiffres ajoutés le 10 septembre 2026
 > — pénétration de blindage arme par arme, répartition des types de dégâts, dureté de coque des châssis, profils de
@@ -1129,8 +1235,8 @@ voir aussi [11-commerce.md](./11-commerce.md) et [02-powerplay.md](./02-powerpla
 > expérimentaux — proviennent des deux dépôts de données ci-dessus, clonés en local et cités avec leur commit : ils
 > sont re-vérifiables ligne à ligne dans dix ans, indépendamment de la disponibilité d'un site web. Trois choses
 > restent hors de portée de ces sources et sont signalées comme telles dans le corps du guide : le **coefficient exact**
-> de réduction des dégâts entre pénétration et dureté (section 3.6), la **règle de calcul** appliquée aux dégâts
-> absolus et au marqueur anti-xéno (section 3.8), et les **seuils de progression** du rang de combat (section 6.1).
+> de réduction des dégâts entre pénétration et dureté ([section 3.6](#36-comment-un-tir-est-encaissé--bouclier-puis-dureté-de-coque-contre-pénétration-de-blindage-puis-résistances)), la **règle de calcul** appliquée aux dégâts
+> absolus et au marqueur anti-xéno ([section 3.8](#38-ce-que-chaque-arme-inflige-réellement--thermique-cinétique-explosif-ou-absolu)), et les **seuils de progression** du rang de combat ([section 6.1](#61-léchelle-de-rang-de-combat-de-harmless-à-elite)).
 > Aucune valeur n'a été inventée pour combler ces trois lacunes.
 
 > **Ce qui reste volatile.** Les mécaniques décrites ici (pips, FA off, chaleur, types d'affûts, sites PvE,
@@ -1142,7 +1248,7 @@ voir aussi [11-commerce.md](./11-commerce.md) et [02-powerplay.md](./02-powerpla
 > [16-outils.md](./16-outils.md)), ainsi qu'avec les discussions communautaires actuelles (forums Frontier, wiki
 > communautaire, r/EliteDangerous).
 
-*Révision du 13 septembre 2026 — chantier 14 (chiffrer les boucles de farming). Ajout de la section 4.6, qui explique
+*Révision du 13 septembre 2026 — chantier 14 (chiffrer les boucles de farming). Ajout de la [section 4.6](#46-megaships-et-installations-spatiales--piratage-à-distance), qui explique
 pour la première fois l'usage du Recon Limpet Controller déjà chiffré dans 04-equipements.md : typologie des
 megaships non accostables (Bulk Cruisers, huit sous-types) et des installations spatiales fixes, procédure de
 piratage à distance (Data Link Scanner → Recon Limpet → Hatch Breaker si besoin), corrélation classe de megaship →

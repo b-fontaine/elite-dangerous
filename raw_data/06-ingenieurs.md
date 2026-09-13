@@ -89,7 +89,8 @@ qui ajoute une propriété supplémentaire, indépendante du grade de la modific
 
 Le système est distinct — mais complémentaire — des **Technology Brokers** (courtiers technologiques), qui débloquent
 des modules Guardian ou liés aux Titans Thargoïdes contre des matériaux spécifiques, sans passer par la mécanique de
-réputation propre aux Ingénieurs (voir la section dédiée plus bas).
+réputation propre aux Ingénieurs (voir la section dédiée
+[Les Technology Brokers](#les-technology-brokers--deux-courtiers-bien-distincts-guardian-et-human) plus bas).
 
 > **Les caractéristiques de vaisseaux et de modules citées ailleurs dans ce corpus sont données en configuration
 > stock** (modules non modifiés) ; l'ingénierie décrite dans ce guide peut les modifier significativement — c'est
@@ -151,7 +152,8 @@ utilisées lors des sorties à pied. Leurs bases sont confirmées par la même s
 quel ingénieur modifie quelle combinaison/arme » évolue avec les mises à jour d'équilibrage et se vérifie le plus
 fiablement en jeu, dans l'onglet Ingénieurs, ou sur Inara. **Le détail complet des modifications qu'ils proposent (avec
 coûts et matériaux) est traité dans [07 — Équipement à pied](./07-equipement-a-pied.md#lingénierie-à-pied-engineering-dodyssey--engineers-blueprints-et-modifications-irréversibles)
-plutôt que répété ici** — voir la nouvelle section « Ingénierie de l'équipement Odyssey » plus bas pour l'articulation
+plutôt que répété ici** — voir la nouvelle section
+[Ingénierie de l'équipement Odyssey](#ingénierie-de-léquipement-odyssey-à-pied) plus bas pour l'articulation
 entre les deux guides.
 
 | Ingénieur       | Système   | Base                 |
@@ -191,6 +193,9 @@ affichée en jeu dans l'onglet Ingénieurs**, ou consultez un outil communautair
 les plus fiables pour ces seuils.
 
 #### Cas travaillé : débloquer Felicity Farseer (Deciat), porte d'entrée de l'ingénierie du FSD
+
+*Répond à : « Comment débloquer Felicity Farseer ? », « Farseer unlock requirements », « Où trouver le Meta-Alloy
+pour Farseer ? »*
 
 Un cas concret vaut mieux qu'une généralité, et celui-ci est le plus fréquent puisque Farseer est la porte d'entrée de
 l'ingénierie du FSD. **Deux conditions**, et deux seulement :
@@ -260,6 +265,9 @@ dédié de l'interface — sans qu'il soit nécessaire de lui rendre visite à n
 
 ### Les Technology Brokers : deux courtiers bien distincts (Guardian et Human)
 
+*Répond à : « Comment débloquer les modules Guardian ? », « Quelle différence entre Engineer et Technology Broker ? »,
+« Where do I unlock Guardian weapons (Technology Broker) ? »*
+
 Plusieurs modules très recherchés ne s'obtiennent **pas** via un Ingénieur classique mais via un **Technology Broker**
 (courtier technologique), présent dans des stations dédiées d'espace habité humain (généralement des systèmes très
 peuplés et bien sécurisés). Il s'agit d'un système parallèle à l'Engineering proprement dit, souvent confondu avec lui :
@@ -295,7 +303,8 @@ pas en détail pour éviter la duplication).
 | XG7 Trident / XG8 Javelin / XG9 Lance (chasseurs Guardian) | Unlock | 1 Guardian Vessel Blueprint Fragment, Guardian Power Cell, Pattern Epsilon/Beta Obelisk Data, Guardian Technology Component/Wreckage/Sentinel Weapon Parts | Sites de ruines Guardian                    |
 | Modified Gauss/Plasma/Shard Cannon (achats répétables)     | Achat  | Mêmes familles de matériaux Guardian que la version « Unlock », en quantités variables                                                                     | Sites de ruines Guardian                    |
 
-*\*Les items « Unlock » se débloquent une fois pour devenir achetables à volonté en crédits en Outfitting ; les items
+*\*Les items « Unlock » se débloquent une fois pour devenir achetables à volonté en crédits en Outfitting (l'atelier
+Équipement du vaisseau) ; les items
 « Achat » ajoutent immédiatement un exemplaire en stockage local et doivent être repayés en matériaux à chaque
 exemplaire supplémentaire.*
 
@@ -350,10 +359,11 @@ Coin**. C'est une monnaie **gagnée en accomplissant des Operations**, avec un *
 que certaines activités sont réalisées ; elle **ne s'achète pas en ARX**. Elle sert à acquérir des **modules de
 vaisseau** (armes, modules cœur, modules internes) et des **blueprints d'ingénierie**. Les récompenses d'une Operation
 comprennent par ailleurs des **matériaux**, des crédits et — en mode Powerplay — des mérites : voir la section
-« Où farmer efficacement les matériaux d'Engineering, type par type » plus bas pour la place de cette source dans le farming.
+[Où farmer efficacement les matériaux d'Engineering, type par type](#où-farmer-efficacement-les-matériaux-dengineering-type-par-type)
+plus bas pour la place de cette source dans le farming.
 
 Le catalogue **MercGear** ouvert à la sortie de la mise à jour comptait **deux blueprints** et **treize modules
-pré-modifiés** :
+pré-modifiés**, dont plusieurs **hardpoints** (points d'ancrage d'armes) :
 
 | Type                       | Article                                 | Ce que la modification apporte, et ce qu'elle coûte                                                                       |
 |----------------------------|-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -460,9 +470,9 @@ Les 50 **matériaux manufacturés** (*Manufactured*) sont récupérés sur épav
 en détruisant des vaisseaux. Organisés en 10 familles
 thématiques, chacune déclinée sur 5 grades. **Source d'obtention principale, toutes familles confondues** : loot sur
 épaves de vaisseaux détruits (RES notamment, voir [00 — Glossaire](./00-glossaire.md) pour ce sigle), scavenging de
-champs de débris et de Nav Beacons compromis — voir « Où farmer efficacement les matériaux d'Engineering, type par
-type » ci-dessous pour le détail
-par méthode.
+champs de débris et de Nav Beacons (balises de navigation) compromis — voir
+[Où farmer efficacement les matériaux d'Engineering, type par type](#où-farmer-efficacement-les-matériaux-dengineering-type-par-type)
+ci-dessous pour le détail par méthode.
 
 | Famille                 | Grade 1                | Grade 2                 | Grade 3                 | Grade 4                 | Grade 5                  |
 |-------------------------|------------------------|-------------------------|-------------------------|-------------------------|--------------------------|
@@ -894,7 +904,7 @@ Les composants de combinaison Odyssey (à pied) ont les sources déclarées suiv
 - **Mission.** Depuis le Type-8 Update (août 2024), les récompenses de mission couvrent les cinq composants de
   combinaison, avec des quantités trois à quatre fois supérieures à l'avant. Sélectionner ses missions par récompense
   est devenu plus efficace que piller.
-- **Bartender.** Le bartender ne revend que les Assets. Il achète les Goods et les Data contre crédits mais n'en
+- **Bartender** (comptoir d'échange de matériaux à pied). Le bartender ne revend que les Assets. Il achète les Goods et les Data contre crédits mais n'en
   revend jamais : Suit Schematic, Health Monitor et Manufacturing Instructions s'obtiennent donc uniquement par
   pillage ou par mission.
 
@@ -952,6 +962,9 @@ interne `docs/faisabilite-spansh-temps-reel-materiaux.md`, § 3.4 (étude du 19 
 
 ### Où farmer efficacement les matériaux d'Engineering, type par type
 
+*Répond à : « Quelle est la meilleure méthode pour farmer les matériaux d'ingénierie ? », « Where do I get Engineering
+materials fast? », « Comment prioriser le farming Raw/Manufactured/Encoded ? »*
+
 Ces méthodes correspondent à des mécaniques de jeu stables et largement documentées par la communauté depuis la
 refonte 2.1 de 2016 ; les **emplacements précis** (systèmes, hotspots) évoluent en revanche avec la génération
 procédurale et le [BGS](./00-glossaire.md) — vérifiez-les sur un outil communautaire tenu à jour avant de planifier un
@@ -962,8 +975,8 @@ trajet.
 > rédaction, et la page « Matériaux » d'Inara n'a pas pu être chargée non plus. Les points ci-dessous reposent donc sur
 > la mécanique de jeu — stable et documentée depuis 2016 — recoupée avec les données EDCD déjà citées dans ce guide, et
 > sur les outils effectivement consultés (EDTools.cc, EDSM.net, EDAstro.com, tous vérifiés le 9 septembre 2026). Un
-> chiffre précis qui n'a pas pu être confirmé en direct (taux de spawn selon l'état économique d'un système, par
-> exemple) est signalé comme tel plutôt que présenté comme acquis.
+> chiffre précis qui n'a pas pu être confirmé en direct (taux de spawn — d'apparition — selon l'état économique d'un
+> système, par exemple) est signalé comme tel plutôt que présenté comme acquis.
 >
 > **Mise à jour de cette révision.** Une partie de ce qui manquait alors est désormais couverte par le référentiel de
 > matériaux consolidé (édition 2026-08) et par l'étude interne du 19 août 2026, qui documentent les sources et
@@ -1029,6 +1042,9 @@ Detailed Surface Scanner et la passe d'équilibrage ; « Beneath the Surface: Yo
 
 #### Matériaux manufacturés (Manufactured) — les High Grade Emissions (HGE), méthode de référence pour le grade 4-5
 
+*Répond à : « Où trouver une High Grade Emission ? », « How to find HGE materials? », « Comment farmer du manufacturé
+grade 4-5 ? »*
+
 Pour les grades 4 et 5 de ce guide (Proprietary/Core Dynamics Composites, Proto Light/Radiolic Alloys, Thermic/Military
 Grade Alloys, Conductive Polymers/Biotech Conductors, Polymer/Military Supercapacitors, Compound/Imperial Shielding,
 Heat Vanes/Proto Heat Radiators, Configurable/Improvised Components, Chemical Manipulators/Pharmaceutical Isolators,
@@ -1060,7 +1076,9 @@ de bon grade ; à la différence des HGE, ils demandent un **atterrissage suivi 
 Odyssey) pour fouiller l'épave au sol. Les deux méthodes sont complémentaires mais **ne se confondent pas** : une HGE
 se traite sans jamais déployer l'SRV, un site de crash impose au contraire l'atterrissage — gardez cette distinction en
 tête si vous planifiez une session dédiée à l'une ou l'autre. Deux sites de crash sont référencés avec leurs
-coordonnées Live dans « Deux sites de farm de matériaux à coordonnées vérifiées » ci-dessus : **Dav's Hope** (Raw et Manufactured,
+coordonnées Live dans
+[Deux sites de farm de matériaux à coordonnées vérifiées](#deux-sites-de-farm-de-matériaux-à-coordonnées-vérifiées--davs-hope-et-jameson-crash-site)
+ci-dessus : **Dav's Hope** (Raw et Manufactured,
 en boucle au SRV) et le **Jameson Crash Site** (Encoded G3 à G5). Attention aux coordonnées de Dav's Hope, que la
 quasi-totalité des guides anciens donne dans leur version *Legacy*, désormais fausse.
 
@@ -1168,7 +1186,7 @@ lecture répandue de cette valeur.
 | **Degraded Emissions**        | Le signal le plus commun : épave, matériaux manufacturés courants, exceptionnellement une sonde inconnue près des mondes ammoniaqués des Pléiades | Non dépendant de l'état système pour le spawn général                                          | 0-4                                      |
 | **Distress Call**             | Marchand en panne ou attaqué, vaisseau de la Federal Navy en détresse, embuscade de pirates déguisée en appel de détresse, épaves thargoïdes ponctuelles | Non documentée                                                                                 | 0-9                                      |
 | **Encoded Emissions**         | Balise de données privée, champ de débris, satellite (mondes habités de type terrestre) — voir le farming Encoded ci-dessus | Non documentée                                                                                 | 0                                        |
-| **High Grade Emissions**      | Matériaux manufacturés de grade 4-5 — voir la table complète « Ce qui décide du contenu d'une HGE » ci-dessus         | Déterminée par l'allégeance de la faction contrôlante et l'état du système (détaillé plus haut) | 0                                        |
+| **High Grade Emissions**      | Matériaux manufacturés de grade 4-5 — voir la table complète [Ce qui décide du contenu d'une HGE](#ce-qui-décide-du-contenu-dune-hge--lallégeance-de-la-faction-pas-léconomie-du-système) ci-dessus | Déterminée par l'allégeance de la faction contrôlante et l'état du système (détaillé plus haut) | 0                                        |
 | **Mission Target**            | Objectif d'une mission acceptée (assassinat, sauvetage...)                                                            | Dépend entièrement de la mission en cours                                                      | 0-4                                      |
 | **Non-Human Signal Source**   | Rencontre thargoïde progressive : une Sonde isolée en bas de l'échelle, puis des Éclaireurs en nombre croissant, puis un Intercepteur (Cyclops, Basilisk, Medusa, jusqu'à Hydra au sommet) — voir [25 — Combat AX §2](./25-combat-ax.md) pour la taxonomie des vaisseaux thargoïdes | Zones connues : Pléiades, Witch Head, Coalsack, Californie, systèmes en incursion ou ciblés par Eagle Eye | 0-9, table complète par niveau publiée   |
 | **Search and Rescue Patrol**  | Un vaisseau non hostile isolé (ex. Asp Explorer) équipé d'un Fuel Transfer Limpet Controller, offrant du carburant     | Non documentée                                                                                 | 0                                        |
@@ -1244,7 +1262,7 @@ Consensus communautaire stable sur le temps nécessaire pour constituer un stock
 Cet ordre justifie une pratique répandue dans la communauté : **prospecter le Raw en continu** (peu coûteux en temps
 de vol dédié, se fait « en passant » lors d'autres activités), **et réserver des sessions ciblées au Manufactured
 (HGE/sites de crash) et à l'Encoded (USS/wakes)**, en comblant les manques ponctuels via un Material Trader (voir
-« Accélérer le grind de matériaux d'Engineering » plus bas) plutôt que de viser l'exhaustivité matériau par matériau.
+[Accélérer le grind de matériaux d'Engineering](#accélérer-le-grind-de-matériaux-dengineering) plus bas) plutôt que de viser l'exhaustivité matériau par matériau.
 
 #### Matériaux Guardian et équipement Odyssey (à pied)
 
@@ -1393,6 +1411,9 @@ EDCD/coriolis-data), et étude interne `docs/faisabilite-spansh-temps-reel-mater
 19 août 2026.*
 
 #### Portée accrue — Frame Shift Drive (*Increased Range*)
+
+*Répond à : « Combien coûte Increased Range grade 5 ? », « Quel est le meilleur blueprint FSD pour la portée de
+saut ? », « FSD Increased Range material cost »*
 
 **Objet.** Le blueprint de portée. Il agit sur la masse optimale du FSD, et la distance de saut y est linéaire — un G5
 complet donne donc +55 % de portée brute, moins l'effet du +30 % de masse que le blueprint ajoute au module lui-même.
@@ -2395,7 +2416,7 @@ les rolls **déterministes**. Les valeurs exactes, déclarées grade par grade p
 net est donc de quelques points de pourcentage inférieur à +55 %, l'écart dépendant du rapport entre la masse du FSD
 et celle du vaisseau — négligeable sur un gros vaisseau, sensible sur un petit. Un ordre de grandeur souvent cité, « de
 +10 à +15 al », est **plausible pour un vaisseau moyen mais reste un ordre de grandeur, pas une valeur** : seule la
-formule appliquée à votre loadout donne le chiffre.
+formule appliquée à votre loadout (la configuration complète de votre vaisseau) donne le chiffre.
 
 #### *Mass Manager*, *Deep Charge* et le multiplicateur ×1,61 — et le cas du FSD SCO
 
@@ -2738,6 +2759,9 @@ modules spécifiques au rôle.
 
 ### Comptoirs d'échange de matériaux (Material Traders)
 
+*Répond à : « Comment convertir des matériaux entre grades ? », « Quel est le taux d'échange d'un Material Trader ? »,
+« How does material trading work? »*
+
 Présents dans des stations dédiées, il en existe trois types — **Raw Material Trader**, **Manufactured Material
 Trader**, **Encoded Data Trader**. Ils permettent d'échanger un surplus de matériaux d'un grade contre des matériaux
 d'un autre grade **au sein du même type** (raw→raw, manufactured→manufactured, encoded→encoded) : **l'échange entre
@@ -2822,7 +2846,7 @@ ingénieré au-delà de 75-80 al.
 
 Chaque palier ajoute un matériau de grade supérieur à la recette précédente — la même logique de coût croissant que
 celle déjà observée pour les blueprints de modules (voir plus haut). Les grades entre parenthèses reprennent le
-tableau des 28 matériaux bruts de ce guide (section « Matériaux bruts (Raw) » ci-dessus) : tous les matériaux de la
+tableau des 28 matériaux bruts de ce guide (section [Matériaux bruts (Raw)](#matériaux-bruts-raw--28-éléments-grades-1-à-4) ci-dessus) : tous les matériaux de la
 FSD Injection se récoltent donc par prospection de surface, aucun ne relève du minage d'astéroïdes.
 
 *(Sources : wiki communautaire Elite Dangerous, page « Synthesis », consultée le 13 septembre 2026 ; recette
@@ -3002,7 +3026,7 @@ introduit une économie de construction (matériaux de colonisation) distincte d
 **reportée à juin** par l'annonce du 22 avril 2026, est sortie le **30 juin 2026**, avec un premier correctif majeur
 le 9 juillet. Elle apporte trois choses qui concernent directement ce guide : une **nouvelle monnaie**, le Merc Coin,
 qui achète des **blueprints** et des **modules pré-modifiés** hors du circuit des Ingénieurs et des Technology Brokers
-— voir « Le Merc Coin et le MercGear » plus haut ; des **matériaux** parmi les récompenses de fin d'Operation ; et
+— voir [Le Merc Coin et le MercGear](#le-merc-coin-et-le-mercgear--une-troisième-voie-depuis-operations) plus haut ; des **matériaux** parmi les récompenses de fin d'Operation ; et
 l'arrivée du **Nomad**, dévoilé le 2 juin 2026 comme un petit vaisseau compact lancé depuis un vaisseau-mère et conçu
 pour explorer les surfaces planétaires. Il est équipé d'un **Mk II Biological Scanner**, qui détecte les signaux
 biologiques directement depuis le cockpit, et se déploie depuis **tout hangar de vaisseau compatible, module Mk I
@@ -3017,6 +3041,112 @@ lancé depuis un vaisseau-mère, le Rhino un SRV. Le détail de ces deux véhicu
 Operations », 22 avril 2026 14:02 UTC ; « Discover the Nomad », 2 juin 2026 13:03 UTC ; « Operations Update »,
 1ᵉʳ juillet 2026 14:01 UTC ; « Operations Update | Update 3 », 9 juillet 2026 10:24 UTC ; « Rhino SRV Update »,
 2 septembre 2026 11:20 UTC.)*
+
+## Questions fréquentes
+
+**Comment débloquer Felicity Farseer (Farseer unlock) ?**
+
+Deux conditions seulement : atteindre le rang d'exploration **Scout** (palier 3 affiché, valeur `2` sur l'échelle
+0-8 du journal), et lui livrer **1 unité de Meta-Alloy** — une marchandise, pas un matériau, qui ne passe pas par un
+comptoir d'échange. Le Meta-Alloy s'achète surtout auprès des Fleet Carriers (de ~9 700 Cr à plus de 19 M Cr la
+tonne selon le vendeur, instantané du 19 août 2026) ; la seule station classique fiable de cet instantané est
+Darnielle's Progress, dans Maia. Voir [Cas travaillé : débloquer Felicity
+Farseer](#cas-travaillé--débloquer-felicity-farseer-deciat-porte-dentrée-de-lingénierie-du-fsd).
+
+**Les rolls d'ingénieur sont-ils toujours aléatoires (are Engineer rolls random) ?**
+
+Non, plus depuis l'**Update 18.08 du 7 août 2024** : chaque roll donne désormais un résultat **fixe et
+déterministe**, fonction du grade de la recette et du rang de réputation auprès de l'Ingénieur. À réputation 5, un
+blueprint de grade N demande exactement **N rolls** pour être validé — « rerouler » pour espérer un meilleur
+résultat n'a donc plus de sens. Voir [Fiches chiffrées de cinq blueprints du socle
+exploration](#fiches-chiffrées-de-cinq-blueprints-du-socle-exploration).
+
+**Combien de matériaux faut-il pour monter un blueprint du grade 1 au grade 5 (G1 to G5 blueprint cost) ?**
+
+**15 rolls** au total à réputation 5 (1 pour le grade 1, 2 pour le grade 2, 3 pour le grade 3, 4 pour le grade 4, 5
+pour le grade 5) ; le coût réel en matériaux est la quantité par roll multipliée par ce nombre de rolls, sommée sur
+les cinq grades. Ce total de 15 rolls vaut pour la quasi-totalité des 81 blueprints de modules chiffrés dans ce
+guide, à l'exception des deux plans de Shield Cell Bank qui s'arrêtent au grade 4 (10 rolls). Voir [Coût total
+d'une montée du grade 1 au grade 5, blueprint par
+blueprint](#coût-total-dune-montée-du-grade-1-au-grade-5-blueprint-par-blueprint).
+
+**Pourquoi je n'arrive pas à monter Increased Range au grade 5 (FSD Increased Range material bottleneck) ?**
+
+Le goulot d'étranglement identifié, ce sont les **5 unités de Datamined Wake Exceptions** (grade 5, catégorie Wake
+Scans) du dernier roll : le Frame Shift Wake Scanner braqué sur un sillage d'hyperespace en est la seule source,
+quel que soit le temps passé à prospecter autrement. Le comptoir d'échange Encoded descend d'un grade à raison de 1
+pour 3 (une unité de grade 5 rend 81 unités de grade 1) : récolter n'importe quel Wake Scan, quel que soit son
+grade, puis convertir au comptoir pour obtenir précisément les grades inférieurs manquants est plus rapide que
+d'espérer tomber directement sur le bon grade à chaque scan. Voir [Portée accrue — Frame Shift Drive
+(Increased Range)](#portée-accrue--frame-shift-drive-increased-range).
+
+**Où trouver une High Grade Emission (where to find HGE) ?**
+
+En supercroisière, en surveillant l'onglet Signaux : une HGE apparaît le plus vite en volant à 200 Ls hors du plan
+orbital, et scanner le Nav Beacon du système peut en faire apparaître une s'il n'y en a pas. Ce n'est pas l'économie
+du système qui détermine son contenu, mais l'**allégeance de la faction contrôlante** (fédérale → Proprietary/Core
+Dynamics Composites, impériale → Imperial Shielding, etc.). Voir [Matériaux manufacturés (Manufactured) — les High
+Grade Emissions
+(HGE)](#matériaux-manufacturés-manufactured--les-high-grade-emissions-hge-méthode-de-référence-pour-le-grade-4-5).
+
+**Quels matériaux Raw ne s'obtiennent qu'en minage d'astéroïdes (Raw materials asteroid mining only) ?**
+
+Trois exceptions sur les 28 matériaux bruts : **Rhenium (grade 1), Lead (grade 1) et Boron (grade 3)** ne
+s'obtiennent **qu'en minage d'astéroïdes** — ils n'apparaissent jamais au sol, quelle que soit la composition
+affichée par le Detailed Surface Scanner. Tous les 25 autres matériaux Raw se récoltent par prospection de surface
+planétaire. Voir [Matériaux bruts (Raw)](#matériaux-bruts-raw--28-éléments-grades-1-à-4).
+
+**Quelle est la différence entre un Material Trader et un Technology Broker ?**
+
+Le **Material Trader** échange un surplus de matériaux d'un grade contre un autre grade à l'intérieur d'un même
+type (Raw/Manufactured/Encoded), à un taux de 6 pour 1 vers le haut et 1 pour 3 vers le bas dans la même catégorie.
+Le **Technology Broker** (Guardian ou Human, deux catalogues totalement séparés) débloque au contraire des modules
+entiers en payant en une seule fois des matériaux et marchandises spécifiques, sans mécanique de réputation ni de
+grade progressif. Voir [Les Technology
+Brokers](#les-technology-brokers--deux-courtiers-bien-distincts-guardian-et-human).
+
+**Qu'est-ce que le Merc Coin et comment l'obtenir (what is Merc Coin) ?**
+
+Une monnaie introduite avec la mise à jour **Operations** (30 juin 2026), gagnée en accomplissant des Operations
+(avec un bonus hebdomadaire à la première réussite de certaines activités) et qui **ne s'achète pas en ARX**. Elle
+sert à acheter des **blueprints** et des **modules pré-modifiés** au catalogue **MercGear** (2 blueprints et 13
+modules pré-modifiés à la sortie), une troisième voie distincte des Ingénieurs et des Technology Brokers. Voir
+[Le Merc Coin et le
+MercGear](#le-merc-coin-et-le-mercgear--une-troisième-voie-depuis-operations).
+
+**Que devient le surplus de matériaux au-delà du plafond de stockage (material cap overflow) ?**
+
+Depuis le **Dodec Update du 11 novembre 2025**, l'excédent n'est plus perdu : il est automatiquement converti en
+crédits, à raison de 2 000 Cr (grade 1), 4 000 Cr (grade 2), 8 000 Cr (grade 3), 16 000 Cr (grade 4) et 32 000 Cr
+(grade 5) par unité au-delà du plafond. Les plafonds eux-mêmes restent inchangés : de 300 unités au grade 1 à 100
+au grade 5. Voir [Plafonds de stockage des matériaux
+d'Engineering](#plafonds-de-stockage-des-matériaux-dengineering-300-unités-au-grade-1-100-au-grade-5).
+
+**Dans quel ordre ingénierer son vaisseau selon son rôle (best Engineering order) ?**
+
+Pour le **combat** : FSD, propulseurs, distributeur d'énergie, boucliers/amplificateurs, armement, générateur
+d'énergie, puis renforts de coque en dernier. Pour l'**exploration** : FSD (Increased Range grade 5 + Mass Manager)
+en priorité absolue, puis distributeur d'énergie/récupérateur de carburant, capteurs, propulseurs. Pour le
+**commerce** : FSD, propulseurs, amplificateurs de bouclier, distributeur d'énergie, puis coque en fin de liste.
+Voir [Ordre optimal d'Engineering par rôle](#ordre-optimal-dengineering-par-rôle).
+
+**Comment fonctionne la FSD Injection en synthèse (jumponium boost) ?**
+
+La synthèse **FSD Injection** (« jumponium ») augmente la portée de saut du **prochain saut uniquement**, en trois
+paliers : Basic (+25 %), Standard (+50 %) et Premium (+100 %) — une nouvelle synthèse remplace le boost précédent
+plutôt que de s'y ajouter. Tous ses matériaux sont des Raw obtenus par prospection de surface (Carbon, Vanadium,
+Germanium, Cadmium, Niobium, Arsenic, Yttrium, Polonium selon le palier), aucun ne relève du minage d'astéroïdes.
+Voir [FSD Injection («
+jumponium »)](#fsd-injection--jumponium---la-synthèse-la-plus-rentable-en-exploration).
+
+**Quelle est la méthode la plus rapide pour farmer les matériaux d'ingénierie (fastest way to farm Engineering materials) ?**
+
+Par ordre d'efficacité, du plus rapide au plus lent selon le consensus communautaire : **Raw** (prospection de
+surface, gisements fixes et cartographiables au Detailed Surface Scanner), **Manufactured** (High Grade Emissions et
+sites de crash pour le grade 4-5), puis **Encoded** (piratage d'USS et scan de wakes FSD, généralement le plus
+lent). La pratique recommandée est de prospecter le Raw en continu et de réserver des sessions ciblées au
+Manufactured et à l'Encoded. Voir [Où farmer efficacement les matériaux d'Engineering, type par
+type](#où-farmer-efficacement-les-matériaux-dengineering-type-par-type).
 
 ## Voir aussi
 
@@ -3044,6 +3174,9 @@ Operations », 22 avril 2026 14:02 UTC ; « Discover the Nomad », 2 juin 2026 1
 - [20 — Minage](./20-minage.md) — pour les matériaux bruts obtenus par extraction plutôt que par prospection de surface.
 - [25 — Combat AX](./25-combat-ax.md) — matériaux et armes anti-Thargoïdes liés au Human Technology Broker et aux
   Rescue Megaships.
+- [26 — Ingénierie à pied avancée](./26-ingenierie-a-pied-avancee.md) — détail des paliers de montée en grade des
+  combinaisons Odyssey (Artemis, Maverick, Dominator) et de la subdivision Chemical/Circuit/Tech de la catégorie
+  Component, déjà référencés depuis ce guide.
 - [27 — Débuter et progresser](./27-debuter-et-progresser.md) — quels deux ou trois Ingénieurs débloquer en priorité
   selon l'objectif visé, quand on démarre et que le temps comme les matériaux manquent.
 - [30 — Piraterie et PvP](./30-piraterie-et-pvp.md) — détail chiffré des 5 niveaux de menace du Convoy Dispersal

@@ -47,8 +47,9 @@ techniques d'extraction dans [Le Minage](./20-minage.md), le transport en volume
 > vérifiable et restent donc vides. Les économies ne sont documentées que pour 133 marchandises sur 270, la légalité
 > pour 12 sur 270, le type d'anneau pour 30 des 63 marchandises minables. **Aucun prix du commerce courant n'est écrit
 > ici** ; les seuls prix qui figurent dans ce guide sont les relevés de marché horodatés des denrées rares, en
-> section 7.3. Une case vide signifie « non établi », jamais « aucun » ni « zéro ». La section 8 dresse la liste des
-> manques et dit où il faudrait aller les chercher.
+> [section 7.3](#73-où-acheter-chacune-des-142-denrées-rares). Une case vide signifie « non établi », jamais « aucun »
+> ni « zéro ». La [section 8](#8-ce-que-ce-référentiel-nétablit-pas-et-où-il-faudrait-aller-le-chercher) dresse la
+> liste des manques et dit où il faudrait aller les chercher.
 
 ## 1. Comment lire ce référentiel : noms anglais, gloses françaises et symboles internes
 
@@ -79,7 +80,8 @@ et `S_TissueSample_Core` à *Pod Surface Tissue* — reproduite sans correction,
 
 ### La catégorie NonMarketable et son entrée unique, les Limpets
 
-`NonMarketable` est une catégorie à **une seule entrée** : *Limpets*, de symbole interne `Drones`. Ce sont les drones
+`NonMarketable` (Non commercialisable) est une catégorie à **une seule entrée** : *Limpets*, de symbole interne
+`Drones`. Ce sont les drones
 consommables pilotés par les contrôleurs de limpets que le corpus documente déjà dans [Le Minage](./20-minage.md) et
 [Équipements](./04-equipements.md). Le libellé de la catégorie signale que ces drones ne relèvent pas du commerce
 ordinaire : ils apparaissent au marché des marchandises mais ne constituent pas une cargaison négociable comme les
@@ -122,7 +124,8 @@ Elles se récupèrent — épaves, signaux non identifiés, missions, sites Guar
 Ce tableau est la table de référence du guide. Il est trié par catégorie, dans l'ordre de la chaîne économique (métaux
 et minéraux d'abord, récupération et non commercialisable en dernier), puis par ordre alphabétique du nom anglais.
 Les colonnes « Nom (EN) », « Catégorie » et « Symbole interne » sont **relevées intégralement** dans `commodity.csv` ;
-la colonne « Nom français » est une **traduction produite pour ce corpus**, comme expliqué en section 1.
+la colonne « Nom français » est une **traduction produite pour ce corpus**, comme expliqué en
+[section 1](#1-comment-lire-ce-référentiel--noms-anglais-gloses-françaises-et-symboles-internes).
 
 | Nom (EN)                        | Nom français                                    | Catégorie                                    | Symbole interne                 |
 |---------------------------------|-------------------------------------------------|----------------------------------------------|---------------------------------|
@@ -407,8 +410,9 @@ des marchandises telles qu'affichées en jeu, mais elle ne porte ni numéro de v
 n'est **pas** un fichier officiel comme `commodity.csv`, et tout ce qui en vient doit être attribué « selon la FAQ
 communautaire EDSM », jamais « selon les données officielles du jeu ».
 
-Une marchandise n'est comptée comme couverte que si sa fiche porte effectivement les deux lignes *Produced by* et
-*Consumed by*. Les 137 marchandises non couvertes ont, pour la plupart, une fiche purement littéraire.
+Une marchandise n'est comptée comme couverte que si sa fiche porte effectivement les deux lignes *Produced by*
+(« Produit par ») et *Consumed by* (« Consommé par »). Les 137 marchandises non couvertes ont, pour la plupart, une
+fiche purement littéraire.
 
 | Catégorie                                    | Marchandises | Couvertes par EDSM | Couverture |
 |----------------------------------------------|--------------|--------------------|------------|
@@ -657,7 +661,8 @@ moteur de recherche documentaire remonte volontiers la phrase qui introduit un t
    Extraction et Military ».
 3. **« Chaque marchandise a une économie productrice. »** Faux. Les **96 marchandises de la catégorie Salvage** n'en
    ont aucune. Chemical Waste est explicitement produit « nulle part » et pourtant consommé en *Refinery*.
-4. **« Service et Terraforming n'ont pas de rôle commercial. »** Faux — voir la correction en 4.3.
+4. **« Service et Terraforming n'ont pas de rôle commercial. »** Faux — voir la correction en
+   [section 4.3](#43-les-17-économies-de-station-face-au-catalogue-des-marchandises).
 5. **« Salvage est une catégorie marginale. »** Faux : 96 entrées, plus du tiers du catalogue.
 
 ## 5. La légalité des marchandises : ce qui est documenté, et pourquoi ce n'est pas une table de légalité
@@ -697,7 +702,8 @@ relevée » en est une traduction produite pour ce corpus.
 
 **Ce que le tableau ne dit pas.** Une marchandise notoirement interdite peut n'avoir aucune mention dans sa fiche —
 et une mention peut exister sans avoir été relevée ici. Les deux sens de l'écart sont ouverts. Le tableau illustre le
-principe énoncé en 5.1, il ne le remplace pas, et la légalité effective se lit en jeu au marché de la station.
+principe énoncé en [section 5.1](#51-la-règle-qui-sapplique-réellement), il ne le remplace pas, et la légalité
+effective se lit en jeu au marché de la station.
 
 **Une proportion à ne pas arrondir.** Sur les 7 marchandises de la catégorie Drogues légales, **5 portent une
 mention** — Beer, Wine, Liquor, Narcotics, Tobacco. Il ne faut donc pas écrire que toutes les drogues légales sont
@@ -745,7 +751,7 @@ que la marchandise s'obtient ailleurs qu'en anneau.
 | Gold                          | Or                                  | Métaux    | Laser                  | Métallique, Riche en métaux *(?)*          | S1/S2 divergent                                   |
 | Hafnium 178                   | Hafnium 178                         | Métaux    | —                      | —                                          | —                                                 |
 | Indium                        | Indium                              | Métaux    | —                      | —                                          | S4                                                |
-| Iridium                       | Iridium                             | Métaux    | Surface planétaire     | *sans objet (hors anneau)*                 | L1 §3.3.3                                         |
+| Iridium                       | Iridium                             | Métaux    | Surface planétaire     | *sans objet (hors anneau)*                 | L1 [§3.3.3](./20-minage.md#333-les-treize-nouvelles-marchandises-du-minage-de-surface-planétaire)                                         |
 | Lanthanum                     | Lanthane                            | Métaux    | —                      | —                                          | S4                                                |
 | Lithium                       | Lithium                             | Métaux    | —                      | —                                          | S4                                                |
 | Osmium                        | Osmium                              | Métaux    | Laser                  | Métallique, Riche en métaux                | S1+S2                                             |
@@ -761,15 +767,15 @@ que la marchandise s'obtient ailleurs qu'en anneau.
 | Titanium                      | Titane                              | Métaux    | —                      | —                                          | S4                                                |
 | Uranium                       | Uranium                             | Métaux    | —                      | —                                          | S4                                                |
 | Alexandrite                   | Alexandrite                         | Minéraux  | Noyau (core)           | Glacé, Rocheux, Riche en métaux            | S1+S3                                             |
-| Bastnasite                    | Bastnäsite                          | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 §3.3.3                                         |
+| Bastnasite                    | Bastnäsite                          | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 [§3.3.3](./20-minage.md#333-les-treize-nouvelles-marchandises-du-minage-de-surface-planétaire)                                         |
 | Bauxite                       | Bauxite                             | Minéraux  | Laser                  | Rocheux                                    | S1+S2                                             |
 | Benitoite                     | Bénitoïte                           | Minéraux  | Noyau (core)           | Rocheux, Riche en métaux *(?)*             | S1/S3 divergent                                   |
 | Bertrandite                   | Bertrandite                         | Minéraux  | Laser                  | Métallique, Riche en métaux                | S1+S2                                             |
 | Bromellite                    | Bromellite                          | Minéraux  | Laser + noyau          | Glacé                                      | S1+S2                                             |
 | Coltan                        | Coltan                              | Minéraux  | Laser                  | Rocheux, Riche en métaux                   | S1+S2                                             |
 | Cryolite                      | Cryolithe                           | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | S4                                                |
-| Deuterium                     | Deutérium                           | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 §3.3.3                                         |
-| Diamond                       | Diamant                             | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 §3.3.3                                         |
+| Deuterium                     | Deutérium                           | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 [§3.3.3](./20-minage.md#333-les-treize-nouvelles-marchandises-du-minage-de-surface-planétaire)                                         |
+| Diamond                       | Diamant                             | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 [§3.3.3](./20-minage.md#333-les-treize-nouvelles-marchandises-du-minage-de-surface-planétaire)                                         |
 | Gallite                       | Gallite                             | Minéraux  | Laser                  | Rocheux, Métallique, Riche en métaux       | S1+S2                                             |
 | Goslarite                     | Goslarite                           | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | S4                                                |
 | Grandidierite                 | Grandidiérite                       | Minéraux  | Noyau (core)           | Glacé                                      | S1+S3                                             |
@@ -779,24 +785,24 @@ que la marchandise s'obtient ailleurs qu'en anneau.
 | Lepidolite                    | Lépidolite                          | Minéraux  | Laser                  | Rocheux, Riche en métaux                   | S1+S2                                             |
 | Lithium Hydroxide             | Hydroxyde de lithium                | Minéraux  | Laser                  | Glacé                                      | S1+S2                                             |
 | Low Temperature Diamonds      | Diamants basse température          | Minéraux  | Noyau + subsurface     | Glacé                                      | S1+S2+S3+S5                                       |
-| Magnesite                     | Magnésite                           | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 §3.3.3                                         |
+| Magnesite                     | Magnésite                           | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 [§3.3.3](./20-minage.md#333-les-treize-nouvelles-marchandises-du-minage-de-surface-planétaire)                                         |
 | Methane Clathrate             | Clathrate de méthane                | Minéraux  | Laser                  | Glacé                                      | S1+S2                                             |
 | Methanol Monohydrate Crystals | Cristaux de monohydrate de méthanol | Minéraux  | Laser                  | Glacé                                      | S1+S2                                             |
 | Moissanite                    | Moissanite                          | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | S4                                                |
 | Monazite                      | Monazite                            | Minéraux  | Noyau (core)           | Rocheux, Métallique, Riche en métaux       | S1 (S3 signale aussi du Monazite en anneau glacé) |
 | Musgravite                    | Musgravite                          | Minéraux  | Noyau (core)           | Rocheux                                    | S1+S3                                             |
-| Olivine                       | Olivine                             | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 §3.3.3                                         |
+| Olivine                       | Olivine                             | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 [§3.3.3](./20-minage.md#333-les-treize-nouvelles-marchandises-du-minage-de-surface-planétaire)                                         |
 | Painite                       | Painite                             | Minéraux  | Laser + noyau          | Métallique, Riche en métaux                | S1+S2+S3+S5                                       |
-| Periclase Dunite              | Dunite à périclase                  | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 §3.3.3                                         |
+| Periclase Dunite              | Dunite à périclase                  | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 [§3.3.3](./20-minage.md#333-les-treize-nouvelles-marchandises-du-minage-de-surface-planétaire)                                         |
 | Pyrophyllite                  | Pyrophyllite                        | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | S4                                                |
-| Quartz Pyroxenite             | Pyroxénite à quartz                 | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 §3.3.3                                         |
+| Quartz Pyroxenite             | Pyroxénite à quartz                 | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 [§3.3.3](./20-minage.md#333-les-treize-nouvelles-marchandises-du-minage-de-surface-planétaire)                                         |
 | Rhodplumsite                  | Rhodplumsite                        | Minéraux  | Noyau (core)           | Métallique, Riche en métaux                | S1+S3                                             |
-| Ruby                          | Rubis                               | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 §3.3.3                                         |
+| Ruby                          | Rubis                               | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 [§3.3.3](./20-minage.md#333-les-treize-nouvelles-marchandises-du-minage-de-surface-planétaire)                                         |
 | Rutile                        | Rutile                              | Minéraux  | Laser                  | Rocheux                                    | S1+S2                                             |
-| Sapphire                      | Saphir                              | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 §3.3.3                                         |
+| Sapphire                      | Saphir                              | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 [§3.3.3](./20-minage.md#333-les-treize-nouvelles-marchandises-du-minage-de-surface-planétaire)                                         |
 | Serendibite                   | Sérendibite                         | Minéraux  | Noyau (core)           | Rocheux, Métallique, Riche en métaux       | S1+S3                                             |
 | Taaffeite                     | Taaffeite                           | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | S4                                                |
-| Thortveitite                  | Thortveitite                        | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 §3.3.3                                         |
+| Thortveitite                  | Thortveitite                        | Minéraux  | Surface planétaire     | *sans objet (hors anneau)*                 | L1 [§3.3.3](./20-minage.md#333-les-treize-nouvelles-marchandises-du-minage-de-surface-planétaire)                                         |
 | Uraninite                     | Uraninite                           | Minéraux  | Laser                  | Rocheux, Riche en métaux                   | S1+S2                                             |
 | Void Opal                     | Opale du vide                       | Minéraux  | Noyau (core)           | Glacé                                      | S1+S3                                             |
 
@@ -820,7 +826,8 @@ Le décompte ci-dessous porte **uniquement sur les catégories Minéraux et Mét
 combien de choses on peut miner dans un anneau, mais combien de marchandises de ces deux catégories y sont
 documentées. Une même marchandise peut compter dans plusieurs anneaux : la somme des quatre lignes vaut
 54 et n'est pas un effectif. La marque *(?)* signale qu'une seule des deux sources l'affirme, l'autre
-l'infirmant ou restant muette (voir 6.5).
+l'infirmant ou restant muette (voir
+[section 6.5](#65-divergences-entre-sources-sur-les-types-danneau-non-tranchées)).
 
 | Type d'anneau   | Nb (Minéraux + Métaux) | Marchandises documentées                                                                                                                                                                              |
 |-----------------|-----------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -837,7 +844,7 @@ anneau glacé ni en anneau rocheux.
 Coltan, Uraninite, Lepidolite, Rutile et Bauxite : S1 (2025) et S2 (2018) s'accordent ligne pour ligne sur leurs types
 d'anneau, et sept ans séparent ces deux relevés. Les métaux au laser en anneau métallique ou riche en métaux sont
 Platinum, Palladium, Gold, Silver, Osmium, Praseodymium et Samarium — le **Cobalt fait exception**, en anneau
-rocheux. Les gemmes du *core mining* sont les neuf que [Le Minage](./20-minage.md) nomme déjà, auxquelles S1 ajoute
+rocheux. Les gemmes du *core mining* (minage de noyau) sont les neuf que [Le Minage](./20-minage.md) nomme déjà, auxquelles S1 ajoute
 Bromellite, Platinum et Painite comme accessibles aussi au noyau ; **la Bromellite n'est donc pas exclusivement
 core-minable**, contrairement aux huit autres gemmes, et core-miner du Platinum ou de la Painite reste
 contre-productif, ces deux-là étant bien plus efficaces au laser.
@@ -861,7 +868,8 @@ par EDSM que les anneaux cités en exemple (Borann A 2 A Ring, Paesia 2 C et 5 A
 
 ### 6.5 Divergences entre sources sur les types d'anneau, non tranchées
 
-Ces quatre désaccords ne sont pas masqués : ils sont reportés dans le tableau de 6.2 par la marque *(?)*.
+Ces quatre désaccords ne sont pas masqués : ils sont reportés dans le tableau de
+[section 6.2](#62-périmètre-de-cette-section-et-un-piège-de-découpage) par la marque *(?)*.
 
 | Marchandise | Ce que dit S1 (oct. 2025)                | Ce que dit l'autre source                            | Traitement retenu                     |
 |-------------|------------------------------------------|------------------------------------------------------|---------------------------------------|
@@ -893,7 +901,7 @@ logique : elle doit être corrigée partout où elle subsiste dans le corpus, et
 
 ### 7.1 Comment les 142 identifiants de marché ont été résolus en système et station
 
-`rare_commodity.csv` ne donne, pour chaque denrée rare, qu'un `market_id` numérique. Les 142 lignes portent
+`rare_commodity.csv` ne donne, pour chaque denrée rare, qu'un `market_id` (identifiant de marché) numérique. Les 142 lignes portent
 **139 identifiants distincts**, résolus un à un par le point d'entrée `https://spansh.co.uk/api/station/<market_id>`,
 qui renvoie la fiche complète de la station : nom, système, type, distance d'arrivée, économie et marché. Les 139 ont
 répondu, sans une seule erreur.
@@ -907,12 +915,15 @@ l'un des deux catalogues n'a pas suivi. Le tableau retient la forme Spansh.
 
 **Une troisième confirmation, partielle.** Spansh marque d'un drapeau `is_home_station` l'entrée de marché d'une
 denrée rare lorsqu'elle se trouve à sa station d'origine avec du stock. Ce drapeau confirme indépendamment
-l'appariement pour **117 des 142 lignes**. Les 25 restantes, listées en 7.5, ne sont pas douteuses pour autant : leur
+l'appariement pour **117 des 142 lignes**. Les 25 restantes, listées en
+[section 7.5](#75-les-trois-stations-qui-produisent-deux-denrées-rares-et-les-25-lignes-sans-troisième-confirmation),
+ne sont pas douteuses pour autant : leur
 station est confirmée par les deux catalogues ; simplement, leur dernier relevé de marché a été pris stock épuisé.
 
 ### 7.2 Répartition des 142 denrées rares par catégorie
 
-Recompté par script sur le tableau des 142 lignes de la section 7.3, catégories traduites depuis la colonne
+Recompté par script sur le tableau des 142 lignes de la
+[section 7.3](#73-où-acheter-chacune-des-142-denrées-rares), catégories traduites depuis la colonne
 `category` de `rare_commodity.csv`.
 
 | Catégorie             | Denrées rares |        Part |
@@ -939,7 +950,7 @@ interrogées le 10 septembre 2026.
 
 Trois avertissements avant de lire ce tableau. **« Arrivée (ls) » est la distance de l'étoile d'arrivée à la
 station**, pas une distance en années-lumière depuis un point de départ : c'est ce qui décide du temps de trajet en
-supercruise, et l'écart est brutal — *Hutton Orbital* est à 6 395 238 ls quand *Weyl Gateway* est à 15 ls, soit un
+supercruise (supercroisière), et l'écart est brutal — *Hutton Orbital* est à 6 395 238 ls quand *Weyl Gateway* est à 15 ls, soit un
 rapport de 1 à 426 000 à l'intérieur du même tableau. **Un tiret « — » signifie « aucun relevé exploitable », jamais
 « zéro »**. Et **les colonnes « Achat relevé » et « Stock relevé » sont un instantané de marché daté du 10 septembre
 2026**, pas des constantes de jeu : le prix d'achat d'une denrée rare monte à mesure que le stock baisse, si bien
@@ -1132,7 +1143,9 @@ aucune source consultée, et il ne faut donc rien déduire de ce tableau sur les
 Pour les 25 denrées ci-dessous, système et station sont établis comme pour les 117 autres et concordent entre
 Spansh et EDSM. Ce qui manque est la troisième confirmation, le drapeau `is_home_station`, qui n'apparaît que si le
 relevé de marché a été pris alors que le stock n'était pas épuisé. Ce sont donc exactement les lignes dont les
-colonnes de prix et de stock sont vides en 7.3 — à deux exceptions près, *HR 7221 Wheat* et *Shan's Charis Orchid*,
+colonnes de prix et de stock sont vides en
+[section 7.3](#73-où-acheter-chacune-des-142-denrées-rares) — à deux exceptions près, *HR 7221 Wheat* et
+*Shan's Charis Orchid*,
 qui portent bien le drapeau mais avec un prix relevé nul, affiché « — » plutôt que « 0 ».
 
 | Denrée rare                       | Système          | Station            |
@@ -1184,7 +1197,8 @@ Gifts » est à retenir comme alias de recherche**.
 trouve **qu'une seule denrée rare citée**, une seule fois : *Soontill Relics*, dans le tableau des jalons de
 [Débuter et progresser](./27-debuter-et-progresser.md), comme condition de déblocage d'Elvira Martuuk (« 3 Soontill
 Relics »). Le corpus affirmait donc qu'il en faut trois sans jamais dire où les acheter. La réponse est désormais dans
-le tableau de 7.3 : **Cheranovsky City, système Ngurii**, station Coriolis à 1 274 ls de l'arrivée, où le relevé du
+le tableau de [section 7.3](#73-où-acheter-chacune-des-142-denrées-rares) : **Cheranovsky City, système Ngurii**,
+station Coriolis à 1 274 ls de l'arrivée, où le relevé du
 10 septembre 2026 donne 80 unités à 17 000 Cr pièce.
 
 D'autres déblocages d'ingénieurs par denrée rare sont réputés exister dans la communauté — les noms de Didi
@@ -1199,7 +1213,9 @@ Ces manques sont mesurés, pas supposés. Ils sont listés ici parce qu'un trou 
 
 ### 8.1 Les données de référence incomplètes : économies, légalité, types d'anneau, localisation française
 
-**1. Les économies de 137 marchandises sur 270.** Le tableau de 4.4 s'arrête à 133 lignes. Les manquantes se
+**1. Les économies de 137 marchandises sur 270.** Le tableau de
+[section 4.4](#44-économies-productrices-et-consommatrices-marchandise-par-marchandise) s'arrête à 133 lignes. Les
+manquantes se
 concentrent sur Salvage (96 sur 96), les Minéraux (19, dont Alexandrite, Benitoite, Grandidierite, Monazite,
 Musgravite, Rhodplumsite, Serendibite, Void Opal, Haematite, Bastnasite, Deuterium, Thortveitite, Quartz Pyroxenite,
 Olivine, Periclase Dunite, Sapphire, Diamond, Ruby, Magnesite), les Produits chimiques (5), les Matériaux industriels
@@ -1219,8 +1235,8 @@ la liste officielle des types de gouvernement, mais **aucune interdiction associ
 
 **3. Le type d'anneau de 16 marchandises sur 63**, et, pour les 30 renseignées, une source qui reste communautaire.
 Trois lignes n'ont aucune donnée d'aucune sorte : Hafnium 178, Steel, Haematite. **Où chercher** : le wiki Fandom
-page par marchandise, aujourd'hui inaccessible ; à défaut, un relevé en jeu. Rien de la section 6 n'a été vérifié en
-jeu.
+page par marchandise, aujourd'hui inaccessible ; à défaut, un relevé en jeu. Rien de la
+[section 6](#6-les-63-marchandises-minables--technique-dextraction-et-type-danneau) n'a été vérifié en jeu.
 
 **4. La réserve minimale conseillée par minéral — 0 case sur 63.** Aucune source publique ne l'établit. La seule voie
 honnête serait un relevé en jeu, ou l'exploitation statistique d'un dump EDDN des événements `ProspectedAsteroid`
@@ -1241,7 +1257,7 @@ ici les figerait en fausse vérité. Les prix se lisent **en jeu**, ou dans un o
 
 **7. Le rendement et le prix par minéral.** Le corpus a pris pour règle de ne pas figer les prix de minage par tonne,
 et ce guide ne revient pas dessus. Le seul relevé trouvé est un instantané Inara du 3 octobre 2025, issu d'un guide
-Steam à faible audience dont l'auteur signale lui-même deux valeurs possiblement gonflées par un Community Goal : il
+Steam à faible audience dont l'auteur signale lui-même deux valeurs possiblement gonflées par un Community Goal (objectif communautaire) : il
 n'est pas repris ici. **Où chercher** un relevé frais : `inara.cz/elite/commodities/` ou `edtools.cc/miner`, à
 consulter juste avant usage et à horodater.
 
@@ -1253,7 +1269,8 @@ et ne prend que 16 valeurs distinctes sur 139 points. Il aurait été facile d'a
 d'annoncer un seuil ; ce serait un chiffre inventé. **Où chercher** : les notes de version 2.1 et 3.0 de Frontier,
 qui ont modifié cette mécanique ; à défaut, une mesure en jeu.
 
-**9. L'économie qui paie le mieux une denrée rare donnée.** Le tableau de 7.4 donne l'économie de la station
+**9. L'économie qui paie le mieux une denrée rare donnée.** Le tableau de
+[section 7.4](#74-type-et-économie-des-139-stations-productrices) donne l'économie de la station
 *productrice*, ce qui n'est pas la question qui intéresse un commerçant. Aucune source consultée ne dit quelle
 économie achète le mieux telle denrée rare.
 
@@ -1288,13 +1305,75 @@ a été retenu. Le forum Frontier est également resté inaccessible (403, puis 
 `wiki.alioth.net/index.php/Economics` a été consultée puis **écartée** : elle traite d'Elite classique et d'Oolite,
 pas d'*Elite Dangerous*.
 
+## Questions fréquentes
+
+**Combien y a-t-il de marchandises (commodities) dans Elite Dangerous ?**
+*Elite Dangerous* recense 270 commodités réparties en 16 catégories officielles. Les quatre plus fournies sont
+Récupération/Salvage (96 entrées, plus du tiers du catalogue), Minéraux (39), Machines (24) et Métaux (24) ; à
+l'autre extrême, Esclavage n'en compte que 2 et la catégorie Non commercialisable (NonMarketable) une seule, les
+Limpets. Voir le [tableau des 16 catégories](#2-les-16-catégories-officielles-de-marchandises-et-leurs-effectifs).
+
+**Combien de denrées rares (rare commodities) existe-t-il et sur combien de stations les trouve-t-on ?**
+Le jeu compte 142 denrées rares, chacune produite en lot limité par une station unique, réparties sur 139 stations —
+trois d'entre elles (Hutton Orbital, George Lucas et Cassie-L-Peia) en produisent chacune deux. Aucune denrée rare
+n'apparaît en revanche à deux stations différentes. Voir le
+[tableau complet des 142 denrées rares](#73-où-acheter-chacune-des-142-denrées-rares).
+
+**Dans quel type d'anneau (ring type) miner la Bertrandite ?**
+La Bertrandite se mine au laser, dans les anneaux métalliques (Metallic) et riches en métaux (Metal Rich) : deux
+sources indépendantes, l'une de 2025 et l'autre de 2018, concordent sur ce point et aucune ne la place en anneau
+glacé ni rocheux. Voir [ce que l'on trouve dans chaque type d'anneau](#63-que-trouve-t-on-dans-chaque-type-danneau).
+
+**Combien de types d'anneaux (ring types) le jeu reconnaît-il pour le minage ?**
+Il n'en existe que 4, relevés intégralement dans `rings.csv` : Icy (Glacé), Rocky (Rocheux), Metallic (Métallique) et
+Metal Rich (Riche en métaux). Toute réponse qui en cite un cinquième est fausse. Voir
+[les quatre types d'anneau reconnus par le jeu](#61-les-quatre-types-danneau-reconnus-par-le-jeu).
+
+**Quelles économies de station achètent l'Or (Gold), le Palladium, l'Argent (Silver) et le Platine (Platinum) ?**
+Toutes les économies sauf Agriculture, Refinery, Extraction et Military. Contrairement à l'intuition, ce sont
+précisément les économies de raffinage et d'extraction qui ne les achètent pas : elles achètent le minerai brut à
+traiter, pas le métal déjà pur. Voir
+[la contradiction corrigée à ce sujet](#66-une-contradiction-à-corriger-dans-deux-guides-du-corpus).
+
+**Comment savoir si une marchandise est illégale (illegal) dans un système donné ?**
+La légalité dépend uniquement de la faction mineure qui contrôle la station et varie d'un système à l'autre : elle
+se lit dans la liste Prohibited du panneau latéral de la station, ou sur la carte du système. Ce référentiel ne
+documente que 12 marchandises sur 270 portant une mention explicite d'illégalité dans leur fiche EDSM — l'absence de
+mention ne prouve donc rien. Voir
+[la légalité des marchandises](#5-la-légalité-des-marchandises--ce-qui-est-documenté-et-pourquoi-ce-nest-pas-une-table-de-légalité).
+
+**Sur combien de marchandises l'économie productrice et l'économie consommatrice sont-elles documentées ?**
+Sur 133 marchandises sur 270 (49 %). La couverture atteint 100 % pour les Denrées alimentaires, les Textiles et les
+Médicaments, mais tombe à 0 % pour les 96 marchandises de Récupération (Salvage), qui ne se produisent pas — elles se
+récupèrent. Voir
+[le détail de cette couverture par catégorie](#41-ce-que-la-donnée--économies--couvre-et-ce-quelle-laisse-de-côté).
+
+**Quel est le stock maximum relevé pour une denrée rare, et que signifie ce chiffre ?**
+Le maximum observé sur les 142 denrées rares est de 90 unités, pour Harma Silver Sea Rum, suivi de 80 pour Soontill
+Relics et 68 pour The Hutton Mug. Ce stock relevé n'est qu'un instantané au 10 septembre 2026 et un minorant de
+l'allocation réelle : on peut affirmer que l'allocation est d'au moins 90 unités, jamais qu'elle vaut exactement 90.
+Voir [ce que le stock relevé dit, et ce qu'il ne dit pas](#76-ce-que-le-stock-relevé-dit-et-ce-quil-ne-dit-pas).
+
+**Où acheter les Soontill Relics nécessaires pour débloquer l'ingénieure Elvira Martuuk ?**
+À Cheranovsky City, dans le système Ngurii — une station Coriolis à 1 274 ls de l'arrivée. Le relevé de marché du
+10 septembre 2026 y donnait 80 unités en stock à 17 000 Cr pièce ; le corpus indique qu'il en faut 3 pour ce
+déblocage. Voir [le tableau des 142 denrées rares](#73-où-acheter-chacune-des-142-denrées-rares).
+
+**Le Tritium est-il minable, alors qu'il n'apparaît pas dans le tableau des 63 marchandises minables ?**
+Oui : le Tritium s'extrait bel et bien en anneau glacé, tout comme l'Hydrogen Peroxide, le Liquid Oxygen et la Water.
+Ces quatre marchandises sont absentes du tableau des 63 marchandises minables parce que le jeu les classe dans la
+catégorie Chemicals et non Minerals/Metals — leur absence de ce tableau ne signifie donc pas qu'elles ne se minent
+pas. Voir [le périmètre de cette section, et un piège de découpage](#62-périmètre-de-cette-section-et-un-piège-de-découpage).
+
 ## Voir aussi
 
 - **[Le Commerce dans Elite Dangerous](./11-commerce.md)** — mécanique des prix, offre et demande, types d'économie,
   marchés noirs et contrebande, exemple chiffré d'une route commerciale. Ce guide-ci nomme et classe les
   marchandises ; celui-là explique comment leur prix se forme.
-- **[Le Minage (Mining)](./20-minage.md)** — les quatre techniques d'extraction, l'équipement minier, les hotspots et
-  les outils de repérage. Le référentiel de la section 6 y renvoie pour tout ce qui touche à la manière de miner.
+- **[Le Minage (Mining)](./20-minage.md)** — les quatre techniques d'extraction, l'équipement minier, les hotspots
+  (concentrations minérales) et les outils de repérage. Le référentiel de la
+  [section 6](#6-les-63-marchandises-minables--technique-dextraction-et-type-danneau) y renvoie pour tout ce qui
+  touche à la manière de miner.
 - **[Transport et fret](./12-transport.md)** — missions de livraison, capacités de soute et logistique de cargaison.
 - **[Porte-vaisseaux de joueur (Fleet Carriers)](./19-fleet-carriers.md)** — transport en volume, marché embarqué,
   Tritium comme marchandise de carburant.
@@ -1303,7 +1382,8 @@ pas d'*Elite Dangerous*.
 - **[Sources de données](./17-sources-donnees.md)** — EDCD/FDevIDs, EDDN et les API communautaires dont proviennent
   les tableaux de ce guide.
 - **[Débuter et progresser](./27-debuter-et-progresser.md)** — jalons de progression, dont le déblocage d'Elvira
-  Martuuk contre 3 Soontill Relics, désormais localisées en section 7.3.
+  Martuuk contre 3 Soontill Relics, désormais localisées en
+  [section 7.3](#73-où-acheter-chacune-des-142-denrées-rares).
 - **[Ingénieurs](./06-ingenieurs.md)** — les composants d'ingénierie qui apparaissent dans le catalogue des
   marchandises (Modular Terminals, Power Converter, Exhaust Manifold et les autres composants « près de <système> »).
 
@@ -1314,9 +1394,12 @@ pas d'*Elite Dangerous*.
 - `FDevIDs/commodity.csv` — 270 lignes de données, colonnes `id`, `symbol`, `category`, `name`. Source unique et
   exclusive des sections 2 et 3, et des colonnes de nom, de catégorie et de symbole interne partout ailleurs.
 - `FDevIDs/rare_commodity.csv` — 142 lignes de données, colonnes `id`, `symbol`, `market_id`, `category`, `name`.
-  Origine des colonnes « Denrée rare », « Catégorie » et « market_id » de la section 7.
-- `FDevIDs/economy.csv` — 17 lignes de données. Source de la table des économies de la section 4.3.
-- `FDevIDs/rings.csv` — 4 lignes de données. Source de la table des types d'anneau de la section 6.1.
+  Origine des colonnes « Denrée rare », « Catégorie » et « market_id » de la
+  [section 7](#7-les-142-denrées-rares--catégorie-système-dorigine-et-station-dachat).
+- `FDevIDs/economy.csv` — 17 lignes de données. Source de la table des économies de la
+  [section 4.3](#43-les-17-économies-de-station-face-au-catalogue-des-marchandises).
+- `FDevIDs/rings.csv` — 4 lignes de données. Source de la table des types d'anneau de la
+  [section 6.1](#61-les-quatre-types-danneau-reconnus-par-le-jeu).
 - `FDevIDs/README.md` — source de l'affirmation selon laquelle la colonne `name` reproduit l'intitulé affiché en jeu
   en anglais, citée à propos de la divergence *Festive Gifts* / *Personal Gifts*.
 - `EliteDangerousCore/EliteDangerous/FrontierData/Enumerations/Rings.cs` — énumération `RingClassEnum`, qui corrobore
@@ -1327,11 +1410,17 @@ pas d'*Elite Dangerous*.
 
 - `https://www.edsm.net/en/faq/commodities` et les 15 pages de catégories `.../index/id/N/name/X` — 413 fiches de
   marchandises, récupérées en HTML brut puis analysées par script. Source unique des colonnes d'économies
-  productrices et consommatrices (sections 4.2, 4.3, 4.4, 6.2) et des mentions d'illégalité (section 5.2). Ces pages
+  productrices et consommatrices (sections [4.2](#42-synthèse-des-économies-par-catégorie-par-dénombrement),
+  [4.3](#43-les-17-économies-de-station-face-au-catalogue-des-marchandises),
+  [4.4](#44-économies-productrices-et-consommatrices-marchandise-par-marchandise) et
+  [6.2](#62-périmètre-de-cette-section-et-un-piège-de-découpage)) et des mentions d'illégalité
+  ([section 5.2](#52-relevé-partiel-des-marchandises-dont-la-description-en-jeu-mentionne-une-illégalité)). Ces pages
   ne portent ni numéro de version du jeu ni date de dernière modification.
 - `https://spansh.co.uk/api/station/<market_id>` — 139 requêtes, une par identifiant de marché distinct, toutes en
   HTTP 200. Origine des colonnes « Système », « Station », « Type », « Arrivée », « Achat relevé » et « Stock relevé »
-  de la section 7.3, ainsi que des tables 7.4 et 7.5.
+  de la [section 7.3](#73-où-acheter-chacune-des-142-denrées-rares), ainsi que des
+  [tables 7.4](#74-type-et-économie-des-139-stations-productrices) et
+  [7.5](#75-les-trois-stations-qui-produisent-deux-denrées-rares-et-les-25-lignes-sans-troisième-confirmation).
 - `https://www.edsm.net/api-system-v1/stations/market?marketId=<id>` — 139 requêtes, utilisées exclusivement comme
   contre-vérification indépendante des noms de système et de station.
 - `https://inara.cz/elite/commodity/52/` (Bertrandite) — contrôle croisé ponctuel : confirme Extraction en production
@@ -1352,8 +1441,10 @@ pas d'*Elite Dangerous*.
 ### Sources du corpus relues pour ce guide, sans modification
 
 - [Commerce](./11-commerce.md) — mécanique des économies de station et tableau produit/consomme par économie ; phrase
-  sur Service et Terraforming à corriger (voir 4.3) ; phrase sur la revente des minerais de valeur à corriger
-  (voir 6.6) ; section sur les denrées rares, qui ne cite ni nom, ni station, ni chiffre.
+  sur Service et Terraforming à corriger (voir
+  [section 4.3](#43-les-17-économies-de-station-face-au-catalogue-des-marchandises)) ; phrase sur la revente des
+  minerais de valeur à corriger (voir [section 6.6](#66-une-contradiction-à-corriger-dans-deux-guides-du-corpus)) ;
+  section sur les denrées rares, qui ne cite ni nom, ni station, ni chiffre.
 - [Le Minage](./20-minage.md) — les trois techniques d'anneau et les neuf gemmes du core mining, les treize
   marchandises du minage de surface planétaire, les réserves Pristine confirmées par EDSM, et la règle de ne pas
   figer les prix de minage.

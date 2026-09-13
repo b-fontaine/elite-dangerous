@@ -44,7 +44,7 @@ l'équipement, pas seulement la coque. Côté Ingénieurs (*Engineers*), **Felic
 Federation (Combat, Commerce, Exploration, Exobiologie, Mercenaire, CQC, de Harmless/Penniless/Aimless jusqu'à Elite I à
 V) plus les marines **fédérale** et **impériale**, qui conditionnent l'achat de sept vaisseaux. Aucun seuil numérique de
 progression n'a jamais été publié par Frontier Developments. Cette édition ajoute trois volets : un point d'entrée
-« Pilot Training » avant la toute première sortie (1.0), trois jalons chiffrés à 10 h/100 h/1000 h de jeu (1.4), et un
+« Pilot Training » avant la toute première sortie ([1.0](#10-avant-la-première-sortie--lassessment-et-les-scénarios--pilot-training-)), trois jalons chiffrés à 10 h/100 h/1000 h de jeu ([1.4](#14-trois-horizons--ce-quon-peut-viser-à-10-h-100-h-et-1000-h-de-jeu)), et un
 Volet 3 réunissant un arbre de décision « quel vaisseau pour quel objectif » et vingt-deux pièges qui coûtent cher,
 agrégés depuis tout le corpus.
 
@@ -60,9 +60,11 @@ Deux règles de prudence traversent tout le document : les seuils numériques ex
 
 ### 1.0 Avant la première sortie : l'Assessment et les scénarios « Pilot Training »
 
+*Répond à : « Que faire avant ma première sortie ? », « C'est quoi le menu Pilot Training ? », « Faut-il s'entraîner avant de jouer en ligne (offline training) ? »*
+
 Avant même le Sidewinder Mk I, le menu principal propose un ensemble de scénarios d'entraînement isolés du monde
 persistant — aucun risque de destruction réelle, aucun impact sur l'économie ou le BGS — regroupés dans le menu
-**Pilot Training**. Un Commandant qui vient de terminer le *Pilot's Assessment* obligatoire (la licence de la Pilots
+**Pilot Training** (entraînement du pilote). Un Commandant qui vient de terminer le *Pilot's Assessment* obligatoire (la licence de la Pilots
 Federation) y trouve, au 13 septembre 2026, environ **neuf simulations de pilotage** et une **dizaine de scénarios de
 défi** supplémentaires, complétés par une bibliothèque d'une vingtaine de vidéos officielles — décompte relevé sur un
 guide communautaire récent, non confirmé par une page officielle directement consultée (`community.elitedangerous.com`
@@ -77,21 +79,23 @@ seulement leur place dans la progression :
    demande, délai d'attribution de pad, dimensions du mailslot, seuils d'amende) est en
    [31-pilotage-navigation-et-stations.md §2](./31-pilotage-navigation-et-stations.md).
 3. **Voyage** (supercroisière, interdiction) — [31-pilotage-navigation-et-stations.md §1](./31-pilotage-navigation-et-stations.md).
-4. **Combat** — initiation aux pips et au Flight Assist Off avant tout engagement réel ; voir
+4. **Combat** — initiation aux pips et au Flight Assist Off (coupure de l'assistance de vol) avant tout engagement réel ; voir
    [08-combat-spatial.md §1](./08-combat-spatial.md), qui recommande explicitement de s'entraîner « en zone de
    simulation de combat » avant tout engagement, et dont ce scénario est le prolongement naturel.
 5. **SRV** — pilotage au sol, utile avant une première sortie de minage de surface ou d'exobiologie.
 6. **Chasseur embarqué** (Ship-Launched Fighter) — optionnel, utile seulement en configuration Multicrew.
-7. **À pied** — mouvement, arme, outils du Suit Tool ; complète [09-combat-a-pied.md](./09-combat-a-pied.md).
+7. **À pied** — mouvement, arme, outils du Suit Tool (outil polyvalent porté à pied) ; complète [09-combat-a-pied.md](./09-combat-a-pied.md).
 
 Ces scénarios sont jouables **hors ligne** (mode solo déconnecté) — le seul contenu du jeu accessible sans connexion
 aux serveurs Frontier, utile pour s'exercer avant un premier vol en ligne. Aucune durée officielle par scénario n'a
 pu être confirmée cette édition ; comptez une session courte (10 à 20 minutes) par scénario pour les parcourir tous
-avant la première sortie réelle. Le CQC ([§2.4 ci-dessous](#24-rang-cqc--ce-qui-est-confirmé-et-ce-qui-ne-lest-pas))
+avant la première sortie réelle. Le CQC (Close Quarters Combat) ([§2.4 ci-dessous](#24-rang-cqc--ce-qui-est-confirmé-et-ce-qui-ne-lest-pas))
 prolonge cette logique d'entraînement sans risque économique, mais dans un cadre multijoueur compétitif plutôt que
 solo.
 
 ### 1.1 Progression de vaisseau : du Sidewinder au premier multirôle
+
+*Répond à : « Quel vaisseau acheter après le Sidewinder ? », « Combien coûte un Cobra Mk III ? », « What's the best starter ship progression? »*
 
 Le Sidewinder Mk I de départ (gratuit) suffit pour les toutes premières missions de livraison et de reconnaissance, mais sa faible capacité de soute et son armement anecdotique en font vite un frein. Le cheminement le plus couramment observé dans la communauté — sans être un passage obligé — consiste à évoluer vers un vaisseau spécialisé bon marché avant de viser un premier multirôle complet :
 
@@ -120,7 +124,7 @@ Aucune source consultée pour cette édition n'a permis de confirmer des chiffre
 | Missions / primes en RES | Vaisseau armé de combat léger (Viper, Eagle, Vulture) | Armes, boucliers, contrôleur de limpets de récupération | Combat PvE, embuscades de PNJ pirates en Hazardous RES | Rapide — RES accessible dès la sortie de station | [08-combat-spatial.md §4.1](./08-combat-spatial.md) |
 | Trading court (aller-retour local) | Vaisseau de fret (Hauler, Type-6, Cobra Mk III) | Soutes de fret supplémentaires | Faible en soi, mais capital immobilisé en marchandise | Rapide — routes visibles sur le panneau de commerce ou via Inara/Spansh | [11-commerce.md §2.1](./11-commerce.md) |
 
-Faute de chiffres vérifiés, la meilleure approche pour un nouveau Commandant reste d'essayer chaque activité brièvement avec l'équipement déjà en sa possession avant d'investir dans une spécialisation — c'est aussi l'esprit de la *New Commander Roadmap* citée en 1.1, qui structure la progression autour de la découverte des styles de jeu plutôt que d'un chiffre de rentabilité imposé.
+Faute de chiffres vérifiés, la meilleure approche pour un nouveau Commandant reste d'essayer chaque activité brièvement avec l'équipement déjà en sa possession avant d'investir dans une spécialisation — c'est aussi l'esprit de la *New Commander Roadmap* citée en [1.1](#11-progression-de-vaisseau--du-sidewinder-au-premier-multirôle), qui structure la progression autour de la découverte des styles de jeu plutôt que d'un chiffre de rentabilité imposé.
 
 Avant même de choisir une activité, la toute première compétence du jeu — décoller, voyager en supercroisière et
 accoster — n'était documentée nulle part dans le corpus jusqu'à ce cycle : voir
@@ -128,6 +132,8 @@ accoster — n'était documentée nulle part dans le corpus jusqu'à ce cycle : 
 d'accostage, l'atterrissage planétaire et les tailles de pad par type de station.
 
 ### 1.3 Choisir ses 2 ou 3 premiers Ingénieurs selon l'objectif
+
+*Répond à : « Quel Ingénieur débloquer en premier ? », « Where is Felicity Farseer? », « Comment débloquer les Engineers rapidement ? »*
 
 Le mécanisme général de déblocage (invitation, rangs 1 à 5, matériaux) est couvert en détail dans [06-ingenieurs.md](./06-ingenieurs.md#débloquer-laccès-à-un-ingénieur--invitation-rangs-de-réputation-et-courtiers-technologiques) et n'est pas repris ici. Ce qui manquait à ce guide est la couche « par où commencer » : deux sources externes indépendantes (edfieldmanual.com et inara.cz) convergent sur les recommandations suivantes.
 
@@ -150,15 +156,17 @@ Les jalons ci-dessous complètent la progression en **capital** détaillée dans
 recoupent sans se dupliquer. Ce ne sont pas des seuils Frontier : des repères de planification construits à partir
 de chiffres déjà sourcés ailleurs dans le corpus, pas un barème officiel de progression, qui n'existe pas.
 
-- **≈ 10 heures** — accoster sans amende (procédure de [31-pilotage-navigation-et-stations.md §2](./31-pilotage-navigation-et-stations.md)), disposer d'environ 1 M Cr de trésorerie, piloter un **Cobra Mk III** (349 720 Cr, voir 1.1), et avoir débloqué un premier Ingénieur — Felicity Farseer, priorité universelle (voir 1.3).
-- **≈ 100 heures** — 50 à 200 M Cr de trésorerie ou d'actifs, un FSD ingénieré au grade 5 chez Farseer (*Increased Range*), un vaisseau spécialisé pour l'activité choisie (minier, de combat ou d'exploration selon 1.2), et un rang à mi-échelle sur au moins une des huit progressions du tableau 2.0.
-- **≈ 1000 heures** — un Federal Corvette ou un Imperial Cutter (rang de marine correspondant atteint, voir 2.0), éventuellement un Porte-Vaisseau (5 Md Cr d'achat, 10 à 20 M Cr/semaine d'entretien réaliste — voir [19-fleet-carriers.md](./19-fleet-carriers.md) et la mise en garde budgétaire en 3.2 ci-dessous), le Guardian FSD Booster ([05-guardians.md](./05-guardians.md)), et soit une exploration lointaine soutenue, soit un engagement Powerplay régulier ([02-powerplay.md](./02-powerplay.md)).
+- **≈ 10 heures** — accoster sans amende (procédure de [31-pilotage-navigation-et-stations.md §2](./31-pilotage-navigation-et-stations.md)), disposer d'environ 1 M Cr de trésorerie, piloter un **Cobra Mk III** (349 720 Cr, voir [1.1](#11-progression-de-vaisseau--du-sidewinder-au-premier-multirôle)), et avoir débloqué un premier Ingénieur — Felicity Farseer, priorité universelle (voir [1.3](#13-choisir-ses-2-ou-3-premiers-ingénieurs-selon-lobjectif)).
+- **≈ 100 heures** — 50 à 200 M Cr de trésorerie ou d'actifs, un FSD ingénieré au grade 5 chez Farseer (*Increased Range*), un vaisseau spécialisé pour l'activité choisie (minier, de combat ou d'exploration selon [1.2](#12-premières-activités-rentables-pour-un-débutant--comparatif-qualitatif)), et un rang à mi-échelle sur au moins une des huit progressions du tableau [2.0](#20-les-huit-échelles-de-rang-delite-dangerous-comparées).
+- **≈ 1000 heures** — un Federal Corvette ou un Imperial Cutter (rang de marine correspondant atteint, voir [2.0](#20-les-huit-échelles-de-rang-delite-dangerous-comparées)), éventuellement un Porte-Vaisseau (5 Md Cr d'achat, 10 à 20 M Cr/semaine d'entretien réaliste — voir [19-fleet-carriers.md](./19-fleet-carriers.md) et la mise en garde budgétaire en [3.2](#32-les-erreurs-qui-coûtent-le-plus-cher) ci-dessous), le Guardian FSD Booster ([05-guardians.md](./05-guardians.md)), et soit une exploration lointaine soutenue, soit un engagement Powerplay régulier ([02-powerplay.md](./02-powerplay.md)).
 
 ---
 
 ## Volet 2 — Monter en rang efficacement
 
 ### 2.0 Les huit échelles de rang d'Elite Dangerous, comparées
+
+*Répond à : « Combien y a-t-il de rangs dans Elite Dangerous ? », « How many ranks are there? », « À quoi servent les rangs de marine fédérale et impériale ? »*
 
 Elite Dangerous suit **huit progressions de rang indépendantes** : les **six filières administrées par la Pilots Federation** — Combat, Commerce, Exploration, CQC, Mercenaire et Exobiologiste ([01-lore.md §2.7](./01-lore.md)) — plus les **deux échelles de marine** des superpuissances, Fédération et Empire, qui conditionnent l'achat de certains vaisseaux ([03-vaisseaux.md, « Rangs de réputation requis »](./03-vaisseaux.md#rangs-de-réputation-requis--les-sept-vaisseaux-fédération-et-empire-sous-condition-de-rang)). Aucune n'a de seuils numériques publiés officiellement par Frontier ; les intitulés ci-dessous sont vérifiés (voir renvois), sauf les colonnes Mercenaire et CQC :
 
@@ -184,7 +192,7 @@ ce guide-ci n'en reprend que les paliers qui conditionnent l'achat d'un vaisseau
 | Marine fédérale (Federal Navy) | Midshipman < Chief Petty Officer < Ensign < … < Rear Admiral | Federal Dropship, Federal Assault Ship, Federal Gunship, Federal Corvette |
 | Marine impériale (Imperial Navy) | Master < Baron < Duke | Imperial Courier, Imperial Clipper, Imperial Cutter |
 
-Sources internes : Combat — [08-combat-spatial.md §6.1](./08-combat-spatial.md) ; Commerce — [11-commerce.md, « Rang de commerce »](./11-commerce.md) ; Exploration/Exobiologie — [10-exploration.md §2.6](./10-exploration.md) ; existence des six filières Pilots Federation — [01-lore.md §2.7](./01-lore.md) ; échelles de marine — [03-vaisseaux.md, « Rangs de réputation requis »](./03-vaisseaux.md#rangs-de-réputation-requis--les-sept-vaisseaux-fédération-et-empire-sous-condition-de-rang) et, pour l'échelle complète et le mécanisme de promotion, [29-missions-reputation-et-rangs.md §3](./29-missions-reputation-et-rangs.md). La colonne CQC reste volontairement lacunaire : Inara ne montre que les paliers atteints par les meilleurs joueurs de son classement (Legend, Hero, Elite I/III/V), pas une échelle complète et ordonnée du bas vers le haut — voir 2.4 pour le détail de ce qui n'a pas pu être confirmé. La colonne Mercenaire l'est pour une autre raison : le corpus atteste l'**existence** de cette filière ([01-lore.md §2.7](./01-lore.md)) et le fait que la réputation mercenaire conditionne les grades de combinaison à pied ([13-operations.md, « S'équiper à pied : les quatre combinaisons »](./13-operations.md)), mais aucune source consultée n'en donne l'échelle de paliers ordonnée — une recherche indépendante menée pour
+Sources internes : Combat — [08-combat-spatial.md §6.1](./08-combat-spatial.md) ; Commerce — [11-commerce.md, « Rang de commerce »](./11-commerce.md) ; Exploration/Exobiologie — [10-exploration.md §2.6](./10-exploration.md) ; existence des six filières Pilots Federation — [01-lore.md §2.7](./01-lore.md) ; échelles de marine — [03-vaisseaux.md, « Rangs de réputation requis »](./03-vaisseaux.md#rangs-de-réputation-requis--les-sept-vaisseaux-fédération-et-empire-sous-condition-de-rang) et, pour l'échelle complète et le mécanisme de promotion, [29-missions-reputation-et-rangs.md §3](./29-missions-reputation-et-rangs.md). La colonne CQC reste volontairement lacunaire : Inara ne montre que les paliers atteints par les meilleurs joueurs de son classement (Legend, Hero, Elite I/III/V), pas une échelle complète et ordonnée du bas vers le haut — voir [2.4](#24-rang-cqc--ce-qui-est-confirmé-et-ce-qui-ne-lest-pas) pour le détail de ce qui n'a pas pu être confirmé. La colonne Mercenaire l'est pour une autre raison : le corpus atteste l'**existence** de cette filière ([01-lore.md §2.7](./01-lore.md)) et le fait que la réputation mercenaire conditionne les grades de combinaison à pied ([13-operations.md, « S'équiper à pied : les quatre combinaisons »](./13-operations.md)), mais aucune source consultée n'en donne l'échelle de paliers ordonnée — une recherche indépendante menée pour
 [29-missions-reputation-et-rangs.md §4](./29-missions-reputation-et-rangs.md#4-le-rang-mercenaire-combat-à-pied) confirme cette même absence plutôt que de la combler ; vérifiez votre progression dans le panneau des rangs en jeu.
 
 ### 2.1 Rang Combat : CZ haute intensité contre assassinats de cibles élevées
@@ -202,13 +210,13 @@ Pour un Commandant encore en vaisseau starter, la prudence recommandée par le c
 
 La méthode **Road to Riches**, décrite en détail dans [10-exploration.md §1.4](./10-exploration.md) et opérationnalisée par l'outil du même nom sur Spansh, consiste à cibler par avance les systèmes contenant des espèces exobiologiques à haute valeur plutôt que d'explorer au hasard. [10-exploration.md §2.5-2.6](./10-exploration.md) documente la stratégie du commandant Canonn *JJGoldberg*, premier Commandant recensé à avoir atteint le rang **Exobiology Elite V** en combinant cette méthode à un repérage systématique des espèces à forte valeur (seuil indicatif > 400 000 Cr par échantillon cité par ce commandant).
 
-Point utile pour la progression de rang, non développé comme tel dans 10-exploration.md : un même circuit Road to Riches fait progresser **simultanément deux échelles de rang indépendantes** — le rang **Explorateur** (basé sur la valeur cumulée des données FSS/DSS vendues à Universal Cartographics) et le rang **Exobiologiste** (basé sur la valeur cumulée des échantillons vendus à Vista Genomics) — puisque le scan de système (honk/FSS) et l'atterrissage pour échantillonnage s'appliquent au même trajet. Un Commandant qui suit un itinéraire Road to Riches fait donc d'une pierre deux coups en termes de rang, sans effort de planification supplémentaire.
+Point utile pour la progression de rang, non développé comme tel dans [10-exploration.md](./10-exploration.md) : un même circuit Road to Riches fait progresser **simultanément deux échelles de rang indépendantes** — le rang **Explorateur** (basé sur la valeur cumulée des données FSS/DSS vendues à Universal Cartographics) et le rang **Exobiologiste** (basé sur la valeur cumulée des échantillons vendus à Vista Genomics) — puisque le scan de système (honk/FSS) et l'atterrissage pour échantillonnage s'appliquent au même trajet. Un Commandant qui suit un itinéraire Road to Riches fait donc d'une pierre deux coups en termes de rang, sans effort de planification supplémentaire.
 
-> **Limite méthodologique héritée de 10-exploration.md** : l'ordre exact des paliers intermédiaires du rang Exobiologiste (voir tableau 2.0) repose sur une reconstitution communautaire recoupée avec un seul article Canonn, faute d'accès au wiki Fandom et aux forums officiels — vérifier l'intitulé exact dans le panneau des rangs en jeu avant de planifier un objectif précis.
+> **Limite méthodologique héritée de [10-exploration.md](./10-exploration.md)** : l'ordre exact des paliers intermédiaires du rang Exobiologiste (voir tableau [2.0](#20-les-huit-échelles-de-rang-delite-dangerous-comparées)) repose sur une reconstitution communautaire recoupée avec un seul article Canonn, faute d'accès au wiki Fandom et aux forums officiels — vérifier l'intitulé exact dans le panneau des rangs en jeu avant de planifier un objectif précis.
 
 ### 2.3 Rang Commerce : relier les méthodes de profit déjà documentées au rang
 
-Le rang de commerce progresse selon le **profit cumulé** réalisé en vendant des marchandises ([11-commerce.md, « Rang de commerce »](./11-commerce.md)), sur neuf paliers puis Elite I à V — voir tableau 2.0. Ce que 11-commerce.md ne tranche pas, et qu'aucune source consultée cette édition n'a permis de confirmer, c'est le **mécanisme exact de calcul** : le profit d'achat-revente pur au marché, la vente de minerai miné, et les récompenses en crédits de missions de livraison comptent-ils tous de façon identique pour ce rang ? Faute de confirmation par une source primaire, ce guide ne tranche pas la question et recommande de vérifier l'évolution du rang après chaque type de vente dans le panneau Réputation du jeu plutôt que de présumer une équivalence.
+Le rang de commerce progresse selon le **profit cumulé** réalisé en vendant des marchandises ([11-commerce.md, « Rang de commerce »](./11-commerce.md)), sur neuf paliers puis Elite I à V — voir tableau [2.0](#20-les-huit-échelles-de-rang-delite-dangerous-comparées). Ce que [11-commerce.md](./11-commerce.md) ne tranche pas, et qu'aucune source consultée cette édition n'a permis de confirmer, c'est le **mécanisme exact de calcul** : le profit d'achat-revente pur au marché, la vente de minerai miné, et les récompenses en crédits de missions de livraison comptent-ils tous de façon identique pour ce rang ? Faute de confirmation par une source primaire, ce guide ne tranche pas la question et recommande de vérifier l'évolution du rang après chaque type de vente dans le panneau Réputation du jeu plutôt que de présumer une équivalence.
 
 Sous cette réserve, les méthodes déjà chiffrées ailleurs dans le corpus peuvent être reliées qualitativement à la vitesse de progression du rang de commerce :
 
@@ -219,6 +227,8 @@ Sous cette réserve, les méthodes déjà chiffrées ailleurs dans le corpus peu
 | Contrebande façon Robigo | ≈ 90 M Cr/h (configuration avancée) | Incertain — dépend de si le marché noir est traité comme une vente « de commerce » standard | [11-commerce.md §2.3](./11-commerce.md) |
 
 ### 2.4 Rang CQC : ce qui est confirmé, et ce qui ne l'est pas
+
+*Répond à : « C'est quoi le CQC ? », « What is CQC rank? », « Le rang CQC compte-t-il pour le rang de combat normal ? »*
 
 Ce que cette édition peut confirmer, en complément de [23-jeu-en-groupe.md §4](./23-jeu-en-groupe.md) : le CQC oppose des équipes dans des arènes séparées du monde persistant, en petits vaisseaux préconfigurés, sans perte d'équipement ni impact sur l'économie ou le BGS. Le rang CQC est suivi par la Pilots Federation, **indépendamment** du rang de combat principal (Harmless → Elite) : un Commandant peut être Elite en CQC sans l'être en combat spatial classique, et réciproquement. Comme le CQC ne demande ni vaisseau possédé ni crédits, c'est un terrain d'entraînement au pilotage pur (visée, esquive) sans enjeu économique — un bon complément d'apprentissage pour un nouveau Commandant avant de risquer un vaisseau réel en Open.
 
@@ -238,11 +248,11 @@ Faute de données fiables sur ces trois points, la seule recommandation actionna
 
 Quel est votre objectif principal pour les prochaines heures de jeu ?
 
-- **Gagner des crédits vite** → comparatif qualitatif de 1.2, puis matrice **Rôle × Budget** de
+- **Gagner des crédits vite** → comparatif qualitatif de [1.2](#12-premières-activités-rentables-pour-un-débutant--comparatif-qualitatif), puis matrice **Rôle × Budget** de
   [03-vaisseaux.md, « Quel vaisseau pour quel rôle et quel budget »](./03-vaisseaux.md) pour choisir un vaisseau au
   budget déjà disponible plutôt que d'attendre d'avoir économisé pour un vaisseau hors de portée.
 - **Explorer loin** → un vaisseau à grande portée de saut (Diamondback Explorer, Asp Explorer, puis Krait Phantom ou
-  Mandalay une fois le budget suffisant) et le FSD *Increased Range* de Farseer (1.3) ; voir
+  Mandalay une fois le budget suffisant) et le FSD *Increased Range* de Farseer ([1.3](#13-choisir-ses-2-ou-3-premiers-ingénieurs-selon-lobjectif)) ; voir
   [10-exploration.md](./10-exploration.md).
 - **Combattre (PvE ou AX)** → un vaisseau de combat dédié dès que le budget dépasse le premier palier de la matrice
   Rôle × Budget ; voir [08-combat-spatial.md](./08-combat-spatial.md) pour les builds chiffrés, ou
@@ -254,6 +264,8 @@ Quel est votre objectif principal pour les prochaines heures de jeu ?
 
 ### 3.2 Les erreurs qui coûtent le plus cher
 
+*Répond à : « Quelles erreurs éviter en début de partie ? », « What are the costliest rookie mistakes? », « Pourquoi mon vaisseau a-t-il été perdu sans que je puisse le récupérer ? »*
+
 Vingt-deux pièges déjà rencontrés ailleurs dans le corpus, réunis ici pour la première fois — trois d'entre eux
 (panne sèche loin de tout, perte des rolls d'ingénierie à la revente, Porte-Vaisseau sans provision d'entretien)
 n'étaient documentés nulle part avant cette édition :
@@ -261,8 +273,8 @@ n'étaient documentés nulle part avant cette édition :
 | Piège | Conséquence chiffrée | Comment l'éviter | Renvoi |
 |---|---|---|---|
 | Engager toute sa trésorerie dans un seul chargement | Cargaison perdue en totalité si le vaisseau est détruit — le rebuy ne couvre que la coque, jamais le fret | Ne jamais transporter une cargaison dont la perte mettrait en péril la trésorerie | [11-commerce.md](./11-commerce.md) |
-| Ne pas vérifier le coût de rebuy avant une sortie risquée | Vaisseau perdu + rebuy à payer sans réserve, jusqu'à l'impossibilité de le récupérer | Vérifier le rebuy affiché au panneau du vaisseau avant chaque sortie risquée | 1.1 ci-dessus |
-| Acheter un vaisseau sans budgéter l'équipement | Budget réel ≈ **2,6×** le prix de coque (un Anaconda en core internals A : ≈ 387 M Cr contre 147 M Cr de coque nue) | Toujours budgétiser modules + rebuy avant l'achat, pas seulement la coque | [03-vaisseaux.md, coût réel d'un vaisseau équipé](./03-vaisseaux.md) |
+| Ne pas vérifier le coût de rebuy avant une sortie risquée | Vaisseau perdu + rebuy à payer sans réserve, jusqu'à l'impossibilité de le récupérer | Vérifier le rebuy affiché au panneau du vaisseau avant chaque sortie risquée | [1.1](#11-progression-de-vaisseau--du-sidewinder-au-premier-multirôle) ci-dessus |
+| Acheter un vaisseau sans budgéter l'équipement | Budget réel ≈ **2,6×** le prix de coque (un Anaconda en core internals A (modules internes obligatoires) : ≈ 387 M Cr contre 147 M Cr de coque nue) | Toujours budgétiser modules + rebuy avant l'achat, pas seulement la coque | [03-vaisseaux.md, coût réel d'un vaisseau équipé](./03-vaisseaux.md) |
 | Ne pas connaître les canaux d'écoulement du fret volé | Cargaison marquée « volée », invendable en marché légal | Écouler via marché noir ou stations d'Anarchie, comme la contrebande | [11-commerce.md](./11-commerce.md) |
 | Chasseur embarqué en vol quand le vaisseau-mère engage la supercroisière | Chasseur détruit automatiquement | Attendre la confirmation d'arrimage avant tout saut | [23-jeu-en-groupe.md](./23-jeu-en-groupe.md) |
 | Cibler un anneau glacé en pensant n'y trouver que des `Minerals` | Tritium, eau et autres `Chemicals` non repérés — mauvaise cible de minage | Consulter [28-marchandises.md](./28-marchandises.md) pour la répartition complète par catégorie | [20-minage.md](./20-minage.md) |
@@ -270,18 +282,55 @@ n'étaient documentés nulle part avant cette édition :
 | Farming furtif à pied : ignorer le triangle de ligne de vue directe | Détection, combat non désiré, boucle « sans combat » cassée | Surveiller triangle/cercle sur le HUD avant de piller chaque casier | [26-ingenierie-a-pied-avancee.md](./26-ingenierie-a-pied-avancee.md) |
 | Appliquer une modification d'ingénierie sans avoir planifié le build | Modification irréversible : ni retirée, ni remplacée, matériaux engagés perdus | Planifier le build complet avant d'engager le moindre matériau | [06-ingenieurs.md](./06-ingenieurs.md) |
 | Vérifier trop tard qu'un Ingénieur exige encore les mêmes seuils | Trajet inutile si la condition a changé entre deux mises à jour | Vérifier l'onglet Ingénieurs en jeu avant de partir, pas un guide figé | [06-ingenieurs.md](./06-ingenieurs.md) |
-| Manquer de carburant loin de toute route commerciale | Immobilisation, ou pire en dehors du vaisseau (réserve d'oxygène) | Garder une marge de carburant ; connaître la procédure d'appel aux Fuel Rats | [31-pilotage-navigation-et-stations.md §7.3](./31-pilotage-navigation-et-stations.md) |
+| Manquer de carburant loin de toute route commerciale | Immobilisation, ou pire en dehors du vaisseau (réserve d'oxygène) | Garder une marge de carburant ; connaître la procédure d'appel aux Fuel Rats (secours bénévole en carburant) | [31-pilotage-navigation-et-stations.md §7.3](./31-pilotage-navigation-et-stations.md) |
 | Revendre un module fraîchement ingénieré | Perte définitive des rolls d'ingénierie déjà appliqués | Stocker le module ingénieré plutôt que le revendre si un usage futur est envisageable | *(absent du corpus avant cette édition)* |
 | Acheter un Porte-Vaisseau sans provisionner l'entretien hebdomadaire | Décommissionnement involontaire : dette déduite du remboursement après une semaine de grâce impayée | Budgéter 10 à 20 M Cr/semaine avant l'achat | [19-fleet-carriers.md](./19-fleet-carriers.md) |
 | Laisser expirer une revendication de colonisation | Balise non déployée sous 24 h ou port primaire non achevé sous 4 semaines → revendication perdue | Respecter les deux délais impératifs dès le contact établi | [18-colonisation.md](./18-colonisation.md) |
 | Compter sur le brut du revenu hebdomadaire de l'Architecte | Impôt galactique prélevé au-delà de 5 M Cr cumulés par semaine | Ne pas se fier au chiffre affiché avant impôt | [18-colonisation.md](./18-colonisation.md) |
 | Se tromper sur le nombre d'unités attendues par Wellington Beck | Déblocage manqué si l'échange s'arrête avant le seuil réel | Vérifier le seuil exact (15 unités) avant de troquer | [26-ingenierie-a-pied-avancee.md](./26-ingenierie-a-pied-avancee.md) |
-| Confondre la masse de coque du Panther Clipper Mk II avec sa capacité de fret | Mauvaise estimation logistique (1 200 t = masse à vide, pas une soute) | Vérifier la capacité réelle via les Cargo Racks installés | [03-vaisseaux.md](./03-vaisseaux.md) |
-| Viser un Federal Corvette ou un Imperial Cutter sans le rang requis | Achat bloqué faute de rang Rear Admiral / Duke | Vérifier son rang de marine avant de viser ces vaisseaux | 2.0 ci-dessus |
-| Se fier à un Cr/h de fin de partie pour un vaisseau starter | Attentes déçues, mauvaise allocation du temps de jeu | Utiliser le comparatif qualitatif de 1.2, pas un chiffre de fin de partie | 1.2 ci-dessus |
-| Vendre une espèce d'exobiologie après qu'un autre CMDR l'a « First Logged » sur le même corps | Perte du bonus ×5, vente à la seule valeur de base | Vérifier la fraîcheur du corps avant d'y consacrer du temps | [10-exploration.md](./10-exploration.md) |
+| Confondre la masse de coque du Panther Clipper Mk II avec sa capacité de fret | Mauvaise estimation logistique (1 200 t = masse à vide, pas une soute) | Vérifier la capacité réelle via les Cargo Racks (soutes) installés | [03-vaisseaux.md](./03-vaisseaux.md) |
+| Viser un Federal Corvette ou un Imperial Cutter sans le rang requis | Achat bloqué faute de rang Rear Admiral / Duke | Vérifier son rang de marine avant de viser ces vaisseaux | [2.0](#20-les-huit-échelles-de-rang-delite-dangerous-comparées) ci-dessus |
+| Se fier à un Cr/h de fin de partie pour un vaisseau starter | Attentes déçues, mauvaise allocation du temps de jeu | Utiliser le comparatif qualitatif de [1.2](#12-premières-activités-rentables-pour-un-débutant--comparatif-qualitatif), pas un chiffre de fin de partie | [1.2](#12-premières-activités-rentables-pour-un-débutant--comparatif-qualitatif) ci-dessus |
+| Vendre une espèce d'exobiologie après qu'un autre CMDR l'a « First Logged » (première consignation) sur le même corps | Perte du bonus ×5, vente à la seule valeur de base | Vérifier la fraîcheur du corps avant d'y consacrer du temps | [10-exploration.md](./10-exploration.md) |
 | Transporter des passagers illégaux sans module de brouillage de scan | Interdiction en vol, perte de la mission si le vaisseau est fouillé | Équiper un brouilleur de scan avant toute contrebande de passagers | [12-transport.md](./12-transport.md) |
 | S'aventurer en HazRES/CZ haute intensité sans SCB ni boucliers renforcés | Destruction rapide face à des meutes de PNJ engineerés | Équiper Shield Cell Bank et boucliers renforcés avant HazRES/haute intensité | [08-combat-spatial.md](./08-combat-spatial.md) |
+
+---
+
+## Questions fréquentes
+
+**Que faire avant ma toute première sortie en jeu (Pilot Training) ?**
+Avant même de piloter le Sidewinder Mk I de départ, le menu principal propose un ensemble de scénarios isolés du monde persistant, réunis dans le menu **Pilot Training** : environ neuf simulations de pilotage et une dizaine de scénarios de défi (décompte non confirmé par une page officielle). Ils sont jouables hors ligne, dans l'ordre recommandé vol de base → accostage → voyage → combat → SRV → chasseur embarqué → à pied. Voir [1.0](#10-avant-la-première-sortie--lassessment-et-les-scénarios--pilot-training-).
+
+**Quel vaisseau acheter après le Sidewinder Mk I de départ (starter ship) ?**
+Le cheminement le plus courant, sans être un passage obligé, va du Sidewinder Mk I gratuit vers le Hauler (52 720 Cr) ou l'Adder (87 810 Cr), puis vers le Cobra Mk III (349 720 Cr), premier vrai multirôle capable de combat, commerce et exploration légère. Aucun de ces quatre vaisseaux ne demande de rang de réputation particulier. Voir [1.1](#11-progression-de-vaisseau--du-sidewinder-au-premier-multirôle).
+
+**Qu'est-ce que le coût de rebuy et pourquoi le vérifier avant de décoller ?**
+Le rebuy est le remboursement d'assurance payé si le vaisseau est détruit ; il faut le vérifier au panneau du vaisseau avant toute sortie risquée, car avoir de quoi acheter un vaisseau ne signifie pas avoir de quoi l'équiper. Un Anaconda équipé en core internals A coûte par exemple environ 2,6× le prix de sa coque nue (≈ 387 M Cr contre 147 M Cr nue). Voir [1.1](#11-progression-de-vaisseau--du-sidewinder-au-premier-multirôle) et le tableau des pièges en [3.2](#32-les-erreurs-qui-coûtent-le-plus-cher).
+
+**Quelle activité rapporte le plus au début du jeu (mining, trading, missions) ?**
+Aucune source consultée ne donne de Cr/h fiable pour un vaisseau starter non ingénierié ; les chiffres circulant ailleurs (routes de commerce à environ 1,2 M Cr/h, minage laser au-delà de 100 M Cr/h, Robigo autour de 90 M Cr/h) concernent des configurations de fin de partie. Le guide recommande d'essayer minage de surface, transport de passagers, missions/primes en RES et trading court avec l'équipement déjà en main avant de se spécialiser. Voir [1.2](#12-premières-activités-rentables-pour-un-débutant--comparatif-qualitatif).
+
+**Quel Ingénieur (Engineer) débloquer en premier dans Elite Dangerous ?**
+Felicity Farseer (Deciat, rang Explorateur « Scout ») est la priorité universelle : elle débloque l'ingénierie du FSD (portée de saut), utile en commerce, exploration et fuite en combat. Viennent ensuite The Dweller (accessibilité), puis Tod McQuinn (combat), Lei Cheung (commerce) ou Elvira Martuuk (exploration) selon l'objectif. Voir [1.3](#13-choisir-ses-2-ou-3-premiers-ingénieurs-selon-lobjectif).
+
+**Quels objectifs viser à 10 h, 100 h et 1000 h de jeu ?**
+À environ 10 heures : un Cobra Mk III, environ 1 M Cr de trésorerie et Felicity Farseer débloquée. À 100 heures : 50 à 200 M Cr, un FSD ingénieré grade 5 et un rang à mi-échelle. À 1000 heures : un Federal Corvette ou un Imperial Cutter, éventuellement un Porte-Vaisseau (5 Md Cr d'achat, 10 à 20 M Cr/semaine d'entretien) et le Guardian FSD Booster. Voir [1.4](#14-trois-horizons--ce-quon-peut-viser-à-10-h-100-h-et-1000-h-de-jeu).
+
+**Combien de rangs (ranks) existe-t-il dans Elite Dangerous ?**
+Huit échelles indépendantes : les six filières Pilots Federation (Combat, Commerce, Exploration, Exobiologie, Mercenaire, CQC, de Harmless/Penniless/Aimless jusqu'à Elite I à V) plus les deux échelles de marine, fédérale et impériale, qui conditionnent l'achat de sept vaisseaux. Aucun seuil numérique n'a jamais été publié officiellement par Frontier. Voir [2.0](#20-les-huit-échelles-de-rang-delite-dangerous-comparées).
+
+**Comment monter rapidement le rang de combat (Combat Rank) ?**
+Le rang de combat repose sur un score pondéré : éliminer un pilote de rang élevé (Deadly, Elite) rapporte bien plus qu'un Harmless. Deux approches complémentaires : les Combat Zones haute intensité (flux continu de PNJ) ou les missions d'assassinat ciblant des pilotes Deadly/Elite (moins de kills, mais chacun de rang garanti élevé). Voir [2.1](#21-rang-combat--cz-haute-intensité-contre-assassinats-de-cibles-élevées).
+
+**Qu'est-ce que la Road to Riches et comment sert-elle à progresser en rang ?**
+La Road to Riches consiste à cibler par avance les systèmes contenant des espèces exobiologiques à haute valeur plutôt que d'explorer au hasard. Un même circuit fait progresser simultanément le rang Explorateur (données FSS/DSS vendues à Universal Cartographics) et le rang Exobiologiste (échantillons vendus à Vista Genomics), sans effort de planification supplémentaire. Voir [2.2](#22-exploration-et-exobiologie--exploiter-la-road-to-riches-pour-le-rang).
+
+**Qu'est-ce que le CQC (Close Quarters Combat) et son rang ?**
+Le CQC oppose des équipes dans des arènes séparées du monde persistant, en petits vaisseaux préconfigurés, sans perte d'équipement ni impact sur l'économie ou le BGS. Son rang est suivi indépendamment du rang de combat principal : un Commandant peut être Elite en CQC sans l'être en combat spatial classique. La composition exacte du roster de vaisseaux et les modes de jeu restent non confirmés par le corpus. Voir [2.4](#24-rang-cqc--ce-qui-est-confirmé-et-ce-qui-ne-lest-pas).
+
+**Quelles sont les erreurs qui coûtent le plus cher à un débutant ?**
+Parmi les vingt-deux pièges recensés : engager toute sa trésorerie dans une seule cargaison, ne pas vérifier le rebuy avant une sortie risquée, acheter un vaisseau sans budgéter son équipement (jusqu'à 2,6× le prix de coque), ou viser un Federal Corvette/Imperial Cutter sans le rang de marine requis (Rear Admiral / Duke). Voir le tableau complet en [3.2](#32-les-erreurs-qui-coûtent-le-plus-cher).
 
 ---
 
@@ -291,17 +340,17 @@ n'étaient documentés nulle part avant cette édition :
   capital d'entrée, rang progressé), les zones aveugles désormais chiffrées (AX, primes/CZ, passagers, exobiologie)
   et les parcours-types 0 → 100 M → 1 Md Cr → Porte-Vaisseau.
 - **[Liste complète des vaisseaux d'Elite Dangerous](./03-vaisseaux.md)** — fiches détaillées, prix, portées de saut, rangs de réputation requis, et matrice Rôle × Budget (Volet 3).
-- **[Guide complet des Ingénieurs](./06-ingenieurs.md)** — mécanisme général d'invitation et de progression, chaînes de déblocage complètes des Ingénieurs cités en 1.3.
+- **[Guide complet des Ingénieurs](./06-ingenieurs.md)** — mécanisme général d'invitation et de progression, chaînes de déblocage complètes des Ingénieurs cités en [1.3](#13-choisir-ses-2-ou-3-premiers-ingénieurs-selon-lobjectif).
 - **[Guide complet du commerce](./11-commerce.md)** — mécanique des prix, rang de commerce, exemple chiffré de route en vrac et vaisseaux de fret.
 - **[Le Minage dans Elite Dangerous](./20-minage.md)** — techniques de minage (laser, subsurface, core, surface planétaire), équipement et rendements chiffrés de fin de partie.
 - **[Guide complet du combat spatial](./08-combat-spatial.md)** — mécaniques de pilotage, tactiques PvE en RES/CZ, missions d'assassinat et échelle de rang de combat.
-- **[Combat anti-Thargoïde (AX) approfondi](./25-combat-ax.md)** — build AX chiffré, procédure d'engagement d'un Interceptor et check-list de sortie citées en 3.1.
+- **[Combat anti-Thargoïde (AX) approfondi](./25-combat-ax.md)** — build AX chiffré, procédure d'engagement d'un Interceptor et check-list de sortie citées en [3.1](#31-arbre-de-décision--quel-objectif-quel-vaisseau).
 - **[Guide complet de l'exploration et de l'exobiologie](./10-exploration.md)** — planification de route, Road to Riches, taxonomie exobiologique et rangs Explorateur/Exobiologiste.
 - **[Wings, Multicrew et CQC](./23-jeu-en-groupe.md)** — mécaniques multijoueur, vaisseaux et arènes du CQC.
-- **[Guide du transport de passagers](./12-transport.md)** — vaisseaux à cabines, missions et contrebande de passagers cités en 1.2.
-- **[Pilotage, navigation et stations](./31-pilotage-navigation-et-stations.md)** — procédure d'accostage complète citée en 1.0 et 1.4.
-- **[Porte-vaisseaux de joueur (Fleet Carriers)](./19-fleet-carriers.md)** — coûts, check-list d'achat et piège du décommissionnement involontaire cité en 3.2.
-- **[La Colonisation de systèmes](./18-colonisation.md)** — délais impératifs et fiscalité de l'Architecte cités en 3.2.
+- **[Guide du transport de passagers](./12-transport.md)** — vaisseaux à cabines, missions et contrebande de passagers cités en [1.2](#12-premières-activités-rentables-pour-un-débutant--comparatif-qualitatif).
+- **[Pilotage, navigation et stations](./31-pilotage-navigation-et-stations.md)** — procédure d'accostage complète citée en [1.0](#10-avant-la-première-sortie--lassessment-et-les-scénarios--pilot-training-) et [1.4](#14-trois-horizons--ce-quon-peut-viser-à-10-h-100-h-et-1000-h-de-jeu).
+- **[Porte-vaisseaux de joueur (Fleet Carriers)](./19-fleet-carriers.md)** — coûts, check-list d'achat et piège du décommissionnement involontaire cité en [3.2](#32-les-erreurs-qui-coûtent-le-plus-cher).
+- **[La Colonisation de systèmes](./18-colonisation.md)** — délais impératifs et fiscalité de l'Architecte cités en [3.2](#32-les-erreurs-qui-coûtent-le-plus-cher).
 - **[Glossaire](./00-glossaire.md)** — sigles utilisés dans ce guide (RES, CZ, CQC, rebuy).
 
 ---

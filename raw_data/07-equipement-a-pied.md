@@ -51,8 +51,8 @@ avant-postes et installations planétaires à l'échelle humaine.
 - **Oxygène** — réserve d'air de la combinaison, consommée en continu et plus rapidement à l'effort (sprint, saut
   assisté) ou en cas de brèche.
 - **Énergie de combinaison (batterie)** — alimente le bouclier personnel, les outils et les capacités de mobilité
-  (jetpack, sprint) ; elle se recharge automatiquement mais peut être vidée par un usage intensif des outils ou par les
-  dégâts.
+  (jetpack — propulseur dorsal de saut assisté, sprint) ; elle se recharge automatiquement mais peut être vidée par un
+  usage intensif des outils ou par les dégâts.
 
 Cet équipement à pied sert quatre grandes familles d'activités :
 
@@ -167,8 +167,8 @@ Suits et armes peuvent chacun être améliorés sur **cinq niveaux de grade** au
 présents dans les concourses de la plupart des stations — une mécanique distincte de l'ingénierie (voir plus loin),
 puisqu'elle ne passe pas par un Engineer et ne consomme aucun emplacement de modification. Elle n'est en revanche
 **pas un simple achat** : chaque palier réclame des **crédits *et* des matériaux**, et le coût augmente fortement avec
-le grade. Le détail chiffré palier par palier figure dans la section « Monter une combinaison en grade : la table de
-référence » ci-dessous.
+le grade. Le détail chiffré palier par palier figure dans la section [Monter une combinaison en grade : la table de
+référence](#monter-une-combinaison-en-grade--la-table-de-référence) ci-dessous.
 
 Deux précisions utiles :
 
@@ -176,8 +176,9 @@ Deux précisions utiles :
   cette activité.
 - Il est possible de trouver dans le monde des combinaisons ou armes **déjà pré-améliorées** (grade 2 ou 3 appliqué)
   plutôt que de payer soi-même la montée en grade, notamment via des drops ou des récompenses de mission — ainsi que
-  via les combinaisons « premium » de grade 2 à 5 que Pioneer Supplies met occasionnellement en vente (voir la section
-  suivante).
+  via les combinaisons « premium » de grade 2 à 5 que Pioneer Supplies met occasionnellement en vente (voir
+  [Monter une combinaison en grade : la table de référence](#monter-une-combinaison-en-grade--la-table-de-référence)
+  ci-dessous).
 
 ### Monter une combinaison en grade : la table de référence
 
@@ -242,7 +243,7 @@ quatrième emplacement de modification se paie au prix des trois premiers.
 | Composant                      | Catégorie Odyssey |    Valeur | Où le trouver                                                                                                                                                                                                                                                               |
 |--------------------------------|-------------------|----------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Suit Schematic**             | Good              | 50 000 Cr | Settlements High Tech et Industrial, bâtiments CMD, PWR et STO. Récompense de mission.                                                                                                                                                                                      |
-| **Health Monitor**             | Good              | 10 000 Cr | Settlements Industrial, bâtiments IND, MED, RES, HAB et CMD, dans des Lockers. Seul des cinq composants attesté aussi sur épave de surface. Récompense de mission.                                                                                                          |
+| **Health Monitor**             | Good              | 10 000 Cr | Settlements Industrial, bâtiments IND, MED, RES, HAB et CMD, dans des Lockers (casiers de butin). Seul des cinq composants attesté aussi sur épave de surface. Récompense de mission.                                                                                                          |
 | **Manufacturing Instructions** | Data              |  9 000 Cr | Data ports uniquement — settlements Industrial et Extraction (Industrial, Laboratory, Satellite, Extraction Data Port), plus Irregular Markers et Impact Sites. Jusqu'à 3 par data port, et seulement dans les bâtiments de production industrielle. Récompense de mission. |
 | **Aerogel**                    | Asset             |    500 Cr | Salles LAB et PROC — donc bâtiments RES, IND, EXT et AGRI — via Industrial Locker (S) et Research Locker (L). Achetable au bartender : coût 9, valeur de cession 5.                                                                                                         |
 | **Graphene**                   | Asset             |  1 300 Cr | Abondant dans les bâtiments Research ; aussi AGRI, HAB et SEC. Achetable au bartender : coût 23, valeur de cession 13.                                                                                                                                                      |
@@ -282,7 +283,9 @@ outil tiers, un journal de jeu ou une base de données.
 
 Deux enseignements pratiques. D'abord, le mot « Asset » du comptoir recouvre exactement la catégorie officielle
 **Component** : les trois matériaux de blindage et le Graphene en font partie, ce qui confirme par la structure des
-données ce que la section précédente ne pouvait que déduire — **Carbon Fibre Plating et Titanium Plating sont bien
+données ce que la section [Où se procurer les cinq composants, et pourquoi le barman n'en revend que
+deux](#où-se-procurer-les-cinq-composants-et-pourquoi-le-barman-nen-revend-que-deux) ne pouvait que déduire —
+**Carbon Fibre Plating et Titanium Plating sont bien
 de même nature que l'Aerogel**, donc du même ressort du barman, même si leur tarif de comptoir reste à relever.
 Ensuite, **Suit Schematic et Health Monitor ne sont pas des « Goods » au sens du journal** mais des *Item*, et
 **Manufacturing Instructions** est bien un *Data* : c'est cette dernière ligne qui explique pourquoi ce composant
@@ -299,7 +302,8 @@ Dayette en réclame **10** pour sa tâche de recommandation vers Yi Shen — la 
 > **Application de la règle, et non donnée relevée.** Le chiffre de **56 recettes** souvent avancé pour ce composant
 > est un calcul, pas un relevé : trois combinaisons et onze armes, quatre paliers chacune du grade 2 au grade 5, soit
 > (3 + 11) × 4 = 56. L'arithmétique est juste, mais elle repose sur un catalogue de onze armes que ce guide n'a pas pu
-> établir lui-même — la section « Catalogue d'armes à pied nommées par fabricant » ci-dessous n'en documente que cinq
+> établir lui-même — la section [Catalogue d'armes à pied nommées par
+> fabricant](#catalogue-darmes-à-pied-nommées-par-fabricant-terminator-executioner-karma-p-15) ci-dessous n'en documente que cinq
 > avec une source, et le relevé du 10 septembre 2026 n'a pas permis de refermer l'écart. Retenez donc l'ordre de
 > grandeur, à savoir que ce composant alimente la montée en grade de **tout**
 > l'équipement à pied, plutôt que le nombre exact.
@@ -342,7 +346,7 @@ récompense est devenu plus efficace que piller, ce qui rend obsolètes les guid
 monter une combinaison ».
 
 Les itinéraires de récolte proprement dits — settlements en système anarchie, autorisation de sécurité prise au
-Command Centre, relog sur data port, rendement horaire — relèvent du farming et sont traités dans
+Command Centre, relog (déconnexion/reconnexion volontaire) sur data port, rendement horaire — relèvent du farming et sont traités dans
 [26-ingenierie-a-pied-avancee.md](./26-ingenierie-a-pied-avancee.md) ; la présente section reste la fiche de référence
 de l'équipement.
 
@@ -476,7 +480,7 @@ EDCD/coriolis-data commit 0db9234b5b9c, EDCD/FDevIDs commit c35612952dd6, `asset
 ### Pas d'arme de mêlée dédiée : le corps-à-corps à pied se fait à mains nues
 
 Il n'existe pas d'arme de corps-à-corps à proprement parler : le combat rapproché se fait via une **attaque à mains
-nues**, disponible quel que soit le loadout équipé. Cette mécanique reste améliorable par ingénierie : la modification
+nues**, disponible quel que soit le loadout (configuration d'armes équipées) en cours. Cette mécanique reste améliorable par ingénierie : la modification
 de combinaison **Added Melee Damage** (proposée par Jude Navarro et Kit Fowler) « augmente fortement les dégâts des
 coups de poing et des attaques de corps-à-corps à l'arme », confirmant que le mêlée est un système à mains nues/à crosse
 d'arme et non une arme séparée.
@@ -566,8 +570,8 @@ piratage électronique normal via le Profile Analyser et le Compact Multi-Tool n
 > `bypass`, identifiant **128961251**, nom affiché **E-Breach**, catégorie *Consumable* — et non *Item*. Aucune
 > entrée « E-Break » n'y existe. L'orthographe « E-Break » est conservée dans les titres de cette section parce que
 > d'autres guides du corpus y pointent par ancre, mais c'est « E-Breach » qu'il faut chercher dans un inventaire ou
-> dans un outil tiers. Voir la section « Les six consommables du jeu, sous leur nom exact et leur identifiant »
-> plus bas. *Sourcage : EDCD/FDevIDs, `microresources.csv`, commit c35612952dd6.*
+> dans un outil tiers. Voir la section [Les six consommables du jeu, sous leur nom exact et leur
+> identifiant](#les-six-consommables-du-jeu-sous-leur-nom-exact-et-leur-identifiant) plus bas. *Sourcage : EDCD/FDevIDs, `microresources.csv`, commit c35612952dd6.*
 
 ### Modifications et montée en grade des outils à pied
 
@@ -579,7 +583,9 @@ piratage électronique normal via le Profile Analyser et le Compact Multi-Tool n
 | **E-Break**           | Aucune montée en grade identifiée           | Outil de forçage de base ; aucune information de montée en grade ou de modification retrouvée                 | Non confirmée dans les sources consultées     |
 
 **Limite de recherche** : à la différence des combinaisons et des armes (grades 1-5 achetés chez Pioneer Supplies,
-puis modifications d'ingénierie chez les Engineers, voir la section suivante), la documentation communautaire
+puis modifications d'ingénierie chez les Engineers, voir
+[L'ingénierie à pied (Engineering) d'Odyssey](#lingénierie-à-pied-engineering-dodyssey--engineers-blueprints-et-modifications-irréversibles)
+ci-dessous), la documentation communautaire
 accessible pendant la rédaction de ce guide (edfieldmanual.com, starzen.space, gamingwithdaopa.ellatha.com — toutes
 consultées le 9 septembre 2026) ne confirme ni l'existence de blueprints d'Engineer dédiés à ces quatre outils, ni le
 détail exact de leurs paliers de grade. Si votre expérience en jeu diffère, ou si vous disposez d'une source à jour,
@@ -617,7 +623,9 @@ emploient massivement les mauvais noms :
   celui-ci : le **Shield Projector** (`amm_grenade_shield`), qui déploie une bulle de bouclier au lieu d'en détruire
   une.
 - L'outil de forçage d'accès s'appelle **E-Breach**, et non « E-Break » : le symbole interne `bypass` confirme qu'il
-  s'agit d'un contournement d'accès. Le titre de la section « Les outils à pied » plus haut et son sous-titre
+  s'agit d'un contournement d'accès. Le titre de la section
+  [Les outils à pied](#les-outils-à-pied--genetic-sampler-arc-cutter-wave-scanner-profile-analyser-compact-multi-tool-e-break)
+  plus haut et son sous-titre
   conservent l'orthographe « E-Break » pour ne pas casser les liens entrants d'autres guides du corpus, mais
   **c'est bien « E-Breach » qu'il faut chercher en jeu**. Notez aussi que le jeu le classe en *Consumable*, et non
   comme un outil d'emplacement au même titre que le Genetic Sampler ou l'Arc Cutter.
@@ -732,7 +740,7 @@ tables.
 | Night Vision                     | Ajoute la vision nocturne                                                               | Oden Geiger (Candiaei) / Yi Shen (Einheriar) — les deux seuls | Non détaillé par palier                          | Non confirmé                    | 1 000 000 Cr |
 | Added Melee Damage               | Augmente fortement les dégâts à mains nues et en corps-à-corps à l'arme                 | Jude Navarro (Aurai) / Kit Fowler (Capoya)         | Non détaillé par palier                          | Non confirmé                    | 500 000 Cr   |
 | Extra Ammo Capacity              | +50 % de capacité de munitions                                                          | Jude Navarro (Aurai) / Kit Fowler (Capoya)         | Non détaillé par palier                          | Non confirmé                    | 750 000 Cr   |
-| Combat Movement Speed            | Supprime le malus de vitesse en visée ADS                                               | Terra Velasquez (Shou Xing) / Yarden Bond (Bayan)  | Non détaillé par palier                          | Non confirmé                    | 750 000 Cr   |
+| Combat Movement Speed            | Supprime le malus de vitesse en visée ADS (Aim Down Sights, visée dans le viseur)       | Terra Velasquez (Shou Xing) / Yarden Bond (Bayan)  | Non détaillé par palier                          | Non confirmé                    | 750 000 Cr   |
 | Increased Air Reserves           | Double les réserves d'oxygène d'urgence                                                 | Hero Ferrari (Sirius) / Terra Velasquez (Shou Xing)| Non détaillé par palier                          | Non confirmé                    | 750 000 Cr   |
 | Increased Sprint Duration        | Réduit la pénalité d'épuisement au sprint prolongé                                      | Hero Ferrari (Sirius) / Terra Velasquez (Shou Xing) / Baltanos (Deriso) | Non détaillé par palier                          | Non confirmé                    | 750 000 Cr   |
 | Improved Jump Assist             | Allonge la durée du saut assisté (jetpack)                                              | Hero Ferrari (Sirius) / Yarden Bond (Bayan) / Baltanos (Deriso) | Non détaillé par palier                          | Non confirmé                    | 750 000 Cr   |
@@ -943,9 +951,10 @@ contenu à enjeu élevé (raid de settlement de haute valeur, transport de gros 
 - **Mise à jour « Operations » (4.4.0.0, 30 juin 2026 en accès anticipé ARX, notes de version le 1ᵉʳ juillet 2026)** —
   cadre de jeu en escadre dont plusieurs scénarios se jouent en partie à pied, et qui introduit le Merc Coin. La même
   mise à jour corrige plusieurs défauts du jeu au sol : zones de conflit à pied échouant malgré la victoire du joueur
-  (Issue ID 80753), état incorrect à l'arrivée par Dropship (78904), et, par l'Update 3 du 9 juillet 2026, la
-  restauration des inventaires à pied effacés à l'issue d'une Operation. Voir la section « La mise à jour "Operations"
-  (4.4.0.0, 30 juin 2026) et le Nomad » en tête de ce guide.
+  (Issue ID 80753), état incorrect à l'arrivée par Dropship (navette de transport) (78904), et, par l'Update 3 du
+  9 juillet 2026, la restauration des inventaires à pied effacés à l'issue d'une Operation. Voir la section
+  [La mise à jour « Operations » (4.4.0.0, 30 juin 2026) et le
+  Nomad](#la-mise-à-jour--operations--4400-30-juin-2026-et-le-nomad--ce-qui-est-établi) en tête de ce guide.
 - **Nomad (dévoilement le 2 juin 2026, sortie le 30 juin 2026)** — *ship-launched vessel* d'exploration de surface
   équipé d'un **Mk II Biological Scanner** qui détecte les signaux biologiques depuis le cockpit. Il déplace la phase
   de **repérage** de l'exobiologie vers le vaisseau sans rien changer au **prélèvement**, qui reste à pied ; voir
@@ -967,6 +976,100 @@ contenu à enjeu élevé (raid de settlement de haute valeur, transport de gros 
   en grade et modifications.
 - **Wiki communautaire et bases de données d'objets** (Inara, wiki Elite Dangerous) — pour le catalogue exhaustif des
   armes par fabricant et les valeurs numériques les plus à jour.
+
+## Questions fréquentes
+
+**Combien coûte la montée en grade complète d'une combinaison (suit) au grade 5 chez Pioneer Supplies ?**
+
+Le parcours complet du grade 1 au grade 5 coûte **14 850 000 Cr**, plus 12 Suit Schematic, 12 Health Monitor,
+12 Manufacturing Instructions, 28 unités du matériau de blindage propre à la combinaison et 28 Graphene. Le grade 3
+seul revient déjà à 2 850 000 Cr, et le seul palier G4 → G5 (7 500 000 Cr) pèse à lui seul plus de la moitié du
+total. Les trois combinaisons spécialisées (Artemis, Maverick, Dominator) suivent exactement la même grille
+tarifaire. Voir [Monter une combinaison en grade : la table de
+référence](#monter-une-combinaison-en-grade--la-table-de-référence).
+
+**Quelle est la différence entre l'Artemis, la Maverick et la Dominator (suits) ?**
+
+L'Artemis est la combinaison d'exobiologie, livrée avec le Genetic Sampler et pensée pour l'autonomie en oxygène et
+en énergie ; la Maverick est la polyvalente/infiltration, livrée avec l'Arc Cutter et une grande capacité de sac à
+dos ; la Dominator est la combinaison de combat lourd, seule à porter deux armes principales et un bouclier à
+régénération renforcée, au prix d'un rangement réduit. Voir [Les combinaisons (Suits)
+d'Odyssey](#les-combinaisons-suits-dodyssey--flight-suit-artemis-maverick-dominator).
+
+**Quelles armes à pied (on-foot weapons) sont confirmées dans Elite Dangerous Odyssey ?**
+
+Seuls cinq modèles sont nommés par une source citable : le Karma P-15 et le Karma AR-50 (Kinematic Armaments), et le
+Manticore Executioner, Intimidator et Terminator (Manticore). Aucun modèle nommé n'est rattaché à Takada par une
+source consultable, et le catalogue complet du jeu n'est pas dénombrable localement. Voir [Catalogue d'armes à pied
+nommées par
+fabricant](#catalogue-darmes-à-pied-nommées-par-fabricant-terminator-executioner-karma-p-15).
+
+**Le Karma P-15 est une arme Takada ou Kinematic Armaments ?**
+
+Kinematic Armaments. L'attribution à Takada, reprise d'un guide de builds tiers, est contredite par deux fiches du
+corpus qui rattachent explicitement toute la famille Karma (P-15 et AR-50) à Kinematic Armaments ; c'est cette
+dernière attribution qui est retenue. Voir [Catalogue d'armes à pied nommées par
+fabricant](#catalogue-darmes-à-pied-nommées-par-fabricant-terminator-executioner-karma-p-15).
+
+**Combien y a-t-il de consommables (consumables) à pied dans le jeu ?**
+
+Exactement six : E-Breach, Energy Cell, Frag Grenade, Medkit, Shield Disruptor et Shield Projector. Cinq d'entre eux
+s'achètent au comptoir Pioneer Supplies ; l'E-Breach ne s'achète que dans les stations Anarchie/Communiste, autour de
+25 000 Cr. Les six s'obtiennent aussi en butin, et le casier du vaisseau en stocke jusqu'à 100 unités par type. Voir
+[Les six consommables du jeu, sous leur nom exact et leur
+identifiant](#les-six-consommables-du-jeu-sous-leur-nom-exact-et-leur-identifiant).
+
+**C'est quoi l'« EMP Grenade » dans Elite Dangerous ?**
+
+Ce nom n'existe pas en jeu : la grenade anti-bouclier s'appelle **Shield Disruptor**, même si son symbole interne
+(`amm_grenade_emp`) trahit son origine électromagnétique. Il existe aussi une troisième grenade souvent oubliée des
+guides, le **Shield Projector**, qui déploie une bulle de bouclier au lieu d'en détruire un. Voir [Les six
+consommables du jeu, sous leur nom exact et leur
+identifiant](#les-six-consommables-du-jeu-sous-leur-nom-exact-et-leur-identifiant).
+
+**Peut-on synthétiser (synthesize) des consommables à pied comme sur un vaisseau ?**
+
+Non : il n'existe aucun mécanisme de synthèse à pied à partir de matériaux, contrairement à la synthèse embarquée du
+vaisseau. Le réapprovisionnement se fait uniquement par achat au comptoir Pioneer Supplies (cinq des six
+consommables) ou par butin (les six). Voir [Pas de synthèse à
+pied](#pas-de-synthèse-à-pied--réapprovisionnement-par-achat-ou-par-butin-à-distinguer-de-la-synthèse-embarquée).
+
+**Combien y a-t-il d'Engineers à pied et comment débloquer Yi Shen ?**
+
+Treize au total : neuf dans la bulle Core, répartis en trois chaînes de trois Engineers chacune, et quatre à
+Colonia. Ces derniers suivent une logique différente : Baltanos, Eleanor Bresa et Rosa Dayette fonctionnent chacun
+de façon indépendante, et il faut compléter **les trois** tâches de recommandation qu'ils proposent pour débloquer
+l'accès à Yi Shen à Einheriar. Voir [Les treize Engineers à pied](#les-treize-engineers-à-pied--neuf-dans-la-bulle-core-quatre-à-colonia).
+
+**Les modifications d'ingénierie (engineering) à pied sont-elles réversibles ?**
+
+Non, jamais : une modification appliquée chez un Engineer à pied ne peut ni être retirée ni remplacée, ce qui rend
+la planification du build cruciale avant d'engager des matériaux. Les coûts relevés vont de 500 000 à 1 000 000 Cr
+selon la modification. Voir [L'ingénierie à pied (Engineering)
+d'Odyssey](#lingénierie-à-pied-engineering-dodyssey--engineers-blueprints-et-modifications-irréversibles).
+
+**Qu'est-ce qu'on perd en mourant à pied (on-foot death) ?**
+
+Le contenu du sac à dos (backpack) au moment de la mort est perdu — matériaux, Data, Items et Components non encore
+transférés — mais tout ce qui a été rangé au préalable dans le casier du vaisseau (Ship Locker) est conservé, quel
+que soit l'endroit où le commandant meurt. Un écran de rebuy s'affiche avec un coût d'assurance, mais son montant
+exact n'a pas pu être confirmé par les sources consultées. Voir [Mort et rebuy à pied](#mort-et-rebuy-à-pied).
+
+**Comment fonctionne le Genetic Sampler pour l'exobiologie ?**
+
+Livré avec l'Artemis, il demande de prélever **trois échantillons partiels** de la même espèce, suffisamment
+espacés géographiquement selon la distance de colonie clonale indiquée par le Codex, pour obtenir un échantillon
+complet. Les échantillons se vendent ensuite aux comptoirs Vista Genomics, de 50 000 à 1 000 000 Cr selon la
+rareté, avec une prime doublée pour la première découverte. Voir [Genetic Sampler (échantillonneur
+génétique)](#genetic-sampler-échantillonneur-génétique).
+
+**Le Merc Coin permet-il d'acheter de l'équipement à pied ?**
+
+Non : les notes officielles listent le catalogue MercGear payable en Merc Coin comme composé uniquement de modules
+de vaisseau (deux blueprints d'ingénierie, huit armes de hardpoint, deux distributeurs de puissance, trois modules
+internes). Aucune annonce officielle ne mentionne d'équipement à pied achetable en Merc Coin. Voir [Récompenses de
+mission, Merc Coin et combinaisons «
+premium »](#récompenses-de-mission-merc-coin-et-combinaisons--premium---les-raccourcis-qui-existent).
 
 ## Voir aussi
 
@@ -1042,7 +1145,9 @@ voir aussi [11-commerce.md](./11-commerce.md) et [02-powerplay.md](./02-powerpla
 - **EDCD/FDevIDs**, dépôt d'identifiants extraits du jeu, commit `c35612952dd6a547d1a7ac4cffab9c7051e86579` —
   `microresources.csv` : source primaire des six consommables à pied, de la catégorie officielle et de l'identifiant
   numérique des sept composants de montée en grade, et du contrôle d'existence des 32 noms de matériaux cités dans la
-  section « Matrice des onze modifications d'armes par fabricant ». `outfitting.csv` et `shipyard.csv` ont été
+  section [Matrice des onze modifications d'armes par
+  fabricant](#matrice-des-onze-modifications-darmes-par-fabricant--les-recettes-réellement-relevées). `outfitting.csv`
+  et `shipyard.csv` ont été
   examinés et **ne contiennent aucune donnée d'équipement à pied**.
 - **EDCD/coriolis-data**, commit `0db9234b5b9ce8c939ea84133d7ce336eea88e27` — examiné et écarté pour ce guide : ce
   dépôt couvre les vaisseaux et leurs modules (y compris les `hardpoints`, qui sont des armes de vaisseau) et **ne
@@ -1060,7 +1165,8 @@ voir aussi [11-commerce.md](./11-commerce.md) et [02-powerplay.md](./02-powerpla
   uniquement en station Anarchie/Communiste, jamais synthétisé.
 
 *Révision du 13 septembre 2026 — chantier 14 (chiffrer les boucles de farming). Correction d'une confusion héritée
-des versions antérieures de ce guide : la section « Les consommables à pied » renvoyait vers « le wiki communautaire
+des versions antérieures de ce guide : la section
+[Les consommables à pied](#les-consommables-à-pied--medkit-energy-cell-et-grenades) renvoyait vers « le wiki communautaire
 ou l'outil EDOMH » pour des recettes de synthèse qui, en réalité, n'existent pas. Il n'existe aucun mécanisme de
 fabrication à partir de matériaux pour les six consommables à pied — seulement achat au comptoir Pioneer Supplies
 (cinq des six) et butin, avec un plafond de 100 unités par type au casier du vaisseau. Corrigé en conséquence, avec

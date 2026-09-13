@@ -116,6 +116,23 @@ de contenu 12 à 15 n'ont pas reçu de paragraphe dans cet historique, contraire
 suivi a été proposé pour l'écrire, distinct de ce chantier. Le corpus reste à 32 guides thématiques, portés à
 **4 documents transversaux**.
 
+Un onzième cycle, mené le 13 septembre 2026 (chantier 17 du plan de cycle 3), a tissé le maillage qui manquait entre
+les guides et les questions qu'un lecteur pose réellement. Le nouveau lexique bilingue
+[34-lexique-fr-en.md](./34-lexique-fr-en.md) (226 lignes) fait correspondre le vocabulaire français du corpus aux
+termes que le jeu emploie en anglais, et le nouveau document transversal [00-faq.md](./00-faq.md) (102 questions)
+rassemble les questions les plus posées avec leur réponse autoportante. Chacun des 32 guides existants a reçu sa
+propre section « Questions fréquentes » (363 questions au total) et 185 gloses bilingues à leur première occurrence ;
+746 renvois internes jusque-là écrits en toutes lettres sont devenus des liens ancrés réels, et 270 corrections de
+maillage croisé ciblées ont recousu deux guides orphelins que le reste du corpus ne citait jusqu'ici nulle part —
+[26-ingenierie-a-pied-avancee.md](./26-ingenierie-a-pied-avancee.md), désormais lié depuis quatre guides, et
+[27-debuter-et-progresser.md](./27-debuter-et-progresser.md), désormais lié depuis huit. Quatre guides
+(03-vaisseaux, 06-ingenieurs, 11-commerce et 27-debuter-et-progresser) portent en outre 23 annotations « Répond
+à : » sous leurs sous-sections clés, sans renommer aucun titre existant — pour ne pas casser les ancres. Un audit
+d'intégrité a vérifié les **1 555 liens internes** du corpus et réparé les **8** qu'il a trouvés cassés, la
+réparation la plus concrète de ce chantier. [`index.yaml`](./index.yaml) recense désormais **38 fichiers** : **33
+guides thématiques** et **5 documents transversaux**. Le recomptage des sections Sources/Voir aussi exclues de
+l'index, laissé de côté par ce chantier, reste à faire dans un cycle ultérieur dédié.
+
 ## Périmètre et non-objectifs
 
 Un « manque » ne se juge pas à l'intuition : cette section dit ce que le corpus doit savoir répondre, ce qu'il
@@ -126,7 +143,7 @@ d'audit ont dû redécouvrir le périmètre à chaque fois plutôt que de le lir
 l'ingénierie, l'accostage, le BGS, la colonisation, le combat anti-Thargoïde), sur un ordre de grandeur chiffré daté
 (prix d'un vaisseau, coût d'un blueprint, rendement d'une boucle de gameplay), sur une entité nommée (un vaisseau, un
 module, une espèce d'exobiologie, un Power, un Ingénieur), ou sur le lore et la chronologie du jeu. C'est le contrat
-que remplissent les 32 guides thématiques.
+que remplissent les 33 guides thématiques.
 
 **Ce que le corpus délègue explicitement à des outils live.** Les prix de marché instantanés (denrées, matériaux),
 les routes de commerce ou d'exploration optimisées à la minute, l'état courant du BGS d'un système précis, le
@@ -151,7 +168,7 @@ aujourd'hui) : c'est le rôle d'un outil connecté, pas d'un corpus versionné.
 Le dépôt héberge deux ensembles de contenu francophone qui se recouvrent partiellement et n'avaient jamais été
 réconciliés. Cette section pose la règle qui les départage.
 
-- **`raw_data/`** — 36 fichiers markdown (32 guides thématiques et 4 documents transversaux) : la base de
+- **`raw_data/`** — 38 fichiers markdown (33 guides thématiques et 5 documents transversaux) : la base de
   connaissances de référence sur **le jeu**, écrite pour alimenter le RAG. C'est le présent répertoire. Chaque guide
   porte un front-matter YAML et un encart « En bref » ; [`index.yaml`](./index.yaml) en agrège les métadonnées et sert
   de routeur de requête. Le gabarit du front-matter et l'usage de l'index sont spécifiés dans les *Notes d'ingestion
@@ -280,8 +297,13 @@ celui défini par les *Notes d'ingestion RAG* en fin de document, qui n'indexe q
   de citation courte et de source unique. Tranche au passage la fiabilité de **MassivelyOP** comme source de presse
   (P3, confirmée sur cinq articles relus en direct) et documente le format normalisé de section Sources, appliqué en
   pilote à [11-commerce.md](./11-commerce.md) et [02-powerplay.md](./02-powerplay.md).
+- [FAQ (Foire aux questions)](./00-faq.md) — 102 questions réellement posées par les joueurs, regroupées par
+  intention (débuter, gagner des crédits, s'équiper, explorer, combattre, jouer à plusieurs, construire, comprendre
+  l'univers, outils), chacune avec une réponse autoportante de quelques lignes et un lien vers la section du corpus
+  qui la développe — le point d'entrée le mieux adapté à une requête RAG posée comme une question plutôt que comme un
+  sujet.
 
-Les 32 guides thématiques sont regroupés ci-dessous par domaine.
+Les 33 guides thématiques sont regroupés ci-dessous par domaine.
 
 ## Débuter et progresser
 
@@ -550,6 +572,9 @@ Les 32 guides thématiques sont regroupés ci-dessous par domaine.
   pratique de citation par commit qui rend chaque chiffre re-vérifiable quand un service répond HTTP 403. Documente
 enfin l'endpoint **GalNet** (`cms.zaonce.net`, API JSON:API Drupal bloquée en accès direct, miroirs de repli) et sa
 méthode d'archivage incrémental par date de publication.
+- [Lexique bilingue français-anglais](./34-lexique-fr-en.md) — 226 lignes qui font correspondre le vocabulaire
+  français du corpus aux termes que le jeu emploie réellement en anglais — vaisseaux, modules, mécaniques,
+  abréviations —, pour qu'une requête posée dans l'une ou l'autre langue retrouve le bon guide.
 
 ## Notes d'ingestion RAG
 
@@ -563,7 +588,7 @@ quels par un humain.
 ### Règle 1 — N'indexer que les guides
 
 Indexer `raw_data/*.md` **à l'exclusion de `README.md`**, et ne pas indexer `raw_data/index.yaml`, qui n'est pas un
-guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 36 fichiers dont le
+guide mais l'artefact de routage décrit à la règle 4. Le périmètre indexé est donc exactement les 38 fichiers dont le
 nom correspond à `^\d{2}-.*\.md$` à la racine de `raw_data/`.
 
 Ce glob doit rester **non récursif** et ignorer les répertoires cachés : `raw_data/` peut contenir un `.omc/`
@@ -698,7 +723,7 @@ Il permet aussi de restituer une réponse en citant sa source exacte.
 
 ### Règle 4 — Router la requête sur `index.yaml` avant la recherche vectorielle
 
-[`index.yaml`](./index.yaml) agrège le front-matter des 36 guides. Il est **généré** depuis ces front-matter et doit
+[`index.yaml`](./index.yaml) agrège le front-matter des 38 guides. Il est **généré** depuis ces front-matter et doit
 être régénéré après toute modification de l'un d'eux ; il n'est **pas** indexé comme un guide.
 
 Il s'emploie en amont de la recherche vectorielle, comme routeur de requête :
