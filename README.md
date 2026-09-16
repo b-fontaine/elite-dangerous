@@ -119,6 +119,41 @@ flutter build web       # compile la chaîne complète, y compris le code géné
 > test `test/app/dependency_injection_test.dart` fait partie de la vérification,
 > pas du confort.
 
+### Distribuer un exécutable Windows
+
+```bash
+task build:windows:installer
+```
+
+Compile la cible Windows puis empaquette `build\windows\x64\runner\Release`
+dans un installeur unique via [Inno Setup 6](https://jrsoftware.org/isdl.php)
+(script : `windows/installer/elite_dangerous.iss`). Inno Setup ne s'installe
+qu'une fois, sur le poste qui build — les destinataires de l'installeur n'ont
+besoin de rien d'autre. Sans lui, la tâche s'arrête sur :
+
+```
+"ISCC": executable file not found in $PATH
+```
+
+Résultat : `build\windows\installer\CodexExobiologique-Setup-<version>.exe`,
+un seul fichier à partager. L'installeur n'étant pas signé, Windows
+SmartScreen avertit au premier lancement côté destinataire (« Informations
+complémentaires → Exécuter quand même ») — normal pour un exécutable sans
+certificat de signature.
+
+> **Ferme l'application avant de relancer la tâche.**
+>
+> Si `elite_dangerous.exe` tourne encore (lancé via `task run:windows` ou une
+> exécution précédente de l'installeur), le linker échoue sur :
+>
+> ```
+> LINK : fatal error LNK1104: impossible d'ouvrir le fichier
+> '...\Release\elite_dangerous.exe'
+> ```
+>
+> Windows verrouille l'exécutable tant qu'il est ouvert. Ferme la fenêtre (ou
+> `Stop-Process -Name elite_dangerous`) puis relance `task build:windows:installer`.
+
 ### Connecter un compte Frontier
 
 Frontier ne délivre un `client_id` qu'après une **demande validée à la main**,

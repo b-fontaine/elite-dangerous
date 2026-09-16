@@ -137,6 +137,41 @@ tasks:
     cmds:
       - flutter build web {{.DEFINES}} {{.CLI_ARGS}}
 
+  build:windows:installer:
+    desc: >
+      Installeur Windows (.exe) à partager — nécessite Inno Setup 6
+      (https://jrsoftware.org/isdl.php)
+    platforms: [windows]
+    vars:
+      # Lu à la main (sans grep/sed, non garantis sur un poste Windows nu) :
+      # ne dépend que des builtins de l'interpréteur shell intégré à go-task.
+      APP_VERSION:
+        sh: |
+          while IFS= read -r line; do
+            case "$line" in
+              version:*)
+                v="${line#version: }"
+                printf '%s' "${v%+*}"
+                break
+                ;;
+            esac
+          done < pubspec.yaml
+    cmds:
+      - task: build:windows
+      - |
+        ISCC="ISCC"
+        for candidate in \
+          "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" \
+          "C:\Program Files\Inno Setup 6\ISCC.exe"
+        do
+          if [ -f "$candidate" ]; then ISCC="$candidate"; break; fi
+        done
+        "$ISCC" "/DMyAppVersion={{.APP_VERSION}}" windows/installer/elite_dangerous.iss || {
+          echo "Inno Setup (ISCC) introuvable — installe-le : https://jrsoftware.org/isdl.php" >&2
+          exit 1
+        }
+      - 'echo "Installeur généré dans build/windows/installer/"'
+
   build:all:
     desc: Toutes les cibles que cet hôte sait construire
     # Les tâches dont `platforms` ne correspond pas sont ignorées, pas en échec.
