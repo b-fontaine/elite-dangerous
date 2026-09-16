@@ -126,3 +126,12 @@ if(NOT CMAKE_BUILD_TYPE MATCHES "Debug")
   install(FILES "${AOT_LIBRARY}" DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
     COMPONENT Runtime)
 endif()
+
+# Desktop entry and hicolor icon theme, for packagers (deb/AppImage/Flatpak)
+# and for `xdg-desktop-menu install` on a manual install.
+install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/packaging/${APPLICATION_ID}.desktop"
+  DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications"
+  COMPONENT Runtime)
+install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/packaging/icons/hicolor"
+  DESTINATION "${CMAKE_INSTALL_PREFIX}/share/icons"
+  COMPONENT Runtime)

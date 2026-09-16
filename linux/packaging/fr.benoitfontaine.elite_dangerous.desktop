@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Codex Exobiologique
+GenericName=Suivi Elite Dangerous
+Comment=Suivi de commandant Elite Dangerous (exploration & exobiologie)
+Exec=elite_dangerous
+Icon=fr.benoitfontaine.elite_dangerous
+Terminal=false
+Categories=Game;
+StartupWMClass=elite_dangerous
