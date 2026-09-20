@@ -46,6 +46,7 @@ void main() {
         const RouteDurationEstimator(),
         FakeAbandon(),
         clock,
+        FakeWatchJournalEvents(),
       ),
     );
   });

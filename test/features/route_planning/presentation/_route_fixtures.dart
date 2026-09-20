@@ -8,8 +8,11 @@ library;
 import 'dart:async';
 
 import 'package:elite_dangerous/core/result/result.dart';
+import 'package:elite_dangerous/core/stream/initial_then.dart';
 import 'package:elite_dangerous/core/time/clock.dart';
 import 'package:elite_dangerous/core/usecase/usecase.dart';
+import 'package:elite_dangerous/features/journal/domain/entities/journal_event.dart';
+import 'package:elite_dangerous/features/journal/domain/usecases/journal_usecases.dart';
 import 'package:elite_dangerous/features/route_planning/domain/entities/route_plan.dart';
 import 'package:elite_dangerous/features/route_planning/domain/entities/route_progress.dart';
 import 'package:elite_dangerous/features/route_planning/domain/entities/route_request.dart';
@@ -160,5 +163,24 @@ class FixedClock implements Clock {
 
   @override
   DateTime now() => instant;
+}
+
+/// Stands in for the journal's own change stream.
+///
+/// Mirrors what [JournalRepositoryImpl.watchEvents] actually does — an
+/// immediate catch-up value on subscription, then one emission per call to
+/// [notifyNewLines] — so a test exercising the bloc's `skip(1)` sees the same
+/// shape of stream the real one produces.
+class FakeWatchJournalEvents implements WatchJournalEvents {
+  final StreamController<List<JournalEvent>> _controller =
+      StreamController<List<JournalEvent>>.broadcast();
+
+  void notifyNewLines() => _controller.add(const <JournalEvent>[]);
+
+  @override
+  Stream<List<JournalEvent>> call(NoParams input) => initialThen(
+        () async => const <JournalEvent>[],
+        _controller.stream,
+      );
 }
 

@@ -838,6 +838,7 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i438.RouteDurationEstimator>(),
         gh<_i668.AbandonRoute>(),
         gh<_i807.Clock>(),
+        gh<_i832.WatchJournalEvents>(),
       ),
     );
     gh.factory<_i756.RoutePlannerBloc>(
