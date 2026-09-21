@@ -1,0 +1,499 @@
+{
+  "id": "premiers-controles-et-entrainement",
+  "title": "Premier vol : entraînement, contrôles et configuration avant de décoller",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Avant même de penser à gagner des crédits : comment s'entraîner sans risque, accoster sans y laisser sa coque, atterrir sur une planète, et choisir ses contrôles. Le guide mécanique du tout premier vol.",
+  "byline": "PC · Live et Legacy · Aucun rang requis",
+  "edition": "2026-09",
+  "topics": ["débutant", "contrôles", "accostage", "atterrissage", "pilot training", "vr"],
+  "estimatedReadMinutes": 17,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Avant de toucher les commandes : ta version du jeu et ton matériel",
+            "Le menu Pilot Training : t'entraîner hors ligne, sans rien risquer",
+            "Accoster sans y laisser sa coque",
+            "Atterrir sur une planète : Orbital Cruise puis Glide",
+            "Quel schéma de contrôle, et pour quel budget",
+            "Le fichier de bindings : où il est, comment le protéger",
+            "Un mot sur la VR",
+            "La check-list avant ta première sortie"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "Ce guide ne parle ni de crédits ni de rentabilité : il répond à une seule question, celle qu'on se pose avant même d'avoir décollé une fois. **Voici exactement quoi faire avant ta première sortie, et comment ne pas te crasher au premier accostage.**"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Il se situe en amont de tout le reste : avant de choisir une activité, avant de dépenser un crédit, avant même le guide « Devenir riche sans combat — le guide du débutant ». Ce dernier suppose que tu sais déjà piloter et accoster — ce guide-ci t'apprend le geste lui-même. Il couvre le menu d'entraînement hors ligne, la procédure d'accostage étape par étape, l'atterrissage planétaire, le choix d'un schéma de contrôle selon ton budget, l'emplacement du fichier qui garde tes réglages, la différence entre les deux versions du jeu, et un mot sur la VR."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Comment lire les chiffres de ce guide",
+          "text": "Les informations sont étiquetées selon leur fiabilité. **OFF** vient de Frontier ou d'un guide officiel. **COM** provient de bases ou de wikis communautaires, parfois eux-mêmes en désaccord entre leurs propres pages. **EST** signale une estimation. Deux points précis n'ont **jamais** été confirmés par une source officielle malgré des tentatives de vérification directe : le décompte exact du menu Pilot Training, et le délai de tolérance avant destruction en cas d'accostage sans autorisation. Ce guide le dit explicitement plutôt que d'inventer un chiffre rassurant."
+        }
+      ]
+    },
+    {
+      "id": "avant-de-voler",
+      "number": 1,
+      "title": "Avant de toucher les commandes : ta version du jeu et ton matériel",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Deux questions se posent avant même d'ouvrir le menu Pilot Training : sur quelle version du jeu es-tu, et avec quel matériel comptes-tu jouer ? La seconde attend le [§5](#5), mais la première change concrètement ce que tu vas voir à l'écran — et personne ne te le signale au lancement."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Live ou Legacy : la distinction qu'on ne t'explique jamais"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Depuis la sortie d'**Odyssey** (19 mai 2021), Elite Dangerous existe sous deux branches serveur incompatibles entre elles. **Live** (version 4.0 et suivantes) reçoit toutes les mises à jour de contenu. **Legacy** est figée depuis novembre 2022 à la version 3.8 : ni jeu à pied, ni exobiologie, ni Colonisation, ni Powerplay 2.0, ni Supercruise Overcharge, ni aucun vaisseau sorti après 2021. **[OFF]**"
+        },
+        {
+          "type": "table",
+          "caption": "Quelle branche par défaut, selon la plateforme",
+          "headers": ["Plateforme", "Comportement par défaut", "Peux-tu changer ?"],
+          "rows": [
+            [
+              {"text": "Steam", "style": "strong"},
+              {"text": "Live par défaut depuis le 19 juin 2023", "style": "normal"},
+              {"text": "Oui, sélecteur « Versions » du launcher", "style": "win"}
+            ],
+            [
+              {"text": "Epic Games Store", "style": "strong"},
+              {"text": "Moins garanti — un épisode documenté fin 2024 a installé Legacy par défaut pour certains joueurs", "style": "normal"},
+              {"text": "Oui, même sélecteur", "style": "mid"}
+            ],
+            [
+              {"text": "PS4 / Xbox One", "style": "strong"},
+              {"text": "La version console EST Legacy, sans exception", "style": "normal"},
+              {"text": "Non, aucun choix possible", "style": "lose"}
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Pourquoi ça compte pour un débutant",
+          "text": "Si tu es sur console, ou si tu tombes par erreur en Legacy sur PC, une bonne partie des guides récents de ce corpus (exobiologie, Colonisation, tout vaisseau sorti depuis 2021) ne s'appliquera tout simplement pas à toi. Vérifie ta branche **avant** de suivre un guide qui suppose l'une ou l'autre : regarde le texte en haut à gauche de l'écran de connexion — « Elite Dangerous Horizons » ou « Elite Dangerous Odyssey » signifie Live, « Elite Dangerous » seul signifie Legacy — ou plus simplement l'absence du jeu à pied en jeu. **[OFF]**"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Tout ce qui suit dans ce guide — Pilot Training, accostage, atterrissage planétaire, contrôles — s'applique **aux deux branches** : ce sont des mécaniques de vol de base, présentes depuis bien avant Odyssey. Seule la section sur les schémas de contrôle et le fichier de bindings distingue les deux versions, parce que le nom du fichier change."
+        }
+      ]
+    },
+    {
+      "id": "pilot-training",
+      "number": 2,
+      "title": "Le menu Pilot Training : t'entraîner hors ligne, sans rien risquer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Avant même de piloter le Sidewinder Mk I gratuit, tu dois passer le **Pilot's Assessment**, la licence obligatoire de la Pilots Federation. Une fois cette formalité passée, le menu principal propose un ensemble de scénarios isolés du monde persistant, réunis dans le menu **Pilot Training** : aucun risque de destruction réelle, aucun impact sur l'économie ou le BGS."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Simulations de pilotage", "value": "environ neuf, au 13 septembre 2026", "reliability": "community"},
+            {"label": "Scénarios de défi additionnels", "value": "environ dix", "reliability": "community"},
+            {"label": "Mode de jeu", "value": "jouable hors ligne — le seul contenu du jeu accessible sans connexion aux serveurs Frontier", "reliability": "official"},
+            {"label": "Durée par scénario", "value": "aucune durée officielle publiée ; compte une session courte de 10 à 20 minutes pour les parcourir tous", "reliability": "estimate"}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Pourquoi ce décompte n'est pas garanti",
+          "text": "Le nombre exact de simulations et de scénarios circule sur des guides communautaires récents, mais la page officielle qui les documenterait (`community.elitedangerous.com/en/tutorial-videos`) a renvoyé une erreur d'accès lors des tentatives de vérification directe. Le chiffre est donc plausible, pas confirmé — vérifie toi-même la liste réelle dans le menu, elle peut avoir changé depuis."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "L'ordre recommandé, du plus basique au plus situationnel"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Ce guide ne décrit pas le contenu de chaque scénario — seulement où il te mène ensuite dans ce guide, et dans le reste du corpus."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Vol de base** (assiette, poussée, boost)",
+              "detail": "Prérequis à tout le reste. Rien de spécifique à ce guide, mais indispensable avant de tenter le moindre accostage."
+            },
+            {
+              "text": "**Accostage**",
+              "detail": "La simulation couvre les gestes ; la procédure complète, chiffrée, avec ses variantes et ses zones d'incertitude, est en [§3](#3) de ce guide."
+            },
+            {
+              "text": "**Voyage** (supercroisière, interdiction)",
+              "detail": "Prépare directement l'atterrissage planétaire du [§4](#4)."
+            },
+            {
+              "text": "**Combat**",
+              "detail": "Initiation aux pips (répartition d'énergie SYS/ENG/WEP) et au Flight Assist Off avant tout engagement réel. Hors du périmètre mécanique de ce guide, mais les bindings correspondants sont listés au [§6](#6)."
+            },
+            {
+              "text": "**SRV**",
+              "detail": "Pilotage au sol, utile avant une première sortie de minage de surface ou d'exobiologie — non couvert ici."
+            },
+            {
+              "text": "**Chasseur embarqué** (Ship-Launched Fighter)",
+              "detail": "Optionnel : utile seulement en configuration Multicrew, à plusieurs joueurs."
+            },
+            {
+              "text": "**À pied**",
+              "detail": "Mouvement, arme, outils du Suit Tool. Ne concerne que les joueurs en branche Live avec Odyssey — absent en Legacy (voir [§1](#1))."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Le CQC (Close Quarters Combat) prolonge cette logique d'entraînement sans risque économique, mais dans un cadre multijoueur compétitif plutôt que solo hors ligne — il n'est pas traité dans ce guide, qui reste centré sur le tout premier vol."
+        }
+      ]
+    },
+    {
+      "id": "accostage",
+      "number": 3,
+      "title": "Accoster sans y laisser sa coque",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Sept étapes, une seule règle d'or : centre-toi dans le mailslot et synchronise ta rotation avant d'y entrer.** C'est la procédure la plus mal transmise du jeu — le menu Pilot Training en couvre les gestes, pas les chiffres. Les voici."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Demande d'autorisation** à moins de 7 500 m de la station",
+              "detail": "Onglet Contacts (panneau gauche), sélectionne la station puis « Request Docking Permission ». Au-delà de cette distance, la demande est refusée automatiquement. **[COM]**"
+            },
+            {
+              "text": "**Attribution d'un pad**, avec un délai de dix minutes",
+              "detail": "En cas d'acceptation, un numéro de pad s'affiche (« Proceed to landing pad XX »). Tu as dix minutes pour t'y poser. **[COM]**"
+            },
+            {
+              "text": "**Franchissement du mailslot** (Access Corridor), 222 m de large sur 52 m de haut",
+              "detail": "Corridor gardé par des tourelles de défense qui ouvrent le feu sur tout vaisseau flânant ou intrus. Centre-toi dessus, puis active l'option « Rotational Correction » pour synchroniser la rotation de ton vaisseau avec celle de la station. **[COM]**"
+            },
+            {
+              "text": "**Vitesse et zone sans tir** à l'intérieur",
+              "detail": "Pas de limite dure universelle, mais dépasser 100 m/s en cas de collision entraîne une amende pour vol dangereux ; toute collision destructrice vaut une accusation de meurtre et l'ouverture du feu des tourelles. Tirer une arme dans la no-fire zone entraîne une amende ; le scan y reste autorisé, larguer du cargo y est sanctionné sauf à quai. **[COM]**"
+            },
+            {
+              "text": "**Délai de flânerie** en cas d'entrée sans autorisation",
+              "detail": "La sanction va jusqu'à la destruction, mais le délai exact n'est pas tranché : deux pages du même wiki communautaire donnent des chiffres contradictoires (90 secondes contre 60 secondes), sans qu'aucune source officielle ne les départage. Ne teste pas la limite — demande toujours l'autorisation."
+            },
+            {
+              "text": "**Motifs de refus documentés**",
+              "detail": "Distance excessive, nouvelle demande depuis l'intérieur de la station, tous les pads occupés, ou vaisseau trop grand pour les pads disponibles. Une prime active n'est **pas** confirmée comme motif de refus par les sources consultées, contrairement à une idée répandue. **[COM]**"
+            },
+            {
+              "text": "**Décollage**, puis cinq minutes pour dégager la zone",
+              "detail": "Depuis le menu du pad, choisis « Launch » (et non « Enter Hangar », qui descend le pad pour l'entretien). Après décollage, tu as cinq minutes pour quitter la zone de la station avant d'être considéré en flânerie, ce qui déclenche un compte à rebours hostile de 60 secondes. **[COM]**"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Le meilleur ami du débutant",
+          "text": "Un **Docking Computer** (Standard ou Advanced) automatise tout le processus une fois la permission demandée et la manette des gaz ramenée à zéro. Ce n'est pas de la triche : c'est un module comme un autre, et il t'évite la majorité des crashs d'apprentissage. Évite seulement de l'activer à l'exact opposé du corridor d'accès à l'intérieur de la station."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Deux variantes à connaître"
+        },
+        {
+          "type": "table",
+          "caption": "Où le mailslot n'existe pas",
+          "headers": ["Type", "Ce qui change", "Pad max"],
+          "rows": [
+            [
+              {"text": "Avant-poste (Outpost)", "style": "strong"},
+              {"text": "Pas de rotation, pas de corridor : pads exposés directement à l'espace, vaisseau maintenu par verrouillage magnétique. 2 à 5 pads (typiquement 4 Small + 1 Medium)", "style": "normal"},
+              {"text": "Medium — aucun pad Large", "style": "lose"}
+            ],
+            [
+              {"text": "Surface Port (planétaire)", "style": "strong"},
+              {"text": "Pas un « Coriolis au sol » : mêmes règles de demande à 7,5 km, mais pads à l'air libre, sans corridor, soumis à la gravité réelle de la planète — sur un monde à forte gravité, tes propulseurs peuvent ne pas suffire à freiner la descente", "style": "normal"},
+              {"text": "Jusqu'à Large selon le sous-type", "style": "mid"}
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Coriolis, Orbis et Ocellus sont exclusivement des classes de stations **orbitales**, dotées d'un mailslot ; il n'existe pas de variante posée au sol. L'équivalent planétaire s'appelle **Surface Port**, un vocabulaire à connaître pour ne pas chercher un « Coriolis » sur une planète."
+        }
+      ]
+    },
+    {
+      "id": "atterrissage-planetaire",
+      "number": 4,
+      "title": "Atterrir sur une planète : Orbital Cruise puis Glide",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Se poser sur une planète ou une lune suit un enchaînement en deux régimes de vitesse automatiques, puis un vol normal. Aucune des trois étapes ne demande de module spécial — seulement de respecter les angles de tangage indiqués."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Orbital Cruise**",
+              "detail": "S'active automatiquement à l'approche d'un corps atterrissable. Maintiens le tangage entre -5° et +5° (zone bleue) pour la vitesse maximale. Plancher d'altitude : 25 km, en dessous duquel tu bascules en Glide — ou subis une chute d'urgence si ta vitesse ou ton angle sont incorrects. **[OFF]**"
+            },
+            {
+              "text": "**Glide**",
+              "detail": "Ne s'engage que si le tangage est compris entre -60° et +5° à la sortie de l'Orbital Cruise, à vitesse suffisamment basse. Vitesse constante de 2 500 m/s pendant le Glide, qui se termine automatiquement à 3 km d'altitude (retour en vitesse normale, propulseurs repris en main). Piquer trop fort déclenche une chute d'urgence. **[OFF]**"
+            },
+            {
+              "text": "**Vol planétaire normal**",
+              "detail": "En dessous de 30° de tangage à faible vitesse, une sécurité automatique ramène progressivement le nez vers le vol en palier. Approche finale recommandée à un angle d'environ 45° — non obligatoire."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Vérifie la gravité avant de te poser",
+          "text": "Un monde à forte gravité peut déborder un vaisseau à propulseurs faibles, causant un atterrissage trop rapide et donc des dégâts sévères, voire la destruction. Vérifie la gravité de surface dans la carte système avant d'atterrir. La gravité maximale à laquelle un pilote peut encore débarquer **à pied** est de 2,69 g ; le déploiement d'un SRV, lui, n'a **aucune** limite de gravité. **[OFF]**"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Le train d'atterrissage doit être sorti avant tout posé. Le sortir en vol normal divise par deux la vitesse maximale du vaisseau ; il est impossible à sortir en supercroisière ou en hyperespace, et doit être rentré avant tout saut FSD — un oubli fréquent chez les débutants qui enchaînent décollage et saut trop vite."
+        }
+      ]
+    },
+    {
+      "id": "schemas-de-controle",
+      "number": 5,
+      "title": "Quel schéma de contrôle, et pour quel budget",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Elite Dangerous compte plus de 300 commandes assignables. Quatre familles de matériel permettent de les gérer, avec un arbitrage clair entre précision, confort et budget."
+        },
+        {
+          "type": "table",
+          "caption": "Les quatre schémas de contrôle",
+          "headers": ["Schéma", "Avantages", "Limites", "Budget indicatif"],
+          "rows": [
+            [
+              {"text": "Clavier + souris", "style": "strong"},
+              {"text": "Précision de la souris pour les armes fixes, coût nul, aucune calibration", "style": "normal"},
+              {"text": "Plus de 300 commandes pour ~104 touches : couches de modificateurs obligatoires", "style": "normal"},
+              {"text": "0 €", "style": "win"}
+            ],
+            [
+              {"text": "Manette (gamepad)", "style": "strong"},
+              {"text": "Fonctionne d'emblée, ergonomie simple", "style": "normal"},
+              {"text": "Trop peu de boutons physiques pour ~300 commandes, rebinding quasi obligatoire", "style": "normal"},
+              {"text": "64 $ à 179 $", "style": "mid"}
+            ],
+            [
+              {"text": "HOTAS mono-stick", "style": "strong"},
+              {"text": "Répartition naturelle stick/manette des gaz, meilleur rapport immersion/prix", "style": "normal"},
+              {"text": "Encombrement, usure des potentiomètres d'entrée de gamme", "style": "normal"},
+              {"text": "132 $ à 310 $", "style": "mid"}
+            ],
+            [
+              {"text": "HOSAS (deux sticks)", "style": "strong"},
+              {"text": "Dissociation totale translations/rotations, le plus précis en Flight-Assist-Off", "style": "normal"},
+              {"text": "Coût doublé, courbe d'apprentissage la plus raide des quatre", "style": "normal"},
+              {"text": "260 $ à 620 $", "style": "lose"}
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Le consensus communautaire, pas un fait mesuré, classe HOSAS > HOTAS > manette > clavier+souris en finesse de pilotage pure — l'ordre s'inverse pour le budget et la courbe d'apprentissage. **[COM]**"
+        },
+        {
+          "type": "verdict",
+          "title": "Pour ta toute première sortie",
+          "text": "Commence avec ce que tu as déjà : le clavier+souris suffit largement pour le vol de base, l'accostage et l'atterrissage couverts par ce guide. Un HOTAS ou une manette s'envisagent une fois que tu sais ce que tu veux en faire — inutile de dépenser avant de savoir si le jeu te plaît."
+        }
+      ]
+    },
+    {
+      "id": "fichier-de-bindings",
+      "number": 6,
+      "title": "Le fichier de bindings : où il est, comment le protéger",
+      "blocks": [
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Emplacement", "value": "%LOCALAPPDATA%\\Frontier Developments\\Elite Dangerous\\Options\\Bindings\\", "reliability": "official"},
+            {"label": "Nom du fichier (branche Live)", "value": "Custom.4.0.binds", "reliability": "official"},
+            {"label": "Nom du fichier (branche Legacy)", "value": "Custom.3.0.binds", "reliability": "official"},
+            {"label": "Quand ce fichier apparaît", "value": "seulement après ta première modification manuelle d'un binding — c'est cette modification qui le génère", "reliability": "community"}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Astuce documentée : récupérer d'anciens réglages",
+          "text": "Renommer manuellement un ancien `Custom.3.0.binds` en `Custom.4.0.binds` au passage à Odyssey permet de repartir de tes anciens réglages Horizons plutôt que de tout reconfigurer depuis zéro."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Créer un preset personnalisé"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "Duplique le fichier `Custom` existant et renomme la copie",
+              "detail": "Évite les espaces et les noms déjà réservés comme `TMasterX`."
+            },
+            {
+              "text": "Édite l'attribut `PresetName` de la balise racine `<Root PresetName=\"...\">` pour qu'il corresponde au nouveau nom"
+            },
+            {
+              "text": "Sélectionne ce preset dans chacune des quatre catégories du menu Options > Contrôles"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Sauvegarde régulièrement",
+          "text": "Le jeu a la réputation, documentée par la communauté, de parfois corrompre ses propres fichiers de bindings lors d'une mise à jour majeure. Garde une copie de ton fichier `Custom` ailleurs que dans le dossier du jeu."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "L'outil **edrefcard.info** génère une fiche graphique de rappel à partir de n'importe quel fichier `.binds` téléversé. Ses catégories de filtrage — Ship, SRV, Scanners, Fighter, On Foot, Multicrew, Head Look, UI, Galaxy Map, Camera, Holo-Me, Miscellaneous — reflètent la structure interne réelle du fichier de bindings, utile pour t'y retrouver avant de personnaliser quoi que ce soit."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Les touches vraiment vitales pour ce que couvre ce guide"
+        },
+        {
+          "type": "table",
+          "caption": "Vol et supercroisière",
+          "headers": ["Fonction", "À quoi ça sert ici"],
+          "rows": [
+            [
+              {"text": "Pips SYS / ENG / WEP", "style": "strong"},
+              {"text": "Répartition d'énergie — indispensable dès la première sortie, notamment pour l'atterrissage planétaire du §4", "style": "normal"}
+            ],
+            [
+              {"text": "Boost", "style": "strong"},
+              {"text": "Accélération ponctuelle, utile pour rejoindre un pad avant l'expiration du délai de dix minutes du §3", "style": "normal"}
+            ],
+            [
+              {"text": "Train d'atterrissage", "style": "strong"},
+              {"text": "À sortir avant tout accostage ou atterrissage planétaire — impossible en supercroisière", "style": "normal"}
+            ],
+            [
+              {"text": "Rotational Correction", "style": "strong"},
+              {"text": "Synchronise ta rotation avec celle de la station pour franchir le mailslot du §3", "style": "normal"}
+            ],
+            [
+              {"text": "Entrer/sortir du FSD", "style": "strong"},
+              {"text": "Sert aussi à initier un saut hyperespace — c'est la même touche", "style": "normal"}
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Les bindings de combat, de scan (FSS/DSS) et de SRV sont couverts par leurs scénarios respectifs du menu Pilot Training ([§2](#2)) plutôt que repris ici — ce guide reste centré sur le vol, l'accostage et l'atterrissage."
+        }
+      ]
+    },
+    {
+      "id": "vr",
+      "number": 7,
+      "title": "Un mot sur la VR",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Le jeu n'a pas de runtime OpenXR natif propre : le support VR passe entièrement par **SteamVR**, et aucun contrôleur de mouvement n'est pris en charge — c'est une expérience VR strictement assise, pilotée au clavier, à la souris, au HOTAS ou à la manette classique, exactement les schémas du [§5](#5)."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Ce qui fonctionne, ce qui ne fonctionne pas",
+          "text": "Le **cockpit** et le **SRV** tournent en stéréoscopie complète — c'est le cœur historique du support VR du jeu depuis son lancement. Le **jeu à pied** introduit par Odyssey, en revanche, reste projeté en écran plat à l'intérieur du casque, sans aucune date d'ajout de la stéréoscopie annoncée. Un responsable communautaire de Frontier l'avait signalé avant même la sortie d'Odyssey, en 2020 ; aucune annonce plus récente n'est venue confirmer ou infirmer que cette position a changé depuis."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Il n'existe pas de section « confort VR » dédiée dans le menu Options — pas de bascule téléportation/glissement, pas de vignette anti-nausée native identifiée. Le confort passe par des réglages génériques réutilisés : **Reduce Camera Shake**, **Vehicle Motion Blackout**, **Vehicle Maintain Horizon Camera** (verrouille l'horizon de la caméra en SRV sur terrain accidenté), et un raccourci **Reset HMD Orientation** sous Contrôles > Divers."
+        }
+      ]
+    },
+    {
+      "id": "checklist",
+      "number": 8,
+      "title": "La check-list avant ta première sortie",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Sais-tu si tu joues en **Live** ou en **Legacy** ? Regarde le texte en haut à gauche de l'écran de connexion.",
+            "As-tu fait au moins les scénarios **vol de base**, **accostage** et **voyage** du menu Pilot Training ?",
+            "Connais-tu la distance de demande d'accostage (7 500 m) et le délai de pad (10 minutes) ?",
+            "Sais-tu reconnaître un mailslot d'un pad de Surface Port à l'air libre ?",
+            "As-tu vérifié la gravité de surface d'un corps avant de t'y poser ?",
+            "As-tu choisi un schéma de contrôle adapté à ton budget — sans avoir besoin de dépenser un centime pour commencer ?",
+            "Sais-tu où se trouve ton fichier de bindings, et as-tu prévu d'en garder une copie de sauvegarde ?"
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Aucune de ces étapes ne coûte un crédit, et toutes se font hors ligne ou en quelques minutes de jeu. C'est le seul investissement obligatoire avant de laisser Elite Dangerous te mettre dehors, dans le noir, avec un vaisseau et une carrière à construire — le reste, y compris devenir riche, peut attendre le prochain guide."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "Frontier Developments",
+    "community.elitedangerous.com",
+    "wiki Elite Dangerous (Fandom)",
+    "forums Frontier",
+    "edfieldmanual.com",
+    "edrefcard.info",
+    "VKB Sim Controllers",
+    "Virpil Controls",
+    "RoadToVR"
+  ]
+}

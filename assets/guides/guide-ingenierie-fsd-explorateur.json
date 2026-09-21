@@ -1,0 +1,447 @@
+{
+  "id": "guide-ingenierie-fsd-explorateur",
+  "title": "Ingénierie de l'explorateur : atteindre le grade 5 sans combat ni détour inutile",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Le plan d'action chiffré pour engineer ton FSD sans passer par la case combat : déblocage de Farseer, coût exact grade par grade, formule de portée, Material Traders et FSD Injection en dépannage.",
+  "byline": "PC · Live · Rang Explorateur Scout minimum",
+  "edition": "2026-09",
+  "topics": ["ingenierie", "fsd", "exploration", "materiaux", "felicity-farseer"],
+  "estimatedReadMinutes": 17,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Débloquer Felicity Farseer sans un coup de feu",
+            "Rolls déterministes : la mécanique qui change tout depuis 2024",
+            "Le blueprint qui compte : Increased Range, grade par grade",
+            "Masse optimale, portée réelle et trois builds chiffrés",
+            "Material Traders : recycler ton surplus plutôt que regrinder",
+            "FSD Injection (jumponium) : le dépannage de dernier recours",
+            "Le reste du socle Farseer : capteurs, sondes, propulseurs",
+            "Ce qu'il faut retenir"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Un seul blueprint change vraiment ta vie d'explorateur : Increased Range sur le FSD, monté au grade 5 avec l'effet expérimental Mass Manager.** Ce guide part du principe que tu as déjà lu exploration-exobiologie.json et/ou protocole-milliard.json, que tu sais scanner un système et prélever une bio, et que tu te demandes enfin comment engineer vraiment ton vaisseau sans passer par la case combat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Depuis l'Update 18.08 du 7 août 2024, l'ingénierie a changé de nature : les rolls ne sont plus un tirage, ils sont un coût fixe. Ça veut dire que ce guide peut te donner des totaux exacts en matériaux, pas des fourchettes « selon la chance ». C'est précisément ce qu'on va faire, blueprint par blueprint."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Comment lire les chiffres de ce guide",
+          "text": "**OFF** = donnée officielle Frontier ou tirée des fichiers de référence EDCD (coriolis-data, FDevIDs) utilisés par Inara, EDMC et EDDI. **COM** = base ou mesure communautaire (wiki Elite Dangerous, EDEngineer, forums). **EST** = estimation ou instantané de marché volatil, à revérifier avant de partir. Les quantités de matériaux et les pourcentages d'effet de ce guide sont **OFF/COM croisés sur cinq sources indépendantes** ; seuls les prix du Meta-Alloy et les emplacements de Material Traders sont des instantanés **EST**, sujets à varier."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ce que ce guide suppose déjà acquis",
+          "text": "Un vaisseau d'exploration correct (Diamondback Explorer, Mandalay ou équivalent), le rang Explorateur **Scout** au minimum, et un peu de trésorerie. Si tu n'as ni l'un ni l'autre, commence par exploration-exobiologie.json — ce guide-ci ne revient pas sur le choix du vaisseau ni sur la boucle de scan."
+        }
+      ]
+    },
+    {
+      "id": "debloquer-farseer",
+      "number": 1,
+      "title": "Débloquer Felicity Farseer sans un coup de feu",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Felicity Farseer, à Deciat, est la porte d'entrée de toute l'ingénierie FSD — et elle se débloque sans tirer une seule fois.** Deux conditions, rien d'autre."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Rang requis", "value": "Explorateur Scout (palier 3 affiché, valeur 2 sur l'échelle 0-8 du journal de jeu)", "reliability": "official"},
+            {"label": "Marchandise à livrer", "value": "1 unité de Meta-Alloys — une seule", "reliability": "official"}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Un piège de vocabulaire",
+          "text": "Le Meta-Alloy est une **marchandise** (commodity), pas un matériau d'ingénierie : il occupe une tonne de soute comme n'importe quel fret, et il **ne passe pas** par un comptoir d'échange de matériaux."
+        },
+        {"type": "heading", "level": 3, "text": "Où trouver ton unité de Meta-Alloy"},
+        {
+          "type": "paragraph",
+          "text": "Le marché du Meta-Alloy est étroit. Sur un instantané du 19 août 2026 (données communautaires, donc à revérifier avant de partir) :"
+        },
+        {
+          "type": "table",
+          "caption": "Où acheter le Meta-Alloy pour Farseer (EST, 19 août 2026)",
+          "headers": ["Source", "Prix", "Stock"],
+          "rows": [
+            [{"text": "Darnielle's Progress (Maia, avant-poste)", "style": "strong"}, {"text": "246 598 Cr", "style": "number"}, {"text": "5 t", "style": "number"}],
+            [{"text": "Fleet Carrier dans Deciat même (V4F-L3N)", "style": "normal"}, {"text": "9 729 Cr", "style": "number"}, {"text": "1 t", "style": "number"}],
+            [{"text": "Les 57 autres Fleet Carriers avec stock", "style": "normal"}, {"text": "de ~9 700 Cr à plus de 19 M Cr / t", "style": "number"}, {"text": "variable", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Deux pièges à éviter",
+          "text": "**Maia Point** et **Moni's Hub** affichent un prix mais un stock à **0**. **Obsidian Orbital** n'affiche que de la demande — on y vend, on n'y achète pas. Et surtout : **ne cherche plus dans les settlements Odyssey**, l'Update 10 du 25 janvier 2022 a corrigé le fait qu'ils en exportaient par erreur. Un guide qui t'y envoie est antérieur à ce correctif."
+        },
+        {"type": "heading", "level": 3, "text": "Monter ta réputation ensuite"},
+        {
+          "type": "paragraph",
+          "text": "Une fois l'invitation honorée, deux leviers documentés font monter ta réputation chez elle : **fabriquer des modules** à sa base (l'effet le plus marqué), et **vendre tes données d'exploration sur place**, à Farseer Inc — une vente ailleurs ne compte pas."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Ce qui n'est chiffré nulle part",
+          "text": "Aucune source vérifiable ne donne les points de réputation par module fabriqué, par mission ou par crédit de données vendues, ni les seuils exacts des rangs 1 à 5. Un chiffre du type « environ 24 M Cr de données au total » circule dans la communauté : traite-le comme une **estimation non sourcée**, pas comme une valeur du jeu."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Une confusion à ne pas faire",
+          "text": "Aucune condition de déblocage d'Ingénieur ne porte sur un rang **Powerplay**. Farseer se débloque sur ton rang d'**Explorateur**, un système de réputation totalement distinct."
+        }
+      ]
+    },
+    {
+      "id": "rolls-deterministes",
+      "number": 2,
+      "title": "Rolls déterministes : la mécanique qui change tout",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Depuis l'Update 18.08 du 7 août 2024, un roll d'ingénieur n'est plus un tirage : c'est un résultat fixe.** Tout conseil qui te dit de « rerouler jusqu'à tomber sur un bon résultat » ou de « brûler des rolls pas chers pour espérer un pic » date d'avant cette mise à jour et n'a plus aucun sens."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "La règle à retenir",
+          "text": "À **réputation 5** auprès d'un Ingénieur, un blueprint de **grade N** demande exactement **N applications (rolls)** pour être validé. En dessous de réputation 5, il en faut davantage — mais le résultat reste fixe, jamais aléatoire."
+        },
+        {
+          "type": "table",
+          "caption": "Rolls nécessaires par grade, à réputation 5",
+          "headers": ["Grade", "Rolls requis", "Coût cumulé en rolls (G1 → ce grade)"],
+          "rows": [
+            [{"text": "1", "style": "number"}, {"text": "1", "style": "number"}, {"text": "1", "style": "normal"}],
+            [{"text": "2", "style": "number"}, {"text": "2", "style": "number"}, {"text": "3", "style": "normal"}],
+            [{"text": "3", "style": "number"}, {"text": "3", "style": "number"}, {"text": "6", "style": "normal"}],
+            [{"text": "4", "style": "number"}, {"text": "4", "style": "number"}, {"text": "10", "style": "normal"}],
+            [{"text": "5", "style": "number"}, {"text": "5", "style": "number"}, {"text": "15", "style": "strong"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Une montée complète du grade 1 au grade 5 coûte donc **15 rolls**, et le coût réel en matériaux d'un grade se calcule en multipliant la quantité par roll par ce nombre de rolls. C'est cette règle qui rend tous les totaux chiffrés de ce guide exacts, et non plus des fourchettes « selon la chance »."
+        }
+      ]
+    },
+    {
+      "id": "increased-range",
+      "number": 3,
+      "title": "Le blueprint qui compte : Increased Range, grade par grade",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Increased Range est le blueprint FSD qui agit sur la masse optimale du module — et la portée de saut y est linéaire.** C'est celui-là, avant tous les autres, qu'il faut monter au grade 5."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trois ingénieurs seulement montent ce blueprint jusqu'au grade 5 : **Felicity Farseer**, **Elvira Martuuk** et **Mel Brandon**. Comme Farseer est aussi la plus accessible sans combat, c'est elle la cible naturelle."
+        },
+        {
+          "type": "table",
+          "caption": "Increased Range — Frame Shift Drive, grade par grade",
+          "headers": ["Grade", "Rolls @ rép. 5", "Matériaux par roll", "Effet"],
+          "rows": [
+            [{"text": "1", "style": "number"}, {"text": "1", "style": "number"}, {"text": "1× Atypical Disrupted Wake Echoes (E1)", "style": "normal"}, {"text": "+15 % masse optimale", "style": "normal"}],
+            [{"text": "2", "style": "number"}, {"text": "2", "style": "number"}, {"text": "1× Atypical Disrupted Wake Echoes (E1), 1× Chemical Processors (M2)", "style": "normal"}, {"text": "+25 % masse optimale", "style": "normal"}],
+            [{"text": "3", "style": "number"}, {"text": "3", "style": "number"}, {"text": "1× Chemical Processors (M2), 1× Phosphorus (R1), 1× Strange Wake Solutions (E3)", "style": "normal"}, {"text": "+35 % masse optimale", "style": "normal"}],
+            [{"text": "4", "style": "number"}, {"text": "4", "style": "number"}, {"text": "1× Chemical Distillery (M3), 1× Eccentric Hyperspace Trajectories (E4), 1× Manganese (R2)", "style": "normal"}, {"text": "+45 % masse optimale", "style": "normal"}],
+            [{"text": "5", "style": "number"}, {"text": "5", "style": "number"}, {"text": "1× Arsenic (R2), 1× Chemical Manipulators (M4), 1× Datamined Wake Exceptions (E5)", "style": "strong"}, {"text": "+55 % masse optimale", "style": "win"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Coût total d'une montée G1 → G5 à réputation 5** (15 rolls) : 5× Arsenic, 3× Atypical Disrupted Wake Echoes, 4× Chemical Distillery, 5× Chemical Manipulators, 5× Chemical Processors, 5× Datamined Wake Exceptions, 4× Eccentric Hyperspace Trajectories, 4× Manganese, 3× Phosphorus, 3× Strange Wake Solutions — dix matériaux distincts, tous obtenables sans combat."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Le goulot d'étranglement, identifié",
+          "text": "Les **5 unités de Datamined Wake Exceptions (grade 5)** du dernier roll. C'est un matériau **Wake Scans**, et sa seule source est le **Frame Shift Wake Scanner** braqué sur un sillage d'hyperespace. Attention : le comptoir d'échange ne permet pas de le fabriquer en convertissant vers le haut — la conversion théorique existe (1296 pour 1) mais elle est **physiquement impossible**, elle dépasserait le plafond de stockage. Il n'y a donc pas de raccourci pour ce matériau précis : il faut scanner jusqu'à en obtenir cinq."
+        },
+        {"type": "heading", "level": 3, "text": "Le module qu'il te faut d'abord : le Frame Shift Wake Scanner"},
+        {
+          "type": "paragraph",
+          "text": "C'est un module utilitaire de **classe 0** (notes E à A, de 13 544 Cr à 1 097 095 Cr), avec une portée de **2 à 4 km** et une durée de scan de **10 secondes**. Assigne-le à un groupe de tir, positionne-toi près d'un sillage d'hyperespace récent — camper les abords d'une station fréquentée est la méthode la plus efficace — et scanne. C'est la seule source des cinq matériaux Wake Scans du jeu."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Le raccourci qui marche, pour les grades 1 à 4",
+          "text": "Le comptoir Encoded **descend** un matériau de grade à raison de **1 pour 3** par palier (une unité de grade 5 rend 81 unités de grade 1, en descendant quatre grades). Ne vise donc pas un grade précis à chaque scan : **récolte n'importe quel Wake Scan**, puis convertis au comptoir vers le grade qui te manque réellement pour les grades 1 à 4 du blueprint. C'est plus rapide que d'espérer tomber directement sur le bon grade à chaque tir de scanner."
+        }
+      ]
+    },
+    {
+      "id": "masse-optimale-et-builds",
+      "number": 4,
+      "title": "Masse optimale, portée réelle et trois builds chiffrés",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**La portée de saut de ton FSD est directement proportionnelle à sa masse optimale.** Comprendre cette formule, c'est comprendre pourquoi Increased Range est le seul blueprint qui compte vraiment pour un explorateur."
+        },
+        {"type": "paragraph", "text": "La formule officielle, stable depuis 2015 :"},
+        {"type": "paragraph", "text": "d = (MasseOptimaleFSD / MasseVaisseau) × (CarburantMaxParSaut × 1000 / ConstanteLinéaire) ^ (1 / ConstantePuissance)"},
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Constante linéaire (selon le rating) : A = 12, B = 10, C = 8, D = 10, E = 11",
+            "Constante de puissance (selon la classe) : classe 2 = 2,00 · classe 3 = 2,15 · classe 4 = 2,30 · classe 5 = 2,45 · classe 6 = 2,60 · classe 7 = 2,75 · classe 8 = 2,90"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Retiens surtout la lecture qualitative : **la distance de saut est linéaire en masse optimale du FSD**. Augmenter cette masse optimale de X %, c'est augmenter ta portée de saut d'à peu près X %, à masse de vaisseau égale."
+        },
+        {"type": "heading", "level": 3, "text": "L'effet chiffré d'Increased Range, grade par grade"},
+        {
+          "type": "table",
+          "caption": "Effet sur la masse optimale du FSD, valeurs fixes depuis l'Update 18.08",
+          "headers": ["Grade", "Masse optimale"],
+          "rows": [
+            [{"text": "1", "style": "number"}, {"text": "+15 %", "style": "normal"}],
+            [{"text": "2", "style": "number"}, {"text": "+25 %", "style": "normal"}],
+            [{"text": "3", "style": "number"}, {"text": "+35 %", "style": "normal"}],
+            [{"text": "4", "style": "number"}, {"text": "+45 %", "style": "normal"}],
+            [{"text": "5", "style": "number"}, {"text": "+55 %", "style": "win"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "+55 % de masse optimale n'est pas +55 % de portée réelle",
+          "text": "Le blueprint ajoute aussi **+30 % à la masse du module FSD lui-même**, qui s'ajoute à la masse totale du vaisseau au dénominateur de la formule. Le gain net est donc de quelques points inférieur à +55 %, l'écart étant négligeable sur un gros vaisseau et plus sensible sur un petit. Pour un chiffre exact, reporte la masse réelle de ton loadout (Coriolis, EDSY ou l'écran Vaisseau en jeu) dans la formule."
+        },
+        {"type": "heading", "level": 3, "text": "Mass Manager ou Deep Charge ?"},
+        {
+          "type": "paragraph",
+          "text": "Les deux effets expérimentaux du FSD coûtent **exactement les mêmes matériaux** : 5× Atypical Disrupted Wake Echoes, 3× Galvanising Alloys, 1× Eccentric Hyperspace Trajectories."
+        },
+        {
+          "type": "table",
+          "caption": "Mass Manager vs Deep Charge",
+          "headers": ["Effet", "Bonus", "Contrepartie"],
+          "rows": [
+            [{"text": "Mass Manager", "style": "strong"}, {"text": "+4 % masse optimale", "style": "win"}, {"text": "−8 % intégrité du module", "style": "lose"}],
+            [{"text": "Deep Charge", "style": "strong"}, {"text": "+10 % carburant maximum par saut", "style": "win"}, {"text": "aucune contrepartie chiffrée", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Sur un trajet long, le +10 % de carburant de Deep Charge peut valoir davantage que les +4 % de portée par saut de Mass Manager — c'est un arbitrage entre portée unitaire et autonomie, pas un choix évident. Felicity Farseer pose les deux."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Combinés, **grade 5 + Mass Manager multiplient la masse optimale du FSD par ×1,61** (1,55 × 1,04) — une valeur fixe, indépendante de la classe du FSD, depuis que les rolls sont déterministes. C'est le calcul qui sert de base aux trois builds ci-dessous."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Le cas du FSD SCO",
+          "text": "Increased Range s'applique aussi au FSD Supercruise Overcharge, avec les mêmes matériaux. En revanche, les attributs propres au SCO (vitesse, accélération, chaleur, consommation en overcharge) **ne sont pas modifiables par l'ingénierie**. Pour planifier un build SCO ingénié, utilise EDSY plutôt que Coriolis, qui n'a aucune donnée sur ce module."
+        },
+        {"type": "heading", "level": 3, "text": "Trois builds chiffrés"},
+        {
+          "type": "table",
+          "caption": "Trois builds FSD chiffrés",
+          "headers": ["Build", "FSD", "Masse optimale stock → engineeré", "Matériaux (rép. 5)", "Point dur"],
+          "rows": [
+            [{"text": "1 — Économique", "style": "strong"}, {"text": "Diamondback Explorer, 5A, grade 3 seul", "style": "normal"}, {"text": "1 050 t → 1 418 t (×1,35)", "style": "number"}, {"text": "14 unités, 4 matériaux (6 rolls)", "style": "normal"}, {"text": "Aucun", "style": "win"}],
+            [{"text": "2 — Optimisé", "style": "strong"}, {"text": "Diamondback Explorer, 5A, grade 5 + Mass Manager", "style": "normal"}, {"text": "1 050 t → 1 693 t (×1,61)", "style": "number"}, {"text": "50 unités, 11 matériaux (15 rolls + effet)", "style": "normal"}, {"text": "5× Datamined Wake Exceptions", "style": "lose"}],
+            [{"text": "3 — Vaisseau lourd", "style": "strong"}, {"text": "Anaconda, 6A, grade 5 + Mass Manager", "style": "normal"}, {"text": "1 800 t → 2 902 t (×1,61)", "style": "number"}, {"text": "Identiques au Build 2", "style": "normal"}, {"text": "5× Datamined Wake Exceptions", "style": "lose"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Point clé, souvent ignoré :** le coût en matériaux d'un grade est **identique quelle que soit la classe du FSD** — un FSD de petite classe sur un vaisseau léger et un FSD de classe 8 sur un Panther Clipper coûtent exactement les mêmes matériaux pour le même grade. Seuls le prix d'achat du module et son gain en tonnes changent avec la classe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prix d'achat, si le module est à remplacer : **5 103 953 Cr** pour le FSD 5A du Build 2, **16 179 531 Cr** pour le FSD 6A du Build 3. L'application du blueprint elle-même ne coûte que des matériaux, jamais de crédits."
+        }
+      ]
+    },
+    {
+      "id": "material-traders",
+      "number": 5,
+      "title": "Material Traders : recycler ton surplus plutôt que regrinder",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Les plafonds de stockage (300 unités au grade 1, jusqu'à 100 au grade 5) rendent les Material Traders indispensables** dès que tu enchaînes plusieurs blueprints de haut grade."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sur les 115 matériaux d'ingénierie du jeu, répartis en 24 catégories, ton chantier FSD n'en mobilise qu'une dizaine — mais autant savoir manier les comptoirs d'échange pour ne rien gaspiller. Trois types de comptoirs existent — Raw, Manufactured, Encoded — et l'échange ne fonctionne qu'à l'intérieur d'un même type : impossible de convertir du Raw en Encoded."
+        },
+        {
+          "type": "table",
+          "caption": "Taux de conversion d'un Material Trader",
+          "headers": ["Écart de grade", "Même catégorie", "Catégorie différente"],
+          "rows": [
+            [{"text": "+1 grade", "style": "normal"}, {"text": "6 → 1", "style": "lose"}, {"text": "36 → 1", "style": "lose"}],
+            [{"text": "+2 grades", "style": "normal"}, {"text": "36 → 1", "style": "lose"}, {"text": "216 → 1", "style": "lose"}],
+            [{"text": "+3 grades", "style": "normal"}, {"text": "216 → 1", "style": "lose"}, {"text": "impossible", "style": "lose"}],
+            [{"text": "+4 grades", "style": "normal"}, {"text": "1296 → 1 (théorique, impossible)", "style": "lose"}, {"text": "7776 → 1 (théorique, impossible)", "style": "lose"}],
+            [{"text": "même grade", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "6 → 1", "style": "mid"}],
+            [{"text": "−1 grade", "style": "normal"}, {"text": "1 → 3", "style": "win"}, {"text": "2 → 1", "style": "mid"}],
+            [{"text": "−2 grades", "style": "normal"}, {"text": "1 → 9", "style": "win"}, {"text": "2 → 3", "style": "mid"}],
+            [{"text": "−3 grades", "style": "normal"}, {"text": "1 → 27", "style": "win"}, {"text": "2 → 9", "style": "mid"}],
+            [{"text": "−4 grades", "style": "normal"}, {"text": "1 → 81", "style": "win"}, {"text": "2 → 27", "style": "mid"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "La stratégie qui en découle",
+          "text": "Monter d'un grade coûte cher (6 pour 1), descendre rapporte beaucoup (1 pour 3). La bonne méthode n'est donc jamais de viser un grade précis en farmant : **récolte large, puis descends au comptoir vers ce qui te manque.** Les conversions théoriques à 1296:1 et 7776:1 existent dans l'interface mais sont **physiquement impossibles** — elles dépasseraient le plafond de stockage."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le comptoir Raw s'installe dans les économies Refinery et Extraction, le Manufactured dans Extraction et Industrial, l'Encoded dans High Tech et Military — avec en plus une sécurité moyenne ou haute, une population entre 1 et 22 millions, un gouvernement non-Anarchy, et une station ni endommagée ni en lockdown."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "L'économie ne garantit rien",
+          "text": "Le type du comptoir ne se déduit pas fiablement de l'économie affichée : Gresley Dock, dans Nanomam, est un comptoir **Encoded** en économie **Agriculture**, ce qui ne correspond à aucune des règles ci-dessus. Vérifie toujours le type affiché avant de t'y déplacer."
+        }
+      ]
+    },
+    {
+      "id": "fsd-injection",
+      "number": 6,
+      "title": "FSD Injection (jumponium) : le dépannage de dernier recours",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**La FSD Injection augmente la portée de ton prochain saut, un seul, en la synthétisant directement depuis le vaisseau — sans passer par une station.** C'est ton dépannage quand un système est juste hors de portée."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une nouvelle synthèse remplace le boost précédent plutôt que de s'y ajouter : impossible de cumuler deux paliers."
+        },
+        {
+          "type": "table",
+          "caption": "FSD Injection — les trois paliers",
+          "headers": ["Palier", "Bonus de portée", "Matériaux Raw requis"],
+          "rows": [
+            [{"text": "Basic", "style": "strong"}, {"text": "+25 %", "style": "normal"}, {"text": "1× Carbon (G1), 1× Vanadium (G2), 1× Germanium (G2)", "style": "normal"}],
+            [{"text": "Standard", "style": "strong"}, {"text": "+50 %", "style": "mid"}, {"text": "1× Carbon (G1), 1× Vanadium (G2), 1× Germanium (G2), 1× Cadmium (G3), 1× Niobium (G3)", "style": "normal"}],
+            [{"text": "Premium", "style": "strong"}, {"text": "+100 %", "style": "win"}, {"text": "1× Carbon (G1), 1× Germanium (G2), 1× Arsenic (G2), 1× Niobium (G3), 1× Yttrium (G4), 1× Polonium (G4)", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Tous ces matériaux sont des **Raw récoltés par prospection de surface** : aucun ne relève du minage d'astéroïdes, donc rien qui sorte de ta routine d'explorateur. Garde toujours un petit stock de Carbon, Germanium, Arsenic, Niobium, Yttrium et Polonium en réserve — c'est le jour où tu en as besoin que tu n'y penses jamais."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Une recette confirmée par Frontier lui-même",
+          "text": "Contrairement à la plupart des recettes de synthèse embarquée — sourcées uniquement par le wiki communautaire — la FSD Injection est confirmée par un **post officiel de Sandro Sammarco**, Lead Designer chez Frontier, sur le forum officiel, dès l'annonce de la mise à jour Beyond Chapter One (7 février 2018). Aucun changement documenté depuis."
+        }
+      ]
+    },
+    {
+      "id": "le-reste-du-socle",
+      "number": 7,
+      "title": "Le reste du socle Farseer : capteurs, sondes, propulseurs",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Farseer ne fait pas que le FSD.** Une fois Increased Range G5 posé, elle couvre aussi trois autres blueprints utiles à l'exploration — mais plafonnés au grade 3 chez elle."
+        },
+        {
+          "type": "table",
+          "caption": "Ce que Farseer plafonne au grade 3",
+          "headers": ["Blueprint", "Module", "Grade max chez Farseer", "Effet au grade max"],
+          "rows": [
+            [{"text": "Expanded Probe Scanning Radius", "style": "strong"}, {"text": "Detailed Surface Scanner", "style": "normal"}, {"text": "3", "style": "mid"}, {"text": "+30 % rayon de sonde", "style": "normal"}],
+            [{"text": "Lightweight", "style": "strong"}, {"text": "Sensors", "style": "normal"}, {"text": "3", "style": "mid"}, {"text": "−50 % de masse", "style": "normal"}],
+            [{"text": "Dirty", "style": "strong"}, {"text": "Thrusters", "style": "normal"}, {"text": "3", "style": "mid"}, {"text": "+26 % puissance de propulseur", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour pousser l'un de ces trois au grade 5, il faudra un autre ingénieur — ce guide reste centré sur le FSD et ne détaille pas ces chaînes de déblocage annexes."
+        },
+        {"type": "heading", "level": 3, "text": "Un blueprint annexe utile pour repérer des sillages : Long Range Sensors"},
+        {
+          "type": "paragraph",
+          "text": "Long Range augmente la portée de détection de tes Sensors jusqu'à **+75 % au grade 5** (au prix de +100 % de masse et −30 % d'angle de balayage) — utile si tu chasses des Datamined Wake Exceptions, pour repérer un sillage d'hyperespace de plus loin avant de foncer dessus au Frame Shift Wake Scanner."
+        },
+        {"type": "heading", "level": 3, "text": "Faster Boot Sequence : monter en réputation sans consommer un seul Wake Scan"},
+        {
+          "type": "paragraph",
+          "text": "Son grade 1 ne demande qu'**1× Grid Resistors**, le matériau manufacturé le plus commun du jeu. Depuis que les rolls sont déterministes, « brûler » ce blueprint pour monter vite n'a plus de sens — mais il reste le moyen le moins cher de faire progresser ta réputation chez Farseer sans toucher à un seul de tes précieux Wake Scans, réservés à Increased Range."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "L'ordre pratique à suivre chez Farseer",
+          "text": "1) Increased Range jusqu'au grade que tes matériaux permettent, quitte à repartir plusieurs fois. 2) Faster Boot Sequence entre deux pour grappiller de la réputation sans consommer de Wake Scans. 3) Une fois le grade 5 FSD posé, seulement alors, Detailed Surface Scanner, Sensors et Thrusters au grade 3 — c'est du confort, pas une urgence."
+        }
+      ]
+    },
+    {
+      "id": "ce-qu-il-faut-retenir",
+      "number": 8,
+      "title": "Ce qu'il faut retenir",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {"text": "**Atteins le rang Explorateur Scout**, puis livre 1 Meta-Alloy à Felicity Farseer, à Deciat.", "detail": "Achète-le à Darnielle's Progress (Maia) ou auprès d'un Fleet Carrier — jamais dans un settlement Odyssey."},
+            {"text": "**Installe un Frame Shift Wake Scanner** et commence à camper des sillages près d'une station fréquentée.", "detail": "C'est la seule source des matériaux Wake Scans, et le vrai point de départ du chantier FSD."},
+            {"text": "**Monte Increased Range grade par grade**, en descendant au Material Trader Encoded les surplus de Wake Scans vers les grades qui te manquent.", "detail": "15 rolls au total à réputation 5 pour atteindre le grade 5."},
+            {"text": "**Pose Mass Manager ou Deep Charge** selon que tu privilégies la portée unitaire ou l'autonomie.", "detail": "Les deux coûtent les mêmes matériaux."},
+            {"text": "**Garde un stock de Carbon, Germanium, Arsenic, Niobium, Yttrium et Polonium** pour une FSD Injection Premium de dépannage.", "detail": "+100 % de portée pour un seul saut, tous matériaux communs de prospection de surface."},
+            {"text": "**Complète ensuite Faster Boot Sequence, Detailed Surface Scanner, Sensors et Thrusters au grade 3 chez Farseer**, sans urgence.", "detail": "Pour aller au grade 5 sur ces trois derniers, il faudra un autre ingénieur."}
+          ]
+        },
+        {"type": "divider"},
+        {
+          "type": "paragraph",
+          "text": "**Fiabilité des données.** Les tables de blueprints, matériaux et grades maximum par ingénieur proviennent des fichiers de référence EDCD (coriolis-data, FDevIDs) utilisés par Inara, EDMC et EDDI, et sont confirmées à l'identique par cinq sources indépendantes (Inara, coriolis-data, EDEngineer, EDSY, wiki communautaire). La recette de FSD Injection est en outre confirmée par un post officiel de Frontier de 2018. Les prix et stocks de Meta-Alloy sont un instantané de marché du 19 août 2026, volatil par nature — revérifie-les avant de partir. Aucune source ne chiffre la vitesse de montée en réputation chez un Ingénieur : ce guide le signale explicitement plutôt que d'inventer un chiffre."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Contenu couvert.** À jour de l'Update 18.08 du 7 août 2024 (rolls déterministes) et du Dodec Update du 11 novembre 2025 (conversion de l'excédent de stockage en crédits), sans impact sur les mécaniques FSD décrites ici."
+        }
+      ]
+    }
+  ],
+  "sources": ["Frontier Developments", "EDCD / coriolis-data", "EDCD / FDevIDs", "wiki Elite Dangerous (Fandom)", "EDEngineer", "forum officiel Frontier", "Inara", "EDSY"]
+}

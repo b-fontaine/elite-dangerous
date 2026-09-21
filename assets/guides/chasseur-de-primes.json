@@ -1,0 +1,251 @@
+{
+  "id": "chasseur-de-primes",
+  "title": "Devenir chasseur de primes : premiers pas dans le combat spatial rentable",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Un parcours chiffré pour un joueur qui n'a jamais combattu en vaisseau : où aller (RES, HazRES, Combat Zones), quel vaisseau monter en premier, et combien ça rapporte vraiment — sans exposé exhaustif des mécaniques de combat.",
+  "byline": "PC · Live · Aucun rang de combat requis pour démarrer · Rear Admiral (Fédération) pour le Federal Corvette",
+  "edition": "2026-09",
+  "topics": ["chasse-aux-primes", "combat", "hazres", "combat-zones", "rang-de-combat", "vulture", "federal-corvette", "primes"],
+  "estimatedReadMinutes": 17,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {"type": "heading", "text": "Au sommaire", "level": 4},
+        {"type": "list", "ordered": true, "items": [
+          "Où aller : RES, HazRES et Combat Zones classés par risque et par rentabilité",
+          "Le minimum vital de mécanique : pips, bouclier et pénétration de blindage",
+          "Ton premier vaisseau chiffré : le Vulture « Faucon HazRES »",
+          "Monter en gamme : le Federal Corvette et le rang qu'il exige",
+          "Combien ça rapporte vraiment : HazRES, missions de massacre, Combat Zones",
+          "Le rang de combat, de Harmless à Elite V",
+          "Compromised Nav Beacons, Combat Zones et missions : le détail des terrains",
+          "Crime, primes et notoriety : ne pas se piéger toi-même",
+          "Les pièges de débutant à éviter dès le premier vol",
+          "Ce qu'il faut retenir, et les sources"
+        ]},
+        {"type": "paragraph", "emphasis": "intro", "text": "**Tu n'as jamais combattu en vaisseau, et tu veux savoir si ça peut rapporter sans dix ans d'entraînement au dogfight.** Réponse courte : oui, à condition de choisir le bon terrain, le bon vaisseau et la bonne cible dès le premier vol. Ce manuel n'est pas un exposé exhaustif des mécaniques de combat spatial — c'est un point d'entrée chiffré : où aller, quel vaisseau monter en premier, combien ça rapporte, et quels pièges évitent de perdre ton vaisseau à la première sortie."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Ce guide part du principe que tu sais déjà piloter, accoster et accepter une mission au tableau — voir premiers-controles-et-entrainement.json pour ces bases. Il suppose aussi que tu as déjà quelques millions de crédits en poche : si ce n'est pas le cas, debuter-sans-combat.json t'explique comment les accumuler sans tirer un seul coup de feu, avant de revenir ici pour ta première configuration de combat."},
+        {"type": "callout", "tone": "info", "title": "Comment lire les chiffres de ce guide", "text": "**OFF** = confirmé par un jeu de données extrait du jeu (EDCD/coriolis-data, EDCD/FDevIDs) ou une mécanique officielle documentée. **COM** = reconstitution ou observation communautaire (forums, discussions de joueurs), sans confirmation officielle directe. **EST** = estimation ou fourchette incertaine, à vérifier toi-même avant d'en dépendre. Les rendements en Cr/h de ce guide (section 5) sont une reconstitution communautaire datée du 13 septembre 2026, pas un barème Frontier — traite-les comme un ordre de grandeur, pas comme une promesse."}
+      ]
+    },
+    {
+      "id": "terrains",
+      "number": 1,
+      "title": "Où aller : RES, HazRES et Combat Zones classés par risque",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le même vaisseau qui cartonne en RES se fait détruire en quelques secondes en Combat Zone haute intensité.** Avant de choisir un vaisseau, choisis un terrain adapté à ton niveau — et prévois d'en changer au fur et à mesure que ton rang de combat progresse (section 6)."},
+        {"type": "table", "caption": "Les quatre terrains PvE, du plus accessible au plus dangereux", "headers": ["Terrain", "Danger", "Pour qui", "Ce qu'il faut avant d'y aller"], "rows": [
+          [{"text": "RES", "style": "strong"}, {"text": "Faible à modéré", "style": "mid"}, {"text": "Débutant complet, premier contact avec le combat", "style": "normal"}, {"text": "Un vaisseau armé quelconque, viser uniquement les cibles portant une prime", "style": "normal"}],
+          [{"text": "Compromised Nav Beacons", "style": "strong"}, {"text": "Modéré", "style": "mid"}, {"text": "Pilote intermédiaire cherchant des cibles isolées", "style": "normal"}, {"text": "Un vaisseau capable d'encaisser un petit groupe", "style": "normal"}],
+          [{"text": "HazRES", "style": "strong"}, {"text": "Élevé — adversaires jusqu'au rang Deadly/Elite, souvent engineerés", "style": "lose"}, {"text": "Vaisseau robuste, priorité rentabilité (section 5)", "style": "normal"}, {"text": "Bouclier renforcé, Shield Cell Bank, vaisseau dédié comme le Vulture (section 3)", "style": "normal"}],
+          [{"text": "Combat Zones", "style": "strong"}, {"text": "Modéré à très élevé selon l'intensité choisie", "style": "lose"}, {"text": "Farming de masse, réputation de faction, jeu en escadre", "style": "normal"}, {"text": "Gestion irréprochable de la chaleur et des pips, capacité de fuite rapide en CZ haute intensité", "style": "normal"}],
+          [{"text": "Missions d'assassinat / massacre", "style": "strong"}, {"text": "Variable, dépend de la cible assignée", "style": "mid"}, {"text": "Revenu combat répétitif et fiable, cumulable avec le RES/HazRES", "style": "normal"}, {"text": "Accepter la mission avant de partir, un wingman conseillé pour les cibles Elite/Deadly", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Le piège du RES : ne tire jamais sur une cible sans prime", "text": "En RES comme en HazRES, seules les cibles portant déjà une prime (« wanted ») peuvent être attaquées sans conséquence : tirer sur un vaisseau clean génère toi-même une prime, potentiellement une réputation de faction dégradée, et en cas de répétition une notoriety qui te bloque l'accostage (section 8). Vérifie toujours le statut de la cible avant d'ouvrir le feu."},
+        {"type": "verdict", "title": "Verdict", "text": "Commence en RES le temps d'apprendre à lire une cible et à gérer tes pips, bascule en HazRES dès que ton vaisseau encaisse (section 3), et garde les Combat Zones et les missions de massacre pour quand tu veux industrialiser le Cr/h (section 5)."}
+      ]
+    },
+    {
+      "id": "mecanique-minimale",
+      "number": 2,
+      "title": "Le minimum vital avant de tirer : pips, bouclier et pénétration de blindage",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Tu n'as pas besoin de maîtriser le Flight Assist Off ni le flick à 180° pour rentabiliser un HazRES — ce sont des techniques de pointe pour le PvP et le end-game, hors du périmètre de ce guide.** Deux choses, en revanche, sont non négociables dès le premier combat : la gestion des pips et le choix d'une arme qui perce vraiment ta cible."},
+        {"type": "heading", "text": "Les pips : 4 unités à répartir entre SYS, ENG et WEP", "level": 3},
+        {"type": "steps", "items": [
+          {"text": "**Approche : bascule sur SYS.**", "detail": "Le bouclier encaisse mieux les premiers tirs pendant que tu te positionnes."},
+          {"text": "**Fenêtre de tir : bascule sur WEP.**", "detail": "Le condensateur d'armes se recharge plus vite, donc ta cadence de tir soutenue augmente."},
+          {"text": "**Repositionnement ou fuite : bascule sur ENG.**", "detail": "Vitesse, accélération et disponibilité du boost reviennent plus vite."}
+        ]},
+        {"type": "heading", "text": "La pénétration de blindage doit égaler ou dépasser la dureté de coque de la cible", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Une fois le bouclier de la cible tombé, chaque tir oppose la **pénétration de blindage** de ton arme à la **dureté de coque** du vaisseau visé — une valeur qui va de 20 à 75 selon le châssis, parmi les 47 vaisseaux mesurés par le jeu de données. Si ta pénétration égale ou dépasse cette dureté, le tir porte à pleine valeur ; sinon, les dégâts sont réduits, sans que le coefficient exact de cette réduction soit publié par les sources consultées. Concrètement : un multi-canon Small (pénétration 22) reste correct contre un Sidewinder (dureté 20) mais devient presque inoffensif contre un châssis lourd."},
+        {"type": "table", "caption": "Pénétration de blindage de quelques armes d'entrée, par taille d'affût", "headers": ["Arme", "Small", "Medium", "Large"], "rows": [
+          [{"text": "Multi-Cannon", "style": "strong"}, {"text": "22", "style": "number"}, {"text": "37", "style": "number"}, {"text": "54", "style": "number"}],
+          [{"text": "Cannon", "style": "strong"}, {"text": "35", "style": "number"}, {"text": "50", "style": "number"}, {"text": "70", "style": "number"}],
+          [{"text": "Pulse / Burst Laser", "style": "strong"}, {"text": "20", "style": "number"}, {"text": "35", "style": "number"}, {"text": "52", "style": "number"}],
+          [{"text": "Fragment Cannon", "style": "strong"}, {"text": "20", "style": "number"}, {"text": "30", "style": "number"}, {"text": "45", "style": "number"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "L'erreur qui plombe ton DPS sans que tu le voies", "text": "Un multi-canon Small ou Medium suffit contre les cibles légères d'un RES classique, mais devient nettement moins efficace contre un châssis lourd en HazRES ou en Combat Zone — sa pénétration reste sous la dureté de coque de ces cibles. Monte en taille d'affût (Large) ou en type d'arme (Cannon, dont la pénétration atteint 70 en Large) dès que tu vises des adversaires robustes, plutôt que de t'acharner avec une arme sous-dimensionnée."}
+      ]
+    },
+    {
+      "id": "premier-vaisseau",
+      "number": 3,
+      "title": "Ton premier vaisseau chiffré : le Vulture « Faucon HazRES »",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le Vulture est le choix le plus documenté de la communauté pour un premier vaisseau de chasse aux primes sérieux : léger, maniable, et déjà capable d'encaisser un HazRES avec la bonne configuration.** Les caractéristiques de châssis ci-dessous sont recalées sur le jeu de données du jeu ; les choix de modules restent une configuration de référence de la méta communautaire, à valider dans un outil de configuration avant achat (voir outils.json)."},
+        {"type": "keyValue", "items": [
+          {"label": "Prix du châssis nu", "value": "4 925 615 Cr (Core Dynamics)", "reliability": "official"},
+          {"label": "Dureté de coque", "value": "55 — un multi-canon Small adverse (pénétration 22) subit une forte réduction contre cette coque, un canon Large (70) porte à plein", "reliability": "official"},
+          {"label": "Affûts", "value": "2× Large", "reliability": "official"},
+          {"label": "Point faible reconnu", "value": "Portée de saut stock faible — priorité d'ingénierie FSD une fois les crédits disponibles", "reliability": "community"}
+        ]},
+        {"type": "table", "caption": "Build « Faucon HazRES » — configuration de référence", "headers": ["Emplacement", "Choix"], "rows": [
+          [{"text": "Hardpoints (2× Large)", "style": "strong"}, {"text": "2× Multi-canons gimbal, G5 « Overcharged », effet « Incendiaire »", "style": "normal"}],
+          [{"text": "Bouclier", "style": "strong"}, {"text": "Générateur bi-weave, G5 « Blindé » + 2 Shield Boosters G5 résistance thermique", "style": "normal"}],
+          [{"text": "Distributeur", "style": "strong"}, {"text": "G5 « Recharge prioritaire » orienté WEP", "style": "normal"}],
+          [{"text": "Renfort", "style": "strong"}, {"text": "1 HRP de classe 5 dans l'unique emplacement militaire du châssis", "style": "normal"}],
+          [{"text": "Pips typiques", "style": "strong"}, {"text": "2-2-0 en approche → 0-4-0 en fenêtre de tir → 0-0-4 en repositionnement", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Pourquoi commencer ici plutôt que sur un vaisseau moins cher", "text": "Un vaisseau de départ (Eagle, Viper) coûte moins cher mais plafonne vite en HazRES faute de bouclier et de coque suffisants. Le Vulture, avec sa dureté de coque de 55 et ses deux affûts Large, encaisse et frappe assez fort pour rentabiliser tout de suite le terrain le plus payant de ce guide (section 5), sans attendre un second vaisseau."},
+        {"type": "callout", "tone": "warning", "title": "Le budget n'est pas anecdotique", "text": "4,9 M Cr pour le châssis nu, avant modules et ingénierie, n'est pas un achat de tout premier jour. Si tu n'as pas encore ce capital, debuter-sans-combat.json et minage-professionnel.json détaillent comment l'accumuler sans combat — reviens ici une fois le budget réuni plutôt que de te lancer en HazRES sous-équipé."},
+        {"type": "verdict", "title": "Verdict", "text": "Le Vulture « Faucon HazRES » est le point d'entrée le plus rentable documenté pour un premier vaisseau de combat : assez robuste pour le HazRES, assez maniable pour rester un bon investissement même après ta montée en rang."}
+      ]
+    },
+    {
+      "id": "monter-en-gamme",
+      "number": 4,
+      "title": "Monter en gamme : le Federal Corvette et le rang qu'il exige",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le Federal Corvette est l'archétype « brawler tanky » de référence pour les Combat Zones haute intensité — mais il ne s'achète pas seulement avec des crédits.**"},
+        {"type": "keyValue", "items": [
+          {"label": "Prix du châssis nu", "value": "187 969 450 Cr (Core Dynamics)", "reliability": "official"},
+          {"label": "Rang requis", "value": "Rear Admiral (Federal Navy Auxiliary)", "reliability": "official"},
+          {"label": "Dureté de coque", "value": "70, parmi les plus élevées du jeu (le maximum est 75)", "reliability": "official"},
+          {"label": "Affûts", "value": "2× Huge + 1× Large + 2× Medium + 2× Small", "reliability": "official"}
+        ]},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le rang Rear Admiral ne s'achète pas non plus : il se gagne par des missions de promotion Federal Navy Auxiliary, détaillées palier par palier dans rangs-marine-et-permis-systeme.json — le guide de référence de ce corpus sur la progression de réputation. Compte cette progression comme un chantier parallèle à ta montée en crédits, pas comme une étape après coup."},
+        {"type": "table", "caption": "Vulture vs Federal Corvette : deux paliers, pas une simple mise à niveau", "headers": ["", "Vulture « Faucon HazRES »", "Federal Corvette « Rempart CZ »"], "rows": [
+          [{"text": "Budget", "style": "strong"}, {"text": "≈ 4,9 M Cr châssis nu", "style": "normal"}, {"text": "≈ 188 M Cr châssis nu + rang Rear Admiral", "style": "normal"}],
+          [{"text": "Rôle", "style": "strong"}, {"text": "Interceptor léger, HazRES et primes isolées", "style": "normal"}, {"text": "Brawler tanky, Combat Zones haute intensité", "style": "normal"}],
+          [{"text": "Dureté de coque", "style": "strong"}, {"text": "55", "style": "number"}, {"text": "70", "style": "number"}],
+          [{"text": "Priorité de pips", "style": "strong"}, {"text": "WEP en fenêtre de tir", "style": "normal"}, {"text": "SYS dominant, quasi en continu", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "info", "title": "Le vrai coût d'un vaisseau équipé", "text": "Le prix du châssis nu n'est qu'une partie de la facture : modules, ingénierie G5 et renforts font grimper la note bien au-delà. vrai-cout-vaisseau-et-gestion-de-flotte.json chiffre ce facteur et détaille le budget réel à prévoir avant de viser un vaisseau de ce calibre."}
+      ]
+    },
+    {
+      "id": "rentabilite",
+      "number": 5,
+      "title": "Combien ça rapporte vraiment : HazRES, missions de massacre, Combat Zones",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**C'est la question qui justifie tout ce guide, et la seule dont la réponse n'est pas un chiffre officiel Frontier.**"},
+        {"type": "callout", "tone": "warning", "title": "Une reconstitution communautaire, pas un barème Frontier", "text": "Les montants ci-dessous proviennent de discussions communautaires (Steam Community, Elite Dangerous General Discussions) consultées le 13 septembre 2026, pas d'une source officielle. Frontier Developments n'a jamais publié de barème de Cr/h pour ces activités : traite ces chiffres comme un ordre de grandeur à vérifier toi-même en jeu, pas comme une promesse."},
+        {"type": "table", "caption": "Rendement estimé par activité (reconstitution communautaire, COM)", "headers": ["Activité", "Rendement estimé", "Condition"], "rows": [
+          [{"text": "HazRES", "style": "strong"}, {"text": "≈ 30 M Cr/h", "style": "number"}, {"text": "Vaisseau de combat engagé + bonus de Power (Powerplay) actif", "style": "normal"}],
+          [{"text": "Missions de massacre empilées", "style": "strong"}, {"text": "≈ 40 M Cr pour 30 cibles, jusqu'à 200 M Cr et plus", "style": "number"}, {"text": "Plusieurs contrats de plusieurs factions cumulés sur le même lot de cibles", "style": "normal"}],
+          [{"text": "Combat Zones", "style": "strong"}, {"text": "Comparable au HazRES selon la communauté, aucun chiffre stable par intensité", "style": "mid"}, {"text": "Dépend fortement de la densité de vagues et du nombre de cibles à prime dans l'instance", "style": "normal"}]
+        ]},
+        {"type": "keyValue", "items": [
+          {"label": "Encaissement des primes", "value": "Les bounty vouchers ne sont pas crédités automatiquement : ils s'encaissent au contact « Redeem Vouchers » d'une station", "reliability": "official"},
+          {"label": "Augmenter le montant récupérable", "value": "Un Kill Warrant Scanner révèle des primes émises par d'autres factions/systèmes sur la même cible, avant le coup de grâce", "reliability": "official"}
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "Empiler des missions de massacre sur le même lot de cibles avant de partir en HazRES est la combinaison la plus documentée pour maximiser le Cr/h : tu es payé par chaque faction qui a émis un contrat sur ces cibles, en plus des bounty vouchers de chaque kill."}
+      ]
+    },
+    {
+      "id": "rang-de-combat",
+      "number": 6,
+      "title": "Le rang de combat, de Harmless à Elite V",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Ton rang de combat ne compte pas tes kills, il pondère leur difficulté** — éliminer une cible Deadly ou Elite rapporte bien plus de progression qu'une cible Harmless."},
+        {"type": "table", "caption": "L'échelle complète, 14 paliers", "headers": ["Valeur interne", "Rang"], "rows": [
+          [{"text": "0", "style": "number"}, {"text": "Harmless", "style": "normal"}],
+          [{"text": "1", "style": "number"}, {"text": "Mostly Harmless", "style": "normal"}],
+          [{"text": "2", "style": "number"}, {"text": "Novice", "style": "normal"}],
+          [{"text": "3", "style": "number"}, {"text": "Competent", "style": "normal"}],
+          [{"text": "4", "style": "number"}, {"text": "Expert", "style": "normal"}],
+          [{"text": "5", "style": "number"}, {"text": "Master", "style": "normal"}],
+          [{"text": "6", "style": "number"}, {"text": "Dangerous", "style": "normal"}],
+          [{"text": "7", "style": "number"}, {"text": "Deadly", "style": "normal"}],
+          [{"text": "8", "style": "number"}, {"text": "Elite", "style": "strong"}],
+          [{"text": "9", "style": "number"}, {"text": "Elite I", "style": "strong"}],
+          [{"text": "10", "style": "number"}, {"text": "Elite II", "style": "strong"}],
+          [{"text": "11", "style": "number"}, {"text": "Elite III", "style": "strong"}],
+          [{"text": "12", "style": "number"}, {"text": "Elite IV", "style": "strong"}],
+          [{"text": "13", "style": "number"}, {"text": "Elite V", "style": "strong"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Aucun seuil de progression n'est publié", "text": "Frontier Developments n'a jamais communiqué le score exact nécessaire pour passer d'un palier au suivant. Les calculateurs communautaires (type Inara) n'en donnent que des estimations : utilise-les comme ordre de grandeur, jamais comme une référence chiffrée exacte."},
+        {"type": "paragraph", "emphasis": "normal", "text": "En pratique, ce que ce guide te propose — HazRES avec cibles à prime, missions de massacre empilées, puis Combat Zones — te fait progresser plus vite que du farming en RES simple, puisque les adversaires y sont statistiquement plus dangereux et donc mieux notés par le score pondéré."}
+      ]
+    },
+    {
+      "id": "terrains-detail",
+      "number": 7,
+      "title": "Compromised Nav Beacons, Combat Zones et missions : le détail des terrains",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Trois terrains restent à détailler pour que tu saches vraiment où mettre les pieds une fois le Vulture rodé.**"},
+        {"type": "heading", "text": "Compromised Nav Beacons (CNB)", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Des balises de navigation autour desquelles apparaissent des rencontres aléatoires de vaisseaux pirates, souvent en groupe. Généralement plus accessibles qu'un HazRES pour un pilote intermédiaire, elles offrent un bon terrain de repérage de cibles isolées entre deux passages en HazRES."},
+        {"type": "heading", "text": "Combat Zones (CZ) : basse, moyenne, haute intensité", "level": 3},
+        {"type": "list", "ordered": false, "items": [
+          "Tu choisis un camp parmi les deux factions en guerre, et gagnes une réputation de combat croissante en accumulant des éliminations.",
+          "Des objectifs tactiques sont disponibles : capture de points de contrôle, escorte ou attaque de vaisseaux capitaux en haute intensité.",
+          "La haute intensité rassemble des vagues nombreuses de vaisseaux souvent engineerés — n'y va pas avant d'avoir rodé ta gestion de chaleur et de pips en RES/HazRES.",
+          "C'est un bon terrain d'entraînement à la coordination en escadre (Wing), utile si tu comptes progresser vers du PvP organisé plus tard."
+        ]},
+        {"type": "heading", "text": "Missions d'assassinat et de massacre", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Les **missions d'assassinat** ciblent un NPC nommé unique, souvent escorté — les cibles Elite ou Deadly demandent un vaisseau optimisé et, idéalement, un coéquipier pour diviser l'attention de l'escorte. Les **missions de massacre** demandent d'éliminer un nombre donné de vaisseaux d'un type ou d'une faction, généralement en RES ou en CNB : c'est la source de revenu combat la plus répétitive et la plus fiable, et celle qui alimente la reconstitution de rentabilité de la section 5."},
+        {"type": "callout", "tone": "tip", "title": "Empiler avant de partir, pas après", "text": "Accepte plusieurs missions de massacre visant le même type de cible auprès de factions différentes avant de décoller : chaque kill compte pour tous les contrats actifs en même temps, ce qui multiplie la récompense sans multiplier le temps passé."}
+      ]
+    },
+    {
+      "id": "crime-et-securite",
+      "number": 8,
+      "title": "Crime, primes et notoriety : ne pas se piéger toi-même",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le plus grand risque du chasseur de primes débutant n'est pas l'adversaire en face — c'est de devenir soi-même une cible recherchée par erreur.**"},
+        {"type": "keyValue", "items": [
+          {"label": "Bounty voucher", "value": "Généré par l'élimination d'une cible déjà recherchée, un par faction ayant émis une prime — s'encaisse en station, pas automatiquement", "reliability": "official"},
+          {"label": "Devenir « wanted »", "value": "Attaquer ou détruire un vaisseau clean (sans prime) génère une prime contre toi dans le système concerné", "reliability": "official"},
+          {"label": "Notoriety", "value": "Augmente avec la répétition d'infractions graves ; bloque l'accostage même après paiement de la prime, et ne décroît qu'avec le temps", "reliability": "official"}
+        ]},
+        {"type": "table", "caption": "Niveaux de sécurité des systèmes", "headers": ["Niveau", "Réponse de la sécurité locale", "Contexte typique"], "rows": [
+          [{"text": "Haute", "style": "strong"}, {"text": "Vaisseaux d'autorité nombreux, réponse rapide", "style": "normal"}, {"text": "RES/CZ bien protégés, terrain sûr pour débuter", "style": "win"}],
+          [{"text": "Moyenne", "style": "normal"}, {"text": "Réponse modérée", "style": "normal"}, {"text": "Compromis risque/liberté d'action", "style": "normal"}],
+          [{"text": "Basse", "style": "normal"}, {"text": "Réponse faible ou lente", "style": "normal"}, {"text": "Activité pirate plus fréquente, crime moins risqué", "style": "mid"}],
+          [{"text": "Anarchy", "style": "strong"}, {"text": "Aucune réponse organisée", "style": "lose"}, {"text": "PvP et piraterie libres localement", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Un tir sur la mauvaise cible ne se rattrape pas avec des crédits", "text": "Payer une prime efface la prime, jamais la notoriety accumulée. Si tu enchaînes les erreurs de ciblage en RES ou en CZ, tu peux te retrouver interdit d'accostage dans tout un système pendant plusieurs jours réels, sans raccourci possible. Vérifie systématiquement le statut d'une cible avant de tirer."},
+        {"type": "callout", "tone": "info", "title": "Si tu voles en Open", "text": "La chasse aux primes t'expose davantage au PvP non consenti qu'une session d'exploration ou d'exobiologie, simplement parce que tu fréquentes des zones de conflit. survivre-au-pvp-sans-combattre.json détaille la procédure d'évasion (soumission, mass lock, high wake) si tu croises un ganker plutôt qu'un pirate NPC."}
+      ]
+    },
+    {
+      "id": "erreurs-debutant",
+      "number": 9,
+      "title": "Les pièges de débutant à éviter dès le premier vol",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**La plupart des échecs du premier HazRES ne viennent pas d'un mauvais vaisseau, mais d'une mauvaise préparation.**"},
+        {"type": "list", "ordered": true, "items": [
+          "**Monter une arme sous-dimensionnée** : un multi-canon Small en HazRES perd l'essentiel de son intérêt contre un châssis lourd (section 2) — vérifie la pénétration avant d'acheter.",
+          "**Partir sans Shield Cell Bank** : sans recharge de bouclier disponible, un HazRES prolongé finit presque toujours par une perte de bouclier suivie d'une perte de coque rapide.",
+          "**Tirer sur une cible clean par réflexe** : une prime accidentelle et la notoriety qui suit (section 8) coûtent bien plus cher que le kill ne rapporte.",
+          "**Sauter directement en Combat Zone haute intensité** : c'est le terrain le plus exigeant de ce guide (section 1), pas un point de départ — rode ta gestion de pips et de chaleur en RES/HazRES d'abord.",
+          "**Oublier de scanner au Kill Warrant Scanner** : sans lui, tu passes à côté des primes émises par d'autres factions sur la même cible (section 5).",
+          "**Négliger la gestion de la chaleur** : une jauge au-delà de 100 % endommage tes modules internes ; garde un œil dessus en combat prolongé, surtout en HazRES."
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Le budget mal calibré", "text": "Un Vulture sous-équipé (bouclier stock, pas de renfort) en HazRES se fait détruire aussi vite qu'un vaisseau de départ. Le prix du châssis nu (section 3) n'est que le point de départ du budget réel — vrai-cout-vaisseau-et-gestion-de-flotte.json explique pourquoi."},
+        {"type": "verdict", "title": "Verdict", "text": "Si tu ne devais retenir qu'une règle : ne monte jamais en HazRES ou en Combat Zone sans Shield Cell Bank et sans avoir vérifié que ton arme perce la coque visée. Le reste s'apprend en volant."}
+      ]
+    },
+    {
+      "id": "retenir",
+      "number": 10,
+      "title": "Ce qu'il faut retenir, et les sources",
+      "blocks": [
+        {"type": "steps", "items": [
+          {"text": "**Commence en RES**, le temps d'apprendre à lire une cible et à gérer tes pips.", "detail": "Sections 1 et 2."},
+          {"text": "**Monte le Vulture « Faucon HazRES »** dès que le budget de ≈ 4,9 M Cr est réuni.", "detail": "Section 3 ; debuter-sans-combat.json pour accumuler ce capital sans combat."},
+          {"text": "**Passe en HazRES** avec Shield Cell Bank et arme correctement dimensionnée.", "detail": "Sections 2 et 9."},
+          {"text": "**Empile les missions de massacre** sur le même lot de cibles avant chaque sortie.", "detail": "Sections 5 et 7."},
+          {"text": "**Vise le rang Rear Admiral** en parallèle si le Federal Corvette t'intéresse.", "detail": "Section 4 ; rangs-marine-et-permis-systeme.json pour le détail palier par palier."},
+          {"text": "**Vérifie toujours le statut d'une cible** avant de tirer.", "detail": "Section 8 — la notoriety ne se rattrape pas avec des crédits."}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le réflexe à automatiser", "text": "Avant chaque sortie en HazRES ou en Combat Zone, prends dix secondes pour accepter toutes les missions de massacre disponibles visant le même type de cible : c'est le geste qui multiplie ton Cr/h sans rien changer à ta façon de combattre."},
+        {"type": "divider"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Fiabilité.** Ce guide s'appuie sur le corpus de référence interne (08-combat-spatial.md), lui-même sourcé sur EDCD/coriolis-data et EDCD/FDevIDs pour les chiffres de châssis, de pénétration et de rang, et sur des discussions communautaires Steam Community pour la reconstitution de rentabilité de la section 5 — signalée comme telle, pas comme un barème Frontier."},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Ce que ce guide ne couvre pas.** Le combat PvP (FA off, flick, méta de duel), le combat anti-Thargoïde et le piratage à distance de megaships relèvent d'autres boucles de jeu, hors du périmètre d'un premier vaisseau de chasse aux primes. Pour la survie face à un joueur hostile plutôt qu'un PNJ, voir survivre-au-pvp-sans-combattre.json."}
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — 08-combat-spatial.md",
+    "EDCD/coriolis-data",
+    "EDCD/FDevIDs",
+    "wiki Elite Dangerous (Fandom)",
+    "Steam Community — Elite Dangerous General Discussions"
+  ]
+}

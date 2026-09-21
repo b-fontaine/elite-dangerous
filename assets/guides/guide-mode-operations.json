@@ -1,0 +1,246 @@
+{
+  "id": "guide-mode-operations",
+  "title": "Ta première Operation — guide d’escouade pour le mode Operations",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Monter une escouade, choisir Mercenary ou Powerplay, encaisser les sept scénarios et dépenser ton Merc Coin dans MercGear : tout ce qu'il faut pour réussir ta première Operation, le mode multijoueur le plus récent du jeu (30 juin 2026).",
+  "byline": "Toutes plateformes · Live 4.4.0.x · Networking & Balancing Beta · Escouade de 1 à 4 commandants",
+  "edition": "2026-09",
+  "topics": ["operations", "escouade", "merc coin", "mercgear", "powerplay", "multijoueur", "matchmaking"],
+  "estimatedReadMinutes": 16,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {"type": "heading", "text": "Au sommaire", "level": 4},
+        {"type": "list", "ordered": true, "items": [
+          "Operations en une page : ce que c'est, et son statut bêta",
+          "Monter ou rejoindre une escouade",
+          "Mercenary ou Powerplay : choisis ton camp",
+          "Les sept scénarios, du abordage au blocus",
+          "Ce que rapporte une Operation : crédits, matériaux, mérites, Merc Coin",
+          "Dépenser ton Merc Coin : le catalogue MercGear",
+          "Check-list avant de lancer ta première Operation",
+          "Une bêta encore rugueuse : pièges et bugs connus",
+          "Questions fréquentes",
+          "Ce qu'il faut retenir, et les sources"
+        ]},
+        {"type": "paragraph", "emphasis": "intro", "text": "**Operations te met en escouade de 4 commandants face à un scénario scripté — abordage de mégavaisseau, évacuation sous le feu, levée de blocus — et te paie en crédits, matériaux et Merc Coin.** Ce guide t'emmène de la création de ton escouade jusqu'à l'achat de ton premier module MercGear, sans réexpliquer ce que d'autres guides du corpus couvrent déjà mieux."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Ce que ce guide ne couvre pas : la préparation de ta combinaison et de ton arme à pied pour les scénarios qui se jouent au sol — c'est le rôle de guide-mercenaire-a-pied.json, à consulter avant ta première sortie si Firestorm Rescue ou Under Siege sont au programme. Ce guide ne couvre pas non plus la mécanique Powerplay elle-même (cycles, mérites, rangs) : guide-powerplay-pacifiste.json en parle déjà en détail."},
+        {"type": "callout", "tone": "info", "title": "Comment lire les chiffres de ce guide", "text": "**OFF** = confirmé par une note de version officielle de Frontier Developments. **COM** = relevé communautaire, jamais publié par Frontier — à vérifier en jeu. **EST** = estimation ou déduction de ce guide, signalée comme telle plutôt que présentée comme acquise. Deux chiffres de ce guide portent une réserve explicite : le plafond de Merc Coin et sa limite hebdomadaire, tous deux **COM**."}
+      ]
+    },
+    {
+      "id": "contexte",
+      "number": 1,
+      "title": "Operations en une page : ce que c'est, et son statut bêta",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Operations est une couche de jeu en escouade, pas une activité de la galaxie persistante.** Lancée le 30 juin 2026, elle regroupe jusqu'à 4 commandants dans un scénario instancié à plusieurs étapes, avec son propre matchmaking, sa propre monnaie et son propre statut de sortie : bêta."},
+        {"type": "table", "caption": "Chronologie officielle d'Operations (avril – septembre 2026)", "headers": ["Date (UTC)", "Annonce Frontier", "Ce qu'elle établit"], "rows": [
+          [{"text": "22 avril 2026", "style": "strong"}, {"text": "« An Update on Operations »"}, {"text": "Report du mode à juin 2026 ; présentation du système en plusieurs étapes pour escouades de 4"}],
+          [{"text": "2 juin 2026", "style": "strong"}, {"text": "« Discover the Nomad »"}, {"text": "Confirme la date de sortie du 30 juin 2026"}],
+          [{"text": "1er juillet 2026", "style": "strong"}, {"text": "« Operations Update »"}, {"text": "Notes de version complètes : six opérations, Operation Runner, Merc Coin, MercGear"}],
+          [{"text": "9 juillet 2026", "style": "strong"}, {"text": "« Operations Update | Update 3 »"}, {"text": "Correctifs, restitution rétroactive des récompenses et inventaires perdus"}],
+          [{"text": "2 septembre 2026", "style": "strong"}, {"text": "« Rhino SRV Update »"}, {"text": "Ajoute une septième opération, Under Siege"}]
+        ]},
+        {"type": "quote", "text": "The Operations Update is here", "attribution": "Frontier Developments — notes de version, 1er juillet 2026"},
+        {"type": "callout", "tone": "warning", "title": "Bêta : attends-toi à des ajustements en continu", "text": "Frontier livre Operations sous le statut explicite de « Networking & Balancing Beta », assumé comme tel dans les notes de version : le mode reste sujet à des ajustements réguliers côté serveur. Au 2 septembre 2026, deux bugs connus subsistent : l'opération **Under Siege peut se terminer prématurément**, et l'**interface d'escouade à pied est absente**. **(OFF)**"},
+        {"type": "paragraph", "emphasis": "normal", "text": "Ne confonds pas ce mode avec les « opérations au sol » (settlements, missions, zones de conflit à pied) introduites dès 2021 avec Odyssey : ce sont deux contenus distincts qui partagent le même nom. Ce guide ne traite que le mode multijoueur en escouade sorti en 2026."},
+        {"type": "verdict", "title": "Verdict", "text": "Operations tient ses promesses de gameplay coopératif scénarisé, mais reste un produit bêta : ne construis pas ta session autour d'un seul scénario si tu ne peux pas te permettre un bug de fin de partie, surtout sur Under Siege."}
+      ]
+    },
+    {
+      "id": "escouade",
+      "number": 2,
+      "title": "Monter ou rejoindre une escouade",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Une Operation se lance depuis un tableau de missions — station, Fleet Carrier ou Squadron Carrier —, seul ou en escouade déjà formée, avec un appariement optionnel pour les places restantes.** Deux chemins existent pour te retrouver à 4 dans l'Operation Runner : monter ta propre escouade, ou rejoindre celle de quelqu'un d'autre."},
+        {"type": "heading", "text": "Monter ta propre escouade", "level": 3},
+        {"type": "steps", "items": [
+          {"text": "**Accoste** à une station, un Fleet Carrier ou un Squadron Carrier.", "detail": "Impossible de sélectionner une opération ou d'envoyer une invitation en vol ou en supercroisière."},
+          {"text": "**Ouvre le tableau de missions** et sélectionne l'onglet Operations.", "detail": "Choisis le scénario visé parmi les sept disponibles (section 4)."},
+          {"text": "**Invite d'autres commandants** directement, où qu'ils se trouvent dans la galaxie.", "detail": "Les membres invités n'ont pas besoin d'être à quai ni dans le même système : ils sont transférés vers l'Operation Runner au lancement."},
+          {"text": "**Complète les places restantes par appariement** si ton escouade compte moins de 4 commandants.", "detail": "Le matchmaking optionnel comble automatiquement les emplacements vides."}
+        ]},
+        {"type": "heading", "text": "Rejoindre une escouade par matchmaking", "level": 3},
+        {"type": "steps", "items": [
+          {"text": "**Accoste** — condition non négociable pour accéder aux annonces d'escouades ouvertes.", "detail": "Le menu Operations n'affiche les annonces en cours que depuis une station, un Fleet Carrier ou un Squadron Carrier."},
+          {"text": "**Parcours les annonces d'escouades ouvertes** dans le menu Operations et sélectionne celle qui t'intéresse.", "detail": "L'intitulé du scénario et le mode (Mercenary ou Powerplay, section 3) sont visibles avant de t'engager."},
+          {"text": "**Rejoins**, même si tu n'es pas encore à quai au moment de sélectionner l'annonce.", "detail": "Ta place est alors réservée jusqu'à ce que tu accostes toi-même — elle n'est pas perdue si tu es encore en vol."}
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Le piège du « pas encore à quai »", "text": "Accoster est une condition pour les deux rôles : impossible d'inviter ou d'envoyer une annonce sans être à quai, et impossible de parcourir les annonces ouvertes sans l'être non plus. Une place réservée via matchmaking pendant que tu es encore en vol reste valable, mais rien ne se lance tant que tu n'as pas toi-même accosté. **(OFF)**"},
+        {"type": "heading", "text": "L'Operation Runner, ton point d'ancrage pendant le scénario", "level": 3},
+        {"type": "keyValue", "items": [
+          {"label": "Rôle", "value": "Vaisseau de déploiement spécialisé qui transporte toute l'escouade vers le système du scénario dès le lancement.", "reliability": "official"},
+          {"label": "Point de réapparition", "value": "Un commandant mis hors de combat y revient automatiquement, vaisseau entièrement réparé, ravitaillé en carburant et réarmé, avant redéploiement.", "reliability": "official"},
+          {"label": "Point d'extraction", "value": "C'est aussi le point d'extraction final de l'opération : sa position est choisie pour raccourcir le trajet de retour vers l'objectif.", "reliability": "official"}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Ce que ça change pour toi", "text": "Une mise hors de combat pendant une étape n'est pas une sortie de partie : tu réapparais prêt à repartir, sans avoir à gérer toi-même réparation ou ravitaillement. Ne fuis pas un combat perdu d'avance par peur de perdre ton vaisseau — l'Operation Runner s'en charge."}
+      ]
+    },
+    {
+      "id": "modes",
+      "number": 3,
+      "title": "Mercenary ou Powerplay : choisis ton camp",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Chaque scénario se joue dans l'un de deux modes, choisis avant le lancement — et le choix n'est pas cosmétique : il détermine si l'escouade sert une cause Powerplay ou reste neutre.**"},
+        {"type": "table", "caption": "Les deux modes de jeu d'une Operation", "headers": ["Mode", "Conditions d'accès", "Conséquences"], "rows": [
+          [{"text": "Mercenary Mode", "style": "strong"}, {"text": "Mode par défaut, ouvert à tout commandant remplissant les prérequis du scénario"}, {"text": "Aucune conséquence ni effet Powerplay"}],
+          [{"text": "Powerplay Mode", "style": "strong"}, {"text": "Systèmes éligibles dépendant de l'alignement et de la position courante du chef d'escouade"}, {"text": "L'escouade déstabilise (undermine) un Power adverse ; impossible de viser son propre Power", "style": "mid"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Non aligné ? Tu peux jouer, tu ne gagnes rien", "text": "Un commandant sans allégeance Powerplay peut participer à une Operation en mode Powerplay, mais **ne gagne aucun mérite** — l'axe Powerplay des Operations ne sert qu'à saper (undermine) une Power adverse, jamais à en renforcer ou en acquérir une. **(OFF)**"},
+        {"type": "paragraph", "emphasis": "normal", "text": "Ce mode Powerplay des Operations est une brique de plus dans le cycle hebdomadaire d'Acquisition/Renforcement/Undermining — pas un système à part. Pour la mécanique complète des mérites, des rangs et du cycle Powerplay, guide-powerplay-pacifiste.json fait référence sur le sujet : ce guide-ci n'en reprend que ce qui s'applique spécifiquement aux Operations."},
+        {"type": "verdict", "title": "Verdict", "text": "Reste en Mercenary par défaut si tu ne joues pas activement un Power : c'est le mode sans arrière-pensée. Ne bascule en Powerplay que si tu es toi-même aligné et que l'objectif est de saper un Power rival — jouer Powerplay sans allégeance ne te coûte rien, mais ne te rapporte rien non plus côté mérites."}
+      ]
+    },
+    {
+      "id": "scenarios",
+      "number": 4,
+      "title": "Les sept scénarios, du abordage au blocus",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Sept opérations existent au 2 septembre 2026, chacune un scénario scripté à plusieurs étapes dans un environnement isolé — pas un point de la galaxie persistante.** Six sont sorties au lancement, une septième s'est ajoutée deux mois plus tard."},
+        {"type": "table", "caption": "Les sept opérations disponibles", "headers": ["Opération", "Scénario", "Ajoutée le"], "rows": [
+          [{"text": "Tactical Takedown", "style": "strong"}, {"text": "Aborder un mégavaisseau compromis, remonter jusqu'au pont de commandement pour des renseignements, puis frapper le général responsable dans sa base"}, {"text": "1er juillet 2026"}],
+          [{"text": "Firestorm Rescue", "style": "strong"}, {"text": "Briser le siège d'une station en feu et évacuer les otages, en gérant la montée en température du site"}, {"text": "1er juillet 2026"}],
+          [{"text": "Reclamation Point", "style": "strong"}, {"text": "Éliminer toutes les forces hostiles dans et autour d'un mégavaisseau détourné, pour que le client le récupère"}, {"text": "1er juillet 2026"}],
+          [{"text": "Biohazard Takedown", "style": "strong"}, {"text": "Donner l'assaut à un vaisseau de recherche, identifier les chercheurs qui développent une arme dangereuse, puis les neutraliser"}, {"text": "1er juillet 2026"}],
+          [{"text": "Rapid Response", "style": "strong"}, {"text": "Évacuer un port planétaire attaqué, contre-la-montre, avant l'arrivée d'une flotte hostile"}, {"text": "1er juillet 2026"}],
+          [{"text": "Terminal Prosecution", "style": "strong"}, {"text": "Nettoyer un système d'un élément criminel qui y opère depuis des semaines"}, {"text": "1er juillet 2026"}],
+          [{"text": "Under Siege", "style": "strong"}, {"text": "Lever le blocus d'un settlement planétaire en détresse et neutraliser les forces qui tentent de s'en emparer"}, {"text": "2 septembre 2026"}]
+        ]},
+        {"type": "callout", "tone": "info", "title": "Ne compte pas sur les noms d'avril 2026", "text": "Le billet du 22 avril 2026 annonçait six scénarios sous d'autres noms (Counter Attack, Burning Rescue, Megaship Massacre Reclaim…) dont les descriptions recoupent largement celles du lancement. Frontier n'a jamais publié de table de correspondance : traite ce rapprochement comme éditorial, et fie-toi uniquement aux sept noms du tableau ci-dessus, ceux qui apparaissent réellement en jeu. **(OFF pour les noms de lancement, rapprochement non officiel pour la correspondance)**"},
+        {"type": "heading", "text": "Under Siege, en deux temps", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Under Siege se déroule en deux phases distinctes d'après une annonce préalable du 27 août 2026, non détaillée par les notes de version elles-mêmes : l'escouade dégage d'abord les menaces aériennes au-dessus du settlement, puis se pose pour reprendre le site au sol en combat à pied, avant l'arrivée d'une « menace plus importante » dont la nature n'est pas précisée par cette source. **(COM, source presse)**"},
+        {"type": "verdict", "title": "Verdict", "text": "Commence par Tactical Takedown, Terminal Prosecution ou Rapid Response pour apprendre le fonctionnement de l'Operation Runner et du matchmaking sur un scénario stable depuis juillet. Garde Under Siege pour quand ton escouade est rodée : c'est le plus récent, celui qui peut encore se terminer prématurément (section 8)."}
+      ]
+    },
+    {
+      "id": "recompenses",
+      "number": 5,
+      "title": "Ce que rapporte une Operation : crédits, matériaux, mérites, Merc Coin",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Terminer une Operation paie sur quatre registres à la fois, et l'un d'eux ne s'obtient nulle part ailleurs dans le jeu.**"},
+        {"type": "keyValue", "items": [
+          {"label": "Crédits", "value": "Versés à chaque commandant à l'issue du scénario.", "reliability": "official"},
+          {"label": "Matériaux", "value": "Versés à chaque commandant à l'issue du scénario.", "reliability": "official"},
+          {"label": "Mérites Powerplay", "value": "Uniquement en mode Powerplay, et uniquement pour un commandant aligné (section 3).", "reliability": "official"},
+          {"label": "Merc Coin", "value": "Monnaie inédite, gagnée en réussissant le scénario ; un bonus hebdomadaire est versé à la première réalisation de certaines activités.", "reliability": "official"}
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Un plafond qui circule sans être officiel", "text": "Un plafond de **9 999 Merc Coins**, avec un gain limité à **1 000 par semaine**, revient souvent dans la documentation communautaire. Frontier n'a publié aucun des deux chiffres dans ses billets officiels : traite-les comme non vérifiés, à confirmer toi-même en jeu avant de baser une stratégie de farm dessus. **(COM, non confirmé)**"},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le Merc Coin n'est pas achetable en Arx : c'est une monnaie gagnée en jeu, explicitement non monétisée. Elle ne sert qu'à une chose — acheter le catalogue MercGear (section 6)."},
+        {"type": "verdict", "title": "Verdict", "text": "Si le bonus hebdomadaire t'intéresse, termine au moins une Operation par semaine plutôt que de tout miser sur une seule session marathon : rien dans les notes officielles ne dit que le bonus se rattrape ou se cumule d'une semaine sur l'autre."}
+      ]
+    },
+    {
+      "id": "mercgear",
+      "number": 6,
+      "title": "Dépenser ton Merc Coin : le catalogue MercGear",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**MercGear compte quinze entrées au lancement, et pas une seule ne se porte sur le dos : tout le catalogue est fait de modules de vaisseau.**"},
+        {"type": "table", "caption": "Le catalogue MercGear (15 entrées, payées en Merc Coin)", "headers": ["Catégorie", "Élément", "Effet en résumé"], "rows": [
+          [{"text": "Blueprint", "style": "strong"}, {"text": "Thermal Plasma Conversion"}, {"text": "Convertit une part des dégâts en plasma sur lasers beam/pulse/burst, au prix d'une consommation électrique accrue"}],
+          [{"text": "Blueprint", "style": "strong"}, {"text": "Scoop Rate Enhanced"}, {"text": "Améliore le débit du fuel scoop, au prix d'une consommation électrique accrue"}],
+          [{"text": "Hardpoint pré-ingénieré", "style": "strong"}, {"text": "Enduring Feedback Rail Gun"}, {"text": "Rechargement, chaleur, portée et munitions améliorés ; effet Feedback Cascade"}],
+          [{"text": "Hardpoint pré-ingénieré", "style": "strong"}, {"text": "Far-Reaching Abrasion Blaster"}, {"text": "Vitesse de tir et portée maximale accrues, au prix de l'intégrité"}],
+          [{"text": "Hardpoint pré-ingénieré", "style": "strong"}, {"text": "Double Screaming Fragment Cannon"}, {"text": "Munitions, chargeur et rafale accrus, au prix de la portée et de la cadence"}],
+          [{"text": "Hardpoint pré-ingénieré", "style": "strong"}, {"text": "Long Range Mining Laser"}, {"text": "Portée accrue, au prix de l'intégrité et des dégâts"}],
+          [{"text": "Hardpoint pré-ingénieré", "style": "strong"}, {"text": "Rapid Phase Multi-Cannon"}, {"text": "Plus de projectiles par tir, au prix d'une dispersion accrue"}],
+          [{"text": "Hardpoint pré-ingénieré", "style": "strong"}, {"text": "Drag Seeker Missile Rack"}, {"text": "Munitions, chargeur et cadence accrus, au prix de la masse et de la consommation"}],
+          [{"text": "Hardpoint pré-ingénieré", "style": "strong"}, {"text": "Lightweight Thermal Seeker Missile Rack"}, {"text": "Masse et consommation réduites, au prix de l'intégrité"}],
+          [{"text": "Hardpoint pré-ingénieré", "style": "strong"}, {"text": "Lockdown Seeker Missile Rack"}, {"text": "Munitions et intégrité accrus, au prix de la cadence et des dégâts"}],
+          [{"text": "Core interne pré-ingénieré", "style": "strong"}, {"text": "Support Focused Power Distributor"}, {"text": "Capacité moteurs/systèmes accrue, au prix de la charge du circuit armes"}],
+          [{"text": "Core interne pré-ingénieré", "style": "strong"}, {"text": "Balanced Power Distributor"}, {"text": "Débit et charge modérément accrus, consommation réduite"}],
+          [{"text": "Interne optionnel pré-ingénieré", "style": "strong"}, {"text": "Extended Cargo Rack"}, {"text": "Capacité de soute accrue"}],
+          [{"text": "Interne optionnel pré-ingénieré", "style": "strong"}, {"text": "Long Range Detailed Surface Scanner"}, {"text": "Meilleur rayon de sondes, au prix de la masse"}],
+          [{"text": "Interne optionnel pré-ingénieré", "style": "strong"}, {"text": "Heavy Duty Module Reinforcement Package"}, {"text": "Protection des modules accrue, au prix de la masse"}]
+        ]},
+        {"type": "callout", "tone": "info", "title": "Le MercGear passe quand même par les ingénieurs", "text": "Le MercGear pré-ingénieré n'est pas un équipement figé : un correctif du 2 septembre 2026 a réglé un bug qui l'empêchait d'être ingénieré immédiatement après achat, ainsi qu'un problème spécifique au Seeker Missile Rack chez l'ingénieure Petra Olmanova. Une fois acheté, il entre dans la boucle d'ingénierie classique. **(OFF)**"},
+        {"type": "callout", "tone": "warning", "title": "Zéro équipement à pied ici", "text": "Si tu cherches à améliorer ta combinaison, ton arme ou tes outils à pied avant une opération comme Firestorm Rescue ou Under Siege, MercGear ne t'aidera pas : le catalogue ne contient aucune arme, combinaison, outil ou grenade. Cette préparation-là est couverte par guide-mercenaire-a-pied.json, pas par ce guide-ci."},
+        {"type": "verdict", "title": "Verdict", "text": "Achète en priorité ce qui sert ton build de vaisseau actuel plutôt que de collectionner les quinze entrées : un hardpoint pré-ingénieré qui ne correspond pas à ton style de combat n'est qu'un raccourci d'ingénierie que tu n'utiliseras jamais."}
+      ]
+    },
+    {
+      "id": "checklist",
+      "number": 7,
+      "title": "Check-list avant de lancer ta première Operation",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Une bonne première Operation se prépare à quai, pas une fois l'escouade déjà transférée sur l'Operation Runner.**"},
+        {"type": "steps", "items": [
+          {"text": "**Choisis ton scénario** parmi les sept (section 4) selon le niveau de rodage de ton escouade.", "detail": "Commence par Tactical Takedown, Terminal Prosecution ou Rapid Response plutôt que par Under Siege."},
+          {"text": "**Décide Mercenary ou Powerplay** avant de lancer (section 3).", "detail": "Powerplay ne rapporte des mérites qu'aux commandants alignés sur le Power visé."},
+          {"text": "**Prépare ton vaisseau pour la phase de combat spatial**, abordage ou nettoyage selon le scénario choisi.", "detail": "L'Operation Runner répare et réarme en cas de mise hors de combat, mais ne remplace pas un build mal adapté au scénario."},
+          {"text": "**Prépare ta combinaison et ton arme à pied si le scénario comporte une phase au sol.**", "detail": "Voir guide-mercenaire-a-pied.json pour cette préparation — ce guide-ci ne la détaille pas."},
+          {"text": "**Accoste avant d'ouvrir le menu Operations**, que tu montes ou que tu rejoignes une escouade.", "detail": "Rien n'est accessible en vol ou en supercroisière (section 2)."},
+          {"text": "**Invite ta propre escouade si tu en as une, sinon compte sur le matchmaking** pour compléter les places restantes.", "detail": "Les membres invités n'ont pas besoin d'être au même endroit que toi."},
+          {"text": "**Garde en tête le statut bêta** : vérifie les bugs connus avant une session qui compte (section 8).", "detail": "Under Siege peut encore se terminer prématurément au 2 septembre 2026."}
+        ]}
+      ]
+    },
+    {
+      "id": "pieges",
+      "number": 8,
+      "title": "Une bêta encore rugueuse : pièges et bugs connus",
+      "blocks": [
+        {"type": "list", "ordered": false, "items": [
+          "**Interface d'escouade à pied absente** : aucun affichage de wing dédié au combat au sol pendant une Operation, au 2 septembre 2026.",
+          "**Under Siege peut se terminer prématurément** : un bug connu, non daté de résolution par Frontier.",
+          "**Statut « Networking & Balancing Beta »** assumé par Frontier : le mode reste sujet à des ajustements serveur réguliers, potentiellement sans annonce détaillée."
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Ce que « bêta » veut dire pour ta session", "text": "Ne mise pas une session qui compte (farming ciblé, objectif de progression serré) sur un scénario ou un équilibrage qui pourrait changer d'une semaine à l'autre. Traite chaque session Operations comme un bonus, pas comme un revenu garanti tant que le statut bêta n'est pas levé."},
+        {"type": "table", "caption": "Pièges fréquents en début de parcours", "headers": ["Piège", "Conséquence", "Comment l'éviter"], "rows": [
+          [{"text": "Tenter de lancer ou rejoindre une Operation en vol"}, {"text": "Le menu Operations reste inaccessible", "style": "lose"}, {"text": "Accoste d'abord — station, Fleet Carrier ou Squadron Carrier (section 2)"}],
+          [{"text": "Espérer des mérites Powerplay sans être aligné"}, {"text": "Participation possible, mérites nuls", "style": "lose"}, {"text": "Vérifie ton alignement avant de choisir le mode Powerplay (section 3)"}],
+          [{"text": "Se fier aux noms de scénarios annoncés en avril 2026"}, {"text": "Confusion sur ce qui existe réellement en jeu", "style": "lose"}, {"text": "Utilise uniquement les sept noms du tableau de la section 4"}],
+          [{"text": "Compter sur MercGear pour l'équipement à pied"}, {"text": "Aucune arme ni combinaison à trouver dans le catalogue", "style": "lose"}, {"text": "Prépare l'équipement à pied via guide-mercenaire-a-pied.json (section 6)"}]
+        ]},
+        {"type": "paragraph", "emphasis": "normal", "text": "Bonne nouvelle côté fiabilité : le correctif « Operations Update | Update 3 » du 9 juillet 2026 a déjà restitué rétroactivement les récompenses d'Operations et les inventaires à pied perdus lors des premiers jours du mode — un signal que Frontier corrige activement les incidents de lancement plutôt que de les laisser filer."}
+      ]
+    },
+    {
+      "id": "faq",
+      "number": 9,
+      "title": "Questions fréquentes",
+      "blocks": [
+        {"type": "heading", "text": "Combien de commandants dans une escouade Operations ?", "level": 4},
+        {"type": "paragraph", "emphasis": "normal", "text": "Jusqu'à **4 commandants**, en escouade déjà constituée ou complétée par un appariement optionnel. Chaque opération se déroule dans un environnement isolé et instancié — pas une activité de la galaxie persistante."},
+        {"type": "heading", "text": "Comment lancer une Operation ?", "level": 4},
+        {"type": "paragraph", "emphasis": "normal", "text": "Depuis un tableau de missions, à quai dans un starport, sur un Fleet Carrier ou un Squadron Carrier. Il faut être à quai pour sélectionner le scénario et envoyer les invitations, ou pour accéder aux annonces d'escouades ouvertes (section 2)."},
+        {"type": "heading", "text": "C'est quoi l'Operation Runner ?", "level": 4},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le vaisseau de déploiement qui transporte toute l'escouade vers le scénario. Il sert aussi de point de réapparition — vaisseau réparé, ravitaillé et réarmé — et de point d'extraction final (section 2)."},
+        {"type": "heading", "text": "Le mode Powerplay des Operations, ça sert à quoi ?", "level": 4},
+        {"type": "paragraph", "emphasis": "normal", "text": "Uniquement à saper (undermine) un Power adverse — jamais à en acquérir ou renforcer un. Un commandant non aligné peut participer sans gagner de mérite (section 3)."},
+        {"type": "heading", "text": "Le Merc Coin, ça s'achète en Arx ?", "level": 4},
+        {"type": "paragraph", "emphasis": "normal", "text": "Non. C'est une monnaie gagnée uniquement en réussissant un scénario d'Operations, avec un bonus hebdomadaire pour certaines activités. Un plafond de 9 999 et une limite hebdomadaire de 1 000 circulent dans la communauté, mais Frontier n'a publié aucun des deux chiffres (section 5)."},
+        {"type": "heading", "text": "Le MercGear contient-il de l'équipement à pied ?", "level": 4},
+        {"type": "paragraph", "emphasis": "normal", "text": "Non : les quinze entrées du catalogue sont toutes des modules de vaisseau — blueprints, hardpoints et internes pré-ingénierés. Pour l'équipement à pied, voir guide-mercenaire-a-pied.json (section 6)."}
+      ]
+    },
+    {
+      "id": "retenir",
+      "number": 10,
+      "title": "Ce qu'il faut retenir, et les sources",
+      "blocks": [
+        {"type": "steps", "items": [
+          {"text": "**Accoste avant tout** : rien du menu Operations ne s'ouvre en vol.", "detail": "Vrai pour monter une escouade comme pour en rejoindre une par matchmaking."},
+          {"text": "**Commence par un scénario rodé** (Tactical Takedown, Terminal Prosecution, Rapid Response) avant Under Siege.", "detail": "Under Siege est le plus récent et le seul encore signalé comme pouvant se terminer prématurément."},
+          {"text": "**Choisis Mercenary par défaut**, et ne passe en Powerplay que si tu es toi-même aligné sur le Power visé.", "detail": "Sinon, tu joues sans gagner de mérite."},
+          {"text": "**Termine au moins une Operation par semaine** si le bonus hebdomadaire de Merc Coin t'intéresse.", "detail": "Rien n'indique qu'il se rattrape d'une semaine sur l'autre."},
+          {"text": "**Dépense ton Merc Coin sur ce qui sert ton build de vaisseau**, jamais sur de l'équipement à pied.", "detail": "MercGear n'en contient pas — voir guide-mercenaire-a-pied.json pour cette préparation."},
+          {"text": "**Garde le statut bêta en tête** avant toute session qui compte.", "detail": "Interface de wing à pied absente, Under Siege parfois écourté : deux bugs connus au 2 septembre 2026."}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le réflexe à automatiser", "text": "Avant d'inviter qui que ce soit, vérifie que tu es bien à quai — c'est la seule condition qui bloque tout le reste, dans les deux sens (créer une escouade ou en rejoindre une)."},
+        {"type": "divider"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Fiabilité.** Ce guide s'appuie sur le corpus de référence interne (13-operations.md, 09-combat-a-pied.md, 07-equipement-a-pied.md), lui-même sourcé sur les billets d'annonce officiels de Frontier Developments relevés via l'API Steam News (22 avril, 2 juin, 1er et 9 juillet, 2 septembre 2026) et, pour le déroulé en deux temps d'Under Siege, sur un article de presse spécialisée (MassivelyOP, 27 août 2026) qui reste la seule source sur ce point précis. Le plafond de Merc Coin, sa limite hebdomadaire et le barème de récompenses par niveau de menace des scénarios sont des données communautaires jamais confirmées par Frontier : elles sont signalées comme telles dans le texte plutôt que présentées comme acquises."},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Ce que ce guide ne couvre pas.** La préparation de ta combinaison et de ton arme à pied (guide-mercenaire-a-pied.json), la mécanique complète du cycle Powerplay (guide-powerplay-pacifiste.json), et le Nomad, le ship-launched vessel livré par la même mise à jour, dont les caractéristiques et la chronologie vivent dans le corpus de référence (14-rhino.md) plutôt que dans les manuels de terrain publiés à ce jour."}
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — 13-operations.md",
+    "Corpus interne — 09-combat-a-pied.md",
+    "Corpus interne — 07-equipement-a-pied.md",
+    "Billets d'annonce officiels Frontier Developments (API Steam News, appid 359320)",
+    "MassivelyOP.com"
+  ]
+}

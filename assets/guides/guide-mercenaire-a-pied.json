@@ -1,0 +1,253 @@
+{
+  "id": "guide-mercenaire-a-pied",
+  "title": "Devenir mercenaire à pied — ton premier assaut",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Zéro couverture existante sur le combat au sol dans ce corpus : quelle suit et quelle arme choisir, combien budgétiser pour la monter en grade et l'engineerer, et dans quel ordre débloquer les Engineers pour progresser Ground CZ Basse → Moyenne → Haute.",
+  "byline": "PC · Live · Combat à pied, objectif Ground CZ (pas infiltration) · Aucun rang requis pour démarrer",
+  "edition": "2026-09",
+  "topics": ["combat-a-pied", "mercenaire", "ground-cz", "ingenierie-a-pied", "dominator", "engineers-a-pied"],
+  "estimatedReadMinutes": 18,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {"type": "list", "ordered": true, "items": [
+          "Ton profil : mercenaire d'assaut, pas infiltrateur",
+          "Choisir sa combinaison : la Dominator et ses deux armes principales",
+          "Choisir son arme : catalogue, fabricants et builds pour la CZ",
+          "Budgétiser la montée en grade de la Dominator (G1 → G5)",
+          "Ingénierie de combat : quels effets, pour quel budget",
+          "Débloquer les Engineers dans le bon ordre pour un objectif combat",
+          "Progresser en Ground CZ : Basse → Moyenne → Haute",
+          "Check-list avant l'assaut, et ce qu'il faut retenir"
+        ]},
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le combat au sol est à 0 % couvert par les manuels de ce corpus — celui-ci ouvre le chantier.** Tu veux enfiler une combinaison, prendre une arme longue et aller vider des Ground CZ à pied plutôt que gérer un vaisseau de combat. Ce guide construit le chemin complet : quelle combinaison et quelle arme choisir, ce que coûte réellement la progression (grade de combinaison puis ingénierie), dans quel ordre débloquer les treize Engineers à pied pour un profil offensif, et comment monter en puissance jusqu'à tenir une zone de conflit de haute intensité."},
+        {"type": "paragraph", "text": "Ce guide suppose que tu sais déjà accoster, accepter une mission au tableau et piloter jusqu'à un settlement — voir premiers-controles-et-entrainement.json pour ces bases. Il se concentre sur la **progression offensive** (Ground CZ, assaut frontal, mercenariat) et laisse volontairement de côté l'infiltration furtive (armes silencieuses, discrétion, missions covert) : c'est un style de jeu différent, avec ses propres priorités d'Engineer, qui mériterait son propre manuel — pas encore publié dans ce corpus à la date de rédaction."},
+        {"type": "callout", "tone": "info", "title": "Comment lire les chiffres de ce guide", "text": "**OFF** = confirmé par un billet officiel Frontier. **COM** = instantané communautaire (wiki, Inara, edfieldmanual.com) capturé le 9-13 septembre 2026, à revérifier en jeu — Frontier peut rééquilibrer ces montants. **EST** = calcul ou estimation de ce guide à partir de chiffres COM, explicitement signalé comme tel plutôt que présenté comme une donnée relevée."},
+        {"type": "callout", "tone": "warning", "title": "Ce que ce guide ne couvre pas", "text": "L'infiltration furtive (Quieter Footsteps, Audio Masking, missions « sans alarme ») n'est traitée ici qu'en négatif — pour dire pourquoi ce n'est *pas* la priorité d'un profil combat. Le prix exact de la montée en grade d'une **arme** (contrairement à celui d'une combinaison) n'est confirmé par aucune source locale ; les spécialités combat des quatre Engineers de Colonia ne sont, à ce jour, pas recensées."}
+      ]
+    },
+    {
+      "id": "cadrage",
+      "number": 1,
+      "title": "Ton profil : mercenaire d'assaut, pas infiltrateur",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Chaque choix de ce guide — combinaison, arme, ordre des Engineers — découle d'un seul objectif : tenir une Ground CZ, pas se faufiler sans être vu.** Confondre les deux te fait engager des matériaux d'ingénierie irréversibles sur des effets qui ne serviront jamais ton style de jeu."},
+        {"type": "paragraph", "text": "Le combat à pied et l'infiltration partagent le même équipement de base (combinaisons, armes, Engineers) mais divergent complètement sur les priorités : une build combat cherche l'encaissement et les dégâts soutenus, une build infiltration cherche le silence et la vitesse de bypass. Le tableau ci-dessous pose la distinction une fois pour toutes, pour que tu ne lises pas ce guide en te demandant si tel conseil s'applique à ton cas."},
+        {"type": "table", "caption": "Objectif combat vs objectif infiltration : deux builds qui ne se recouvrent pas", "headers": ["Critère", "Objectif combat (ce guide)", "Objectif infiltration (hors périmètre)"], "rows": [
+          [{"text": "Combinaison", "style": "strong"}, {"text": "Dominator — deux armes principales, bouclier renforcé", "style": "win"}, {"text": "Maverick ou Artemis — discrétion, rangement"}],
+          [{"text": "Arme longue", "style": "strong"}, {"text": "Fusil d'assaut ou plasma polyvalent, cadence élevée", "style": "win"}, {"text": "Pistolet silencieux, arme de finition"}],
+          [{"text": "Grenade", "style": "strong"}, {"text": "Fragmentation ou Shield Disruptor", "style": "win"}, {"text": "Non létale, utilitaire"}],
+          [{"text": "Priorité d'ingénierie", "style": "strong"}, {"text": "Damage Resistance, Faster Shield Regen, Headshot Damage", "style": "win"}, {"text": "Quieter Footsteps, Audio Masking, Improved Jump Assist"}],
+          [{"text": "Premier Engineer visé", "style": "strong"}, {"text": "Hero Ferrari puis Uma Laszlo (section 6)", "style": "win"}, {"text": "Yarden Bond, en fin de Chaîne 3"}],
+          [{"text": "Terrain de jeu", "style": "strong"}, {"text": "Ground CZ, assaut de settlement", "style": "win"}, {"text": "Vol de données, sabotage « sans alarme »"}]
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Un guide qui reste à écrire", "text": "Si ton objectif est réellement l'infiltration, garde ce guide de côté : ses recommandations de suit, d'arme et d'ordre d'Engineers ne te serviront pas, et certaines (Damage Resistance avant Quieter Footsteps) iraient même contre ton intérêt. Un manuel dédié à ce style de jeu n'existe pas encore dans ce corpus."},
+        {"type": "verdict", "title": "Verdict", "text": "Ce guide est écrit pour un seul profil : celui qui veut encaisser, tirer et tenir une ligne de front. Toutes les recommandations qui suivent — combinaison, arme, budget, ordre des Engineers, progression de CZ — partent de ce postulat et ne le rappelleront plus à chaque section."}
+      ]
+    },
+    {
+      "id": "suit",
+      "number": 2,
+      "title": "Choisir sa combinaison : la Dominator et ses deux armes principales",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Sur les trois combinaisons spécialisées, une seule porte deux armes principales et un bouclier à régénération renforcée : la Dominator.** C'est le point de départ non négociable d'un profil mercenaire d'assaut."},
+        {"type": "table", "caption": "Les trois combinaisons spécialisées, lues pour un objectif combat", "headers": ["Combinaison", "Rôle", "Pour le combat", "Contre le combat"], "rows": [
+          [{"text": "Dominator", "style": "strong"}, {"text": "Combat lourd"}, {"text": "Deux emplacements d'arme principale, bouclier à régén. renforcée", "style": "win"}, {"text": "Sac à dos réduit — moins de butin transportable"}],
+          [{"text": "Maverick", "style": "strong"}, {"text": "Polyvalente / infiltration"}, {"text": "Bonne mobilité, Arc Cutter intégré utile pour forcer un accès"}, {"text": "Un seul emplacement d'arme principale, pas de bonus de bouclier"}],
+          [{"text": "Artemis", "style": "strong"}, {"text": "Exobiologie"}, {"text": "Aucun — c'est la suit d'exploration"}, {"text": "Génétique Sampler intégré inutile en CZ, moins résistante que la Dominator", "style": "lose"}]
+        ]},
+        {"type": "paragraph", "text": "Les statistiques exactes de bouclier, de points de vie et de capacité de sac à dos par combinaison ne sont chiffrées par aucune source locale de ce corpus (voir 07-equipement-a-pied.md) : ce tableau reste donc volontairement qualitatif plutôt que d'inventer des chiffres absents. Ce qui compte pour un mercenaire d'assaut, c'est la conséquence pratique du double emplacement d'arme : tu peux emporter une arme longue à haut dégât (Manticore Terminator ou Executioner) **et** une seconde arme longue de secours ou de zone (lance-roquettes) sans passer par l'arme de poing en solution de repli."},
+        {"type": "list", "items": [
+          "**Dominator General Combat Suit** — Faster Shield Regen, Extra Ammo Capacity, mobilité améliorée : le profil généraliste pour débuter en Ground CZ.",
+          "**Dominator War Suit** — Night Vision et capacité de munitions accrue : pour tenir des zones de conflit prolongées, notamment en Moyenne/Haute intensité (section 7)."
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Le grade ouvre des emplacements, il ne remplace pas l'ingénierie", "text": "Une Dominator de grade 5 sans aucune modification reste une combinaison stock : le grade (section 4) achète des **emplacements** de modification, l'ingénierie (section 5) les **remplit**. Les deux dépenses sont cumulatives, pas alternatives — budgétise les deux avant de partir en CZ Moyenne."},
+        {"type": "verdict", "title": "Verdict", "text": "Prends la Dominator. Le double emplacement d'arme principale et le bouclier renforcé ne sont égalés par aucune autre combinaison pour un profil d'assaut, et c'est elle que toute la suite de ce guide — budget, ingénierie, progression de CZ — suppose que tu portes."}
+      ]
+    },
+    {
+      "id": "armes",
+      "number": 3,
+      "title": "Choisir son arme : catalogue, fabricants et builds pour la CZ",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Trois fabricants se partagent le catalogue des armes à pied, mais un seul d'entre eux n'a encore aucun modèle nommé par une source consultable.**"},
+        {"type": "table", "caption": "Les quatre armes à pied nommées et typées par une source, fabricant corrigé", "headers": ["Arme", "Fabricant", "Type", "Dégâts"], "rows": [
+          [{"text": "Karma P-15", "style": "strong"}, {"text": "Kinematic Armaments"}, {"text": "Pistolet"}, {"text": "Cinétique"}],
+          [{"text": "Karma AR-50", "style": "strong"}, {"text": "Kinematic Armaments"}, {"text": "Fusil d'assaut"}, {"text": "Cinétique"}],
+          [{"text": "Manticore Executioner", "style": "strong"}, {"text": "Manticore"}, {"text": "Fusil de précision"}, {"text": "Plasma"}],
+          [{"text": "Manticore Terminator", "style": "strong"}, {"text": "Manticore"}, {"text": "Fusil polyvalent"}, {"text": "Plasma"}]
+        ]},
+        {"type": "paragraph", "text": "Deux armes nommées par une source restent hors de ce tableau faute de type et de dégâts documentés : le **Manticore Intimidator** (Manticore, troisième modèle du fabricant, type et dégâts non précisés) et tout modèle **Takada** — ce dernier fabricant complète le trio (armes à énergie/laser) mais aucun de ses modèles n'est nommé par une source consultable pour ce chantier. Ce n'est pas une absence de contenu en jeu, seulement un trou de documentation. Pour un profil combat, retiens surtout l'archétype : le fusil d'assaut kinétique automatique (type du Karma AR-50) reste la référence pour l'assaut frontal et la CZ, efficace dès que le bouclier adverse est tombé ; le fusil plasma polyvalent (type du Manticore Terminator) tient la cadence et la capacité de chargeur sur la durée d'un engagement."},
+        {"type": "table", "caption": "Quatre builds nommés par la communauté, filtrés pour un usage combat", "headers": ["Archétype de mission", "Arme recommandée", "Fabricant", "Pourquoi"], "rows": [
+          [{"text": "Massacre au sol / CZ Moyenne-Haute", "style": "strong"}, {"text": "Manticore Terminator"}, {"text": "Manticore"}, {"text": "Cadence et capacité de chargeur élevées, polyvalent sur la durée"}],
+          [{"text": "Mercenariat / CZ dédiée à haut dégât", "style": "strong"}, {"text": "Manticore Executioner Warfighter"}, {"text": "Manticore"}, {"text": "Build offensif dédié, pensé pour les zones de conflit à haut dégât"}],
+          [{"text": "Achever une cible sans bouclier", "style": "strong"}, {"text": "Karma P15 Warfighter"}, {"text": "Kinematic Armaments"}, {"text": "Visée rapide, chargeur agrandi pour finir sans traîner"}],
+          [{"text": "Groupes d'ennemis regroupés", "style": "strong"}, {"text": "Lance-roquettes Warfighter"}, {"text": "Manticore"}, {"text": "Dégâts de zone contre plusieurs adversaires à la fois"}]
+        ]},
+        {"type": "callout", "tone": "info", "title": "Pas d'arme de mêlée dédiée", "text": "Le corps-à-corps passe uniquement par l'attaque à mains nues, disponible en permanence quel que soit ton loadout — utile en dernier recours si ton arme est en rechargement ou tes munitions épuisées en pleine CZ. La modification **Added Melee Damage** (Jude Navarro / Kit Fowler, 500 000 Cr) la rend réellement dangereuse ; voir section 5."},
+        {"type": "callout", "tone": "warning", "title": "Le prix de la montée en grade d'une arme n'est pas documenté", "text": "Contrairement à la combinaison (section 4, chiffrée précisément), **aucune source locale de ce corpus ne porte le prix par grade 1 à 5 d'une arme à pied**, ni ses dégâts, sa cadence ou sa portée nominale. Ne cherche pas ce chiffre ici : vérifie-le directement au comptoir Pioneer Supplies avant d'engager ton budget."},
+        {"type": "verdict", "title": "Verdict", "text": "Pars sur un Karma AR-50 ou un Manticore Terminator comme arme longue principale — les deux archétypes de référence pour l'assaut en CZ — et garde le lance-roquettes en option pour les groupes serrés. Laisse les armes silencieuses de côté : leur portée récemment étendue (40 → 128 m depuis la mise à jour Lynx Highliner du 28 avril 2026) sert un profil infiltration, pas le tien."}
+      ]
+    },
+    {
+      "id": "budget-suit",
+      "number": 4,
+      "title": "Budgétiser la montée en grade de la Dominator (G1 → G5)",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Monter une Dominator du grade 1 au grade 5 coûte 14 850 000 Cr, plus cinq composants en quantités convexes — et le seul dernier palier pèse plus de la moitié de la facture totale.**"},
+        {"type": "table", "caption": "Les quatre paliers chiffrés de la Dominator (matériau de blindage : Titanium Plating)", "headers": ["Palier", "Suit Schematic", "Health Monitor", "Manufacturing Instructions", "Titanium Plating", "Graphene", "Crédits (Cr)", "Mod. (cumul)"], "rows": [
+          [{"text": "G1 → G2", "style": "strong"}, {"text": "1", "style": "number"}, {"text": "1", "style": "number"}, {"text": "1", "style": "number"}, {"text": "2", "style": "number"}, {"text": "2", "style": "number"}, {"text": "600 000", "style": "number"}, {"text": "1", "style": "number"}],
+          [{"text": "G2 → G3", "style": "strong"}, {"text": "2", "style": "number"}, {"text": "2", "style": "number"}, {"text": "2", "style": "number"}, {"text": "5", "style": "number"}, {"text": "5", "style": "number"}, {"text": "2 250 000", "style": "number"}, {"text": "2", "style": "number"}],
+          [{"text": "G3 → G4", "style": "strong"}, {"text": "4", "style": "number"}, {"text": "4", "style": "number"}, {"text": "4", "style": "number"}, {"text": "9", "style": "number"}, {"text": "9", "style": "number"}, {"text": "4 500 000", "style": "number"}, {"text": "3", "style": "number"}],
+          [{"text": "G4 → G5", "style": "strong"}, {"text": "5", "style": "number"}, {"text": "5", "style": "number"}, {"text": "5", "style": "number"}, {"text": "12", "style": "number"}, {"text": "12", "style": "number"}, {"text": "7 500 000", "style": "number"}, {"text": "4", "style": "number"}],
+          [{"text": "Total G1 → G5", "style": "strong"}, {"text": "12", "style": "strong"}, {"text": "12", "style": "strong"}, {"text": "12", "style": "strong"}, {"text": "28", "style": "strong"}, {"text": "28", "style": "strong"}, {"text": "14 850 000", "style": "strong"}, {"text": "4", "style": "strong"}]
+        ]},
+        {"type": "table", "caption": "Cumul en main : ce qu'il faut avoir dépensé pour se tenir sur chaque grade", "headers": ["Grade", "Cumul (Cr)", "Emplacements de mod. disponibles"], "rows": [
+          [{"text": "G1"}, {"text": "0", "style": "number"}, {"text": "0", "style": "number"}],
+          [{"text": "G2"}, {"text": "600 000", "style": "number"}, {"text": "1", "style": "number"}],
+          [{"text": "G3"}, {"text": "2 850 000", "style": "number"}, {"text": "2", "style": "number"}],
+          [{"text": "G4", "style": "strong"}, {"text": "7 350 000", "style": "number"}, {"text": "3", "style": "win"}],
+          [{"text": "G5"}, {"text": "14 850 000", "style": "number"}, {"text": "4", "style": "number"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Une dépense convexe pour un gain linéaire", "text": "Le seul palier **G4 → G5 coûte 7 500 000 Cr**, soit plus de la moitié des 14 850 000 Cr du parcours complet — davantage que les trois premiers paliers réunis. Les emplacements de modification, eux, progressent linéairement (0, 1, 2, 3, 4). Conséquence budgétaire directe : le **grade 4** est le meilleur rapport, puisque son troisième emplacement se paie au prix des trois premiers réunis, alors que le quatrième emplacement du grade 5 coûte à lui seul plus que tout le reste."},
+        {"type": "keyValue", "items": [
+          {"label": "Suit Schematic (Good)", "value": "50 000 Cr pièce — ne jamais céder au barman pendant une montée en grade, c'est le composant qui manque le plus souvent", "reliability": "community"},
+          {"label": "Health Monitor (Good)", "value": "10 000 Cr pièce — trouvable en Locker sur épave de surface en plus des settlements Industrial", "reliability": "community"},
+          {"label": "Manufacturing Instructions (Data)", "value": "9 000 Cr pièce — non échangeable au barman, uniquement Data Ports et récompenses de mission : le vrai goulot d'étranglement", "reliability": "community"},
+          {"label": "Titanium Plating (Component/Asset)", "value": "Même nature que l'Aerogel et le Graphene, donc a priori échangeable au barman — tarif de comptoir non relevé par les sources consultées", "reliability": "estimate"},
+          {"label": "Graphene (Component/Asset)", "value": "Achetable au barman : coût 23, valeur de cession 13", "reliability": "community"}
+        ]},
+        {"type": "paragraph", "text": "Depuis le Type-8 Update (août 2024), les récompenses de mission couvrent les cinq composants en quantités trois à quatre fois supérieures au pillage : sélectionner ses missions par récompense, plutôt que fouiller des conteneurs au hasard, est devenu la méthode la plus rapide pour réunir de quoi monter en grade."},
+        {"type": "list", "items": [
+          "Vise le **grade 4** comme premier palier réaliste (7 350 000 Cr, 3 emplacements) avant d'envisager le grade 5.",
+          "Ne cède jamais un **Suit Schematic** ou un **Health Monitor** au barman : ce sont des Goods, rachetés mais jamais revendus par lui — perds-les et tu repars de zéro sur le composant le plus cher.",
+          "Priorise les missions dont la récompense inclut **Manufacturing Instructions** : c'est le seul des cinq composants sans aucune voie d'achat."
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "Budgétise en priorité le passage au grade 4 (7 350 000 Cr) : c'est le point où le rapport dépense/emplacements de modification est le meilleur. Le grade 5 reste l'objectif final, mais son seul dernier palier (7 500 000 Cr) mérite d'attendre que ton ingénierie de combat (section 5) soit déjà bien avancée sur les grades inférieurs."}
+      ]
+    },
+    {
+      "id": "ingenierie-combat",
+      "number": 5,
+      "title": "Ingénierie de combat : quels effets, pour quel budget",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Chaque modification d'ingénierie à pied est irréversible et coûte 500 000 à 1 000 000 Cr : ce n'est pas un achat qu'on refait, donc autant savoir à l'avance lesquelles servent vraiment un profil combat.**"},
+        {"type": "table", "caption": "Modifications de combinaison prioritaires pour un profil combat", "headers": ["Modification", "Effet", "Engineer(s)", "Coût (instantané COM)"], "rows": [
+          [{"text": "Damage Resistance", "style": "strong"}, {"text": "−10 % de dégâts cinétiques, thermiques, plasma et explosifs (chacun)"}, {"text": "Uma Laszlo (Xuane)"}, {"text": "750 000 Cr", "style": "number"}],
+          [{"text": "Faster Shield Regen", "style": "strong"}, {"text": "≈ +25 % de régénération du bouclier personnel"}, {"text": "Uma Laszlo (Xuane) / Kit Fowler (Capoya)"}, {"text": "750 000 Cr", "style": "number"}],
+          [{"text": "Extra Ammo Capacity", "style": "strong"}, {"text": "+50 % de capacité de munitions"}, {"text": "Jude Navarro (Aurai) / Kit Fowler (Capoya)"}, {"text": "750 000 Cr", "style": "number"}],
+          [{"text": "Added Melee Damage", "style": "strong"}, {"text": "Dégâts à mains nues et au corps-à-corps à l'arme fortement augmentés"}, {"text": "Jude Navarro (Aurai) / Kit Fowler (Capoya)"}, {"text": "500 000 Cr", "style": "number"}]
+        ]},
+        {"type": "table", "caption": "Modifications d'arme prioritaires pour un profil combat", "headers": ["Modification", "Effet", "Engineer(s)"], "rows": [
+          [{"text": "Headshot Damage", "style": "strong"}, {"text": "Augmente les dégâts aux tirs à la tête"}, {"text": "Uma Laszlo (Xuane)"}],
+          [{"text": "Reload Speed", "style": "strong"}, {"text": "Réduit le temps de rechargement"}, {"text": "Uma Laszlo (Xuane) / Jude Navarro (Aurai)"}],
+          [{"text": "Stowed Reloading", "style": "strong"}, {"text": "Recharge automatique quand l'arme est rangée"}, {"text": "Uma Laszlo (Xuane) / Kit Fowler (Capoya)"}],
+          [{"text": "Magazine Size", "style": "strong"}, {"text": "Augmente la capacité du chargeur"}, {"text": "Jude Navarro (Aurai) / Kit Fowler (Capoya)"}],
+          [{"text": "Stability", "style": "strong"}, {"text": "Jusqu'à +30 % de stabilité, recul réduit"}, {"text": "Domino Green (Orishis) / Oden Geiger (Candiaei)"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Coût des modifications d'arme : fourchette générale, pas de détail par effet", "text": "07-equipement-a-pied.md ne chiffre pas individuellement chaque modification d'arme — seuls Noise Suppressor et Audio Masking (discrétion, hors périmètre combat) sont chiffrés à environ 1 000 000 Cr. Retiens la **fourchette générale de 500 000 à 1 000 000 Cr**, valable pour les treize Engineers à pied, et vérifie le montant exact affiché chez l'Engineer avant d'engager tes matériaux — une modification posée ne peut ni être retirée ni remplacée."},
+        {"type": "keyValue", "items": [
+          {"label": "Budget d'entrée (4 mods de combinaison ci-dessus)", "value": "750 000 + 750 000 + 750 000 + 500 000 = 2 750 000 Cr — calcul de ce guide à partir des coûts COM du tableau", "reliability": "estimate"},
+          {"label": "Budget combiné suit + mods (grade 4 + 3 mods de combinaison)", "value": "7 350 000 (grade) + 2 250 000 (Damage Resistance, Faster Shield Regen, Extra Ammo Capacity) ≈ 9 600 000 Cr — hors coût des mods d'arme, non chiffrées", "reliability": "estimate"}
+        ]},
+        {"type": "callout", "tone": "info", "title": "La recette dépend du fabricant de l'arme", "text": "Une même modification d'arme ne demande pas les mêmes matériaux selon que ton arme vient de Kinematic Armaments, Manticore ou Takada — pour Headshot Damage, les trois recettes ne partagent qu'un seul matériau (Ion Battery, entre Manticore et Takada). Prépare ta collecte pour un effet **et** un fabricant précis : un stock monté pour un Karma ne sert à rien sur un Manticore. Détail complet dans 07-equipement-a-pied.md."},
+        {"type": "verdict", "title": "Verdict", "text": "Si tu ne poses que quatre modifications avant ta première Ground CZ Moyenne, choisis Damage Resistance, Faster Shield Regen, Extra Ammo Capacity côté combinaison et Headshot Damage côté arme : c'est la meilleure densité de survie et de dégâts pour un budget de l'ordre de 3 millions de crédits."}
+      ]
+    },
+    {
+      "id": "engineers-ordre",
+      "number": 6,
+      "title": "Débloquer les Engineers dans le bon ordre pour un objectif combat",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Neuf Engineers de la bulle Core se répartissent en trois chaînes de trois, chacune débloquant le suivant — mais un seul point d'entrée est documenté par les sources consultées : dix Ground CZ pour Hero Ferrari.**"},
+        {"type": "paragraph", "text": "Chaîne 1 : Hero Ferrari (Sirius) → Wellington Beck (Jolapa) → Uma Laszlo (Xuane). Chaîne 2 : Jude Navarro (Aurai) → Terra Velasquez (Shou Xing) → Oden Geiger (Candiaei). Chaîne 3 : Domino Green (Orishis) → Kit Fowler (Capoya) → Yarden Bond (Bayan). Les quatre Engineers de Colonia (Baltanos, Eleanor Bresa, Rosa Dayette, Yi Shen) suivent une logique convergente indépendante et ne proposent, à ce jour, aucune modification de combat recensée — ignore-les pour ce guide."},
+        {"type": "table", "caption": "Densité d'effets combat par Engineer, pour prioriser ton temps", "headers": ["Engineer", "Chaîne / position", "Densité combat", "Ce qu'il apporte pour l'assaut"], "rows": [
+          [{"text": "Hero Ferrari", "style": "strong"}, {"text": "1 / 1er"}, {"text": "Faible", "style": "mid"}, {"text": "Point d'entrée obligatoire de la Chaîne 1 ; effets (air, sprint) secondaires en combat"}],
+          [{"text": "Wellington Beck", "style": "strong"}, {"text": "1 / 2e"}, {"text": "Faible", "style": "mid"}, {"text": "Palier de passage ; Greater Range utile en soutien à distance"}],
+          [{"text": "Uma Laszlo", "style": "strong"}, {"text": "1 / 3e"}, {"text": "Haute", "style": "win"}, {"text": "Damage Resistance, Faster Shield Regen, Headshot Damage, Reload Speed, Stowed Reloading — la meilleure densité du roster"}],
+          [{"text": "Domino Green", "style": "strong"}, {"text": "3 / 1er"}, {"text": "Faible", "style": "mid"}, {"text": "Palier de passage vers Kit Fowler ; Stability utile côté arme"}],
+          [{"text": "Kit Fowler", "style": "strong"}, {"text": "3 / 2e"}, {"text": "Haute", "style": "win"}, {"text": "Faster Shield Regen, Added Melee Damage, Extra Ammo Capacity, Stowed Reloading, Magazine Size"}],
+          [{"text": "Jude Navarro", "style": "strong"}, {"text": "2 / 1er"}, {"text": "Moyenne"}, {"text": "Added Melee Damage, Extra Ammo Capacity, Reload Speed, Magazine Size — redondant avec Kit Fowler"}],
+          [{"text": "Terra Velasquez", "style": "strong"}, {"text": "2 / 2e"}, {"text": "Moyenne"}, {"text": "Combat Movement Speed — supprime le malus de vitesse en visée ADS, un vrai gain de duel"}],
+          [{"text": "Oden Geiger", "style": "strong"}, {"text": "2 / 3e"}, {"text": "Faible", "style": "mid"}, {"text": "Night Vision et Scope servent surtout le sniping/reconnaissance"}],
+          [{"text": "Yarden Bond", "style": "strong"}, {"text": "3 / 3e"}, {"text": "Hors périmètre", "style": "lose"}, {"text": "Quieter Footsteps, Audio Masking — priorité n°1 d'un objectif infiltration, pas de celui-ci"}]
+        ]},
+        {"type": "steps", "items": [
+          {"text": "**Hero Ferrari (Sirius)** — débloqué en complétant 10 zones de conflit de surface.", "detail": "Des Ground CZ Basse suffisent : farme-les tôt, elles rapportent aussi crédits et matériaux (section 7)."},
+          {"text": "**Wellington Beck (Jolapa)**, puis **Uma Laszlo (Xuane)**.", "detail": "Uma Laszlo est la priorité absolue de ce guide : Damage Resistance et Faster Shield Regen côté suit, Headshot Damage/Reload Speed/Stowed Reloading côté arme."},
+          {"text": "**Domino Green (Orishis)**, puis **Kit Fowler (Capoya)**.", "detail": "Deuxième meilleure densité combat du roster : Added Melee Damage, Extra Ammo Capacity, Magazine Size."},
+          {"text": "**(Optionnel) Jude Navarro puis Terra Velasquez.**", "detail": "Redondant avec Kit Fowler côté munitions/rechargement, mais Combat Movement Speed (Terra) reste un gain net en duel rapproché."},
+          {"text": "**Ne priorise pas Oden Geiger ni Yarden Bond** pour ce profil.", "detail": "Leurs effets (vision nocturne, discrétion) servent la reconnaissance et l'infiltration — hors du périmètre de ce guide."}
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Un seul critère de déblocage est documenté", "text": "Les sources consultées pour ce guide (07, 09, 13) documentent la **structure** des trois chaînes (qui débloque qui) mais pas le critère précis d'invitation du premier Engineer de la Chaîne 2 (Jude Navarro) ni de la Chaîne 3 (Domino Green) — seul celui de Hero Ferrari (10 Ground CZ) l'est. Si tu bloques sur l'un des deux autres, vérifie sur le wiki communautaire plutôt que de supposer qu'il s'agit aussi d'un quota de CZ."},
+        {"type": "verdict", "title": "Verdict", "text": "Farme tes 10 premières Ground CZ pour Hero Ferrari, remonte la Chaîne 1 jusqu'à Uma Laszlo, puis la Chaîne 3 jusqu'à Kit Fowler. À ce stade tu détiens l'essentiel de l'ingénierie combat disponible dans la bulle Core ; tout le reste (Chaîne 2, Colonia) est un complément, pas un prérequis."}
+      ]
+    },
+    {
+      "id": "ground-cz",
+      "number": 7,
+      "title": "Progresser en Ground CZ : Basse → Moyenne → Haute",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Les Ground CZ existent en trois niveaux d'intensité, et le dernier n'est quasiment pas jouable en solo sans équipement engineeré — ce n'est pas une figure de style, c'est ce que documente le corpus.**"},
+        {"type": "table", "caption": "Les trois niveaux d'intensité de Ground CZ", "headers": ["Intensité", "Effectifs adverses", "Équipement rencontré", "Équipement recommandé côté joueur"], "rows": [
+          [{"text": "Basse", "style": "strong"}, {"text": "Réduits"}, {"text": "Armement de base, peu de véhicules"}, {"text": "Dominator grade 2-3, arme stock — accessible dès le début"}],
+          [{"text": "Moyenne", "style": "strong"}, {"text": "Modérés"}, {"text": "Armement varié, quelques snipers"}, {"text": "Dominator grade 4, Damage Resistance + Faster Shield Regen posées"}],
+          [{"text": "Haute", "style": "strong"}, {"text": "Nombreux et agressifs", "style": "lose"}, {"text": "Véhicules blindés, tourelles, snipers, troupes d'élite", "style": "lose"}, {"text": "Grade 5 pleinement engineeré, idéalement en escouade", "style": "lose"}]
+        ]},
+        {"type": "steps", "items": [
+          {"text": "**Démarre en CZ Basse** dès ta première Dominator, même au grade 1-2.", "detail": "Objectif double : farmer les 10 zones qui débloquent Hero Ferrari (section 6) et accumuler de quoi monter en grade (section 4)."},
+          {"text": "**Passe en CZ Moyenne** une fois Uma Laszlo débloqué et ta Dominator au grade 3-4.", "detail": "Damage Resistance et Faster Shield Regen changent radicalement ton taux de survie face à un armement varié."},
+          {"text": "**Réserve la CZ Haute** à un équipement grade 5 pleinement engineeré, si possible en groupe.", "detail": "Les missions partagées, introduites après le lancement d'Odyssey, permettent de réaliser une CZ à plusieurs commandants et de répartir la pression de détection et de combat."}
+        ]},
+        {"type": "callout", "tone": "warning", "title": "La Haute intensité n'est pas un palier « un peu plus dur »", "text": "À la différence de Basse et Moyenne, la Haute intensité oppose des véhicules blindés, plusieurs tourelles et des troupes d'élite en nombre — une combinaison qu'un profil solo, même bien équipé, encaisse difficilement sans ingénierie complète. Ne t'y engage pas tant que Damage Resistance, Faster Shield Regen et au moins deux modifications d'arme ne sont pas posées."},
+        {"type": "table", "caption": "Récompenses par niveau de menace — ordres de grandeur non vérifiés en session, à confirmer en jeu", "headers": ["Niveau de menace", "Crédits par mission", "Matériaux / données"], "rows": [
+          [{"text": "Faible"}, {"text": "Quelques dizaines de milliers de Cr", "style": "mid"}, {"text": "Matériaux communs, données de base"}],
+          [{"text": "Moyen"}, {"text": "Plusieurs dizaines à ~100 000+ Cr", "style": "mid"}, {"text": "Matériaux et données de grade intermédiaire"}],
+          [{"text": "Élevé"}, {"text": "Plusieurs centaines de milliers de Cr, davantage en CZ High soutenue", "style": "mid"}, {"text": "Matériaux et données de grade supérieur"}]
+        ]},
+        {"type": "callout", "tone": "info", "title": "Trois défauts de longue date, corrigés depuis juillet 2026", "text": "La mise à jour Operations du 1er juillet 2026 a corrigé trois bugs qui pénalisaient spécifiquement les Ground CZ : victoire sans navette de retour (Issue ID 80753), mauvais état à l'arrivée par Dropship (78904), et zones qui ne se résolvaient pas correctement (78480). Si tu lis un guide antérieur à cette date qui met en garde contre ces symptômes, il décrit un état du jeu révolu."},
+        {"type": "verdict", "title": "Verdict", "text": "Ne saute aucun palier. La CZ Basse te paie ton premier équipement, la Moyenne teste ton ingénierie, et la Haute récompense un profil complet plutôt qu'un joueur pressé — surtout en solo, où elle reste, de l'aveu même du corpus, quasi impraticable sans préparation."}
+      ]
+    },
+    {
+      "id": "retenir",
+      "number": 8,
+      "title": "Check-list avant l'assaut, et ce qu'il faut retenir",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Avant de descendre à la première CZ de la journée, une vérification de deux minutes évite la plupart des sorties ratées.**"},
+        {"type": "list", "items": [
+          "Combinaison Dominator au grade adapté au palier de CZ visé (section 4 et 7).",
+          "Modifications de combinaison posées : au minimum Damage Resistance et Faster Shield Regen avant une CZ Moyenne (section 5).",
+          "Arme longue adaptée (Manticore Terminator ou Karma AR-50), chargée, arme de poing en secours (section 3).",
+          "3 grenades du même type : fragmentation pour nettoyer un groupe, Shield Disruptor pour faire tomber un bouclier avant l'assaut.",
+          "Medkits et Energy Cells en stock — la santé ne se régénère pas seule.",
+          "Casier du vaisseau vidé de tes matériaux rares avant une sortie à risque : le sac à dos est perdu à la mort, pas le casier.",
+          "Jauge de force du camp soutenu surveillée en CZ : se retirer ou changer de camp s'il est en train de perdre."
+        ]},
+        {"type": "steps", "items": [
+          {"text": "**Équipe-toi** : Dominator + arme longue adaptée (sections 2-3).", "detail": ""},
+          {"text": "**Budgétise** la montée en grade jusqu'au grade 4 au minimum (section 4).", "detail": ""},
+          {"text": "**Débloque Hero Ferrari** via 10 Ground CZ Basse, puis remonte vers Uma Laszlo et Kit Fowler (section 6).", "detail": ""},
+          {"text": "**Pose tes quatre premières modifications** de combat (section 5) avant de viser la CZ Moyenne.", "detail": ""},
+          {"text": "**Progresse Basse → Moyenne → Haute**, en groupe pour la Haute (section 7).", "detail": ""}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le réflexe à automatiser en CZ", "text": "Élimine les cibles isolées avant qu'elles n'alertent le reste du groupe, et vise les points faibles une fois le bouclier adverse tombé — les dégâts kinétiques deviennent nettement plus efficaces à ce moment-là. C'est ce réflexe, plus que n'importe quelle modification d'ingénierie, qui fait la différence en CZ Moyenne."},
+        {"type": "divider"},
+        {"type": "paragraph", "text": "**Fiabilité.** Ce guide s'appuie sur trois fichiers du corpus de référence interne (09-combat-a-pied.md, 07-equipement-a-pied.md, 13-operations.md), eux-mêmes recoupés avec les billets officiels Frontier (Kestrel Mk II Update, Lynx Highliner Update Notes, Operations Update, Operations Update | Update 3, Rhino SRV Update) et des instantanés communautaires (wiki Elite Dangerous, Inara, edfieldmanual.com) capturés entre le 9 et le 13 septembre 2026. Les montants en crédits de la montée en grade de combinaison sont corroborés entre plusieurs sources communautaires mais jamais par un billet Frontier — traite-les comme un ordre de grandeur fiable, pas comme un tarif garanti."},
+        {"type": "paragraph", "text": "**Ce que ce guide ne couvre pas.** L'infiltration furtive (armes silencieuses, Quieter Footsteps, Audio Masking, missions covert) mériterait son propre manuel, pas encore publié dans ce corpus. Le prix exact de la montée en grade d'une arme, les spécialités combat des quatre Engineers de Colonia et le montant exact du rebuy à pied restent, à la date de rédaction, non chiffrés par les sources consultées — vérifie-les en jeu avant toute décision engageant beaucoup de crédits."}
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — 09-combat-a-pied.md",
+    "Corpus interne — 07-equipement-a-pied.md",
+    "Corpus interne — 13-operations.md",
+    "Billets officiels Frontier — Kestrel Mk. II Update (24/02/2026), Lynx Highliner Update Notes (28/04/2026), Operations Update (01/07/2026), Operations Update | Update 3 (09/07/2026), Rhino SRV Update (02/09/2026)",
+    "wiki Elite Dangerous (Fandom)",
+    "Inara.cz",
+    "edfieldmanual.com"
+  ]
+}

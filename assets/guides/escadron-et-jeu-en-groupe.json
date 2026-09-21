@@ -1,0 +1,241 @@
+{
+  "id": "escadron-et-jeu-en-groupe",
+  "title": "Fonder un escadron et jouer à plusieurs sans dépendre du combat",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Un escadron, même réduit à toi seul, change une mécanique concrète de la colonisation ; un Wing bien utilisé sécurise une expédition d'exploration entre amis sans jamais dépendre d'un vaisseau de combat. Ce guide couvre la création d'un escadron solo avant de coloniser, la coordination d'un groupe d'explorateurs en Wing, et pourquoi tu ne retrouves pas toujours tes amis en Open.",
+  "byline": "Toutes plateformes · Live 4.4.0.x · Prérequis : aucun rang particulier — un escadron ou un Wing se forment gratuitement",
+  "edition": "2026-09",
+  "topics": ["squadron", "escadron", "wing", "jeu en groupe", "colonisation", "exploration", "instanciation", "fuel rats", "hull seals"],
+  "estimatedReadMinutes": 16,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {"type": "list", "ordered": true, "items": [
+          "Trois échelles de jeu à plusieurs, et laquelle sert vraiment un profil non-combattant",
+          "Fonder un escadron solo pour sécuriser ta colonisation",
+          "Gérer ton escadron sur la durée : rangs, permissions, succession",
+          "Coordonner une expédition d'exploration en Wing",
+          "Pourquoi tu ne vois pas tes amis en Open, et comment forcer l'instanciation",
+          "Jouer en groupe fermé sans jamais avoir à combattre",
+          "Pièges fréquents et fiabilité des chiffres"
+        ]},
+        {"type": "paragraph", "emphasis": "intro", "text": "**Un escadron d'un seul membre change une mécanique de jeu concrète ; un Wing bien utilisé résout le problème n°1 du jeu en groupe : ne pas retrouver ses amis.** Ce guide ne réexplique ni la colonisation elle-même (voir Devenir Architecte système : fonder une colonie de A à Z) ni la survie au PvP en Open (voir Survivre au PvP sans combattre : le guide du pilote pacifiste en Open) — il se concentre sur ce que le Squadron et le Wing apportent concrètement à un joueur coopératif qui ne veut jamais dépendre d'un vaisseau de combat pour progresser."},
+        {"type": "callout", "tone": "info", "title": "Légende de fiabilité utilisée dans ce guide", "text": "**OFF** confirmé par une note de patch officielle de Frontier Developments ou par le comportement observé et documenté du jeu. **COM** retour communautaire cohérent (Inara.cz, forums, guides Steam Community) mais non confirmé par Frontier. **EST** donnée absente des sources consultées pour ce guide : signalée comme telle plutôt qu'inventée — à vérifier toi-même en jeu."},
+        {"type": "keyValue", "items": [
+          {"label": "Fenêtre de revendication d'un système colonisé, escadron même solo", "value": "30 minutes (System Architect seul) puis jusqu'à 24 heures pour tout l'escadron du System Architect", "reliability": "official"},
+          {"label": "Taille maximale d'un escadron", "value": "600 membres, 25 candidatures en attente (depuis le Patch 1 Vanguards, 22 août 2025)", "reliability": "official"},
+          {"label": "Succession du Squadron Leader", "value": "automatique, par tirage au sort, après 90 jours sans connexion du leader", "reliability": "official"},
+          {"label": "Taille maximale d'un Wing", "value": "4 joueurs, chacun dans son propre vaisseau", "reliability": "official"},
+          {"label": "Primes et combat bonds en Wing", "value": "versés à pleine valeur à chaque membre contributeur, jamais divisés", "reliability": "official"},
+          {"label": "Rejoindre les secours bénévoles (Fuel Rats, Hull Seals)", "value": "aucune condition de rang, juste le bon limpet controller à bord", "reliability": "community"}
+        ]}
+      ]
+    },
+    {
+      "id": "trois-echelles",
+      "number": 1,
+      "title": "Trois échelles de jeu à plusieurs, et laquelle sert vraiment un profil non-combattant",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Squadron, Wing et Multicrew se confondent facilement, alors qu'ils ne répondent à aucun des mêmes besoins.** Pour un commandant qui construit sa fortune par l'exobiologie, le minage ou le commerce plutôt que par le combat, un seul de ces trois systèmes mérite un vrai investissement de temps ; les deux autres se traitent en une lecture."},
+        {"type": "table", "caption": "Les trois échelles de jeu à plusieurs", "headers": ["Mécanique", "Échelle", "Persistance", "Utilité pour un profil non-combattant"], "rows": [
+          [{"text": "Squadron (escadron)", "style": "strong"}, {"text": "De 1 à 600 membres", "style": "normal"}, {"text": "Persistante (adhésion durable)", "style": "normal"}, {"text": "Haute — sécurise la colonisation, structure une communauté sur la durée", "style": "win"}],
+          [{"text": "Wing (escadre)", "style": "strong"}, {"text": "4 joueurs maximum, chacun son vaisseau", "style": "normal"}, {"text": "Temporaire (dure la session)", "style": "normal"}, {"text": "Haute — coordination en temps réel d'une expédition, sans jamais partager un seul vaisseau", "style": "win"}],
+          [{"text": "Multicrew", "style": "strong"}, {"text": "Jusqu'à 3 joueurs sur un seul vaisseau", "style": "normal"}, {"text": "Temporaire (dure la session)", "style": "normal"}, {"text": "Faible — pensé pour le combat et le pilotage de chasseur embarqué, pas pour l'exploration ou le commerce en solo", "style": "lose"}]
+        ]},
+        {"type": "heading", "level": 3, "text": "Pourquoi le Multicrew ne sert pas ce guide"},
+        {"type": "paragraph", "emphasis": "normal", "text": "En Multicrew, un seul commandant — le capitaine — encaisse le commerce, le minage et la vente de données d'exploration ; les invités ne touchent que les primes et combat bonds générés en combat, proportionnellement à leur contribution. Pour un groupe qui explore ou mine sans combattre, cela revient à transformer trois commandants autonomes en un seul commandant actif et deux passagers sans revenu propre sur l'activité principale — l'inverse de ce que cherche un joueur coopératif non-combattant. Le Wing, où chacun garde son propre vaisseau et sa propre cargaison, sert bien mieux cet objectif : voir section 4."},
+        {"type": "callout", "tone": "tip", "title": "Ce que ce guide couvre, et ce qu'il renvoie ailleurs", "text": "Ce guide traite le Squadron et le Wing en profondeur. Pour la colonisation elle-même (fondation, chantiers, ports), voir Devenir Architecte système : fonder une colonie de A à Z. Pour la survie en Open une fois instancié avec un joueur hostile, voir Survivre au PvP sans combattre : le guide du pilote pacifiste en Open."}
+      ]
+    },
+    {
+      "id": "fonder-escadron-colonisation",
+      "number": 2,
+      "title": "Fonder un escadron solo pour sécuriser ta colonisation",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Un escadron d'un seul membre — toi — change une règle concrète du jeu : la durée pendant laquelle tu es seul à pouvoir revendiquer un système que tu viens de coloniser.** Ce mécanisme, introduit pour lutter contre le « claim sniping » (l'accaparement précoce d'une revendication par un tiers), récompense un geste administratif de trente secondes fait avant de lancer la colonisation."},
+        {"type": "heading", "level": 3, "text": "Le mécanisme anti-claim-sniping, en clair"},
+        {"type": "table", "caption": "Fenêtre de revendication après l'achèvement du port primaire", "headers": ["Délai depuis l'achèvement du port primaire", "Qui peut revendiquer le système"], "rows": [
+          [{"text": "0 à 30 minutes", "style": "strong"}, {"text": "Le System Architect exclusivement — le commandant à l'origine de la colonisation", "style": "normal"}],
+          [{"text": "30 minutes à 24 heures (23,5 heures de fenêtre)", "style": "strong"}, {"text": "Tous les membres de l'escadron du System Architect", "style": "win"}],
+          [{"text": "Au-delà de 24 heures", "style": "strong"}, {"text": "N'importe quel commandant", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Ça marche même si ton escadron n'a qu'un seul membre", "text": "Frontier précise explicitement que cette extension de fenêtre s'applique « even if the System Architect is in their own solo Squadron » — même si l'escadron ne compte que toi. À l'inverse, si tu n'appartiens à aucun escadron au moment de la colonisation, seul le verrou de 30 minutes s'applique : passé ce délai, n'importe quel commandant peut revendiquer, y compris un tiers qui n'a rien construit."},
+        {"type": "steps", "items": [
+          {"text": "Crée ton escadron plusieurs jours avant de lancer une colonisation, jamais le jour même.", "detail": "La création elle-même prend quelques minutes, mais autant t'assurer qu'elle est validée à l'avance plutôt que de le découvrir au pire moment."},
+          {"text": "Renseigne les trois champs obligatoires : devise (motto), déclaration de mission et conditions de candidature.", "detail": "Le jeu refusait autrefois la création si l'un de ces champs restait vide, en échouant silencieusement — corrigé au Patch 3, mais autant les remplir dès le départ."},
+          {"text": "Ajoute un logo et une bannière, également requis.", "detail": "Aucun contenu narratif n'est exigé au-delà de l'existence de ces champs."},
+          {"text": "Lance la colonisation depuis le contact dédié une fois l'escadron confirmé actif.", "detail": "Le panneau de revendication affiche désormais si un verrou est actif et la durée restante."},
+          {"text": "Si tu joues avec des alliés qui n'ont pas participé à la colonisation, invite-les dans ton escadron avant l'achèvement du port primaire.", "detail": "Ce sont les membres de l'escadron du System Architect au moment considéré qui bénéficient de la fenêtre étendue."}
+        ]},
+        {"type": "heading", "level": 3, "text": "Le filtre anti-injures accepte enfin les accents"},
+        {"type": "list", "ordered": false, "items": [
+          "Les trois champs texte libre (motto, description, messages de recrutement) passent par un filtre anti-injures.",
+          "Ce filtre, jugé trop restrictif au lancement de la refonte Vanguards, a été assoupli au Patch 1 pour autoriser explicitement les virgules et les caractères accentués.",
+          "Un motto ou une description entièrement en français ne devrait donc plus être rejetée à tort depuis fin août 2025."
+        ]},
+        {"type": "callout", "tone": "info", "title": "Point non confirmé : la création est-elle gratuite ?", "text": "Aucune source officielle consultée ne précise s'il existe une condition de rang, d'ancienneté ou de coût pour fonder un escadron. La compréhension communautaire générale est que c'est gratuit et ouvert à tout commandant, mais ce n'est pas confirmé par une note de patch ou une page officielle — vérifie-le toi-même en jeu avant de t'appuyer dessus pour planifier un timing serré."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Ce guide ne rechiffre pas la colonisation elle-même — fondation d'un port primaire, choix du système, coûts de construction : voir Devenir Architecte système : fonder une colonie de A à Z, le guide de référence sur ce sujet. Ce qui précède ne concerne que la fenêtre de revendication qui s'ouvre une fois le port primaire achevé."},
+        {"type": "verdict", "title": "Verdict", "text": "Crée un escadron solo avant toute colonisation, même si tu ne comptes jamais recruter personne. Le coût est nul en temps de jeu et potentiellement nul en crédits (non confirmé, mais jamais démenti), le bénéfice est une fenêtre de sécurité de 23,5 heures supplémentaires pour toi et tes alliés éventuels — largement suffisant pour réagir à une tentative d'accaparement pendant que tu dors."}
+      ]
+    },
+    {
+      "id": "gouvernance-escadron",
+      "number": 3,
+      "title": "Gérer ton escadron sur la durée : rangs, permissions, succession",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Un escadron, même réduit à un seul membre au départ, hérite de toute la mécanique de gouvernance prévue pour des escadrons de plusieurs centaines de pilotes.** Comprendre les rangs et la succession automatique évite deux mauvaises surprises : perdre le contrôle de ton propre escadron, ou le voir basculer en « Inactive » sans le vouloir."},
+        {"type": "table", "caption": "Rangs confirmés d'un escadron, du plus élevé au plus bas", "headers": ["Rang", "Ce qu'il permet"], "rows": [
+          [{"text": "Squadron Leader", "style": "strong"}, {"text": "Seul rang habilité à acheter un Squadron Carrier et à gérer les commandes du bar embarqué", "style": "win"}],
+          [{"text": "Senior Officer", "style": "strong"}, {"text": "Capacités de gestion étendues, mais pas l'achat du Squadron Carrier", "style": "normal"}],
+          [{"text": "Recruit", "style": "strong"}, {"text": "Rang d'entrée, observé sur les fiches d'escadron communautaires", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "info", "title": "Des rangs intermédiaires existent probablement", "text": "La hiérarchie proposait historiquement plusieurs échelons ; un ou plusieurs rangs intermédiaires entre Senior Officer et Recruit existent vraisemblablement, mais leur dénomination exacte n'a pas pu être confirmée par les sources consultées pour ce guide."},
+        {"type": "heading", "level": 3, "text": "Groupes de permissions personnalisables"},
+        {"type": "paragraph", "emphasis": "normal", "text": "Au-delà de la hiérarchie de rangs, des groupes de permissions personnalisables permettent d'attribuer des droits de gestion plus fins que le simple rang. Ce système a été activement retravaillé pendant la saison Vanguards : un bug de crash lors de l'édition des groupes de permissions a été corrigé, le propriétaire fondateur ne peut plus retirer par erreur ses propres droits de gestion, et un bug empêchant certains Squadron Leaders d'éditer les permissions de rang a été corrigé quelques semaines plus tard. Le détail exact de l'interface (combien de groupes, quelles actions sont attribuables individuellement) n'a pas pu être confirmé par une source consultée — à explorer directement dans l'onglet de gestion de ton escadron."},
+        {"type": "divider"},
+        {"type": "heading", "level": 3, "text": "Succession automatique après 90 jours d'inactivité"},
+        {"type": "steps", "items": [
+          {"text": "Chaque maintenance hebdomadaire, le jeu vérifie si le Squadron Leader s'est connecté au cours des 90 derniers jours.", "detail": "Ce délai court même pour un escadron solo, mais dans ce cas il n'y a personne à qui transférer le leadership."},
+          {"text": "Si le leader est inactif, un message est envoyé aux membres actifs du rang immédiatement inférieur, les informant qu'il a jusqu'à la prochaine maintenance pour se reconnecter.", "detail": "Si aucun membre actif n'est trouvé à ce rang, le rang suivant est vérifié, et ainsi de suite."},
+          {"text": "Si le leader ne s'est toujours pas reconnecté à la maintenance suivante, un nouveau leader est tiré au sort parmi les membres actifs ayant reçu le message.", "detail": "Le rang le plus bas de l'escadron n'est jamais éligible à cette succession."},
+          {"text": "Le nouveau leader désigné peut retransférer librement le leadership via l'interface Roster.", "detail": "Utile si le tirage au sort désigne un membre qui ne souhaite pas garder le rôle."},
+          {"text": "Si aucun membre actif n'est trouvé à aucun rang éligible, l'escadron est marqué « Inactive ».", "detail": "Cela le masque uniquement du Squadron Browser public ; il redevient visible dès qu'un membre se reconnecte — aucune donnée n'est perdue."}
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Le cas particulier de l'escadron solo", "text": "Un escadron réduit à un seul membre — le cas typique d'un escadron créé uniquement pour la fenêtre de colonisation (section 2) — n'a personne à qui transférer le leadership. Au bout de 90 jours sans connexion, il bascule simplement en « Inactive » : rien n'est supprimé, et une reconnexion suffit à le réactiver. Ce n'est donc pas un risque à gérer activement pour ce cas d'usage précis."},
+        {"type": "keyValue", "items": [
+          {"label": "Taille maximale d'un escadron", "value": "600 membres (depuis 500 avant la refonte Vanguards)", "reliability": "official"},
+          {"label": "Candidatures en attente maximum", "value": "25 (depuis 10 avant la refonte)", "reliability": "official"},
+          {"label": "Date d'entrée en vigueur de ces deux plafonds", "value": "Patch 1 Vanguards, 22 août 2025 — confirmés stables jusqu'au Caspian Explorer Update (2 décembre 2025)", "reliability": "official"},
+          {"label": "Rang exclu de la succession automatique", "value": "le rang le plus bas de l'escadron", "reliability": "official"}
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "Pour un escadron de plusieurs membres, comprends la succession automatique avant qu'elle ne te concerne : un Leader qui part en pause prolongée n'immobilise plus l'escadron indéfiniment. Pour un escadron solo créé uniquement pour la colonisation, ignore cette mécanique sans risque — le pire qui puisse arriver est un masquage temporaire du Squadron Browser, réversible d'une simple connexion."}
+      ]
+    },
+    {
+      "id": "wing-expedition-exploration",
+      "number": 4,
+      "title": "Coordonner une expédition d'exploration en Wing",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Un Wing d'explorateurs ne partage jamais un vaisseau ni des données d'exploration — il partage une formation, un cap, et la certitude de rester ensemble d'un saut à l'autre.** C'est exactement ce qu'il faut à un petit groupe qui part cartographier une région éloignée, sans qu'aucun membre ne dépende du combat ou d'un vaisseau hôte."},
+        {"type": "heading", "level": 3, "text": "Ce qu'un Wing apporte concrètement à un groupe d'explorateurs"},
+        {"type": "list", "ordered": false, "items": [
+          "**Nav-lock** : chaque membre peut verrouiller sa navigation sur un autre depuis le panneau Wing — la prochaine destination de saut FSD, de supercruise ou d'accostage sélectionnée par la cible est reprise automatiquement. De quoi suivre un chef de formation de système en système sans re-sélectionner soi-même chaque destination.",
+          "**Panneau Wing** : affiche en permanence, pour chaque membre présent dans la même instance, sa position relative, sa distance et son cap — un repère de navigation continu, sans aucun module ou objet à équiper.",
+          "**Aucune hiérarchie formelle** : n'importe quel membre peut inviter tant que le Wing n'a pas atteint 4 joueurs ; pas de rôle « chef de wing » disposant de permissions administratives particulières.",
+          "**Missions de wing partagées** : une mission acceptée par un membre peut se propager aux autres membres présents, qui y contribuent et en touchent la récompense sans l'accepter individuellement au préalable."
+        ]},
+        {"type": "callout", "tone": "info", "title": "Ce qui reste individuel, même en Wing", "text": "Les données d'exploration (scans FSS/DSS, exobiologie) restent la propriété de celui qui les a collectées et se vendent individuellement à chaque retour de station — un Wing ne mutualise ni ne partage cette valeur. Seuls les bounty vouchers et combat bonds sont versés à pleine valeur à chaque membre contributeur ; une expédition d'exploration pure n'a simplement jamais l'occasion d'en toucher."},
+        {"type": "table", "caption": "Wing ou Squadron pour une expédition d'exploration ?", "headers": ["Besoin", "Outil"], "rows": [
+          [{"text": "Rester groupé en temps réel pendant l'expédition, se suivre de saut en saut", "style": "normal"}, {"text": "Wing — nav-lock et panneau de position", "style": "strong"}],
+          [{"text": "Coordonner un groupe plus large entre les sessions, sur plusieurs semaines", "style": "normal"}, {"text": "Squadron — persiste hors connexion, pas de limite de 4 joueurs", "style": "strong"}],
+          [{"text": "Forcer deux amis à se retrouver dans la même instance réseau", "style": "normal"}, {"text": "Wing — le Squadron n'a aucun effet confirmé sur l'instanciation (voir section 5)", "style": "strong"}]
+        ]},
+        {"type": "steps", "items": [
+          {"text": "Invite tes coéquipiers via le panneau Comms/Contacts par pseudonyme de Commandant avant le départ.", "detail": "Gratuit, aucun prérequis de rang."},
+          {"text": "Une fois mutuellement visibles en supercroisière, active le nav-lock sur le membre qui ouvre la route.", "detail": "Voir section 5 pour la mécanique complète de mise en instance commune."},
+          {"text": "Reste dans la même instance réseau si tu veux garder le suivi mutuel actif : au-delà d'une certaine distance ou en cas de connexion dégradée, un membre peut se désynchroniser dans une instance séparée.", "detail": "Il n'apparaît alors plus sur le panneau Wing tant qu'il n'est pas revenu dans la même instance."},
+          {"text": "Pour une expédition de plusieurs semaines avec des participants qui ne jouent pas aux mêmes horaires, double le Wing par session d'un Squadron persistant.", "detail": "Le Squadron garde la coordination vivante entre les sessions ; le Wing gère le temps réel une fois tout le monde connecté."}
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Combien de commandants dans une même instance ?", "text": "Le chiffre de « 32 joueurs par instance », souvent cité, remonte au financement participatif du jeu (2012-2013) et n'a jamais été republié comme plafond technique ferme par une source datée de la version actuelle. En pratique, la taille réelle dépend surtout de la bande passante et de la latence des participants — avec coordination communautaire, un record de 127 commandants simultanés a été atteint lors de l'expédition « Small Worlds 2 »."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Pour une expédition longue distance, un Fleet Carrier positionné en relais logistique — sur le modèle du réseau DSSA (Deep Space Support Array) qui maille la périphérie de la Bulle de porte-vaisseaux offrant a minima réparation et ravitaillement — évite à chaque membre du Wing de revenir jusqu'à la Bulle pour se réapprovisionner. Ce guide ne rechiffre pas l'achat ni l'entretien d'un Fleet Carrier : voir Posséder et rentabiliser un Porte-Vaisseau, le guide de référence sur ces chiffres, avant d'envisager cette logistique pour ton groupe."},
+        {"type": "verdict", "title": "Verdict", "text": "Pour une expédition d'exploration entre amis, le Wing est l'outil quasiment gratuit qui règle 90 % des frictions de coordination en temps réel — nav-lock et panneau de position, sans jamais toucher à la propriété individuelle des données collectées. Réserve le Squadron à la coordination entre les sessions, pas à la navigation elle-même."}
+      ]
+    },
+    {
+      "id": "instanciation-open",
+      "number": 5,
+      "title": "Pourquoi tu ne vois pas tes amis en Open, et comment forcer l'instanciation",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**« On est dans le même système, en Open, et je ne le vois pas » est la plainte la plus commune du jeu en groupe — et elle a une explication mécanique précise, pas un bug.** Comprendre l'instanciation évite de perdre une session entière à chercher un ami qui est, techniquement, juste à côté."},
+        {"type": "heading", "level": 3, "text": "Trois critères doivent se combiner pour partager une instance"},
+        {"type": "list", "ordered": false, "items": [
+          "**Le mode de jeu**, filtre strict et exclusif : Solo n'instancie jamais avec un autre humain (uniquement des PNJ) ; Groupe privé n'instancie qu'avec les membres explicitement invités par son propriétaire ; Open peut instancier avec n'importe quel autre joueur en Open, sans aucune garantie de rencontre.",
+          "**La localisation fine** : être dans le même système ne suffit pas, il faut partager le même point local — même sortie de supercroisière, même signal, même station, même site de surface.",
+          "**La qualité de connexion** : le matchmaking privilégie des paires à latence comparable et proches géographiquement, ce qui peut empêcher deux amis très éloignés (même système, même mode) de s'instancier ensemble."
+        ]},
+        {"type": "table", "caption": "Ce qui pèse le même quel que soit le mode choisi", "headers": ["Système", "Effet du mode de jeu (Solo/Privé/Open)"], "rows": [
+          [{"text": "Instanciation P2P en temps réel (te voir, te battre, voler ensemble)", "style": "normal"}, {"text": "Dépend entièrement du mode — c'est tout l'objet de cette section", "style": "mid"}],
+          [{"text": "BGS (influence de faction)", "style": "strong"}, {"text": "Identique dans les trois modes — une mission, une vente ou un combat pèse pareil", "style": "win"}],
+          [{"text": "Powerplay (mérites)", "style": "strong"}, {"text": "Identique dans les trois modes, selon le même principe de parité", "style": "win"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Le prix caché du Solo permanent", "text": "Un groupe qui choisit d'agir sur le BGS uniquement en Solo obtient une immunité totale au risque de rétorsion PvP — invisible et inattaquable par des rivaux en Open — mais il devient techniquement impossible d'y former ou d'y rejoindre un Wing. Toute coordination doit alors passer par des moyens hors-jeu (chat vocal, tableurs), ce qui va à l'encontre même de l'objectif d'un guide sur le jeu en groupe."},
+        {"type": "heading", "level": 3, "text": "Le nav-lock en Wing : la méthode la plus fiable pour se retrouver"},
+        {"type": "steps", "items": [
+          {"text": "Retrouve-toi mutuellement visible avec ton ami en supercroisière, dans le même système.", "detail": "C'est le signal que vous êtes déjà, au moins partiellement, dans une instance commune."},
+          {"text": "Forme un Wing et active le nav-lock sur lui.", "detail": "Voir la mécanique complète en section 4."},
+          {"text": "Laisse le Wing terminer le regroupement : le coéquipier qui rejoint est placé dans l'instance de son coéquipier.", "detail": "C'est le remède le plus fiable documenté pour se retrouver entre amis en Open."},
+          {"text": "Si l'instanciation échoue malgré un Wing actif, vérifie le type de NAT affiché dans le menu réseau du jeu.", "detail": "Un NAT strict (symétrique) empêche l'établissement direct de la connexion P2P."},
+          {"text": "Derrière un CGNAT (IP mutualisée par le fournisseur d'accès, fréquent en fibre/mobile), active manuellement la redirection du port UDP dédié si l'UPnP du routeur échoue, assigne une IP locale statique à ta machine, ouvre les exceptions pare-feu nécessaires, et envisage IPv6 ou un service de redirection de port en dernier recours.", "detail": "Le CGNAT empêche structurellement la connexion entrante qu'exige le P2P — la redirection de port classique ne suffit pas toujours à elle seule."}
+        ]},
+        {"type": "callout", "tone": "info", "title": "Le Squadron ne force rien", "text": "Contrairement au Wing, le Squadron n'a aucun effet connu et confirmé sur le matchmaking d'instance : il structure la vie sociale et le soutien BGS d'un groupe, pas sa visibilité mutuelle en jeu. Appartenir au même escadron qu'un ami ne garantit donc jamais de se croiser en Open — seul le Wing le fait."},
+        {"type": "verdict", "title": "Verdict", "text": "Le trio mode de jeu + localisation fine + qualité de connexion explique la quasi-totalité des « je ne le vois pas ». Face à un échec persistant, le réflexe à tester dans l'ordre est : former un Wing et activer le nav-lock, puis vérifier le type de NAT si cela ne suffit pas."}
+      ]
+    },
+    {
+      "id": "jeu-prive-sans-combat",
+      "number": 6,
+      "title": "Jouer en groupe fermé sans jamais avoir à combattre",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le jeu en groupe non-combattant ne se limite pas au Squadron et au Wing : rendre son escadron discret et rejoindre les secours bénévoles sont deux façons concrètes de jouer collectivement sans jamais dépendre d'une arme.**"},
+        {"type": "heading", "level": 3, "text": "Rendre son escadron discret"},
+        {"type": "table", "caption": "Niveaux de visibilité d'un escadron (depuis le Patch 2 Vanguards)", "headers": ["Niveau", "Effet"], "rows": [
+          [{"text": "Public (par défaut)", "style": "normal"}, {"text": "Visible et localisable dans le Squadron Browser par tout commandant", "style": "normal"}],
+          [{"text": "Private", "style": "strong"}, {"text": "Masque la localisation et d'autres détails aux commandants non-membres", "style": "win"}],
+          [{"text": "Squadron only", "style": "strong"}, {"text": "Même effet, réservé à la consultation par les membres de l'escadron", "style": "win"}]
+        ]},
+        {"type": "paragraph", "emphasis": "normal", "text": "Cette option convient particulièrement à un groupe d'amis qui veut jouer sans exposer ses activités au grand public — un complément direct au choix du mode Groupe privé pour les sessions elles-mêmes, sans les limites d'instanciation strictes de ce dernier."},
+        {"type": "divider"},
+        {"type": "heading", "level": 3, "text": "Rejoindre les secours bénévoles : Fuel Rats et Hull Seals"},
+        {"type": "list", "ordered": false, "items": [
+          "**Fuel Rats** — build minimal : un Fuel Transfer Limpet Controller et un stock de limpets, sur un vaisseau capable d'atteindre rapidement la position du commandant en détresse (FSD à portée confortable, pas nécessairement ingénierée).",
+          "**Hull Seals** — build minimal : un Hull/Module Repair Limpet Controller pour la réparation de coque à distance ; matériel et service distincts des Fuel Rats, qui ne traitent pas le carburant.",
+          "L'appel se déclenche par le commandant en détresse lui-même, via la procédure documentée sur fuelrats.com : il poste sa position, reprise en charge par un « Rat » disponible.",
+          "Les deux organisations opèrent en dehors de toute affiliation de faction ou de superpuissance, quel que soit le mode de jeu ou l'allégeance du commandant secouru — aucune condition de rang à remplir."
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Une vraie communauté de jeu en groupe, hors de tout outil Frontier", "text": "Contrairement au Squadron et au Wing, ces deux organisations se coordonnent entièrement en dehors du jeu — Discord et forums dédiés. Rejoindre l'une d'elles est une façon concrète de jouer en groupe et de rendre service sans jamais tirer un coup de feu, ni t'inscrire à quoi que ce soit de plus formel qu'un canal Discord."},
+        {"type": "verdict", "title": "Verdict", "text": "Le duo Squadron privé + secours bénévole couvre l'essentiel du jeu en groupe non-combattant hors expédition : le premier protège la vie privée d'un groupe d'amis, le second transforme du temps de jeu en aide concrète à d'autres commandants, sans jamais dépendre d'un vaisseau armé."}
+      ]
+    },
+    {
+      "id": "pieges-fiabilite",
+      "number": 7,
+      "title": "Pièges fréquents et fiabilité des chiffres",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Les mécaniques de ce guide sont solides sur les chiffres, mais certains détails d'interface restent des trous documentés que ce guide ne comble pas en inventant.**"},
+        {"type": "table", "caption": "Pièges fréquents", "headers": ["Piège", "Conséquence", "Comment l'éviter"], "rows": [
+          [{"text": "Lancer une colonisation avant de fonder ton escadron", "style": "normal"}, {"text": "Fenêtre de revendication limitée à 30 minutes au lieu de 24 heures", "style": "lose"}, {"text": "Crée l'escadron plusieurs jours à l'avance — section 2", "style": "normal"}],
+          [{"text": "Laisser motto, mission statement ou conditions de candidature vides", "style": "normal"}, {"text": "Corrigé depuis le Patch 3, mais autant les remplir dès la création", "style": "mid"}, {"text": "Renseigne les trois champs obligatoires avant de valider — section 2", "style": "normal"}],
+          [{"text": "Compter sur le Squadron pour te faire croiser un ami en Open", "style": "normal"}, {"text": "Aucun effet confirmé sur le matchmaking d'instance", "style": "lose"}, {"text": "Forme un Wing et active le nav-lock — section 5", "style": "normal"}],
+          [{"text": "Agir sur le BGS uniquement en Solo pour éviter tout risque", "style": "normal"}, {"text": "Immunité PvP totale, mais impossible d'y former ou rejoindre un Wing", "style": "lose"}, {"text": "Coordonne hors-jeu si tu tiens à rester en Solo — section 5", "style": "normal"}],
+          [{"text": "Ignorer le type de NAT affiché dans le menu réseau", "style": "normal"}, {"text": "Instanciation qui échoue systématiquement malgré un Wing actif", "style": "lose"}, {"text": "Vérifie le NAT et le CGNAT avant d'accuser un bug — section 5", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Le cas particulier d'un escadron solo à 90 jours d'inactivité", "text": "Un escadron réduit à toi seul, créé uniquement pour la fenêtre de colonisation, bascule en « Inactive » après 90 jours sans connexion — sans perte de données, réversible d'une simple reconnexion. Ce n'est pas une raison de te connecter par obligation, mais autant le savoir avant de t'en inquiéter à tort."},
+        {"type": "keyValue", "items": [
+          {"label": "Fenêtre de revendication étendue à l'escadron", "value": "30 minutes à 24 heures après l'achèvement du port primaire", "reliability": "official"},
+          {"label": "Taille maximale d'un escadron / candidatures en attente", "value": "600 membres / 25 candidatures depuis le Patch 1 Vanguards (22 août 2025)", "reliability": "official"},
+          {"label": "Taille maximale d'un Wing", "value": "4 joueurs, chacun dans son propre vaisseau", "reliability": "official"},
+          {"label": "Partage des primes et combat bonds en Wing", "value": "pleine valeur à chaque membre contributeur, jamais divisé", "reliability": "official"},
+          {"label": "Condition de rang pour fonder un escadron ou rejoindre Fuel Rats/Hull Seals", "value": "aucune condition confirmée dans les deux cas", "reliability": "community"}
+        ]},
+        {"type": "callout", "tone": "info", "title": "Ce que ce guide ne peut pas confirmer", "text": "La liste complète des rangs d'escadron au-delà de Squadron Leader, Senior Officer et Recruit, le détail exact de l'interface des groupes de permissions, une éventuelle condition de rang ou de coût pour fonder un escadron, le mécanisme précis d'affiliation formelle à un Power au-delà du filtre du Squadron Browser, et les catégories exactes des Squadron Leaderboards n'ont pas pu être confirmés par les sources consultées pour ce guide — vérifie-les directement en jeu avant de t'appuyer dessus."},
+        {"type": "verdict", "title": "Verdict", "text": "Fonde un escadron solo avant toute colonisation, utilise le Wing — jamais le Multicrew — pour coordonner une expédition d'exploration entre amis, et réserve le Squadron à la coordination sociale et à la fenêtre de revendication plutôt qu'à l'instanciation, que seul le Wing garantit."}
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — 22-squadrons.md",
+    "Corpus interne — 23-jeu-en-groupe.md",
+    "Steam News Frontier (API ISteamNews v0002) — billets Vanguards, Patch 1/2/3, Type-11 Prospector Update et Update 2",
+    "Inara.cz — annuaire des escadrons",
+    "Fiche Steam officielle Elite Dangerous (appid 359320)",
+    "fuelrats.com — procédure d'appel de détresse",
+    "hullseals.space",
+    "forums.frontier.co.uk — réseau DSSA (Deep Space Support Array), Fleetcomm",
+    "Guide de référence du corpus — guide-architecte-systeme.json (colonisation)",
+    "Guide de référence du corpus — survivre-au-pvp-sans-combattre.json (survie PvP)",
+    "Guide de référence du corpus — porte-vaisseau-rentable.json (Fleet Carrier)"
+  ]
+}

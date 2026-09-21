@@ -1,0 +1,238 @@
+{
+  "id": "devenir-pirate",
+  "title": "Devenir pirate : chasser, forcer, écouler sans jamais tuer un joueur",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "La chaîne opératoire complète de la piraterie PvE — cibler, scanner, interdire, forcer l'éjection du cargo, écouler — avec deux builds chiffrés au même gabarit et les trois terrains de chasse réellement documentés.",
+  "byline": "PC · Live · Piraterie PvE (PNJ uniquement) · Aucun rang de superpuissance requis",
+  "edition": "2026-09",
+  "topics": ["piraterie", "pve", "manifest scanner", "convoy dispersal pattern", "marché noir", "hatch breaker"],
+  "estimatedReadMinutes": 16,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {"type": "list", "ordered": true, "items": [
+          "Ton profil : chasseur PvE, pas ganker",
+          "La chaîne opératoire en 7 étapes",
+          "Le seul scanner qui compte : le Manifest Scanner",
+          "Où chasser : trois terrains documentés",
+          "Deux builds chiffrés : Python contre Krait Mk II",
+          "Écouler le butin : marché noir et Interstellar Factors",
+          "Piraterie PvE, PvP et étiquette : ce qui distingue le pirate du ganker",
+          "Check-list avant de partir, et ce qu'il faut retenir"
+        ]},
+        {"type": "paragraph", "emphasis": "intro", "text": "**Tu ne veux pas détruire, tu veux forcer une reddition et repartir avec la cargaison.** Ce manuel construit la chaîne opératoire complète de la piraterie PvE (perspective offensive, contre des PNJ uniquement) : cibler une cible chargée, la scanner avant d'agir, l'interdire, la mass locker, forcer l'éjection de son cargo, le récupérer, puis l'écouler. Deux builds chiffrés au même gabarit, trois terrains de chasse documentés, et le sort légal exact du butin volé."},
+        {"type": "paragraph", "text": "Ce guide adopte la perspective du pirate, pas de sa victime. Si tu cherches à *survivre* à une interdiction plutôt qu'à la déclencher — reconnaître un ganker, fuir une interdiction, rejoindre un groupe anti-PvP — c'est survivre-au-pvp-sans-combattre.json qu'il te faut : il établit déjà la distinction entre pirate et ganker, et ce guide ne la réexplique pas dans le détail, seulement le strict nécessaire pour que tu restes du bon côté de cette ligne (section 7)."},
+        {"type": "callout", "tone": "info", "title": "Comment lire les chiffres de ce guide", "text": "**OFF** = confirmé par une source officielle ou un jeu de données extrait du jeu (Frontier, EDCD/coriolis-data). **COM** = documenté par la communauté (forums, wiki, Coriolis, EDSY) sans confirmation officielle directe. **EST** = estimation ou calcul de ce guide, explicitement signalé comme tel. Un point traverse ce guide : la fréquence réelle des interdictions par PNJ pirates en état Pirate Attack et les montants exacts de primes en RES ne sont confirmés par aucune source fiable consultée — ce guide le signale plutôt que de l'inventer."},
+        {"type": "callout", "tone": "warning", "title": "Piraterie PvE, pas PvP", "text": "Tout ce guide suppose des cibles **PNJ**. Pirater un autre joueur pose une question d'étiquette déjà tranchée ailleurs dans ce corpus (section 7) : la communauté distingue nettement le pirate, qui prend une rançon et relâche sa cible, du **ganker**, qui détruit sans intérêt pour le butin. Si tu ne sais pas de quel côté tu te situes, ce n'est probablement pas la piraterie que tu pratiques."}
+      ]
+    },
+    {
+      "id": "profil",
+      "number": 1,
+      "title": "Ton profil : chasseur PvE, pas ganker",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**La piraterie PvE est une activité de jeu normale, sans question d'étiquette — dès l'instant où ta cible est un PNJ.** Confondre ce guide avec un manuel de ganking te ferait manquer l'essentiel : ici, l'objectif est de forcer une reddition et de repartir avec du cargo, pas de détruire pour détruire."},
+        {"type": "heading", "text": "Piraterie PvE contre piraterie PvP : deux jeux, une seule étiquette qui compte", "level": 3},
+        {"type": "paragraph", "text": "Le corpus de référence est net sur ce point : la piraterie contre des PNJ ne pose aucune question d'étiquette, c'est une activité de jeu normale au même titre que le commerce ou le minage. C'est la piraterie contre un **autre joueur** qui en pose une, parce que la communauté y distingue deux profils aux intentions opposées — mais cette distinction, ce guide ne la reconstruit pas : elle est déjà établie en détail dans survivre-au-pvp-sans-combattre.json (scan de cargaison qui alerte, demande explicite avant de tirer, cibles favorites d'un ganker), qui la traite du point de vue de la victime."},
+        {"type": "table", "caption": "Ce que ce guide couvre, et ce qu'il renvoie ailleurs", "headers": ["Sujet", "Traité ici", "Renvoi"], "rows": [
+          [{"text": "Chaîne opératoire offensive (cibler → écouler)", "style": "strong"}, {"text": "Oui — sections 2 à 6", "style": "win"}, {"text": "—"}],
+          [{"text": "Distinction pirate / ganker en détail", "style": "strong"}, {"text": "Non — résumé section 7 seulement", "style": "mid"}, {"text": "survivre-au-pvp-sans-combattre.json"}],
+          [{"text": "Mini-jeu d'interdiction, mass lock, low/high wake", "style": "strong"}, {"text": "Résumé opérationnel seulement", "style": "mid"}, {"text": "Corpus de référence combat spatial"}],
+          [{"text": "Marché noir, systèmes Anarchy, contrebande", "style": "strong"}, {"text": "Résumé légal du butin (section 6)", "style": "mid"}, {"text": "Corpus de référence commerce"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Ne deviens pas ce que tu chasses", "text": "Le pirate documenté par ce guide scanne avant d'agir, communique une demande, et relâche sa cible une fois le butin cédé — contre des PNJ, cette étiquette n'a aucune conséquence mécanique, mais elle conditionne ton comportement si jamais tu interdis un joueur par erreur. Un tir immédiat sans négociation, quelle que soit la cible, c'est le mode opératoire du ganker, pas du pirate. Voir section 7."},
+        {"type": "list", "ordered": false, "items": [
+          "Aucun rang de superpuissance requis pour les deux builds chiffrés de ce guide (section 5).",
+          "Aucune compétence de combat avancée : l'objectif est de faire céder une cible, pas de gagner un duel prolongé.",
+          "Un module de scan (Manifest Scanner, section 3) suffit à éviter d'interdire un vaisseau vide pour rien."
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "Ce guide est écrit pour un seul profil : celui qui veut forcer une reddition PNJ et repartir avec du cargo, pas détruire pour détruire. Si ton objectif est de survivre à un pirate ou à un ganker plutôt que d'en devenir un, c'est survivre-au-pvp-sans-combattre.json qu'il te faut — les deux manuels se complètent, ils ne se recouvrent pas."}
+      ]
+    },
+    {
+      "id": "chaine-operatoire",
+      "number": 2,
+      "title": "La chaîne opératoire en 7 étapes",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Sept étapes, dans cet ordre précis : en sauter une seule suffit à te faire rentrer bredouille ou à te faire repérer pour rien.** Chacune s'appuie sur un module ou une mécanique déjà chiffrés ailleurs dans le corpus ; ce guide les assemble en une seule procédure jouable."},
+        {"type": "steps", "items": [
+          {"text": "**Cibler une cible chargée**", "detail": "Un PNJ marchand — Type-9 Heavy, Type-7 Transporter, ou tout autre Lakon lourd — repéré sur une lane commerciale ou dans un signal (section 4). Un vaisseau de combat PNJ n'a généralement rien à piller."},
+          {"text": "**Lire le manifeste avant d'engager**", "detail": "Scanne la cargaison au Manifest Scanner (section 3) avant l'interdiction : un vaisseau vide n'a rien à céder, et tu viens de perdre ton effet de surprise pour rien."},
+          {"text": "**Interdire proprement**", "detail": "Déclenche le mini-jeu d'interdiction en supercroisière. La mécanique complète (résister ou se soumettre, positionnement de sortie) est déjà chiffrée dans le corpus de référence combat spatial — ce guide ne la reproduit pas."},
+          {"text": "**Mass locker la cible**", "detail": "Une fois sorti en espace normal, ton Mass Lock Factor (et celui de tout vaisseau tiers massif à proximité) empêche la cible de recharger son FSD tant qu'elle reste à portée."},
+          {"text": "**Forcer l'éjection du cargo**", "detail": "Un ou plusieurs Hatch Breaker Limpet Controllers endommagent la trappe de soute et forcent l'éjection de conteneurs de marchandise, sans nécessairement détruire le vaisseau cible — c'est précisément le but : le cargo compte, pas l'épave."},
+          {"text": "**Récupérer**", "detail": "Un Collector Limpet Controller ramasse les conteneurs éjectés flottant dans l'espace. Lance-le tôt : les conteneurs dérivent et peuvent finir hors de portée si tu tardes."},
+          {"text": "**Écouler**", "detail": "La cargaison récupérée est marquée volée (stolen) : elle ne se revend que sur un marché noir ou via un Interstellar Factors Contact (section 6)."}
+        ]},
+        {"type": "heading", "text": "Le manifeste avant tout : l'étape que les débutants sautent", "level": 3},
+        {"type": "callout", "tone": "tip", "title": "Pourquoi scanner avant d'interdire", "text": "Interdire un vaisseau vide te coûte du temps et alerte inutilement le trafic local — un PNJ interdit sans raison peut prévenir la sécurité si tu ouvres le feu ensuite. Le Manifest Scanner (section 3) élimine ce risque en te montrant le contenu de la soute *avant* d'engager quoi que ce soit."},
+        {"type": "callout", "tone": "warning", "title": "Le scan alerte la cible, dans les deux sens", "text": "Le Manifest Scanner est un acte intrusif : la cible est immédiatement alertée dès que le scan démarre, avant même qu'il n'aboutisse. Une cible avertie peut fuir, activer le Silent Running, déployer ses affûts (ce qui interrompt un scan de sécurité par précaution) ou larguer du chaff. Prévois ton interdiction avant que la cible n'ait le temps de réagir, pas après."},
+        {"type": "list", "ordered": false, "items": [
+          "Fuir en accélérant vers la supercroisière ou l'hyperespace.",
+          "Activer le Silent Running pour masquer sa signature.",
+          "Déployer ses affûts, ce qui interrompt un scan de sécurité par précaution.",
+          "Larguer du chaff pour brouiller un Kill Warrant Scanner en cours."
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "Respecte l'ordre : cibler, scanner, interdire, mass locker, forcer l'éjection, récupérer, écouler. Sauter l'étape du scan est l'erreur la plus fréquente et la plus coûteuse — elle te fait engager des cibles vides et alerter le trafic local pour rien."}
+      ]
+    },
+    {
+      "id": "scanners",
+      "number": 3,
+      "title": "Le seul scanner qui compte : le Manifest Scanner",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Il n'existe que trois scanners utilitaires de piraterie, pas quatre : le Manifest Scanner n'est pas un module distinct du Cargo Scanner, c'est son nom actuel.** Une confusion répandue dans certaines listes de modules compte les deux séparément — ce guide la corrige."},
+        {"type": "heading", "text": "Trois scanners, pas quatre", "level": 3},
+        {"type": "table", "caption": "Les trois scanners de piraterie, tous en emplacement utilitaire classe 0", "headers": ["Scanner", "Rôle", "Portée", "Temps de scan", "Alerte la cible ?"], "rows": [
+          [{"text": "Manifest Scanner (ex-Cargo Scanner)", "style": "strong"}, {"text": "Révèle le contenu de la soute d'un vaisseau ciblé"}, {"text": "2 000 à 4 000 m", "style": "number"}, {"text": "10 s, à maintenir", "style": "number"}, {"text": "Oui — acte intrusif", "style": "lose"}],
+          [{"text": "Kill Warrant Scanner", "style": "strong"}, {"text": "Révèle les primes émises par d'autres juridictions sur une cible"}, {"text": "2 000 à 4 000 m", "style": "number"}, {"text": "10 s, à maintenir", "style": "number"}, {"text": "Oui", "style": "lose"}],
+          [{"text": "Frame Shift Wake Scanner", "style": "strong"}, {"text": "Révèle la destination d'une cible via son sillage après un saut hyperespace (high wake)"}, {"text": "2 000 à 4 000 m", "style": "number"}, {"text": "10 s, à maintenir", "style": "number"}, {"text": "Non documenté dans un sens ou l'autre", "style": "mid"}]
+        ]},
+        {"type": "keyValue", "items": [
+          {"label": "Portée et temps de scan", "value": "2 000 à 4 000 m, 10 s à maintenir pour les trois scanners", "reliability": "official"},
+          {"label": "Date exacte du renommage Cargo → Manifest Scanner", "value": "Largement associée à Odyssey (mai 2021), aucune note de patch primaire retrouvée", "reliability": "community"}
+        ]},
+        {"type": "callout", "tone": "info", "title": "D'où vient la confusion", "text": "Le Manifest Scanner est le nom actuel du Cargo Scanner, renommé (et étendu au scan des cabines passagers) — pas un module supplémentaire. Une liste de modules qui compte « Kill Warrant, Wake, Cargo, Manifest Scanner » comme quatre entrées distinctes répète cette confusion. Retiens un seul chiffre : **trois** scanners de piraterie. **(OFF, EDCD/coriolis-data)**"},
+        {"type": "paragraph", "text": "Le low wake (transition vers la supercroisière, même système) se lit sans équipement spécial par n'importe quel vaisseau ; seul le high wake (saut hyperespace) exige le Frame Shift Wake Scanner pour être tracé."},
+        {"type": "callout", "tone": "warning", "title": "Scanner n'est pas illégal, mais attaquer si", "text": "D'après la documentation communautaire actuelle, scanner un vaisseau « Clean » n'est listé nulle part comme un délit pour le scanneur : c'est la cible, si elle transporte du fret volé ou illégal, qui écope d'une amende une fois démasquée. Ça ne rend pas pour autant licite d'attaquer ensuite une cible Clean dans le système courant — sauf en système **Anarchy**, où tous les vaisseaux apparaissent Clean localement par défaut, ce qui rend le Kill Warrant Scanner indispensable à la chasse aux primes qui s'y pratique. **(COM)**"},
+        {"type": "verdict", "title": "Verdict", "text": "Équipe les trois scanners — Manifest, Kill Warrant, Frame Shift Wake — plutôt que d'en chercher un quatrième qui n'existe pas. Le Manifest Scanner reste le seul strictement indispensable à la chaîne opératoire de piraterie (section 2) ; les deux autres servent à qualifier une cible avant d'agir."}
+      ]
+    },
+    {
+      "id": "terrains-de-chasse",
+      "number": 4,
+      "title": "Où chasser : trois terrains documentés",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Trois terrains concentrent l'essentiel des cibles PNJ chargées : un signal dédié, des sites d'extraction à quatre intensités, et les lanes commerciales elles-mêmes.** Aucun rang ni déblocage préalable n'est nécessaire pour y accéder."},
+        {"type": "heading", "text": "Convoy Dispersal Pattern : cinq niveaux de menace", "level": 3},
+        {"type": "table", "caption": "Convoy Dispersal Pattern (USS), cinq niveaux de menace", "headers": ["Niveau", "Composition", "Risque pour toi"], "rows": [
+          [{"text": "0", "style": "number"}, {"text": "Petit groupe de vaisseaux neutres"}, {"text": "Scannables et pillables sans risque", "style": "win"}],
+          [{"text": "1-2", "style": "number"}, {"text": "Convoi escorté, dont Type-9 Heavy"}, {"text": "PNJ armés — tu choisis d'attaquer ou de défendre le convoi (récompense en crédits ou réputation selon le camp)", "style": "mid"}],
+          [{"text": "3-4", "style": "number"}, {"text": "Non détaillé par les sources consultées"}, {"text": "Menace croissante, à traiter avec prudence en l'absence de détail chiffré", "style": "lose"}]
+        ]},
+        {"type": "heading", "text": "Resource Extraction Sites : la Hazardous en tête", "level": 3},
+        {"type": "paragraph", "text": "Quatre intensités (Low, Regular, High, Hazardous) déterminent la densité de PNJ présents sur un RES. En **HazRES**, les crimes commis ne sont pas signalés à la sécurité locale — un terrain de chasse dense en cibles recherchées de toute taille, sans réponse de sécurité organisée pour t'interrompre."},
+        {"type": "heading", "text": "Lanes commerciales en état Boom", "level": 3},
+        {"type": "paragraph", "text": "Les PNJ marchands transportent une cargaison qui reflète l'économie de leur station d'origine — minerais et métaux en économie Extraction, machines et biens de consommation en Industrial. Un système en état **Boom** augmente le nombre de missions commerciales et, combiné à l'état secondaire **Pirate Attack** (plus probable en économie positive), la fréquence des interdictions de marchands par des PNJ pirates. Terrain classique : patrouiller juste au-delà des zones de non-tir d'une station riche, ou suivre le sillage des gros transporteurs qui en sortent."},
+        {"type": "verdict", "title": "Verdict", "text": "Débute par le Convoy Dispersal Pattern niveau 0-1 pour apprendre la chaîne opératoire sans risque, puis monte vers le HazRES une fois ton build maîtrisé (section 5) : la densité de cibles y est supérieure, sans réponse de sécurité organisée."}
+      ]
+    },
+    {
+      "id": "builds-chiffres",
+      "number": 5,
+      "title": "Deux builds chiffrés : Python contre Krait Mk II",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Les deux builds ci-dessous partagent le même gabarit d'affûts (3 Large + 2 Medium + 4 utilitaires) et le même fabricant — le choix entre eux se résume à un arbitrage robustesse contre maniabilité, sans qu'aucun rang de superpuissance ne soit requis.**"},
+        {"type": "table", "caption": "Build A — Python « Corsaire polyvalent »", "headers": ["Emplacement", "Choix"], "rows": [
+          [{"text": "Hardpoints (3× Large + 2× Medium)", "style": "strong"}, {"text": "Armement mixte gimbal (multi-canons ou canons à fragmentation) pour forcer la reddition sans détruire la cible avant récupération du butin"}],
+          [{"text": "Utilitaires (4×)", "style": "strong"}, {"text": "Manifest Scanner, Kill Warrant Scanner, Frame Shift Wake Scanner, Chaff Launcher"}],
+          [{"text": "Optionnels internes", "style": "strong"}, {"text": "Frame Shift Drive Interdictor classe 4A ; 2× Hatch Breaker Limpet Controller ; 1× Collector Limpet Controller ; Cargo Racks dans le reste"}],
+          [{"text": "Bouclier", "style": "strong"}, {"text": "Générateur bi-weave + boosters — le Python dispose d'emplacements internes de classe 5-6 pour ce compromis"}],
+          [{"text": "Dureté de coque", "style": "strong"}, {"text": "65", "style": "win"}],
+          [{"text": "Prix du châssis nu", "style": "strong"}, {"text": "56 978 180 Cr (Faulcon DeLacy), aucun rang requis", "style": "number"}]
+        ]},
+        {"type": "table", "caption": "Build B — Krait Mk II « Intercepteur léger »", "headers": ["Emplacement", "Choix"], "rows": [
+          [{"text": "Hardpoints (3× Large + 2× Medium)", "style": "strong"}, {"text": "Configuration plus orientée dégâts (silhouette plus maniable), multi-canons ou canons gimbal"}],
+          [{"text": "Utilitaires (4×)", "style": "strong"}, {"text": "Manifest Scanner, Kill Warrant Scanner, Frame Shift Wake Scanner, Heat Sink Launcher"}],
+          [{"text": "Optionnels internes", "style": "strong"}, {"text": "Frame Shift Drive Interdictor classe 4A ; 2× Hatch Breaker Limpet Controller ; 1× Collector Limpet Controller ; Cargo Racks dans le reste"}],
+          [{"text": "Bouclier", "style": "strong"}, {"text": "Bi-weave + boosters, priorité à la maniabilité pour l'interdiction et la fuite"}],
+          [{"text": "Dureté de coque", "style": "strong"}, {"text": "55", "style": "mid"}],
+          [{"text": "Prix du châssis nu", "style": "strong"}, {"text": "45 814 210 Cr (Faulcon DeLacy), aucun rang requis", "style": "number"}]
+        ]},
+        {"type": "table", "caption": "Python contre Krait Mk II, l'arbitrage en un coup d'œil", "headers": ["Critère", "Python", "Krait Mk II"], "rows": [
+          [{"text": "Prix du châssis nu", "style": "strong"}, {"text": "56 978 180 Cr", "style": "number"}, {"text": "45 814 210 Cr", "style": "number"}],
+          [{"text": "Dureté de coque", "style": "strong"}, {"text": "65", "style": "win"}, {"text": "55", "style": "mid"}],
+          [{"text": "Point fort", "style": "strong"}, {"text": "Robustesse, volume de soute"}, {"text": "Maniabilité, vitesse d'interdiction et de fuite"}],
+          [{"text": "Rang de superpuissance requis", "style": "strong"}, {"text": "Aucun", "style": "win"}, {"text": "Aucun", "style": "win"}]
+        ]},
+        {"type": "keyValue", "items": [
+          {"label": "Caractéristiques de coque (Python)", "value": "EDCD/coriolis-data, ships/python.json, commit 0db9234b5b9c", "reliability": "official"},
+          {"label": "Caractéristiques de coque (Krait Mk II)", "value": "EDCD/coriolis-data, ships/krait_mkii.json, commit 0db9234b5b9c", "reliability": "official"}
+        ]},
+        {"type": "callout", "tone": "info", "title": "Un gabarit partagé, une décision simple", "text": "Les deux châssis viennent du même fabricant (Faulcon DeLacy) et partagent strictement le même gabarit d'affûts. La différence tient à 11 163 970 Cr d'écart de prix et 10 points de dureté de coque — pas à une différence de rôle. **(OFF, EDCD/coriolis-data)**"},
+        {"type": "callout", "tone": "tip", "title": "Comment choisir", "text": "Prends le Python si tu comptes encaisser un tir de riposte occasionnel et emporter davantage de cargo entre deux écoulements. Prends le Krait Mk II si tu privilégies la vitesse d'interdiction et la capacité à décrocher rapidement en cas de mauvaise surprise — sa coque plus fragile se compense par sa maniabilité supérieure."},
+        {"type": "verdict", "title": "Verdict", "text": "Aucun des deux choix n'est mauvais : les deux builds partagent le même équipement fonctionnel (scanners, Interdictor, limpets) et ne divergent que sur le compromis coque/maniabilité. Débute avec celui que tu peux te permettre aujourd'hui plutôt que d'attendre d'avoir de quoi acheter le plus cher des deux."}
+      ]
+    },
+    {
+      "id": "ecouler-le-butin",
+      "number": 6,
+      "title": "Écouler le butin : marché noir et Interstellar Factors",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**La cargaison que tu viens de récupérer est marquée volée : les marchés légaux la refusent net. Deux canaux seulement l'acceptent, et aucun des deux n'efface ta notoriety.**"},
+        {"type": "heading", "text": "Deux canaux, pas plus", "level": 3},
+        {"type": "table", "caption": "Marché noir contre Interstellar Factors Contact", "headers": ["Canal", "Où le trouver", "Effet sur la notoriety", "Particularité"], "rows": [
+          [{"text": "Marché noir (Black Market)", "style": "strong"}, {"text": "Surtout en systèmes Anarchy"}, {"text": "Aucun effet direct", "style": "mid"}, {"text": "Rachète directement la cargaison volée au prix du marché noir local"}],
+          [{"text": "Interstellar Factors Contact", "style": "strong"}, {"text": "Présent dans de nombreuses stations"}, {"text": "Ne réduit pas la notoriety", "style": "mid"}, {"text": "Paie une prime émise dans un autre système sans s'y déplacer, moyennant commission"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "La notoriety suit son propre calendrier", "text": "Payer une prime via un Interstellar Factors Contact règle la dette financière, pas la notoriety : sa décroissance suit son propre délai, indépendant du paiement. Un vaisseau qui accumule les infractions graves voit sa notoriety monter et se voit refuser l'accostage dans les stations légitimes du système concerné, même primes payées."},
+        {"type": "keyValue", "items": [
+          {"label": "Bonus Archon Delaine (Kumo Crew)", "value": "+30 % sur les profits du marché noir pour ses partisans", "reliability": "official"},
+          {"label": "Effet secondaire du soutien à Archon Delaine", "value": "Réduction ou suppression des amendes pour activité criminelle en territoire qu'il contrôle", "reliability": "community"}
+        ]},
+        {"type": "paragraph", "text": "La piraterie et la contrebande contribuent aussi à l'influence de la faction qui contrôle le marché noir où le butin est écoulé — généralement une faction en Anarchie. Si tu joues aussi le Background Simulation d'un système, c'est un levier supplémentaire à connaître, indépendant du seul gain en crédits."},
+        {"type": "verdict", "title": "Verdict", "text": "N'espère jamais revendre du stolen cargo sur un marché légal : direction marché noir ou Interstellar Factors Contact, selon que tu préfères le prix local ou la commodité à distance. Dans les deux cas, budgétise le temps que ta notoriety redescende séparément — ce n'est pas une transaction qui l'efface."}
+      ]
+    },
+    {
+      "id": "etiquette-et-pvp",
+      "number": 7,
+      "title": "Piraterie PvE, PvP et étiquette : ce qui distingue le pirate du ganker",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**La piraterie contre un PNJ ne pose aucune question d'étiquette. Contre un autre joueur, elle en pose une — et ce guide ne la retranche pas, il te renvoie à l'endroit où elle est déjà tranchée en détail.**"},
+        {"type": "paragraph", "text": "survivre-au-pvp-sans-combattre.json établit la distinction complète du point de vue de la victime : le scan de cargaison qui alerte avant l'interdiction, la demande explicite avant l'ouverture du feu, le comportement en cas de coopération, les cibles favorites d'un ganker (vaisseaux désarmés à Deciat, explorateurs sans bouclier à Shinrarta Dezhra). Ce guide ne reconstruit pas ce tableau : si tu veux le détail complet des signes qui distinguent les deux profils, c'est là qu'il se trouve."},
+        {"type": "list", "ordered": false, "items": [
+          "Le pirate scanne parfois la cargaison avant d'interdire, communique une demande, et relâche sa cible une fois le butin cédé.",
+          "Le ganker interdit sans vérification préalable, ouvre le feu sans négociation, et continue même si la cible n'a rien à donner.",
+          "Le coût de la destruction pour un pirate est nul : la reddition rapporte autant, sans le risque d'un vaisseau tiers qui s'en mêle."
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Si tu interdis un joueur par erreur", "text": "Rien dans ce guide ne t'autorise à traiter un joueur comme un PNJ. Si ton interdiction tombe sur un commandant plutôt qu'un PNJ marchand, le mode opératoire documenté du pirate — scanner, communiquer une demande, relâcher une fois payé — reste ton seul filet pour ne pas basculer, aux yeux de la communauté, du côté du ganker. Voir survivre-au-pvp-sans-combattre.json pour la procédure côté victime, utile aussi pour anticiper sa réaction."},
+        {"type": "paragraph", "text": "L'essentiel à retenir pour ce guide : tant que tes cibles restent des PNJ (sections 2 et 4), aucune de ces considérations d'étiquette ne s'applique — c'est une activité de jeu normale, au même titre que le commerce ou le minage."},
+        {"type": "verdict", "title": "Verdict", "text": "Chasse des PNJ, pas des joueurs : c'est ce qui fait de toi un pirate PvE plutôt qu'un ganker en puissance. Si le sujet t'intéresse du point de vue de la victime — reconnaître la menace, fuir, se protéger — survivre-au-pvp-sans-combattre.json est le manuel complémentaire à lire."}
+      ]
+    },
+    {
+      "id": "retenir",
+      "number": 8,
+      "title": "Check-list avant de partir, et ce qu'il faut retenir",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Avant ta première sortie, une vérification de deux minutes t'évite l'essentiel des sorties ratées.**"},
+        {"type": "list", "ordered": false, "items": [
+          "Manifest Scanner, Kill Warrant Scanner et Frame Shift Wake Scanner équipés en utilitaire (section 3).",
+          "Au moins 2 Hatch Breaker Limpet Controllers et 1 Collector Limpet Controller en interne (section 5).",
+          "Frame Shift Drive Interdictor classe 4A installé pour déclencher l'interdiction toi-même.",
+          "Cargo Racks dans les emplacements internes restants — inutile de forcer une éjection que tu ne peux pas récupérer.",
+          "Un plan d'écoulement avant de partir : marché noir local ou Interstellar Factors Contact déjà repéré (section 6).",
+          "Terrain de chasse choisi selon ton niveau : Convoy Dispersal Pattern niveau 0-1 pour débuter, HazRES une fois à l'aise (section 4)."
+        ]},
+        {"type": "steps", "items": [
+          {"text": "**Choisis ton châssis**", "detail": "Python pour la robustesse et le volume de soute, Krait Mk II pour la maniabilité et la vitesse (section 5)."},
+          {"text": "**Équipe la chaîne complète**", "detail": "Trois scanners, Interdictor, limpets — rien de plus n'est nécessaire pour la boucle de base (sections 2-3)."},
+          {"text": "**Chasse au bon endroit**", "detail": "Convoy Dispersal Pattern, RES/HazRES ou lanes en Boom, selon la densité de cibles recherchée (section 4)."},
+          {"text": "**Scanne avant d'interdire, toujours**", "detail": "Un vaisseau vide n'a rien à céder ; le scan alerte la cible, prévois ton interdiction en conséquence (sections 2-3)."},
+          {"text": "**Écoule sans attendre que la notoriety redescende d'elle-même**", "detail": "Marché noir ou Interstellar Factors Contact — dans les deux cas la notoriety suit son propre délai (section 6)."}
+        ]},
+        {"type": "keyValue", "items": [
+          {"label": "Prix Python", "value": "56 978 180 Cr, dureté de coque 65", "reliability": "official"},
+          {"label": "Prix Krait Mk II", "value": "45 814 210 Cr, dureté de coque 55", "reliability": "official"},
+          {"label": "Nombre de scanners de piraterie", "value": "3 (Manifest, Kill Warrant, Frame Shift Wake) — pas 4", "reliability": "official"},
+          {"label": "Bonus marché noir Archon Delaine", "value": "+30 % sur les profits pour ses partisans", "reliability": "official"}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le réflexe à automatiser", "text": "Scanne avant d'interdire, communique une demande avant de tirer, relâche une fois payé. C'est ce triptyque, plus que n'importe quel choix de build, qui fait de toi un pirate documenté plutôt qu'un ganker qui s'ignore."},
+        {"type": "divider"},
+        {"type": "paragraph", "text": "**Fiabilité.** Ce guide s'appuie sur le corpus de référence interne (30-piraterie-et-pvp.md), lui-même sourcé sur EDCD/coriolis-data pour les caractéristiques de châssis et les prix, et sur la documentation communautaire (wiki Elite Dangerous, forums.frontier.co.uk) pour la légalité du scan et le comportement des PNJ interdits. Les montants exacts de bounty vouchers par type de PNJ en RES ou en zone de conflit ne sont confirmés par aucune source fiable consultée pour ce guide : vérifie-les en jeu avant d'en dépendre pour ton budget."},
+        {"type": "paragraph", "text": "**Ce que ce guide ne couvre pas.** Le mini-jeu d'interdiction, le mass lock et les mécaniques de low/high wake sont déjà chiffrés dans le corpus de référence combat spatial et ne sont pas reproduits ici. La distinction complète pirate/ganker, les lieux à risque documentés et la procédure d'évasion appartiennent à survivre-au-pvp-sans-combattre.json, qui traite ces sujets du point de vue de la victime plutôt que de l'agresseur."}
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — 30-piraterie-et-pvp.md",
+    "EDCD/coriolis-data",
+    "wiki Elite Dangerous (Fandom)",
+    "forums.frontier.co.uk",
+    "elitepve.com (Mobius PvE)"
+  ]
+}

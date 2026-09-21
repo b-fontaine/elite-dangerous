@@ -1,0 +1,167 @@
+{
+  "id": "survivre-au-pvp-sans-combattre",
+  "title": "Survivre au PvP sans combattre : le guide du pilote pacifiste en Open",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Zéro compétence de combat requise : reconnaître une menace, échapper à une interdiction, choisir le bon mode de jeu et rejoindre un groupe anti-PvP quand l'Open devient trop lourd à porter.",
+  "byline": "PC · Live · Mode Open · Aucune compétence de combat requise",
+  "edition": "2026-09",
+  "topics": ["pvp", "survie", "sans combat", "mobius", "open play", "évasion"],
+  "estimatedReadMinutes": 14,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {"type": "heading", "text": "Au sommaire", "level": 4},
+        {"type": "list", "ordered": true, "items": [
+          "Pirate ou ganker : lire la menace avant de réagir",
+          "Les lieux à risque documentés (et l'angle mort qu'on ne t'a jamais signalé)",
+          "Les 3 modes de jeu, et comment changer en 30 secondes",
+          "La procédure d'évasion, étape par étape",
+          "Rejoindre un groupe privé anti-PvP : Mobius PvE",
+          "Bloquer, signaler : ce que ça garantit vraiment",
+          "Ce qu'il faut retenir, et les sources"
+        ]},
+        {"type": "paragraph", "emphasis": "intro", "text": "**Tu ne veux pas apprendre à te battre, tu veux repartir en un seul morceau.** Ce manuel ne contient aucune compétence offensive : pas de flick, pas de gestion fine du condensateur WEP, pas de build sniper. Juste ce qu'il faut pour reconnaître une menace avant qu'elle ne devienne un problème, t'échapper proprement d'une interdiction, et choisir un mode de jeu qui protège ta session — même si tu veux rester en **Open**."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Ce guide s'adresse au pilote pacifiste qu'artemis-suit.json et exploration-exobiologie.json envoient sur le terrain sans jamais le prévenir des dangers du PvP non consenti : tu fais de l'exobiologie, du commerce ou de l'exploration, tu voles en Open pour rester dans un univers vivant, et tu n'as ni l'envie ni l'équipement pour te battre. Ce n'est pas un défaut : c'est un choix de jeu parfaitement viable, à condition de connaître trois choses — où se cachent les vrais points chauds, comment fuir proprement, et où te réfugier si l'Open devient trop lourd à porter."},
+        {"type": "callout", "tone": "info", "title": "Comment lire les chiffres de ce guide", "text": "**OFF** = confirmé par une source officielle ou un jeu de données extrait du jeu (Frontier, EDCD). **COM** = documenté par la communauté (forums, wiki, groupes de joueurs) sans confirmation officielle directe. **EST** = estimation ou fourchette incertaine, à vérifier toi-même avant d'en dépendre. Deux points sensibles de ce guide — la fiabilité actuelle du blocage et la taille exacte de Mobius PvE — portent une réserve explicite : ils ne sont établis que par la communauté, jamais par Frontier."}
+      ]
+    },
+    {
+      "id": "menace",
+      "number": 1,
+      "title": "Pirate ou ganker : lire la menace avant de réagir",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Une interdiction ne veut pas dire la même chose selon qui la déclenche.** Confondre un pirate et un ganker te fait perdre soit ta cargaison pour rien, soit un temps précieux à négocier avec quelqu'un qui n'a jamais eu l'intention de te laisser repartir."},
+        {"type": "heading", "text": "La distinction qui change tout", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "La communauté distingue nettement deux profils d'agresseur en Open, aux objectifs opposés : le **pirate** veut ta cargaison ou une rançon, et te relâche une fois payé ; le **ganker** veut ta destruction, sans intérêt pour ce que tu transportes — lui livrer ton chargement ne change rien à son intention."},
+        {"type": "table", "caption": "Pirate ou ganker : les signes qui ne trompent pas", "headers": ["Ce que tu observes", "Pirate", "Ganker"], "rows": [
+          [{"text": "Avant d'interdire", "style": "strong"}, {"text": "Scanne parfois ta cargaison au Manifest Scanner — un acte qui t'alerte immédiatement, car il cherche à savoir si tu vaux le coup", "style": "normal"}, {"text": "Interdit directement, sans étape de vérification préalable", "style": "normal"}],
+          [{"text": "Après l'interdiction", "style": "strong"}, {"text": "Communique souvent une demande (soumettre du cargo, throttle à zéro) avant de tirer", "style": "normal"}, {"text": "Ouvre le feu sans négociation", "style": "normal"}],
+          [{"text": "Si tu coopères", "style": "strong"}, {"text": "Te relâche généralement une fois le butin cédé", "style": "normal"}, {"text": "Continue même si tu n'as rien à perdre ou rien à donner", "style": "normal"}],
+          [{"text": "Cibles favorites", "style": "strong"}, {"text": "Vaisseaux de fret chargés, sur les lanes commerciales", "style": "normal"}, {"text": "Vaisseaux désarmés ou endommagés, notamment autour de Deciat et Shinrarta Dezhra (section 2)", "style": "normal"}],
+          [{"text": "Coût pour lui de te détruire", "style": "strong"}, {"text": "Nul intérêt : la destruction ne rapporte rien de plus que la reddition", "style": "normal"}, {"text": "Aucun risque financier réel, en particulier contre une cible sans bouclier", "style": "lose"}]
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Ce que dit le silence du scanner", "text": "Un Manifest Scanner qui t'alerte (message de scan en cours) est en soi une information : quelqu'un vérifie ta soute avant d'agir, ce qui correspond au mode opératoire documenté du pirate, pas à celui du ganker, qui n'a aucune raison de vérifier ce qu'il ne veut pas récupérer. Ça ne garantit rien sur la suite, mais ça oriente ta lecture de la situation dans les premières secondes. **(COM, déduit du mode opératoire documenté)**"},
+        {"type": "verdict", "title": "Verdict", "text": "Un scan de cargaison suivi d'une demande explicite oriente vers le pirate : coopérer a de bonnes chances de te faire repartir avec ton vaisseau. Un tir immédiat sans négociation, ou une localisation comme Deciat ou Shinrarta Dezhra, orientent vers le ganker — ta seule option devient alors la fuite (section 4), pas la négociation."}
+      ]
+    },
+    {
+      "id": "lieux",
+      "number": 2,
+      "title": "Les lieux à risque documentés (et l'angle mort qu'on ne t'a jamais signalé)",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Trois lieux sont réellement documentés par la communauté comme points de guet PvP — et l'un d'eux est un endroit où d'autres guides de ce corpus t'envoient sans jamais te prévenir.**"},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le PvP non consenti ne frappe pas au hasard sur toute la carte : il se concentre là où les cibles faciles sont statistiquement nombreuses — vaisseaux non armés en route vers un ingénieur, explorateurs de retour sans bouclier, ou foule massée pour une Community Goal."},
+        {"type": "table", "caption": "Les lieux à risque, triés par niveau de confirmation", "headers": ["Lieu", "Documenté depuis", "Qui est visé", "Ce que ça coûte à l'attaquant", "Fiabilité"], "rows": [
+          [{"text": "Deciat", "style": "strong"}, {"text": "2020", "style": "number"}, {"text": "Vaisseaux non armés en route vers l'ingénieure Felicity Farseer", "style": "normal"}, {"text": "Quasi rien : les cibles ne ripostent pas", "style": "lose"}, {"text": "COM (forums officiels)", "style": "mid"}],
+          [{"text": "Shinrarta Dezhra / Jameson Memorial", "style": "strong"}, {"text": "2017", "style": "number"}, {"text": "Vaisseaux endommagés ou sans bouclier, explorateurs de retour", "style": "normal"}, {"text": "Quasi rien : l'attaquant ne perd presque jamais son vaisseau", "style": "lose"}, {"text": "COM (forums officiels)", "style": "mid"}],
+          [{"text": "Stations en Community Goal active", "style": "strong"}, {"text": "Pendant l'événement", "style": "normal"}, {"text": "Forte concentration de joueurs en Open attirés par la CG", "style": "normal"}, {"text": "Variable", "style": "normal"}, {"text": "COM (témoignages joueurs)", "style": "mid"}],
+          [{"text": "Colonia Bridge", "style": "strong"}, {"text": "—", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "Non établi : risque diffus non confirmé", "style": "lose"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "L'angle mort que ce guide corrige : Deciat", "text": "Deciat est l'un des systèmes les plus visités du jeu, parce qu'artemis-suit.json et exploration-exobiologie.json t'y envoient tous les deux pour débloquer **Felicity Farseer** — le premier ingénieur que la quasi-totalité des joueurs débloquent, aussi bien pour l'Artemis Suit que pour le FSD. Aucun des deux guides ne mentionne qu'un vaisseau qui arrive à Deciat, généralement peu armé et concentré sur sa livraison de matériaux, y est documenté depuis 2020 comme cible de guet PvP classique. Si tu t'y rends en Open : soumets-toi vite en cas d'interdiction (section 4) et ne t'attarde pas en supercroisière une fois arrivé."},
+        {"type": "verdict", "title": "Verdict", "text": "Ces trois lieux couvrent l'essentiel du risque réellement documenté. Le Colonia Bridge, souvent cité, ne l'est pas : traite-le comme un risque diffus de long trajet, pas comme un point chaud avéré, et ne laisse pas cette rumeur dicter ton mode de jeu à elle seule."}
+      ]
+    },
+    {
+      "id": "modes",
+      "number": 3,
+      "title": "Les 3 modes de jeu, et comment changer en 30 secondes",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le mode de jeu ne change ni ton économie ni le BGS partagé — seulement ton exposition au PvP.** Tu peux en changer à tout moment, sans perdre le moindre crédit ni la moindre progression."},
+        {"type": "keyValue", "items": [
+          {"label": "Solo", "value": "Seuls les PNJ partagent ton instance : aucun autre commandant humain n'y apparaît jamais.", "reliability": "official"},
+          {"label": "Groupe privé (Private Group)", "value": "Instance restreinte à une liste fermée de joueurs (amis, ou groupe communautaire comme Mobius PvE, section 5). Le PvP y reste possible, mais uniquement entre membres du groupe.", "reliability": "official"},
+          {"label": "Open", "value": "Instance partagée où n'importe quel autre joueur peut apparaître à proximité. C'est le seul mode où le PvP non consenti (embuscade, interdiction par un joueur, ganking) est possible.", "reliability": "official"}
+        ]},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le choix ne dépend donc que du niveau de risque PvP que tu es prêt à accepter aujourd'hui, pas d'un renoncement définitif : tu peux très bien exobio-farmer en Solo toute la semaine et rejoindre l'Open pour une Community Goal, en connaissant le risque exposé en section 2."},
+        {"type": "steps", "items": [
+          {"text": "Va dans le **menu principal**, avant ou pendant une session (pause).", "detail": "Le changement de mode se fait hors du cockpit, pas en jeu."},
+          {"text": "Sélectionne le mode de jeu : **Open**, **Groupe privé**, ou **Solo**.", "detail": "Pour un Groupe privé, choisis-le dans la liste de ceux que tu as rejoints (voir section 5 pour Mobius PvE)."},
+          {"text": "Reprends ta session normalement.", "detail": "Ton vaisseau, tes crédits, ta progression et le BGS restent strictement identiques quel que soit le mode."}
+        ]},
+        {"type": "callout", "tone": "info", "title": "Ce qui ne change pas", "text": "L'économie, le BGS, ta réputation de faction et tes crédits sont **partagés entre les trois modes**. Changer de mode ne te fait perdre aucune progression : c'est un curseur de risque PvP, rien de plus. **(OFF)**"}
+      ]
+    },
+    {
+      "id": "evasion",
+      "number": 4,
+      "title": "La procédure d'évasion, étape par étape",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Face à une interdiction, la bonne décision se prend en une seconde, avant même de savoir si c'est un pirate ou un ganker : tu ne le sauras pas toujours à temps.**"},
+        {"type": "steps", "items": [
+          {"text": "**Soumets-toi immédiatement** à l'interdiction plutôt que de résister.", "detail": "Résister prolonge le mini-jeu d'interdiction et peut te laisser, en cas d'échec, dans une position et une orientation défavorables. Se soumettre te fait sortir de supercroisière tout de suite, en gardant plus de contrôle sur ta position de sortie."},
+          {"text": "**Gère tes pips SYS/ENG** dès la sortie en espace normal.", "detail": "SYS pour encaisser les premiers tirs si l'adversaire ouvre le feu, ENG pour préparer la fuite — bascule vers ENG dès que tu as jugé la menace (section 1)."},
+          {"text": "**Booste hors du rayon de mass lock** de l'interdicteur (et de tout vaisseau tiers massif à proximité).", "detail": "Tant que l'indicateur de mass lock reste actif, ton FSD ne peut pas charger, quel que soit le type de saut visé."},
+          {"text": "**Charge un high wake, jamais un low wake, une fois hors du mass lock.**", "detail": "Un low wake (transition vers la supercroisière, même système) laisse ta cible à portée d'un poursuivant équipé d'un Frame Shift Wake Scanner. Un high wake (saut hyperespace) t'emmène dans un autre système : c'est la seule sortie qui te met hors de portée immédiate."},
+          {"text": "**Couvre la manœuvre** si tu en as les moyens.", "detail": "Silent Running, Heat Sink et Chaff ralentissent un poursuivant, brouillent un verrouillage ou masquent ta signature — aucun de ces modules n'est une arme, ils restent compatibles avec un build zéro-combat."}
+        ]},
+        {"type": "callout", "tone": "warning", "title": "L'erreur qui te fait recapturer", "text": "Ne charge **jamais** de low wake tant que l'indicateur de mass lock est actif : tu resteras à portée de l'interdicteur, qui peut relancer une interdiction ou simplement te suivre. Assure-toi d'être visuellement hors du rayon de mass lock avant d'engager n'importe quel saut."}
+      ]
+    },
+    {
+      "id": "mobius",
+      "number": 5,
+      "title": "Rejoindre un groupe privé anti-PvP : Mobius PvE",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Si l'Open te pèse trop souvent, tu n'as pas à basculer en Solo et à perdre le sentiment d'un univers vivant : un Groupe privé PvE fait le compromis pour toi.**"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Mobius PvE** est le plus connu de ces groupes, fondé sur une règle unique et sans exception : interdiction totale du PvP non consenti, y compris contre un commandant recherché (wanted) dans le système. Autrement dit, avoir une prime sur la tête ne protège personne qui t'attaquerait quand même — c'est le membre fautif qui est en tort, pas toi."},
+        {"type": "steps", "items": [
+          {"text": "**Remplis le formulaire d'inscription** sur le site du groupe.", "detail": "L'adhésion n'est pas automatique : elle est validée manuellement par un administrateur, sans code d'accès immédiat."},
+          {"text": "**En jeu, ouvre Social > Groups.**", "detail": ""},
+          {"text": "**Recherche le sous-groupe qui te correspond** : « MOBIUS PVE EURASIA », « MOBIUS PVE AMERICA » ou « MOBIUS FACTIONS ».", "detail": "Envoie une demande d'adhésion depuis cet écran."},
+          {"text": "**Attends la validation manuelle**, puis sélectionne ce groupe comme mode de jeu (section 3) quand tu veux jouer protégé.", "detail": ""}
+        ]},
+        {"type": "keyValue", "items": [
+          {"label": "Taille de la communauté (compteur du forum)", "value": "19 309 membres", "reliability": "community"},
+          {"label": "Taille de la communauté (page de politique du groupe)", "value": "40 000 membres", "reliability": "community"}
+        ]},
+        {"type": "callout", "tone": "info", "title": "Un écart non résolu", "text": "Ces deux chiffres proviennent de sources communautaires consultées le même jour, sans qu'aucune ne l'emporte sur l'autre : retiens seulement qu'il s'agit d'une communauté de plusieurs dizaines de milliers de joueurs actifs, pas d'un chiffre exact. **(COM)**"},
+        {"type": "paragraph", "emphasis": "normal", "text": "Les violations constatées (capture d'écran à l'appui) entraînent l'expulsion de tous les sous-groupes Mobius pour le fautif, jusqu'au bannissement permanent pour les cas les plus graves — un signal que la règle est appliquée, pas seulement affichée."}
+      ]
+    },
+    {
+      "id": "blocage",
+      "number": 6,
+      "title": "Bloquer, signaler : ce que ça garantit vraiment",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le blocage n'est pas un bouclier : c'est un outil imparfait, à connaître pour ce qu'il est vraiment plutôt que pour ce qu'on voudrait qu'il soit.**"},
+        {"type": "list", "ordered": false, "items": [
+          "**Bloquer un joueur** : Social > Friends > sélectionner le CMDR > Block Player, ou depuis le panneau Comms en jeu.",
+          "**Signaler un joueur** : Social > Report en jeu (nom du CMDR + type de comportement fautif), ou ticket de support Frontier pour la triche ou le harcèlement caractérisé."
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Pas de garantie absolue", "text": "Un test communautaire de 2017 a montré que rester **ami** avec un joueur bloqué annulait l'effet du blocage sur l'instanciation — vous continuiez à vous croiser malgré le blocage. Des retours plus récents suggèrent que le blocage coupe surtout les communications, sans empêcher l'instanciation de façon fiable. **Aucune source récente ne confirme si ce comportement a changé** : ne présente jamais le blocage comme une garantie de ne plus jamais croiser quelqu'un. **(COM, non reconfirmé depuis 2017)**"},
+        {"type": "paragraph", "emphasis": "normal", "text": "En pratique, le blocage reste utile pour couper la communication avec quelqu'un d'hostile et documenter un comportement avant signalement — traite-le comme un outil de confort et de preuve, pas comme une protection technique."},
+        {"type": "verdict", "title": "Verdict", "text": "Si un joueur te harcèle de façon répétée, bloque **et** signale : le signalement (avec capture d'écran) est ce qui déclenche une sanction Frontier, le blocage n'est qu'un filtre de confort dont l'efficacité sur l'instanciation reste incertaine."}
+      ]
+    },
+    {
+      "id": "retenir",
+      "number": 7,
+      "title": "Ce qu'il faut retenir, et les sources",
+      "blocks": [
+        {"type": "steps", "items": [
+          {"text": "**Apprends à lire la menace avant de réagir** (section 1).", "detail": "Un scan de cargaison et une demande orientent vers un pirate négociable ; un tir immédiat sans négociation, vers un ganker à fuir."},
+          {"text": "**Reste vigilant à Deciat**, même pour une simple visite à Felicity Farseer.", "detail": "C'est un point de guet documenté depuis 2020, que rien dans les guides qui t'y envoient ne signale."},
+          {"text": "**Soumets-toi, gère tes pips, booste hors du mass lock, puis charge un high wake — jamais un low wake.**", "detail": "C'est toute la procédure d'évasion, sans exception."},
+          {"text": "**Bascule en Groupe privé ou Solo** dès que le risque dépasse ce que tu es prêt à accepter aujourd'hui.", "detail": "Aucune perte de progression, aucune perte de crédits : c'est un simple curseur de risque."},
+          {"text": "**Rejoins Mobius PvE** si tu veux le compromis entre univers vivant et sécurité PvP.", "detail": "Formulaire du site, puis Social > Groups en jeu."},
+          {"text": "**Bloque et signale**, mais ne compte pas sur le blocage seul pour ne plus jamais croiser quelqu'un.", "detail": "Le signalement documenté est ce qui a un vrai effet disciplinaire."}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le réflexe à automatiser", "text": "Avant même de savoir qui t'interdit, ta main devrait déjà être sur la touche de soumission. C'est le seul geste qui compte dans les deux premières secondes, quel que soit le profil de l'agresseur."},
+        {"type": "divider"},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Fiabilité.** Ce guide s'appuie sur deux fichiers du corpus de référence interne (30-piraterie-et-pvp.md, 08-combat-spatial.md), eux-mêmes sourcés sur le wiki communautaire Elite Dangerous, des fils datés de forums.frontier.co.uk, et la page de politique du groupe Mobius PvE (elitepve.com). Plusieurs affirmations — la fiabilité actuelle du blocage, la taille exacte de Mobius PvE, le statut du Colonia Bridge — ne sont documentées que par la communauté, jamais par une source Frontier consultée directement : elles sont signalées comme telles dans le texte plutôt que présentées comme acquises."},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Ce que ce guide ne couvre pas.** Le combat logging, le détail chiffré du mini-jeu d'interdiction et les builds de fuite pour vaisseaux de fret sont traités ailleurs dans le corpus de référence (30-piraterie-et-pvp, 08-combat-spatial, 11-commerce) : ce manuel se limite à la survie sans combat en Open, pas à la boucle de jeu du pirate lui-même."}
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — 30-piraterie-et-pvp.md",
+    "Corpus interne — 08-combat-spatial.md",
+    "wiki Elite Dangerous (Fandom)",
+    "forums.frontier.co.uk",
+    "elitepve.com (Mobius PvE)",
+    "EDCD/coriolis-data"
+  ]
+}

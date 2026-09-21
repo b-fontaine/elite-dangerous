@@ -1,0 +1,511 @@
+{
+  "id": "guide-guardian-fsd-booster",
+  "title": "Débloquer le Guardian FSD Booster",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Le parcours complet pour farmer des Guardian Structures rapprochées, nettoyer juste assez de sentinelles pour scanner l'Ancient Data Terminal, et débloquer au Tech Broker le FSD Booster ainsi que les modules défensifs Guardian — sans jamais toucher à un Thargoïde.",
+  "byline": "PC · Live · SRV et pilotage de base maîtrisés · Aucune expérience de combat requise",
+  "edition": "2026-09",
+  "topics": ["guardian", "fsd-booster", "tech-broker", "ingenierie", "combat minimal"],
+  "estimatedReadMinutes": 17,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Pourquoi le Guardian FSD Booster mérite ce détour",
+            "Ce que tu vas vraiment affronter : les Guardian Sentinels, pas les Thargoïdes",
+            "Vaisseau et équipement minimal pour un pilote qui n'a jamais tiré",
+            "Repérer un site Guardian rapproché : la géographie qui compte",
+            "Étape 0 : farmer quelques Ancient Relics sur les Ruines",
+            "Le déroulé étape par étape sur une Guardian Structure",
+            "La boucle de session solo : enchaîner les sites plutôt qu'attendre un repop",
+            "Débloquer le FSD Booster classe 1 au Tech Broker",
+            "Les modules défensifs Guardian : bouclier, coque, distributeur, centrale",
+            "Budget total et temps à prévoir",
+            "Ce qu'il faut retenir"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Tu veux le bonus de portée du Guardian FSD Booster sans devenir un pilote de combat.** Ce manuel t'emmène du hub Guardian le plus proche jusqu'au comptoir du Tech Broker, avec le minimum de tirs nécessaires pour scanner un Ancient Data Terminal — pas un octet de plus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce guide part du principe que tu es un explorateur ou une exploratrice qui a déjà lu guide-ingenierie-fsd-explorateur.json (Increased Range au FSD) et qui cherche maintenant le second levier de portée : le Guardian FSD Booster, un bonus fixe qui s'ajoute par-dessus l'ingénierie. Il ne s'agit pas de combat anti-Thargoïde : les Guardian Sentinels qui gardent les sites au sol n'ont rien à voir avec les Interceptors thargoïdes, et ce guide ne couvre pas ce second sujet."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Comment lire les chiffres de ce guide",
+          "text": "**OFF** = donnée officielle ou issue des fichiers de référence du jeu (EDCD/coriolis-data, EDCD/FDevIDs) relayés par le wiki Elite Dangerous et Inara.cz. **COM** = mesure ou consensus communautaire, non confirmé par Frontier. **EST** = estimation ou extrapolation prudente, à vérifier en jeu avant de t'y fier. Les statistiques du FSD Booster par classe et la recette de déblocage de la classe 1 sont **OFF** ; les recettes des classes 2 à 5 du FSD Booster sont **absentes des sources consultées** — ce guide le signale explicitement plutôt que de les estimer."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ce que ce guide ne couvre pas",
+          "text": "Le combat anti-Thargoïde (Interceptors, Titans, armement AX) est un sujet à part entière, non traité ici : les Guardian Sentinels de ce guide sont des gardiens automatisés d'un site archéologique Guardian, pas des adversaires thargoïdes. Ce guide suppose aussi que tu sais déjà piloter, accoster et manier ton SRV — si ce n'est pas le cas, commence par premiers-controles-et-entrainement.json."
+        }
+      ]
+    },
+    {
+      "id": "pourquoi-fsd-booster",
+      "number": 1,
+      "title": "Pourquoi le Guardian FSD Booster mérite ce détour",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Le Guardian FSD Booster ajoute un bonus fixe de portée par-dessus tout ce que l'ingénierie peut faire à ton FSD — et un seul exemplaire suffit, pour toujours.**"
+        },
+        {"type": "heading", "level": 3, "text": "Le barème par classe"},
+        {
+          "type": "table",
+          "caption": "Guardian FSD Booster par classe (statistiques EDCD/coriolis-data, OFF)",
+          "headers": ["Classe", "Bonus de portée", "Coût d'achat (une fois le plan débloqué)", "Intégrité", "Consommation d'énergie"],
+          "rows": [
+            [{"text": "1", "style": "number"}, {"text": "+4 al", "style": "normal"}, {"text": "405 022 Cr", "style": "number"}, {"text": "32", "style": "normal"}, {"text": "0,75 MW", "style": "normal"}],
+            [{"text": "2", "style": "number"}, {"text": "+6 al", "style": "normal"}, {"text": "810 521 Cr", "style": "number"}, {"text": "32", "style": "normal"}, {"text": "0,98 MW", "style": "normal"}],
+            [{"text": "3", "style": "number"}, {"text": "+7,75 al", "style": "normal"}, {"text": "1 620 431 Cr", "style": "number"}, {"text": "32", "style": "normal"}, {"text": "1,27 MW", "style": "normal"}],
+            [{"text": "4", "style": "number"}, {"text": "+9,25 al", "style": "normal"}, {"text": "3 245 013 Cr", "style": "number"}, {"text": "32", "style": "normal"}, {"text": "1,65 MW", "style": "normal"}],
+            [{"text": "5", "style": "number"}, {"text": "+10,5 al", "style": "win"}, {"text": "6 483 101 Cr", "style": "number"}, {"text": "32", "style": "normal"}, {"text": "2,14 MW", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Un seul exemplaire, quel que soit le nombre d'emplacements libres",
+          "text": "Le Guardian FSD Booster ne se cumule pas avec lui-même : installer deux exemplaires n'ajoute aucun bonus supplémentaire. Un seul emplacement utilitaire suffit, ce qui laisse les autres libres pour un Shield Booster, un Heat Sink Launcher ou un Chaff Launcher (section 3)."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Ce bonus s'ajoute à l'ingénierie du FSD, il ne la remplace pas.** guide-ingenierie-fsd-explorateur.json détaille comment le blueprint Increased Range multiplie la masse optimale du FSD jusqu'à ×1,61 au grade 5 avec l'effet Mass Manager ; le FSD Booster, lui, ajoute un bonus de portée fixe par-dessus le résultat de ce calcul, indépendamment de la classe ou du grade d'ingénierie du module. Les deux se cumulent : il n'y a aucune raison de choisir l'un plutôt que l'autre."
+        },
+        {
+          "type": "verdict",
+          "title": "Quelle classe viser en premier ?",
+          "text": "Ce guide détaille la recette de déblocage de la **classe 1** (+4 al), la seule confirmée par les sources consultées. Rien n'empêche de viser une classe supérieure une fois sur place — mais sans recette vérifiée pour les classes 2 à 5, prévois de consulter Inara.cz au comptoir Guardian avant de calculer ton propre total de matériaux pour ces classes."
+        }
+      ]
+    },
+    {
+      "id": "sentinelles-pas-thargoides",
+      "number": 2,
+      "title": "Ce que tu vas vraiment affronter : les Guardian Sentinels, pas les Thargoïdes",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Les Guardian Sentinels sont des gardiens automatisés d'un site archéologique, pas des Thargoïdes.** Comprendre cette distinction change directement le matériel à embarquer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deux types de sentinelles protègent une Guardian Structure : des **drones volants** en forme de soucoupe, mobiles, et des **tourelles immobiles** au sol. Leurs faisceaux endommagent la coque rapidement et ciblent volontiers tes modules — le FSD étant une cible fréquente — ce qui impose une approche mobile plutôt qu'un combat statique en position fixe."
+        },
+        {
+          "type": "table",
+          "caption": "Combien de sentinelles apparaissent, et quand (petit site, OFF)",
+          "headers": ["Vague", "Déclencheur", "Sentinelles"],
+          "rows": [
+            [{"text": "1", "style": "number"}, {"text": "Pendant la charge des 6 pylônes", "style": "normal"}, {"text": "3", "style": "number"}],
+            [{"text": "2", "style": "number"}, {"text": "Une fois les 6 pylônes chargés", "style": "normal"}, {"text": "1", "style": "number"}],
+            [{"text": "3", "style": "number"}, {"text": "Après déverrouillage du Terminal", "style": "normal"}, {"text": "2", "style": "number"}],
+            [{"text": "Total", "style": "strong"}, {"text": "—", "style": "normal"}, {"text": "6 (minimum)", "style": "strong"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Le FSD est une cible privilégiée",
+          "text": "Les tirs des sentinelles perturbent ou désactivent en priorité certains modules du vaisseau, le FSD en tête — encore une raison de nettoyer vite plutôt que d'encaisser en position statique. Sur les sites 'larges', accessibles via un Guardian Beacon, ce total grimpe jusqu'à 12 sentinelles."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Privilégie des armes fixes à tir rapide pour abattre les drones avant qu'ils ne verrouillent leur faisceau.",
+            "Embarque heatsinks et chaff pour limiter les dégâts de composants pendant l'engagement.",
+            "N'engage le SRV pour le puzzle des pylônes qu'une fois le site réellement 'nettoyé'.",
+            "Sache qu'activer les pylônes fait apparaître les vagues du tableau ci-dessus, même une fois le premier passage terminé."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Le volet à pied (Odyssey) : optionnel, et plus dangereux",
+          "text": "Depuis Odyssey, tu peux sortir en combinaison pour atteindre certains obélisques à pied. La combinaison **Artemis** (voir artemis-suit.json) est recommandée face aux dégâts thermiques/énergétiques des tourelles et drones, sérieux même contre un fantassin. Pour un premier passage sans expérience de combat, nettoie entièrement le site depuis l'espace ou en SRV avant de t'exposer à pied."
+        }
+      ]
+    },
+    {
+      "id": "vaisseau-et-equipement",
+      "number": 3,
+      "title": "Vaisseau et équipement minimal pour un pilote qui n'a jamais tiré",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Tu n'as pas besoin d'un build PvP pour nettoyer un site Guardian — juste d'un vaisseau capable d'encaisser et de tirer vite.**"
+        },
+        {
+          "type": "table",
+          "caption": "Vaisseaux recommandés pour nettoyer un site Guardian",
+          "headers": ["Vaisseau", "Pourquoi lui"],
+          "rows": [
+            [{"text": "Chieftain", "style": "strong"}, {"text": "Bonne maniabilité, tir précis sur cibles rapides (drones).", "style": "normal"}],
+            [{"text": "Krait Mk II", "style": "strong"}, {"text": "Bon compromis polyvalence/soute pour ramasser le butin au sol ensuite.", "style": "normal"}],
+            [{"text": "Federal Gunship", "style": "strong"}, {"text": "Bon tank, puissance de feu élevée.", "style": "normal"}],
+            [{"text": "Anaconda", "style": "strong"}, {"text": "Grande capacité de soute et de modules, bon tank.", "style": "normal"}],
+            [{"text": "Federal Corvette", "style": "strong"}, {"text": "Excellent tank et armement, pour les commandants les mieux équipés.", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Budgéter ce vaisseau si tu n'en as pas",
+          "text": "Si ton vaisseau d'exploration actuel n'a pas les emplacements pour encaisser des tirs de sentinelles, vrai-cout-vaisseau-et-gestion-de-flotte.json détaille le facteur ×2,6 entre le prix de la coque nue et celui d'un vaisseau réellement équipé pour ce genre de mission, ainsi que la matrice Rôle × Budget pour choisir sans te ruiner."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Deux à quatre armes fixes ou tourelles, à tir rapide plutôt qu'à forte alpha.",
+            "Un ou deux Heat Sink Launcher pour encaisser une charge de tourelle sans surchauffer.",
+            "Un Chaff Launcher pour perturber le verrouillage des drones.",
+            "Un Shield Booster si ton vaisseau a un bouclier — les tourelles Guardian tapent fort en énergie."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Les mêmes outils, un usage différent",
+          "text": "Heat Sink et Chaff sont exactement les modules que survivre-au-pvp-sans-combattre.json recommande pour fuir un ganker. Ici, tu ne fuis pas : tu les utilises pour encaisser et perturber pendant que tu nettoies le site, avant de rengainer une fois le Data Terminal scanné."
+        }
+      ]
+    },
+    {
+      "id": "reperer-un-site",
+      "number": 4,
+      "title": "Repérer un site Guardian rapproché : la géographie qui compte",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Tous les sites Guardian ne se valent pas pour une session de farming : certains sont isolés, d'autres regroupés à quelques minutes de saut les uns des autres.**"
+        },
+        {
+          "type": "table",
+          "caption": "Systèmes Guardian de référence et distance depuis Sol (OFF, coordonnées EDSM)",
+          "headers": ["Système", "Distance depuis Sol", "Particularité"],
+          "rows": [
+            [{"text": "HIP 12099", "style": "strong"}, {"text": "≈ 217 al", "style": "number"}, {"text": "Hub le plus efficace : plusieurs sites Guardian rapprochés dans le même système.", "style": "normal"}],
+            [{"text": "HIP 22460", "style": "strong"}, {"text": "≈ 362 al", "style": "number"}, {"text": "Système Guardian documenté, même région générale que HIP 12099.", "style": "normal"}],
+            [{"text": "Synuefe XR-H d11-102", "style": "strong"}, {"text": "≈ 368 al", "style": "number"}, {"text": "Site Guardian le plus proche de la Bulle parmi ceux listés ici.", "style": "normal"}],
+            [{"text": "Synuefe EU-Q c21-9 / c21-16 / c21-4", "style": "strong"}, {"text": "≈ 774 à 793 al", "style": "number"}, {"text": "Amas de plusieurs sites Guardian, dont des ruines pour s'entraîner au puzzle des pylônes.", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Où vérifier les sites à jour",
+          "text": "Le tableau ci-dessus liste des repères courants, mais la liste exhaustive et à jour se trouve sur **Canonn Bifrost** (ruins.canonn.tech, listé sur canonn.science/resources/) — l'outil filtrable de la communauté pour repérer un cluster de sites rapprochés avant de partir. outils.json référence d'autres logiciels utiles à ce type d'expédition."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deux types de sites coexistent dans cette zone : les **Guardian Ruins**, non défendues, où un puzzle de pylônes libère des objets de catégorie Salvage ; et les **Guardian Structures**, défendues par des sentinelles, où la charge de six pylônes puis le scan d'un Ancient Data Terminal délivrent un fragment de plan. Tu as besoin des deux : la section suivante explique pourquoi."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Le détail exact des bâtiments par site n'est pas vérifié",
+          "text": "Le type précis d'installation (Foundry, Robotics Facility, Technology Facility, Vessel/Weapon Blueprint Facility) présent sur chaque site Guardian n'a pas pu être confirmé site par site dans les sources consultées pour ce guide. Croise toujours avec Bifrost ou le wiki avant de cibler un site pour un fragment précis, plutôt que de te fier à une liste figée."
+        }
+      ]
+    },
+    {
+      "id": "farmer-les-ruines-dabord",
+      "number": 5,
+      "title": "Étape 0 : farmer quelques Ancient Relics sur les Ruines",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Avant même de viser une Guardian Structure, fais un détour par une Guardian Ruins voisine : c'est là que tu récupères l'Ancient Relic à déposer plus tard dans le Data Terminal.**"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Descends en SRV (Scarab) à proximité du site de ruines."},
+            {"text": "Observe la séquence lumineuse projetée par les pylônes/plaques au sol."},
+            {"text": "Interagis avec les pylônes pour reproduire la séquence, jusqu'à activer la Relic Tower centrale.", "detail": "Un site de ruines n'a aucune sentinelle hostile : c'est le meilleur endroit pour t'entraîner sans risque avant d'affronter une Structure."},
+            {"text": "Ramasse les objets Salvage libérés par la tour.", "detail": "C'est l'un de ces objets — l'Ancient Relic — que tu déposeras plus tard dans la fente lumineuse du Data Terminal (section 6)."}
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Guardian Relic",
+            "Guardian Casket",
+            "Guardian Orb",
+            "Guardian Tablet",
+            "Guardian Urn"
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Un bonus exobiologie gratuit",
+          "text": "Selon le Codex Canonn, les **Brain Trees** apparaissent systématiquement dans les cratères proches des ruines Guardian — un aller-retour à combiner avec une session d'exobiologie si tu as déjà lu exploration-exobiologie.json."
+        }
+      ]
+    },
+    {
+      "id": "deroule-structure",
+      "number": 6,
+      "title": "Le déroulé étape par étape sur une Guardian Structure",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Une fois tes Ancient Relics en poche, le passage sur une Guardian Structure suit toujours la même séquence.**"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Nettoie les sentinelles actives (drones + tourelles) depuis ton vaisseau, avant de descendre.", "detail": "Ne déploie le SRV qu'une fois le site calme (section 2)."},
+            {"text": "Descends en SRV près de l'Ancient Data Terminal : deux pylônes lui sont directement adjacents.", "detail": "Charge-les en premier."},
+            {"text": "Charge les quatre pylônes restants, dispersés autour du site.", "detail": "Chaque étape de charge fait apparaître de nouvelles sentinelles (section 2) — reste mobile."},
+            {"text": "Dépose un Ancient Relic dans la fente lumineuse une fois les six pylônes chargés.", "detail": "Les sites à Vessel Blueprint Segment demandent un Ancient Key à la place, obtenu uniquement via un Guardian Beacon (encart ci-dessous)."},
+            {"text": "Scanne le cœur du Terminal avec le Data Link Scanner du SRV.", "detail": "Cela délivre un seul fragment de plan par scan — un Guardian Module Blueprint Segment pour le FSD Booster et les modules défensifs de ce guide."},
+            {"text": "Ramasse au passage les composants d'épave au sol avant de repartir.", "detail": "Guardian Power Cell, Guardian Technology Component, etc. — voir le tableau des matériaux en section 9."}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Sites 'larges' : un Ancient Key, pas un Ancient Relic",
+          "text": "Les sites 'larges', accessibles via un Guardian Beacon (structure orbitale distincte), délivrent les Guardian Vessel Blueprint Segments — hors périmètre de ce guide, centré sur le Module Blueprint Segment du FSD Booster. Sur une Beacon, une fois le premier de ses 3 pylônes chargé, les deux autres doivent l'être en 3 minutes pour la réactiver. Le minutage équivalent pour les 6 pylônes d'un site au sol n'a pas été chiffré par une source primaire consultée : compte, par extrapolation prudente, un ordre de grandeur de quelques minutes, à valider par toi-même en jeu."
+        },
+        {"type": "heading", "level": 3, "text": "Petit site vs site 'large'"},
+        {
+          "type": "table",
+          "headers": ["Site", "Pylônes", "Sentinelles", "Dépôt requis"],
+          "rows": [
+            [{"text": "Petit (ce guide)", "style": "strong"}, {"text": "6", "style": "number"}, {"text": "au moins 6", "style": "normal"}, {"text": "Ancient Relic", "style": "normal"}],
+            [{"text": "'Large' (via Beacon)", "style": "strong"}, {"text": "6", "style": "number"}, {"text": "jusqu'à 12", "style": "lose"}, {"text": "Ancient Key", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Scanne aussi les obélisques au passage",
+          "text": "Les obélisques (colonnes isolées, distinctes des pylônes) se scannent individuellement, sans séquence à reproduire : capture-les en chemin pour les Pattern Obelisk Data nécessaires aux modules défensifs (section 9), et pour nourrir au passage les Guardian Logs de Ram Tah."
+        }
+      ]
+    },
+    {
+      "id": "boucle-de-session",
+      "number": 7,
+      "title": "La boucle de session solo : enchaîner les sites plutôt qu'attendre un repop",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Un même site ne rapporte qu'un seul fragment par instance et par joueur solo — la vraie stratégie n'est pas d'attendre, c'est d'enchaîner.**"
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Pas de repop sur place",
+          "text": "Réactiver et scanner à nouveau le même Ancient Data Terminal sans te déconnecter puis te reconnecter ne délivre aucune donnée supplémentaire, selon le wiki communautaire Elite Dangerous. En Wing, en revanche, chaque membre peut scanner le même Terminal rechargé pour obtenir son propre exemplaire du fragment, sans faire apparaître de sentinelles supplémentaires."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Repère avant de partir un petit groupe de sites confirmés et rapprochés (le hub HIP 12099, ou l'amas Synuefe EU-Q c21-4/9/16, section 4) via Bifrost.",
+            "Nettoie chaque site : sentinelles → 6 pylônes → dépôt de la relique → scan du Terminal → ramassage des composants d'épave au passage.",
+            "Saute directement au site suivant du groupe repéré, sans revenir sur le précédent : le trajet interstellaire remplace l'attente d'un repop.",
+            "Une fois le groupe épuisé, vise un autre cluster ou reconnecte-toi (menu principal) pour reprendre la boucle sur le premier site."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Jouer en Wing multiplie les fragments, pas le nettoyage",
+          "text": "Si tu voles avec un ou deux commandants, chacun peut scanner le même Terminal rechargé pour son propre fragment — sans faire réapparaître davantage de sentinelles. C'est le moyen le plus direct de réduire le nombre de sites à visiter pour un total de fragments donné."
+        }
+      ]
+    },
+    {
+      "id": "debloquer-fsd-booster",
+      "number": 8,
+      "title": "Débloquer le FSD Booster classe 1 au Tech Broker",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Le déblocage se fait en deux temps bien distincts : d'abord le plan, une fois pour toutes ; ensuite l'achat de chaque exemplaire, en crédits.**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Au Guardian Tech Broker, tu livres d'abord les fragments et matériaux qui débloquent le plan Guardian FSD Booster classe 1 — une opération à ne faire qu'une seule fois. Une fois débloqué, chaque exemplaire fabriqué ensuite ne coûte plus que des crédits, au tarif de la table de la section 1 (405 022 Cr pour la classe 1)."
+        },
+        {"type": "heading", "level": 3, "text": "La recette de déblocage, matériau par matériau"},
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Fragment requis", "value": "1 Guardian Module Blueprint Fragment", "reliability": "official"},
+            {"label": "Matériaux Guardian farmés sur site", "value": "21 Guardian Power Cell + 21 Guardian Technology Component", "reliability": "official"},
+            {"label": "Matériau non-Guardian", "value": "24 Focus Crystals (salvage/USS, hors sites Guardian)", "reliability": "official"},
+            {"label": "Commodity à acheter en station", "value": "8 HN Shock Mount", "reliability": "official"}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Classes 2 à 5 : la recette n'est pas documentée dans les sources de ce guide",
+          "text": "Aucune source consultée pour ce guide ne chiffre les quantités de fragments et de matériaux requises pour débloquer les classes 2 à 5 du FSD Booster — seule la classe 1 est vérifiée ci-dessus. Ne suppose pas une simple règle de trois à partir de la classe 1 : consulte Inara.cz (inara.cz/elite/techbroker/2/) au comptoir Guardian avant de calculer un total pour une classe supérieure."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le Guardian Module Blueprint Fragment s'obtient exactement comme décrit en section 6 : un scan d'Ancient Data Terminal après dépôt d'un Ancient Relic. Les deux matériaux d'épave (Power Cell, Technology Component) se ramassent au sol sur les mêmes sites, souvent après avoir détruit les sentinelles qui les gardaient — voir la table des matériaux en section 9."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Avec une seule recette vérifiée, la classe 1 (+4 al pour 405 022 Cr d'achat, plus le fragment et les matériaux ci-dessus) est l'objectif réaliste de ce guide. Elle suffit déjà à repousser sensiblement ton rayon d'action une fois combinée à l'ingénierie Increased Range — voir section 1."
+        }
+      ]
+    },
+    {
+      "id": "modules-defensifs",
+      "number": 9,
+      "title": "Les modules défensifs Guardian : bouclier, coque, distributeur, centrale",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Une fois sur place, autant repartir aussi avec de quoi renforcer ton vaisseau : les modules défensifs Guardian utilisent les mêmes fragments et les mêmes sites.**"
+        },
+        {
+          "type": "table",
+          "caption": "Modules défensifs Guardian, recette de déblocage vérifiée (classe indiquée, OFF)",
+          "headers": ["Module", "Fragment", "Matériaux Guardian (site)", "Autre matériau"],
+          "rows": [
+            [{"text": "Guardian Shield Reinforcement Package (cl. 1)", "style": "strong"}, {"text": "1 Module Blueprint Fragment", "style": "normal"}, {"text": "17 Power Cell + 20 Technology Component + 24 Pattern Delta Obelisk Data", "style": "normal"}, {"text": "—", "style": "normal"}],
+            [{"text": "Guardian Hull Reinforcement Package (cl. 1)", "style": "strong"}, {"text": "1 Module Blueprint Fragment", "style": "normal"}, {"text": "21 Sentinel Wreckage Components + 16 Pattern Beta Obelisk Data + 16 Pattern Gamma Obelisk Data", "style": "normal"}, {"text": "—", "style": "normal"}],
+            [{"text": "Guardian Power Distributor Hybrid (cl. 1)", "style": "strong"}, {"text": "1 Module Blueprint Fragment", "style": "normal"}, {"text": "24 Power Cell + 20 Pattern Alpha Obelisk Data", "style": "normal"}, {"text": "18 Phase Alloys (non-Guardian)", "style": "normal"}],
+            [{"text": "Guardian Power Plant Hybrid (cl. 2)", "style": "strong"}, {"text": "1 Module Blueprint Fragment", "style": "normal"}, {"text": "18 Power Conduit + 21 Pattern Epsilon Obelisk Data", "style": "normal"}, {"text": "15 Heat Resistant Ceramics (non-Guardian)", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Les Pattern Obelisk Data, un farming à part",
+          "text": "Les cinq familles — Alpha, Beta, Gamma, Delta, Epsilon — s'obtiennent uniquement en scannant des **obélisques** individuellement (section 6), pas en chargeant des pylônes. Un site avec plusieurs obélisques actifs sert donc directement à alimenter ces modules, indépendamment des fragments de plan récoltés au Data Terminal."
+        },
+        {"type": "heading", "level": 3, "text": "Ce que chaque module apporte"},
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Shield Reinforcement Package : renfort de points de bouclier, plusieurs classes disponibles.",
+            "Hull Reinforcement Package : renfort de coque avec un bonus de résistance inclus.",
+            "Power Distributor (Hybrid) : répartition de pips différente, apprécié sur les builds tank.",
+            "Power Plant (Hybrid) : profil thermique et efficacité différents des centrales humaines standards."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ces quantités ne couvrent qu'une classe par module",
+          "text": "Comme pour le FSD Booster, les quantités des classes supérieures de ces modules n'ont pas été vérifiées dans les sources consultées pour ce guide — reste sur Inara.cz avant de planifier une session de farming ciblée sur une classe précise."
+        }
+      ]
+    },
+    {
+      "id": "budget-et-temps",
+      "number": 10,
+      "title": "Budget total et temps à prévoir",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Aucune source consultée ne chiffre la durée totale d'un passage complet sur un site — ce guide le dit franchement plutôt que d'inventer un chiffre confortable.**"
+        },
+        {
+          "type": "table",
+          "caption": "Ordre de grandeur par étape (EST, à valider en chronométrant ton premier passage)",
+          "headers": ["Étape", "Repère chiffré disponible"],
+          "rows": [
+            [{"text": "Trajet interstellaire vers le site suivant", "style": "strong"}, {"text": "Variable selon la distance entre sites du même cluster (quelques minutes en FSD).", "style": "normal"}],
+            [{"text": "Nettoyage des sentinelles (6 à 12 selon le site)", "style": "strong"}, {"text": "Non chiffré par une source primaire — dépend entièrement de ton armement (sections 2-3).", "style": "normal"}],
+            [{"text": "Charge des 6 pylônes au sol", "style": "strong"}, {"text": "Ordre de grandeur extrapolé de quelques minutes (contre 3 minutes documentées pour les 3 pylônes d'une Beacon).", "style": "normal"}],
+            [{"text": "Dépôt de la relique + scan du Terminal", "style": "strong"}, {"text": "Quelques secondes une fois les pylônes chargés.", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ne prends pas ces repères pour des minutages garantis",
+          "text": "Le nettoyage des sentinelles et la charge des pylônes au sol ne sont chiffrés par aucune source primaire consultée pour ce guide : ce sont des ordres de grandeur, pas des temps garantis. Ton propre temps dépendra de ton armement, de ton pilotage et du nombre de sentinelles réellement rencontrées."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Achat du FSD Booster classe 1 (une fois le plan débloqué)", "value": "405 022 Cr", "reliability": "official"},
+            {"label": "Commodity à acheter en station pour débloquer le plan", "value": "8 HN Shock Mount, prix variable selon la station", "reliability": "community"}
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Si ton vaisseau actuel n'est pas encore équipé pour encaisser une Guardian Structure, budgète-le avec vrai-cout-vaisseau-et-gestion-de-flotte.json avant de partir plutôt qu'en cours de route — c'est plus simple de tout prévoir une fois, au calme, dans une station."
+        }
+      ]
+    },
+    {
+      "id": "ce-qu-il-faut-retenir",
+      "number": 11,
+      "title": "Ce qu'il faut retenir",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {"text": "**Fais un détour par une Guardian Ruins voisine avant toute Structure**, pour repartir avec au moins un Ancient Relic.", "detail": "Aucune sentinelle hostile là-bas : c'est ton entraînement sans risque."},
+            {"text": "**Nettoie les sentinelles avant de déployer le SRV**, avec des armes fixes à tir rapide, heatsinks et chaff.", "detail": "Au moins 6 sentinelles sur un petit site, en trois vagues déclenchées par la charge des pylônes."},
+            {"text": "**Charge les 6 pylônes, dépose ton Ancient Relic, scanne le Terminal.**", "detail": "Un seul fragment de Guardian Module Blueprint par scan et par instance."},
+            {"text": "**Enchaîne plusieurs sites rapprochés plutôt que d'attendre un repop.**", "detail": "Rescanner le même Terminal en solo exige de te déconnecter puis de te reconnecter."},
+            {"text": "**Débloque le FSD Booster classe 1** avec 1 fragment, 21 Power Cell, 21 Technology Component, 24 Focus Crystals et 8 HN Shock Mount, puis achète-le 405 022 Cr.", "detail": "Les classes 2 à 5 existent, mais leur recette de déblocage n'est pas documentée par les sources de ce guide."},
+            {"text": "**Farme aussi les obélisques** pour les Pattern Obelisk Data des modules défensifs, en plus des pylônes.", "detail": "Shield, Hull, Power Distributor et Power Plant Guardian utilisent les mêmes sites."}
+          ]
+        },
+        {"type": "divider"},
+        {
+          "type": "paragraph",
+          "text": "**Fiabilité des données.** Les statistiques du FSD Booster par classe, la mécanique des 6 pylônes et des vagues de sentinelles, ainsi que la recette de déblocage de la classe 1, proviennent des fichiers de référence EDCD (coriolis-data, FDevIDs), du wiki Elite Dangerous (Fandom, via l'API MediaWiki publique) et d'Inara.cz (comptoir Guardian). Les quantités des classes 2 à 5, le minutage exact de charge des pylônes au sol et la durée totale d'un passage ne sont chiffrés par aucune source primaire consultée : ce guide le signale explicitement plutôt que de les estimer sans le dire."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Ce que ce guide ne couvre pas.** Le combat anti-Thargoïde (Interceptors, armement AX), l'ingénierie des armes Guardian et le lore complet des Guardians sont traités ailleurs dans le corpus de référence, pas dans ce manuel de terrain centré sur le FSD Booster et le minimum de combat nécessaire pour l'obtenir."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — 05-guardians.md",
+    "Elite Dangerous Wiki (Fandom)",
+    "Inara.cz",
+    "EDCD / coriolis-data",
+    "EDCD / FDevIDs",
+    "Canonn Research (canonn.science)",
+    "Canonn Bifrost (ruins.canonn.tech)",
+    "EDSM"
+  ]
+}

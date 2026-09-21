@@ -1,0 +1,288 @@
+{
+  "id": "transport-passagers-sauvetage",
+  "title": "Pilote de liner et sauveteur : transporter sans combattre",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Transport de passagers et Search & Rescue : deux métiers non-combattants jamais couverts par ce corpus, pour un profil social et humanitaire bien différent de l'explorateur solitaire — quelle cabine choisir, quel vaisseau acheter, combien ça rapporte réellement, et comment ramener tout le monde vivant.",
+  "byline": "PC · Live · Transport de passagers & Search and Rescue · Aucune compétence de combat requise",
+  "edition": "2026-09",
+  "topics": ["transport-passagers", "cabines-passagers", "search-and-rescue", "sauvetage", "lynx-highliner", "sans-combat"],
+  "estimatedReadMinutes": 17,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {"type": "list", "ordered": true, "items": [
+          "Ton profil : pilote de liner et sauveteur, pas explorateur solitaire",
+          "Les quatre classes de cabines : l'arbitrage densité / rémunération",
+          "Choisir son liner : Dolphin, Orca, Beluga Liner, Lynx Highliner",
+          "Rentabilité chiffrée : 50 à 100 M Cr/h en mission stacking",
+          "Missions spéciales : évacuer une station en feu",
+          "Search & Rescue : où chercher, quoi récupérer, le piège fatal",
+          "Livraison, récompenses, et le flou Powerplay",
+          "Évasion d'interdiction pour un vaisseau sans arme",
+          "Optimiser la portée de saut d'un liner ou d'un vaisseau SAR",
+          "Check-list avant le vol, et ce qu'il faut retenir"
+        ]},
+        {"type": "paragraph", "emphasis": "intro", "text": "**Transporter des gens, pas des caisses : deux métiers non-combattants — passagers et Search & Rescue — jamais couverts par ce corpus jusqu'ici.** Ce manuel construit le profil du pilote de liner et du sauveteur : quelle cabine choisir, quel vaisseau acheter, combien ça rapporte réellement à l'heure, et comment ramener tout le monde vivant sans jamais dégainer une arme."},
+        {"type": "paragraph", "text": "Ce guide s'adresse à un profil distinct des autres manuels pacifistes du corpus : debuter-sans-combat.json et exploration-exobiologie.json t'envoient seul, loin de la bulle, face à des planètes et des espèces à scanner. Ici, ton terrain de jeu reste social — stations, comptoirs de mission, contacts Search and Rescue — et ta cargaison, ce sont des personnes : touristes, VIP, civils évacués d'une station en feu, ou survivants récupérés sur une épave. Zéro compétence de combat requise, comme pour les autres manuels non-combattants du corpus, mais un rythme et des réflexes complètement différents de ceux de l'explorateur solitaire."},
+        {"type": "callout", "tone": "info", "title": "Comment lire les chiffres de ce guide", "text": "**OFF** = confirmé par une source officielle ou une note de version Frontier. **COM** = documenté par la communauté (EDSY, Inara, Coriolis, presse spécialisée) sans confirmation officielle directe. **EST** = estimation ou reconstitution de ce guide à partir de chiffres COM, signalée comme telle plutôt que présentée comme acquise. Deux points sensibles de ce guide portent une réserve explicite : les capacités de cabines par taille de module (jamais reconfirmées en direct) et un éventuel bonus Powerplay pour le Search & Rescue (ni confirmé ni infirmé par les sources consultées)."},
+        {"type": "callout", "tone": "warning", "title": "Ce que ce guide ne couvre pas", "text": "La distinction entre un pirate et un ganker, la procédure de blocage/signalement et le choix du mode de jeu sont déjà traités en détail dans survivre-au-pvp-sans-combattre.json — ce manuel n'y revient pas. L'ingénierie du FSD (déblocage de Farseer, blueprint Increased Range, injection de matériaux) est intégralement couverte par guide-ingenierie-fsd-explorateur.json, tout comme le Guardian FSD Booster par guide-guardian-fsd-booster.json : ce guide s'appuie sur ces manuels sans les réexpliquer. L'achat et l'entretien d'un Fleet Carrier restent le sujet de porte-vaisseau-rentable.json."}
+      ]
+    },
+    {
+      "id": "profil",
+      "number": 1,
+      "title": "Ton profil : pilote de liner et sauveteur, pas explorateur solitaire",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Un pilote de liner ne fuit pas la civilisation, il en vit : ton revenu dépend de stations peuplées, de comptoirs de mission et d'une réputation de faction à entretenir, pas d'un système désert à cartographier.**"},
+        {"type": "paragraph", "text": "Rien dans ce corpus ne distinguait encore ce profil de celui de l'explorateur pacifiste. Pourtant les réflexes divergent complètement : un explorateur planifie une route de plusieurs semaines loin de toute aide, un transporteur de passagers planifie une rotation de quelques dizaines de minutes entre deux stations, avec des délais à respecter et une réputation de faction qui déverrouille progressivement de meilleurs contrats. Le sauveteur Search & Rescue, lui, réagit à l'instant : une épave ou un signal de détresse ne se planifie pas des semaines à l'avance."},
+        {"type": "table", "caption": "Deux profils pacifistes, deux réflexes", "headers": ["Critère", "Explorateur solitaire (autres guides)", "Transporteur & sauveteur (ce guide)"], "rows": [
+          [{"text": "Terrain de jeu", "style": "strong"}, {"text": "Systèmes inexplorés, loin de la bulle"}, {"text": "Stations peuplées, comptoirs de mission, USS de détresse"}],
+          [{"text": "Rythme", "style": "strong"}, {"text": "Sessions longues, autonomie totale"}, {"text": "Rotations courtes, délais de mission stricts"}],
+          [{"text": "Ce qui te fait progresser", "style": "strong"}, {"text": "Découvertes cartographiées, exobiologie"}, {"text": "Réputation de faction, volume de passagers et de sauvetages livrés"}],
+          [{"text": "Échec typique", "style": "strong"}, {"text": "Vaisseau perdu loin de tout secours"}, {"text": "Passager perdu, réputation pénalisée, prime possible", "style": "lose"}]
+        ]},
+        {"type": "list", "items": [
+          "**Nombre de passagers et classe de cabine exigée** — vérifie que ton fit correspond avant d'accepter, pas après avoir décollé.",
+          "**Statut VIP ou non** — un VIP à haute valeur peut justifier une escorte armée, hors périmètre de ce guide.",
+          "**Destination et limite de temps** — beaucoup de contrats imposent un délai strict, à vérifier avant de charger une route longue.",
+          "**Statut légal du passager** — certains sont recherchés ou voyagent clandestinement : évite tout scan de sécurité, comme tu le ferais pour de la contrebande."
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Ce que coûte un échec", "text": "Destruction du vaisseau, dépassement du délai, arrivée au mauvais quai : dans les trois cas, tu perds le passager, tu encaisses une pénalité de réputation, et une prime (bounty) peut même être placée sur ta tête si le passager bénéficiait d'une protection particulière. Aucun de ces échecs n'est rattrapable en cours de mission — la seule prévention, c'est de vérifier les quatre paramètres ci-dessus avant d'accepter."},
+        {"type": "verdict", "title": "Verdict", "text": "Ce guide part d'un postulat simple : tu veux faire progresser ta réputation et ton compte en banque en déplaçant des gens, pas des cristaux ou des cartes stellaires. Les sections qui suivent — cabines, vaisseaux, rentabilité, Search & Rescue — partent toutes de ce postulat."}
+      ]
+    },
+    {
+      "id": "cabines",
+      "number": 2,
+      "title": "Les quatre classes de cabines : l'arbitrage densité / rémunération",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le choix de classe de cabine est l'arbitrage central de tout transporteur de passagers : densité contre rémunération, sur quatre niveaux de confort.**"},
+        {"type": "heading", "text": "Les quatre classes de confort", "level": 3},
+        {"type": "list", "items": [
+          "**Économique** — la classe la plus dense : le plus de passagers par tonne, la rémunération par tête la plus faible. C'est la classe des missions de masse, des évacuations et du Search & Rescue.",
+          "**Affaires (Business)** — un compromis entre densité et rémunération, pour les missions courantes à bon rendement.",
+          "**Première classe (First Class)** — des slots proportionnellement plus grands pour moins de passagers, contre une rémunération nettement supérieure : contrats VIP, tourisme haut de gamme.",
+          "**Luxe (Luxury)** — la classe la plus exigeante en espace, réservée aux plus gros vaisseaux dédiés, mais la mieux rémunérée par passager : circuits longue distance sur Orca ou Beluga Liner."
+        ]},
+        {"type": "table", "caption": "Capacité en passagers par taille de module (valeurs stock, communautaires)", "headers": ["Taille du module", "Économique", "Affaires", "Première classe", "Luxe"], "rows": [
+          [{"text": "2", "style": "strong"}, {"text": "8", "style": "number"}, {"text": "4", "style": "number"}, {"text": "—"}, {"text": "—"}],
+          [{"text": "3", "style": "strong"}, {"text": "16", "style": "number"}, {"text": "8", "style": "number"}, {"text": "3", "style": "number"}, {"text": "—"}],
+          [{"text": "4", "style": "strong"}, {"text": "32", "style": "number"}, {"text": "16", "style": "number"}, {"text": "6", "style": "number"}, {"text": "3", "style": "number"}],
+          [{"text": "5", "style": "strong"}, {"text": "64", "style": "number"}, {"text": "32", "style": "number"}, {"text": "12", "style": "number"}, {"text": "6", "style": "number"}],
+          [{"text": "6", "style": "strong"}, {"text": "128", "style": "number"}, {"text": "64", "style": "number"}, {"text": "24", "style": "number"}, {"text": "12", "style": "number"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Des valeurs jamais reconfirmées en direct", "text": "Ce tableau reprend des valeurs historiquement documentées par la communauté (EDSY, Inara, Coriolis) pour une cabine en configuration stock — pas un chiffre confirmé par une source officielle récente. Économique et Affaires existent dès la taille 2, Première classe à partir de la taille 3, Luxe à partir de la taille 4. Vérifie les valeurs actuelles sur un configurateur comme EDSY.org avant de planifier un fit précis : les patchs d'équilibrage peuvent les faire évoluer. **(COM)**"},
+        {"type": "keyValue", "items": [
+          {"label": "Cabine taille 6, Économique", "value": "128 passagers", "reliability": "community"},
+          {"label": "Cabine taille 6, Affaires", "value": "64 passagers", "reliability": "community"},
+          {"label": "Cabine taille 6, Première classe", "value": "24 passagers", "reliability": "community"},
+          {"label": "Cabine taille 6, Luxe", "value": "12 passagers", "reliability": "community"}
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "Pars sur de l'Économique pour maximiser le volume — missions de masse, évacuations, Search & Rescue — et réserve l'Affaires ou la Première classe aux contrats mieux payés une fois ta réputation de faction montée. Le Luxe ne devient rentable que sur un vaisseau dédié à forte capacité (section suivante) : ne l'installe pas sur un petit coucou en pensant rentabiliser l'espace perdu."}
+      ]
+    },
+    {
+      "id": "vaisseaux",
+      "number": 3,
+      "title": "Choisir son liner : Dolphin, Orca, Beluga Liner, Lynx Highliner",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Cinq vaisseaux se disputent le marché du transport de passagers, et le petit dernier n'est pas du fabricant que tout le monde croit.**"},
+        {"type": "table", "caption": "Vaisseaux dédiés au transport de passagers", "headers": ["Vaisseau", "Profil", "Points forts", "Usage recommandé"], "rows": [
+          [{"text": "Dolphin", "style": "strong"}, {"text": "Petit-moyen"}, {"text": "Rapide, agile, abordable, bonne portée grâce à sa faible masse"}, {"text": "Débuter : missions à faible effectif, haute fréquence"}],
+          [{"text": "Orca", "style": "strong"}, {"text": "Moyen-large"}, {"text": "Excellent rapport vitesse/portée de saut"}, {"text": "Tourisme VIP/Luxe longue distance"}],
+          [{"text": "Beluga Liner", "style": "strong"}, {"text": "Grand"}, {"text": "Capacité de cabines la plus élevée des vaisseaux spécialisés", "style": "win"}, {"text": "Maximiser les passagers par rotation"}],
+          [{"text": "Type-9 Heavy (reconfiguré)", "style": "strong"}, {"text": "Grand cargo"}, {"text": "Slots internes énormes en Économique, mais lent"}, {"text": "Missions de très gros volume bon marché"}],
+          [{"text": "Lynx Highliner", "style": "strong"}, {"text": "Moyen"}, {"text": "Jusqu'à 225 passagers, moins raffiné que l'Orca/Beluga", "style": "win"}, {"text": "Alternative moderne à forte capacité"}]
+        ]},
+        {"type": "callout", "tone": "info", "title": "Le Lynx Highliner n'est pas un vaisseau Saud Kruger", "text": "Distribué gratuitement en avril 2026 puis achetable en crédits à partir du 28 avril 2026, le Lynx Highliner est en réalité le tout premier paquebot de passagers de **Zorgon Peterson** — un fabricant jusque-là associé au combat (Adder, Fer-de-Lance, Krait, Mamba), pas au tourisme spatial. Sa sortie a aussi ramené les missions « stations en feu » (section 5). **(COM, fiche produit officielle + Inara.cz)**"},
+        {"type": "keyValue", "items": [
+          {"label": "Lynx Highliner, capacité maximale", "value": "Jusqu'à 225 passagers", "reliability": "community"},
+          {"label": "Disponibilité", "value": "Distribué gratuitement en avril 2026, achetable en crédits depuis le 28 avril 2026", "reliability": "community"}
+        ]},
+        {"type": "table", "caption": "Quel vaisseau pour quel usage ?", "headers": ["Objectif", "Vaisseau recommandé", "Raison"], "rows": [
+          [{"text": "Débuter dans le transport de passagers", "style": "strong"}, {"text": "Dolphin"}, {"text": "Abordable, agile, bonne portée"}],
+          [{"text": "Tourisme VIP/Luxe longue distance", "style": "strong"}, {"text": "Orca"}, {"text": "Meilleur rapport vitesse/portée"}],
+          [{"text": "Maximiser les passagers par rotation", "style": "strong"}, {"text": "Beluga Liner ou Lynx Highliner"}, {"text": "Plus grande capacité dédiée"}],
+          [{"text": "Évacuation de masse / Search & Rescue", "style": "strong"}, {"text": "Type-9 Heavy ou Beluga en config Économique"}, {"text": "Volume maximal à faible coût par tête"}]
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Combiner avec les marchandises rares", "text": "Les rares occupent peu de place en soute et se combinent bien avec des cabines passagers (Beluga, Orca, Dolphin) sur une même rotation. Ce guide ne détaille pas cette économie : voir commerce-professionnel.json pour les boucles de marchandises rares et leur rentabilité chiffrée."},
+        {"type": "verdict", "title": "Verdict", "text": "Le Dolphin pour débuter, l'Orca pour le VIP longue distance, le Beluga Liner ou le Lynx Highliner dès que le volume prime sur le raffinement. Le Type-9 Heavy reconfiguré reste l'option brutale pour du volume Économique pur, notamment en évacuation."}
+      ]
+    },
+    {
+      "id": "rentabilite",
+      "number": 4,
+      "title": "Rentabilité chiffrée : 50 à 100 M Cr/h en mission stacking",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**50 à 100 M Cr/h en missions groupées, jusqu'à ≈ 90 M Cr/h sur la route historique Robigo → Sothis — mais aucun de ces chiffres n'est un barème officiel Frontier.**"},
+        {"type": "keyValue", "items": [
+          {"label": "Limite de missions actives simultanées", "value": "20 missions", "reliability": "official"},
+          {"label": "Rentabilité en missions groupées (système touristique dense)", "value": "≈ 50 à 100 M Cr/h", "reliability": "community"},
+          {"label": "Route Robigo → Sothis (≈ 60 al)", "value": "Documentée jusqu'à ≈ 90 M Cr/h", "reliability": "community"}
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Une reconstitution communautaire, pas un tarif garanti", "text": "Ces chiffres sont une reconstitution communautaire datée de septembre 2026 (GameRant, Pilots Trade Network), pas un barème publié par Frontier. Le rendement réel d'une session varie avec le marché, la réputation de faction, la sélection des missions et la distance de vol : traite-les comme un ordre de grandeur, pas comme une promesse."},
+        {"type": "list", "items": [
+          "Le marché local et la densité de contrats disponibles au comptoir.",
+          "Ta réputation de faction, qui déverrouille progressivement des contrats mieux payés et des VIP à forte valeur.",
+          "La sélection des missions : privilégier celles vers une même destination pour grouper les livraisons.",
+          "La distance de vol réelle, qui détermine combien de rotations tu peux enchaîner par heure."
+        ]},
+        {"type": "steps", "items": [
+          {"text": "Choisis un système touristique dense, ou une route mixte type Robigo → Sothis.", "detail": "Plus il y a de contrats vers la même destination, plus le stacking est efficace."},
+          {"text": "Accepte jusqu'à 20 missions actives vers la même destination.", "detail": "C'est la limite du jeu — au-delà, tu dois d'abord en livrer ou en abandonner une."},
+          {"text": "Vérifie que ta capacité de cabines couvre le total de passagers acceptés avant de décoller.", "detail": "Un contrat accepté sans place à bord ne peut pas être rempli."},
+          {"text": "Livre tout d'un coup à l'arrivée, puis relance immédiatement une nouvelle salve de contrats.", "detail": "C'est l'enchaînement des rotations, pas une seule grosse mission, qui fait le Cr/h annoncé."}
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "Vise le mission stacking dans un hub touristique dense pour un revenu régulier, et garde Robigo → Sothis en tête comme référence historique si tu acceptes de mélanger passagers légaux et recherchés. Ne construis jamais ton budget sur le haut de la fourchette : c'est un maximum documenté, pas une moyenne garantie."}
+      ]
+    },
+    {
+      "id": "stations-en-feu",
+      "number": 5,
+      "title": "Missions spéciales : évacuer une station en feu",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Depuis avril 2026, certaines missions ne te demandent plus de vendre un trajet : elles te demandent de sauver des vies avant qu'une station ne devienne inhabitable.**"},
+        {"type": "paragraph", "text": "Le patch qui a introduit le Lynx Highliner a aussi ramené les missions « stations en feu » (burning stations) : rejoindre une station spatiale en train de brûler pour en évacuer les civils. Cette mécanique exploite directement tes capacités de transport de passagers en masse — typiquement en cabines Économiques, pour maximiser le nombre de survivants évacués en un minimum de rotations."},
+        {"type": "steps", "items": [
+          {"text": "Repère la mission au tableau ou via le signal d'urgence associé.", "detail": "Ces missions sont temporaires et affichent généralement une limite de temps stricte."},
+          {"text": "Configure ton vaisseau en cabines Économiques dès que possible avant le départ.", "detail": "Le volume prime totalement sur le confort pour ce type de mission."},
+          {"text": "Enchaîne les rotations vers un point d'évacuation sûr plutôt que de viser une seule livraison massive.", "detail": "Un vaisseau plus petit mais plus rapide peut évacuer davantage de monde à l'heure qu'un gros porteur lent."}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Les bons vaisseaux pour ce type d'urgence", "text": "Un Beluga Liner, un Lynx Highliner ou un Type-9 Heavy reconfiguré en Économique dense sont particulièrement adaptés : volume maximal, coût par tête minimal (voir section 3)."},
+        {"type": "callout", "tone": "info", "title": "Une mécanique cousine du Search & Rescue", "text": "Les évacuations de station en feu et le Search & Rescue (section suivante) partagent la même logique de sauvetage de survivants, avec une différence : ici, les civils montent volontairement à bord comme des passagers classiques, alors qu'en Search & Rescue tu récupères des occupants déjà en détresse dans l'espace, sans qu'ils pilotent quoi que ce soit."},
+        {"type": "verdict", "title": "Verdict", "text": "Traite une mission « station en feu » comme un sprint de volume, pas comme un contrat de confort : cabines Économiques, rotations courtes, et un œil sur le chronomètre plutôt que sur la classe de la cabine."}
+      ]
+    },
+    {
+      "id": "sar-mecaniques",
+      "number": 6,
+      "title": "Search & Rescue : où chercher, quoi récupérer, le piège fatal",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le Search & Rescue n'est pas du transport de passagers : c'est du fret spécial qui peut coûter des vies si tu le traites comme n'importe quelle cargaison.**"},
+        {"type": "heading", "text": "Où trouver les marchandises de sauvetage", "level": 3},
+        {"type": "list", "items": [
+          "Sur les **épaves** laissées par des vaisseaux détruits — les tiens, ceux d'autres joueurs ou de PNJ.",
+          "Dans les **sites de signal non identifiés (USS)** signalés « détresse » ou « combat » lors du survol d'un système.",
+          "Lors de combats, y compris en **zones de conflit**, où des vaisseaux détruits laissent parfois des survivants à récupérer.",
+          "Lors des missions d'évacuation type « station en feu » (section 5), qui produisent directement ce type de cargaison."
+        ]},
+        {"type": "heading", "text": "Quoi récupérer", "level": 3},
+        {"type": "list", "items": [
+          "**Capsules de sauvetage occupées (Occupied Escape Pods)** — chaque unité représente un ou plusieurs survivants.",
+          "**Boîtes noires (Black Boxes)** — données de vol à ramener au contact dédié.",
+          "**Effets personnels (Personal Effects)** — objets récupérés sur l'épave.",
+          "**Composants d'épave (Wreckage Components)** — éléments matériels du vaisseau détruit."
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Le piège fatal du Search & Rescue", "text": "Scanner ou détruire un vaisseau qui contient encore des occupants vivants, avant de les récupérer, entraîne leur **perte définitive**. Contrairement à une cargaison classique que tu peux abîmer sans conséquence irréversible, une capsule de sauvetage occupée ne se remplace pas : traite tout vaisseau en détresse avec des survivants à bord comme une cible à ne jamais scanner ni engager avant d'avoir récupéré ce qu'il contient."},
+        {"type": "table", "caption": "Les deux types d'USS liés au sauvetage", "headers": ["Type de signal", "Ce que tu y trouves", "Niveau de menace"], "rows": [
+          [{"text": "Distress Call", "style": "strong"}, {"text": "Marchand en détresse ou attaqué"}, {"text": "Variable — peut être hostile", "style": "mid"}],
+          [{"text": "Search and Rescue Patrol", "style": "strong"}, {"text": "Vaisseau isolé non hostile"}, {"text": "Faible", "style": "win"}]
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "Le Search & Rescue se transporte comme du fret classique — pas besoin de cabine dédiée — mais se manipule comme une cargaison humaine : jamais de scan agressif, jamais de tir avant d'avoir confirmé qu'il ne reste personne à bord. C'est la seule règle qui compte dans cette activité."}
+      ]
+    },
+    {
+      "id": "sar-livraison",
+      "number": 7,
+      "title": "Livraison, récompenses, et le flou Powerplay",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Livrer au bon contact rapporte plus que revendre au marché libre — et parfois davantage qu'un simple chiffre en crédits.**"},
+        {"type": "list", "items": [
+          "Une récompense en crédits, généralement supérieure à la revente sur le marché libre de la même marchandise.",
+          "Un gain de réputation avec la faction locale.",
+          "Occasionnellement, une contribution à une Community Goal à thème évacuation ou secours, si un tel objectif est actif dans le secteur — voir guide-community-goals.json pour le fonctionnement général des CG."
+        ]},
+        {"type": "steps", "items": [
+          {"text": "Accoste à une station disposant d'un contact Search and Rescue.", "detail": "Ce n'est pas systématiquement le même comptoir que les missions de passagers classiques."},
+          {"text": "Vends ou livre les Occupied Escape Pods, Black Boxes, Personal Effects et Wreckage Components au contact dédié.", "detail": "Traite-les séparément de ta cargaison commerciale ordinaire."},
+          {"text": "Encaisse la récompense et le gain de réputation associé.", "detail": ""}
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Un bonus Powerplay non confirmé", "text": "Aucune source consultée pour ce guide ne confirme ni n'infirme qu'une livraison Search & Rescue compte comme marchandise d'acquisition pour une Puissance Powerplay donnée. Les mérites Powerplay se gagnent avec certitude par le combat ou par la livraison de la marchandise propre à chaque Puissance auprès de son contact local — n'ajoute pas de bonus Search & Rescue à une stratégie de mérites sans l'avoir vérifié toi-même via les notes de version officielles."},
+        {"type": "keyValue", "items": [
+          {"label": "Mérites Powerplay par combat", "value": "Interdiction et destruction d'ennemis affiliés à des factions rivales", "reliability": "community"},
+          {"label": "Mérites Powerplay par logistique de fret", "value": "Achat/collecte de la commodité liée à la Puissance, livrée au contact local", "reliability": "community"},
+          {"label": "Mérites Powerplay via Search & Rescue", "value": "Non documenté — ni confirmé ni infirmé par les sources consultées", "reliability": "estimate"}
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "Livre systématiquement au contact Search and Rescue plutôt qu'au marché libre : la prime de récompense et le gain de réputation compensent largement le petit détour. Ne compte en revanche sur aucun bonus Powerplay tant qu'une note de version officielle ne l'aura pas confirmé."}
+      ]
+    },
+    {
+      "id": "evasion",
+      "number": 8,
+      "title": "Évasion d'interdiction pour un vaisseau sans arme",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Un liner ou un vaisseau de sauvetage n'a presque jamais d'armement sérieux : ta seule défense, c'est de ne jamais te faire rattraper.**"},
+        {"type": "callout", "tone": "info", "title": "Pirate ou ganker : la distinction est déjà écrite ailleurs", "text": "Reconnaître si tu fais face à un pirate négociable ou à un ganker qui veut ta destruction est couvert en détail — signes avant l'interdiction, comportement après, lieux à risque documentés (Deciat, Shinrarta Dezhra) — par survivre-au-pvp-sans-combattre.json. Ce guide ne la réexplique pas : va y voir avant ta première rotation en Open."},
+        {"type": "steps", "items": [
+          {"text": "Soumets-toi immédiatement plutôt que de résister.", "detail": "Résister prolonge le mini-jeu et peut te laisser dans une position défavorable une fois dropé."},
+          {"text": "Éloigne-toi de l'interdicteur pour sortir du mass lock.", "detail": "Tant que le mass lock reste actif, ton FSD ne peut charger aucun type de saut."},
+          {"text": "Charge un high-wake dès que possible, jamais un low-wake.", "detail": "Le high-wake t'emmène dans un autre système, hors de portée immédiate ; le low-wake te laisse à portée d'un scanner de sillage."}
+        ]},
+        {"type": "list", "items": [
+          "**Chaff** — réduit la précision des armes adverses à tourelle ou asservies.",
+          "**Banques de cellules de bouclier** — pour encaisser les premières salves le temps de charger le saut.",
+          "**Tourelles de défense ponctuelle (Point Defence)** — contre les missiles.",
+          "**Mode furtif (silent running)** — pour éviter d'être repéré avant même la tentative d'interdiction, au prix d'un risque de surchauffe."
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Le pire scénario pour un sauveteur", "text": "Pour un vaisseau de passagers, une destruction en vol coûte le passager et une pénalité de réputation (section 1). Pour un vaisseau de Search & Rescue transportant des occupants déjà récupérés, c'est pire : les survivants embarqués sont perdus avec le vaisseau, exactement comme s'ils n'avaient jamais été récupérés (section 6). La fuite n'est jamais une option secondaire sur ce profil : elle est la stratégie par défaut."},
+        {"type": "verdict", "title": "Verdict", "text": "Privilégie systématiquement un bouclier renforcé, une vitesse de pointe élevée et une marge de portée de saut suffisante pour enchaîner rapidement un high-wake plutôt que d'engager le moindre combat. Un transporteur qui gagne, c'est un transporteur qui n'a jamais eu à se battre."}
+      ]
+    },
+    {
+      "id": "portee",
+      "number": 9,
+      "title": "Optimiser la portée de saut d'un liner ou d'un vaisseau SAR",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Plus tu charges de cabines ou de cargaison de sauvetage, plus ta portée de saut chute — le nerf de la guerre de tout transporteur longue distance.**"},
+        {"type": "list", "items": [
+          "**Alléger le vaisseau** : retire les modules optionnels non essentiels, privilégie les modules les plus légers disponibles pour la classe requise.",
+          "**Arbitrer cargaison/cabines contre portée** : plus le nombre de cabines ou la cargaison de sauvetage est élevé, plus la portée chute — mieux vaut parfois multiplier les trajets partiels que charger au maximum sur une très longue distance.",
+          "**Prévoir une soute à carburant adaptée** sur les circuits longue distance (tourisme de luxe, sauvetage loin de la bulle), voire un fuel scoop."
+        ]},
+        {"type": "callout", "tone": "info", "title": "L'ingénierie du FSD est déjà couverte ailleurs", "text": "Le déblocage de Felicity Farseer, le blueprint Increased Range grade par grade et l'injection de matériaux au Material Trader sont intégralement détaillés dans guide-ingenierie-fsd-explorateur.json. Ce guide ne les réexplique pas : applique directement cette ingénierie à ton liner ou ton vaisseau de sauvetage, elle ne diffère pas de celle d'un vaisseau d'exploration."},
+        {"type": "callout", "tone": "info", "title": "Le Guardian FSD Booster, en complément", "text": "Ce module additionnel ajoute un bonus fixe de portée, cumulable avec la portée de base engineerée (rendements décroissants selon le bonus déjà atteint). Son déblocage et son installation sont couverts par guide-guardian-fsd-booster.json — un bon complément une fois ton FSD déjà engineeré au maximum utile."},
+        {"type": "paragraph", "text": "Sur un profil transport, l'arbitrage portée/capacité se joue différemment que sur un vaisseau d'exploration pur : tu n'as pas besoin d'une autonomie record, mais d'une marge suffisante pour enchaîner les rotations sans ravitailler à chaque saut, et pour t'échapper rapidement (section 8) si une interdiction tourne mal."},
+        {"type": "verdict", "title": "Verdict", "text": "N'engage pas de budget d'ingénierie FSD spécifique à ce guide : applique celle déjà documentée pour l'explorateur, et complète-la par un Guardian FSD Booster si tes rotations dépassent régulièrement 20 à 30 années-lumière par saut."}
+      ]
+    },
+    {
+      "id": "retenir",
+      "number": 10,
+      "title": "Check-list avant le vol, et ce qu'il faut retenir",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Avant de décoller pour ta prochaine rotation, une vérification de deux minutes évite la plupart des missions ratées.**"},
+        {"type": "list", "items": [
+          "Classe de cabine adaptée au profil de mission (Économique pour le volume, Affaires/Première/Luxe pour la rémunération par tête) — section 2.",
+          "Vaisseau adapté au volume visé : Dolphin pour débuter, Beluga Liner ou Lynx Highliner pour maximiser la capacité — section 3.",
+          "Nombre de missions acceptées vérifié contre la capacité réelle de cabines avant de décoller — section 4.",
+          "Contremesures posées si tu voles en Open : chaff, banques de cellules, silent running — section 8.",
+          "Jamais de scan ni de tir sur un vaisseau en détresse avant d'avoir récupéré ses occupants — section 6.",
+          "Contact Search and Rescue repéré en station avant d'accepter une mission de sauvetage — section 7."
+        ]},
+        {"type": "steps", "items": [
+          {"text": "Choisis ta classe de cabine et ton vaisseau selon le volume visé (sections 2-3).", "detail": ""},
+          {"text": "Monte une rotation en mission stacking dans un hub touristique dense (section 4).", "detail": ""},
+          {"text": "Bascule en évacuation de station en feu ou en Search & Rescue selon l'opportunité (sections 5-6).", "detail": ""},
+          {"text": "Livre toujours au bon contact, jamais uniquement au marché libre (section 7).", "detail": ""},
+          {"text": "Fuis systématiquement toute interdiction plutôt que d'engager le combat (section 8).", "detail": ""}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le réflexe à automatiser", "text": "Face à un signal de détresse, le premier réflexe doit être de vérifier s'il reste des occupants vivants avant tout scan agressif ou tir — pas après. C'est le seul geste qui distingue un sauvetage réussi d'une perte définitive."},
+        {"type": "divider"},
+        {"type": "paragraph", "text": "**Fiabilité.** Ce guide s'appuie sur le fichier du corpus de référence interne 12-transport.md, lui-même recoupé avec EDSY.org, Inara.cz et Coriolis pour les capacités de cabines, et avec GameRant et Pilots Trade Network pour la reconstitution du Cr/h de mission stacking. Deux points restent explicitement non confirmés par les sources consultées : les capacités de cabines par taille de module (valeurs communautaires jamais reconfirmées en direct) et un éventuel bonus Powerplay pour le Search & Rescue (ni confirmé ni infirmé)."},
+        {"type": "paragraph", "text": "**Ce que ce guide ne couvre pas.** La distinction pirate/ganker et la procédure de blocage/signalement restent le sujet de survivre-au-pvp-sans-combattre.json. L'ingénierie du FSD et le Guardian FSD Booster sont couverts par guide-ingenierie-fsd-explorateur.json et guide-guardian-fsd-booster.json. Le fret pour la colonisation et Powerplay, les marchandises rares et l'achat d'un Fleet Carrier relèvent de commerce-professionnel.json, guide-powerplay-pacifiste.json et porte-vaisseau-rentable.json : ce manuel se limite au transport de passagers et au Search & Rescue."}
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — 12-transport.md",
+    "EDSY.org",
+    "Inara.cz",
+    "EDCD/coriolis-data",
+    "GameRant — 12 Best Ways To Make Money",
+    "Pilots Trade Network — guide du débutant Odyssey",
+    "MassivelyOP"
+  ]
+}

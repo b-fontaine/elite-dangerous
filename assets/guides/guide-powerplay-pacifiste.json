@@ -1,0 +1,501 @@
+{
+  "id": "guide-powerplay-pacifiste",
+  "title": "Powerplay sans tirer un coup de feu",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Rejoindre un Power et grimper les 100 rangs Powerplay 2.0 en s'appuyant uniquement sur le minage, l'exploration et l'exobiologie — sans jamais entrer en Conflict Zone. Choix du Power selon l'éthos et les bonus économiques, plan de mérites chiffré, salaire hebdomadaire et pièges de rééquilibrage.",
+  "byline": "Toutes plateformes · Live 4.4.0.x · Prérequis : minage, exploration ou exobiologie déjà maîtrisés (voir « Devenir riche sans combat » et « Explorer la galaxie »)",
+  "edition": "2026-09",
+  "topics": ["powerplay", "pacifiste", "minage", "exploration", "exobiologie", "mérites", "sans combat"],
+  "estimatedReadMinutes": 17,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Powerplay 2.0 : pourquoi le joueur pacifiste peut (enfin) y jouer",
+            "Les trois axes sans jamais tirer : Acquisition, Renforcement, Undermining",
+            "Choisir son Power : la grille pacifiste (minage / exploration / exobiologie)",
+            "Générer des mérites sans combattre : minage, exploration, exobiologie, commerce",
+            "Grimper les 100 rangs : barème et plan concret",
+            "Le salaire hebdomadaire : de 500 000 Cr à un milliard selon ton classement",
+            "Pièges, volatilité et fiabilité : ce qui peut changer sous tes pieds"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Powerplay 2.0 relie presque toute activité du jeu à un méta-jeu territorial — et ça inclut le minage, l'exploration et l'exobiologie que tu maîtrises peut-être déjà.** Ce guide t'explique comment rejoindre un Power, en choisir un adapté à ton profil, et grimper les 100 rangs jusqu'au sommet **sans jamais entrer en Conflict Zone ni tirer un coup de feu** — mérites, bonus d'éthos, salaire hebdomadaire et pièges de rééquilibrage inclus."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Mérites cumulés pour le rang 100", "value": "≈775 000 — valeur haute couramment citée par la communauté ; Frontier n'a jamais publié de barème officiel exhaustif", "reliability": "community"},
+            {"label": "Meilleur rendement en mérites (minage, système d'Acquisition/Renforcement)", "value": "25 000 à 75 000 mérites/heure", "reliability": "community"},
+            {"label": "Bonus d'éthos (activité alignée sur le profil de ton Power)", "value": "environ +50 % de mérites sur l'axe concerné", "reliability": "community"},
+            {"label": "Temps pour atteindre le rang 100", "value": "≈10 à 30 h dans le meilleur cas (minage optimisé, sans interruption) ; 50 à 75 h ou plus en mixte", "reliability": "estimate"},
+            {"label": "Salaire hebdomadaire selon ton classement dans ton Power", "value": "500 000 Cr (base) à ≈1 milliard Cr (top 1 %) — instantané au 9 septembre 2026, sujet à ajustement", "reliability": "community"}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Légende de fiabilité utilisée dans ce guide",
+          "text": "**[OFF]** mécanique ou seuil stable, confirmé par le comportement documenté du jeu ou par un communiqué Frontier tel que retranscrit dans le corpus. **[COM]** chiffre ou retour communautaire cohérent (inara.cz, forums, wikis), non publié officiellement par Frontier, ou extrapolation assumée comme telle par la source. **[EST]** donnée manquante, contradictoire entre sources, ou explicitement qualifiée d'incertaine dans le corpus — signalée comme telle plutôt qu'estimée sans le dire."
+        }
+      ]
+    },
+    {
+      "id": "pourquoi-pacifiste",
+      "number": 1,
+      "title": "Powerplay 2.0 : pourquoi le joueur pacifiste peut (enfin) y jouer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "Pendant près d'une décennie, Powerplay a été une activité de niche : mécaniques répétitives, terminologie confuse, et surtout une décroissance des mérites qui punissait tout joueur occasionnel. La refonte **Powerplay 2.0** (mise à jour *Ascendancy*, 31 octobre 2024) change la donne sur le point qui t'intéresse directement : les mérites sont désormais **permanents et non-décroissants**, et **quasiment toute activité du jeu** — combat, mais aussi commerce, minage, exploration et missions Odyssey à pied — en rapporte, selon le système et l'activité concernés."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Mérites permanents** : ce que tu gagnes en minant ou en scannant ne se dégrade jamais, contrairement à Powerplay 1.0.",
+            "**Le minage et l'exploration comptent officiellement** : plus besoin d'une activité Powerplay dédiée et déconnectée du reste du jeu — ta routine habituelle rapporte des mérites dès qu'elle est faite dans le bon système.",
+            "**Modules non-exclusifs** : les 12 modules Powerplay (détail en section 5) sont à terme accessibles quel que soit le Power choisi — ton choix ne te ferme donc aucune porte matérielle.",
+            "**12 Powers actifs** depuis le 31 octobre 2024 : 2 fédéraux (Jerome Archer, Felicia Winters), 4 impériaux (Denton Patreus, Zemina Torval, Aisling Duval, Arissa Lavigny-Duval), 2 de l'Alliance (Edmund Mahon, Nakato Kaine), 4 indépendants (Li Yong-Rui, Archon Delaine, Pranav Antal, Yuri Grom)."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Rien de nouveau à apprendre en jeu",
+          "text": "Ce guide ne réexplique pas *comment* miner, explorer ou faire de l'exobiologie — « Devenir riche sans combat » (debuter-sans-combat.json, parties 3 et 4) et « Explorer la galaxie » (exploration-exobiologie.json) couvrent déjà ces méthodes en détail. Ici, il s'agit uniquement de transformer une activité que tu maîtrises peut-être déjà en progression Powerplay, sans jamais avoir à viser un vaisseau."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Ce guide part donc du principe que tu sais déjà miner, scanner un système ou prélever des échantillons exobiologiques, et que tu joues (ou peux jouer) en Solo ou dans un groupe privé orienté PvE — le principe d'or du pacifiste reste le même qu'ailleurs dans ce corpus."
+        }
+      ]
+    },
+    {
+      "id": "trois-axes",
+      "number": 2,
+      "title": "Les trois axes sans jamais tirer : Acquisition, Renforcement, Undermining",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "Toute action Powerplay se range dans l'un de ces trois axes, selon l'état du système où tu joues au moment où tu joues."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Renforcement (Reinforcement)** — agir dans un système déjà contrôlé par ton propre Power pour le consolider et le faire progresser en état.",
+            "**Acquisition / Expansion** — agir dans un système inoccupé, situé à 20-30 années-lumière d'un bastion allié déjà établi, pour le faire basculer sous le contrôle de ton Power. Si deux Powers dépassent chacun 30 % de progression sur le même système inoccupé, il devient **« contesté »** : une course s'engage jusqu'au cycle suivant.",
+            "**Undermining (déstabilisation)** — agir dans un système tenu par un Power ennemi ou rival, pour faire baisser son score de contrôle, jusqu'à le faire régresser d'état ou basculer sous ton propre contrôle."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Le point clé pour un profil pacifiste",
+          "text": "Puisque « quasiment toute activité du jeu » rapporte des mérites selon le système où elle est faite (section précédente), **l'Undermining ne veut pas dire combattre** : miner ou scanner dans un système tenu par un Power rival compte comme de l'Undermining, sans qu'aucun tir ne soit nécessaire. Le corpus confirme ce principe général mais ne donne pas d'exemple chiffré spécifique à la combinaison minage + Undermining — le taux de conversion exact reste à vérifier en jeu."
+        },
+        {
+          "type": "table",
+          "caption": "États de contrôle d'un système Powerplay",
+          "headers": ["État", "Seuil de points de contrôle", "Effet"],
+          "rows": [
+            [{"text": "Exploité (Exploited)", "style": "strong"}, {"text": "0 à 350 000", "style": "number"}, {"text": "Niveau d'entrée, notamment pour un système nouvellement acquis", "style": "normal"}],
+            [{"text": "Fortifié (Fortified)", "style": "strong"}, {"text": "350 000 à 1 000 000", "style": "number"}, {"text": "Bulle de soutien logistique d'environ 20 al (accès facilité, bonus étendus aux systèmes voisins)", "style": "normal"}],
+            [{"text": "Bastion (Stronghold)", "style": "strong"}, {"text": "> 1 000 000", "style": "number"}, {"text": "Bulle de 30 al ; seul palier permettant l'apparition de Stronghold Carriers", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Les bascules d'état et de territoire ne s'appliquent qu'au **tick hebdomadaire, le jeudi à 07:00 UTC** — ce que tu fais entre deux ticks s'accumule, mais ne change rien à la carte avant ce moment-là."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "L'hostilité automatique : le vrai risque, même sans combattre toi-même",
+          "text": "Rejoindre un Power te rend **automatiquement hostile aux autres Powers** dans les systèmes qu'ils contrôlent, avec des interdictions possibles en territoire adverse. C'est le cas typiquement si tu fais de l'Undermining en minant ou en scannant dans un système ennemi. Si tu joues en Open, prépare le kit d'évasion (soumettre l'interdiction, booster, high wake) détaillé dans « Devenir riche sans combat » (partie 0.5) et surtout dans « Survivre au PvP sans combattre » (survivre-au-pvp-sans-combattre.json), qui couvre spécifiquement les lieux à risque et la procédure d'évasion face à des joueurs hostiles. En Solo ou en groupe privé orienté PvE (ex. Mobius), ce risque disparaît totalement."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Pour un profil pacifiste, privilégie le Renforcement de systèmes activement contestés et l'Acquisition de systèmes proches de bastions déjà alliés (voir section 7.3 du corpus) — l'Undermining reste possible sans combattre, mais seulement en acceptant le risque d'hostilité territoriale, à réserver au Solo/PvE si tu veux l'éviter entièrement."
+        }
+      ]
+    },
+    {
+      "id": "choisir-son-power",
+      "number": 3,
+      "title": "Choisir son Power : la grille pacifiste (minage / exploration / exobiologie)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "La communauté recommande trois critères pour choisir un Power : le rôle de jeu recherché, l'affinité de rôle-play avec la superpuissance, et le Power qui contrôle déjà ton système d'attache (pour profiter des bonus locaux sans te déplacer). Pour un profil minage/exploration/exobiologie, le premier critère se joue sur deux mécaniques distinctes qu'il ne faut pas confondre."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Deux mécaniques distinctes : l'éthos (mérites) et le bonus économique (crédits)"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Chaque Power associe l'une de quatre catégories d'activités à chacun de ses trois axes (Acquisition, Renforcement, Undermining). Réaliser l'activité correspondant à l'éthos assigné à l'axe travaillé confère un **bonus de mérites d'environ +50 %** sur cet axe. C'est un mécanisme séparé des bonus économiques propres à chaque Power (ex. « +45 % profits sur le minage »), qui augmentent tes **crédits**, pas directement tes mérites. Les deux se cumulent quand ils s'appliquent, mais l'un n'implique pas l'autre."
+        },
+        {
+          "type": "table",
+          "caption": "Les quatre catégories d'éthos",
+          "headers": ["Éthos", "Activités concernées"],
+          "rows": [
+            [{"text": "Combat", "style": "strong"}, {"text": "Chasse de primes, zones de combat Powerplay, destruction de vaisseaux", "style": "normal"}],
+            [{"text": "Finance", "style": "strong"}, {"text": "Commerce, minage, transport Powerplay", "style": "normal"}],
+            [{"text": "Social", "style": "strong"}, {"text": "Recherche et sauvetage, missions de soutien, activités Odyssey", "style": "normal"}],
+            [{"text": "Covert", "style": "strong"}, {"text": "Données Odyssey volées, piratage, malware", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "L'exploration et l'exobiologie ne sont explicitement classées dans aucune des quatre catégories",
+          "text": "Le minage et le commerce tombent clairement sous « Finance ». En revanche, le corpus ne précise pas explicitement si les données d'exploration ou les échantillons exobiologiques relèvent de « Social » via la mention générique « activités Odyssey » [EST]. Ne bâtis pas ta stratégie sur cette hypothèse sans l'avoir vérifiée en jeu — le bonus économique propre à certains Powers (ex. Pranav Antal pour l'exobiologie, Li Yong-Rui pour les données d'exploration) est en revanche confirmé indépendamment de cette question d'éthos."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "La matrice des éthos par Power"
+        },
+        {
+          "type": "table",
+          "caption": "Axe(s) utilisant chaque catégorie d'éthos, par Power — instantané du 9 septembre 2026, reconstitué fiche par fiche sur inara.cz",
+          "headers": ["Power", "Combat", "Finance", "Social", "Covert"],
+          "rows": [
+            [{"text": "Denton Patreus", "style": "strong"}, {"text": "Renforcement, Undermining", "style": "normal"}, {"text": "Acquisition", "style": "win"}, {"text": "—", "style": "normal"}, {"text": "—", "style": "normal"}],
+            [{"text": "Aisling Duval", "style": "strong"}, {"text": "—", "style": "normal"}, {"text": "Renforcement", "style": "win"}, {"text": "Acquisition, Undermining", "style": "normal"}, {"text": "—", "style": "normal"}],
+            [{"text": "Arissa Lavigny-Duval", "style": "strong"}, {"text": "Renforcement, Undermining", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "Acquisition", "style": "normal"}, {"text": "—", "style": "normal"}],
+            [{"text": "Zemina Torval", "style": "strong"}, {"text": "—", "style": "normal"}, {"text": "Acquisition, Renforcement*", "style": "win"}, {"text": "—", "style": "normal"}, {"text": "Undermining*", "style": "normal"}],
+            [{"text": "Felicia Winters", "style": "strong"}, {"text": "—", "style": "normal"}, {"text": "Renforcement, Undermining", "style": "win"}, {"text": "Acquisition", "style": "normal"}, {"text": "—", "style": "normal"}],
+            [{"text": "Jerome Archer", "style": "strong"}, {"text": "Acquisition, Renforcement", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "Undermining", "style": "normal"}],
+            [{"text": "Edmund Mahon", "style": "strong"}, {"text": "Undermining*", "style": "normal"}, {"text": "Acquisition, Renforcement", "style": "win"}, {"text": "—", "style": "normal"}, {"text": "—", "style": "normal"}],
+            [{"text": "Nakato Kaine", "style": "strong"}, {"text": "—", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "Acquisition, Undermining", "style": "normal"}, {"text": "Renforcement", "style": "normal"}],
+            [{"text": "Li Yong-Rui", "style": "strong"}, {"text": "—", "style": "normal"}, {"text": "Renforcement, Undermining", "style": "win"}, {"text": "Acquisition", "style": "normal"}, {"text": "—", "style": "normal"}],
+            [{"text": "Archon Delaine", "style": "strong"}, {"text": "Acquisition, Renforcement, Undermining*", "style": "lose"}, {"text": "—", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "—", "style": "normal"}],
+            [{"text": "Pranav Antal", "style": "strong"}, {"text": "—", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "Acquisition, Undermining", "style": "normal"}, {"text": "Renforcement", "style": "normal"}],
+            [{"text": "Yuri Grom", "style": "strong"}, {"text": "Renforcement", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "Acquisition, Undermining", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "* Zemina Torval, Edmund Mahon, Archon Delaine : données non confirmées directement [EST]",
+          "text": "La fiche inara.cz de Zemina Torval a renvoyé une erreur HTTP 503 lors de la vérification du corpus (9 septembre 2026) ; ses valeurs proviennent d'une source secondaire (lavewiki.com), fiable sur certains Powers mais en désaccord avec inara.cz sur d'autres — notamment l'axe Undermining d'Edmund Mahon et d'Archon Delaine, marqué d'un astérisque dans la table pour la même raison. Vérifie en priorité dans le panneau Powerplay en jeu avant de bâtir une stratégie sur l'un de ces trois Powers."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Bonus économiques utiles au profil minage / exploration / exobiologie"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Chaque Power confère aussi un bonus économique propre, indépendant de l'éthos. Voici ceux directement utiles à ce profil — les bonus des autres Powers (primes, réarmement, marché noir) ne servent à rien ici et ne sont pas repris."
+        },
+        {
+          "type": "table",
+          "caption": "Bonus économiques par Power — en vigueur au 9 septembre 2026, à revérifier en jeu avant de choisir",
+          "headers": ["Power", "Superpuissance", "Bonus utile à ce profil"],
+          "rows": [
+            [{"text": "Zemina Torval", "style": "strong"}, {"text": "Empire", "style": "normal"}, {"text": "+45 % profits sur le minage [COM]", "style": "normal"}],
+            [{"text": "Nakato Kaine", "style": "strong"}, {"text": "Alliance", "style": "normal"}, {"text": "+50 % profits sur le minage, +150 % réputation factions mineures, +120 % profits Search & Rescue [COM]", "style": "normal"}],
+            [{"text": "Li Yong-Rui", "style": "strong"}, {"text": "Indépendant", "style": "normal"}, {"text": "+100 % données d'exploration, ravitaillement/réarmement/réparation gratuits, +25 % bonus commercial [COM]", "style": "normal"}],
+            [{"text": "Yuri Grom", "style": "strong"}, {"text": "Indépendant", "style": "normal"}, {"text": "+15 % données d'exploration, +15 % bons commerciaux [COM]", "style": "normal"}],
+            [{"text": "Pranav Antal", "style": "strong"}, {"text": "Indépendant", "style": "normal"}, {"text": "+30 % exobiologie, +50 % commerce technologique [COM]", "style": "normal"}],
+            [{"text": "Edmund Mahon", "style": "strong"}, {"text": "Alliance", "style": "normal"}, {"text": "+50 % biens rares, +25 % bonus commercial [COM]", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Quatre profils recommandés"
+        },
+        {
+          "type": "table",
+          "caption": "Grille de choix pour un profil pacifiste",
+          "headers": ["Profil", "Power suggéré", "Pourquoi", "Point de vigilance"],
+          "rows": [
+            [{"text": "Mineur pur", "style": "strong"}, {"text": "Zemina Torval", "style": "normal"}, {"text": "+45 % profits minage (bonus économique) ; éthos Finance sur Acquisition et Renforcement — bonus de mérites +50 % potentiel sur ces deux axes en minant", "style": "normal"}, {"text": "Lien éthos Renforcement marqué incertain par la source (fiche 503, repli lavewiki.com) [EST]", "style": "lose"}],
+            [{"text": "Explorateur / commerçant", "style": "strong"}, {"text": "Li Yong-Rui", "style": "normal"}, {"text": "+100 % données d'exploration et services gratuits (bonus économique) ; éthos Finance confirmé sur Renforcement et Undermining pour le commerce et le minage", "style": "normal"}, {"text": "Le bonus de +100 % sur les données d'exploration est un gain de crédits, distinct du bonus d'éthos de mérites — les deux ne se cumulent pas forcément [COM]", "style": "mid"}],
+            [{"text": "Exobiologiste", "style": "strong"}, {"text": "Pranav Antal", "style": "normal"}, {"text": "+30 % profits exobiologie (bonus économique)", "style": "normal"}, {"text": "Son éthos Social couvre les « activités Odyssey » en général — le corpus ne confirme pas que le scan exobiologique déclenche le bonus de mérites de cet éthos [EST]", "style": "lose"}],
+            [{"text": "Généraliste / indécis", "style": "strong"}, {"text": "Jerome Archer", "style": "normal"}, {"text": "Cité par la communauté comme choix généraliste équilibré", "style": "normal"}, {"text": "Éthos presque entièrement Combat/Covert — aucun bonus d'éthos mérites pour minage/exploration/exobiologie", "style": "lose"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Troisième critère à ne pas négliger : si un Power contrôle déjà ton système d'attache habituel, ses bonus s'appliquent sans que tu aies à te déplacer — un gain de confort qui peut faire pencher la balance entre deux choix par ailleurs équivalents."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Zemina Torval et Li Yong-Rui sont les choix les mieux documentés pour ce profil, avec un bonus économique confirmé [COM] et un lien d'éthos au moins partiellement confirmé sur les activités Finance. Pranav Antal reste tentant pour un pur exobiologiste mais repose sur une hypothèse d'éthos non confirmée — accepte cette incertitude ou vérifie-la toi-même avant de t'engager."
+        }
+      ]
+    },
+    {
+      "id": "generer-des-merites",
+      "number": 4,
+      "title": "Générer des mérites sans combattre : minage, exploration, exobiologie, commerce",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "Ce guide n'explique pas comment miner, explorer ou faire de l'exobiologie — « Devenir riche sans combat » (parties 3 et 4) et « Explorer la galaxie » couvrent déjà ces méthodes en détail. Cette section explique uniquement comment transformer cette activité en mérites Powerplay."
+        },
+        {
+          "type": "table",
+          "caption": "Méthodes de mérites sans combat — méta 2025-2026",
+          "headers": ["Méthode", "Rendement approximatif", "Remarque"],
+          "rows": [
+            [{"text": "Minage de commodités dans un système d'Acquisition ou de Renforcement, hotspot + prix de vente élevé", "style": "strong"}, {"text": "25 000 à 75 000 mérites/heure", "style": "number"}, {"text": "L'une des méthodes les plus citées actuellement [COM]", "style": "normal"}],
+            [{"text": "Commerce à haute marge (> 40 % de profit), exobiologie, données Odyssey", "style": "strong"}, {"text": "Sources secondaires mais viables", "style": "normal"}, {"text": "Exploite le bonus d'éthos de +50 % si l'activité correspond au profil du Power (section 3) [COM]", "style": "normal"}],
+            [{"text": "Missions en escadre (wing missions) empilées", "style": "strong"}, {"text": "Bon rendement combiné", "style": "normal"}, {"text": "Gains en mérites, crédits et matériaux d'ingénierie [COM]", "style": "normal"}],
+            [{"text": "Combat / chasse de primes Powerplay (référence de comparaison, hors périmètre pacifiste)", "style": "normal"}, {"text": "10 000 à 25 000 mérites/heure", "style": "number"}, {"text": "Nécessite un vaisseau de combat équipé — non couvert par ce guide", "style": "mid"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "À vérifier impérativement avant de bâtir ta routine",
+          "text": "Peu après le lancement de la 2.0, la collecte de capsules de sauvetage et la vente de biens rares ont été **désactivées** comme sources de mérites. Plus grave pour ce profil : à un moment donné en 2025-2026, **les données d'exploration et les échantillons génétiques (exobiologie) ont eux aussi été temporairement neutralisés comme sources de mérites**, pour corriger des abus. Le corpus ne précise pas si cette désactivation est toujours active à la date où tu lis ce guide [EST] — vérifie l'état courant en jeu ou sur un site communautaire avant de construire ta routine sur l'exploration/exobiologie plutôt que sur le minage, qui reste la source la plus stable citée."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Empiler le bonus d'éthos (+50 %)"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Concrètement : mine ou scanne dans un système d'Acquisition ou de Renforcement de ton Power, sur l'axe où la matrice de la section 3 associe ton activité (Finance pour le minage/commerce) à ce Power. Tu cumules alors le rendement de base (25 000 à 75 000 mérites/h pour le minage) et le bonus d'éthos d'environ +50 % — sans qu'aucune étape supplémentaire ne soit nécessaire par rapport à ta routine habituelle, à part le choix du système."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Repérer les bons systèmes",
+          "text": "La carte galactique in-jeu est jugée insuffisante par la communauté pour ce suivi (informations manquantes ou erronées sur ce qui rapporte des mérites dans tel ou tel système). Des outils tiers comme Inara.cz, EDPowerPlay ou ED-Board permettent de repérer les systèmes d'Acquisition/Renforcement de ton Power en temps réel — ce corpus ne documente pas ces outils Powerplay en détail (distinct des logiciels d'exploration couverts par outils.json), consulte-les directement."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Le minage reste la valeur la plus sûre pour un pacifiste : rendement le plus haut, le mieux documenté, et non affecté par les désactivations temporaires qui ont visé l'exploration/exobiologie. Traite l'exploration et l'exobiologie comme un complément bienvenu plutôt que comme ta seule source de mérites, tant que leur statut courant n'est pas revérifié en jeu."
+        }
+      ]
+    },
+    {
+      "id": "grimper-les-rangs",
+      "number": 5,
+      "title": "Grimper les 100 rangs : barème et plan concret",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "Le rang 1 est atteint après 5 missions initiales (0 mérite requis) ; les paliers 2 à 5 demandent une progression croissante jusqu'à 15 000 mérites ; du rang 6 à 99, chaque rang demande environ 8 000 mérites supplémentaires ; le rang 100 nécessite environ **775 000 mérites cumulés**."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Barème non officiel",
+          "text": "Frontier n'a jamais publié de barème exhaustif rang par rang. Le tableau ci-dessous combine les rares points de mesure documentés (rang 2, rang 100) avec une extrapolation linéaire au taux moyen de ~8 000 mérites/rang pour les rangs 6 à 99 — à traiter comme une estimation indicative, pas comme un barème exact."
+        },
+        {
+          "type": "table",
+          "caption": "Progression des rangs Powerplay (mérites cumulés, estimation par palier)",
+          "headers": ["Rang", "Mérites cumulés requis", "Remarque"],
+          "rows": [
+            [{"text": "1", "style": "strong"}, {"text": "0", "style": "number"}, {"text": "Atteint automatiquement après les 5 missions d'introduction du Power", "style": "normal"}],
+            [{"text": "2", "style": "strong"}, {"text": "~2 000", "style": "number"}, {"text": "Seul point de mesure en jeu documenté hors rang 100 [COM]", "style": "normal"}],
+            [{"text": "5", "style": "strong"}, {"text": "~15 000", "style": "number"}, {"text": "Fin du premier palier (2 à 5) [COM]", "style": "normal"}],
+            [{"text": "10", "style": "strong"}, {"text": "~55 000", "style": "number"}, {"text": "Estimation (+8 000/rang après le rang 5) [EST]", "style": "normal"}],
+            [{"text": "20", "style": "strong"}, {"text": "~135 000", "style": "number"}, {"text": "Estimation [EST]", "style": "normal"}],
+            [{"text": "30", "style": "strong"}, {"text": "~215 000", "style": "number"}, {"text": "Estimation [EST]", "style": "normal"}],
+            [{"text": "40", "style": "strong"}, {"text": "~295 000", "style": "number"}, {"text": "Estimation [EST]", "style": "normal"}],
+            [{"text": "50", "style": "strong"}, {"text": "~375 000", "style": "number"}, {"text": "Estimation [EST]", "style": "normal"}],
+            [{"text": "60", "style": "strong"}, {"text": "~455 000", "style": "number"}, {"text": "Estimation [EST]", "style": "normal"}],
+            [{"text": "70", "style": "strong"}, {"text": "~535 000", "style": "number"}, {"text": "Estimation [EST]", "style": "normal"}],
+            [{"text": "80", "style": "strong"}, {"text": "~615 000", "style": "number"}, {"text": "Estimation [EST]", "style": "normal"}],
+            [{"text": "90", "style": "strong"}, {"text": "~695 000", "style": "number"}, {"text": "Estimation [EST]", "style": "normal"}],
+            [{"text": "99", "style": "strong"}, {"text": "~767 000", "style": "number"}, {"text": "Estimation [EST]", "style": "normal"}],
+            [{"text": "100", "style": "strong"}, {"text": "~775 000", "style": "number"}, {"text": "Valeur haute couramment citée ; déblocage généralement complet des modules dès ~97 [COM]", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Combien de temps ça prend réellement"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "En reprenant les rendements de la section 4, atteindre ~775 000 mérites cumulés représente très approximativement **10 à 30 heures** de jeu actif dans le meilleur cas (méthode la plus rentable du moment, jouée sans interruption), et **50 à 75 heures voire davantage** pour un joueur mixant des activités moins optimisées ou en sessions courtes [EST]. Bonne nouvelle pour ce profil : la méthode la plus rentable citée par la source est le **minage** — donc, contrairement à une intuition répandue, un pacifiste optimisé n'est pas structurellement plus lent qu'un joueur orienté combat pour grimper les rangs, à condition de trouver un hotspot et des prix de vente favorables."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Rang 0 → 5 (0 à ~15 000 mérites)", "detail": "Complète les 5 missions d'introduction de ton Power, puis enchaîne une première session de minage ou d'exploration dans un système d'Acquisition ou de Renforcement pour franchir les paliers 2 à 5."},
+            {"text": "Rang 6 → ~50 (routine avec bonus d'éthos)", "detail": "Installe ta routine habituelle (minage laser, Road to Riches ou exobiologie — voir debuter-sans-combat.json et exploration-exobiologie.json) dans un système où l'axe travaillé correspond à l'éthos Finance/Social de ton Power (section 3), pour cumuler rendement de base et bonus de +50 %."},
+            {"text": "Rang ~50 → ~97 (déblocages progressifs)", "detail": "Les modules exclusifs se débloquent progressivement — vérifie dans le panneau Powerplay lesquels t'intéressent réellement (la plupart sont des armes de combat, voir ci-dessous)."},
+            {"text": "Rang ~97 → 100", "detail": "Déblocage généralement complet des modules dès le rang ~97 [COM] ; au-delà, la progression relève surtout du prestige et du classement hebdomadaire (section 6)."}
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Les 12 modules exclusifs : seulement deux comptent pour ce profil"
+        },
+        {
+          "type": "table",
+          "caption": "Modules exclusifs Powerplay et pertinence pour un profil pacifiste",
+          "headers": ["Module", "Nature", "Pertinence pour ce profil"],
+          "rows": [
+            [{"text": "Prismatic Shields", "style": "strong"}, {"text": "Bouclier défensif", "style": "normal"}, {"text": "Utile — purement défensif, aide à encaisser ou fuir une interdiction sans jamais tirer", "style": "win"}],
+            [{"text": "Mining Lance", "style": "strong"}, {"text": "Outil de minage (d'après son nom)", "style": "normal"}, {"text": "Potentiellement utile — le corpus ne détaille pas ses statistiques exactes [EST], à vérifier en jeu au déblocage", "style": "win"}],
+            [{"text": "Pacifier Frag-Cannons", "style": "normal"}, {"text": "Arme de combat", "style": "normal"}, {"text": "Sans intérêt", "style": "lose"}],
+            [{"text": "Imperial Hammer", "style": "normal"}, {"text": "Railgun (arme de combat)", "style": "normal"}, {"text": "Sans intérêt", "style": "lose"}],
+            [{"text": "Advanced Plasma Accelerator", "style": "normal"}, {"text": "Arme de combat", "style": "normal"}, {"text": "Sans intérêt", "style": "lose"}],
+            [{"text": "Pack-Hound", "style": "normal"}, {"text": "Missiles (arme de combat)", "style": "normal"}, {"text": "Sans intérêt", "style": "lose"}],
+            [{"text": "Containment Missile", "style": "normal"}, {"text": "Relance le FSD ennemi (arme de combat)", "style": "normal"}, {"text": "Sans intérêt", "style": "lose"}],
+            [{"text": "Pulse Disruptor", "style": "normal"}, {"text": "Dysfonctionnement de module ciblé (arme de combat)", "style": "normal"}, {"text": "Sans intérêt", "style": "lose"}],
+            [{"text": "Concord Cannon", "style": "normal"}, {"text": "Arme de combat (nouveauté 2.0)", "style": "normal"}, {"text": "Sans intérêt", "style": "lose"}],
+            [{"text": "Enforcer Cannon", "style": "normal"}, {"text": "Arme de combat", "style": "normal"}, {"text": "Sans intérêt", "style": "lose"}],
+            [{"text": "Cytoscramblers", "style": "normal"}, {"text": "Arme de combat", "style": "normal"}, {"text": "Sans intérêt", "style": "lose"}],
+            [{"text": "Retributor", "style": "normal"}, {"text": "Augmente la chaleur de la cible (arme de combat)", "style": "normal"}, {"text": "Sans intérêt", "style": "lose"}]
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Tu n'as pas besoin du rang 97 pour « tout débloquer » au sens utile : sur les 12 modules exclusifs, seuls Prismatic Shields (défensif) et potentiellement Mining Lance (minage) servent réellement un profil pacifiste. Vise le rang 100 pour le salaire hebdomadaire et le classement (section 6), pas pour l'arsenal."
+        }
+      ]
+    },
+    {
+      "id": "salaire-hebdomadaire",
+      "number": 6,
+      "title": "Le salaire hebdomadaire : de 500 000 Cr à un milliard selon ton classement",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "Depuis la 2.0, les commandants reçoivent un paiement hebdomadaire calculé selon leur **classement relatif au sein de leur Power** — pas selon l'activité qui a produit leurs mérites. Un mineur, un explorateur ou un exobiologiste efficace peut donc viser le haut du classement au même titre qu'un joueur orienté combat."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Salaire de base (ensemble de la base de joueurs du Power)", "value": "500 000 Cr/semaine", "reliability": "community"},
+            {"label": "Salaire au top 1 % du classement", "value": "≈1 000 000 000 Cr/semaine", "reliability": "community"},
+            {"label": "Date de l'instantané", "value": "9 septembre 2026 — valeurs sujettes à ajustement lors des rééquilibrages", "reliability": "community"}
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Le corpus ne détaille pas la formule exacte de répartition entre ces deux bornes (paliers intermédiaires, courbe de progression) — seules les valeurs extrêmes (500 000 Cr et ~1 Md Cr) sont documentées [EST pour tout ce qui est entre les deux]."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Où concentrer ton activité pour grimper le classement",
+          "text": "Depuis l'Update 3.4 (Trailblazers, été 2025), il est conseillé de privilégier l'Undermining et le Renforcement de systèmes **activement contestés**, plutôt que le Renforcement passif de bastions déjà tranquilles — désormais pénalisé par la nouvelle formule de bonus/malus glissant. Pour un pacifiste, cela veut dire : mine ou scanne dans un système contesté de ton Power plutôt que dans un bastion qui tourne déjà à plein régime tout seul."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Le salaire hebdomadaire ne pénalise pas le joueur pacifique : c'est un classement de mérites, pas d'activité. La vraie variable qui te fait monter dans le classement est le choix du système (contesté plutôt que passif), pas le choix entre combat et non-combat."
+        }
+      ]
+    },
+    {
+      "id": "pieges-et-fiabilite",
+      "number": 7,
+      "title": "Pièges, volatilité et fiabilité : ce qui peut changer sous tes pieds",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "Powerplay 2.0 a fait l'objet de rééquilibrages fréquents depuis son lancement — preuve d'un suivi actif de Frontier, mais aussi de problèmes d'équilibrage persistants. Les chiffres de ce guide sont un instantané au 9 septembre 2026."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Historique des rééquilibrages 2025-2026"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Peu après le lancement** — désactivation de la collecte de capsules de sauvetage et de la livraison de biens rares comme sources de mérites (au détriment notamment d'Aisling Duval et de Nakato Kaine, pour qui ces activités étaient des points forts). Annonce faite uniquement sur les réseaux sociaux, sans notification claire en jeu.",
+            "**Courant 2025** — instauration d'une pénalité sur le renforcement passif, pour limiter le « turtling » (fortification excessive de systèmes déjà tranquilles).",
+            "**Trailblazers Update 3.4 (été 2025)** — rééquilibrage majeur : le Renforcement passe à un système de bonus/malus glissant selon l'intensité de l'Undermining récemment subi (un système jamais attaqué rapporte nettement moins) ; l'Undermining voit son bonus de mérites augmenté ; l'Acquisition de systèmes inoccupés voit le sien réduit ; introduction d'une **décroissance du score de contrôle** (control score decay) à chaque tick hebdomadaire, non linéaire, comptée comme de l'Undermining.",
+            "**Fin 2025 / 2026** — désactivation temporaire des mérites/score liés aux données d'exploration et aux échantillons génétiques (exobiologie) pour corriger des abus ; correctifs sur des kills PvP ne rapportant parfois aucun mérite en zone Powerplay ; réduction des mérites pour la destruction de chasseurs embarqués ; correctifs sur le comportement des marchés noirs pour Archon Delaine et Pranav Antal."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ce qui concerne directement ce profil : l'état courant est à revérifier",
+          "text": "La désactivation temporaire des mérites d'exploration et d'exobiologie a eu lieu « à un moment donné en 2025-2026 » selon le corpus, sans date de fin précisée ni confirmation que ces sources sont réactivées à la date où tu lis ce guide [EST]. Le minage, lui, n'a pas fait l'objet d'une désactivation similaire dans les sources consultées — c'est la raison pour laquelle ce guide le recommande comme socle plutôt que comme complément."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Changer ou quitter un Power"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Confirmé** — le rang et les mérites accumulés restent attachés au Power où ils ont été gagnés et ne se transfèrent pas : rejoindre un autre Power fait repartir de rang 1 auprès de lui.",
+            "**Confirmé** — quitter ou changer de Power fait perdre l'accès immédiat aux bonus économiques et au statut du Power quitté.",
+            "**Confirmé** — rejoindre un Power rend hostile aux autres Powers dans leurs systèmes contrôlés ; rester non engagé neutralise cette hostilité.",
+            "**Non confirmé** — la durée exacte d'un éventuel délai de latence (cooldown) avant de pouvoir se réengager après avoir quitté un Power [EST].",
+            "**Non confirmé** — si un module Powerplay déjà débloqué reste utilisable après avoir quitté le Power concerné, bien que les modules ne soient plus exclusifs depuis la 2.0 [EST]."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Autres zones d'incertitude du corpus, sans lien direct avec le choix pacifiste mais à connaître",
+          "text": "Le taux exact de conversion des mérites en points de contrôle par activité n'est pas figé et change à chaque rééquilibrage. Pour un système colonisé, l'existence d'un seuil de développement avant qu'il devienne éligible à l'Acquisition Powerplay, et si l'allégeance choisie à sa fondation restreint les Powers pouvant le revendiquer, ne sont pas confirmées dans les sources consultées."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict final",
+          "text": "Le rang 100 en Powerplay sans combattre est atteignable — la méthode la plus rentable du jeu (le minage) est elle-même non-combat, et le classement hebdomadaire ne fait aucune distinction entre origine des mérites. Le vrai risque n'est pas le combat : c'est de bâtir ta routine sur une source de mérites (exploration, exobiologie) que Frontier a déjà désactivée temporairement une fois. Avant de t'engager dans un plan long, vérifie en jeu l'état courant des sources de mérites et le texte d'avertissement du panneau Powerplay si tu envisages de changer de Power en cours de route."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "Frontier Developments",
+    "Inara.cz — Powerplay & fiches par Power",
+    "elite-dangerous.fandom.com — Powerplay",
+    "EDPowerPlay / ED-Board (outils communautaires de suivi Powerplay)",
+    "Lavewiki.com (source de repli, éthos Zemina Torval)",
+    "Corpus interne — raw_data/02-powerplay.md",
+    "Corpus interne — debuter-sans-combat.json",
+    "Corpus interne — exploration-exobiologie.json",
+    "Corpus interne — survivre-au-pvp-sans-combattre.json"
+  ]
+}

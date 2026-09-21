@@ -1,0 +1,593 @@
+{
+  "id": "guide-architecte-systeme",
+  "title": "Devenir Architecte système : fonder une colonie de A à Z",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "25 M Cr, un cercle de 15 années-lumière et deux délais qui ne pardonnent pas : voici comment revendiquer un système inhabité, éviter le piège de coût qui double ta facture en Points de Construction, et organiser le transport sans y laisser des dizaines d'heures.",
+  "byline": "Toutes plateformes · Live 4.2.2.x (Dodec Update) · Prérequis : 25 M Cr non remboursables, aucun rang requis",
+  "edition": "2026-09",
+  "topics": ["colonisation", "architecte-système", "construction", "points-de-construction", "fleet-carrier", "bgs", "powerplay"],
+  "estimatedReadMinutes": 19,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Revendiquer : le contact, la portée, le capital",
+            "Le compte à rebours : 24 heures, puis 4 semaines",
+            "Le piège du coût croissant : décide l'ordre avant le premier port",
+            "Économie et liens : la décision qu'on ne peut pas défaire",
+            "Logistique de transport : tonnage, rotations et Porte-Vaisseau",
+            "Ce que tu deviens : récompenses, Powerplay, BGS",
+            "Check-list finale et pièges fréquents"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Fonder un système coûte 25 000 000 Cr et deux délais impossibles à négocier — 24 heures pour une balise, 4 semaines pour un port primaire.** Entre les deux, un choix d'ordre de construction anodin en apparence peut te faire payer huit installations de support supplémentaires pour rien. Ce guide t'emmène de la première revendication au statut permanent d'Architecte système, dans l'ordre où les décisions se prennent réellement — pas dans l'ordre où le jeu les explique."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Coût de la revendication", "value": "25 000 000 Cr, non remboursables en cas d'échec", "reliability": "official"},
+            {"label": "Portée maximale de revendication", "value": "15 années-lumière depuis un contact « System Colonisation »", "reliability": "official"},
+            {"label": "Délai pour déployer la balise", "value": "24 heures après l'enregistrement de la revendication", "reliability": "official"},
+            {"label": "Délai pour achever le port primaire", "value": "4 semaines après le déploiement de la balise", "reliability": "official"},
+            {"label": "Ordre de construction optimal (T3, T3, T2, T2)", "value": "16 CP jaunes + 12 CP verts, 28 installations de support minimum", "reliability": "community"},
+            {"label": "Ordre naïf (T2, T2, T3, T3)", "value": "6 CP jaunes + 30 CP verts, 36 installations de support minimum", "reliability": "community"},
+            {"label": "Statut du système après achèvement", "value": "« Uncontrolled Populated », éligible immédiatement au Powerplay et au BGS", "reliability": "official"}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Légende de fiabilité utilisée dans ce guide",
+          "text": "**[OFF]** confirmé par une source officielle (notes de mise à jour Frontier, journal de jeu, EDCD/coriolis-data). **[COM]** valeur communautaire recoupée (mega-guide CMDR Mechan, retours de commandants) mais jamais publiée par Frontier dans le détail. **[EST]** donnée reconstruite ou absente des sources consultées : ce guide te le dit explicitement plutôt que d'inventer un chiffre rassurant."
+        }
+      ]
+    },
+    {
+      "id": "revendiquer",
+      "number": 1,
+      "title": "Revendiquer : le contact, la portée, le capital",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**25 000 000 Cr, c'est un millième du prix d'un Porte-Vaisseau.** Si tu cherches encore comment réunir cette somme, elle est largement à portée d'un parcours exploration/exobiologie ou commerce classique — voir « Devenir riche sans combat — le guide du débutant » ou, pour un plan plus ambitieux, « Protocole 1 milliard de crédits ». Ce guide-ci part du principe que le capital est déjà réuni et attaque directement la mécanique de revendication."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Où trouver un contact « System Colonisation »"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Le contact n'existe que dans un système **peuplé** qui le possède déjà — la Bulle historique (concentré autour de Sol, Achenar, Alliot) en regorge.",
+            "Un système **déjà colonisé par un joueur dont le port primaire est terminé** obtient lui aussi ce contact, ce qui permet de « tendre des ponts » de systèmes-relais vers une région éloignée.",
+            "Un système peuplé « naturel » situé hors de la Bulle et jamais colonisé (Colonia, la nébuleuse Witch Head) **n'a pas** ce contact tant qu'il n'a pas lui-même été rattaché à une chaîne de colonisation par un architecte."
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Portée et coût d'une revendication [OFF]",
+          "headers": ["Élément", "Valeur", "Remarque"],
+          "rows": [
+            [
+              {"text": "Portée maximale", "style": "strong"},
+              {"text": "15,00 années-lumière", "style": "number"},
+              {"text": "Affichée par un cercle vert dans le mode « System Claim Mode » de la carte galactique", "style": "normal"}
+            ],
+            [
+              {"text": "Coût de la revendication", "style": "strong"},
+              {"text": "25 000 000 Cr", "style": "number"},
+              {"text": "Payé d'avance, jamais remboursé en cas d'expiration de la balise ou du délai de construction", "style": "lose"}
+            ],
+            [
+              {"text": "Prérequis de rang", "style": "strong"},
+              {"text": "Aucun", "style": "win"},
+              {"text": "N'importe quel commandant peut créer une revendication", "style": "normal"}
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Le « sniping » de revendication reste un risque non résolu",
+          "text": "Le système est strictement premier arrivé, premier servi, sans contribution minimale préalable. Un commandant peut observer une chaîne de systèmes-relais construite par d'autres, puis foncer dès l'apparition d'un nouveau contact pour revendiquer le système convoité à leur place. Les notes du Dodec Update mentionnent des « corrections significatives de l'interface de revendication » sans confirmer explicitement la disparition de ce problème — traite-le au conditionnel tant qu'aucune source ne le confirme."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Trouve un contact « System Colonisation » éligible.", "detail": "Voir la liste ci-dessus — un système de la Bulle est le point de départ le plus simple."},
+            {"text": "Ouvre la carte galactique en mode « System Claim Mode » et choisis ton système cible dans le rayon de 15 al.", "detail": "Seuls les systèmes éligibles apparaissent en points verts vifs."},
+            {"text": "Choisis le type de port primaire (installation et orientation économique) au moment de la revendication.", "detail": "Ce choix est irréversible une fois lancé — voir section 4 avant de valider."},
+            {"text": "Ne clique sur « confirmer » qu'une fois ta logistique de fret planifiée.", "detail": "Le compte à rebours de 24 heures démarre à cet instant précis — voir section 2."}
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Ne revendique pas avant d'avoir lu la suite",
+          "text": "Le bouton de confirmation déclenche immédiatement le délai de 24 heures. Les sections 2 à 4 couvrent les trois décisions à prendre avant, pas après : le compte à rebours, l'ordre de construction, et le choix d'économie."
+        }
+      ]
+    },
+    {
+      "id": "compte-a-rebours",
+      "number": 2,
+      "title": "Le compte à rebours : 24 heures, puis 4 semaines",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Deux horloges se déclenchent l'une après l'autre, et aucune des deux ne se met en pause.** Rater l'une ou l'autre ne coûte pas seulement du temps : elle efface la revendication et ses 25 M Cr non remboursés."
+        },
+        {
+          "type": "table",
+          "caption": "Les deux délais impératifs [OFF]",
+          "headers": ["Étape", "Délai", "Conséquence en cas de dépassement"],
+          "rows": [
+            [
+              {"text": "Déployer la Balise de colonisation système", "style": "strong"},
+              {"text": "24 heures après l'enregistrement de la revendication", "style": "number"},
+              {"text": "La revendication expire et redevient disponible pour un autre commandant", "style": "lose"}
+            ],
+            [
+              {"text": "Achever le port primaire", "style": "strong"},
+              {"text": "4 semaines après le déploiement de la balise", "style": "number"},
+              {"text": "La revendication expire ; le système ne peut pas être re-revendiqué immédiatement", "style": "lose"}
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "La balise se déploie via le module « System Colonisation Suite », présent par défaut sur tous les vaisseaux au même titre que le Discovery Scanner — aucun achat ni équipement à prévoir. Une fois déployée, le port primaire se construit en livrant les commodités requises au **mégavaisseau de colonisation**, qui sert de dépôt temporaire pendant le chantier."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Aucune construction ne s'annule une fois lancée",
+          "text": "Hors « Cancel Construction » (qui rembourse partiellement des Points de Construction sur un chantier non terminé), aucune instruction de construction ne peut être défaite : il n'existe aucun bouton pour supprimer ou déconstruire une fois l'ordre passé. Un joueur soumis à une restriction de revendication via son escadron ne peut pas non plus la contourner en quittant l'escadron. Vérifie ton choix avant de valider, pas après."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Calcule le tonnage de commodités du port primaire avant de déployer la balise, pas après.", "detail": "Méthode complète en section 5."},
+            {"text": "Positionne ton vaisseau de fret — ou ton Fleet Carrier si le système est isolé — à proximité avant de lancer le compte à rebours de 4 semaines.", "detail": "Un trajet aller-retour de plusieurs jours grignote directement ta marge."},
+            {"text": "Décide de l'orientation économique du port primaire avant de le choisir à l'écran de revendication.", "detail": "Ce choix est définitif — voir section 4."},
+            {"text": "Mets une alarme réelle sur les deux échéances : 24 heures, puis 4 semaines.", "detail": "Le jeu ne relance aucun rappel automatique en cas d'oubli."}
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Planifie avant de cliquer, pas après",
+          "text": "Le tonnage, la logistique et l'orientation économique doivent être décidés avant de créer la revendication. Une fois la balise déployée, le compte à rebours de 4 semaines ne s'arrête pour aucune raison."
+        }
+      ]
+    },
+    {
+      "id": "ordre-construction",
+      "number": 3,
+      "title": "Le piège du coût croissant : décide l'ordre avant le premier port",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Construire les mêmes quatre ports dans le mauvais ordre te coûte huit installations de support en plus, pour un résultat identique.** C'est la décision la plus rentable de tout ce guide, et elle se prend avant même de poser la première pierre après le port primaire."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Les trois Tiers et la chaîne de Points de Construction"
+        },
+        {
+          "type": "table",
+          "caption": "Les trois niveaux d'installation et leur rôle dans la chaîne de CP [COM]",
+          "headers": ["Tier", "Coût en Points de Construction", "Génère", "Exemples"],
+          "rows": [
+            [
+              {"text": "Tier 1", "style": "strong"},
+              {"text": "Aucun (gratuit)", "style": "win"},
+              {"text": "CP de niveau 2 (« CP jaunes »)", "style": "normal"},
+              {"text": "Avant-poste civil/commercial, avant-poste industriel/scientifique/militaire/contrebande", "style": "normal"}
+            ],
+            [
+              {"text": "Tier 2", "style": "strong"},
+              {"text": "CP jaunes", "style": "mid"},
+              {"text": "CP de niveau 3 (« CP verts »)", "style": "normal"},
+              {"text": "Coriolis, base d'astéroïde", "style": "normal"}
+            ],
+            [
+              {"text": "Tier 3", "style": "strong"},
+              {"text": "CP verts", "style": "lose"},
+              {"text": "Aucun", "style": "normal"},
+              {"text": "Orbis, Ocellus, port planétaire Tier 3", "style": "normal"}
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Chaque port Tier 2 ou Tier 3 construit ensuite dans le système coûte **plus cher que le précédent** — à une exception près : le **port primaire ne compte jamais dans ce calcul**, quel que soit son niveau. Construire le port primaire directement en Tier 3 (Orbis ou Ocellus) est donc « gratuit » vis-à-vis de cette mécanique."
+        },
+        {
+          "type": "table",
+          "caption": "Coût croissant en Points de Construction par port supplémentaire, hors port primaire [COM]",
+          "headers": ["Port construit", "Coût en CP jaunes (starport T2)", "Coût en CP verts (starport T3)"],
+          "rows": [
+            [
+              {"text": "1er", "style": "normal"},
+              {"text": "3", "style": "number"},
+              {"text": "6", "style": "number"}
+            ],
+            [
+              {"text": "2e", "style": "normal"},
+              {"text": "3", "style": "number"},
+              {"text": "6", "style": "number"}
+            ],
+            [
+              {"text": "3e", "style": "normal"},
+              {"text": "5", "style": "number"},
+              {"text": "12", "style": "number"}
+            ],
+            [
+              {"text": "4e", "style": "normal"},
+              {"text": "7", "style": "number"},
+              {"text": "18", "style": "number"}
+            ],
+            [
+              {"text": "5e", "style": "normal"},
+              {"text": "9", "style": "number"},
+              {"text": "24", "style": "number"}
+            ],
+            [
+              {"text": "N-ième (n ≥ 2)", "style": "strong"},
+              {"text": "3 + (n − 2) × 2", "style": "mid"},
+              {"text": "(n − 1) × 6", "style": "mid"}
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "La formule ne s'applique qu'à partir du 2e port",
+          "text": "Le 1er et le 2e port coûtent le même montant de base (3 CP jaunes / 6 CP verts) : la progression ne commence qu'à partir du 3e port construit. Applique la formule « N-ième » seulement pour n ≥ 2 ; pour n = 1, utilise directement les valeurs de la ligne « 2e »."
+        },
+        {
+          "type": "table",
+          "caption": "Même quatre ports construits, deux ordres, un écart de huit installations de support [COM]",
+          "headers": ["Ordre de construction", "CP jaunes requis", "CP verts requis", "Installations de support minimales"],
+          "rows": [
+            [
+              {"text": "T3, T3, T2, T2 (optimal)", "style": "strong"},
+              {"text": "16", "style": "win"},
+              {"text": "12", "style": "win"},
+              {"text": "28", "style": "win"}
+            ],
+            [
+              {"text": "T2, T2, T3, T3 (naïf)", "style": "strong"},
+              {"text": "6", "style": "mid"},
+              {"text": "30", "style": "lose"},
+              {"text": "36", "style": "lose"}
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "La règle à retenir : Tier 3 avant Tier 2, toujours",
+          "text": "Chaque Tier 2 que tu poses avant un Tier 3 fait grimper le coût du Tier 3 suivant bien plus vite que l'inverse — les CP verts coûtent le double des CP jaunes à volume de ports égal. Construis systématiquement tes starports Tier 3 (Orbis, Ocellus, port planétaire T3) avant tes Tier 2 (Coriolis, base d'astéroïde) dans un même système."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Deux limites à connaître avant de planifier",
+          "text": "Cette mécanique de coût croissant ne s'applique **ni** au Tier 1, **ni** aux colonies/settlements/hubs/installations — seuls les starports Tier 2/3 et le port planétaire Tier 3 sont concernés. Un système peut avoir au maximum **5 chantiers de construction simultanés** ; il faut en achever un pour en démarrer un sixième."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Décide ton ordre de construction avant de poser la première pierre après le port primaire : Tier 3 d'abord, Tier 2 ensuite. L'avant-poste civil planétaire Tier 1 échappe totalement à ce coût croissant — une valeur stratégique à part."
+        }
+      ]
+    },
+    {
+      "id": "economie-liens",
+      "number": 4,
+      "title": "Économie et liens : la décision qu'on ne peut pas défaire",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**L'orientation économique de chaque port se choisit au lancement du chantier, et ne se change plus ensuite.** Elle détermine ce qui se vend sur ton marché pour les années à venir — la décision mérite d'être prise avant de cliquer, pas corrigée après."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Ports « type colonie » et ports « spécialisés »"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Les ports **« type colonie »** héritent leur économie du corps céleste sur ou en orbite duquel ils sont construits.",
+            "Les ports **« spécialisés »** (Industriel, Contrebande, HighTech/Scientifique, Militaire) ont une économie fixe imposée par le type d'installation, non affectée par l'héritage local."
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Héritage de l'économie selon le type de corps céleste [OFF]",
+          "headers": ["Type de corps céleste", "Économie héritée"],
+          "rows": [
+            [{"text": "Trous noirs, étoiles à neutrons, naines blanches", "style": "normal"}, {"text": "HighTech, Tourisme", "style": "normal"}],
+            [{"text": "Naines brunes et tous les autres types d'étoiles", "style": "normal"}, {"text": "Militaire", "style": "normal"}],
+            [{"text": "Mondes de type terrestre (Earth-like)", "style": "normal"}, {"text": "Agriculture, HighTech, Militaire, Tourisme", "style": "normal"}],
+            [{"text": "Mondes océaniques (Water world)", "style": "normal"}, {"text": "Agriculture, Tourisme", "style": "normal"}],
+            [{"text": "Mondes ammoniaqués", "style": "normal"}, {"text": "HighTech, Tourisme", "style": "normal"}],
+            [{"text": "Géantes gazeuses", "style": "normal"}, {"text": "HighTech, Industriel", "style": "normal"}],
+            [{"text": "Corps riches en métaux / à haute teneur métallique", "style": "normal"}, {"text": "Extraction", "style": "normal"}],
+            [{"text": "Corps rocheux glacés", "style": "normal"}, {"text": "Industriel, Raffinerie", "style": "normal"}],
+            [{"text": "Corps rocheux", "style": "normal"}, {"text": "Raffinerie", "style": "normal"}],
+            [{"text": "Corps glacés", "style": "normal"}, {"text": "Industriel", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Trois modificateurs locaux s'additionnent à ce tableau : anneaux (y compris étoiles à ceinture d'astéroïdes) → +Extraction ; signaux biologiques → +Agriculture, +Terraformation ; signaux géologiques → +Extraction, +Industriel."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Liens forts et liens faibles entre installations"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Lien fort** : entre un port et une installation de support sur le **même corps céleste**. Force de base 0,35 à 0,80, modulée de ±0,4 selon l'économie (jamais sous un plancher de 0,1). S'il existe plusieurs ports sur le même corps, seul le plus haut niveau (ou le plus ancien à niveau égal) reçoit le lien.",
+            "**Lien faible** : entre un port et une installation d'un type économique donné **ailleurs dans le même système**. Valeur fixe de **0,05**, jamais modifiée — la spécialisation se raisonne donc à l'échelle du système entier, pas seulement du corps céleste."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Deux erreurs qui abîment ton économie",
+          "text": "Ne construis **qu'un seul port par corps céleste** — les configurations à plusieurs ports sur un même corps sont documentées comme complexes, voire buggées. Et ne mélange pas deux économies sur un même marché : cela peut créer un marché « stérile » où l'offre et la demande s'auto-neutralisent."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Construis tes raffineries en premier",
+          "text": "Les métaux qu'une raffinerie produit profitent ensuite à la construction de toutes les autres installations du système — un ordre qui accélère mécaniquement le reste du chantier."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Niveau technologique minimal pour un chantier naval en ligne", "value": "35", "reliability": "community"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "logistique-transport",
+      "number": 5,
+      "title": "Logistique de transport : tonnage, rotations et Porte-Vaisseau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Aucun barème officiel ne fixe le tonnage requis par installation** — les notes de mise à jour précisent seulement que le niveau de production dépend de la population locale associée. Un point chiffré fiable malgré tout : **le port primaire coûte 17 à 25 % de matériaux en plus** qu'un starport non-primaire équivalent, car il passe par le mégavaisseau de colonisation plutôt que par livraison directe."
+        },
+        {
+          "type": "table",
+          "caption": "Capacité de fret utile comparée, racks classe E dans tous les emplacements internes optionnels [OFF]",
+          "headers": ["Vaisseau", "Rang requis", "Capacité tout cargaison", "Avec un bouclier", "Point fort"],
+          "rows": [
+            [
+              {"text": "Type-8 Transporter", "style": "strong"},
+              {"text": "Aucun", "style": "win"},
+              {"text": "406 t", "style": "number"},
+              {"text": "342 t", "style": "number"},
+              {"text": "FSD classe 5 de série sur une coque de 400 t — meilleure portée par trajet, adapté aux relais longue distance", "style": "normal"}
+            ],
+            [
+              {"text": "Type-9 Heavy", "style": "strong"},
+              {"text": "Aucun", "style": "win"},
+              {"text": "790 t", "style": "number"},
+              {"text": "726 t", "style": "number"},
+              {"text": "Meilleur compromis tonnage/accessibilité, aucun rang à débloquer", "style": "normal"}
+            ],
+            [
+              {"text": "Imperial Cutter", "style": "strong"},
+              {"text": "Duc (Duke) de la marine impériale", "style": "lose"},
+              {"text": "794 t", "style": "number"},
+              {"text": "730 t", "style": "number"},
+              {"text": "Tonnage maximal, mais rang élevé requis ; remise permanente de 30 % à l'achat et au rachat chez Summerland", "style": "normal"}
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Nombre de rotations minimal pour livrer un tonnage donné : **Rotations = ⌈ Tonnage requis ÷ Capacité utile par trajet ⌉**."
+        },
+        {
+          "type": "table",
+          "caption": "Exemple réel de port planétaire Tier 3 — à ne pas généraliser comme tonnage universel [EST]",
+          "headers": ["Poste à livrer", "Tonnage", "Rotations Type-8 (406 t)", "Rotations Type-9 (790 t)", "Rotations Imperial Cutter (794 t)"],
+          "rows": [
+            [
+              {"text": "Titane seul", "style": "normal"},
+              {"text": "34 580 t", "style": "number"},
+              {"text": "86", "style": "mid"},
+              {"text": "44", "style": "mid"},
+              {"text": "44", "style": "mid"}
+            ],
+            [
+              {"text": "Les huit commodités de ce même port", "style": "strong"},
+              {"text": "84 952 t", "style": "number"},
+              {"text": "210", "style": "lose"},
+              {"text": "108", "style": "mid"},
+              {"text": "107", "style": "mid"}
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Ce tonnage n'est qu'un exemple, pas une règle",
+          "text": "Un autre port planétaire à économie Contrebande observé par la communauté ne demandait que quelques centaines à quelques milliers de tonnes au total — un écart qui confirme la forte variabilité selon le type d'installation et le corps céleste local. Ne budgète pas ton fret sur ces deux exemples seuls : vérifie le tonnage réel affiché sur ton propre chantier via l'écran « Construction Effort », consultable par n'importe quel commandant visitant le site."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Au-delà d'une centaine de rotations, un aller-retour solo depuis la Bulle cesse d'être réaliste. C'est le moment de positionner un **Porte-Vaisseau comme dépôt avancé** : parcourir la longue distance une seule fois pour le remplir, puis enchaîner des rotations courtes en supercruise entre le porteur et le chantier."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Pour l'économie du Porte-Vaisseau, voir le guide dédié",
+          "text": "Le budget hebdomadaire, le choix des services et le « metahauling » (réduire les services embarqués à Réarmement/Ravitaillement/Réparation pour atteindre 24 070 t de capacité de fret) sont chiffrés en détail dans « Posséder et rentabiliser un Porte-Vaisseau » (porte-vaisseau-rentable.json) — ce guide-ci ne rechiffre pas cette économie."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Pour aller plus vite sans porteur dédié, la communauté mutualise : un Fleet Carrier peut ouvrir ses ordres de marché à tous les commandants, payés entre **30 000 et 60 000 Cr par tonne** livrée sur courte distance — soit environ **720 millions de Cr** pour faire remplir 24 000 t par d'autres joueurs à 30 000 Cr/t. Pour trouver des preneurs : lier son compte à Inara, ou publier l'offre sur le bulletin du Fleet Carrier Owners Club (FCOC) ou sur les discords PTN."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Réduire le nombre de sauts plutôt que le nombre de rotations",
+          "text": "Pour un relais longue distance (bridging) ou un porteur isolé, améliorer la portée de saut réduit le temps par rotation sans changer le tonnage transporté. Le déblocage de Farseer et le blueprint « Increased Range » grade par grade sont couverts en détail dans « Ingénierie de l'explorateur : atteindre le grade 5 sans combat ni détour inutile » (guide-ingenierie-fsd-explorateur.json) — pas repris ici."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Sous une centaine de rotations, un Type-9 Heavy ou un Type-8 suffit. Au-delà, ou pour un système isolé de la Bulle, le Porte-Vaisseau en metahauling — ou la mutualisation entre commandants — change l'échelle de temps du chantier."
+        }
+      ]
+    },
+    {
+      "id": "recompenses-powerplay-bgs",
+      "number": 6,
+      "title": "Ce que tu deviens : récompenses, Powerplay, BGS",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Une fois le port primaire achevé, une séquence de confirmation Brewer Corporation s'affiche, le mégavaisseau de colonisation quitte le système, et tu deviens Architecte système de façon permanente et non transférable.** Le système bascule alors en « Uncontrolled Populated »."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Paiement hebdomadaire de l'Architecte", "value": "Formule officielle non publiée ; une estimation communautaire non officielle avance score du système × 10 000 × (1 + facteur « Chance »), sans plafond confirmé", "reliability": "estimate"},
+            {"label": "Impôt galactique", "value": "Prélevé sur tout revenu hebdomadaire cumulé dépassant 5 000 000 Cr", "reliability": "official"},
+            {"label": "Remise sur vaisseaux et équipement", "value": "3 % dans tout système où l'Architecte a fait construire au moins 10 installations, cumulable avec les remises Powerplay", "reliability": "official"},
+            {"label": "Bonus de livraison", "value": "Léger bonus de prix au-dessus de la moyenne galactique pour quiconque livre des commodités sur un chantier, Architecte ou non", "reliability": "official"}
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Héritage des factions mineures du BGS"
+        },
+        {
+          "type": "table",
+          "caption": "Jusqu'à quatre factions héritées à la création du système [COM] — total 99 %, tel que documenté par la source communautaire",
+          "headers": ["Rang", "Poids", "Origine de la faction"],
+          "rows": [
+            [{"text": "1", "style": "strong"}, {"text": "60 %", "style": "number"}, {"text": "Faction contrôlant la station d'où la revendication a été faite", "style": "normal"}],
+            [{"text": "2", "style": "strong"}, {"text": "20 %", "style": "number"}, {"text": "Faction contrôlant le système d'origine", "style": "normal"}],
+            [{"text": "3", "style": "strong"}, {"text": "13 %", "style": "number"}, {"text": "Faction alliée de l'escadron du joueur (mécanisme non documenté si aucun escadron)", "style": "mid"}],
+            [{"text": "4", "style": "strong"}, {"text": "6 %", "style": "number"}, {"text": "Faction Anarchie reprise du système existant le plus proche qui en possède une", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Le système devient **immédiatement éligible à l'expansion et au contrôle Powerplay**, en dehors de la Bulle historique — un levier direct d'expansion territoriale pour les Powers."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Changer de faction dirigeante plus tard est très pénible",
+          "text": "Une fois le système colonisé, changer sa faction dirigeante demande des semaines de guerres BGS. Si l'identité de la faction au pouvoir t'importe, choisis-la dès la revendication plutôt que d'espérer la corriger ensuite."
+        }
+      ]
+    },
+    {
+      "id": "checklist-pieges",
+      "number": 7,
+      "title": "Check-list finale et pièges fréquents",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Pièges fréquents et coûts cachés d'une colonisation",
+          "headers": ["Piège", "Conséquence chiffrée", "Comment l'éviter"],
+          "rows": [
+            [
+              {"text": "Laisser expirer les 24 h sans déployer la balise", "style": "normal"},
+              {"text": "Revendication perdue, 25 M Cr non remboursés, système redevient disponible", "style": "lose"},
+              {"text": "Déployer la balise dès l'enregistrement de la revendication (section 2)", "style": "normal"}
+            ],
+            [
+              {"text": "Laisser expirer les 4 semaines sans achever le port primaire", "style": "normal"},
+              {"text": "Revendication perdue, système non re-revendicable immédiatement", "style": "lose"},
+              {"text": "Planifier tonnage et rotations avant de déployer la balise (section 2 et 5)", "style": "normal"}
+            ],
+            [
+              {"text": "Construire les Tier 2 avant les Tier 3", "style": "normal"},
+              {"text": "Jusqu'à 18 CP verts et 8 installations de support en plus pour le même résultat", "style": "lose"},
+              {"text": "Toujours Tier 3 puis Tier 2 dans un même système (section 3)", "style": "normal"}
+            ],
+            [
+              {"text": "Mélanger deux économies sur un même marché", "style": "normal"},
+              {"text": "Marché « stérile », offre et demande s'auto-neutralisent", "style": "lose"},
+              {"text": "Spécialiser fortement chaque port, un seul par corps céleste (section 4)", "style": "normal"}
+            ],
+            [
+              {"text": "Compter sur le paiement hebdomadaire brut de l'Architecte", "style": "normal"},
+              {"text": "Impôt galactique prélevé au-delà de 5 M Cr cumulés, formule non garantie", "style": "lose"},
+              {"text": "Traiter ce revenu comme un ordre de grandeur, pas un salaire fixe (section 6)", "style": "normal"}
+            ]
+          ]
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Réunis les 25 M Cr et confirme l'orientation économique du port primaire avant de contacter le point de colonisation.", "detail": "Ce choix ne se corrige plus une fois lancé — section 4."},
+            {"text": "Calcule le tonnage estimé et le nombre de rotations avec ton vaisseau de fret.", "detail": "Section 5 — vérifie ensuite le tonnage réel affiché en jeu via « Construction Effort »."},
+            {"text": "Positionne ton hauler, ou ton Fleet Carrier en configuration metahauling si le système est isolé.", "detail": "Voir porte-vaisseau-rentable.json pour l'économie du porteur."},
+            {"text": "Crée la revendication et déploie la balise dans les 24 heures.", "detail": "Section 2."},
+            {"text": "Livre les commodités du port primaire au mégavaisseau de colonisation dans les 4 semaines.", "detail": "Section 2."},
+            {"text": "Une fois Architecte, construis systématiquement les ports Tier 3 avant les Tier 2, un seul port par corps céleste.", "detail": "Sections 3 et 4."},
+            {"text": "Ne compte le revenu hebdomadaire que comme un bonus, pas comme un salaire garanti.", "detail": "Section 6."}
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "L'essentiel en une phrase",
+          "text": "Planifie l'économie et la logistique avant de revendiquer, construis Tier 3 avant Tier 2, et laisse le Porte-Vaisseau — pas ta propre soute — absorber le volume une fois le chantier lancé."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "Frontier Developments — update-notes 4.1.0.0 / 4.1.2.0 / 4.1.2.102 / 4.2.2.0",
+    "Mega-guide communautaire CMDR Mechan et contributeurs (MikeCZ23/CCCL, CC BY-SA 4.0)",
+    "EDCD/coriolis-data (GitHub)",
+    "aussig/BGS-Tally (GitHub)",
+    "Wikipédia — Elite Dangerous",
+    "Corpus interne — raw_data/18-colonisation.md",
+    "Corpus interne — porte-vaisseau-rentable.json (économie du Fleet Carrier)"
+  ]
+}

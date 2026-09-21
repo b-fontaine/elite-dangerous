@@ -316,7 +316,7 @@
             "**Voler sans pouvoir payer son rebuy** (voir principe d'or). La n°1 absolue.",
             "**Vendre ses données d'exploration trop tard / au mauvais endroit** — ou pire, se faire détruire avec des heures de données non vendues à bord (les données non vendues sont **perdues** à la mort).",
             "**Acheter trop gros trop vite** : un vaisseau cher mal équipé est un piège à rebuy. Montez en gamme progressivement.",
-            "**Suivre des guides périmés** (voir la section « Ce qui a changé en 2025-2026 »). Le méta bouge : Robigo, le core mining et le Painite ne sont plus ce qu'ils étaient.",
+            "**Suivre des guides périmés** (voir la section « Ce qui a été nerfé / buffé / modifié », Partie 7). Le méta bouge : Robigo, le core mining et le Painite ne sont plus ce qu'ils étaient.",
             "**Négliger l'ingénierie du FSD** : sans le blueprint **Increased Range** sur le FSD, vous doublez le nombre de sauts pour tout — c'est la première amélioration à faire."
           ]
         }
@@ -984,7 +984,7 @@
           "type": "callout",
           "tone": "warning",
           "title": "Erreur fréquente",
-          "text": "scanner 3 échantillons trop près les uns des autres → message « insufficient genetic diversity ». Éloignez-vous de la Clonal Colony Range (l'outil Elite Observatory + plugin Botanist vous l'indique, voir Partie 7)."
+          "text": "scanner 3 échantillons trop près les uns des autres → message « insufficient genetic diversity ». Éloignez-vous de la Clonal Colony Range (l'outil Elite Observatory + plugin Botanist vous l'indique, voir Partie 7bis)."
         },
         {
           "type": "heading",
@@ -1540,12 +1540,12 @@
                 "style": "strong"
               },
               {
-                "text": "ARX (SLV)",
-                "style": "number"
+                "text": "N/A — payant en ARX, pas en Cr",
+                "style": "mid"
               },
               {
-                "text": "SLV",
-                "style": "normal"
+                "text": "N/A — véhicule lancé, pas une classe de coque",
+                "style": "mid"
               },
               {
                 "text": "Petit véhicule lancé (Operations)",

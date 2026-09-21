@@ -1,0 +1,532 @@
+{
+  "id": "guide-material-traders-synthese",
+  "title": "Material Traders et Synthèse : ne repars jamais les mains vides",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Le guide de poche des comptoirs d'échange de matériaux et du panneau Synthesis : taux exacts toutes catégories confondues, neuf familles de recettes embarquées, trois recettes SRV, et les deux idées reçues qui font perdre du temps si on n'y prend pas garde.",
+  "byline": "PC · Live · Accès Engineering déjà débloqué",
+  "edition": "2026-09",
+  "topics": ["material-trader", "synthese", "synthesis", "materiaux", "ingenierie"],
+  "estimatedReadMinutes": 15,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Material Traders : trois comptoirs, une mécanique commune",
+            "115 matériaux, 24 catégories : pourquoi les comptoirs sont indispensables",
+            "Synthèse embarquée : la mécanique commune aux neuf familles",
+            "Munitions : la table complète par catégorie d'arme",
+            "Chaff, Heat Sink, AFMU, Limpets, Life Support, Caustic Sink",
+            "SRV : munitions, carburant, réparation",
+            "Deux idées reçues à corriger",
+            "Questions fréquentes",
+            "Ce qu'il faut retenir"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Un Material Trader convertit ton surplus de matériaux inutiles en ce qui te manque ; le panneau Synthesis fabrique des consommables directement depuis le vaisseau, sans repasser par une station.** Ce guide est une référence de poche : les taux exacts de conversion, toutes catégories confondues, et les neuf familles de recettes de synthèse embarquée — plus les trois recettes SRV — avec les deux idées reçues qui coûtent du temps si on n'y prend pas garde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il suppose que tu sais déjà ce qu'est un blueprint, un effet expérimental et un rang de réputation chez un Ingénieur. Si tu découvres l'ingénierie du FSD pour l'exploration — déblocage de Felicity Farseer, blueprint Increased Range grade par grade, recette de FSD Injection —, ce guide-ci ne le réexplique pas : va voir guide-ingenierie-fsd-explorateur.json, qui couvre déjà ce chantier en détail."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Comment lire les chiffres de ce guide",
+          "text": "**OFF** = donnée officielle Frontier ou tirée d'un fichier de référence du jeu (EDCD / FDevIDs). **COM** = mesure ou base communautaire (wiki Elite Dangerous, EDEngineer, étude interne croisée sur plusieurs sources). Les taux des Material Traders et les plafonds de stockage sont **COM**, stables depuis plusieurs années et croisés sur plusieurs sources indépendantes. Les recettes de synthèse embarquée reposent en revanche sur une **source communautaire unique** (wiki Elite Dangerous, page Synthesis), faute d'accès à Inara.cz au moment de la rédaction — seule la FSD Injection est confirmée par un post officiel Frontier de 2018. Un rappel dédié referme la section munitions plus loin."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ce que ce guide suppose déjà acquis",
+          "text": "L'accès au panneau Engineering (au moins un Ingénieur débloqué) et, pour tester certaines recettes, un module compatible déjà installé (un Limpet Controller pour la synthèse de limpets, un AFMU pour son ravitaillement). Ce guide ne réexplique ni le déblocage d'un Ingénieur, ni le blueprint FSD Increased Range, ni sa recette de FSD Injection — ces trois sujets sont déjà chiffrés en détail dans guide-ingenierie-fsd-explorateur.json."
+        }
+      ]
+    },
+    {
+      "id": "comptoirs-mecanique",
+      "number": 1,
+      "title": "Material Traders : trois comptoirs, une mécanique commune",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Un Material Trader échange un surplus de matériaux d'un grade contre des matériaux d'un autre grade — à l'intérieur du même type seulement.** Impossible de convertir du Raw en Encoded ou du Manufactured en Raw : chaque comptoir reste cloisonné dans sa catégorie de matériau."
+        },
+        {"type": "heading", "level": 3, "text": "Trois types, trois implantations économiques"},
+        {
+          "type": "paragraph",
+          "text": "Chaque type de comptoir s'installe dans des économies précises, mais son implantation ne s'arrête pas là :"
+        },
+        {
+          "type": "table",
+          "caption": "Les trois types de Material Traders",
+          "headers": ["Type de comptoir", "Économies d'implantation", "Catégories échangeables"],
+          "rows": [
+            [{"text": "Raw Material Trader", "style": "strong"}, {"text": "Refinery, Extraction", "style": "normal"}, {"text": "7 groupes — 28 matériaux bruts, grades 1 à 4", "style": "normal"}],
+            [{"text": "Manufactured Material Trader", "style": "strong"}, {"text": "Extraction, Industrial", "style": "normal"}, {"text": "10 familles — 50 matériaux manufacturés, grades 1 à 5", "style": "normal"}],
+            [{"text": "Encoded Data Trader", "style": "strong"}, {"text": "High Tech, Military", "style": "normal"}, {"text": "6 familles — 30 matériaux encodés, grades 1 à 5", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "À cela s'ajoutent quatre critères indépendants de l'économie affichée :"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Sécurité moyenne ou haute",
+            "Population comprise entre 1 et 22 millions d'habitants",
+            "Gouvernement autre qu'Anarchy",
+            "Station ni endommagée ni en lockdown"
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "L'économie ne garantit rien",
+          "text": "Le type du comptoir ne se déduit pas fiablement de l'économie affichée : sur un test mené sur les trente comptoirs situés à moins de 30 al de Sol, l'économie donne deux candidats possibles pour presque toutes les stations, et **Gresley Dock, dans Nanomam, est un comptoir Encoded en économie Agriculture** — un cas qui ne correspond à aucune des règles ci-dessus. Vérifie toujours le type affiché avant de t'y déplacer."
+        },
+        {"type": "heading", "level": 3, "text": "La table exacte des taux de conversion"},
+        {
+          "type": "paragraph",
+          "text": "À l'intérieur d'un même type, on peut aussi changer de catégorie de matériau — mais cela multiplie le coût par 6. Voici la table complète, dans les deux sens :"
+        },
+        {
+          "type": "table",
+          "caption": "Taux de conversion d'un Material Trader (identiques pour Raw, Manufactured et Encoded)",
+          "headers": ["Écart de grade", "Même catégorie", "Catégorie différente"],
+          "rows": [
+            [{"text": "+1 grade", "style": "normal"}, {"text": "6 → 1", "style": "lose"}, {"text": "36 → 1", "style": "lose"}],
+            [{"text": "+2 grades", "style": "normal"}, {"text": "36 → 1", "style": "lose"}, {"text": "216 → 1", "style": "lose"}],
+            [{"text": "+3 grades", "style": "normal"}, {"text": "216 → 1", "style": "lose"}, {"text": "impossible", "style": "lose"}],
+            [{"text": "même grade", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "6 → 1", "style": "mid"}],
+            [{"text": "−1 grade", "style": "normal"}, {"text": "1 → 3", "style": "win"}, {"text": "2 → 1", "style": "mid"}],
+            [{"text": "−2 grades", "style": "normal"}, {"text": "1 → 9", "style": "win"}, {"text": "2 → 3", "style": "mid"}],
+            [{"text": "−3 grades", "style": "normal"}, {"text": "1 → 27", "style": "win"}, {"text": "2 → 9", "style": "mid"}],
+            [{"text": "−4 grades", "style": "normal"}, {"text": "1 → 81", "style": "win"}, {"text": "2 → 27", "style": "mid"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "La stratégie qui en découle",
+          "text": "Monter d'un grade coûte cher (6 pour 1), descendre rapporte beaucoup (1 pour 3, soit 81 unités de grade 1 pour une seule de grade 5 en descendant quatre grades). La bonne méthode n'est donc jamais de viser un grade précis en farmant : **récolte large, à n'importe quel grade dans la catégorie, puis descends au comptoir vers ce qui te manque réellement.**"
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Deux conversions listées mais impossibles",
+          "text": "Le jeu affiche aussi des taux à **1296 pour 1** et **7776 pour 1** (changement de catégorie sur respectivement 3 et 4 grades). Ils sont **physiquement impossibles à réaliser** : ils exigeraient de stocker plus d'unités que ne l'autorise le plafond de stockage du matériau visé (voir la section suivante)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces taux n'ont pas changé depuis l'introduction des Material Traders en **février 2018** — vérification faite à la fois sur l'historique des révisions du wiki communautaire et sur plusieurs années de notes de patch (COM)."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Un comptoir n'est pas un outil de farming ciblé, c'est un outil de recyclage. Ne l'utilise jamais pour viser directement un grade précis : récolte large dans la catégorie qui t'intéresse, laisse les plafonds de stockage se remplir, puis descends vers ce qu'il te manque au moment de payer un blueprint."
+        }
+      ]
+    },
+    {
+      "id": "plafonds-et-catalogue",
+      "number": 2,
+      "title": "115 matériaux, 24 catégories : pourquoi les comptoirs sont indispensables",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Chaque matériau d'Engineering a un plafond de stockage qui dépend uniquement de son grade — identique pour les trois types (Raw, Manufactured, Encoded).** C'est ce plafond, et lui seul, qui rend les Material Traders indispensables dès que tu enchaînes plusieurs blueprints de haut grade."
+        },
+        {
+          "type": "table",
+          "caption": "Plafonds de stockage par grade",
+          "headers": ["Grade", "Plafond de stockage (par matériau)", "Rareté en jeu"],
+          "rows": [
+            [{"text": "1", "style": "number"}, {"text": "300 unités", "style": "win"}, {"text": "Très commun", "style": "normal"}],
+            [{"text": "2", "style": "number"}, {"text": "250 unités", "style": "normal"}, {"text": "Commun", "style": "normal"}],
+            [{"text": "3", "style": "number"}, {"text": "200 unités", "style": "normal"}, {"text": "Standard", "style": "normal"}],
+            [{"text": "4", "style": "number"}, {"text": "150 unités", "style": "normal"}, {"text": "Rare", "style": "normal"}],
+            [{"text": "5", "style": "number"}, {"text": "100 unités", "style": "lose"}, {"text": "Très rare", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ce qui a changé : le surplus n'est plus perdu",
+          "text": "Depuis le **Dodec Update du 11 novembre 2025**, tout matériau collecté au-delà du plafond est automatiquement converti en crédits, à raison de **2 000 Cr (grade 1), 4 000 Cr (grade 2), 8 000 Cr (grade 3), 16 000 Cr (grade 4) et 32 000 Cr (grade 5)** par unité excédentaire. Plus rien n'est perdu — mais ces crédits ne remplacent pas un matériau qui te manque ailleurs : le plafond reste la contrainte réelle à gérer, notamment via les Material Traders."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Matériaux bruts (Raw)", "value": "28 matériaux, 7 groupes d'échange, grades 1 à 4", "reliability": "official"},
+            {"label": "Matériaux manufacturés (Manufactured)", "value": "50 matériaux, 10 familles d'échange, grades 1 à 5", "reliability": "official"},
+            {"label": "Données encodées (Encoded)", "value": "30 matériaux, 6 familles d'échange, grades 1 à 5", "reliability": "official"},
+            {"label": "Composants de combinaison Odyssey", "value": "7 matériaux à pied, sans grade ni plafond, non échangeables à un comptoir", "reliability": "community"}
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Total : **115 matériaux répartis en 24 catégories** (108 échangeables côté vaisseau, plus les 7 composants Odyssey à part). Les groupes et familles ci-dessus reprennent l'ordre exact dans lequel un comptoir présente ses matériaux — c'est celui qui permet de voir d'un coup d'œil ce qui est convertible en quoi."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Surveille les matériaux proches de leur plafond avant une session de farming ciblée.", "detail": "Le panneau Inventaire → Matériaux affiche la quantité actuelle à côté du plafond du grade."},
+            {"text": "Descends au comptoir avant de déborder, pas après.", "detail": "Convertir un grade 5 en excédent vers un grade inférieur qui te manque rapporte plus que laisser le jeu le transformer en crédits."},
+            {"text": "Ne compte jamais sur la conversion automatique en crédits comme stratégie de gestion.", "detail": "Elle évite la perte pure, mais un crédit ne se remange pas en matériau manquant pour un blueprint — seul un comptoir le fait."}
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Les plafonds ne sont pas une punition, ce sont la raison d'être du système d'échange : sans eux, personne n'aurait besoin des Material Traders. Gère ton stock en fonction du grade le plus contraint (100 unités seulement au grade 5), pas du grade le plus commun."
+        }
+      ]
+    },
+    {
+      "id": "synthese-mecanique-generale",
+      "number": 3,
+      "title": "Synthèse embarquée : la mécanique commune aux neuf familles",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**La Synthèse (Synthesis) consomme des matériaux d'Engineering pour fabriquer des consommables directement depuis ton vaisseau, sans repasser par une station.** C'est l'outil de prolongation de session le plus direct pour le farming ou le combat prolongé."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elle est accessible depuis le panneau droit, onglet **Engineering → Synthesis**. Le mécanisme couvre neuf familles de recettes embarquées — la source distingue les munitions conventionnelles des munitions anti-Thargoïdes et Guardian, dont les matériaux ne se recoupent jamais — plus **trois recettes dédiées au SRV**, accessibles depuis le panneau du véhicule une fois déployé."
+        },
+        {"type": "heading", "level": 3, "text": "Ce qui varie réellement d'un palier à l'autre"},
+        {
+          "type": "paragraph",
+          "text": "Pour la quasi-totalité des recettes à plusieurs paliers (Basic/Standard/Premium), **la quantité produite ne change pas** : la synthèse recharge le stock du module concerné jusqu'à sa capacité maximale, quel que soit le palier choisi. Ce qui varie, c'est **(a)** les matériaux requis, de plus en plus rares à mesure que le palier monte, et **(b)** un bonus qualitatif additionnel (dégâts, vitesse de réparation, durée d'effet, efficacité de carburant...) propre à chaque recette."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "La seule exception : la FSD Injection",
+          "text": "Ses trois paliers changent directement l'ampleur de l'effet obtenu (portée de saut), pas un bonus secondaire. Sa recette exacte, ses matériaux et son rôle de dépannage pour un explorateur sont déjà chiffrés en détail dans guide-ingenierie-fsd-explorateur.json — ce guide-ci se limite à la citer comme l'une des neuf familles, sans la rechiffrer."
+        },
+        {
+          "type": "table",
+          "caption": "Les neuf familles de recettes côté vaisseau",
+          "headers": ["Famille de recette", "Ce qu'elle recharge", "Paliers disponibles"],
+          "rows": [
+            [{"text": "FSD Injection (jumponium)", "style": "strong"}, {"text": "Portée de saut du prochain saut uniquement", "style": "normal"}, {"text": "Basic / Standard / Premium — détaillé dans guide-ingenierie-fsd-explorateur.json", "style": "normal"}],
+            [{"text": "Munitions conventionnelles", "style": "strong"}, {"text": "Stock de munitions au maximum de l'arme visée", "style": "normal"}, {"text": "Basic / Standard / Premium selon l'arme (table complète plus bas)", "style": "normal"}],
+            [{"text": "Munitions anti-Thargoïdes et Guardian", "style": "strong"}, {"text": "Armes AX et Guardian, matériaux dédiés (Weapon Parts, Guardian Power Cell...)", "style": "normal"}, {"text": "Basic / Standard, Premium selon l'arme (table complète plus bas)", "style": "normal"}],
+            [{"text": "Chaff Launcher", "style": "strong"}, {"text": "Charges de leurre au maximum", "style": "normal"}, {"text": "Basic / Standard / Premium", "style": "normal"}],
+            [{"text": "Heat Sink Launcher", "style": "strong"}, {"text": "Charges de dissipation thermique au maximum", "style": "normal"}, {"text": "Basic / Standard / Premium", "style": "normal"}],
+            [{"text": "AFMU Refill", "style": "strong"}, {"text": "Charges de réparation au maximum", "style": "normal"}, {"text": "Basic / Standard / Premium", "style": "normal"}],
+            [{"text": "Limpets", "style": "strong"}, {"text": "Jusqu'à 4 limpets selon la soute libre", "style": "normal"}, {"text": "Basic seul", "style": "normal"}],
+            [{"text": "Life Support", "style": "strong"}, {"text": "Réserve d'oxygène d'urgence au maximum", "style": "normal"}, {"text": "Basic seul", "style": "normal"}],
+            [{"text": "Caustic Sink Launcher", "style": "strong"}, {"text": "Module utilitaire anti-dégâts caustiques (combat de Titan)", "style": "normal"}, {"text": "Basic seul", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "SRV Ammo Restock — munitions du canon du véhicule",
+            "SRV Refuel — carburant du véhicule",
+            "SRV Repair — intégrité de coque du véhicule"
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Retiens la règle générale avant les tables détaillées : sauf pour la FSD Injection, monter de palier ne te donne jamais plus de munitions ou de charges, seulement un bonus qualitatif contre des matériaux plus rares. Ne synthétise donc pas systématiquement en Premium si le Basic suffit à ton usage immédiat."
+        }
+      ]
+    },
+    {
+      "id": "munitions-completes",
+      "number": 4,
+      "title": "Munitions : la table complète par catégorie d'arme",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Chaque recette de munitions recharge l'arme visée à 100 % de sa capacité ; seul le palier ajoute le bonus de dégâts indiqué** (ou, pour les munitions Guardian « Configurable », la capacité à infliger des dégâts anti-xéno). Les matériaux Raw ne sont pas ré-annotés par grade individuel ici — croise-les au besoin avec le référentiel des matériaux bruts si tu veux prospecter en connaissance de cause."
+        },
+        {
+          "type": "table",
+          "caption": "Munitions : matériaux par catégorie d'arme et par palier",
+          "headers": ["Arme visée", "Palier", "Bonus", "Matériaux"],
+          "rows": [
+            [{"text": "Multi-cannon (Small Calibre)", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "2 Iron, 1 Nickel, 2 Sulphur", "style": "normal"}],
+            [{"text": "Multi-cannon (Small Calibre)", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+15 % dégâts", "style": "normal"}, {"text": "2 Iron, 2 Zinc, 2 Phosphorus, 2 Selenium, 2 Zirconium", "style": "normal"}],
+            [{"text": "Multi-cannon (Small Calibre)", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+30 % dégâts", "style": "normal"}, {"text": "2 Sulphur, 2 Phosphorus, 2 Tungsten, 2 Zirconium, 2 Mercury, 1 Antimony", "style": "normal"}],
+            [{"text": "Cannon / Fragment Cannon (Large Calibre)", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "4 Nickel, 3 Carbon, 2 Sulphur", "style": "normal"}],
+            [{"text": "Cannon / Fragment Cannon (Large Calibre)", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+15 % dégâts", "style": "normal"}, {"text": "2 Tin, 3 Zinc, 3 Phosphorus, 1 Arsenic, 2 Zirconium", "style": "normal"}],
+            [{"text": "Cannon / Fragment Cannon (Large Calibre)", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+30 % dégâts", "style": "normal"}, {"text": "8 Zinc, 2 Tungsten, 1 Arsenic, 1 Mercury, 2 Antimony", "style": "normal"}],
+            [{"text": "Railgun (High Velocity)", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "2 Iron, 1 Vanadium", "style": "normal"}],
+            [{"text": "Railgun (High Velocity)", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+15 % dégâts", "style": "normal"}, {"text": "4 Iron, 3 Vanadium, 2 Tungsten, 2 Zirconium", "style": "normal"}],
+            [{"text": "Railgun (High Velocity)", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+30 % dégâts", "style": "normal"}, {"text": "4 Vanadium, 4 Tungsten, 2 Zirconium, 2 Yttrium", "style": "normal"}],
+            [{"text": "Plasma Accelerator", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "3 Sulphur, 4 Phosphorus, 1 Manganese", "style": "normal"}],
+            [{"text": "Plasma Accelerator", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+15 % dégâts", "style": "normal"}, {"text": "5 Phosphorus, 3 Manganese, 1 Selenium, 4 Molybdenum", "style": "normal"}],
+            [{"text": "Plasma Accelerator", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+30 % dégâts", "style": "normal"}, {"text": "5 Selenium, 4 Cadmium, 4 Molybdenum, 2 Technetium", "style": "normal"}],
+            [{"text": "Missile / Mine (Explosives)", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "3 Iron, 3 Nickel, 4 Carbon, 4 Sulphur", "style": "normal"}],
+            [{"text": "Missile / Mine (Explosives)", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+15 % dégâts", "style": "normal"}, {"text": "6 Sulphur, 6 Phosphorus, 4 Arsenic, 2 Mercury", "style": "normal"}],
+            [{"text": "Missile / Mine (Explosives)", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+30 % dégâts", "style": "normal"}, {"text": "5 Phosphorus, 4 Arsenic, 5 Niobium, 5 Mercury, 5 Polonium", "style": "normal"}],
+            [{"text": "Seismic Charge Launcher", "style": "strong"}, {"text": "Basic seul", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "2 Iron, 2 Nickel, 2 Sulphur, 3 Phosphorus, 1 Mercury", "style": "normal"}],
+            [{"text": "Sub-surface Displacement Missile", "style": "strong"}, {"text": "Basic seul", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "3 Nickel, 3 Carbon, 3 Sulphur, 2 Tungsten", "style": "normal"}],
+            [{"text": "Remote Release Flechette Launcher", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "2 Boron, 1 Tungsten, 3 Electrochemical Arrays, 2 Mechanical Components", "style": "normal"}],
+            [{"text": "Remote Release Flechette Launcher", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+5 % dégâts", "style": "normal"}, {"text": "4 Boron, 4 Tungsten, 6 Electrochemical Arrays, 4 Mechanical Components", "style": "normal"}],
+            [{"text": "Remote Release Flechette Launcher", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+10 % dégâts", "style": "normal"}, {"text": "6 Boron, 6 Tungsten, 9 Electrochemical Arrays, 5 Mechanical Components", "style": "normal"}],
+            [{"text": "Shock Cannon", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "2 Lead, 3 Grid Resistors, 2 Heat Dispersion Plate, 2 Focus Crystals, 2 Phase Alloys", "style": "normal"}],
+            [{"text": "Shock Cannon", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+5 % dégâts", "style": "normal"}, {"text": "3 Lead, 5 Grid Resistors, 3 Heat Dispersion Plate, 4 Focus Crystals, 5 Phase Alloys", "style": "normal"}],
+            [{"text": "Shock Cannon", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+10 % dégâts", "style": "normal"}, {"text": "5 Lead, 7 Grid Resistors, 4 Heat Dispersion Plate, 6 Focus Crystals, 8 Phase Alloys", "style": "normal"}],
+            [{"text": "Enzyme Missile Rack", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "3 Iron, 2 Lead, 3 Sulphur, 4 Bio-Mechanical Conduits, 3 Propulsion Elements, 2 Weapon Parts", "style": "normal"}],
+            [{"text": "Enzyme Missile Rack", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+15 % dégâts", "style": "normal"}, {"text": "4 Lead, 6 Sulphur, 4 Tungsten, 5 Bio-Mechanical Conduits, 6 Propulsion Elements, 4 Weapon Parts", "style": "normal"}],
+            [{"text": "Enzyme Missile Rack", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+30 % dégâts", "style": "normal"}, {"text": "6 Lead, 5 Phosphorus, 4 Tungsten, 6 Bio-Mechanical Conduits, 6 Propulsion Elements, 5 Weapon Parts", "style": "normal"}],
+            [{"text": "AX Multi-cannon", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "2 Iron, 1 Nickel, 1 Sulphur, 2 Weapon Parts", "style": "normal"}],
+            [{"text": "AX Multi-cannon", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+5 % dégâts", "style": "normal"}, {"text": "2 Iron, 2 Phosphorus, 2 Zirconium, 3 Sensor Fragment, 4 Weapon Parts", "style": "normal"}],
+            [{"text": "AX Multi-cannon", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+10 % dégâts", "style": "normal"}, {"text": "3 Iron, 2 Phosphorus, 2 Zirconium, 4 Sensor Fragment, 2 Thargoid Carapace, 6 Weapon Parts", "style": "normal"}],
+            [{"text": "AX Missile Rack", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "3 Iron, 3 Nickel, 4 Carbon, 3 Propulsion Elements", "style": "normal"}],
+            [{"text": "AX Missile Rack", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+5 % dégâts", "style": "normal"}, {"text": "6 Sulphur, 6 Phosphorus, 2 Mercury, 4 Thargoid Organic Circuitry, 4 Propulsion Elements", "style": "normal"}],
+            [{"text": "AX Missile Rack", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+10 % dégâts", "style": "normal"}, {"text": "5 Tungsten, 4 Mercury, 2 Polonium, 5 Bio-Mechanical Conduits, 5 Propulsion Elements, 6 Ship Flight Data", "style": "normal"}],
+            [{"text": "Remote Release Flak Launcher", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "4 Nickel, 3 Carbon, 2 Sulphur", "style": "normal"}],
+            [{"text": "Remote Release Flak Launcher", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+5 % dégâts", "style": "normal"}, {"text": "2 Tin, 3 Zinc, 1 Arsenic, 3 Thargoid Technology Components, 2 Wreckage Components", "style": "normal"}],
+            [{"text": "Remote Release Flak Launcher", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+10 % dégâts", "style": "normal"}, {"text": "8 Zinc, 2 Tungsten, 1 Arsenic, 3 Sensor Fragment, 4 Thargoid Technology Components, 1 Weapon Parts", "style": "normal"}],
+            [{"text": "Advanced Multi-cannon (Configurable)", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "2 Iron, 1 Nickel, 2 Sulphur", "style": "normal"}],
+            [{"text": "Advanced Multi-cannon (Configurable)", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "Munitions à dégâts anti-xéno", "style": "normal"}, {"text": "2 Tin, 3 Zinc, 3 Phosphorus, 1 Guardian Power Cell, 1 Guardian Power Conduit, 1 Guardian Technology Component", "style": "normal"}],
+            [{"text": "Advanced Multi-cannon (Configurable)", "style": "strong"}, {"text": "Premium", "style": "lose"}, {"text": "N'existe pas", "style": "normal"}, {"text": "—", "style": "normal"}],
+            [{"text": "Advanced Missile Rack (Configurable)", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "3 Iron, 3 Nickel, 4 Carbon, 4 Sulphur", "style": "normal"}],
+            [{"text": "Advanced Missile Rack (Configurable)", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "Munitions à dégâts anti-xéno", "style": "normal"}, {"text": "6 Phosphorus, 4 Arsenic, 2 Mercury, 1 Guardian Power Cell, 1 Guardian Power Conduit, 1 Guardian Technology Component", "style": "normal"}],
+            [{"text": "Advanced Missile Rack (Configurable)", "style": "strong"}, {"text": "Premium", "style": "lose"}, {"text": "N'existe pas", "style": "normal"}, {"text": "—", "style": "normal"}],
+            [{"text": "Guardian Gauss Cannon", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "3 Manganese, 2 Focus Crystals, 2 Guardian Power Conduit, 4 Guardian Wreckage Components", "style": "normal"}],
+            [{"text": "Guardian Gauss Cannon", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+15 % dégâts", "style": "normal"}, {"text": "5 Manganese, 3 Heat Resistant Ceramics, 5 Focus Crystals, 4 Guardian Power Conduit, 3 Guardian Sentinel Weapon Parts", "style": "normal"}],
+            [{"text": "Guardian Gauss Cannon", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+30 % dégâts", "style": "normal"}, {"text": "8 Manganese, 6 Guardian Technology Component, 6 Filament Composites, 10 Focus Crystals", "style": "normal"}],
+            [{"text": "Guardian Plasma Charger", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "3 Chromium, 2 Heat Dispersion Plate, 3 Guardian Power Conduit, 4 Guardian Wreckage Components", "style": "normal"}],
+            [{"text": "Guardian Plasma Charger", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+15 % dégâts", "style": "normal"}, {"text": "4 Chromium, 2 Heat Exchangers, 2 Phase Alloys, 2 Guardian Power Cell, 2 Guardian Technology Component", "style": "normal"}],
+            [{"text": "Guardian Plasma Charger", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+30 % dégâts", "style": "normal"}, {"text": "6 Chromium, 2 Zirconium, 4 Heat Exchangers, 6 Phase Alloys, 4 Guardian Power Cell, 3 Guardian Sentinel Weapon Parts", "style": "normal"}],
+            [{"text": "Guardian Shard Cannon", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "3 Carbon, 2 Vanadium, 3 Crystal Shards, 3 Guardian Power Cell, 5 Guardian Wreckage Components", "style": "normal"}],
+            [{"text": "Guardian Shard Cannon", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+15 % dégâts", "style": "normal"}, {"text": "4 Crystal Shards, 2 Guardian Power Cell, 2 Guardian Sentinel Weapon Parts", "style": "normal"}],
+            [{"text": "Guardian Shard Cannon", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+30 % dégâts", "style": "normal"}, {"text": "8 Carbon, 4 Vanadium, 8 Crystal Shards, 6 Guardian Power Cell", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Fiabilité de cette table",
+          "text": "Reproduite depuis le wiki communautaire Elite Dangerous, page Synthesis. Aucune deuxième source communautaire indépendante n'a pu être croisée : Inara.cz, qui aurait permis un recoupement, renvoyait une erreur au moment de la rédaction. Aucune contradiction n'a en revanche été trouvée entre les sources effectivement consultées. À revérifier en jeu avant une session de farming ciblée si une quantité te paraît incohérente."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Les munitions AX et Guardian piochent dans un autre stock",
+          "text": "Weapon Parts, Sensor Fragment, Thargoid Carapace, Guardian Power Cell, Guardian Power Conduit... ces matériaux ne se récoltent ni au minage ni par prospection classique — ils proviennent du combat AX, des sites Guardian et des Unidentified Signal Sources dédiées. Un stock de munitions conventionnelles ne prépare donc en rien une session de synthèse de munitions AX ou Guardian."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Sauf pour les deux recettes « Configurable » (dont le Premium n'existe pas) et les munitions AX/Guardian (matériaux dédiés hors minage), le schéma est constant : Basic gratuit en matériaux communs, Standard +15 % de dégâts pour un coût modéré, Premium +30 % pour des matériaux nettement plus rares. Vise le Standard pour l'usage courant, réserve le Premium aux munitions que tu synthétises rarement."
+        }
+      ]
+    },
+    {
+      "id": "consommables-utilitaires",
+      "number": 5,
+      "title": "Chaff, Heat Sink, AFMU, Limpets, Life Support, Caustic Sink",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Ces six recettes couvrent l'essentiel de la survie en session prolongée** — leurre, dissipation thermique, réparation, ramassage, oxygène d'urgence et défense anti-caustique. Trois d'entre elles n'ont qu'un seul palier."
+        },
+        {
+          "type": "table",
+          "caption": "Les consommables utilitaires",
+          "headers": ["Recette", "Palier", "Bonus", "Matériaux"],
+          "rows": [
+            [{"text": "Chaff Launcher", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "1 Compact Composites, 1 Filament Composites", "style": "normal"}],
+            [{"text": "Chaff Launcher", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+1 s de durée d'effet", "style": "normal"}, {"text": "1 Compact Composites, 2 Filament Composites, 1 Thermic Alloys", "style": "normal"}],
+            [{"text": "Chaff Launcher", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+2 s de durée d'effet", "style": "normal"}, {"text": "1 Compact Composites, 2 Filament Composites, 1 Thermic Alloys, 1 Proto Radiolic Alloys", "style": "normal"}],
+            [{"text": "Heat Sink Launcher", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "2 Basic Conductors, 2 Heat Conduction Wiring", "style": "normal"}],
+            [{"text": "Heat Sink Launcher", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+15 % de dissipation thermique", "style": "normal"}, {"text": "2 Basic Conductors, 2 Heat Conduction Wiring, 2 Heat Exchangers", "style": "normal"}],
+            [{"text": "Heat Sink Launcher", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+30 % de dissipation thermique", "style": "normal"}, {"text": "2 Basic Conductors, 2 Heat Conduction Wiring, 2 Heat Exchangers, 1 Proto Heat Radiators", "style": "normal"}],
+            [{"text": "AFMU Refill", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "2 Nickel, 2 Zinc, 2 Chromium, 3 Vanadium", "style": "normal"}],
+            [{"text": "AFMU Refill", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+50 % de vitesse de réparation", "style": "normal"}, {"text": "1 Tin, 2 Manganese, 6 Vanadium, 1 Molybdenum, 1 Zirconium", "style": "normal"}],
+            [{"text": "AFMU Refill", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+100 % de vitesse de réparation", "style": "normal"}, {"text": "2 Zinc, 4 Chromium, 6 Vanadium, 2 Zirconium, 1 Tellurium, 1 Ruthenium", "style": "normal"}],
+            [{"text": "Limpets", "style": "strong"}, {"text": "Basic seul", "style": "normal"}, {"text": "Jusqu'à 4 limpets selon la soute libre", "style": "normal"}, {"text": "10 Iron, 10 Nickel", "style": "normal"}],
+            [{"text": "Life Support", "style": "strong"}, {"text": "Basic seul", "style": "normal"}, {"text": "Recharge l'oxygène d'urgence au maximum de sa capacité", "style": "normal"}, {"text": "2 Iron, 1 Nickel", "style": "normal"}],
+            [{"text": "Caustic Sink Launcher", "style": "strong"}, {"text": "Basic seul", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "1 Chemical Storage Units, 1 Galvanising Alloys, 4 Caustic Shard, 2 Corrosive Mechanisms", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Limpets exige un contrôleur déjà installé",
+          "text": "Le panneau Synthesis n'affiche la recette Limpets que si un Limpet Controller (Collector, Prospector, Hatch Breaker, Fuel Transfer, Repair, Research, Decontamination, Recon ou un des Multi Limpet Controllers) est installé. Un seul type de recette suffit quel que soit le contrôleur équipé — c'est le contrôleur actif au moment du lancement qui détermine le comportement du limpet."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Life Support ne rallonge pas une durée fixe",
+          "text": "La recette recharge la réserve d'oxygène d'urgence à sa capacité **maximale**, laquelle dépend de la classe et de la notation du module installé — de 5 à 25 minutes selon le module, pas un bonus de durée universel."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Caustic Sink Launcher est un module de niche",
+          "text": "C'est un utilitaire distinct dédié au combat de Titan : absorption automatique des dégâts caustiques. Pour le contexte des nuages caustiques et l'ensemble du combat AX, voir pilote-anti-thargoide.json."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Ces six recettes ne demandent que des matériaux communs (Iron, Nickel, Chromium, Vanadium en tête) — garde-en toujours un petit stock de base plutôt que de les considérer comme des recettes de fin de chaîne. Ce sont elles qui permettent de rester en session sans jamais rentrer se ravitailler à quai."
+        }
+      ]
+    },
+    {
+      "id": "srv-recettes",
+      "number": 6,
+      "title": "SRV : munitions, carburant, réparation",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Trois recettes propres au SRV**, accessibles depuis le panneau droit du véhicule une fois déployé — indépendantes du panneau Synthesis du vaisseau-mère."
+        },
+        {
+          "type": "table",
+          "caption": "Les trois recettes SRV",
+          "headers": ["Recette", "Palier", "Bonus", "Matériaux"],
+          "rows": [
+            [{"text": "SRV Ammo Restock", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "2 Sulphur, 1 Phosphorus", "style": "normal"}],
+            [{"text": "SRV Ammo Restock", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+15 % dégâts", "style": "normal"}, {"text": "1 Phosphorus, 1 Manganese, 1 Selenium, 1 Molybdenum", "style": "normal"}],
+            [{"text": "SRV Ammo Restock", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+30 % dégâts", "style": "normal"}, {"text": "2 Phosphorus, 2 Selenium, 1 Molybdenum, 1 Technetium", "style": "normal"}],
+            [{"text": "SRV Refuel", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "1 Sulphur, 1 Phosphorus", "style": "normal"}],
+            [{"text": "SRV Refuel", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+100 % d'efficacité de carburant", "style": "normal"}, {"text": "1 Sulphur, 1 Phosphorus, 1 Arsenic, 1 Mercury", "style": "normal"}],
+            [{"text": "SRV Refuel", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+200 % d'efficacité de carburant", "style": "normal"}, {"text": "1 Sulphur, 1 Arsenic, 1 Mercury, 1 Technetium", "style": "normal"}],
+            [{"text": "SRV Repair", "style": "strong"}, {"text": "Basic", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "2 Iron, 1 Nickel", "style": "normal"}],
+            [{"text": "SRV Repair", "style": "strong"}, {"text": "Standard", "style": "mid"}, {"text": "+50 % de résistance de coque", "style": "normal"}, {"text": "3 Nickel, 1 Manganese, 2 Vanadium, 1 Molybdenum", "style": "normal"}],
+            [{"text": "SRV Repair", "style": "strong"}, {"text": "Premium", "style": "win"}, {"text": "+100 % de résistance de coque", "style": "normal"}, {"text": "1 Zinc, 2 Chromium, 2 Vanadium, 1 Tungsten, 1 Tellurium", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **Rhino**, plus grand SRV du jeu, utilise le même mécanisme de synthèse que le Scarab et le Scorpion — aucune source consultée ne documente de recette distincte pour ce véhicule."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Le réflexe pratique",
+          "text": "Synthétise SRV Refuel et SRV Repair **avant** de remonter au vaisseau-mère plutôt qu'après : ça t'évite un aller-retour si tu repars aussitôt en prospection ou en minage de surface."
+        }
+      ]
+    },
+    {
+      "id": "idees-recues",
+      "number": 7,
+      "title": "Deux idées reçues à corriger",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Deux modules font l'objet d'une confusion récurrente : on suppose qu'ils se synthétisent comme le reste, alors qu'ils ne le peuvent tout simplement pas.**"
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Le Point Defence Turret n'a aucune recette de synthèse",
+          "text": "Sa fiche de module porte un besoin de rechargement, mais **aucun champ Synthesis** — contrairement à l'AFMU, au Heat Sink Launcher, au Chaff Launcher et au Life Support, qui en portent un. Le seul rechargement possible se fait à quai : **Station Services → Advanced Maintenance → Restock**."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Les munitions des Ship-Launched Fighters ne se synthétisent pas non plus",
+          "text": "Un chasseur à court de munitions ou endommagé doit s'arrimer au **Fighter Bay** du vaisseau-mère, qui le répare et recharge ses munitions **gratuitement**, en quelques secondes, sans jamais passer par le panneau Synthesis."
+        },
+        {
+          "type": "table",
+          "caption": "Ce qui se recharge par Synthesis, ce qui ne se recharge pas",
+          "headers": ["Module", "Rechargement"],
+          "rows": [
+            [{"text": "AFMU, Heat Sink Launcher, Chaff Launcher, Life Support", "style": "normal"}, {"text": "Synthesis (embarqué), sans repasser par une station", "style": "win"}],
+            [{"text": "Point Defence Turret", "style": "normal"}, {"text": "Quai uniquement — Station Services → Advanced Maintenance → Restock", "style": "lose"}],
+            [{"text": "Munitions des Ship-Launched Fighters", "style": "normal"}, {"text": "Fighter Bay du vaisseau-mère — gratuit et automatique, pas de Synthesis", "style": "lose"}]
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Si un module n'affiche pas de champ Synthesis dans sa fiche technique, ne perds pas de temps à chercher sa recette : elle n'existe pas. Vérifie la fiche du module avant de partir en session plutôt que de le découvrir en plein combat."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "number": 8,
+      "title": "Questions fréquentes",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Quatre questions qui reviennent souvent une fois les tables ci-dessus en tête."
+        },
+        {"type": "heading", "level": 3, "text": "Quelle est la différence entre un Material Trader et un Technology Broker ?"},
+        {
+          "type": "paragraph",
+          "text": "Le Material Trader échange des matériaux entre grades à l'intérieur d'un même type (Raw, Manufactured ou Encoded). Le Technology Broker, lui, débloque des modules Guardian ou liés aux Titans Thargoïdes contre des matériaux spécifiques, sans passer par une mécanique de réputation — deux services distincts, pas toujours dans les mêmes stations."
+        },
+        {"type": "heading", "level": 3, "text": "Un Fleet Carrier peut-il installer un Material Trader ?"},
+        {
+          "type": "paragraph",
+          "text": "Non. Un porte-vaisseaux personnel installe des services Shipyard/Outfitting, mais **ni Material Trader ni Technology Broker** ne figurent parmi les services disponibles à bord — ces deux services restent réservés aux stations dédiées. Son apport à l'ingénierie reste purement logistique : stocker et transporter matériaux et modules près d'une base d'Ingénieur. Voir porte-vaisseau-rentable.json pour l'achat et le budget d'un porte-vaisseaux."
+        },
+        {"type": "heading", "level": 3, "text": "Pourquoi la FSD Injection n'est-elle pas détaillée dans ce guide ?"},
+        {
+          "type": "paragraph",
+          "text": "Parce qu'elle l'est déjà, en détail, dans guide-ingenierie-fsd-explorateur.json — recette exacte des trois paliers, sourçage croisé avec un post officiel Frontier de 2018, et son rôle de dépannage pour un explorateur. Ce guide-ci se contente de la citer comme l'une des neuf familles de synthèse, pour ne pas dupliquer un chiffrage déjà publié."
+        },
+        {"type": "heading", "level": 3, "text": "La synthèse remplace-t-elle un ravitaillement à quai ?"},
+        {
+          "type": "paragraph",
+          "text": "Pour les munitions, l'AFMU, le Chaff, le Heat Sink et le Life Support, oui : la synthèse recharge le module au maximum de sa capacité, sans repasser par une station. Mais deux exceptions cassent l'habitude — le Point Defence Turret et les munitions des Ship-Launched Fighters, qui ne se synthétisent jamais. Voir la section dédiée plus haut."
+        }
+      ]
+    },
+    {
+      "id": "ce-qu-il-faut-retenir",
+      "number": 9,
+      "title": "Ce qu'il faut retenir",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Ne farme jamais un grade précis à un comptoir.", "detail": "Récolte large à n'importe quel grade dans une catégorie, puis descends au comptoir vers ce qui te manque réellement — monter d'un grade coûte 6 fois plus cher que ce que rapporte le fait d'en descendre un."},
+            {"text": "Surveille tes stocks avant qu'ils ne plafonnent.", "detail": "300 unités au grade 1, jusqu'à 100 au grade 5 : depuis le Dodec Update du 11 novembre 2025, le surplus se convertit automatiquement en crédits (2 000 à 32 000 Cr/unité selon le grade), mais ça ne remplace pas un matériau qui te manque ailleurs."},
+            {"text": "Vérifie toujours le type de comptoir affiché avant de t'y déplacer.", "detail": "L'économie de la station ne suffit pas à le deviner — Gresley Dock, dans Nanomam, est un comptoir Encoded en économie Agriculture."},
+            {"text": "Utilise la Synthèse pour prolonger une session sans repasser par une station.", "detail": "Neuf familles côté vaisseau, trois côté SRV — la quantité produite ne change presque jamais avec le palier, seuls les matériaux et un bonus qualitatif varient."},
+            {"text": "N'attends rien du panneau Synthesis pour le Point Defence Turret ni les munitions de chasseur.", "detail": "Le premier se restocke à quai (Advanced Maintenance), les seconds se rechargent gratuitement au Fighter Bay du vaisseau-mère."},
+            {"text": "Pour le blueprint FSD et la recette FSD Injection chiffrés en détail, va voir guide-ingenierie-fsd-explorateur.json.", "detail": "Ce guide-ci reste un outil de poche sur les comptoirs et la synthèse générale, pas sur le chantier FSD complet."}
+          ]
+        },
+        {"type": "divider"},
+        {
+          "type": "paragraph",
+          "text": "**Fiabilité des données.** Les taux de conversion des Material Traders et les plafonds de stockage reposent sur une étude interne croisée avec le catalogue de matériaux consolidé et le projet open-source EDEngineer, stables depuis février 2018 pour les taux et non modifiés depuis plusieurs années pour les plafonds. Les recettes de synthèse embarquée (munitions, chaff, heat sink, AFMU, limpets, life support, caustic sink) reposent sur une source communautaire unique — le wiki Elite Dangerous, page Synthesis — faute d'accès à Inara.cz au moment de la rédaction ; seule la FSD Injection est confirmée par un post officiel de Sandro Sammarco, Lead Designer chez Frontier, du 7 février 2018. Aucune contradiction n'a été trouvée entre les sources effectivement consultées, mais revérifie en jeu une quantité qui te paraîtrait incohérente avant une session de farming ciblée."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Contenu couvert.** À jour du Dodec Update du 11 novembre 2025 (conversion de l'excédent de stockage en crédits) ; la mécanique des Material Traders elle-même est inchangée depuis son introduction en février 2018. Ce guide ne couvre ni le déblocage d'un Ingénieur ni le farming ciblé d'un matériau précis — voir guide-ingenierie-fsd-explorateur.json pour un exemple chiffré complet appliqué au FSD d'un explorateur."
+        }
+      ]
+    }
+  ],
+  "sources": ["Frontier Developments", "wiki Elite Dangerous (Fandom)", "EDEngineer", "forum officiel Frontier", "EDCD / FDevIDs"]
+}

@@ -1,0 +1,235 @@
+{
+  "id": "pilote-anti-thargoide",
+  "title": "Pilote anti-Thargoïde : le manuel du combat AX",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Un Interceptor thargoïde ne meurt pas comme un vaisseau humain : bouclier organique à fragiliser, Shutdown Field Neutraliser à charger, cœurs à exécuter dans une fenêtre chronométrée. Ce manuel couvre la mécanique, l'armement Guardian et l'ordre d'ingénierie qui la rendent possible.",
+  "byline": "PC · Live · NHSS / AXCZ · Vaisseau de combat équipé requis, pas de prérequis narratif",
+  "edition": "2026-09",
+  "topics": ["combat ax", "thargoïdes", "interceptors", "shutdown field neutraliser", "guardian gauss cannon", "nhss", "axcz", "ingénierie combat"],
+  "estimatedReadMinutes": 20,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {"type": "heading", "text": "Au sommaire", "level": 4},
+        {"type": "list", "ordered": true, "items": [
+          "Connaître l'ennemi : Scouts et les 4 classes d'Interceptors",
+          "La procédure de neutralisation en 3 temps (bouclier organique → SFN → cœurs)",
+          "Essaim de Thargons et nuages caustiques : les dégâts qu'on encaisse en silence",
+          "Armement Guardian et archétype de build AX",
+          "Ordre d'ingénierie orienté survie et combat",
+          "Où pratiquer le combat AX en 2026, et sa rentabilité",
+          "Check-list avant sortie, FAQ et sources"
+        ]},
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le combat AX ne se pilote pas comme un CZ humain ou une embuscade PvP.** Un Interceptor thargoïde ne perd pas de bouclier de façon progressive sous tes tirs : il faut fragiliser un bouclier organique, le couper net avec un module dédié — le Shutdown Field Neutraliser (SFN) — puis exécuter ses cœurs dans une fenêtre chronométrée avant qu'il ne se réactive. Ce manuel détaille cette mécanique en trois temps, l'armement Guardian qui la rend possible, et l'ordre dans lequel ingénierer ton vaisseau pour survivre à l'expérience plutôt que juste y participer."},
+        {"type": "paragraph", "emphasis": "normal", "text": "La Seconde Guerre Thargoïde est officiellement close depuis le 19 décembre 2024, mais le combat AX reste un pan de gameplay pleinement actif en 2026 : Non-Human Signal Sources (NHSS) et Zones de Combat Anti-Xéno (AXCZ) restent praticables pour la réputation Aegis, les matériaux du Technology Broker et l'entraînement pur. Ce guide ne réexplique pas ce que d'autres manuels du corpus couvrent déjà : le déblocage du Guardian Technology Broker est détaillé dans guide-guardian-fsd-booster.json, le déblocage de l'ingénieure Felicity Farseer et la portée FSD dans guide-ingenierie-fsd-explorateur.json, et le budget d'achat d'un châssis de combat dans vrai-cout-vaisseau-et-gestion-de-flotte.json."},
+        {"type": "callout", "tone": "info", "title": "Comment lire les chiffres de ce guide", "text": "**OFF** = confirmé par une source officielle ou un jeu de données extrait directement du jeu (Frontier, EDCD). **COM** = documenté par la communauté (wikis, forums, reconstitutions de joueurs) sans confirmation officielle directe. **EST** = valeur indicative non vérifiée, à confirmer toi-même en jeu. Trois points sensibles de ce guide portent une réserve explicite : le nombre exact de cœurs par classe d'Interceptor, la durée de la fenêtre de tir après shutdown, et la rentabilité en Cr/h — aucun des trois n'est un barème publié par Frontier."}
+      ]
+    },
+    {
+      "id": "ennemi",
+      "number": 1,
+      "title": "Connaître l'ennemi : Scouts et les 4 classes d'Interceptors",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Ne confonds pas un Scout et un Interceptor : le premier t'entraîne, le second peut te détruire.** Savoir à qui tu as affaire avant d'engager conditionne tout l'équipement que tu embarques."},
+        {"type": "heading", "text": "Scouts : l'entraînement, pas la vraie menace", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Les **Scouts** sont les plus petits vaisseaux thargoïdes, rencontrés en NHSS et dans les systèmes ayant connu une présence thargoïde active. Menace individuelle faible, mais capables d'**hyperdiction** (ils peuvent forcer un vaisseau non préparé, notamment un gros cargo, à sortir de supercroisière) et dangereux en essaim. Il n'existe pas de sous-classification formelle largement établie au-delà d'une échelle de niveau de menace croissante — traite-les comme ton introduction au combat AX avant de viser un Interceptor."},
+        {"type": "heading", "text": "Les 4 classes d'Interceptors, du Cyclops au Hydra", "level": 3},
+        {"type": "table", "caption": "Taxonomie des Interceptors thargoïdes", "headers": ["Classe", "Cœurs", "Menace", "Particularité notable"], "rows": [
+          [{"text": "Cyclops", "style": "strong"}, {"text": "1", "style": "number"}, {"text": "Modérée", "style": "normal"}, {"text": "Premier Interceptor rencontré en progression normale ; sert d'introduction au combat de cœurs.", "style": "normal"}],
+          [{"text": "Basilisk", "style": "strong"}, {"text": "2", "style": "number"}, {"text": "Élevée", "style": "normal"}, {"text": "Capacités offensives renforcées par rapport au Cyclops.", "style": "normal"}],
+          [{"text": "Medusa", "style": "strong"}, {"text": "3", "style": "number"}, {"text": "Très élevée", "style": "mid"}, {"text": "Usage intensif de projectiles et mines caustiques (section 3).", "style": "normal"}],
+          [{"text": "Hydra", "style": "strong"}, {"text": "4", "style": "number"}, {"text": "Extrême", "style": "lose"}, {"text": "Le plus dangereux : brouillage étendu, tirs les plus destructeurs.", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "D'où vient ce nombre de cœurs (COM)", "text": "Cette répartition (1 à 4 cœurs) est une donnée de connaissance de jeu largement citée par la communauté depuis les mises à jour « Thargoid War » 2020-2022, mais elle n'a pas pu être recoupée sur une source primaire indépendante (Wikipédia, Inara et Canonn ne la détaillent pas). Ne la grave pas dans un contexte critique — un calcul de DPS requis pour un raid, par exemple — sans la confirmer en jeu ou sur un wiki communautaire à jour."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Beaucoup d'Interceptors déploient aussi un **essaim de Thargons**, de petites unités autonomes qui interceptent une partie de tes tirs, et les classes **Medusa** et **Hydra** disposent en plus de batteries caustiques. Ces deux menaces annexes sont couvertes en détail en section 3 — ne les découvre pas en plein engagement."},
+        {"type": "callout", "tone": "tip", "title": "L'éruption terminale (death cloud)", "text": "À sa destruction, un Interceptor libère une explosion de résine/gaz caustique à grand rayon. La règle de sécurité standard : **éloigne-toi immédiatement** après le coup de grâce, avant même de célébrer la prime."},
+        {"type": "verdict", "title": "Verdict", "text": "Débute sur Scouts puis Cyclops pour apprendre le rythme fragilisation → SFN → cœurs sans risquer ton vaisseau. Ne vise Medusa et Hydra qu'une fois cette boucle maîtrisée et un Caustic Sink Launcher embarqué — leurs batteries caustiques punissent sévèrement l'improvisation."}
+      ]
+    },
+    {
+      "id": "procedure",
+      "number": 2,
+      "title": "La procédure de neutralisation en 3 temps",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Trois temps, dans cet ordre exact, sans raccourci possible.** C'est la mécanique centrale du combat AX : ignore-la et tu videras ton arsenal sur un bouclier organique qui ne descendra jamais à zéro par de simples dégâts de bouclier."},
+        {"type": "heading", "text": "Temps 1 — Fragiliser le bouclier organique", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le bouclier d'un Interceptor est **organique** : il ne se réduit pas comme un bouclier humain classique sous de simples dégâts de bouclier. Il doit d'abord être fragilisé par des tirs conventionnels ou AX (armement d'attrition, section 4), jusqu'à un seuil qui rend le Shutdown Field Neutraliser efficace."},
+        {"type": "heading", "text": "Temps 2 — Désactiver au Shutdown Field Neutraliser (SFN)", "level": 3},
+        {"type": "steps", "items": [
+          {"text": "**Charge le SFN** via son arme chargeuse dédiée, montée sur un hardpoint séparé du SFN lui-même.", "detail": "Le SFN est un module utilitaire, pas une arme offensive : il ne fonctionne qu'une fois chargé."},
+          {"text": "**Maintiens le tir de charge sur l'Interceptor** pendant que le bouclier organique est déjà fragilisé (temps 1).", "detail": "Charger trop tôt, sur un bouclier encore intact, gaspille la charge sans effet."},
+          {"text": "**Déclenche le SFN** une fois chargé.", "detail": "Le bouclier organique tombe, exposant les cœurs pour une durée limitée (temps 3)."}
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Un module devenu indispensable", "text": "Sans SFN débloqué et fonctionnel, tu n'as tout simplement aucun accès aux cœurs d'un Interceptor : c'est devenu un module indispensable sur toute configuration de combat anti-xéno moderne, au même titre qu'une arme."},
+        {"type": "heading", "text": "Temps 3 — Détruire les cœurs dans la fenêtre de tir", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Une fois le bouclier neutralisé, les **cœurs** (hearts) apparaissent comme des points lumineux internes — de 1 (Cyclops) à 4 (Hydra), voir section 1. Leur destruction inflige des dégâts catastrophiques et conditionne la mort du vaisseau. Le **Guardian Gauss Cannon** (section 4), à haut dégât d'alpha-strike et haute précision, est l'arme de référence pour ce heart-sniping."},
+        {"type": "callout", "tone": "info", "title": "Fenêtre de tir : 15 à 20 secondes (EST)", "text": "Une fois le SFN déclenché, la fenêtre de tir sur les cœurs est de l'ordre de **15 à 20 secondes** — une valeur indicative communautaire, non vérifiée sur source primaire. Calibre ton armement (nombre de Gauss Cannon, cadence) pour espérer atteindre tous les cœurs de la classe visée dans ce délai plutôt que de le découvrir en vol."},
+        {"type": "verdict", "title": "Verdict", "text": "Fragiliser, désactiver, exécuter : c'est tout le combat AX. La différence entre un pilote débutant et un pilote compétent ne se joue pas sur le DPS brut mais sur le tempo — charger le SFN au bon moment, et concentrer les cœurs dans la fenêtre plutôt que de la laisser expirer à moitié."}
+      ]
+    },
+    {
+      "id": "menaces-annexes",
+      "number": 3,
+      "title": "Essaim de Thargons et nuages caustiques",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Deux menaces annexes tuent plus de pilotes AX que les cœurs eux-mêmes** : l'essaim de Thargons qui absorbe et retarde tes tirs, et les nuages caustiques qui contournent purement et simplement ton bouclier."},
+        {"type": "heading", "text": "L'essaim de Thargons", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Beaucoup d'Interceptors déploient un essaim de petites unités autonomes (désignées « Thargons » par la communauté) qui interceptent une partie des tirs destinés au vaisseau principal. Un **Flak Cannon** ou un **Remote Release Flak Launcher** est généralement recommandé pour nettoyer cet essaim avant de te concentrer sur les cœurs — sans ça, une partie de ton alpha-strike Gauss Cannon se perd dans le vide pendant la fenêtre de tir."},
+        {"type": "heading", "text": "Nuages caustiques : mécanique et contre-mesures", "level": 3},
+        {"type": "table", "caption": "Nuages caustiques : sources, effet, contre-mesures", "headers": ["Aspect", "Détail"], "rows": [
+          [{"text": "Sources", "style": "strong"}, {"text": "Missiles/mines de Medusa et Hydra ; éruption terminale (death cloud) à la mort d'un Interceptor.", "style": "normal"}],
+          [{"text": "Effet", "style": "strong"}, {"text": "Dégâts continus (DoT) qui contournent directement le bouclier et attaquent la coque, en stacks persistants même après avoir quitté la zone.", "style": "lose"}],
+          [{"text": "Conséquences", "style": "strong"}, {"text": "Pannes de modules si la coque descend trop bas ; peut détruire un vaisseau mal préparé resté trop près d'une explosion terminale.", "style": "normal"}],
+          [{"text": "Contre-mesure directe", "style": "strong"}, {"text": "Caustic Sink Launcher : neutralise les stacks déjà accumulés sur ton propre vaisseau.", "style": "win"}],
+          [{"text": "Contre-mesure préventive", "style": "strong"}, {"text": "Remote Release Flak/Flechette Launcher, pour détruire les mines/missiles caustiques avant impact.", "style": "normal"}],
+          [{"text": "Contre-mesure comportementale", "style": "strong"}, {"text": "S'éloigner immédiatement stoppe uniquement l'accumulation de nouveaux stacks — ne retire pas ceux déjà présents.", "style": "mid"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Le bouclier ne te protège pas ici", "text": "Les dégâts caustiques **contournent directement le bouclier** et attaquent la coque. Un vaisseau qui compte uniquement sur un gros bouclier pour encaisser un Medusa ou un Hydra se fait ronger la coque en silence, stack après stack, sans que la jauge de bouclier ne bouge."},
+        {"type": "list", "ordered": true, "items": [
+          "Purge les stacks déjà accumulés au **Caustic Sink Launcher** dès que possible — c'est la seule contre-mesure qui les retire réellement.",
+          "Abats les projectiles caustiques en approche au **Remote Release Flak/Flechette Launcher**, avant qu'ils ne touchent.",
+          "Éloigne-toi de la zone pour arrêter l'accumulation de **nouveaux** stacks pendant que tu répares ou fuis, sans compter sur ce geste pour effacer les dégâts déjà pris."
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "N'engage jamais un Medusa ou un Hydra sans Caustic Sink Launcher embarqué : c'est le seul module qui traite le vrai problème, les dégâts qui contournent ton bouclier plutôt que de simplement le vider plus vite."}
+      ]
+    },
+    {
+      "id": "armement",
+      "number": 4,
+      "title": "Armement Guardian et archétype de build AX",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**L'armement AX se répartit en deux familles : le trio Guardian pour le heart-sniping et les modules utilitaires qui rendent la procédure du temps 2-3 possible.** Aucun des deux ne se substitue à l'autre."},
+        {"type": "heading", "text": "Le trio Guardian : Gauss, Plasma, Shard", "level": 3},
+        {"type": "table", "caption": "Les trois armes Guardian et leur usage AX", "headers": ["Arme", "Montage", "Mécanique", "Usage typique en AX"], "rows": [
+          [{"text": "Gauss Cannon", "style": "strong"}, {"text": "Fixe uniquement", "style": "normal"}, {"text": "À charge, un tir puissant par cycle", "style": "normal"}, {"text": "Heart-sniping : haute précision, idéal pendant la fenêtre de shutdown.", "style": "normal"}],
+          [{"text": "Plasma Charger", "style": "strong"}, {"text": "Fixe ou gimbal", "style": "normal"}, {"text": "À charge, chargeur de tirs rapides", "style": "normal"}, {"text": "Polyvalent contre boucliers et coque, en phase d'attrition.", "style": "normal"}],
+          [{"text": "Shard Cannon", "style": "strong"}, {"text": "Fixe ou tourelle", "style": "normal"}, {"text": "Gerbe de projectiles façon fusil à pompe", "style": "normal"}, {"text": "Dégâts dévastateurs à courte portée sur coque et sous-systèmes.", "style": "normal"}]
+        ]},
+        {"type": "keyValue", "items": [
+          {"label": "Gauss Cannon — DPS soutenu stock (fixe, taille 2)", "value": "≈ 38,5", "reliability": "official"},
+          {"label": "Plasma Charger — DPS soutenu stock (fixe, taille 2)", "value": "≈ 12,9", "reliability": "official"},
+          {"label": "Shard Cannon — DPS soutenu stock (fixe, taille 2)", "value": "≈ 30,0", "reliability": "official"}
+        ]},
+        {"type": "callout", "tone": "info", "title": "Valeurs stock, à revérifier avant usage compétitif", "text": "Ces DPS sont calculés à partir des valeurs brutes de la base technique EDCD/coriolis-data, en configuration stock, montage fixe, taille moyenne. L'ingénierie (section 5) peut les modifier significativement, et les montages tourelle ou les autres tailles ont des profils différents — confirme via Coriolis ou EDSY avant de figer un build."},
+        {"type": "heading", "text": "Modules utilitaires indispensables", "level": 3},
+        {"type": "table", "caption": "Modules utilitaires d'un build AX", "headers": ["Équipement", "Rôle", "Notes"], "rows": [
+          [{"text": "Shutdown Field Neutraliser (SFN)", "style": "strong"}, {"text": "Désactivation du bouclier organique", "style": "normal"}, {"text": "Indispensable, voir section 2.", "style": "normal"}],
+          [{"text": "AX Multi-Cannon / Enzyme Missile Rack", "style": "strong"}, {"text": "Attrition de l'armure thargoïde", "style": "normal"}, {"text": "Inefficaces contre les vaisseaux humains ; débloqués via réputation Aegis.", "style": "normal"}],
+          [{"text": "Thargoid Pulse Neutraliser", "style": "strong"}, {"text": "Neutralisation des Scouts", "style": "normal"}, {"text": "Coupe leurs capacités offensives et d'hyperdiction.", "style": "normal"}],
+          [{"text": "Remote Release Flak/Flechette Launcher", "style": "strong"}, {"text": "Nettoyage d'essaim et de projectiles caustiques", "style": "normal"}, {"text": "Voir section 3.", "style": "normal"}],
+          [{"text": "Caustic Sink Launcher", "style": "strong"}, {"text": "Neutralisation des stacks caustiques", "style": "normal"}, {"text": "Voir section 3.", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Où débloquer cet armement", "text": "Le trio Guardian et les modules utilitaires se débloquent au Guardian Technology Broker et au Human Technology Broker contre des fragments de plans, des matériaux Guardian/Thargoïdes et de la réputation Aegis. La procédure complète de farming et de déblocage du Technology Broker est traitée dans guide-guardian-fsd-booster.json — ce manuel ne la réexplique pas et se concentre sur l'usage en combat une fois l'armement débloqué."},
+        {"type": "heading", "text": "Archétype de build : châssis et emplacements", "level": 3},
+        {"type": "table", "caption": "Structure générale d'un build AX compétitif", "headers": ["Catégorie", "Choix typiques"], "rows": [
+          [{"text": "Châssis recommandés", "style": "strong"}, {"text": "Federal Corvette, Krait Mk II, Alliance Chieftain/Challenger, Anaconda, Vulture.", "style": "normal"}],
+          [{"text": "Armement offensif principal", "style": "strong"}, {"text": "1 à 2 Guardian Gauss Cannon en fixe, dédiés au heart-sniping.", "style": "normal"}],
+          [{"text": "Armement d'attrition", "style": "strong"}, {"text": "AX Multi-Cannons et/ou Enzyme Missile Racks, pour user l'armure entre deux fenêtres de shutdown.", "style": "normal"}],
+          [{"text": "Emplacements utilitaires", "style": "strong"}, {"text": "1 SFN, 1 à 2 Caustic Sink Launcher, 1 Remote Release Flak/Flechette Launcher, Shield Boosters, Hull Reinforcement Package, Guardian Shield Reinforcement Package.", "style": "normal"}],
+          [{"text": "Gestion thermique", "style": "strong"}, {"text": "Heat Sink Launcher, pour la dissipation instantanée pendant les engagements prolongés.", "style": "normal"}]
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "Aucune valeur de dégâts n'est figée d'un patch à l'autre : vérifie toujours ce build dans un configurateur externe (Coriolis, EDSY) avant un engagement compétitif. Pour le budget d'achat du châssis lui-même, consulte vrai-cout-vaisseau-et-gestion-de-flotte.json plutôt qu'une fiche technique répétée ici."}
+      ]
+    },
+    {
+      "id": "ingenierie",
+      "number": 5,
+      "title": "Ordre d'ingénierie orienté survie et combat",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Ingénierer un vaisseau AX répond à une seule question : qu'est-ce qui te fait survivre à la fenêtre de tir et à ce qui vient après ?** Voici l'ordre de priorité, avec les Ingénieurs qui le permettent quand la source le précise — et une zone d'ombre assumée quand elle ne le fait pas."},
+        {"type": "heading", "text": "Priorité 1 — FSD : rejoindre vite les zones de chasse", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Un Interceptor ne se trouve pas au coin de la rue : les NHSS et AXCZ actifs (section 6) sont parfois loin de ta base. Un FSD ingénieré **Increased Range** chez **Felicity Farseer** (Deciat) raccourcit ces trajets. La procédure complète de déblocage de Farseer (Meta-Alloy) et l'ingénierie FSD sont détaillées dans guide-ingenierie-fsd-explorateur.json — ce manuel ne la reprend pas."},
+        {"type": "heading", "text": "Priorité 2 — Armement Guardian : réduire le temps de charge et la pénétration", "level": 3},
+        {"type": "table", "caption": "Effets d'ingénierie confirmés sur les armes Guardian", "headers": ["Arme", "Effets confirmés", "Intérêt pour l'AX"], "rows": [
+          [{"text": "Guardian Gauss Cannon", "style": "strong"}, {"text": "High Capacity, Rapid Fire", "style": "normal"}, {"text": "Rapid Fire réduit le temps de charge caractéristique de l'arme : plus de tirs de cœur possibles dans la fenêtre de 15-20 s (section 2).", "style": "normal"}],
+          [{"text": "Guardian Plasma Charger", "style": "strong"}, {"text": "Overcharged (dégâts), Focused (précision/dispersion)", "style": "normal"}, {"text": "Renforce la phase d'attrition entre deux ouvertures de SFN.", "style": "normal"}],
+          [{"text": "Guardian Shard Cannon", "style": "strong"}, {"text": "Long Range, Focused, effet expérimental Super Penetrator", "style": "normal"}, {"text": "Super Penetrator améliore la pénétration contre coque et sous-systèmes à courte portée.", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Une zone d'ombre à ne pas combler par supposition", "text": "Les trois armes Guardian acceptent l'ingénierie standard, mais aucune source consultée ne précise quel Ingénieur nommé (parmi les 25 listés côté modules de vaisseau) les propose, ni les plages exactes de bonus par grade G1-G5. Vérifie directement dans l'onglet Ingénieurs en jeu ou sur Coriolis/EDSY avant de te déplacer pour une arme Guardian précise — ne suppose pas qu'un Ingénieur en particulier la couvre."},
+        {"type": "heading", "text": "Priorité 3 — Survie : bouclier, coque, thermique", "level": 3},
+        {"type": "table", "caption": "Ordre d'ingénierie pour la survie en combat AX", "headers": ["Module", "Ingénieur (grade max documenté)", "Pourquoi pour l'AX"], "rows": [
+          [{"text": "Shield Booster", "style": "strong"}, {"text": "Didi Vatermann (Leesti) ou Lei Cheung (Laksak), G5", "style": "normal"}, {"text": "Le bouclier organique adverse n'a pas d'effet sur le tien : booster ton propre bouclier reste ta meilleure absorption face aux tirs conventionnels avant la phase SFN.", "style": "normal"}],
+          [{"text": "Hull Reinforcement Package", "style": "strong"}, {"text": "Selene Jean (Kuk) ou Petra Olmanova (Asura), G5", "style": "normal"}, {"text": "Amortit les dégâts caustiques résiduels (section 3) et les tirs encaissés une fois le bouclier tombé.", "style": "normal"}],
+          [{"text": "Heat Sink Launcher", "style": "strong"}, {"text": "Ram Tah (Meene) ou Petra Olmanova (Asura), G5", "style": "normal"}, {"text": "Dissipation instantanée utile lors d'engagements prolongés (charge du SFN, tirs soutenus).", "style": "normal"}]
+        ]},
+        {"type": "heading", "text": "Synthèse embarquée : munitions AX à booster en vol", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "Distincte des blueprints d'Ingénieur ci-dessus, la **Synthèse** embarquée (panneau Fabrication) consomme des matériaux récoltés en vol pour un bonus temporaire de dégâts sur le stock de munitions d'une arme précise — utile pour un dernier coup de boost avant une sortie sans repasser par une station."},
+        {"type": "table", "caption": "Synthèse de munitions AX — paliers Standard/Premium", "headers": ["Munition", "Palier", "Bonus", "Matériaux clés"], "rows": [
+          [{"text": "AX Multi-Cannon", "style": "strong"}, {"text": "Standard", "style": "normal"}, {"text": "+5 % dégâts", "style": "normal"}, {"text": "Iron, Phosphorus, Zirconium, Sensor Fragment, Weapon Parts", "style": "normal"}],
+          [{"text": "AX Multi-Cannon", "style": "strong"}, {"text": "Premium", "style": "normal"}, {"text": "+10 % dégâts", "style": "normal"}, {"text": "Iron, Phosphorus, Zirconium, Sensor Fragment, Thargoid Carapace, Weapon Parts", "style": "normal"}],
+          [{"text": "AX Missile Rack", "style": "strong"}, {"text": "Standard", "style": "normal"}, {"text": "+5 % dégâts", "style": "normal"}, {"text": "Sulphur, Phosphorus, Mercury, Thargoid Organic Circuitry, Propulsion Elements", "style": "normal"}],
+          [{"text": "AX Missile Rack", "style": "strong"}, {"text": "Premium", "style": "normal"}, {"text": "+10 % dégâts", "style": "normal"}, {"text": "Tungsten, Mercury, Polonium, Bio-Mechanical Conduits, Propulsion Elements, Ship Flight Data", "style": "normal"}],
+          [{"text": "Remote Release Flak Launcher", "style": "strong"}, {"text": "Standard", "style": "normal"}, {"text": "+5 % dégâts", "style": "normal"}, {"text": "Tin, Zinc, Arsenic, Thargoid Technology Components, Wreckage Components", "style": "normal"}],
+          [{"text": "Remote Release Flak Launcher", "style": "strong"}, {"text": "Premium", "style": "normal"}, {"text": "+10 % dégâts", "style": "normal"}, {"text": "Zinc, Tungsten, Arsenic, Sensor Fragment, Thargoid Technology Components, Weapon Parts", "style": "normal"}],
+          [{"text": "Guardian Gauss Cannon", "style": "strong"}, {"text": "Standard", "style": "normal"}, {"text": "+15 % dégâts", "style": "normal"}, {"text": "Manganese, Heat Resistant Ceramics, Focus Crystals, Guardian Power Conduit, Guardian Sentinel Weapon Parts", "style": "normal"}],
+          [{"text": "Guardian Gauss Cannon", "style": "strong"}, {"text": "Premium", "style": "normal"}, {"text": "+30 % dégâts", "style": "normal"}, {"text": "Manganese, Guardian Technology Component, Filament Composites, Focus Crystals", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "info", "title": "Pour les quantités exactes", "text": "Les quantités précises par palier, la recette de synthèse chiffrée du Caustic Sink Launcher et la compatibilité complète des effets expérimentaux sont détaillées dans le corpus interne 06-ingenieurs.md — ce guide en donne l'essentiel pour préparer une sortie, pas le tableau exhaustif."},
+        {"type": "verdict", "title": "Verdict", "text": "Dans le doute, priorise dans cet ordre : FSD pour arriver vite, Gauss Cannon Rapid Fire pour maximiser la fenêtre de tir, puis Shield Booster/Hull Reinforcement pour encaisser ce que la fenêtre ne couvre pas. La Synthèse de munitions reste un bonus de dernière minute, pas un substitut à l'ingénierie."}
+      ]
+    },
+    {
+      "id": "pratique",
+      "number": 6,
+      "title": "Où pratiquer le combat AX en 2026, et sa rentabilité",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**La guerre est finie, le terrain d'entraînement ne l'est pas.** Voici où trouver des cibles en 2026, et ce que rapporte réellement une sortie AX bien préparée."},
+        {"type": "heading", "text": "NHSS et AXCZ : les deux terrains de chasse actifs", "level": 3},
+        {"type": "list", "ordered": false, "items": [
+          "**Non-Human Signal Sources (NHSS)** : dans les systèmes ayant connu une présence thargoïde active, pour affronter des Scouts et occasionnellement des Interceptors isolés.",
+          "**Zones de Combat Anti-Xéno (AXCZ)** : pendant thargoïde des Combat Zones classiques, pour un entraînement structuré et répété contre des Interceptors.",
+          "**Carcasses de Titans** (dont celle de Sol) : visitables à but d'exploration et de tourisme post-guerre, sans mécanique de combat actif documentée à ce jour — ce guide couvre le combat NHSS/AXCZ courant, pas l'assaut historique de Titan, devenu obsolète."
+        ]},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le dernier Titan, Cocijo, est tombé à Sol le **19 décembre 2024 à 15:00 UTC**, marquant la fin officielle de la Seconde Guerre Thargoïde (date vérifiée sur l'horodatage brut du flux Steam News officiel de Frontier). Depuis, aucune nouvelle classe d'Interceptor ni mécanique inédite n'a été documentée : le combat AX sert désormais à l'entraînement, à la réputation Aegis et à la collecte de matériaux du Technology Broker plutôt qu'à repousser une invasion active."},
+        {"type": "heading", "text": "Rentabilité chiffrée (reconstitution communautaire)", "level": 3},
+        {"type": "table", "caption": "Primes et temps de neutralisation par classe (COM)", "headers": ["Classe", "Prime partagée", "Temps de neutralisation du bouclier"], "rows": [
+          [{"text": "Cyclops", "style": "strong"}, {"text": "≈ 6 500 000 Cr", "style": "number"}, {"text": "≈ 1 min 45", "style": "normal"}],
+          [{"text": "Basilisk", "style": "strong"}, {"text": "≈ 20 000 000 Cr", "style": "number"}, {"text": "≈ 3 min", "style": "normal"}],
+          [{"text": "Medusa", "style": "strong"}, {"text": "≈ 34 000 000 Cr", "style": "number"}, {"text": "≈ 4 min", "style": "normal"}],
+          [{"text": "Hydra", "style": "strong"}, {"text": "≈ 50 000 000 Cr", "style": "number"}, {"text": "≈ 5 min", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Pas un barème Frontier", "text": "Ces primes et temps de neutralisation sont une **reconstitution communautaire**, pas un barème officiel Frontier. Elle est partagée entre tous les Commandants ayant endommagé la cible avant sa destruction — ne compte pas sur la prime pleine si tu chasses en groupe."},
+        {"type": "paragraph", "emphasis": "normal", "text": "En comptant la phase de cœurs (section 2) et le repositionnement post-destruction (death cloud, section 1), un pilote compétent enchaîne un Interceptor toutes les 10 à 20 minutes selon la classe visée — d'où une fourchette reconstituée d'**≈ 20 à 60 millions de Cr/h**, plus élevée en ciblant Medusa/Hydra avec un build éprouvé, plus basse en apprentissage sur Cyclops/Basilisk. Ce chiffre ne compte pas le temps de recherche d'un Interceptor ni les pertes en cas d'échec."},
+        {"type": "verdict", "title": "Verdict", "text": "Ne choisis pas ta classe cible seulement pour la prime : un Hydra mal préparé qui te coûte un vaisseau rapporte 0 Cr/h. Monte en classe au rythme où ton build (section 4) et ton ingénierie (section 5) suivent, pas au rythme du tableau ci-dessus."}
+      ]
+    },
+    {
+      "id": "checklist",
+      "number": 7,
+      "title": "Check-list avant sortie, FAQ et sources",
+      "blocks": [
+        {"type": "steps", "items": [
+          {"text": "**Vérifie le déblocage et l'ingénierie du Shutdown Field Neutraliser.**", "detail": "Sans lui, aucun accès aux cœurs — section 2."},
+          {"text": "**Emporte au moins un Guardian Gauss Cannon** dédié au heart-sniping, et de l'armement d'attrition.", "detail": "AX Multi-Cannon ou Enzyme Missile Rack pour user l'armure entre deux fenêtres de shutdown — section 4."},
+          {"text": "**Équipe un Remote Release Flak/Flechette Launcher** pour l'essaim de Thargons et un **Caustic Sink Launcher** pour les stacks caustiques.", "detail": "Section 3 — indispensable dès la classe Medusa."},
+          {"text": "**Confirme la classe d'Interceptor visée** et le temps de neutralisation de bouclier associé.", "detail": "Pour calibrer l'endurance de la sortie plutôt que de découvrir la classe en vol — section 6."},
+          {"text": "**Prévois la manœuvre d'éloignement immédiat** après chaque destruction.", "detail": "Nuage caustique terminal (death cloud) — section 1."},
+          {"text": "**Repère à l'avance un NHSS ou une AXCZ actifs.**", "detail": "Plutôt que de partir sans cible confirmée — section 6."},
+          {"text": "**Débutant : entraîne-toi sur Scouts et Cyclops avant Medusa/Hydra.**", "detail": "Section 1 — la boucle fragilisation/SFN/cœurs se maîtrise sur les classes les moins punitives."}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le réflexe à automatiser", "text": "Avant même d'ouvrir le feu, ta charge de SFN devrait déjà être en cours : c'est le goulot d'étranglement de toute la procédure, pas un module qu'on active après coup."},
+        {"type": "divider"},
+        {"type": "heading", "text": "Questions fréquentes", "level": 3},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Comment désactiver le bouclier organique d'un Interceptor ?** Fragilise-le d'abord par des tirs conventionnels/AX, puis charge et déclenche le Shutdown Field Neutraliser (SFN) via son arme chargeuse dédiée sur un hardpoint séparé. Une fenêtre de tir d'environ 15 à 20 secondes (EST) s'ouvre alors sur les cœurs. Voir section 2."},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Combien de cœurs a chaque classe d'Interceptor ?** De 1 (Cyclops) à 4 (Hydra), en passant par 2 (Basilisk) et 3 (Medusa) — une donnée de connaissance de jeu communautaire (COM), non recoupée sur source primaire accessible. Voir section 1."},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Le combat AX vaut-il encore le coup après la fin de la guerre thargoïde ?** Oui : la guerre est officiellement close depuis le 19 décembre 2024, mais NHSS et AXCZ restent actifs pour la réputation Aegis, le Technology Broker et l'entraînement, avec une rentabilité reconstituée (COM) d'≈20 à 60 M Cr/h selon la classe visée. Voir section 6."},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Quel armement minimum pour affronter un Interceptor ?** Un Shutdown Field Neutraliser, un ou deux Guardian Gauss Cannon pour le heart-sniping, de l'armement d'attrition (AX Multi-Cannon ou Enzyme Missile Rack), un Remote Release Flak/Flechette Launcher contre l'essaim de Thargons, et un Caustic Sink Launcher contre les stacks caustiques. Voir sections 3-4."},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Comment gérer le nuage caustique terminal (death cloud) ?** Éloigne-toi immédiatement après le coup de grâce : l'explosion de résine/gaz caustique à la destruction d'un Interceptor a un grand rayon. Les stacks déjà accumulés ne se retirent qu'au Caustic Sink Launcher, jamais en s'éloignant seul. Voir sections 1 et 3."},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Fiabilité.** Ce guide s'appuie sur trois fichiers du corpus de référence interne (25-combat-ax.md, 05-guardians.md, 06-ingenieurs.md), eux-mêmes sourcés sur le flux Steam News officiel de Frontier, EDCD/coriolis-data, Wikipédia, Canonn et des wikis communautaires. Le nombre de cœurs par classe, la durée de la fenêtre de tir et la rentabilité en Cr/h sont des reconstitutions communautaires signalées comme telles dans le texte, jamais présentées comme un barème Frontier."},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Ce que ce guide ne couvre pas.** L'assaut historique des Titans/Maelstroms et les Thargoid Spire Sites (boucle désactivée depuis fin 2024), le déblocage détaillé du Guardian Technology Broker (guide-guardian-fsd-booster.json), l'ingénierie FSD complète (guide-ingenierie-fsd-explorateur.json) et le budget d'achat du châssis (vrai-cout-vaisseau-et-gestion-de-flotte.json) sont traités ailleurs dans le corpus plutôt que répétés ici."}
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — 25-combat-ax.md",
+    "Corpus interne — 05-guardians.md",
+    "Corpus interne — 06-ingenieurs.md",
+    "Flux Steam News officiel de Frontier Developments",
+    "EDCD/coriolis-data",
+    "wiki Anti Xeno Initiative (wiki.antixenoinitiative.com)",
+    "Elite Dangerous Wiki (Fandom)"
+  ]
+}

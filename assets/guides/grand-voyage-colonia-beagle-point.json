@@ -1,0 +1,468 @@
+{
+  "id": "grand-voyage-colonia-beagle-point",
+  "title": "Rejoindre Colonia ou le bord de la galaxie : le grand voyage",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "La check-list d'expédition longue distance pour cocher Colonia, Sagittarius A* et Beagle Point sur ta bucket list — sans combat, sans exigence de rentabilité, juste le référentiel spatial et la logistique pour y arriver et en revenir entier.",
+  "byline": "PC · Live · Vaisseau d'exploration correct requis, aucun rang minimum",
+  "edition": "2026-09",
+  "topics": ["exploration", "colonia", "beagle-point", "sagittarius-a", "expedition", "geographie-galactique"],
+  "estimatedReadMinutes": 15,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Le référentiel : où sont ces trois destinations et pourquoi elles sont mythiques",
+            "Colonia : la destination raisonnable",
+            "Sagittarius A* : le détour qui ne coûte presque rien",
+            "Beagle Point : le bord de la galaxie, pour de vrai",
+            "Le fit qui ne bouge pas, quelle que soit la destination",
+            "Le réseau de secours : DSSA, Colonia Bridge, Fuel Rats",
+            "Check-list de départ et budget temps",
+            "Ce qu'il faut retenir"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Ce guide répond à une seule question : comment coche-t-on Colonia, Sagittarius A* et Beagle Point sur sa bucket list, sans combat, sans avoir besoin que le voyage rapporte un crédit ?** Il part du principe que tu sais déjà scanner un système et prélever une bio (sinon, commence par exploration-exobiologie.json) et que tu as déjà lu — ou vas lire — guide-ingenierie-fsd-explorateur.json pour ton FSD. Ici, on ne refait aucun de ces deux guides : on fournit ce qu'ils ne donnent pas, à savoir **où sont ces trois lieux, comment ils s'articulent entre eux, et dans quel ordre les visiter**."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Comment lire les chiffres de ce guide",
+          "text": "**OFF** = donnée officielle Frontier ou mesure directe (API EDSM, coordonnées du jeu). **COM** = base ou mesure communautaire (wiki Elite Dangerous, forums Frontier, Distant Worlds). **EST** = estimation ou fourchette indicative. La plupart des distances de ce guide sont **OFF** (mesurées), mais plusieurs éléments de logistique — espacement exact du réseau DSSA, distance de route réelle par opposition à la distance en ligne droite — n'ont **aucune source primaire chiffrée** : ce guide le signale explicitement plutôt que d'inventer un chiffre."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ce que ce guide ne fait pas",
+          "text": "Il ne réexplique pas la formule de portée de saut ni l'ingénierie du FSD (guide-ingenierie-fsd-explorateur.json), ni la logistique complète d'un Fleet Carrier (porte-vaisseau-rentable.json), ni la mécanique du Wing pour voyager à plusieurs (guide-mode-operations.json, escadron-et-jeu-en-groupe.json). Il renvoie systématiquement vers ces guides plutôt que de dupliquer leur contenu."
+        }
+      ]
+    },
+    {
+      "id": "le-referentiel",
+      "number": 1,
+      "title": "Le référentiel : où sont ces trois destinations",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Aucun des guides pacifistes déjà publiés ne situe Colonia, Sagittarius A* ou Beagle Point dans l'espace.** Avant de préparer quoi que ce soit, il faut ce référentiel de base : trois distances, une origine commune (Sol), et une distinction essentielle entre distance en ligne droite et distance de route réellement parcourue."
+        },
+        {
+          "type": "table",
+          "caption": "Les trois destinations, distance depuis Sol (OFF)",
+          "headers": ["Destination", "Distance depuis Sol", "Repère"],
+          "rows": [
+            [{"text": "Colonia", "style": "strong"}, {"text": "≈ 22 000 al", "style": "number"}, {"text": "La plus proche, la plus praticable", "style": "win"}],
+            [{"text": "Sagittarius A*", "style": "strong"}, {"text": "≈ 25 900 al", "style": "number"}, {"text": "Le centre galactique lui-même", "style": "mid"}],
+            [{"text": "Beagle Point", "style": "strong"}, {"text": "≈ 65 279 al", "style": "number"}, {"text": "Le bord de la galaxie, en ligne droite", "style": "lose"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ligne droite vs distance de route : ne confonds jamais les deux",
+          "text": "Les 65 279 al de Beagle Point sont une **distance directe** (calculée à vol d'oiseau depuis Sol), pas la distance réellement parcourue par une expédition — toujours supérieure, à cause des détours imposés par les zones à faible densité stellaire de *The Abyss* et par les étoiles non ravitaillables qu'il faut contourner. **Aucune source ne chiffre précisément cet écart** : ne planifie jamais ton temps de trajet sur la seule distance en ligne droite."
+        },
+        {
+          "type": "paragraph",
+          "text": "Point commun aux trois voyages : ils partent tous de la Bulle (la région d'environ 200 années-lumière de rayon autour de Sol où vit l'essentiel de l'humanité) vers l'extérieur, dans des directions différentes de la galaxie. Colonia est la destination la plus proche et la plus \"aménagée\" ; Sagittarius A* est un détour relativement court une fois passé Colonia ; Beagle Point est un projet à part entière, au-delà des deux premiers."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Naissance de Colonia", "value": "Échouage accidentel de Jaques Station le 21 mai 3302, lors d'une tentative du plus long saut FSD jamais enregistré (21 890 al) vers Beagle Point", "reliability": "official"},
+            {"label": "Record de Beagle Point", "value": "Atteint le 18 janvier 3301 par CMDR Erimus Kamzel", "reliability": "official"},
+            {"label": "Station la plus isolée du jeu", "value": "Explorer's Anchorage (Sagittarius A*), à 3,66 al de Sag A* — et la station habitée la plus proche de Beagle Point, sans que cette seconde distance soit elle-même chiffrée", "reliability": "official"}
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Une seule route, trois arrêts possibles"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le point à retenir avant de lire la suite : ces trois destinations ne sont pas trois voyages séparés à organiser un jour chacun. Colonia, Sagittarius A* et Beagle Point sont grossièrement **alignés sur le même axe de vol** depuis la Bulle — Explorer's Anchorage, la station la plus proche à la fois de Sag A* et de Beagle Point, en est la preuve la plus nette. Un seul grand voyage, avec trois arrêts dans l'ordre, coche les trois cases."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Ne planifie pas \"un voyage à Colonia\" puis, plus tard, \"un voyage à Beagle Point\". Planifie **un seul grand départ** avec trois étapes dans l'ordre croissant de distance et de difficulté : Colonia d'abord (la moins engageante), Sagittarius A* ensuite (un détour court depuis Colonia), Beagle Point enfin (le projet sérieux). Tu peux t'arrêter après n'importe laquelle sans que ce soit un échec — c'est une bucket list, pas un objectif de rentabilité."
+        }
+      ]
+    },
+    {
+      "id": "colonia",
+      "number": 2,
+      "title": "Colonia : la destination raisonnable",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Colonia est le premier palier logique : assez loin pour être un vrai voyage, assez aménagée pour ne rien avoir d'une expédition extrême.** Elle joue le rôle de camp de base pour la suite."
+        },
+        {
+          "type": "paragraph",
+          "text": "Née d'un accident — Jaques Station tentait le plus long saut FSD jamais enregistré (21 890 al) vers Beagle Point et s'est échouée le 21 mai 3302 dans le système aujourd'hui nommé Colonia, redécouvert le 29 juin 3302 — la région est aujourd'hui une véritable extension de la Bulle à 22 000 années-lumière de distance, avec ses propres services complets."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Huit Ingénieurs, une voie d'accès à part"
+        },
+        {
+          "type": "paragraph",
+          "text": "La région de Colonia compte **8 Ingénieurs** accessibles via une invitation du **Colonia Council**, plutôt que par la voie habituelle des Ingénieurs de la Bulle — 4 pour l'ingénierie de vaisseau (Étienne Dorn à Los, Marsha Hicks à Tir, Mel Brandon à Luchtaine, Petra Olmanova à Asura) et 4 pour l'équipement à pied (Baltanos à Deriso, Eleanor Bresa à Desy, Rosa Dayette à Kojeara, Yi Shen à Einheriar). **Jaques Station elle-même n'héberge aucun Ingénieur**, mais dispose d'un Chantier Naval et d'un Équipement complets pour réparer, réarmer ou reconfigurer ton vaisseau sur place."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Pour l'ingénierie du FSD, un seul renvoi",
+          "text": "Le détail du blueprint Increased Range, grade par grade, les Material Traders et la FSD Injection de dépannage sont déjà couverts intégralement dans **guide-ingenierie-fsd-explorateur.json** — ce guide-ci ne les réexplique pas. Prépare ton FSD *avant* de partir : la chaîne de déblocage Farseer se fait dans la Bulle, pas à Colonia."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Le Colonia Bridge officiel"
+        },
+        {
+          "type": "paragraph",
+          "text": "Depuis fin 3307, un projet officiel de Frontier relie la Bulle à Colonia : le **Colonia Bridge**, financé par la Brewer Corporation en 4 phases (octobre 3307 à février 3308), relie Alcor à Colonia le long de la *Colonia Connection Highway*."
+        },
+        {
+          "type": "table",
+          "caption": "Le Colonia Bridge en chiffres (OFF)",
+          "headers": ["Élément", "Détail"],
+          "rows": [
+            [{"text": "Mégavaisseaux relais", "style": "strong"}, {"text": "56 (Flight Operations Carrier, classe Wells), espacés de 400 à 500 al", "style": "normal"}],
+            [{"text": "Stations Ocellus permanentes", "style": "strong"}, {"text": "6, à des points clés de la route", "style": "normal"}],
+            [{"text": "Total installations", "style": "strong"}, {"text": "62", "style": "number"}],
+            [{"text": "Financement", "style": "strong"}, {"text": "Brewer Corporation, 4 phases, octobre 3307 à février 3308", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "L'intérêt concret du Bridge",
+          "text": "Avec un relais tous les 400-500 al, tu n'as jamais besoin d'une portée de saut extrême pour rejoindre Colonia : un vaisseau d'exploration correct, ingénieré normalement (pas nécessairement au maximum théorique), fait l'affaire. C'est ce qui distingue Colonia des deux destinations suivantes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour la logistique de Porte-Vaisseau applicable à ce trajet (achat, budget, entretien), voir **porte-vaisseau-rentable.json** — ce guide n'y revient pas."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Colonia est la destination \"grand public\" de ce guide : accessible avec un vaisseau d'exploration classique, jalonnée par le Colonia Bridge, avec des services complets à l'arrivée. Si ton objectif est de cocher une seule case, c'est celle-ci — la plus sûre et la plus rapide des trois."
+        }
+      ]
+    },
+    {
+      "id": "sagittarius-a",
+      "number": 3,
+      "title": "Sagittarius A* : le détour qui ne coûte presque rien",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Une fois à Colonia, le centre galactique n'est plus un projet à part : c'est un détour.** Sagittarius A* est à peine plus loin de Sol que Colonia (25 900 contre 22 000 al), et la route entre les deux passe par des zones déjà cartographiées par des générations d'explorateurs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sagittarius A* est le trou noir supermassif au centre de la galaxie, avec l'étoile B « Source 2 » en orbite et la balise touristique « The Centre ». Il n'y a pas de portée de saut minimale spécifique publiée pour Sag A* seul : les seuils de 33-45 al généralement cités concernent le tronçon le plus dur (*The Abyss*, vers Beagle Point) des expéditions qui visitent aussi le centre galactique en chemin — une fourchette plus large que le seuil de 34 al cité section 4 pour Beagle Point seul, car elle inclut la marge du détour par Sag A*."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Explorer's Anchorage : la station la plus isolée du jeu, à un jet de pierre de tout",
+          "text": "Construite par l'expédition Distant Worlds II et mise en service le 21 février 3305, **Explorer's Anchorage** est à seulement **3,66 al** de Sagittarius A* — et c'est aussi la station la plus proche de Beagle Point. Chantier Naval et Équipement y sont disponibles : un point de ravitaillement précieux avant de repartir vers l'un ou l'autre de ces deux objectifs."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Le Neutron Router, déjà documenté ailleurs"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le principal outil pour accélérer ce trajet — le routeur neutron de Spansh, qui enchaîne des étoiles à neutrons pour multiplier ta portée de saut par 4 — est déjà détaillé dans **exploration-exobiologie.json**, section « La route des neutrons ». Grâce à lui, Sagittarius A* est atteignable avec une portée de saut nettement plus modeste que le seuil de 33-45 al cité pour Beagle Point."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Ravitaille et répare à Explorer's Anchorage avant de continuer, même si tu n'en as pas immédiatement besoin — c'est la dernière vraie station avant longtemps sur la route de Beagle Point.",
+            "Prends le temps d'un DSS et d'une visite de « The Centre », la balise touristique en orbite de Sag A* — c'est un des moments les plus photogéniques du jeu.",
+            "Ne confonds pas la proximité orbitale (3,66 al) avec la facilité d'accès : rejoindre le voisinage de Sagittarius A* depuis Sol reste un trajet de plusieurs milliers de sauts sans Neutron Router."
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Sagittarius A* n'est pas une destination à part : c'est un arrêt sur la route vers Beagle Point, si tu es déjà arrivé jusque-là. Ne fais pas un aller-retour dédié depuis Colonia si Beagle Point est aussi dans tes projets — enchaîne les deux dans le même élan."
+        }
+      ]
+    },
+    {
+      "id": "beagle-point",
+      "number": 4,
+      "title": "Beagle Point : le bord de la galaxie, pour de vrai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Beagle Point est le vrai projet de ce guide : 65 279 années-lumière en ligne droite, le point le plus emblématique du bord de la galaxie.** C'est ici que la préparation compte le plus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le nom vient du HMS Beagle, le navire de Charles Darwin — un clin d'œil approprié pour la destination la plus associée à l'exploration pure dans tout le jeu. Le record de la première arrivée a été établi le 18 janvier 3301 par CMDR Erimus Kamzel."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "La portée de saut minimale généralement citée",
+          "text": "**34 années-lumière sans recours au jumponium** (les boosts de synthèse de carburant) — un seuil communautaire (COM), pas une spécification officielle Frontier. Une **marge de sécurité** au-delà de ce minimum théorique (33-34 al) est fortement recommandée : les routes calculées par les routeurs communautaires ne garantissent pas toujours une étoile scoopable à chaque étape, en particulier dans les zones à faible densité stellaire de *The Abyss*."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "La check-list additionnelle propre à Beagle Point"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le fit d'exploration de base (FSD ingénieré, Guardian FSD Booster, Fuel Scoop, AFMU, hangar SRV) est identique à celui de Colonia et de Sagittarius A*, et il est déjà chiffré dans exploration-exobiologie.json et guide-ingenierie-fsd-explorateur.json. Ce qui s'ajoute spécifiquement pour Beagle Point tient à la durée et à l'isolement du trajet :"
+        },
+        {
+          "type": "table",
+          "caption": "Ce qui s'ajoute au fit standard pour Beagle Point",
+          "headers": ["Élément", "Pourquoi"],
+          "rows": [
+            [{"text": "Limpets de réparation en réserve", "style": "strong"}, {"text": "Au-delà de l'AFMU seul, pour les réparations d'urgence loin de tout support", "style": "normal"}],
+            [{"text": "Heat sinks (charges de dissipation thermique)", "style": "strong"}, {"text": "Dépannage instantané en cas de surchauffe, sans attendre un refroidissement naturel", "style": "normal"}],
+            [{"text": "Stock de matériaux pour FSD Injection (jumponium)", "style": "strong"}, {"text": "Franchir ponctuellement un seuil de portée trop juste — recette déjà détaillée dans guide-ingenierie-fsd-explorateur.json", "style": "normal"}],
+            [{"text": "Marge de sécurité sur la portée de saut", "style": "strong"}, {"text": "Le minimum théorique de 34 al ne garantit rien face à une étoile non scoopable imprévue", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Vends tes données au fil de l'eau, jamais à la fin",
+          "text": "Vends régulièrement les données d'exploration accumulées (FSS, DSS, scans d'exobiologie) à un contact Universal Cartographics ou Vista Genomics dès que l'occasion se présente, plutôt que d'attendre la fin de l'expédition. Toute destruction du vaisseau avant la vente **perd les données non encaissées** — un risque d'autant plus lourd que le trajet est long."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Vérifie ta portée de saut réelle avec une marge par rapport au seuil de 34 al.", "detail": "Reporte ta masse réelle de loadout dans un simulateur (EDSY, Coriolis) plutôt que de te fier à une valeur théorique."},
+            {"text": "Planifie ta route avec le routeur neutron de Spansh.", "detail": "Déjà détaillé dans exploration-exobiologie.json, section « La route des neutrons »."},
+            {"text": "Fais étape à Explorer's Anchorage pour un dernier ravitaillement complet.", "detail": "À seulement 3,66 al de Sagittarius A*, sur ta route naturelle."},
+            {"text": "Vends tes données à chaque occasion, sans attendre l'arrivée.", "detail": "Universal Cartographics et Vista Genomics, dès qu'un contact est disponible."},
+            {"text": "Prends le temps du symbole une fois arrivé : Beagle Point n'a aucune récompense en jeu au-delà du souvenir.", "detail": "C'est une bucket list, pas une activité rentable — c'est précisément l'objectif de ce guide."}
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Beagle Point ne se \"rentabilise\" pas — ce guide ne prétend même pas essayer. C'est un objectif en soi : arriver, prendre une capture d'écran, et savoir que tu as touché le bord de la galaxie. La préparation matérielle sert un seul but, en revenir en un seul morceau."
+        }
+      ]
+    },
+    {
+      "id": "le-fit",
+      "number": 5,
+      "title": "Le fit qui ne bouge pas, quelle que soit la destination",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Le même vaisseau, avec le même fit de base, sert pour les trois destinations.** Seule la marge de sécurité et le stock de consommables augmentent avec la distance."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Renvoi plutôt que duplication",
+          "text": "Le choix du vaisseau (comparatif complet), la formule de portée de saut, le build module par module et l'ingénierie du FSD grade par grade sont déjà chiffrés dans **exploration-exobiologie.json** et **guide-ingenierie-fsd-explorateur.json**. Ce guide ne reproduit pas ces tableaux : il indique seulement ce qui change selon la destination visée."
+        },
+        {
+          "type": "table",
+          "caption": "Ce qui varie selon la destination",
+          "headers": ["Destination", "Exigence de portée", "Marge recommandée", "Consommables additionnels"],
+          "rows": [
+            [{"text": "Colonia", "style": "strong"}, {"text": "Faible — relayée par le Colonia Bridge", "style": "win"}, {"text": "Minime", "style": "normal"}, {"text": "Aucun au-delà du fit standard", "style": "normal"}],
+            [{"text": "Sagittarius A*", "style": "strong"}, {"text": "Modérée avec Neutron Router", "style": "mid"}, {"text": "Standard", "style": "normal"}, {"text": "Heat sinks recommandés (proximité du trou noir)", "style": "normal"}],
+            [{"text": "Beagle Point", "style": "strong"}, {"text": "≥ 34 al sans jumponium (COM)", "style": "lose"}, {"text": "Impérative", "style": "strong"}, {"text": "Limpets, heat sinks, stock de jumponium", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Le seul point commun à ne jamais sauter : le carburant"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un Fuel Scoop de bonne classe reste indispensable pour les trois trajets — sans lui, un grand voyage devient une suite d'aller-retours vers des étoiles scoopables, ce qui triple le temps réel de trajet. Ce point est déjà couvert en détail dans exploration-exobiologie.json (« Survivre : carburant et étoiles »), qui rappelle l'acronyme KGBFOAM des étoiles scoopables — ce guide n'y revient pas."
+        }
+      ]
+    },
+    {
+      "id": "reseau-de-secours",
+      "number": 6,
+      "title": "Le réseau de secours : DSSA, Colonia Bridge, Fuel Rats",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Trois filets de sécurité distincts existent en dehors de la Bulle, et ils ne se recouvrent pas.** Savoir lequel appeler en cas de pépin fait la différence entre un contretemps et une expédition écourtée."
+        },
+        {
+          "type": "table",
+          "caption": "Trois réseaux, trois natures",
+          "headers": ["Réseau", "Nature", "Ce qu'il offre"],
+          "rows": [
+            [{"text": "Colonia Bridge", "style": "strong"}, {"text": "Officiel (Frontier / Brewer Corporation)", "style": "normal"}, {"text": "56 mégavaisseaux + 6 stations Ocellus, entre Alcor et Colonia uniquement", "style": "normal"}],
+            [{"text": "DSSA (Deep Space Support Array)", "style": "strong"}, {"text": "Communautaire (initiative FleetComm)", "style": "normal"}, {"text": "≈ un Porte-Vaisseau relais par région galactique (max 3), ravitaillement et réparation gratuits", "style": "normal"}],
+            [{"text": "Fuel Rats / Hull Seals", "style": "strong"}, {"text": "Communautaire (secours bénévole à la demande)", "style": "normal"}, {"text": "Intervention ponctuelle sur appel de détresse, pas un maillage fixe", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ne confonds pas DSSA et Colonia Bridge",
+          "text": "Le Colonia Bridge est un projet **officiel**, chiffré précisément (62 installations, espacées de 400 à 500 al, financées en 4 phases) et limité au trajet Alcor-Colonia. Le réseau **DSSA** est **communautaire**, maille toute la galaxie au-delà de la Bulle avec une règle affichée de maximum trois Porte-Vaisseaux par région (pour éviter le regroupement), mais **aucun espacement en années-lumière n'est publié officiellement** pour ce réseau — ne compte pas dessus avec la même précision que sur le Bridge."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Voyager en groupe plutôt que seul"
+        },
+        {
+          "type": "paragraph",
+          "text": "Rien n'oblige à faire ce voyage en solo. Un **Wing** (jusqu'à quatre joueurs, chacun dans son propre vaisseau) peut parfaitement enchaîner Colonia, Sagittarius A* et Beagle Point ensemble, avec le nav-lock pour rester groupé — mécanique déjà détaillée dans **escadron-et-jeu-en-groupe.json**. Rejoindre une expédition communautaire en cours (type Distant Worlds) ne demande généralement aucune inscription formelle : suivre le canal Discord de coordination et respecter l'itinéraire et les fenêtres de saut communiquées suffit."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Un vaisseau de secours minimal, si tu veux rendre la pareille",
+          "text": "Un vaisseau doté d'un **Fuel Transfer Limpet Controller** et d'un stock de limpets suffit pour rejoindre rapidement un commandant Fuel Rats en détresse ; un **Hull/Module Repair Limpet Controller** sert de son côté à la réparation de coque à distance (Hull Seals). Les deux services opèrent en dehors de toute affiliation de faction, quel que soit le mode de jeu du commandant secouru."
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Ce qui reste flou : soyons honnêtes sur les limites"
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Trois zones d'ombre assumées",
+          "text": "Aucune source consultée ne chiffre précisément : (1) la distance de route réelle jusqu'à Beagle Point, par opposition à la distance en ligne droite de 65 279 al ; (2) l'espacement exact en années-lumière des Porte-Vaisseaux du réseau DSSA ; (3) le nombre total actuel de Porte-Vaisseaux DSSA déployés en 2026. Plutôt que d'estimer ces chiffres sans le dire, ce guide les signale comme inconnus — vérifie l'état du réseau DSSA sur le forum officiel FleetComm avant de partir si ces détails sont critiques pour toi."
+        }
+      ]
+    },
+    {
+      "id": "check-list-et-budget-temps",
+      "number": 7,
+      "title": "Check-list de départ et budget temps",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Voici la synthèse pratique : ce qu'il faut avoir réglé avant de quitter la Bulle, et un ordre de grandeur du temps à prévoir.**"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Check-list avant le grand départ"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "FSD ingénieré avec une marge de portée confortable au-dessus du strict minimum de ta destination la plus lointaine visée",
+            "Guardian FSD Booster installé si le slot le permet",
+            "Fuel Scoop de bonne classe, capable de ravitailler rapidement sur les étoiles KGBFOAM",
+            "AFMU pour les réparations autonomes, complétée de limpets de réparation pour Beagle Point",
+            "Heat sinks en réserve pour les sorties de saut délicates",
+            "Stock de matériaux de FSD Injection (jumponium) si Beagle Point est au programme",
+            "Toutes les données d'exploration en attente vendues avant le départ (ne pars jamais avec un solde non encaissé)",
+            "Itinéraire calculé au routeur neutron de Spansh, avec les relais DSSA et Colonia Bridge repérés sur la route"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Budget temps, à titre indicatif (EST)"
+        },
+        {
+          "type": "table",
+          "caption": "Ordre de grandeur du temps de trajet — aucune source ne chiffre précisément la distance de route réelle, ces durées sont des estimations grossières à ajuster selon ta portée de saut et ton style de jeu",
+          "headers": ["Étape", "Distance en ligne droite", "Repère de durée"],
+          "rows": [
+            [{"text": "Bulle → Colonia (via Colonia Bridge)", "style": "strong"}, {"text": "≈ 22 000 al", "style": "number"}, {"text": "Quelques heures à une soirée, selon la portée de saut", "style": "normal"}],
+            [{"text": "Colonia → Sagittarius A*", "style": "strong"}, {"text": "≈ 4 000 al supplémentaires", "style": "number"}, {"text": "Une session, avec Neutron Router", "style": "normal"}],
+            [{"text": "Sagittarius A* → Beagle Point", "style": "strong"}, {"text": "≈ 40 000 al supplémentaires", "style": "number"}, {"text": "Plusieurs sessions à plusieurs jours, selon le rythme", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ces durées ne sont pas une promesse",
+          "text": "Elles supposent une portée de saut confortable, un Neutron Router bien utilisé, et aucun contretemps majeur. Une panne de carburant en zone déserte, une surchauffe mal gérée ou simplement une envie de prendre son temps pour scanner peuvent multiplier ces chiffres par deux ou trois sans que ce soit un problème — encore une fois, ce voyage n'a pas d'exigence de rentabilité ni de vitesse."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "FAQ express"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Faut-il un rang particulier pour partir ?** Non, aucun des trois voyages n'exige de rang minimum — seulement un vaisseau correctement équipé.",
+            "**Peut-on visiter Beagle Point sans passer par Colonia ?** Rien ne l'interdit techniquement, mais Colonia est sur la route et offre le seul vrai point de ravitaillement complet avant des dizaines de milliers d'années-lumière de vide — l'ignorer n'a aucun intérêt pratique.",
+            "**Le voyage rapporte-t-il des crédits ?** Marginalement, via la vente de données d'exploration accumulées en route, mais ce n'est jamais l'objectif de ce guide ni le critère à optimiser — voir exploration-exobiologie.json pour maximiser ce volet si tu le souhaites.",
+            "**Peut-on revenir après Beagle Point ?** Oui, le trajet retour suit la même logique (Neutron Router, relais DSSA) qu'à l'aller — ce guide ne traite que l'aller, mais rien de spécifique ne change au retour."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ce-qu-il-faut-retenir",
+      "number": 8,
+      "title": "Ce qu'il faut retenir",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {"text": "**Prépare ton FSD dans la Bulle avant de partir.**", "detail": "guide-ingenierie-fsd-explorateur.json couvre le déblocage Farseer et le blueprint Increased Range — fais-le avant, pas pendant le voyage."},
+            {"text": "**Planifie un seul grand départ avec trois étapes**, pas trois voyages séparés.", "detail": "Colonia, puis Sagittarius A*, puis Beagle Point — dans cet ordre, sur le même axe de vol."},
+            {"text": "**Utilise le Colonia Bridge pour la première étape.**", "detail": "56 mégavaisseaux + 6 stations Ocellus espacés de 400-500 al : une portée de saut modeste suffit jusqu'à Colonia."},
+            {"text": "**Fais étape à Explorer's Anchorage avant le dernier tronçon.**", "detail": "À 3,66 al de Sagittarius A*, et aussi la station habitée la plus proche de Beagle Point — le dernier vrai ravitaillement avant longtemps."},
+            {"text": "**Augmente ta marge de sécurité à mesure que tu t'éloignes.**", "detail": "Minime pour Colonia, standard pour Sag A*, impérative pour Beagle Point (≥ 34 al sans jumponium, COM)."},
+            {"text": "**Vends tes données au fil de l'eau, jamais en fin de trajet.**", "detail": "Toute destruction de vaisseau avant la vente perd les données non encaissées — un risque d'autant plus lourd que le trajet est long."},
+            {"text": "**Repère les relais DSSA sur ta route, sans t'y fier au kilomètre près.**", "detail": "Ravitaillement et réparation gratuits, mais aucun espacement précis n'est publié officiellement pour ce réseau communautaire."}
+          ]
+        },
+        {"type": "divider"},
+        {
+          "type": "paragraph",
+          "text": "**Fiabilité des données.** Les distances (Colonia, Sagittarius A*, Beagle Point, Explorer's Anchorage), la date de fondation de Colonia, le détail du Colonia Bridge et le nombre d'Ingénieurs accessibles sont des données **officielles ou mesurées directement** (API EDSM, wiki Elite Dangerous, forums Frontier). Le seuil de portée de saut de 34 al pour Beagle Point, l'existence et le principe du réseau DSSA sont des données **communautaires (COM)**. La distance de route réelle jusqu'à Beagle Point, l'espacement exact du réseau DSSA en années-lumière et son nombre total de Porte-Vaisseaux en 2026 n'ont **pu être confirmés par aucune source primaire** consultée — ce guide le signale explicitement plutôt que d'avancer un chiffre inventé."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Contenu couvert.** Version du jeu 4.4.0.x, branche Live. Ce guide s'appuie sur le référentiel spatial documenté dans le corpus de référence (géographie galactique, jeu en groupe) et sur les guides déjà publiés qu'il ne duplique pas : exploration-exobiologie.json, guide-ingenierie-fsd-explorateur.json, porte-vaisseau-rentable.json, escadron-et-jeu-en-groupe.json."
+        }
+      ]
+    }
+  ],
+  "sources": ["Frontier Developments", "wiki Elite Dangerous (Fandom)", "edsm.net (API publique)", "hosting.zaonce.net (Player Journal Manual)", "forums.frontier.co.uk", "distantworlds3.space", "fuelrats.com", "hullseals.space"]
+}

@@ -1,0 +1,266 @@
+{
+  "id": "piratage-a-distance-megaships",
+  "title": "Piratage à distance : vider les megaships et installations sans un seul tir",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Une activité 100% non-violente et méconnue : pirater les données et parfois la cargaison de megaships non accostables (Bulk Cruisers) et d'installations spatiales fixes au Recon Limpet Controller, sans jamais s'arrimer ni combattre.",
+  "byline": "PC · Live · Aucun combat requis · Recon Limpet Controller (notation E)",
+  "edition": "2026-09",
+  "topics": ["piratage", "megaship", "installation", "recon limpet controller", "hacking", "sans combat", "pacifiste"],
+  "estimatedReadMinutes": 16,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {"type": "heading", "text": "Au sommaire", "level": 4},
+        {"type": "list", "ordered": true, "items": [
+          "Une activité de pirate sans combat : de quoi il s'agit",
+          "L'équipement : Recon Limpet Controller et compagnie",
+          "Deux familles de cibles : Bulk Cruisers et installations fixes",
+          "Trouver ses cibles : plan de vol, cycle hebdomadaire, détection",
+          "La procédure en 4 étapes, du scan à la récupération",
+          "Ce que rapporte chaque classe de megaship (et l'angle mort des installations)",
+          "Le butin encodé et son usage en ingénierie",
+          "Sécurité, amendes et évasion : rester invisible",
+          "Rentabilité réelle : ce qu'on sait, ce qu'on ignore",
+          "Pièges à éviter et FAQ",
+          "Ce qu'il faut retenir, et les sources"
+        ]},
+        {"type": "paragraph", "emphasis": "intro", "text": "**Tu peux piller un vaisseau capital sans jamais l'accoster, et une installation militaire sans jamais tirer un coup de feu.** Ce manuel documente une boucle de jeu à part, quasi jamais expliquée dans les guides généralistes : le piratage à distance de megaships non accostables et d'installations spatiales fixes, au **Recon Limpet Controller**, sans arrimage et sans le moindre combat."},
+        {"type": "paragraph", "text": "Ce guide prolonge le persona pacifiste de debuter-sans-combat.json et d'exploration-exobiologie.json : tu voles peut-être déjà sans arme à bord, et tu te demandes s'il existe une activité de « piraterie » qui ne t'oblige pas à en équiper une. La réponse est oui, et elle reste méconnue même de joueurs expérimentés. Ce n'est pas la boucle de piraterie classique contre d'autres commandants — pour ça, la distinction pirate/ganker et les techniques d'évasion (mass lock, high wake) sont déjà couvertes en détail dans survivre-au-pvp-sans-combattre.json, et ce guide s'y renvoie plutôt que de les répéter."},
+        {"type": "callout", "tone": "info", "title": "Comment lire les chiffres de ce guide", "text": "**OFF** = confirmé par une source officielle ou un jeu de données extrait du jeu. **COM** = documenté par la communauté (wiki, forums, recherche indépendante) sans confirmation officielle directe. **EST** = estimation incertaine. Quatre points restent explicitement non chiffrés ici plutôt que devinés : le temps de piratage exact classe par classe du Recon Limpet Controller (le détail complet vit dans le corpus d'équipements, non reproduit ici), tout rendement en crédits/heure de cette boucle, une table butin par type d'installation, et la confirmation que cette activité déclenche la notoriety."}
+      ]
+    },
+    {
+      "id": "definition",
+      "number": 1,
+      "title": "Une activité de pirate sans combat : de quoi il s'agit",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**« Piratage » ne veut pas dire ici interdiction, tir de sommation et négociation sous la menace.** Il s'agit de voler des données et parfois de la cargaison à des cibles fixes ou semi-mobiles, en s'approchant à quelques centaines de mètres, sans jamais s'arrimer et sans qu'aucune arme n'entre en jeu à aucun moment de la procédure."},
+        {"type": "heading", "text": "Ce que tu fais, ce que tu ne fais jamais", "level": 3},
+        {"type": "list", "ordered": false, "items": [
+          "Tu t'approches d'un megaship ou d'une installation à quelques kilomètres, puis quelques centaines de mètres.",
+          "Tu scannes avec des modules non hostiles : Data Link Scanner, puis un scan de sous-objet ciblé.",
+          "Tu lances un Recon Limpet (et, si besoin, un Hatch Breaker Limpet) sur le point piraté.",
+          "Tu ne t'arrimes jamais à la cible : ces megaships et installations n'ont ni pad ni service.",
+          "Tu ne tires jamais : aucune arme n'intervient dans la procédure elle-même."
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Ne confonds pas avec les megaships accostables", "text": "Trois megaships du jeu — **Wells-class Carrier**, **Detention Centre** et **Rescue Vessel** — disposent de pads et de services : ce sont des cibles amicales, hors du périmètre de ce guide, déjà traitées ailleurs dans le corpus de référence. Les megaships de ce guide sont les **Bulk Cruisers**, non accostables par nature, et les **installations spatiales fixes**, jamais accostables non plus."},
+        {"type": "paragraph", "text": "Ça reste une activité criminelle aux yeux du jeu : un rapport de crime part dès le lancement du limpet (section 8), et le résultat te rend potentiellement recherché dans le système. La différence avec le piratage « classique » contre d'autres commandants, c'est que ta cible ne peut ni te tirer dessus via un pilote humain, ni négocier — et que toi, tu n'as besoin d'aucune arme pour la vider."},
+        {"type": "verdict", "title": "Verdict", "text": "Si tu veux une activité qui porte le nom de piraterie sans jamais toucher une gâchette, celle-ci est la plus directe du jeu. Elle ne remplace pas un revenu de commerce ou d'exobiologie (section 9) : elle se pratique pour la curiosité, le matériau encodé (section 7) et, parfois, un peu de cargaison rare."}
+      ]
+    },
+    {
+      "id": "equipement",
+      "number": 2,
+      "title": "L'équipement : Recon Limpet Controller et compagnie",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Un seul module est indispensable, et il tient dans un petit emplacement utilitaire : le Recon Limpet Controller.** Tout le reste de cette section est optionnel, selon que tu vises seulement les données ou aussi la cargaison."},
+        {"type": "keyValue", "items": [
+          {"label": "Classes disponibles", "value": "1, 3, 5 et 7 — en notation E (Efficient) uniquement, aucune autre notation n'existe pour ce module", "reliability": "official"},
+          {"label": "Temps de piratage", "value": "de 10 à 17 secondes selon la classe montée", "reliability": "official"},
+          {"label": "Portée d'accrochage", "value": "de 1 200 à 2 000 m selon la classe", "reliability": "official"},
+          {"label": "Combat requis", "value": "aucun, à aucune classe", "reliability": "official"}
+        ]},
+        {"type": "callout", "tone": "info", "title": "Le détail classe par classe vit ailleurs", "text": "Le temps et la portée exacts de chacune des quatre classes (1E/3E/5E/7E) sont chiffrés dans le corpus d'équipements de référence, pas reproduits ici pour éviter un tableau qui se périmerait à la prochaine passe d'équilibrage. Retiens la fourchette ci-dessus pour choisir : une classe plus élevée pirate plus vite et de plus loin, jamais avec plus de limpets actifs à la fois (toujours un seul, quelle que soit la classe)."},
+        {"type": "heading", "text": "Les autres modules utiles", "level": 3},
+        {"type": "table", "caption": "Modules complémentaires — aucun n'est une arme", "headers": ["Module", "Rôle", "Nécessaire pour"], "rows": [
+          [{"text": "Data Link Scanner"}, {"text": "Scan général de la cible, révèle les objets interactifs"}, {"text": "Intégré et gratuit sur tout vaisseau — rien à acheter ni à monter"}],
+          [{"text": "Hatch Breaker Limpet Controller"}, {"text": "Force l'ouverture d'une soute ou d'un sas de secours"}, {"text": "Voler de la cargaison (jamais les données)"}],
+          [{"text": "Manifest Scanner"}, {"text": "Affiche le contenu d'une soute avant de la vider"}, {"text": "Savoir ce que contient la cargaison avant de lancer un Hatch Breaker"}],
+          [{"text": "Collector Limpet Controller"}, {"text": "Récupère les canisters éjectés dans l'espace"}, {"text": "Récupérer le butin d'un Hackable Comms Array ou d'une soute forcée"}]
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le module que tu as déjà", "text": "Le Data Link Scanner ne s'achète pas et n'occupe aucun emplacement : il est présent par défaut sur chaque vaisseau du jeu. Tu peux tester cette boucle avec un vaisseau minimal équipé d'un seul Recon Limpet Controller en petit emplacement utilitaire — rien d'autre n'est strictement obligatoire pour viser les données."},
+        {"type": "verdict", "title": "Verdict", "text": "Pour débuter, un seul Recon Limpet Controller (même petite classe) suffit à tout scanner et à tout pirater côté données. N'ajoute Hatch Breaker, Manifest Scanner et Collector Limpet que si tu vises aussi la cargaison physique — trois modules de plus, pour un gain qui reste, comme la section 9 le détaille, mal chiffré."}
+      ]
+    },
+    {
+      "id": "cibles",
+      "number": 3,
+      "title": "Deux familles de cibles : Bulk Cruisers et installations fixes",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Deux familles de cibles, et une seule règle commune : aucune des deux ne s'accoste.** Le reste — mobilité, détection, contenu — diffère complètement entre elles."},
+        {"type": "heading", "text": "Megaships non accostables : les Bulk Cruisers", "level": 3},
+        {"type": "list", "ordered": false, "items": [
+          "Bulk Cargo Ship — fret en vrac, le sous-type le plus courant",
+          "Tanker — carburant et liquides",
+          "Agricultural Vessel — denrées",
+          "Science Vessel — recherche",
+          "Survey Vessel — recherche également, sous-type le plus rare des huit",
+          "Tourist Ship — passagers",
+          "Prison Ship — transport de détenus",
+          "Dredger — cas marginal, quasi unique en jeu"
+        ]},
+        {"type": "heading", "text": "Installations spatiales fixes", "level": 3},
+        {"type": "list", "ordered": false, "items": [
+          "Agricultural", "Civilian", "Comms", "Government", "Industrial", "Medical", "Military", "Scientific", "Security", "Tourist", "Unauthorised"
+        ]},
+        {"type": "callout", "tone": "info", "title": "Mobile contre fixe : la vraie différence tactique", "text": "Un Bulk Cruiser suit un plan de vol et change de position chaque semaine (section 4) : tu dois le retrouver à chaque fois. Une installation reste à poste fixe et se détecte au panneau de navigation jusqu'à 1 000 Ls : une fois repérée, elle ne bouge plus jamais. Les deux restent strictement non accostables, contrairement aux trois megaships amicaux signalés en section 1."},
+        {"type": "verdict", "title": "Verdict", "text": "Si tu débutes, une installation est la cible la plus simple : fixe, détectable de loin, jamais de plan de vol à reconstituer. Garde les Bulk Cruisers pour quand tu maîtrises déjà la procédure de la section 5, le temps d'apprendre à lire un plan de vol à six escales."}
+      ]
+    },
+    {
+      "id": "reperage",
+      "number": 4,
+      "title": "Trouver ses cibles : plan de vol, cycle hebdomadaire, détection",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Aucune carte statique ne te donnera la position d'un Bulk Cruiser : il faut le trouver, pas le chercher sur une liste.** Une installation, à l'inverse, se détecte comme n'importe quel point d'intérêt une fois dans le bon système."},
+        {"type": "heading", "text": "Bulk Cruisers : un plan de vol fixe, révélé seulement au scan", "level": 3},
+        {"type": "steps", "items": [
+          {"text": "Repère un Bulk Cruiser dans les signaux du système ou près d'une nav beacon.", "detail": "Ce sont des objets massifs, visibles de loin en supercroisière comme en espace normal."},
+          {"text": "Approche à portée de scan et vise le Ship Log Uplink au Data Link Scanner (section 5).", "detail": "Ce scan est non hostile : il ne déclenche aucun rapport de crime."},
+          {"text": "Lis le plan de vol révélé : six escales fixes, propres à ce vaisseau.", "detail": "La position du Bulk Cruiser change selon un cycle hebdomadaire, traditionnellement le jeudi — ce qui explique qu'aucune carte figée ne puisse en donner la position durable."},
+          {"text": "Reviens le pirater à l'une des six escales de ton choix.", "detail": "Choisis l'escale la plus commode pour toi plutôt que de le suivre en temps réel."}
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Pas de carte, pas de raccourci", "text": "Aucun outil communautaire consulté pour ce guide ne publie de carte fiable des positions de Bulk Cruisers : leur cycle hebdomadaire rend toute liste figée obsolète en quelques jours. Le scan du Ship Log Uplink reste la seule méthode fiable pour connaître le plan de vol d'un vaisseau donné. **(COM)**"},
+        {"type": "heading", "text": "Installations : détection à longue portée", "level": 3},
+        {"type": "paragraph", "text": "Une installation apparaît comme point d'intérêt au panneau de navigation dès que tu es à moins de **1 000 Ls** d'elle — largement de quoi la repérer en arrivant dans le système, sans scanner quoi que ce soit. Elle ne bouge jamais, contrairement au Bulk Cruiser : une fois visitée, tu sais où la retrouver indéfiniment. **(COM)**"},
+        {"type": "verdict", "title": "Verdict", "text": "Pour un premier essai, choisis une installation à moins de 1 000 Ls dans un système que tu fréquentes déjà : zéro effort de repérage. Garde le suivi d'un Bulk Cruiser sur plusieurs semaines pour plus tard, une fois que la procédure de la section 5 est devenue un réflexe."}
+      ]
+    },
+    {
+      "id": "procedure",
+      "number": 5,
+      "title": "La procédure en 4 étapes, du scan à la récupération",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Toute la boucle tient en quatre étapes, sans jamais engager d'arme.** Une fois maîtrisée, elle se répète en quelques minutes par cible."},
+        {"type": "steps", "items": [
+          {"text": "Scan général au Data Link Scanner, à quelques kilomètres.", "detail": "Gratuit et intégré : il révèle la liste des objets interactifs de la cible — Ship Log Uplink, Cargo Bay/Escape Hatch, Automated Defence Turret, Hackable Data Transmitter, Hackable Comms Array, Fighter Bay."},
+          {"text": "Cible le sous-objet visé et scanne-le à courte portée (quelques centaines de mètres).", "detail": "Ce scan rapproché révèle son Limpet Docking Point : un Hackable Data Transmitter n'en propose qu'un seul, un Hackable Comms Array en propose deux."},
+          {"text": "Lance le Recon Limpet sur le point ciblé et attends le temps de piratage.", "detail": "10 à 17 secondes selon la classe du contrôleur monté (section 2) — aucune action supplémentaire de ta part pendant ce délai."},
+          {"text": "Récupère le butin — la méthode dépend entièrement de la cible touchée.", "detail": "Voir le tableau ci-dessous : les trois cas de figure ne se récupèrent pas de la même façon."}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le doublement qui accélère un Comms Array", "text": "Un Hackable Comms Array propose deux points de piratage : tu peux les attaquer en parallèle avec **deux Recon Limpet Controllers classe 1E** montés simultanément, plutôt qu'un seul module de classe supérieure. Monter une classe plus élevée réduit le temps de piratage par point, mais n'augmente jamais le nombre de limpets actifs en même temps — toujours un seul par module. C'est le nombre de modules montés, pas leur classe, qui détermine si tu peux traiter les deux points à la fois."},
+        {"type": "heading", "text": "Récupération : ça dépend de la cible", "level": 3},
+        {"type": "table", "caption": "Comment récupérer selon le sous-objet piraté", "headers": ["Cible", "Ce qui se passe", "Module supplémentaire requis"], "rows": [
+          [{"text": "Hackable Data Transmitter", "style": "strong"}, {"text": "Les données piratées vont directement dans ta soute de données, sans rien à ramasser"}, {"text": "Aucun"}],
+          [{"text": "Hackable Comms Array", "style": "strong"}, {"text": "Le piratage éjecte des canisters flottants dans l'espace"}, {"text": "Collector Limpet Controller, ou récupération manuelle"}],
+          [{"text": "Cargo Bay / Escape Hatch", "style": "strong"}, {"text": "La soute s'ouvre progressivement, un Hatch Breaker à la fois, jusqu'à épuisement"}, {"text": "Hatch Breaker Limpet Controller, précédé d'un scan au Manifest Scanner"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Recon Limpet et Hatch Breaker ne sont pas le même module", "text": "Le Recon Limpet Controller pirate des **données** (Hackable Data Transmitter, Hackable Comms Array) ; il ne force jamais l'ouverture d'une soute. Pour voler de la **cargaison**, il faut un **Hatch Breaker Limpet Controller** distinct, et scanner la soute au Manifest Scanner avant, pour savoir si le contenu vaut le détour."},
+        {"type": "verdict", "title": "Verdict", "text": "Si tu ne veux gérer qu'un seul module, vise uniquement les Hackable Data Transmitter : scan, limpet, attente, et les données tombent seules dans ta soute — la procédure la plus simple des trois."}
+      ]
+    },
+    {
+      "id": "butin-megaships",
+      "number": 6,
+      "title": "Ce que rapporte chaque classe de megaship (et l'angle mort des installations)",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le contenu d'un Bulk Cruiser ne dépend ni de la faction qui contrôle le système, ni de sa sécurité, ni de son économie : il est fixé une bonne fois pour toutes par la classe du vaisseau.**"},
+        {"type": "table", "caption": "Cinq classes de Bulk Cruisers, à titre d'exemple parmi la vingtaine documentée", "headers": ["Classe", "Tonnage moyen", "Biens rares typiques", "Marchandises courantes"], "rows": [
+          [{"text": "Gordon-class Hauler", "style": "strong"}, {"text": "250 t"}, {"text": "Metals"}, {"text": "Industrial Materials, Metals"}],
+          [{"text": "Alcatraz-class Reformatory", "style": "strong"}, {"text": "750 t"}, {"text": "Honesty Pills (exclusivement)"}, {"text": "Legal Drugs, Machinery, Medicines, Personal Effects, Waste, Weapons"}],
+          [{"text": "Naphtha-class Tanker", "style": "strong"}, {"text": "20 t"}, {"text": "Foods"}, {"text": "Chemicals, Medicines, Metals"}],
+          [{"text": "Freedom-class Surveyor", "style": "strong"}, {"text": "550 t"}, {"text": "Metals"}, {"text": "Machinery, Metals, Minerals"}],
+          [{"text": "Demeter-class Cropper", "style": "strong"}, {"text": "150 t"}, {"text": "Chemicals, Machinery"}, {"text": "Chemicals, Foods, Legal Drugs, Machinery, Medicines"}]
+        ]},
+        {"type": "callout", "tone": "info", "title": "Un manifeste qui s'écarte du profil, c'est un signal", "text": "Si le contenu réel d'un Bulk Cruiser diffère de son profil de classe par défaut, c'est le signe que le vaisseau vient d'être attaqué ou est en train de l'être — pas une variation aléatoire. **(COM)**"},
+        {"type": "callout", "tone": "warning", "title": "L'angle mort : aucune table pour les installations", "text": "Aucune source consultée pour ce guide ne documente de table équivalente type d'installation → contenu. Les articles de référence sur les installations datent d'avant l'ajout du piratage par limpet (patch 3.1, 2018) : ce vide n'est pas comblé ici par une estimation, il est signalé comme tel. Attends-toi à devoir scanner sur place pour savoir ce qu'une installation donnée transporte."},
+        {"type": "keyValue", "items": [
+          {"label": "Nombre de classes de Bulk Cruisers documentées", "value": "une vingtaine, dont cinq données ci-dessus à titre d'exemple", "reliability": "community"},
+          {"label": "Table butin par type d'installation", "value": "non documentée dans les sources consultées", "reliability": "community"}
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "Avant de viser un Bulk Cruiser précis pour sa cargaison, identifie sa classe au scan : le tableau ci-dessus te dit déjà si le déplacement vaut le coup. Pour une installation, il n'existe pas de raccourci équivalent — le scan sur place reste la seule source d'information."}
+      ]
+    },
+    {
+      "id": "butin-encode",
+      "number": 7,
+      "title": "Le butin encodé et son usage en ingénierie",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Les données piratées ne sont pas des curiosités inertes : ce sont des matériaux encodés, la monnaie d'une partie de l'ingénierie G5.**"},
+        {"type": "table", "caption": "Matériaux typiques selon la source du piratage", "headers": ["Source", "Matériaux typiques obtenus"], "rows": [
+          [{"text": "Hackable Data Transmitter", "style": "strong"}, {"text": "Anomalous Bulk Scan Data, Classified Scan Databanks/Fragment, Modified Embedded Firmware, Tagged Encryption Codes, Security Firmware Patch"}],
+          [{"text": "Hackable Comms Array", "style": "strong"}, {"text": "Anomalous Bulk Scan Data, Divergent Scan Data, Unusual Encrypted Files, Untypical/Distorted/Inconsistent Shield Scan Data, Unidentified Scan Archives, Modified Consumer Firmware"}]
+        ]},
+        {"type": "callout", "tone": "info", "title": "Pour recycler le surplus, une autre section du corpus fait déjà le travail", "text": "Une fois que tu accumules plus de matériaux encodés que tu n'en utilises, les **Material Traders** permettent de convertir ce surplus plutôt que de le laisser plafonner ton inventaire — ce mécanisme est déjà détaillé, avec ses ratios et son usage pour l'ingénierie FSD, dans guide-ingenierie-fsd-explorateur.json. Ce guide ne le réexplique pas."},
+        {"type": "paragraph", "text": "Concrètement, ces matériaux encodés servent aux blueprints qui exigent une part de matériaux « données » plutôt que de matériaux manufacturés ou bruts — la plupart des modules de capteurs et certains effets expérimentaux d'armes en dépendent. Si l'ingénierie ne t'intéresse pas, cette section n'est qu'un sous-produit gratuit de la procédure : tu n'as rien à faire de spécial pour l'obtenir."},
+        {"type": "verdict", "title": "Verdict", "text": "Si l'ingénierie encodée t'intéresse déjà, cette boucle est une source directe de matériaux sans détour par le combat. Sinon, considère les données comme un bonus : le vrai motif de cette activité reste la curiosité et, éventuellement, la cargaison rare de la section 6."}
+      ]
+    },
+    {
+      "id": "securite",
+      "number": 8,
+      "title": "Sécurité, amendes et évasion : rester invisible",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le piratage à distance reste un crime aux yeux du jeu, même sans combat : un rapport part dès le lancement du premier limpet.**"},
+        {"type": "heading", "text": "Ce que déclenche le piratage", "level": 3},
+        {"type": "paragraph", "text": "Le lancement d'un Recon Limpet ou d'un Hatch Breaker déclenche un rapport de crime à la sécurité locale, systématiquement — sauf en système **Anarchy**, où aucune force de sécurité organisée n'existe pour le recevoir. Ailleurs, la sécurité du système est prévenue et patrouille la zone une fois l'alerte donnée."},
+        {"type": "keyValue", "items": [
+          {"label": "Silent Running engagé avant l'accrochage", "value": "évite l'amende immédiate et l'identification pendant toute la durée du piratage", "reliability": "official"},
+          {"label": "Ce que le Silent Running ne fait pas", "value": "il ne supprime jamais le rapport de crime local — la sécurité reste alertée et patrouille", "reliability": "official"},
+          {"label": "En système Anarchy", "value": "aucune réponse de sécurité organisée, quel que soit ton usage du Silent Running", "reliability": "official"}
+        ]},
+        {"type": "callout", "tone": "warning", "title": "L'Automated Defence Turret, le risque qu'on oublie", "text": "Le scan général du Data Link Scanner (section 5) peut révéler un **Automated Defence Turret** parmi les objets interactifs de la cible : une source de tir automatisé, sans pilote à négocier ni ganker à identifier. Les sources consultées ne détaillent pas ses conditions précises d'ouverture du feu — traite sa simple présence sur le scan comme un signal de prudence. Si une réponse armée s'engage (tourelle ou vaisseau de sécurité), la procédure d'évasion — gestion des pips, sortie du rayon de mass lock, puis high wake plutôt que low wake — est déjà détaillée pas à pas dans survivre-au-pvp-sans-combattre.json : ce guide ne la répète pas."},
+        {"type": "paragraph", "text": "Pour effacer une amende ou une prime accumulée sans passer par la case combat, un **Interstellar Factor** dans un système non contrôlé par la faction lésée règle la note moyennant commission — cette mécanique générale de Crime & Punishment est commune à toute infraction, pas spécifique à cette activité. La cargaison volée, elle, s'écoule au **marché noir** plutôt qu'au comptoir de commerce standard."},
+        {"type": "callout", "tone": "info", "title": "Un point que personne ne confirme", "text": "Aucune source consultée pour ce guide ne confirme que le piratage de megaships ou d'installations déclenche spécifiquement la mécanique de **notoriety** (qui ne se paie pas et ne décroît qu'avec le temps). C'est un point à traiter comme non établi, pas comme acquis dans un sens ou dans l'autre : ne présume pas qu'il en est exempté."},
+        {"type": "verdict", "title": "Verdict", "text": "Engage le Silent Running avant chaque accrochage par réflexe : il ne t'évite pas d'être repéré à terme, mais il retarde l'amende et l'identification pendant toute la fenêtre la plus vulnérable, celle où tu es immobile à quelques centaines de mètres de ta cible."}
+      ]
+    },
+    {
+      "id": "rentabilite",
+      "number": 9,
+      "title": "Rentabilité réelle : ce qu'on sait, ce qu'on ignore",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Ce guide ne te promettra pas un chiffre en crédits par heure : aucune source consultée n'en fournit un fiable pour cette boucle précise, et il vaut mieux le dire que l'inventer.**"},
+        {"type": "callout", "tone": "warning", "title": "Le chiffre qui manque, assumé comme tel", "text": "Contrairement au minage, au commerce ou même au farming de HazRES (chiffrés ailleurs dans le corpus), aucune moyenne de Cr/h vérifiée n'existe pour le piratage à distance de megaships et d'installations. La valeur de cette boucle est avant tout en **matériaux encodés** (section 7) et en **cargaison rare ponctuelle** (section 6), pas en revenu régulier."},
+        {"type": "list", "ordered": false, "items": [
+          "Ce qui est documenté : les classes du Recon Limpet Controller, leurs temps et portées, la procédure en quatre étapes, les deux familles de cibles et leurs sous-types, le contenu fixe par classe de Bulk Cruiser.",
+          "Ce qui ne l'est pas : un rendement en crédits par heure, une table butin par type d'installation, le déclenchement exact de la notoriety pour cette activité spécifique.",
+          "Ce qui dépend de toi : le temps de repérage d'un Bulk Cruiser (plan de vol à retenir) contre celui, quasi nul, d'une installation détectée à 1 000 Ls."
+        ]},
+        {"type": "keyValue", "items": [
+          {"label": "Temps de piratage", "value": "10 à 17 s selon la classe du Recon Limpet Controller", "reliability": "official"},
+          {"label": "Portée d'accrochage", "value": "1 200 à 2 000 m selon la classe", "reliability": "official"},
+          {"label": "Rendement en Cr/h de cette boucle", "value": "non documenté par les sources consultées", "reliability": "community"},
+          {"label": "Table butin par installation", "value": "non documentée par les sources consultées", "reliability": "community"}
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "Pratique cette activité pour ce qu'elle est — une source de matériaux encodés et de curiosités, sans risque de combat direct — pas comme un substitut au commerce ou au minage pour ton revenu principal. Si tu cherches un chiffre en Cr/h fiable, il n'existe pas encore dans les sources disponibles pour cette boucle."}
+      ]
+    },
+    {
+      "id": "pieges-faq",
+      "number": 10,
+      "title": "Pièges à éviter et FAQ",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Deux pièges reviennent le plus souvent chez qui débute cette activité — tous deux évitables une fois identifiés.**"},
+        {"type": "heading", "text": "FAQ", "level": 3},
+        {"type": "table", "caption": "Questions fréquentes", "headers": ["Question", "Réponse"], "rows": [
+          [{"text": "Puis-je m'arrimer à un Bulk Cruiser ou une installation ?", "style": "strong"}, {"text": "Jamais : ni l'un ni l'autre ne dispose de pad. Seuls Wells-class Carrier, Detention Centre et Rescue Vessel s'accostent, et ce sont des cibles amicales hors périmètre."}],
+          [{"text": "Le Recon Limpet peut-il rater ?", "style": "strong"}, {"text": "Les sources consultées ne documentent pas de mécanique d'échec en cours de piratage une fois le limpet accroché ; le risque se situe avant (perdre l'accrochage, être repéré), pas pendant le décompte."}],
+          [{"text": "Ai-je besoin d'un vaisseau de combat ?", "style": "strong"}, {"text": "Non : un vaisseau léger et rapide, capable de sortir vite du rayon de mass lock en cas de réponse de sécurité, convient mieux qu'un vaisseau lourd."}],
+          [{"text": "Puis-je viser plusieurs Hackable Data Transmitter à la fois ?", "style": "strong"}, {"text": "Seulement avec plusieurs Recon Limpet Controllers montés en parallèle (section 5) : un seul module ne pirate jamais qu'un point à la fois."}],
+          [{"text": "Le Silent Running suffit-il à rester impuni ?", "style": "strong"}, {"text": "Non : il retarde l'amende et l'identification, il ne supprime pas le rapport de crime (section 8)."}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Piège n°1 : confondre Comms Array et soute", "text": "Un Hackable Comms Array se pirate au Recon Limpet, une Cargo Bay se force au Hatch Breaker Limpet : ce sont deux modules et deux procédures différentes (section 5). Monter uniquement l'un des deux te ferme la moitié des cibles possibles."},
+        {"type": "callout", "tone": "warning", "title": "Piège n°2 : fuir par le mauvais type de saut", "text": "Si une réponse de sécurité ou une tourelle t'oblige à fuir, ne charge jamais de low wake tant que tu es mass locké par la cible : la procédure complète (mass lock, high wake) est détaillée dans survivre-au-pvp-sans-combattre.json, section évasion — ne l'improvise pas sur le moment."},
+        {"type": "verdict", "title": "Verdict", "text": "Ces deux pièges expliquent la quasi-totalité des mauvaises surprises rapportées sur cette activité : le mauvais module pour le mauvais objectif, et une fuite mal négociée. Élimine-les et le reste de la procédure (section 5) est mécanique."}
+      ]
+    },
+    {
+      "id": "retenir",
+      "number": 11,
+      "title": "Ce qu'il faut retenir, et les sources",
+      "blocks": [
+        {"type": "steps", "items": [
+          {"text": "**Équipe un Recon Limpet Controller**, même en petite classe.", "detail": "C'est le seul module strictement indispensable (section 2)."},
+          {"text": "**Choisis ta cible** : une installation détectée à 1 000 Ls pour débuter, un Bulk Cruiser une fois la procédure maîtrisée (sections 3-4).", "detail": "L'installation ne demande aucun effort de repérage."},
+          {"text": "**Suis les quatre étapes** : Data Link Scanner, scan du sous-objet, Recon Limpet, récupération adaptée (section 5).", "detail": "Toujours dans cet ordre, jamais de combat."},
+          {"text": "**Engage le Silent Running avant chaque accrochage.**", "detail": "Ça retarde l'amende et l'identification, sans supprimer le rapport de crime (section 8)."},
+          {"text": "**Ne compte pas dessus pour un revenu régulier.**", "detail": "Aucune source ne chiffre de Cr/h fiable pour cette boucle (section 9) : vise les matériaux encodés et la curiosité, pas le profit."}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le réflexe à automatiser", "text": "Avant même de lancer un limpet, vérifie que le Silent Running est actif. C'est le seul geste qui protège toute la fenêtre où tu es le plus exposé : immobile, à courte portée, en train de scanner."},
+        {"type": "divider"},
+        {"type": "paragraph", "text": "**Fiabilité.** Ce guide s'appuie sur le corpus de référence interne (08-combat-spatial.md, section « Megaships et installations spatiales : piratage à distance »), lui-même sourcé sur le wiki communautaire Elite Dangerous (pages Megaship, Bulk Cruiser, Installation, Recon/Hatch Breaker/Manifest Scanner, Hackable Data Transmitter, Hackable Comms Array) et sur Canonn Research Group, article « Non-Dockable Megaships. An Introduction » (22 mai 2022). Le chiffre global de classes recensées par Canonn (2022) est un ordre de grandeur historique, pas un inventaire actuel ; l'article Canonn sur les installations date de 2017, antérieur à l'ajout du piratage par limpet (patch 3.1, 2018), ce qui explique l'absence documentée d'une table butin par type d'installation."},
+        {"type": "paragraph", "text": "**Ce que ce guide ne couvre pas.** La distinction pirate/ganker, les techniques d'évasion détaillées (mass lock, low/high wake, Frame Shift Wake Scanner) et les groupes privés anti-PvP sont couverts dans survivre-au-pvp-sans-combattre.json. Les Material Traders et l'ingénierie FSD complète sont couverts dans guide-ingenierie-fsd-explorateur.json. Le combat spatial, les armes et le rang de combat n'ont pas leur place ici par construction : cette activité n'en requiert aucun."}
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — 08-combat-spatial.md",
+    "wiki Elite Dangerous (Fandom) — Megaship, Bulk Cruiser, Installation, Recon/Hatch Breaker/Manifest Scanner, Hackable Data Transmitter, Hackable Comms Array",
+    "Canonn Research Group — « Non-Dockable Megaships. An Introduction » (22 mai 2022)",
+    "EDCD/coriolis-data"
+  ]
+}

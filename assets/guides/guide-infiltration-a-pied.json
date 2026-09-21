@@ -1,0 +1,228 @@
+{
+  "id": "guide-infiltration-a-pied",
+  "title": "Voler, saboter, s'infiltrer à pied",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Zéro Ground CZ, zéro assaut frontal : missions de settlement en pure discrétion — piratage, vol de données, sabotage — comment lire la suspicion progressive, quels mods de discrétion poser en premier, et pourquoi la portée des armes silencieuses a changé la donne le 28 avril 2026.",
+  "byline": "PC · Live · Combat à pied, objectif infiltration (pas assaut) · Aucun rang requis pour démarrer",
+  "edition": "2026-09",
+  "topics": ["infiltration", "furtivite", "combat-a-pied", "missions-covert", "detection", "engineers-a-pied", "maverick"],
+  "estimatedReadMinutes": 16,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {"type": "list", "ordered": true, "items": [
+          "Ton profil : infiltrateur pur, jamais le combat engagé",
+          "Choisir sa combinaison : la Maverick, pas la Dominator",
+          "La mécanique de détection : suspicion progressive, pas un interrupteur",
+          "Contre-mesures de discrétion : mods, posture et le tournant du 28 avril 2026",
+          "Missions covert : assassinat, vol de données, vol de marchandises, sabotage",
+          "Neutraliser sans un bruit : arme silencieuse et mains nues",
+          "Le settlement Anarchy et l'autorisation de sécurité niveau 3",
+          "Check-list avant l'infiltration, et ce qu'il faut retenir"
+        ]},
+        {"type": "paragraph", "emphasis": "intro", "text": "**Tu ne descends jamais avec l'intention de tirer.** Ce manuel couvre les missions de settlement jouées en pure discrétion — piratage de terminal, vol de données, vol de marchandises, sabotage — où le seul objectif est de ressortir sans qu'aucune alarme n'ait sonné. Pas de Ground CZ, pas d'assaut frontal : si une arme parle, c'est déjà un échec de méthode."},
+        {"type": "paragraph", "text": "Ce guide part du principe que tu sais déjà accoster et piloter jusqu'à un settlement — voir premiers-controles-et-entrainement.json pour ces bases. Il se concentre sur l'angle STEALTH, exactement à l'opposé de guide-mercenaire-a-pied.json (le manuel d'assaut de ce corpus) : même équipement de base (combinaisons, armes, treize Engineers à pied), priorités radicalement différentes. Les coûts chiffrés de la montée en grade d'une combinaison et la modification Added Melee Damage sont déjà détaillés là-bas — ce guide n'y revient pas, il y renvoie."},
+        {"type": "callout", "tone": "info", "title": "Comment lire les chiffres de ce guide", "text": "**OFF** = confirmé par un billet officiel Frontier. **COM** = instantané communautaire (wiki, Inara, edfieldmanual.com) capturé le 9-13 septembre 2026, à revérifier en jeu — Frontier peut rééquilibrer ces montants. **EST** = calcul ou estimation de ce guide à partir de chiffres COM, explicitement signalé comme tel plutôt que présenté comme une donnée relevée."},
+        {"type": "callout", "tone": "warning", "title": "Ce que ce guide ne couvre pas", "text": "La table chiffrée de la montée en grade d'une combinaison (Grade 1 → 5) et la modification Added Melee Damage sont déjà détaillées dans guide-mercenaire-a-pied.json — ce guide ne fait qu'y renvoyer, en signalant le seul matériau de blindage qui change pour la Maverick. La distinction pirate/ganker en PvP et la procédure d'évasion en vaisseau vivent dans survivre-au-pvp-sans-combattre.json ; le déblocage de Farseer et le blueprint FSD Increased Range dans guide-ingenierie-fsd-explorateur.json."}
+      ]
+    },
+    {
+      "id": "profil",
+      "number": 1,
+      "title": "Ton profil : infiltrateur pur, jamais le combat engagé",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Chaque recommandation de ce guide — combinaison, arme, ordre des Engineers — découle d'un seul principe : rester invisible vaut mieux que gagner un échange de tirs.** Poser une modification de dégâts avant une modification de discrétion, c'est engager des matériaux irréversibles sur un style de jeu qui n'est pas le tien."},
+        {"type": "table", "caption": "Objectif infiltration vs objectif combat : deux builds qui ne se recouvrent pas", "headers": ["Critère", "Objectif infiltration (ce guide)", "Objectif combat (hors périmètre)"], "rows": [
+          [{"text": "Combinaison", "style": "strong"}, {"text": "Maverick — mobilité, sac à dos, discrétion supérieure", "style": "win"}, {"text": "Dominator — deux armes principales, bouclier renforcé (voir guide-mercenaire-a-pied.json)"}],
+          [{"text": "Arme longue", "style": "strong"}, {"text": "Pistolet/fusil silencieux (Karma P15 Infiltrator), arme longue en secours seulement", "style": "win"}, {"text": "Fusil d'assaut ou plasma polyvalent, cadence élevée"}],
+          [{"text": "Grenade", "style": "strong"}, {"text": "Non létale ou perturbatrice ciblée, jamais de fragmentation en zone civile", "style": "win"}, {"text": "Fragmentation ou Shield Disruptor"}],
+          [{"text": "Priorité d'ingénierie", "style": "strong"}, {"text": "Quieter Footsteps, Audio Masking, Improved Jump Assist", "style": "win"}, {"text": "Damage Resistance, Faster Shield Regen, Headshot Damage"}],
+          [{"text": "Premier Engineer visé", "style": "strong"}, {"text": "Domino Green → Kit Fowler → Yarden Bond (section 4)", "style": "win"}, {"text": "Hero Ferrari puis Uma Laszlo"}],
+          [{"text": "Terrain de jeu", "style": "strong"}, {"text": "Vol de données, sabotage, assassinat « covert »", "style": "win"}, {"text": "Ground CZ, assaut de settlement"}]
+        ]},
+        {"type": "paragraph", "text": "Le tableau de mission d'un settlement propose huit familles d'opérations au sol ; quatre d'entre elles se prêtent nativement à une approche sans jamais engager le combat, à condition de choisir la bonne variante et de préparer sa reconnaissance."},
+        {"type": "list", "ordered": false, "items": [
+          "**Assassinat, variante « covert »** — éliminer une cible nommée sans jamais être repéré : la contrainte de discrétion est ici la mission elle-même, pas une option.",
+          "**Vol de données (hacking)** — pirater un terminal pour en extraire des données ; discrétion optionnelle selon la mission, mais toujours plus rapide sans déclencher d'alerte.",
+          "**Vol de marchandises** — dérober un objet physique en zone souvent surveillée par caméras ; l'approche furtive et la connaissance du bâtiment priment sur la vitesse.",
+          "**Sabotage** — endommager ou désactiver un équipement (générateur, communications) ; déclenche souvent une alerte locale immédiate, donc un plan de fuite préparé à l'avance est non négociable."
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le Dominator n'a rien à faire ici", "text": "Si tu veux un guide qui te fait porter une Dominator et vider des Ground CZ, c'est guide-mercenaire-a-pied.json qu'il te faut, pas celui-ci. Les deux styles partagent le même équipement de base mais divergent sur tout le reste : ce guide ne reviendra plus sur cette distinction."},
+        {"type": "verdict", "title": "Verdict", "text": "Ce guide est écrit pour un seul profil : celui qui entre, agit et ressort sans qu'aucun PNJ n'ait jamais su qu'il était là. Toutes les recommandations qui suivent partent de ce postulat."}
+      ]
+    },
+    {
+      "id": "suit",
+      "number": 2,
+      "title": "Choisir sa combinaison : la Maverick, pas la Dominator",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Sur les trois combinaisons spécialisées, une seule combine bonne capacité de sac à dos et discrétion supérieure documentée par la communauté : la Maverick.** C'est le point de départ non négociable d'un profil infiltration."},
+        {"type": "table", "caption": "Les trois combinaisons spécialisées, lues pour un objectif infiltration", "headers": ["Combinaison", "Rôle", "Pour l'infiltration", "Contre l'infiltration"], "rows": [
+          [{"text": "Maverick", "style": "strong"}, {"text": "Polyvalente / infiltration"}, {"text": "Grande capacité de sac à dos, discrétion supérieure, Arc Cutter intégré pour un accès forcé silencieux", "style": "win"}, {"text": "Pas de bonus de bouclier ni d'arme principale supplémentaire"}],
+          [{"text": "Artemis", "style": "strong"}, {"text": "Exobiologie / reconnaissance"}, {"text": "Bonnes réserves d'oxygène pour une reconnaissance prolongée à distance"}, {"text": "Pensée pour le scan, pas pour le portage de matériel volé ; Genetic Sampler intégré inutile ici"}],
+          [{"text": "Dominator", "style": "strong"}, {"text": "Combat lourd"}, {"text": "Aucun — c'est la suit d'assaut", "style": "lose"}, {"text": "Deux armes principales et bouclier renforcé qui ne servent à rien si tu ne dégaines jamais (voir guide-mercenaire-a-pied.json)", "style": "lose"}]
+        ]},
+        {"type": "paragraph", "text": "Les statistiques exactes de bouclier, de points de vie et de capacité de sac à dos par combinaison ne sont chiffrées par aucune source locale de ce corpus (voir 07-equipement-a-pied.md) : reste sur les rôles relatifs plutôt que d'attendre un chiffre qui n'existe pas. **La table chiffrée de la montée en grade (Grade 1 → 5, 14 850 000 Cr, cinq composants) est déjà publiée dans guide-mercenaire-a-pied.json** — elle s'applique à l'identique à la Maverick, au seul matériau de blindage près : **Carbon Fibre Plating** remplace le Titanium Plating de la Dominator. Son tarif de comptoir chez le barman n'est relevé par aucune source consultée ; c'est un Asset comme l'Aerogel et le Graphene, donc a priori échangeable, mais vérifie le chiffre en jeu avant d'y bâtir une session de troc."},
+        {"type": "list", "ordered": false, "items": [
+          "**Maverick Infiltration Suit** — Night Vision, Increased Sprint Duration, Improved Jump Assist, Extra Backpack Capacity : jugée par la communauté comme la meilleure configuration pour la furtivité.",
+          "**Maverick General Purpose** — Increased Sprint Duration, Extra Backpack Capacity, Improved Battery Capacity, Increased Air Reserves : un profil généraliste si tu alternes infiltration et reconnaissance longue."
+        ]},
+        {"type": "callout", "tone": "warning", "title": "L'ingénierie posée ne se retire jamais", "text": "Chaque modification appliquée chez un Engineer à pied est **irréversible** : elle ne peut ni être retirée ni remplacée. Planifie ton build de discrétion (section 4) avant d'engager le moindre matériau — surtout que Quieter Footsteps et Audio Masking coûtent chacune environ 1 000 000 Cr."},
+        {"type": "verdict", "title": "Verdict", "text": "Prends la Maverick. Discrétion et capacité de portage — pour ramener le butin volé sans avoir à faire des allers-retours — ne sont égalées par aucune autre combinaison pour ce profil, et c'est elle que toute la suite de ce guide suppose que tu portes."}
+      ]
+    },
+    {
+      "id": "detection",
+      "number": 3,
+      "title": "La mécanique de détection : suspicion progressive, pas un interrupteur",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**La détection n'est pas un piège binaire qui te repère ou t'ignore : c'est une jauge de suspicion qui monte et qui peut redescendre — comprendre ça change toute ta façon de bouger dans un settlement.**"},
+        {"type": "heading", "text": "Ce qui déclenche la détection", "level": 3},
+        {"type": "list", "ordered": false, "items": [
+          "Le **champ de vision** des gardes et des caméras/tourelles automatiques.",
+          "Le **bruit produit** : courir est nettement plus détectable que marcher accroupi.",
+          "**Dégainer une arme** dans une zone civile ou surveillée — ça déclenche la suspicion même sans tirer un seul coup.",
+          "Être repéré en **zone interdite**, forcer une **porte verrouillée**, ou pirater un **terminal sous observation**."
+        ]},
+        {"type": "callout", "tone": "info", "title": "Escalade, pas interrupteur", "text": "Le niveau de suspicion monte à mesure que tu t'exposes, et peut **redescendre si tu restes hors de vue** suffisamment longtemps — ou déclencher une **alerte complète** si tu continues à t'exposer. Sortir de la ligne de vue d'un garde n'est donc jamais du temps perdu : c'est la seule façon de faire retomber une suspicion déjà montée."},
+        {"type": "table", "caption": "Ce que déclenche une alerte complète — et pourquoi ça complique l'extraction", "headers": ["Conséquence", "Effet concret"], "rows": [
+          [{"text": "Confinement", "style": "strong"}, {"text": "Verrouillage des portes en mode confinement"}],
+          [{"text": "Renforts", "style": "strong"}, {"text": "Appel de gardes armés supplémentaires"}],
+          [{"text": "Défenses", "style": "strong"}, {"text": "Activation des tourelles"}],
+          [{"text": "Statut recherché", "style": "strong"}, {"text": "Attribution locale du statut recherché — risque de scan au décollage si ton vaisseau reste dans la zone de sécurité du settlement", "style": "lose"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Le piège du téléchargement violet", "text": "Les téléchargements de données interdits sont **signalés en violet** et déclenchent l'alarme d'eux-mêmes, souvent au pire moment d'une mission de vol de données. Vérifie la couleur de l'indicateur avant de valider un piratage, pas après."},
+        {"type": "verdict", "title": "Verdict", "text": "Ta meilleure arme contre la détection n'est ni une modification ni un objet : c'est le réflexe de sortir de vue dès que la suspicion commence à monter, plutôt que de parier sur la chance jusqu'à l'alerte complète."}
+      ]
+    },
+    {
+      "id": "contre-mesures",
+      "number": 4,
+      "title": "Contre-mesures de discrétion : mods, posture, et le tournant du 28 avril 2026",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Deux modifications, un seul Engineer, environ 1 000 000 Cr chacune — et un changement d'équilibrage du 28 avril 2026 qui a rendu l'élimination silencieuse à distance moyenne enfin viable.**"},
+        {"type": "keyValue", "items": [
+          {"label": "Quieter Footsteps (suit)", "value": "−50 % de portée audible des pas — Yarden Bond (Bayan), ≈1 000 000 Cr", "reliability": "community"},
+          {"label": "Audio Masking (arme)", "value": "Réduit le bruit en environnement non pressurisé, essentiel en extérieur de settlement — Yarden Bond (Bayan), ≈1 000 000 Cr", "reliability": "community"}
+        ]},
+        {"type": "callout", "tone": "info", "title": "Un seul Engineer pour les deux mods clés", "text": "Yarden Bond est l'**unique** source de Quieter Footsteps et d'Audio Masking, en 3ᵉ position de la Chaîne 3 (Core) : Domino Green → Kit Fowler → Yarden Bond. C'est le même Engineer que guide-mercenaire-a-pied.json classe explicitement « hors périmètre » pour un profil combat — logique, puisque ses deux effets signatures sont la priorité n°1 de ce guide-ci, pas du sien."},
+        {"type": "table", "caption": "La portée d'une arme silencieuse, avant et après la mise à jour Lynx Highliner", "headers": ["Période", "Portée", "Source"], "rows": [
+          [{"text": "Jusqu'au 28 avril 2026", "style": "strong"}, {"text": "40 mètres", "style": "lose"}, {"text": "OFF — condamnait un build furtif à l'approche au corps-à-corps"}],
+          [{"text": "Depuis le 28 avril 2026", "style": "strong"}, {"text": "128 mètres (×3,2)", "style": "win"}, {"text": "OFF — billet « Lynx Highliner Update Notes », 13:11 UTC, pour aligner les armes silencieuses sur les autres, qui restent toutefois supérieures en portée"}]
+        ]},
+        {"type": "paragraph", "text": "Un build d'infiltration pensé avant cette date part d'une hypothèse de portée périmée. La même mise à jour a corrigé les sons de tir silencieux du Karma AR-50 et aligné les modes suppressed/audio-masked du Manticore Executioner sur ceux du Karma AR-50 et du P-15 — Noise Suppressor et Audio Masking se comportent donc désormais de façon plus homogène d'une arme à l'autre."},
+        {"type": "list", "ordered": false, "items": [
+          "**Posture accroupie ou rampante** plutôt que debout : elle réduit directement la vitesse de détection, sans dépendre d'aucune modification.",
+          "**Connaissance du cycle des rondes et des angles morts des caméras** — reste, de l'aveu même du corpus, l'outil le plus fiable pour éviter toute alerte, quel que soit ton niveau d'ingénierie.",
+          "**Profile Analyser** pour repérer gardes, civils et points d'intérêt à distance avant de t'engager, plutôt que de découvrir un garde en tournant un coin."
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "Pose Quieter Footsteps et Audio Masking dès que tu peux te le permettre — environ 2 000 000 Cr pour les deux — et ne construis plus ton build silencieux sur l'ancienne portée de 40 mètres : depuis avril 2026, 128 mètres change concrètement ce qu'une élimination silencieuse permet."}
+      ]
+    },
+    {
+      "id": "missions-covert",
+      "number": 5,
+      "title": "Missions covert : assassinat, vol de données, vol de marchandises, sabotage",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Les quatre familles de mission qui tolèrent une approche zéro-combat partagent la même logique : repérer avant d'agir, agir vite, et avoir déjà prévu comment ressortir.**"},
+        {"type": "table", "caption": "Les quatre familles de mission compatibles avec une approche sans combat", "headers": ["Type de mission", "Objectif", "Contrainte fréquente", "Approche"], "rows": [
+          [{"text": "Assassinat (covert)", "style": "strong"}, {"text": "Éliminer une cible nommée retranchée"}, {"text": "Ne jamais être repéré — c'est la mission elle-même"}, {"text": "Infiltration, arme silencieuse ou combinaison discrète"}],
+          [{"text": "Vol de données", "style": "strong"}, {"text": "Pirater un terminal pour en extraire des données"}, {"text": "Discrétion optionnelle selon la mission"}, {"text": "Outil de piratage de bon grade, timing des rondes"}],
+          [{"text": "Vol de marchandises", "style": "strong"}, {"text": "Dérober un objet physique en zone restreinte"}, {"text": "Zone souvent surveillée par caméras"}, {"text": "Approche furtive, connaissance du layout du bâtiment"}],
+          [{"text": "Sabotage", "style": "strong"}, {"text": "Endommager ou désactiver un équipement"}, {"text": "Déclenche souvent une alerte locale immédiate"}, {"text": "Plan de fuite préparé avant l'action"}]
+        ]},
+        {"type": "steps", "items": [
+          {"text": "**Reconnaissance à distance** au Profile Analyser.", "detail": "Repère gardes, civils et objectif avant même d'entrer dans le périmètre de détection."},
+          {"text": "**Atterrissage hors du périmètre**, approche à pied ou en SRV.", "detail": "Un atterrissage direct sur la plateforme t'expose immédiatement aux systèmes de sécurité du settlement."},
+          {"text": "**Cartographie mentale des rondes et angles morts de caméras.**", "detail": "C'est l'information qui prime sur n'importe quelle modification d'ingénierie."},
+          {"text": "**Exécution** : piratage, prélèvement ou sabotage, en surveillant l'indicateur de suspicion.", "detail": "Sors de vue dès qu'il commence à monter plutôt que de terminer l'action à tout prix."},
+          {"text": "**Exfiltration par le chemin déjà repéré** à l'aller.", "detail": "Ne découvre pas ta route de sortie au moment où l'alarme sonne."}
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Sabotage : l'alerte fait partie du plan", "text": "Contrairement au vol de données, le sabotage déclenche presque systématiquement une alerte locale immédiate au moment de l'action elle-même. Ce n'est pas un échec de discrétion : c'est la nature de la mission. Prépare ta sortie **avant** de désactiver quoi que ce soit, pas après."},
+        {"type": "callout", "tone": "tip", "title": "Retourner l'alarme contre le settlement", "text": "Une alarme déclenchée volontairement ailleurs sert de **diversion** : elle vide un bâtiment de ses gardes, qui se déplacent vers la source de l'alerte. Combine ça avec la règle selon laquelle **les gardes n'entrent pas dans un bâtiment dont ils n'ont pas le niveau d'accès** pour agir tranquillement dans celui qu'ils viennent de quitter."},
+        {"type": "verdict", "title": "Verdict", "text": "Sur ces quatre familles, la reconnaissance préalable rapporte plus que n'importe quelle modification d'ingénierie : un joueur stock qui connaît les rondes ressort plus souvent qu'un joueur pleinement engineeré qui improvise."}
+      ]
+    },
+    {
+      "id": "arme-silencieuse",
+      "number": 6,
+      "title": "Neutraliser sans un bruit : arme silencieuse et mains nues",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Une seule arme nommée porte la discrétion dans son nom de build : le Karma P15 Infiltrator — le reste de ton arsenal ne devrait servir qu'en solution de repli.**"},
+        {"type": "table", "caption": "Le Karma P15 Infiltrator, seul build silencieux nommé par la communauté", "headers": ["Arme de base", "Fabricant", "Usage", "Pourquoi"], "rows": [
+          [{"text": "Pistolet cinétique", "style": "strong"}, {"text": "Kinematic Armaments"}, {"text": "Infiltration silencieuse"}, {"text": "Masquage audio + suppresseur : neutralise une cible sans déclencher l'alarme ; sert aussi de solution de repli pour un vol de marchandises ou un sabotage repéré"}]
+        ]},
+        {"type": "callout", "tone": "info", "title": "Le corps-à-corps reste l'option zéro-bruit ultime", "text": "Aucune arme de mêlée dédiée n'existe : le corps-à-corps passe par l'attaque à mains nues, disponible en permanence quel que soit ton loadout — la seule neutralisation qui ne produit strictement aucun son de tir. La modification **Added Melee Damage** (Jude Navarro / Kit Fowler, 500 000 Cr) qui la rend réellement efficace est déjà chiffrée dans guide-mercenaire-a-pied.json ; ce guide-ci ne fait que rappeler qu'elle sert aussi ton profil, en dernier recours silencieux plutôt qu'en solution offensive de premier plan."},
+        {"type": "list", "ordered": false, "items": [
+          "**Priorité d'ingénierie côté arme** : Audio Masking et Noise Suppressor avant toute modification de dégâts — un tir entendu ruine une mission « sans alarme » même s'il touche.",
+          "**La recette varie par fabricant** : les matériaux d'Audio Masking/Noise Suppressor pour un Karma diffèrent de ceux d'un Manticore ou d'un Takada. Prépare ta collecte pour une arme précise, pas pour un effet générique — détail complet dans 07-equipement-a-pied.md."
+        ]},
+        {"type": "verdict", "title": "Verdict", "text": "Emporte le Karma P15 Infiltrator comme arme principale et laisse tout le reste au fond du sac : dans ce style de jeu, une arme qu'on n'a pas besoin de sortir est déjà une arme qui a fait son travail."}
+      ]
+    },
+    {
+      "id": "anarchy",
+      "number": 7,
+      "title": "Le settlement Anarchy et l'autorisation de sécurité niveau 3",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le choix du settlement compte autant que ton build : un site en gouvernement Anarchy neutralise à lui seul une bonne partie du risque, avant même que tu n'engages la moindre modification de discrétion.**"},
+        {"type": "callout", "tone": "tip", "title": "Zéro amende en territoire Anarchy", "text": "Les settlements contrôlés par une faction **Anarchy** n'infligent **aucune amende** de pillage — c'est le terrain à privilégier pour toute mission où tu comptes prélever ou piller au passage, indépendamment de la mission principale."},
+        {"type": "keyValue", "items": [
+          {"label": "Niveau d'autorisation de sécurité", "value": "Obtenu sur place depuis un terminal du Command Centre du settlement", "reliability": "community"},
+          {"label": "Niveau 2", "value": "Suffit à éteindre les tourelles", "reliability": "community"},
+          {"label": "Niveau 3", "value": "Neutralise le risque de sécurité pour l'exécution de toute une mission — le settlement est alors considéré comme « désactivé »", "reliability": "community"}
+        ]},
+        {"type": "list", "ordered": false, "items": [
+          "**Rétablir le courant en premier** (bâtiment PWR) empêche l'apparition de vagues de pillards (« scavengers ») qui viendraient compliquer une infiltration déjà en cours.",
+          "**Les gardes n'entrent pas dans un bâtiment dont ils n'ont pas le niveau d'accès** — un repli exploitable une fois une alerte partiellement déclenchée (voir section 5).",
+          "Une mission de **réactivation/restauration de settlement** fournit directement un niveau d'autorisation 3 le temps de la mission — un raccourci utile si ton objectif de la sortie est ailleurs dans le même site."
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Une mécanique documentée côté farming, pas côté infiltration dédiée", "text": "Ces faits sur l'Anarchy et les niveaux d'autorisation viennent du chantier de farming de matériaux (26-ingenierie-a-pied-avancee.md), pas d'un test spécifiquement consacré aux missions covert — mais le système de sécurité qu'ils décrivent est le même quelle que soit la raison de ta présence sur le site."},
+        {"type": "verdict", "title": "Verdict", "text": "Avant de choisir ta cible, vérifie deux choses : le gouvernement du settlement (Anarchy si tu comptes piller au passage) et si une autorisation de sécurité niveau 2 ou 3 est accessible depuis son Command Centre. Ces deux vérifications réduisent le risque de toute la sortie plus qu'aucune modification d'ingénierie."}
+      ]
+    },
+    {
+      "id": "retenir",
+      "number": 8,
+      "title": "Check-list avant l'infiltration, et ce qu'il faut retenir",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Avant de descendre pour une mission « sans alarme », une vérification de deux minutes évite la plupart des sorties compromises.**"},
+        {"type": "list", "ordered": false, "items": [
+          "Combinaison Maverick, avec Night Vision et Improved Jump Assist posées si le budget le permet (section 2).",
+          "Quieter Footsteps et Audio Masking posées ou, à défaut, budgétées en priorité (section 4).",
+          "Arme silencieuse (Karma P15 Infiltrator) chargée, arme longue rangée en secours seulement (section 6).",
+          "Profile Analyser équipé pour la reconnaissance à distance avant d'entrer dans le périmètre.",
+          "Gouvernement du settlement vérifié — Anarchy en priorité si du pillage est prévu en plus de la mission (section 7).",
+          "Niveau d'autorisation de sécurité du Command Centre vérifié ou obtenu (niveau 2 minimum pour désactiver les tourelles).",
+          "Itinéraire d'exfiltration repéré à l'aller, jamais improvisé à l'alerte.",
+          "Casier du vaisseau vidé de tes matériaux/données rares avant la sortie : le sac à dos est perdu à la mort, pas le casier."
+        ]},
+        {"type": "steps", "items": [
+          {"text": "**Équipe-toi** : Maverick + Karma P15 Infiltrator + Profile Analyser (sections 2 et 6).", "detail": ""},
+          {"text": "**Vérifie le settlement** : gouvernement Anarchy, niveau d'autorisation disponible (section 7).", "detail": ""},
+          {"text": "**Reconnais avant d'entrer** : rondes, caméras, points d'accès (sections 3 et 5).", "detail": ""},
+          {"text": "**Agis vite, sors de vue au premier signe de suspicion** (section 3).", "detail": ""},
+          {"text": "**Exfiltre par le chemin déjà repéré**, jamais par un chemin découvert en urgence.", "detail": ""}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le réflexe à automatiser", "text": "Dès que l'indicateur de suspicion commence à monter, ton premier réflexe doit être de sortir de la ligne de vue — pas de continuer l'action en espérant que ça redescende tout seul pendant que tu agis. C'est ce réflexe, plus que n'importe quelle modification d'ingénierie, qui fait la différence entre une mission « sans alarme » réussie et une CZ improvisée."},
+        {"type": "divider"},
+        {"type": "paragraph", "text": "**Fiabilité.** Ce guide s'appuie sur trois fichiers du corpus de référence interne (09-combat-a-pied.md, 13-operations.md, 07-equipement-a-pied.md) et sur 26-ingenierie-a-pied-avancee.md pour le volet Anarchy/autorisation de sécurité, eux-mêmes recoupés avec le billet officiel Frontier « Lynx Highliner Update Notes » (28 avril 2026, 13:11 UTC) pour la portée des armes silencieuses, et des instantanés communautaires (wiki Elite Dangerous, Inara, edfieldmanual.com) capturés entre le 9 et le 13 septembre 2026 pour les coûts d'ingénierie. Les montants en crédits des modifications de discrétion sont des instantanés communautaires, jamais confirmés par un billet Frontier — traite-les comme un ordre de grandeur, pas comme un tarif garanti."},
+        {"type": "paragraph", "text": "**Ce que ce guide ne couvre pas.** La table chiffrée de montée en grade d'une combinaison et la modification Added Melee Damage vivent dans guide-mercenaire-a-pied.json ; le déblocage complet de Farseer et le blueprint FSD Increased Range dans guide-ingenierie-fsd-explorateur.json ; la distinction pirate/ganker et la procédure d'évasion en vaisseau dans survivre-au-pvp-sans-combattre.json. Le tarif de comptoir du Carbon Fibre Plating, le grade exact des matériaux d'ingénierie à pied par palier, et le montant exact du rebuy à pied restent, à la date de rédaction, non chiffrés par les sources consultées."}
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — 09-combat-a-pied.md",
+    "Corpus interne — 13-operations.md",
+    "Corpus interne — 07-equipement-a-pied.md",
+    "Corpus interne — 26-ingenierie-a-pied-avancee.md",
+    "Billet officiel Frontier — Lynx Highliner Update Notes (28/04/2026)",
+    "Billet officiel Frontier — Kestrel Mk. II Update (24/02/2026)",
+    "wiki Elite Dangerous (Fandom)",
+    "Inara.cz",
+    "edfieldmanual.com"
+  ]
+}

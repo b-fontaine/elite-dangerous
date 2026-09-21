@@ -1,0 +1,520 @@
+{
+  "id": "guide-bgs-groupes",
+  "title": "Faire basculer une faction : le guide BGS pour groupes organisés",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Un protocole concret pour piloter une campagne BGS — pousser une faction vers l'Expansion ou provoquer le retrait d'une faction hostile — en mesurant, tick après tick avec BGS-Tally, si l'effort de ton groupe produit un résultat ou s'évapore dans le bruit.",
+  "byline": "Toutes plateformes · Live 4.4.0.x · Prérequis : un groupe organisé (escadron, communauté Discord) et le plugin BGS-Tally installé",
+  "edition": "2026-09",
+  "topics": ["bgs", "background simulation", "faction mineure", "influence", "tick", "expansion", "retreat", "bgs-tally", "pmf", "groupe organisé"],
+  "estimatedReadMinutes": 18,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Le terrain en accéléré : ce qu'un groupe BGS doit savoir avant d'agir",
+            "Choisir sa cible : faire basculer une expansion ou provoquer un retrait",
+            "Les leviers actionnables, classés par contrôlabilité",
+            "Le protocole de mesure en 7 étapes avec BGS-Tally",
+            "Exemple chiffré : faire passer une PMF de 25 % à 35 % en 10 jours de tick",
+            "Coordonner un groupe organisé sans gaspiller l'effort",
+            "BGS et le reste du jeu : Powerplay, Colonisation, Community Goals",
+            "Pièges fréquents et check-list de lancement"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Le BGS ne se pilote pas à l'instinct : il se mesure.** Ce guide s'adresse à un groupe organisé — escadron, communauté Discord, alliance inter-groupes — qui veut faire basculer une faction mineure vers l'Expansion, ou au contraire provoquer le retrait forcé d'une faction hostile, et qui veut savoir, chiffres à l'appui via BGS-Tally, si l'effort collectif produit un résultat ou s'évapore dans le bruit d'un système peuplé. Ce n'est pas un guide sur les mécaniques du minage, du commerce ou du combat — suppose-les déjà maîtrisées (voir « Devenir riche sans combat — le guide du débutant », « Miner sans combattre : du laser au minage de surface », « Commerçant professionnel : routes, rang et gros porteurs ») — mais sur la façon de rediriger cette activité vers un objectif BGS précis, et de vérifier qu'elle marche."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Fréquence de mise à jour du BGS", "value": "Un tick par cycle de 24 heures ; toute action après le tick du jour n'est comptabilisée qu'au tick suivant", "reliability": "official"},
+            {"label": "Seuil d'Expansion (non officiel)", "value": "Consensus communautaire autour de 35 % d'influence ou plus, précédé d'un état préparatoire Investment", "reliability": "community"},
+            {"label": "Seuil de Retreat (non officiel)", "value": "Consensus communautaire entre 2,5 % et 5 % d'influence, maintenu sur plusieurs ticks", "reliability": "community"},
+            {"label": "Paliers de récompense de mission ventilés par BGS-Tally", "value": "5 paliers distincts (➊ à ➎) ; poids relatif exact non publié", "reliability": "community"},
+            {"label": "Plafond d'influence par tick (« tick cap »)", "value": "Phénomène largement rapporté par la communauté ; aucune valeur numérique fiable confirmée à ce jour", "reliability": "estimate"}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Légende de fiabilité utilisée dans ce guide",
+          "text": "**[OFF]** mécanique confirmée par un comportement de jeu stable et documenté depuis l'introduction du BGS en 2015 (tick, somme d'influence à 100 %, faction contrôlante). **[COM]** seuil, pratique ou classement reconnu par la communauté spécialisée en BGS (BGS-Tally, forums, groupes dédiés), jamais publié officiellement par Frontier Developments. **[EST]** donnée absente ou non vérifiable dans les sources consultées pour ce guide, signalée comme telle plutôt qu'estimée sans le dire."
+        }
+      ]
+    },
+    {
+      "id": "terrain-en-accelere",
+      "number": 1,
+      "title": "Le terrain en accéléré : ce qu'un groupe BGS doit savoir avant d'agir",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "Avant de choisir une cible, un groupe doit maîtriser cinq faits qui conditionnent toute la suite de ce guide — pas des rappels encyclopédiques, mais les contraintes concrètes qui déterminent quand agir et ce qui est mesurable."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Le BGS tourne au tick, pas en continu** [OFF] : une mise à jour par cycle de 24 heures agrège toutes les actions des dernières 24 h ; ce que ton groupe fait après le tick du jour n'apparaît qu'au tick suivant — aucun ajustement fin en cours de journée n'est possible.",
+            "**L'influence est un jeu à somme nulle par système** [OFF] : la somme des influences de toutes les factions d'un même système vaut toujours 100 %. Faire progresser ta cible et affaiblir sa rivale sont donc souvent la même action vue sous deux angles.",
+            "**La faction contrôlante fixe l'allégeance, les taxes et l'accès au marché noir** [OFF] : c'est l'objectif final visible de la plupart des campagnes de groupe, même quand le levier immédiat n'est qu'une simple mission de livraison.",
+            "**Deux familles d'états coexistent** [OFF] : les états économiques/situationnels (Boom, Famine, Outbreak, Lockdown…) reflètent la conjoncture locale, les états de conflit (Expansion, Retreat, War, Civil War, Election) naissent d'un franchissement de seuil ou d'une proximité d'influence entre factions — ce guide se concentre sur ces derniers.",
+            "**Une PMF (Player Minor Faction) suit exactement les mêmes règles qu'une faction NPC** [OFF] : une fois créée pour un groupe, elle gagne ou perd de l'influence, entre en Expansion ou en Retreat, exactement comme n'importe quelle autre faction du système."
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Les cinq états de conflit du BGS — seuils non officiels [COM]",
+          "headers": ["État", "Déclencheur", "Résolution"],
+          "rows": [
+            [{"text": "Expansion", "style": "strong"}, {"text": "Franchissement d'un seuil haut d'influence — consensus communautaire autour de 35 % ou plus, précédé de l'état préparatoire Investment", "style": "normal"}, {"text": "Implantation dans un système voisin choisi selon des critères de proximité et de score partiellement empiriques", "style": "normal"}],
+            [{"text": "Retreat", "style": "strong"}, {"text": "Influence sous un seuil bas maintenue plusieurs ticks — consensus communautaire entre 2,5 % et 5 %", "style": "normal"}, {"text": "Retrait complet du système ; l'influence perdue se redistribue aux factions restantes", "style": "normal"}],
+            [{"text": "War", "style": "strong"}, {"text": "Deux factions à des niveaux d'influence très proches", "style": "normal"}, {"text": "Conflict Zones spatiales et au sol ; le camp qui en remporte le plus gagne en influence", "style": "normal"}],
+            [{"text": "Civil War", "style": "strong"}, {"text": "Équivalent d'une War entre deux factions de même allégeance/groupe", "style": "normal"}, {"text": "Même résolution par Conflict Zones", "style": "normal"}],
+            [{"text": "Election", "style": "strong"}, {"text": "Équivalent pacifique entre deux factions démocratiques aux influences proches", "style": "normal"}, {"text": "Résolue par l'activité de mission plutôt que par le combat", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "L'horaire du tick n'a jamais été publié",
+          "text": "Frontier Developments n'a jamais fixé ni communiqué l'heure exacte du tick, et elle a dérivé plusieurs fois au fil des années selon les rapports communautaires [COM]. Recoupe l'horaire observé avec un outil communautaire à jour (BGS-Tally ou équivalent) avant de caler une campagne au tick près, plutôt que de planifier une action fine sans confirmation récente."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Vérifie l'état courant de la faction visée dans le panneau de la station ou de la carte système.", "detail": "Une faction déjà en Investment est proche du seuil d'Expansion ; une faction déjà en Retreat est proche de disparaître sans effort supplémentaire."},
+            {"text": "Compte le nombre de factions présentes dans le système (3 à 10 en général).", "detail": "Un petit système à 3 factions bascule pour un volume d'activité qu'un hub très fréquenté absorbera presque sans effet visible sur le pourcentage."},
+            {"text": "Regarde si un autre groupe est déjà actif sur la même faction ou la même cible.", "detail": "Un effort non coordonné avec un autre groupe peut fausser ta mesure de ratio (section 4) dans un sens comme dans l'autre."}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Ce guide ne réexplique pas l'inventaire complet des états économiques",
+          "text": "Boom, Bust, Famine, Outbreak, Lockdown et les autres états situationnels sont visibles directement dans le panneau de la faction en jeu et influent sur les primes locales — ce guide ne les détaille pas un par un, il se concentre sur le pilotage d'une campagne de groupe vers un état de conflit précis (Expansion ou Retreat)."
+        }
+      ]
+    },
+    {
+      "id": "choisir-sa-cible",
+      "number": 2,
+      "title": "Choisir sa cible : faire basculer une expansion ou provoquer un retrait",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "Une campagne BGS de groupe vise presque toujours l'un de ces deux objectifs opposés — les mécaniques diffèrent, mais la mesure (section 4) reste la même dans les deux cas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Pousser une faction vers l'Expansion"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "L'objectif : faire franchir à ta cible le seuil haut d'influence — autour de 35 % ou plus selon le consensus communautaire [COM] — après un passage par l'état préparatoire **Investment**, qui signale que la faction en est proche.",
+            "Le système cible de l'expansion n'est pas choisi par ton groupe : il est sélectionné par le jeu parmi les systèmes voisins non contrôlés, selon des critères de proximité et de score qui restent partiellement empiriques et non documentés officiellement [EST].",
+            "Une expansion réussie installe la faction avec une influence de départ modeste dans le nouveau système : elle doit ensuite être développée comme n'importe quelle autre faction — la campagne ne s'arrête pas au jour de la bascule."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Le seuil de 35 % n'est pas une garantie",
+          "text": "C'est un ordre de grandeur communautaire non officiel [COM], pas une règle fixe : Frontier Developments n'a jamais publié la formule complète de calcul de l'influence ni la valeur exacte de ce seuil. Recoupe l'état affiché (Investment, puis Expansion) plutôt que de viser un pourcentage précis au tick près."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Provoquer le retrait (Retreat) d'une faction hostile"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Le principal outil pour faire disparaître une faction indésirable : **cesser tout soutien à son égard** — plus aucune mission acceptée en son nom, plus aucune vente dans ses stations.",
+            "Pour accélérer sa chute, cible-la activement : missions de sabotage ou d'assassinat contre elle, ou simplement concentration de l'effort du groupe sur ses rivales dans le même système (rappel : l'influence est à somme nulle, section 1).",
+            "L'influence doit rester sous le seuil bas — entre 2,5 % et 5 % selon le consensus communautaire [COM] — pendant **plusieurs ticks consécutifs** avant que le retrait ne soit acté ; le nombre exact de ticks nécessaires n'est pas documenté officiellement [EST].",
+            "Une faction qui perd sa dernière présence dans tous les systèmes où elle existait disparaît définitivement de la galaxie."
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Deux campagnes, deux logiques",
+          "headers": ["", "Pousser vers l'Expansion", "Provoquer un Retreat"],
+          "rows": [
+            [{"text": "Signal à surveiller", "style": "strong"}, {"text": "État Investment affiché sur la faction alliée", "style": "normal"}, {"text": "Influence de la faction hostile qui stagne ou baisse sous ~5 %", "style": "normal"}],
+            [{"text": "Levier principal", "style": "strong"}, {"text": "Missions et ventes concentrées en faveur de la cible", "style": "normal"}, {"text": "Cessation totale du soutien + missions de sabotage/assassinat contre la cible", "style": "normal"}],
+            [{"text": "Durée typique", "style": "strong"}, {"text": "Dépend du ratio mesuré (section 4) — l'exemple de la section 5 illustre un cas à 10 jours de tick", "style": "normal"}, {"text": "Plusieurs ticks consécutifs sous le seuil bas, durée exacte non documentée [EST]", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Les deux campagnes s'appuient sur le même moteur et la même contrainte de somme à 100 % : renforcer une faction alliée dans un système affaiblit mécaniquement ses rivales, y compris la faction hostile que tu cherches à faire reculer. Un groupe organisé combine souvent les deux logiques dans le même système plutôt que de les traiter séparément."
+        }
+      ]
+    },
+    {
+      "id": "leviers-actionnables",
+      "number": 3,
+      "title": "Les leviers actionnables, classés par contrôlabilité",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "Toute activité à effet économique, sécuritaire ou politique nourrit le BGS, mais pas au même poids ni avec le même degré de contrôle sur la faction ciblée. Voici les leviers classés par contrôlabilité — du plus direct au plus diffus."
+        },
+        {
+          "type": "table",
+          "caption": "Les paliers de récompense de mission ventilés par BGS-Tally (➊ à ➎) — poids relatif exact non publié [COM]",
+          "headers": ["Palier", "Repère de récompense", "Implication pratique"],
+          "rows": [
+            [{"text": "➊ – ➋", "style": "strong"}, {"text": "Missions courtes, récompense faible à modeste", "style": "normal"}, {"text": "Cycle de complétion rapide ⇒ volume élevé, chacune compte comme unité indépendante — pratique pour un ratio de mesure stable (section 4)", "style": "normal"}],
+            [{"text": "➌", "style": "strong"}, {"text": "Récompense moyenne", "style": "normal"}, {"text": "Palier intermédiaire, peu documenté isolément", "style": "normal"}],
+            [{"text": "➍ – ➎", "style": "strong"}, {"text": "Missions longues ou à forte récompense", "style": "normal"}, {"text": "Poids par mission plus élevé mais cycle de complétion plus long ⇒ effet horaire incertain sans mesure directe", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Commerce et ventes en marché** : vendre dans une station de la faction cible contribue à son influence, avec effet démultiplié en état Boom, ou en livrant des denrées pendant une Famine / des médicaments pendant un Outbreak.",
+            "**Combat, primes et Conflict Zones** : la chasse aux primes contribue modestement ; en état War/Civil War, remporter des Conflict Zones est le principal moyen de faire basculer l'issue du conflit.",
+            "**Exploration et exobiologie** : vendre les données à un comptoir universel rattaché à la faction cible (plutôt qu'à un comptoir neutre) contribue à son influence — un levier apprécié d'un groupe qui ne veut ni commercer ni combattre.",
+            "**Dons** : remettre des crédits à une faction via l'interface de station lui apporte directement de l'influence.",
+            "**Contrebande et sauvetage** : le trafic via un marché noir profite à sa faction propriétaire (généralement une Anarchie) ; la livraison d'objets de sauvetage profite à la faction destinataire."
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Efficacité comparée des leviers — classement qualitatif, aucun chiffre d'INF/heure universel n'est vérifiable [EST]",
+          "headers": ["Levier", "Avantage", "Limite"],
+          "rows": [
+            [{"text": "Missions courtes et répétables", "style": "strong"}, {"text": "Nombreuses complétions par heure", "style": "normal"}, {"text": "Poids par mission généralement plus faible (paliers bas)", "style": "normal"}],
+            [{"text": "Missions longues ou à forte récompense", "style": "strong"}, {"text": "Poids par mission plus élevé", "style": "normal"}, {"text": "Peu de complétions par heure, effet total incertain", "style": "normal"}],
+            [{"text": "Trade en Famine/Outbreak", "style": "strong"}, {"text": "Marges et primes très supérieures à la normale", "style": "normal"}, {"text": "Fenêtre temporaire, nécessite souvent un ravitaillement extérieur", "style": "normal"}],
+            [{"text": "Trade en Boom", "style": "strong"}, {"text": "Achat et vente parfois dans le même système", "style": "normal"}, {"text": "Effet de levier moins marqué que Famine/Outbreak", "style": "normal"}],
+            [{"text": "Conflict Zones", "style": "strong"}, {"text": "Seul levier capable de faire basculer directement un conflit", "style": "normal"}, {"text": "Ne s'applique qu'en présence d'un état de conflit actif", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Une mission peut soutenir et affaiblir en même temps",
+          "text": "Certaines missions (massacre, assassinat) visent explicitement une faction adverse et réduisent son influence à leur complétion. Un même passage en station permet donc souvent de soutenir ta cible et d'affaiblir sa rivale simultanément — particulièrement utile pour une campagne de Retreat menée en parallèle d'une Expansion dans le même système (section 2)."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Aucun classement chiffré d'INF/heure n'existe",
+          "text": "Le rapport de poids exact entre paliers de mission, comme le rendement en INF par heure de chaque levier, dépend de l'état économique en cours, de la distance et des prix du jour — une donnée trop volatile pour être publiée de façon fiable [EST]. Le seul chiffre qui vaille pour ta campagne est celui que tu mesures toi-même (section 4)."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Missions et ventes en marché restent les leviers les plus contrôlables pour cibler précisément une faction ; Conflict Zones et dons sont plus ponctuels ou plus lents à organiser en groupe. Combine plusieurs leviers plutôt que d'en isoler un seul, et mesure le résultat plutôt que de te fier à un classement générique."
+        }
+      ]
+    },
+    {
+      "id": "protocole-mesure",
+      "number": 4,
+      "title": "Le protocole de mesure en 7 étapes avec BGS-Tally",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "BGS-Tally est l'outil de référence de la communauté pour transformer les principes de la section précédente en pilotage chiffré. Le protocole ci-dessous se déroule en 7 étapes, réparties sur au moins trois jours de tick — impossible d'aller plus vite, puisque chaque mesure dépend d'un tick pour se révéler (section 1)."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Avant de lancer la campagne"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Note l'influence exacte de la faction ciblée, juste avant un tick.", "detail": "Panneau de la faction en jeu, ou un outil communautaire de suivi des systèmes — c'est ton point de départ fiable."},
+            {"text": "Active le suivi BGS-Tally pour le système et la faction concernés.", "detail": "Le plugin détecte automatiquement missions par palier, ventes par niveau de demande, marché noir, primes, Combat Bonds, Conflict Zones sol/espace, données cartographiques et sauvetage."}
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Pendant et après un tick"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Joue une journée de tick normale en laissant BGS-Tally agréger l'activité de chaque commandant du groupe.", "detail": "L'outil génère un rapport prêt à publier sur Discord."},
+            {"text": "Relève l'influence de la faction ciblée après le tick suivant.", "detail": "Calcule la variation en points de pourcentage par rapport au relevé de départ."}
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Calcul et itération"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Calcule le ratio local : variation d'influence (en points) ÷ volume d'activité produit.", "detail": "Ce ratio — missions complétées par palier, chiffre d'affaires de trade, primes, CZ gagnées — est l'étalonnage réel du système visé ; il remplace toute estimation générique trouvée en ligne."},
+            {"text": "Répète la mesure sur plusieurs ticks consécutifs avant de tirer une conclusion.", "detail": "Un seul tick peut être bruité par l'activité d'autres commandants non coordonnés, par un plafond de tick (section 6), ou par un changement d'état économique en cours de période."},
+            {"text": "Ajuste le volume quotidien à la hausse ou à la baisse selon l'écart entre le ratio mesuré et l'objectif du groupe, puis republie le rapport BGS-Tally à jour.", "detail": "Voir l'exemple méthodologique complet en section 5."}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Trois sources de bruit à connaître avant de conclure trop vite",
+          "text": "Un tick isolé peut être trompeur : l'activité d'autres commandants non coordonnés avec ton groupe (positive ou négative pour la cible), un éventuel plafond de rendement par tick dont la valeur exacte n'est pas confirmée [EST], ou un changement d'état économique en cours de période peuvent tous fausser un seul point de mesure. D'où l'étape 6 du protocole : plusieurs ticks, pas un seul."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Centraliser les rapports évite le gaspillage",
+          "text": "En publiant les rapports BGS-Tally individuels dans un canal Discord commun, le groupe évite qu'une faction reçoive un volume d'activité largement supérieur à ce qu'un éventuel plafond de tick peut convertir en influence réelle — au-delà de ce plafond, l'effort reste rentable en crédits mais devient du temps perdu pour l'objectif BGS."
+        },
+        {
+          "type": "table",
+          "caption": "Activités enregistrées automatiquement par BGS-Tally depuis le journal de jeu",
+          "headers": ["Catégorie", "Détail suivi"],
+          "rows": [
+            [{"text": "Missions", "style": "strong"}, {"text": "Ventilées par palier de récompense (➊ à ➎)", "style": "normal"}],
+            [{"text": "Trade", "style": "strong"}, {"text": "Achats/ventes par niveau de demande, y compris marché noir", "style": "normal"}],
+            [{"text": "Combat", "style": "strong"}, {"text": "Primes et Combat Bonds", "style": "normal"}],
+            [{"text": "Conflict Zones", "style": "strong"}, {"text": "Zones de conflit au sol et dans l'espace", "style": "normal"}],
+            [{"text": "Exploration", "style": "strong"}, {"text": "Données cartographiques vendues", "style": "normal"}],
+            [{"text": "Autre", "style": "strong"}, {"text": "Opérations de sauvetage", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Sans ce protocole, un groupe ne sait jamais s'il pousse réellement sa cible ou s'il finance une progression que le BGS aurait produite de toute façon. Le ratio mesuré localement, sur plusieurs ticks, est la seule donnée qui vaille pour planifier la suite d'une campagne — tout le reste (section 3, section 5) n'est qu'un point de départ à recalibrer."
+        }
+      ]
+    },
+    {
+      "id": "exemple-chiffre",
+      "number": 5,
+      "title": "Exemple chiffré : faire passer une PMF de 25 % à 35 % en 10 jours de tick",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "L'exemple suivant illustre la méthode de calcul à appliquer une fois le ratio local mesuré (étape 5 du protocole). Les chiffres utilisés sont des valeurs d'illustration choisies pour la démonstration, pas une donnée universelle vérifiée — remplace-les par ton propre ratio avant toute planification réelle."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ratio fictif, à ne jamais réutiliser tel quel",
+          "text": "Le ratio « 0,2 point d'influence pour 10 missions » utilisé ci-dessous provient d'un exemple méthodologique du corpus, pas d'une mesure garantie pour ton système. Le ratio réel varie selon le système, la faction, la période et l'état économique en cours [EST] — mesure-le toi-même avec le protocole de la section 4 avant de fixer un objectif de commandants ou de missions par jour."
+        },
+        {
+          "type": "table",
+          "caption": "Objectif : faire passer une PMF de 25 % à 35 % (seuil d'Expansion indicatif) en 10 jours de tick — exemple illustratif",
+          "headers": ["Donnée", "Valeur", "Origine"],
+          "rows": [
+            [{"text": "Gain total nécessaire", "style": "strong"}, {"text": "35 − 25 = 10 points d'influence", "style": "number"}, {"text": "Objectif fixé par le groupe", "style": "normal"}],
+            [{"text": "Gain moyen requis par jour de tick", "style": "strong"}, {"text": "1 point / jour", "style": "number"}, {"text": "10 points ÷ 10 jours", "style": "normal"}],
+            [{"text": "Ratio de calibrage mesuré (exemple fictif)", "style": "strong"}, {"text": "≈0,2 point pour 10 missions de palier bas/moyen", "style": "mid"}, {"text": "Exemple illustratif — à remplacer par ta propre mesure (section 4)", "style": "normal"}],
+            [{"text": "Volume quotidien nécessaire avec ce ratio", "style": "strong"}, {"text": "≈50 missions par jour de tick", "style": "number"}, {"text": "1 point ÷ 0,2 point pour 10 missions × 10", "style": "normal"}],
+            [{"text": "Commandants nécessaires", "style": "strong"}, {"text": "≈4 à 6 commandants actifs quotidiennement", "style": "mid"}, {"text": "Si un commandant isolé complète 8 à 12 missions de ce type par session [EST, ordre de grandeur non vérifié pour ce guide]", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "La même mécanique de calcul s'applique en sens inverse pour une campagne de Retreat, avec une nuance importante : puisque l'influence est à somme nulle (section 1), renforcer une ou plusieurs factions alliées dans le même système fait mécaniquement reculer la faction hostile visée, sans qu'aucune action ne soit dirigée contre elle. Un groupe peut donc mesurer le même ratio (points perdus par la cible ÷ volume d'activité produit en faveur des factions alliées) plutôt que de compter uniquement les missions de sabotage ou d'assassinat dirigées contre elle."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Fixe le seuil bas visé (autour de 2,5 % à 5 % selon le consensus communautaire, section 2) plutôt qu'un seuil haut.", "detail": "Mesure l'influence de la cible avant chaque tick, comme à l'étape 1 du protocole."},
+            {"text": "Comptabilise à la fois les missions de sabotage/assassinat dirigées contre la cible et l'activité de soutien versée aux factions alliées du même système.", "detail": "Les deux contribuent au même résultat via la contrainte de somme à 100 %."},
+            {"text": "Si la baisse stagne malgré un volume d'activité soutenu, vérifie si un autre commandant hors groupe soutient la faction hostile sans le savoir.", "detail": "Une seule mesure ne suffit jamais à trancher (étape 6 du protocole, section 4)."}
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Un objectif chiffré (10 points en 10 jours, par exemple) n'a de sens qu'une fois traduit en volume d'activité quotidien via un ratio mesuré — jamais via un ratio générique trouvé en ligne. Le calcul lui-même est simple ; c'est la mesure qui fait la différence entre un plan et un espoir."
+        }
+      ]
+    },
+    {
+      "id": "coordination-groupe",
+      "number": 6,
+      "title": "Coordonner un groupe organisé sans gaspiller l'effort",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "Un joueur isolé pèse réellement sur le BGS, mais un système peuplé de plusieurs milliers d'habitants visité par de nombreux commandants absorbe facilement l'effort d'une seule personne. C'est pourquoi le BGS se joue surtout en groupe organisé — et un groupe mal coordonné peut gaspiller une partie de son effort sans même s'en rendre compte."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Répartis l'effort sur plusieurs jours de tick plutôt que de le concentrer sur une seule journée** : un plafond de rendement par tick est largement rapporté par la communauté, même si sa valeur exacte n'est pas confirmée [EST] — un pic isolé d'activité ne se convertit pas forcément en gain d'influence linéaire.",
+            "**Désigne un référent de campagne** qui centralise les rapports BGS-Tally, calcule le ratio (section 4) et republie l'objectif quotidien ajusté au reste du groupe.",
+            "**Fais tourner les cibles plutôt que de t'acharner sur un seul système** une fois le ratio mesuré et le plafond probable approché — le surplus d'activité au-delà du plafond reste rentable en crédits, mais n'apporte plus rien à la campagne BGS.",
+            "**Documente les campagnes en cours** (faction, système, objectif, date de début) dans un canal ou un tableau partagé, pour qu'un nouveau membre du groupe sache immédiatement où porter son effort."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Le plafond de tick : rentable en crédits, gaspillé pour le BGS",
+          "text": "Au-delà d'un certain volume d'activité produit pour une même faction dans un même système sur un même tick, le gain d'influence marginal s'effondrerait ou deviendrait nul selon un phénomène largement rapporté par la communauté BGS — sans valeur numérique officielle confirmée [EST]. Un effort mal coordonné au-delà de ce plafond reste un bon usage du temps de jeu pour les crédits ou l'équipement, mais n'avance plus l'objectif BGS visé."
+        },
+        {
+          "type": "table",
+          "caption": "Qui fait quoi dans une campagne de groupe",
+          "headers": ["Profil", "Contribution BGS", "Renvoi"],
+          "rows": [
+            [{"text": "Mineur / commerçant", "style": "strong"}, {"text": "Ventes en marché de la faction cible, effet démultiplié en Boom/Famine/Outbreak", "style": "normal"}, {"text": "« Miner sans combattre », « Commerçant professionnel »", "style": "normal"}],
+            [{"text": "Combattant", "style": "strong"}, {"text": "Bounty hunting, Conflict Zones en état War/Civil War", "style": "normal"}, {"text": "Corpus — combat spatial", "style": "normal"}],
+            [{"text": "Explorateur / exobiologiste", "style": "strong"}, {"text": "Vente des données à un comptoir rattaché à la faction cible", "style": "normal"}, {"text": "« Explorer la galaxie »", "style": "normal"}],
+            [{"text": "Tout profil", "style": "strong"}, {"text": "Missions (support ou sabotage/assassinat selon l'objectif), dons", "style": "normal"}, {"text": "Section 3 de ce guide", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Créer sa propre PMF : une option à part",
+          "text": "Un groupe qui veut un contrôle total plutôt que soutenir ou affaiblir une faction existante peut demander la création d'une Player Minor Faction (PMF), rattachée à un système donné. Une fois créée, elle suit exactement les mêmes règles de BGS que toute faction NPC (section 1) — c'est un projet à plus long terme que les campagnes ponctuelles couvertes dans ce guide, mais le protocole de mesure (section 4) s'applique de la même façon."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "La coordination ne consiste pas à jouer plus, mais à répartir le même volume d'activité de façon à ne jamais dépasser un plafond de tick dont l'existence est largement corroborée même sans valeur exacte — et à garder une trace de qui fait quoi pour que la mesure de la section 4 reste interprétable."
+        }
+      ]
+    },
+    {
+      "id": "bgs-et-le-reste-du-jeu",
+      "number": 7,
+      "title": "BGS et le reste du jeu : Powerplay, Colonisation, Community Goals",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "Le BGS n'est pas un système isolé : trois autres mécaniques majeures interagissent avec lui, sans être calculées par le même moteur — une campagne de groupe a intérêt à connaître ces frontières plutôt que de les découvrir en cours de route."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "BGS et Powerplay : deux couches distinctes"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Depuis la refonte Powerplay 2.0 (31 octobre 2024), une Power exerce sur les systèmes qu'elle contrôle une influence de fond (fortification, exploitation, contestation) distincte du calcul BGS : un système peut être simultanément contrôlé par une faction mineure au sens du BGS et affilié à une Power au sens de Powerplay, sans que l'un ne détermine l'autre. Un groupe qui mène déjà une campagne Powerplay pacifiste y trouvera un profil d'activité complémentaire plutôt que redondant — voir « Powerplay sans tirer un coup de feu » pour le détail du choix de Power, des mérites et des trois axes Acquisition/Renforcement/Undermining, non repris ici."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "BGS et Colonisation : un système peut échapper temporairement au BGS"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Tant qu'un système est en cours de colonisation par un seul commandant, il n'héberge encore aucune faction mineure et échappe donc entièrement au cycle BGS décrit dans ce guide. Une fois suffisamment développé et peuplé, il finit par générer ses propres factions mineures, qui entrent alors dans le cycle normal d'influence et d'états — un point d'entrée piloté par le joueur, distinct de l'expansion organique d'une faction déjà existante. Voir « Devenir Architecte système : fonder une colonie de A à Z » pour la mécanique complète de revendication et de construction, non reprise ici."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "BGS et Community Goals : le levier macro"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Un Community Goal réussi ou échoué peut injecter un gain ou une perte d'influence massif et immédiat pour la faction sponsor, voire déclencher directement un état spécial — en plus et indépendamment du calcul BGS organique quotidien de ce guide. Pour un groupe, participer activement à un CG qui sponsorise sa faction cible est un accélérateur ponctuel à ajouter au plan, pas un substitut à la campagne mesurée des sections 4 et 5."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Trois frontières à retenir",
+          "text": "Powerplay se calcule au niveau des Powers, au-dessus des factions mineures. La Colonisation crée des systèmes qui échappent au BGS tant qu'ils restent sous revendication solo. Les Community Goals injectent un choc ponctuel qui court-circuite le rythme habituel du tick. Aucune des trois n'annule les principes de mesure de ce guide — elles s'y ajoutent."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Une campagne BGS bien menée ne se retranche pas derrière ces trois systèmes voisins : elle les traite comme des accélérateurs ou des angles morts ponctuels à surveiller, tout en gardant le protocole de mesure de la section 4 comme fil conducteur."
+        }
+      ]
+    },
+    {
+      "id": "pieges-et-checklist",
+      "number": 8,
+      "title": "Pièges fréquents et check-list de lancement",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Pièges fréquents d'une campagne BGS de groupe",
+          "headers": ["Piège", "Conséquence", "Comment l'éviter"],
+          "rows": [
+            [{"text": "Agir après le tick du jour en pensant que ça compte immédiatement", "style": "normal"}, {"text": "L'action n'est comptabilisée qu'au tick suivant, aucun ajustement fin possible", "style": "lose"}, {"text": "Planifier par jour de tick, jamais par heure (section 1)", "style": "normal"}],
+            [{"text": "Concentrer tout l'effort du groupe sur une seule journée", "style": "normal"}, {"text": "Rendement marginal probablement écrasé par un plafond de tick non quantifié", "style": "lose"}, {"text": "Répartir l'effort sur plusieurs jours de tick (section 6)", "style": "normal"}],
+            [{"text": "Tirer une conclusion sur un seul tick mesuré", "style": "normal"}, {"text": "Confusion entre l'effet de ton groupe et le bruit d'autres commandants ou d'un changement d'état", "style": "lose"}, {"text": "Répéter la mesure sur plusieurs ticks consécutifs (section 4)", "style": "normal"}],
+            [{"text": "Réutiliser un ratio générique trouvé en ligne", "style": "normal"}, {"text": "Ratio non représentatif du système et de la faction visés", "style": "lose"}, {"text": "Mesurer son propre ratio local avec BGS-Tally (section 4)", "style": "normal"}],
+            [{"text": "Pousser une Expansion et un Retreat sur la même faction sans le vouloir", "style": "normal"}, {"text": "Effort contradictoire au sein même du groupe", "style": "lose"}, {"text": "Documenter l'objectif de chaque campagne en cours (section 6)", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Choisis ta cible et ton objectif (Expansion ou Retreat) avec le panneau de faction en jeu.", "detail": "Vérifie l'état courant et le nombre de factions présentes (section 1)."},
+            {"text": "Active BGS-Tally et relève l'influence de départ juste avant un tick.", "detail": "Étapes 1 et 2 du protocole (section 4)."},
+            {"text": "Joue un premier tick de calibrage pour mesurer ton ratio local.", "detail": "Étapes 3 à 5 du protocole (section 4)."},
+            {"text": "Répartis l'objectif quotidien entre les commandants du groupe et lance la campagne sur plusieurs jours.", "detail": "Section 5 pour le calcul, section 6 pour la coordination."},
+            {"text": "Republie le rapport BGS-Tally et ajuste le volume à chaque tick.", "detail": "Étape 7 du protocole (section 4)."}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Un tableau partagé vaut mieux qu'une mémoire collective",
+          "text": "Consigne dans un canal ou un tableau partagé, pour chaque campagne en cours : faction, système, objectif, date de début et dernier ratio mesuré. Un nouveau membre du groupe doit pouvoir rejoindre l'effort sans reposer les questions déjà tranchées."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Le ratio mesuré reste nul ou négligeable sur plusieurs ticks consécutifs malgré un volume d'activité soutenu.",
+            "La faction visée a déjà franchi le seuil visé (Expansion actée, ou Retreat en cours) — continuer au même rythme devient un gaspillage d'effort.",
+            "Un autre groupe, non coordonné, agit dans le sens inverse sur la même faction et neutralise l'effet mesuré."
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict final",
+          "text": "Le BGS récompense la mesure plus que le volume brut : un groupe qui calibre son ratio sur un ou deux ticks avant de s'engager perd moins de temps, au global, qu'un groupe qui pousse fort sans jamais vérifier si son effort produit un résultat. Le protocole de la section 4 est la seule partie de ce guide à ne jamais sauter."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — raw_data/21-bgs.md",
+    "GitHub aussig/BGS-Tally et son wiki (« Usage – BGS and TW Tracking »)",
+    "Wikipédia EN/FR — Elite Dangerous",
+    "Connaissances communautaires corroborées sur le fonctionnement du BGS (forums, groupes spécialisés en BGS)",
+    "Corpus interne — guide-powerplay-pacifiste.json",
+    "Corpus interne — guide-architecte-systeme.json"
+  ]
+}

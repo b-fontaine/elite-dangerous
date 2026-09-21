@@ -672,7 +672,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour un exobiologiste, quatre mods valent le détour, et il se trouve qu'aucun n'exige de passer par un ingénieur guerrier.",
+          "text": "Pour un exobiologiste, quatre mods valent le détour — Extra Backpack Capacity, Improved Battery Capacity, Reduced Tool Battery Consumption, plus un mod de mobilité au choix (sprint ou jetpack) — et il se trouve qu'aucun n'exige de passer par un ingénieur guerrier. Le tableau ci-dessous en liste un cinquième et sixième (l'autre mod de mobilité, et Night Vision) pour être complet, mais le callout qui suit explique pourquoi ils passent après.",
           "emphasis": "normal"
         },
         {
@@ -789,6 +789,24 @@
               },
               {
                 "text": "1 000 000",
+                "style": "number"
+              }
+            ],
+            [
+              {
+                "text": "Increased Air Reserves",
+                "style": "normal"
+              },
+              {
+                "text": "Double les réserves d'oxygène d'urgence",
+                "style": "normal"
+              },
+              {
+                "text": "Hero Ferrari, Terra Velasquez",
+                "style": "normal"
+              },
+              {
+                "text": "750 000",
                 "style": "number"
               }
             ]

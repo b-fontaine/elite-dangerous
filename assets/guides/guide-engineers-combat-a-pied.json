@@ -1,0 +1,222 @@
+{
+  "id": "guide-engineers-combat-a-pied",
+  "title": "Quel Engineer à pied débloquer en premier si tu veux te battre",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Le pendant combattant d'artemis-suit.json : la matrice complète de déblocage des 13 Engineers à pied pour un objectif combat (CZ, raids), et les recettes d'armes qui changent du tout au tout selon le fabricant — sans revenir sur les coûts de base déjà chiffrés dans guide-mercenaire-a-pied.json.",
+  "byline": "PC · Live · Objectif combat (CZ, raids de settlement) · Suppose une Dominator déjà en cours de montée en grade",
+  "edition": "2026-09",
+  "topics": ["engineers-a-pied", "ingenierie-a-pied", "combat-a-pied", "recettes-armes", "deblocage"],
+  "estimatedReadMinutes": 15,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {"type": "list", "ordered": true, "items": [
+          "Pourquoi une matrice dédiée aux 13 Engineers de combat",
+          "La matrice complète des 13 Engineers à pied",
+          "Deux profils opposés : Hero Ferrari contre Domino Green",
+          "Terra Velasquez : le maillon le plus long",
+          "Les recettes d'armes par fabricant : la matrice à 33 cellules",
+          "La convergence de Colonia et l'accès à Yi Shen",
+          "L'ordre de déblocage recommandé, Engineer par Engineer",
+          "Check-list et ce qu'il faut retenir"
+        ]},
+        {"type": "paragraph", "emphasis": "intro", "text": "**Treize Engineers à pied, trois chaînes dans la bulle Core, quatre à Colonia — et une seule question compte si ton objectif est le combat : dans quel ordre les débloquer, et pour quelles recettes exactes ?** Ce guide est le pendant combattant d'artemis-suit.json : là où celui-ci construit ton chemin d'exploratrice ou d'explorateur pacifiste, celui-ci construit ta matrice de déblocage pour la CZ et le raid de settlement."},
+        {"type": "paragraph", "text": "Ce guide suppose que tu as déjà une Dominator en cours de montée en grade et une idée de ton arme longue — voir guide-mercenaire-a-pied.json pour ces bases chiffrées (coûts de grade, catalogue d'armes, ordre de déblocage résumé). Ici, on descend d'un cran : la condition de déblocage exacte de chacun des 13 Engineers quand elle est documentée, et les recettes d'armes qui changent du tout au tout selon le fabricant."},
+        {"type": "callout", "tone": "info", "title": "Comment lire les chiffres de ce guide", "text": "**OFF** = confirmé par un billet officiel Frontier. **COM** = donnée communautaire (Inara.cz, forums Frontier, wiki) capturée entre le 9 et le 13 septembre 2026 pour le corpus de référence, à revérifier en jeu — Frontier peut rééquilibrer ces montants sans préavis. **EST** = calcul ou déduction de ce guide, signalé comme tel plutôt que présenté comme une donnée relevée."},
+        {"type": "callout", "tone": "warning", "title": "Ce que ce guide ne réexplique pas", "text": "Les coûts de base de la Dominator (montée en grade G1 → G5), le catalogue d'armes par fabricant et le budget global d'une build combat sont déjà chiffrés dans guide-mercenaire-a-pied.json — ce guide n'y revient pas. Il ne couvre pas non plus l'infiltration (Quieter Footsteps, Audio Masking) ni l'exobiologie pacifiste, déjà traitées ailleurs (survivre-au-pvp-sans-combattre.json, artemis-suit.json)."}
+      ]
+    },
+    {
+      "id": "cadrage",
+      "number": 1,
+      "title": "Pourquoi une matrice dédiée aux 13 Engineers de combat",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**« Débloquer les Engineers dans le bon ordre » ne suffit pas comme réponse : sur treize Engineers, seuls quelques liens de chaîne ont une condition de déblocage documentée par une source consultable, et une modification d'arme demande des matériaux presque totalement différents selon son fabricant.** Ce guide traite les deux angles morts que la vue d'ensemble de guide-mercenaire-a-pied.json ne pouvait pas développer sans doubler sa longueur : la matrice complète, Engineer par Engineer, et les recettes d'arme, fabricant par fabricant."},
+        {"type": "paragraph", "text": "La structure d'ensemble tient en une phrase : neuf Engineers dans la bulle Core, répartis en trois chaînes de trois (chacun débloque l'accès au suivant), plus quatre Engineers à Colonia qui fonctionnent différemment — trois d'entre eux (Baltanos, Eleanor Bresa, Rosa Dayette) opèrent indépendamment, et c'est en complétant leurs trois tâches de recommandation que l'accès à Yi Shen s'ouvre. Ce n'est donc pas une simple liste à parcourir dans l'ordre : c'est un graphe à trois branches, plus une convergence finale."},
+        {"type": "table", "caption": "Ce que chaque manuel du corpus couvre, pour ne pas relire deux fois la même chose", "headers": ["Manuel", "Angle", "Ce qu'il chiffre"], "rows": [
+          [{"text": "guide-mercenaire-a-pied.json", "style": "strong"}, {"text": "Vue d'ensemble combat à pied"}, {"text": "Coûts de grade Dominator, catalogue d'armes, budget global, ordre résumé (Hero Ferrari → Uma Laszlo → Kit Fowler)"}],
+          [{"text": "Ce guide", "style": "strong"}, {"text": "Détail des 13 Engineers pour un objectif combat", "style": "win"}, {"text": "Condition de déblocage documentée par Engineer, matrice de recettes d'arme par fabricant, cas Terra Velasquez et convergence Colonia"}],
+          [{"text": "artemis-suit.json", "style": "strong"}, {"text": "Pendant pacifiste"}, {"text": "Exobiologie, combinaison Artemis, aucun Engineer de combat"}]
+        ]},
+        {"type": "callout", "tone": "info", "title": "Les deux sources qui structurent ce guide", "text": "Tout ce qui suit s'appuie sur deux fichiers du corpus de référence interne : celui consacré au farming et à l'ingénierie à pied avancée pour les conditions de déblocage, et le guide complet de l'équipement à pied pour la table des 13 Engineers et les recettes d'armes. Les deux sont eux-mêmes sourcés sur Inara.cz et les forums officiels Frontier — le détail complet figure en fin de guide."},
+        {"type": "callout", "tone": "tip", "title": "Pas encore équipé ?", "text": "Si tu n'as pas encore de Dominator ni d'arme longue choisie, commence par guide-mercenaire-a-pied.json : ce guide-ci suppose ces bases acquises et ne les rappelle pas."},
+        {"type": "verdict", "title": "Verdict", "text": "Ce guide répond à deux questions précises que le manuel d'ensemble laisse ouvertes : quelle est la condition exacte de déblocage de chacun des 13 Engineers, quand elle est documentée, et quelle recette exacte demande quelle modification d'arme, chez quel fabricant."}
+      ]
+    },
+    {
+      "id": "matrice-13-engineers",
+      "number": 2,
+      "title": "La matrice complète des 13 Engineers à pied : système, chaîne, condition de déblocage",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Sur les treize Engineers à pied, huit conditions de déblocage précises sont documentées par une source consultable — les cinq autres ne le sont pas, et ce guide le dit plutôt que d'inventer un chiffre.**"},
+        {"type": "table", "caption": "Les 13 Engineers à pied : système, chaîne, condition de déblocage", "headers": ["Engineer", "Système", "Chaîne / position", "Condition de déblocage"], "rows": [
+          [{"text": "Hero Ferrari", "style": "strong"}, {"text": "Sirius"}, {"text": "Chaîne 1 (Core), 1er"}, {"text": "10 zones de conflit de surface", "style": "win"}],
+          [{"text": "Wellington Beck", "style": "strong"}, {"text": "Jolapa"}, {"text": "Chaîne 1 (Core), 2e"}, {"text": "Remise cumulée de 15 unités (Multimedia Entertainment / Classic Entertainment / Cat Media) aux bartenders"}],
+          [{"text": "Uma Laszlo", "style": "strong"}, {"text": "Xuane"}, {"text": "Chaîne 1 (Core), 3e"}, {"text": "Non documentée par les sources consultées", "style": "mid"}],
+          [{"text": "Jude Navarro", "style": "strong"}, {"text": "Aurai"}, {"text": "Chaîne 2 (Core), 1er"}, {"text": "10 missions de restauration/réactivation de settlement"}],
+          [{"text": "Terra Velasquez", "style": "strong"}, {"text": "Shou Xing"}, {"text": "Chaîne 2 (Core), 2e"}, {"text": "6 Covert Heists + 6 Covert Thefts — le plus long de tous", "style": "lose"}],
+          [{"text": "Oden Geiger", "style": "strong"}, {"text": "Candiaei"}, {"text": "Chaîne 2 (Core), 3e"}, {"text": "Remise cumulée de 20 unités (Biological Sample / Employee Genetic Data / Genetic Research) aux bartenders"}],
+          [{"text": "Domino Green", "style": "strong"}, {"text": "Orishis"}, {"text": "Chaîne 3 (Core), 1er"}, {"text": "100 années-lumière en navette/taxi Apex — zéro combat", "style": "win"}],
+          [{"text": "Kit Fowler", "style": "strong"}, {"text": "Capoya"}, {"text": "Chaîne 3 (Core), 2e"}, {"text": "Non documentée par les sources consultées", "style": "mid"}],
+          [{"text": "Yarden Bond", "style": "strong"}, {"text": "Bayan"}, {"text": "Chaîne 3 (Core), 3e"}, {"text": "Non documentée par les sources consultées", "style": "mid"}],
+          [{"text": "Baltanos", "style": "strong"}, {"text": "Deriso"}, {"text": "Colonia, convergent → Yi Shen"}, {"text": "Tâche de recommandation (matériaux/données spécifiques) — contenu exact non documenté", "style": "mid"}],
+          [{"text": "Eleanor Bresa", "style": "strong"}, {"text": "Desy"}, {"text": "Colonia, convergent → Yi Shen"}, {"text": "Tâche de recommandation — contenu exact non documenté, et ses spécialités le sont tout autant", "style": "mid"}],
+          [{"text": "Rosa Dayette", "style": "strong"}, {"text": "Kojeara"}, {"text": "Colonia, convergent → Yi Shen"}, {"text": "Tâche de recommandation chiffrée : 10 Manufacturing Instructions"}],
+          [{"text": "Yi Shen", "style": "strong"}, {"text": "Einheriar"}, {"text": "Colonia, débloqué par les 3 précédents"}, {"text": "Convergence des trois tâches de recommandation ci-dessus"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Cinq liens sans condition documentée", "text": "Uma Laszlo, Kit Fowler, Yarden Bond, et le détail exact des tâches de Baltanos et Eleanor Bresa n'ont, à la date de rédaction, aucune condition de déblocage chiffrée dans les sources consultées pour ce corpus. Ce n'est pas une absence en jeu — c'est un trou de documentation : si tu bloques sur l'un de ces cinq, vérifie sur le wiki communautaire plutôt que de supposer qu'il s'agit d'un quota de CZ ou de missions."},
+        {"type": "keyValue", "items": [
+          {"label": "Wellington Beck — remise bartender", "value": "15 unités cumulées de Multimedia Entertainment, Classic Entertainment ou Cat Media, dans n'importe quelle combinaison", "reliability": "community"},
+          {"label": "Oden Geiger — remise bartender", "value": "20 unités cumulées de Biological Sample, Employee Genetic Data ou Genetic Research, dans n'importe quelle combinaison", "reliability": "community"},
+          {"label": "Rosa Dayette — recommandation vers Yi Shen", "value": "10 Manufacturing Instructions — le même matériau qui goulot d'étrangle la montée en grade de combinaison (section 6)", "reliability": "community"}
+        ]},
+        {"type": "callout", "tone": "info", "title": "Une remise n'est pas un troc", "text": "Ces trois remises au bartender ne sont pas des échanges matériau contre matériau : ce sont des dépôts ciblés qui cochent une case de quête. Les matériaux remis ne reviennent sous aucune forme — inutile d'en garder le compte au plus juste, vise large plutôt qu'un total exact."},
+        {"type": "verdict", "title": "Verdict", "text": "Retiens les trois conditions vraiment exploitables pour planifier ta progression : 10 CZ pour Hero Ferrari, 10 missions de réactivation pour Jude Navarro, 100 al pour Domino Green. Les remises bartender de Wellington Beck (15 unités) et Oden Geiger (20 unités) sont bon marché une fois que tu farmes déjà des settlements pour d'autres raisons — ne les vise pas isolément."}
+      ]
+    },
+    {
+      "id": "profils-opposes",
+      "number": 3,
+      "title": "Deux profils opposés : Hero Ferrari (10 CZ) contre Domino Green (100 al, zéro combat)",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Sur les trois premiers maillons de chaîne, deux se tiennent aux extrêmes opposés de l'effort demandé : Hero Ferrari réclame dix zones de conflit de surface, du combat pur, quand Domino Green ne demande que cent années-lumière de vol en navette Apex — zéro combat, zéro matériau à farmer.**"},
+        {"type": "table", "caption": "Les trois premiers maillons de chaîne, effort comparé", "headers": ["Engineer", "Condition", "Effort pour un profil combat", "Effort pour un profil non-combat"], "rows": [
+          [{"text": "Hero Ferrari", "style": "strong"}, {"text": "10 zones de conflit de surface"}, {"text": "Faible — tu fais déjà des CZ", "style": "win"}, {"text": "Le plus long/difficile de tous les Engineers de départ", "style": "lose"}],
+          [{"text": "Jude Navarro", "style": "strong"}, {"text": "10 missions de réactivation/restauration"}, {"text": "Modéré", "style": "mid"}, {"text": "Modéré — et finance en même temps le farming de matériaux (double bénéfice)"}],
+          [{"text": "Domino Green", "style": "strong"}, {"text": "100 al en navette Apex"}, {"text": "Trivial — à lancer en tâche de fond", "style": "win"}, {"text": "Le plus rapide et le plus facile", "style": "win"}]
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le double bénéfice de Jude Navarro", "text": "Les 10 missions de réactivation/restauration qui débloquent Jude Navarro sont aussi la méthode reine de farming de matériaux à pied côté suit (Power Regulator, composants de combinaison). Un profil combat qui monte sa Dominator en grade en parallèle (guide-mercenaire-a-pied.json, section budget) fait donc d'une pierre deux coups en les complétant."},
+        {"type": "callout", "tone": "warning", "title": "Hero Ferrari n'est « difficile » que pour qui évite le combat", "text": "Les sources qualifient Hero Ferrari de maillon « le plus long/difficile pour un joueur non orienté combat ». Pour le lecteur de ce guide, c'est l'inverse : dix CZ, c'est une session ou deux si tu vises déjà la CZ pour progresser (voir guide-mercenaire-a-pied.json, section Ground CZ) — c'est structurellement le moins coûteux des trois pour un profil combat, pas le plus coûteux."},
+        {"type": "verdict", "title": "Verdict", "text": "Lance Domino Green en tâche de fond dès le premier trajet vers une station lointaine — il ne coûte rien. Traite Hero Ferrari comme prioritaire et non comme un obstacle : tes CZ de toute façon prévues le débloquent en chemin. Jude Navarro peut suivre, sans urgence, en profitant de son double bénéfice de farming."}
+      ]
+    },
+    {
+      "id": "terra-velasquez",
+      "number": 4,
+      "title": "Terra Velasquez : le maillon le plus long, toutes chaînes confondues",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Terra Velasquez, deuxième maillon de la Chaîne 2, est signalée comme le maillon le plus long à débloquer de tout le roster à pied — toutes chaînes confondues : 6 Covert Heists et 6 Covert Thefts, douze missions furtives avant d'y accéder.**"},
+        {"type": "table", "caption": "Ce que Terra Velasquez apporte, une fois débloquée", "headers": ["Domaine", "Spécialités"], "rows": [
+          [{"text": "Suit", "style": "strong"}, {"text": "Combat Movement Speed, Increased Air Reserves, Increased Sprint Duration"}],
+          [{"text": "Arme", "style": "strong"}, {"text": "Improved Hip Fire Accuracy, Noise Suppressor"}]
+        ]},
+        {"type": "paragraph", "text": "Douze missions de casse et de vol furtifs (Covert Heists, Covert Thefts) demandent un profil d'infiltration — discrétion, piratage, pas d'alarme — à l'opposé du style d'un mercenaire d'assaut. C'est là que le coût de Terra Velasquez ne se mesure pas seulement en temps : il se mesure en changement de posture de jeu, le temps de la débloquer."},
+        {"type": "callout", "tone": "warning", "title": "Est-ce que ça vaut le coup pour un profil combat ?", "text": "Un seul effet de son roster est un vrai gain de duel pour un profil combat : **Combat Movement Speed**, qui supprime le malus de vitesse en visée ADS. Le reste (Improved Hip Fire Accuracy, Noise Suppressor, réserves d'air/sprint) sert surtout la mobilité et la discrétion. Elle débloque ensuite Oden Geiger (Night Vision, Scope — reconnaissance), pas un troisième maillon offensif. Douze missions furtives pour un seul effet de duel directement utile : c'est un investissement de fin de progression, pas un préalable."},
+        {"type": "verdict", "title": "Verdict", "text": "Ne planifie pas Terra Velasquez comme un jalon précoce. Traite-la comme un objectif optionnel une fois que Chaîne 1 et Chaîne 3 sont bouclées (section 8) : Combat Movement Speed reste un vrai gain, mais douze missions furtives pour l'obtenir ne se justifient qu'une fois le reste de ta build déjà solide."}
+      ]
+    },
+    {
+      "id": "recettes-armes-fabricant",
+      "number": 5,
+      "title": "Les recettes d'armes par fabricant : la matrice à 33 cellules, 6 relevées",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Onze modifications d'arme, trois fabricants (Kinematic Armaments, Manticore, Takada) : trente-trois recettes distinctes possibles. Six seulement sont intégralement relevées par une source consultable — et même sur ces six, les matériaux ne se recoupent presque jamais d'un fabricant à l'autre.**"},
+        {"type": "table", "caption": "Les 12 recettes exactes vérifiées sur Inara.cz : Hero Ferrari et Wellington Beck", "headers": ["Modification", "Ingénieur", "Matériaux exacts", "Coût"], "rows": [
+          [{"text": "Faster Handling (arme)", "style": "strong"}, {"text": "Hero Ferrari"}, {"text": "5 Operational Manual, 5 Combatant Performance, 5 Combat Training Material, 3 Viscoelastic Polymer"}, {"text": "500 000 Cr", "style": "number"}],
+          [{"text": "Improved Jump Assist (suit)", "style": "strong"}, {"text": "Hero Ferrari"}, {"text": "5 G-Meds, 5 Topographical Surveys, 3 Micro Thrusters, 5 Motor"}, {"text": "750 000 Cr", "style": "number"}],
+          [{"text": "Increased Air Reserves (suit)", "style": "strong"}, {"text": "Hero Ferrari"}, {"text": "3 Pharmaceutical Patents, 8 Air Quality Reports, 5 Oxygenic Bacteria, 8 pH Neutraliser"}, {"text": "750 000 Cr", "style": "number"}],
+          [{"text": "Increased Sprint Duration (suit)", "style": "strong"}, {"text": "Hero Ferrari"}, {"text": "3 Troop Deployment Records, 3 Gene Sequencing Data, 3 Clinical Trial Records, 5 Oxygenic Bacteria, 8 Chemical Catalyst"}, {"text": "750 000 Cr", "style": "number"}],
+          [{"text": "Noise Suppressor (arme)", "style": "strong"}, {"text": "Hero Ferrari"}, {"text": "5 Atmospheric Data, 5 Mining Analytics, 8 Viscoelastic Polymer, 3 Weapon Component"}, {"text": "1 000 000 Cr", "style": "number"}],
+          [{"text": "Extra Backpack Capacity (suit)", "style": "strong"}, {"text": "Wellington Beck"}, {"text": "5 Weapon Inventory, 5 Chemical Inventory, 5 Digital Designs, 5 Epoxy Adhesive, 3 Memory Chip"}, {"text": "750 000 Cr", "style": "number"}],
+          [{"text": "Greater Range (Kinematic Armaments)", "style": "strong"}, {"text": "Wellington Beck"}, {"text": "10 Ballistics Data, 10 Topographical Surveys, 10 Metal Coil, 10 RDX, 5 Weapon Component"}, {"text": "500 000 Cr", "style": "number"}],
+          [{"text": "Greater Range (Manticore)", "style": "strong"}, {"text": "Wellington Beck"}, {"text": "10 Chemical Formulae, 15 Mineral Survey, 10 Motor, 10 Electromagnet, 5 Electrical Fuse"}, {"text": "500 000 Cr", "style": "number"}],
+          [{"text": "Greater Range (Takada)", "style": "strong"}, {"text": "Wellington Beck"}, {"text": "5 Stellar Activity Logs, 8 Risk Assessments, 8 Micro Transformer, 3 Optical Lens, 3 Circuit Board"}, {"text": "500 000 Cr", "style": "number"}],
+          [{"text": "Improved Battery Capacity (suit)", "style": "strong"}, {"text": "Wellington Beck"}, {"text": "5 Reactor Output Review, 8 Maintenance Logs, 3 Ion Battery, 5 Micro Supercapacitor, 5 Electrical Wiring"}, {"text": "750 000 Cr", "style": "number"}],
+          [{"text": "Reduced Tool Battery Consumption (suit)", "style": "strong"}, {"text": "Wellington Beck"}, {"text": "5 Reactor Output Review, 3 Electrical Fuse, 5 Micro Transformer, 8 Electrical Wiring"}, {"text": "500 000 Cr", "style": "number"}],
+          [{"text": "Scope (arme)", "style": "strong"}, {"text": "Wellington Beck"}, {"text": "5 Spectral Analysis Data, 3 Biometric Data, 5 Optical Lens, 3 Optical Fibre"}, {"text": "500 000 Cr", "style": "number"}]
+        ]},
+        {"type": "paragraph", "text": "Ces douze recettes sont, à la date de rédaction, les seules recettes à pied vérifiées matériau par matériau sur une page Engineer individuelle d'Inara.cz — ce sont aussi les deux Engineers que ce guide te recommande de débloquer en premier (section 8). Trois d'entre elles (les trois Greater Range) forment, avec les trois recettes de Headshot Damage ci-dessous, l'intégralité des six cellules connues de la matrice fabricant × modification."},
+        {"type": "keyValue", "items": [
+          {"label": "Faster Handling / Noise Suppressor (arme, Hero Ferrari)", "value": "Combat-critique : dégainage plus rapide, arme silencieuse en environnement pressurisé", "reliability": "community"},
+          {"label": "Improved Jump Assist / Increased Air Reserves / Increased Sprint Duration (suit, Hero Ferrari)", "value": "Mobilité/QoL : utile en CZ étendue, mais à déprioriser si le budget est serré", "reliability": "estimate"},
+          {"label": "Extra Backpack Capacity / Improved Battery Capacity / Reduced Tool Battery Consumption (suit, Wellington Beck)", "value": "Logistique : prolonge une session, ne change pas l'issue d'un duel", "reliability": "estimate"},
+          {"label": "Greater Range / Scope (arme, Wellington Beck)", "value": "Combat-critique : portée effective et optique, gains directs en CZ à distance", "reliability": "community"}
+        ]},
+        {"type": "table", "caption": "Les 2 modifications d'arme intégralement relevées par fabricant, sur 11 possibles", "headers": ["Modification d'arme", "Kinematic Armaments", "Manticore", "Takada"], "rows": [
+          [{"text": "Headshot Damage", "style": "strong"}, {"text": "Weapon Test Data, Medical Records, Chemical Catalyst, RDX, Weapon Component"}, {"text": "Chemical Experiment Data, Blood Test Results, Ion Battery, Electromagnet, Micro Supercapacitor"}, {"text": "Spectral Analysis Data, Biometric Data, Ion Battery, Optical Lens, Scrambler"}],
+          [{"text": "Greater Range", "style": "strong"}, {"text": "10 Ballistics Data, 10 Topographical Surveys, 10 Metal Coil, 10 RDX, 5 Weapon Component", "style": "win"}, {"text": "10 Chemical Formulae, 15 Mineral Survey, 10 Motor, 10 Electromagnet, 5 Electrical Fuse", "style": "win"}, {"text": "5 Stellar Activity Logs, 8 Risk Assessments, 8 Micro Transformer, 3 Optical Lens, 3 Circuit Board", "style": "win"}]
+        ]},
+        {"type": "paragraph", "text": "Ce que ces deux lignes montrent d'un coup d'œil : pour **Greater Range**, les quinze matériaux des trois recettes sont tous distincts, aucun recoupement. Pour **Headshot Damage**, un seul matériau se recoupe (Ion Battery, entre Manticore et Takada) sur les quinze au total. Conséquence de terrain directe : tu ne prépares pas une session de récolte pour un effet, tu la prépares pour un effet **et** un fabricant précis."},
+        {"type": "callout", "tone": "warning", "title": "Un stock pour un Karma ne sert à rien sur un Manticore", "text": "Si tu farmes 10 Ballistics Data en pensant équiper ta prochaine arme en Greater Range, vérifie d'abord qu'elle vient bien de Kinematic Armaments — sur un Manticore, ces mêmes dix unités ne serviront à rien : la recette change intégralement de matériaux."},
+        {"type": "callout", "tone": "info", "title": "Les 9 autres modifications : aucune source ne relève leur recette", "text": "Ce n'est pas un oubli de ce guide : aucune source consultable pour ce corpus (Inara, edfieldmanual.com, EDOMH) ne relève les recettes exactes de Scope, Improved Hip Fire Accuracy, Stability, Noise Suppressor, Audio Masking, Faster Handling, Reload Speed, Stowed Reloading et Magazine Size, fabricant par fabricant. Utilise EDOMH ou la page Engineer concernée sur Inara.cz pour connaître la recette exacte avant d'engager des matériaux — une modification posée est irréversible."},
+        {"type": "verdict", "title": "Verdict", "text": "Débloque Hero Ferrari et Wellington Beck en premier (section 8) : ce sont les deux seuls Engineers dont la totalité des recettes est vérifiée matériau par matériau, ce qui te permet de farmer avec un objectif chiffré au lieu d'une fourchette. Pour toute autre modification, vérifie la recette exacte chez l'Engineer en jeu avant de te déplacer."}
+      ]
+    },
+    {
+      "id": "convergence-colonia",
+      "number": 6,
+      "title": "La convergence de Colonia : Baltanos, Eleanor Bresa, Rosa Dayette et l'accès à Yi Shen",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Les quatre Engineers de Colonia ne suivent pas une chaîne séquentielle : Baltanos, Eleanor Bresa et Rosa Dayette fonctionnent chacun indépendamment, et c'est en complétant leurs trois tâches de recommandation que l'accès à Yi Shen — seul autre pourvoyeur de Night Vision avec Oden Geiger — s'ouvre.**"},
+        {"type": "table", "caption": "Les quatre Engineers de Colonia", "headers": ["Engineer", "Système", "Rôle", "Spécialités suit connues"], "rows": [
+          [{"text": "Baltanos", "style": "strong"}, {"text": "Deriso"}, {"text": "Convergent → Yi Shen"}, {"text": "Improved Jump Assist, Increased Sprint Duration"}],
+          [{"text": "Eleanor Bresa", "style": "strong"}, {"text": "Desy"}, {"text": "Convergent → Yi Shen"}, {"text": "Non couvert par le jeu de données — y compris sa spécialité arme", "style": "lose"}],
+          [{"text": "Rosa Dayette", "style": "strong"}, {"text": "Kojeara"}, {"text": "Convergent → Yi Shen"}, {"text": "Improved Battery Capacity, Extra Backpack Capacity, Reduced Tool Battery Consumption"}],
+          [{"text": "Yi Shen", "style": "strong"}, {"text": "Einheriar"}, {"text": "Débloqué par les 3 précédents"}, {"text": "Night Vision — lui et Oden Geiger sont les deux seuls à la proposer", "style": "win"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Rosa Dayette entre en concurrence directe avec ta montée en grade", "text": "Sa tâche de recommandation réclame **10 Manufacturing Instructions** — exactement le matériau qui goulot d'étrangle la montée en grade complète de ta Dominator (12 unités supplémentaires, soit 22 au total, aucune voie d'achat). Si tu vises Colonia en parallèle d'une montée en grade, planifie les deux besoins ensemble plutôt que de découvrir le manque en cours de route."},
+        {"type": "paragraph", "text": "Night Vision n'est utile à un profil combat que dans un cas précis : les CZ ou raids de nuit, en environnement peu éclairé, où repérer une cible avant qu'elle ne te repère devient le facteur qui décide d'un engagement. En plein jour ou en intérieur éclairé, l'effet n'apporte rien de mesurable pour l'assaut."},
+        {"type": "callout", "tone": "tip", "title": "Yi Shen se mérite un trajet", "text": "Einheriar, le système de Yi Shen, se trouve dans la région de Colonia comme les trois Engineers convergents qui y mènent — compte le trajet (et une ingénierie FSD adaptée, voir guide-ingenierie-fsd-explorateur.json) dans le coût réel de cet objectif, pas seulement les matériaux des tâches de recommandation."},
+        {"type": "verdict", "title": "Verdict", "text": "Ne vise la convergence de Colonia qu'une fois ta build Core (Chaîne 1 et Chaîne 3, section 8) déjà bouclée : le trajet vers Colonia, la tâche de Rosa Dayette et sa concurrence en Manufacturing Instructions en font un objectif de fin de progression, pas un préalable — sauf si tu pratiques déjà des raids nocturnes et veux Night Vision en priorité absolue."}
+      ]
+    },
+    {
+      "id": "ordre-recommande",
+      "number": 7,
+      "title": "L'ordre de déblocage recommandé, Engineer par Engineer",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**En assemblant la matrice de la section 2, l'analyse des trois premiers maillons (section 3) et le cas Terra Velasquez (section 4), un seul ordre concret se dégage pour un objectif combat.**"},
+        {"type": "steps", "items": [
+          {"text": "**Hero Ferrari (Sirius)** — 10 zones de conflit de surface.", "detail": "Le moins coûteux des trois premiers maillons pour qui fait déjà des CZ (section 3). Débloque Faster Handling et Noise Suppressor côté arme."},
+          {"text": "**Wellington Beck (Jolapa)** — remise de 15 unités au bartender.", "detail": "Bon marché une fois que tu farmes déjà des settlements. Débloque Greater Range (les trois recettes fabricant, section 5) et Scope."},
+          {"text": "**Uma Laszlo (Xuane)** — condition non documentée.", "detail": "Meilleure densité combat du roster (Damage Resistance, Faster Shield Regen, Headshot Damage, Reload Speed, Stowed Reloading) : à débloquer dès que la Chaîne 1 le permet, quel que soit le déclencheur réel."},
+          {"text": "**Domino Green (Orishis)**, en parallèle — 100 al en navette Apex.", "detail": "Coût quasi nul (section 3) : lance-le en tâche de fond dès ton premier long trajet."},
+          {"text": "**Kit Fowler (Capoya)** — condition non documentée.", "detail": "Deuxième meilleure densité combat (Added Melee Damage, Extra Ammo Capacity, Magazine Size, Stowed Reloading)."},
+          {"text": "**(Optionnel, fin de progression) Jude Navarro → Terra Velasquez → Oden Geiger, puis convergence Colonia.**", "detail": "Combat Movement Speed (Terra Velasquez) et Night Vision (Oden Geiger/Yi Shen) restent utiles mais coûtent disproportionnellement plus cher en temps et en Manufacturing Instructions (sections 4 et 6)."}
+        ]},
+        {"type": "table", "caption": "Cet ordre face à l'ordre alternatif « Falcon's Guide », non consensuel", "headers": ["Source", "Ordre proposé", "Statut"], "rows": [
+          [{"text": "Ce guide", "style": "strong"}, {"text": "Hero Ferrari → Wellington Beck → Uma Laszlo, en parallèle Domino Green → Kit Fowler"}, {"text": "Fondé sur la densité d'effets combat et le coût réel par profil", "style": "win"}],
+          [{"text": "« Falcon's Guide » (guide indépendant, contenu non vérifié)", "style": "strong"}, {"text": "Jude Navarro → Terra Velasquez → Hero Ferrari → Domino Green"}, {"text": "Traite Domino Green en dernier alors qu'il est objectivement le moins coûteux à débloquer — mentionné comme point de vue alternatif, pas comme consensus", "style": "lose"}]
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Un ordre différent pour un objectif différent", "text": "guide-mercenaire-a-pied.json recommande, pour un profil polyvalent/early game non spécifiquement combat, Domino Green → Jude Navarro en premier : c'est un ordre valide, mais pour un objectif combat pur, la densité d'effets de la Chaîne 1 (Uma Laszlo en particulier) justifie de la prioriser malgré le coût d'entrée de Hero Ferrari."},
+        {"type": "verdict", "title": "Verdict", "text": "Termine la Chaîne 1 (Hero Ferrari → Wellington Beck → Uma Laszlo) et la Chaîne 3 (Domino Green → Kit Fowler) avant d'envisager la Chaîne 2 ou Colonia. À ce stade, tu détiens Damage Resistance, Faster Shield Regen, Headshot Damage, Reload Speed, Stowed Reloading, Added Melee Damage, Extra Ammo Capacity et Magazine Size — l'essentiel de l'ingénierie combat disponible dans la bulle Core."}
+      ]
+    },
+    {
+      "id": "retenir",
+      "number": 8,
+      "title": "Check-list et ce qu'il faut retenir",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Avant d'investir des matériaux irréversibles dans un Engineer, une vérification de deux minutes évite le regret le plus courant : farmer pour le mauvais fabricant.**"},
+        {"type": "list", "items": [
+          "Vérifie le fabricant de ton arme (Kinematic Armaments, Manticore, Takada) avant de farmer une recette de modification (section 5) — les matériaux ne se recoupent presque jamais entre fabricants.",
+          "Débloque Hero Ferrari et Wellington Beck en priorité : ce sont les deux seuls Engineers dont la totalité des recettes est vérifiée matériau par matériau (section 5).",
+          "Ne planifie pas Terra Velasquez comme un jalon précoce — 12 missions furtives pour un seul effet de duel directement utile (section 4).",
+          "Si tu vises la convergence de Colonia, budgétise les 10 Manufacturing Instructions de Rosa Dayette en même temps que ta montée en grade de combinaison (section 6) — même matériau, même goulot d'étranglement.",
+          "Pour les cinq liens sans condition de déblocage documentée (Uma Laszlo, Kit Fowler, Yarden Bond, Baltanos, Eleanor Bresa), vérifie en jeu ou sur le wiki communautaire plutôt que de supposer un quota (section 2).",
+          "Une modification posée est irréversible : vérifie la recette exacte chez l'Engineer avant d'engager tes matériaux, jamais après."
+        ]},
+        {"type": "steps", "items": [
+          {"text": "**Farme tes 10 Ground CZ** en visant Hero Ferrari, tout en avançant ta Dominator en grade (guide-mercenaire-a-pied.json).", "detail": ""},
+          {"text": "**Débloque Wellington Beck** (15 unités bartender) puis **Uma Laszlo**.", "detail": ""},
+          {"text": "**En parallèle, débloque Domino Green** (100 al) **puis Kit Fowler**.", "detail": ""},
+          {"text": "**Vérifie le fabricant de ton arme** avant chaque farming de modification (section 5).", "detail": ""},
+          {"text": "**Traite Jude Navarro → Terra Velasquez → Oden Geiger et la convergence Colonia comme un objectif de fin de progression.**", "detail": ""}
+        ]},
+        {"type": "divider"},
+        {"type": "paragraph", "text": "**Fiabilité.** Ce guide s'appuie sur deux fichiers du corpus de référence interne consacrés à l'équipement et à l'ingénierie à pied, eux-mêmes sourcés sur les pages Engineer individuelles d'Inara.cz (recontrôlées lors d'une passe de vérification adversariale le 9 septembre 2026), les forums officiels Frontier et EDCD/FDevIDs. Les conditions de déblocage de Wellington Beck et Oden Geiger proviennent d'une relecture directe de leur page Inara ; les douze recettes exactes de la section 5 en proviennent également."},
+        {"type": "paragraph", "text": "**Ce que ce guide n'a pas pu établir.** Les conditions de déblocage précises d'Uma Laszlo, Kit Fowler, Yarden Bond, ainsi que le contenu exact des tâches de recommandation de Baltanos et Eleanor Bresa, ne sont documentées par aucune source consultée pour ce corpus. Vingt-sept des trente-trois cellules de la matrice fabricant × modification d'arme restent également sans recette relevée (section 5). Pour les coûts de base (grade de combinaison, catalogue d'armes) et le budget global d'une build combat, voir guide-mercenaire-a-pied.json."}
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — 26-ingenierie-a-pied-avancee.md",
+    "Corpus interne — 07-equipement-a-pied.md",
+    "Inara.cz — pages Engineer individuelles (engineer/28 Hero Ferrari, engineer/30 Wellington Beck)",
+    "Forums officiels Frontier",
+    "EDCD/FDevIDs"
+  ]
+}

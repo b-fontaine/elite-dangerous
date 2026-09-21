@@ -1,0 +1,468 @@
+{
+  "id": "commerce-professionnel",
+  "title": "Commerçant professionnel : routes, rang et gros porteurs",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Le commerce en vrac traité en profondeur, pas en survol : la méthode pour calculer toi-même la rentabilité d'une route, l'arbre de progression complet jusqu'au Panther Clipper Mk II, la prise en main de Trade Dangerous et Spansh, et ce que valent vraiment les denrées rares.",
+  "byline": "Toutes plateformes · Live 4.4.0.x · Prérequis : un vaisseau de fret et une trésorerie de départ (un Hauler à ~50 000 Cr suffit pour commencer)",
+  "edition": "2026-09",
+  "topics": ["commerce", "trading", "trade rank", "vaisseaux de fret", "trade dangerous", "spansh", "denrées rares", "économie"],
+  "estimatedReadMinutes": 18,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Pourquoi ce guide : le commerce en vrac au-delà des bases",
+            "Calculer la rentabilité d'une route, étape par étape",
+            "Le Trade Rank et l'arbre de progression jusqu'au Panther Clipper Mk II",
+            "Prise en main de Trade Dangerous et Spansh",
+            "Configurer un gros porteur : soute, boucliers, fuite",
+            "Un mot sur les denrées rares",
+            "Pièges fréquents et fiabilité des chiffres"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**« Devenir riche sans combat » effleure le commerce en une poignée de paragraphes : ce guide-ci lui consacre le traitement complet.** Ici, pas de survol : une méthode de calcul que tu peux réappliquer à n'importe quelle route, l'arbre de progression chiffré du Hauler au Panther Clipper Mk II, la prise en main concrète de Trade Dangerous et de Spansh, et un point honnête sur ce que les denrées rares rapportent réellement en 2026."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Exemple de référence (Type-6 Transporter, 114 t)", "value": "marge 2 150 Cr/t, profit brut 245 100 Cr en ~12 min, ≈1 225 500 Cr/h en aller simple répété", "reliability": "community"},
+            {"label": "Progression de prix", "value": "Hauler ~50 000 Cr → Panther Clipper Mk II ~301,35 M Cr", "reliability": "official"},
+            {"label": "Trade Rank", "value": "9 paliers officiels (Penniless → Elite, puis Elite I à V) ; seuils de profit cumulé non documentés", "reliability": "official"},
+            {"label": "Commande type Trade Dangerous", "value": "trade.py run --credits 5000 --capacity 8 --ly-per 8.56 --jumps 2 --hops 2", "reliability": "official"},
+            {"label": "Denrées rares", "value": "bonus de prix plafonné entre 150 et 200 al selon les estimations communautaires, demande faible par station", "reliability": "community"}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Légende de fiabilité utilisée dans ce guide",
+          "text": "**[OFF]** confirmé par une source primaire (fichiers de référence EDCD/coriolis-data et EDCD/FDevIDs, documentation officielle d'un outil). **[COM]** retour ou estimation communautaire cohérente (guides, forums, tests joueurs) mais non officiel. **[EST]** donnée absente ou incomplète dans les sources consultées : ce guide te le dit explicitement plutôt que d'inventer un chiffre — à vérifier toi-même en jeu ou via un outil à jour."
+        }
+      ]
+    },
+    {
+      "id": "positionnement",
+      "number": 1,
+      "title": "Pourquoi ce guide : le commerce en vrac au-delà des bases",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Le commerce en vrac (le « trading ») n'est ni la voie la plus rapide vers la richesse, ni une activité anecdotique : c'est celle qui monte en échelle avec ton capital, sans dépendre d'un point chaud de minage ni d'un corps céleste précis à visiter.** Plus ta soute grossit, plus chaque aller simple rapporte — jusqu'au Panther Clipper Mk II, le plus gros transporteur non-capital du jeu."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Pour situer honnêtement cette activité : le mining-to-trade (minage puis revente) et l'exobiologie dépassent largement le commerce classique en crédits par heure — le minage laser bien équipé franchit les 100 M Cr/heure quand une route classique en Type-6 plafonne autour de 1,2 M Cr/heure. Ce que le commerce offre en échange, c'est une activité qui ne dépend d'aucun gisement précis, qui progresse linéairement avec le tonnage acheté, et qui se prête particulièrement bien aux pics de demande de la Colonisation et des Community Goals — deux leviers que ce guide signale sans les redévelopper, chacun ayant déjà sa place ailleurs dans le corpus."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Pour la richesse rapide en solo** (exobiologie, minage), voir *Devenir riche sans combat* et *Explorer la galaxie*, qui couvrent ce terrain en détail.",
+            "**Pour l'ingénierie du FSD** (portée de saut, coûteuse à débloquer mais rentable sur un gros porteur), voir *Ingénierie de l'explorateur : atteindre le grade 5 sans combat ni détour inutile* — la référence du corpus sur ce blueprint, non redéveloppée ici.",
+            "**Pour le Porte-Vaisseau comme outil de commerce** (marché mobile, logistique de Colonisation), voir *Posséder et rentabiliser un Porte-Vaisseau* — la référence du corpus sur son exploitation économique.",
+            "**Pour la survie face au pirate ou au ganker en cours de route**, voir *Survivre au PvP sans combattre* — la référence du corpus sur l'évasion défensive, condensée ici en section 5 sous l'angle strictement matériel."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Ce que ce guide couvre, et ce qu'il ne recouvre pas",
+          "text": "Ce guide traite la méthode de calcul de rentabilité (section 2), l'arbre de progression des vaisseaux de fret et le Trade Rank (section 3), les outils de routage Trade Dangerous et Spansh (section 4), l'équipement d'un gros porteur (section 5) et les denrées rares (section 6). Il ne traite ni la contrebande, ni la piraterie, ni le mining-to-trade, ni le commerce de données — quatre familles distinctes du commerce au sens large, hors du périmètre de ce manuel."
+        }
+      ]
+    },
+    {
+      "id": "calcul-rentabilite",
+      "number": 2,
+      "title": "Calculer la rentabilité d'une route, étape par étape",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**La règle d'or du commerce en vrac : acheter dans l'économie qui produit une commodité, la vendre dans celle qui la consomme.** Tout le reste — état de faction, distance, temps de trajet — n'est qu'un ajustement de cette règle de base."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Cinq économies de station à connaître pour démarrer"
+        },
+        {
+          "type": "table",
+          "caption": "Ce que produisent et consomment typiquement les économies de station les plus utiles au commerce en vrac",
+          "headers": ["Économie", "Produit (achat pas cher)", "Consomme (vente chère)"],
+          "rows": [
+            [{"text": "Industrial", "style": "strong"}, {"text": "Machines, alliages, produits chimiques industriels", "style": "normal"}, {"text": "Métaux bruts, produits chimiques de base", "style": "normal"}],
+            [{"text": "High Tech", "style": "strong"}, {"text": "Composants électroniques, technologie avancée", "style": "normal"}, {"text": "Métaux, produits chimiques rares", "style": "normal"}],
+            [{"text": "Agriculture", "style": "strong"}, {"text": "Denrées alimentaires, produits agricoles", "style": "normal"}, {"text": "Machines, produits chimiques, technologie", "style": "normal"}],
+            [{"text": "Extraction", "style": "strong"}, {"text": "Métaux et minerais bruts", "style": "normal"}, {"text": "Machines, denrées, technologie", "style": "normal"}],
+            [{"text": "Refinery", "style": "strong"}, {"text": "Métaux raffinés (à partir du minerai acheté ailleurs)", "style": "normal"}, {"text": "Minerai brut, produits chimiques", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Au-delà du type d'économie, l'état de la faction locale (le BGS) fait bouger les prix dans l'instant : **Boom** est l'état idéal pour vendre (offre abondante, prix favorables), **Famine** fait exploser la demande et le prix des denrées alimentaires, **Outbreak** (épidémie) celle des produits médicaux. Repérer ces états avant de partir — au panneau système ou via un outil communautaire — vaut souvent plus qu'un calcul théorique de marge."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "La formule"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Profit horaire estimé ≈ (Soute en tonnes × Marge en Cr/tonne) ÷ Temps du trajet en heures, où la marge est le prix de vente moins le prix d'achat, et le temps de trajet inclut l'achat, les sauts, l'amarrage et la vente. Cette formule ne vaut que pour un aller simple répété : elle ignore le fret retour et suppose un marché qui ne s'épuise pas d'un aller à l'autre."
+        },
+        {
+          "type": "table",
+          "caption": "Exemple chiffré complet : Type-6 Transporter (114 t), composants électroniques, Industrial (Boom) → High Tech — instantané pédagogique, prix à revérifier avant de partir",
+          "headers": ["Étape du calcul", "Valeur"],
+          "rows": [
+            [{"text": "Prix d'achat", "style": "normal"}, {"text": "~4 750 Cr/t", "style": "number"}],
+            [{"text": "Prix de vente", "style": "normal"}, {"text": "~6 900 Cr/t", "style": "number"}],
+            [{"text": "Marge unitaire", "style": "strong"}, {"text": "2 150 Cr/t", "style": "number"}],
+            [{"text": "Capital engagé (114 t × 4 750 Cr)", "style": "normal"}, {"text": "541 500 Cr", "style": "number"}],
+            [{"text": "Recette à la vente (114 t × 6 900 Cr)", "style": "normal"}, {"text": "786 600 Cr", "style": "number"}],
+            [{"text": "Profit brut de l'aller simple", "style": "strong"}, {"text": "245 100 Cr", "style": "win"}],
+            [{"text": "Temps de l'aller simple (achat, 2 sauts, amarrage, vente)", "style": "normal"}, {"text": "~12 minutes", "style": "number"}],
+            [{"text": "Profit horaire estimé (245 100 Cr ÷ 12 min × 60)", "style": "strong"}, {"text": "≈1 225 500 Cr/heure", "style": "win"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ce chiffre est un exemple pédagogique, pas un relevé de marché",
+          "text": "Les prix réels fluctuent en continu selon l'offre, la demande et l'état de BGS de chaque station : revérifie-les via Spansh ou Inara juste avant de partir. De plus, acheter et vendre en boucle sur le même marché fait baisser l'offre et la demande locales — la marge réelle se dégrade à chaque aller. C'est précisément pour ça que des outils de routage multi-étapes comme Trade Dangerous ou Spansh (section 4) recalculent la meilleure boucle disponible plutôt que de répéter un aller simple jusqu'à épuisement du marché."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Repère une paire de stations où l'une produit la commodité visée (offre abondante, idéalement en Boom) et l'autre la consomme.", "detail": "Section précédente pour les cinq économies de base."},
+            {"text": "Relève le prix d'achat et le prix de vente en temps réel via Spansh ou Inara, jamais sur un chiffre d'un guide écrit.", "detail": "Les prix bougent en continu, voir le callout ci-dessus."},
+            {"text": "Calcule le capital engagé (soute × prix d'achat) et vérifie que ta trésorerie le couvre sans l'épuiser entièrement.", "detail": "Règle de prudence : ne jamais engager toute sa trésorerie dans un seul chargement, l'assurance ne couvre jamais la cargaison perdue."},
+            {"text": "Calcule la marge (vente − achat) puis le profit brut (soute × marge).", "detail": "—"},
+            {"text": "Divise par le temps de trajet réel, sauts compris, pour obtenir un profit horaire comparable d'une route à l'autre.", "detail": "Un chargement plus rentable au trajet peut être moins rentable à l'heure s'il est trop loin."}
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Le fret retour double la mise, en théorie",
+          "text": "Trouver une cargaison rentable sur le trajet inverse permettrait, en théorie, de doubler le profit horaire pour un temps de trajet quasiment identique — c'est exactement ce que Trade Dangerous et Spansh excellent à calculer automatiquement plutôt qu'à la main (section 4)."
+        }
+      ]
+    },
+    {
+      "id": "trade-rank-et-vaisseaux",
+      "number": 3,
+      "title": "Le Trade Rank et l'arbre de progression jusqu'au Panther Clipper Mk II",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Le Trade Rank se base sur le profit cumulé réalisé en vendant des marchandises**, sur le même principe que les rangs de combat ou d'exploration : neuf paliers officiels, le dernier subdivisé en cinq sous-niveaux."
+        },
+        {
+          "type": "table",
+          "caption": "Les neuf paliers officiels du Trade Rank",
+          "headers": ["Palier", "Nom"],
+          "rows": [
+            [{"text": "0", "style": "number"}, {"text": "Penniless", "style": "normal"}],
+            [{"text": "1", "style": "number"}, {"text": "Mostly Penniless", "style": "normal"}],
+            [{"text": "2", "style": "number"}, {"text": "Peddler", "style": "normal"}],
+            [{"text": "3", "style": "number"}, {"text": "Dealer", "style": "normal"}],
+            [{"text": "4", "style": "number"}, {"text": "Merchant", "style": "normal"}],
+            [{"text": "5", "style": "number"}, {"text": "Broker", "style": "normal"}],
+            [{"text": "6", "style": "number"}, {"text": "Entrepreneur", "style": "normal"}],
+            [{"text": "7", "style": "number"}, {"text": "Tycoon", "style": "normal"}],
+            [{"text": "8", "style": "number"}, {"text": "Elite", "style": "strong"}],
+            [{"text": "9–13", "style": "number"}, {"text": "Elite I à Elite V", "style": "strong"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Les seuils de crédits exacts ne sont pas documentés",
+          "text": "Aucune source primaire fiable ne donne les seuils de profit cumulé par palier [EST] — consulte le panneau **Right Panel > Réputation** en jeu, qui affiche le seuil exact du prochain palier, ou un wiki communautaire à jour. Un rang élevé conditionne l'accès à certaines missions de commerce les mieux rémunérées, mais ne débloque aucun vaisseau ou module spécifique — contrairement au rang impérial, qui conditionne l'achat de l'Imperial Cutter (voir plus bas)."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "L'arbre de progression des vaisseaux de fret"
+        },
+        {
+          "type": "table",
+          "caption": "Progression de vaisseaux recommandée, du premier Hauler au Panther Clipper Mk II",
+          "headers": ["Étape", "Vaisseau", "Prix indicatif", "Soute indicative", "Remarque"],
+          "rows": [
+            [{"text": "Débutant", "style": "normal"}, {"text": "Hauler", "style": "strong"}, {"text": "~50 000 Cr", "style": "number"}, {"text": "26 t", "style": "number"}, {"text": "Capital d'entrée minimal", "style": "normal"}],
+            [{"text": "Débutant avancé", "style": "normal"}, {"text": "Keelback", "style": "strong"}, {"text": "~3,1 M Cr", "style": "number"}, {"text": "~112 t", "style": "number"}, {"text": "Baie de chasseur défensive incluse", "style": "normal"}],
+            [{"text": "Intermédiaire", "style": "normal"}, {"text": "Cobra Mk III", "style": "strong"}, {"text": "~340 000 Cr", "style": "number"}, {"text": "64 t", "style": "number"}, {"text": "Multirôle rapide, bonne soute pour son prix", "style": "normal"}],
+            [{"text": "Confirmé", "style": "normal"}, {"text": "Type-6 Transporter", "style": "strong"}, {"text": "~1 M Cr", "style": "number"}, {"text": "114 t", "style": "number"}, {"text": "Vaisseau de l'exemple chiffré (section 2)", "style": "normal"}],
+            [{"text": "Confirmé avancé", "style": "normal"}, {"text": "Type-8 Transporter (2024)", "style": "strong"}, {"text": "~38,45 M Cr", "style": "number"}, {"text": "~406 t annoncées", "style": "number"}, {"text": "Bonne gestion du FSD en régime SCO", "style": "normal"}],
+            [{"text": "Avancé", "style": "normal"}, {"text": "Asp Explorer", "style": "strong"}, {"text": "~6,6 M Cr", "style": "number"}, {"text": "130 t", "style": "number"}, {"text": "Polyvalent, bonne portée de saut", "style": "normal"}],
+            [{"text": "Expert (volume)", "style": "normal"}, {"text": "Type-9 Heavy", "style": "strong"}, {"text": "~76,6 M Cr équipé", "style": "number"}, {"text": "~790 t théorique", "style": "number"}, {"text": "Meilleure soute brute par crédit investi", "style": "normal"}],
+            [{"text": "Expert (premium)", "style": "normal"}, {"text": "Imperial Cutter", "style": "strong"}, {"text": "~209 M Cr équipé", "style": "number"}, {"text": "794 t tout cargaison (730 t avec bouclier)", "style": "number"}, {"text": "Nécessite le rang impérial de Duc", "style": "lose"}],
+            [{"text": "Expert (hybride)", "style": "normal"}, {"text": "Type-10 Defender", "style": "strong"}, {"text": "~124,8 M Cr équipé", "style": "number"}, {"text": "~566 t théorique", "style": "number"}, {"text": "Le plus armé et résistant, pour zones dangereuses", "style": "normal"}],
+            [{"text": "Expert (multirôle)", "style": "normal"}, {"text": "Anaconda", "style": "strong"}, {"text": "~147 M Cr équipé", "style": "number"}, {"text": "~470 t théorique", "style": "number"}, {"text": "Meilleure portée de saut, un seul vaisseau pour tout faire", "style": "normal"}],
+            [{"text": "Sommet", "style": "normal"}, {"text": "Panther Clipper Mk II (2025)", "style": "strong"}, {"text": "~301,35 M Cr", "style": "number"}, {"text": "voir calcul ci-dessous", "style": "mid"}, {"text": "Seul vaisseau non-capital à deux emplacements internes classe 8", "style": "strong"}]
+          ]
+        },
+        {"type": "divider"},
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Cas particulier : la soute du Panther Clipper Mk II, un calcul indicatif"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Les fichiers de référence EDCD/coriolis-data publient les emplacements internes officiels du Panther Clipper Mk II, mais pas de chiffre unique de soute théorique — contrairement au Type-9, à l'Imperial Cutter, au Type-10 et à l'Anaconda, pour lesquels ce chiffre est publié directement. On peut néanmoins l'obtenir avec la même méthode que celle employée pour ces quatre vaisseaux : installer un Cargo Rack dans chaque emplacement interne compatible et additionner les capacités."
+        },
+        {
+          "type": "table",
+          "caption": "Capacité d'un Cargo Rack selon la classe d'emplacement",
+          "headers": ["Classe", "1", "2", "3", "4", "5", "6", "7", "8"],
+          "rows": [
+            [{"text": "Capacité (t)", "style": "strong"}, {"text": "2", "style": "number"}, {"text": "4", "style": "number"}, {"text": "8", "style": "number"}, {"text": "16", "style": "number"}, {"text": "32", "style": "number"}, {"text": "64", "style": "number"}, {"text": "128", "style": "number"}, {"text": "256", "style": "number"}]
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Calcul indicatif de la soute théorique du Panther Clipper Mk II (2 × classe 8, 2 × classe 7, 3 × classe 6, 2 × classe 5, 1 × classe 4, 1 × classe 2, 1 × classe 1 ; suite planétaire exclue)",
+          "headers": ["Emplacements", "Capacité unitaire", "Sous-total"],
+          "rows": [
+            [{"text": "2 × classe 8", "style": "normal"}, {"text": "256 t", "style": "number"}, {"text": "512 t", "style": "number"}],
+            [{"text": "2 × classe 7", "style": "normal"}, {"text": "128 t", "style": "number"}, {"text": "256 t", "style": "number"}],
+            [{"text": "3 × classe 6", "style": "normal"}, {"text": "64 t", "style": "number"}, {"text": "192 t", "style": "number"}],
+            [{"text": "2 × classe 5", "style": "normal"}, {"text": "32 t", "style": "number"}, {"text": "64 t", "style": "number"}],
+            [{"text": "1 × classe 4", "style": "normal"}, {"text": "16 t", "style": "number"}, {"text": "16 t", "style": "number"}],
+            [{"text": "1 × classe 2", "style": "normal"}, {"text": "4 t", "style": "number"}, {"text": "4 t", "style": "number"}],
+            [{"text": "1 × classe 1", "style": "normal"}, {"text": "2 t", "style": "number"}, {"text": "2 t", "style": "number"}],
+            [{"text": "Total calculé", "style": "strong"}, {"text": "—", "style": "normal"}, {"text": "≈1 046 t", "style": "win"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Un calcul, pas une donnée officielle",
+          "text": "**≈1 046 t est un chiffre que ce guide calcule à partir des emplacements internes officiels [OFF], pas une valeur publiée telle quelle par Frontier ou par coriolis-data [EST].** Un build réel réservera une partie de ces emplacements aux boucliers et aux modules de fuite (section 5) — ce total n'est atteignable que sur un « stripped build » sacrifiant toute défense, à réserver aux routes garanties en haute sécurité."
+        },
+        {
+          "type": "verdict",
+          "title": "Quel vaisseau pour quel usage ?",
+          "text": "Type-9 Heavy pour la meilleure soute brute par crédit investi en zone sûre. Imperial Cutter pour le meilleur compromis vitesse/portée/résistance, une fois le rang de Duc débloqué. Type-10 Defender pour le commerce en zone dangereuse, où survivre prime sur le volume. Anaconda pour qui veut un seul vaisseau polyvalent plutôt qu'un cargo dédié. Panther Clipper Mk II pour le volume de fret pur absolu, au prix d'une maniabilité très limitée et d'un mass-lock élevé pendant les interdictions."
+        }
+      ]
+    },
+    {
+      "id": "outils-td-spansh",
+      "number": 4,
+      "title": "Prise en main de Trade Dangerous et Spansh",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Ne calcule jamais une route à la main au-delà de l'exemple pédagogique de la section 2 : deux outils communautaires actifs le font pour toi, en tenant compte de dizaines de stations à la fois.**"
+        },
+        {
+          "type": "table",
+          "caption": "Les outils de routage commercial actifs en 2026",
+          "headers": ["Outil", "Rôle", "Statut"],
+          "rows": [
+            [{"text": "Trade Dangerous", "style": "strong"}, {"text": "Optimiseur de routes multi-étapes en ligne de commande (Python)", "style": "normal"}, {"text": "Actif", "style": "win"}],
+            [{"text": "Spansh", "style": "strong"}, {"text": "Calculateur de routes commerciales web, successeur de facto d'EDDB", "style": "normal"}, {"text": "Actif — référence principale pour le routage web", "style": "win"}],
+            [{"text": "Inara", "style": "strong"}, {"text": "Marché galactique, comparateur de vaisseaux, revérification de prix en temps réel", "style": "normal"}, {"text": "Actif — référence majeure", "style": "win"}],
+            [{"text": "EDDB.io", "style": "normal"}, {"text": "Ancien calculateur de routes", "style": "normal"}, {"text": "Fermé en 2022 — obsolète, ne plus utiliser", "style": "lose"}]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Trade Dangerous : la commande de base"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Trade Dangerous se distingue par un principe précis : il cherche à « maximiser les gains de chaque espace de cargaison ET crédit », plutôt que de simplement suggérer le chargement le plus lourd possible. Commande type, telle que documentée par le projet :"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "trade.py run --credits 5000 --capacity 8 --ly-per 8.56 --jumps 2 --hops 2"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "--credits : le capital de départ disponible, en Cr.", "detail": "5000 Cr dans l'exemple — adapte à ta trésorerie réelle."},
+            {"text": "--capacity : la capacité de soute du vaisseau, en tonnes.", "detail": "8 t dans l'exemple : une valeur de démonstration, pas une recommandation de vaisseau."},
+            {"text": "--ly-per : la portée de saut à pleine charge, en années-lumière.", "detail": "8,56 al dans l'exemple."},
+            {"text": "--jumps : le nombre maximal de sauts autorisés par étape du trajet.", "detail": "2 sauts dans l'exemple."},
+            {"text": "--hops : le nombre d'étapes enchaînées que l'outil doit calculer.", "detail": "2 étapes dans l'exemple."}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Vérifie chaque option avant de construire ton propre plan",
+          "text": "Cette lecture des paramètres se déduit de leur nom et de la description du projet [COM] ; elle n'a pas pu être recoupée ligne à ligne avec la documentation complète du dépôt pour ce guide. Lance `trade.py run --help` en local pour confirmer le comportement exact de chaque option avant de bâtir une route réelle dessus."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Pour suivre ta progression en jeu : voir le guide Outils",
+          "text": "EDMC (Elite Dangerous Market Connector) et son plugin BGS-Tally — qui alimentent les bases communautaires et repèrent les états Boom/Famine/Guerre civile — sont présentés en détail dans le guide *Outils* du corpus. Ce guide-ci ne les redéveloppe pas : il se concentre sur Trade Dangerous et Spansh, spécifiques au calcul de route commerciale."
+        },
+        {
+          "type": "verdict",
+          "title": "Trade Dangerous ou Spansh ?",
+          "text": "Spansh, en ligne, ne demande aucune installation et convient à une vérification rapide avant de partir. Trade Dangerous, en ligne de commande, s'installe une fois et permet ensuite d'automatiser des recherches répétées avec des paramètres précis (capital, soute, portée de saut) — plus adapté à qui route plusieurs fois par session avec le même vaisseau."
+        }
+      ]
+    },
+    {
+      "id": "config-vaisseau-fret",
+      "number": 5,
+      "title": "Configurer un gros porteur : soute, boucliers, fuite",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Le choix central de toute configuration de fret : soute maximale ou configuration équilibrée.** Un « stripped build » (tous les emplacements en cargo, aucune défense) n'est rentable que sur des routes en haute sécurité garantie ; partout ailleurs, la communauté recommande de conserver boucliers et modules de fuite au prix d'un peu de tonnage."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Shield Generator** de la classe la plus élevée compatible avec le vaisseau.",
+            "**Shield Boosters** dans les points d'ancrage utilitaires (classe 0), pour encaisser une interdiction le temps de fuir.",
+            "**Shield Cell Bank** pour régénérer rapidement le bouclier après un engagement bref.",
+            "**FSD à la portée maximale possible**, éventuellement complété par un Guardian FSD Booster — réduit le nombre de sauts, donc le nombre d'occasions d'être intercepté.",
+            "**Heat Sink Launcher** pour couper temporairement la signature thermique.",
+            "**Chaff Launcher** pour réduire la précision des tirs adverses le temps de fuir.",
+            "**Point Defence** pour se protéger des missiles et torpilles de pirates pendant la fuite."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Il n'existe pas de module « anti-interdiction »",
+          "text": "La défense contre l'interdiction repose sur trois leviers combinés, jamais sur un seul module dédié : l'ingénierie des propulseurs et du distributeur d'énergie (voir *Ingénierie de l'explorateur : atteindre le grade 5 sans combat ni détour inutile* pour le blueprint Increased Range, transposable à un gros porteur), la gestion des répartiteurs d'énergie (pips vers SYS/ENG) pendant le mini-jeu d'interdiction, et la réduction du nombre de sauts nécessaires sur la route. Pour la procédure complète d'évasion, les lieux à risque (Deciat, Shinrarta Dezhra) et les groupes PvE type Mobius, voir *Survivre au PvP sans combattre* — la référence du corpus sur ce terrain, non redéveloppée ici."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Enfin, soumettre volontairement à l'interdiction (« submit ») permet de contrôler le moment et la position de sortie de la vitesse supraluminique, plutôt que de subir une sortie forcée à un endroit défavorable — un réflexe simple, indépendant de toute configuration de vaisseau."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Réserve le « stripped build » aux routes en haute sécurité que tu connais déjà. Partout ailleurs, sacrifie 10 à 20 % de soute pour un bouclier correct et un FSD à portée maximisée : la règle de prudence vaut ici comme pour tout commerce — l'assurance ne rembourse jamais la cargaison perdue."
+        }
+      ]
+    },
+    {
+      "id": "denrees-rares",
+      "number": 6,
+      "title": "Un mot sur les denrées rares",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Le commerce de denrées rares reste une méthode d'appoint valable, pas un pilier de la stratégie de ce guide.** Chaque station productrice ne renouvelle qu'un lot limité toutes les quelques heures, mais le prix de vente augmente avec la distance parcourue jusqu'à un plafond — ce qui permet un aller simple rentable, sans avoir à organiser de fret retour."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Plafond du bonus de distance", "value": "quelque part entre 150 et 200 années-lumière selon les estimations communautaires", "reliability": "community"},
+            {"label": "Demande par station", "value": "faible, de l'ordre de ~130 unités", "reliability": "community"},
+            {"label": "Boucles classiques", "value": "8 à 12 stations productrices enchaînées", "reliability": "community"},
+            {"label": "Catalogue complet", "value": "142 denrées rares réparties sur 139 stations dans le corpus de référence interne (28-marchandises.md)", "reliability": "official"}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ce que ce guide ne fait pas",
+          "text": "Le corpus de référence interne recense les 142 denrées rares nommément (système, station, type de station), mais précise lui-même que **l'allocation par cycle et la distance optimale de revente ne sont établies par aucune source primaire** — ces trois chiffres ci-dessus sont donc des estimations communautaires à vérifier en jeu, pas des constantes du jeu. Ce guide ne duplique pas la liste des 142 denrées : consulte Inara ou un outil de recherche de denrées rares à jour pour la station la plus proche de toi."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Bonne tactique de premier jour ou d'appoint entre deux routes de vrac, mais le plafond de stock par station limite mécaniquement le volume : un Type-9 ou un Panther Clipper chargé de commodités classiques (section 2) rapporte davantage à l'heure qu'une boucle de denrées rares, dès que ta soute dépasse celle d'un vaisseau d'entrée de gamme."
+        }
+      ]
+    },
+    {
+      "id": "pieges-fiabilite",
+      "number": 7,
+      "title": "Pièges fréquents et fiabilité des chiffres",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Pièges fréquents du commerce en vrac",
+          "headers": ["Piège", "Conséquence", "Comment l'éviter"],
+          "rows": [
+            [
+              {"text": "Recopier un prix d'achat/vente d'un guide écrit", "style": "normal"},
+              {"text": "Marge réelle différente, parfois négative, car les prix fluctuent en continu", "style": "lose"},
+              {"text": "Toujours revérifier via Spansh ou Inara juste avant de partir (section 2)", "style": "normal"}
+            ],
+            [
+              {"text": "Répéter le même aller simple jusqu'à épuisement du marché", "style": "normal"},
+              {"text": "Marge qui se dégrade à chaque aller, sans que le commandant s'en rende compte", "style": "lose"},
+              {"text": "Utiliser Trade Dangerous ou Spansh pour recalculer une boucle multi-étapes (section 4)", "style": "normal"}
+            ],
+            [
+              {"text": "Acheter l'Imperial Cutter sans le rang impérial de Duc", "style": "normal"},
+              {"text": "Achat tout simplement impossible tant que le rang n'est pas atteint", "style": "lose"},
+              {"text": "Vérifier son rang impérial avant de provisionner les ~209 M Cr (section 3)", "style": "normal"}
+            ],
+            [
+              {"text": "Configurer un « stripped build » hors des routes garanties sûres", "style": "normal"},
+              {"text": "Perte de la cargaison entière à la première interdiction réussie, jamais remboursée par l'assurance", "style": "lose"},
+              {"text": "Conserver bouclier et modules de fuite partout sauf en haute sécurité connue (section 5)", "style": "normal"}
+            ],
+            [
+              {"text": "Construire une stratégie de revenu sur les denrées rares comme pilier principal", "style": "normal"},
+              {"text": "Volume plafonné par un stock limité et renouvelé lentement par station", "style": "lose"},
+              {"text": "Réserver les denrées rares à l'appoint, privilégier le vrac en gros porteur (section 6)", "style": "normal"}
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "**Fiabilité des chiffres de ce guide.** Les prix et capacités de soute des vaisseaux, les neuf paliers du Trade Rank, la commande de base de Trade Dangerous et le statut des outils de routage sont confirmés en confiance haute par des sources primaires (EDCD/coriolis-data, EDCD/FDevIDs, documentation des projets eux-mêmes)."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Quatre points restent non confirmés — à revérifier toi-même",
+          "text": "**1.** Les seuils de profit cumulé de chaque palier du Trade Rank n'ont été retrouvés dans aucune source primaire — consulte le panneau Réputation en jeu. **2.** Le détail exact de chaque option de la commande Trade Dangerous se déduit de son nom, pas d'une documentation ligne à ligne recoupée — lance `--help` avant de t'y fier. **3.** Le plafond de distance, la demande par station et la taille typique d'une boucle pour les denrées rares sont des estimations communautaires, le corpus de référence interne signalant lui-même l'absence de source primaire sur ces trois points. **4.** La soute théorique du Panther Clipper Mk II (≈1 046 t) est un calcul de ce guide à partir des emplacements internes officiels, pas une valeur publiée par Frontier ou coriolis-data."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "Frontier Developments",
+    "EDCD/coriolis-data (fiches vaisseaux : type_9_heavy, imperial_cutter, type_10_defender, anaconda, keelback, type_8_transport, panther_clipper)",
+    "EDCD/FDevIDs (TradeRank.csv, economy.csv, commodity.csv, rare_commodity.csv)",
+    "Trade Dangerous (eyeonus/Trade-Dangerous, dépôt GitHub)",
+    "Spansh",
+    "EDSM",
+    "TheGamer — guide de commerce Elite Dangerous",
+    "GameRant — classement des méthodes de profit",
+    "Corpus interne — 11-commerce.md, 28-marchandises.md"
+  ]
+}

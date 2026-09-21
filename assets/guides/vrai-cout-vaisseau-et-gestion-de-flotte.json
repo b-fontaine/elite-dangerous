@@ -1,0 +1,420 @@
+{
+  "id": "vrai-cout-vaisseau-et-gestion-de-flotte",
+  "title": "Le vrai prix d’un vaisseau : budgéter, choisir et faire grandir sa flotte",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Le prix affiché au chantier naval n'est que la moitié de l'histoire. Ce guide chiffre le facteur ×2,6 entre coque nue et vaisseau réellement équipé, classe tes options par rôle et par budget, et détaille ce que coûtent — en crédits et en temps — le transfert et le stockage d'une flotte qui grandit.",
+  "byline": "Toutes plateformes · Live 4.4.0.x · Prérequis : un budget d'achat déjà réuni",
+  "edition": "2026-09",
+  "topics": ["vaisseaux", "budget", "flotte", "économie", "achat", "transfert", "stockage"],
+  "estimatedReadMinutes": 17,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Le facteur ×2,6 : ce que le prix de coque ne dit pas",
+            "Budgéter par palier : la matrice Rôle × Budget",
+            "Les vaisseaux sous condition : rang de marine, pas seulement des crédits",
+            "Faire venir son vaisseau : transfert entre stations, coût et délai",
+            "Stocker sa flotte sans payer : le plafond de 40 par station",
+            "Pièges fréquents et fiabilité des chiffres"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Tu as enfin le budget. La vraie question n'est plus « combien coûte ce vaisseau ? » mais « combien coûte ce vaisseau une fois qu'il vole vraiment ? »** Ce guide part du principe que tu as déjà de l'argent — via le **Protocole 1 milliard de crédits** ou le parcours **Devenir riche sans combat** — et s'attaque à ce que ces deux guides ne couvrent pas : combien mettre de côté au-delà du prix de coque, quel vaisseau choisir à budget donné, et ce que coûte réellement une flotte qui s'étend sur plusieurs stations."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Facteur coque → vaisseau équipé (core internals qualité A seuls)", "value": "≈2,6× le prix de coque affiché", "reliability": "official"},
+            {"label": "Exemple vérifié — Anaconda", "value": "147 M Cr nue → ≈387 M Cr équipée → rebuy ≈19,4 M Cr", "reliability": "official"},
+            {"label": "Coût de transfert entre stations", "value": "≈(0,00006 × valeur totale × al) + (0,0002 × valeur totale) + 1 000 Cr", "reliability": "community"},
+            {"label": "Délai de transfert", "value": "≈300 s + 10 s/al — soit ≈61 h pour Bulle → Colonia", "reliability": "community"},
+            {"label": "Stockage gratuit de vaisseaux", "value": "40 par station (chantier naval), sans limite de durée, extensible en répartissant sur plusieurs stations", "reliability": "official"},
+            {"label": "Vaisseaux sous condition de rang de marine", "value": "7 sur 48 — les 41 autres s'achètent avec des crédits seuls", "reliability": "official"}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Légende de fiabilité utilisée dans ce guide",
+          "text": "**[OFF]** valeur relevée ou calculée directement sur des données officielles ou des jeux de données communautaires de référence (Inara.cz, EDCD/coriolis-data, EDCD/FDevIDs). **[COM]** formule ou pratique communautaire cohérente mais non confirmée par Frontier — à traiter comme un ordre de grandeur. **[EST]** donnée incomplète ou non revérifiée dans les sources consultées : ce guide te le dit explicitement plutôt que d'inventer un chiffre."
+        }
+      ]
+    },
+    {
+      "id": "facteur-2-6",
+      "number": 1,
+      "title": "Le facteur ×2,6 : ce que le prix de coque ne dit pas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Le prix affiché au chantier naval n'est que celui de la coque nue.** Deux postes s'y ajoutent systématiquement dès que tu veux réellement voler avec ce vaisseau : les modules de qualité correcte, et le rebuy — l'assurance qui te rembourse la perte en cas de destruction."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "L'exemple vérifiable : un Anaconda en core internals qualité A"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un Anaconda rééquipé avec ses seuls **7 modules de core internals obligatoires** en qualité A (Power Plant, Thrusters, FSD, Life Support, Power Distributor, Sensors, réservoir de carburant) — donc **avant tout bouclier, toute arme ou tout module optionnel** — donne le détail suivant, entièrement recalculable sur les données brutes EDCD/coriolis-data :"
+        },
+        {
+          "type": "table",
+          "caption": "Coût réel d'un Anaconda en core internals A (rebuy inclus)",
+          "headers": ["Poste", "Coût (Cr)"],
+          "rows": [
+            [{"text": "Coque nue"}, {"text": "146 969 450", "style": "number"}],
+            [{"text": "Power Plant 8A"}, {"text": "116 739 873", "style": "number"}],
+            [{"text": "Thrusters 7A"}, {"text": "51 289 112", "style": "number"}],
+            [{"text": "FSD 6A"}, {"text": "16 179 531", "style": "number"}],
+            [{"text": "Life Support 5A"}, {"text": "1 241 317", "style": "number"}],
+            [{"text": "Power Distributor 8A"}, {"text": "27 249 391", "style": "number"}],
+            [{"text": "Sensors 8A"}, {"text": "27 249 391", "style": "number"}],
+            [{"text": "Réservoir de carburant classe 5"}, {"text": "97 754", "style": "number"}],
+            [{"text": "Total coque + core internals A", "style": "strong"}, {"text": "≈ 387 015 819", "style": "strong"}],
+            [{"text": "Rebuy (≈5 % de la valeur assurée)", "style": "strong"}, {"text": "≈ 19 350 791", "style": "lose"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Rien que sur les modules **obligatoires**, le budget réel atteint déjà **2,6 fois** le prix de coque affiché — et un Anaconda de combat ou d'exploration pleinement équipé (boucliers, armes, modules optionnels) coûte en pratique nettement plus que ce sous-total. Le rebuy seul (≈19,4 M Cr) dépasse à lui seul le prix d'achat de nombreux vaisseaux Medium."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Le piège du budget pile-poil",
+          "text": "Économiser exactement le prix de coque affiché et se présenter au chantier naval avec cette seule somme, c'est repartir avec une coque équipée de composants standards médiocres — ou ne pas pouvoir l'équiper du tout. Provisionne toujours le facteur ×2,6 avant d'acheter, pas après."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Un ordre de grandeur, pas un devis par vaisseau",
+          "text": "Ce facteur ×2,6 est établi sur un seul exemple, l'Anaconda, en configuration qualité A minimale. Il sert de repère pour n'importe quel autre châssis (voir la matrice de la section suivante), mais l'ingénierie, les armes et les modules optionnels font varier le coût réel à la hausse comme à la baisse : ce n'est jamais un chiffre exact par vaisseau. Pour la suite logique — améliorer ces modules sans changer leur coût d'achat initial — voir **Ingénierie de l'explorateur : atteindre le grade 5 sans combat ni détour inutile**, qui reste la référence sur le déblocage de Farseer et le blueprint Increased Range."
+        },
+        {
+          "type": "verdict",
+          "title": "Budgète la coque × 2,6, jamais la coque seule",
+          "text": "Avant de viser un vaisseau, multiplie son prix de coque affiché par 2,6 pour estimer le budget réel d'entrée — équipement de base et premier rebuy compris. C'est un plancher, pas un plafond."
+        }
+      ]
+    },
+    {
+      "id": "matrice-role-budget",
+      "number": 2,
+      "title": "Budgéter par palier : la matrice Rôle × Budget",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Une fois le facteur ×2,6 en tête, la question devient : quel vaisseau pour quel rôle, à quel budget total ?** La matrice ci-dessous classe six rôles sur quatre paliers de budget — coque et équipement de base compris, pas le seul prix affiché au chantier naval."
+        },
+        {
+          "type": "paragraph",
+          "text": "Chaque cellule applique le facteur ×2,6 de la section précédente au prix de coque du vaisseau concerné, arrondi. Ce n'est **pas un devis exact par vaisseau** — l'ingénierie, les armes et les modules optionnels font varier le total réel — mais un repère suffisant pour choisir un palier avant d'aller regarder le détail en jeu."
+        },
+        {
+          "type": "table",
+          "caption": "Matrice Rôle × Budget — recommandation principale et alternative par palier",
+          "headers": ["Rôle", "< 5 M Cr", "5-50 M Cr", "50-300 M Cr", "> 300 M Cr"],
+          "rows": [
+            [
+              {"text": "Combat", "style": "strong"},
+              {"text": "Viper Mk III (≈0,37 M Cr équipé) — alt. Eagle Mk II"},
+              {"text": "Vulture (≈12,8 M Cr) — alt. Viper Mk IV (≈1,1 M Cr, entrée basse)"},
+              {"text": "Fer-de-Lance (≈134 M Cr) — alt. Python Mk II (≈176 M Cr)"},
+              {"text": "Federal Corvette (≈489 M Cr, rang Rear Admiral requis) — alt. Imperial Cutter (≈543 M Cr, rang Duke requis)", "style": "strong"}
+            ],
+            [
+              {"text": "Exploration", "style": "strong"},
+              {"text": "Diamondback Scout (≈1,5 M Cr) — alt. Sidewinder Mk I (≈0,08 M Cr)"},
+              {"text": "Asp Explorer (≈17,3 M Cr) — alt. Diamondback Explorer (≈4,9 M Cr, entrée basse)"},
+              {"text": "Krait Phantom (≈97 M Cr) — alt. Krait Mk II (≈119 M Cr)"},
+              {"text": "Anaconda (≈382 M Cr) — alt. Caspian Explorer (≈507 M Cr, meilleure portée Large)", "style": "strong"}
+            ],
+            [
+              {"text": "Commerce / fret", "style": "strong"},
+              {"text": "Hauler (≈0,14 M Cr) — alt. Adder (≈0,23 M Cr)"},
+              {"text": "Keelback (≈8,1 M Cr) — alt. Type-7 Transporter (≈45 M Cr, entrée haute)"},
+              {"text": "Type-8 Transporter (≈100 M Cr) — alt. Type-9 Heavy (≈199 M Cr)"},
+              {"text": "Panther Clipper Mk II (≈784 M Cr) — alt. Type-10 Defender (≈324 M Cr, fret armé)", "style": "strong"}
+            ],
+            [
+              {"text": "Transport de passagers", "style": "strong"},
+              {"text": "Dolphin (≈3,5 M Cr) — pas d'alternative dédiée à ce palier"},
+              {"text": "Aucun vaisseau à cabines dédié à ce palier — un Adder/Cobra Mk III avec cabine en soute peut dépanner", "style": "mid"},
+              {"text": "Orca (≈126 M Cr) — alt. Beluga Liner (≈220 M Cr)"},
+              {"text": "Aucun vaisseau à cabines dédié ne dépasse 300 M Cr équipé — au-delà, on ajoute des cabines à un Type-9 Heavy ou un Panther Clipper Mk II", "style": "mid"}
+            ],
+            [
+              {"text": "Minage", "style": "strong"},
+              {"text": "Aucun vaisseau minier dédié à ce palier — un Hauler/Adder avec laser minier basique peut démarrer", "style": "mid"},
+              {"text": "Aucun vaisseau minier dédié à ce palier — un Cobra Mk III/Asp Explorer équipé en minage basique convient en attendant", "style": "mid"},
+              {"text": "Type-11 Prospector (≈176 M Cr) — alt. Type-9 Heavy (≈199 M Cr)", "style": "strong"},
+              {"text": "Type-10 Defender (≈324 M Cr) — au-delà, un Anaconda ou un Imperial Cutter reconvertis restent moins efficaces que le Type-11"}
+            ],
+            [
+              {"text": "Multi-rôle", "style": "strong"},
+              {"text": "Cobra Mk III (≈0,91 M Cr) — alt. Cobra Mk IV (≈2,0 M Cr)"},
+              {"text": "Cobra Mk V (≈5,2 M Cr) — alt. Imperial Clipper (≈58 M Cr, entrée haute)"},
+              {"text": "Python Mk II (≈176 M Cr) — alt. Corsair (≈206 M Cr)"},
+              {"text": "Imperial Cutter (≈543 M Cr, rang Duke requis) — seule option à ce palier", "style": "strong"}
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Pour remplir ces paliers en crédits",
+          "text": "Le parcours **Devenir riche sans combat — le guide du débutant** couvre l'exobio/minage/commerce jusqu'aux premiers paliers, et **Protocole 1 milliard de crédits** chiffre un plan complet 45 M → 1 Md Cr par exploration/exobiologie. Ce guide-ci prend le relais côté vaisseaux une fois l'argent en poche, pas côté activité génératrice de revenus."
+        }
+      ]
+    },
+    {
+      "id": "rang-de-marine",
+      "number": 3,
+      "title": "Les vaisseaux sous condition : rang de marine, pas seulement des crédits",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Avant de viser un vaisseau haut de gamme, vérifie qu'il ne demande pas autre chose que des crédits.** Sept des 48 vaisseaux de chantier naval exigent un rang de réputation auprès d'une des deux marines de superpuissance, en plus de leur prix affiché."
+        },
+        {
+          "type": "table",
+          "caption": "Les 7 vaisseaux sous condition de rang de marine",
+          "headers": ["Vaisseau", "Puissance", "Rang requis"],
+          "rows": [
+            [{"text": "Federal Dropship"}, {"text": "Fédération"}, {"text": "Midshipman"}],
+            [{"text": "Federal Assault Ship"}, {"text": "Fédération"}, {"text": "Chief Petty Officer"}],
+            [{"text": "Federal Gunship"}, {"text": "Fédération"}, {"text": "Ensign"}],
+            [{"text": "Federal Corvette", "style": "strong"}, {"text": "Fédération"}, {"text": "Rear Admiral", "style": "lose"}],
+            [{"text": "Imperial Courier"}, {"text": "Empire"}, {"text": "Master"}],
+            [{"text": "Imperial Clipper"}, {"text": "Empire"}, {"text": "Baron"}],
+            [{"text": "Imperial Cutter", "style": "strong"}, {"text": "Empire"}, {"text": "Duke", "style": "lose"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Les 41 autres vaisseaux de chantier naval s'achètent avec des crédits seuls, quel que soit leur prix** — y compris l'Imperial Eagle et toute la gamme Alliance (Chieftain, Crusader, Challenger), souvent crus à tort soumis à condition de rang. Le rang ne se rattrape pas en payant plus cher : il se gagne par des missions et un temps de progression propres à chaque marine."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Une seconde condition, différente du rang : la possession d'Odyssey",
+          "text": "Deux vaisseaux récents — Caspian Explorer et Type-11 Prospector — sont réservés aux commandants possédant l'extension Odyssey, indépendamment de tout rang de marine. C'est une condition de plateforme, pas de réputation : elle se vérifie avant de commencer à économiser, pas au moment de payer."
+        },
+        {
+          "type": "verdict",
+          "title": "Vérifie le rang avant d'économiser, pas après",
+          "text": "Un budget de 500 M Cr ne débloque ni le Federal Corvette ni l'Imperial Cutter sans le rang de marine correspondant. Contrôle ton rang en jeu avant de viser l'un de ces sept vaisseaux, quitte à réorienter ton épargne vers une alternative sans condition (voir la matrice de la section précédente)."
+        }
+      ]
+    },
+    {
+      "id": "transfert-vaisseaux",
+      "number": 4,
+      "title": "Faire venir son vaisseau : transfert entre stations, coût et délai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Une flotte qui grandit finit dispersée sur plusieurs stations.** Faire venir un vaisseau déjà possédé plutôt qu'en racheter un neuf sur place coûte des crédits et du temps, selon une formule communautaire non officielle mais dont la partie « délai » est corroborée par des témoignages récents de transferts vers Colonia."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Formule de coût", "value": "≈(0,00006 × valeur totale × distance en al) + (0,0002 × valeur totale) + 1 000 Cr", "reliability": "community"},
+            {"label": "Formule de délai", "value": "≈300 s + 10 s par année-lumière", "reliability": "community"}
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "« Valeur totale » comprend la coque **et** les modules installés. Le calcul ci-dessous applique la formule à deux cas concrets : un vaisseau à 20 M Cr (l'exemple de référence de la source), et un Anaconda équipé en core internals A à ≈387 M Cr (section 1) — sur quatre distances, jusqu'au trajet Bulle → Colonia."
+        },
+        {
+          "type": "table",
+          "caption": "Coût et délai de transfert selon la distance",
+          "headers": ["Distance", "Coût (vaisseau ≈20 M Cr)", "Coût (Anaconda équipée ≈387 M Cr)", "Délai"],
+          "rows": [
+            [
+              {"text": "50 al", "style": "number"},
+              {"text": "65 000 Cr", "style": "number"},
+              {"text": "1 239 451 Cr", "style": "number"},
+              {"text": "≈13 min"}
+            ],
+            [
+              {"text": "500 al", "style": "number"},
+              {"text": "605 000 Cr", "style": "number"},
+              {"text": "11 688 878 Cr", "style": "number"},
+              {"text": "≈1 h 28"}
+            ],
+            [
+              {"text": "1 000 al", "style": "number"},
+              {"text": "1 205 000 Cr", "style": "number"},
+              {"text": "23 299 352 Cr", "style": "number"},
+              {"text": "≈2 h 52"}
+            ],
+            [
+              {"text": "≈22 000 al (Bulle → Colonia)", "style": "number"},
+              {"text": "26 405 000 Cr", "style": "lose"},
+              {"text": "510 939 284 Cr", "style": "lose"},
+              {"text": "≈61 h", "style": "lose"}
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Au-delà d'une certaine distance, transférer coûte plus cher que racheter",
+          "text": "Faire venir l'Anaconda équipée de l'exemple jusqu'à Colonia coûterait, d'après cette formule, ≈511 M Cr — davantage que sa propre valeur (≈387 M Cr). Passé un certain seuil de distance, vendre le vaisseau sur place et en racheter un équivalent à destination revient moins cher que payer le transfert. Ce calcul est une application mécanique de la formule communautaire, pas une valeur confirmée par Frontier : vérifie toujours le coût affiché dans le panneau de transfert en jeu avant de valider."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Le transfert ne se déclenche qu'à quai, dans une station dotée du service Chantier Naval — impossible en vol ou en supercroisière.",
+            "Vers un Porte-Vaisseau, le tarif standard s'applique toujours (aucune gratuité) et dépend du réglage d'accès du propriétaire ; celui-ci peut en revanche stocker et transférer ses propres vaisseaux sans acheter le service Chantier Naval — voir **Posséder et rentabiliser un Porte-Vaisseau** pour l'exploitation complète d'un Porte-Vaisseau.",
+            "Le transfert de modules seuls suit la même base de coût, avec un frais fixe de +100 Cr au lieu de +1 000 Cr pour un vaisseau."
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Calcule avant de choisir entre acheter neuf et faire venir",
+          "text": "Sur une courte distance, faire venir un vaisseau déjà équipé coûte une fraction de son prix. Sur une très longue distance, la même opération peut dépasser la valeur du vaisseau : calcule toujours les deux options avant de décider."
+        }
+      ]
+    },
+    {
+      "id": "stockage-flotte",
+      "number": 5,
+      "title": "Stocker sa flotte sans payer : le plafond de 40 par station",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Le stockage de vaisseaux est gratuit et sans limite de durée — mais plafonné par station.** Comprendre ce plafond évite de se retrouver bloqué au pire moment, en pleine expansion de flotte."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Stockage gratuit de vaisseaux", "value": "40 par station (chantier naval standard), sans limite de durée", "reliability": "official"},
+            {"label": "Stockage gratuit de modules", "value": "600 au total par commandant, toutes stations confondues (plafond global, pas par station)", "reliability": "official"},
+            {"label": "Ancien plafond global de 250 vaisseaux/commandant", "value": "signalé en 2015 comme source de bugs au-delà — aucune source datée de 2024-2026 ne confirme s'il existe toujours", "reliability": "estimate"}
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Le plafond de 40 vaisseaux se répartit **par station**, pas par commandant : un surplus se stocke simplement dans une autre station, chacune plafonnée à 40 également. C'est le même chiffre que les 40 emplacements gratuits d'un Porte-Vaisseau — une coïncidence de plafond, pas une règle unifiée énoncée comme telle par Frontier. Le stockage de modules, lui, suit une logique différente : un plafond global de 600, et non par station."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Centraliser plutôt que disperser : la pratique des hubs de flotte"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Jameson Memorial** (Shinrarta Dezhra) — propose la quasi-totalité des vaisseaux et modules du jeu, à 10 % de remise ; hub de référence historique de la communauté.",
+            "**Deciat** — concentre un trafic exceptionnel de commandants du fait de la présence de l'ingénieure Felicity Farseer, l'une des toutes premières débloquées.",
+            "**Jaques Station** (Colonia) — hub de facto pour la région, à ≈61 h de la Bulle (section précédente) : mieux vaut y centraliser une partie de sa flotte que payer des transferts longue distance répétés."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Deux hubs de stockage, deux zones à risque",
+          "text": "Shinrarta Dezhra et Deciat, cités ci-dessus pour leur richesse de services, figurent aussi parmi les lieux à risque documentés dans **Survivre au PvP sans combattre : le guide du pilote pacifiste en Open** — fort trafic de commandants rime aussi avec présence accrue de gankers. Centraliser sa flotte n'y dispense pas des précautions habituelles à l'arrivée et au départ."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Le Porte-Vaisseau supprime la question du plafond",
+          "text": "Un Porte-Vaisseau personnel stocke sa propre flotte n'importe où dans la galaxie, sans dépendre du plafond de 40 d'une station tierce. Voir **Posséder et rentabiliser un Porte-Vaisseau** pour le budget d'achat et d'entretien correspondant — un chaînon nettement plus coûteux que la gestion de flotte décrite ici."
+        },
+        {
+          "type": "verdict",
+          "title": "Répartis, ne t'entasse pas",
+          "text": "Tant que le plafond par station suffit, le stockage de vaisseaux ne coûte rien. Dès qu'une flotte dépasse 40 unités sur un même point, répartis-la sur un second hub plutôt que d'en vendre par contrainte."
+        }
+      ]
+    },
+    {
+      "id": "pieges-fiabilite",
+      "number": 6,
+      "title": "Pièges fréquents et fiabilité des chiffres",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Pièges fréquents et coûts cachés",
+          "headers": ["Piège", "Conséquence chiffrée", "Comment l'éviter"],
+          "rows": [
+            [
+              {"text": "Ne budgéter que le prix de coque affiché"},
+              {"text": "Coût réel ≈2,6× la coque une fois équipé en qualité A (Anaconda : ≈387 M Cr contre 147 M Cr de coque)", "style": "lose"},
+              {"text": "Appliquer le facteur ×2,6 avant d'acheter (section 1)"}
+            ],
+            [
+              {"text": "Viser un Federal Corvette ou un Imperial Cutter sans le rang requis"},
+              {"text": "Achat bloqué faute de rang Rear Admiral (Fédération) ou Duke (Empire), quel que soit le budget", "style": "lose"},
+              {"text": "Vérifier son rang de marine avant de viser ces vaisseaux (section 3)"}
+            ],
+            [
+              {"text": "Transférer un vaisseau de valeur sur une très longue distance sans calculer"},
+              {"text": "Coût de transfert pouvant dépasser la valeur du vaisseau lui-même (≈511 M Cr pour une Anaconda ≈387 M Cr vers Colonia)", "style": "lose"},
+              {"text": "Comparer transfert et rachat sur place avant de valider (section 4)"}
+            ],
+            [
+              {"text": "Entasser une flotte sur une seule station"},
+              {"text": "Blocage à 40 vaisseaux stockés par station, achat suivant impossible tant qu'aucune place ne se libère", "style": "lose"},
+              {"text": "Répartir sur plusieurs hubs de flotte (section 5)"}
+            ],
+            [
+              {"text": "Décoller sans avoir vérifié le rebuy"},
+              {"text": "Vaisseau perdu et rebuy à payer sans réserve en cas de destruction (≈19,4 M Cr pour l'Anaconda de l'exemple)", "style": "lose"},
+              {"text": "Vérifier le rebuy affiché au panneau du vaisseau avant chaque sortie risquée"}
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Fiabilité des chiffres de ce guide.** Les prix de coque, la composition du facteur ×2,6 sur l'exemple de l'Anaconda, le taux de rebuy, la liste des sept vaisseaux sous condition de rang et le plafond de stockage de 40 vaisseaux par station sont confirmés en confiance haute par accès direct aux jeux de données communautaires de référence (Inara.cz, EDCD/coriolis-data, EDCD/FDevIDs)."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Quatre points restent des ordres de grandeur — à revérifier en jeu",
+          "text": "**1.** Le facteur ×2,6 est établi sur un seul exemple (l'Anaconda) et appliqué par extension au reste de la matrice Rôle × Budget : un repère, pas un devis par châssis. **2.** La formule de transfert de vaisseau date de 2019 et n'a pas été revérifiée depuis dans son intégralité — seule la partie « délai » est corroborée par des témoignages récents. **3.** Le statut actuel de l'ancien plafond global de 250 vaisseaux par commandant (signalé en 2015) n'est confirmé par aucune source datée de 2024-2026. **4.** Les prix Inara fluctuent dans le temps : revérifie-les avant tout achat important, notamment aux paliers élevés de la matrice."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Vérifie ton rang de marine si le vaisseau visé fait partie des 7 sous condition.", "detail": "Section 3 — aucun budget ne remplace le rang Rear Admiral ou Duke."},
+            {"text": "Multiplie le prix de coque affiché par ≈2,6 pour estimer le budget réel d'entrée.", "detail": "Section 1 — coque + core internals qualité A + premier rebuy."},
+            {"text": "Compare le coût de transfert au coût de rachat sur place si le vaisseau vient d'ailleurs.", "detail": "Section 4 — au-delà d'un certain seuil, transférer coûte plus cher que racheter."},
+            {"text": "Vérifie qu'une place de stockage est disponible à destination avant l'achat.", "detail": "Section 5 — plafond de 40 vaisseaux par station, réparti sur plusieurs hubs si besoin."},
+            {"text": "Note le rebuy affiché avant toute sortie risquée avec ce vaisseau.", "detail": "Un vaisseau détruit sans rebuy en réserve est un vaisseau perdu définitivement."}
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "Inara.cz",
+    "EDCD/coriolis-data",
+    "EDCD/FDevIDs",
+    "Frontier Developments",
+    "Corpus interne — 03-vaisseaux.md",
+    "Corpus interne — 04-equipements.md"
+  ]
+}

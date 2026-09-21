@@ -1,0 +1,602 @@
+{
+  "id": "porte-vaisseau-rentable",
+  "title": "Posséder et rentabiliser un Porte-Vaisseau",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Le chaînon manquant après le protocole du milliard : 5 Md Cr n'achètent que la coque, l'entretien commence dès la première semaine. Budget hebdomadaire réaliste, formule de consommation de Tritium, choix des services selon ton usage, et check-list de décommissionnement pour ne jamais te faire piéger par la dette.",
+  "byline": "Toutes plateformes · Live 4.4.0.x · Prérequis : 5 Md Cr en poche + réserve d'entretien",
+  "edition": "2026-09",
+  "topics": ["porte-vaisseau", "fleet carrier", "tritium", "économie", "colonisation", "minage"],
+  "estimatedReadMinutes": 16,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Faut-il acheter maintenant ?",
+            "L'achat : le Drydock, le prix, ce qui est inclus",
+            "Le budget hebdomadaire réel",
+            "Carburant Tritium : formule, portée, cooldown",
+            "Choisir tes services selon ton usage",
+            "Décommissionnement : la check-list anti-dette",
+            "Pièges fréquents et fiabilité des chiffres"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**5 000 000 000 Cr, c'est exactement l'objectif du protocole du milliard — et exactement le prix de la coque nue d'un Porte-Vaisseau, sans un crédit pour l'entretien.** Ce guide part du principe que tu as déjà cette somme en poche et répond à la seule question qui compte ensuite : peux-tu payer chaque semaine, et comment configurer les services pour que la note en vaille la peine ?"
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Prix d'achat (coque nue)", "value": "5 000 000 000 Cr", "reliability": "official"},
+            {"label": "Entretien de base", "value": "5 000 000 Cr/semaine + 100 000 Cr par saut effectué", "reliability": "official"},
+            {"label": "Tritium par saut de 500 al", "value": "~135 t à vide → jusqu'à ~260 t à pleine charge", "reliability": "official"},
+            {"label": "Entretien total observé (plusieurs services actifs)", "value": "10 à 20 M Cr/semaine", "reliability": "community"},
+            {"label": "Frais de décommissionnement volontaire", "value": "150 000 000 Cr", "reliability": "official"},
+            {"label": "Coût des services Odyssey (Concourse, Vista Genomics, Pioneer Supplies)", "value": "non documenté publiquement dans les sources consultées — à vérifier toi-même en jeu avant d'activer", "reliability": "estimate"}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Légende de fiabilité utilisée dans ce guide",
+          "text": "**[OFF]** confirmé par accès direct à une source primaire (guide Pilots Trade Network, roguey.co.uk, journal de jeu). **[COM]** retour communautaire cohérent (forums, témoignages joueurs) mais non officiel. **[EST]** donnée absente des sources consultées malgré la recherche : ce guide te le dit explicitement plutôt que d'inventer un chiffre — à vérifier par toi-même en jeu."
+        }
+      ]
+    },
+    {
+      "id": "faut-il-acheter",
+      "number": 1,
+      "title": "Faut-il acheter maintenant ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Si tu as 5 Md Cr pile et pas un crédit de plus, n'achète pas encore.** L'entretien se prélève automatiquement dès la première semaine, que le Porte-Vaisseau saute ou reste à quai — un achat au bord du gouffre financier se termine en décommissionnement involontaire avant même d'avoir servi."
+        },
+        {
+          "type": "table",
+          "caption": "Ce qu'il te faut réellement avant de signer chez le vendeur",
+          "headers": ["Poste", "Montant", "Remarque"],
+          "rows": [
+            [
+              {"text": "Achat de la coque nue", "style": "strong"},
+              {"text": "5 000 000 000 Cr", "style": "number"},
+              {"text": "Coque + trois services par défaut, non désactivables [OFF]", "style": "normal"}
+            ],
+            [
+              {"text": "Réserve d'entretien recommandée", "style": "strong"},
+              {"text": "40 à 160 M Cr", "style": "number"},
+              {"text": "4 à 8 semaines à 10-20 M Cr/semaine [COM] — voir section 3", "style": "normal"}
+            ],
+            [
+              {"text": "Total réaliste avant d'acheter", "style": "strong"},
+              {"text": "~5,04 à 5,16 Md Cr", "style": "number"},
+              {"text": "Le prix affiché n'est que la moitié du budget de départ", "style": "mid"}
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Le piège du milliard pile-poil",
+          "text": "Acheter à 5 000 000 000 Cr exactement laisse zéro marge. La première semaine impayée déclenche un délai de grâce d'environ une semaine (voir section 6), puis un décommissionnement automatique qui déduit la dette accumulée du remboursement — au lieu des 150 M Cr de frais fixes du décommissionnement volontaire. Tu perds alors plus que si tu n'avais jamais acheté."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Provisionne au moins 40 M Cr de réserve avant de signer, 160 M Cr si tu comptes activer Shipyard et Outfitting en permanence.", "detail": "Voir la formule complète en section 3."},
+            {"text": "Décide à l'avance de ton usage principal (minage, colonisation, commerce, denrées rares) avant d'activer des services — chaque service actif ou même suspendu coûte chaque semaine.", "detail": "Voir section 5."},
+            {"text": "Repère le système avec un Drydock le plus proche via un annuaire communautaire type INARA.", "detail": "Le Drydock est un lieu d'achat, pas un module embarqué — voir section 2."},
+            {"text": "Mets en place un rappel de paiement hebdomadaire dès le premier jour.", "detail": "La semaine de grâce en cas d'impayé n'est pas un filet de sécurité confortable."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "achat",
+      "number": 2,
+      "title": "L'achat : le Drydock, le prix, ce qui est inclus",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Où acheter — le « Drydock », un lieu, pas un service embarqué"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Un Porte-Vaisseau ne s'achète pas depuis n'importe quelle station : il faut se rendre dans un système possédant une installation spécifique, désignée par la communauté sous le nom de « Drydock » (chantier naval), qui propose le vendeur de Porte-Vaisseaux. Une fois le tien en poche, ce n'est plus une fonctionnalité embarquée — il n'existe aucun module « Drydock » dans son interface d'administration. L'entretien et la réparation des vaisseaux visiteurs passent par le service **Repair**, décrit en section 5."
+        },
+        {
+          "type": "table",
+          "caption": "Prix d'achat d'un Porte-Vaisseau",
+          "headers": ["Élément", "Montant", "Confiance"],
+          "rows": [
+            [
+              {"text": "Coque nue", "style": "strong"},
+              {"text": "5 000 000 000 Cr", "style": "number"},
+              {"text": "Haute [OFF] — calculateur PTN et guide PTN concordants", "style": "win"}
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Ce qui est inclus gratuitement dès l'achat"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Bridge Crew** — équipage de base.",
+            "**Commodities Market** — marché de commodités dont tu fixes toi-même les prix d'achat et de vente, dans une fourchette autorisée.",
+            "**Tritium Depot** — dépôt de carburant séparé de 1 000 t, vide au moment de l'achat (voir section 4)."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Tout le reste se paie séparément",
+          "text": "Refuel, Repair, Rearm, Shipyard, Outfitting, Redemption Office, Universal Cartographics, Secure Warehouse et les services Odyssey (Concourse, Vista Genomics, Pioneer Supplies) sont des options : chacune ajoute son propre coût hebdomadaire au socle de base, qu'elle soit activement utilisée ou simplement « suspendue ». Détail complet en section 3."
+        }
+      ]
+    },
+    {
+      "id": "budget-hebdomadaire",
+      "number": 3,
+      "title": "Le budget hebdomadaire réel",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**L'entretien de base coûte 5 000 000 Cr par semaine, à vide, plus 100 000 Cr par saut effectué.** À ce socle s'ajoute le coût hebdomadaire de chaque service optionnel installé — actif ou suspendu."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Coût hebdomadaire total = 5 000 000 Cr (base) + Σ(coûts des services optionnels actifs ou suspendus) + (100 000 Cr × nombre de sauts effectués dans la semaine)."
+        },
+        {
+          "type": "table",
+          "caption": "Coût de chaque service optionnel",
+          "headers": ["Service", "Coût actif / semaine", "Coût suspendu / semaine", "Remarque"],
+          "rows": [
+            [
+              {"text": "Refuel", "style": "strong"},
+              {"text": "1,5 M Cr", "style": "number"},
+              {"text": "0,75 M Cr", "style": "number"},
+              {"text": "Ravitaille les visiteurs en Tritium et alimente le dépôt", "style": "normal"}
+            ],
+            [
+              {"text": "Repair", "style": "strong"},
+              {"text": "1,5 M Cr", "style": "number"},
+              {"text": "0,75 M Cr", "style": "number"},
+              {"text": "Répare la coque des visiteurs", "style": "normal"}
+            ],
+            [
+              {"text": "Rearm / Armoury", "style": "strong"},
+              {"text": "1,5 M Cr", "style": "number"},
+              {"text": "0,75 M Cr", "style": "number"},
+              {"text": "Munitions pour les visiteurs", "style": "normal"}
+            ],
+            [
+              {"text": "Redemption Office", "style": "strong"},
+              {"text": "1,85 M Cr", "style": "number"},
+              {"text": "0,85 M Cr", "style": "number"},
+              {"text": "Primes et combat bonds, commission ≈ 25 %", "style": "normal"}
+            ],
+            [
+              {"text": "Universal Cartographics", "style": "strong"},
+              {"text": "1,85 M Cr", "style": "number"},
+              {"text": "0,7 M Cr", "style": "number"},
+              {"text": "Revente de données d'exploration, commission ≈ 25 %", "style": "normal"}
+            ],
+            [
+              {"text": "Secure Warehouse", "style": "strong"},
+              {"text": "2 M Cr", "style": "number"},
+              {"text": "1,25 M Cr", "style": "number"},
+              {"text": "Stockage sécurisé, commission ≈ 25 % à l'usage", "style": "normal"}
+            ],
+            [
+              {"text": "Outfitting", "style": "strong"},
+              {"text": "5 M Cr", "style": "number"},
+              {"text": "1,5 M Cr", "style": "number"},
+              {"text": "Stockage gratuit et illimité de modules, y compris déjà ingénierés", "style": "normal"}
+            ],
+            [
+              {"text": "Shipyard", "style": "strong"},
+              {"text": "6,5 M Cr", "style": "number"},
+              {"text": "1,8 M Cr", "style": "number"},
+              {"text": "Service le plus cher — jusqu'à 40 vaisseaux stockés gratuitement", "style": "lose"}
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Services Odyssey : coûts inconnus [EST]",
+          "text": "Concourse/Bar, Vista Genomics et Pioneer Supplies existent bien comme options installables, confirmées par le guide PTN. Mais leurs coûts hebdomadaires précis n'ont pas pu être retrouvés dans les sources consultées pour ce guide. Ne budgète pas à l'aveugle : ouvre le panneau d'administration en jeu et lis le montant affiché avant d'activer l'un de ces trois services."
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Des retours de joueurs [COM] évoquent un entretien hebdomadaire typique de **10 à 20 millions de Cr** pour une configuration avec plusieurs services actifs — un ordre de grandeur cohérent avec la formule ci-dessus une fois quelques services additionnés au socle de base."
+        },
+        {
+          "type": "verdict",
+          "title": "Budgète large, pas juste",
+          "text": "N'active en permanence que les services que ton usage exige réellement (voir section 5). Chaque service suspendu continue de coûter — désinstalle plutôt que de suspendre si tu n'en as plus besoin pour de bon."
+        }
+      ]
+    },
+    {
+      "id": "tritium",
+      "number": 4,
+      "title": "Carburant Tritium : formule, portée, cooldown",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Formule de consommation par saut"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Tritium consommé (t) = 10 + (Distance en al ÷ 4) × [1 + (Cargo actuel + Tritium en réserve) ÷ 25 000], avec un plancher de 10 t même à distance nulle [OFF]."
+        },
+        {
+          "type": "table",
+          "caption": "Ce que la formule donne en pratique",
+          "headers": ["Cas", "Distance", "Chargement", "Tritium consommé"],
+          "rows": [
+            [
+              {"text": "Repositionnement sur place", "style": "normal"},
+              {"text": "0 al", "style": "number"},
+              {"text": "indifférent", "style": "normal"},
+              {"text": "10 t (plancher)", "style": "mid"}
+            ],
+            [
+              {"text": "Saut maximal à vide", "style": "normal"},
+              {"text": "500 al", "style": "number"},
+              {"text": "soute et réserve vides", "style": "normal"},
+              {"text": "~135 t", "style": "win"}
+            ],
+            [
+              {"text": "Saut maximal à pleine charge", "style": "normal"},
+              {"text": "500 al", "style": "number"},
+              {"text": "25 000 t cumulées (cargo + réserve)", "style": "normal"},
+              {"text": "~260 t", "style": "lose"}
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Conclusion pratique",
+          "text": "Voyager à vide entre deux positions coûte près de moitié moins de Tritium qu'à pleine charge. Si tu enchaînes plusieurs sauts, vends ou transfère ton cargo avant de partir plutôt qu'après être arrivé."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Portée, dépôt et infrastructure"
+        },
+        {
+          "type": "table",
+          "caption": "Chiffres d'infrastructure à connaître avant le premier saut",
+          "headers": ["Élément", "Valeur", "Remarque"],
+          "rows": [
+            [
+              {"text": "Portée de saut maximale", "style": "strong"},
+              {"text": "500 al", "style": "number"},
+              {"text": "Fixe, non améliorable par ingénierie [OFF]", "style": "normal"}
+            ],
+            [
+              {"text": "Dépôt de Tritium (Tritium Depot)", "style": "strong"},
+              {"text": "1 000 t", "style": "number"},
+              {"text": "Réservoir séparé de la soute [OFF]", "style": "normal"}
+            ],
+            [
+              {"text": "Autonomie pratique repère", "style": "strong"},
+              {"text": "~1 500 al", "style": "number"},
+              {"text": "Ordre de grandeur communautaire pour un usage mixte, pas une valeur absolue [COM]", "style": "mid"}
+            ],
+            [
+              {"text": "Soute mutualisée", "style": "strong"},
+              {"text": "25 000 t", "style": "number"},
+              {"text": "Pool unique, partagé entre marchandises et Tritium excédentaire [OFF]", "style": "normal"}
+            ],
+            [
+              {"text": "Baies d'appontage", "style": "strong"},
+              {"text": "16 (4 S, 4 M, 8 L)", "style": "number"},
+              {"text": "Confiance moyenne — une seule source documente cette répartition en détail", "style": "mid"}
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Le dépôt de Tritium se ravitaille de deux façons : **en l'achetant** via le service Refuel actif, au prix courant, ou **gratuitement**, en transférant directement du Tritium miné depuis la soute d'un vaisseau visiteur vers le dépôt via le panneau de transfert. La seconde méthode, largement utilisée par les opérations de minage, maintient un Porte-Vaisseau approvisionné à coût nul."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Cycle de saut"
+        },
+        {
+          "type": "table",
+          "caption": "Durée d'un cycle de saut",
+          "headers": ["Étape", "Durée"],
+          "rows": [
+            [
+              {"text": "Charge-up avant exécution du saut", "style": "strong"},
+              {"text": "min. ~15 minutes (jamais sous 15:06)", "style": "number"}
+            ],
+            [
+              {"text": "Verrouillage (saut non annulable)", "style": "strong"},
+              {"text": "à partir de 3:20 restantes", "style": "number"}
+            ],
+            [
+              {"text": "Cooldown après arrivée", "style": "strong"},
+              {"text": "~5 minutes", "style": "number"}
+            ],
+            [
+              {"text": "Cycle complet le plus rapide (un saut de 500 al)", "style": "strong"},
+              {"text": "~20 minutes", "style": "number"}
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services-usage",
+      "number": 5,
+      "title": "Choisir tes services selon ton usage",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**N'active jamais un service « au cas où ».** Chaque ligne du tableau de la section 3 coûte chaque semaine, active ou suspendue. Voici comment trois usages courants se traduisent en services réellement utiles."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Dépôt mobile de minage"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Le Porte-Vaisseau se positionne directement sur un point chaud (hotspot) de minage. Les vaisseaux mineurs livrent leur minerai au marché du Porte-Vaisseau sans aller-retour vers une station lointaine, et le propriétaire déplace ensuite le Porte-Vaisseau chargé vers le meilleur acheteur."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Commodities Market** (inclus par défaut) — suffit pour acheter le minerai livré par la flotte.",
+            "**Refuel** — utile seulement si tu ravitailles aussi des vaisseaux visiteurs en Tritium ; sinon le transfert gratuit depuis la soute des mineurs alimente déjà ton dépôt.",
+            "**Repair** — à activer si tes vaisseaux mineurs opèrent loin de toute station et subissent des dégâts d'astéroïdes.",
+            "**Shipyard / Outfitting** — dispensable au démarrage : leur coût (jusqu'à 6,5 M Cr/semaine) ne se justifie que si tu gères une flotte importante de mineurs depuis le Porte-Vaisseau."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Le Tritium peut se miner lui-même",
+          "text": "Le Tritium miné se dépose gratuitement dans le Tritium Depot via le panneau de transfert, rendant l'opération quasi autonome en carburant — voir section 4."
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Le profil minage est le moins cher à faire tourner : Commodities Market inclus, Refuel et Repair en option selon ta distance aux stations. Compte 5 à 8 M Cr/semaine hors sauts (socle 5 M + Refuel 1,5 M + Repair 1,5 M au maximum)."
+        },
+        {"type": "divider"},
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Logistique de colonisation"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Bien que la colonisation soit réalisable sans Porte-Vaisseau, en posséder un facilite la préparation logistique : pré-charger les matériaux de construction requis, avec le Porte-Vaisseau servant de dépôt avancé près du site pour réduire les temps de trajet des haulers."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Soute de 25 000 t** (incluse par défaut) — c'est elle qui porte l'essentiel de la valeur pour ce profil, pas un service optionnel.",
+            "**Secure Warehouse** — à envisager seulement si tu stockes des matériaux sur plusieurs semaines et veux limiter les pertes en cas de perte du Porte-Vaisseau ; commission ≈ 25 % à l'usage.",
+            "Des outils tiers communautaires (« Raven Colonial », edcolony.com) sont conçus pour planifier ce pré-chargement et suivre la progression des chantiers — aucun n'est un service du Porte-Vaisseau lui-même."
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Le profil colonisation s'appuie surtout sur la capacité de soute incluse. N'ajoute Secure Warehouse que si la durée de stockage le justifie face à sa commission de 25 %."
+        },
+        {"type": "divider"},
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Revente de denrées rares"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "Jusqu'à la mise à jour Trailblazers (bêta du 26 février 2025), il n'était pas possible d'échanger des denrées rares via le marché d'un Porte-Vaisseau. Un changement discret introduit avec cette mise à jour aurait rendu cela possible, d'après une seule citation de thread communautaire [COM] — non re-confirmée par accès direct pour ce guide."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Deux points non tranchés — vérifie en jeu",
+          "text": "**1.** La date et le mécanisme exact de ce déblocage reposent sur une seule source communautaire, non re-vérifiable directement au moment de la rédaction [EST]. **2.** Sur le marché normal d'une station, le prix d'une denrée rare augmente avec la distance parcourue depuis son système d'origine. Aucune source consultée ne confirme si le marché d'un Porte-Vaisseau, dont les prix sont fixés manuellement par le propriétaire, réplique ce bonus par distance [EST]. Ne construis pas ta stratégie de prix sur cette hypothèse sans l'avoir vérifiée toi-même."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**Commodities Market** (inclus par défaut) — c'est le seul service nécessaire ; tu fixes toi-même les prix d'achat et de vente dans la fourchette autorisée.",
+            "Aucun service optionnel de la section 3 n'est spécifiquement dédié aux denrées rares."
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Le profil denrées rares est le moins coûteux en services, mais le moins fiable en données : confirme en jeu que le marché de ton Porte-Vaisseau accepte bien les denrées rares avant d'y bâtir un plan de revenus."
+        },
+        {
+          "type": "table",
+          "caption": "Comparatif des trois profils",
+          "headers": ["Profil", "Services recommandés", "Coût hebdo indicatif (hors sauts)", "Point de vigilance"],
+          "rows": [
+            [
+              {"text": "Dépôt mobile de minage", "style": "strong"},
+              {"text": "Commodities Market + Refuel/Repair selon besoin", "style": "normal"},
+              {"text": "5 à 8 M Cr", "style": "number"},
+              {"text": "Faible — Tritium quasi autosuffisant", "style": "win"}
+            ],
+            [
+              {"text": "Logistique de colonisation", "style": "strong"},
+              {"text": "Soute 25 000 t incluse + Secure Warehouse en option", "style": "normal"},
+              {"text": "5 à 7 M Cr", "style": "number"},
+              {"text": "Commission ≈ 25 % sur Secure Warehouse si activé", "style": "mid"}
+            ],
+            [
+              {"text": "Revente de denrées rares", "style": "strong"},
+              {"text": "Commodities Market seul", "style": "normal"},
+              {"text": "5 M Cr (socle seul)", "style": "number"},
+              {"text": "Mécanique elle-même incertaine [EST] — vérifier en jeu", "style": "lose"}
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decommissionnement",
+      "number": 6,
+      "title": "Décommissionnement : la check-list anti-dette",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Le décommissionnement volontaire rembourse tes 5 Md Cr moins 150 000 000 Cr de frais fixes — mais rien d'autre.** Comprendre cette limite avant d'en avoir besoin t'évite de perdre bien plus que les frais eux-mêmes."
+        },
+        {
+          "type": "table",
+          "caption": "Remboursement au décommissionnement volontaire",
+          "headers": ["Poste", "Montant"],
+          "rows": [
+            [
+              {"text": "Prix d'achat initial", "style": "strong"},
+              {"text": "5 000 000 000 Cr", "style": "number"}
+            ],
+            [
+              {"text": "Frais fixes de décommissionnement", "style": "strong"},
+              {"text": "− 150 000 000 Cr", "style": "lose"}
+            ],
+            [
+              {"text": "Remboursement net", "style": "strong"},
+              {"text": "4 850 000 000 Cr", "style": "win"}
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ce qui n'est jamais remboursé",
+          "text": "Le **Tritium restant** dans le dépôt, les **marchandises stockées** dans la soute, et la valeur des **services optionnels installés** (aucune restitution de leur coût d'installation). Vide ces trois postes avant de lancer la procédure."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Décommissionnement involontaire — le vrai piège"
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "En cas d'impayé de la maintenance hebdomadaire, le Porte-Vaisseau entre dans une phase de « décommissionnement en attente », avec un délai de grâce d'environ **une semaine** pour régulariser la dette. Passé ce délai, le décommissionnement et le démantèlement sont automatiques, et **la dette accumulée est déduite du remboursement** — au lieu des 150 M Cr de frais fixes du décommissionnement volontaire. Une dette suffisamment élevée peut donc réduire ton remboursement bien en dessous de ce que rapporterait une procédure volontaire à temps."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Vérifie ton solde de trésorerie avant chaque semaine de jeu.", "detail": "Un impayé déclenche le délai de grâce d'environ une semaine, pas un avertissement anodin."},
+            {"text": "Vends ou transfère tout le cargo stocké dans la soute avant de décommissionner.", "detail": "Rien de la soute n'est remboursé, quelle que soit la procédure."},
+            {"text": "Vends ou transfère tout le Tritium restant dans le dépôt.", "detail": "Il n'est pas remboursé non plus, même partiellement."},
+            {"text": "Récupère ou vends les modules stockés via Outfitting avant de fermer ce service.", "detail": "Le stockage gratuit disparaît avec le service."},
+            {"text": "Compare le coût réel du décommissionnement volontaire (150 M Cr) à celui d'une simple pause : suspendre les services optionnels non essentiels réduit l'entretien sans renoncer au Porte-Vaisseau.", "detail": "Un service suspendu coûte moins cher qu'actif — voir le tableau de la section 3."},
+            {"text": "Si tu ne peux plus payer du tout, lance le décommissionnement volontaire avant d'entrer en dette plutôt que d'attendre le délai de grâce.", "detail": "150 M Cr de frais fixes valent mieux qu'une dette non plafonnée déduite de force."}
+          ]
+        },
+        {
+          "type": "verdict",
+          "title": "Verdict",
+          "text": "Le décommissionnement volontaire, anticipé et vidé au préalable, coûte un montant fixe et connu à l'avance. Le décommissionnement involontaire, lui, transforme une dette de quelques semaines d'entretien impayé en perte directe sur le remboursement — sans plafond annoncé dans les sources consultées."
+        }
+      ]
+    },
+    {
+      "id": "pieges-fiabilite",
+      "number": 7,
+      "title": "Pièges fréquents et fiabilité des chiffres",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Pièges fréquents et coûts cachés",
+          "headers": ["Piège", "Conséquence chiffrée", "Comment l'éviter"],
+          "rows": [
+            [
+              {"text": "Acheter sans provisionner l'entretien hebdomadaire", "style": "normal"},
+              {"text": "Décommissionnement involontaire après une semaine de grâce impayée, dette déduite du remboursement", "style": "lose"},
+              {"text": "Budgéter 40 à 160 M Cr de réserve avant l'achat (section 1)", "style": "normal"}
+            ],
+            [
+              {"text": "Activer un service « au cas où »", "style": "normal"},
+              {"text": "Coût hebdomadaire même suspendu, jusqu'à 1,8 M Cr/semaine pour Shipyard suspendu", "style": "lose"},
+              {"text": "N'active que ce que ton usage exige (section 5)", "style": "normal"}
+            ],
+            [
+              {"text": "Décommissionner sans vider cargo, Tritium et modules", "style": "normal"},
+              {"text": "Perte totale de leur valeur, en plus des 150 M Cr de frais", "style": "lose"},
+              {"text": "Suivre la check-list de la section 6 avant de lancer la procédure", "style": "normal"}
+            ],
+            [
+              {"text": "Sous-estimer le Tritium d'un saut à pleine charge", "style": "normal"},
+              {"text": "Jusqu'à ~260 t consommées contre ~135 t à vide sur 500 al", "style": "lose"},
+              {"text": "Calculer avec la formule de la section 4 avant un saut long", "style": "normal"}
+            ],
+            [
+              {"text": "Construire un plan de revenus sur les denrées rares sans vérifier en jeu", "style": "normal"},
+              {"text": "Mécanique récente, confirmée par une seule source communautaire", "style": "lose"},
+              {"text": "Tester sur le marché de ton Porte-Vaisseau avant d'engager du temps de jeu (section 5)", "style": "normal"}
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "normal",
+          "text": "**Fiabilité des chiffres de ce guide.** Le prix d'achat, le coût de base hebdomadaire et le coût par saut, les coûts des services optionnels, la capacité de soute et du dépôt de Tritium, la portée maximale de saut, les frais de décommissionnement et la structure de la formule de consommation de Tritium sont confirmés en confiance haute par accès direct à plusieurs sources indépendantes concordantes."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Trois points restent non confirmés — à revérifier en jeu",
+          "text": "**1.** Les coûts hebdomadaires exacts des trois services Odyssey (Concourse, Vista Genomics, Pioneer Supplies) n'ont pas été retrouvés dans les sources consultées. **2.** La date précise et le mécanisme du déblocage du commerce de denrées rares reposent sur une seule citation de thread communautaire. **3.** La répartition des seize baies d'appontage (4 S, 4 M, 8 L) provient d'une seule source, sans deuxième source indépendante retrouvée. Ces trois points sont un instantané, pas une certitude définitive — Frontier peut les faire évoluer, comme les frais de décommissionnement l'ont déjà fait passer de 125 M à 150 M Cr par le passé."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "Frontier Developments",
+    "Pilots Trade Network (PTN) — Fleet Carrier Owner's Guide",
+    "roguey.co.uk",
+    "elite-journal.readthedocs.io",
+    "FC-Fuel-Estimator (GitHub)",
+    "Corpus interne — 19-fleet-carriers.md"
+  ]
+}

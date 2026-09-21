@@ -1,0 +1,514 @@
+{
+  "id": "minage-professionnel",
+  "title": "Miner sans combattre : du laser au minage de surface",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Le minage traité comme un métier à part entière : trois techniques d'anneau comparées, le bon vaisseau selon ton ambition jusqu'au Type-11 Prospector, la toute nouvelle boucle de minage de surface au SRV Rhino, et une méthode pour trouver un hotspot vivant plutôt qu'un nom de système périmé.",
+  "byline": "Toutes plateformes · Live 4.4.0.x · Aucun combat requis",
+  "edition": "2026-09",
+  "topics": ["minage", "mining", "laser mining", "core mining", "type-11-prospector", "rhino", "hotspots", "edtools"],
+  "estimatedReadMinutes": 19,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Trois techniques, un seul objectif : sortir du minerai vendable",
+            "Équiper le bon vaisseau selon ton objectif, jusqu'au Type-11 Prospector",
+            "La boucle de minage de surface planétaire (Rhino, 2 septembre 2026)",
+            "Rendements chiffrés et revente : où va vraiment ton minerai",
+            "Trouver un hotspot à jour : la méthode plutôt que la liste",
+            "Pièges fréquents et verdict"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Le minage n'est pas une étape parmi d'autres de ta progression, c'est un métier à part entière.** debuter-sans-combat.json t'a fait miner ton premier Platine pour financer un Type-11 ; ce guide-ci part de là et traite le minage comme ta boucle principale : comparer vraiment les trois techniques, choisir la coque selon ton ambition et non par défaut, comprendre la boucle de surface toute neuve du Rhino, et surtout arrêter de chercher un hotspot dans un vieux guide."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prérequis : tu sais déjà piloter, accoster et lire ton HUD (voir premiers-controles-et-entrainement.json si ce n'est pas le cas). Ce guide ne revient pas sur les commandes de base, seulement sur ce qui fait d'un mineur occasionnel un mineur professionnel."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Comment lire les chiffres de ce guide",
+          "text": "**OFF** = donnée officielle Frontier (billets Steam News, notes de version) ou registre communautaire de référence (EDCD/FDevIDs, EDSM). **COM** = chiffre ou retour communautaire cohérent (presse spécialisée, réseau Pilots Trade Network) mais non publié par Frontier. **EST** = donnée absente des sources consultées malgré la recherche : ce guide le dit explicitement plutôt que d'inventer un chiffre."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ce que ce guide ne refait pas",
+          "text": "L'ingénierie du FSD pour raccourcir tes trajets vers un hotspot lointain est traitée en détail dans guide-ingenierie-fsd-explorateur.json. Le coût hebdomadaire et la configuration d'un Porte-Vaisseau utilisé comme dépôt mobile de minage sont chiffrés dans porte-vaisseau-rentable.json. Ce guide-ci n'y revient pas."
+        }
+      ]
+    },
+    {
+      "id": "trois-techniques",
+      "number": 1,
+      "title": "Trois techniques, un seul objectif : sortir du minerai vendable",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Les trois techniques de minage en anneau se combinent sur un même astéroïde, mais ne demandent pas le même investissement en modules ni en attention.** Voici comment choisir, sans y passer la moitié de ta session à hésiter."
+        },
+        {
+          "type": "table",
+          "caption": "Les trois techniques de minage en anneau, comparées [OFF]",
+          "headers": ["Technique", "Astéroïde ciblé", "Outil principal", "Complexité", "Rendement typique"],
+          "rows": [
+            [
+              {"text": "Laser mining", "style": "strong"},
+              {"text": "N'importe quel astéroïde", "style": "normal"},
+              {"text": "Mining Laser (ou Mining Lance)", "style": "normal"},
+              {"text": "Faible", "style": "win"},
+              {"text": "Modéré, mais rapide à mettre en œuvre", "style": "mid"}
+            ],
+            [
+              {"text": "Subsurface deposit mining", "style": "strong"},
+              {"text": "Astéroïdes affichant des « cloques » visibles", "style": "normal"},
+              {"text": "Abrasion Blaster", "style": "normal"},
+              {"text": "Moyenne", "style": "mid"},
+              {"text": "Supérieur au laser par gisement, sans charge sismique", "style": "mid"}
+            ],
+            [
+              {"text": "Core mining / Deep core mining", "style": "strong"},
+              {"text": "Astéroïdes « à noyau » (identifiés au Pulse Wave Analyser)", "style": "normal"},
+              {"text": "Pulse Wave Analyser + Sub-Surface Displacement Missile + Seismic Charge Launcher", "style": "normal"},
+              {"text": "Élevée", "style": "lose"},
+              {"text": "Le plus haut : dizaines de tonnes par noyau", "style": "win"}
+            ]
+          ]
+        },
+        {"type": "heading", "level": 3, "text": "Le laser mining : la base, sur n'importe quel astéroïde"},
+        {
+          "type": "paragraph",
+          "text": "Aucun prérequis de repérage particulier : le **Mining Laser** (taille 1-2, fixe ou tourelle) tire en continu et détache des fragments directement exploitables par les Collector Limpets. Rendement modéré mais mise en œuvre immédiate — c'est la méthode privilégiée pour le Painite, le Platine et l'Osmium en anneaux métalliques. Une variante avancée, la **Mining Lance**, est une récompense Powerplay de rating D (voir [section 4](#4-rendements-chiffrés-et-revente--où-va-vraiment-ton-minerai))."
+        },
+        {"type": "heading", "level": 3, "text": "Le minage de subsurface : l'Abrasion Blaster, plus rapide que le laser seul"},
+        {
+          "type": "paragraph",
+          "text": "Certains astéroïdes affichent des « cloques » de surface visibles : des gisements de subsurface. Repérés au Prospector Limpet ou à l'œil nu, l'**Abrasion Blaster** (taille 1, fixe ou tourelle) les fait exploser en une seule salve, libérant plusieurs fragments à haute teneur d'un coup — sans avoir besoin de charge sismique."
+        },
+        {"type": "heading", "level": 3, "text": "Le core mining : le plus haut rendement, le plus technique"},
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Scanner l'astéroïde au Pulse Wave Analyser.", "detail": "Révèle les fissures internes — indispensable, sans lui tu ne sais pas où tirer."},
+            {"text": "Tirer le Sub-Surface Displacement Missile sur les fissures visibles.", "detail": "Fait monter la pression interne de l'astéroïde."},
+            {"text": "Larguer le Seismic Charge Launcher, puis t'éloigner avant la détonation.", "detail": "La charge est à retardement — reste trop près et tu encaisses l'explosion."},
+            {"text": "Finir de casser le noyau (motherlode) au laser ou à l'Abrasion Blaster, puis tout collecter aux Collector Limpets.", "detail": "Un seul noyau peut livrer des dizaines de tonnes de Void Opals, Alexandrite ou Low Temperature Diamonds selon l'anneau visé."}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Une arme minière à la mécanique encore floue",
+          "text": "Le jeu propose aussi un **Sub-Surface Extraction Missile** (fixe, taille 2, rating B). Son existence est confirmée indépendamment par le registre EDCD/FDevIDs [OFF], mais son rôle fonctionnel exact dans la boucle de core mining — complément ou alternative au Displacement Missile — n'a pas pu être confirmé par un texte de notes de patch descriptif. Vérifie-le toi-même en jeu avant de lui attribuer un rôle précis dans ta stratégie."
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Le Prospector Limpet Controller sert aux trois techniques",
+          "text": "Il révèle la composition exacte (pourcentage de chaque minéral) avant que tu ne tires quoi que ce soit — utile au laser comme au subsurface comme au core. Déploie-en un avant de t'engager sur un astéroïde, quelle que soit la technique."
+        },
+        {
+          "type": "verdict",
+          "title": "Quelle technique pour commencer ?",
+          "text": "Démarre au laser mining, sur n'importe quel anneau : c'est la seule technique qui ne demande aucun repérage préalable. Passe au core mining une fois à l'aise avec le Pulse Wave Analyser — c'est lui qui rapporte le plus par astéroïde, pas le laser."
+        }
+      ]
+    },
+    {
+      "id": "equiper-le-bon-vaisseau",
+      "number": 2,
+      "title": "Équiper le bon vaisseau selon ton objectif, jusqu'au Type-11 Prospector",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**debuter-sans-combat.json** couvre déjà le strict nécessaire pour miner ton premier million ; ce guide part de là et équipe pour du minage professionnel, poste par poste — jusqu'au premier vaisseau du jeu entièrement pensé pour cette activité."
+        },
+        {
+          "type": "table",
+          "caption": "Le bon vaisseau selon ton ambition",
+          "headers": ["Objectif", "Vaisseau", "Pourquoi"],
+          "rows": [
+            [
+              {"text": "Apprendre les trois techniques", "style": "strong"},
+              {"text": "Adder / Cobra Mk III", "style": "normal"},
+              {"text": "Faible investissement, assez d'emplacements pour tester laser, subsurface et core sans tout miser", "style": "normal"}
+            ],
+            [
+              {"text": "Minage laser sérieux, en solo", "style": "strong"},
+              {"text": "Python", "style": "normal"},
+              {"text": "Meilleur compromis soute/maniabilité pour du minage laser soutenu", "style": "normal"}
+            ],
+            [
+              {"text": "Volume, ou wing mining organisé", "style": "strong"},
+              {"text": "Type-9 Heavy / Imperial Cutter", "style": "normal"},
+              {"text": "Grande soute, encaisse mieux une session longue en groupe (voir Pilots Trade Network, section 4)", "style": "normal"}
+            ],
+            [
+              {"text": "Minage à plein temps, dédié", "style": "strong"},
+              {"text": "Type-11 Prospector", "style": "normal"},
+              {"text": "Premier vaisseau entièrement pensé pour le minage — détail ci-dessous", "style": "normal"}
+            ]
+          ]
+        },
+        {"type": "heading", "level": 3, "text": "Le Type-11 Prospector (Lakon), premier vaisseau entièrement dédié au minage"},
+        {
+          "type": "paragraph",
+          "text": "Sorti le 29 septembre 2025, c'est le premier vaisseau spatial entièrement dédié au minage de l'histoire du jeu — la formulation reprise du billet officiel Frontier lui-même."
+        },
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Points d'ancrage", "value": "8 au total, dont 4 exclusivement miniers (1 large, 2 moyens, 1 petit) + 4 utilitaires standards (3 petits, 1 moyen)", "reliability": "official"},
+            {"label": "Emplacements internes", "value": "12 : deux classe 1, un classe 2, un classe 3, un classe 4, quatre classe 5, trois classe 6", "reliability": "official"},
+            {"label": "Mk II Mining Repeater", "value": "Nouveau laser minier, extrait davantage de fragments avec une chance accrue de fragments à haute densité", "reliability": "official"},
+            {"label": "Mining Volley Repeater", "value": "Rendement d'extraction supérieur aux autres outils miniers, réservé au Type-11 au lancement en raison de sa charge thermique", "reliability": "official"},
+            {"label": "Mk II Mining Multi Limpet Controller", "value": "Contrôleur multi-limpet minier taille 5, capacité de limpets et vitesse de collecte augmentées", "reliability": "official"},
+            {"label": "Prix (Arx, formules pré-équipées au lancement)", "value": "Standard 16 520 · Stellar 33 000 · Galactic 60 000", "reliability": "official"}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Le bundle avec le Rhino",
+          "text": "**Type-11 Prospector Galactic Mining Pack, 100 000 Arx**, publié un an plus tard avec le Rhino (section suivante) — associe les deux véhicules pour qui vise le minage d'astéroïde et le minage de surface à la fois."
+        },
+        {"type": "heading", "level": 3, "text": "Configuration recommandée, quelle que soit la coque"},
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "**2 à 3 emplacements dédiés à la Refinery** — au-delà, tu risques de jeter du minerai brut faute de place en session intensive [COM].",
+            "**Un Prospector Limpet Controller et un Collector Limpet Controller** (classe impaire 1/3/5/7), ou un **Mining Multi Limpet Controller** pour les deux fonctions dans un seul emplacement.",
+            "**Un Detailed Surface Scanner**, pour repérer les hotspots à l'échelle du système (voir [section 5](#5-trouver-un-hotspot-à-jour--la-méthode-plutôt-que-la-liste)).",
+            "**Pour le core mining** : ajoute un Pulse Wave Analyser, un Sub-Surface Displacement Missile et un Seismic Charge Launcher."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Aller plus loin : Porte-Vaisseau et FSD",
+          "text": "Un Porte-Vaisseau positionné directement sur le hotspot supprime l'aller-retour vers une station lointaine — voir le profil « dépôt mobile de minage » chiffré dans **porte-vaisseau-rentable.json**. Pour réduire le temps de trajet vers un hotspot éloigné, l'ingénierie FSD détaillée dans **guide-ingenierie-fsd-explorateur.json** s'applique tout autant à un vaisseau minier qu'à un explorateur."
+        }
+      ]
+    },
+    {
+      "id": "minage-de-surface-rhino",
+      "number": 3,
+      "title": "La boucle de minage de surface planétaire (Rhino, 2 septembre 2026)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Depuis le 2 septembre 2026, miner ne se limite plus aux anneaux : une boucle entièrement nouvelle se joue au sol, en SRV.** Elle ne partage ni ses outils ni ses marchandises avec les trois techniques de la section 1 — traite-la comme une activité à part, pas comme un module supplémentaire du laser mining."
+        },
+        {"type": "heading", "level": 3, "text": "Le Rhino (Vodel)"},
+        {
+          "type": "keyValue",
+          "items": [
+            {"label": "Fabricant", "value": "Vodel", "reliability": "official"},
+            {"label": "Type", "value": "SRV à six roues, entièrement dédié au minage planétaire de surface", "reliability": "official"},
+            {"label": "Équipage", "value": "Jusqu'à trois occupants — aucun espace intérieur praticable, contrairement au Nomad", "reliability": "official"},
+            {"label": "Déploiement", "value": "Depuis la nouvelle soute à véhicule (Vessel Hangar) — trop volumineux pour la trappe du Scarab/Scorpion", "reliability": "official"},
+            {"label": "Trois équipements signature", "value": "Planetary Mining Deposit Scanner, Refinery, Mining Rig Deployment Module", "reliability": "official"},
+            {"label": "Prix (Arx)", "value": "Standard 16 520 · Stellar 33 000 (+ peinture Excavation Yellow) · Galactic 60 000 (+ combinaison cosmétique, Holo-Kit, Ship Kit)", "reliability": "official"}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Deux points non confirmés — ne construis pas ta stratégie dessus",
+          "text": "Frontier n'a publié, dans les billets consultés, ni la liste des vaisseaux ni les classes de module permettant d'embarquer un Rhino, ni un éventuel achat en crédits au chantier naval (seules des formules Arx sont documentées à ce jour). Les deux points restent à vérifier en jeu."
+        },
+        {"type": "heading", "level": 3, "text": "Enchaînement des étapes"},
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Depuis ton vaisseau, sonder la planète au Detailed Surface Scanner.", "detail": "Le DSS a été mis à jour pour détecter les Planetary Mining Locations à la surface — c'est, à ce jour, le seul moyen documenté de les repérer depuis l'orbite."},
+            {"text": "Une fois au sol en Rhino, localiser les gisements au Planetary Mining Deposit Scanner.", "detail": "Il distingue Location (le site) et Deposit (le gisement à l'intérieur) — Frontier ne détaille pas la relation exacte entre les deux."},
+            {"text": "Déployer la foreuse (Mining Rig Deployment Module) et laisser la Refinery embarquée traiter la matière extraite.", "detail": "Le geste exact en jeu (pose de la foreuse, durée, collecte) n'est pas décrit par les notes de version — à découvrir toi-même."}
+          ]
+        },
+        {"type": "heading", "level": 3, "text": "Les treize nouvelles marchandises"},
+        {
+          "type": "table",
+          "caption": "Marchandises de minage de surface planétaire (Rhino SRV Update, 2 septembre 2026) [OFF]",
+          "headers": ["Marchandise (nom officiel)", "Nom français d'usage"],
+          "rows": [
+            [{"text": "Bastnäsite", "style": "normal"}, {"text": "Bastnäsite", "style": "normal"}],
+            [{"text": "Deuterium", "style": "normal"}, {"text": "Deutérium", "style": "normal"}],
+            [{"text": "Diamond", "style": "normal"}, {"text": "Diamant", "style": "normal"}],
+            [{"text": "Helium", "style": "normal"}, {"text": "Hélium", "style": "normal"}],
+            [{"text": "Helium-3", "style": "normal"}, {"text": "Hélium-3", "style": "normal"}],
+            [{"text": "Iridium", "style": "normal"}, {"text": "Iridium", "style": "normal"}],
+            [{"text": "Magnesite", "style": "normal"}, {"text": "Magnésite", "style": "normal"}],
+            [{"text": "Olivine", "style": "normal"}, {"text": "Olivine", "style": "normal"}],
+            [{"text": "Periclase dunite", "style": "normal"}, {"text": "Périclase dunite", "style": "normal"}],
+            [{"text": "Quartz pyroxenite", "style": "normal"}, {"text": "Quartz pyroxénite", "style": "normal"}],
+            [{"text": "Ruby", "style": "normal"}, {"text": "Rubis", "style": "normal"}],
+            [{"text": "Sapphire", "style": "normal"}, {"text": "Saphir", "style": "normal"}],
+            [{"text": "Thortveitite", "style": "normal"}, {"text": "Thortveitite", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Un homonyme piégeux",
+          "text": "Le *Diamond* de cette liste est une marchandise distincte des **Low Temperature Diamonds** du core mining en anneau (section 1) : les deux coexistent désormais dans le jeu, et confondre l'une avec l'autre fausse toute recherche de prix."
+        },
+        {"type": "heading", "level": 3, "text": "Ce que Frontier n'a pas publié : douze axes d'équilibrage sans aucune valeur"},
+        {
+          "type": "paragraph",
+          "text": "Les notes de version listent explicitement les axes de réglage de cette boucle, sans donner la moindre valeur chiffrée. Les reproduire avec un nombre inventé serait une erreur ; les voici tels quels :"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Capacité d'un gisement selon son niveau de densité",
+            "Délai de reconstitution d'un gisement épuisé",
+            "Pondération des marchandises tirées par gisement",
+            "Tailles et quantités des Planetary Mining Deposits et Locations",
+            "Temps de minage de base",
+            "Quantité maximale de contenu miné",
+            "Part d'une marchandise dans le contenu extrait",
+            "Fréquence des microressources additionnelles",
+            "Taux de recharge de l'efficacité",
+            "Efficacité selon la densité du gisement",
+            "Effet de la température sur l'efficacité des foreuses",
+            "Statistiques du véhicule (Rhino) et des foreuses (Rig)"
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Problème connu au lancement",
+          "text": "Le Rhino ne collecte que **9 fragments sur 12** lors du minage de surface au lancement ; Frontier annonce un correctif « dès que possible » sans date ni numéro de version. Aucune publication ultérieure au 9 septembre 2026 dans le flux officiel — vérifie en jeu si c'est déjà corrigé avant de baser un rendement dessus."
+        },
+        {
+          "type": "verdict",
+          "title": "Faut-il s'y mettre déjà ?",
+          "text": "Le minage de surface est amusant à découvrir, mais ce guide ne peut te donner ni prix de vente, ni économie acheteuse, ni rendement en Cr/heure pour ses treize marchandises : Frontier ne les avait pas publiés une semaine après le lancement. Traite-le comme un bonus à surveiller pour l'instant, pas comme ta boucle de revenu principale — les techniques d'anneau de la section 1 restent la valeur sûre chiffrée."
+        }
+      ]
+    },
+    {
+      "id": "rendements-et-revente",
+      "number": 4,
+      "title": "Rendements chiffrés et revente : où va vraiment ton minerai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Le rendement dépend autant de la technique que de la station où tu vends.** Les deux points suivants surprennent souvent les mineurs qui débutent."
+        },
+        {
+          "type": "table",
+          "caption": "Rendements horaires observés (instantanés communautaires, à revérifier avant de bâtir un plan)",
+          "headers": ["Configuration", "Rendement", "Fiabilité"],
+          "rows": [
+            [
+              {"text": "Laser mining optimisé (Python ou Type-9 Heavy, refinery + prospector/collector limpets + cargo racks en nombre)", "style": "normal"},
+              {"text": "Dépasse 100 M Cr/heure", "style": "win"},
+              {"text": "COM", "style": "mid"}
+            ],
+            [
+              {"text": "Wing mining organisé (4 commandants, réseau Pilots Trade Network, 60 à 80 missions de minage)", "style": "normal"},
+              {"text": "Jusqu'à 3,5 Md Cr par cycle pour l'équipage complet", "style": "win"},
+              {"text": "COM", "style": "mid"}
+            ],
+            [
+              {"text": "Mérites Powerplay en minage (système en acquisition/renforcement, hotspot, prix de vente local élevé)", "style": "normal"},
+              {"text": "Environ 25 000 à 75 000 mérites/heure", "style": "normal"},
+              {"text": "COM", "style": "mid"}
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Fiabilité de ces trois chiffres",
+          "text": "Les trois proviennent de la presse spécialisée (GameRant/TheGamer) et de la communauté, pas de Frontier directement : ce sont des instantanés, pas des garanties, et ils dépendent fortement des prix de marché et du rééquilibrage du minage de septembre 2026. Confirmé en revanche : le **Pilots Trade Network** est une organisation Discord/Reddit réellement active, qui gère plus de 400 Fleet Carriers — mais qui ne publie pas elle-même de statistique de rendement chiffrée."
+        },
+        {"type": "heading", "level": 3, "text": "Où revendre le Platine, l'Or, le Painite : ce qui surprend"},
+        {
+          "type": "table",
+          "caption": "Économies productrices et acheteuses des minerais de valeur (relevé EDSM) [OFF]",
+          "headers": ["Marchandise", "Produit par", "Acheté par"],
+          "rows": [
+            [{"text": "Platine", "style": "strong"}, {"text": "Minage seul", "style": "normal"}, {"text": "Partout sauf Agriculture, Raffinage, Extraction et Militaire", "style": "normal"}],
+            [{"text": "Painite", "style": "strong"}, {"text": "Minage seul", "style": "normal"}, {"text": "Partout sauf Terraformation, Extraction et Militaire", "style": "normal"}],
+            [{"text": "Diamants basse température", "style": "strong"}, {"text": "Minage seul", "style": "normal"}, {"text": "Partout, y compris Raffinage et Extraction", "style": "win"}],
+            [{"text": "Opales du vide (Void Opal)", "style": "strong"}, {"text": "Non documenté", "style": "mid"}, {"text": "Non documenté", "style": "mid"}],
+            [{"text": "Or", "style": "strong"}, {"text": "Extraction et Raffinage", "style": "normal"}, {"text": "Partout sauf Agriculture, Raffinage, Extraction et Militaire", "style": "normal"}],
+            [{"text": "Palladium", "style": "strong"}, {"text": "Extraction", "style": "normal"}, {"text": "Partout sauf Agriculture, Raffinage, Extraction et Militaire", "style": "normal"}],
+            [{"text": "Argent", "style": "strong"}, {"text": "Extraction et Raffinage", "style": "normal"}, {"text": "Partout sauf Agriculture, Raffinage, Extraction et Militaire", "style": "normal"}],
+            [{"text": "Osmium", "style": "strong"}, {"text": "Minage seul", "style": "normal"}, {"text": "High Tech, Industrial, Militaire et Terraformation", "style": "normal"}]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Contrairement à une idée répandue, une économie de raffinage ou d'extraction n'est pas le débouché naturel de ces minerais.** Le Platine, l'Or, le Palladium et l'Argent se vendent partout *sauf* dans les économies agricoles, de raffinage, d'extraction et militaires — précisément celles qui les produisent. Seuls les Diamants basse température s'achètent réellement partout, raffinage et extraction compris. Les Void Opals n'ont, eux, aucune donnée publiée chez EDSM : ne suppose rien par analogie avec les autres lignes du tableau."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Ne vends jamais toute ta cargaison au même comptoir",
+          "text": "Une vente massive d'un coup fait chuter le prix de vente local en cours de session. Répartis entre plusieurs stations plutôt que de tout écouler au premier marché venu, et ne considère jamais ta cargaison minée comme acquise avant la vente — l'assurance (rebuy) ne couvre que le remplacement de la coque, jamais la cargaison perdue en cas de piraterie ou d'interdiction sur le trajet retour."
+        },
+        {
+          "type": "verdict",
+          "title": "Le calcul qui compte",
+          "text": "Le laser mining reste la valeur sûre chiffrée : rapide à mettre en œuvre, rendement documenté, et un minerai comme le Platine qui s'achète presque partout. Le core mining rapporte plus par astéroïde mais n'a aucun Cr/heure chiffré dans les sources consultées — traite-le comme un multiplicateur qualitatif, pas comme une ligne fiable de ton tableur."
+        }
+      ]
+    },
+    {
+      "id": "trouver-un-hotspot",
+      "number": 5,
+      "title": "Trouver un hotspot à jour : la méthode plutôt que la liste",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "emphasis": "intro",
+          "text": "**Un nom de système imprimé dans un guide vieillit mal.** Les prix fluctuent, la concurrence se déplace, et le statut de hotspot lui-même dépend de scans FSS/DSS soumis en continu par la communauté. Voici comment obtenir toi-même une réponse à jour en quelques minutes, avec EDTools.cc — plutôt qu'un nom qui sera obsolète dans un mois."
+        },
+        {"type": "heading", "level": 3, "text": "EDTools.cc — Hotspot finder, pour repérer où miner"},
+        {
+          "type": "table",
+          "caption": "Ce que couvre le Hotspot finder d'EDTools.cc [OFF, interface revérifiée directement]",
+          "headers": ["Minéraux couverts", "Filtres disponibles"],
+          "rows": [
+            [
+              {"text": "Alexandrite, Benitoite, Bromellite, Grandidierite, Low Temperature Diamond, Monazite, Musgravite, Void Opal, Painite, Platinum, Rhodplumsite, Serendibite, Tritium (13 minéraux)", "style": "normal"},
+              {"text": "Type d'anneau (Glacé/Rocheux/Métallique), nombre minimum de hotspots, systèmes Pristine uniquement, systèmes peuplés uniquement", "style": "normal"}
+            ]
+          ]
+        },
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Ouvrir edtools.cc/hotspot dans un navigateur."},
+            {"text": "Renseigner ton système actuel dans « Reference system ».", "detail": "Laissé vide, l'outil part de Sol par défaut."},
+            {"text": "Choisir ton minéral cible dans le menu déroulant Mineral.", "detail": "Le Void Opal s'affiche sous le nom « Opal » dans l'interface."},
+            {"text": "Renseigner « Minimum Hotspots » si tu veux un anneau à plusieurs hotspots du même minéral.", "detail": "Plus rentable qu'un anneau à un seul hotspot."},
+            {"text": "Cocher « Populated systems only » si tu veux rester en système peuplé.", "detail": "Accès facilité, mais aussi plus de trafic et de concurrence."},
+            {"text": "Lancer la recherche et noter le nom exact du corps et de l'anneau affiché.", "detail": "Format « Système X Y Ring »."},
+            {"text": "Confirmer visuellement le hotspot en jeu avant d'engager une session complète.", "detail": "FSS puis approche de l'anneau — l'outil te dirige, il ne remplace pas la vérification en jeu."}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Un type d'anneau que l'outil ne couvre pas",
+          "text": "Le Hotspot finder se limite aux anneaux glacé, rocheux et métalliques — le **riche en métaux**, pourtant documenté pour dix-huit marchandises différentes, en est absent. Pour ce type d'anneau, repère-le au FSS en jeu ou via un autre outil."
+        },
+        {"type": "heading", "level": 3, "text": "EDTools.cc — Miner's Tool, pour la revente"},
+        {
+          "type": "steps",
+          "items": [
+            {"text": "Ouvrir edtools.cc/miner."},
+            {"text": "Renseigner ton système actuel dans « I am in: »."},
+            {"text": "Cliquer sur le minéral concerné dans la liste affichée.", "detail": "12 minéraux couverts : Platinum, Painite, Osmium, LT Diamonds, Rhodplumsite, Serendibite, Monazite, Musgravite, Grandidierite, Benitoite, Alexandrite, Void Opals."},
+            {"text": "Choisir le tri dans « Sort by: » — Distance, Price ou Demand."},
+            {"text": "Repérer la station qui correspond à ton compromis (proche, mieux payée, ou plus demandeuse) avant de t'y rendre."}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Une alternative existe : Spansh Ring Finder",
+          "text": "spansh.co.uk/riches propose une fonction équivalente, mais c'est une application entièrement dynamique côté client : son interface exacte n'a pas pu être vérifiée mot pour mot pour ce guide. EDTools.cc reste, à ce jour, l'outil dont ce guide peut garantir la description exacte."
+        },
+        {
+          "type": "verdict",
+          "title": "La règle à retenir",
+          "text": "N'engage jamais une session de minage sur la base d'un nom de système lu dans un guide, y compris celui-ci. Ouvre EDTools.cc, lance la recherche, confirme en jeu — ça prend moins de temps qu'un aller-retour raté sur un anneau épuisé."
+        }
+      ]
+    },
+    {
+      "id": "pieges-et-verdict",
+      "number": 6,
+      "title": "Pièges fréquents et verdict",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Pièges fréquents du minage professionnel",
+          "headers": ["Piège", "Conséquence", "Comment l'éviter"],
+          "rows": [
+            [
+              {"text": "Cibler un anneau glacé en pensant n'y trouver que des Minerals/Metals", "style": "normal"},
+              {"text": "Tritium, eau et autres Chemicals non repérés — mauvaise cible de minage", "style": "lose"},
+              {"text": "Vérifier au Prospector Limpet ce que contient réellement l'anneau", "style": "normal"}
+            ],
+            [
+              {"text": "Confondre le Diamond de surface avec les Low Temperature Diamonds", "style": "normal"},
+              {"text": "Recherche de prix faussée entre deux marchandises distinctes", "style": "lose"},
+              {"text": "Bien distinguer les deux dans toute recherche de marché (section 3)", "style": "normal"}
+            ],
+            [
+              {"text": "Vendre toute la cargaison minée d'un coup au même marché", "style": "normal"},
+              {"text": "Effondrement du prix de vente en cours de session", "style": "lose"},
+              {"text": "Répartir les ventes entre plusieurs stations (section 4)", "style": "normal"}
+            ],
+            [
+              {"text": "Manquer d'emplacements de Refinery en session intensive", "style": "normal"},
+              {"text": "Minerai brut jeté faute de place dans les bacs de raffinage", "style": "lose"},
+              {"text": "Réserver 2 à 3 emplacements dédiés à la Refinery (section 2)", "style": "normal"}
+            ],
+            [
+              {"text": "Construire une stratégie sur un pourcentage de bonus Powerplay non revérifié", "style": "normal"},
+              {"text": "Stratégie basée sur un taux potentiellement obsolète", "style": "lose"},
+              {"text": "Vérifier la fiche à jour de la Power sur Inara.cz avant de baser une stratégie dessus", "style": "normal"}
+            ],
+            [
+              {"text": "Recopier un nom de système « hotspot » lu dans un vieux guide", "style": "normal"},
+              {"text": "Anneau épuisé ou minerai mal payé sur place", "style": "lose"},
+              {"text": "Utiliser la méthode EDTools.cc de la section 5, systématiquement", "style": "normal"}
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "title": "Les quatre types d'anneau, et seulement quatre",
+          "text": "Glacé, rocheux, métallique, riche en métaux — c'est tout : un relevé intégral du registre EDCD/FDevIDs, corroboré par le lecteur de journaux EliteDangerousCore. Toute source qui en cite un cinquième se trompe."
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Minage en système à sécurité basse ou en Anarchie",
+          "text": "Les sites d'extraction de ressources (RES) où les mineurs remontent chargés comptent parmi les lieux de chasse classiques des pirates. Si tu minces loin des patrouilles, prépare ta fuite — voir **survivre-au-pvp-sans-combattre.json** pour la procédure d'évasion et les groupes Mobius PvE."
+        },
+        {
+          "type": "verdict",
+          "title": "Le parcours professionnel, en une phrase",
+          "text": "Démarre au laser mining sur n'importe quel anneau, passe au core mining une fois le Pulse Wave Analyser maîtrisé, équipe un Type-11 Prospector si le minage devient ton activité principale, et laisse le minage de surface planétaire comme un bonus à surveiller le temps que Frontier en publie l'économie."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — 20-minage.md",
+    "Corpus interne — 11-commerce.md",
+    "Steam News Frontier (API ISteamNews, billets Frontier intégraux)",
+    "EDCD/FDevIDs (rings.csv, commodity.csv, outfitting.csv)",
+    "EDDiscovery/EliteDangerousCore (énumération RingClassEnum)",
+    "EDSM (API bodies, FAQ Commodities)",
+    "EDTools.cc",
+    "Pilots Trade Network (pilotstradenetwork.com)",
+    "GameRant / TheGamer (rendements horaires, instantanés communautaires)"
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "id": "guide-community-goals",
+  "title": "Community Goals : maximiser sa récompense individuelle",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Chaque Community Goal transforme une session de jeu ordinaire en session à multiplicateur de prix — mais seulement si tu sais quand t'engager et sur quelle activité. Ce guide couvre le timing d'engagement, le choix d'activité selon le type de CG, et comment Wing et Fleet Carrier démultiplient un effort qui reste, lui, toujours classé individuellement.",
+  "byline": "Toutes plateformes · Live 4.4.0.x · Prérequis : un vaisseau déjà adapté à l'activité ciblée (minage, commerce, combat ou exploration)",
+  "edition": "2026-09",
+  "topics": ["community goal", "cg", "minage", "commerce", "combat", "exploration", "exobiologie", "wing", "fleet carrier", "timing"],
+  "estimatedReadMinutes": 13,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {"type": "list", "ordered": true, "items": [
+          "Le double classement d'une CG : palier collectif et rang individuel",
+          "Stratégie de timing : s'engager tôt ou attendre",
+          "Quelle activité choisir selon le type de CG",
+          "Démultiplier ton score en groupe : Wing, Squadron, Fleet Carrier",
+          "Repérer et suivre une CG en temps réel",
+          "Pièges fréquents et fiabilité des chiffres"
+        ]},
+        {"type": "paragraph", "emphasis": "intro", "text": "**Une Community Goal grille ton temps de jeu en crédits si tu sais où le mettre — et le gaspille si tu improvises.** Ce guide ne réexplique pas le minage, le commerce, le combat ou l'exploration en détail : chaque guide dédié du corpus le fait déjà, et ce guide y renvoie à chaque fois. Il répond à la seule question que pose vraiment l'ouverture d'une CG : dois-je m'y mettre maintenant, sur quelle activité, et seul ou en groupe ?"},
+        {"type": "callout", "tone": "info", "title": "Légende de fiabilité utilisée dans ce guide", "text": "**OFF** confirmé par une source officielle ou par le comportement observé et documenté du jeu (Frontier, mécanique de partage en Wing). **COM** retour communautaire cohérent (Inara.cz, presse spécialisée, guides d'activité du corpus) mais non officiel. **EST** donnée absente des sources consultées : signalée comme telle plutôt qu'inventée — à vérifier toi-même en jeu."},
+        {"type": "keyValue", "items": [
+          {"label": "Multiplicateur de prix pendant une CG", "value": "x2 à x10 sur la marchandise/activité ciblée, pour toute la durée de la fenêtre", "reliability": "community"},
+          {"label": "Barème observé (ex. Wreaken Calls for Mining Support, minage, sept. 2026)", "value": "9 paliers, ≈30 M Cr au palier bas à ≈180 M Cr au palier maximal", "reliability": "community"},
+          {"label": "Minage laser optimisé pendant une CG", "value": "cité à plus de 100 M Cr/heure en valeur de revente", "reliability": "community"},
+          {"label": "Partage des bounty vouchers / combat bonds en Wing", "value": "intégral, non divisé, entre les membres présents à la destruction", "reliability": "official"},
+          {"label": "Score individuel de CG au sein d'un Wing", "value": "jamais mutualisé — chaque commandant reste compté séparément", "reliability": "official"}
+        ]}
+      ]
+    },
+    {
+      "id": "double-classement",
+      "number": 1,
+      "title": "Le double classement d'une CG : palier collectif et rang individuel",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Une CG te paie sur deux registres distincts, et rater l'un annule l'autre.** Le premier est collectif : la progression de toute la communauté doit franchir un palier (tier) pour débloquer la récompense de ce palier — pour tout le monde, y compris les plus gros contributeurs. Le second est individuel : à l'intérieur du palier débloqué, ton propre volume de contribution te classe dans une tranche qui fixe ce que TU touches réellement."},
+        {"type": "heading", "level": 3, "text": "Le palier collectif plafonne tout le monde"},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le nombre de paliers varie fortement d'une CG à l'autre — de quelques paliers à neuf sur l'exemple de « Wreaken Calls for Mining Support » (minage, active en septembre 2026), pour une fourchette de récompense en crédits d'environ 30 M Cr au palier bas à environ 180 M Cr au palier maximal. Un palier non atteint par la communauté plafonne la récompense de TOUS les participants à ce niveau, quel qu'ait été leur effort individuel."},
+        {"type": "table", "caption": "Rang individuel : tranches de contribution observées", "headers": ["Tranche", "Ce qu'elle débloque typiquement"], "rows": [
+          [{"text": "Top 75 / 50 / 25 % des contributeurs", "style": "strong"}, {"text": "Barème de crédits croissant, cosmétiques (peinture de vaisseau, décalque)", "style": "normal"}],
+          [{"text": "Top 10 / 25 CMDRs (classement nominal restreint)", "style": "strong"}, {"text": "Récompenses les plus rares : module engineered exceptionnel, très rarement un vaisseau complet (un Alliance Chieftain offert au top 25 CMDRs en 2022)", "style": "win"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Zéro contribution = zéro récompense", "text": "Un commandant n'ayant rien livré ne touche rien, même si le palier maximal est débloqué par la communauté entière. À l'inverse, contribuer au-delà de la tranche supérieure suivante n'améliore rien tant que le palier collectif correspondant n'est pas débloqué."},
+        {"type": "verdict", "title": "Verdict", "text": "Le palier collectif fixe le plafond de tout le monde, le rang individuel fixe ta part de ce plafond. Optimiser l'un sans l'autre ne sert à rien : c'est tout l'enjeu du timing traité en section suivante."}
+      ]
+    },
+    {
+      "id": "timing",
+      "number": 2,
+      "title": "Stratégie de timing : s'engager tôt ou attendre",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**La question qui compte à l'ouverture d'une CG n'est pas « vais-je participer » mais « quand ».** Le mécanisme à deux niveaux de la section précédente crée un arbitrage réel entre sécuriser un rang tôt et limiter le risque sur le palier collectif."},
+        {"type": "heading", "level": 3, "text": "Pourquoi s'engager tôt fonctionne"},
+        {"type": "list", "ordered": false, "items": [
+          "**Aucun risque de « gâchis »** : la contribution déjà livrée n'est jamais perdue, quelle que soit l'issue finale de la CG.",
+          "**Rang individuel plus facile à sécuriser** quand le nombre de participants est encore faible — décisif pour les récompenses à classement nominal restreint (top 10/25 CMDRs), mathématiquement bien plus dures à atteindre une fois la masse des contributeurs tardifs arrivée.",
+          "Une CG dure le plus souvent une à trois semaines : démarrer dans les premiers jours donne un avantage de position qui ne se rattrape pas facilement en fin de fenêtre."
+        ]},
+        {"type": "heading", "level": 3, "text": "Le risque qui ne disparaît jamais"},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le palier collectif visé — celui qui plafonne la récompense de tout le monde — n'est jamais garanti à l'avance. Un gros contributeur précoce dans une CG qui plafonne finalement bas reste plafonné à ce palier, quel qu'ait été son investissement personnel. Attendre ne supprime pas ce risque : cela le déplace simplement en fin de fenêtre, avec moins de marge pour réagir si la progression collective patine."},
+        {"type": "steps", "items": [
+          {"text": "Vérifie l'objectif exact et la monnaie comptée par la CG au tableau des missions avant de lancer quoi que ce soit.", "detail": "Un objectif mal identifié fait perdre des heures sans faire progresser la barre — voir section 6."},
+          {"text": "Engage-toi dans les premiers jours si l'activité te convient déjà.", "detail": "Le rang individuel est mathématiquement plus facile à sécuriser tant que peu de commandants ont rejoint."},
+          {"text": "Reviens vérifier la barre de progression collective à mi-fenêtre.", "detail": "Sur le tableau des missions ou sur Inara.cz — voir section 5."},
+          {"text": "Répartis ton effort régulièrement si le palier visé semble en bonne voie.", "detail": "Pas besoin de forcer si la progression collective suit un rythme suffisant."},
+          {"text": "Concentre l'essentiel de ta session dans le dernier tiers de la fenêtre si la progression semble en retard.", "detail": "La communauté elle-même accélère typiquement sa contribution en fin de CG."}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Approche hybride recommandée", "text": "Suis la barre de progression collective pendant la première moitié de la fenêtre plutôt que de décider une fois pour toutes le premier jour. C'est cette lecture à mi-parcours, pas l'intuition de départ, qui doit trancher entre répartir ton effort et le concentrer en fin de course."},
+        {"type": "verdict", "title": "Verdict", "text": "S'engager tôt reste la meilleure option par défaut : aucun risque sur ce qui est déjà livré, et un avantage réel sur le rang individuel. Le seul cas où attendre l'emporte, c'est si tu ne peux consacrer qu'une seule session à la CG et préfères la placer au moment où le palier visé est déjà quasi sécurisé."}
+      ]
+    },
+    {
+      "id": "activites-par-type-de-cg",
+      "number": 3,
+      "title": "Quelle activité choisir selon le type de CG",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Le rendement par heure dépend presque entièrement de l'activité ciblée par la CG, pas de ta compétence de pilotage.** Cette section indique quoi privilégier pour chaque type de CG ; le détail des builds et techniques reste dans les guides dédiés du corpus, cités à chaque fois plutôt que réexpliqué ici."},
+        {"type": "heading", "level": 3, "text": "CG de minage"},
+        {"type": "list", "ordered": false, "items": [
+          "**Minage laser optimisé** (Python ou Type-9 Heavy équipés de refinery, prospector/collector limpets en nombre) : rendement cité à plus de 100 M Cr/heure en valeur de revente pendant une CG — l'ordre de grandeur le plus transposable au tonnage brut demandé par une CG de minage.",
+          "**Core mining** : volumes plus concentrés par roche sur les minerais rares, mais pilotage actif plus lourd — à réserver aux CG portant spécifiquement sur ces minerais plutôt qu'au tonnage générique.",
+          "Choisis un **hotspot du minerai exact demandé**, le plus proche possible de la station cible : le temps de trajet aller-retour limite souvent le tonnage/heure davantage que la vitesse d'extraction elle-même.",
+          "**Wing mining organisé** (rôles séparés : extraction, navette, vente) peut démultiplier le rendement collectif d'une escouade — voir la logistique de groupe en section 4."
+        ]},
+        {"type": "divider"},
+        {"type": "heading", "level": 3, "text": "CG de primes et de combat bonds"},
+        {"type": "list", "ordered": false, "items": [
+          "Vérifie d'abord **quelle monnaie exacte** compte pour la CG (bounty vouchers, combat bonds, ou nombre de destructions) : cela oriente le choix de zone et de cible — une cible individuellement plus primée (Deadly/Elite) rapporte davantage par kill qu'un grand nombre de cibles faiblement primées.",
+          "Les **Resource Extraction Sites**, en particulier les **Hazardous RES**, et les **Compromised Nav Beacons** restent les foyers de farm de primes les plus denses en continu — un HazRES exige un vaisseau robuste (boucliers renforcés, batteries de bouclier) pour éviter une destruction rapide.",
+          "Pour une CG anti-thargoïde, un build de chasse aux primes classique ne suffit pas : armement AX dédié et contre-mesures aux nuages caustiques sont nécessaires ; l'organisation communautaire **AXI (Anti Xeno Initiative)** coordonne ce type de campagne à grande échelle.",
+          "Confirme où les vouchers doivent être encaissés (comptoir de la faction ou de la superpuissance liée à la CG) **avant** de lancer une session de farm loin de ce point de vente : un voucher encaissé au mauvais guichet ne compte pas pour la CG."
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Une station de CG concentre du monde — pas seulement des alliés", "text": "Une CG regroupe un trafic dense de commandants sur une station ou un système précis pendant plusieurs jours, ce qui en fait aussi un point de guet documenté pour le PvP non consenti. Si tu y transportes du fret ou des données de valeur en parallèle de la CG, applique les réflexes défensifs de survivre-au-pvp-sans-combattre.json : le fait qu'une zone serve une CG ne la rend pas sécurisée pour autant."},
+        {"type": "divider"},
+        {"type": "heading", "level": 3, "text": "CG de commerce"},
+        {"type": "list", "ordered": false, "items": [
+          "Le tonnage/heure dépend directement de la capacité de soute : privilégie un **Type-9 Heavy, un Type-10 Defender ou un Imperial Cutter** plutôt qu'un vaisseau polyvalent moins spécialisé.",
+          "Achète au **point d'approvisionnement le plus proche possible** de la station cible : cela réduit le temps de trajet par rotation, souvent plus déterminant que la taille de la soute au-delà d'un certain seuil.",
+          "Si un point d'achat unique s'épuise (stock insuffisant, prix qui grimpe au fil des achats), répartis les achats sur plusieurs stations sources proches, en coordination avec ton escadron si besoin.",
+          "Si tu découvres le commerce, debuter-sans-combat.json couvre les bases avant d'appliquer ces repères de CG."
+        ]},
+        {"type": "divider"},
+        {"type": "heading", "level": 3, "text": "CG d'exploration et d'exobiologie"},
+        {"type": "list", "ordered": false, "items": [
+          "Une CG de données d'exploration valorise surtout les corps à forte valeur de cartographie (mondes semblables à la Terre, mondes d'eau terraformables, mondes riches en ammoniac ou en métaux terraformables) : priorise leur scan plutôt que celui de chaque corps d'un système.",
+          "Une CG d'exobiologie impose des échantillons complets (trois scans de la même espèce, chacun espacé du précédent) : privilégie les corps hébergeant plusieurs espèces à forte valeur repérées ensemble, pour limiter les trajets en SRV ou à pied.",
+          "Les données doivent être physiquement rapportées et vendues à la station cible : intègre la distance de retour dans ton calcul de rentabilité dès le départ, plutôt que de t'enfoncer loin dans une région inexplorée pendant la fenêtre de la CG.",
+          "Pour le détail des espèces et des corps à forte valeur, voir exploration-exobiologie.json ; pour les logiciels tiers de repérage, voir outils.json ; pour un plan chiffré complet exploration/exobiologie hors CG, voir protocole-milliard.json."
+        ]},
+        {"type": "table", "caption": "Vue d'ensemble : où regarder selon le type de CG", "headers": ["Type de CG", "Priorité tactique", "Guide de référence du corpus"], "rows": [
+          [{"text": "Minage", "style": "strong"}, {"text": "Laser mining sur hotspot le plus proche de la station cible ; wing mining si escadron disponible", "style": "normal"}, {"text": "debuter-sans-combat.json (bases du minage)", "style": "normal"}],
+          [{"text": "Primes / combat bonds", "style": "strong"}, {"text": "HazRES, Compromised Nav Beacons ; build AX si CG anti-thargoïde", "style": "normal"}, {"text": "survivre-au-pvp-sans-combattre.json (risque aux stations à fort trafic)", "style": "normal"}],
+          [{"text": "Commerce", "style": "strong"}, {"text": "Gros porteur (Type-9/Type-10/Cutter), achat au point d'approvisionnement le plus proche", "style": "normal"}, {"text": "debuter-sans-combat.json (bases du commerce)", "style": "normal"}],
+          [{"text": "Exploration / exobiologie", "style": "strong"}, {"text": "Corps à forte valeur, échantillons complets, distance de retour anticipée", "style": "normal"}, {"text": "exploration-exobiologie.json · outils.json · protocole-milliard.json", "style": "normal"}]
+        ]}
+      ]
+    },
+    {
+      "id": "logistique-groupe",
+      "number": 4,
+      "title": "Démultiplier ton score en groupe : Wing, Squadron, Fleet Carrier",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Une CG de combat ou de minage devient mécaniquement plus rentable en groupe — à condition de comprendre précisément ce qui se partage et ce qui ne se partage jamais.**"},
+        {"type": "heading", "level": 3, "text": "Le score individuel de CG n'est jamais mutualisé"},
+        {"type": "callout", "tone": "warning", "title": "Ce qu'un Wing ne fait PAS", "text": "Un Wing (jusqu'à 4 joueurs) ne mutualise pas le score individuel de CG — chaque commandant reste comptabilisé séparément pour sa propre tranche de classement. Voler en groupe n'améliore donc pas mécaniquement ton rang individuel sur le volume livré."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Ce qu'un Wing partage réellement : l'intégralité des bounty vouchers et des combat bonds entre tous les membres présents dans la même instance ayant participé à une destruction, **sans division du montant**. Une CG de type combat ou primes est donc mécaniquement plus rentable en Wing qu'en solo, à ressources égales — chaque membre touche le montant plein, pas une fraction divisée par le nombre de participants."},
+        {"type": "heading", "level": 3, "text": "Squadron : coordonner plutôt que fusionner"},
+        {"type": "paragraph", "emphasis": "normal", "text": "Un Squadron, structure persistante plus large qu'un Wing, sert surtout à coordonner qui mine, qui transporte et qui vend, et à répartir les hotspots ou routes commerciales pour éviter que plusieurs membres ne se marchent dessus sur le même point de collecte pendant une CG."},
+        {"type": "heading", "level": 3, "text": "Fleet Carrier : le relais logistique, pas le multiplicateur de score"},
+        {"type": "paragraph", "emphasis": "normal", "text": "Un Porte-Vaisseau positionné à portée de saut du site de collecte peut servir de dépôt intermédiaire : les vaisseaux miniers ou commerciaux livrent au carrier au lieu de faire l'aller-retour complet jusqu'à la station de la CG, et un ou quelques gros porteurs rapatrient ensuite le stock accumulé en un nombre réduit de trajets. Un Squadron Carrier, financé collectivement, peut jouer ce même rôle pour un escadron entier. **Ce guide ne rechiffre pas l'économie d'un Porte-Vaisseau (achat, entretien hebdomadaire, consommation de Tritium) : voir porte-vaisseau-rentable.json, le guide de référence sur ces chiffres, avant d'envisager cette logistique.**"},
+        {"type": "callout", "tone": "warning", "title": "Point non vérifié : qui touche le crédit de la livraison ?", "text": "Il n'est pas confirmé si une CG crédite la contribution au commandant qui effectue la livraison finale à la station cible, ou à celui qui a miné ou acheté la marchandise déposée sur le carrier — ces deux commandants peuvent être différents. Teste sur un petit lot avant d'y engager toute une cargaison, ou confirme auprès de la coordination communautaire de la CG en cours."},
+        {"type": "heading", "level": 3, "text": "Mission stacking : cumuler sans te tromper de cible"},
+        {"type": "paragraph", "emphasis": "normal", "text": "Le tableau des missions d'une station propose souvent, en parallèle d'une CG, des contrats individuels portant sur la même commodité, le même type de cible ou la même activité. Accepter ces missions compatibles avant de démarrer une session permet de cumuler, pour un même trajet, la progression de la CG, la récompense de mission, et le bonus de prix propre à la CG — à condition que la commodité ou la cible corresponde **exactement** à ce que compte la CG : un produit ou une cible voisine mais différente ne fait pas progresser la barre, même si la mission reste rentable en elle-même."},
+        {"type": "verdict", "title": "Verdict", "text": "En combat ou en primes, vole en Wing dès que l'occasion se présente : le partage non divisé des vouchers et des bonds est un gain net sans contrepartie. En minage ou en commerce, un Fleet Carrier ne devient rentable pour une CG ponctuelle que si tu en possèdes déjà un — ne l'achète jamais pour une seule CG isolée."}
+      ]
+    },
+    {
+      "id": "reperer-suivre",
+      "number": 5,
+      "title": "Repérer et suivre une CG en temps réel",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Tu ne peux pas ajuster ta stratégie de timing (section 2) sans suivre la progression collective.** Deux sources se complètent, avec des forces différentes."},
+        {"type": "table", "caption": "Où suivre une CG", "headers": ["Source", "Ce qu'elle montre", "Limite"], "rows": [
+          [{"text": "Tableau des missions en jeu (à quai)", "style": "strong"}, {"text": "État réel côté serveur, CG actives rattachées à la station", "style": "normal"}, {"text": "Ne montre que les CG liées à la station où tu te trouves", "style": "mid"}],
+          [{"text": "Flux GalNet (en jeu et sur le site officiel)", "style": "strong"}, {"text": "Annonce du lancement et des développements narratifs d'une CG", "style": "normal"}, {"text": "Peu de détail chiffré en temps réel", "style": "mid"}],
+          [{"text": "Inara.cz (inara.cz/elite/communitygoals/)", "style": "strong"}, {"text": "Palier courant, pourcentage de progression, nombre de contributeurs, barème de récompenses par palier et par tranche", "style": "normal"}, {"text": "Le suivi individuel dépend d'une soumission volontaire du journal de jeu (EDMC, EDDiscovery ou import direct) — pas un accès direct aux serveurs Frontier", "style": "mid"}]
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Réflexe pratique", "text": "Ouvre Inara.cz dès l'annonce d'une CG qui t'intéresse, puis reviens-y à mi-fenêtre pour décider, avec la section 2, s'il faut répartir ton effort ou le concentrer en fin de course."},
+        {"type": "paragraph", "emphasis": "normal", "text": "Plusieurs CG tournent généralement en parallèle à un instant donné, souvent des paires antagonistes rattachées au même conflit. Rien n'empêche de suivre plusieurs fenêtres à la fois si ton activité principale correspond à plusieurs CG actives simultanément."}
+      ]
+    },
+    {
+      "id": "pieges-fiabilite",
+      "number": 6,
+      "title": "Pièges fréquents et fiabilité des chiffres",
+      "blocks": [
+        {"type": "table", "caption": "Pièges fréquents", "headers": ["Piège", "Conséquence", "Comment l'éviter"], "rows": [
+          [{"text": "Attendre la fin de la fenêtre pour t'engager", "style": "normal"}, {"text": "Rang individuel plus dur à sécuriser dans les tranches nominales (top 10/25 CMDRs), concurrence accrue en fin de CG", "style": "lose"}, {"text": "Applique l'approche hybride de la section 2 : commence tôt, ajuste à mi-fenêtre", "style": "normal"}],
+          [{"text": "Livrer une commodité ou une cible voisine mais différente de celle comptée par la CG", "style": "normal"}, {"text": "Zéro progression sur la barre, malgré une session rentable en elle-même", "style": "lose"}, {"text": "Vérifie l'intitulé exact de l'objectif au tableau des missions avant de lancer une session", "style": "normal"}],
+          [{"text": "Encaisser un voucher ou un bond au mauvais comptoir", "style": "normal"}, {"text": "La contribution ne compte pas pour la CG", "style": "lose"}, {"text": "Confirme le point de vente lié à la CG avant de partir en farm loin de la station cible", "style": "normal"}],
+          [{"text": "Compter sur un Wing pour améliorer ton score individuel", "style": "normal"}, {"text": "Aucun effet : le score individuel de CG n'est jamais mutualisé", "style": "lose"}, {"text": "Vole en Wing pour le partage non divisé des primes et des bonds, pas pour le classement CG", "style": "normal"}],
+          [{"text": "Acheter un Fleet Carrier pour une seule CG", "style": "normal"}, {"text": "Coût d'achat et d'entretien largement supérieur au gain d'une CG ponctuelle", "style": "lose"}, {"text": "Consulte porte-vaisseau-rentable.json avant tout achat motivé par une CG isolée", "style": "normal"}]
+        ]},
+        {"type": "paragraph", "emphasis": "normal", "text": "**Fiabilité des chiffres de ce guide.** Le mécanisme à deux niveaux (palier collectif et rang individuel), le multiplicateur de prix pendant une CG et le partage non divisé des primes et combat bonds en Wing sont confirmés par le comportement observé du jeu et par la documentation communautaire cohérente. Le barème précis de paliers et de récompenses varie d'une CG à l'autre et n'a pas de grille standardisée sur l'ensemble de l'historique du jeu : les montants cités (≈30 à ≈180 M Cr, plus de 100 M Cr/heure en minage) sont des exemples observés, pas des garanties reproductibles sur la prochaine CG."},
+        {"type": "callout", "tone": "info", "title": "Ce que ce guide ne couvre pas", "text": "Le barème exact des merits Powerplay distribués par les CG rattachées à une Power (variable selon la campagne, à vérifier au cas par cas sur le tableau des missions) et le détail des modules engineered offerts par certaines CG passées ne sont pas documentés de façon fiable dans les sources consultées pour ce guide — il ne les invente pas."}
+      ]
+    }
+  ],
+  "sources": [
+    "Inara.cz — Community Goals (suivi et historique)",
+    "GalNet et tableau des missions en jeu",
+    "Corpus interne — 24-community-goals.md",
+    "Corpus interne — 20-minage.md",
+    "Corpus interne — 11-commerce.md",
+    "Corpus interne — 08-combat-spatial.md",
+    "Corpus interne — 25-combat-ax.md",
+    "Corpus interne — 10-exploration.md",
+    "Corpus interne — 23-jeu-en-groupe.md",
+    "Corpus interne — 19-fleet-carriers.md"
+  ]
+}

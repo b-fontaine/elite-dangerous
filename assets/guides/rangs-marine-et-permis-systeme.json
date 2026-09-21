@@ -1,0 +1,233 @@
+{
+  "id": "rangs-marine-et-permis-systeme",
+  "title": "Devenir Amiral : rangs de marine, missions et permis de système",
+  "kicker": "Elite Dangerous · Édition septembre 2026",
+  "deck": "Les deux échelles de marine qui conditionnent le Federal Corvette et l'Imperial Cutter, palier par palier, le mécanisme de missions de promotion qui les fait progresser, les 16 systèmes à permis et le tableau de missions qui alimente toute la mécanique.",
+  "byline": "PC · Live · Aucun rang requis pour démarrer · Rear Admiral (Fédération) ou Duke (Empire) pour le vaisseau amiral visé",
+  "edition": "2026-09",
+  "topics": ["rangs", "marine-federale", "marine-imperiale", "permis-de-systeme", "federal-corvette", "imperial-cutter", "reputation", "missions"],
+  "estimatedReadMinutes": 17,
+  "sections": [
+    {
+      "id": "sommaire",
+      "number": 0,
+      "title": "Au sommaire",
+      "blocks": [
+        {"type": "list", "ordered": true, "items": [
+          "La réputation de faction : le socle de toute la progression",
+          "Federal Navy Auxiliary : les 15 paliers, du Recruit au Federal Corvette",
+          "Imperial Navy : les 15 paliers, du Serf à l'Imperial Cutter",
+          "Comment monter en grade : le mécanisme des missions de promotion",
+          "Les 16 systèmes à permis, avec leur condition exacte",
+          "Le tableau de missions : sept familles, missions d'équipe et cumul",
+          "Ce que ça débloque vraiment, et ce qu'il faut retenir"
+        ]},
+        {"type": "paragraph", "emphasis": "intro", "text": "**Deux échelles de quinze paliers séparent ton Sidewinder de départ du Federal Corvette ou de l'Imperial Cutter — et aucun guide de ce corpus ne les avait encore traitées comme un sujet à part entière.** Ce manuel documente les deux marines en entier, le mécanisme qui te fait grimper de palier, les 16 systèmes verrouillés derrière un rang ou une réputation, et le tableau de missions qui alimente toute cette progression."},
+        {"type": "paragraph", "text": "Ce guide suppose que tu sais déjà piloter, accoster et accepter une mission au tableau — voir premiers-controles-et-entrainement.json pour ces bases. Il ne traite pas les six filières de rang administrées par la Pilots Federation (Combat, Commerce, Exploration, Exobiologie, Mercenaire, CQC) : seules les deux échelles de marine de superpuissance, distinctes de ces six filières, sont couvertes ici."},
+        {"type": "callout", "tone": "info", "title": "Comment lire les chiffres de ce guide", "text": "**OFF** = confirmé par une source officielle Frontier ou par un jeu de données indépendant (GitHub EDCD/EDMarketConnector, qui reproduit l'échelle Federal Navy à l'identique). **COM** = documenté uniquement par le wiki communautaire ou des forums, sans confirmation officielle directe. **EST** = chiffre isolé ou non revérifié récemment, à prendre comme un ordre de grandeur. Les 15 paliers de chaque marine et les trois seuils de réputation chiffrés (Cordial, Friendly, Allied) sont **OFF** ; la plupart des conditions de permis et le plafond de missions actives sont **COM**, comme précisé au fil du texte."},
+        {"type": "callout", "tone": "warning", "title": "Ce que ce guide ne couvre pas", "text": "Le rang **Mercenaire** (combat à pied) existe et conditionne des grades de combinaison, mais aucune source consultée — pour ce guide comme pour l'édition précédente du corpus — ne publie une échelle de paliers ordonnée pour lui : c'est une absence documentée à deux reprises, pas un oubli. Suis ta progression dans le panneau Statut > Réputation en jeu. Le rang **Power** de Powerplay est également un système de réputation totalement distinct (1 à 100, nécessite de se *pledge*) : aucune des deux échelles de marine ci-dessous ne s'y superpose."}
+      ]
+    },
+    {
+      "id": "reputation-de-faction",
+      "number": 1,
+      "title": "La réputation de faction : le socle de toute la progression",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Avant de viser un rang de marine ou un permis de système, comprends ce qui les débloque tous les deux au niveau le plus bas : ta réputation avec chaque faction mineure que tu croises.** Tout commandant démarre **Neutral** avec chaque faction, sur une échelle à six paliers."},
+        {"type": "table", "caption": "L'échelle de réputation de faction, de Hostile à Allied", "headers": ["Palier", "Seuil", "Effet documenté"], "rows": [
+          [{"text": "Hostile", "style": "strong"}, {"text": "non chiffré par les sources consultées", "style": "lose"}, {"text": "Attaqué à vue par les PNJ affiliés à cette faction", "style": "normal"}],
+          [{"text": "Unfriendly", "style": "normal"}, {"text": "non chiffré par les sources consultées", "style": "lose"}, {"text": "—", "style": "normal"}],
+          [{"text": "Neutral", "style": "normal"}, {"text": "0 à 15 %", "style": "number"}, {"text": "Palier de départ par défaut", "style": "normal"}],
+          [{"text": "Cordial", "style": "strong"}, {"text": "≥ 15 %", "style": "number"}, {"text": "Débloque les missions de promotion Navy (section 4)", "style": "normal"}],
+          [{"text": "Friendly", "style": "strong"}, {"text": "≥ 35 %", "style": "number"}, {"text": "Accès à des missions mieux rémunérées", "style": "normal"}],
+          [{"text": "Allied", "style": "strong"}, {"text": "≥ 75 %", "style": "number"}, {"text": "Accès aux missions les mieux rémunérées ; condition la plus fréquente d'un permis de système (section 5)", "style": "win"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Deux paliers sans chiffre publié", "text": "Les seuils numériques exacts d'**Unfriendly** et de **Hostile** ne sont chiffrés par aucune source consultée — seuls Cordial (15 %), Friendly (35 %) et Allied (75 %) le sont. Ne te fie donc pas à un pourcentage précis pour ces deux paliers bas, seulement à leur ordre relatif."},
+        {"type": "keyValue", "items": [
+          {"label": "Décroissance au-dessus de 75 % (superpuissances seulement)", "value": "Redescend lentement vers ce plancher, au moins un point par jour, même hors connexion", "reliability": "community"},
+          {"label": "Remontée en dessous de Neutral (superpuissances seulement)", "value": "Remonte lentement vers un plafond de 25 %, tant qu'elle reste au-dessus de ce seuil", "reliability": "community"},
+          {"label": "Décroissance pour une faction mineure", "value": "Aucune — un statut Allié acquis reste acquis tant qu'aucune action négative ne l'entame", "reliability": "community"}
+        ]},
+        {"type": "callout", "tone": "info", "title": "La décroissance ne touche que les trois superpuissances majeures", "text": "Ce mécanisme de **decay** ne s'applique qu'à la réputation envers la Fédération, l'Empire et l'Alliance — jamais à une faction mineure locale. Si tu vises un rang de marine, une pause prolongée sans y contribuer peut donc légèrement grignoter ta progression vers le prochain palier ; si tu cherches juste l'invitation d'un Ingénieur via une faction mineure, ce statut ne se dégrade jamais tout seul."},
+        {"type": "callout", "tone": "info", "title": "Un point non tranché : l'accès au marché noir", "text": "Le wiki communautaire documente l'accès au marché noir d'une station comme dépendant uniquement du type de gouvernement de la faction contrôlante (Anarchie, Communisme, Confédération, Coopérative et Démocratie l'autorisent ; Corporation, Dictature, Féodalité, Mécénat, Colonie pénitentiaire et Théocratie le suppriment) et de son état BGS — sans seuil de réputation du joueur. Des discussions communautaires affirment à l'inverse qu'un statut **Cordial** minimum serait requis. Les sources ne se réconcilient pas sur ce point ; ce guide rapporte la contradiction plutôt que de la trancher."}
+      ]
+    },
+    {
+      "id": "federal-navy",
+      "number": 2,
+      "title": "Federal Navy Auxiliary : les 15 paliers, du Recruit au Federal Corvette",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**L'échelle fédérale compte quinze paliers numérotés de 0 (None) à 14 (Admiral), soit quatorze rangs titrés.** Si ton seul objectif est le Federal Corvette, le palier qui compte vraiment est le 12 : Rear Admiral. Tout ce qui suit n'est plus que prestige."},
+        {"type": "table", "caption": "Federal Navy Auxiliary — l'échelle complète", "headers": ["#", "Rang", "Débloque"], "rows": [
+          [{"text": "0", "style": "number"}, {"text": "None", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "1", "style": "number"}, {"text": "Recruit", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "2", "style": "number"}, {"text": "Cadet", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "3", "style": "number"}, {"text": "Midshipman", "style": "strong"}, {"text": "Federal Dropship ; invitation de l'Ingénieur The Sarge (condition exacte non confirmée par une source primaire)", "style": "win"}],
+          [{"text": "4", "style": "number"}, {"text": "Petty Officer", "style": "strong"}, {"text": "Permis Sol, délivré par le Federal Congress", "style": "mid"}],
+          [{"text": "5", "style": "number"}, {"text": "Chief Petty Officer", "style": "strong"}, {"text": "Federal Assault Ship ; permis Vega et Beta Hydri", "style": "win"}],
+          [{"text": "6", "style": "number"}, {"text": "Warrant Officer", "style": "strong"}, {"text": "Permis PLX 695", "style": "mid"}],
+          [{"text": "7", "style": "number"}, {"text": "Ensign", "style": "strong"}, {"text": "Federal Gunship ; permis Ross 128", "style": "win"}],
+          [{"text": "8", "style": "number"}, {"text": "Lieutenant", "style": "strong"}, {"text": "Permis Exbeur", "style": "mid"}],
+          [{"text": "9", "style": "number"}, {"text": "Lieutenant Commander", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "10", "style": "number"}, {"text": "Post Commander", "style": "strong"}, {"text": "Permis Hors", "style": "mid"}],
+          [{"text": "11", "style": "number"}, {"text": "Post Captain", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "12", "style": "number"}, {"text": "Rear Admiral", "style": "strong"}, {"text": "Federal Corvette — dernier déblocage utile de l'échelle", "style": "win"}],
+          [{"text": "13", "style": "number"}, {"text": "Vice Admiral", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "14", "style": "number"}, {"text": "Admiral", "style": "normal"}, {"text": "Rang honorifique de sommet, aucun déblocage supplémentaire", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Rear Admiral suffit : Vice Admiral et Admiral sont cosmétiques", "text": "Une fois Rear Admiral (12) atteint, le Federal Corvette est acheté : rien n'oblige à pousser jusqu'à Admiral (14). Les deux derniers paliers ne débloquent ni vaisseau ni permis supplémentaire — ne les vise que pour le titre lui-même."},
+        {"type": "callout", "tone": "info", "title": "Confirmation croisée indépendante", "text": "Cette échelle est reproduite à l'identique — mêmes intitulés, même ordre — par le dépôt GitHub `EDCD/EDMarketConnector` (fichier `stats.py`), indépendamment du wiki communautaire : les deux sources se recoupent sans divergence. **(OFF)**"}
+      ]
+    },
+    {
+      "id": "imperial-navy",
+      "number": 3,
+      "title": "Imperial Navy : les 15 paliers, du Serf à l'Imperial Cutter",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**L'échelle impériale compte elle aussi quinze paliers, de 0 (None) à 14 (King).** Contrairement à une idée reçue répandue dans la communauté, l'Imperial Cutter ne demande **pas** le rang suprême King : il se débloque quatre paliers plus tôt, à Duke (12) — exactement le même palier relatif que le Federal Corvette côté fédéral."},
+        {"type": "table", "caption": "Imperial Navy — l'échelle complète", "headers": ["#", "Rang", "Débloque"], "rows": [
+          [{"text": "0", "style": "number"}, {"text": "None", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "1", "style": "number"}, {"text": "Outsider", "style": "strong"}, {"text": "Invitation de l'Ingénieure Hera Tani (cumulée avec une progression Liz Ryder et 50 Kamitra Cigars)", "style": "mid"}],
+          [{"text": "2", "style": "number"}, {"text": "Serf", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "3", "style": "number"}, {"text": "Master", "style": "strong"}, {"text": "Imperial Courier", "style": "win"}],
+          [{"text": "4", "style": "number"}, {"text": "Squire", "style": "strong"}, {"text": "Permis Achenar (capitale de l'Empire), délivré par l'Achenar Empire League", "style": "mid"}],
+          [{"text": "5", "style": "number"}, {"text": "Knight", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "6", "style": "number"}, {"text": "Lord", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "7", "style": "number"}, {"text": "Baron", "style": "strong"}, {"text": "Imperial Clipper ; permis Summerland", "style": "win"}],
+          [{"text": "8", "style": "number"}, {"text": "Viscount", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "9", "style": "number"}, {"text": "Count", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "10", "style": "number"}, {"text": "Earl", "style": "strong"}, {"text": "Permis Facece (siège historique de l'Imperial Navy)", "style": "mid"}],
+          [{"text": "11", "style": "number"}, {"text": "Marquis", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "12", "style": "number"}, {"text": "Duke", "style": "strong"}, {"text": "Imperial Cutter — et non au rang King, contrairement à une idée reçue répandue", "style": "win"}],
+          [{"text": "13", "style": "number"}, {"text": "Prince", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "14", "style": "number"}, {"text": "King", "style": "normal"}, {"text": "Rang honorifique de sommet, aucun déblocage supplémentaire", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Le piège du rang King", "text": "Si tu vises uniquement l'Imperial Cutter, arrête-toi à **Duke (12)** — exactement comme Rear Admiral suffit côté fédéral. Prince et King n'ajoutent aucun déblocage connu."},
+        {"type": "callout", "tone": "tip", "title": "Aucun titre féminisé", "text": "Le jeu n'emploie aucun titre féminisé (pas de « Princess », « Queen » ou « Duchess ») quel que soit le genre du Commandant. Plusieurs fils des forums officiels Frontier réclament leur ajout, ce qui confirme leur absence actuelle plutôt que de la documenter directement. **(COM, confiance moyenne)**"}
+      ]
+    },
+    {
+      "id": "monter-en-grade",
+      "number": 4,
+      "title": "Comment monter en grade : le mécanisme des missions de promotion",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Les deux marines partagent exactement le même mécanisme de progression, en deux temps.** Comprendre cette mécanique unique t'évite de chercher un bouton « s'engager » qui n'existe pas : contrairement à Powerplay, aucune démarche d'adhésion formelle n'est nécessaire."},
+        {"type": "steps", "items": [
+          {"text": "**Identifie les factions mineures alignées** à la superpuissance visée (Fédération ou Empire), présentes dans les systèmes que tu fréquentes.", "detail": "N'importe quel commandant indépendant de la Pilots Federation peut servir dans l'une ou l'autre marine sans engagement préalable."},
+          {"text": "**Accomplis des missions, dons ou contrats** pour ces factions.", "detail": "Cela fait progresser une jauge de réputation interne au rang de marine, distincte de la réputation de faction de la section 1."},
+          {"text": "**Maintiens un statut Cordial ou supérieur** avec au moins une de ces factions une fois la jauge pleine.", "detail": "C'est la condition pour qu'une mission de promotion apparaisse au tableau."},
+          {"text": "**Accepte et termine la mission de promotion**, explicitement titrée (par exemple « Federal Navy Acquisition Contract » ou son équivalent impérial).", "detail": "La compléter fait monter le rang d'un palier exact."},
+          {"text": "**Répète** jusqu'au palier visé.", "detail": "La progression de réputation excédentaire n'est pas perdue en attendant qu'une mission de promotion apparaisse."}
+        ]},
+        {"type": "keyValue", "items": [
+          {"label": "Jauge de promotion", "value": "Distincte de la réputation de faction (section 1) ; aucun seuil numérique publié", "reliability": "community"},
+          {"label": "Condition d'apparition de la mission", "value": "Statut Cordial ou supérieur avec une faction alignée à la superpuissance visée", "reliability": "community"},
+          {"label": "Engagement formel requis", "value": "Aucun — contrairement à Powerplay, où il faut se pledge à un Power", "reliability": "official"}
+        ]},
+        {"type": "callout", "tone": "info", "title": "Des rangs honorifiques, pas une hiérarchie réelle", "text": "Ces rangs ne confèrent aucune autorité en jeu : seulement l'achat de certains vaisseaux et l'accès à des systèmes restreints (section 5). Rien n'empêche de servir les deux marines en parallèle sur des personnages ou des sessions différentes — les deux échelles sont indépendantes l'une de l'autre."}
+      ]
+    },
+    {
+      "id": "permis-de-systeme",
+      "number": 5,
+      "title": "Les 16 systèmes à permis, avec leur condition exacte",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**16 systèmes du jeu sont verrouillés derrière un rang de carrière, une réputation Alliée suivie d'une mission d'invitation, ou un historique de Community Goal.** Le mécanisme général n'a pas changé avec Powerplay 2.0 (31 octobre 2024) ni avec la Colonisation (2025) : aucune recherche ciblée sur ces deux mises à jour ne documente de refonte des permis historiques."},
+        {"type": "table", "caption": "Les 16 systèmes à permis", "headers": ["Système", "Autorité", "Condition", "Intérêt"], "rows": [
+          [{"text": "Shinrarta Dezhra", "style": "strong"}, {"text": "Pilots Federation Local Branch", "style": "normal"}, {"text": "Rang Elite dans Combat, Commerce, Exploration, Mercenaire OU Exobiologie (une seule filière suffit) ; accès permanent", "style": "strong"}, {"text": "Siège de la Pilots Federation ; Jameson Memorial vend tout le catalogue à 10 % de remise", "style": "normal"}],
+          [{"text": "Sol", "style": "strong"}, {"text": "Federal Congress", "style": "normal"}, {"text": "Federal Navy Petty Officer (#4)", "style": "normal"}, {"text": "Capitale de la Fédération ; berceau de l'humanité", "style": "normal"}],
+          [{"text": "Beta Hydri", "style": "strong"}, {"text": "Beta Hydri Democrats", "style": "normal"}, {"text": "Federal Navy Chief Petty Officer (#5)", "style": "normal"}, {"text": "Un des cinq systèmes fondateurs de la Fédération", "style": "normal"}],
+          [{"text": "Vega", "style": "strong"}, {"text": "Vega Independents", "style": "normal"}, {"text": "Federal Navy Chief Petty Officer (#5)", "style": "normal"}, {"text": "10 % de remise sur l'Eagle Mk II à Edmondson High", "style": "normal"}],
+          [{"text": "PLX 695", "style": "strong"}, {"text": "PLX 695 Values Party", "style": "normal"}, {"text": "Federal Navy Warrant Officer (#6)", "style": "normal"}, {"text": "Fournisseur militaire In Depth Protection", "style": "normal"}],
+          [{"text": "Ross 128", "style": "strong"}, {"text": "Social Ross 128 Coalition", "style": "normal"}, {"text": "Federal Navy Ensign (#7)", "style": "normal"}, {"text": "Abrite la Warren Prison Mine", "style": "normal"}],
+          [{"text": "Exbeur", "style": "strong"}, {"text": "Workers of Exbeur Democrats", "style": "normal"}, {"text": "Federal Navy Lieutenant (#8)", "style": "normal"}, {"text": "—", "style": "normal"}],
+          [{"text": "Hors", "style": "strong"}, {"text": "Clan of Hors", "style": "normal"}, {"text": "Federal Navy Post Commander (#10)", "style": "normal"}, {"text": "Centre d'entraînement Brightlight Training", "style": "normal"}],
+          [{"text": "Achenar", "style": "strong"}, {"text": "Achenar Empire League", "style": "normal"}, {"text": "Imperial Navy Squire (#4)", "style": "normal"}, {"text": "Capitale de l'Empire", "style": "normal"}],
+          [{"text": "Summerland", "style": "strong"}, {"text": "—", "style": "normal"}, {"text": "Imperial Navy Baron (#7)", "style": "normal"}, {"text": "Débloqué au même rang que l'Imperial Clipper", "style": "normal"}],
+          [{"text": "Facece", "style": "strong"}, {"text": "Facece Empire Party", "style": "normal"}, {"text": "Imperial Navy Earl (#10)", "style": "normal"}, {"text": "Siège historique de l'Imperial Navy", "style": "normal"}],
+          [{"text": "Sirius", "style": "strong"}, {"text": "Sirius Corporation", "style": "normal"}, {"text": "Réputation Alliée + mission d'invitation — localisation du mégaship contestée entre les sources", "style": "mid"}, {"text": "Siège de Sirius Corporation et de l'Ingénieur Marco Qwent", "style": "normal"}],
+          [{"text": "Van Maanen's Star", "style": "strong"}, {"text": "Sublime Order of Van Maanen's Star", "style": "normal"}, {"text": "Réputation Alliée + mission d'invitation (mégaship Shadows Endurant, système voisin Epsilon Eridani)", "style": "mid"}, {"text": "—", "style": "normal"}],
+          [{"text": "CD-43 11917", "style": "strong"}, {"text": "CQC Holdings", "style": "normal"}, {"text": "Rang Prestige en CQC Championship", "style": "normal"}, {"text": "Siège du CQC Championship ; remises à Attilius Orbital", "style": "normal"}],
+          [{"text": "Alioth", "style": "strong"}, {"text": "Alioth Independents", "style": "normal"}, {"text": "Réputation Alliée + mission d'invitation (mégaship Meredith's Dream, système voisin Alcor) — voir note ci-dessous", "style": "mid"}, {"text": "Capitale de l'Alliance", "style": "normal"}],
+          [{"text": "Pilots' Federation District", "style": "strong"}, {"text": "Pilots' Federation Administration", "style": "normal"}, {"text": "Historiquement automatique en démarrant à Mawson Dock (Dromi) ; option probablement retirée depuis 2023, voir note", "style": "lose"}, {"text": "Dix systèmes en zone de départ protégée", "style": "normal"}]
+        ]},
+        {"type": "callout", "tone": "warning", "title": "Deux permis à sourcing incertain", "text": "**Sirius** : une source situe le mégaship d'invitation *Spirit of Laelaps* à Luyten's Star, une autre à Avik — non tranché. **Pilots' Federation District** : l'option de démarrage « Dromi » qui le délivrait automatiquement semble avoir disparu de la création de personnage depuis l'*Update 14* (avril 2023) ; aucune source datée de 2024-2026 ne confirme une réintroduction. Si la suppression perdure, ce permis est aujourd'hui de facto hors d'atteinte pour un nouveau commandant, bien que le permis existe toujours dans les données du jeu."},
+        {"type": "callout", "tone": "info", "title": "Alioth : une divergence de datation non tranchée", "text": "Une partie du corpus interne date le déblocage du permis Alioth d'un Community Goal « Prime Minister Edmund Mahon » de mai-juin 2021. Cette recherche ne retrouve ni cette date ni ce libellé : elle situe l'établissement du mégaship *Meredith's Dream* à Alcor en novembre 2021, et un Community Goal distinct (« Fight For Reorte Mining Coalition », février 2022) ayant offert le permis aux 75 % meilleurs contributeurs. Les deux versions ne sont pas nécessairement incompatibles, mais aucune source ne les réconcilie : ce guide signale la divergence sans la trancher."},
+        {"type": "callout", "tone": "tip", "title": "Un lieu déjà documenté ailleurs pour un tout autre risque", "text": "Shinrarta Dezhra n'est pas qu'un objectif de rang Elite : survivre-au-pvp-sans-combattre.json le recense comme point de guet PvP documenté depuis 2017, ciblant en particulier les vaisseaux endommagés ou sans bouclier qui reviennent d'expédition. Si tu t'y rends en Open une fois le rang Elite atteint, vérifie ce guide avant d'y traîner en supercroisière."}
+      ]
+    },
+    {
+      "id": "tableau-de-missions",
+      "number": 6,
+      "title": "Le tableau de missions : sept familles, missions d'équipe et cumul",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Toute la progression documentée plus haut se construit mission après mission — comprendre le tableau qui les propose t'évite de perdre du temps sur les mauvais contrats.** Il n'existe aucune taxonomie officielle publiée par Frontier ; le wiki communautaire en retient sept familles officieuses."},
+        {"type": "table", "caption": "Les sept familles officieuses du tableau de missions", "headers": ["Famille", "Contenu", "Risque", "Récompense", "Variantes notables"], "rows": [
+          [{"text": "Courier", "style": "strong"}, {"text": "Livrer des données ou de la marchandise fournie par le donneur d'ordre à une destination donnée", "style": "normal"}, {"text": "Faible", "style": "win"}, {"text": "Faible", "style": "normal"}, {"text": "Devient Smuggling si la marchandise est illégale à destination", "style": "normal"}],
+          [{"text": "Supply", "style": "strong"}, {"text": "Acheter puis livrer un bien, miner-raffiner-livrer (Mining Rush), ou faire un don de crédits", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "—", "style": "normal"}, {"text": "Donation : récompense en réputation/influence seulement, complétable aussitôt", "style": "normal"}],
+          [{"text": "Assassination", "style": "strong"}, {"text": "Détruire une cible nommée", "style": "normal"}, {"text": "Très élevé", "style": "lose"}, {"text": "Très élevé", "style": "win"}, {"text": "Wetwork : cible non révélée avant l'arrivée, parfois civile", "style": "normal"}],
+          [{"text": "Massacre", "style": "strong"}, {"text": "Détruire un nombre donné de vaisseaux d'une faction, souvent lié à une Guerre Civile", "style": "normal"}, {"text": "Élevé", "style": "lose"}, {"text": "Élevé", "style": "win"}, {"text": "Anarchy : cible nommée Civilian ; factions légales : Spec/Black Ops", "style": "normal"}],
+          [{"text": "Theft / Liberation", "style": "strong"}, {"text": "Voler ou récupérer un bien ou un otage détenu par une cible", "style": "normal"}, {"text": "Élevé", "style": "lose"}, {"text": "Élevé", "style": "win"}, {"text": "—", "style": "normal"}],
+          [{"text": "Recovery", "style": "strong"}, {"text": "Récupérer un objet en espace profond ou en surface planétaire", "style": "normal"}, {"text": "Moyen", "style": "mid"}, {"text": "Moyen", "style": "mid"}, {"text": "Illegal Recovery, Civil War Recovery", "style": "normal"}],
+          [{"text": "Surface Operations", "style": "strong"}, {"text": "Scanner un Data Point en SRV, ou saboter un générateur de settlement", "style": "normal"}, {"text": "Moyen", "style": "mid"}, {"text": "Moyen", "style": "mid"}, {"text": "Nécessite un SRV — à la frontière missions-vaisseau / missions au sol", "style": "normal"}]
+        ]},
+        {"type": "paragraph", "text": "S'y ajoutent deux carrières transversales — **Salvager** (récupération légale ou volée, risque moyen, récompense faible) et **Smuggler** (transport illégal sans se faire scanner, risque moyen, récompense moyenne) — ainsi que les contrats **Passenger**, scindés en **VIP** (aller-retour, haute récompense/risque, utile aux rangs Explorateur et Commerce) et **Bulk** (aller simple, faible récompense/risque, utile à l'influence BGS et au rang Commerce)."},
+        {"type": "heading", "level": 3, "text": "Missions d'équipe (Team missions)"},
+        {"type": "paragraph", "text": "Quatre des familles ci-dessus existent aussi en version partagée entre membres d'une même équipe : **Assassination, Delivery, Massacre, Source and Return**."},
+        {"type": "keyValue", "items": [
+          {"label": "Taille d'équipe maximale", "value": "4 joueurs", "reliability": "community"},
+          {"label": "Missions d'équipe actives simultanées", "value": "4 maximum", "reliability": "community"},
+          {"label": "Partage par joueur", "value": "Une seule mission d'équipe partagée à la fois", "reliability": "community"},
+          {"label": "Validation", "value": "Le joueur qui l'a acceptée doit la rendre en premier avant que les autres membres puissent la rendre à leur tour ; tous les membres présents à la complétion reçoivent un choix de récompense individuel", "reliability": "community"}
+        ]},
+        {"type": "heading", "level": 3, "text": "Rafraîchissement du tableau et cumul de missions"},
+        {"type": "paragraph", "text": "Le tableau se rafraîchit automatiquement et partiellement environ toutes les dix minutes — un consensus communautaire, non publié officiellement par Frontier. Le « board flipping » historique (changer de mode de jeu pour forcer un nouveau tirage) a été neutralisé dès 2018 par un serveur de missions dédié ; le terme survit dans l'usage communautaire mais désigne aujourd'hui une pratique différente : visiter plusieurs stations pour accumuler des contrats compatibles entre eux."},
+        {"type": "callout", "tone": "warning", "title": "Le cumul (mission stacking) fonctionne surtout pour Massacre et Assassination", "text": "Une même élimination compte simultanément pour plusieurs missions, à condition qu'elles proviennent de **factions différentes** ciblant la même faction hostile ; deux missions de la même faction contre la même cible ne se valident pas toutes les deux avant que l'une soit achevée. Un plafond de **20 missions actives simultanées**, partagé avec les contrats passagers, est documenté par un fil de forum Frontier de janvier 2018 — **non revérifié depuis pour la version 4.4.0.x actuelle**. Traite ce chiffre comme un ordre de grandeur ancien, pas une certitude à jour. **(EST)**"},
+        {"type": "callout", "tone": "info", "title": "Les timers tournent en temps réel", "text": "Les minuteurs de mission ne se mettent jamais en pause. Dépasser le délai ou abandonner une mission baisse systématiquement la réputation avec la faction émettrice, et parfois inflige une amende dont le montant n'est spécifié que dans le détail de cette mission précise."}
+      ]
+    },
+    {
+      "id": "ce-quil-faut-retenir",
+      "number": 7,
+      "title": "Ce que ça débloque vraiment, et ce qu'il faut retenir",
+      "blocks": [
+        {"type": "paragraph", "emphasis": "intro", "text": "**Au-delà des crédits, les deux marines débloquent sept vaisseaux, dix permis de système sur les seize, deux invitations d'Ingénieur et des remises locales ponctuelles.** Aucun module pré-engineered n'est documenté comme récompense d'un rang de marine, à la différence de certains Community Goals."},
+        {"type": "table", "caption": "Les sept vaisseaux conditionnés à un rang de marine", "headers": ["Vaisseau", "Marine", "Rang requis"], "rows": [
+          [{"text": "Federal Dropship", "style": "normal"}, {"text": "Fédération", "style": "normal"}, {"text": "Midshipman (#3)", "style": "number"}],
+          [{"text": "Federal Assault Ship", "style": "normal"}, {"text": "Fédération", "style": "normal"}, {"text": "Chief Petty Officer (#5)", "style": "number"}],
+          [{"text": "Federal Gunship", "style": "normal"}, {"text": "Fédération", "style": "normal"}, {"text": "Ensign (#7)", "style": "number"}],
+          [{"text": "Federal Corvette", "style": "strong"}, {"text": "Fédération", "style": "normal"}, {"text": "Rear Admiral (#12)", "style": "strong"}],
+          [{"text": "Imperial Courier", "style": "normal"}, {"text": "Empire", "style": "normal"}, {"text": "Master (#3)", "style": "number"}],
+          [{"text": "Imperial Clipper", "style": "normal"}, {"text": "Empire", "style": "normal"}, {"text": "Baron (#7)", "style": "number"}],
+          [{"text": "Imperial Cutter", "style": "strong"}, {"text": "Empire", "style": "normal"}, {"text": "Duke (#12)", "style": "strong"}]
+        ]},
+        {"type": "list", "ordered": false, "items": [
+          "Invitations d'Ingénieur : **The Sarge** (Federal Navy Midshipman, condition exacte non recoupée verbatim) et **Hera Tani** (Imperial Navy Outsider, cumulée avec une progression Liz Ryder et 50 Kamitra Cigars)",
+          "Remises locales ponctuelles : 20 % sur l'Eagle Mk II à Daedalus (Sol), 10 % sur le Federal Dropship et le Vulture au même comptoir, 10 % sur l'Eagle Mk II à Edmondson High (Vega)",
+          "10 des 16 permis de système de la section 5 dépendent directement d'un palier de l'une des deux marines ; les 6 autres dépendent d'un rang Pilots Federation, d'une réputation Alliée, ou d'un historique de Community Goal"
+        ]},
+        {"type": "verdict", "title": "Corvette ou Cutter : un choix de style, pas de difficulté relative", "text": "Le Federal Corvette (Rear Admiral, #12 sur 14) et l'Imperial Cutter (Duke, #12 sur 14) se débloquent exactement au même palier relatif sur leur échelle respective — contrairement à l'idée reçue selon laquelle l'Imperial Cutter exigerait le rang suprême King. Aucune source consultée ne documente de différence structurelle de longueur de parcours entre les deux marines : le choix entre Fédération et Empire devrait donc se faire sur les factions et systèmes que tu fréquentes déjà, pas sur une prétendue difficulté comparée."},
+        {"type": "divider"},
+        {"type": "steps", "items": [
+          {"text": "**Maintiens un statut Cordial ou supérieur** avec au moins une faction alignée à la superpuissance visée.", "detail": "C'est la condition d'apparition des missions de promotion (section 4)."},
+          {"text": "**Enchaîne missions, dons et contrats** pour ces factions jusqu'à ce qu'une mission de promotion apparaisse, puis termine-la.", "detail": "Répète palier par palier ; la progression excédentaire n'est jamais perdue."},
+          {"text": "**Vise Rear Admiral (#12)** côté Fédération ou **Duke (#12)** côté Empire.", "detail": "Inutile d'aller plus loin pour le vaisseau amiral visé — les paliers suivants sont honorifiques."},
+          {"text": "**Vérifie la condition exacte d'un permis avant de t'y consacrer** (section 5), en particulier pour Sirius et le Pilots' Federation District, dont le sourcing reste incertain.", "detail": "Le panneau en jeu prévaut toujours sur un guide figé."},
+          {"text": "**Ne compte pas sur un chiffre de cumul de missions à jour** : le plafond de 20 missions actives date d'un fil de forum de 2018.", "detail": "Vérifie ta propre limite en jeu si tu empiles beaucoup de contrats."}
+        ]},
+        {"type": "callout", "tone": "tip", "title": "Le réflexe à automatiser", "text": "Avant de partir en expédition pour un rang ou un permis, vérifie la condition affichée directement dans le panneau des rangs ou de l'Ingénieur en jeu — elle prévaut toujours sur ce guide en cas de correctif non encore documenté."},
+        {"type": "paragraph", "text": "**Fiabilité des données.** Les 15 paliers de chaque marine et les trois seuils de réputation chiffrés (Cordial 15 %, Friendly 35 %, Allied 75 %) proviennent du wiki communautaire Elite Dangerous, recoupé pour l'échelle Federal Navy par le dépôt GitHub EDCD/EDMarketConnector — une confirmation indépendante. Les conditions de permis, le plafond de 20 missions actives et la plupart des chiffres de récompense restent des données **communautaires (COM)**, non republiées par Frontier depuis leur première documentation ; deux permis (Sirius, Pilots' Federation District) portent une incertitude signalée explicitement plutôt que résolue par supposition."},
+        {"type": "paragraph", "text": "**Ce que ce guide ne couvre pas.** Les six filières de rang Pilots Federation (Combat, Commerce, Exploration, Exobiologie, Mercenaire, CQC) sont hors périmètre — voir premiers-controles-et-entrainement.json pour les bases de pilotage qui précèdent toute cette progression. Les caractéristiques et le prix d'achat du Federal Corvette et de l'Imperial Cutter eux-mêmes ne sont pas repris ici : ce guide s'arrête à la condition de déblocage, pas à l'équipement du vaisseau une fois acheté."}
+      ]
+    }
+  ],
+  "sources": [
+    "Corpus interne — 29-missions-reputation-et-rangs.md",
+    "Corpus interne — 27-debuter-et-progresser.md",
+    "wiki Elite Dangerous (Fandom) — Federation/Ranks, Empire/Ranks, Permits, Mission Board, Reputation",
+    "GitHub EDCD/EDMarketConnector (stats.py)",
+    "elitedangerous.com/news/updates (4.4.0.0, 4.4.0.2, 4.4.0.3)",
+    "forums.frontier.co.uk",
+    "Guide Steam Community — All Known Permits and How to Unlock Them (28 mai 2025)"
+  ]
+}
