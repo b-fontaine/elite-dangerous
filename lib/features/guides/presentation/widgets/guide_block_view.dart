@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../../design_system/design_system.dart';
 import '../../domain/entities/guide.dart';
-import 'guide_rich_text.dart';
 
 /// Renders one authored block with the matching design-system component.
 ///
@@ -50,13 +49,13 @@ class GuideBlockView extends StatelessWidget {
         EdCallout(
           tone: _tone(tone),
           title: title,
-          child: GuideRichText(text, style: EdTypography.bodySmall),
+          child: EdRichText(text, style: EdTypography.bodySmall),
         ),
       GuideQuote(:final String text, :final String? attribution) =>
         EdPullQuote(quote: text, attribution: attribution),
       GuideVerdict(:final String title, :final String text) => EdVerdict(
           title: title,
-          child: GuideRichText(
+          child: EdRichText(
             text,
             style: EdTypography.bodySmall.copyWith(fontSize: 14.5),
           ),
@@ -71,14 +70,14 @@ class GuideBlockView extends StatelessWidget {
 
   Widget _paragraph(String text, {required bool isIntro}) {
     if (!isIntro) {
-      return GuideRichText(text, style: EdTypography.body);
+      return EdRichText(text, style: EdTypography.body);
     }
     return Container(
       decoration: const BoxDecoration(
         border: Border(left: BorderSide(color: EdColors.orange, width: 2)),
       ),
       padding: const EdgeInsets.only(left: EdSpacing.lg),
-      child: GuideRichText(text, style: EdTypography.intro),
+      child: EdRichText(text, style: EdTypography.intro),
     );
   }
 
@@ -106,7 +105,7 @@ class GuideBlockView extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: GuideRichText(
+                  child: EdRichText(
                     items[i],
                     style: EdTypography.bodySmall.copyWith(height: 1.6),
                   ),
@@ -134,7 +133,7 @@ class GuideBlockView extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Expanded(
-                    child: Text(
+                    child: EdRichText(
                       item.label.toUpperCase(),
                       style: EdTypography.tag.copyWith(
                         fontSize: 10,
@@ -144,7 +143,12 @@ class GuideBlockView extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: EdSpacing.sm),
-                  Text(item.value, style: EdTypography.numeric),
+                  // Flexible (not Expanded): a short value keeps its natural
+                  // width so the tag sits right after it, while a long one
+                  // wraps within its share instead of overflowing the row.
+                  Flexible(
+                    child: EdRichText(item.value, style: EdTypography.numeric),
+                  ),
                   const SizedBox(width: EdSpacing.xs),
                   EdTag.reliability(_reliability(item.reliability)),
                 ],

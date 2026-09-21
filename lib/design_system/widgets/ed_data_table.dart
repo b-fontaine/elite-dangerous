@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../shapes/ed_notched_border.dart';
 import '../tokens/ed_colors.dart';
 import '../tokens/ed_typography.dart';
+import 'ed_rich_text.dart';
 
 /// A single cell of an [EdDataTable].
 class EdCell {
@@ -187,7 +188,7 @@ class _TableBody extends StatelessWidget {
                     width: widthFor(i),
                     stretch: stretch,
                     flex: i == 0 ? 3 : 2,
-                    child: Text(rows[r][i].text, style: rows[r][i].resolve()),
+                    child: EdRichText(rows[r][i].text, style: rows[r][i].resolve()),
                   ),
               ],
             ),

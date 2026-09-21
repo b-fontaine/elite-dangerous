@@ -4,6 +4,7 @@ import '../shapes/ed_notched_border.dart';
 import '../tokens/ed_colors.dart';
 import '../tokens/ed_spacing.dart';
 import '../tokens/ed_typography.dart';
+import 'ed_rich_text.dart';
 
 /// One entry of an [EdSteps] list.
 class EdStep {
@@ -93,7 +94,7 @@ class _EdStepRow extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(
+                EdRichText(
                   step.text,
                   style: EdTypography.bodySmall.copyWith(
                     fontSize: 14.5,
@@ -104,7 +105,7 @@ class _EdStepRow extends StatelessWidget {
                 ),
                 if (step.detail != null) ...<Widget>[
                   const SizedBox(height: 4),
-                  Text(step.detail!, style: EdTypography.caption),
+                  EdRichText(step.detail!, style: EdTypography.caption),
                 ],
               ],
             ),

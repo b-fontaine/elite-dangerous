@@ -16,6 +16,7 @@ export 'widgets/ed_page_header.dart';
 export 'widgets/ed_panel.dart';
 export 'widgets/ed_progress_bar.dart';
 export 'widgets/ed_pull_quote.dart';
+export 'widgets/ed_rich_text.dart';
 export 'widgets/ed_scanline_overlay.dart';
 export 'widgets/ed_section_header.dart';
 export 'widgets/ed_stat_tile.dart';

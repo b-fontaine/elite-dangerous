@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../../../../design_system/design_system.dart';
+import '../tokens/ed_colors.dart';
+import '../tokens/ed_typography.dart';
 
 /// Renders the light markup the authored guides use: `**bold**`.
 ///
 /// A full Markdown renderer would be a lot of dependency for one construct, and
 /// the guides deliberately carry structure as block *types* rather than as
-/// inline syntax.
-class GuideRichText extends StatelessWidget {
-  const GuideRichText(
+/// inline syntax. Lives in the design system, not the guides feature, because
+/// other components here (`EdDataTable`, `EdSteps`) render authored text too.
+class EdRichText extends StatelessWidget {
+  const EdRichText(
     this.text, {
     this.style,
     this.strongColor = EdColors.textStrong,
