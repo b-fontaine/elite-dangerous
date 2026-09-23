@@ -8,6 +8,9 @@ import 'package:injectable/injectable.dart';
 
 import '../../../../core/error/failure.dart';
 import '../../../../core/time/clock.dart';
+import '../../../../core/usecase/usecase.dart';
+import '../../../journal/domain/entities/journal_event.dart';
+import '../../../journal/domain/usecases/journal_usecases.dart';
 import '../../domain/entities/route_plan.dart';
 import '../../domain/entities/route_progress.dart';
 import '../../domain/entities/session_pace.dart';
@@ -35,6 +38,7 @@ class RouteTrackingBloc extends Bloc<RouteTrackingEvent, RouteTrackingState> {
     this._estimator,
     this._abandon,
     this._clock,
+    this._watchJournalEvents,
   ) : super(const RouteTrackingState()) {
     on<RouteTrackingStarted>(_onStarted);
     on<RouteTrackingRefreshed>(_onStarted);
@@ -45,6 +49,7 @@ class RouteTrackingBloc extends Bloc<RouteTrackingEvent, RouteTrackingState> {
   final RouteDurationEstimator _estimator;
   final AbandonRoute _abandon;
   final Clock _clock;
+  final WatchJournalEvents _watchJournalEvents;
 
   /// How long between two reads of the game machine.
   ///
@@ -80,9 +85,19 @@ class RouteTrackingBloc extends Bloc<RouteTrackingEvent, RouteTrackingState> {
   @visibleForTesting
   bool get isPolling => _poll != null;
 
+  /// Wakes a re-read as soon as the local journal gains new lines.
+  ///
+  /// Set up once, on the first start: the game machine has nothing else
+  /// nudging this screen, since [_scheduleNextRead] only arms a timer for a
+  /// shared one. `skip(1)` drops the stream's own catch-up value — this
+  /// bloc's first read already covers it, so acting on it too would refresh
+  /// twice for the same journal.
+  StreamSubscription<List<JournalEvent>>? _journalSubscription;
+
   @override
   Future<void> close() {
     _stopPolling();
+    unawaited(_journalSubscription?.cancel());
     return super.close();
   }
 
@@ -90,6 +105,16 @@ class RouteTrackingBloc extends Bloc<RouteTrackingEvent, RouteTrackingState> {
     RouteTrackingEvent event,
     Emitter<RouteTrackingState> emit,
   ) async {
+    _journalSubscription ??= _watchJournalEvents(const NoParams())
+        .skip(1)
+        .listen((_) {
+      // A shared screen keeps re-reading the bridge on its own timer instead;
+      // nudging it here too would just add a redundant bridge round trip.
+      if (!isClosed && !state.isShared) {
+        add(const RouteTrackingRefreshed(silent: true));
+      }
+    });
+
     final int read = ++_reads;
     final bool silent = event is RouteTrackingRefreshed && event.silent;
     if (!silent) {

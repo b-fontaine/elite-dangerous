@@ -21,6 +21,7 @@ void main() {
   late FakeTrack track;
   late FixedClock clock;
   late FakeAbandon abandon;
+  late FakeWatchJournalEvents journalEvents;
 
   RouteTrackingBloc build() => RouteTrackingBloc(
         FollowRoute(
@@ -31,6 +32,7 @@ void main() {
         const RouteDurationEstimator(),
         abandon,
         clock,
+        journalEvents,
       );
 
   setUp(() {
@@ -41,6 +43,7 @@ void main() {
     track = FakeTrack(freshProgress(plan));
     clock = FixedClock(publishedAt.add(const Duration(seconds: 12)));
     abandon = FakeAbandon();
+    journalEvents = FakeWatchJournalEvents();
   });
 
   tearDown(() => RouteTrackingBloc.pollInterval = const Duration(seconds: 10));
@@ -74,6 +77,39 @@ void main() {
       expect(bloc.state.hasRoute, isFalse);
       expect(bloc.state.failure, isNull);
       expect(bloc.state.isShared, isFalse);
+
+      await bloc.close();
+    });
+
+    test('wakes up and re-reads as soon as the journal gains new lines',
+        () async {
+      final RouteTrackingBloc bloc = build();
+
+      bloc.add(const RouteTrackingStarted());
+      await bloc.stream.firstWhere((RouteTrackingState s) => !s.isLoading);
+      expect(track.calls, 1);
+
+      // What the live journal watcher does ten seconds after the commander
+      // makes a jump: no screen action, just new lines on disk.
+      journalEvents.notifyNewLines();
+      await Future<void>.delayed(const Duration(milliseconds: 20));
+
+      expect(track.calls, 2);
+
+      await bloc.close();
+    });
+
+    test('the journal\'s own catch-up value does not trigger a second read',
+        () async {
+      final RouteTrackingBloc bloc = build();
+
+      bloc.add(const RouteTrackingStarted());
+      await bloc.stream.firstWhere((RouteTrackingState s) => !s.isLoading);
+
+      // The stream's first emission on subscription is the same journal this
+      // read already covered; acting on it too would double every read.
+      await Future<void>.delayed(const Duration(milliseconds: 20));
+      expect(track.calls, 1);
 
       await bloc.close();
     });
@@ -312,6 +348,31 @@ void main() {
         isFalse,
         reason: 'une lecture périmée ne doit pas relancer le minuteur',
       );
+
+      await bloc.close();
+    });
+
+    test('a shared screen ignores its own local journal', () async {
+      bridge.answer = Result<RouteStateEnvelope?>.ok(
+        RouteStateEnvelope(
+          progress: freshProgress(plan),
+          pace: const SessionPace(),
+          publishedAt: publishedAt,
+        ),
+      );
+      final RouteTrackingBloc bloc = build();
+
+      bloc.add(const RouteTrackingStarted());
+      await bloc.stream.firstWhere((RouteTrackingState s) => !s.isLoading);
+      final int readsBefore = bridge.reads;
+
+      // This device is not the one running the game — see [FollowRoute] — so
+      // its own journal changing means nothing and must not spend a bridge
+      // round trip re-reading a machine that already re-reads itself.
+      journalEvents.notifyNewLines();
+      await Future<void>.delayed(const Duration(milliseconds: 20));
+
+      expect(bridge.reads, readsBefore);
 
       await bloc.close();
     });
